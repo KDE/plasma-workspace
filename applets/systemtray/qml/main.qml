@@ -184,16 +184,14 @@ ContainmentItem {
                 // The icon size to display when not using the auto-scaling setting
                 readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
 
-                // Automatically use autoSize setting when in tablet mode, if it's
-                // not already being used
-                readonly property bool autoSize: Plasmoid.configuration.scaleIconsToFit || Kirigami.Settings.tabletMode
+                readonly property bool autoSize: Plasmoid.configuration.scaleIconsToFit
 
                 readonly property int gridThickness: root.vertical ? root.width : root.height
                 // Should change to 2 rows/columns on a 56px panel (in standard DPI)
                 readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + Kirigami.Units.smallSpacing))))
 
                 // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
-                readonly property int cellSpacing: Kirigami.Units.smallSpacing * (Kirigami.Settings.tabletMode ? 6 : Plasmoid.configuration.iconSpacing)
+                readonly property int cellSpacing: Kirigami.Units.smallSpacing * Plasmoid.configuration.iconSpacing
                 readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + cellSpacing
 
                 cellHeight: {

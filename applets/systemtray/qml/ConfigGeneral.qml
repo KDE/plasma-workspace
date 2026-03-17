@@ -221,29 +221,12 @@ KCMUtils.ScrollViewKCM {
                     }
                 ]
                 textRole: "label"
-                enabled: !Kirigami.Settings.tabletMode
 
-                currentIndex: {
-                    if (Kirigami.Settings.tabletMode) {
-                        return 1; // scale to fit
-                    }
-
-                    if (iconsPage.cfg_scaleIconsToFit) {
-                        return 1 // scale to fit
-                    } else {
-                        return 0 // small
-                    }
-                }
+                currentIndex: iconsPage.cfg_scaleIconsToFit ? 1 : 0
 
                 onActivated: index => {
                     iconsPage.cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
                 }
-            }
-            QQC2.Label {
-                visible: Kirigami.Settings.tabletMode
-                text: i18n("Automatically enabled when in Touch Mode")
-                textFormat: Text.PlainText
-                font: Kirigami.Theme.smallFont
             }
 
             QQC2.ComboBox {
@@ -266,29 +249,16 @@ KCMUtils.ScrollViewKCM {
                     }
                 ]
                 textRole: "label"
-                enabled: !Kirigami.Settings.tabletMode
 
-                currentIndex: {
-                    if (Kirigami.Settings.tabletMode) {
-                        return 2; // Large
-                    }
-
-                    switch (iconsPage.cfg_iconSpacing) {
-                        case 1: return 0; // Small
-                        case 2: return 1; // Normal
-                        case 6: return 2; // Large
-                    }
+                currentIndex: switch (iconsPage.cfg_iconSpacing) {
+                    case 1: return 0; // Small
+                    case 2: return 1; // Normal
+                    case 6: return 2; // Large
                 }
 
                 onActivated: index => {
                     iconsPage.cfg_iconSpacing = model[currentIndex]["spacing"];
                 }
-            }
-            QQC2.Label {
-                visible: Kirigami.Settings.tabletMode
-                text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
-                textFormat: Text.PlainText
-                font: Kirigami.Theme.smallFont
             }
         }
     }

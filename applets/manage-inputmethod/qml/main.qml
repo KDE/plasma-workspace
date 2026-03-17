@@ -114,7 +114,7 @@ PlasmoidItem {
             PropertyChanges {
                 root.Plasmoid.icon: "arrow-down"
                 // Because the keyboard can become visible with a touch input when
-                // while not explicitly in Touch Mode
+                // while not explicitly in Tablet Mode
                 root.Plasmoid.status: Kirigami.Settings.hasTransientTouchInput ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
                 root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: visible")
             }
