@@ -1363,6 +1363,3 @@ msgstr "Oscail Scéim Datha"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Comhaid Scéim Dathanna (*.colors)"
-
-#~ msgid "You do not have permission to overwrite that scheme"
-#~ msgstr "Níl cead agat an scéim sin a fhorscríobh"
