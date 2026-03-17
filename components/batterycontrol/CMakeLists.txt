@@ -3,6 +3,7 @@
 
 set(batterycontrol_SRCS
         batterycontrol.cpp batterycontrol.h
+        batteryproxymodel.cpp batteryproxymodel.h
         batteriesnamesmonitor_p.cpp batteriesnamesmonitor_p.h
 )
 
