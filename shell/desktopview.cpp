@@ -74,17 +74,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     QObject::connect(m_activityController, &KActivities::Controller::activityAdded, this, &DesktopView::candidateContainmentsChanged);
     QObject::connect(m_activityController, &KActivities::Controller::activityRemoved, this, &DesktopView::candidateContainmentsChanged);
 
-    // KRunner settings
-    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
-    KConfigGroup configGroup(config, u"General"_s);
-    m_activateKRunnerWhenTypingOnDesktop = configGroup.readEntry("ActivateWhenTypingOnDesktop", true);
-
-    m_configWatcher = KConfigWatcher::create(config);
-    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-        if (names.contains(QByteArrayView("ActivateWhenTypingOnDesktop"))) {
-            m_activateKRunnerWhenTypingOnDesktop = group.readEntry("ActivateWhenTypingOnDesktop", true);
-        }
-    });
+    // KRunner settings: activation on typing is always enabled (no config flag)
 
     // Accent color setting
     connect(static_cast<ShellCorona *>(corona), &ShellCorona::accentColorFromWallpaperEnabledChanged, this, &DesktopView::usedInAccentColorChanged);
@@ -471,11 +461,7 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
         return;
     }
 
-    if (!m_activateKRunnerWhenTypingOnDesktop) {
-        return;
-    }
-
-    // When a key is pressed on desktop when nothing else is active forward the key to krunner
+    // When a key is pressed on desktop when nothing else is active and type-ahead is disabled in FolderView, forward the key to krunner
     if (handleKRunnerTextInput(e)) {
         e->accept();
         return;
