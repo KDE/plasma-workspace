@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_cursortheme",
-        "Description": "Choose mouse cursor theme",
+        "Description": "Choose mouse pointer theme",
         "Description[ar]": "اختر سِمة المؤشر",
         "Description[az]": "Siçan kursoru mövzusunu seçmək",
         "Description[be]": "Выбар тэмы курсора мышы",
@@ -53,7 +53,7 @@
         "Description[zh_CN]": "选择鼠标光标主题",
         "Description[zh_TW]": "選擇滑鼠游標主題",
         "Icon": "preferences-desktop-cursors",
-        "Name": "Cursors",
+        "Name": "Pointers",
         "Name[ar]": "المؤشرات",
         "Name[ast]": "Cursores",
         "Name[az]": "Kursorlar",
@@ -111,7 +111,7 @@
         "Name[zh_TW]": "游標"
     },
     "X-DocPath": "kcontrol/cursortheme/index.html",
-    "X-KDE-Keywords": "Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skin,Pointer Colors,Pointer Appearance,cursor skin,cursor style,cursor size,mouse style,pointer,start,launch,busy,feedback,mouse,pointer,bounce,bouncing,rotating,spinning,startup,start-up,program,report,taskbar,animation,loading",
+    "X-KDE-Keywords": "Mouse,pointer,Cursor,Theme,Mouse Appearance,Cursor Appearance,Pointer Appearance,Mouse Color,Pointer Color,Cursor Color,Mouse Theme,Pointer Theme,Cursor Theme,Mouse Skin,Pointer Skin,Cursor Skin,Mouse Style,Pointer Style,Cursor Style,Mouse Size,Pointer Size,Cursor Size,start,launch,busy,feedback,bounce,bouncing,rotating,spinning,startup,start-up,program,report,taskbar,animation,loading",
     "X-KDE-Keywords[ar]": "الفأرة,المؤشر,المظهر,مظهر المؤشر,لون المؤشر,مظهر المؤشر,مظهر الفأرة,مظهر الفأرة,جلد الفأرة,ألوان المؤشر,مظهر المؤشر,جلد المؤشر,نمط المؤشر,حجم المؤشر,نمط الفأرة,المؤشر,البدء,التشغيل,مشغول,ردود الفعل,الفأرة,المؤشر,الارتداد,الارتداد,الدوران,الدوران,بدء التشغيل,بدء التشغيل,البرنامج,التقرير,شريط المهام,الرسوم المتحركة,التحميل",
     "X-KDE-Keywords[az]": "Siçan,Kursor,Kursor görünüşü,Kursor rəngi,Kursor mövzusu,Siçan mövzusu,Siçan görünüşü,Siçan örtüyü,Göstərici rəngi,Göstərici görünüşü,kursor örtüyü,kursor tərzi,kursor ölçüsü,siçan tərzi,göstərici,başlamaq,başlatmaq,məşğul,rəy bildirişi,siçan,göstərici,sıçramaq,sıçrayan,dönən,fırlanan,başlama,işə salma, proqram,hesabat,tapşırıq çubuğu,animasiya,canlanma,yüklənmə",
     "X-KDE-Keywords[be]": "Мыш,курсор,тэма,выгляд курсора,колер курсора,тэма курсора,тэма мышы,выгляд мышы,графічная абалонка мышы,колеры паказальніка,выгляд курсора,графічная абалонка курсора,стыль курсора,памер курсора,стыль мышы,паказальнік,пуск,запуск,заняты, водгук,мыш,паказальнік,вярчэнне,кручэнне,запуск,запуск,праграма,справаздача,панэль задач,анімацыя,загрузка",

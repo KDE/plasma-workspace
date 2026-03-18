@@ -45,11 +45,11 @@ KCM.GridDelegate {
         Kirigami.Action {
             icon.name: "edit-delete"
             tooltip: if (enabled) {
-                return i18nc("@info:tooltip", "Remove cursor theme");
+                return i18nc("@info:tooltip", "Remove pointer theme");
             } else if (delegate.GridView.isCurrentItem) {
-                return i18nc("@info:tooltip", "Cannot delete the active cursor theme");
+                return i18nc("@info:tooltip", "Cannot delete the active pointer theme");
             } else {
-                return i18nc("@info:tooltip", "Cannot delete system-installed cursor themes");
+                return i18nc("@info:tooltip", "Cannot delete system-installed pointer themes");
             }
             enabled: model.isWritable && !delegate.GridView.isCurrentItem
             visible: !model.pendingDeletion
@@ -57,7 +57,7 @@ KCM.GridDelegate {
         },
         Kirigami.Action {
             icon.name: "edit-undo"
-            tooltip: i18n("Don’t delete this cursor theme")
+            tooltip: i18n("Don’t delete this pointer theme")
             visible: model.pendingDeletion
             onTriggered: model.pendingDeletion = false
         }

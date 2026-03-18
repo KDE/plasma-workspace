@@ -196,7 +196,7 @@ KCM.GridViewKCM {
         sourceComponent: QtDialogs.FileDialog {
             title: i18n("Open Theme")
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
-            nameFilters: [ i18n("Cursor Theme Files (*.tar.gz *.tar.bz2)") ]
+            nameFilters: [ i18n("Pointer Theme Files (*.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
                 kcm.installThemeFromFile(selectedFile)

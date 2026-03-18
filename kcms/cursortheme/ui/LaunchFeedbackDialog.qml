@@ -46,8 +46,8 @@ Kirigami.Dialog {
             QQC2.RadioButton {
                 id: busyCursorDisabled
 
-                Kirigami.FormData.label: i18nc("@label", "Cursor feedback:")
-                text: i18nc("@option:radio No cursor feedback when launching apps", "None")
+                Kirigami.FormData.label: i18nc("@label", "Pointer feedback:")
+                text: i18nc("@option:radio No pointer feedback when launching apps", "None")
                 checked: !kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
                 enabled: !formLayout.cursorImmutable
                 QQC2.ButtonGroup.group: busyCursorGroup

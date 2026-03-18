@@ -6,11 +6,11 @@
   <kcfgfile name="kcminputrc" />
   <group name="Mouse">
     <entry name="cursorTheme" type="String">
-      <label>Name of the current cursor theme</label>
+      <label>Name of the current pointer theme</label>
       <default>default</default>
     </entry>
     <entry name="cursorSize" type="Int">
-      <label>Current cursor size</label>
+      <label>Current pointer size</label>
       <default>24</default>
     </entry>
   </group>
