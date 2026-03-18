@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-03-13 14:11+0100\n"
+"PO-Revision-Date: 2026-03-17 10:58+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -412,6 +412,9 @@ msgid ""
 "in some applications. If you would like your system to use American English, "
 "remove all other languages."
 msgstr ""
+"Umístění americké angličtiny nad všechny jazyky způsobí nežádoucí chování v "
+"některých aplikacích. Pokud chcete systém používat v americké angličtině, "
+"odstraňte všechny ostatní jazyky."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
