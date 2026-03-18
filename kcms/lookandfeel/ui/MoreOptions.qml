@@ -73,7 +73,7 @@ ColumnLayout {
                     { text: i18n("Window Decoration Size"), flag: Private.LookandFeelManager.BorderSize },
                     { text: i18n("Icons"), flag: Private.LookandFeelManager.Icons },
                     { text: i18n("Plasma Style"), flag: Private.LookandFeelManager.PlasmaTheme },
-                    { text: i18n("Cursors"), flag: Private.LookandFeelManager.Cursors },
+                    { text: i18n("Pointers"), flag: Private.LookandFeelManager.Cursors },
                     { text: i18n("Fonts"), flag: Private.LookandFeelManager.Fonts },
                     { text: i18n("Task Switcher"), flag: Private.LookandFeelManager.WindowSwitcher },
                     { text: i18n("Splash Screen"), flag: Private.LookandFeelManager.SplashScreen },
