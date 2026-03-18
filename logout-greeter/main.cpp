@@ -14,6 +14,7 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QLibraryInfo>
+#include <QOpenGLContext>
 #include <QQuickWindow>
 #include <QSurfaceFormat>
 
@@ -23,6 +24,12 @@
 #include <sessionmanagement.h>
 
 using namespace Qt::StringLiterals;
+
+static bool graphicsDriverIsBroken()
+{
+    QOpenGLContext context;
+    return !context.create();
+}
 
 int main(int argc, char *argv[])
 {
@@ -34,6 +41,11 @@ int main(int argc, char *argv[])
 
     QQuickWindow::setDefaultAlphaBuffer(true);
     QGuiApplication app(argc, argv);
+
+    if (graphicsDriverIsBroken()) {
+        qCWarning(LOGOUT_GREETER) << "Graphics driver is broken, falling back to software rendering";
+        QQuickWindow::setGraphicsApi(QSGRendererInterface::Software);
+    }
 
     bool windowed = false;
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), u"KDE"_s);
