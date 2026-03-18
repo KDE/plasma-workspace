@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -413,7 +413,39 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Временске зоне"
 
-#: main.qml:160
+#: main.qml:82
+#, kde-format
+msgctxt "@info offset from current time"
+msgid " • %1 hour later"
+msgid_plural " • %1 hours later"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: main.qml:84
+#, kde-format
+msgctxt "@info offset from current time in hours and minutes"
+msgid " • %1:%2 later"
+msgstr ""
+
+#: main.qml:88
+#, kde-format
+msgctxt "@info offset from current time"
+msgid " • %1 hour earlier"
+msgid_plural " • %1 hours earlier"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: main.qml:90
+#, kde-format
+msgctxt "@info offset from current time in hours and minutes"
+msgid " • %1:%2 earlier"
+msgstr ""
+
+#: main.qml:185
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
@@ -443,14 +475,14 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr ""
 
-#: plugin/timezonemodel.cpp:146
+#: plugin/timezonemodel.cpp:151
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "локално"
 
 # >> @option:check
-#: plugin/timezonemodel.cpp:148
+#: plugin/timezonemodel.cpp:153
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
 msgid "System's local time zone"

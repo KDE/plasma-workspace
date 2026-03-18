@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2026-03-13 14:18+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -395,7 +395,37 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Vyberte časové pásmo"
 
-#: main.qml:160
+#: main.qml:82
+#, kde-format
+msgctxt "@info offset from current time"
+msgid " • %1 hour later"
+msgid_plural " • %1 hours later"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: main.qml:84
+#, kde-format
+msgctxt "@info offset from current time in hours and minutes"
+msgid " • %1:%2 later"
+msgstr ""
+
+#: main.qml:88
+#, kde-format
+msgctxt "@info offset from current time"
+msgid " • %1 hour earlier"
+msgid_plural " • %1 hours earlier"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: main.qml:90
+#, kde-format
+msgctxt "@info offset from current time in hours and minutes"
+msgid " • %1:%2 earlier"
+msgstr ""
+
+#: main.qml:185
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Zkopírovat do schránky"
@@ -426,13 +456,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Juliánský datum)"
 
-#: plugin/timezonemodel.cpp:146
+#: plugin/timezonemodel.cpp:151
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "Místní"
 
-#: plugin/timezonemodel.cpp:148
+#: plugin/timezonemodel.cpp:153
 #, kde-format
 msgid "System's local time zone"
 msgstr "Systémové místní časové pásmo"

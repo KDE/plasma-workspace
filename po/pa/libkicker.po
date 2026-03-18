@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2024-10-25 23:31-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -43,7 +43,7 @@ msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਵਿੱਚ ਟੰਗੋ"
 msgid "Add to Panel (Widget)"
 msgstr "ਪੈਨਲ ਵਿੱਚ ਜੋੜੋ (ਵਿਦਜੈੱਟ)"
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, kde-format
 msgid "Recent Files"
 msgstr "ਤਾਜ਼ਾ ਫ਼ਾਇਲਾਂ"
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr "ਕੰਪਿਊਟਰ"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "ਪਸੰਦੀਦਾ"
@@ -168,32 +168,32 @@ msgstr "ਸਾਰੀਆਂ ਫਾਇਲ ਭੁਲਾਓ"
 msgid "All Applications"
 msgstr "ਸਭ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 ਨੂੰ ਲੁਕਾਓ"
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "ਇਹ ਦਿਖਾਈ ਨਹੀਂ ਦੇਵੇਗਾ! ਛੱਡੋ ਪਰ੍ਹਾ"
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, kde-format
 msgid "Often Used Files"
 msgstr "ਅਕਸਰ ਵਰਤੀਆਂ ਫਾਇਲ"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Recent Applications"
 msgstr "ਤਾਜ਼ਾ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Often Used Applications"
 msgstr "ਅਕਸਰ ਵਰਤੇ ਗਏ ਐਪਲੀਕੇਸ਼ਨ"
 
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, kde-format
 msgid "Power / Session"
 msgstr "ਪਾਵਰ / ਸ਼ੈਸ਼ਨ"

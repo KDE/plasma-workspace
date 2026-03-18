@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2026-02-09 18:15-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "ۋەزىپە باشقۇرغۇچقا مىخلا"
 msgid "Add to Panel (Widget)"
 msgstr "كۆزنەكچىگە قوش (ئەپچە)"
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, kde-format
 msgid "Recent Files"
 msgstr "يېقىنقى ھۆججەت"
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr "كومپيۇتېر"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "يىغقۇچ"
@@ -168,32 +168,32 @@ msgstr "ھەممە ھۆججەتنى ئۇنتۇ"
 msgid "All Applications"
 msgstr "بارلىق پىروگرامما"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 نى يوشۇر"
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "بۇنى كۆرۈنمەسلىكى كېرەك! KICKER_FAVORITES_MODEL نى ئىشلىتىڭ"
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, kde-format
 msgid "Often Used Files"
 msgstr "دائىم ئىشلىتىدىغان ھۆججەت"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Recent Applications"
 msgstr "يېقىنقى پىروگرامما"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Often Used Applications"
 msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
 
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, kde-format
 msgid "Power / Session"
 msgstr "توك مەنبە / جەريانچاق"

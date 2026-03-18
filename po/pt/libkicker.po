@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2021-06-08 19:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Fixar no Gestor de Tarefas"
 msgid "Add to Panel (Widget)"
 msgstr "Adicionar ao Painel (Elemento)"
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, kde-format
 msgid "Recent Files"
 msgstr "Ficheiros Recentes"
@@ -110,7 +110,7 @@ msgid "Computer"
 msgstr "Computador"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
@@ -165,32 +165,32 @@ msgstr "Esquecer Todos os Ficheiros"
 msgid "All Applications"
 msgstr "Todas as Aplicações"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "Esconder o %1"
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Isto não deveria estar visível! Use o KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, kde-format
 msgid "Often Used Files"
 msgstr "Ficheiros Usados Frequentemente"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplicações Recentes"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplicações Frequentes"
 
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, kde-format
 msgid "Power / Session"
 msgstr "Energia / Sessão"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2025-03-02 14:52+0530\n"
 "Last-Translator: Shreekant Kalwar <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "कार्यप्रबन्धकं प्रति पिन क
 msgid "Add to Panel (Widget)"
 msgstr "फलक (विजेट्) मध्ये योजयतु ."
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, kde-format
 msgid "Recent Files"
 msgstr "अद्यतनसञ्चिकाः"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "संगणक"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "प्रियाः"
@@ -169,32 +169,32 @@ msgstr "सर्वाणि सञ्चिकाः विस्मरन्�
 msgid "All Applications"
 msgstr "सर्वे अनुप्रयोगाः"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 गोपयन्तु"
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "एतत् दृश्यमानं न भवितुमर्हति! KICKER_FAVORITES_MODEL इत्यस्य उपयोगं कुर्वन्तु"
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, kde-format
 msgid "Often Used Files"
 msgstr "प्रायः प्रयुक्ताः सञ्चिकाः"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Recent Applications"
 msgstr "हाल के आवेदन"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Often Used Applications"
 msgstr "प्रायः प्रयुक्ताः अनुप्रयोगाः"
 
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, kde-format
 msgid "Power / Session"
 msgstr "शक्ति / सत्र"

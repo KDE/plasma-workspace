@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2023-01-08 09:41+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -421,7 +421,33 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Múi giờ"
 
-#: main.qml:160
+#: main.qml:82
+#, kde-format
+msgctxt "@info offset from current time"
+msgid " • %1 hour later"
+msgid_plural " • %1 hours later"
+msgstr[0] ""
+
+#: main.qml:84
+#, kde-format
+msgctxt "@info offset from current time in hours and minutes"
+msgid " • %1:%2 later"
+msgstr ""
+
+#: main.qml:88
+#, kde-format
+msgctxt "@info offset from current time"
+msgid " • %1 hour earlier"
+msgid_plural " • %1 hours earlier"
+msgstr[0] ""
+
+#: main.qml:90
+#, kde-format
+msgctxt "@info offset from current time in hours and minutes"
+msgid " • %1:%2 earlier"
+msgstr ""
+
+#: main.qml:185
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Chép vào bảng nháp"
@@ -450,13 +476,13 @@ msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
 msgstr "%1 (Ngày Julius)"
 
-#: plugin/timezonemodel.cpp:146
+#: plugin/timezonemodel.cpp:151
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
 msgstr "Địa phương"
 
-#: plugin/timezonemodel.cpp:148
+#: plugin/timezonemodel.cpp:153
 #, kde-format
 msgid "System's local time zone"
 msgstr "Múi giờ địa phương của hệ thống"

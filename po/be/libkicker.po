@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2024-11-04 22:07\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -47,7 +47,7 @@ msgstr "Замацаваць у кіраўніку задач"
 msgid "Add to Panel (Widget)"
 msgstr "Дадаць на панэль (віджэт)"
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, kde-format
 msgid "Recent Files"
 msgstr "Нядаўнія файлы"
@@ -117,7 +117,7 @@ msgid "Computer"
 msgstr "Камп'ютар"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Улюбёнае"
@@ -172,32 +172,32 @@ msgstr "Забыцца на ўсе файлы"
 msgid "All Applications"
 msgstr "Усе праграмы"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "Схаваць %1"
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Гэта мусіць быць бачна! Выкарыстоўвайце KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, kde-format
 msgid "Often Used Files"
 msgstr "Файлы, якія часта выкарыстоўваюцца"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Recent Applications"
 msgstr "Нядаўнія праграмы"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Праграмы, якія часта выкарыстоўваюцца"
 
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, kde-format
 msgid "Power / Session"
 msgstr "Сілкаванне / сеанс"

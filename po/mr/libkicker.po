@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Add to Panel (Widget)"
 msgstr "पसंत मध्ये जोडा"
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "पसंत जागा"
@@ -171,32 +171,32 @@ msgstr "दस्तऐवज विसरा"
 msgid "All Applications"
 msgstr "सर्व अनुप्रयोग"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr ""
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, fuzzy, kde-format
 msgid "Often Used Files"
 msgstr "अलिकडील दस्तऐवज"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, fuzzy, kde-format
 msgid "Recent Applications"
 msgstr "अनुप्रयोग"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, fuzzy, kde-format
 msgid "Often Used Applications"
 msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग"
 
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, fuzzy, kde-format
 msgid "Power / Session"
 msgstr "नवीन सत्र"

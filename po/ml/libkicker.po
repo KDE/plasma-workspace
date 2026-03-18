@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -44,7 +44,7 @@ msgstr "ടാസ്ക് മാനേജറിലേക്ക് പിൻ ച
 msgid "Add to Panel (Widget)"
 msgstr "പാളിയിലേക്ക് ചേര്‍ക്കുക (വിഡ്ജറ്റ്)"
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, kde-format
 msgid "Recent Files"
 msgstr "സമീപകാല ഫയലുകൾ"
@@ -116,7 +116,7 @@ msgid "Computer"
 msgstr "കമ്പ്യൂട്ടര്‍"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "പ്രിയപ്പെട്ടവ"
@@ -171,32 +171,32 @@ msgstr "എല്ലാ ഫയലുകളും മറക്കുക"
 msgid "All Applications"
 msgstr "എല്ലാ പ്രയോഗങ്ങളും"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 മറയ്ക്കുക"
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "ഇത് ദൃശ്യമാകില്ല! KICKER_FAVORITES_MODEL ഉപയോഗിക്കുക"
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, kde-format
 msgid "Often Used Files"
 msgstr "കൂടെക്കൂടെ ഉപയോഗിച്ച ഫയലുകൾ"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Recent Applications"
 msgstr "അടുത്തിടേയുള്ള പ്രയോഗങ്ങള്‍"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Often Used Applications"
 msgstr "കൂടെക്കൂടെ ഉപയോഗിച്ച പ്രയോഗങ്ങള്‍"
 
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, kde-format
 msgid "Power / Session"
 msgstr "ഊർജ്ജം / സെഷൻ"

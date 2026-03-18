@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2024.
+# SPDX-FileCopyrightText: 2024, 2026 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-11 00:49+0000\n"
-"PO-Revision-Date: 2024-04-15 15:15+0000\n"
+"PO-Revision-Date: 2026-03-17 11:19+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm_soundtheme.cpp:156
 #, kde-format
@@ -32,39 +32,39 @@ msgstr "Hljóðþema til vara frá freedesktop.org"
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Mistókst að búa til bráðabirgðaskrá."
 
 #: kcm_soundtheme.cpp:259
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
-msgstr ""
+msgstr "Ekki tókst að sækja hljóðþemusafnið: %1."
 
 #: kcm_soundtheme.cpp:270
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr ""
+msgstr "Tókst ekki að opna safnskrána."
 
 #: kcm_soundtheme.cpp:275
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Uppsetningu á þema er lokið."
+msgstr[1] "Uppsetningu á þemum er lokið."
 
 #: kcm_soundtheme.cpp:278
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
-msgstr ""
+msgstr "Safnskráin inniheldur ekki gilt hljóðþema."
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@action:button Install sound theme from file"
 msgid "Install from File…"
-msgstr ""
+msgstr "Setja upp úr skrá…"
 
 #: ui/main.qml:42
 #, kde-format
@@ -117,9 +117,9 @@ msgstr "Tókst ekki að forskoða hljóð: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
-msgstr ""
+msgstr "Veldu hljóðþema"
 
 #: ui/main.qml:250
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
-msgstr ""
+msgstr "Þemaskrár (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

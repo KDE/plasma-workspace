@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Fixar no gerenciador de tarefas"
 msgid "Add to Panel (Widget)"
 msgstr "Adicionar ao painel (widget)"
 
-#: actionlist.cpp:316 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:555
 #, kde-format
 msgid "Recent Files"
 msgstr "Arquivos recentes"
@@ -116,7 +116,7 @@ msgid "Computer"
 msgstr "Computador"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
@@ -171,27 +171,27 @@ msgstr "Esquecer todos os arquivos"
 msgid "All Applications"
 msgstr "Todos os aplicativos"
 
-#: rootmodel.cpp:131
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "Ocultar %1"
 
-#: rootmodel.cpp:525
+#: rootmodel.cpp:542
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Isto não deveria estar visível! Use KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:538
+#: rootmodel.cpp:555
 #, kde-format
 msgid "Often Used Files"
 msgstr "Arquivos usados frequentemente"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplicativos recentes"
 
-#: rootmodel.cpp:547
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplicativos frequentemente usados"
@@ -199,7 +199,7 @@ msgstr "Aplicativos frequentemente usados"
 # 'Power' foi traduzido como 'Desligar', porque trata-se de menu com os seguintes itens:
 # Bloquear, Encerrar sessão, Nova sessão, Reiniciar e Desligar.
 # A tradução como 'Energia' não fica adequada. (Alvarenga)
-#: rootmodel.cpp:562
+#: rootmodel.cpp:579
 #, kde-format
 msgid "Power / Session"
 msgstr "Desligar / Sessão"
