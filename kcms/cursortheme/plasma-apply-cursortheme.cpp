@@ -89,7 +89,7 @@ int main(int argc, char **argv)
         }
 
         if (settings->cursorTheme() == requestedTheme) {
-            ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedTheme) << Qt::endl;
+            ts << i18n("The requested theme “%1” is already set as the theme for the current Plasma session.", requestedTheme) << Qt::endl;
             // This is not an error condition, no reason to set an error code
         } else {
             auto results = model->findIndex(requestedTheme);
@@ -112,7 +112,7 @@ int main(int argc, char **argv)
                     const CursorTheme *theme = model->theme(model->index(i, 0));
                     availableThemes << theme->name();
                 }
-                ts << i18n("Could not find theme \"%1\". The theme should be one of the following options: %2",
+                ts << i18n("Could not find theme “%1”. The theme should be one of the following options: %2",
                            requestedTheme,
                            availableThemes.join(QLatin1String{", "}))
                    << Qt::endl;
