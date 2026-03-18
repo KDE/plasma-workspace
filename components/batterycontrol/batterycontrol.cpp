@@ -266,7 +266,11 @@ void BatteryControlModel::deviceAdded(const QString &udi)
         return;
     }
 
+    int position = m_batterySources.size();
+
     if (battery->type() == Solid::Battery::PrimaryBattery) {
+        position = m_internalBatteries.size();
+
         m_internalBatteries.append(udi);
 
         m_hasInternalBatteries = true;
@@ -289,8 +293,6 @@ void BatteryControlModel::deviceAdded(const QString &udi)
     connect(battery, &Solid::Battery::powerSupplyStateChanged, this, &BatteryControlModel::updateBatteryPowerSupplyState);
     connect(battery, &Solid::Battery::capacityChanged, this, &BatteryControlModel::updateBatteryCapacity);
 
-    int position = m_batterySources.size();
-
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Position for battery with udi : " << udi << "initialized : " << position;
 
     m_batteryPositions[udi] = position;
@@ -298,7 +300,13 @@ void BatteryControlModel::deviceAdded(const QString &udi)
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Update Battery Position. Udi: " << udi << "Position: " << m_batteryPositions[udi];
 
     beginInsertRows(QModelIndex(), position, position);
-    m_batterySources.append(udi);
+
+    m_batterySources.insert(position, udi);
+
+    for (int newPosition = position + 1; newPosition < m_batterySources.size(); ++newPosition) {
+        m_batteryPositions[m_batterySources[newPosition]] = newPosition;
+    }
+
     endInsertRows();
 
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Battery with udi: " << udi << " is added";
