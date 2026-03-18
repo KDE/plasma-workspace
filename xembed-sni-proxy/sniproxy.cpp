@@ -14,6 +14,7 @@
 #include <xcb/xcb_event.h>
 #include <xcb/xcb_icccm.h>
 
+#include <QDBusPendingCallWatcher>
 #include <QScreen>
 #include <QTimer>
 
@@ -93,6 +94,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     // there is an undocumented feature that you can register an SNI by path, however it doesn't detect an object on a service being removed, only the entire
     // service closing instead lets use one DBus connection per SNI
     m_dbus(QDBusConnection::connectToBus(QDBusConnection::SessionBus, QStringLiteral("XembedSniProxy%1").arg(s_serviceCount++)))
+    , m_dbusWatcher(QStringLiteral(SNI_WATCHER_SERVICE_NAME), m_dbus, QDBusServiceWatcher::WatchForRegistration, this)
     , m_x11Interface(qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
     , m_windowId(wid)
     , m_injectMode(Direct)
@@ -101,13 +103,8 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     new StatusNotifierItemAdaptor(this);
     m_dbus.registerObject(QStringLiteral("/StatusNotifierItem"), this);
 
-    auto statusNotifierWatcher =
-        new org::kde::StatusNotifierWatcher(QStringLiteral(SNI_WATCHER_SERVICE_NAME), QStringLiteral(SNI_WATCHER_PATH), QDBusConnection::sessionBus(), this);
-    auto reply = statusNotifierWatcher->RegisterStatusNotifierItem(m_dbus.baseService());
-    reply.waitForFinished();
-    if (reply.isError()) {
-        qCWarning(SNIPROXY) << "could not register SNI:" << reply.error().message();
-    }
+    registerNotifierItem();
+    QObject::connect(&m_dbusWatcher, &QDBusServiceWatcher::serviceRegistered, this, &SNIProxy::watcherServiceRegistered);
 
     auto c = m_x11Interface->connection();
 
@@ -457,6 +454,27 @@ void SNIProxy::setActiveForInput(bool active) const
         const uint32_t stackData[] = {XCB_STACK_MODE_BELOW};
         xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
     }
+}
+
+void SNIProxy::registerNotifierItem()
+{
+    auto statusNotifierWatcher =
+        org::kde::StatusNotifierWatcher(QStringLiteral(SNI_WATCHER_SERVICE_NAME), QStringLiteral(SNI_WATCHER_PATH), QDBusConnection::sessionBus(), this);
+    auto reply = statusNotifierWatcher.RegisterStatusNotifierItem(m_dbus.baseService());
+    auto replyWatcher = new QDBusPendingCallWatcher(reply, this);
+    QObject::connect(replyWatcher, &QDBusPendingCallWatcher::finished, [](QDBusPendingCallWatcher *call) {
+        if (call->isError()) {
+            qCWarning(SNIPROXY) << "could not register SNI:" << call->error().message();
+        }
+        call->deleteLater();
+    });
+}
+
+void SNIProxy::watcherServiceRegistered(const QString &serviceName)
+{
+    Q_UNUSED(serviceName);
+
+    registerNotifierItem();
 }
 
 //____________properties__________
