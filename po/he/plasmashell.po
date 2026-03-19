@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-04 00:47+0000\n"
+"POT-Creation-Date: 2026-03-19 00:48+0000\n"
 "PO-Revision-Date: 2025-10-05 09:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -35,103 +35,103 @@ msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 msgid "Configure Mouse Actions Plugin"
 msgstr "הגדרת תוסף פעולות עכבר"
 
-#: desktopview.cpp:223
+#: desktopview.cpp:213
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "פלזמה 6.0 למפתחים מבית KDE‏"
 
-#: desktopview.cpp:226
+#: desktopview.cpp:216
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "פלזמה 6.0 אלפא מבית KDE‏"
 
-#: desktopview.cpp:229
+#: desktopview.cpp:219
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "פלזמה 6.0 בטא 1 מבית KDE‏"
 
-#: desktopview.cpp:232
+#: desktopview.cpp:222
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "פלזמה 6.0 בטא 2 מבית KDE‏"
 
-#: desktopview.cpp:235
+#: desktopview.cpp:225
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "פלזמה 6.0 מועמדת ראשונה להפצה מבית KDE‏"
 
-#: desktopview.cpp:238
+#: desktopview.cpp:228
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "פלזמה 6.0 מועמדת שנייה להפצה מבית KDE‏"
 
-#: desktopview.cpp:264
+#: desktopview.cpp:254
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "פלזמה מבית KDE‏ %1 למפתחים"
 
-#: desktopview.cpp:268
+#: desktopview.cpp:258
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "פלזמה מבית KDE‏ %1 בטא"
 
-#: desktopview.cpp:271
+#: desktopview.cpp:261
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "פלזמה מבית KDE‏ %1 בטא %2"
 
-#: desktopview.cpp:275
+#: desktopview.cpp:265
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "פלזמה מבית KDE‏ %1"
 
-#: desktopview.cpp:281
+#: desktopview.cpp:271
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "נא לפנות אל bugs.kde.org כדי לדווח על תקלות"
 
-#: desktopview.cpp:289
+#: desktopview.cpp:279
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
 msgstr "העתקת גרסת פלזמה"
 
-#: desktopview.cpp:295
+#: desktopview.cpp:285
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
 msgstr "דיווח על תקלה…"
 
-#: desktopview.cpp:305
+#: desktopview.cpp:295
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
 msgstr "הסתרת כרזת תצוגה מקדימה"
 
-#: desktopview.cpp:307
+#: desktopview.cpp:297
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
 msgstr "הסתרה עד הפעלה מחדש"
 
-#: desktopview.cpp:314
+#: desktopview.cpp:304
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
 msgstr "הסתרה לצמיתות"
 
-#: desktopview.cpp:320
+#: desktopview.cpp:310
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,18 +144,18 @@ msgstr ""
 "ידי הסרת השורה שמתחילה ב־<icode>ShowDesktopPreviewBanner</icode> בקובץ "
 "ההגדרות <filename>kdeglobals</filename>."
 
-#: desktopview.cpp:322
+#: desktopview.cpp:312
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "להסתיר את כרזת התצוגה המקדימה?"
 
-#: desktopview.cpp:557 desktopview.cpp:573
+#: desktopview.cpp:543 desktopview.cpp:559
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "כניסה למצב עריכה"
 
-#: desktopview.cpp:571
+#: desktopview.cpp:557
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "יציאה ממצב עריכה"

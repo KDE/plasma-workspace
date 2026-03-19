@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-18 00:47+0000\n"
-"PO-Revision-Date: 2025-05-31 07:37+0300\n"
+"PO-Revision-Date: 2026-03-18 12:43+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -402,32 +402,32 @@ msgstr "Виберіть часовий пояс"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " • на %1 годину пізніше"
+msgstr[1] " • на %1 години пізніше"
+msgstr[2] " • на %1 годин пізніше"
+msgstr[3] " • на %1 годину пізніше"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • на %1:%2 пізніше"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " • на %1 годину раніше"
+msgstr[1] " • на %1 години раніше"
+msgstr[2] " • на %1 годин раніше"
+msgstr[3] " • на %1 годину раніше"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • на %1:%2 раніше"
 
 #: main.qml:185
 #, kde-format

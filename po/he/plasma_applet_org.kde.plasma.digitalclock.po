@@ -3,13 +3,13 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-18 00:47+0000\n"
-"PO-Revision-Date: 2025-05-31 07:24+0300\n"
+"PO-Revision-Date: 2026-03-18 16:20+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: CalendarView.qml:149
 #, kde-format
@@ -397,32 +397,32 @@ msgstr "בחירת אזור זמן"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " • שעה לאחר מכן"
+msgstr[1] " • שעתיים לאחר מכן"
+msgstr[2] " • %1 שעות לאחר מכן"
+msgstr[3] " • %1 שעות לאחר מכן"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 לאחר מכן"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " • שעה לפני כן"
+msgstr[1] " • שעתיים לפני כן"
+msgstr[2] " • %1 שעות לפני כן"
+msgstr[3] " • %1 שעות לפני כן"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 לפני כן"
 
 #: main.qml:185
 #, kde-format

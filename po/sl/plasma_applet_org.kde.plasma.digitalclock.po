@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-18 00:47+0000\n"
-"PO-Revision-Date: 2025-05-31 21:57+0200\n"
+"PO-Revision-Date: 2026-03-18 07:16+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: CalendarView.qml:149
 #, kde-format
@@ -402,32 +402,32 @@ msgstr "Izberi časovni pas"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " • %1 ur kasneje"
+msgstr[1] " • %1 uro kasneje"
+msgstr[2] " • %1 uri kasneje"
+msgstr[3] " • %1 ure kasneje"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 kasneje"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] " • %1 ur prej"
+msgstr[1] " • %1 uro prej"
+msgstr[2] " • %1 uri prej"
+msgstr[3] " • %1 ure prej"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr "• %1:%2 prej"
 
 #: main.qml:185
 #, kde-format

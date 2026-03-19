@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-18 00:47+0000\n"
-"PO-Revision-Date: 2025-05-31 03:30+0200\n"
+"PO-Revision-Date: 2026-03-18 03:09+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.9\n"
 
 #: CalendarView.qml:149
 #, kde-format
@@ -399,28 +399,28 @@ msgstr "აირჩიეთ დროის სარტყელი"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " • %1 საათის შემდეგ"
+msgstr[1] " • %1 საათის შემდეგ"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2-ის შემდეგ"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " • %1 საათით ადრე"
+msgstr[1] " • %1 საათით ადრე"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2-ით ადრე"
 
 #: main.qml:185
 #, kde-format

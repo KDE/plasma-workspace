@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
+# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Sergiu Bivol <sergiu@cip.md>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-18 00:47+0000\n"
-"PO-Revision-Date: 2025-10-05 00:20+0100\n"
+"PO-Revision-Date: 2026-03-18 21:25+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: CalendarView.qml:149
 #, kde-format
@@ -397,30 +397,30 @@ msgstr "Alege fusul orar"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • peste %1 oră"
+msgstr[1] " • peste %1 ore"
+msgstr[2] " • peste %1 de ore"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • peste %1:%2"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • acum %1 oră"
+msgstr[1] " • acum %1 ore"
+msgstr[2] " • acum %1 de ore"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • acum %1:%2"
 
 #: main.qml:185
 #, kde-format

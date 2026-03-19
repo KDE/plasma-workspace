@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-07 00:46+0000\n"
-"PO-Revision-Date: 2026-02-05 15:25+0000\n"
+"PO-Revision-Date: 2026-03-16 16:18+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -688,6 +688,7 @@ msgstr ""
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
 msgstr ""
+"Această schemă e doar pentru citire. Salvați modificările cu altă denumire."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format

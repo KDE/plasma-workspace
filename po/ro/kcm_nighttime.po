@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:48+0000\n"
-"PO-Revision-Date: 2026-01-29 01:23+0000\n"
+"PO-Revision-Date: 2026-03-16 16:19+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -49,7 +49,7 @@ msgstr "În baza amplasării dispozitivului"
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
-msgstr "Folosind ore personalizare"
+msgstr "Folosind ore personalizate"
 
 #: ui/main.qml:60
 #, kde-format

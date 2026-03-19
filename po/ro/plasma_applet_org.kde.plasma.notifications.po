@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-01-28 20:36+0000\n"
+"PO-Revision-Date: 2026-03-18 21:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -119,40 +119,31 @@ msgid "%2 of %1"
 msgstr "%2 din %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 din %1 fișier"
-msgstr[1] "%2 din %1 fișiere"
-msgstr[2] "%2 din %1 de fișiere"
+msgstr[0] "%3 din %2 fișier"
+msgstr[1] "%3 din %2 fișiere"
+msgstr[2] "%3 din %2 de fișiere"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 din %1 dosar"
-msgstr[1] "%2 din %1 dosare"
-msgstr[2] "%2 din %1 de dosare"
+msgstr[0] "%3 din %2 dosar"
+msgstr[1] "%3 din %2 dosare"
+msgstr[2] "%3 din %2 de dosare"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 din %1 element"
-msgstr[1] "%2 din %1 elemente"
-msgstr[2] "%2 din %1 de elemente"
+msgstr[0] "%3 din %2 element"
+msgstr[1] "%3 din %2 elemente"
+msgstr[2] "%3 din %2 de elemente"
 
 #: components/JobDetails.qml:137
 #, kde-format
