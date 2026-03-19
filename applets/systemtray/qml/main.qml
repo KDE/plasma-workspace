@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2011 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2020 Konrad Materka <materka@gmail.com>
+    SPDX-FileCopyrightText: 2026 Nathaniel Krebs <areyoufeelingitnowmrkrebs@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -20,11 +21,12 @@ ContainmentItem {
     id: root
 
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
+    readonly property bool reverseLayout: Plasmoid.configuration.reverseIconOrder
 
     Layout.minimumWidth: vertical ? Kirigami.Units.iconSizes.small : mainLayout.implicitWidth + Kirigami.Units.smallSpacing
     Layout.minimumHeight: vertical ? mainLayout.implicitHeight + Kirigami.Units.smallSpacing : Kirigami.Units.iconSizes.small
 
-    LayoutMirroring.enabled: !vertical && Application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: !vertical && ((Application.layoutDirection === Qt.RightToLeft) !== reverseLayout)
     LayoutMirroring.childrenInherit: true
 
     readonly property alias systemTrayState: systemTrayState
@@ -176,10 +178,16 @@ ContainmentItem {
             GridView {
                 id: tasksGrid
 
+                Layout.row: root.vertical && root.reverseLayout ? 1 : 0 // Explicitly define grid coordinates
+                Layout.column: 0                                        // to prevent overlapping
+
                 Layout.alignment: Qt.AlignCenter
 
                 interactive: false //disable features we don't need
                 flow: root.vertical ? GridView.LeftToRight : GridView.TopToBottom
+
+                // Tell the grid to populate bottom-to-top when flipped on a vertical panel
+                verticalLayoutDirection: (root.vertical && root.reverseLayout) ? GridView.BottomToTop : GridView.TopToBottom
 
                 // The icon size to display when not using the auto-scaling setting
                 readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
@@ -250,6 +258,10 @@ ContainmentItem {
 
             ExpanderArrow {
                 id: expander
+
+                Layout.row: root.vertical && !root.reverseLayout ? 1 : 0 // Explicitly define grid coordinates
+                Layout.column: root.vertical ? 0 : 1                     // to prevent overlapping
+
                 Layout.fillWidth: vertical
                 Layout.fillHeight: !vertical
                 Layout.alignment: vertical ? Qt.AlignVCenter : Qt.AlignHCenter

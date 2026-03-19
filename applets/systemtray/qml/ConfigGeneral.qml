@@ -5,6 +5,7 @@
     SPDX-FileCopyrightText: 2022 ivan (@ratijas) tkachenko <me@ratijas.tk>
     SPDX-FileCopyrightText: 2025 Kristen McWilliam <kristen@kde.org>
     SPDX-FileCopyrightText: 2025 Nate Graham <nate@kde.org>
+    SPDX-FileCopyrightText: 2026 Nathaniel Krebs <areyoufeelingitnowmrkrebs@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -30,6 +31,7 @@ KCMUtils.ScrollViewKCM {
 
     property bool cfg_scaleIconsToFit
     property int cfg_iconSpacing
+    property bool cfg_reverseIconOrder
     property bool cfg_showAllItems
     property list<string> cfg_shownItems: []
     property list<string> cfg_hiddenItems: []
@@ -199,7 +201,7 @@ KCMUtils.ScrollViewKCM {
         Kirigami.FormLayout {
             id: formLayout
 
-            readonly property int maxComboboxWidth: Math.max(sizeChooser.implicitWidth, spacingChooser.implicitWidth)
+            readonly property int maxComboboxWidth: Math.max(sizeChooser.implicitWidth, spacingChooser.implicitWidth, layoutChooser.implicitWidth)
 
             QQC2.ComboBox {
                 id: sizeChooser
@@ -208,11 +210,11 @@ KCMUtils.ScrollViewKCM {
                     ? i18nc("@item:inlistbox Icon size", "Scale with Panel height")
                     : i18nc("@item:inlistbox Icon size", "Scale with Panel width")
 
-                Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon size:")
+                Kirigami.FormData.label: i18nc("@label:listbox Whether the system tray icons in the Panel always stay small or scale with the Panel's size", "Panel icon size:")
                 Layout.preferredWidth: formLayout.maxComboboxWidth
                 model: [
                     {
-                        "label": i18nc("@item:inlistbox Icon spacing", "Small"),
+                        "label": i18nc("@item:inlistbox Icon size", "Small"),
                         "size": "small"
                     },
                     {
@@ -249,7 +251,7 @@ KCMUtils.ScrollViewKCM {
             QQC2.ComboBox {
                 id: spacingChooser
 
-                Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon spacing:")
+                Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Spacing:")
                 Layout.preferredWidth: formLayout.maxComboboxWidth
                 model: [
                     {
@@ -284,6 +286,46 @@ KCMUtils.ScrollViewKCM {
                     iconsPage.cfg_iconSpacing = model[currentIndex]["spacing"];
                 }
             }
+
+            QQC2.ComboBox {
+                id: layoutChooser
+
+                Kirigami.FormData.label: i18nc("@label:listbox Which direction system tray icons in the Panel emerge from the expander arrow", "Direction:")
+                Layout.preferredWidth: formLayout.maxComboboxWidth
+
+                textRole: "text"
+                valueRole: "value"
+
+                // Evaluate current system state for dynamic labels
+                readonly property bool isRtl: Qt.application.layoutDirection === Qt.RightToLeft
+                readonly property bool isVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
+
+                model: {
+                    if (isVertical) {
+                        // Vertical default is arrow at bottom, expanding upwards
+                        return [
+                            { "text": i18n("Bottom-to-top"), "value": false },
+                            { "text": i18n("Top-to-bottom"), "value": true }
+                        ];
+                    } else if (isRtl) {
+                        // RTL default is arrow on left, expanding to the right
+                        return [
+                            { "text": i18n("Left-to-right"), "value": false },
+                            { "text": i18n("Right-to-left"), "value": true }
+                        ];
+                    } else {
+                        // Standard LTR default is arrow on right, expanding to the left
+                        return [
+                            { "text": i18n("Right-to-left"), "value": false },
+                            { "text": i18n("Left-to-right"), "value": true }
+                        ];
+                    }
+                }
+
+                currentIndex: iconsPage.cfg_reverseIconOrder ? 1 : 0
+                onActivated: iconsPage.cfg_reverseIconOrder = currentValue;
+            }
+
             QQC2.Label {
                 visible: Kirigami.Settings.tabletMode
                 text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
