@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2025-11-22 22:26+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -376,8 +376,8 @@ msgstr "Plasma stílus"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Kurzorok"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -454,6 +454,9 @@ msgstr "Alkalmazni kívántak kiválasztása…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Kevesebb lehetőség megjelenítése…"
+
+#~ msgid "Cursors"
+#~ msgstr "Kurzorok"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 17:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -372,8 +372,8 @@ msgstr "பிளாஸ்மா தோற்றத்திட்டம்"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "சுட்டிக்குறிகள்"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -449,6 +449,9 @@ msgstr "செயல்படுத்தவேண்டியவை…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "குறைவான விருப்பங்களையே காட்டு…"
+
+#~ msgid "Cursors"
+#~ msgstr "சுட்டிக்குறிகள்"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

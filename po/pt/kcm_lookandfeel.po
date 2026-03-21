@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2023-01-22 22:38+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -375,8 +375,8 @@ msgstr "Estilo do Plasma"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Cursores"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -454,6 +454,9 @@ msgstr "Escolher o que aplicar…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostrar menos opções…"
+
+#~ msgid "Cursors"
+#~ msgstr "Cursores"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

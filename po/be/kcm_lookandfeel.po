@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -380,8 +380,8 @@ msgstr "Стыль Plasma"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Курсоры"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -458,6 +458,9 @@ msgstr "Абраць, што ўжываць…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Паказаць менш параметраў…"
+
+#~ msgid "Cursors"
+#~ msgstr "Курсоры"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-20 00:45+0000\n"
-"PO-Revision-Date: 2025-12-04 04:18+0100\n"
+"PO-Revision-Date: 2026-03-20 03:40+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -141,9 +141,7 @@ msgid "Scale with Panel width"
 msgstr "გადიდება პანელის სიგანესთან ერთად"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -151,8 +149,7 @@ msgid "Panel icon size:"
 msgstr "პანელის ხატულების ზომა:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "პატარა"
@@ -166,7 +163,7 @@ msgstr "შეხების რეჟიმში ავტომატურ�
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "დაშორება:"
 
 #: qml/ConfigGeneral.qml:258
 #, kde-format
@@ -187,33 +184,32 @@ msgid "Large"
 msgstr "დიდი"
 
 #: qml/ConfigGeneral.qml:293
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "მეტი ქმედება"
+msgstr "მიმართულება:"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "ქვემოდან ზემოთ"
 
 #: qml/ConfigGeneral.qml:308
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "ზემოდან ქვემოთ"
 
 #: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "მარცხნიდან მარჯვნივ"
 
 #: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "მარჯვნიდან მარცხნივ"
 
 #: qml/ConfigGeneral.qml:331
 #, kde-format

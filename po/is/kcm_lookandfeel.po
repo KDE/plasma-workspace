@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-01-09 09:04+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -377,8 +377,8 @@ msgstr "Stíll Plasma"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Bendlar"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -454,6 +454,9 @@ msgstr "Veldu það sem á að virkja..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Birta færri valkosti..."
+
+#~ msgid "Cursors"
+#~ msgstr "Bendlar"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

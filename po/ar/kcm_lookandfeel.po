@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-01-08 12:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -377,8 +377,8 @@ msgstr "نمط بلازما"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "المؤشرات"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -454,6 +454,9 @@ msgstr "اختر ماذا تريد أن تطبق..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "اعرض خيارات أقل…"
+
+#~ msgid "Cursors"
+#~ msgstr "المؤشرات"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

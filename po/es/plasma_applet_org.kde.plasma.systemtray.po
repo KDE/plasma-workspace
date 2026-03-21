@@ -1,14 +1,14 @@
 # Spanish translations for plasma_applet_org.kde.plasma.systemtray.po package.
-# Copyright (C) 2013-2025 This file is copyright:
+# Copyright (C) 2013-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-20 00:45+0000\n"
-"PO-Revision-Date: 2025-12-04 11:37+0100\n"
+"PO-Revision-Date: 2026-03-21 01:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -142,9 +142,7 @@ msgid "Scale with Panel width"
 msgstr "Escalar a la anchura del panel"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -152,9 +150,7 @@ msgid "Panel icon size:"
 msgstr "Tamaño de los iconos del panel:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Icon spacing"
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Pequeño"
@@ -168,7 +164,7 @@ msgstr "Activado automáticamente en el modo táctil"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Espaciado:"
 
 #: qml/ConfigGeneral.qml:258
 #, kde-format
@@ -189,33 +185,32 @@ msgid "Large"
 msgstr "Grande"
 
 #: qml/ConfigGeneral.qml:293
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Más acciones"
+msgstr "Dirección:"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "De abajo a arriba"
 
 #: qml/ConfigGeneral.qml:308
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "De arriba a abajo"
 
 #: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "De izquierda a derecha"
 
 #: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "De derecha a izquierda"
 
 #: qml/ConfigGeneral.qml:331
 #, kde-format
@@ -284,7 +279,3 @@ msgstr "Cuadrícula con %1 elementos en %2 columnas"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#~ msgid "Panel icon spacing:"
-#~ msgstr "Espacio entre los iconos del panel:"

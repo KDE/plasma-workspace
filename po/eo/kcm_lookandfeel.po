@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2024-07-27 14:20+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -374,8 +374,8 @@ msgstr "Plasma Stilo"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Kurseroj"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -452,6 +452,9 @@ msgstr "Elektu kion apliki…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Montri malpli da ebloj…"
+
+#~ msgid "Cursors"
+#~ msgstr "Kurseroj"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-01-05 12:41+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -375,8 +375,8 @@ msgstr "סגנון פלזמה"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "סמני עכבר"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -452,6 +452,9 @@ msgstr "בחירה מה להחיל…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "הצגת פחות אפשרויות…"
+
+#~ msgid "Cursors"
+#~ msgstr "סמני עכבר"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

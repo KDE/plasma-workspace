@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-01-30 04:02+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -362,7 +362,7 @@ msgstr "Stíl Plasma"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
+msgid "Pointers"
 msgstr ""
 
 #: ui/MoreOptions.qml:77

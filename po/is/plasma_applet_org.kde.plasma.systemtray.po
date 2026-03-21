@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-20 00:45+0000\n"
-"PO-Revision-Date: 2026-03-13 15:22+0000\n"
+"PO-Revision-Date: 2026-03-20 10:47+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -142,9 +142,7 @@ msgid "Scale with Panel width"
 msgstr "Kvarða við breidd skjástiku"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -152,8 +150,7 @@ msgid "Panel icon size:"
 msgstr "Táknastærð á skjástiku:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Lítil"
@@ -167,7 +164,7 @@ msgstr "Sjálfkrafa virkjað þegar snertistilling er notuð"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Millibil:"
 
 #: qml/ConfigGeneral.qml:258
 #, kde-format
@@ -188,33 +185,32 @@ msgid "Large"
 msgstr "Stórt"
 
 #: qml/ConfigGeneral.qml:293
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Fleiri aðgerðir"
+msgstr "Stefna:"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "Neðan-og-upp"
 
 #: qml/ConfigGeneral.qml:308
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "Ofan-og-niður"
 
 #: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "Vinstri-til-hægri"
 
 #: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "Hægri-til-vinstri"
 
 #: qml/ConfigGeneral.qml:331
 #, kde-format

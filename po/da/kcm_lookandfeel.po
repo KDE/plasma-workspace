@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2025-10-31 23:09+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -378,8 +378,8 @@ msgstr "Stil for Plasma"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Markører"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -455,6 +455,9 @@ msgstr "Vælg hvad der skal anvendes..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Vis færre indstillinger..."
+
+#~ msgid "Cursors"
+#~ msgstr "Markører"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

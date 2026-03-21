@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-03-02 10:15+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -381,8 +381,8 @@ msgstr "Stilul Plasma"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Cursori"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -459,6 +459,9 @@ msgstr "Alegeți ce să fie aplicat…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Arată mai puține opțiuni…"
+
+#~ msgid "Cursors"
+#~ msgstr "Cursori"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

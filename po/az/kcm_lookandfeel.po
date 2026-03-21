@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-02-05 00:29+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -376,8 +376,8 @@ msgstr "Plasma üslubu"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "Kursorlar"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -454,6 +454,9 @@ msgstr "Necə tətbiq olunacağını seçin..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Daha az seçimləri göstərmək..."
+
+#~ msgid "Cursors"
+#~ msgstr "Kursorlar"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

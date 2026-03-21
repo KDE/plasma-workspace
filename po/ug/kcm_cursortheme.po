@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:46+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2026-02-09 18:09-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -20,14 +20,16 @@ msgstr ""
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
-#, kde-format
-msgid "Name of the current cursor theme"
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgid "Name of the current pointer theme"
 msgstr "نۆۋەتتىكى نۇر بەلگە ئۆرنەكنىڭ ئاتى"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
-#, kde-format
-msgid "Current cursor size"
+#, fuzzy, kde-format
+#| msgid "Current cursor size"
+msgid "Current pointer size"
 msgstr "نۆۋەتتىكى نۇر بەلگە چوڭلۇقى"
 
 #: kcmcursortheme.cpp:312
@@ -89,9 +91,13 @@ msgstr ""
 "ئىلتىماس قىلغان چوڭلۇقى «%1» نى ئىشلەتكىلى بولمايدۇ، ئورنىغا %2 نى ئىشلىتىدۇ."
 
 #: plasma-apply-cursortheme.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This tool allows you to set the mouse cursor theme for the current Plasma "
+#| "session, without accidentally setting it to one that is either not "
+#| "available, or which is already set."
 msgid ""
-"This tool allows you to set the mouse cursor theme for the current Plasma "
+"This tool allows you to set the mouse pointer theme for the current Plasma "
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
@@ -100,10 +106,13 @@ msgstr ""
 "ئىشلىتىلىۋاتقان لايىھە قىلىپ تەڭشەشتىن ساقلىنىدۇ."
 
 #: plasma-apply-cursortheme.cpp:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The name of the cursor theme you wish to set for your current Plasma "
+#| "session (passing a full path will only use the last part of the path)"
 msgid ""
-"The name of the cursor theme you wish to set for your current Plasma session "
-"(passing a full path will only use the last part of the path)"
+"The name of the pointer theme you wish to set for your current Plasma "
+"session (passing a full path will only use the last part of the path)"
 msgstr ""
 "نۆۋەتتىكى Plasma جەريانچاق (تولۇق يول يەتكۈزۈلسە يولنىڭ پەقەت ئاخىرقى "
 "بۆلىكىلا ئىشلىتىلىدۇ) قا تەڭشىمەكچى بولغان نۇر بەلگە ئۆرنەك ئىسمى"
@@ -124,42 +133,56 @@ msgstr ""
 "ئىشلىتىدۇ"
 
 #: plasma-apply-cursortheme.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The requested theme \"%1\" is already set as the theme for the current "
+#| "Plasma session."
 msgid ""
-"The requested theme \"%1\" is already set as the theme for the current "
-"Plasma session."
+"The requested theme “%1” is already set as the theme for the current Plasma "
+"session."
 msgstr ""
 "ئىلتىماس قىلىنغان ئۆرنەك «%1» ئاللىبۇرۇن نۆۋەتتىكى  Plasma جەريانچاقنىڭ "
 "ئۆرنىكىگە تەڭشەلگەن."
 
 #: plasma-apply-cursortheme.cpp:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Successfully applied the mouse cursor theme %1 to your current Plasma "
+#| "session"
 msgid ""
-"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+"Successfully applied the mouse pointer theme %1 to your current Plasma "
+"session"
 msgstr ""
 "چاشقىنەك نۇر بەلگە ئۆرنىكى %1 نى مۇۋەپپەقىيەتلىك ھالدا نۆۋەتتىكى Plasma "
 "جەريانچاققا قوللاندى"
 
 #: plasma-apply-cursortheme.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "You have to restart the Plasma session for your newly applied mouse "
+#| "cursor theme to display correctly."
 msgid ""
-"You have to restart the Plasma session for your newly applied mouse cursor "
+"You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
 msgstr ""
 "يېڭىدىن قوللانغان چاشقىنەك نۇر بەلگە ئۆرنەكنىڭ توغرا كۆرۈنۈشى ئۈچۈن Plasma "
 "جەريانچاقنى قايتا قوزغىتىشىڭىز كېرەك."
 
 #: plasma-apply-cursortheme.cpp:115
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not find theme \"%1\". The theme should be one of the following "
+#| "options: %2"
 msgid ""
-"Could not find theme \"%1\". The theme should be one of the following "
-"options: %2"
+"Could not find theme “%1”. The theme should be one of the following options: "
+"%2"
 msgstr ""
 "«%1» ئۆرنەكنى تاپالمىدى. ئۆرنەك تۆۋەندىكى تاللانمىدىن بىرى بولۇشى كېرەك: %2"
 
 #: plasma-apply-cursortheme.cpp:123
-#, kde-format
-msgid "You have the following mouse cursor themes on your system:"
+#, fuzzy, kde-format
+#| msgid "You have the following mouse cursor themes on your system:"
+msgid "You have the following mouse pointer themes on your system:"
 msgstr "سىستېمىڭىزدا تۆۋەندىكى چاشقىنەك نۇر بەلگە ئۆرنىكى بار:"
 
 #: plasma-apply-cursortheme.cpp:128
@@ -171,26 +194,28 @@ msgstr "(بۇ Plasma جەريانچاقنىڭ نۆۋەتتىكى ئۆرنىكى)
 #, fuzzy, kde-format
 #| msgid "Restore Cursor Theme"
 msgctxt "@info:tooltip"
-msgid "Remove cursor theme"
+msgid "Remove pointer theme"
 msgstr "نۇربەلگە ئۆرنىكىنى ئەسلىگە كەلتۈر"
 
 #: ui/Delegate.qml:50
 #, fuzzy, kde-format
 #| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active cursor theme"
+msgid "Cannot delete the active pointer theme"
 msgstr "نۆۋەتتىكى نۇر بەلگە ئۆرنەكنىڭ ئاتى"
 
 #: ui/Delegate.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgid "Cannot delete system-installed pointer themes"
+msgstr "نۆۋەتتىكى نۇر بەلگە ئۆرنەكنىڭ ئاتى"
 
 #: ui/Delegate.qml:60
-#, kde-format
-msgid "Don’t delete this cursor theme"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgid "Don’t delete this pointer theme"
+msgstr "نۆۋەتتىكى نۇر بەلگە ئۆرنەكنىڭ ئاتى"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -205,14 +230,18 @@ msgid "Configure the animations played while an application is launching."
 msgstr "پىروگرامما قوزغالغاندا قويىدىغان جانلاندۇرۇمنى سەپلەيدۇ."
 
 #: ui/LaunchFeedbackDialog.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label"
+#| msgid "Cursor feedback:"
 msgctxt "@label"
-msgid "Cursor feedback:"
+msgid "Pointer feedback:"
 msgstr "نۇربەلگە قايتۇرما ئىنكاسى:"
 
 #: ui/LaunchFeedbackDialog.qml:50
-#, kde-format
-msgctxt "@option:radio No cursor feedback when launching apps"
+#, fuzzy, kde-format
+#| msgctxt "@option:radio No cursor feedback when launching apps"
+#| msgid "None"
+msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
 msgstr "يوق"
 
@@ -285,8 +314,9 @@ msgid "Open Theme"
 msgstr "ئۆرنەك ئاچ"
 
 #: ui/main.qml:199
-#, kde-format
-msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+#, fuzzy, kde-format
+#| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "نۇر بەلگە ئۆرنەك ھۆججىتى (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:59

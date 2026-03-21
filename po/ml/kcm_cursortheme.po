@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:46+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -22,14 +22,16 @@ msgstr ""
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
-#, kde-format
-msgid "Name of the current cursor theme"
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgid "Name of the current pointer theme"
 msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
-#, kde-format
-msgid "Current cursor size"
+#, fuzzy, kde-format
+#| msgid "Current cursor size"
+msgid "Current pointer size"
 msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരൽ വലിപ്പം"
 
 #: kcmcursortheme.cpp:312
@@ -90,9 +92,13 @@ msgid "The requested size '%1' is not available, using %2 instead."
 msgstr ""
 
 #: plasma-apply-cursortheme.cpp:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This tool allows you to set the mouse cursor theme for the current Plasma "
+#| "session, without accidentally setting it to one that is either not "
+#| "available, or which is already set."
 msgid ""
-"This tool allows you to set the mouse cursor theme for the current Plasma "
+"This tool allows you to set the mouse pointer theme for the current Plasma "
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
@@ -101,10 +107,13 @@ msgstr ""
 "നിങ്ങളെ അനുവദിക്കുന്നു."
 
 #: plasma-apply-cursortheme.cpp:69
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The name of the cursor theme you wish to set for your current Plasma "
+#| "session (passing a full path will only use the last part of the path)"
 msgid ""
-"The name of the cursor theme you wish to set for your current Plasma session "
-"(passing a full path will only use the last part of the path)"
+"The name of the pointer theme you wish to set for your current Plasma "
+"session (passing a full path will only use the last part of the path)"
 msgstr ""
 "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനായി നിങ്ങൾ സജ്ജമാക്കാൻ ആഗ്രഹിക്കുന്ന ചൂണ്ടുവിരല്‍ തീമിന്റെ പേര് "
 "(ഒരു പൂർണ്ണ പാത നൽകിയാലും അതിന്റെ അവസാന ഭാഗം മാത്രമേ ഉപയോഗിക്കൂ)"
@@ -121,40 +130,54 @@ msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 
 #: plasma-apply-cursortheme.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The requested theme \"%1\" is already set as the theme for the current "
+#| "Plasma session."
 msgid ""
-"The requested theme \"%1\" is already set as the theme for the current "
-"Plasma session."
+"The requested theme “%1” is already set as the theme for the current Plasma "
+"session."
 msgstr ""
 "അഭ്യർത്ഥിച്ച പ്രമേയം \"%1\" നിലവിലെ പ്ലാസ്മ സെഷന്റെ പ്രമേയം ആയി ഇതിനകം "
 "സജ്ജീകരിച്ചിരിക്കുന്നു."
 
 #: plasma-apply-cursortheme.cpp:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Successfully applied the mouse cursor theme %1 to your current Plasma "
+#| "session"
 msgid ""
-"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+"Successfully applied the mouse pointer theme %1 to your current Plasma "
+"session"
 msgstr "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനിൽ ചൂണ്ടുവിരല്‍ പ്രമേയം %1 വിജയകരമായി പ്രയോഗിച്ചു"
 
 #: plasma-apply-cursortheme.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "You have to restart the Plasma session for your newly applied mouse "
+#| "cursor theme to display correctly."
 msgid ""
-"You have to restart the Plasma session for your newly applied mouse cursor "
+"You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
 msgstr ""
 "നിങ്ങളുടെ പുതുതായി പ്രയോഗിച്ച ചൂണ്ടുവിരല്‍ പ്രമേയം ശരിയായി പ്രദർശിപ്പിക്കുന്നതിന് നിങ്ങൾ പ്ലാസ്മ "
 "സെഷൻ പുനരാരംഭിക്കേണ്ടതുണ്ട്."
 
 #: plasma-apply-cursortheme.cpp:115
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Could not find theme \"%1\". The theme should be one of the following "
+#| "options: %2"
 msgid ""
-"Could not find theme \"%1\". The theme should be one of the following "
-"options: %2"
+"Could not find theme “%1”. The theme should be one of the following options: "
+"%2"
 msgstr ""
 "\"%1\" പ്രമേയം കണ്ടെത്താനായില്ല. പ്രമേയം ഇനിപ്പറയുന്ന ഓപ്ഷനുകളിൽ ഒന്നായിരിക്കണം: %2"
 
 #: plasma-apply-cursortheme.cpp:123
-#, kde-format
-msgid "You have the following mouse cursor themes on your system:"
+#, fuzzy, kde-format
+#| msgid "You have the following mouse cursor themes on your system:"
+msgid "You have the following mouse pointer themes on your system:"
 msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇനിപ്പറയുന്ന ചൂണ്ടുവിരല്‍ പ്രമേയങ്ങൾ ഉണ്ട്:"
 
 #: plasma-apply-cursortheme.cpp:128
@@ -166,26 +189,28 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Restore Cursor Theme"
 msgctxt "@info:tooltip"
-msgid "Remove cursor theme"
+msgid "Remove pointer theme"
 msgstr "ചൂണ്ടുവിരൽ പ്രമേയം പുനഃസ്ഥാപിക്കുക"
 
 #: ui/Delegate.qml:50
 #, fuzzy, kde-format
 #| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
-msgid "Cannot delete the active cursor theme"
+msgid "Cannot delete the active pointer theme"
 msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
 
 #: ui/Delegate.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
-msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgid "Cannot delete system-installed pointer themes"
+msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
 
 #: ui/Delegate.qml:60
-#, kde-format
-msgid "Don’t delete this cursor theme"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgid "Don’t delete this pointer theme"
+msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -200,14 +225,15 @@ msgid "Configure the animations played while an application is launching."
 msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Pointer acceleration:"
 msgctxt "@label"
-msgid "Cursor feedback:"
-msgstr ""
+msgid "Pointer feedback:"
+msgstr "മൌസ് പോയിന്ററിന്റെ ത്വരണം:"
 
 #: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
-msgctxt "@option:radio No cursor feedback when launching apps"
+msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
 msgstr ""
 
@@ -283,8 +309,9 @@ msgid "Open Theme"
 msgstr "പ്രമേയം തുറക്കുക"
 
 #: ui/main.qml:199
-#, kde-format
-msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+#, fuzzy, kde-format
+#| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ചൂണ്ടുവിരൽ പ്രമേയ ഫയലുകൾ (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:59
@@ -502,9 +529,6 @@ msgstr "(ലഭ്യമായ വലുപ്പങ്ങൾ: %1)"
 
 #~ msgid " x"
 #~ msgstr "എക്സ്"
-
-#~ msgid "Pointer acceleration:"
-#~ msgstr "മൌസ് പോയിന്ററിന്റെ ത്വരണം:"
 
 #~ msgid "Pointer threshold:"
 #~ msgstr "പോയിന്റര്‍ ത്രെഷ്ഹോള്‍ഡ്"

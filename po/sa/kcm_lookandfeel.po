@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:45+0000\n"
+"POT-Creation-Date: 2026-03-21 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -372,8 +372,8 @@ msgstr "प्लाज्मा शैली"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
-msgid "Cursors"
-msgstr "कर्सराः"
+msgid "Pointers"
+msgstr ""
 
 #: ui/MoreOptions.qml:77
 #, kde-format
@@ -450,6 +450,9 @@ msgstr "किं प्रयोक्तव्यम् इति चिनो
 #, kde-format
 msgid "Show fewer options…"
 msgstr "न्यूनानि विकल्पानि दर्शयतु..."
+
+#~ msgid "Cursors"
+#~ msgstr "कर्सराः"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

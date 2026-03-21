@@ -134,22 +134,18 @@ msgid "Scale with Panel width"
 msgstr "按面板宽度缩放"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
 msgid "Panel icon size:"
-msgstr "面板图标大小："
+msgstr ""
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Icon spacing"
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
-msgstr "小"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:246
 #, kde-format
@@ -181,13 +177,12 @@ msgid "Large"
 msgstr "大"
 
 #: qml/ConfigGeneral.qml:293
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "更多操作"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
@@ -274,7 +269,3 @@ msgstr "在 %2 列中显示 %1 个项目的网格"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#~ msgid "Panel icon spacing:"
-#~ msgstr "面板图标间距："
