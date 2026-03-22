@@ -442,6 +442,3 @@ msgstr "选择要应用的设置…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "显示更少选项…"
-
-#~ msgid "Cursors"
-#~ msgstr "光标"

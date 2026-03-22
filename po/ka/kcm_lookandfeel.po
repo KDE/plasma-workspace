@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-01-05 09:36+0100\n"
+"PO-Revision-Date: 2026-03-21 06:01+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -89,7 +89,7 @@ msgstr "Copyright 2017, Marco Martin"
 #: tool/lnftool.cpp:37
 #, kde-format
 msgid "Marco Martin"
-msgstr "მაკრო მარტინი"
+msgstr "მარკო მარტინი"
 
 #: tool/lnftool.cpp:37
 #, kde-format
@@ -375,7 +375,7 @@ msgstr "Plasma-ის სტილი"
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "მაჩვენებლები"
 
 #: ui/MoreOptions.qml:77
 #, kde-format

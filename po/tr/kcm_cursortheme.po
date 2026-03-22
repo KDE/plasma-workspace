@@ -20,29 +20,27 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-01-31 15:43+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2026-03-21 13:18+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgid "Name of the current pointer theme"
-msgstr "Geçerli imleç temasının adı"
+msgstr "Geçerli işaretçi temasının adı"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Current cursor size"
+#, kde-format
 msgid "Current pointer size"
-msgstr "Geçerli imleç boyutu"
+msgstr "Geçerli işaretçi boyutu"
 
 #: kcmcursortheme.cpp:312
 #, kde-format
@@ -104,29 +102,22 @@ msgid "The requested size '%1' is not available, using %2 instead."
 msgstr "İstenen “%1” boyutu kullanılabilir değil, yerine “%2” kullanılıyor."
 
 #: plasma-apply-cursortheme.cpp:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "This tool allows you to set the mouse cursor theme for the current Plasma "
-#| "session, without accidentally setting it to one that is either not "
-#| "available, or which is already set."
+#, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
 "Bu araç, yanlışlıkla var olmayan veya önceden ayarlanmış olana ayarlamadan, "
-"geçerli Plasma oturumu için fare imleci temasını ayarlamanıza olanak tanır."
+"geçerli Plasma oturumu için fare işaretçi temasını ayarlamanıza olanak tanır."
 
 #: plasma-apply-cursortheme.cpp:69
-#, fuzzy, kde-format
-#| msgid ""
-#| "The name of the cursor theme you wish to set for your current Plasma "
-#| "session (passing a full path will only use the last part of the path)"
+#, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
 msgstr ""
-"Geçerli Plasma oturumunuz için ayarlamak istediğiniz imleç temasının adı "
+"Geçerli Plasma oturumunuz için ayarlamak istediğiniz işaretçi temasının adı "
 "(tam bir yolu girmek, yolun yalnızca son kısmını kullanır)"
 
 #: plasma-apply-cursortheme.cpp:70
@@ -142,10 +133,7 @@ msgid "Use a specific size, rather than the theme default size"
 msgstr "Tema öntanımlı boyutu yerine belirli bir boyut kullanın"
 
 #: plasma-apply-cursortheme.cpp:92
-#, fuzzy, kde-format
-#| msgid ""
-#| "The requested theme \"%1\" is already set as the theme for the current "
-#| "Plasma session."
+#, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
@@ -154,32 +142,24 @@ msgstr ""
 "ayarlanmış."
 
 #: plasma-apply-cursortheme.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Successfully applied the mouse cursor theme %1 to your current Plasma "
-#| "session"
+#, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
-msgstr "Fare imleç teması %1, başarıyla geçerli Plasma oturumunuza uygulandı"
+msgstr ""
+"Fare işaretçi teması %1, başarıyla geçerli Plasma oturumunuza uygulandı"
 
 #: plasma-apply-cursortheme.cpp:105
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for your newly applied mouse "
-#| "cursor theme to display correctly."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
 msgstr ""
-"Yeni uygulanan fare imleci temanızın doğru şekilde görüntülenmesi için "
+"Yeni uygulanan fare işaretçisi temanızın doğru şekilde görüntülenmesi için "
 "Plasma oturumunu yeniden başlatmanız gerekir."
 
 #: plasma-apply-cursortheme.cpp:115
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not find theme \"%1\". The theme should be one of the following "
-#| "options: %2"
+#, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
@@ -187,10 +167,9 @@ msgstr ""
 "“%1” teması bulunamadı. Tema aşağıdaki seçeneklerden biri olmalıdır: %2"
 
 #: plasma-apply-cursortheme.cpp:123
-#, fuzzy, kde-format
-#| msgid "You have the following mouse cursor themes on your system:"
+#, kde-format
 msgid "You have the following mouse pointer themes on your system:"
-msgstr "Sisteminizde aşağıdaki fare imleci temaları var:"
+msgstr "Sisteminizde aşağıdaki fare işaretçisi temaları var:"
 
 #: plasma-apply-cursortheme.cpp:128
 #, kde-format
@@ -198,34 +177,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(Bu Plasma oturumu için geçerli tema)"
 
 #: ui/Delegate.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Remove cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
-msgstr "İmleç temasını kaldır"
+msgstr "İşaretçi temasını kaldır"
 
 #: ui/Delegate.qml:50
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cannot delete the active cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
-msgstr "Etkin imleç teması silinemez"
+msgstr "Etkin işaretçi teması silinemez"
 
 #: ui/Delegate.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cannot delete system-installed cursor themes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
-msgstr "Sistem ile kurulu gelen imleç temaları silinemez"
+msgstr "Sistem ile kurulu gelen işaretçi temaları silinemez"
 
 #: ui/Delegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Don’t delete this cursor theme"
+#, kde-format
 msgid "Don’t delete this pointer theme"
-msgstr "Bu imleç temasını silme"
+msgstr "Bu işaretçi temasını silme"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -240,17 +212,13 @@ msgid "Configure the animations played while an application is launching."
 msgstr "Bir uygulama başlarken oynatılan canlandırmaları yapılandır"
 
 #: ui/LaunchFeedbackDialog.qml:49
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Cursor feedback:"
+#, kde-format
 msgctxt "@label"
 msgid "Pointer feedback:"
-msgstr "İmleç geri bildirimi:"
+msgstr "İşaretçi geri bildirimi:"
 
 #: ui/LaunchFeedbackDialog.qml:50
-#, fuzzy, kde-format
-#| msgctxt "@option:radio No cursor feedback when launching apps"
-#| msgid "None"
+#, kde-format
 msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
 msgstr "Yok"
@@ -325,10 +293,9 @@ msgid "Open Theme"
 msgstr "Tema Aç"
 
 #: ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+#, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
-msgstr "İmleç teması dosyaları (*.tar.gz *.tar.bz2)"
+msgstr "İşaretçi teması dosyaları (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:59
 #, kde-format

@@ -139,13 +139,13 @@ msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "面板图标大小："
 
 #: qml/ConfigGeneral.qml:217
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
-msgstr ""
+msgstr "小"
 
 #: qml/ConfigGeneral.qml:246
 #, kde-format
@@ -156,7 +156,7 @@ msgstr "在触摸模式下自动启用"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "间距："
 
 #: qml/ConfigGeneral.qml:258
 #, kde-format
@@ -182,27 +182,27 @@ msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr ""
+msgstr "方向："
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "从下到上"
 
 #: qml/ConfigGeneral.qml:308
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "从上到下"
 
 #: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "从左到右"
 
 #: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "从右到左"
 
 #: qml/ConfigGeneral.qml:331
 #, kde-format
