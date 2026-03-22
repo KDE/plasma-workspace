@@ -137,7 +137,7 @@ msgstr "按面板宽度缩放"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "面板图标大小："
 
 #: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format

@@ -183,7 +183,7 @@ msgstr "光标动效："
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr "无"
+msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:59
 #, kde-format
