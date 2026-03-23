@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-20 00:45+0000\n"
-"PO-Revision-Date: 2026-01-10 19:45+0100\n"
+"PO-Revision-Date: 2026-03-21 11:12+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Text-Markup: kde4\n"
 
 #: qml/config.qml:13
@@ -151,9 +151,7 @@ msgid "Scale with Panel width"
 msgstr "Ajuster à la largeur du panneau"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -161,8 +159,7 @@ msgid "Panel icon size:"
 msgstr "Taille des icônes du panneau :"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Petit"
@@ -176,7 +173,7 @@ msgstr "Automatiquement activé lorsqu'en mode « Tablette »"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Espacement :"
 
 #: qml/ConfigGeneral.qml:258
 #, kde-format
@@ -197,33 +194,32 @@ msgid "Large"
 msgstr "Grand"
 
 #: qml/ConfigGeneral.qml:293
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Plus d'actions"
+msgstr "Direction : "
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "De bas en haut"
 
 #: qml/ConfigGeneral.qml:308
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "De haut en bas"
 
 #: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "De gauche à droite"
 
 #: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "De droite à gauche"
 
 #: qml/ConfigGeneral.qml:331
 #, kde-format
