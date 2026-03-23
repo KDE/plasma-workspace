@@ -56,7 +56,7 @@ KCM.SimpleKCM {
                     currentIndex: kcm.nightLightSettings.active ? kcm.nightLightSettings.mode + 1 : 0
                     model: [
                         i18nc("@item:inlistbox switching times", "Always off"),  // This is not actually a Mode, but represents Night Light being disabled
-                        i18nc("@item:inlistbox switching times", "Always on night light"),
+                        i18nc("@item:inlistbox switching times", "Always on"),
                         i18nc("@item:inlistbox switching times", "Sunrise and sunset")
                     ]
                     onCurrentIndexChanged: {
