@@ -465,6 +465,10 @@ add_subdirectory(devicenotifications)
 
 add_subdirectory(ksecretprompter)
 
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    add_subdirectory(systemdaskpassword)
+endif()
+
 ki18n_install(po)
 
 install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
