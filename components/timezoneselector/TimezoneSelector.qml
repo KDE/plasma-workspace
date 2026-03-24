@@ -15,6 +15,7 @@ import QtCore
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.workspace.timezoneselector as Workspace
 import org.kde.kirigamiaddons.components as Components
+import org.kde.kirigamiaddons.formcard as FormCard
 
 /**
  * @brief An element that shows all available timezones through a map and comboboxes, and allows you to select one.
@@ -22,6 +23,8 @@ import org.kde.kirigamiaddons.components as Components
  */
 Item {
     id: root
+
+    implicitHeight: Kirigami.Settings.isMobile ? mobileFormCard.implicitHeight : 0
 
 //BEGIN properties
     /**
@@ -102,14 +105,65 @@ Item {
             right: parent.right
         }
         text: i18ndc("plasmashellprivateplugin", "@info", "The currently selected time zone is not available for visualization on this map")
-        visible: !root.availableMapTimeZones.includes(root.selectedTimeZone) && root.selectedTimeZone
+        visible: !Kirigami.Settings.isMobile && !root.availableMapTimeZones.includes(root.selectedTimeZone) && root.selectedTimeZone
         Kirigami.OverlayZStacking.layer: Kirigami.OverlayZStacking.FullScreen
         z: Kirigami.OverlayZStacking.z
+    }
+
+    // On mobile, show stacked FormCard comboboxes without the map.
+    FormCard.FormCard {
+        id: mobileFormCard
+        visible: Kirigami.Settings.isMobile
+        width: parent.width
+
+        FormCard.FormComboBoxDelegate {
+            id: mobileRegionComboBox
+
+            property string chooseText: i18ndc("plasmashellprivateplugin", "Placeholder for empty time zone combobox selector", "Choose…")
+
+            text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
+            model: [chooseText, ...regionsModel]
+
+            Connections {
+                target: root
+                function onSelectedTimeZoneChanged() {
+                    mobileRegionComboBox.currentIndex = Math.max(mobileRegionComboBox.model.indexOf(root.split(root.selectedTimeZone)[0]), 0)
+                }
+            }
+
+            onActivated: {
+                if (mobileRegionComboBox.currentText === chooseText) return;
+                if (mobileRegionComboBox.currentText !== root.split(root.selectedTimeZone)[0]) {
+                    mobileLocationComboBox.model = root.areasByRegion[mobileRegionComboBox.currentText]
+                }
+            }
+        }
+
+        FormCard.FormComboBoxDelegate {
+            id: mobileLocationComboBox
+
+            visible: mobileRegionComboBox.currentText !== mobileRegionComboBox.chooseText
+            text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
+
+            Connections {
+                target: root
+                function onSelectedTimeZoneChanged() {
+                    let [prefix, suffix] = root.split(root.selectedTimeZone)
+                    mobileLocationComboBox.model = root.areasByRegion[prefix]
+                    mobileLocationComboBox.currentIndex = mobileLocationComboBox.model.indexOf(suffix)
+                }
+            }
+
+            onActivated: {
+                root.selectedTimeZone = root.technical(mobileRegionComboBox.currentText) + '/' + root.technical(mobileLocationComboBox.currentText)
+            }
+        }
     }
 
     MapView {
         id: view
 
+        visible: !Kirigami.Settings.isMobile
         anchors.fill: parent
 
         // HACK: to work around the Qt bug QTBUG-136711,

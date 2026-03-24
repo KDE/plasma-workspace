@@ -6,6 +6,7 @@ ecm_add_qml_module(timezoneplugin
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES
         org.kde.kirigami
+        org.kde.kirigamiaddons.formcard
 )
 
 target_sources(timezoneplugin PRIVATE
