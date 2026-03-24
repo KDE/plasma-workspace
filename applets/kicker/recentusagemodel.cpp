@@ -225,6 +225,8 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
         return i18n("Applications");
     } else if (role == Kicker::FavoriteIdRole) {
         return service->storageId();
+    } else if (role == Kicker::UrlRole) {
+        return QUrl::fromLocalFile(service->entryPath());
     } else if (role == Kicker::HasChildrenRole) {
         return false;
     } else if (role == Kicker::IsParentRole) {
