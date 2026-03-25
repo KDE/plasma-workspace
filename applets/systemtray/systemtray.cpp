@@ -555,6 +555,11 @@ void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *status
 {
     const auto source = StatusNotifierItemHost::self()->itemForService(service);
 
+    if (!source) {
+        qCWarning(SYSTEM_TRAY) << "activate: Could not find item for service" << service;
+        return;
+    }
+
     connect(
         source,
         &StatusNotifierItemSource::activateResult,
@@ -585,6 +590,11 @@ void SystemTray::secondaryActivate(const QString &service, QPoint pos)
 {
     const auto source = StatusNotifierItemHost::self()->itemForService(service);
 
+    if (!source) {
+        qCWarning(SYSTEM_TRAY) << "secondaryActivate: Could not find item for service" << service;
+        return;
+    }
+
     QWindow *window = nullptr;
     if (KWindowSystem::isPlatformX11()) {
         source->secondaryActivate(pos.x(), pos.y());
@@ -601,6 +611,11 @@ void SystemTray::secondaryActivate(const QString &service, QPoint pos)
 void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem *statusNotifierIcon)
 {
     const auto source = StatusNotifierItemHost::self()->itemForService(service);
+
+    if (!source) {
+        qCWarning(SYSTEM_TRAY) << "openContextMenu: Could not find item for service" << service;
+        return;
+    }
 
     connect(
         source,
@@ -640,6 +655,12 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
 void SystemTray::scroll(const QString &service, int delta, const QString &direction)
 {
     const auto source = StatusNotifierItemHost::self()->itemForService(service);
+
+    if (!source) {
+        qCWarning(SYSTEM_TRAY) << "scroll: Could not find item for service" << service;
+        return;
+    }
+
     source->scroll(delta, direction);
 }
 
