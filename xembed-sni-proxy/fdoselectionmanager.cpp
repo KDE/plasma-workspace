@@ -197,30 +197,5 @@ void FdoSelectionManager::onLostOwnership()
 void FdoSelectionManager::setSystemTrayVisual()
 {
     xcb_connection_t *c = m_x11Interface->connection();
-    auto screen = xcb_setup_roots_iterator(xcb_get_setup(c)).data;
-    auto trayVisual = screen->root_visual;
-    xcb_depth_iterator_t depth_iterator = xcb_screen_allowed_depths_iterator(screen);
-    xcb_depth_t *depth = nullptr;
-
-    while (depth_iterator.rem) {
-        if (depth_iterator.data->depth == 32) {
-            depth = depth_iterator.data;
-            break;
-        }
-        xcb_depth_next(&depth_iterator);
-    }
-
-    if (depth) {
-        xcb_visualtype_iterator_t visualtype_iterator = xcb_depth_visuals_iterator(depth);
-        while (visualtype_iterator.rem) {
-            xcb_visualtype_t *visualtype = visualtype_iterator.data;
-            if (visualtype->_class == XCB_VISUAL_CLASS_TRUE_COLOR) {
-                trayVisual = visualtype->visual_id;
-                break;
-            }
-            xcb_visualtype_next(&visualtype_iterator);
-        }
-    }
-
-    xcb_change_property(c, XCB_PROP_MODE_REPLACE, m_selectionOwner->ownerWindow(), Xcb::atoms->visualAtom, XCB_ATOM_VISUALID, 32, 1, &trayVisual);
+    xcb_change_property(c, XCB_PROP_MODE_REPLACE, m_selectionOwner->ownerWindow(), Xcb::atoms->visualAtom, XCB_ATOM_VISUALID, 32, 1, &Xcb::trayVisual->visualId);
 }
