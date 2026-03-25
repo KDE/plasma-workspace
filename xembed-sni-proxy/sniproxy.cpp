@@ -111,13 +111,15 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     // create a container window
     auto screen = xcb_setup_roots_iterator(xcb_get_setup(c)).data;
     m_containerWid = xcb_generate_id(c);
-    uint32_t values[3];
-    uint32_t mask = XCB_CW_BACK_PIXEL | XCB_CW_OVERRIDE_REDIRECT | XCB_CW_EVENT_MASK;
-    values[0] = screen->black_pixel; // draw a solid background so the embedded icon doesn't get garbage in it
-    values[1] = true; // bypass wM
-    values[2] = XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_REDIRECT;
+    uint32_t values[5];
+    uint32_t mask = XCB_CW_BACK_PIXEL | XCB_CW_BORDER_PIXEL | XCB_CW_OVERRIDE_REDIRECT | XCB_CW_EVENT_MASK | XCB_CW_COLORMAP;
+    values[0] = Xcb::trayVisual->blackPixel; // draw a solid background so the embedded icon doesn't get garbage in it
+    values[1] = Xcb::trayVisual->blackPixel; // required when visual is diffrent from parent
+    values[2] = true; // bypass wM
+    values[3] = XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_REDIRECT;
+    values[4] = Xcb::trayVisual->colormap; // required when visual is diffrent from parent
     xcb_create_window(c, /* connection    */
-                      XCB_COPY_FROM_PARENT, /* depth         */
+                      Xcb::trayVisual->visualDepth, /* depth         */
                       m_containerWid, /* window Id     */
                       screen->root, /* parent window */
                       0,
@@ -126,7 +128,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
                       s_embedSize, /* width, height */
                       0, /* border_width  */
                       XCB_WINDOW_CLASS_INPUT_OUTPUT, /* class         */
-                      screen->root_visual, /* visual        */
+                      Xcb::trayVisual->visualId, /* visual        */
                       mask,
                       values); /* masks         */
 
