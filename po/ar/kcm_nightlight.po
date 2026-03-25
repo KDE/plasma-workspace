@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2026-02-18 17:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -51,10 +51,12 @@ msgid "Always off"
 msgstr "دائما معطل"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "دائما على الإضاءة الليلية"
+msgid "Always on"
+msgstr "دائما معطل"
 
 #: ui/main.qml:60
 #, kde-format
@@ -97,6 +99,10 @@ msgstr "دافئ"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "حرارة الإضاءة الليلية:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "دائما على الإضاءة الليلية"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

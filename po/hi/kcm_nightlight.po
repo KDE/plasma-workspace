@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2022-03-29 20:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Always on"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
+msgid "Always on"
 msgstr "हमेशा चालू"
 
 #: ui/main.qml:60

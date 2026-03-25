@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2026-02-19 18:58+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -55,10 +55,12 @@ msgid "Always off"
 msgstr "Mereu oprită"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Mereu în lumină nocturnă"
+msgid "Always on"
+msgstr "Mereu oprită"
 
 #: ui/main.qml:60
 #, kde-format
@@ -101,6 +103,10 @@ msgstr "Caldă"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura luminii nocturne:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Mereu în lumină nocturnă"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2026-01-18 20:23+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -51,10 +51,12 @@ msgid "Always off"
 msgstr "Alltid av"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Alltid kveldsfarger"
+msgid "Always on"
+msgstr "Alltid av"
 
 #: ui/main.qml:60
 #, kde-format
@@ -97,3 +99,7 @@ msgstr "Varm"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Kveldsfarge-temperatur:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Alltid kveldsfarger"

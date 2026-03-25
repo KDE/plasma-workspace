@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2025-11-19 20:11+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -406,7 +406,7 @@ msgstr "Nepavyko įdiegti paketo %1: %2."
 msgid "Installation Failure"
 msgstr "Įdiegimo nesėkmė"
 
-#: timezoneselector/TimezoneSelector.qml:104
+#: timezoneselector/TimezoneSelector.qml:107
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -416,42 +416,45 @@ msgstr ""
 "Šiuo metu pasirinkta laiko juosta yra neprieinama atvaizdavimui šiame "
 "žemėlapyje"
 
-#: timezoneselector/TimezoneSelector.qml:194
-#, kde-format
-msgctxt "@action:button"
-msgid "Zoom in"
-msgstr "Didinti"
-
-#: timezoneselector/TimezoneSelector.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Zoom out"
-msgstr "Mažinti"
-
-#: timezoneselector/TimezoneSelector.qml:239
-#, kde-format
-msgctxt "@label:listbox In the context of time zone selection"
-msgid "Region:"
-msgstr "Regionas:"
-
-#: timezoneselector/TimezoneSelector.qml:247
+#: timezoneselector/TimezoneSelector.qml:122
+#: timezoneselector/TimezoneSelector.qml:301
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Pasirinkti…"
 
-#: timezoneselector/TimezoneSelector.qml:251
+#: timezoneselector/TimezoneSelector.qml:124
+#: timezoneselector/TimezoneSelector.qml:293
 #, kde-format
-msgid "Timezone region selector"
-msgstr "Laiko juostos regiono parinkiklis"
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Region:"
+msgstr "Regionas:"
 
-#: timezoneselector/TimezoneSelector.qml:272
+#: timezoneselector/TimezoneSelector.qml:146
+#: timezoneselector/TimezoneSelector.qml:326
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Laiko juosta:"
 
-#: timezoneselector/TimezoneSelector.qml:283
+#: timezoneselector/TimezoneSelector.qml:248
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom in"
+msgstr "Didinti"
+
+#: timezoneselector/TimezoneSelector.qml:264
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom out"
+msgstr "Mažinti"
+
+#: timezoneselector/TimezoneSelector.qml:305
+#, kde-format
+msgid "Timezone region selector"
+msgstr "Laiko juostos regiono parinkiklis"
+
+#: timezoneselector/TimezoneSelector.qml:337
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Laiko juostos vietovės parinkiklis"

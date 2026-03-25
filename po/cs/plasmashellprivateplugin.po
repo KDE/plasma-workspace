@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2026-02-27 13:01+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -403,7 +403,7 @@ msgstr "Instalace balíčku %1 selhala: %2."
 msgid "Installation Failure"
 msgstr "Chyba instalace"
 
-#: timezoneselector/TimezoneSelector.qml:104
+#: timezoneselector/TimezoneSelector.qml:107
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -411,42 +411,45 @@ msgid ""
 "map"
 msgstr "Aktuálně vybrané časové pásmo nemůže být na této mapě zobrazeno"
 
-#: timezoneselector/TimezoneSelector.qml:194
-#, kde-format
-msgctxt "@action:button"
-msgid "Zoom in"
-msgstr "Přiblížit"
-
-#: timezoneselector/TimezoneSelector.qml:210
-#, kde-format
-msgctxt "@action:button"
-msgid "Zoom out"
-msgstr "Oddálit"
-
-#: timezoneselector/TimezoneSelector.qml:239
-#, kde-format
-msgctxt "@label:listbox In the context of time zone selection"
-msgid "Region:"
-msgstr "Region:"
-
-#: timezoneselector/TimezoneSelector.qml:247
+#: timezoneselector/TimezoneSelector.qml:122
+#: timezoneselector/TimezoneSelector.qml:301
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Vybrat…"
 
-#: timezoneselector/TimezoneSelector.qml:251
+#: timezoneselector/TimezoneSelector.qml:124
+#: timezoneselector/TimezoneSelector.qml:293
 #, kde-format
-msgid "Timezone region selector"
-msgstr "Výběr oblasti časového pásma"
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Region:"
+msgstr "Region:"
 
-#: timezoneselector/TimezoneSelector.qml:272
+#: timezoneselector/TimezoneSelector.qml:146
+#: timezoneselector/TimezoneSelector.qml:326
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Časové pásmo:"
 
-#: timezoneselector/TimezoneSelector.qml:283
+#: timezoneselector/TimezoneSelector.qml:248
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom in"
+msgstr "Přiblížit"
+
+#: timezoneselector/TimezoneSelector.qml:264
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom out"
+msgstr "Oddálit"
+
+#: timezoneselector/TimezoneSelector.qml:305
+#, kde-format
+msgid "Timezone region selector"
+msgstr "Výběr oblasti časového pásma"
+
+#: timezoneselector/TimezoneSelector.qml:337
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Výběr umístění časového pásma"

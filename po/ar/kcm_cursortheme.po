@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-01-31 20:30+0400\n"
+"PO-Revision-Date: 2026-03-23 22:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -28,15 +28,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgid "Name of the current pointer theme"
 msgstr "اسم سمة المؤشر الحالية"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Current cursor size"
+#, kde-format
 msgid "Current pointer size"
 msgstr "حجم المؤشر الحالي"
 
@@ -96,11 +94,7 @@ msgid "The requested size '%1' is not available, using %2 instead."
 msgstr "لا يتوفر الحجم '%1'، سيستعمل %2 عوضاً عن ذلك."
 
 #: plasma-apply-cursortheme.cpp:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "This tool allows you to set the mouse cursor theme for the current Plasma "
-#| "session, without accidentally setting it to one that is either not "
-#| "available, or which is already set."
+#, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
 "session, without accidentally setting it to one that is either not "
@@ -110,10 +104,7 @@ msgstr ""
 "طريق الخطأ على نظام إما غير متوفر، أو معين من قبل."
 
 #: plasma-apply-cursortheme.cpp:69
-#, fuzzy, kde-format
-#| msgid ""
-#| "The name of the cursor theme you wish to set for your current Plasma "
-#| "session (passing a full path will only use the last part of the path)"
+#, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
@@ -133,30 +124,21 @@ msgid "Use a specific size, rather than the theme default size"
 msgstr "استخدم حجم المحدد عوضاً عن الحجم المبدئي السمة"
 
 #: plasma-apply-cursortheme.cpp:92
-#, fuzzy, kde-format
-#| msgid ""
-#| "The requested theme \"%1\" is already set as the theme for the current "
-#| "Plasma session."
+#, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr "عُينت السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية من قبل."
 
 #: plasma-apply-cursortheme.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Successfully applied the mouse cursor theme %1 to your current Plasma "
-#| "session"
+#, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "تم بنجاح تطبيق سمة مؤشر الفأرة %1 على جلسة بلازما الحالية"
 
 #: plasma-apply-cursortheme.cpp:105
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for your newly applied mouse "
-#| "cursor theme to display correctly."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
@@ -164,10 +146,7 @@ msgstr ""
 "عليك إعادة تشغيل جلسة بلازما لتطبيق سمة المؤشر الجديدة و تعرض بشكل صحيح."
 
 #: plasma-apply-cursortheme.cpp:115
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not find theme \"%1\". The theme should be one of the following "
-#| "options: %2"
+#, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
@@ -176,8 +155,7 @@ msgstr ""
 "التالية: %2"
 
 #: plasma-apply-cursortheme.cpp:123
-#, fuzzy, kde-format
-#| msgid "You have the following mouse cursor themes on your system:"
+#, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "لديك سمات المؤشرات التالية على نظامك:"
 
@@ -187,32 +165,25 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(سمة الحالية لجلسة بلازما هذه)"
 
 #: ui/Delegate.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Remove cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "أزل سِمة المؤشر"
 
 #: ui/Delegate.qml:50
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cannot delete the active cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "لا يمكن حذف سمة المؤشر النشطة"
 
 #: ui/Delegate.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cannot delete system-installed cursor themes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "لا يمكن حذف سمات المؤشر المثبتة في النظام"
 
 #: ui/Delegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Don’t delete this cursor theme"
+#, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "لا تحذف سمة المؤشر هذه"
 
@@ -229,17 +200,13 @@ msgid "Configure the animations played while an application is launching."
 msgstr "اضبط الحركات التي يجب تشغيلها عند بدء تطبيق."
 
 #: ui/LaunchFeedbackDialog.qml:49
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Cursor feedback:"
+#, kde-format
 msgctxt "@label"
 msgid "Pointer feedback:"
 msgstr "تنبيه المؤشر:"
 
 #: ui/LaunchFeedbackDialog.qml:50
-#, fuzzy, kde-format
-#| msgctxt "@option:radio No cursor feedback when launching apps"
-#| msgid "None"
+#, kde-format
 msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
 msgstr "لا شيء"
@@ -318,8 +285,7 @@ msgid "Open Theme"
 msgstr "افتح سمة"
 
 #: ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+#, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ملفات سمة المؤشر (*.tar.gz *.tar.bz2)"
 

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2026-02-18 08:15-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -61,10 +61,12 @@ msgid "Always off"
 msgstr "Sempre desligado"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Luz noturna sempre ativa"
+msgid "Always on"
+msgstr "Sempre desligado"
 
 #: ui/main.qml:60
 #, kde-format
@@ -107,6 +109,10 @@ msgstr "Quente"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura da luz noturna:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Luz noturna sempre ativa"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

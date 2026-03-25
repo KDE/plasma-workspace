@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2025-07-20 01:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -50,10 +50,12 @@ msgid "Always off"
 msgstr "항상 끄기"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "항상 야간 조명 사용"
+msgid "Always on"
+msgstr "항상 끄기"
 
 #: ui/main.qml:60
 #, kde-format
@@ -96,6 +98,10 @@ msgstr "따뜻함"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "야간 조명 색온도:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "항상 야간 조명 사용"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

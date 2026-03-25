@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2025-08-14 18:37+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -54,10 +54,12 @@ msgid "Always off"
 msgstr "Aina poissa käytöstä"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Yövalo aina käytössä"
+msgid "Always on"
+msgstr "Aina poissa käytöstä"
 
 #: ui/main.qml:60
 #, kde-format
@@ -100,6 +102,10 @@ msgstr "Lämmin"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Yövalon lämpötila:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Yövalo aina käytössä"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

@@ -366,7 +366,7 @@ msgstr "Plasma 外观样式"
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "指针"
 
 #: ui/MoreOptions.qml:77
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2024-12-17 19:35+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -58,10 +58,10 @@ msgstr "Sempre desactivado"
 
 #: ui/main.qml:59
 #, fuzzy, kde-format
-#| msgid "Always on night light"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Luz nocturna perpetua"
+msgid "Always on"
+msgstr "Sempre desactivado"
 
 #: ui/main.qml:60
 #, fuzzy, kde-format
@@ -107,6 +107,12 @@ msgstr "Cálida"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura de luz nocturna:"
+
+#, fuzzy
+#~| msgid "Always on night light"
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Luz nocturna perpetua"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

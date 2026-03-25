@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2026-02-18 08:19+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -57,10 +57,12 @@ msgid "Always off"
 msgstr "Завжди вимкнено"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Завжди нічні кольори"
+msgid "Always on"
+msgstr "Завжди вимкнено"
 
 #: ui/main.qml:60
 #, kde-format
@@ -103,6 +105,10 @@ msgstr "Теплий"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Температура нічних кольорів:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Завжди нічні кольори"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

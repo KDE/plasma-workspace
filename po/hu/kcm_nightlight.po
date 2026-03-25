@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2025-11-22 22:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -53,10 +53,12 @@ msgid "Always off"
 msgstr "Mindig ki"
 
 #: ui/main.qml:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox switching times"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Éjszakai fény mindig bekapcsolva"
+msgid "Always on"
+msgstr "Mindig ki"
 
 #: ui/main.qml:60
 #, kde-format
@@ -99,6 +101,10 @@ msgstr "Meleg"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Éjszakai fényhőmérséklet:"
+
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Éjszakai fény mindig bekapcsolva"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"

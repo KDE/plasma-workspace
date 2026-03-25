@@ -21,13 +21,13 @@ msgstr ""
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current pointer theme"
-msgstr ""
+msgstr "当前指针主题名称"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current pointer size"
-msgstr ""
+msgstr "当前指针大小"
 
 #: kcmcursortheme.cpp:312
 #, kde-format
@@ -91,6 +91,8 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"此工具用于设置当前 Plasma 会话的鼠标指针主题，并避免将其设置为不可用的或已经"
+"设置的主题。"
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
@@ -98,6 +100,8 @@ msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
 msgstr ""
+"您想要为当前 Plasma 会话设置的鼠标指针主题的名称 (传递完整路径时将只使用路径"
+"的最后一部分)"
 
 #: plasma-apply-cursortheme.cpp:70
 #, kde-format
@@ -115,33 +119,33 @@ msgstr "使用指定的大小，而不是主题的默认大小"
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
-msgstr ""
+msgstr "请求的主题“%1”已经是当前的 Plasma 会话的主题。"
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
-msgstr ""
+msgstr "成功应用鼠标指针主题 %1 到当前 Plasma 会话"
 
 #: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
-msgstr ""
+msgstr "为了使刚刚应用的鼠标指针主题能够正确显示，您必须重启 Plasma 会话。"
 
 #: plasma-apply-cursortheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
-msgstr ""
+msgstr "无法找到主题“%1”。主题应当是以下选项之一：%2"
 
 #: plasma-apply-cursortheme.cpp:123
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
-msgstr ""
+msgstr "您的系统已安装以下鼠标指针主题："
 
 #: plasma-apply-cursortheme.cpp:128
 #, kde-format
@@ -152,24 +156,24 @@ msgstr "(此 Plasma 会话的当前主题)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
-msgstr ""
+msgstr "移除指针主题"
 
 #: ui/Delegate.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
-msgstr ""
+msgstr "无法删除已激活的指针主题"
 
 #: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
-msgstr ""
+msgstr "无法删除系统安装的指针主题"
 
 #: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this pointer theme"
-msgstr ""
+msgstr "不要删除此指针主题"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -187,13 +191,13 @@ msgstr "配置应用程序启动时的动效。"
 #, kde-format
 msgctxt "@label"
 msgid "Pointer feedback:"
-msgstr ""
+msgstr "指针反馈："
 
 #: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
 msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: ui/LaunchFeedbackDialog.qml:59
 #, kde-format
@@ -266,7 +270,7 @@ msgstr "打开主题"
 #: ui/main.qml:199
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "指针主题文件 (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:59
 #, kde-format

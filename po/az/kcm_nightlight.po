@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:48+0000\n"
+"POT-Creation-Date: 2026-03-25 00:46+0000\n"
 "PO-Revision-Date: 2025-04-01 15:19+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -59,10 +59,10 @@ msgstr "Həmişə sönülü"
 
 #: ui/main.qml:59
 #, fuzzy, kde-format
-#| msgid "Always on night light"
+#| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
-msgid "Always on night light"
-msgstr "Həmişə gecə rejimində"
+msgid "Always on"
+msgstr "Həmişə sönülü"
 
 #: ui/main.qml:60
 #, kde-format
@@ -107,6 +107,12 @@ msgstr "İsti"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Gecə rejimi temperaturu:"
+
+#, fuzzy
+#~| msgid "Always on night light"
+#~ msgctxt "@item:inlistbox switching times"
+#~ msgid "Always on night light"
+#~ msgstr "Həmişə gecə rejimində"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"
