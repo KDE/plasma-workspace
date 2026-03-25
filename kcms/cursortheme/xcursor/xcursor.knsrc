@@ -1,5 +1,6 @@
 [KNewStuff]
 Name=Pointers
+Name[ar]=المؤشرات
 Name[ca]=Punters
 Name[ca@valencia]=Punters
 Name[es]=Punteros
@@ -8,11 +9,13 @@ Name[he]=סמנים
 Name[ia]=Punctatores
 Name[is]=Bendlar
 Name[ka]=მაჩვენებლები
+Name[lt]=Rodyklės
 Name[nl]=Aanwijzers
 Name[pt_BR]=Ponteiros
 Name[sl]=Kazalci
 Name[tr]=İşaretçiler
 Name[uk]=Вказівники
+Name[zh_CN]=指针
 
 Categories=X11 Mouse Theme
 InstallPath=.icons
