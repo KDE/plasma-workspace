@@ -119,4 +119,67 @@ public:
 
 extern Atoms *atoms;
 
+class TrayVisual
+{
+public:
+    TrayVisual()
+    {
+        auto c = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();
+        auto screen = xcb_setup_roots_iterator(xcb_get_setup(c)).data;
+        visualId = screen->root_visual;
+        visualDepth = screen->root_depth;
+        colormap = screen->default_colormap;
+
+        xcb_depth_iterator_t depth_iterator = xcb_screen_allowed_depths_iterator(screen);
+        xcb_depth_t *depth = nullptr;
+
+        while (depth_iterator.rem) {
+            if (depth_iterator.data->depth == 32) {
+                depth = depth_iterator.data;
+                break;
+            }
+            xcb_depth_next(&depth_iterator);
+        }
+        if (!depth) {
+            return;
+        }
+
+        xcb_visualtype_iterator_t visualtype_iterator = xcb_depth_visuals_iterator(depth);
+        while (visualtype_iterator.rem) {
+            xcb_visualtype_t *visualtype = visualtype_iterator.data;
+            if (visualtype->_class == XCB_VISUAL_CLASS_TRUE_COLOR) {
+                visualId = visualtype->visual_id;
+                break;
+            }
+            xcb_visualtype_next(&visualtype_iterator);
+        }
+        if (visualId == screen->root_visual) {
+            return;
+        }
+
+        // these are required for xcb_create_window when visual is different from parent
+        visualDepth = depth->depth;
+        colormap = xcb_generate_id(c);
+        xcb_create_colormap(c, XCB_COLORMAP_ALLOC_NONE, colormap, screen->root, visualId);
+        auto allocColorCookie = xcb_alloc_color(c, colormap, 0, 0, 0);
+        auto allocColorReply = xcb_alloc_color_reply(c, allocColorCookie, nullptr);
+        blackPixel = allocColorReply->pixel;
+        free(allocColorReply);
+    }
+
+    ~TrayVisual()
+    {
+        auto c = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();
+        // colormap might be screen->default_colormap, but Xlib doc says it's safe to free a default colormap
+        xcb_free_colormap(c, colormap);
+    }
+
+    xcb_visualid_t visualId;
+    uint8_t visualDepth;
+    xcb_colormap_t colormap;
+    uint32_t blackPixel;
+};
+
+extern TrayVisual *trayVisual;
+
 } // namespace Xcb
