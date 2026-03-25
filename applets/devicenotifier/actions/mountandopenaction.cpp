@@ -90,6 +90,10 @@ QString MountAndOpenAction::predicate() const
                     newPredicate = QLatin1String("solid_afc.desktop"); // this lives in kio-extras!
                     break;
                 }
+                if (protocol == u"kdeconnect") {
+                    newPredicate = QLatin1String("solid_kdeconnect.desktop"); // this lives in kdeconnect-kde!
+                    break;
+                }
                 if (protocol == u"ptp") {
                     newPredicate = QLatin1String("solid_camera.desktop");
                     break;
