@@ -1,15 +1,15 @@
 # Spanish translations for kcm_nightlight.po package.
-# Copyright (C) 2017-2025 This file is copyright:
+# Copyright (C) 2017-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2017.
 #
-# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightlight\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-07-12 21:16+0100\n"
+"PO-Revision-Date: 2026-03-25 12:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -54,7 +54,7 @@ msgstr "Horas de cambio:"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr "Siempre desactivado"
+msgstr "Siempre desactivadas"
 
 #: ui/main.qml:59
 #, kde-format
