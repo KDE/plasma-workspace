@@ -38,6 +38,7 @@ class ScreencastingRequest : public QObject
 
     /** The offered nodeId to give to a source */
     Q_PROPERTY(quint32 nodeId READ nodeId NOTIFY nodeIdChanged)
+    Q_PROPERTY(quint64 objectSerial READ objectSerial NOTIFY objectSerialChanged)
 public:
     ScreencastingRequest(QObject *parent = nullptr);
     ~ScreencastingRequest();
@@ -51,11 +52,13 @@ public:
     QString outputName() const;
 
     quint32 nodeId() const;
+    quint64 objectSerial() const;
 
 Q_SIGNALS:
     void nodeIdChanged(quint32 nodeId);
     void uuidChanged(const QString &uuid);
     void outputNameChanged(const QString &outputNames);
+    void objectSerialChanged(quint64 objectSerial);
 
 private:
     void setNodeid(uint nodeId);
@@ -66,4 +69,5 @@ private:
     QString m_uuid;
     QString m_outputName;
     quint32 m_nodeId = 0;
+    quint64 m_objectSerial = 0;
 };

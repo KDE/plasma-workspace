@@ -23,6 +23,7 @@ public:
     ~ScreencastingStream() override;
 
 Q_SIGNALS:
+    void objectSerialArrived(quint64 objectSerial);
     void created(quint32 nodeid);
     void failed(const QString &error);
     void closed();
@@ -31,6 +32,7 @@ protected:
     void zkde_screencast_stream_unstable_v1_created(uint32_t node) override;
     void zkde_screencast_stream_unstable_v1_closed() override;
     void zkde_screencast_stream_unstable_v1_failed(const QString &error) override;
+    void zkde_screencast_stream_unstable_v1_serial(uint32_t object_serial_hi, uint32_t object_serial_low) override;
 };
 
 class Screencasting : public QWaylandClientExtensionTemplate<Screencasting>, public QtWayland::zkde_screencast_unstable_v1
