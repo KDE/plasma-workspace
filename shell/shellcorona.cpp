@@ -1622,7 +1622,12 @@ void ShellCorona::createWaitingPanels()
         connect(panel, &PanelView::thicknessChanged, this, rectNotify);
         connect(panel, &PanelView::userConfiguringChanged, this, &ShellCorona::panelBeingConfiguredChanged);
 
-        auto checkUiReady = [this, panel](bool visible) {
+        auto checkUiReady = [this, panel = QPointer{panel}](bool visible) {
+            // Be mindful of what you capture in this lambda. At the time of writing the connects only ensures 'this'
+            // is still alive. Panel may not be, so weak pointer it.
+            if (!panel) {
+                return;
+            }
             if (!panel->containment()) {
                 return;
             }
