@@ -21,6 +21,11 @@ quint32 ScreencastingRequest::nodeId() const
     return m_nodeId;
 }
 
+quint64 ScreencastingRequest::objectSerial() const
+{
+    return m_objectSerial;
+}
+
 void ScreencastingRequest::resetUuid()
 {
     setUuid(QString());
@@ -78,6 +83,10 @@ void ScreencastingRequest::setStream(std::unique_ptr<ScreencastingStream> stream
         });
         connect(m_stream.get(), &ScreencastingStream::failed, this, [](const QString &error) {
             qWarning() << "error creating screencast" << error;
+        });
+        connect(m_stream.get(), &ScreencastingStream::objectSerialArrived, this, [this](quint64 objectSerial) {
+            m_objectSerial = objectSerial;
+            Q_EMIT objectSerialChanged(objectSerial);
         });
     } else {
         m_stream.reset();

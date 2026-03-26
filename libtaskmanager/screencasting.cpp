@@ -33,8 +33,13 @@ void ScreencastingStream::zkde_screencast_stream_unstable_v1_failed(const QStrin
     Q_EMIT failed(error);
 }
 
+void ScreencastingStream::zkde_screencast_stream_unstable_v1_serial(uint32_t object_serial_hi, uint32_t object_serial_low)
+{
+    Q_EMIT objectSerialArrived(static_cast<quint64>(object_serial_hi) << 32 | object_serial_low);
+}
+
 Screencasting::Screencasting()
-    : QWaylandClientExtensionTemplate<Screencasting>(ZKDE_SCREENCAST_UNSTABLE_V1_STREAM_REGION_SINCE_VERSION)
+    : QWaylandClientExtensionTemplate<Screencasting>(ZKDE_SCREENCAST_STREAM_UNSTABLE_V1_SERIAL_SINCE_VERSION)
 {
     initialize();
 
