@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-03-26 00:47+0000\n"
 "PO-Revision-Date: 2025-07-24 18:04+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.3\n"
 
-#: abstractnotificationsmodel.cpp:364
+#: abstractnotificationsmodel.cpp:370
 #, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
@@ -105,7 +105,7 @@ msgstr "%1 %2(e)tik"
 msgid "Application closed unexpectedly."
 msgstr "Aplikazio bat itxi da ustekabean."
 
-#: notifications.cpp:914
+#: notifications.cpp:985
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -113,7 +113,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Irakurri gabeko jakinarazpena"
 msgstr[1] "Irakurri gabeko jakinarazpenak"
 
-#: notifications.cpp:916
+#: notifications.cpp:987
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -121,7 +121,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "Jakinarazpen %1 jaso da Zaratarik Ez aktibo zegoen bitartean."
 msgstr[1] "%1 jakinarazpen jaso dira Zaratarik Ez aktibo zegoen bitartean."
 
-#: notifications.cpp:924
+#: notifications.cpp:995
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightlight\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-25 00:46+0000\n"
-"PO-Revision-Date: 2026-02-18 19:22+0100\n"
+"PO-Revision-Date: 2026-03-25 12:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -54,15 +54,13 @@ msgstr "Horas de cambio:"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr "Siempre desactivado"
+msgstr "Siempre desactivadas"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox switching times"
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "Siempre desactivado"
+msgstr "Siempre activadas"
 
 #: ui/main.qml:60
 #, kde-format
@@ -105,7 +103,3 @@ msgstr "Cálido"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura de la luz nocturna:"
-
-#~ msgctxt "@item:inlistbox switching times"
-#~ msgid "Always on night light"
-#~ msgstr "Siempre en luz nocturna"
