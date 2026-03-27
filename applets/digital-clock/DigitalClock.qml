@@ -92,7 +92,7 @@ MouseArea {
         target: Plasmoid
         function onContextualActionsAboutToShow() {
             ClipboardMenu.secondsIncluded = (Plasmoid.configuration.showSeconds === 2);
-            ClipboardMenu.currentDate = clock.dateTime;
+            ClipboardMenu.timezone = clock.timeZone;
         }
     }
 
