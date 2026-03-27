@@ -19,16 +19,16 @@ ClipboardMenu::ClipboardMenu(QObject *parent)
 
 ClipboardMenu::~ClipboardMenu() = default;
 
-QDateTime ClipboardMenu::currentDate() const
+QByteArray ClipboardMenu::timezone() const
 {
-    return m_currentDate;
+    return m_timezone;
 }
 
-void ClipboardMenu::setCurrentDate(const QDateTime &currentDate)
+void ClipboardMenu::setTimezone(const QByteArray &timezone)
 {
-    if (m_currentDate != currentDate) {
-        m_currentDate = currentDate;
-        Q_EMIT currentDateChanged();
+    if (m_timezone != timezone) {
+        m_timezone = timezone;
+        Q_EMIT timezoneChanged();
     }
 }
 
@@ -49,18 +49,19 @@ void ClipboardMenu::setupMenu(QAction *action)
 {
     auto *menu = new QMenu;
 
-    /*
-     * The refresh rate of m_currentDate depends of what is shown in the plasmoid.
-     * If only minutes are shown, the value is updated at the full minute and
-     * seconds are always 0 or 59 and thus useless/confusing to offer for copy.
-     * Use a reference to the config's showSeconds to decide if seconds are sent
-     * to the clipboard. There was no workaround found ...
-     */
     connect(menu, &QMenu::aboutToShow, this, [this, menu] {
         menu->clear();
+        QDateTime currentDateTime = QDateTime::currentDateTime();
+        if (!m_timezone.isEmpty()) {
+            currentDateTime.setTimeZone(QTimeZone(m_timezone));
+        }
+        if (!m_secondsIncluded) {
+            QTime timeWithoutSeconds(currentDateTime.time().hour(), currentDateTime.time().minute(), 0);
+            currentDateTime.setTime(timeWithoutSeconds);
+        }
 
-        const QDate date = m_currentDate.date();
-        const QTime time = m_currentDate.time();
+        const QDate date = currentDateTime.date();
+        const QTime time = currentDateTime.time();
         const QRegularExpression rx(QStringLiteral("[^0-9:]"));
         const QChar spaceCharacter = QLatin1Char(' ');
         QString timeString;
@@ -114,10 +115,10 @@ void ClipboardMenu::setupMenu(QAction *action)
 
                 otherCalendarsMenu->addSeparator();
         */
-        timeString = QString::number(m_currentDate.toMSecsSinceEpoch() / 1000);
+        timeString = QString::number(currentDateTime.toMSecsSinceEpoch() / 1000);
         menuOption = otherCalendarsMenu->addAction(i18nc("unix timestamp (seconds since 1.1.1970)", "%1 (UNIX Time)", timeString));
         menuOption->setData(timeString);
-        timeString = QString::number(qreal(2440587.5) + qreal(m_currentDate.toMSecsSinceEpoch()) / qreal(86400000), 'f', 5);
+        timeString = QString::number(qreal(2440587.5) + qreal(currentDateTime.toMSecsSinceEpoch()) / qreal(86400000), 'f', 5);
         menuOption = otherCalendarsMenu->addAction(i18nc("for astronomers (days and decimals since ~7000 years ago)", "%1 (Julian Date)", timeString));
         menuOption->setData(timeString);
     });

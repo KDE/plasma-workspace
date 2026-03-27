@@ -17,15 +17,16 @@ class ClipboardMenu : public QObject
     QML_ELEMENT
     QML_SINGLETON
 
-    Q_PROPERTY(QDateTime currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
+    // Holds the IANA timezone ID (e.g. "Europe/London")
+    Q_PROPERTY(QByteArray timezone READ timezone WRITE setTimezone NOTIFY timezoneChanged)
     Q_PROPERTY(bool secondsIncluded READ secondsIncluded WRITE setSecondsIncluded NOTIFY secondsIncludedChanged)
 
 public:
     explicit ClipboardMenu(QObject *parent = nullptr);
     virtual ~ClipboardMenu();
 
-    QDateTime currentDate() const;
-    void setCurrentDate(const QDateTime &date);
+    QByteArray timezone() const;
+    void setTimezone(const QByteArray &timezone);
 
     bool secondsIncluded() const;
     void setSecondsIncluded(bool secondsIncluded);
@@ -33,10 +34,10 @@ public:
     Q_INVOKABLE void setupMenu(QAction *action);
 
 Q_SIGNALS:
-    void currentDateChanged();
+    void timezoneChanged();
     void secondsIncludedChanged();
 
 private:
-    QDateTime m_currentDate;
+    QByteArray m_timezone;
     bool m_secondsIncluded = false;
 };
