@@ -11,6 +11,7 @@
 
 #include <KDirWatch>
 #include <KSharedConfig>
+#include <KSycoca>
 #include <KWindowSystem>
 
 #include <qwayland-plasma-window-management.h>
@@ -23,6 +24,7 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QSet>
+#include <QTimer>
 #include <QUrl>
 #include <QUuid>
 #include <QWaylandClientExtension>
@@ -34,6 +36,8 @@
 #include <fcntl.h>
 #include <sys/poll.h>
 #include <unistd.h>
+
+using namespace std::chrono_literals;
 
 namespace TaskManager
 {
@@ -453,6 +457,7 @@ public:
     VirtualDesktopInfo *virtualDesktopInfo = nullptr;
     static QUuid uuid;
     QList<QString> stackingOrder;
+    QTimer sycocaChangeTimer;
 
     void init();
     void initWayland();
@@ -485,6 +490,31 @@ void WaylandTasksModel::Private::init()
     virtualDesktopInfo = new VirtualDesktopInfo(q);
 
     initWayland();
+
+    auto clearCacheAndRefresh = [this] {
+        if (windows.empty()) {
+            return;
+        }
+
+        appDataCache.clear();
+
+        // Emit changes of all roles satisfied from app data cache.
+        Q_EMIT q->dataChanged(q->index(0, 0),
+                              q->index(windows.size() - 1, 0),
+                              QList<int>{Qt::DecorationRole,
+                                         AbstractTasksModel::AppId,
+                                         AbstractTasksModel::AppName,
+                                         AbstractTasksModel::GenericName,
+                                         AbstractTasksModel::LauncherUrl,
+                                         AbstractTasksModel::LauncherUrlWithoutIcon,
+                                         AbstractTasksModel::CanLaunchNewInstance,
+                                         AbstractTasksModel::SkipTaskbar});
+    };
+
+    sycocaChangeTimer.setSingleShot(true);
+    sycocaChangeTimer.setInterval(100ms);
+    sycocaChangeTimer.callOnTimeout(q, clearCacheAndRefresh);
+    QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, &sycocaChangeTimer, qOverload<>(&QTimer::start));
 }
 
 void WaylandTasksModel::Private::initWayland()
