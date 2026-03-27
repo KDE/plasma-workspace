@@ -50,12 +50,10 @@ msgid "Always off"
 msgstr "总是关闭"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox switching times"
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "总是关闭"
+msgstr ""
 
 #: ui/main.qml:60
 #, kde-format
@@ -98,7 +96,3 @@ msgstr "暖"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "夜间色温："
-
-#~ msgctxt "@item:inlistbox switching times"
-#~ msgid "Always on night light"
-#~ msgstr "总是使用夜间色温"

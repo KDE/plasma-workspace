@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2024-07-06 23:48\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -55,17 +55,17 @@ msgstr ""
 "вас ідэнтыфікаваць.<nl/><nl/>Вы можаце азнаёміцца з нашай палітыкай "
 "прыватнасці <link url='https://kde.org/privacypolicy-apps.php'>тут.</link>"
 
-#: ui/main.qml:100
+#: ui/main.qml:102
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Будуць адпраўленыя наступныя звесткі:"
 
-#: ui/main.qml:148
+#: ui/main.qml:150
 #, kde-format
 msgid "View sent data:"
 msgstr "Прагляд адпраўленых даных:"

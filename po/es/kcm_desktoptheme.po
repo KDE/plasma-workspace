@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 12:09+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -133,56 +133,56 @@ msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Compatible con el esquema de color"
 
-#: ui/main.qml:130
+#: ui/main.qml:114
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalar desde archivo…"
 
-#: ui/main.qml:135
+#: ui/main.qml:119
 #, kde-format
 msgid "Get New…"
 msgstr "Obtener novedades…"
 
-#: ui/main.qml:148
+#: ui/main.qml:132
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Sigue el esquema de color"
 
-#: ui/main.qml:166
+#: ui/main.qml:150
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Editar tema…"
 
-#: ui/main.qml:174
+#: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
 msgstr "Eliminar estilo de Plasma"
 
-#: ui/main.qml:176
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
 msgstr "No se puede borrar el estilo de Plasma activo"
 
-#: ui/main.qml:178
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
 msgstr "No se pueden borrar estilos de Plasma instalados en el sistema"
 
-#: ui/main.qml:186
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
 msgstr "No borrar este estilo de Plasma"
 
-#: ui/main.qml:205
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir tema"
 
-#: ui/main.qml:207
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Archivos de temas (*.zip *.tar.gz *.tar.bz2)"

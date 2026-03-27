@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 13:56+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -130,56 +130,56 @@ msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Compatible amb l'esquema de color"
 
-#: ui/main.qml:130
+#: ui/main.qml:114
 #, kde-format
 msgid "Install from File…"
 msgstr "Instal·la des d'un fitxer…"
 
-#: ui/main.qml:135
+#: ui/main.qml:119
 #, kde-format
 msgid "Get New…"
 msgstr "Obtín nous…"
 
-#: ui/main.qml:148
+#: ui/main.qml:132
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Seguix l'esquema de color"
 
-#: ui/main.qml:166
+#: ui/main.qml:150
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Edita el tema…"
 
-#: ui/main.qml:174
+#: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
 msgstr "Elimina l'estil de Plasma"
 
-#: ui/main.qml:176
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
 msgstr "No es pot suprimir l'estil de Plasma actiu"
 
-#: ui/main.qml:178
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
 msgstr "No es poden suprimir els estils de Plasma instal·lats al sistema"
 
-#: ui/main.qml:186
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
 msgstr "No suprimisques este estil de Plasma"
 
-#: ui/main.qml:205
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Obri un tema"
 
-#: ui/main.qml:207
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Fitxers de tema (*.zip *.tar.gz *.tar.bz2)"

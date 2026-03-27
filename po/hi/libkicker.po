@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -124,42 +124,42 @@ msgstr "पसंदीदा"
 msgid "Recently Used"
 msgstr "हाल में प्रयुक्त"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr "फ़ाइलें"
 
-#: recentusagemodel.cpp:251
+#: recentusagemodel.cpp:253
 #, kde-format
 msgid "Forget Application"
 msgstr "अनुप्रयोग को भुलें"
 
-#: recentusagemodel.cpp:316
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:357
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "युक्त फोल्डर खोलें"
 
-#: recentusagemodel.cpp:360
+#: recentusagemodel.cpp:362
 #, kde-format
 msgid "Forget File"
 msgstr "फ़ाइल भूलें"
 
-#: recentusagemodel.cpp:504
+#: recentusagemodel.cpp:506
 #, kde-format
 msgid "Forget All"
 msgstr "सभी को भुलें"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:508
 #, kde-format
 msgid "Forget All Applications"
 msgstr "सभी अनुप्रयोगों को भुलें"
 
-#: recentusagemodel.cpp:509
+#: recentusagemodel.cpp:511
 #, kde-format
 msgid "Forget All Files"
 msgstr "सभी फाइलों को भुलें"

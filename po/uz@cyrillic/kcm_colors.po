@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-07 00:46+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2008-06-08 22:32+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -1327,101 +1327,101 @@ msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Ранг қолипини сақлаш"
 
-#: ui/main.qml:152
+#: ui/main.qml:136
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:157
+#: ui/main.qml:141
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:204
+#: ui/main.qml:188
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Ойнадаги матн"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, fuzzy, kde-format
 msgid "Window text"
 msgstr "Ойнадаги матн"
 
-#: ui/main.qml:235
+#: ui/main.qml:219
 #, fuzzy, kde-format
 #| msgid "  Button"
 msgid "Button"
 msgstr "  Тугма"
 
-#: ui/main.qml:275
+#: ui/main.qml:259
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "боғ"
 
-#: ui/main.qml:277
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr ""
 
-#: ui/main.qml:285
+#: ui/main.qml:269
 #, kde-format
 msgid "Normal text"
 msgstr ""
 
-#: ui/main.qml:292
+#: ui/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Selected text"
 msgid "Highlighted text"
 msgstr "Белгиланган матн"
 
-#: ui/main.qml:299
+#: ui/main.qml:283
 #, fuzzy, kde-format
 #| msgid "Inactive Title Button"
 msgid "Disabled text"
 msgstr "Актив бўлмаган сарлавҳа тугмаси"
 
-#: ui/main.qml:317
+#: ui/main.qml:301
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Edit Color Scheme…"
 msgstr "Ранг қолипини импорт қилиш"
 
-#: ui/main.qml:324
+#: ui/main.qml:308
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Ранг қолипини сақлаш"
 
-#: ui/main.qml:326
+#: ui/main.qml:310
 #, fuzzy, kde-format
 #| msgid "Save the current color scheme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Жорий ранг қолипини сақлаш"
 
-#: ui/main.qml:328
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:336
+#: ui/main.qml:320
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr ""
 
-#: ui/main.qml:380
+#: ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Ранг қолипини сақлаш"
 
-#: ui/main.qml:382
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

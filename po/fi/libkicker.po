@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2025-01-12 17:10+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -123,42 +123,42 @@ msgstr "Suosikit"
 msgid "Recently Used"
 msgstr "Viimeisimmät"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr "Tiedostot"
 
-#: recentusagemodel.cpp:251
+#: recentusagemodel.cpp:253
 #, kde-format
 msgid "Forget Application"
 msgstr "Unohda sovellus"
 
-#: recentusagemodel.cpp:316
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr "Kansiot"
 
-#: recentusagemodel.cpp:357
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Avaa yläkansio"
 
-#: recentusagemodel.cpp:360
+#: recentusagemodel.cpp:362
 #, kde-format
 msgid "Forget File"
 msgstr "Unohda tiedosto"
 
-#: recentusagemodel.cpp:504
+#: recentusagemodel.cpp:506
 #, kde-format
 msgid "Forget All"
 msgstr "Unohda kaikki"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:508
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Unohda kaikki sovellukset"
 
-#: recentusagemodel.cpp:509
+#: recentusagemodel.cpp:511
 #, kde-format
 msgid "Forget All Files"
 msgstr "Unohda kaikki tiedostot"

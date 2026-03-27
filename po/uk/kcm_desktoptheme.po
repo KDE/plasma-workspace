@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-02-02 18:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -126,56 +126,56 @@ msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Сумісні зі схемою кольорів"
 
-#: ui/main.qml:130
+#: ui/main.qml:114
 #, kde-format
 msgid "Install from File…"
 msgstr "Встановити з файла…"
 
-#: ui/main.qml:135
+#: ui/main.qml:119
 #, kde-format
 msgid "Get New…"
 msgstr "Отримати ще…"
 
-#: ui/main.qml:148
+#: ui/main.qml:132
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Відповідно до схеми кольорів"
 
-#: ui/main.qml:166
+#: ui/main.qml:150
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Змінити тему…"
 
-#: ui/main.qml:174
+#: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
 msgstr "Вилучити стиль Плазми"
 
-#: ui/main.qml:176
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
 msgstr "Не можна вилучати активний стиль Плазми"
 
-#: ui/main.qml:178
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
 msgstr "Не можна вилучати встановлені на рівні системи стилі Плазми"
 
-#: ui/main.qml:186
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
 msgstr "Не вилучати цей стиль Плазми"
 
-#: ui/main.qml:205
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Відкриття теми"
 
-#: ui/main.qml:207
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "файли тем (*.zip *.tar.gz *.tar.bz2)"

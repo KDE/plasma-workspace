@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2022-02-20 22:24+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -46,17 +46,17 @@ msgstr ""
 "><link url='https://kde.org/privacypolicy-apps.php'>여기에서 개인 정보 취급 "
 "방침</link>을 확인할 수 있습니다."
 
-#: ui/main.qml:100
+#: ui/main.qml:102
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "다음 정보를 보냅니다:"
 
-#: ui/main.qml:148
+#: ui/main.qml:150
 #, kde-format
 msgid "View sent data:"
 msgstr "전송된 데이터 표시:"

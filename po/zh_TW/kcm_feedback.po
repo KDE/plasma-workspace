@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2024-05-09 06:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -49,17 +49,17 @@ msgstr ""
 "我們永遠不會收集您的個人資料、使用的檔案、瀏覽的網站或能讓我們識別您的任何隱"
 "私資訊。<nl/><nl/>您能在下述連結閱讀我們的隱私權政策："
 
-#: ui/main.qml:100
+#: ui/main.qml:102
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "將會傳送下列資訊："
 
-#: ui/main.qml:148
+#: ui/main.qml:150
 #, kde-format
 msgid "View sent data:"
 msgstr "檢視已傳送的資料："

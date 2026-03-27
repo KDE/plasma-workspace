@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 08:44+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -129,56 +129,56 @@ msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Barvna shema kompatibilna"
 
-#: ui/main.qml:130
+#: ui/main.qml:114
 #, kde-format
 msgid "Install from File…"
 msgstr "Namesti iz datoteke…"
 
-#: ui/main.qml:135
+#: ui/main.qml:119
 #, kde-format
 msgid "Get New…"
 msgstr "Dobi nove…"
 
-#: ui/main.qml:148
+#: ui/main.qml:132
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Sledi barvni shemi"
 
-#: ui/main.qml:166
+#: ui/main.qml:150
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Uredi teme…"
 
-#: ui/main.qml:174
+#: ui/main.qml:158
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
 msgstr "Odstrani slog Plasme"
 
-#: ui/main.qml:176
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
 msgstr "Ni mogoče izbrisati aktivnega sloga Plasme"
 
-#: ui/main.qml:178
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
 msgstr "Ni mogoče izbrisati sistemsko nameščenih slogov Plasme"
 
-#: ui/main.qml:186
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
 msgstr "Ne izbrišite tega sloga Plasme"
 
-#: ui/main.qml:205
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Odpri temo"
 
-#: ui/main.qml:207
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Datoteke s temami (*.zip *.tar.gz *.tar.bz2)"

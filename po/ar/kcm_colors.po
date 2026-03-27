@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-07 00:46+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-03-08 09:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1284,92 +1284,92 @@ msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "تشكيلات مظلمة"
 
-#: ui/main.qml:152
+#: ui/main.qml:136
 #, kde-format
 msgid "Install from File…"
 msgstr "ثبت من ملف..."
 
-#: ui/main.qml:157
+#: ui/main.qml:141
 #, kde-format
 msgid "Get New…"
 msgstr "احصل على المزيد…"
 
-#: ui/main.qml:204
+#: ui/main.qml:188
 #, kde-format
 msgid "Window Title"
 msgstr "عنوان النافذة"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, kde-format
 msgid "Window text"
 msgstr "نص النافذة"
 
-#: ui/main.qml:235
+#: ui/main.qml:219
 #, kde-format
 msgid "Button"
 msgstr "الزر"
 
-#: ui/main.qml:275
+#: ui/main.qml:259
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "الرابط"
 
-#: ui/main.qml:277
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "مُزار"
 
-#: ui/main.qml:285
+#: ui/main.qml:269
 #, kde-format
 msgid "Normal text"
 msgstr "نص عادي"
 
-#: ui/main.qml:292
+#: ui/main.qml:276
 #, kde-format
 msgid "Highlighted text"
 msgstr "نص مميز"
 
-#: ui/main.qml:299
+#: ui/main.qml:283
 #, kde-format
 msgid "Disabled text"
 msgstr "نص معطل"
 
-#: ui/main.qml:317
+#: ui/main.qml:301
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "حرر التشكيلة الألوان..."
 
-#: ui/main.qml:324
+#: ui/main.qml:308
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "أزل تشكيلة الألوان"
 
-#: ui/main.qml:326
+#: ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "لا يمكن حذف تشكيلة الألوان النشطة"
 
-#: ui/main.qml:328
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr "لا يمكن حذف تشكيلات الألوان المثبتة في النظام"
 
-#: ui/main.qml:336
+#: ui/main.qml:320
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr "لا يمكن حذف تشكيلة الألوان هذه"
 
-#: ui/main.qml:380
+#: ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "افتح تشكيلة الألوان"
 
-#: ui/main.qml:382
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "ملفات تشكيلات الألوان (*.colors)"

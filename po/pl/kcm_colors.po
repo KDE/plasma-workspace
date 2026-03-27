@@ -1,6 +1,6 @@
 # translation of kcmcolors.po to Polish
 # translation of kcmcolors.po to
-# Version: $Revision: 1732231 $
+# Version: $Revision: 1733206 $
 # SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Norbert Popiołek <norbert@kde.com.pl>\n"
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-07 00:46+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-03-14 06:57+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -1299,92 +1299,92 @@ msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Ciemne zestawy"
 
-#: ui/main.qml:152
+#: ui/main.qml:136
 #, kde-format
 msgid "Install from File…"
 msgstr "Wgraj z pliku..."
 
-#: ui/main.qml:157
+#: ui/main.qml:141
 #, kde-format
 msgid "Get New…"
 msgstr "Pobierz nowe…"
 
-#: ui/main.qml:204
+#: ui/main.qml:188
 #, kde-format
 msgid "Window Title"
 msgstr "Tytuł okna"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, kde-format
 msgid "Window text"
 msgstr "Tekst okna"
 
-#: ui/main.qml:235
+#: ui/main.qml:219
 #, kde-format
 msgid "Button"
 msgstr "Przycisk"
 
-#: ui/main.qml:275
+#: ui/main.qml:259
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "odnośnik"
 
-#: ui/main.qml:277
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "odwiedzony"
 
-#: ui/main.qml:285
+#: ui/main.qml:269
 #, kde-format
 msgid "Normal text"
 msgstr "Zwykły tekst"
 
-#: ui/main.qml:292
+#: ui/main.qml:276
 #, kde-format
 msgid "Highlighted text"
 msgstr "Podświetlony tekst"
 
-#: ui/main.qml:299
+#: ui/main.qml:283
 #, kde-format
 msgid "Disabled text"
 msgstr "Wyłączony tekst"
 
-#: ui/main.qml:317
+#: ui/main.qml:301
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Edytuj zestaw kolorów..."
 
-#: ui/main.qml:324
+#: ui/main.qml:308
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Usuń zestaw kolorów"
 
-#: ui/main.qml:326
+#: ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Nie można usunąć używanego zestawów kolorów"
 
-#: ui/main.qml:328
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr "Nie można usunąć zestawu kolorów wgranych na całym systemie"
 
-#: ui/main.qml:336
+#: ui/main.qml:320
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr "Nie usuwaj tego zestawu kolorów"
 
-#: ui/main.qml:380
+#: ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Otwórz zestaw kolorów"
 
-#: ui/main.qml:382
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Pliki zestawu kolorów (*.colors)"

@@ -1,7 +1,7 @@
 # translation of kcmcolors.po to Slovenian
 # Translation of kcmcolors.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_colors.po 1731770 2026-03-08 01:30:14Z scripty $
+# $Id: kcm_colors.po 1733206 2026-03-27 01:30:10Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-07 00:46+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-03-07 06:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1304,92 +1304,92 @@ msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Temne sheme"
 
-#: ui/main.qml:152
+#: ui/main.qml:136
 #, kde-format
 msgid "Install from File…"
 msgstr "Namesti iz datoteke…"
 
-#: ui/main.qml:157
+#: ui/main.qml:141
 #, kde-format
 msgid "Get New…"
 msgstr "Dobi nove…"
 
-#: ui/main.qml:204
+#: ui/main.qml:188
 #, kde-format
 msgid "Window Title"
 msgstr "Besedilo okna"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, kde-format
 msgid "Window text"
 msgstr "Besedilo okna"
 
-#: ui/main.qml:235
+#: ui/main.qml:219
 #, kde-format
 msgid "Button"
 msgstr "Gumb"
 
-#: ui/main.qml:275
+#: ui/main.qml:259
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "povezava"
 
-#: ui/main.qml:277
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "obiskano"
 
-#: ui/main.qml:285
+#: ui/main.qml:269
 #, kde-format
 msgid "Normal text"
 msgstr "Običajno besedilo"
 
-#: ui/main.qml:292
+#: ui/main.qml:276
 #, kde-format
 msgid "Highlighted text"
 msgstr "Označeno besedilo"
 
-#: ui/main.qml:299
+#: ui/main.qml:283
 #, kde-format
 msgid "Disabled text"
 msgstr "Onemogočeno besedilo"
 
-#: ui/main.qml:317
+#: ui/main.qml:301
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Uredi barvno shemo…"
 
-#: ui/main.qml:324
+#: ui/main.qml:308
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Odstrani barvno shemo"
 
-#: ui/main.qml:326
+#: ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Ni mogoče izbrisati aktivne barvne sheme"
 
-#: ui/main.qml:328
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr "Barvnih shem, ki jih je namestil sistem, ni mogoče izbrisati"
 
-#: ui/main.qml:336
+#: ui/main.qml:320
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr "Ne izbrišite te barvne sheme"
 
-#: ui/main.qml:380
+#: ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Odpri barvno shemo"
 
-#: ui/main.qml:382
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Datoteke barvnih shem (*.colors)"

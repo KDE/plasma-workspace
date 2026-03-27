@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-07 00:46+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-02-11 22:34+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1292,92 +1292,92 @@ msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Тъмни схеми"
 
-#: ui/main.qml:152
+#: ui/main.qml:136
 #, kde-format
 msgid "Install from File…"
 msgstr "Инсталиране от файл…"
 
-#: ui/main.qml:157
+#: ui/main.qml:141
 #, kde-format
 msgid "Get New…"
 msgstr "Изтегляне на нови…"
 
-#: ui/main.qml:204
+#: ui/main.qml:188
 #, kde-format
 msgid "Window Title"
 msgstr "Заглавие на прозорец"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, kde-format
 msgid "Window text"
 msgstr "Текст на прозорец"
 
-#: ui/main.qml:235
+#: ui/main.qml:219
 #, kde-format
 msgid "Button"
 msgstr "Бутон"
 
-#: ui/main.qml:275
+#: ui/main.qml:259
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "връзка"
 
-#: ui/main.qml:277
+#: ui/main.qml:261
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "посетен"
 
-#: ui/main.qml:285
+#: ui/main.qml:269
 #, kde-format
 msgid "Normal text"
 msgstr "Нормален текст"
 
-#: ui/main.qml:292
+#: ui/main.qml:276
 #, kde-format
 msgid "Highlighted text"
 msgstr "Маркиран текст"
 
-#: ui/main.qml:299
+#: ui/main.qml:283
 #, kde-format
 msgid "Disabled text"
 msgstr "Деактивиран текст"
 
-#: ui/main.qml:317
+#: ui/main.qml:301
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Редактиране на цветова схема…"
 
-#: ui/main.qml:324
+#: ui/main.qml:308
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Премахване на цветова схема"
 
-#: ui/main.qml:326
+#: ui/main.qml:310
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Активната цветова схема не може да се изтрие"
 
-#: ui/main.qml:328
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr "Не може да се изтрие системна цветова схема"
 
-#: ui/main.qml:336
+#: ui/main.qml:320
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr "Да не се изтрива тази цветова схема"
 
-#: ui/main.qml:380
+#: ui/main.qml:364
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Отваряне на цветова схема"
 
-#: ui/main.qml:382
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлове с цветна схема (*.colors)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2025-01-07 19:48+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -125,42 +125,42 @@ msgstr "Favoritos"
 msgid "Recently Used"
 msgstr "Uso recente"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr "Ficheiros"
 
-#: recentusagemodel.cpp:251
+#: recentusagemodel.cpp:253
 #, kde-format
 msgid "Forget Application"
 msgstr "Esquecer a aplicación"
 
-#: recentusagemodel.cpp:316
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr "Cartafoles"
 
-#: recentusagemodel.cpp:357
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Abrir o cartafol contedor"
 
-#: recentusagemodel.cpp:360
+#: recentusagemodel.cpp:362
 #, kde-format
 msgid "Forget File"
 msgstr "Esquecer o ficheiro"
 
-#: recentusagemodel.cpp:504
+#: recentusagemodel.cpp:506
 #, kde-format
 msgid "Forget All"
 msgstr "Esquecer todo"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:508
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Esquecer todas as aplicacións"
 
-#: recentusagemodel.cpp:509
+#: recentusagemodel.cpp:511
 #, kde-format
 msgid "Forget All Files"
 msgstr "Esquecer todos os ficheiros"

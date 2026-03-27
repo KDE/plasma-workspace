@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-25 00:46+0000\n"
-"PO-Revision-Date: 2026-02-19 16:11+0100\n"
+"PO-Revision-Date: 2026-03-26 10:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -54,12 +54,10 @@ msgid "Always off"
 msgstr "Sempre Off"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox switching times"
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "Sempre Off"
+msgstr "Sempre On"
 
 #: ui/main.qml:60
 #, kde-format

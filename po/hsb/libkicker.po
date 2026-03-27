@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2021-10-25 19:03+0200\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -124,42 +124,42 @@ msgstr "Najlubše"
 msgid "Recently Used"
 msgstr "Njedawno wužiwane"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr "Dataje"
 
-#: recentusagemodel.cpp:251
+#: recentusagemodel.cpp:253
 #, kde-format
 msgid "Forget Application"
 msgstr "Aplikaciju zabyć"
 
-#: recentusagemodel.cpp:316
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:357
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Zapisk  z tutym elementom wočinić"
 
-#: recentusagemodel.cpp:360
+#: recentusagemodel.cpp:362
 #, kde-format
 msgid "Forget File"
 msgstr "Dataju zabyć"
 
-#: recentusagemodel.cpp:504
+#: recentusagemodel.cpp:506
 #, kde-format
 msgid "Forget All"
 msgstr "Wšitke zabyć"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:508
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Wšitke aplikacije zabyć"
 
-#: recentusagemodel.cpp:509
+#: recentusagemodel.cpp:511
 #, kde-format
 msgid "Forget All Files"
 msgstr "Wšitke dataje zabyć"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2014-07-02 23:27+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -125,62 +125,62 @@ msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:130
+#: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Insta&ll from File"
 msgid "Install from File…"
 msgstr "Ut Datei insta&lleren"
 
-#: ui/main.qml:135
+#: ui/main.qml:119
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:148
+#: ui/main.qml:132
 #, fuzzy, kde-format
 #| msgctxt "plasma name"
 #| msgid "Color Scheme"
 msgid "Follows color scheme"
 msgstr "Klöörschema"
 
-#: ui/main.qml:166
+#: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Edit Theme…"
 msgstr "Muster"
 
-#: ui/main.qml:174
+#: ui/main.qml:158
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
 msgstr "Nieg Mustern halen..."
 
-#: ui/main.qml:176
+#: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
 msgstr "Nieg Mustern halen..."
 
-#: ui/main.qml:178
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
 msgstr ""
 
-#: ui/main.qml:186
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
 msgstr ""
 
-#: ui/main.qml:205
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Muster opmaken"
 
-#: ui/main.qml:207
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Musterdateien (*.zip *.tar.gz *.tar.bz2)"

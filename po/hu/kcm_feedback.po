@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2022-01-14 10:55+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -50,17 +50,17 @@ msgstr ""
 "<link url='https://kde.org/privacypolicy-apps.php'>itt</link> olvashat "
 "többet."
 
-#: ui/main.qml:100
+#: ui/main.qml:102
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Az alábbi információk kerülnek továbbításra:"
 
-#: ui/main.qml:148
+#: ui/main.qml:150
 #, kde-format
 msgid "View sent data:"
 msgstr "Elküldött adatok megtekintése:"

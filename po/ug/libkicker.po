@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2026-02-09 18:15-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -123,42 +123,42 @@ msgstr "يىغقۇچ"
 msgid "Recently Used"
 msgstr "يېقىندا ئىشلەتكەن"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr "ھۆججەت"
 
-#: recentusagemodel.cpp:251
+#: recentusagemodel.cpp:253
 #, kde-format
 msgid "Forget Application"
 msgstr "پىروگراممىنى ئۇنتۇ"
 
-#: recentusagemodel.cpp:316
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr "قىسقۇچ"
 
-#: recentusagemodel.cpp:357
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ئىچىدىكى قىسقۇچنى ئاچ"
 
-#: recentusagemodel.cpp:360
+#: recentusagemodel.cpp:362
 #, kde-format
 msgid "Forget File"
 msgstr "ھۆججەتنى ئۇنتۇ"
 
-#: recentusagemodel.cpp:504
+#: recentusagemodel.cpp:506
 #, kde-format
 msgid "Forget All"
 msgstr "ھەممىنى ئۇنتۇ"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:508
 #, kde-format
 msgid "Forget All Applications"
 msgstr "ھەممە پىروگراممىنى ئۇنتۇ"
 
-#: recentusagemodel.cpp:509
+#: recentusagemodel.cpp:511
 #, kde-format
 msgid "Forget All Files"
 msgstr "ھەممە ھۆججەتنى ئۇنتۇ"

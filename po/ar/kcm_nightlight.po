@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-25 00:46+0000\n"
-"PO-Revision-Date: 2026-02-18 17:46+0400\n"
+"PO-Revision-Date: 2026-03-26 10:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -51,12 +51,10 @@ msgid "Always off"
 msgstr "دائما معطل"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox switching times"
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "دائما معطل"
+msgstr "دائما يعمل"
 
 #: ui/main.qml:60
 #, kde-format

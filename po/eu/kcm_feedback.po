@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2022-08-11 20:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -52,17 +52,17 @@ msgstr ""
 "informaziorik.<nl/><nl/><link url='https://kde.org/privacypolicy-apps."
 "php'>Hemen gure pribatutasun gidalerroei</link> buruz irakur dezakezu."
 
-#: ui/main.qml:100
+#: ui/main.qml:102
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:122
+#: ui/main.qml:124
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Ondoko informazioa bidaliko da:"
 
-#: ui/main.qml:148
+#: ui/main.qml:150
 #, kde-format
 msgid "View sent data:"
 msgstr "Ikusi bidalitako datuak:"

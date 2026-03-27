@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-07 00:46+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2013-10-18 19:27+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -1346,37 +1346,37 @@ msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Sačuvaj šemu..."
 
-#: ui/main.qml:152
+#: ui/main.qml:136
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:157
+#: ui/main.qml:141
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:204
+#: ui/main.qml:188
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Tekst prozora"
 
-#: ui/main.qml:227
+#: ui/main.qml:211
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Tekst prozora"
 
-#: ui/main.qml:235
+#: ui/main.qml:219
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "Dugme"
 
-#: ui/main.qml:275
+#: ui/main.qml:259
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1384,7 +1384,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "veza"
 
-#: ui/main.qml:277
+#: ui/main.qml:261
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1392,66 +1392,66 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "posjećeno"
 
-#: ui/main.qml:285
+#: ui/main.qml:269
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Obični tekst"
 
-#: ui/main.qml:292
+#: ui/main.qml:276
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Tekst posjećenog"
 
-#: ui/main.qml:299
+#: ui/main.qml:283
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Isključeno"
 
-#: ui/main.qml:317
+#: ui/main.qml:301
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "&Otpremi šemu..."
 
 # >> @title:window
-#: ui/main.qml:324
+#: ui/main.qml:308
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Upisivanje šeme boja"
 
-#: ui/main.qml:326
+#: ui/main.qml:310
 #, fuzzy, kde-format
 #| msgid "Save the current color scheme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Sačuvaj tekuću šemu boja"
 
-#: ui/main.qml:328
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:336
+#: ui/main.qml:320
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr ""
 
 # >> @title:window
-#: ui/main.qml:380
+#: ui/main.qml:364
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Upisivanje šeme boja"
 
-#: ui/main.qml:382
+#: ui/main.qml:366
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

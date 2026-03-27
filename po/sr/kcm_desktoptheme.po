@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -125,62 +125,62 @@ msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr ""
 
-#: ui/main.qml:130
+#: ui/main.qml:114
 #, fuzzy, kde-format
 #| msgid "Install from File..."
 msgid "Install from File…"
 msgstr "Инсталирај из фајла..."
 
-#: ui/main.qml:135
+#: ui/main.qml:119
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:148
+#: ui/main.qml:132
 #, kde-format
 msgid "Follows color scheme"
 msgstr ""
 
 # >> @title:window
-#: ui/main.qml:166
+#: ui/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Open Theme"
 msgid "Edit Theme…"
 msgstr "Отварање теме"
 
-#: ui/main.qml:174
+#: ui/main.qml:158
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
 msgstr "Добави нове теме..."
 
-#: ui/main.qml:176
+#: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgid "This module lets you configure the desktop theme."
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
 msgstr "У овом модулу можете да подесите тему површи."
 
-#: ui/main.qml:178
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
 msgstr ""
 
-#: ui/main.qml:186
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
 msgstr ""
 
 # >> @title:window
-#: ui/main.qml:205
+#: ui/main.qml:189
 #, kde-format
 msgid "Open Theme"
 msgstr "Отварање теме"
 
-#: ui/main.qml:207
+#: ui/main.qml:191
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "фајлови тема (*.zip *.tar.gz *.tar.bz2)"
