@@ -315,7 +315,11 @@ void Klipper::slotConfigure()
 
 void Klipper::slotPopupMenu()
 {
-    m_popup->show();
+    if (m_popup->isVisible()) {
+        m_popup->hide();
+    } else {
+        m_popup->show();
+    }
 }
 
 void Klipper::slotRepeatAction()
