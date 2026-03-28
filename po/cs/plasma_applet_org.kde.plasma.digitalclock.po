@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-28 00:46+0000\n"
 "PO-Revision-Date: 2026-03-13 14:18+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -439,18 +439,18 @@ msgstr ""
 "Časové pásmo není nastaveno; klikněte zde pro otevření nastavení Data a času "
 "a nastavte jej."
 
-#: plugin/clipboardmenu.cpp:110
+#: plugin/clipboardmenu.cpp:111
 #, kde-format
 msgid "Other Calendars"
 msgstr "Jiné kalendáře"
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:119
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr "%1 (UNIXový čas)"
 
-#: plugin/clipboardmenu.cpp:121
+#: plugin/clipboardmenu.cpp:122
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"

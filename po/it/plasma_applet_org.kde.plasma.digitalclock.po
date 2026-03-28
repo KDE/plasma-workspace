@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-28 00:46+0000\n"
 "PO-Revision-Date: 2026-03-18 14:24+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -436,18 +436,18 @@ msgstr ""
 "Il fuso orario non è impostato; fai clic qui per aprire le impostazioni di "
 "data e ora e impostarne uno"
 
-#: plugin/clipboardmenu.cpp:110
+#: plugin/clipboardmenu.cpp:111
 #, kde-format
 msgid "Other Calendars"
 msgstr "Altri calendari"
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:119
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr "%1 (Tempo UNIX)"
 
-#: plugin/clipboardmenu.cpp:121
+#: plugin/clipboardmenu.cpp:122
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"

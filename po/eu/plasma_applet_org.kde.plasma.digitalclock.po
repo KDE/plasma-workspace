@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-28 00:46+0000\n"
 "PO-Revision-Date: 2025-06-08 09:58+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -442,18 +442,18 @@ msgstr ""
 "Ordu-eremua ezarri gabe dago; egin klik hemen, Data eta Ordua ezarpenetara "
 "sartu eta bat ezartzeko"
 
-#: plugin/clipboardmenu.cpp:110
+#: plugin/clipboardmenu.cpp:111
 #, kde-format
 msgid "Other Calendars"
 msgstr "Beste egutegi batzuk"
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:119
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr "%1 (UNIX ordua)"
 
-#: plugin/clipboardmenu.cpp:121
+#: plugin/clipboardmenu.cpp:122
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"

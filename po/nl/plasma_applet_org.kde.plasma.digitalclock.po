@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-28 00:46+0000\n"
 "PO-Revision-Date: 2026-03-18 17:16+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -434,18 +434,18 @@ msgstr ""
 "Tijdzone is niet ingesteld; klik hier om Datum & Tijd instellingen te openen "
 "en er een in te stellen"
 
-#: plugin/clipboardmenu.cpp:110
+#: plugin/clipboardmenu.cpp:111
 #, kde-format
 msgid "Other Calendars"
 msgstr "Andere agenda's"
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:119
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr "%1 (UNIX-tijd)"
 
-#: plugin/clipboardmenu.cpp:121
+#: plugin/clipboardmenu.cpp:122
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"

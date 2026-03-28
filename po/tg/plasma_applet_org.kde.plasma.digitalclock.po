@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"POT-Creation-Date: 2026-03-28 00:46+0000\n"
 "PO-Revision-Date: 2019-09-23 21:28+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -444,18 +444,18 @@ msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
 
-#: plugin/clipboardmenu.cpp:110
+#: plugin/clipboardmenu.cpp:111
 #, kde-format
 msgid "Other Calendars"
 msgstr ""
 
-#: plugin/clipboardmenu.cpp:118
+#: plugin/clipboardmenu.cpp:119
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
 msgstr ""
 
-#: plugin/clipboardmenu.cpp:121
+#: plugin/clipboardmenu.cpp:122
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"

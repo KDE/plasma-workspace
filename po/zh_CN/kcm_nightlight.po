@@ -53,7 +53,7 @@ msgstr "总是关闭"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr ""
+msgstr "始终开启"
 
 #: ui/main.qml:60
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-25 00:46+0000\n"
-"PO-Revision-Date: 2026-02-21 02:21+0200\n"
+"PO-Revision-Date: 2026-03-27 21:34+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
 "Language: lt\n"
@@ -56,12 +56,10 @@ msgid "Always off"
 msgstr "Visada išjungta"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox switching times"
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "Visada išjungta"
+msgstr "Visada įjungta"
 
 #: ui/main.qml:60
 #, kde-format
