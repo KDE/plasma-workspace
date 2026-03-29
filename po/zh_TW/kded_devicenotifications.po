@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-06 00:46+0000\n"
+"POT-Creation-Date: 2026-03-29 00:45+0000\n"
 "PO-Revision-Date: 2025-08-08 02:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 25.07.70\n"
 
-#: devicenotifications.cpp:434
+#: devicenotifications.cpp:449
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "偵測到顯示器"
 
-#: devicenotifications.cpp:435
+#: devicenotifications.cpp:450
 #, kde-format
 msgid "A display has been connected."
 msgstr "已連接一個顯示器。"
 
-#: devicenotifications.cpp:455
+#: devicenotifications.cpp:470
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "顯示器已移除"
 
-#: devicenotifications.cpp:456
+#: devicenotifications.cpp:471
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "已中斷一個顯示器的連接。"
 
-#: devicenotifications.cpp:502
+#: devicenotifications.cpp:517
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 已連接。"
 
-#: devicenotifications.cpp:502
+#: devicenotifications.cpp:517
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "已連接一個 USB 裝置。"
 
-#: devicenotifications.cpp:507
+#: devicenotifications.cpp:522
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "偵測到 USB 裝置"
 
-#: devicenotifications.cpp:545
+#: devicenotifications.cpp:560
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 已中斷連接。"
 
-#: devicenotifications.cpp:545
+#: devicenotifications.cpp:560
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "已中斷一個 USB 裝置的連接。"
 
-#: devicenotifications.cpp:550
+#: devicenotifications.cpp:565
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

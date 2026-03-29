@@ -271,7 +271,3 @@ msgstr "Rutenett med %1 element i %2 kolonnar"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AÅILlmyjgGJP"
-
-#~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#~ msgid "Panel icon spacing:"
-#~ msgstr "Mellomrom mellom panelikon:"

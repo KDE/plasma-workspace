@@ -453,6 +453,3 @@ msgstr "Vel kva du vil ta i bruk …"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Vis færre val …"
-
-#~ msgid "Cursors"
-#~ msgstr "Peikarar"

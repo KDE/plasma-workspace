@@ -99,7 +99,3 @@ msgstr "Varm"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Kveldsfarge-temperatur:"
-
-#~ msgctxt "@item:inlistbox switching times"
-#~ msgid "Always on night light"
-#~ msgstr "Alltid kveldsfarger"
