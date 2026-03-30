@@ -54,8 +54,6 @@ private:
     MenuMode m_mode;
 
     TaskManager::VirtualDesktopInfo *const m_virtualDesktopInfo;
-
-    static TaskManager::ActivityInfo *s_activityInfo;
-    static TaskManager::TasksModel *s_tasksModel;
-    static int s_instanceCount;
+    TaskManager::ActivityInfo *const m_activityInfo;
+    TaskManager::TasksModel *const m_tasksModel;
 };

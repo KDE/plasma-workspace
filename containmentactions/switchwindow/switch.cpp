@@ -21,43 +21,24 @@
 
 using namespace TaskManager;
 
-ActivityInfo *SwitchWindow::s_activityInfo = nullptr;
-TasksModel *SwitchWindow::s_tasksModel = nullptr;
-int SwitchWindow::s_instanceCount = 0;
-
 SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
     , m_mode(AllFlat)
     , m_virtualDesktopInfo(new VirtualDesktopInfo(this))
+    , m_activityInfo(new ActivityInfo(this))
+    , m_tasksModel(new TasksModel(this))
 {
-    ++s_instanceCount;
+    m_tasksModel->setGroupMode(TasksModel::GroupDisabled);
 
-    if (!s_activityInfo) {
-        s_activityInfo = new ActivityInfo();
-    }
-
-    if (!s_tasksModel) {
-        s_tasksModel = new TasksModel();
-
-        s_tasksModel->setGroupMode(TasksModel::GroupDisabled);
-
-        s_tasksModel->setActivity(s_activityInfo->currentActivity());
-        s_tasksModel->setFilterByActivity(true);
-        connect(s_activityInfo, &ActivityInfo::currentActivityChanged, this, []() {
-            s_tasksModel->setActivity(s_activityInfo->currentActivity());
-        });
-    }
+    m_tasksModel->setActivity(m_activityInfo->currentActivity());
+    m_tasksModel->setFilterByActivity(true);
+    connect(m_activityInfo, &ActivityInfo::currentActivityChanged, this, [this]() {
+        m_tasksModel->setActivity(m_activityInfo->currentActivity());
+    });
 }
 
 SwitchWindow::~SwitchWindow()
 {
-    --s_instanceCount;
-
-    if (!s_instanceCount) {
-        delete std::exchange(s_activityInfo, nullptr);
-        delete std::exchange(s_tasksModel, nullptr);
-    }
-
     qDeleteAll(m_actions);
 }
 
@@ -106,7 +87,7 @@ void SwitchWindow::makeMenu()
     qDeleteAll(m_actions);
     m_actions.clear();
 
-    if (s_tasksModel->rowCount() == 0) {
+    if (m_tasksModel->rowCount() == 0) {
         return;
     }
 
@@ -114,8 +95,8 @@ void SwitchWindow::makeMenu()
     QList<QAction *> allDesktops;
 
     // Make all the window actions.
-    for (int i = 0; i < s_tasksModel->rowCount(); ++i) {
-        const QModelIndex &idx = s_tasksModel->index(i, 0);
+    for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
+        const QModelIndex &idx = m_tasksModel->index(i, 0);
 
         if (!idx.data(AbstractTasksModel::IsWindow).toBool()) {
             continue;
@@ -215,11 +196,11 @@ void SwitchWindow::switchTo(QAction *action)
 {
     const QVariantList &idList = action->data().toList();
 
-    for (int i = 0; i < s_tasksModel->rowCount(); ++i) {
-        const QModelIndex &idx = s_tasksModel->index(i, 0);
+    for (int i = 0; i < m_tasksModel->rowCount(); ++i) {
+        const QModelIndex &idx = m_tasksModel->index(i, 0);
 
         if (idList == idx.data(AbstractTasksModel::WinIdList).toList()) {
-            s_tasksModel->requestActivate(idx);
+            m_tasksModel->requestActivate(idx);
 
             return;
         }
@@ -238,7 +219,7 @@ void SwitchWindow::performPreviousAction()
 
 void SwitchWindow::doSwitch(bool up)
 {
-    const QModelIndex &activeTask = s_tasksModel->activeTask();
+    const QModelIndex &activeTask = m_tasksModel->activeTask();
 
     if (!activeTask.isValid()) {
         return;
@@ -248,17 +229,17 @@ void SwitchWindow::doSwitch(bool up)
         const QModelIndex &next = activeTask.sibling(activeTask.row() + 1, 0);
 
         if (next.isValid()) {
-            s_tasksModel->requestActivate(next);
-        } else if (s_tasksModel->rowCount() > 1) {
-            s_tasksModel->requestActivate(s_tasksModel->index(0, 0));
+            m_tasksModel->requestActivate(next);
+        } else if (m_tasksModel->rowCount() > 1) {
+            m_tasksModel->requestActivate(m_tasksModel->index(0, 0));
         }
     } else {
         const QModelIndex &previous = activeTask.sibling(activeTask.row() - 1, 0);
 
         if (previous.isValid()) {
-            s_tasksModel->requestActivate(previous);
-        } else if (s_tasksModel->rowCount() > 1) {
-            s_tasksModel->requestActivate(s_tasksModel->index(s_tasksModel->rowCount() - 1, 0));
+            m_tasksModel->requestActivate(previous);
+        } else if (m_tasksModel->rowCount() > 1) {
+            m_tasksModel->requestActivate(m_tasksModel->index(m_tasksModel->rowCount() - 1, 0));
         }
     }
 }
