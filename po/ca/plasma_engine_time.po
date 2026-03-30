@@ -1,16 +1,17 @@
 # Translation of plasma_engine_time.po to Catalan
-# Copyright (C) 2014 This_file_is_part_of_KDE
+# Copyright (C) 2014-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2014 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2014-09-26 11:08+0200\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"PO-Revision-Date: 2026-03-29 16:40+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: timesource.cpp:46
 msgid "Local"
@@ -26,19 +27,19 @@ msgstr "Local"
 
 #: timesource.cpp:61
 msgid "Timezone"
-msgstr "Zona horària"
+msgstr "Fus horari"
 
 #: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
 msgid "Timezone City"
-msgstr "Ciutat de la zona horària"
+msgstr "Ciutat del fus horari"
 
 #: timesource.cpp:68 timesource.cpp:71
 msgid "Timezone Continent"
-msgstr "Continent de la zona horària"
+msgstr "Continent del fus horari"
 
 #: timesource.cpp:72
 msgid "Timezone Country"
-msgstr "País de la zona horària"
+msgstr "País del fus horari"
 
 #: timesource.cpp:97
 msgid "Offset"
@@ -46,7 +47,7 @@ msgstr "Diferència"
 
 #: timesource.cpp:100
 msgid "Timezone Abbreviation"
-msgstr "Abreviatura de la zona horària"
+msgstr "Abreviatura del fus horari"
 
 #: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
 msgid "DateTime"
