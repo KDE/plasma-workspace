@@ -1,6 +1,8 @@
 #include <QQmlEngine>
 #include <QQmlExtensionPlugin>
 
+#include <Plasma/Plasma>
+
 class ComponentsPlugin : public QQmlExtensionPlugin
 {
     Q_PLUGIN_METADATA(IID QQmlExtensionInterface_iid)
@@ -9,7 +11,7 @@ public:
     void initializeEngine(QQmlEngine *engine, const char *uri) override
     {
         Q_UNUSED(uri)
-        engine->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
+        Plasma::setupPlasmaStyle(engine);
     }
     void registerTypes(const char *uri) override
     {

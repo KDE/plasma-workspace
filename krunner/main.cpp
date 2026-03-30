@@ -21,6 +21,7 @@
 #include <KDBusService>
 #include <KRunner/RunnerManager>
 
+#include <Plasma/Plasma>
 #include <PlasmaQuick/SharedQmlEngine>
 
 #include <QQmlEngine>
@@ -100,7 +101,7 @@ int main(int argc, char **argv)
     PlasmaQuick::SharedQmlEngine sharedEngine;
     // It is important this to be done before the view is created, as it creates internally a framesvgitem for the background
     // that needs to use the current plasma theme
-    sharedEngine.engine()->setProperty("_kirigamiTheme", u"KirigamiPlasmaStyle"_s);
+    Plasma::setupPlasmaStyle(sharedEngine.engine().get());
     sharedEngine.setInitializationDelayed(true);
     View view(&sharedEngine);
 

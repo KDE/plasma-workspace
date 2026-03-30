@@ -19,6 +19,9 @@
 #include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 #include <KX11Extras>
+
+#include <Plasma/Plasma>
+
 #include <algorithm>
 
 #include "historymodel.h"
@@ -30,7 +33,7 @@ KlipperPopup::KlipperPopup()
     : PlasmaQuick::PlasmaWindow()
     , m_model(HistoryModel::self())
 {
-    m_engine.engine()->setProperty("_kirigamiTheme", u"KirigamiPlasmaStyle"_s);
+    Plasma::setupPlasmaStyle(m_engine.engine().get());
     m_engine.setInitializationDelayed(true);
 
     // used only by screen readers
