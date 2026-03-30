@@ -8,6 +8,7 @@
 #include "../historycycler.h"
 #include "../historyitem.h"
 #include "../historymodel.h"
+#include "../klipperpopup.h"
 #include "../systemclipboard.h"
 
 #include <KConfigGroup>
@@ -46,6 +47,8 @@ private Q_SLOTS:
         @see https://bugs.kde.org/465225
      */
     void testBug465225();
+
+    void testSlotPopupMenuToggle();
 };
 
 void KlipperTest::initTestCase()
@@ -103,6 +106,28 @@ void KlipperTest::testBug465225()
         QCOMPARE(model->rowCount(), 2);
         QCOMPARE(model->first()->type(), HistoryItemType::Image);
     }
+}
+
+/**
+    Verify that slotPopupMenu() toggles the popup visibility,
+    rather than just showing it repeatedly.
+ */
+void KlipperTest::testSlotPopupMenuToggle()
+{
+    Klipper klipper;
+    auto *popup = klipper.popup();
+    QVERIFY(popup);
+
+    // Initially not visible
+    QVERIFY(!popup->isVisible());
+
+    // Show the popup
+    klipper.slotPopupMenu();
+    QVERIFY(popup->isVisible());
+
+    // Toggle the popup visibility
+    klipper.slotPopupMenu();
+    QVERIFY(!popup->isVisible());
 }
 
 QTEST_MAIN(KlipperTest)
