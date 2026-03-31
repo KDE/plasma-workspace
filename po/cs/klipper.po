@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-03-13 14:15+0100\n"
+"PO-Revision-Date: 2026-03-30 12:56+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -288,6 +288,11 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Zde je třeba zadat název okna WM_CLASS, které chcete vyloučit. Chcete-li "
+"zjistit název okna WM_CLASS, zadejte v jiném terminálovém okně příkaz:<nl/"
+"><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/>a klikněte "
+"na okno, které chcete vyloučit. První název, který se zobrazí za rovnítkem, "
+"je ten, který musíte zadat."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -559,6 +564,8 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"Akce URL můžete povolit později na stránce <interface>Nastavení činností</"
+"interface> v okně appletu Schránka"
 
 #: klipper.cpp:606
 #, kde-format

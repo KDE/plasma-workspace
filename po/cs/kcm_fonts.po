@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-03-13 14:06+0100\n"
+"PO-Revision-Date: 2026-03-30 12:55+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -163,6 +163,8 @@ msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
+"Desetinné velikosti písma mohou v některých aplikacích způsobit problémy s "
+"rozložením textu. Zvažte, zda nepoužívat pouze celočíselné velikosti písma."
 
 #: package/contents/ui/main.qml:94
 #, kde-format

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2014.
+# SPDX-FileCopyrightText: 2014, 2026 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2022, 2023.
 #
 msgid ""
@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-03-10 12:58+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-30 19:52+0200\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
 #: shellpackage.cpp:26 shellpackage.cpp:27
 #, kde-format
 msgid "Applets furniture"
-msgstr ""
+msgstr "Nabídka appletů"
 
 #: shellpackage.cpp:28
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "UI průzkumníka pro přidávání widgetů"
 #: shellpackage.cpp:29
 #, kde-format
 msgid "User interface for the views that will show containments"
-msgstr ""
+msgstr "Uživatelské rozhraní, ve kterých se bude zobrazovat obsah"
 
 #: shellpackage.cpp:37
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "Výchozí soubor rozvržení"
 #: shellpackage.cpp:38
 #, kde-format
 msgid "Default plugins for containments, containmentActions, etc."
-msgstr ""
+msgstr "Výchozí moduly pro obsahy, akce obsahu atd."
 
 #: shellpackage.cpp:43
 #, kde-format
@@ -61,16 +61,18 @@ msgid ""
 "Compact representation of an applet when collapsed in a popup, for instance "
 "as an icon. Applets can override this component."
 msgstr ""
+"Zkrácené zobrazení appletu, když je sbalený v rozbalovacím okně, například "
+"jako ikona. Applety mohou tuto komponentu přepsat."
 
 #: shellpackage.cpp:53
 #, kde-format
 msgid "QML component for the configuration dialog for applets"
-msgstr ""
+msgstr "Komponenta QML pro konfigurační dialogové okno pro applety"
 
 #: shellpackage.cpp:56
 #, kde-format
 msgid "QML component for the configuration dialog for containments"
-msgstr ""
+msgstr "Komponenta QML pro konfigurační dialogové okno pro kontejnery"
 
 #: shellpackage.cpp:57
 #, kde-format
@@ -80,12 +82,12 @@ msgstr "Rozhraní nastavení panelu"
 #: shellpackage.cpp:60
 #, kde-format
 msgid "QML component for choosing an alternate applet"
-msgstr ""
+msgstr "Komponenta QML pro výběr alternativního appletu"
 
 #: shellpackage.cpp:63
 #, kde-format
 msgid "QML component for the configuration dialog of containments"
-msgstr ""
+msgstr "Komponenta QML pro konfigurační dialogové okno kontejnerů"
 
 #: shellpackage.cpp:66
 #, kde-format
@@ -98,3 +100,5 @@ msgid ""
 "A UI for writing, loading and running desktop scripts in the current live "
 "session"
 msgstr ""
+"UI pro psaní, načítání a spouštění skriptů pro pracovní plochu v aktuální "
+"relaci"

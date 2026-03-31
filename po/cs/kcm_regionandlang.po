@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-03-17 10:58+0100\n"
+"PO-Revision-Date: 2026-03-30 12:56+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -261,7 +261,7 @@ msgstr "Nelze najít spustitelný soubor „check-language-support“"
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr ""
+msgstr "check-language-support selhal, výstup: %1"
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format
