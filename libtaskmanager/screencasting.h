@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "qwayland-zkde-screencast-unstable-v1.h"
+#include "qwayland-kde-screencast-v2.h"
 
 #include <QObject>
 #include <QWaylandClientExtensionTemplate>
@@ -14,7 +14,7 @@
 
 #include <memory>
 
-class ScreencastingStream : public QObject, public QtWayland::zkde_screencast_stream_unstable_v1
+class ScreencastingStream : public QObject, public QtWayland::kde_screencast_stream_v2
 {
     Q_OBJECT
 
@@ -23,19 +23,17 @@ public:
     ~ScreencastingStream() override;
 
 Q_SIGNALS:
-    void objectSerialArrived(quint64 objectSerial);
-    void created(quint32 nodeid);
+    void created(quint32 nodeid, quint64 objectSerial);
     void failed(const QString &error);
     void closed();
 
 protected:
-    void zkde_screencast_stream_unstable_v1_created(uint32_t node) override;
-    void zkde_screencast_stream_unstable_v1_closed() override;
-    void zkde_screencast_stream_unstable_v1_failed(const QString &error) override;
-    void zkde_screencast_stream_unstable_v1_serial(uint32_t object_serial_hi, uint32_t object_serial_low) override;
+    void kde_screencast_stream_v2_created(uint32_t node, uint32_t object_serial_hi, uint32_t object_serial_low) override;
+    void kde_screencast_stream_v2_closed() override;
+    void kde_screencast_stream_v2_failed(const QString &error) override;
 };
 
-class Screencasting : public QWaylandClientExtensionTemplate<Screencasting>, public QtWayland::zkde_screencast_unstable_v1
+class Screencasting : public QWaylandClientExtensionTemplate<Screencasting>, public QtWayland::kde_screencast_manager_v2
 {
     Q_OBJECT
     QML_ELEMENT
@@ -45,6 +43,6 @@ public:
     explicit Screencasting();
     ~Screencasting() override;
 
-    std::unique_ptr<ScreencastingStream> createOutputStream(const QString &outputName, pointer mode);
-    std::unique_ptr<ScreencastingStream> createWindowStream(const QString &uuid, pointer mode);
+    std::unique_ptr<ScreencastingStream> createOutputStream(const QString &outputName, pointer_mode mode);
+    std::unique_ptr<ScreencastingStream> createWindowStream(const QString &uuid, pointer_mode mode);
 };

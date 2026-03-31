@@ -50,7 +50,7 @@ qt6_generate_wayland_protocol_client_sources(taskmanager
     ${private_code_option}
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/org-kde-plasma-virtual-desktop.xml
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-window-management.xml
-    FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/zkde-screencast-unstable-v1.xml
+    FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screencast-v2.xml
 )
 
 generate_export_header(taskmanager)

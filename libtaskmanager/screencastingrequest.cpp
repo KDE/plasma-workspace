@@ -45,7 +45,7 @@ void ScreencastingRequest::setUuid(const QString &uuid)
         if (!m_screenCasting) {
             m_screenCasting = std::make_unique<Screencasting>();
         }
-        setStream(m_screenCasting->createWindowStream(m_uuid, Screencasting::pointer_hidden));
+        setStream(m_screenCasting->createWindowStream(m_uuid, Screencasting::pointer_mode_hidden));
     }
 }
 
@@ -68,7 +68,7 @@ void ScreencastingRequest::setOutputName(const QString &outputName)
         if (!m_screenCasting) {
             m_screenCasting = std::make_unique<Screencasting>();
         }
-        setStream(m_screenCasting->createOutputStream(m_outputName, Screencasting::pointer_hidden));
+        setStream(m_screenCasting->createOutputStream(m_outputName, Screencasting::pointer_mode_hidden));
     }
 }
 
@@ -77,16 +77,16 @@ void ScreencastingRequest::setStream(std::unique_ptr<ScreencastingStream> stream
     if (stream) {
         m_stream = std::move(stream);
 
-        connect(m_stream.get(), &ScreencastingStream::created, this, &ScreencastingRequest::setNodeid);
+        connect(m_stream.get(), &ScreencastingStream::created, this, [this](quint32 nodeId, quint64 objectSerial) {
+            m_objectSerial = objectSerial;
+            Q_EMIT objectSerialChanged(objectSerial);
+            setNodeid(nodeId);
+        });
         connect(m_stream.get(), &ScreencastingStream::closed, this, [this]() {
             setNodeid(0);
         });
         connect(m_stream.get(), &ScreencastingStream::failed, this, [](const QString &error) {
             qWarning() << "error creating screencast" << error;
-        });
-        connect(m_stream.get(), &ScreencastingStream::objectSerialArrived, this, [this](quint64 objectSerial) {
-            m_objectSerial = objectSerial;
-            Q_EMIT objectSerialChanged(objectSerial);
         });
     } else {
         m_stream.reset();

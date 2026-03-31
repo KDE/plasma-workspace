@@ -15,36 +15,31 @@ ScreencastingStream::ScreencastingStream() = default;
 
 ScreencastingStream::~ScreencastingStream()
 {
-    close();
+    destroy();
 }
 
-void ScreencastingStream::zkde_screencast_stream_unstable_v1_created(uint32_t node)
+void ScreencastingStream::kde_screencast_stream_v2_created(uint32_t node, uint32_t object_serial_hi, uint32_t object_serial_low)
 {
-    Q_EMIT created(node);
+    Q_EMIT created(node, quint64(object_serial_hi) << 32 | object_serial_low);
 }
 
-void ScreencastingStream::zkde_screencast_stream_unstable_v1_closed()
+void ScreencastingStream::kde_screencast_stream_v2_closed()
 {
     Q_EMIT closed();
 }
 
-void ScreencastingStream::zkde_screencast_stream_unstable_v1_failed(const QString &error)
+void ScreencastingStream::kde_screencast_stream_v2_failed(const QString &error)
 {
     Q_EMIT failed(error);
 }
 
-void ScreencastingStream::zkde_screencast_stream_unstable_v1_serial(uint32_t object_serial_hi, uint32_t object_serial_low)
-{
-    Q_EMIT objectSerialArrived(static_cast<quint64>(object_serial_hi) << 32 | object_serial_low);
-}
-
 Screencasting::Screencasting()
-    : QWaylandClientExtensionTemplate<Screencasting>(ZKDE_SCREENCAST_STREAM_UNSTABLE_V1_SERIAL_SINCE_VERSION)
+    : QWaylandClientExtensionTemplate<Screencasting>(1)
 {
     initialize();
 
     if (!isInitialized()) {
-        qWarning() << "Remember requesting the interface on your desktop file: X-KDE-Wayland-Interfaces=zkde_screencast_unstable_v1";
+        qWarning() << "Remember to request the interface on your desktop file: X-KDE-Wayland-Interfaces=kde_screencast_v2";
     }
 }
 
@@ -55,36 +50,28 @@ Screencasting::~Screencasting()
     }
 }
 
-std::unique_ptr<ScreencastingStream> Screencasting::createOutputStream(const QString &outputName, pointer mode)
+std::unique_ptr<ScreencastingStream> Screencasting::createOutputStream(const QString &outputName, pointer_mode mode)
 {
     if (!isActive()) {
         return nullptr;
     }
 
-    wl_output *output = nullptr;
-    for (auto screen : qGuiApp->screens()) {
-        if (screen->name() == outputName) {
-            output = (wl_output *)QGuiApplication::platformNativeInterface()->nativeResourceForScreen("output", screen);
-        }
-    }
-
-    if (!output) {
-        return nullptr;
-    }
-
+    QtWayland::kde_screencast_output_params_v2 params(stream_output(outputName));
+    params.set_pointer_mode(mode);
     auto stream = std::make_unique<ScreencastingStream>();
-    stream->setObjectName(outputName);
-    stream->init(stream_output(output, mode));
+    stream->init(params.create_stream());
     return stream;
 }
 
-std::unique_ptr<ScreencastingStream> Screencasting::createWindowStream(const QString &uuid, pointer mode)
+std::unique_ptr<ScreencastingStream> Screencasting::createWindowStream(const QString &uuid, pointer_mode mode)
 {
     if (!isActive()) {
         return nullptr;
     }
+    QtWayland::kde_screencast_window_params_v2 params(stream_window(uuid));
+    params.set_pointer_mode(mode);
     auto stream = std::make_unique<ScreencastingStream>();
-    stream->init(stream_window(uuid, mode));
+    stream->init(params.create_stream());
     return stream;
 }
 
