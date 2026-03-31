@@ -66,8 +66,19 @@ PlasmoidItem {
             id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            visible: !main.isClipboardEmpty && !(main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.editing
+            visible: !main.isClipboardEmpty && !(main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.editing && !copyClipboardAction.visible
             onTriggered: (main.fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
+        },
+        PlasmaCore.Action {
+            id: copyClipboardAction
+
+            readonly property var page: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.T.StackView.view.currentItem
+
+            icon.name: page?.copyAction?.icon.name ?? ""
+            text: page?.copyAction?.tooltip ?? ""
+            onTriggered: page.copyAction.triggered()
+            enabled: page?.copyAction?.enabled ?? ""
+            visible: Plasmoid.containment.pluginName === "org.kde.plasma.systemtray" && page instanceof Private.BarcodePage
         }
     ]
 
@@ -126,7 +137,7 @@ PlasmoidItem {
                 model: historyModel
                 showsClearHistoryButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && clearAction.visible
                 barcodeType: Plasmoid.configuration.barcodeType
-                showBackButton: Plasmoid.containment.pluginName !== "org.kde.plasma.systemtray"
+                showHeader: Plasmoid.containment.pluginName !== "org.kde.plasma.systemtray"
 
                 onItemSelected: if (main.hideOnWindowDeactivate) {
                     main.expanded = false;

@@ -28,7 +28,9 @@ Item {
     readonly property bool fit: barcodeItem.implicitWidth <= barcodeItem.width && barcodeItem.implicitHeight <= barcodeItem.height
     property alias text: barcodeItem.content
 
-    required property bool showBackButton
+    readonly property alias copyAction: copyQRButton.action
+
+    required property bool showHeader
 
     Keys.onPressed: event => {
         if (event.key == Qt.Key_Escape) {
@@ -38,13 +40,14 @@ Item {
     }
 
     property PlasmaExtras.PlasmoidHeading header: PlasmaExtras.PlasmoidHeading {
+        visible: barcodeView.showHeader
         RowLayout {
             anchors.fill: parent
             PlasmaComponents3.ToolButton {
                 icon.name: "go-previous-view"
                 text: i18nd("klipper", "Return to Clipboard")
                 onClicked: barcodeView.stack.popCurrentItem()
-                visible: barcodeView.showBackButton
+                visible: barcodeView.showHeader
             }
 
             Item {
@@ -58,6 +61,7 @@ Item {
             PlasmaComponents3.ToolButton {
                 id: copyQRButton
 
+                visible: barcodeView.showHeader
                 action: Kirigami.Action {
                     enabled: barcodeView.valid && barcodeView.fit
                     icon.name: "edit-copy"
@@ -71,10 +75,11 @@ Item {
                                 i18ndc("klipper", "@info:status", "An image of the QR code has been copied to clipboard"), 5000)
                         });
                     }
+                    tooltip: i18ndc("klipper", "@info:tooltip", "Copy QR code image to clipboard")
                 }
 
                 PlasmaComponents3.ToolTip {
-                    text: i18ndc("klipper", "@info:tooltip", "Copy QR code image to clipboard")
+                    text: copyQRButton.action.tooltip
                 }
             }
         }

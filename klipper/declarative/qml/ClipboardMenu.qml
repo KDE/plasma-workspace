@@ -40,7 +40,7 @@ PlasmaComponents3.ScrollView {
     readonly property bool editing: T.StackView.view.currentItem instanceof EditPage
 
     property alias view: menuListView
-    property bool showBackButton: true
+    property bool showHeader: true
 
     background: null
     contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
@@ -62,7 +62,7 @@ PlasmaComponents3.ScrollView {
             stack: clipboardMenu.T.StackView.view,
             text: text,
             barcodeType: Qt.binding(() => clipboardMenu.barcodeType),
-            showBackButton: clipboardMenu.showBackButton
+            showHeader: clipboardMenu.showHeader
         });
     }
     onTriggerAction: uuid => model.invokeAction(uuid)
