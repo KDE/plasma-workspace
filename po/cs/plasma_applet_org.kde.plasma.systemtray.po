@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-20 00:45+0000\n"
-"PO-Revision-Date: 2026-03-13 14:21+0100\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
+"PO-Revision-Date: 2026-03-30 19:52+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -142,94 +142,84 @@ msgid "Scale with Panel width"
 msgstr "Měnit s šířkou panelu"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
 msgid "Panel icon size:"
-msgstr "Velikost ikony panelu:"
+msgstr "Velikost ikon panelu:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Icon spacing"
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
-msgstr "Malé"
+msgstr "Malý"
 
-#: qml/ConfigGeneral.qml:246
-#, kde-format
-msgid "Automatically enabled when in Touch Mode"
-msgstr "Automaticky povoleno v dotykovém režimu"
-
-#: qml/ConfigGeneral.qml:254
+#: qml/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Mezery:"
 
-#: qml/ConfigGeneral.qml:258
+#: qml/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Malé"
 
-#: qml/ConfigGeneral.qml:262
+#: qml/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normální"
 
-#: qml/ConfigGeneral.qml:266
+#: qml/ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Velké"
 
-#: qml/ConfigGeneral.qml:293
-#, fuzzy, kde-format
-#| msgid "More actions"
+#: qml/ConfigGeneral.qml:269
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Další činnosti"
+msgstr "Směr:"
 
-#: qml/ConfigGeneral.qml:307
+#: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "Zdola nahoru"
 
-#: qml/ConfigGeneral.qml:308
+#: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "Shora dolů"
 
-#: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
+#: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "Zleva doprava"
 
-#: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "Zprava doleva"
 
-#: qml/ConfigGeneral.qml:331
+#: qml/ConfigGeneral.qml:307
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automaticky přepnout na velké v dotykovém režimu"
 
-#: qml/ConfigGeneral.qml:357
+#: qml/ConfigGeneral.qml:333
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Položky"
 
-#: qml/ConfigGeneral.qml:361
+#: qml/ConfigGeneral.qml:337
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
@@ -282,6 +272,9 @@ msgstr "Mřížka s %1 položkami v %2 sloupcích"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Automatically enabled when in Touch Mode"
+#~ msgstr "Automaticky povoleno v dotykovém režimu"
 
 #~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 #~ msgid "Panel icon spacing:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-28 00:46+0000\n"
-"PO-Revision-Date: 2026-03-13 14:18+0100\n"
+"PO-Revision-Date: 2026-03-30 14:36+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -400,30 +400,30 @@ msgstr "Vyberte časové pásmo"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • %1 hodinu později"
+msgstr[1] " • %1 hodiny později"
+msgstr[2] " • %1 hodin později"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 později"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • %1 hodinu dříve"
+msgstr[1] " • %1 hodiny dříve"
+msgstr[2] " • %1 hodin dříve"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 dříve"
 
 #: main.qml:185
 #, kde-format

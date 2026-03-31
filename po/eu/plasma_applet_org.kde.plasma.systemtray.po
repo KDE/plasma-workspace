@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-20 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2025-12-07 23:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -159,36 +159,31 @@ msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Txikia"
 
-#: qml/ConfigGeneral.qml:246
-#, kde-format
-msgid "Automatically enabled when in Touch Mode"
-msgstr "Ukimen moduan automatikoki gaitzen da"
-
-#: qml/ConfigGeneral.qml:254
+#: qml/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:258
+#: qml/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Txikia"
 
-#: qml/ConfigGeneral.qml:262
+#: qml/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Arrunta"
 
-#: qml/ConfigGeneral.qml:266
+#: qml/ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Handia"
 
-#: qml/ConfigGeneral.qml:293
+#: qml/ConfigGeneral.qml:269
 #, fuzzy, kde-format
 #| msgid "More actions"
 msgctxt ""
@@ -197,39 +192,39 @@ msgctxt ""
 msgid "Direction:"
 msgstr "Ekintza gehiago"
 
-#: qml/ConfigGeneral.qml:307
+#: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:308
+#: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
+#: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:331
+#: qml/ConfigGeneral.qml:307
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Ukimen moduan automatikoki ezarri handira"
 
-#: qml/ConfigGeneral.qml:357
+#: qml/ConfigGeneral.qml:333
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Sarrerak"
 
-#: qml/ConfigGeneral.qml:361
+#: qml/ConfigGeneral.qml:337
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
@@ -282,6 +277,9 @@ msgstr "%1 elementu eta %2 zutabeko sareta"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Automatically enabled when in Touch Mode"
+#~ msgstr "Ukimen moduan automatikoki gaitzen da"
 
 #~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 #~ msgid "Panel icon spacing:"

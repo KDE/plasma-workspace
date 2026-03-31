@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-20 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-01-18 20:46+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -157,36 +157,31 @@ msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Liten"
 
-#: qml/ConfigGeneral.qml:246
-#, kde-format
-msgid "Automatically enabled when in Touch Mode"
-msgstr "Automatisk brukt i trykkskjerm-modus"
-
-#: qml/ConfigGeneral.qml:254
+#: qml/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:258
+#: qml/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Liten"
 
-#: qml/ConfigGeneral.qml:262
+#: qml/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: qml/ConfigGeneral.qml:266
+#: qml/ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Stor"
 
-#: qml/ConfigGeneral.qml:293
+#: qml/ConfigGeneral.qml:269
 #, fuzzy, kde-format
 #| msgid "More actions"
 msgctxt ""
@@ -195,39 +190,39 @@ msgctxt ""
 msgid "Direction:"
 msgstr "Flere handlinger"
 
-#: qml/ConfigGeneral.qml:307
+#: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:308
+#: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
+#: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:331
+#: qml/ConfigGeneral.qml:307
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatisk satt til «stor» i trykkskjerm-modus"
 
-#: qml/ConfigGeneral.qml:357
+#: qml/ConfigGeneral.qml:333
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Oppføringer"
 
-#: qml/ConfigGeneral.qml:361
+#: qml/ConfigGeneral.qml:337
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
@@ -280,3 +275,6 @@ msgstr "Rutenett med %1 ikoner og %2 kolonner"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AÅILlmyjgGJP"
+
+#~ msgid "Automatically enabled when in Touch Mode"
+#~ msgstr "Automatisk brukt i trykkskjerm-modus"

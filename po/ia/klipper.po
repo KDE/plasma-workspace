@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:46+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-02-04 18:51+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -252,66 +252,35 @@ msgstr "Vias breve"
 msgid "Shortcuts Configuration"
 msgstr "Configuration de vias breve"
 
-#: declarative/qml/BarcodePage.qml:34
-#, kde-format
-msgid "QR Code"
-msgstr "QR Code (Codice QR)"
-
-#: declarative/qml/BarcodePage.qml:35
-#, kde-format
-msgid "Data Matrix"
-msgstr "Data Matrix"
-
-#: declarative/qml/BarcodePage.qml:36
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "Aztec"
-
-#: declarative/qml/BarcodePage.qml:37
-#, kde-format
-msgid "Code 39"
-msgstr "Codice 39"
-
-#: declarative/qml/BarcodePage.qml:38
-#, kde-format
-msgid "Code 93"
-msgstr "Codice 93"
-
-#: declarative/qml/BarcodePage.qml:39
-#, kde-format
-msgid "Code 128"
-msgstr "Codice 128"
-
-#: declarative/qml/BarcodePage.qml:54
+#: declarative/qml/BarcodePage.qml:45
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Retorna a area de transferentia"
 
-#: declarative/qml/BarcodePage.qml:99
+#: declarative/qml/BarcodePage.qml:65
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Copia"
 
-#: declarative/qml/BarcodePage.qml:105
+#: declarative/qml/BarcodePage.qml:71
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Un imagine del codice QR  ha essite copiate al tabuliero"
 
-#: declarative/qml/BarcodePage.qml:111
+#: declarative/qml/BarcodePage.qml:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Copia codice QR in area de transferentia (tabuliero)"
 
-#: declarative/qml/BarcodePage.qml:122
+#: declarative/qml/BarcodePage.qml:108
 #, kde-format
-msgid "Change the QR code type"
-msgstr "Cambia le typo de codice QR "
+msgid "QR Code"
+msgstr "QR Code (Codice QR)"
 
-#: declarative/qml/BarcodePage.qml:207
+#: declarative/qml/BarcodePage.qml:157
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -319,7 +288,7 @@ msgstr ""
 "Il non ha assatis spatio per monstrar le codice QR. Tu essaya redimensionar "
 "iste applet."
 
-#: declarative/qml/BarcodePage.qml:207
+#: declarative/qml/BarcodePage.qml:157
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Il falleva crear codice QR"
@@ -937,7 +906,7 @@ msgstr ""
 "Si un nomine de fileo un URL es seligite, include applicaiones que pote "
 "acceptar sy typo MIME in le menu de popup."
 
-#: klipperpopup.cpp:37
+#: klipperpopup.cpp:40
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Popup de Tabula de Notas"
@@ -946,6 +915,25 @@ msgstr "Popup de Tabula de Notas"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancella"
+
+#~ msgid "Data Matrix"
+#~ msgstr "Data Matrix"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "Aztec"
+
+#~ msgid "Code 39"
+#~ msgstr "Codice 39"
+
+#~ msgid "Code 93"
+#~ msgstr "Codice 93"
+
+#~ msgid "Code 128"
+#~ msgstr "Codice 128"
+
+#~ msgid "Change the QR code type"
+#~ msgstr "Cambia le typo de codice QR "
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

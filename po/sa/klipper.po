@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:46+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -244,74 +244,43 @@ msgstr "शॉर्टकट"
 msgid "Shortcuts Configuration"
 msgstr "शॉर्टकट् विन्यासः"
 
-#: declarative/qml/BarcodePage.qml:34
-#, kde-format
-msgid "QR Code"
-msgstr "QR कोड"
-
-#: declarative/qml/BarcodePage.qml:35
-#, kde-format
-msgid "Data Matrix"
-msgstr "डाटा मैट्रिक्स"
-
-#: declarative/qml/BarcodePage.qml:36
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "एज्टेक"
-
-#: declarative/qml/BarcodePage.qml:37
-#, kde-format
-msgid "Code 39"
-msgstr "संहिता 39"
-
-#: declarative/qml/BarcodePage.qml:38
-#, kde-format
-msgid "Code 93"
-msgstr "संहिता 93"
-
-#: declarative/qml/BarcodePage.qml:39
-#, kde-format
-msgid "Code 128"
-msgstr "संहिता १२८"
-
-#: declarative/qml/BarcodePage.qml:54
+#: declarative/qml/BarcodePage.qml:45
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Clipboard प्रति प्रत्यागच्छन्तु"
 
-#: declarative/qml/BarcodePage.qml:99
+#: declarative/qml/BarcodePage.qml:65
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:105
+#: declarative/qml/BarcodePage.qml:71
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:111
+#: declarative/qml/BarcodePage.qml:77
 #, fuzzy, kde-format
 #| msgid "Append to clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "क्लिप्बोर्ड् मध्ये योजयन्तु"
 
-#: declarative/qml/BarcodePage.qml:122
+#: declarative/qml/BarcodePage.qml:108
 #, kde-format
-msgid "Change the QR code type"
-msgstr "QR कोड प्रकारं परिवर्तयन्तु"
+msgid "QR Code"
+msgstr "QR कोड"
 
-#: declarative/qml/BarcodePage.qml:207
+#: declarative/qml/BarcodePage.qml:157
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "QR-सङ्केतं प्रदर्शयितुं पर्याप्तं स्थानं नास्ति । अस्य एप्लेट् इत्यस्य आकारं परिवर्तयितुं प्रयतस्व ।"
 
-#: declarative/qml/BarcodePage.qml:207
+#: declarative/qml/BarcodePage.qml:157
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR कोडस्य निर्माणं विफलम् अभवत्"
@@ -911,7 +880,7 @@ msgstr ""
 "यदि सञ्चिकानाम अथवा URL चयनितम् अस्ति तर्हि पॉपअप मेन्यू मध्ये तस्य MIME प्रकारं "
 "स्वीकुर्वितुं शक्नुवन्ति अनुप्रयोगाः समाविष्टाः कुर्वन्तु ।"
 
-#: klipperpopup.cpp:37
+#: klipperpopup.cpp:40
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड पॉपअप"
@@ -920,6 +889,25 @@ msgstr "क्लिपबोर्ड पॉपअप"
 #, kde-format
 msgid "&Cancel"
 msgstr "&निरसयतु"
+
+#~ msgid "Data Matrix"
+#~ msgstr "डाटा मैट्रिक्स"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "एज्टेक"
+
+#~ msgid "Code 39"
+#~ msgstr "संहिता 39"
+
+#~ msgid "Code 93"
+#~ msgstr "संहिता 93"
+
+#~ msgid "Code 128"
+#~ msgstr "संहिता १२८"
+
+#~ msgid "Change the QR code type"
+#~ msgstr "QR कोड प्रकारं परिवर्तयन्तु"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

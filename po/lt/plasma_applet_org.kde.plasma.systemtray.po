@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-20 00:45+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2026-03-24 14:12+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -158,36 +158,31 @@ msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Mažas"
 
-#: qml/ConfigGeneral.qml:246
-#, kde-format
-msgid "Automatically enabled when in Touch Mode"
-msgstr "Automatiškai įjungta, kai esama lietimo veiksenoje"
-
-#: qml/ConfigGeneral.qml:254
+#: qml/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr "Tarpai:"
 
-#: qml/ConfigGeneral.qml:258
+#: qml/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Maži"
 
-#: qml/ConfigGeneral.qml:262
+#: qml/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Įprasti"
 
-#: qml/ConfigGeneral.qml:266
+#: qml/ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Dideli"
 
-#: qml/ConfigGeneral.qml:293
+#: qml/ConfigGeneral.qml:269
 #, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
@@ -195,39 +190,39 @@ msgctxt ""
 msgid "Direction:"
 msgstr "Kryptis:"
 
-#: qml/ConfigGeneral.qml:307
+#: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
 msgstr "Iš apačios į viršų"
 
-#: qml/ConfigGeneral.qml:308
+#: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
 msgstr "Iš viršaus į apačią"
 
-#: qml/ConfigGeneral.qml:313 qml/ConfigGeneral.qml:320
+#: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
 msgstr "Iš kairės į dešinę"
 
-#: qml/ConfigGeneral.qml:314 qml/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
 msgstr "Iš dešinės į kairę"
 
-#: qml/ConfigGeneral.qml:331
+#: qml/ConfigGeneral.qml:307
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatiškai nustatoma į didelius, kai esama lietimo veiksenoje"
 
-#: qml/ConfigGeneral.qml:357
+#: qml/ConfigGeneral.qml:333
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Elementai"
 
-#: qml/ConfigGeneral.qml:361
+#: qml/ConfigGeneral.qml:337
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
@@ -280,6 +275,9 @@ msgstr "Tinklelis, kuriame %1 elementai išdėstyti %2 stulpeliais"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AĄČčęĘėĖĮįILlmŠšŲųŪūŽžyjgGJP"
+
+#~ msgid "Automatically enabled when in Touch Mode"
+#~ msgstr "Automatiškai įjungta, kai esama lietimo veiksenoje"
 
 #~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 #~ msgid "Panel icon spacing:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-03-13 14:06+0100\n"
+"PO-Revision-Date: 2026-03-30 12:56+0200\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -379,7 +379,7 @@ msgstr "Styl Plasma"
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "Ukazatele"
 
 #: ui/MoreOptions.qml:77
 #, kde-format

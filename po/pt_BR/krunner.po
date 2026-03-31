@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-19 00:49+0000\n"
+"POT-Creation-Date: 2026-03-31 00:46+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -31,47 +31,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alvarenga@kde.org"
 
-#: main.cpp:58 view.cpp:49
+#: main.cpp:59 view.cpp:49
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:58
+#: main.cpp:59
 #, kde-format
 msgid "Run Command interface"
 msgstr "Interface de execução de comandos"
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Use o conteúdo da área de transferência como consulta do KRunner"
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Iniciar o KRunner em segundo plano, não mostrá-lo."
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substituir uma instância existente"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Mostrar apenas resultados do plugin fornecido"
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgid "List available plugins"
 msgstr "Listar plugins disponíveis"
 
-#: main.cpp:75
+#: main.cpp:76
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "A consulta a executar, usada apenas se -c não for fornecido"
 
-#: main.cpp:84
+#: main.cpp:85
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
