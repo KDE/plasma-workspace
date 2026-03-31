@@ -434,7 +434,12 @@ void AppletsLayout::showPlaceHolderForItem(ItemContainer *item)
     m_placeHolder->setPosition(item->position());
     m_placeHolder->setSize(item->size());
 
+    // Make the placeholder respect the minimum size defined by the applet
+    m_placeHolder->m_layoutAttached = item->layoutAttached();
+
     m_layoutManager->positionItem(m_placeHolder);
+
+    m_placeHolder->m_layoutAttached = nullptr;
 
     m_placeHolder->setProperty("opacity", 1);
 }

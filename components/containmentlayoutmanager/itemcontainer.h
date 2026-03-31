@@ -191,6 +191,7 @@ private Q_SLOTS:
     void onConfigOverlayComponentStatusChanged(QQmlComponent::Status status, QQmlComponent *component = nullptr);
 
 private:
+    friend class AppletsLayout;
     void syncChildItemsGeometry(const QSizeF &size);
     void sendUngrabRecursive(QQuickItem *item);
 
