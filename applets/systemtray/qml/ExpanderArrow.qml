@@ -70,13 +70,13 @@ PlasmaCore.ToolTipArea {
 
         source: {
             if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
-                return "arrow-down";
+                return "arrow-down-symbolic";
             } else if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
-                return "arrow-right";
+                return "arrow-right-symbolic";
             } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
-                return "arrow-left";
+                return "arrow-left-symbolic";
             } else {
-                return "arrow-up";
+                return "arrow-up-symbolic";
             }
         }
     }
@@ -99,13 +99,13 @@ PlasmaCore.ToolTipArea {
 
         source: {
             if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
-                return "arrow-up";
+                return "arrow-up-symbolic";
             } else if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
-                return "arrow-left";
+                return "arrow-left-symbolic";
             } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
-                return "arrow-right";
+                return "arrow-right-symbolic";
             } else {
-                return "arrow-down";
+                return "arrow-down-symbolic";
             }
         }
     }
