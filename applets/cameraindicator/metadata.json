@@ -62,6 +62,7 @@
         "Description[bg]": "Показва дали камерата се използва от някое приложение",
         "Description[ca@valencia]": "Mostra si una aplicació utilitza actualment qualsevol càmera",
         "Description[ca]": "Mostra si una aplicació utilitza actualment qualsevol càmera",
+        "Description[cs]": "Ukazuje,zda některou z kamer právě využívá nějaká aplikace",
         "Description[da]": "Viser om et kamera er i brug af en app",
         "Description[de]": "Die aktuelle Verwendung der Kamera durch eine Anwendung anzeigen",
         "Description[el]": "Δείχνει αν κάποια κάμερα χρησιμοποιείται αυτή τη στιγμή από μια εφαρμογή",
