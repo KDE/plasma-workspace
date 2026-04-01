@@ -64,6 +64,7 @@ class ClipboardDeadlockTest(unittest.TestCase):
 if __name__ == '__main__':
     try:
         from PySide6.QtCore import QObject
+        from KGuiAddons import KSystemClipboard
     except ModuleNotFoundError:
         sys.exit(0)
     unittest.main()
