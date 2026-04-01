@@ -62,6 +62,7 @@
         "Description[bg]": "Показва конфигурируема диаграма на сензор за системен монитор",
         "Description[ca@valencia]": "Mostra un diagrama configurable d'un sensor del monitor del sistema",
         "Description[ca]": "Mostra un diagrama configurable d'un sensor del monitor del sistema",
+        "Description[cs]": "Zobrazí konfigurovatelný graf senzoru systémového monitoru",
         "Description[da]": "Viser et konfigurerbart diagram over en systemovervågning-sensor",
         "Description[de]": "Zeigt ein anpassbares Diagramm eines Systemmonitor-Sensors an",
         "Description[en_GB]": "Displays a configurable chart of a system monitor sensor",
