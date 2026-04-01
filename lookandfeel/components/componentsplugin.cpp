@@ -11,7 +11,7 @@ public:
     void initializeEngine(QQmlEngine *engine, const char *uri) override
     {
         Q_UNUSED(uri)
-        Plasma::setupPlasmaStyle(engine);
+        engine->setProperty("_kirigamiTheme", QStringLiteral("KirigamiPlasmaStyle"));
     }
     void registerTypes(const char *uri) override
     {
