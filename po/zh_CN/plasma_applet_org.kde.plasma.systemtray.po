@@ -264,6 +264,3 @@ msgstr "在 %2 列中显示 %1 个项目的网格"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Automatically enabled when in Touch Mode"
-#~ msgstr "在触摸模式下自动启用"

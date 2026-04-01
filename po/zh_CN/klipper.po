@@ -863,22 +863,3 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgid "Data Matrix"
-#~ msgstr "Data Matrix"
-
-#~ msgctxt "Aztec barcode"
-#~ msgid "Aztec"
-#~ msgstr "Aztec"
-
-#~ msgid "Code 39"
-#~ msgstr "Code 39"
-
-#~ msgid "Code 93"
-#~ msgstr "Code 93"
-
-#~ msgid "Code 128"
-#~ msgstr "Code 128"
-
-#~ msgid "Change the QR code type"
-#~ msgstr "更改二维码类型"
