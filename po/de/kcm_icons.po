@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-12-06 22:26+0100\n"
+"PO-Revision-Date: 2026-03-26 22:41+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -36,7 +36,7 @@ msgstr "Es kann keine temporäre Datei erstellt werden."
 #: main.cpp:158
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Das Archiv für das Symboldesign %1 kann nicht heruntergeladen werden."
+msgstr "Das Symboldesign-Archiv kann nicht heruntergeladen werden: %1"
 
 #: main.cpp:172
 #, kde-format
