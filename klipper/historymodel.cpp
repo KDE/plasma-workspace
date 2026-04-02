@@ -798,7 +798,6 @@ void HistoryModel::loadSettings()
     // 0 is the id of "Ignore selection" radiobutton
     m_bIgnoreSelection = KlipperSettings::ignoreSelection();
     m_bKeepContents = KlipperSettings::keepClipboardContents();
-    m_bSynchronize = KlipperSettings::syncClipboards();
     m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
 
     if (m_bNoNullClipboard) {
@@ -901,9 +900,6 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     // XXX: Order sensitive code. Must die.
     const bool selectionMode = mode == QClipboard::Selection;
     if (selectionMode && m_bIgnoreSelection) {
-        if (m_bSynchronize) {
-            m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
-        }
         return;
     }
 
@@ -919,12 +915,7 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         return;
     }
 
-    if (changed && insert(data)) [[likely]] {
-        qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-        if (m_bSynchronize) { // applyClipChanges can return nullptr
-            m_clip->setMimeData(data, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
-        }
-    }
+    if (changed && insert(data)) [[likely]] { }
 }
 
 void HistoryModel::slotIgnored(QClipboard::Mode mode)

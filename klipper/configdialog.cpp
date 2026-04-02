@@ -17,7 +17,6 @@
 #include <QPushButton>
 #include <QRadioButton>
 #include <QSpinBox>
-#include <QToolTip>
 #include <QWindow>
 
 #include <KActionCollection>
@@ -92,40 +91,10 @@ GeneralWidget::GeneralWidget(QWidget *parent)
 
     layout->addRow(QString(), new QLabel(this));
 
-    // Synchronise selection and clipboard
-    item = KlipperSettings::self()->syncClipboardsItem();
-    m_syncClipboardsCb = new QCheckBox(item->label(), this);
-    m_syncClipboardsCb->setObjectName(QLatin1String("kcfg_SyncClipboards"));
-    layout->addRow(i18n("Selection and Clipboard:"), m_syncClipboardsCb);
-
-    QLabel *hint = ConfigDialog::createHintLabel(item, this);
-    layout->addRow(QString(), hint);
-    connect(hint, &QLabel::linkActivated, this, [hint]() {
-        QToolTip::showText(QCursor::pos(),
-                           xi18nc("@info:tooltip",
-                                  "When text or an area of the screen is highlighted with the mouse or keyboard, \
-this is the <emphasis>selection</emphasis>. It can be pasted using the middle mouse button.\
-<nl/>\
-<nl/>\
-If the selection is explicitly copied using a <interface>Copy</interface> or <interface>Cut</interface> action, \
-it is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a <interface>Paste</interface> action. \
-<nl/>\
-<nl/>\
-When turned on this option keeps the selection and the clipboard the same, so that any selection is immediately available to paste by any means. \
-If it is turned off, the selection may still be saved in the clipboard history (subject to the options below), but it can only be pasted using the middle mouse button."),
-                           hint);
-    });
-
-    layout->addRow(QString(), new QLabel(this));
-
     // Radio button group: Storing text selections in history
     //
     // These two options correspond to the 'ignoreSelection' internal
     // Klipper setting.
-    //
-    // The 'Always' option is not available if selection/clipboard synchronisation
-    // is turned off - in this case the selection is never automatically saved
-    // in the clipboard history.
 
     auto *buttonGroup = new QButtonGroup(this);
 
@@ -162,9 +131,6 @@ If it is turned off, the selection may still be saved in the clipboard history (
     // Option 1:  Always store images in history
     //        2:  Only when explicitly copied
     //        3:  Never store images in history
-    //
-    // The 'Always' option is not available if selection/clipboard synchronisation
-    // is turned off.
 
     buttonGroup = new QButtonGroup(this);
 
@@ -187,8 +153,6 @@ If it is turned off, the selection may still be saved in the clipboard history (
     layout->addRow(QString(), m_neverImageRb);
 
     layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
-
-    m_havePrevAlwaysImageTextConfig = false;
 }
 
 void GeneralWidget::updateWidgets()
@@ -201,49 +165,6 @@ void GeneralWidget::updateWidgets()
     // priority too.
     if (KlipperSettings::selectionTextOnly()) {
         KlipperSettings::setIgnoreImages(false);
-    }
-}
-
-void GeneralWidget::initWidgetStates()
-{
-    Q_ASSERT(!m_havePrevAlwaysImageTextConfig);
-    // During dialog setup, disable / change some widgets according to current settings to achieve the same
-    // internal consistency as settings changes made by the user after opening the dialog.
-    slotWidgetModified();
-    m_havePrevAlwaysImageTextConfig = false;
-}
-
-void GeneralWidget::slotWidgetModified()
-{
-    // A setting widget has been changed.  Update the state of
-    // any other widgets that depend on it.
-
-    if (m_syncClipboardsCb->isChecked()) {
-        m_alwaysImageRb->setEnabled(true);
-        m_alwaysTextRb->setEnabled(true);
-        m_copiedTextRb->setEnabled(true);
-
-        if (m_havePrevAlwaysImageTextConfig) {
-            m_alwaysTextRb->setChecked(m_prevAlwaysText);
-            m_alwaysImageRb->setChecked(m_prevAlwaysImage);
-            m_havePrevAlwaysImageTextConfig = false;
-        }
-    } else {
-        m_prevAlwaysText = m_alwaysTextRb->isChecked();
-        m_prevAlwaysImage = m_alwaysImageRb->isChecked();
-        m_havePrevAlwaysImageTextConfig = true;
-
-        if (m_alwaysImageRb->isChecked()) {
-            m_copiedImageRb->setChecked(true);
-        }
-
-        if (m_alwaysTextRb->isChecked()) {
-            m_copiedTextRb->setChecked(true);
-        }
-
-        m_alwaysImageRb->setEnabled(false);
-        m_alwaysTextRb->setEnabled(false);
-        m_copiedTextRb->setEnabled(false);
     }
 }
 
@@ -606,9 +527,6 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
 
     connect(m_generalPage, &GeneralWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
-
-    connect(this, &KConfigDialog::widgetModified, m_generalPage, &GeneralWidget::slotWidgetModified);
-    m_generalPage->initWidgetStates();
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void)winId();

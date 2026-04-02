@@ -140,7 +140,6 @@ private:
     bool m_bNoNullClipboard = true;
     bool m_bIgnoreSelection = true;
     bool m_bKeepContents = true;
-    bool m_bSynchronize = false;
     bool m_bSelectionTextOnly = true;
 
     friend class DeclarativeHistoryModel;

@@ -245,10 +245,6 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode, const QMimeData *data
         return; // unknown, ignore
     }
 
-    if (data->hasFormat(QStringLiteral("application/x-kde-syncselection"))) {
-        return;
-    }
-
     Q_ASSERT_X((mode == QClipboard::Clipboard && m_clipboardLocklevel == 1) || (mode == QClipboard::Selection && m_selectionLocklevel == 1),
                Q_FUNC_INFO,
                qPrintable(QStringLiteral("%1 %2").arg(QString::number(m_clipboardLocklevel), QString::number(m_selectionLocklevel))));
@@ -405,9 +401,6 @@ void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeDat
     if (clipboardMimeData) {
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
             clipboardMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
-            // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
-            clipboardMimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
         }
         QMetaObject::invokeMethod(
             this,
@@ -416,7 +409,7 @@ void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeDat
                 qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << (clipboardMimeData->hasImage() ? u"image"_s : clipboardMimeData->text()) << ">";
                 m_clip->setMimeData(clipboardMimeData, QClipboard::Clipboard);
             },
-            updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
+            Qt::DirectConnection);
     }
 }
 

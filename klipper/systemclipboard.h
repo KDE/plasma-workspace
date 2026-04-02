@@ -70,7 +70,6 @@ public:
 
     enum class ClipboardUpdateReason {
         UpdateClipboard,
-        SyncSelection,
         PreventEmptyClipboard,
     };
 

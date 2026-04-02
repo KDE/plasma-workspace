@@ -31,17 +31,12 @@ public:
     ~GeneralWidget() override = default;
 
     void updateWidgets();
-    void initWidgetStates();
 
 Q_SIGNALS:
     void widgetChanged();
 
-public Q_SLOTS:
-    void slotWidgetModified();
-
 private:
     QCheckBox *m_enableHistoryCb;
-    QCheckBox *m_syncClipboardsCb;
 
     QRadioButton *m_alwaysTextRb;
     QRadioButton *m_copiedTextRb;
@@ -51,10 +46,6 @@ private:
     QRadioButton *m_neverImageRb;
 
     QSpinBox *m_historySizeSb;
-
-    bool m_havePrevAlwaysImageTextConfig;
-    bool m_prevAlwaysImage;
-    bool m_prevAlwaysText;
 };
 
 class PopupWidget : public QWidget

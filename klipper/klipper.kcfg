@@ -23,11 +23,6 @@
       <label comment="KDE::DoNotExtract">Backwards compatibility, don't touch.</label>
       <default>3</default>
     </entry>
-    <entry name="SyncClipboards" type="Bool">
-      <label>Keep the selection and clipboard the same</label>
-      <default>false</default>
-      <whatsthis>Content selected with the cursor is automatically copied to the clipboard so that it can be pasted with either a Paste action or a middle-click.&lt;br/&gt;&lt;a href="1"&gt;More about the selection and clipboard&lt;/a&gt;.</whatsthis>
-    </entry>
     <entry name="IgnoreSelection" type="Bool">
       <label>Ignore the selection</label>
       <default>true</default>
