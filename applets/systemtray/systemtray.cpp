@@ -314,6 +314,10 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     }
 
     auto *desktopMenu = new QMenu;
+    // Breeze and Oxygen have rounded corners on menus. They set this attribute
+    // in polish() but at that time the underlying surface has already been
+    // created so setting this flag makes no difference anymore (Bug 385311)
+    desktopMenu->setAttribute(Qt::WA_TranslucentBackground);
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
 
