@@ -21,7 +21,7 @@ target_sources(components PRIVATE components/componentsplugin.cpp)
 target_link_libraries(components PRIVATE Plasma::Plasma)
 ecm_finalize_qml_module(components DESTINATION ${KDE_INSTALL_QMLDIR})
 
-qt_add_shaders(components LNFSHADERS
+qt6_add_shaders(components LNFSHADERS
     PRECOMPILE
     BATCHABLE
     OPTIMIZED
