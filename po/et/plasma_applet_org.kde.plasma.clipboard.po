@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:46+0000\n"
+"POT-Creation-Date: 2026-04-03 00:45+0000\n"
 "PO-Revision-Date: 2020-10-08 10:12+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -34,7 +34,7 @@ msgstr "Lõikepuhver on tühi"
 msgid "Clear History"
 msgstr "Ajaloo puhastamine"
 
-#: qml/main.qml:76
+#: qml/main.qml:87
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"

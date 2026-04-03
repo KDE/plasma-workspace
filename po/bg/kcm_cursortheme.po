@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-02-11 22:36+0100\n"
+"PO-Revision-Date: 2026-04-03 02:05+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -21,17 +21,15 @@ msgstr ""
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgid "Name of the current pointer theme"
-msgstr "Име на текущата тема на курсора"
+msgstr "Име на текущата тема на показалеца"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Current cursor size"
+#, kde-format
 msgid "Current pointer size"
-msgstr "Текущ размер на курсора"
+msgstr "Текущ размер на показалеца"
 
 #: kcmcursortheme.cpp:312
 #, kde-format
@@ -89,31 +87,25 @@ msgid "The requested size '%1' is not available, using %2 instead."
 msgstr "Заявеният размер „%1“ не е наличен, вместо него се използва %2."
 
 #: plasma-apply-cursortheme.cpp:65
-#, fuzzy, kde-format
-#| msgid ""
-#| "This tool allows you to set the mouse cursor theme for the current Plasma "
-#| "session, without accidentally setting it to one that is either not "
-#| "available, or which is already set."
+#, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
-"Този инструмент ви позволява да зададете темата за курсора на мишката за "
+"Този инструмент ви позволява да зададете темата за показалеца на мишката за "
 "текущата Plasma сесия, без случайно да го зададете на този, който или не е "
 "на разположение, или който вече е зададен."
 
 #: plasma-apply-cursortheme.cpp:69
-#, fuzzy, kde-format
-#| msgid ""
-#| "The name of the cursor theme you wish to set for your current Plasma "
-#| "session (passing a full path will only use the last part of the path)"
+#, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
 msgstr ""
-"Името на темата на курсора, която искате да зададете за текущата си сесия на "
-"Plasma (посочването на пълен път, ще използва само последната част на пътя)"
+"Името на темата на показалеца, която искате да зададете за текущата си сесия "
+"на Plasma (посочването на пълен път, ще използва само последната част на "
+"пътя)"
 
 #: plasma-apply-cursortheme.cpp:70
 #, kde-format
@@ -128,10 +120,7 @@ msgstr ""
 "Използване на определен размер, а не на размера по подразбиране на темата"
 
 #: plasma-apply-cursortheme.cpp:92
-#, fuzzy, kde-format
-#| msgid ""
-#| "The requested theme \"%1\" is already set as the theme for the current "
-#| "Plasma session."
+#, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
@@ -139,32 +128,24 @@ msgstr ""
 "Заявената тема „%1“ вече е зададена като тема за текущата сесия на Plasma."
 
 #: plasma-apply-cursortheme.cpp:103
-#, fuzzy, kde-format
-#| msgid ""
-#| "Successfully applied the mouse cursor theme %1 to your current Plasma "
-#| "session"
+#, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
-msgstr "Успешно прилагане на тема на курсора %1 към текущата сесия на Plasma"
+msgstr ""
+"Успешно прилагане на тема на показалеца %1 към текущата сесия на Plasma"
 
 #: plasma-apply-cursortheme.cpp:105
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for your newly applied mouse "
-#| "cursor theme to display correctly."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
 msgstr ""
-"Трябва да рестартирате Plasma сесия, за да се покаже правилно новата тема на "
-"курсора на мишката."
+"Трябва да рестартирате сесията на Plasma, за да се покаже правилно новата "
+"тема на показалеца на мишката."
 
 #: plasma-apply-cursortheme.cpp:115
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not find theme \"%1\". The theme should be one of the following "
-#| "options: %2"
+#, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
@@ -172,10 +153,9 @@ msgstr ""
 "Не може да се намери тема „%1“. Темата трябва да има следните опции: %2"
 
 #: plasma-apply-cursortheme.cpp:123
-#, fuzzy, kde-format
-#| msgid "You have the following mouse cursor themes on your system:"
+#, kde-format
 msgid "You have the following mouse pointer themes on your system:"
-msgstr "Имате следните теми на курсора на мишката на вашата система:"
+msgstr "Имате следните теми на показалеца на мишката на вашата система:"
 
 #: plasma-apply-cursortheme.cpp:128
 #, kde-format
@@ -183,34 +163,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(Текуща тема за тази сесия на Plasma)"
 
 #: ui/Delegate.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Remove cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
-msgstr "Премахване на тема с курсори"
+msgstr "Премахване на тема с показалци"
 
 #: ui/Delegate.qml:50
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cannot delete the active cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
-msgstr "Не може да се изтрие активната тема на курсори"
+msgstr "Не може да се изтрие активната тема на показалеца"
 
 #: ui/Delegate.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Cannot delete system-installed cursor themes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
-msgstr "Не може да се изтрие системна тема с курсори"
+msgstr "Не може да се изтрие системна тема с показалци"
 
 #: ui/Delegate.qml:60
-#, fuzzy, kde-format
-#| msgid "Don’t delete this cursor theme"
+#, kde-format
 msgid "Don’t delete this pointer theme"
-msgstr "Да не се изтрива тази тема на курсори"
+msgstr "Да не се изтрива тази тема с показалци"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -227,17 +200,13 @@ msgstr ""
 "стартирането на дадено приложение."
 
 #: ui/LaunchFeedbackDialog.qml:49
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Cursor feedback:"
+#, kde-format
 msgctxt "@label"
 msgid "Pointer feedback:"
-msgstr "Курсор обратна връзка"
+msgstr "Обратна връзка на показалеца:"
 
 #: ui/LaunchFeedbackDialog.qml:50
-#, fuzzy, kde-format
-#| msgctxt "@option:radio No cursor feedback when launching apps"
-#| msgid "None"
+#, kde-format
 msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
 msgstr "Без"
@@ -312,10 +281,9 @@ msgid "Open Theme"
 msgstr "Отваряне на тема"
 
 #: ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+#, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
-msgstr "Тематични файлове на курсора  (*.tar.gz *.tar.bz2)"
+msgstr "Тематични файлове на показалеца (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:59
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:46+0000\n"
+"POT-Creation-Date: 2026-04-03 00:45+0000\n"
 "PO-Revision-Date: 2023-06-01 09:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -33,7 +33,7 @@ msgstr "الحافظة فارغة"
 msgid "Clear History"
 msgstr "امحُ التّأريخ"
 
-#: qml/main.qml:76
+#: qml/main.qml:87
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "اضبط الحافظة..."

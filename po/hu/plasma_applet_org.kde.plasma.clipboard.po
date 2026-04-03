@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:46+0000\n"
+"POT-Creation-Date: 2026-04-03 00:45+0000\n"
 "PO-Revision-Date: 2023-12-28 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr "A vágólap üres"
 msgid "Clear History"
 msgstr "Előzmények törlése"
 
-#: qml/main.qml:76
+#: qml/main.qml:87
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Vágólap beállítása…"

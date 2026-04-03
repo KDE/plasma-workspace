@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:46+0000\n"
+"POT-Creation-Date: 2026-04-03 00:45+0000\n"
 "PO-Revision-Date: 2024-08-11 21:06\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -37,7 +37,7 @@ msgstr "Буфер абмену пусты"
 msgid "Clear History"
 msgstr "Ачысціць гісторыю"
 
-#: qml/main.qml:76
+#: qml/main.qml:87
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Наладжванне буфера абмену…"

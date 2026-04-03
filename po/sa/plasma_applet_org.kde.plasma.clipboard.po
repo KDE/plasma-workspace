@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-12 00:46+0000\n"
+"POT-Creation-Date: 2026-04-03 00:45+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "क्लिप्बोर्ड् रिक्तम् अस्त�
 msgid "Clear History"
 msgstr "इतिहासं स्पष्टं कुरुत"
 
-#: qml/main.qml:76
+#: qml/main.qml:87
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "क्लिपबोर्ड विन्यस्तं कुर्वन्तु..."

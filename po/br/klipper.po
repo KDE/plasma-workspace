@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-31 00:46+0000\n"
+"POT-Creation-Date: 2026-04-03 00:45+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -245,43 +245,43 @@ msgstr "&Berradenn"
 msgid "Shortcuts Configuration"
 msgstr "&Berradenn"
 
-#: declarative/qml/BarcodePage.qml:45
+#: declarative/qml/BarcodePage.qml:48
 #, fuzzy, kde-format
 #| msgid "Clipboard"
 msgid "Return to Clipboard"
 msgstr "Golver"
 
-#: declarative/qml/BarcodePage.qml:65
+#: declarative/qml/BarcodePage.qml:69
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:71
+#: declarative/qml/BarcodePage.qml:75
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:77
+#: declarative/qml/BarcodePage.qml:78
 #, fuzzy, kde-format
 #| msgid "Clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Golver"
 
-#: declarative/qml/BarcodePage.qml:108
+#: declarative/qml/BarcodePage.qml:113
 #, kde-format
 msgid "QR Code"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:157
+#: declarative/qml/BarcodePage.qml:162
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:157
+#: declarative/qml/BarcodePage.qml:162
 #, kde-format
 msgid "Creating QR code failed"
 msgstr ""
