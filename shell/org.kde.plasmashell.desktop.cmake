@@ -3,6 +3,7 @@ Exec=@CMAKE_INSTALL_PREFIX@/bin/plasmashell
 X-DBUS-StartupType=Unique
 Name=Plasma
 Name[ar]=بلازما
+Name[bg]=Plasma
 Name[ca]=Plasma
 Name[ca@valencia]=Plasma
 Name[cs]=Plasma
