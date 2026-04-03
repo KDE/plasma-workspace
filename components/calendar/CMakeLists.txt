@@ -3,6 +3,7 @@ ecm_add_qml_module(calendarplugin
     VERSION 2.0
     GENERATE_PLUGIN_SOURCE
     DEPENDENCIES QtCore
+    NO_LINT # https://qt-project.atlassian.net/browse/QTBUG-145572
 )
 
 target_sources(calendarplugin PRIVATE
