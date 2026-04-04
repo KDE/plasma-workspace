@@ -141,7 +141,19 @@ Item {
                     Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
                     text: {
                         if (index % 2 === 0) {
-                            return i18nc("@label %1 is a city or time zone name", "%1:", Plasmoid.configuration.displayTimezoneAsCode ? tzClock.timeZoneCode : TimeZonesI18n.i18nCity(tzClock.timeZone));
+                            let tzLabel = "";
+                            switch (Plasmoid.configuration.displayTimezoneFormat) {
+                            case 0: // Code
+                                tzLabel = tzClock.timeZoneCode;
+                                break;
+                            case 1: // City
+                                tzLabel = TimeZonesI18n.i18nCity(tzClock.timeZone);
+                                break;
+                            case 2: // Offset from UTC time
+                                tzLabel = tzClock.timeZoneOffset;
+                                break;
+                            }
+                            return i18nc("@label %1 is a city or time zone name", "%1:", tzLabel);
                         } else {
                             return formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds > 0) + formatOffset(tzClock.dateTime);
                         }
