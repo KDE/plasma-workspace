@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2022-12-29 10:33+0100\n"
+"PO-Revision-Date: 2026-04-04 19:50+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "Wydarzenia"
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
-msgstr "Dodaj..."
+msgstr "Dodaj…"
 
 #: package/contents/ui/CalendarView.qml:148
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "24-godzinny"
 #: package/contents/ui/configAppearance.qml:133
 #, kde-format
 msgid "Change Regional Settings…"
-msgstr "Zmień ustawienia regionalne..."
+msgstr "Zmień ustawienia regionalne…"
 
 #: package/contents/ui/configAppearance.qml:144
 #, kde-format
@@ -291,7 +291,7 @@ msgstr "Ukryta, gdy to miejscowa strefa czasowa miasta"
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Przełącz systemową strefę czasową..."
+msgstr "Przełącz systemową strefę czasową…"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
