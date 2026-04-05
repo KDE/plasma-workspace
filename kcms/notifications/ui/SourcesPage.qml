@@ -26,9 +26,13 @@ KCM.AbstractKCM {
     framedView: false
 
     Component.onCompleted: {
-        // In Component.onCompleted we might not be assigned a window yet
-        // which we need to make the events config dialog transient to it
         Qt.callLater(function() {
+            // Select the requested item in the list
+            if (rootIndex.valid) {
+                const proxyIndex = kcm.filteredModel.mapFromSource(rootIndex);
+                sourcesList.currentIndex = proxyIndex.row;
+            }
+            // Select the specific event
             if (eventId) {
                 appConfiguration.configureEvents(eventId);
             }
