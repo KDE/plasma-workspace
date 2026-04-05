@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-25 00:46+0000\n"
-"PO-Revision-Date: 2026-02-21 08:56+0100\n"
+"PO-Revision-Date: 2026-04-04 19:39+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -55,12 +55,10 @@ msgid "Always off"
 msgstr "Zawsze wyłączone"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox switching times"
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "Zawsze wyłączone"
+msgstr "Zawsze włączone"
 
 #: ui/main.qml:60
 #, kde-format

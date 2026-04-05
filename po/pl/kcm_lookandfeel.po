@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-01-18 16:10+0100\n"
+"PO-Revision-Date: 2026-04-04 19:38+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -378,7 +378,7 @@ msgstr "Wygląd Plazmy"
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "Wskaźniki"
 
 #: ui/MoreOptions.qml:77
 #, kde-format

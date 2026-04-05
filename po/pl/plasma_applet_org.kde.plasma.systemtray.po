@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2026-01-01 12:52+0100\n"
+"PO-Revision-Date: 2026-04-04 19:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -140,9 +140,7 @@ msgid "Scale with Panel width"
 msgstr "Zmieniający się wraz z szerokością paska"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -150,8 +148,7 @@ msgid "Panel icon size:"
 msgstr "Rozmiar ikon na pasku:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Mały"
@@ -160,7 +157,7 @@ msgstr "Mały"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Odstęp:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
@@ -181,33 +178,32 @@ msgid "Large"
 msgstr "Duża"
 
 #: qml/ConfigGeneral.qml:269
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Więcej działań"
+msgstr "Kierunek:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "Z dołu do góry"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "Z góry na dół"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "Od lewej do prawej"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "Od prawej do lewej"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
