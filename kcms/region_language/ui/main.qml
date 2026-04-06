@@ -422,6 +422,15 @@ KCM.ScrollViewKCM {
                         kcm.takeLast();
                     }
                 }
+
+                Kirigami.PlaceholderMessage {
+                    anchors.centerIn: parent
+                    width: parent.width - (Kirigami.Units.largeSpacing * 4)
+                    visible: localeListView.count === 0
+                    icon.name: "languages-symbolic"
+                    text: i18nc("@info:placeholder", "This system does not include settings for “%1”", searchField.text)
+                    explanation: i18nc("@info:usagetip", "Try searching for a nearby region.")
+                }
             }
         }
     }

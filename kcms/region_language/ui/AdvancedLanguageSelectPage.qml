@@ -13,6 +13,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kirigami.dialogs as KDialogs
 import org.kde.kcmutils as KCM
 import org.kde.kitemmodels as ItemModels
+import org.kde.coreaddons as KCoreAddons
 
 import kcmregionandlang
 
@@ -226,6 +227,15 @@ KCM.ScrollViewKCM {
             delegate: addLanguageItemComponent
             cacheBuffer: Math.max(0, contentHeight)
             reuseItems: true
+
+            Kirigami.PlaceholderMessage {
+                anchors.centerIn: parent
+                width: parent.width - (Kirigami.Units.largeSpacing * 4)
+                visible: availableLanguagesList.count === 0
+                icon.name: "languages-symbolic"
+                text: i18nc("@info:placeholder", "This system does not include “%1”", searchField.text)
+                explanation: xi18nc("@info:usagetip", "Learn how to help <link url='%1'>translate KDE software into your language</link>.", "https://community.kde.org/Get_Involved/translation")
+            }
         }
     }
     footer: ColumnLayout {
