@@ -14,3 +14,11 @@ qt_add_dbus_interface(kded_statusnotifierwatcher_SRCS ${statusnotifieritem_xml} 
 
 kcoreaddons_add_plugin(statusnotifierwatcher SOURCES ${kded_statusnotifierwatcher_SRCS} INSTALL_NAMESPACE "kf6/kded")
 target_link_libraries(statusnotifierwatcher Qt::DBus KF6::DBusAddons KF6::CoreAddons)
+
+ecm_qt_declare_logging_category(statusnotifierwatcher
+    HEADER statusnotifierwatcher_debug.h
+    IDENTIFIER STATUSNOTIFIERITEMWATCHER
+    CATEGORY_NAME org.kde.plasma.statusnotifierwatcher
+    DESCRIPTION "Status Notifier Manager"
+    EXPORT PLASMAWORKSPACE
+)
