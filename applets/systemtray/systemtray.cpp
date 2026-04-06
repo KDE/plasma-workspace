@@ -98,15 +98,12 @@ static void showSystemTrayMenuWayland(QMenu *menu, QQuickItem *trayItem, Plasma:
     menu->winId();
     QWindow *menuWindow = menu->windowHandle();
 
-    // If the system tray is in a panel, the anchor rect will be stretched so the popup doesn't cover the panel.
-    QRect anchorRect = trayItem->mapRectToScene(QRectF(QPoint(0, 0), trayItem->size())).toRect();
+    const QRect anchorRect = trayItem->mapRectToScene(QRectF(QPoint(0, 0), trayItem->size())).toRect();
 
     Qt::Edges anchor;
     Qt::Edges gravity;
     switch (location) {
     case Plasma::Types::Location::TopEdge:
-        anchorRect.setBottom(trayWindow->mask().boundingRect().bottom());
-
         anchor = Qt::BottomEdge;
         gravity = Qt::BottomEdge;
 
@@ -120,8 +117,6 @@ static void showSystemTrayMenuWayland(QMenu *menu, QQuickItem *trayItem, Plasma:
         break;
 
     case Plasma::Types::Location::BottomEdge:
-        anchorRect.setTop(trayWindow->mask().boundingRect().top());
-
         anchor = Qt::TopEdge;
         gravity = Qt::TopEdge;
 
@@ -135,13 +130,11 @@ static void showSystemTrayMenuWayland(QMenu *menu, QQuickItem *trayItem, Plasma:
         break;
 
     case Plasma::Types::Location::LeftEdge:
-        anchorRect.setRight(trayWindow->mask().boundingRect().right());
         anchor = Qt::RightEdge | Qt::TopEdge;
         gravity = Qt::RightEdge | Qt::BottomEdge;
         break;
 
     case Plasma::Types::Location::RightEdge:
-        anchorRect.setLeft(trayWindow->mask().boundingRect().left());
         anchor = Qt::LeftEdge | Qt::TopEdge;
         gravity = Qt::LeftEdge | Qt::BottomEdge;
         break;
