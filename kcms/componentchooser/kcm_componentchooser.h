@@ -11,12 +11,14 @@
 
 #include "componentchooser.h"
 
+class ComponentChooserCalendar;
 class ComponentChooserData;
 
 class KcmComponentChooser : public KQuickManagedConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(ComponentChooser *browsers READ browsers CONSTANT)
+    Q_PROPERTY(ComponentChooser *calendar READ calendar CONSTANT)
     Q_PROPERTY(ComponentChooser *emailClients READ emailClients CONSTANT)
     Q_PROPERTY(ComponentChooser *terminalEmulators READ terminalEmulators CONSTANT)
     Q_PROPERTY(ComponentChooser *fileManagers READ fileManagers CONSTANT)
@@ -33,6 +35,7 @@ public:
     KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData);
 
     ComponentChooser *browsers() const;
+    ComponentChooser *calendar() const;
     ComponentChooser *emailClients() const;
     ComponentChooser *terminalEmulators() const;
     ComponentChooser *fileManagers() const;
@@ -53,6 +56,7 @@ public:
 
 private:
     ComponentChooser *m_browsers;
+    ComponentChooser *m_calendar;
     ComponentChooser *m_fileManagers;
     ComponentChooser *m_terminalEmulators;
     ComponentChooser *m_emailClients;

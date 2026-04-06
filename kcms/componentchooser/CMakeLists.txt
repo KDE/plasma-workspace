@@ -8,6 +8,7 @@ target_sources(kcm_componentchooser PRIVATE
     componentchooser.cpp
     applicationmodel.cpp
     components/componentchooserbrowser.cpp
+    components/componentchoosercalendar.cpp
     components/componentchooseremail.cpp
     components/componentchooserterminal.cpp
     components/componentchooserfilemanager.cpp

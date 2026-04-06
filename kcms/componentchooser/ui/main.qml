@@ -45,6 +45,7 @@ KCM.SimpleKCM {
         id: form
 
         readonly property int longestComboBox: Math.max(browserCombo.implicitWidth,
+                                                        calendarCombo.implicitWidth,
                                                         fileManagerCombo.implicitWidth,
                                                         textEditorCombo.implicitWidth,
                                                         pdfViewerCombo.implicitWidth,
@@ -89,6 +90,20 @@ KCM.SimpleKCM {
         }
         MimeMessage {
             componentChooser: kcm.emailClients
+        }
+
+        ComponentComboBox {
+            id: calendarCombo
+            Kirigami.FormData.label: i18nc("Default calendar application", "Calendar:")
+            Layout.preferredWidth: form.longestComboBox
+            component: kcm.calendar
+
+            KCM.SettingHighlighter {
+                highlight: !kcm.calendar.isDefaults
+            }
+        }
+        MimeMessage {
+            componentChooser: kcm.calendar
         }
 
         ComponentComboBox {

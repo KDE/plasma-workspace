@@ -17,6 +17,7 @@
 
 #include "components/componentchooserarchivemanager.h"
 #include "components/componentchooserbrowser.h"
+#include "components/componentchoosercalendar.h"
 #include "components/componentchooseremail.h"
 #include "components/componentchooserfilemanager.h"
 #include "components/componentchoosergeo.h"
@@ -35,6 +36,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KcmComponentChooserFactory, "kcm_componentchooser.jso
 KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData &metaData)
     : KQuickManagedConfigModule(parent, metaData)
     , m_browsers(new ComponentChooserBrowser(this))
+    , m_calendar(new ComponentChooserCalendar(this))
     , m_fileManagers(new ComponentChooserFileManager(this))
     , m_terminalEmulators(new ComponentChooserTerminal(this))
     , m_emailClients(new ComponentChooserEmail(this))
@@ -50,6 +52,7 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData 
     setButtons(Help | Default | Apply);
 
     connect(browsers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
+    connect(calendar(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(fileManagers(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(terminalEmulators(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
     connect(emailClients(), &ComponentChooser::indexChanged, this, &KcmComponentChooser::settingsChanged);
@@ -66,6 +69,11 @@ KcmComponentChooser::KcmComponentChooser(QObject *parent, const KPluginMetaData 
 ComponentChooser *KcmComponentChooser::browsers() const
 {
     return m_browsers;
+}
+
+ComponentChooser *KcmComponentChooser::calendar() const
+{
+    return m_calendar;
 }
 
 ComponentChooser *KcmComponentChooser::emailClients() const
@@ -126,6 +134,7 @@ ComponentChooser *KcmComponentChooser::archiveManagers() const
 void KcmComponentChooser::defaults()
 {
     m_browsers->defaults();
+    m_calendar->defaults();
     m_fileManagers->defaults();
     m_terminalEmulators->defaults();
     m_emailClients->defaults();
@@ -142,6 +151,7 @@ void KcmComponentChooser::defaults()
 void KcmComponentChooser::load()
 {
     m_browsers->load();
+    m_calendar->load();
     m_fileManagers->load();
     m_terminalEmulators->load();
     m_emailClients->load();
@@ -166,6 +176,7 @@ void KcmComponentChooser::save()
         }
     };
     handleSave(m_browsers);
+    handleSave(m_calendar);
     handleSave(m_fileManagers);
     handleSave(m_terminalEmulators);
     handleSave(m_emailClients);
@@ -194,16 +205,18 @@ void KcmComponentChooser::save()
 
 bool KcmComponentChooser::isDefaults() const
 {
-    return m_browsers->isDefaults() && m_fileManagers->isDefaults() && m_terminalEmulators->isDefaults() && m_emailClients->isDefaults()
-        && m_geoUriHandlers->isDefaults() && m_telUriHandlers->isDefaults() && m_textEditors->isDefaults() && m_imageViewers->isDefaults()
-        && m_musicPlayers->isDefaults() && m_videoPlayers->isDefaults() && m_pdfViewers->isDefaults() && m_archiveManagers->isDefaults();
+    return m_browsers->isDefaults() && m_calendar->isDefaults() && m_fileManagers->isDefaults() && m_terminalEmulators->isDefaults()
+        && m_emailClients->isDefaults() && m_geoUriHandlers->isDefaults() && m_telUriHandlers->isDefaults() && m_textEditors->isDefaults()
+        && m_imageViewers->isDefaults() && m_musicPlayers->isDefaults() && m_videoPlayers->isDefaults() && m_pdfViewers->isDefaults()
+        && m_archiveManagers->isDefaults();
 }
 
 bool KcmComponentChooser::isSaveNeeded() const
 {
-    return m_browsers->isSaveNeeded() || m_fileManagers->isSaveNeeded() || m_terminalEmulators->isSaveNeeded() || m_emailClients->isSaveNeeded()
-        || m_geoUriHandlers->isSaveNeeded() || m_telUriHandlers->isSaveNeeded() || m_textEditors->isSaveNeeded() || m_imageViewers->isSaveNeeded()
-        || m_musicPlayers->isSaveNeeded() || m_videoPlayers->isSaveNeeded() || m_pdfViewers->isSaveNeeded() || m_archiveManagers->isSaveNeeded();
+    return m_browsers->isSaveNeeded() || m_calendar->isSaveNeeded() || m_fileManagers->isSaveNeeded() || m_terminalEmulators->isSaveNeeded()
+        || m_emailClients->isSaveNeeded() || m_geoUriHandlers->isSaveNeeded() || m_telUriHandlers->isSaveNeeded() || m_textEditors->isSaveNeeded()
+        || m_imageViewers->isSaveNeeded() || m_musicPlayers->isSaveNeeded() || m_videoPlayers->isSaveNeeded() || m_pdfViewers->isSaveNeeded()
+        || m_archiveManagers->isSaveNeeded();
 }
 
 #include "kcm_componentchooser.moc"
