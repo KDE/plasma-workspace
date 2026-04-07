@@ -15,6 +15,7 @@ Name[he]=פלזמה
 Name[ia]=Plasma
 Name[is]=Plasma
 Name[it]=Plasma
+Name[ja]=Plasma
 Name[ka]=Plasma
 Name[lt]=Plasma
 Name[nl]=Plasma
