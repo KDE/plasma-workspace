@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-04-07 00:46+0000\n"
 "PO-Revision-Date: 2025-10-16 12:32-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -457,12 +457,12 @@ msgctxt ""
 msgid " (Standard format for %1)"
 msgstr " (%1 ਲਈ ਮਿਆਰੀ ਫ਼ਾਰਮੈਟ)"
 
-#: ui/AdvancedLanguageSelectPage.qml:23
+#: ui/AdvancedLanguageSelectPage.qml:24
 #, kde-format
 msgid "Language"
 msgstr "ਭਾਸ਼ਾ"
 
-#: ui/AdvancedLanguageSelectPage.qml:36
+#: ui/AdvancedLanguageSelectPage.qml:37
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -472,54 +472,68 @@ msgstr ""
 "ਹੋਰ ਭਾਸ਼ਾਵਾਂ ਨੂੰ ਅੰਗਰੇਜ਼ੀ ਦੇ ਹੇਠਾਂ ਰੱਖਣ ਨਾਲ ਕੁਝ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦਾ ਰਵੱਈਆ ਅਜੀਬ ਹੋਵੇਗਾ। ਜੇ ਤੁਸੀਂ ਆਪਣੇ "
 "ਸਿਸਟਮ ਨੂੰ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹੋਰ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਨੂੰ ਹਟਾ ਦਿਓ।"
 
-#: ui/AdvancedLanguageSelectPage.qml:45
+#: ui/AdvancedLanguageSelectPage.qml:46
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "ਭਾਸ਼ਾ \"%1\" ਸਹਾਇਕ ਨਹੀਂ ਹੈ"
 
-#: ui/AdvancedLanguageSelectPage.qml:58
+#: ui/AdvancedLanguageSelectPage.qml:59
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿੱਚ ਜੋ ਵੀ ਭਾਸ਼ਾਵਾਂ ਤੁਸੀਂ ਵੇਖਣੀਆਂ ਚਾਹੁੰਦੇ ਹੋ, ਉਹਨਾਂ ਨੂੰ ਜੋੜੋ।"
 
-#: ui/AdvancedLanguageSelectPage.qml:100
+#: ui/AdvancedLanguageSelectPage.qml:101
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "ਭਾਸ਼ਾ ਬਦਲੋ"
 
-#: ui/AdvancedLanguageSelectPage.qml:104
+#: ui/AdvancedLanguageSelectPage.qml:105
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "ਭਾਸ਼ਾ ਬਦਲੋ"
 
-#: ui/AdvancedLanguageSelectPage.qml:113
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "ਉੱਤੇ ਭੇਜੋ"
 
-#: ui/AdvancedLanguageSelectPage.qml:122
+#: ui/AdvancedLanguageSelectPage.qml:123
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
 
-#: ui/AdvancedLanguageSelectPage.qml:137
+#: ui/AdvancedLanguageSelectPage.qml:138
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "ਕੋਈ ਭਾਸ਼ਾ ਸੰਰਚਿਤ ਨਹੀਂ ਹੈ"
 
-#: ui/AdvancedLanguageSelectPage.qml:179 ui/AdvancedLanguageSelectPage.qml:213
+#: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "ਭਾਸ਼ਾਵਾਂ ਜੋੜੋ"
 
 #: ui/AdvancedLanguageSelectPage.qml:236
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "This system does not include “%1”"
+msgstr ""
+
+#: ui/AdvancedLanguageSelectPage.qml:237
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Learn how to help <link url='%1'>translate KDE software into your language</"
+"link>."
+msgstr ""
+
+#: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
@@ -621,3 +635,15 @@ msgstr "ਨਾਂ"
 msgctxt "Phone Numbers"
 msgid "Phone number"
 msgstr "ਫ਼ੋਨ ਨੰਬਰ"
+
+#: ui/main.qml:431
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "This system does not include settings for “%1”"
+msgstr ""
+
+#: ui/main.qml:432
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Try searching for a nearby region."
+msgstr ""

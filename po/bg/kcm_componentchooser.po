@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-04-07 00:46+0000\n"
 "PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -33,6 +33,12 @@ msgstr "Избиране на архивираща програма по под�
 #, kde-format
 msgid "Select default browser"
 msgstr "Избиране на браузър по подразбиране"
+
+#: components/componentchoosercalendar.cpp:10
+#, fuzzy, kde-format
+#| msgid "Select default dialer application"
+msgid "Select default calendar application"
+msgstr "Избиране на приложение по подразбиране за телефонно набиране"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -147,87 +153,93 @@ msgctxt "@action:button"
 msgid "View Details"
 msgstr "Подробности"
 
-#: ui/main.qml:62
+#: ui/main.qml:63
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Интернет"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "Web browser:"
 msgstr "Преглед на интернет:"
 
-#: ui/main.qml:82
+#: ui/main.qml:83
 #, kde-format
 msgid "Email client:"
 msgstr "Електронна поща:"
 
-#: ui/main.qml:96
+#: ui/main.qml:97
+#, kde-format
+msgctxt "Default calendar application"
+msgid "Calendar:"
+msgstr ""
+
+#: ui/main.qml:111
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "Телефонни номера:"
 
-#: ui/main.qml:110
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Мултимедия"
 
-#: ui/main.qml:116
+#: ui/main.qml:131
 #, kde-format
 msgid "Image viewer:"
 msgstr "Преглед на изображения:"
 
-#: ui/main.qml:130
+#: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
 msgstr "Музикален плеър:"
 
-#: ui/main.qml:144
+#: ui/main.qml:159
 #, kde-format
 msgid "Video player:"
 msgstr "Видео плеър:"
 
-#: ui/main.qml:158
+#: ui/main.qml:173
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Документи"
 
-#: ui/main.qml:164
+#: ui/main.qml:179
 #, kde-format
 msgid "Text editor:"
 msgstr "Текстов редактор:"
 
-#: ui/main.qml:179
+#: ui/main.qml:194
 #, kde-format
 msgid "PDF viewer:"
 msgstr "Преглед на файлове PDF:"
 
-#: ui/main.qml:193
+#: ui/main.qml:208
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Помощни програми"
 
-#: ui/main.qml:199
+#: ui/main.qml:214
 #, kde-format
 msgid "File manager:"
 msgstr "Управление на файлове:"
 
-#: ui/main.qml:213
+#: ui/main.qml:228
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Терминален емулатор:"
 
-#: ui/main.qml:227
+#: ui/main.qml:242
 #, kde-format
 msgid "Archive manager:"
 msgstr "Архивиране:"
 
-#: ui/main.qml:241
+#: ui/main.qml:256
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

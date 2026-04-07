@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-04-07 00:46+0000\n"
 "PO-Revision-Date: 2024-11-29 00:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -38,6 +38,12 @@ msgstr "기본 압축 프로그램 선택"
 #, kde-format
 msgid "Select default browser"
 msgstr "기본 브라우저 선택"
+
+#: components/componentchoosercalendar.cpp:10
+#, fuzzy, kde-format
+#| msgid "Select default dialer application"
+msgid "Select default calendar application"
+msgstr "기본 다이얼러 선택"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -152,87 +158,93 @@ msgctxt "@action:button"
 msgid "View Details"
 msgstr "자세한 정보 표시"
 
-#: ui/main.qml:62
+#: ui/main.qml:63
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "인터넷"
 
-#: ui/main.qml:68
+#: ui/main.qml:69
 #, kde-format
 msgid "Web browser:"
 msgstr "웹 브라우저:"
 
-#: ui/main.qml:82
+#: ui/main.qml:83
 #, kde-format
 msgid "Email client:"
 msgstr "이메일 클라이언트:"
 
-#: ui/main.qml:96
+#: ui/main.qml:97
+#, kde-format
+msgctxt "Default calendar application"
+msgid "Calendar:"
+msgstr ""
+
+#: ui/main.qml:111
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "전화번호:"
 
-#: ui/main.qml:110
+#: ui/main.qml:125
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "멀티미디어"
 
-#: ui/main.qml:116
+#: ui/main.qml:131
 #, kde-format
 msgid "Image viewer:"
 msgstr "그림 뷰어:"
 
-#: ui/main.qml:130
+#: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
 msgstr "음악 재생기:"
 
-#: ui/main.qml:144
+#: ui/main.qml:159
 #, kde-format
 msgid "Video player:"
 msgstr "동영상 재생기:"
 
-#: ui/main.qml:158
+#: ui/main.qml:173
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "문서"
 
-#: ui/main.qml:164
+#: ui/main.qml:179
 #, kde-format
 msgid "Text editor:"
 msgstr "텍스트 편집기:"
 
-#: ui/main.qml:179
+#: ui/main.qml:194
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF 뷰어:"
 
-#: ui/main.qml:193
+#: ui/main.qml:208
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "유틸리티"
 
-#: ui/main.qml:199
+#: ui/main.qml:214
 #, kde-format
 msgid "File manager:"
 msgstr "파일 관리자:"
 
-#: ui/main.qml:213
+#: ui/main.qml:228
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "터미널 에뮬레이터:"
 
-#: ui/main.qml:227
+#: ui/main.qml:242
 #, kde-format
 msgid "Archive manager:"
 msgstr "압축 프로그램:"
 
-#: ui/main.qml:241
+#: ui/main.qml:256
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
