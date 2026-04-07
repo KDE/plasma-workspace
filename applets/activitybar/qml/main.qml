@@ -33,6 +33,11 @@ PlasmoidItem {
         width: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? parent.height : parent.width
         height: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? parent.width : parent.height
 
+        // The QQuickTabBar template will resize every of the tabbutton to its contentHeight
+        // This means we need a contentHeight which makes sense, but this comes from the
+        // internal ListView to the TabBar which is a value we can't control directly.
+        // so make sure the contentHeight is actually our height
+        contentHeight: height
 
         position: {
             switch (Plasmoid.location) {
@@ -54,6 +59,9 @@ PlasmoidItem {
                 required property bool current
                 required property string name
                 required property string id
+
+                topPadding: Kirigami.Units.smallSpacing
+                bottomPadding: Kirigami.Units.smallSpacing
 
                 checked: current
                 text: name
