@@ -1,11 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-01-03 23:35-0800\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-03-31 10:54+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,44 +14,45 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: main.cpp:32
 #, kde-format
 msgid "Session Management"
-msgstr ""
+msgstr "セッション管理"
 
 #: main.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Screen"
-msgstr ""
+msgstr "ログアウト画面を表示"
 
 #: main.cpp:48
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "ログアウト"
 
 #: main.cpp:54
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "シャットダウン"
 
 #: main.cpp:60
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "再起動"
 
 #: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr ""
+msgstr "確認なしでログアウト"
 
 #: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr ""
+msgstr "確認なしでシャットダウン"
 
 #: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr ""
+msgstr "確認なしで再起動"
