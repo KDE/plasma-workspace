@@ -3,9 +3,9 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"session-shortcuts-kded\")
 
-kcoreaddons_add_plugin(plasma-session-shortcuts SOURCES main.cpp INSTALL_NAMESPACE "kf6/kded")
+kcoreaddons_add_plugin(plasma_session_shortcuts SOURCES main.cpp INSTALL_NAMESPACE "kf6/kded")
 
-target_link_libraries(plasma-session-shortcuts
+target_link_libraries(plasma_session_shortcuts
    Qt::Core
    Qt::DBus
    KF6::GlobalAccel
