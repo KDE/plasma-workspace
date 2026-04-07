@@ -842,7 +842,8 @@ void HistoryModel::moveToTop(qsizetype row)
     if (row == 0) {
         // The item is already at the top, but it still may be not be set as the actual clipboard
         // contents, normally this happens if the item is only in the X11 mouse selection but
-        // not in the Ctrl+V clipboard.
+        // not in the Ctrl+V clipboard, or if the current contents are not saved in the history.
+        Q_EMIT changed(true);
         return;
     }
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
