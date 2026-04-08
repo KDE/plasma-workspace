@@ -196,11 +196,11 @@ QString PlasmaAppletItem::unsupportedMessage() const
 
     if (version.isNull()) {
         return i18n(
-            "This Widget was written for an unknown older version of Plasma and is not compatible with Plasma %1. Please contact the widget's author for an "
+            "This widget was written for an unknown older version of Plasma and is not compatible with Plasma %1. Please contact the widget's author for an "
             "updated version.",
             PROJECT_VERSION_MAJOR);
     } else if (version.majorVersion() < PROJECT_VERSION_MAJOR) {
-        return i18n("This Widget was written for Plasma %1 and is not compatible with Plasma %2. Please contact the widget's author for an updated version.",
+        return i18n("This widget was written for Plasma %1 and is not compatible with Plasma %2. Please contact the widget's author for an updated version.",
                     version.majorVersion(),
                     PROJECT_VERSION_MAJOR);
     } else if (version.majorVersion() > PROJECT_VERSION_MAJOR) {
@@ -209,7 +209,7 @@ QString PlasmaAppletItem::unsupportedMessage() const
                     PROJECT_VERSION_MAJOR);
     } else if (version.minorVersion() > PROJECT_VERSION_MINOR) {
         return i18n(
-            "This Widget was written for Plasma %1 and is not compatible with the latest version of Plasma. Please update Plasma in order to use the widget.",
+            "This widget was written for Plasma %1 and is not compatible with the latest version of Plasma. Please update Plasma in order to use the widget.",
             versionString);
     }
 
