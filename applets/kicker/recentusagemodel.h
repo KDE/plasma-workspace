@@ -62,6 +62,7 @@ public:
         AppsAndDocs,
         OnlyApps,
         OnlyDocs,
+        OnlyFolders,
     };
     Q_ENUM(IncludeUsage)
 

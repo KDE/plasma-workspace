@@ -96,6 +96,7 @@ RootModel::RootModel(QObject *parent)
     , m_showAllAppsCategorized(false)
     , m_showRecentApps(true)
     , m_showRecentDocs(true)
+    , m_showRecentFolders(false)
     , m_recentOrdering(RecentUsageModel::Recent)
     , m_showPowerSession(true)
     , m_showFavoritesPlaceholder(false)
@@ -104,6 +105,7 @@ RootModel::RootModel(QObject *parent)
     , m_refreshNewlyInstalledAppsTimer(nullptr)
     , m_recentAppsModel(nullptr)
     , m_recentDocsModel(nullptr)
+    , m_recentFoldersModel(nullptr)
 {
 }
 
@@ -122,7 +124,7 @@ QVariant RootModel::data(const QModelIndex &index, int role) const
             const auto *group = static_cast<const GroupEntry *>(entry);
             AbstractModel *model = group->childModel();
 
-            if (model == m_recentAppsModel || model == m_recentDocsModel) {
+            if (model == m_recentAppsModel || model == m_recentDocsModel || model == m_recentFoldersModel) {
                 if (role == Kicker::HasActionListRole) {
                     return true;
                 } else if (role == Kicker::ActionListRole) {
@@ -153,6 +155,10 @@ bool RootModel::trigger(int row, const QString &actionId, const QVariant &argume
                 return true;
             } else if (model == m_recentDocsModel) {
                 setShowRecentDocs(false);
+
+                return true;
+            } else if (model == m_recentFoldersModel) {
+                setShowRecentFolders(false);
 
                 return true;
             }
@@ -225,6 +231,22 @@ void RootModel::setShowRecentDocs(bool show)
         refresh();
 
         Q_EMIT showRecentDocsChanged();
+    }
+}
+
+bool RootModel::showRecentFolders() const
+{
+    return m_showRecentFolders;
+}
+
+void RootModel::setShowRecentFolders(bool show)
+{
+    if (show != m_showRecentFolders) {
+        m_showRecentFolders = show;
+
+        refresh();
+
+        Q_EMIT showRecentFoldersChanged();
     }
 }
 
@@ -335,6 +357,7 @@ void RootModel::refresh()
     AppsModel *allModel = nullptr;
     m_recentAppsModel = nullptr;
     m_recentDocsModel = nullptr;
+    m_recentFoldersModel = nullptr;
 
     if (m_showAllApps) {
         QHash<QString, AbstractEntry *> appsHash;
@@ -546,6 +569,15 @@ void RootModel::refresh()
 
         favoritesPlaceholderModel->setDescription(QStringLiteral("KICKER_FAVORITES_MODEL")); // Intentionally no i18n.
         m_entryList.prepend(new GroupEntry(this, i18n("Favorites"), QStringLiteral("bookmarks"), favoritesPlaceholderModel));
+        ++separatorPosition;
+    }
+
+    if (m_showRecentFolders) {
+        m_recentFoldersModel = new RecentUsageModel(this, RecentUsageModel::OnlyFolders, m_recentOrdering);
+        m_entryList.prepend(new GroupEntry(this,
+                                           m_recentOrdering == RecentUsageModel::Recent ? i18n("Recent Places") : i18n("Often Used Places"),
+                                           m_recentOrdering == RecentUsageModel::Recent ? QStringLiteral("view-history") : QStringLiteral("office-chart-pie"),
+                                           m_recentFoldersModel));
         ++separatorPosition;
     }
 

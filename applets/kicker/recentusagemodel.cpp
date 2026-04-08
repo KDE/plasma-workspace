@@ -154,6 +154,8 @@ QString RecentUsageModel::description() const
         return i18n("Recently Used");
     case OnlyApps:
         return i18n("Applications");
+    case OnlyFolders:
+        return i18n("Places");
     case OnlyDocs:
     default:
         return i18n("Files");
@@ -359,7 +361,11 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
             Kicker::createActionItem(i18n("Open Containing Folder"), QStringLiteral("folder-open"), QStringLiteral("openParentFolder"));
         actionList << openParentFolder;
 
-        QVariantMap forgetAction = Kicker::createActionItem(i18n("Forget File"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));
+        const auto index = findPlaceForKFileItem(fileItem);
+
+        QVariantMap forgetAction = Kicker::createActionItem((fileItem.isDir() || index.isValid()) ? i18n("Forget Folder") : i18n("Forget File"),
+                                                            QStringLiteral("edit-clear-history"),
+                                                            QStringLiteral("forget"));
         actionList << forgetAction;
 
         QVariantMap forgetAllAction = Kicker::createActionItem(forgetAllActionName(), QStringLiteral("edit-clear-history"), QStringLiteral("forgetAll"));
@@ -506,6 +512,8 @@ QString RecentUsageModel::forgetAllActionName() const
         return i18n("Forget All");
     case OnlyApps:
         return i18n("Forget All Applications");
+    case OnlyFolders:
+        return i18n("Forget All Folders");
     case OnlyDocs:
     default:
         return i18n("Forget All Files");
@@ -554,7 +562,7 @@ void RecentUsageModel::refresh()
     auto query = UsedResources
                     | (m_ordering == Recent ? RecentlyUsedFirst : HighScoredFirst)
                     | Agent::any()
-                    | (m_usage == OnlyDocs ? Type::files() : Type::any())
+                    | (m_usage == OnlyDocs ? Type::files() : (m_usage == OnlyFolders) ? Type::directories() : Type::any())
                     | Activity::current();
     // clang-format on
 
@@ -568,6 +576,7 @@ void RecentUsageModel::refresh()
         break;
     }
     case OnlyDocs:
+    case OnlyFolders:
     default: {
         query = query | Url::file() | Limit(15);
     }
@@ -582,7 +591,7 @@ void RecentUsageModel::refresh()
         model->fetchMore(index);
     }
 
-    if (m_usage != OnlyDocs) {
+    if (m_usage != OnlyDocs && m_usage != OnlyFolders) {
         model = new InvalidAppsFilterProxy(this, model);
     }
 

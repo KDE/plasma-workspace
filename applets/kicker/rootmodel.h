@@ -51,6 +51,7 @@ class RootModel : public AppsModel
     Q_PROPERTY(bool showAllAppsCategorized READ showAllAppsCategorized WRITE setShowAllAppsCategorized NOTIFY showAllAppsCategorizedChanged)
     Q_PROPERTY(bool showRecentApps READ showRecentApps WRITE setShowRecentApps NOTIFY showRecentAppsChanged)
     Q_PROPERTY(bool showRecentDocs READ showRecentDocs WRITE setShowRecentDocs NOTIFY showRecentDocsChanged)
+    Q_PROPERTY(bool showRecentFolders READ showRecentFolders WRITE setShowRecentFolders NOTIFY showRecentFoldersChanged)
     Q_PROPERTY(int recentOrdering READ recentOrdering WRITE setRecentOrdering NOTIFY recentOrderingChanged)
     Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
     Q_PROPERTY(bool showFavoritesPlaceholder READ showFavoritesPlaceholder WRITE setShowFavoritesPlaceholder NOTIFY showFavoritesPlaceholderChanged)
@@ -77,6 +78,9 @@ public:
     bool showRecentDocs() const;
     void setShowRecentDocs(bool show);
 
+    bool showRecentFolders() const;
+    void setShowRecentFolders(bool show);
+
     int recentOrdering() const;
     void setRecentOrdering(int ordering);
 
@@ -102,6 +106,7 @@ Q_SIGNALS:
     void showAllAppsCategorizedChanged() const;
     void showRecentAppsChanged() const;
     void showRecentDocsChanged() const;
+    void showRecentFoldersChanged() const;
     void showPowerSessionChanged() const;
     void recentOrderingChanged() const;
     void recentAppsModelChanged() const;
@@ -131,6 +136,7 @@ private:
     bool m_showAllAppsCategorized;
     bool m_showRecentApps;
     bool m_showRecentDocs;
+    bool m_showRecentFolders;
     int m_recentOrdering;
     bool m_showPowerSession;
     bool m_showFavoritesPlaceholder;
@@ -141,4 +147,5 @@ private:
 
     RecentUsageModel *m_recentAppsModel;
     RecentUsageModel *m_recentDocsModel;
+    RecentUsageModel *m_recentFoldersModel;
 };
