@@ -9,13 +9,13 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2015, 2016.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2020, 2021, 2022, 2023.
 # SPDX-FileCopyrightText: 2023, 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
-# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-02-02 00:16-0300\n"
+"PO-Revision-Date: 2026-04-07 01:16-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -33,62 +33,62 @@ msgstr "Outro…"
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
-msgstr "Selecionar gerenciador de arquivos compactados padrão"
+msgstr "Selecione o gerenciador de arquivos compactados padrão"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr "Selecionar navegador padrão"
+msgstr "Selecione o navegador padrão"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
 msgid "Select default e-mail client"
-msgstr "Selecionar cliente de e-mail padrão"
+msgstr "Selecione o cliente de e-mail padrão"
 
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format
 msgid "Select default file manager"
-msgstr "Selecionar gerenciador de arquivos padrão"
+msgstr "Selecione o gerenciador de arquivos padrão"
 
 #: components/componentchoosergeo.cpp:13
 #, kde-format
 msgid "Select default map"
-msgstr "Selecionar mapa padrão"
+msgstr "Selecione o mapa padrão"
 
 #: components/componentchooserimageviewer.cpp:15
 #, kde-format
 msgid "Select default image viewer"
-msgstr "Selecionar visualizador de imagem padrão"
+msgstr "Selecione o visualizador de imagem padrão"
 
 #: components/componentchoosermusicplayer.cpp:15
 #, kde-format
 msgid "Select default music player"
-msgstr "Selecionar reprodutor de música padrão"
+msgstr "Selecione o reprodutor de música padrão"
 
 #: components/componentchooserpdfviewer.cpp:11
 #, kde-format
 msgid "Select default PDF viewer"
-msgstr "Selecionar visualizador de PDF padrão"
+msgstr "Selecione o visualizador de PDF padrão"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr "Selecionar aplicativo discador padrão"
+msgstr "Selecione o aplicativo discador padrão"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr "Selecionar emulador de terminal padrão"
+msgstr "Selecione o emulador de terminal padrão"
 
 #: components/componentchoosertexteditor.cpp:15
 #, kde-format
 msgid "Select default text editor"
-msgstr "Selecionar editor de texto padrão"
+msgstr "Selecione o editor de texto padrão"
 
 #: components/componentchooservideoplayer.cpp:15
 #, kde-format
 msgid "Select default video player"
-msgstr "Selecionar reprodutor de vídeo padrão"
+msgstr "Selecione o reprodutor de vídeo padrão"
 
 #: ui/ComponentOverlay.qml:54
 #, kde-format
