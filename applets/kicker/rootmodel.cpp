@@ -729,7 +729,7 @@ void RootModel::onResourceScoresChanged(const QString &activity,
             }
         } else if (entry->type() == AbstractEntry::GroupType) {
             auto *groupEntry = static_cast<GroupEntry *>(entry);
-            if (AbstractModel *model = groupEntry->childModel()) {
+            if (AppsModel *model = dynamic_cast<AppsModel *>(groupEntry->childModel())) {
                 for (int i = 0; i < model->count(); ++i) {
                     processEntry(static_cast<AbstractEntry *>(model->index(i, 0).internalPointer()));
                 }
