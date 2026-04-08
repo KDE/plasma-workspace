@@ -134,7 +134,6 @@ PlasmaExtras.Representation {
                     spacing: Kirigami.Units.smallSpacing
 
                     Layout.alignment: Qt.AlignBottom
-                    Layout.bottomMargin: Kirigami.Units.mediumSpacing
 
                     // Heading text
                     Kirigami.Heading {
