@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2025-11-12 06:54+0100\n"
+"PO-Revision-Date: 2026-04-07 05:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -522,7 +522,7 @@ msgstr "ენების დამატება"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "ეს სისტემა არ შეიცავს \"%1\"-ს"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -531,6 +531,8 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"ისწავლეთ, როგორ დაგვეხმაროთ, <link url='%1'>ვთარგმნოთ KDE-ის პროგრამები "
+"თქვენს ენაზე</link>."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -639,13 +641,13 @@ msgstr "ტელეფონის ნომერი"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "ეს სისტემა არ შეიცავს პარამეტრებს \"%1\"-ისთვის"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "სცადეთ, უახლოესი რეგიონი მოძებნოთ."
 
 #~ msgid ""
 #~ "You can configure the formats used for time, dates, money and other "

@@ -1,5 +1,5 @@
 # Translation of kcm_componentchooser.po to Catalan (Valencian)
-# Copyright (C) 2002-2024 This_file_is_part_of_KDE
+# Copyright (C) 2002-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
@@ -7,20 +7,20 @@
 # SPDX-FileCopyrightText: 2003, 2014, 2016, 2017, 2019 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2005 Albert Astals Cid <aacid@kde.org>
 # SPDX-FileCopyrightText: 2019 Alfredo Vicente <alviboi@gmail.com>
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2016, 2017, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2016, 2017, 2020, 2021, 2022, 2023, 2024, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-09-26 10:24+0200\n"
+"PO-Revision-Date: 2026-04-07 08:33+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -40,10 +40,9 @@ msgid "Select default browser"
 msgstr "Trieu el navegador predeterminat"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Trieu l'aplicació predeterminada de marcatge"
+msgstr "Trieu l'aplicació predeterminada de calendari"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -178,7 +177,7 @@ msgstr "Client de correu:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Calendari:"
 
 #: ui/main.qml:111
 #, kde-format

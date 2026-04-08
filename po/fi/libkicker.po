@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2025-01-12 17:10+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -64,18 +64,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Poista tai hallitse lisäosia…"
 
-#: appentry.cpp:361
+#: appentry.cpp:400
 #, kde-format
 msgid "Hide Application"
 msgstr "Piilota sovellus"
 
-#: appentry.cpp:423
+#: appentry.cpp:462
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:425
+#: appentry.cpp:464
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

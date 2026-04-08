@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-01-27 15:57+0100\n"
+"PO-Revision-Date: 2026-04-07 21:02+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -34,10 +34,9 @@ msgid "Select default browser"
 msgstr "Selige navigator predefinite"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Selige le preferite application de dialer (pro  telephonar)"
+msgstr "Selige le application de calendario predefinite"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -172,7 +171,7 @@ msgstr "Cliente de E-Posta:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Calendario:"
 
 #: ui/main.qml:111
 #, kde-format

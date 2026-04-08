@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2025-11-12 18:17+0200\n"
+"PO-Revision-Date: 2026-04-07 08:28+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -525,7 +525,7 @@ msgstr "Додавання мов"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "У цій системі немає «%1»"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -534,6 +534,8 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"Дізнайтеся про те, як <link url='%1'>перекласти програми KDE вашою рідною "
+"мовою</link>."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -645,13 +647,13 @@ msgstr "Номер телефону"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "У цій системі немає параметрів для «%1»"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "Спробуйте пошукати у сусідньому регіоні."
 
 #~ msgid ""
 #~ "You can configure the formats used for time, dates, money and other "

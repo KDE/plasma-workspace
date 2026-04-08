@@ -13,13 +13,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2005, 2007, 2008, 2009, 2012.
 # tahmar1900 <tahmar1900@gmail.com>, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-09-27 07:46+0300\n"
+"PO-Revision-Date: 2026-04-07 13:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -46,10 +46,9 @@ msgid "Select default browser"
 msgstr "נא לבחור דפדפן ברירת מחדל"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "נא לבחור את יישום החייגן כברירת המחדל"
+msgstr "בחירת יישום לוח השנה כברירת מחדל"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -181,7 +180,7 @@ msgstr "לקוח דוא״ל:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "לוח שנה:"
 
 #: ui/main.qml:111
 #, kde-format

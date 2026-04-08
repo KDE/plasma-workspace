@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-08 00:48+0000\n"
 "PO-Revision-Date: 2025-06-04 19:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -65,18 +65,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Desinstalar y gestionar complementos…"
 
-#: appentry.cpp:361
+#: appentry.cpp:400
 #, kde-format
 msgid "Hide Application"
 msgstr "Ocultar aplicación"
 
-#: appentry.cpp:423
+#: appentry.cpp:462
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:425
+#: appentry.cpp:464
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

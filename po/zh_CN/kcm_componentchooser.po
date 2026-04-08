@@ -34,10 +34,9 @@ msgid "Select default browser"
 msgstr "选择默认网页浏览器"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "选择默认拨号程序"
+msgstr ""
 
 #: components/componentchooseremail.cpp:20
 #, kde-format

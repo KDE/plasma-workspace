@@ -901,22 +901,3 @@ msgstr "Utklippstavle-sprettopp"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "Data Matrix"
-#~ msgstr "Datatabell"
-
-#~ msgctxt "Aztec barcode"
-#~ msgid "Aztec"
-#~ msgstr "Aztec"
-
-#~ msgid "Code 39"
-#~ msgstr "Kode 39"
-
-#~ msgid "Code 93"
-#~ msgstr "Kode 93"
-
-#~ msgid "Code 128"
-#~ msgstr "Kode 128"
-
-#~ msgid "Change the QR code type"
-#~ msgstr "Endre type QR-kode"

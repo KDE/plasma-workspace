@@ -266,6 +266,3 @@ msgstr "Rutenett med %1 element i %2 kolonnar"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AÅILlmyjgGJP"
-
-#~ msgid "Automatically enabled when in Touch Mode"
-#~ msgstr "Vert automatisk brukt i trykkskjerm-modus"

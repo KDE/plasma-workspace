@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-09-26 05:34+0200\n"
+"PO-Revision-Date: 2026-04-07 05:40+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -34,10 +34,9 @@ msgid "Select default browser"
 msgstr "აირჩიეთ ნაგულისხმევი ბრაუზერი"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "აირჩიეთ ნაგულიხმები დამრეკი აპლიკაცია"
+msgstr "აირჩიეთ ნაგულიხმევი კალენდრის აპლიკაცია"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -72,7 +71,7 @@ msgstr "აირჩიეთ ნაგულისხმევი PDF-ები
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr "აირჩიეთ ნაგულიხმები დამრეკი აპლიკაცია"
+msgstr "აირჩიეთ ნაგულისხმევი დამრეკავი აპლიკაცია"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
@@ -161,7 +160,7 @@ msgstr "ინტერნეტი"
 #: ui/main.qml:69
 #, kde-format
 msgid "Web browser:"
-msgstr "ვებ-ბრაუზერი:"
+msgstr "ვებბრაუზერი:"
 
 #: ui/main.qml:83
 #, kde-format
@@ -172,7 +171,7 @@ msgstr "ელფოსტის კლიენტი:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "კალენდარი:"
 
 #: ui/main.qml:111
 #, kde-format
