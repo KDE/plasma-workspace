@@ -15,6 +15,7 @@ import org.kde.plasma.components as PlasmaComponents // FIXME: PC3 Tabbar only h
 import org.kde.activities as Activities
 import org.kde.plasma.activityswitcher as ActivitySwitcher
 import org.kde.kcmutils // KCMLauncher
+import org.kde.kirigami as Kirigami
 import org.kde.config // KAuthorized
 
 PlasmoidItem {
