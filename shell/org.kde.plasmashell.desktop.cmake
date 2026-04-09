@@ -24,6 +24,7 @@ Name[pl]=Plazma
 Name[pt_BR]=Plasma
 Name[ro]=Plasma
 Name[ru]=Plasma
+Name[sk]=Plasma
 Name[sl]=Plasma
 Name[tr]=Plasma
 Name[uk]=Плазма

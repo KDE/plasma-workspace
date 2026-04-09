@@ -20,10 +20,12 @@ Name[pl]=Wskaźniki
 Name[pt_BR]=Ponteiros
 Name[ro]=Indicatori
 Name[ru]=Курсоры
+Name[sk]=Pozícia kurzora
 Name[sl]=Kazalci
 Name[tr]=İşaretçiler
 Name[uk]=Вказівники
 Name[zh_CN]=指针
+Name[zh_TW]=游標
 
 Categories=X11 Mouse Theme
 InstallPath=.icons
