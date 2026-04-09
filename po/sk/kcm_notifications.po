@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-04-09 00:47+0000\n"
 "PO-Revision-Date: 2023-11-11 14:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -75,32 +75,30 @@ msgstr "Zahrať zvuk"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Ukážka zvuku"
 
 #: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Obnoviť"
 
 #: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Vyberte zvukový súbor"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Nastaviť..."
+msgstr "Konfigurácia pre systém…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Nastavenia aplikácií"
+msgstr "Konfigurácia pre aplikácie…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -134,20 +132,16 @@ msgstr "Režim Nevyrušovať"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "Povoliť automaticky:"
 
 #: ui/main.qml:132
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Pri zrkadlení obrazoviek"
 
 #: ui/main.qml:144
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode during screen sharing"
-#| msgid "During screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Počas zdieľania obrazovky"
@@ -158,13 +152,13 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "Keď je aplikácia na celú obrazovku je zameraná"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "Manuálne prepnúť pomocou skratky:"
 
 #: ui/main.qml:177
 #, kde-format
@@ -214,7 +208,7 @@ msgstr "Vedľa ikony upozornení"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Vybrať..."
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -231,13 +225,11 @@ msgid "Hide after:"
 msgstr "Skryť po:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Zobrazovať v upozorneniach"
+msgstr "Zobraziť indikátor časového limitu"
 
 #: ui/main.qml:318
 #, kde-format
@@ -278,29 +270,28 @@ msgid "Popup Position"
 msgstr "Poloha vyskakovacieho okna"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Nastavenia aplikácií"
+msgstr "Upozornenia aplikácií"
 
-#: ui/SourcesPage.qml:104
+#: ui/SourcesPage.qml:108
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: ui/SourcesPage.qml:105
+#: ui/SourcesPage.qml:109
 #, kde-format
 msgid "System Services"
 msgstr "Systémové služby"
 
-#: ui/SourcesPage.qml:153
+#: ui/SourcesPage.qml:157
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Žiadna aplikácia alebo udalosť nezodpovedá hľadanému výrazu"
 
-#: ui/SourcesPage.qml:177
+#: ui/SourcesPage.qml:181
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
@@ -309,13 +300,11 @@ msgstr ""
 "Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a správania"
 
 #, fuzzy
-#~| msgid "Notifications"
 #~ msgctxt "@action:button Plasma-specific notifications"
 #~ msgid "System Notifications"
 #~ msgstr "Upozornenia"
 
 #, fuzzy
-#~| msgid "Application Settings"
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings"
 #~ msgstr "Nastavenia aplikácií"
@@ -330,7 +319,6 @@ msgstr ""
 #~ msgstr "Vybrať vlastnú polohu..."
 
 #, fuzzy
-#~| msgid "Application Settings"
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"
 #~ msgstr "Nastavenia aplikácií"

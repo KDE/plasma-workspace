@@ -36,7 +36,7 @@ msgstr "选择默认网页浏览器"
 #: components/componentchoosercalendar.cpp:10
 #, kde-format
 msgid "Select default calendar application"
-msgstr ""
+msgstr "选择默认日历程序"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -167,7 +167,7 @@ msgstr "电子邮件客户端："
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "日历："
 
 #: ui/main.qml:111
 #, kde-format

@@ -520,7 +520,7 @@ msgstr "添加语言"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "此系统不包含“%1”"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -528,7 +528,7 @@ msgctxt "@info:usagetip"
 msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
-msgstr ""
+msgstr "了解如何将 KDE 软件<link url='%1'>翻译为您的语言</link>。"
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -634,10 +634,10 @@ msgstr "电话号码"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "此系统不包含“%1”的设置"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "请尝试搜索附近区域。"

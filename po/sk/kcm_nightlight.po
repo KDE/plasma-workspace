@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 24.01.80\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -33,55 +33,49 @@ msgid ""
 msgstr "Teplota farby sa začne meniť na dennú o %1 a úplne sa zmení o %2"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Vďaka filtru modrého svetla sú farby na obrazovke teplejšie."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Čas prepnutí:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Vždy vypnuté"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
 msgstr "Vždy vypnuté"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Sunrise begins:"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr "Východ slnka začína:"
+msgstr "Východ a západ slnka"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Nastaviť..."
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
-msgstr ""
+msgstr "%1 K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Teplota dennej farby:"
@@ -99,14 +93,12 @@ msgid "Warm"
 msgstr "Teplá"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Teplota nočnej farby: "
 
 #, fuzzy
-#~| msgid "Always on night light"
 #~ msgctxt "@item:inlistbox switching times"
 #~ msgid "Always on night light"
 #~ msgstr "Vždy používať nočnú farbu"
@@ -130,7 +122,6 @@ msgstr "Teplota nočnej farby: "
 #~ msgstr "Priblížiť"
 
 #, fuzzy
-#~| msgid "Zoom in"
 #~ msgid "Zoom out"
 #~ msgstr "Priblížiť"
 
@@ -193,8 +184,6 @@ msgstr "Teplota nočnej farby: "
 #~ msgstr "Hľadám..."
 
 #, fuzzy
-#~| msgid "%1 minute"
-#~| msgid_plural "%1 minutes"
 #~ msgctxt "@info:tooltip Part of a control for setting a time"
 #~ msgid "minute"
 #~ msgstr "%1 minúta"
@@ -221,17 +210,14 @@ msgstr "Teplota nočnej farby: "
 #~ msgstr "Studená"
 
 #, fuzzy
-#~| msgid "This is what Night Color will look like when active."
 #~ msgid "This is what day color temperature will look like when active."
 #~ msgstr "Takto bude vyzerať nočná farba, keď bude aktívna."
 
 #, fuzzy
-#~| msgid "This is what Night Color will look like when active."
 #~ msgid "This is what night color temperature will look like when active."
 #~ msgstr "Takto bude vyzerať nočná farba, keď bude aktívna."
 
 #, fuzzy
-#~| msgid "Activate Night Color"
 #~ msgid "Activate blue light filter"
 #~ msgstr "Aktivovať nočnú farbu"
 

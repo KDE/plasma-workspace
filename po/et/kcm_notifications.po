@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-04-09 00:47+0000\n"
 "PO-Revision-Date: 2020-01-06 12:09+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -294,23 +294,23 @@ msgctxt ""
 msgid "Application Notifications"
 msgstr "Rakenduste seadistused"
 
-#: ui/SourcesPage.qml:104
+#: ui/SourcesPage.qml:108
 #, kde-format
 msgid "Applications"
 msgstr "Rakendused"
 
-#: ui/SourcesPage.qml:105
+#: ui/SourcesPage.qml:109
 #, kde-format
 msgid "System Services"
 msgstr "Süsteemi teenused"
 
-#: ui/SourcesPage.qml:153
+#: ui/SourcesPage.qml:157
 #, fuzzy, kde-format
 #| msgid "No application or event matches your search term."
 msgid "No application or event matches your search term"
 msgstr "Otsingule ei vasta ükski rakendus ega sündmus."
 
-#: ui/SourcesPage.qml:177
+#: ui/SourcesPage.qml:181
 #, fuzzy, kde-format
 #| msgid ""
 #| "Select an application from the list to configure its notification "

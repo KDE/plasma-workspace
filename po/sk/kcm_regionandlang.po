@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -25,37 +25,37 @@ msgstr "Zdediť jazyk"
 #, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "International Electrotechnical Commission (IEC)"
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "Joint Electron Device Engineering Council (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "Metrický systém (SI)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "Binárne -  Kibibajty (KiB), Mebibajty (MiB), Gibibajty (GiB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Binárne – kilobajty (KB), megabajty (MB), gigabajty (GB)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Desatinné - Kilobajty (kB), Megabajty (MB), Gigabajty (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -290,12 +290,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Nemožno nájsť spustiteľný súbor `check-language-support`"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support zlyhal, výstup: %1"
+msgstr "kontrola podpory jazyka zlyhala, výstup: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -304,12 +302,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Nie všetky chýbajúce balíky sa podarilo vyriešiť! %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Nepodarilo sa nainštalovať balík %1"
+msgstr "Inštalácia jazykových balíkov sa nepodarila (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
@@ -426,25 +422,25 @@ msgstr "Telefónne čísla"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Veľkosti úložiska a údajov"
 
 #: optionsmodel.cpp:279
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -597,7 +593,7 @@ msgstr "Upraviť..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Veľkosti úložiska a údajov"
 
 #: ui/main.qml:282
 #, kde-format

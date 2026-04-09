@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -43,9 +43,7 @@ msgstr[1] "Odhlásenie o %1 sekundy"
 msgstr[2] "Odhlásenie o %1 sekúnd"
 
 #: contents/logout/Logout.qml:158
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] "Inštalácia aktualizácií softvéru a reštartovanie za 1 sekundu"
@@ -79,8 +77,7 @@ msgstr[2] ""
 "alebo reštartovaný, títo používatelia môžu stratiť prácu."
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 
@@ -90,103 +87,84 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 
 #: contents/logout/Logout.qml:208
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 
 #: contents/logout/Logout.qml:221
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
+msgstr "Po reštartovaní sa počítač prepne na %1."
 
 #: contents/logout/Logout.qml:243
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Uspať"
 
 #: contents/logout/Logout.qml:244
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Uspať teraz"
 
 #: contents/logout/Logout.qml:253
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
 msgstr "Hibernovať"
 
 #: contents/logout/Logout.qml:254
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
 msgstr "Hibernovať teraz"
 
 #: contents/logout/Logout.qml:265
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Inštalovať aktualizácie a reštartovať"
 
 #: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
 msgstr "Reštartovať"
 
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
 msgstr "Reštartovať teraz"
 
 #: contents/logout/Logout.qml:300
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Inštalovať aktualizácie a reštartovať teraz"
 
 #: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
 msgstr "Vypnúť"
 
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
 msgstr "Vypnúť teraz"
 
 #: contents/logout/Logout.qml:334
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
 msgstr "Odhlásiť sa"
 
 #: contents/logout/Logout.qml:335
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
 msgstr "Odhlásiť sa teraz"
 
 #: contents/logout/Logout.qml:345
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Zrušiť"
+msgstr "&Zrušiť"
 
 #: contents/splash/Splash.qml:79
 #, kde-format
@@ -206,8 +184,6 @@ msgstr "Plasma vytvorená komunitou KDE"
 #~ msgstr "Inštalovať aktualizácie a reštartovať teraz"
 
 #, fuzzy
-#~| msgctxt "@action:button Keep short"
-#~| msgid "Install Updates & Restart Now"
 #~ msgctxt "@action:button Keep short"
 #~ msgid "Install Updates & Shut Down Now"
 #~ msgstr "Inštalovať aktualizácie a reštartovať teraz"
@@ -335,7 +311,6 @@ msgstr "Plasma vytvorená komunitou KDE"
 #~ msgstr "Nastaviť"
 
 #, fuzzy
-#~| msgid "Configure KRunner…"
 #~ msgid "Configure KRunner Behavior"
 #~ msgstr "Nastaviť KRunner…"
 
@@ -412,7 +387,6 @@ msgstr "Plasma vytvorená komunitou KDE"
 #~ msgstr "Prihlásiť ako iný používateľ"
 
 #, fuzzy
-#~| msgid "Password"
 #~ msgid "Password..."
 #~ msgstr "Heslo"
 

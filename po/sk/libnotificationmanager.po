@@ -115,21 +115,21 @@ msgstr "Aplikácia neočakávane skončila."
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Neprečítané upozornenie"
+msgstr[1] "Neprečítané upozornenia"
+msgstr[2] "Neprečítané upozornenia"
 
 #: notifications.cpp:987
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 oznámenie bolo prijaté, keď bola aktivovaná funkcia Nerušiť."
+msgstr[1] "%1 oznámenia boli prijaté, keď bola aktivovaná funkcia Nerušiť."
+msgstr[2] "%1 oznámení bolo prijatých, keď bola aktivovaná funkcia Nerušiť."
 
 #: notifications.cpp:995
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr ""
+msgstr "Zobraziť upozornenia"

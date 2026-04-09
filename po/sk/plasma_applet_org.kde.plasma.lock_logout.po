@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: config.qml:13
 #, kde-format
@@ -25,7 +25,7 @@ msgstr "Všeobecné"
 #: ConfigGeneral.qml:120
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Nedostupné"
 
 #: data.js:5
 #, kde-format
@@ -38,10 +38,9 @@ msgid "Lock the screen"
 msgstr "Zamknúť obrazovku"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Prepnúť užívateľa"
+msgstr "Prepnúť užívateľa..."
 
 #: data.js:13
 #, kde-format
@@ -49,8 +48,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Spustiť súbežné sedenie ako iný užívateľ"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Vypnúť"
 
@@ -70,10 +68,9 @@ msgid "Reboot the computer"
 msgstr "Reštartovať počítač"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
-msgstr "Odhlásiť sa"
+msgstr "Log out"
 
 #: data.js:34
 #, kde-format
@@ -81,17 +78,15 @@ msgid "End the session"
 msgstr "Ukončiť sedenie"
 
 #: data.js:40
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Zamknúť obrazovku"
+msgstr "Zobraziť obrazovku na odhlásenie sa"
 
 #: data.js:41
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Vypnúť počítač"
+msgstr "Odhlásiť sa, vypnúť alebo reštartovať počítač"
 
 #: data.js:47
 #, kde-format
@@ -115,8 +110,6 @@ msgid "Hibernate (suspend to disk)"
 msgstr "Uspať (uspať na disk)"
 
 #, fuzzy
-#~| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~| msgid "Actions"
 #~ msgctxt "@title:column"
 #~ msgid "Actions"
 #~ msgstr "Akcie"
@@ -131,7 +124,6 @@ msgstr "Uspať (uspať na disk)"
 #~ msgstr "Odhlásiť sa"
 
 #, fuzzy
-#~| msgid "Lock the screen"
 #~ msgctxt "@option:check"
 #~ msgid "Show logout screen"
 #~ msgstr "Zamknúť obrazovku"
