@@ -136,6 +136,7 @@ void Clock::componentComplete()
         setupTimeZone(QTimeZone(QTimeZone::systemTimeZoneId()));
     }
     setupTickConnections();
+    Q_EMIT timeChanged();
 }
 
 void Clock::update()
