@@ -137,27 +137,22 @@ Item {
                     required property int index
                     required property string modelData
 
-                    // Layout.fillWidth is buggy here
-                    Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
-                    text: {
-                        if (index % 2 === 0) {
-                            let tzLabel = "";
-                            switch (Plasmoid.configuration.displayTimezoneFormat) {
-                            case 0: // Code
-                                tzLabel = tzClock.timeZoneCode;
-                                break;
-                            case 1: // City
-                                tzLabel = TimeZonesI18n.i18nCity(tzClock.timeZone);
-                                break;
-                            case 2: // Offset from UTC time
-                                tzLabel = tzClock.timeZoneOffset;
-                                break;
-                            }
-                            return i18nc("@label %1 is a city or time zone name", "%1:", tzLabel);
-                        } else {
-                            return formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds > 0) + formatOffset(tzClock.dateTime);
+                    readonly property string tzLabel: {
+                        switch (Plasmoid.configuration.displayTimezoneFormat) {
+                        case 0: // Code
+                            return tzClock.timeZoneCode;
+                        case 1: // City
+                            return TimeZonesI18n.i18nCity(tzClock.timeZone);
+                        case 2: // Offset from UTC time
+                            return tzClock.timeZoneOffset;
                         }
                     }
+
+                    // Layout.fillWidth is buggy here
+                    Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
+                    text: index % 2 === 0
+                        ? i18nc("@label %1 is a city or time zone name", "%1:", tzLabel)
+                        : formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds > 0) + formatOffset(tzClock.dateTime)
                     Clock {
                         id: tzClock
                         timeZone: label.modelData
