@@ -24,7 +24,7 @@ PlasmoidItem {
         } else if (Keyboards.KWinVirtualKeyboard.visible) {
             Keyboards.KWinVirtualKeyboard.active = false
         } else {
-            Keyboards.KWinVirtualKeyboard.enabled = !Keyboards.KWinVirtualKeyboard.enabled
+            Keyboards.KWinVirtualKeyboard.enabled = true
         }
     }
     preferredRepresentation: fullRepresentation
