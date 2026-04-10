@@ -101,7 +101,7 @@ msgstr "Nie je možné delete system-installed icon themes"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "Neodstraňovať túto tému ikon"
 
 #: ui/main.qml:250
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2022-02-20 22:24+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23,21 +23,24 @@ msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr "중앙에서 사용자 피드백을 비활성화했습니다. 배포판에 문의하십시오."
 
-#: ui/main.qml:39 ui/main.qml:65
-#, kde-format
-msgid "Plasma:"
-msgstr "Plasma:"
-
-#: ui/main.qml:45
-#, kde-kuit-format
+#: ui/main.qml:44
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/><nl/>You can read about <link "
+#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
+#| "link>"
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
 "it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
 "information is optional and entirely anonymous. We never collect your "
 "personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
-"privacypolicy-apps.php'>our privacy policy here.</link>"
+"identify you.<nl/>"
 msgstr ""
 "Plasma를 사용하는 방법에 대한 정보를 공유하여 KDE에서 여러분이 중요하게 생각"
 "하는 기능에 더 집중할 수 있도록 도와 줄 수 있습니다.<nl/><nl/>정보 공유는 선"
@@ -46,17 +49,28 @@ msgstr ""
 "><link url='https://kde.org/privacypolicy-apps.php'>여기에서 개인 정보 취급 "
 "방침</link>을 확인할 수 있습니다."
 
-#: ui/main.qml:102
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@info"
+msgid "Read more about our privacy policy"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: ui/main.qml:101
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:124
+#: ui/main.qml:123
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "다음 정보를 보냅니다:"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgid "View sent data:"
 msgstr "전송된 데이터 표시:"

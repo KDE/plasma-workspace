@@ -42,28 +42,28 @@ msgstr "Nie je možné download the sound theme archive: %1"
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr ""
+msgstr "Archív sa nepodarilo otvoriť."
 
 #: kcm_soundtheme.cpp:275
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Téma bola úspešne nainštalovaná."
+msgstr[1] "Témy boli úspešne nainštalované."
+msgstr[2] "Tém bolo úspešne nainštalovaných."
 
 #: kcm_soundtheme.cpp:278
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
-msgstr ""
+msgstr "Archív neobsahuje platnú zvukovú tému."
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@action:button Install sound theme from file"
 msgid "Install from File…"
-msgstr ""
+msgstr "Inštalovať zo súboru…"
 
 #: ui/main.qml:42
 #, kde-format

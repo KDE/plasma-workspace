@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2022-01-08 07:25+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -25,21 +25,24 @@ msgstr ""
 "Le segnalazioni degli utenti sono state disabilitate centralmente. Contatta "
 "il tuo distributore."
 
-#: ui/main.qml:39 ui/main.qml:65
-#, kde-format
-msgid "Plasma:"
-msgstr "Plasma:"
-
-#: ui/main.qml:45
-#, kde-kuit-format
+#: ui/main.qml:44
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/><nl/>You can read about <link "
+#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
+#| "link>"
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
 "it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
 "information is optional and entirely anonymous. We never collect your "
 "personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
-"privacypolicy-apps.php'>our privacy policy here.</link>"
+"identify you.<nl/>"
 msgstr ""
 "Puoi aiutare KDE a migliorare Plasma fornendoci le informazioni su come lo "
 "utilizzi, in modo che possiamo concentrarci sulle cose che ti interessano."
@@ -49,17 +52,28 @@ msgstr ""
 "leggere <link url='https://kde.org/privacypolicy-apps.php'>qui le "
 "informazioni sulla nostra politica di riservatezza.</link>"
 
-#: ui/main.qml:102
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@info"
+msgid "Read more about our privacy policy"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: ui/main.qml:101
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:124
+#: ui/main.qml:123
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Saranno inviate le seguenti informazioni:"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgid "View sent data:"
 msgstr "Visualizza i dati inviati:"

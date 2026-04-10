@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2026-03-18 07:16+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -493,7 +493,7 @@ msgstr ""
 "Kliknite ikono ure, da odprete nastavitve datuma in časa in nastavite "
 "časovni pas."
 
-#: Tooltip.qml:144
+#: Tooltip.qml:154
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

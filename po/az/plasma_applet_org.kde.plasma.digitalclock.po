@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2025-06-02 12:18+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -485,7 +485,7 @@ msgstr ""
 "Tarix və vaxt ayarlarını açmaq və saat qurşağını təyin etmək üçün saat "
 "nişanına vurun."
 
-#: Tooltip.qml:144
+#: Tooltip.qml:154
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

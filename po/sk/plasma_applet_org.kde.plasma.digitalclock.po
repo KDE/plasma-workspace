@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -399,30 +399,30 @@ msgstr "Vyberte časové pásmo"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • %1 hodinu neskôr"
+msgstr[1] " • %1 hodiny neskôr"
+msgstr[2] " • %1 hodín neskôr"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 neskôr"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • %1 hodinu skôr"
+msgstr[1] " • %1 hodiny skôr"
+msgstr[2] " • %1 hodín skôr"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 skôr"
 
 #: main.qml:185
 #, kde-format
@@ -488,7 +488,7 @@ msgstr ""
 "Kliknutím na ikonu hodín otvoríte nastavenia dátumu a času a nastavíte "
 "časové pásmo."
 
-#: Tooltip.qml:144
+#: Tooltip.qml:154
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

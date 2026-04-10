@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2026-03-18 21:25+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -486,7 +486,7 @@ msgstr ""
 "Apăsați pictograma ceasului pentru a deschide configurările de dată și oră "
 "ca să alegeți un fus orar."
 
-#: Tooltip.qml:144
+#: Tooltip.qml:154
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

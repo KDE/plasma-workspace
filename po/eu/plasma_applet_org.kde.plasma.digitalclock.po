@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2025-06-08 09:58+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -492,7 +492,7 @@ msgstr ""
 "Egin klik ordulari ikonoari Data eta Ordua ezarpenak ireki eta ordu-eremu "
 "bat ezartzeko."
 
-#: Tooltip.qml:144
+#: Tooltip.qml:154
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

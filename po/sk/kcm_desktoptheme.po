@@ -168,7 +168,7 @@ msgstr "Nie je možné delete system-installed Plasma styles"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Neodstraňovať tento štýl Plasma"
 
 #: ui/main.qml:189
 #, kde-format

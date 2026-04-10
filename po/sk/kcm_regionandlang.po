@@ -522,7 +522,7 @@ msgstr "Pridanie jazykov"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "Tento systém neobsahuje „%1“"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -531,6 +531,8 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"Zistite, ako pomôcť <link url='%1'>preložiť softvér KDE do vášho jazyka</"
+"link>."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -642,13 +644,13 @@ msgstr "Telefónne číslo"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "Tento systém neobsahuje nastavenia pre „%1“"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "Skúste vyhľadať blízky región."
 
 #~ msgid ""
 #~ "You can configure the formats used for time, dates, money and other "

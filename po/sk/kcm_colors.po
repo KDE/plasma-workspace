@@ -695,7 +695,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "Táto schéma je iba na čítanie. Uložte prosím úpravy pod iným názvom."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -1376,7 +1376,7 @@ msgstr "Nie je možné delete system-installed color schemes"
 #: ui/main.qml:320
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Neodstraňovať túto farebnú schému"
 
 #: ui/main.qml:364
 #, kde-format

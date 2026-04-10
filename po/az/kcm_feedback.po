@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2022-01-11 12:23+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -25,21 +25,24 @@ msgstr ""
 "İstifadəçi rəyi mərkəzi olaraq söndürülüb. Lütfən təminatşınıza müraciət "
 "edin."
 
-#: ui/main.qml:39 ui/main.qml:65
-#, kde-format
-msgid "Plasma:"
-msgstr "Plasma:"
-
-#: ui/main.qml:45
-#, kde-kuit-format
+#: ui/main.qml:44
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/><nl/>You can read about <link "
+#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
+#| "link>"
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
 "it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
 "information is optional and entirely anonymous. We never collect your "
 "personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
-"privacypolicy-apps.php'>our privacy policy here.</link>"
+"identify you.<nl/>"
 msgstr ""
 "KDE-ni necə istifadə etdiyiniz haqqında təcrübələrinizi bizimlə bölüşərək "
 "bizə daha vacib detallara diqqət yetirməmizə və Plasmanı sizin  üçün daha da "
@@ -50,17 +53,28 @@ msgstr ""
 ">Siyasətimizlə <link url='https://kde.org/privacypolicy-apps.php'>buradan "
 "tanış ola bilərsiniz.</link>"
 
-#: ui/main.qml:102
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@info"
+msgid "Read more about our privacy policy"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: ui/main.qml:101
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:124
+#: ui/main.qml:123
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Aşağıdakı məlumatlar göndəriləcək:"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgid "View sent data:"
 msgstr "Göndərilən məlumatlara baxın:"

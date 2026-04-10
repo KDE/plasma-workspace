@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2020-01-17 19:05+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -25,12 +25,7 @@ msgstr ""
 "Kasutaja tagasiside on tsentraalselt keelatud. Palun võta ühendust oma "
 "distributsiooniga."
 
-#: ui/main.qml:39 ui/main.qml:65
-#, kde-format
-msgid "Plasma:"
-msgstr "Plasma:"
-
-#: ui/main.qml:45
+#: ui/main.qml:44
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -46,8 +41,7 @@ msgid ""
 "it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
 "information is optional and entirely anonymous. We never collect your "
 "personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
-"privacypolicy-apps.php'>our privacy policy here.</link>"
+"identify you.<nl/>"
 msgstr ""
 "Sa võid abistada KDE arendajaid Plasma täiustamisel, kui jagad nendega "
 "teavet, mil moel sina seda kasutad, mis võimaldab meil keskenduda just sulle "
@@ -57,17 +51,28 @@ msgstr ""
 "külastad, samuti mitte mingit muud teavet, mis võimaldaks sind tuvastada.<nl/"
 "><nl/>Meie reeglitest saab lugeda järgmisel lingil:"
 
-#: ui/main.qml:102
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@info"
+msgid "Read more about our privacy policy"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: ui/main.qml:101
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:124
+#: ui/main.qml:123
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Edastatakse järgmine teave:"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgid "View sent data:"
 msgstr ""

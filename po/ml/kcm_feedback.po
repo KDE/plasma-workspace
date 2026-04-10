@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-10 00:54+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -26,12 +26,7 @@ msgid ""
 msgstr ""
 "ഉപയോക്തൃ അഭിപ്രായം കേന്ദ്രീകൃതമായി അപ്രാപ്‌തമാക്കി. നിങ്ങളുടെ വിതരണക്കാരനുമായി ബന്ധപ്പെടുക."
 
-#: ui/main.qml:39 ui/main.qml:65
-#, kde-format
-msgid "Plasma:"
-msgstr "പ്ലാസ്മ:"
-
-#: ui/main.qml:45
+#: ui/main.qml:44
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -47,8 +42,7 @@ msgid ""
 "it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
 "information is optional and entirely anonymous. We never collect your "
 "personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
-"privacypolicy-apps.php'>our privacy policy here.</link>"
+"identify you.<nl/>"
 msgstr ""
 "നിങ്ങൾ എങ്ങനെ പ്ലാസ്മ ഉപയോഗിക്കുന്നുവെന്നതിനെക്കുറിച്ചുള്ള വിവരങ്ങൾ സംഭാവന ചെയ്യുന്നതിലൂടെ കെ."
 "ഡി.ഇയെ മെച്ചപ്പെടുത്താൻ നിങ്ങൾക്ക് സഹായിക്കാനാകും, അതിനാൽ നിങ്ങൾക്ക് പ്രാധാന്യമുള്ള "
@@ -58,17 +52,28 @@ msgstr ""
 "കഴിയുന്ന വിവരങ്ങൾ ഞങ്ങൾ ഒരിക്കലും ശേഖരിക്കുന്നില്ല.<nl/><nl/>ഞങ്ങളുടെ നയം ചുവടെയുള്ള "
 "ലിങ്കിലൂടെ വായിക്കാം:"
 
-#: ui/main.qml:102
+#: ui/main.qml:51
+#, kde-format
+msgctxt "@info"
+msgid "Read more about our privacy policy"
+msgstr ""
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Plasma:"
+msgstr "പ്ലാസ്മ:"
+
+#: ui/main.qml:101
 #, kde-format
 msgid "Plasma"
 msgstr "പ്ലാസ്മ"
 
-#: ui/main.qml:124
+#: ui/main.qml:123
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "ഈ പറയുന്ന വിവരങ്ങൾ അയക്കും:"
 
-#: ui/main.qml:150
+#: ui/main.qml:149
 #, kde-format
 msgid "View sent data:"
 msgstr ""
