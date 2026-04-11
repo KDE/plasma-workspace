@@ -16,6 +16,7 @@ Item {
     property int percent
     property bool pluggedIn
     property string batteryType
+    property bool isSomehowFullyCharged: false
     property bool active: false
     property string powerProfileIconName: ""
     property bool preferSymbolic: false
@@ -30,6 +31,12 @@ Item {
         active: root.active
 
         function fillElement(p: int): string {
+            // Don't show the battery icon when fully charged and plugged in;
+            // it adds no value here. Only show the power profile icon
+            if (root.isSomehowFullyCharged && root.powerProfileIconName) {
+                return "battery-profile-" + root.powerProfileIconName
+            }
+
             let name
             if (p >= 95) {
                 name = "battery-100";
