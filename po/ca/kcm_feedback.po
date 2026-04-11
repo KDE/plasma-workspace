@@ -1,16 +1,16 @@
 # Translation of kcm_feedback.po to Catalan
-# Copyright (C) 2019-2024 This_file_is_part_of_KDE
+# Copyright (C) 2019-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2024-10-27 18:32+0100\n"
+"PO-Revision-Date: 2026-04-10 09:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -31,16 +31,7 @@ msgstr ""
 
 # skip-rule: punctuation-period-no
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -53,15 +44,13 @@ msgstr ""
 "referent a com l'useu. Això permet enfocar-nos en les coses que us importen."
 "<nl/><nl/>La col·laboració amb aquesta informació és opcional i totalment "
 "anònima. Mai es recolliran les dades personals, els fitxers que useu, els "
-"llocs web que visiteu, o informació que us pugui identificar.<nl/><nl/>Podeu "
-"llegir més quant a la <link url='https://kde.org/privacypolicy-apps."
-"php'>nostra política de privadesa aquí</link>."
+"llocs web que visiteu, o informació que us pugui identificar.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Llegiu més quant a la nostra política de privadesa"
 
 #: ui/main.qml:64
 #, kde-format

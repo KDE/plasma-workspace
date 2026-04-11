@@ -182,30 +182,19 @@ msgid "Filters"
 msgstr "过滤"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for an unknown older version of Plasma and is not "
-#| "compatible with Plasma %1. Please contact the widget's author for an "
-#| "updated version."
+#, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
-"此小部件是为未知的旧版 Plasma 编写的，它与 Plasma %1 不兼容。请联系小部件的作"
-"者获取新版小部件。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please contact the widget's author for an updated version."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
-"此小部件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请联系小部件的作者获取"
-"新版小部件。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
@@ -217,16 +206,11 @@ msgstr ""
 "以使用此小部件。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
-"此小部件是为 Plasma %1 编写的，它与最新版本的 Plasma 不兼容。请更换 Plasma 桌"
-"面环境以使用此小部件。"
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-09 00:47+0000\n"
-"PO-Revision-Date: 2026-03-29 13:24+0200\n"
+"PO-Revision-Date: 2026-04-09 11:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -186,11 +186,7 @@ msgid "Filters"
 msgstr "Filtres"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for an unknown older version of Plasma and is not "
-#| "compatible with Plasma %1. Please contact the widget's author for an "
-#| "updated version."
+#, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
@@ -201,10 +197,7 @@ msgstr ""
 "versió actualitzada."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please contact the widget's author for an updated version."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
@@ -222,10 +215,7 @@ msgstr ""
 "Actualitzeu Plasma per tal d'emprar-lo."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."

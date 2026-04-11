@@ -1,21 +1,20 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2023-10-04 21:42+0300\n"
-"Last-Translator: \n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-04-10 11:13+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -26,16 +25,7 @@ msgid ""
 msgstr "משוב המשתמש הושבת מרכזית. נא ליצור קשר עם המפיץ."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -47,15 +37,13 @@ msgstr ""
 "אפשר לסייע ל־KDE לשפר את פלזמה על ידי תרומת מידע על דפוס השימוש שלך כדי "
 "שנוכל להתמקד על הדברים שחשובים לך.<nl/><nl/>תרומת המידע היא בהתנדבות והיא "
 "אלמונית לחלוטין. אנחנו לעולם לא אוספים את הנתונים האישיים שלך, קבצים שבהם "
-"השתמשת, אתרים שבהם ביקרת או מידע שיכול לחשוף אותך.<nl/><nl/>אפשר לקרוא על "
-"<link url='https://kde.org/privacypolicy-apps.php'>מדיניות הפרטיות שלנו כאן."
-"</link>"
+"השתמשת, אתרים שבהם ביקרת או מידע שיכול לחשוף אותך.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "מידע נוסף על מדיניות הפרטיות שלנו"
 
 #: ui/main.qml:64
 #, kde-format

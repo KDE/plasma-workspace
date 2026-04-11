@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcm_feedback\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2023-01-11 21:19+0100\n"
+"PO-Revision-Date: 2026-04-10 12:00+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -25,16 +25,7 @@ msgstr ""
 "distribúciu."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -44,18 +35,16 @@ msgid ""
 "identify you.<nl/>"
 msgstr ""
 "Môžete KDE pomôcť vylepšiť Plasmu zdieľaním informácií o jej používaní. To "
-"nám umožňuje zamerať sa na veci, na ktorých vám záleží. <nl/><nl/"
-">Prispievanie s informáciami o používaní je voliteľné a úplne anonymné. "
-"Nepriraďujeme údaje k žiadnemu druhu jedinečného identifikátora a nikdy "
-"nebudeme sledovať otvorené dokumenty, navštívené webové stránky ani iné "
-"osobné informácie.<nl/><nl/>Môžete si prečítať o <link url='https://kde.org/"
-"privacypolicy-apps.php'>našich zásadách ochrany osobných údajov.</link>"
+"nám umožňuje zamerať sa na veci, na ktorých vám záleží.<nl/><nl/"
+">Prispievanie informácií o používaní je voliteľné a úplne anonymné. Nikdy "
+"nezhromažďujeme vaše osobné údaje, súbory, ktoré používate, webové stránky, "
+"ktoré navštevujete, ani informácie, ktoré by vás mohli identifikovať.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Prečítajte si viac o našich zásadách ochrany osobných údajov"
 
 #: ui/main.qml:64
 #, kde-format

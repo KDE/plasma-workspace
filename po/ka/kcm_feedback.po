@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2022-09-02 06:48+0200\n"
+"PO-Revision-Date: 2026-04-10 05:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.9\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -26,16 +26,7 @@ msgstr ""
 "მომხმარებლის უკუკავშირი გათიშულია ცენტრალურად. დაუკავშირდით მომწოდებელს."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -44,20 +35,18 @@ msgid ""
 "personal data, files you use, websites you visit, or information that could "
 "identify you.<nl/>"
 msgstr ""
-"თქვენ შეგიძლიათ დაეხმაროთ KDE-ს პლაზმის გაუმჯობესებაში ინფორმაციის "
-"მიწოდებით, თუ როგორ იყენებთ მას, ასე რომ, ჩვენ შეგვიძლია ფოკუსირება "
-"მოვახდინოთ თქვენთვის მნიშვნელოვან საკითხებზე.<nl/><nl/>ამ ინფორმაციის "
-"კონტრიბუცია არჩევითია და სრულიად ანონიმური. ჩვენ არასდროს ვაგროვებთ თქვენს "
+"შეგიძლიათ, დაეხმაროთ KDE-ს Plasma-ის გაუმჯობესებაში ინფორმაციის მიწოდებით, "
+"თუ როგორ იყენებთ მას, ასე რომ, ჩვენ შეგვიძლია ფოკუსირება მოვახდინოთ "
+"თქვენთვის მნიშვნელოვან საკითხებზე.<nl/><nl/>ამ ინფორმაციის მოწოდება "
+"არასავალდებულო და სრულიად ანონიმურია. ჩვენ არასდროს ვაგროვებთ თქვენს "
 "პერსონალურ მონაცემებს, ფაილებს, რომლებსაც იყენებთ, ვებსაიტებს, რომლებსაც "
-"ეწვიეთ ან ინფორმაციას, რომელსაც შეუძლია თქვენი იდენტიფიცირება.<nl/><nl/"
-">შეგიძლიათ წაიკითხოთ <link url='https://kde.org/privacypolicy-apps ."
-"php'>ჩვენი კონფიდენციალურობის პოლიტიკა აქ.</link>"
+"ეწვიეთ ან ინფორმაციას, რომელსაც შეუძლია თქვენი იდენტიფიცირება.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "წაიკითხეთ მეტი ჩვენი კონფიდენციალობის პოლიტიკის შესახებ"
 
 #: ui/main.qml:64
 #, kde-format

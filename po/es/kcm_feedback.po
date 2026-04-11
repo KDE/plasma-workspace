@@ -1,15 +1,15 @@
 # Spanish translations for kcm_feedback.po package.
-# Copyright (C) 2019-2025 This file is copyright:
+# Copyright (C) 2019-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2019.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_feedback\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2025-06-04 19:31+0100\n"
+"PO-Revision-Date: 2026-04-10 20:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -28,16 +28,7 @@ msgstr ""
 "contacto con su distribuidor."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -50,15 +41,13 @@ msgstr ""
 "lo usa, de modo que podamos centrarnos en las cosas que le importan a usted."
 "<nl/><nl/>La colaboración con esta información es opcional y completamente "
 "anónima. Nunca recopilamos sus datos personales, los archivos que usa, los "
-"sitios web que visita ni información que pueda identificarlo.<nl/><nl/>Aquí "
-"puede consultar <link url='https://kde.org/privacypolicy-apps.php'>nuestra "
-"política de privacidad</link>."
+"sitios web que visita ni información que pueda identificarlo.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Más información sobre nuestra política de privacidad"
 
 #: ui/main.qml:64
 #, kde-format

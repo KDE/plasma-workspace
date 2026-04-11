@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-10-05 19:51+0300\n"
+"PO-Revision-Date: 2026-04-10 22:02+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -33,10 +33,9 @@ msgid "Select default browser"
 msgstr "Pasirinkti numatytąją naršyklę"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Pasirinkti numatytąją numerio rinkiklio programą"
+msgstr "Pasirinkti numatytąją kalendoriaus programą"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -170,7 +169,7 @@ msgstr "El. pašto kliento programa:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Kalendorius:"
 
 #: ui/main.qml:111
 #, kde-format

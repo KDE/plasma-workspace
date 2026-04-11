@@ -24,16 +24,7 @@ msgid ""
 msgstr "用户反馈已被集中禁用。请联系您的软件发行组织。"
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -42,11 +33,6 @@ msgid ""
 "personal data, files you use, websites you visit, or information that could "
 "identify you.<nl/>"
 msgstr ""
-"您可以向 KDE 提供 Plasma 的使用情况信息，帮助开发人员了解用户的使用习惯，从而"
-"对软件进行针对性的改进。<nl/><nl/>使用情况信息的上传是非强制性的，它基于自愿"
-"原则，而且上传的数据也是完全匿名的。我们绝不会收集您的个人信息、您使用的文"
-"件、您访问的网页或任何可以识别您个人身份的信息。<nl/><nl/>您可以点击此链接了"
-"解<link url='https://kde.org/privacypolicy-apps.php'>我们的隐私政策</link>。"
 
 #: ui/main.qml:51
 #, kde-format

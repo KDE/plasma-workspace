@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2025-11-19 20:06+0200\n"
+"PO-Revision-Date: 2026-04-10 22:29+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -524,7 +524,7 @@ msgstr "Pridėti kalbas"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "Į šią sistemą nėra įtraukta „%1“"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -533,6 +533,8 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"Sužinokite, kaip padėti <link url='%1'>išversti KDE programinę įrangą į savo "
+"gimtąją kalbą</link>."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -644,10 +646,10 @@ msgstr "Telefono numeris"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "Į šią sistemą nėra įtrauktos „%1“ nuostatos"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "Pabandykite ieškoti šalia esančio regiono."
