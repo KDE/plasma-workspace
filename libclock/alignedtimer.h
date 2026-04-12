@@ -9,6 +9,8 @@
 #include <chrono>
 #include <memory>
 
+class QTimer;
+
 class AlignedTimer : public QObject
 {
     Q_OBJECT
@@ -25,5 +27,9 @@ Q_SIGNALS:
 private:
     void initTimer();
     std::chrono::seconds m_interval;
-    int m_timerFd = -1;
+#if defined(Q_OS_OPENBSD)
+     QTimer *m_timer = nullptr;
+#else
+     int m_timerFd = -1;
+#endif
 };

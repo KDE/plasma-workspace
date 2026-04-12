@@ -3,7 +3,11 @@ URI "org.kde.plasma.clock"
 GENERATE_PLUGIN_SOURCE
 )
 
-target_sources(clockplugin PRIVATE alignedtimer.cpp clock.cpp)
+if(CMAKE_SYSTEM_NAME STREQUAL "OpenBSD")
+    target_sources(clockplugin PRIVATE alignedtimer_posix.cpp clock.cpp)
+else()
+    target_sources(clockplugin PRIVATE alignedtimer.cpp clock.cpp)
+endif()
 
 target_link_libraries(clockplugin
     PRIVATE
