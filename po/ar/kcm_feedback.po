@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2021, 2022, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2022-01-05 19:53+0400\n"
+"PO-Revision-Date: 2026-04-11 18:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,12 +16,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
-msgstr "عطلت مشاركة بيانات المستخدم مركزيًا. يرجى الاتصال بالموزع الخاص بك. "
+msgstr "عطلت مشاركة بيانات المستخدم مركزيًا. يرجى الاتصال بالموزع الخاص بك."
 
 #: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
 #, kde-format
@@ -40,7 +41,7 @@ msgid ""
 "privacypolicy-apps.php'>our privacy policy here.</link>"
 msgstr ""
 "يمكنك مساعدة كِيدِي في تحسين بلازما من خلال المساهمة بمعلومات حول كيفية "
-"استخدامها، حتى نتمكن من التركيز على الأشياء التي تهمك. <nl /> <nl/> المساهمة "
+"استخدامها، حتى نتمكن من التركيز على الأشياء التي تهمك. <nl/> <nl/> المساهمة "
 "بهذه المعلومات اختيارية ومجهولة تمامًا. نحن لا نجمع أبدًا بياناتك الشخصية أو "
 "الملفات التي تستخدمها أو مواقع الويب التي تزورها أو المعلومات التي قد تحدد "
 "هويتك. <nl/> <nl/> يمكنك أن <link url='https://kde.org/privacypolicy-apps."
