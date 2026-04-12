@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2022-11-18 20:46+0200\n"
+"PO-Revision-Date: 2026-04-11 13:30+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -28,16 +28,7 @@ msgstr ""
 "savo platintoju."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -47,19 +38,17 @@ msgid ""
 "identify you.<nl/>"
 msgstr ""
 "Galite padėti KDE tobulinti Plasma pateikdami informaciją apie tai, kaip "
-"naudojatės Plasma darbalaukiu, kad tokiu būdu mes galėtume susitelkti ties "
-"dalykais, kurie yra svarbūs jums.<nl/><nl/>Šios informacijos pateikimas yra "
-"laisvanoriškas ir visiškai anoniminis. Mes niekada nerenkame jūsų asmeninių "
-"duomenų, jūsų naudojamų failų, jūsų aplankytų internetinių svetainių ar "
-"informacijos, kuri galėtų jus identifikuoti.<nl/><nl/>Galite perskaityti "
-"apie <link url='https://kde.org/privacypolicy-apps.php'>mūsų privatumo "
-"politiką čia.</link>"
+"naudojatės Plasma darbalaukio aplinka, kad tokiu būdu mes galėtume sutelkti "
+"dėmesį į dalykus, kurie jums svarbūs.<nl/><nl/>Šios informacijos pateikimas "
+"yra laisvanoriškas ir visiškai anoniminis. Mes niekada nerenkame jūsų "
+"asmeninių duomenų, jūsų naudojamų failų, jūsų aplankytų internetinių "
+"svetainių ar informacijos, kuri galėtų jus identifikuoti.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Skaitykite daugiau apie mūsų privatumo politiką"
 
 #: ui/main.qml:64
 #, kde-format

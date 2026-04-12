@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2025-11-01 10:09+0100\n"
+"PO-Revision-Date: 2026-04-11 09:37+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -75,7 +75,7 @@ msgstr "Wyśrodkowana"
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Przełącz dynamiczne tapety:"
+msgstr "Przełączaj tapety:"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "Zawsze używaj jasnego trybu"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr "Zawsze używaj ciemnego trybu"
+msgstr "Zawsze używaj trybu ciemnego"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
