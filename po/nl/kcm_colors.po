@@ -2,13 +2,14 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2026 Luc Castermans <luc.castermans@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-01-31 12:26+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2026-04-12 10:09+0200\n"
+"Last-Translator: Luc Castermans <luc.castermans@gmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -67,7 +68,7 @@ msgstr "Naam kleurenschema"
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr "Accentuatiekleur"
+msgstr "Accentkleur"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -76,16 +77,15 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
-"De laatst gebruikte aangepaste accentuatiekleur voordat de gebruiker "
-"omschakelde naar uit achtergrondafbeelding gegenereerde kleur of de "
-"standaard kleur"
+"De laatst gebruikte aangepaste accentkleur voordat de gebruiker omschakelde "
+"naar uit achtergrondafbeelding gegenereerde kleur of de standaard kleur"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
-"Of de accentuatiekleur uit achtergrondafbeelding zou moeten worden toegepast"
+"Of de accentkleur uit achtergrondafbeelding zou moeten worden toegepast"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -861,7 +861,7 @@ msgstr "Gesorteerde kolom &in lijsten van schaduw voorzien"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr "Titelbalken van vensters kleuren met de a&ccentuatiekleur"
+msgstr "Titelbalken van vensters kleuren met de a&ccentkleur"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
