@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-04-13 00:45+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -669,23 +669,23 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "&Lañser kemperzhel er reti al logodenn"
 
-#: klipper.cpp:402 klipper.cpp:411
+#: klipper.cpp:407 klipper.cpp:416
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "Ment istor ar go&lver :"
 
-#: klipper.cpp:428
+#: klipper.cpp:433
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:435
+#: klipper.cpp:440
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:442
+#: klipper.cpp:447
 #, kde-format
 msgid "down"
 msgstr ""

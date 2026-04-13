@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-04-13 00:45+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -661,22 +661,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
-#: klipper.cpp:402 klipper.cpp:411
+#: klipper.cpp:407 klipper.cpp:416
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:428
+#: klipper.cpp:433
 #, kde-format
 msgid "up"
 msgstr "उपरि"
 
-#: klipper.cpp:435
+#: klipper.cpp:440
 #, kde-format
 msgid "current"
 msgstr "वर्त्तमानः"
 
-#: klipper.cpp:442
+#: klipper.cpp:447
 #, kde-format
 msgid "down"
 msgstr "अधः"

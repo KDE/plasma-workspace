@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2025-11-30 13:54+0530\n"
+"PO-Revision-Date: 2026-04-12 17:10+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -521,7 +521,7 @@ msgstr "மொழிகளைச் சேர்ப்பது"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "இக்கணினியில் '%1' இல்லை"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -530,6 +530,7 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"கே.டீ.யீ. செயலிகளை <link url='%1'> உங்கள் மொழிக்கு மொழிபெயர்க்க</link> உதவலாம்."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -640,10 +641,10 @@ msgstr "தொலைபேசி எண்"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "'%1' என்பதற்கான அமைப்புகள் இக்கணினியில் இல்லை"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "அருகிலுள்ள மண்டலத்தைத் தேர்ந்தெடுக்கவும்."

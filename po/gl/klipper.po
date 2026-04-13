@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-04-13 00:45+0000\n"
 "PO-Revision-Date: 2025-01-19 13:39+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -684,22 +684,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Amosar os elementos do portapapeis na posición do rato"
 
-#: klipper.cpp:402 klipper.cpp:411
+#: klipper.cpp:407 klipper.cpp:416
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial do portapapeis"
 
-#: klipper.cpp:428
+#: klipper.cpp:433
 #, kde-format
 msgid "up"
 msgstr "arriba"
 
-#: klipper.cpp:435
+#: klipper.cpp:440
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:442
+#: klipper.cpp:447
 #, kde-format
 msgid "down"
 msgstr "abaixo"

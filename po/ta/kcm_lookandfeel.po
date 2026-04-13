@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-01-31 17:38+0530\n"
+"PO-Revision-Date: 2026-04-12 17:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -373,7 +373,7 @@ msgstr "பிளாஸ்மா தோற்றத்திட்டம்"
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "சுட்டிக்குறிகள்"
 
 #: ui/MoreOptions.qml:77
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-31 00:46+0000\n"
-"PO-Revision-Date: 2026-01-04 15:07+0530\n"
+"PO-Revision-Date: 2026-04-12 17:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -136,9 +136,7 @@ msgid "Scale with Panel width"
 msgstr "பலகையின் அகலத்தைப் பொறுத்து மாறும்"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -146,8 +144,7 @@ msgid "Panel icon size:"
 msgstr "பலகையிலுள்ள சின்னத்தின் அளவு:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "சிறியது"
@@ -156,7 +153,7 @@ msgstr "சிறியது"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "இடைவெளி:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
@@ -177,33 +174,32 @@ msgid "Large"
 msgstr "பெரியது"
 
 #: qml/ConfigGeneral.qml:269
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "மேலும் செயல்கள்"
+msgstr "நோக்குநிலை:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "கீழிருந்து மேல்"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "மேலிருந்து கீழ்"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "இடதிலிருந்து வலது"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "வலதிலிருந்து இடது"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format

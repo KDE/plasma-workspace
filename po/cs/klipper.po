@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-04-13 00:45+0000\n"
 "PO-Revision-Date: 2026-03-13 14:15+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -664,22 +664,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Zobrazit položky ve schránce na pozici myši"
 
-#: klipper.cpp:402 klipper.cpp:411
+#: klipper.cpp:407 klipper.cpp:416
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historie schránky"
 
-#: klipper.cpp:428
+#: klipper.cpp:433
 #, kde-format
 msgid "up"
 msgstr "nahoru"
 
-#: klipper.cpp:435
+#: klipper.cpp:440
 #, kde-format
 msgid "current"
 msgstr "současný"
 
-#: klipper.cpp:442
+#: klipper.cpp:447
 #, kde-format
 msgid "down"
 msgstr "dolů"

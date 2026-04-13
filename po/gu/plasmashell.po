@@ -1,0 +1,454 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Samyak Vidhan <crazycourt651@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"PO-Revision-Date: 2026-04-12 22:57+0530\n"
+"Last-Translator: Samyak Vidhan <crazycourt651@gmail.com>\n"
+"Language-Team: gu\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 25.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Samyak Vidhan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "CrazyCourt651@gmail.com"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "માઉસ ક્રિયાને લગતા પ્લગિનની ગોઠવણ કરો..."
+
+#: desktopview.cpp:213
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Dev"
+msgstr "KDE Plasma 6.0 Dev"
+
+#: desktopview.cpp:216
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Alpha"
+msgstr "KDE Plasma 6.0 Alpha"
+
+#: desktopview.cpp:219
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 1"
+msgstr "KDE Plasma 6.0 Beta 1"
+
+#: desktopview.cpp:222
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 2"
+msgstr "KDE Plasma 6.0 Beta 2"
+
+#: desktopview.cpp:225
+#, kde-format
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC1"
+msgstr "KDE Plasma 6.0 RC1"
+
+#: desktopview.cpp:228
+#, kde-format
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC2"
+msgstr "KDE Plasma 6.0 RC2"
+
+#: desktopview.cpp:254
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Dev"
+msgstr "KDE Plasma %1 Dev"
+
+#: desktopview.cpp:258
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr "KDE Plasma %1 Beta"
+
+#: desktopview.cpp:261
+#, kde-format
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr "KDE Plasma %1 Beta %2"
+
+#: desktopview.cpp:265
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr "KDE Plasma %1"
+
+#: desktopview.cpp:271
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr "Visit bugs.kde.org to report issues"
+
+#: desktopview.cpp:279
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy Plasma Version"
+msgstr "Copy Plasma Version"
+
+#: desktopview.cpp:285
+#, kde-format
+msgctxt "@action:button"
+msgid "Report a Bug…"
+msgstr "ભૂલની જાણ કરો…"
+
+#: desktopview.cpp:295
+#, kde-format
+msgctxt "@title:menu"
+msgid "Hide Preview Banner"
+msgstr "પૂર્વદર્શન પટ્ટી છુપાવો"
+
+#: desktopview.cpp:297
+#, kde-format
+msgctxt "@action:button Hide the preview banner until the system is restarted"
+msgid "Hide Until Restart"
+msgstr "પુન:આરંભ સુધી છુપાવો"
+
+#: desktopview.cpp:304
+#, kde-format
+msgctxt "@action:button Hide the preview banner permanently"
+msgid "Hide Permanently…"
+msgstr "કાયમી ધોરણે છુપાવો…"
+
+#: desktopview.cpp:310
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Are you sure you want to permanently hide the preview banner?<nl/><nl/>This "
+"action can only be undone by removing the line beginning with "
+"<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
+"filename> config file."
+msgstr ""
+"શુ તમે ખરેખર કાયમી ધોરણે પૂ્ર્વદર્શન પટને છુપાવવા માગો છો?…<nl/><nl/>આ ક્રિયા ફક્ત "
+"<icode>ShowDesktopPreviewBanner</icode> થી શરુ થતી લીટીને "
+"<filename>kdeglobals</filename> કન્ફિગ ફાઇલમાંથી કાઢીને ઉલટાવી શકાશે."
+
+#: desktopview.cpp:312
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide Preview Banner?"
+msgstr "પૂર્વદર્શન પટ્ટી છુપાવો?"
+
+#: desktopview.cpp:543 desktopview.cpp:559
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr "ફેરફાર કરવાની સ્થિતિમાં પ્રવેશો"
+
+#: desktopview.cpp:557
+#, kde-format
+msgid "Exit Edit Mode"
+msgstr "ફેરફાર કરવાની સ્થિતિમાંથી બહાર નીકળો"
+
+#: main.cpp:108
+#, kde-format
+msgid "Plasma Shell"
+msgstr "પ્લાઝમા શેલ"
+
+#: main.cpp:121
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Enable QML Javascript debugger"
+
+#: main.cpp:124
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "પ્લાઝમા શેલને ક્રેશ પછી આપોઆપ ચાલૂ ન કરશો"
+
+#: main.cpp:127
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "બળજબરીથી પ્લગિનને લોડ કરો"
+
+#: main.cpp:131
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "હાલનો ઇન્સ્ટન્સ બદલો"
+
+#: main.cpp:134
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "વપરાશકર્તાનો અભિપ્રાય લેવાના વિવિધ વિકલ્પો બતાવે છે"
+
+#: main.cpp:190
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "પ્લાઝમા શરૂ થવામાં નિષ્ફળ"
+
+#: main.cpp:191
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"પ્લાઝમા OpenGL 2 નો યોગ્ય વપરાશ ન કરવાથી અથવા સોફ્ટવેર ફોલબેકના કારણે શરુ થઇ શક્યુ "
+"નથી મહેરબાની કરીનેે તપાસ કરો કે તમારા ગ્રાફિક્સ ડ્રાઇવરની ગોઠવણ યોગ્ય છે."
+
+#: osd.cpp:63
+#, kde-format
+msgctxt "Brightness OSD: display name and brightness percentage"
+msgid "%1: %2%"
+msgstr "%1: %2%"
+
+#: osd.cpp:91
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "અવાજ બંધ છે"
+
+#: osd.cpp:114
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "માઇક બંધ છે"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 નો અવાજ બંધ છે"
+
+#: osd.cpp:152
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "ટચપેડ ચાલુ છે"
+
+#: osd.cpp:154
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "ટચપેડ બંધ છે"
+
+#: osd.cpp:161
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wifi ચાલુ છે"
+
+#: osd.cpp:163
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wifi બંધ છે"
+
+#: osd.cpp:170
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "બ્લૂટૂથ ચાલુ છે"
+
+#: osd.cpp:172
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "બ્લૂટૂથ બંધ છે"
+
+#: osd.cpp:179
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "મોબાઇલ ઇન્ટરનેટ ચાલુ છે."
+
+#: osd.cpp:181
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "મોબાઇલ ઇન્ટરનેટ બંધ છે."
+
+#: osd.cpp:189
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "સ્ક્રિન પરનુ કી-બોર્ડ ચાલુ કરાયુ"
+
+#: osd.cpp:192
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "સ્ક્રિન પરનુ કી-બોર્ડ બંધ કરાયુ"
+
+#: osd.cpp:199
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr "ઉંઘ તેમજ સ્ક્રિન લોક અવરોધિત કરાયુ"
+
+#: osd.cpp:201
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr "ઉંઘ તેમજ સ્ક્રિન લોક પરનો અવરોધ હટાવ્યો"
+
+#: osd.cpp:211
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr "પાવર બચત મોડ"
+
+#: osd.cpp:214
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr "સંતુલિત પાવર મોડ"
+
+#: osd.cpp:217
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr "કાર્યક્ષમ મોડ"
+
+#: panelview.cpp:458
+#, kde-format
+msgid ""
+"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
+"known to cause poor window drag and resize performance. Consider using other "
+"settings."
+msgstr ""
+"X11 ના Nvidia GPU પર, ફ્લોટિન્ગ તેમજ અનુકુલિત દ્રશ્યતા મોટ વિન્ડો ખસેડવા તેમજ કદ "
+"બદલવાની ક્રિયાઓની કાર્યક્ષમતા નબળી કરે છે.બીજો કોઇ વિકલ્પ અજમાવી જુઓ."
+
+#: panelview.cpp:1144
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Panel Configuration"
+msgstr "કોન્ફિગરેશન પટ્ટી છુપાવો"
+
+#: panelview.cpp:1146
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Panel Configuration"
+msgstr "કોન્ફિગરેશન પટ્ટી બતાવો"
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: shellcontainmentconfig.cpp:107
+#, kde-format
+msgid "Internal Screen on %1"
+msgstr "આંતરિક સ્ક્રિન %1 પર છે"
+
+#: shellcontainmentconfig.cpp:111
+#, kde-format
+msgctxt "Screen manufacturer and model on connector"
+msgid "%1 %2 on %3"
+msgstr "%3 પર %1 %2"
+
+#: shellcontainmentconfig.cpp:134
+#, kde-format
+msgid "Disconnected Screen %1"
+msgstr "સ્ક્રિન %1 દૂર થઇ"
+
+#: shellcorona.cpp:180 shellcorona.cpp:182
+#, kde-format
+msgid "Show Desktop"
+msgstr "ડેસ્કટોપ બતાવો"
+
+#: shellcorona.cpp:182
+#, kde-format
+msgid "Hide Desktop"
+msgstr "ડેસ્કટોપ છુપાવો"
+
+#: shellcorona.cpp:197
+#, kde-format
+msgid "Activate Application Launcher"
+msgstr "એપ્લિકેશન લોન્ચર કાર્યરત કરો"
+
+#: shellcorona.cpp:205
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "ક્રિયા બદલનાર બતાવો"
+
+#: shellcorona.cpp:214
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "પાછલી ક્રિયા પર જાઓ"
+
+#: shellcorona.cpp:222
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "આગલી ક્રિયા પર જાઓ"
+
+#: shellcorona.cpp:237
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "ક્રિયા સંચાલકની યાદી %1 ચાલુ કરો"
+
+#: shellcorona.cpp:272
+#, kde-format
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr "ડેસ્કટોપ અને પટ્ટીઓનુ સંચાલન કરો"
+
+#: shellcorona.cpp:294
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "પટ્ટીઓ વચ્ચે કીબોર્ડનુ ફોક્સ બદલો"
+
+#: shellcorona.cpp:2270
+#, kde-format
+msgid "Add Panel"
+msgstr "પટ્ટી ઉમેરો"
+
+#: shellcorona.cpp:2353
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "%1 ખાલી"
+
+#: softwarerendernotifier.cpp:34
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "સોફ્ટવેર રેન્ડરર વપરાશમાં છે"
+
+#: softwarerendernotifier.cpp:35
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "સોફ્ટવેર રેન્ડરર વપરાશમાં છે"
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "રેન્ડરીંગ નબળુ હોઇ શકે"
+
+#: softwarerendernotifier.cpp:46
+#, kde-format
+msgid "Never show again"
+msgstr "ફરી બતાવશો નહિ"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "પટ્ટીઓની સંખ્યા"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "પટ્ટીઓની સંખ્યા ગણશે"
