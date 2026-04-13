@@ -30,5 +30,4 @@ protected:
 
 private:
     std::shared_ptr<TaskManager::ActivityInfo> m_activityInfo;
-    std::shared_ptr<TaskManager::VirtualDesktopInfo> m_virtualDesktopInfo;
 };

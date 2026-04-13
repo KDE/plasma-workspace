@@ -40,12 +40,28 @@ public:
     ~VirtualDesktopInfo() override;
 
     /**
-     * The currently active virtual desktop.
+     * The currently active virtual desktop on active screen.
      *
      * @returns the id of the currently active virtual desktop. QString on
      * Wayland; uint >0 on X11.
      **/
     QVariant currentDesktop() const;
+
+    /**
+     * The currently active virtual desktop on given screen.
+     *
+     * @return the id of the currently active virtual desktop. QString on
+     * Wayland; uint >0 on X11.
+     */
+    Q_INVOKABLE QVariant currentDesktopByScreenName(const QString &screenName) const;
+
+    /**
+     * The currently active virtual desktop on given screen.
+     *
+     * @return the id of the currently active virtual desktop. QString on
+     * Wayland; uint >0 on X11.
+     */
+    Q_INVOKABLE QVariant currentDesktopByScreenGeometry(const QRect &screenGeometry) const;
 
     /**
      * The number of virtual desktops present in the session.
@@ -91,11 +107,18 @@ public:
     int desktopLayoutRows() const;
 
     /**
-     * Request activating the passed-in virtual desktop.
+     * Request activating the passed-in virtual desktop on active screen.
      *
      * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
      **/
     void requestActivate(const QVariant &desktop);
+
+    /**
+     * Request activating the passed-in virtual desktop on given screen.
+     *
+     * @param desktop A virtual desktop id (QString on Wayland; uint >0 on X11).
+     **/
+    void requestActivateOnScreen(const QVariant &desktop, const QString &screenName);
 
     /**
      * Request adding a new virtual desktop at the specified position.
@@ -126,6 +149,7 @@ public:
 
 Q_SIGNALS:
     void currentDesktopChanged() const;
+    void currentDesktopForScreenChanged(const QString &screenName) const;
     void numberOfDesktopsChanged() const;
     void desktopIdsChanged() const;
     void desktopNamesChanged() const;

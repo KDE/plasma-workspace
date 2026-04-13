@@ -38,6 +38,8 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(QString activity READ activity WRITE setActivity NOTIFY activityChanged)
 
     Q_PROPERTY(bool filterByVirtualDesktop READ filterByVirtualDesktop WRITE setFilterByVirtualDesktop NOTIFY filterByVirtualDesktopChanged)
+    Q_PROPERTY(bool filterByCurrentVirtualDesktop READ filterByCurrentVirtualDesktop WRITE setFilterByCurrentVirtualDesktop NOTIFY
+                   filterByCurrentVirtualDesktopChanged)
     Q_PROPERTY(bool filterByScreen READ filterByScreen WRITE setFilterByScreen NOTIFY filterByScreenChanged)
     Q_PROPERTY(bool filterByActivity READ filterByActivity WRITE setFilterByActivity NOTIFY filterByActivityChanged)
     Q_PROPERTY(RegionFilterMode::Mode filterByRegion READ filterByRegion WRITE setFilterByRegion NOTIFY filterByRegionChanged)
@@ -159,6 +161,25 @@ public:
      * @param filter Whether tasks should be filtered by virtual desktop.
      **/
     void setFilterByVirtualDesktop(bool filter);
+
+    /**
+     * Whether tasks should be filtered by its screen's virtual desktop.
+     * Defaults to @c false.
+     *
+     * @see setFilterByCurrentVirtualDesktop
+     * @returns @c true if tasks should be filtered by their screen's
+     * virtual desktops.
+     **/
+    bool filterByCurrentVirtualDesktop() const;
+
+    /**
+     * Set whether tasks should be filtered by virtual desktop.
+     *
+     * @see filterByCurrentVirtualDesktop
+     * @param filter Whether tasks should be filtered by their screen's
+     * virtual desktop.
+     **/
+    void setFilterByCurrentVirtualDesktop(bool filter);
 
     /**
      * Whether tasks should be filtered by screen. Defaults to @c false.
@@ -379,6 +400,7 @@ Q_SIGNALS:
     void regionGeometryChanged();
     void activityChanged() const;
     void filterByVirtualDesktopChanged() const;
+    void filterByCurrentVirtualDesktopChanged() const;
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;
     void filterByRegionChanged();

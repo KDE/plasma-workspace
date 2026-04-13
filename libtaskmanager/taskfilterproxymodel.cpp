@@ -6,14 +6,17 @@
 
 #include "taskfilterproxymodel.h"
 #include "abstracttasksmodel.h"
+#include "virtualdesktopinfo.h"
 
 #include "launchertasksmodel_p.h"
 
 #include "config-X11.h"
-#if HAVE_X11
+
 #include <QGuiApplication>
 #include <QScreen>
+#include <memory>
 
+#if HAVE_X11
 #include <KWindowSystem>
 #endif
 
@@ -27,11 +30,13 @@ public:
     AbstractTasksModelIface *sourceTasksModel = nullptr;
 
     QVariant virtualDesktop;
+    std::unique_ptr<VirtualDesktopInfo> virtualDesktopInfo;
     QRect screenGeometry;
     QRect regionGeometry;
     QString activity;
 
     bool filterByVirtualDesktop = false;
+    bool filterByCurrentVirtualDesktop = false;
     bool filterByScreen = false;
     bool filterByActivity = false;
     RegionFilterMode::Mode filterByRegion = RegionFilterMode::Mode::Disabled;
@@ -150,6 +155,33 @@ void TaskFilterProxyModel::setFilterByVirtualDesktop(bool filter)
         invalidateFilter();
 
         Q_EMIT filterByVirtualDesktopChanged();
+    }
+}
+
+bool TaskFilterProxyModel::filterByCurrentVirtualDesktop() const
+{
+    return d->filterByCurrentVirtualDesktop;
+}
+
+void TaskFilterProxyModel::setFilterByCurrentVirtualDesktop(bool filter)
+{
+    if (d->filterByCurrentVirtualDesktop != filter) {
+        d->filterByCurrentVirtualDesktop = filter;
+
+        if (filter) {
+            d->virtualDesktopInfo = std::make_unique<VirtualDesktopInfo>();
+            connect(d->virtualDesktopInfo.get(), &VirtualDesktopInfo::currentDesktopForScreenChanged, this, [this]() {
+                if (d->filterByCurrentVirtualDesktop) {
+                    invalidateFilter();
+                }
+            });
+        } else {
+            d->virtualDesktopInfo = nullptr;
+        }
+
+        invalidateFilter();
+
+        Q_EMIT filterByCurrentVirtualDesktopChanged();
     }
 }
 
@@ -345,6 +377,27 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
 
             if (!virtualDesktops.isEmpty() && !virtualDesktops.contains(d->virtualDesktop)) {
                 return false;
+            }
+        }
+    }
+
+    // Filter by per-screen virtual desktop.
+    if (d->filterByCurrentVirtualDesktop && d->virtualDesktopInfo != nullptr) {
+        if (!sourceIdx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()
+            && (!d->demandingAttentionSkipsFilters || !sourceIdx.data(AbstractTasksModel::IsDemandingAttention).toBool())) {
+            const QVariantList &virtualDesktops = sourceIdx.data(AbstractTasksModel::VirtualDesktops).toList();
+            const QRect &screenGeometry = sourceIdx.data(AbstractTasksModel::ScreenGeometry).toRect();
+
+            if (!virtualDesktops.isEmpty() && screenGeometry.isValid()) {
+                for (auto screen : qGuiApp->screens()) {
+                    if (screen->geometry() != screenGeometry) {
+                        continue;
+                    }
+                    if (!virtualDesktops.contains(d->virtualDesktopInfo->currentDesktopByScreenName(screen->name()))) {
+                        return false;
+                    }
+                    break;
+                }
             }
         }
     }

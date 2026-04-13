@@ -282,6 +282,7 @@ void TasksModel::Private::initModels()
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::regionGeometryChanged, q, &TasksModel::regionGeometryChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::activityChanged, q, &TasksModel::activityChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByVirtualDesktopChanged, q, &TasksModel::filterByVirtualDesktopChanged);
+    QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByCurrentVirtualDesktopChanged, q, &TasksModel::filterByCurrentVirtualDesktopChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByScreenChanged, q, &TasksModel::filterByScreenChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByActivityChanged, q, &TasksModel::filterByActivityChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByRegionChanged, q, &TasksModel::filterByRegionChanged);
@@ -1173,6 +1174,16 @@ bool TasksModel::filterByVirtualDesktop() const
 void TasksModel::setFilterByVirtualDesktop(bool filter)
 {
     d->filterProxyModel->setFilterByVirtualDesktop(filter);
+}
+
+bool TasksModel::filterByCurrentVirtualDesktop() const
+{
+    return d->filterProxyModel->filterByCurrentVirtualDesktop();
+}
+
+void TasksModel::setFilterByCurrentVirtualDesktop(bool filter)
+{
+    d->filterProxyModel->setFilterByCurrentVirtualDesktop(filter);
 }
 
 bool TasksModel::filterByScreen() const

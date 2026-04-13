@@ -64,6 +64,7 @@ SwitchWindow::~SwitchWindow()
 void SwitchWindow::restore(const KConfigGroup &config)
 {
     m_mode = (MenuMode)config.readEntry("mode", (int)AllFlat);
+    s_tasksModel->setFilterByCurrentVirtualDesktop(m_mode == CurrentDesktop);
 }
 
 QWidget *SwitchWindow::createConfigurationInterface(QWidget *parent)
@@ -94,6 +95,8 @@ void SwitchWindow::configurationAccepted()
     } else {
         m_mode = CurrentDesktop;
     }
+
+    s_tasksModel->setFilterByCurrentVirtualDesktop(m_mode == CurrentDesktop);
 }
 
 void SwitchWindow::save(KConfigGroup &config)
@@ -112,6 +115,7 @@ void SwitchWindow::makeMenu()
 
     QMultiMap<QString, QAction *> desktops;
     QList<QAction *> allDesktops;
+    QList<QAction *> uniqueActions;
 
     // Make all the window actions.
     for (int i = 0; i < s_tasksModel->rowCount(); ++i) {
@@ -130,6 +134,14 @@ void SwitchWindow::makeMenu()
         auto *action = new QAction(name, this);
         action->setIcon(idx.data(Qt::DecorationRole).value<QIcon>());
         action->setData(idx.data(AbstractTasksModel::WinIdList).toList());
+        connect(action, &QAction::triggered, [=, this]() {
+            switchTo(action);
+        });
+
+        if (m_mode == CurrentDesktop) {
+            uniqueActions << action;
+            continue;
+        }
 
         const QStringList &desktopList = idx.data(AbstractTasksModel::VirtualDesktops).toStringList();
 
@@ -140,22 +152,17 @@ void SwitchWindow::makeMenu()
         if (idx.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool()) {
             allDesktops << action;
         }
-
-        connect(action, &QAction::triggered, [=, this]() {
-            switchTo(action);
-        });
     }
 
     // Sort into menu(s).
     if (m_mode == CurrentDesktop) {
-        const QString &currentDesktop = m_virtualDesktopInfo->currentDesktop().toString();
-
         auto *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "Windows"), this);
         a->setSeparator(true);
         m_actions << a;
-        m_actions << desktops.values(currentDesktop);
-        m_actions << allDesktops;
 
+        for (auto action : uniqueActions) {
+            m_actions << action;
+        }
     } else {
         const QVariantList &desktopIds = m_virtualDesktopInfo->desktopIds();
         const QStringList &desktopNames = m_virtualDesktopInfo->desktopNames();

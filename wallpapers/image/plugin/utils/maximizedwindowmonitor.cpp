@@ -8,12 +8,10 @@
 
 #include "abstracttasksmodel.h" // For enums
 #include "activityinfo.h"
-#include "virtualdesktopinfo.h"
 
 MaximizedWindowMonitor::MaximizedWindowMonitor(QObject *parent)
     : TaskManager::TasksModel(parent)
     , m_activityInfo(activityInfo())
-    , m_virtualDesktopInfo(virtualDesktopInfo())
 {
     setSortMode(SortMode::SortActivity);
     setGroupMode(GroupMode::GroupDisabled);
@@ -23,14 +21,9 @@ MaximizedWindowMonitor::MaximizedWindowMonitor(QObject *parent)
     setCurrentActivity();
     connect(m_activityInfo.get(), &TaskManager::ActivityInfo::currentActivityChanged, this, setCurrentActivity);
 
-    auto currentDesktop = std::bind(&TaskManager::VirtualDesktopInfo::currentDesktop, m_virtualDesktopInfo);
-    auto setCurrentDesktop = std::bind(&TaskManager::TasksModel::setVirtualDesktop, this, currentDesktop);
-    setCurrentDesktop();
-    connect(m_virtualDesktopInfo.get(), &TaskManager::VirtualDesktopInfo::currentDesktopChanged, this, setCurrentDesktop);
-
     setFilterMinimized(true);
     setFilterByActivity(true);
-    setFilterByVirtualDesktop(true);
+    setFilterByCurrentVirtualDesktop(true);
     setFilterByRegion(RegionFilterMode::Mode::Intersect);
 }
 
