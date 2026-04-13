@@ -351,8 +351,19 @@ MouseArea {
         }
     ]
 
+    acceptedButtons: Qt.LeftButton | (ApplicationIntegration.calendarInstalled ? Qt.MiddleButton : 0)
     onPressed: wasExpanded = root.expanded
-    onClicked: root.expanded = !wasExpanded
+    onClicked: mouse => {
+        if (!mouse) {
+            root.expanded = !wasExpanded;
+            return;
+        }
+        if (mouse.button === Qt.MiddleButton && ApplicationIntegration.calendarInstalled) {
+            ApplicationIntegration.launchCalendar();
+        } else if (mouse.button === Qt.LeftButton) {
+            root.expanded = !wasExpanded;
+        }
+    }
     onWheel: wheel => {
         if (!Plasmoid.configuration.wheelChangesTimezone) {
             return;

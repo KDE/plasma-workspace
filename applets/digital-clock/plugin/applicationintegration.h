@@ -11,14 +11,23 @@ class ApplicationIntegration : public QObject
     Q_OBJECT
     QML_ELEMENT
     QML_SINGLETON
-    Q_PROPERTY(bool calendarInstalled READ calendarInstalled CONSTANT)
+    Q_PROPERTY(bool calendarInstalled READ calendarInstalled NOTIFY calendarInstalledChanged)
+    Q_PROPERTY(QString calendarApplicationName READ calendarApplicationName NOTIFY calendarApplicationNameChanged)
 
 public:
     explicit ApplicationIntegration(QObject *parent = nullptr);
     ~ApplicationIntegration() = default;
 
     bool calendarInstalled() const;
+    QString calendarApplicationName() const;
     Q_INVOKABLE void launchCalendar() const;
+
+Q_SIGNALS:
+    void calendarInstalledChanged();
+    void calendarApplicationNameChanged();
+
+private Q_SLOTS:
+    void refresh();
 
 private:
     KService::Ptr m_calendarService;

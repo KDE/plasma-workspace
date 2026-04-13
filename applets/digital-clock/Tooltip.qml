@@ -174,5 +174,14 @@ Item {
                 }
             }
         }
+
+        PlasmaComponents.Label {
+            Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
+            Layout.maximumWidth: toolTipContentItem.preferredTextWidth
+            visible: ApplicationIntegration.calendarInstalled
+            text: i18nc("@info:tooltip %1 is the name of a calendar application", "Middle-click to open %1", ApplicationIntegration.calendarApplicationName)
+            textFormat: Text.PlainText
+            opacity: 0.75
+        }
     }
 }
