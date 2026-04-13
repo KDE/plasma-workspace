@@ -7,4 +7,4 @@
 
 podir=${podir:?} # ensure it is defined
 
-$XGETTEXT $(find . -name \*.cpp -o -name \*.h) -o "$podir"/oom-notifier.pot
+$XGETTEXT $(find . -name \*.cpp -o -name \*.h) -o "$podir"/oom_notifier.pot

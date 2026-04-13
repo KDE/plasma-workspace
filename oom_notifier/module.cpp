@@ -64,7 +64,7 @@ public:
                     const auto unit = decodeUnitName(QFileInfo(msg.path()).fileName());
                     const auto service = serviceForUnitName(unit);
                     const QString eventId = u"catastrophe"_s;
-                    const QString component = u"oom-notifier"_s;
+                    const QString component = u"oom_notifier"_s;
                     const QString title = i18nc("@title", "Memory Shortage Avoided");
                     const auto programMessage = [](const QString &command) -> QString {
                         return xi18nc("@info",
@@ -123,6 +123,6 @@ private:
                                                      nullptr};
 };
 
-K_PLUGIN_CLASS_WITH_JSON(OOMNotifierModule, "oom-notifier.json")
+K_PLUGIN_CLASS_WITH_JSON(OOMNotifierModule, "oom_notifier.json")
 
 #include "module.moc"

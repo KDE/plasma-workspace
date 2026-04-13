@@ -7,4 +7,4 @@ endif()
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
-ecm_add_tests(oom-notifier-decodetest.cpp LINK_LIBRARIES Qt::Test)
+ecm_add_tests(oom_notifier-decodetest.cpp LINK_LIBRARIES Qt::Test)

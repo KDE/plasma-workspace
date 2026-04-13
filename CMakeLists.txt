@@ -411,7 +411,7 @@ add_subdirectory(libklookandfeel)
 add_subdirectory(libkworkspace)
 add_subdirectory(libdbusmenuqt)
 add_subdirectory(appmenu)
-add_subdirectory(oom-notifier)
+add_subdirectory(oom_notifier)
 
 add_subdirectory(libclock)
 add_subdirectory(libtaskmanager)

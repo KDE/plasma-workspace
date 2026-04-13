@@ -67,4 +67,4 @@ private Q_SLOTS:
 
 QTEST_GUILESS_MAIN(DecodeTest)
 
-#include "oom-notifier-decodetest.moc"
+#include "oom_notifier-decodetest.moc"
