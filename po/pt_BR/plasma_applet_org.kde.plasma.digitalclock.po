@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-04-14 00:46+0000\n"
 "PO-Revision-Date: 2026-03-18 08:55-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -495,6 +495,12 @@ msgstr ""
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
 msgstr "%1:"
+
+#: Tooltip.qml:182
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a calendar application"
+msgid "Middle-click to open %1"
+msgstr ""
 
 #~ msgid ""
 #~ "Tip: if you travel frequently, add your home time zone to this list. It "

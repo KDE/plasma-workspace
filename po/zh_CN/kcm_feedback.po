@@ -33,12 +33,16 @@ msgid ""
 "personal data, files you use, websites you visit, or information that could "
 "identify you.<nl/>"
 msgstr ""
+"您可以与 KDE 分享 Plasma 的使用统计信息，让我们知道各项功能的使用情况，从而改"
+"进您最常用的功能。<nl/><nl/>信息的上传基于自愿原则，它是非强制性且完全匿名"
+"的。我们绝不会收集您的个人信息、您使用的文件、您访问的网页或任何可以识别您个"
+"人身份的信息。<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "了解我们的隐私政策"
 
 #: ui/main.qml:64
 #, kde-format

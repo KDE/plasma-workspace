@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2026 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2022-01-05 22:19+0100\n"
+"PO-Revision-Date: 2026-04-13 11:19+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -26,16 +26,7 @@ msgstr ""
 "continge tu distributor."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -44,19 +35,17 @@ msgid ""
 "personal data, files you use, websites you visit, or information that could "
 "identify you.<nl/>"
 msgstr ""
-"Tu pote adjutar KDE a meliorar Plasma per contribuer information sur como tu "
-"usa lo, assi nos pote focalisar sur cosas que importa te.<nl/><nl/"
-">Contribuer iste information es optional e totalmente anonyme. Nos jammais "
-"collige tu datos personal, files que tu usa, sitos web que tu visita, o "
-"information que pote identificar te.<nl/><nl/>Tu pote leger re nostre  "
-"politica de confidentialitate hic <link url='https://kde.org/privacypolicy-"
-"apps.php'></link>"
+"Tu pote adjutar KDE a meliorar Plasma per contribuer information super como "
+"tu lo usa, de modo que nos pote concentrar nos sur cosas que importa a te. "
+"<nl/><nl/> Contribuer iste information es optional e completemente anonyme. "
+"Nos nunquam collige tu datos personal, files que tu usa, sitos web que tu "
+"visita,  o information que poterea identificar te.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Lege plus super nostre politica de confidentialitate"
 
 #: ui/main.qml:64
 #, kde-format

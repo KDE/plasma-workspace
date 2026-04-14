@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-04-14 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -35,19 +35,19 @@ msgstr "प्रत्येकस्य डेस्कटॉप् कृत�
 msgid "Display only the current desktop's windows"
 msgstr "केवलं वर्तमानस्य डेस्कटॉप् इत्यस्य विण्डोस् प्रदर्शयन्तु"
 
-#: switch.cpp:73
+#: switch.cpp:74
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "स्विच विण्डो प्लगिन् विन्यस्तं कुर्वन्तु"
 
-#: switch.cpp:153
+#: switch.cpp:159
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "विण्डोज"
 
-#: switch.cpp:177 switch.cpp:198 switch.cpp:200
+#: switch.cpp:184 switch.cpp:205 switch.cpp:207
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"

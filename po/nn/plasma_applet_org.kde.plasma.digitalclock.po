@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-04-14 00:46+0000\n"
 "PO-Revision-Date: 2025-10-26 13:06+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -492,3 +492,9 @@ msgstr ""
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
 msgstr "%1:"
+
+#: Tooltip.qml:182
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a calendar application"
+msgid "Middle-click to open %1"
+msgstr ""

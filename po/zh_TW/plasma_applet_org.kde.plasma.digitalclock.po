@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-04-14 00:46+0000\n"
 "PO-Revision-Date: 2026-04-08 22:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -492,6 +492,12 @@ msgstr "點擊時鐘圖示來開啟日期和時間設定頁面以設定時區。
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
 msgstr "%1："
+
+#: Tooltip.qml:182
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a calendar application"
+msgid "Middle-click to open %1"
+msgstr ""
 
 #~ msgid ""
 #~ "Tip: if you travel frequently, add your home time zone to this list. It "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-04-14 00:46+0000\n"
 "PO-Revision-Date: 2026-03-19 22:43+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -488,6 +488,12 @@ msgstr ""
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
 msgstr "%1:"
+
+#: Tooltip.qml:182
+#, kde-format
+msgctxt "@info:tooltip %1 is the name of a calendar application"
+msgid "Middle-click to open %1"
+msgstr ""
 
 #~ msgid ""
 #~ "Tip: if you travel frequently, add your home time zone to this list. It "
