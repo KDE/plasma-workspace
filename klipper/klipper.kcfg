@@ -43,10 +43,6 @@
       <default>true</default>
       <whatsthis>Do not store images in the clipboard history, even if explicitly copied.</whatsthis>
     </entry>
-    <entry name="UseGUIRegExpEditor" type="Bool">
-      <label>Use graphical regexp editor</label>
-      <default>true</default>
-    </entry>
     <entry name="URLGrabberEnabled" type="Bool">
         <label>Immediately on selection</label>
 	<tooltip>Show the popup menu of applicable actions as soon as a selection is made.</tooltip>

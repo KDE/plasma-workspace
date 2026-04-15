@@ -235,8 +235,6 @@ void Klipper::slotStartShowTimer()
 void Klipper::loadSettings()
 {
     m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
-    // NOTE: not used atm - kregexpeditor is not ported to kde4
-    m_bUseGUIRegExpEditor = KlipperSettings::useGUIRegExpEditor();
 
     m_bURLGrabber = KlipperSettings::uRLGrabberEnabled();
     // this will cause it to loadSettings too
