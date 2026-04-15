@@ -113,6 +113,14 @@ void CalculatorRunnerTest::testFunctions()
     // Does not match the prefixless queries and function-pattern
     launchQuery(u"sqrt 4"_s);
     QCOMPARE(manager->matches().size(), 0);
+
+    // BUG: 496343
+    launchQuery(u"1 + sqrt(4)"_s);
+    QCOMPARE(manager->matches().size(), 1);
+
+    // Functions containing numbers in their name
+    launchQuery(u"factorial2(4)"_s);
+    QCOMPARE(manager->matches().size(), 1);
 }
 
 QTEST_MAIN(CalculatorRunnerTest)

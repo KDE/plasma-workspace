@@ -92,7 +92,7 @@ void CalculatorRunner::match(KRunner::RunnerContext &context)
         userFriendlyMultiplication(cmd);
     }
 
-    const static QRegularExpression functionName(QStringLiteral("^([a-zA-Z]+)\\(.+\\)"));
+    const static QRegularExpression functionName(QStringLiteral("([a-zA-Z]+[0-9]*)\\(.+\\)"));
     if (foundPrefix) {
         cmd.remove(0, cmd.indexOf(QLatin1Char('=')) + 1);
     } else if (cmd.endsWith(QLatin1Char('='))) {
