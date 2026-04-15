@@ -498,7 +498,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
+msgstr "Kliknutím stredným tlačidlom otvoríte %1"
 
 #~ msgid ""
 #~ "Tip: if you travel frequently, add your home time zone to this list. It "
