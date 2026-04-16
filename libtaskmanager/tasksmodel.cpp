@@ -886,6 +886,16 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
     }
 
     case SortWindowPositionHorizontal: {
+        const bool leftIsStartup = left.data(AbstractTasksModel::IsStartup).toBool();
+        const bool rightIsStartup = right.data(AbstractTasksModel::IsStartup).toBool();
+
+        if (leftIsStartup && rightIsStartup) {
+            return (left.row() < right.row());
+        } else if (leftIsStartup && !rightIsStartup) {
+            return false;
+        } else if (!leftIsStartup && rightIsStartup) {
+            return true;
+        }
 
         if (auto result = lessThanByVirtualDesktop(left, right)) {
             return *result;
