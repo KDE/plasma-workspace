@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:45+0000\n"
+"POT-Creation-Date: 2026-04-16 00:46+0000\n"
 "PO-Revision-Date: 2026-02-09 18:14-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -665,22 +665,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "چاشقىنەك ئورنىدا چاپلاش تاختىسى تۈرىنى كۆرسىتىدۇ"
 
-#: klipper.cpp:407 klipper.cpp:416
+#: klipper.cpp:405 klipper.cpp:414
 #, kde-format
 msgid "Clipboard history"
 msgstr "چاپلاش تاختىسى تارىخى"
 
-#: klipper.cpp:433
+#: klipper.cpp:431
 #, kde-format
 msgid "up"
 msgstr "ئۈستىگە"
 
-#: klipper.cpp:440
+#: klipper.cpp:438
 #, kde-format
 msgid "current"
 msgstr "نۆۋەتتىكى"
 
-#: klipper.cpp:447
+#: klipper.cpp:445
 #, kde-format
 msgid "down"
 msgstr "ئاستى"
@@ -790,20 +790,14 @@ msgstr ""
 "گەرچە ئېنىق كۆچۈرۈلگەن تەقدىردىمۇ، سۈرەتنى چاپلاش تاختىسىنىڭ تارىخ "
 "خاتىرىسىگە ساقلىمايدۇ."
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr "گىرافىكلىق مۇنتىزىم ئىپادە تەھرىرلىگۈچ"
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, kde-format
 msgid "Immediately on selection"
 msgstr "تاللىغاندا دەرھال"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:48
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -812,43 +806,43 @@ msgstr ""
 "كۆرسىتىدۇ."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "ئۆزلۈكىدىن مەشغۇلات تىزىملىكى ۋاقتى:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "ئۆزلۈكىدىن قاڭقىش مەشغۇلات تىزىملىكىنىڭ كۆرسىتىش ۋاقتى."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:59
 #, kde-format
 msgid "History size:"
 msgstr "تارىخ خاتىرە چوڭلۇقى:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "چاپلاش تاختىسى تارىخ خاتىرىسى ساقلايدىغان ئۇچۇر سانى."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "مەشغۇلاتنىڭ شاخسىمان ئەپچىدە ئىپادىلەيدىغان ئۆزگىرىشنىڭ بوش ئۇچۇر تۈرى"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "تاللاشتىن ئالدى كەينى بوشلۇقنى چىقىرىۋېتىدۇ"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:82
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -862,13 +856,13 @@ msgstr ""
 "ئۇچرىمايدۇ."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:85
+#: klipper.kcfg:81
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "تارىخ خاتىرىسىدىن ئۇچۇر تاللانغاندا قاڭقىت"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:83
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -878,13 +872,13 @@ msgstr ""
 "مەشغۇلاتىنىڭ قاڭقىش تىزىملىكىنى كۆرسىتىدۇ."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:90
+#: klipper.kcfg:86
 #, kde-format
 msgid "Include MIME actions"
 msgstr "MIME مەشغۇلاتىنى ئۆز ئىچىگە ئالىدۇ"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:88
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -902,6 +896,9 @@ msgstr "چاپلاش تاختىسى قاڭقىش كۆزنىكى"
 #, kde-format
 msgid "&Cancel"
 msgstr "ۋاز كەچ(&C)"
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "گىرافىكلىق مۇنتىزىم ئىپادە تەھرىرلىگۈچ"
 
 #~ msgid "Data Matrix"
 #~ msgstr "سانلىق مەلۇمات ماترىتساسى"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:45+0000\n"
+"POT-Creation-Date: 2026-04-16 00:46+0000\n"
 "PO-Revision-Date: 2025-08-30 11:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -673,22 +673,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra els elements del porta-retalls a la posició del ratolí"
 
-#: klipper.cpp:407 klipper.cpp:416
+#: klipper.cpp:405 klipper.cpp:414
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del porta-retalls"
 
-#: klipper.cpp:433
+#: klipper.cpp:431
 #, kde-format
 msgid "up"
 msgstr "amunt"
 
-#: klipper.cpp:440
+#: klipper.cpp:438
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:447
+#: klipper.cpp:445
 #, kde-format
 msgid "down"
 msgstr "avall"
@@ -798,20 +798,14 @@ msgstr ""
 "No emmagatzema imatges en l'historial del porta-retalls, encara que es "
 "copien explícitament."
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr "Utilitza un editor gràfic d'expressions regulars"
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Immediatament en la selecció"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:48
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -820,43 +814,43 @@ msgstr ""
 "una selecció."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Temps del menú emergent d'acció automàtica:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Mostra el menú emergent d'acció automàtica durant este temps."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:59
 #, kde-format
 msgid "History size:"
 msgstr "Mida de l'historial:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "L'historial del porta-retalls emmagatzemarà esta quantitat d'elements."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Entrada fictícia per a indicar canvis en un giny d'arbre d'accions"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Elimina els espais en blanc de la selecció"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:82
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -870,13 +864,13 @@ msgstr ""
 "retalls no està afectat."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:85
+#: klipper.kcfg:81
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Per a un element triat de l'historial"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:83
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -886,13 +880,13 @@ msgstr ""
 "l'historial del porta-retalls."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:90
+#: klipper.kcfg:86
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Inclou les accions MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:88
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -910,6 +904,9 @@ msgstr "Menú emergent del porta-retalls"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "Utilitza un editor gràfic d'expressions regulars"
 
 #~ msgid "Data Matrix"
 #~ msgstr "Data Matrix"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:45+0000\n"
+"POT-Creation-Date: 2026-04-16 00:46+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -678,22 +678,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Паказваць элементы буфера абмену ў месцы курсора мышы"
 
-#: klipper.cpp:407 klipper.cpp:416
+#: klipper.cpp:405 klipper.cpp:414
 #, kde-format
 msgid "Clipboard history"
 msgstr "Гісторыя буфера абмену"
 
-#: klipper.cpp:433
+#: klipper.cpp:431
 #, kde-format
 msgid "up"
 msgstr "уверх"
 
-#: klipper.cpp:440
+#: klipper.cpp:438
 #, kde-format
 msgid "current"
 msgstr "бягучая"
 
-#: klipper.cpp:447
+#: klipper.cpp:445
 #, kde-format
 msgid "down"
 msgstr "уніз"
@@ -801,63 +801,57 @@ msgid ""
 msgstr ""
 "Не захоўваць выявы ў гісторыі буфера абмену, нават калі яны скапіяваныя."
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr "Выкарыстоўваць графічны рэдактар regexp"
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Неадкладны вывад магчымых дзеянняў"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:48
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "Паказваць выплыўное меню дзеянняў адразу пасля таго, як нешта абрана."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Час меню дзеянняў:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Час паказу выплыўнога меню дзеянняў."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:59
 #, kde-format
 msgid "History size:"
 msgstr "Памер гісторыі:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "Колькасць элементаў гісторыі буфера абмену."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Пусты запіс для пазначэння зменаў у віджэце дрэва дзеянняў"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Абразаць прагалы ў абраным"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:82
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -870,13 +864,13 @@ msgstr ""
 "браўзер. Не ўплывае на тэкст, захаваны ў буферы абмену."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:85
+#: klipper.kcfg:81
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Для элемента, абранага з гісторыі"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:83
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -886,13 +880,13 @@ msgstr ""
 "абмену."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:90
+#: klipper.kcfg:86
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Дадаваць дзеянні паводле тыпаў MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:88
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -910,6 +904,9 @@ msgstr "Выплыўное акно буфера абмену"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасаваць"
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "Выкарыстоўваць графічны рэдактар regexp"
 
 #~ msgid "Data Matrix"
 #~ msgstr "Матрыца даных"

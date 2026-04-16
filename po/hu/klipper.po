@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:45+0000\n"
+"POT-Creation-Date: 2026-04-16 00:46+0000\n"
 "PO-Revision-Date: 2025-11-22 22:02+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -669,22 +669,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Vágólapelemek megjelenítése a kurzorpozíciónál"
 
-#: klipper.cpp:407 klipper.cpp:416
+#: klipper.cpp:405 klipper.cpp:414
 #, kde-format
 msgid "Clipboard history"
 msgstr "Vágólapnapló"
 
-#: klipper.cpp:433
+#: klipper.cpp:431
 #, kde-format
 msgid "up"
 msgstr "fel"
 
-#: klipper.cpp:440
+#: klipper.cpp:438
 #, kde-format
 msgid "current"
 msgstr "jelenlegi"
 
-#: klipper.cpp:447
+#: klipper.cpp:445
 #, kde-format
 msgid "down"
 msgstr "le"
@@ -791,20 +791,14 @@ msgid ""
 msgstr ""
 "Ne tároljon képeket a vágólap előzményeiben, még kifejezett másoláskor sem."
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr "Grafikus reguláriskifejezés-szerkesztő használata"
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Kiválasztáskor azonnal"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:48
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -813,43 +807,43 @@ msgstr ""
 "kiválasztás megtörtént."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Automatikus műveletmenü időkorlátja:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Az automatikus műveletmenü megjelenítése ennyi ideig."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:59
 #, kde-format
 msgid "History size:"
 msgstr "Napló mérete:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "A vágólap előzményei legfeljebb ennyi elemet tárolnak."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Üres bejegyzés egy művelet faeleme változásainak jelzésére"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Üres helyek eltávolítása a kiválasztásból"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:82
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -862,13 +856,13 @@ msgstr ""
 "böngésző megfelelően értelmezze azt. A vágólapra mentett szöveget nem érinti."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:85
+#: klipper.kcfg:81
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Az előzményekből kiválasztott elemhez"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:83
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -878,13 +872,13 @@ msgstr ""
 "kiválasztása került az előzményekből."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:90
+#: klipper.kcfg:86
 #, kde-format
 msgid "Include MIME actions"
 msgstr "MIME-műveletek felvétele"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:88
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -902,6 +896,9 @@ msgstr "Felugró vágólap"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Mégsem"
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "Grafikus reguláriskifejezés-szerkesztő használata"
 
 #~ msgid "Data Matrix"
 #~ msgstr "Adatmátrix"

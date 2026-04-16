@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:45+0000\n"
+"POT-Creation-Date: 2026-04-16 00:46+0000\n"
 "PO-Revision-Date: 2008-10-18 22:34+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -686,23 +686,23 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "&Vyjaŭlaj menu ŭ miescy kursora myšy"
 
-#: klipper.cpp:407 klipper.cpp:416
+#: klipper.cpp:405 klipper.cpp:414
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "&Pamier historyi abmiennaha bufera:"
 
-#: klipper.cpp:433
+#: klipper.cpp:431
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:440
+#: klipper.cpp:438
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:447
+#: klipper.cpp:445
 #, kde-format
 msgid "down"
 msgstr ""
@@ -804,68 +804,62 @@ msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr ""
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Immediately on selection"
 msgstr "&Nie zvažaj na vyłučeńnie"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:48
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Automatic action menu time:"
 msgstr "&Termin čakańnia dla vypłyŭnych menu:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Display the automatic action popup menu for this time."
 msgstr "&Termin čakańnia dla vypłyŭnych menu:"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:59
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "History size:"
 msgstr "&Pamier historyi abmiennaha bufera:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, fuzzy, kde-format
 #| msgid "Remove whitespace when executing actions"
 msgid "Trim whitespace from selection"
 msgstr "Vydalaj prabieły pry vykanańni aperacyjaŭ"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:82
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -875,14 +869,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:85
+#: klipper.kcfg:81
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "&Paŭtary aperacyi z elementam, vybranym z historyi"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:83
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid ""
@@ -891,14 +885,14 @@ msgid ""
 msgstr "&Vyčyści historyju abmiennaha bufera"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:90
+#: klipper.kcfg:86
 #, fuzzy, kde-format
 #| msgid "Enable/Disable Clipboard Actions"
 msgid "Include MIME actions"
 msgstr "Uklučeńnie/Vyklučeńnie aperacyjaŭ abmiennaha bufera"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:88
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "

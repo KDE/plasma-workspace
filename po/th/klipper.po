@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:45+0000\n"
+"POT-Creation-Date: 2026-04-16 00:46+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -673,22 +673,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "เรียกเมนูผุดที่ตำแหน่งตัวชี้ของเมาส์"
 
-#: klipper.cpp:407 klipper.cpp:416
+#: klipper.cpp:405 klipper.cpp:414
 #, kde-format
 msgid "Clipboard history"
 msgstr "ขนาดของประวัติคลิปบอร์ด"
 
-#: klipper.cpp:433
+#: klipper.cpp:431
 #, kde-format
 msgid "up"
 msgstr "ขึ้น"
 
-#: klipper.cpp:440
+#: klipper.cpp:438
 #, kde-format
 msgid "current"
 msgstr "ปัจจุบัน"
 
-#: klipper.cpp:447
+#: klipper.cpp:445
 #, kde-format
 msgid "down"
 msgstr "ลง"
@@ -788,68 +788,62 @@ msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr "ใช้เครื่องมือแก้ไข regexp แบบกราฟิก"
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, fuzzy, kde-format
 #| msgid "Ignore selection"
 msgid "Immediately on selection"
 msgstr "ไม่สนใจการเลือก"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:48
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Automatic action menu time:"
 msgstr "ช่วงเวลาแสดงหน้าต่างผุดของการกระทำ:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Display the automatic action popup menu for this time."
 msgstr "ช่วงเวลาแสดงหน้าต่างผุดของการกระทำ:"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:59
 #, fuzzy, kde-format
 #| msgid "Clipboard history size:"
 msgid "History size:"
 msgstr "ขนาดของประวัติคลิปบอร์ด:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "รายการเทียม สำหรับบ่งชี้ถึงการเปลี่ยนแปลงในวิดเจ็ตผังต้นไม้ของการกระทำ"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, fuzzy, kde-format
 #| msgid "Strip whitespace when executing an action"
 msgid "Trim whitespace from selection"
 msgstr "ลบช่องว่างเมื่อเรียกใช้งานการกระทำ"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:82
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -859,14 +853,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:85
+#: klipper.kcfg:81
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "ทำการกระทำบนรายการที่เลือกไว้จากประวัติอีกครั้ง"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:83
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid ""
@@ -875,14 +869,14 @@ msgid ""
 msgstr "ต้องการจะลบรายการประวัติทั้งหมดในคลิปบอร์ดจริงหรือไม่ ?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:90
+#: klipper.kcfg:86
 #, fuzzy, kde-format
 #| msgid "Enable MIME-based actions"
 msgid "Include MIME actions"
 msgstr "เปิดการใช้งานการกระทำ ที่มีพื้นฐาน MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:88
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -899,6 +893,9 @@ msgstr "ขนาดของประวัติคลิปบอร์ด"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ยกเลิก"
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "ใช้เครื่องมือแก้ไข regexp แบบกราฟิก"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

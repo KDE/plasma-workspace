@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-13 00:45+0000\n"
+"POT-Creation-Date: 2026-04-16 00:46+0000\n"
 "PO-Revision-Date: 2010-01-29 15:54+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -671,22 +671,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "पाप अप एट माउस स्थिति"
 
-#: klipper.cpp:407 klipper.cpp:416
+#: klipper.cpp:405 klipper.cpp:414
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:433
+#: klipper.cpp:431
 #, kde-format
 msgid "up"
 msgstr "उप्पर"
 
-#: klipper.cpp:440
+#: klipper.cpp:438
 #, kde-format
 msgid "current"
 msgstr "मोजुदा"
 
-#: klipper.cpp:447
+#: klipper.cpp:445
 #, kde-format
 msgid "down"
 msgstr "नीच्चाँ"
@@ -786,68 +786,62 @@ msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
 
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr "आलेखी regexp संपादक कए प्रयोग करू"
-
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, fuzzy, kde-format
 #| msgid "Ignore Selection"
 msgid "Immediately on selection"
 msgstr "उपेक्षा चुनाव"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:48
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:52
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Automatic action menu time:"
 msgstr "क्रिया पापअपक समय खत्म:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Display the automatic action popup menu for this time."
 msgstr "क्रिया पापअपक समय खत्म:"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:59
 #, fuzzy, kde-format
 #| msgid "Clipboard history size:"
 msgid "History size:"
 msgstr "क्लिपबोर्डक इतिहास आकार:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, fuzzy, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "प्रविष्टि क'लेल in s ट्री"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, fuzzy, kde-format
 #| msgid "Remove whitespace when executing actions"
 msgid "Trim whitespace from selection"
 msgstr "जखन क्रिया केँ चलाएल जाए तँ व्हाइटस्पेसेस हटाउ"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:82
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -857,13 +851,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:85
+#: klipper.kcfg:81
 #, fuzzy, kde-format
 msgid "For an item chosen from history"
 msgstr "पर मद चयनित सँ"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:87
+#: klipper.kcfg:83
 #, fuzzy, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -871,13 +865,13 @@ msgid ""
 msgstr "मेटाबू क्लिपबोर्ड?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:90
+#: klipper.kcfg:86
 #, fuzzy, kde-format
 msgid "Include MIME actions"
 msgstr "सक्रिय करू"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:92
+#: klipper.kcfg:88
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -894,6 +888,9 @@ msgstr "क्लिपबोर्ड इतिहास"
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द करू (&C)"
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "आलेखी regexp संपादक कए प्रयोग करू"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
