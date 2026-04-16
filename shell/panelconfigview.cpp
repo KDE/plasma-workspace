@@ -309,6 +309,17 @@ void PanelConfigView::addPanelSpacer()
                                        "}"));
 }
 
+void PanelConfigView::addPanelMarginsSeparator()
+{
+    auto *c = qobject_cast<ShellCorona *>(m_containment->corona());
+    if (!c) {
+        return;
+    }
+    c->evaluateScript(u"panel = panelById(" + QString::number(m_containment->id())
+                      + QStringLiteral(");"
+                                       "    panel.addWidget(\"org.kde.plasma.marginsseparator\");"));
+}
+
 void PanelConfigView::syncGeometry()
 {
     switch (m_containment->location()) {
