@@ -130,6 +130,9 @@ QtObject {
         }
 
         const containment = plasmoid.containment;
+        if (!containment) {
+            return Qt.rect(0, 0, -1, -1);
+        }
         // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
         let rect = Qt.rect(containment.screenGeometry.x + containment.availableScreenRect.x,
                            containment.screenGeometry.y + containment.availableScreenRect.y,
@@ -207,7 +210,7 @@ QtObject {
     // Sorts plasmoids based on a heuristic to find a suitable plasmoid to follow when placing popups
     function ratePlasmoids() {
         var plasmoidScore = function(plasmoidItem) {
-            if (!plasmoidItem || plasmoidItem.plasmoid) {
+            if (!plasmoidItem || !plasmoidItem.plasmoid) {
                 return 0;
             }
 
@@ -260,6 +263,11 @@ QtObject {
             }
         });
         globals.plasmoidItems = newPlasmoidItems;
+        if (newPlasmoidItems.length === 0) {
+            globals.plasmoidItem = null;
+            globals.plasmoid = null;
+            return;
+        }
         globals.plasmoidItem = newPlasmoidItems[0];
         globals.plasmoid = globals.plasmoidItem.plasmoid;
     }
