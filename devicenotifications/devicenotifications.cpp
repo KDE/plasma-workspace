@@ -6,6 +6,8 @@
 
 #include "devicenotifications.h"
 
+#include <algorithm>
+
 #include <QGuiApplication>
 
 #include <KLocalizedString>
@@ -339,6 +341,7 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
         auto *self = static_cast<KdedDeviceNotifications *>(data);
         if (qstrcmp(interface, "kde_output_device_v2") == 0) {
             const bool initialOutputsReceived = self->m_initialOutputsReceived;
+            const uint32_t supportedVersion = std::min(version, static_cast<uint32_t>(QtWayland::kde_output_device_v2::interface()->version));
             Output *output = self->m_outputs.emplace_back(std::make_unique<Output>(name)).get();
             // Notify after the UUID's are resolved, and add it to our timed list
             connect(output, &Output::uuidAdded, self, [output, self, initialOutputsReceived]() {
@@ -350,7 +353,7 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
                     }
                 }
             });
-            output->init(registry, name, version);
+            output->init(registry, name, supportedVersion);
         }
     };
     auto globalRemoved = [](void *data, wl_registry *registry, uint32_t name) {
