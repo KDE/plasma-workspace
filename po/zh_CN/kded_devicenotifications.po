@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-29 02:37+0000\n"
+"POT-Creation-Date: 2026-04-18 02:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,55 +18,55 @@ msgstr ""
 "kded_devicenotifications.pot\n"
 "X-Crowdin-File-ID: 52662\n"
 
-#: devicenotifications.cpp:414
+#: devicenotifications.cpp:417
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "检测到显示器"
 
-#: devicenotifications.cpp:415
+#: devicenotifications.cpp:418
 #, kde-format
 msgid "A display has been connected."
 msgstr "一个显示器已连接。"
 
-#: devicenotifications.cpp:435
+#: devicenotifications.cpp:438
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "显示器已移除"
 
-#: devicenotifications.cpp:436
+#: devicenotifications.cpp:439
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "一个显示器已经断开连接。"
 
-#: devicenotifications.cpp:482
+#: devicenotifications.cpp:485
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 已连接。"
 
-#: devicenotifications.cpp:482
+#: devicenotifications.cpp:485
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "一个 USB 设备已连接。"
 
-#: devicenotifications.cpp:487
+#: devicenotifications.cpp:490
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "检测到 USB 设备"
 
-#: devicenotifications.cpp:525
+#: devicenotifications.cpp:528
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 已断开连接。"
 
-#: devicenotifications.cpp:525
+#: devicenotifications.cpp:528
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "一个 USB 设备已断开连接。"
 
-#: devicenotifications.cpp:530
+#: devicenotifications.cpp:533
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
