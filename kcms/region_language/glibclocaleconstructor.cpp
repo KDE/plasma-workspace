@@ -134,7 +134,7 @@ void GlibcLocaleConstructor::constructGlibcLocaleMap()
                 auto duplicated = frequencyMap;
                 auto skipBase = baseLocale.size() + 1; // we skip "sv_" part of "sv_SE", eg. compare "SE" part with "sv"
                 for (QChar c : glibcLocale) {
-                    if (skipBase--) {
+                    if (skipBase-- > 0) {
                         continue;
                     }
                     duplicated[int(c.toLower().toLatin1())]--;
