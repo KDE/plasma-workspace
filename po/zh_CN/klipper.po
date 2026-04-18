@@ -857,6 +857,3 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "使用图形化正则表达式编辑器"

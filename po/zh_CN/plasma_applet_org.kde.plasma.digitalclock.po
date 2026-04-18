@@ -486,4 +486,4 @@ msgstr "%1："
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
+msgstr "中键点击打开 %1"
