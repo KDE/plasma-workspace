@@ -135,6 +135,9 @@ void ActionInterface::storageSetupDone(const QString &udi)
     Q_UNUSED(udi);
 
     if (m_stateInfo->getState() == StateInfo::MountDone) {
+        // Disconnect to prevent multiple invocations
+        disconnect(m_stateInfo.get(), &StateInfo::stateChanged, this, &ActionInterface::storageSetupDone);
+
         qCDebug(APPLETS::DEVICENOTIFIER) << "DelayedExecutor " << m_storageInfo->device().udi() << " : Mounting finished";
         if (m_stateInfo->isMounted()) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "DelayedExecutor " << m_storageInfo->device().udi() << " : Mounting successful. Triggering action";
