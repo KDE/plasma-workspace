@@ -5,33 +5,28 @@
 
 import os
 import shutil
-import subprocess
-import time
 import unittest
 from typing import Final
 
-from appium import webdriver
-from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import GLib
 
-KDE_VERSION: Final = 6
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.base_test import KCMTest
+
 KCM_ID: Final = "kcm_soundtheme"
 
 
-class KCMSoundThemeTest(unittest.TestCase):
+class KCMSoundThemeTest(KCMTest):
     """
     Tests for kcm_soundtheme
     """
 
-    driver: webdriver.Remote
+    kcm_id = KCM_ID
 
     @classmethod
     def setUpClass(cls) -> None:
-        """
-        Opens the KCM and initialize the webdriver
-        """
-        # In CI there is no sound theme by default, so manually install one
         system_data_dirs: Final[list[str]] = GLib.get_system_data_dirs()
         freedesktop_sound_theme_installed: bool = False
         for system_data_dir in system_data_dirs:
@@ -51,34 +46,7 @@ class KCMSoundThemeTest(unittest.TestCase):
                 shutil.copytree("../../kcms/soundtheme/autotests/data/freedesktop", fdo_sound_theme_folder)
                 cls.addClassCleanup(lambda: shutil.rmtree(fdo_sound_theme_folder))
 
-        options = AppiumOptions()
-        options.set_capability("app", f"kcmshell{KDE_VERSION} {KCM_ID}")
-        options.set_capability("timeouts", {'implicit': 10000})
-        options.set_capability("environ", {
-            "LC_ALL": "en_US.UTF-8",
-        })
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
-
-    def tearDown(self) -> None:
-        """
-        Take screenshot when the current test fails
-        """
-        if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file(f"failed_test_shot_{KCM_ID}_#{self.id()}.png")
-
-    @classmethod
-    def tearDownClass(cls) -> None:
-        """
-        Make sure to terminate the driver again, lest it dangles.
-        """
-        cls.driver.find_element(AppiumBy.XPATH, "//*[@name='Close' and contains(@accessibility-id, 'Button')]").click()
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", f"kcmshell{KDE_VERSION}"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
-        cls.driver.quit()
+        super().setUpClass()
 
     def test_0_open(self) -> None:
         """
