@@ -77,10 +77,10 @@ AbstractItem {
     onWheel: wheel => {
         //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
         if (wheel.angleDelta.y !== 0) {
-            Plasmoid.scroll(model.DataEngineSource, wheel.angleDelta.y, "Vertical")
+            Plasmoid.scroll(model.DataEngineSource, wheel.angleDelta.y, "vertical")
         }
         if (wheel.angleDelta.x !== 0) {
-            Plasmoid.scroll(model.DataEngineSource, wheel.angleDelta.x, "Horizontal")
+            Plasmoid.scroll(model.DataEngineSource, wheel.angleDelta.x, "horizontal")
         }
     }
 }

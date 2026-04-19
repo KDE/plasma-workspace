@@ -542,7 +542,7 @@ void SNIProxy::ContextMenu(int x, int y)
 
 void SNIProxy::Scroll(int delta, const QString &orientation)
 {
-    if (orientation == QLatin1String("vertical")) {
+    if (orientation.compare(QLatin1String("vertical"), Qt::CaseInsensitive) == 0) {
         sendClick(delta > 0 ? XCB_BUTTON_INDEX_4 : XCB_BUTTON_INDEX_5, 0, 0);
     } else {
         sendClick(delta > 0 ? 6 : 7, 0, 0);
