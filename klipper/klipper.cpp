@@ -57,7 +57,6 @@ Klipper::Klipper(QObject *parent)
     : QObject(parent)
     , m_clip(SystemClipboard::self())
     , m_historyCycler(new HistoryCycler(this))
-    , m_quitAction(nullptr)
     , m_plasmashell(nullptr)
 {
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));

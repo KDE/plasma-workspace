@@ -72,11 +72,6 @@ public:
 
     void saveSettings() const;
 
-    QMenu *actionsPopup() const
-    {
-        return m_actionsPopup;
-    }
-
     KlipperPopup *popup()
     {
         return m_popup.get();
@@ -124,8 +119,6 @@ private:
     QAction *m_repeatAction;
     QAction *m_editAction = nullptr;
     QAction *m_showBarcodeAction;
-    QAction *m_configureAction;
-    QAction *m_quitAction;
     QAction *m_cycleNextAction;
     QAction *m_cyclePrevAction;
     QAction *m_showOnMousePos;
@@ -139,7 +132,6 @@ private:
 
     QString cycleText() const;
     KActionCollection *m_collection;
-    QMenu *m_actionsPopup;
     QPointer<KNotification> m_notification;
     KWayland::Client::PlasmaShell *m_plasmashell;
 };
