@@ -28,3 +28,5 @@ CMakeLists.txt.user*
 .cache
 .vscode
 .qmlls.ini
+*.pyc
+__pycache__/
