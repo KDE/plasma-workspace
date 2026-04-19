@@ -1,4 +1,4 @@
-# Translation of oom-notifier to Norwegian Bokmål
+# Translation of oom_notifier to Norwegian Bokmål
 #
 msgid ""
 msgstr ""
