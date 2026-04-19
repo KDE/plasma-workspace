@@ -10,8 +10,6 @@ import unittest
 from datetime import date
 from typing import Final
 
-from appium import webdriver
-from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from dateutil.relativedelta import relativedelta
 from selenium.webdriver.remote.webelement import WebElement
@@ -19,49 +17,28 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 
+import sys
+import os
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.base_test import PlasmaAppletTest
+
 WIDGET_ID: Final = "org.kde.plasma.digitalclock"
-KDE_VERSION: Final = 6
 
 
-class DigitalClockTests(unittest.TestCase):
+class DigitalClockTests(PlasmaAppletTest):
 
-    driver: webdriver.Remote
+    widget_id = WIDGET_ID
 
     @classmethod
     def setUpClass(cls):
-        options = AppiumOptions()
-        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
-        options.set_capability("timeouts", {'implicit': 10000})
-        options.set_capability("environ", {
-            "LC_ALL": "en_US.UTF-8",
-        })
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
-        # Check the current time in the compact representation
+        super().setUpClass()
         cls.driver.find_element(AppiumBy.XPATH, f"//label[contains(@name, '{time.strftime('%I:%M', time.localtime()).lstrip('0')}')]")
-        # Open Applet
         cls.driver.find_element(AppiumBy.ACCESSIBILITY_ID, "digital-clock-compactrepresentation").click()
 
     def setUp(self):
         self.driver.find_element(by=AppiumBy.NAME, value="Today").click()
         self.assertEqual(self.compareMonthLabel(date.today()), True)
-
-    def tearDown(self):
-        if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file(f"failed_test_shot_digitalclocktest_{self.id()}.png")
-
-    @classmethod
-    def tearDownClass(cls) -> None:
-        """
-        Make sure to terminate the driver again, lest it dangles.
-        """
-        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", "plasmawindowed"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
-        cls.driver.quit()
 
     def assertResult(self, actual, expected):
         wait = WebDriverWait(self.driver, 20)
@@ -156,7 +133,6 @@ class DigitalClockTests(unittest.TestCase):
         el.send_keys(Keys.ENTER)
         wait = WebDriverWait(self.driver, 1)
         el = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Timezone location selector")))
-
 
 
 if __name__ == '__main__':
