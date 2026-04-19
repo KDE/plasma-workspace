@@ -85,7 +85,6 @@ private:
     QTimer *m_myPopupKillTimer;
     int m_myPopupKillTimeout;
     bool m_stripWhiteSpace;
-    HistoryCycler *m_history;
 
 private Q_SLOTS:
     void slotItemSelected(QAction *action);
