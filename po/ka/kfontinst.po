@@ -302,7 +302,7 @@ msgstr "%1-ით გაფილტვრა…"
 #: kcmfontinst/FontList.cpp:548
 #, kde-format
 msgid "Font"
-msgstr "შრიფტი"
+msgstr "ფონტი"
 
 #: kcmfontinst/FontList.cpp:550
 #, kde-format

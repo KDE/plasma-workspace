@@ -895,6 +895,3 @@ msgstr "Utklippstavle-sprettopp"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Bruk grafisk redigering av regulære uttrykk"
