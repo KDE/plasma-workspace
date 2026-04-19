@@ -10,15 +10,12 @@ import json
 import os
 import subprocess
 import sys
-import time
 import unittest
 from tempfile import NamedTemporaryFile
 from time import sleep
 from typing import Final
 
 import gi
-from appium import webdriver
-from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.interaction import POINTER_TOUCH
@@ -35,16 +32,23 @@ from mediaplayer import (InvalidMpris2, Mpris2, read_base_properties, read_playe
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, GLib, Gtk
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.base_test import PlasmaAppletTest
+
 WIDGET_ID: Final = "org.kde.plasma.mediacontroller"
-KDE_VERSION: Final = 6
 
 
-class MediaControllerTests(unittest.TestCase):
+class MediaControllerTests(PlasmaAppletTest):
     """
     Tests for the media controller widget
     """
 
-    driver: webdriver.Remote
+    widget_id = WIDGET_ID
+    extra_environ = {
+        "QT_FATAL_WARNINGS": "1",
+        "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.propertyCache.append.warning=false",
+    }
+
     loop_thread: GLibMainLoopThread
     mpris_interface: Mpris2 | None
     player_b: subprocess.Popen | None = None
@@ -53,21 +57,9 @@ class MediaControllerTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        """
-        Opens the widget and initialize the webdriver
-        """
         cls.loop_thread = GLibMainLoopThread()
         cls.loop_thread.start()
-
-        options = AppiumOptions()
-        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
-        options.set_capability("environ", {
-            "LC_ALL": "en_US.UTF-8",
-            "QT_FATAL_WARNINGS": "1",
-            "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.propertyCache.append.warning=false",
-        })
-        options.set_capability("timeouts", {'implicit': 10000})
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        super().setUpClass()
 
     def setUp(self) -> None:
         json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_a.json")
@@ -91,18 +83,8 @@ class MediaControllerTests(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls) -> None:
-        """
-        Make sure to terminate the driver again, lest it dangles.
-        """
-        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", "plasmawindowed"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
+        super().tearDownClass()
         cls.loop_thread.quit()
-        cls.driver.quit()
 
     def test_track(self) -> None:
         """
