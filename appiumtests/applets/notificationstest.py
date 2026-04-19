@@ -10,13 +10,10 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import time
 import unittest
 from typing import Any, Final
 
 import gi
-from appium import webdriver
-from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.common.exceptions import (NoSuchElementException, WebDriverException)
 from selenium.webdriver.support import expected_conditions as EC
@@ -28,87 +25,45 @@ from gi.repository import Gdk, GdkPixbuf, Gio, GLib
 from kicker.favoritetest import start_kactivitymanagerd
 from notificationstest.jobnotificationinterface import JobNotificationControlInterface
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.base_test import PlasmaAppletTest
+from utils.notification_helpers import send_notification
+
 WIDGET_ID: Final = "org.kde.plasma.notifications"
-KDE_VERSION: Final = 6
 BUS_NAME: Final = "org.freedesktop.Notifications"
 OBJECT_PATH: Final = "/org/freedesktop/Notifications"
 IFACE_NAME: Final = BUS_NAME
 
 
-def send_notification(data: dict[str, str | int | list[str] | dict[str, GLib.Variant] | GLib.Variant], session_bus: Gio.DBusConnection | None = None) -> int:
-    """
-    @returns Notification id
-    """
-    app_name: str = str(data.get("app_name", "Appium Test"))
-    replaces_id: int = int(data.get("replaces_id", 0))
-    app_icon: str = str(data.get("app_icon", "wayland"))
-    summary: str = str(data.get("summary", ""))
-    body: str = str(data.get("body", ""))
-    actions: list[str] = data.get("actions", [])
-    hints: dict[str, GLib.Variant] = data.get("hints", {})
-    timeout: int = data.get("timeout", -1)
-    parameters = GLib.Variant("(susssasa{sv}i)", [app_name, replaces_id, app_icon, summary, body, actions, hints, timeout])
-
-    if session_bus is None:
-        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
-
-    reply = session_bus.call_sync(BUS_NAME, OBJECT_PATH, IFACE_NAME, "Notify", parameters, None, Gio.DBusSendMessageFlags.NONE, 5000)
-    return reply.get_child_value(0).get_uint32()
-
-
-class NotificationsTest(unittest.TestCase):
+class NotificationsTest(PlasmaAppletTest):
     """
     Tests for the notification widget
     """
 
+    widget_id = WIDGET_ID
+    extra_environ = {
+        "QT_LOGGING_RULES": "kf.notification*.debug=true;org.kde.plasma.notificationmanager.debug=true",
+    }
+
     notification_proxy: Gio.DBusProxy
-    driver: webdriver.Remote
     kactivitymanagerd: subprocess.Popen
 
     @classmethod
     def setUpClass(cls) -> None:
-        """
-        Opens the widget and initialize the webdriver
-        """
-        # Make history work
         cls.kactivitymanagerd = start_kactivitymanagerd()
 
         os.makedirs(os.path.join(GLib.get_user_data_dir(), "knotifications6"))
         shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "libnotificationmanager", "libnotificationmanager.notifyrc"), os.path.join(GLib.get_user_data_dir(), "knotifications6"))
 
-        options = AppiumOptions()
-        options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
-        options.set_capability("timeouts", {'implicit': 10000})
-        options.set_capability("environ", {
-            "LC_ALL": "en_US.UTF-8",
-            "QT_LOGGING_RULES": "kf.notification*.debug=true;org.kde.plasma.notificationmanager.debug=true",
-        })
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        super().setUpClass()
 
         cls.notification_proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION, 0, None, BUS_NAME, OBJECT_PATH, IFACE_NAME)
 
-    def tearDown(self) -> None:
-        """
-        Take screenshot when the current test fails
-        """
-        if not self._outcome.result.wasSuccessful():
-            self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
-
     @classmethod
     def tearDownClass(cls) -> None:
-        """
-        Make sure to terminate the driver again, lest it dangles.
-        """
-        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        super().tearDownClass()
         cls.kactivitymanagerd.kill()
         cls.kactivitymanagerd.wait(10)
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", "plasmawindowed"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
-        cls.driver.quit()
 
     def close_notifications(self) -> None:
         wait = WebDriverWait(self.driver, 5)
