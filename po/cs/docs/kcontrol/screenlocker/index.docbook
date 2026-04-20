@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Czech "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Zamykání obrazovky</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Jan</firstname
+><surname
+>Papež</surname
+><affiliation
+><address
+><email
+>honyczek@centrum.cz</email
+></address
+></affiliation
+><contrib
+>Překlad</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2020-07-02</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>systemsettings</keyword>
+<keyword
+>screenlocker</keyword>
+<keyword
+>zámek obrazovky</keyword>
+</keywordset>
+</articleinfo>
+<para
+>Pomocí tohoto modulu můžete určit, kolik času musí uplynout, než bude aktivován zámek obrazovky, konfigurovat dobu, po kterou bude možné odemčení obrazovky bez hesla, a zvolit vzhled zámku obrazovky.</para>
+
+<para
+>V horní části se nachází zaškrtávací políčko pro automatické zamknutí obrazovky <guilabel
+>Automaticky uzamknout obrazovku</guilabel
+> a roletku, která určuje dobu nečinnosti před spuštěním zámku obrazovky. Do tohoto pole můžete zadat libovolné kladné číslo v minutách.</para>
+
+<para
+>Zaškrtávací políčko <guilabel
+>Po probuzení ze spánku zamknout</guilabel
+> lze použít k nastavení zamykání obrazovky po uspání systému na volbu zapnuto/vypnuto.</para>
+
+<para
+>Níže se nachází roletka označená <guilabel
+>Prodleva před vyžádáním hesla</guilabel
+>. Když stisknete klávesu nebo kliknete tlačítkem myši, abyste ukončili zámek obrazovky a vrátili se ke své práci, do doby navolené v této roletce nemusíte zadávat heslo. Použité heslo je stejné, které jste použili pro přihlášení k vašemu počítači.</para>
+
+<para
+>Ruční zamknutí obrazovky způsobí okamžité zapnutí ochrany heslem.</para>
+
+<para
+>Můžete definovat zkratku pro zamknutí obrazovky pomocí pole <guilabel
+>Klávesová zkratka</guilabel
+>.</para>
+
+<para
+>Výchozí zkratka <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> nabízí rychlý způsob jak ručně zamknout obrazovku.</para>
+
+<para
+>Pokud chcete změnit pozadí obrazovky v zamknutém stavu, stiskněte tlačítko <guibutton
+>Nastavit vzhled</guibutton
+> vedle štítku <guilabel
+>Vzhled</guilabel
+>. Poté můžete <guilabel
+>typ tapety</guilabel
+> změnit.</para>
+
+<para
+>Jako typ tapety můžete vybrat <guilabel
+>Jednoduchou barvu</guilabel
+>.</para>
+
+<para
+>Případně můžete použít jeden obrázek nebo prezentaci s obrázky z adresáře nebo načíst nové tapety z internetu.</para>
+
+</article>
