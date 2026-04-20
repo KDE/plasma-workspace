@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-20 00:50+0000\n"
 "PO-Revision-Date: 2026-02-05 11:33+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -616,70 +616,70 @@ msgstr "Dette er stjernemerket. Vil du virkelig fjerne den fra historikken?"
 msgid "Remove Starred Item"
 msgstr "Fjern stjernemerket"
 
-#: klipper.cpp:78
+#: klipper.cpp:77
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Sprett automatisk opp handlingsmeny"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Tøm utklippshistorikken"
 
-#: klipper.cpp:101
+#: klipper.cpp:100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Start handling på utklippstavla manuelt"
 
-#: klipper.cpp:109
+#: klipper.cpp:108
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Rediger innhold …"
 
-#: klipper.cpp:115
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vis &strekkode …"
 
-#: klipper.cpp:122
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Neste historikkelement"
 
-#: klipper.cpp:127
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Forrige historikkelement"
 
-#: klipper.cpp:134
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Vis utklippstavleelement ved musepekeren"
 
-#: klipper.cpp:405 klipper.cpp:414
+#: klipper.cpp:404 klipper.cpp:413
 #, kde-format
 msgid "Clipboard history"
 msgstr "Utklippshistorikk"
 
-#: klipper.cpp:431
+#: klipper.cpp:430
 #, kde-format
 msgid "up"
 msgstr "opp"
 
-#: klipper.cpp:438
+#: klipper.cpp:437
 #, kde-format
 msgid "current"
 msgstr "gjeldende"
 
-#: klipper.cpp:445
+#: klipper.cpp:444
 #, kde-format
 msgid "down"
 msgstr "ned"

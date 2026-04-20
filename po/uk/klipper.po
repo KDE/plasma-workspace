@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-20 00:50+0000\n"
 "PO-Revision-Date: 2025-08-30 13:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -628,70 +628,70 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr "Вилучити запис із зірочкою"
 
-#: klipper.cpp:78
+#: klipper.cpp:77
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Контекстне меню автоматичних дій"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Сп&орожнити журнал кишені"
 
-#: klipper.cpp:101
+#: klipper.cpp:100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Викликати дію над поточною кишенею вручну"
 
-#: klipper.cpp:109
+#: klipper.cpp:108
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Редагувати вміст…"
 
-#: klipper.cpp:115
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "П&оказати штрихкод…"
 
-#: klipper.cpp:122
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Наступний запис журналу"
 
-#: klipper.cpp:127
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Попередній запис журналу"
 
-#: klipper.cpp:134
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показувати записи буфера на позиції вказівника"
 
-#: klipper.cpp:405 klipper.cpp:414
+#: klipper.cpp:404 klipper.cpp:413
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера даних"
 
-#: klipper.cpp:431
+#: klipper.cpp:430
 #, kde-format
 msgid "up"
 msgstr "вгору"
 
-#: klipper.cpp:438
+#: klipper.cpp:437
 #, kde-format
 msgid "current"
 msgstr "поточний"
 
-#: klipper.cpp:445
+#: klipper.cpp:444
 #, kde-format
 msgid "down"
 msgstr "вниз"

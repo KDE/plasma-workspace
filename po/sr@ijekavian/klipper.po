@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-20 00:50+0000\n"
 "PO-Revision-Date: 2017-11-04 20:03+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -634,20 +634,20 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:78
+#: klipper.cpp:77
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr ""
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Очисти историјат клипборда"
 
-#: klipper.cpp:101
+#: klipper.cpp:100
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
@@ -655,57 +655,57 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ручно изврши радњу над тренутним клипбордом"
 
 # >> @title:window
-#: klipper.cpp:109
+#: klipper.cpp:108
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Уређивање садржаја"
 
-#: klipper.cpp:115
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Прикажи бар‑код..."
 
-#: klipper.cpp:122
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Сљедећа ставка историјата"
 
-#: klipper.cpp:127
+#: klipper.cpp:126
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Претходна ставка историјата"
 
-#: klipper.cpp:134
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Отвори Клипер на положају миша"
 
-#: klipper.cpp:405 klipper.cpp:414
+#: klipper.cpp:404 klipper.cpp:413
 #, kde-format
 msgid "Clipboard history"
 msgstr "Историјат клипборда"
 
-#: klipper.cpp:431
+#: klipper.cpp:430
 #, kde-format
 msgid "up"
 msgstr "горе"
 
-#: klipper.cpp:438
+#: klipper.cpp:437
 #, kde-format
 msgid "current"
 msgstr "текуће"
 
-#: klipper.cpp:445
+#: klipper.cpp:444
 #, kde-format
 msgid "down"
 msgstr "доље"

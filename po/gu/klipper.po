@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-20 00:50+0000\n"
 "PO-Revision-Date: 2009-04-07 22:47+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -621,77 +621,77 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:78
+#: klipper.cpp:77
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ક્રિયા પોપઅપ્સ માટે સમયસમાપ્તિ:"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ સાફ કરો (&l)"
 
-#: klipper.cpp:101
+#: klipper.cpp:100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:109
+#: klipper.cpp:108
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "વિગતો ફેરફાર કરો"
 
-#: klipper.cpp:115
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:122
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: klipper.cpp:127
+#: klipper.cpp:126
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: klipper.cpp:134
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "માઉસ સ્થિતિ પર પોપઅપ"
 
-#: klipper.cpp:405 klipper.cpp:414
+#: klipper.cpp:404 klipper.cpp:413
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clipboard history"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: klipper.cpp:431
+#: klipper.cpp:430
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:438
+#: klipper.cpp:437
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:445
+#: klipper.cpp:444
 #, kde-format
 msgid "down"
 msgstr ""
