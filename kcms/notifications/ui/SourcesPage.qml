@@ -130,14 +130,14 @@ KCM.AbstractKCM {
                         sourcesList.currentIndex = index;
                     }
 
-                    leftPadding: mirrored && indicator.visible ? horizontalPadding + implicitIndicatorWidth + spacing : horizontalPadding
-                    rightPadding: !mirrored && indicator.visible ? horizontalPadding + implicitIndicatorWidth + spacing : horizontalPadding
+                    leftPadding: Kirigami.Units.largeSpacing
+                    rightPadding: Kirigami.Units.largeSpacing
 
                     indicator: Rectangle {
                         anchors {
                             right: parent.right
-                            rightMargin: sourceDelegate.horizontalPadding
-                            verticalCenter: parent.verticalCenter
+                            rightMargin: Kirigami.Units.largeSpacing
+                            verticalCenter: parent.contentItem.verticalCenter
                         }
 
                         radius: width * 0.5
