@@ -128,8 +128,26 @@ class Mpris2:
         self.connection.unregister_object(self.__base_reg_id)
         self.__base_reg_id = 0
         Gio.bus_unown_name(self.__owner_id)
-        self.connection.flush_sync(None)  # Otherwise flaky
+        self.connection.flush_sync(None)
+        self._wait_for_dbus_name_released()
         logging.info("Player exit")
+
+    def _wait_for_dbus_name_released(self, timeout: float = 5.0) -> None:
+        """Wait for a D-Bus name to be released."""
+        import time
+        bus_name = self.APP_INTERFACE
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+        deadline = time.time() + timeout
+        while time.time() < deadline:
+            result = session_bus.call_sync(
+                "org.freedesktop.DBus", "/org/freedesktop/DBus",
+                "org.freedesktop.DBus", "NameHasOwner",
+                GLib.Variant("(s)", (bus_name,)), None,
+                Gio.DBusSendMessageFlags.NONE, 100, None
+            )
+            if not result[0]:
+                return
+            time.sleep(0.1)
 
     def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:
         """
@@ -419,6 +437,8 @@ class InvalidMpris2(Mpris2):
     """
     MPRIS2 interfaces with invalid responses
     """
+
+    APP_INTERFACE: Final = f"org.mpris.MediaPlayer2.appiumtest_invalid.instance{str(getpid())}"
 
     def __init__(self) -> None:
         super().__init__([], {}, {}, 0)
