@@ -204,12 +204,12 @@ QString PlasmaAppletItem::unsupportedMessage() const
                     version.majorVersion(),
                     PROJECT_VERSION_MAJOR);
     } else if (version.majorVersion() > PROJECT_VERSION_MAJOR) {
-        return i18n("This Widget was written for Plasma %1 and is not compatible with Plasma %2. Please update Plasma in order to use the widget.",
+        return i18n("This widget was written for Plasma %1 and is not compatible with Plasma %2. Please update Plasma in order to use the widget.",
                     version.majorVersion(),
                     PROJECT_VERSION_MAJOR);
     } else if (version.minorVersion() > PROJECT_VERSION_MINOR) {
         return i18n(
-            "This widget was written for Plasma %1 and is not compatible with the latest version of Plasma. Please update Plasma in order to use the widget.",
+            "This widget was written for Plasma %1 and is not compatible with the older version of Plasma installed on this system. Please update Plasma in order to use the widget.",
             versionString);
     }
 
