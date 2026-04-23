@@ -30,8 +30,14 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optio
                             parent)
     , m_runnerId(runnerId)
 {
-    runnerManager()->setHistoryEnvironmentIdentifier(m_consumer.currentActivity());
-    connect(&m_consumer, &KActivities::Consumer::currentActivityChanged, runnerManager(), &KRunner::RunnerManager::setHistoryEnvironmentIdentifier);
+    if (m_consumer.serviceStatus() == KActivities::Consumer::Running) {
+        runnerManager()->setHistoryEnvironmentIdentifier(m_consumer.currentActivity());
+    }
+    connect(&m_consumer, &KActivities::Consumer::currentActivityChanged, this, [this](const QString &currentActivity) {
+        if (m_consumer.serviceStatus() == KActivities::Consumer::Running) {
+            runnerManager()->setHistoryEnvironmentIdentifier(currentActivity);
+        }
+    });
     connect(this, &RunnerMatchesModel::rowsInserted, this, &RunnerMatchesModel::countChanged);
     connect(this, &RunnerMatchesModel::rowsRemoved, this, &RunnerMatchesModel::countChanged);
     connect(this, &RunnerMatchesModel::modelReset, this, &RunnerMatchesModel::countChanged);
