@@ -728,7 +728,7 @@ QtObject {
             // cannot use QModelIndex here as the model row is already gone
             globals.popupNotificationsModel.startTimeout(notificationId);
 
-            globals.positionPopups();
+            globals.repositionTimer.start();
         }
     }
 
