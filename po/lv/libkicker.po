@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2025-01-27 15:49+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Piespraust pie uzdevumu pārvaldnieka"
 msgid "Add to Panel (Widget)"
 msgstr "Pievienot panelim (logdaļa)"
 
-#: actionlist.cpp:316 rootmodel.cpp:555
+#: actionlist.cpp:316 rootmodel.cpp:587
 #, kde-format
 msgid "Recent Files"
 msgstr "Nesenās datnes"
@@ -83,7 +83,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
 #, kde-format
 msgid "Applications"
 msgstr "Programmas"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "Dators"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Iecienītās"
@@ -124,42 +124,59 @@ msgstr "Iecienītās"
 msgid "Recently Used"
 msgstr "Nesen lietotās"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:158
+#, kde-format
+msgid "Places"
+msgstr ""
+
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
 msgid "Files"
 msgstr "Datnes"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:255
 #, kde-format
 msgid "Forget Application"
 msgstr "Aizmirst programmu"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:320
 #, kde-format
 msgid "Folders"
 msgstr "Mapes"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:361
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atvērt saturošo mapi"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:366
+#, fuzzy, kde-format
+#| msgid "Forget File"
+msgid "Forget Folder"
+msgstr "Aizmirst datni"
+
+#: recentusagemodel.cpp:366
 #, kde-format
 msgid "Forget File"
 msgstr "Aizmirst datni"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:512
 #, kde-format
 msgid "Forget All"
 msgstr "Aizmirst visu"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:514
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Aizmirst visas programmas"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:516
+#, fuzzy, kde-format
+#| msgid "Forget All Files"
+msgid "Forget All Folders"
+msgstr "Aizmirst visas datnes"
+
+#: recentusagemodel.cpp:519
 #, kde-format
 msgid "Forget All Files"
 msgstr "Aizmirst visas datnes"
@@ -169,32 +186,44 @@ msgstr "Aizmirst visas datnes"
 msgid "All Applications"
 msgstr "Visas programmas"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:134
 #, kde-format
 msgid "Hide %1"
 msgstr "Slēpt %1"
 
-#: rootmodel.cpp:542
+#: rootmodel.cpp:565
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Šim nav jābūt redzamam! Lietojiet KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:555
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgid "Recent Places"
+msgstr "Nesenās datnes"
+
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Often Used Files"
+msgid "Often Used Places"
+msgstr "Biežāk lietotās datnes"
+
+#: rootmodel.cpp:587
 #, kde-format
 msgid "Often Used Files"
 msgstr "Biežāk lietotās datnes"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nesenās programmas"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Biežāk lietotās programmas"
 
-#: rootmodel.cpp:579
+#: rootmodel.cpp:611
 #, kde-format
 msgid "Power / Session"
 msgstr "Izslēgšana / sesija"

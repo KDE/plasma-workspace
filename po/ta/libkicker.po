@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2025-01-26 17:25+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "பணி மேலாளரில் தக்கவை"
 msgid "Add to Panel (Widget)"
 msgstr "பலகையில் சேர் (பிளாஸ்மாய்ட்)"
 
-#: actionlist.cpp:316 rootmodel.cpp:555
+#: actionlist.cpp:316 rootmodel.cpp:587
 #, kde-format
 msgid "Recent Files"
 msgstr "சமீப கோப்புகள்"
@@ -81,7 +81,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
 #, kde-format
 msgid "Applications"
 msgstr "செயலிகள்"
@@ -112,7 +112,7 @@ msgid "Computer"
 msgstr "கணினி"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "பிடித்தவை"
@@ -122,42 +122,59 @@ msgstr "பிடித்தவை"
 msgid "Recently Used"
 msgstr "சமீபத்தில் பயன்படுத்தியவை"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:158
+#, kde-format
+msgid "Places"
+msgstr ""
+
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
 msgid "Files"
 msgstr "கோப்புகள்"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:255
 #, kde-format
 msgid "Forget Application"
 msgstr "செயலியை மறந்துவிடு"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:320
 #, kde-format
 msgid "Folders"
 msgstr "அடைவுகள்"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:361
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:366
+#, fuzzy, kde-format
+#| msgid "Forget File"
+msgid "Forget Folder"
+msgstr "கோப்பை மறந்துவிடு"
+
+#: recentusagemodel.cpp:366
 #, kde-format
 msgid "Forget File"
 msgstr "கோப்பை மறந்துவிடு"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:512
 #, kde-format
 msgid "Forget All"
 msgstr "அனைத்தையும் மறந்துவிடு"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:514
 #, kde-format
 msgid "Forget All Applications"
 msgstr "அனைத்து செயலிகளையும் மறந்துவிடு"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:516
+#, fuzzy, kde-format
+#| msgid "Forget All Files"
+msgid "Forget All Folders"
+msgstr "அனைத்து கோப்புகளையும் மறந்துவிடு"
+
+#: recentusagemodel.cpp:519
 #, kde-format
 msgid "Forget All Files"
 msgstr "அனைத்து கோப்புகளையும் மறந்துவிடு"
@@ -167,32 +184,44 @@ msgstr "அனைத்து கோப்புகளையும் மறந�
 msgid "All Applications"
 msgstr "அனைத்து செயலிகள்"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:134
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 என்பதை மறை"
 
-#: rootmodel.cpp:542
+#: rootmodel.cpp:565
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "இது தெரியக் கூடாதது! KICKER_FAVORITES_MODEL என்பதை பயன்படுத்துங்கள்"
 
-#: rootmodel.cpp:555
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgid "Recent Places"
+msgstr "சமீப கோப்புகள்"
+
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Often Used Files"
+msgid "Often Used Places"
+msgstr "அடிக்கடி பயன்படுத்தப்படும் கோப்புகள்"
+
+#: rootmodel.cpp:587
 #, kde-format
 msgid "Often Used Files"
 msgstr "அடிக்கடி பயன்படுத்தப்படும் கோப்புகள்"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Recent Applications"
 msgstr "சமீப செயலிகள்"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Often Used Applications"
 msgstr "அடிக்கடி பயன்படுத்தப்படும் செயலிகள்"
 
-#: rootmodel.cpp:579
+#: rootmodel.cpp:611
 #, kde-format
 msgid "Power / Session"
 msgstr "ஆற்றல் / அமர்வு"

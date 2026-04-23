@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2025-01-08 16:38+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -45,7 +45,7 @@ msgstr "הצמדה למנהל המשימות"
 msgid "Add to Panel (Widget)"
 msgstr "הוספה ללוח (יישומון)"
 
-#: actionlist.cpp:316 rootmodel.cpp:555
+#: actionlist.cpp:316 rootmodel.cpp:587
 #, kde-format
 msgid "Recent Files"
 msgstr "קבצים אחרונים"
@@ -84,7 +84,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
 #, kde-format
 msgid "Applications"
 msgstr "יישומים"
@@ -115,7 +115,7 @@ msgid "Computer"
 msgstr "מחשב"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "מועדפים"
@@ -125,42 +125,59 @@ msgstr "מועדפים"
 msgid "Recently Used"
 msgstr "היו בשימוש לאחרונה"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:158
+#, kde-format
+msgid "Places"
+msgstr "מקומות"
+
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
 msgid "Files"
 msgstr "קבצים"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:255
 #, kde-format
 msgid "Forget Application"
 msgstr "לשכוח יישומים"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:320
 #, kde-format
 msgid "Folders"
 msgstr "תיקייה"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:361
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:366
+#, fuzzy, kde-format
+#| msgid "Forget File"
+msgid "Forget Folder"
+msgstr "לשכוח קובץ"
+
+#: recentusagemodel.cpp:366
 #, kde-format
 msgid "Forget File"
 msgstr "לשכוח קובץ"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:512
 #, kde-format
 msgid "Forget All"
 msgstr "לשכוח הכול"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:514
 #, kde-format
 msgid "Forget All Applications"
 msgstr "לשכוח את כל היישומים"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:516
+#, fuzzy, kde-format
+#| msgid "Forget All Files"
+msgid "Forget All Folders"
+msgstr "לשכוח את כל הקבצים"
+
+#: recentusagemodel.cpp:519
 #, kde-format
 msgid "Forget All Files"
 msgstr "לשכוח את כל הקבצים"
@@ -170,32 +187,44 @@ msgstr "לשכוח את כל הקבצים"
 msgid "All Applications"
 msgstr "כל היישומים"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:134
 #, kde-format
 msgid "Hide %1"
 msgstr "הסתרת %1"
 
-#: rootmodel.cpp:542
+#: rootmodel.cpp:565
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "זה לא אמור להיות חשוף! יש להשתמש ב־KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:555
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgid "Recent Places"
+msgstr "קבצים אחרונים"
+
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Often Used Files"
+msgid "Often Used Places"
+msgstr "קבצים תדירים"
+
+#: rootmodel.cpp:587
 #, kde-format
 msgid "Often Used Files"
 msgstr "קבצים תדירים"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Recent Applications"
 msgstr "יישומים אחרונים"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Often Used Applications"
 msgstr "יישומים תדירים"
 
-#: rootmodel.cpp:579
+#: rootmodel.cpp:611
 #, kde-format
 msgid "Power / Session"
 msgstr "יציאה / הפעלה"
@@ -481,9 +510,6 @@ msgstr "פעולות מערכת"
 
 #~ msgid "Removable Storage"
 #~ msgstr "אחסון נשלף"
-
-#~ msgid "Places"
-#~ msgstr "מקומות"
 
 #~ msgid "Logout"
 #~ msgstr "התנתקות"

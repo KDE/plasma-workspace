@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2023-01-10 11:44+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "Pripnúť k správcovi úloh"
 msgid "Add to Panel (Widget)"
 msgstr "Pridať do panela (miniaplikácia)"
 
-#: actionlist.cpp:316 rootmodel.cpp:555
+#: actionlist.cpp:316 rootmodel.cpp:587
 #, kde-format
 msgid "Recent Files"
 msgstr "Nedávne súbory"
@@ -82,7 +82,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr "Počítač"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Obľúbené"
@@ -123,42 +123,59 @@ msgstr "Obľúbené"
 msgid "Recently Used"
 msgstr "Nedávno použité"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:158
+#, kde-format
+msgid "Places"
+msgstr "Miesta"
+
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
 msgid "Files"
 msgstr "Súbory"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:255
 #, kde-format
 msgid "Forget Application"
 msgstr "Zabudnúť aplikáciu"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:320
 #, kde-format
 msgid "Folders"
 msgstr "Priečinky"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:361
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:366
+#, fuzzy, kde-format
+#| msgid "Forget File"
+msgid "Forget Folder"
+msgstr "Zabudnúť súbor"
+
+#: recentusagemodel.cpp:366
 #, kde-format
 msgid "Forget File"
 msgstr "Zabudnúť súbor"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:512
 #, kde-format
 msgid "Forget All"
 msgstr "Zabudnúť všetko"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:514
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Zabudnúť všetky aplikácie"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:516
+#, fuzzy, kde-format
+#| msgid "Forget All Files"
+msgid "Forget All Folders"
+msgstr "Zabudnúť všetky súbory"
+
+#: recentusagemodel.cpp:519
 #, kde-format
 msgid "Forget All Files"
 msgstr "Zabudnúť všetky súbory"
@@ -168,32 +185,44 @@ msgstr "Zabudnúť všetky súbory"
 msgid "All Applications"
 msgstr "Všetky aplikácie"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:134
 #, kde-format
 msgid "Hide %1"
 msgstr "Skryť %1"
 
-#: rootmodel.cpp:542
+#: rootmodel.cpp:565
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Toto by nemalo byť viditeľné. Použite KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:555
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgid "Recent Places"
+msgstr "Nedávne súbory"
+
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Often Used Files"
+msgid "Often Used Places"
+msgstr "Často používané súbory"
+
+#: rootmodel.cpp:587
 #, kde-format
 msgid "Often Used Files"
 msgstr "Často používané súbory"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nedávne aplikácie"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Často použité aplikácie"
 
-#: rootmodel.cpp:579
+#: rootmodel.cpp:611
 #, kde-format
 msgid "Power / Session"
 msgstr "Napájanie / Sedenie"
@@ -462,9 +491,6 @@ msgstr "Systémové akcie"
 
 #~ msgid "Removable Storage"
 #~ msgstr "Vymeniteľné úložisko"
-
-#~ msgid "Places"
-#~ msgstr "Miesta"
 
 #~ msgid "Logout"
 #~ msgstr "Odhlásenie"

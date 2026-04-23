@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-08 00:48+0000\n"
+"POT-Creation-Date: 2026-04-23 00:46+0000\n"
 "PO-Revision-Date: 2025-05-17 18:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -44,7 +44,7 @@ msgstr "ثبّت في مدير المهامّ"
 msgid "Add to Panel (Widget)"
 msgstr "أضف إلى اللوحة (ودجة)"
 
-#: actionlist.cpp:316 rootmodel.cpp:555
+#: actionlist.cpp:316 rootmodel.cpp:587
 #, kde-format
 msgid "Recent Files"
 msgstr "الملفات الحديثة"
@@ -83,7 +83,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
 #, kde-format
 msgid "Applications"
 msgstr "التّطبيقات"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "الحاسوب"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:548 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:548 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "المفضّلة"
@@ -124,42 +124,59 @@ msgstr "المفضّلة"
 msgid "Recently Used"
 msgstr "المستخدمة حديثًا"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:158
+#, kde-format
+msgid "Places"
+msgstr "الأماكن"
+
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
 msgid "Files"
 msgstr "الملفات"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:255
 #, kde-format
 msgid "Forget Application"
 msgstr "انسَ التّطبيق"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:320
 #, kde-format
 msgid "Folders"
 msgstr "المجلّدات"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:361
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "افتح المجلد الحاوي"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:366
+#, fuzzy, kde-format
+#| msgid "Forget File"
+msgid "Forget Folder"
+msgstr "انسَ الملف"
+
+#: recentusagemodel.cpp:366
 #, kde-format
 msgid "Forget File"
 msgstr "انسَ الملف"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:512
 #, kde-format
 msgid "Forget All"
 msgstr "انسَ الكلّ"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:514
 #, kde-format
 msgid "Forget All Applications"
 msgstr "انسَ كلّ التّطبيقات"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:516
+#, fuzzy, kde-format
+#| msgid "Forget All Files"
+msgid "Forget All Folders"
+msgstr "انسَ كلّ الملفات"
+
+#: recentusagemodel.cpp:519
 #, kde-format
 msgid "Forget All Files"
 msgstr "انسَ كلّ الملفات"
@@ -169,32 +186,44 @@ msgstr "انسَ كلّ الملفات"
 msgid "All Applications"
 msgstr "كلّ التّطبيقات"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:134
 #, kde-format
 msgid "Hide %1"
 msgstr "أخفِ %1"
 
-#: rootmodel.cpp:542
+#: rootmodel.cpp:565
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "لا يجب أن يكون هذا ظاهر! استعمل KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:555
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Recent Files"
+msgid "Recent Places"
+msgstr "الملفات الحديثة"
+
+#: rootmodel.cpp:578
+#, fuzzy, kde-format
+#| msgid "Often Used Files"
+msgid "Often Used Places"
+msgstr "المستندات المعتاد استخدامها"
+
+#: rootmodel.cpp:587
 #, kde-format
 msgid "Often Used Files"
 msgstr "المستندات المعتاد استخدامها"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Recent Applications"
 msgstr "آخر التّطبيقات"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:596
 #, kde-format
 msgid "Often Used Applications"
 msgstr "التّطبيقات المعتادة"
 
-#: rootmodel.cpp:579
+#: rootmodel.cpp:611
 #, kde-format
 msgid "Power / Session"
 msgstr "الطّاقة/الجلسة"
@@ -479,9 +508,6 @@ msgstr "إجراءات النّظام"
 
 #~ msgid "Removable Storage"
 #~ msgstr "التّخزين المنفصل"
-
-#~ msgid "Places"
-#~ msgstr "الأماكن"
 
 #~ msgid "Logout"
 #~ msgstr "اخرج"
