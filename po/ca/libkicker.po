@@ -1,16 +1,16 @@
 # Translation of libkicker.po to Catalan
-# Copyright (C) 2014-2025 This_file_is_part_of_KDE
+# Copyright (C) 2014-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2019, 2020, 2021, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2019, 2020, 2021, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2014, 2015, 2017, 2019 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-27 02:42+0000\n"
-"PO-Revision-Date: 2025-01-07 10:14+0100\n"
+"PO-Revision-Date: 2026-04-23 09:22+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -149,7 +149,7 @@ msgstr "Obre la carpeta contenidora"
 #: recentusagemodel.cpp:362
 #, kde-format
 msgid "Forget File"
-msgstr "Oblida un fitxer"
+msgstr "Oblida el fitxer"
 
 #: recentusagemodel.cpp:506
 #, kde-format
