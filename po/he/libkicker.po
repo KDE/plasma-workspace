@@ -3,13 +3,13 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2025-01-08 16:38+0200\n"
+"PO-Revision-Date: 2026-04-23 08:26+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -151,10 +151,9 @@ msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
 
 #: recentusagemodel.cpp:366
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "לשכוח קובץ"
+msgstr "לשכוח תיקייה"
 
 #: recentusagemodel.cpp:366
 #, kde-format
@@ -172,10 +171,9 @@ msgid "Forget All Applications"
 msgstr "לשכוח את כל היישומים"
 
 #: recentusagemodel.cpp:516
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "לשכוח את כל הקבצים"
+msgstr "לשכוח את כל התיקיות"
 
 #: recentusagemodel.cpp:519
 #, kde-format
@@ -198,16 +196,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "זה לא אמור להיות חשוף! יש להשתמש ב־KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "קבצים אחרונים"
+msgstr "מקומות אחרונים"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "קבצים תדירים"
+msgstr "מקומות בשימוש לעיתים קרובות"
 
 #: rootmodel.cpp:587
 #, kde-format

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 00:48+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2026-02-20 15:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -35,27 +35,27 @@ msgstr "Hatalar için Denetle"
 msgid "Mount"
 msgstr "Bağla"
 
-#: actions/mountandopenaction.cpp:173
+#: actions/mountandopenaction.cpp:177
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Dosya Yöneticisinde Aç"
 
-#: actions/mountandopenaction.cpp:176
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Try to Fix"
 msgstr "Onarmaya Çalış"
 
-#: actions/mountandopenaction.cpp:176
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Mount and Open"
 msgstr "Bağla ve Aç"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Eject"
 msgstr "Çıkar"
 
-#: actions/mountandopenaction.cpp:180
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Safely remove"
 msgstr "Güvenli Kaldır"

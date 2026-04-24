@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2026-04-09 08:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -211,19 +211,26 @@ msgstr ""
 "ласка, зв'яжіться з автором віджета, щоб отримати оновлену версію."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
+#| "%2. Please update Plasma in order to use the widget."
 msgid ""
-"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
 "Цей віджет було написано для Плазми %1, він є несумісним із Плазмою %2. Будь "
 "ласка, оновіть Плазму, щоб користуватися цим віджетом."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This widget was written for Plasma %1 and is not compatible with the "
+#| "latest version of Plasma. Please update Plasma in order to use the widget."
 msgid ""
-"This widget was written for Plasma %1 and is not compatible with the latest "
-"version of Plasma. Please update Plasma in order to use the widget."
+"This widget was written for Plasma %1 and is not compatible with the older "
+"version of Plasma installed on this system. Please update Plasma in order to "
+"use the widget."
 msgstr ""
 "Цей віджет було написано для Плазми %1, він є несумісним із найсвіжішою "
 "версією Плазми. Будь ласка, оновіть Плазму, щоб користуватися цим віджетом."

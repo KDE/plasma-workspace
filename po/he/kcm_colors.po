@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 08:02+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -1264,116 +1264,116 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "צבע משני מותאם אישית"
 
-#: ui/main.qml:90
+#: ui/main.qml:94
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "סכמת הצבעים ‚%1’ לא מותקנת. סכמת ברירת המחדל נבחרת במקומה."
 
-#: ui/main.qml:123
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "כל הערכות"
 
-#: ui/main.qml:124
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "ערכות בהירות"
 
-#: ui/main.qml:125
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "ערכות כהות"
 
-#: ui/main.qml:136
+#: ui/main.qml:140
 #, kde-format
 msgid "Install from File…"
 msgstr "התקנה מקובץ…"
 
-#: ui/main.qml:141
+#: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
 msgstr "הורדת חדשה…"
 
-#: ui/main.qml:188
+#: ui/main.qml:192
 #, kde-format
 msgid "Window Title"
 msgstr "כותרת חלון"
 
-#: ui/main.qml:211
+#: ui/main.qml:215
 #, kde-format
 msgid "Window text"
 msgstr "טקסט חלון"
 
-#: ui/main.qml:219
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "כפתור"
 
-#: ui/main.qml:259
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "קישור"
 
-#: ui/main.qml:261
+#: ui/main.qml:265
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "שביקרו בו"
 
-#: ui/main.qml:269
+#: ui/main.qml:273
 #, kde-format
 msgid "Normal text"
 msgstr "טקסט רגיל"
 
-#: ui/main.qml:276
+#: ui/main.qml:280
 #, kde-format
 msgid "Highlighted text"
 msgstr "טקסט מודגש"
 
-#: ui/main.qml:283
+#: ui/main.qml:287
 #, kde-format
 msgid "Disabled text"
 msgstr "טקסט מושבת"
 
-#: ui/main.qml:301
+#: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "עריכת סכמת צבעים…"
 
-#: ui/main.qml:308
+#: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "הסרת סכמת צבעים"
 
-#: ui/main.qml:310
+#: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "לא ניתן למחוק את סכמת הצבעים הפעילה"
 
-#: ui/main.qml:312
+#: ui/main.qml:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr "לא ניתן למחוק סכמות צבעים מערכתיות"
 
-#: ui/main.qml:320
+#: ui/main.qml:324
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr "לא ניתן למחוק את סכמת הצבעים הזאת"
 
-#: ui/main.qml:364
+#: ui/main.qml:368
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "פתיחת סכמת צבעים"
 
-#: ui/main.qml:366
+#: ui/main.qml:370
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "קובצי סכמות צבעים (‎*.colors)"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2024-08-29 18:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1277,7 +1277,7 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Cor de énfase personalizada"
 
-#: ui/main.qml:90
+#: ui/main.qml:94
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
@@ -1285,112 +1285,112 @@ msgstr ""
 "O esquema de cores «%1» non está instalado. No seu lugar seleccionarase o "
 "tema predeterminado."
 
-#: ui/main.qml:123
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Todos os esquemas"
 
-#: ui/main.qml:124
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "Esquemas claros"
 
-#: ui/main.qml:125
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Esquemas escuros"
 
-#: ui/main.qml:136
+#: ui/main.qml:140
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalar desde un ficheiro…"
 
-#: ui/main.qml:141
+#: ui/main.qml:145
 #, kde-format
 msgid "Get New…"
 msgstr "Obter novidades…"
 
-#: ui/main.qml:188
+#: ui/main.qml:192
 #, kde-format
 msgid "Window Title"
 msgstr "Título da xanela"
 
-#: ui/main.qml:211
+#: ui/main.qml:215
 #, kde-format
 msgid "Window text"
 msgstr "Texto da xanela"
 
-#: ui/main.qml:219
+#: ui/main.qml:223
 #, kde-format
 msgid "Button"
 msgstr "Botón"
 
-#: ui/main.qml:259
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ligazón"
 
-#: ui/main.qml:261
+#: ui/main.qml:265
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "visitada"
 
-#: ui/main.qml:269
+#: ui/main.qml:273
 #, kde-format
 msgid "Normal text"
 msgstr "Texto normal"
 
-#: ui/main.qml:276
+#: ui/main.qml:280
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texto realzado"
 
-#: ui/main.qml:283
+#: ui/main.qml:287
 #, kde-format
 msgid "Disabled text"
 msgstr "Texto desactivado"
 
-#: ui/main.qml:301
+#: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Editar o esquema de cores…"
 
-#: ui/main.qml:308
+#: ui/main.qml:312
 #, fuzzy, kde-format
 #| msgid "Remove Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Retirar o esquema de cores"
 
-#: ui/main.qml:310
+#: ui/main.qml:314
 #, fuzzy, kde-format
 #| msgid "Utility to edit and create color schemes"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Ferramenta para editar e crear esquemas de cores."
 
-#: ui/main.qml:312
+#: ui/main.qml:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:320
+#: ui/main.qml:324
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr ""
 
-#: ui/main.qml:364
+#: ui/main.qml:368
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Abrir un esquema de cores"
 
-#: ui/main.qml:366
+#: ui/main.qml:370
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Ficheiros de esquema de cores (*.colors)"

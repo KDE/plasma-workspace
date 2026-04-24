@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2026-04-09 09:34-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -208,19 +208,26 @@ msgstr ""
 "Entre em contato com o autor do widget para obter uma versão atualizada."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
+#| "%2. Please update Plasma in order to use the widget."
 msgid ""
-"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
 "Este widget foi escrito para o Plasma %1 e não é compatível com o Plasma %2. "
 "Atualize o Plasma para usar o widget."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This widget was written for Plasma %1 and is not compatible with the "
+#| "latest version of Plasma. Please update Plasma in order to use the widget."
 msgid ""
-"This widget was written for Plasma %1 and is not compatible with the latest "
-"version of Plasma. Please update Plasma in order to use the widget."
+"This widget was written for Plasma %1 and is not compatible with the older "
+"version of Plasma installed on this system. Please update Plasma in order to "
+"use the widget."
 msgstr ""
 "Este widget foi escrito para o Plasma %1 e não é compatível com a versão "
 "mais recente do Plasma. Atualize o Plasma para usar o widget."

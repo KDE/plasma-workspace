@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-09 00:47+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2026-04-09 06:13+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -202,19 +202,26 @@ msgstr ""
 "განახლებული ვერსიისთვის ავტორს დაუკავშირდით."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
+#| "%2. Please update Plasma in order to use the widget."
 msgid ""
-"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
 "ვიჯეტი დაწერილია Plasma %1-სთვის და Plasma %2-თან თავსებადი არაა. იმისთვის "
 "რომ ვიჯეტი გამოიყენოთ, განაახლეთ Plasma."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This widget was written for Plasma %1 and is not compatible with the "
+#| "latest version of Plasma. Please update Plasma in order to use the widget."
 msgid ""
-"This widget was written for Plasma %1 and is not compatible with the latest "
-"version of Plasma. Please update Plasma in order to use the widget."
+"This widget was written for Plasma %1 and is not compatible with the older "
+"version of Plasma installed on this system. Please update Plasma in order to "
+"use the widget."
 msgstr ""
 "ვიჯეტი დაწერილია Plasma %1-სთვის და Plasma-ის უკანასკნელ ვერსიასთან "
 "თავსებადი არაა. იმისთვის რომ ვიჯეტი გამოიყენოთ, განაახლეთ Plasma."

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 00:48+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2024-08-24 10:27+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -35,27 +35,27 @@ msgstr ""
 msgid "Mount"
 msgstr "Προσάρτηση"
 
-#: actions/mountandopenaction.cpp:173
+#: actions/mountandopenaction.cpp:177
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Άνοιγμα στη διαχείριση αρχείων"
 
-#: actions/mountandopenaction.cpp:176
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: actions/mountandopenaction.cpp:176
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Mount and Open"
 msgstr "Προσάρτηση και άνοιγμα"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Eject"
 msgstr "Εξαγωγή"
 
-#: actions/mountandopenaction.cpp:180
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Safely remove"
 msgstr "Αφαίρεση με ασφάλεια"

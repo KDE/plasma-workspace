@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 00:48+0000\n"
+"POT-Creation-Date: 2026-04-24 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -33,27 +33,27 @@ msgstr ""
 msgid "Mount"
 msgstr "माउन्ट"
 
-#: actions/mountandopenaction.cpp:173
+#: actions/mountandopenaction.cpp:177
 #, kde-format
 msgid "Open in File Manager"
 msgstr "फ़ाइल प्रबंधक में खोलें"
 
-#: actions/mountandopenaction.cpp:176
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: actions/mountandopenaction.cpp:176
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Mount and Open"
 msgstr "माउन्ट करें व खोलें"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Eject"
 msgstr "बाहर निकालें"
 
-#: actions/mountandopenaction.cpp:180
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Safely remove"
 msgstr "सुरक्षित रूप से निकालें"

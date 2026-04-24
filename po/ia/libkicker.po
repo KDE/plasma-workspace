@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2021, 2024, 2025 G.Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2024, 2025, 2026 G.Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2025-01-08 15:41+0100\n"
+"PO-Revision-Date: 2026-04-23 09:33+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -125,7 +125,7 @@ msgstr "Recentemente usate"
 #: recentusagemodel.cpp:158
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Placias"
 
 #: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
@@ -148,10 +148,9 @@ msgid "Open Containing Folder"
 msgstr "Aperi dossier continente"
 
 #: recentusagemodel.cpp:366
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Oblida file"
+msgstr "Oblida dossier"
 
 #: recentusagemodel.cpp:366
 #, kde-format
@@ -169,10 +168,9 @@ msgid "Forget All Applications"
 msgstr "Oblida omne applicationes"
 
 #: recentusagemodel.cpp:516
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Oblida omne files"
+msgstr "Oblida omne dossieres"
 
 #: recentusagemodel.cpp:519
 #, kde-format
@@ -195,16 +193,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Isto non deberea esser visibile! Usa KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Files recente"
+msgstr "Placias recente"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Files frequentemente usate"
+msgstr "Placias frequentemente usate"
 
 #: rootmodel.cpp:587
 #, kde-format
