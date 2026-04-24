@@ -87,6 +87,8 @@ KCM.GridViewKCM {
         text: model.display
         toolTip: model.description
 
+        checked: kcm.iconsSettings.theme === model.themeName
+
         thumbnailAvailable: typeof thumbFlow.previews === "undefined" || thumbFlow.previews.length > 0
         thumbnail: MouseArea {
             id: thumbArea

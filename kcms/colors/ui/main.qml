@@ -159,6 +159,8 @@ KCM.GridViewKCM {
 
         text: model.display
 
+        checked: kcm.model.selectedScheme === model.schemeName
+
         thumbnailAvailable: true
         thumbnail: Rectangle {
             anchors.fill: parent
