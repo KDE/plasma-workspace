@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-04-09 14:26+0300\n"
+"PO-Revision-Date: 2026-04-24 16:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -203,10 +203,7 @@ msgstr ""
 "bir sürüm için araç takımının yazarıyla iletişime geçin."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -215,17 +212,15 @@ msgstr ""
 "takımını kullanmak için lütfen Plasma’yı güncelleyin."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Bu araç takımı Plasma %1 için yazılmış ve Plasma’nın güncel sürümüyle uyumlu "
-"değil. Araç takımını kullanmak için lütfen Plasma’yı güncelleyin."
+"Bu araç takımı Plasma %1 için yazılmış ve bu sistemde kurulu olan daha eski "
+"bir Plasma sürümüyle uyumlu değil. Araç takımını kullanmak için lütfen "
+"Plasma’yı güncelleyin."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"

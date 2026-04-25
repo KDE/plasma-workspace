@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-04-09 11:01+0200\n"
+"PO-Revision-Date: 2026-04-24 09:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -206,10 +206,7 @@ msgstr ""
 "%2. Poseu-vos en contacte amb l'autor del giny per a una versió actualitzada."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -218,17 +215,15 @@ msgstr ""
 "%2. Actualitzeu el Plasma per tal de fer servir el giny."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Aquest giny s'ha escrit per al Plasma %1 i no és compatible amb l'última "
-"versió del Plasma. Actualitzeu el Plasma per tal de fer servir el giny."
+"Aquest giny s'ha escrit per al Plasma %1 i no és compatible amb la versió "
+"antiga del Plasma instal·lada en aquest sistema. Actualitzeu el Plasma per "
+"tal de fer servir el giny."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-04-09 07:19+0200\n"
+"PO-Revision-Date: 2026-04-24 07:11+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -208,10 +208,7 @@ msgstr ""
 "se na avtorja gradnika za posodobljeno različico."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -220,17 +217,15 @@ msgstr ""
 "Posodobite Plasmo, da bi lahko uporabljali gradnik."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Ta gradnik je bil napisan za Plasmo %1 in ni združljiv z najnovejšo "
-"različico Plasme. Posodobite Plasmo, če želite uporabljati gradnik."
+"Ta gradnik je bil napisan za Plasmo %1 in ni združljiv s starejšo različico "
+"Plasme nameščeno na tem sistemu. Posodobite Plasmo, če želite uporabljati "
+"gradnik."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
