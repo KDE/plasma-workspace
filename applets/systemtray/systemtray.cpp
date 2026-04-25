@@ -21,6 +21,7 @@
 #include <QMenu>
 #include <QMetaMethod>
 #include <QMetaObject>
+#include <QPointer>
 #include <QQueue>
 #include <QQuickItem>
 #include <QQuickWindow>
@@ -576,10 +577,15 @@ void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *status
         return;
     }
 
+    const QPointer<StatusNotifierItemSource> sourceGuard(source);
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(source, [source, service, pos](const QString &token) {
-        source->provideXdgActivationToken(token);
-        source->activate(pos.x(), pos.y());
+    tokenFuture.then(this, [sourceGuard, service, pos](const QString &token) {
+        if (!sourceGuard) {
+            qCWarning(SYSTEM_TRAY) << "activate: Item disappeared before xdg activation token was received" << service;
+            return;
+        }
+        sourceGuard->provideXdgActivationToken(token);
+        sourceGuard->activate(pos.x(), pos.y());
     });
 }
 
@@ -598,10 +604,15 @@ void SystemTray::secondaryActivate(const QString &service, QPoint pos)
         return;
     }
 
+    const QPointer<StatusNotifierItemSource> sourceGuard(source);
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(source, [source, pos](const QString &token) {
-        source->provideXdgActivationToken(token);
-        source->secondaryActivate(pos.x(), pos.y());
+    tokenFuture.then(this, [sourceGuard, service, pos](const QString &token) {
+        if (!sourceGuard) {
+            qCWarning(SYSTEM_TRAY) << "secondaryActivate: Item disappeared before xdg activation token was received" << service;
+            return;
+        }
+        sourceGuard->provideXdgActivationToken(token);
+        sourceGuard->secondaryActivate(pos.x(), pos.y());
     });
 }
 
@@ -642,10 +653,15 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
         return;
     }
 
+    const QPointer<StatusNotifierItemSource> sourceGuard(source);
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(source, [source, pos](const QString &token) {
-        source->provideXdgActivationToken(token);
-        source->contextMenu(pos.x(), pos.y());
+    tokenFuture.then(this, [sourceGuard, service, pos](const QString &token) {
+        if (!sourceGuard) {
+            qCWarning(SYSTEM_TRAY) << "openContextMenu: Item disappeared before xdg activation token was received" << service;
+            return;
+        }
+        sourceGuard->provideXdgActivationToken(token);
+        sourceGuard->contextMenu(pos.x(), pos.y());
     });
 }
 
