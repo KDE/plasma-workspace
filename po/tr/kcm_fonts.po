@@ -11,21 +11,21 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2012.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2014, 2015, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-18 02:50+0000\n"
-"PO-Revision-Date: 2025-09-04 15:01+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2026-04-24 16:21+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -315,13 +315,13 @@ msgstr "%1 pnt"
 #: ui/main.qml:306
 #, kde-format
 msgid "to"
-msgstr " ile"
+msgstr "şuna:"
 
 #: ui/main.qml:338
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "Alt piksel sunumu:"
+msgstr "Alt piksel sunma:"
 
 #: ui/main.qml:376
 #, kde-kuit-format
@@ -350,7 +350,7 @@ msgstr ""
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "Gölgeleme:"
+msgstr "Piksel hizalaması:"
 
 #: ui/main.qml:418
 #, kde-kuit-format
@@ -361,10 +361,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
-"Gölgeleme, bir yazıtipine gömülü gölgelerin, özellikle küçük boyutlarda "
-"sunum kalitesini artırmak için kullanıldığı bir tekniktir. Daha güçlü "
-"gölgeler genellikle daha keskin kenarlara yol açar, ancak küçük harfler "
-"büyük boyutlarda şekillerine daha az benzeyecektir."
+"Piksel hizalaması; bir yazıtipine gömülü gölgelerin, özellikle küçük "
+"boyutlarda sunum kalitesini artırmak için kullanıldığı bir tekniktir. Daha "
+"güçlü gölgeler genellikle daha keskin kenarlara yol açar, ancak küçük "
+"harfler büyük boyutlarda şekillerine daha az benzeyecektir."
 
 #: ui/main.qml:431
 #, kde-format
