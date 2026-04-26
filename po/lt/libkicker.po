@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-23 00:46+0000\n"
-"PO-Revision-Date: 2025-01-10 01:17+0200\n"
+"PO-Revision-Date: 2026-04-25 23:29+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Paskiausiai naudoti"
 #: recentusagemodel.cpp:158
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Vietos"
 
 #: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
@@ -151,10 +151,9 @@ msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
 #: recentusagemodel.cpp:366
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Pamiršti failą"
+msgstr "Pamiršti aplanką"
 
 #: recentusagemodel.cpp:366
 #, kde-format
@@ -172,10 +171,9 @@ msgid "Forget All Applications"
 msgstr "Pamiršti visas programas"
 
 #: recentusagemodel.cpp:516
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Pamiršti visus failus"
+msgstr "Pamiršti visus aplankus"
 
 #: recentusagemodel.cpp:519
 #, kde-format
@@ -198,16 +196,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Tai neturėtų būti matoma! Naudokite KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Paskiausiai naudoti failai"
+msgstr "Paskiausios vietos"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Dažnai naudojami failai"
+msgstr "Dažnai naudojamos vietos"
 
 #: rootmodel.cpp:587
 #, kde-format

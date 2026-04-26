@@ -203,29 +203,24 @@ msgstr ""
 "Ak chcete získať aktualizovanú verziu widgetu, obráťte sa na jeho autora."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
-"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s Plasmou %2. "
-"Ak chcete widget používať, aktualizujte Plasmu."
+"Tento widget bol napísaný pre Plasma %1 a nie je kompatibilný s Plasma %2. "
+"Na použitie widgetu aktualizujte Plasma."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s najnovšou "
-"verziou Plasmy. Ak chcete widget používať, aktualizujte Plasmu."
+"Tento widget bol napísaný pre Plasma %1 a nie je kompatibilný so staršou "
+"verziou Plasma nainštalovanou v tomto systéme. Na použitie widgetu "
+"aktualizujte Plasma."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
