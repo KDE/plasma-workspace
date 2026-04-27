@@ -4,13 +4,13 @@
 # SPDX-FileCopyrightText: 2023-2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024-2025 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 02:42+0000\n"
-"PO-Revision-Date: 2025-11-20 22:43+0100\n"
+"PO-Revision-Date: 2026-04-23 19:01+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -194,8 +194,8 @@ msgid ""
 msgstr ""
 "Dieses Miniprogramm wurde für eine unbekannte ältere Version von Plasma "
 "geschrieben und ist nicht mit Plasma %1 kompatibel. Bitte nehmen Sie mit dem "
-"Autor des Miniprogramms Kontakt auf und bitten diesen um eine aktualisierte "
-"Version."
+"Autor des Miniprogramms Kontakt auf und bitten Sie diesen um eine "
+"aktualisierte Version."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
@@ -205,7 +205,7 @@ msgid ""
 msgstr ""
 "Dieses Miniprogramm wurde für Plasma %1 geschrieben und ist nicht mit Plasma "
 "%2 kompatibel. Bitte nehmen Sie mit dem Autor des Miniprogramms Kontakt auf "
-"und bitten diesen um eine aktualisierte Version."
+"und bitten Sie diesen um eine aktualisierte Version."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
@@ -214,8 +214,8 @@ msgid ""
 "Please update Plasma in order to use the widget."
 msgstr ""
 "Dieses Miniprogramm wurde für Plasma %1 geschrieben und ist nicht mit Plasma "
-"%2 kompatibel. Bitte aktualisieren Plasma, damit das Miniprogramm verwendet "
-"werden kann."
+"%2 kompatibel. Bitte aktualisieren Sie Plasma, um das Miniprogramm verwenden "
+"zu können."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
