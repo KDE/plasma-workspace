@@ -50,6 +50,7 @@ class OrgKdeTestdbusactivation:
 """)
         self.reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.handle_method_call, None, None)
         assert self.reg_id > 0
+        print("READY", flush=True)
         logging.info("Interface is ready")
 
     def handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
