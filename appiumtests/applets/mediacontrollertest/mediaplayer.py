@@ -15,6 +15,7 @@ import os
 import signal
 import sys
 import threading
+import time
 from os import getpid
 from typing import Any, Final
 
@@ -129,12 +130,12 @@ class Mpris2:
         self.__base_reg_id = 0
         Gio.bus_unown_name(self.__owner_id)
         self.connection.flush_sync(None)
+        GLibMainLoopThread.process_events()
         self._wait_for_dbus_name_released()
         logging.info("Player exit")
 
     def _wait_for_dbus_name_released(self, timeout: float = 5.0) -> None:
         """Wait for a D-Bus name to be released."""
-        import time
         bus_name = self.APP_INTERFACE
         session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
         deadline = time.time() + timeout
