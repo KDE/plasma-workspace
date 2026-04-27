@@ -178,8 +178,7 @@ class Mpris2:
                 assert False, f"Unknown interface {interface}"
 
             print(f"Get: {interface} {property_name} {ret}", file=sys.stderr, flush=True)
-            # https://bugzilla.gnome.org/show_bug.cgi?id=765603
-            invocation.return_value(GLib.Variant.new_tuple(ret))
+            invocation.return_value(GLib.Variant.new_tuple(GLib.Variant('v', ret)))
 
         elif method_name == "GetAll":
             interface = parameters[0]
