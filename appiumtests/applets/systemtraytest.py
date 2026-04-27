@@ -513,10 +513,16 @@ class SystemTrayTests(unittest.TestCase):
         """
         Dynamically load a Plasmoid into the systemtray when a specific service becomes available
         """
-        with subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "dbusservice.py")], stdout=sys.stderr, stderr=sys.stderr) as process:
+        with subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "dbusservice.py")], stdout=subprocess.PIPE, stderr=sys.stderr, text=True) as process:
+            assert process.stdout is not None
+            ready_line = process.stdout.readline()
+            assert ready_line.strip() == "READY", f"Unexpected output: {ready_line}"
             plasmoid_title = "Do not translate Test only"
-            element = self.driver.find_element(AppiumBy.NAME, plasmoid_title)
-            process.kill()
+            element = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((AppiumBy.NAME, plasmoid_title))
+            )
+            process.terminate()
+            process.wait()
         WebDriverWait(self.driver, 10).until_not(lambda _: element.is_displayed())
 
 
