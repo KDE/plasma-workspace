@@ -17,6 +17,7 @@ Name[is]=Plasma
 Name[it]=Plasma
 Name[ja]=Plasma
 Name[ka]=Plasma
+Name[ko]=Plasma
 Name[lt]=Plasma
 Name[nl]=Plasma
 Name[nn]=Plasma
