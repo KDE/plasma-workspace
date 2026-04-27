@@ -81,10 +81,13 @@ private Q_SLOTS:
 private:
     // Initializes the models when the first query is run or mergeResults changed
     void initializeModels();
+    void setEnabledRunners(const QStringList &runners);
+    void updateEnabledRunners();
 
     AbstractModel *m_favoritesModel = nullptr;
     QObject *m_appletInterface = nullptr;
     QStringList m_runners;
+    QStringList m_enabledRunners;
     QList<RunnerMatchesModel *> m_models;
     QString m_query;
     QTimer m_queryTimer;

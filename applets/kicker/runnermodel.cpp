@@ -41,6 +41,11 @@ RunnerModel::RunnerModel(QObject *parent)
     m_configWatcher = KConfigWatcher::create(m_krunnerConfig);
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, readFavorites);
     readFavorites();
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group) {
+        if (group.name() == QLatin1String("Plugins")) {
+            updateEnabledRunners();
+        }
+    });
 }
 
 RunnerModel::~RunnerModel() = default;
@@ -159,7 +164,20 @@ void RunnerModel::setRunners(const QStringList &runners)
     }
 
     m_runners = runners;
+    // Delay checking enabled runners until needed
+    if (!m_models.isEmpty()) {
+        updateEnabledRunners();
+    }
     Q_EMIT runnersChanged();
+}
+
+void RunnerModel::setEnabledRunners(const QStringList &runners)
+{
+    if (runners == m_enabledRunners) {
+        return;
+    }
+
+    m_enabledRunners = runners;
 
     // Update the existing models only, if we have initialized the models
     if (!m_models.isEmpty()) {
@@ -172,6 +190,26 @@ void RunnerModel::setRunners(const QStringList &runners)
             m_models.clear();
             initializeModels();
         }
+    }
+}
+
+void RunnerModel::updateEnabledRunners()
+{
+    if (m_runners.isEmpty()) {
+        setEnabledRunners(m_runners);
+    } else {
+        const static auto availableRunners = KRunner::RunnerManager::runnerMetaDataList();
+        const auto configGroup = m_krunnerConfig->group(QStringLiteral("Plugins"));
+        QStringList newEnabledRunners;
+        for (const QString &runnerId : std::as_const(m_runners)) {
+            for (const KPluginMetaData &runner : availableRunners) {
+                if (runner.pluginId() == runnerId && runner.isEnabled(configGroup)) {
+                    newEnabledRunners << runnerId;
+                    break;
+                }
+            }
+        }
+        setEnabledRunners(newEnabledRunners);
     }
 }
 
@@ -221,15 +259,16 @@ void RunnerModel::clear()
 
 void RunnerModel::initializeModels()
 {
+    updateEnabledRunners();
     beginResetModel();
     if (m_mergeResults) {
         auto model = new RunnerMatchesModel(QString(), i18n("Search results"), this);
-        model->runnerManager()->setAllowedRunners(m_runners);
+        model->runnerManager()->setAllowedRunners(m_enabledRunners);
         model->setFavoritesModel(m_favoritesModel);
         model->setFavoriteIds(m_favoritePluginIds);
         m_models.append(model);
     } else {
-        for (const QString &runnerId : std::as_const(m_runners)) {
+        for (const QString &runnerId : std::as_const(m_enabledRunners)) {
             auto *model = new RunnerMatchesModel(runnerId, std::nullopt, this);
             model->setFavoritesModel(m_favoritesModel);
             m_models.append(model);
