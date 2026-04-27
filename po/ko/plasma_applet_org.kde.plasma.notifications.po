@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-02-03 23:29+0100\n"
+"PO-Revision-Date: 2026-04-26 20:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -110,34 +110,25 @@ msgid "%2 of %1"
 msgstr "%2/%1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "파일 %1개 중 %2개"
+msgstr[0] "파일 %2개 중 %3개"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "폴더 %1개 중 %2개"
+msgstr[0] "폴더 %2개 중 %3개"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "항목 %1개 중 %2개"
+msgstr[0] "항목 %2개 중 %3개"
 
 #: components/JobDetails.qml:137
 #, kde-format

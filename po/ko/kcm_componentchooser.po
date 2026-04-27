@@ -6,7 +6,7 @@
 # Hongsoo Byun <hsbyun@haansoft.com>, 2005.
 # Youngbin Park <shrike@nate.com>, 2005.
 # Sung-Jae, Cho <jachin@hanafos.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2016, 2017, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2016, 2017, 2020, 2021, 2022, 2023, 2024, 2026 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-11-29 00:27+0100\n"
+"PO-Revision-Date: 2026-04-26 21:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -40,10 +40,9 @@ msgid "Select default browser"
 msgstr "기본 브라우저 선택"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "기본 다이얼러 선택"
+msgstr "기본 캘린더 앱 선택"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -178,7 +177,7 @@ msgstr "이메일 클라이언트:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "캘린더:"
 
 #: ui/main.qml:111
 #, kde-format

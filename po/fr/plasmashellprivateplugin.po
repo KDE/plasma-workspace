@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-04-11 07:43+0200\n"
+"PO-Revision-Date: 2026-04-25 08:00+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -210,10 +210,7 @@ msgstr ""
 "version à jour."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -223,18 +220,15 @@ msgstr ""
 "graphique."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
 "Ce composant graphique a été écrit pour Plasma %1. Il est incompatible avec "
-"la dernière version de Plasma. Veuillez mettre à jour Plasma pour pouvoir "
-"utiliser ce composant graphique."
+"l'ancienne version de Plasma installée sur ce système. Veuillez mettre à "
+"jour Plasma pour pouvoir utiliser ce composant graphique."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"

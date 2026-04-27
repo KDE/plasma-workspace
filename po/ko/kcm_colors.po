@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-02-03 23:18+0100\n"
+"PO-Revision-Date: 2026-04-26 20:42+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -689,6 +689,8 @@ msgstr ""
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
 msgstr ""
+"이 색 구성표는 읽기 전용입니다. 변경 사항을 저장하려면 다른 이름으로 저장하십"
+"시오."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format

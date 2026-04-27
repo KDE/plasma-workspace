@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2026-02-03 23:34+0100\n"
+"PO-Revision-Date: 2026-04-26 20:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -61,10 +61,9 @@ msgstr[0] ""
 "용자의 작업이 손실됩니다."
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
+msgstr "컴퓨터를 다시 시작하면 UEFI 펌웨어 설정으로 진입합니다."
 
 #: contents/logout/Logout.qml:193
 #, kde-format

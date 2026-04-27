@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-02-03 23:22+0100\n"
+"PO-Revision-Date: 2026-04-26 20:38+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -521,7 +521,7 @@ msgstr "언어 추가"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "시스템에 \"%1\"이(가) 포함되어 있지 않음"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -530,6 +530,8 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"<link url='%1'>KDE 소프트웨어를 내 언어로 번역하는 것</link>을 도울 수 있는 "
+"방법에 대해서 알아 보십시오."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -637,13 +639,13 @@ msgstr "전화번호"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "시스템에 \"%1\" 설정이 포함되어 있지 않음"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "근처 지역을 검색해 보십시오."
 
 #~ msgid ""
 #~ "You can configure the formats used for time, dates, money and other "

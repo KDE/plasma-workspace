@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-14 00:46+0000\n"
-"PO-Revision-Date: 2025-06-10 22:09+0200\n"
+"PO-Revision-Date: 2026-04-26 20:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: CalendarView.qml:148
 #, kde-format
@@ -394,26 +394,26 @@ msgstr "시간대 선택"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
+msgstr[0] " • %1시간 후"
 
 #: main.qml:84
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 후"
 
 #: main.qml:88
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
+msgstr[0] " • %1시간 전"
 
 #: main.qml:90
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 전"
 
 #: main.qml:185
 #, kde-format
@@ -488,7 +488,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
+msgstr "가운데 단추로 클릭하여 %1 열기"
 
 #~ msgid ""
 #~ "Tip: if you travel frequently, add your home time zone to this list. It "

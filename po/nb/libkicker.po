@@ -128,7 +128,7 @@ msgstr "Nylig brukte"
 #: recentusagemodel.cpp:158
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Steder"
 
 #: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format

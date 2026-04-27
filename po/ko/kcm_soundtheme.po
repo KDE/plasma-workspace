@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-11 00:49+0000\n"
-"PO-Revision-Date: 2024-02-20 23:55+0100\n"
+"PO-Revision-Date: 2026-04-26 20:36+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: kcm_soundtheme.cpp:156
 #, kde-format
@@ -32,38 +32,38 @@ msgstr "freedesktop.org의 폴백 소리 테마"
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "임시 파일을 만들 수 없습니다."
 
 #: kcm_soundtheme.cpp:259
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
-msgstr ""
+msgstr "소리 테마 압축 파일을 다운로드할 수 없음: %1"
 
 #: kcm_soundtheme.cpp:270
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr ""
+msgstr "압축 파일을 열 수 없습니다."
 
 #: kcm_soundtheme.cpp:275
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
-msgstr[0] ""
+msgstr[0] "테마를 설치했습니다."
 
 #: kcm_soundtheme.cpp:278
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
-msgstr ""
+msgstr "압축 파일에 올바른 소리 테마가 포함되어 있지 않습니다."
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@action:button Install sound theme from file"
 msgid "Install from File…"
-msgstr ""
+msgstr "파일에서 설치…"
 
 #: ui/main.qml:42
 #, kde-format
@@ -115,9 +115,9 @@ msgstr "소리를 미리 들을 수 없음: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
-msgstr ""
+msgstr "소리 테마 선택"
 
 #: ui/main.qml:250
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
-msgstr ""
+msgstr "테마 파일 (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
