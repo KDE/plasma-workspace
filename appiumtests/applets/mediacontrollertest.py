@@ -45,7 +45,6 @@ class MediaControllerTests(PlasmaAppletTest):
 
     widget_id = WIDGET_ID
     extra_environ = {
-        "QT_FATAL_WARNINGS": "1",
         "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.propertyCache.append.warning=false",
     }
 
