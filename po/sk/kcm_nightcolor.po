@@ -132,7 +132,7 @@ msgstr "Teplá"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "Studená (žiadný filter)"
+msgstr "Studená (žiadny filter)"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format

@@ -922,7 +922,7 @@ msgstr "Slabá snehová prehánka"
 #, kde-format
 msgctxt "weather condition"
 msgid "Lightning Visible"
-msgstr "Víditeľné blesky"
+msgstr "Viditeľné blesky"
 
 #: envcan_i18n.dat:47
 #, kde-format
@@ -1840,7 +1840,7 @@ msgstr "Ľadové krúpy so snehom"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
-msgstr "Ľadové krúpyalebo mrznúci dážď"
+msgstr "Ľadové krúpy alebo mrznúci dážď"
 
 #: envcan_i18n.dat:200
 #, kde-format

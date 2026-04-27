@@ -212,7 +212,7 @@ msgstr "Dátum zmeny (najnovšie ako prvé)"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:61
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr "Dátum zmeny (nastaršie ako prvé)"
+msgstr "Dátum zmeny (najstaršie ako prvé)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:86
 #, kde-format

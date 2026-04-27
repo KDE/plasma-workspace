@@ -265,7 +265,7 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
 msgstr ""
-"Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a spravávania."
+"Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a správania."
 
 #: sourcesmodel.cpp:363
 #, kde-format
