@@ -1,14 +1,14 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2025, 2026 Charlotte <altronic25@protonmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-13 22:45+0000\n"
-"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"PO-Revision-Date: 2026-04-27 16:15+0100\n"
+"Last-Translator: charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,12 +46,12 @@ msgstr "Blaosc Plasma"
 #: main.cpp:100
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr ""
+msgstr "Cumasaigh Dífhabhtóir Javascript QML"
 
 #: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr "Ná atosaigh Blaosc Plasma go huathoibríoch tar éis tuairteáil"
+msgstr "Ná atosaigh Blaosc Plasma go huathoibríoch tar éis cliseadh"
 
 #: main.cpp:106
 #, kde-format
@@ -89,10 +90,14 @@ msgstr ""
 #: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr "Ní Féidir Plasma a Thosú"
+msgstr "Níorbh Fhéidir Plasma a Thosú"
 
 #: main.cpp:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Plasma is unable to start as it could not correctly use OpenGL 2 or "
+#| "software fallback\n"
+#| "Please check that your graphic drivers are set up correctly."
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
 "fallback\n"
@@ -106,19 +111,19 @@ msgstr ""
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
-msgstr "Fuaim Múchta"
+msgstr "Fuaim Balbhaithe"
 
 #: osd.cpp:72
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr "Micreafón Múchta"
+msgstr "Micreafón Balbhaithe"
 
 #: osd.cpp:88
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr "%1 Fuaime Múchta"
+msgstr "%1 Balbhaithe"
 
 #: osd.cpp:110
 #, kde-format
@@ -130,7 +135,7 @@ msgstr "Ceap Tadhaill Ar"
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr "Ceap Tadhaill Múchta"
+msgstr "Ceap Tadhaill As"
 
 #: osd.cpp:119
 #, kde-format
@@ -142,7 +147,7 @@ msgstr "Wifi Ar"
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
-msgstr "Wifi Múchta"
+msgstr "Wifi As"
 
 #: osd.cpp:128
 #, kde-format
@@ -154,7 +159,7 @@ msgstr "Blutooth Ar"
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
-msgstr "Bluetooth Múchta"
+msgstr "Bluetooth As"
 
 #: osd.cpp:137
 #, kde-format
@@ -166,7 +171,7 @@ msgstr "Idirlíon Móibíleach Ar"
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "Idirlíon Móibíleach Múchta"
+msgstr "Idirlíon Móibíleach As"
 
 #: osd.cpp:147
 #, kde-format
@@ -198,7 +203,7 @@ msgstr "%1 %2 ar %3"
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Scáileán Dícheangailte %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
@@ -223,12 +228,12 @@ msgstr ""
 #: shellcorona.cpp:210
 #, kde-format
 msgid "Switch to Previous Activity"
-msgstr ""
+msgstr "Athraigh go an ghníomhaíocht roimhe seo"
 
 #: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
-msgstr ""
+msgstr "Athraigh go an chéad gníomhaíocht eile"
 
 #: shellcorona.cpp:232
 #, kde-format
@@ -259,31 +264,31 @@ msgstr "Coimeád Folamh %1"
 #: softwarerendernotifier.cpp:27
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "Rindreálaí Bogearraí ag Úsáid"
 
 #: softwarerendernotifier.cpp:28
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "Rindreálaí Bogearraí ag Úsáid"
 
 #: softwarerendernotifier.cpp:29
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "Beidh rindreáil díghrádaithe"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format
 msgid "Never show again"
-msgstr ""
+msgstr "Ná taispeáin riamh"
 
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr ""
+msgstr "Comhaireamh na Painéil"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr ""
+msgstr "Comhairtear na painéil"
