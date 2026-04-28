@@ -100,12 +100,10 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
     TYPE RUNTIME
 )
 
-find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION} CONFIG)
-set_package_properties(KF6NetworkManagerQt PROPERTIES
-    DESCRIPTION "Qt wrapper for NetworkManager API"
-    PURPOSE "Needed for location-based time zone changes."
-    TYPE OPTIONAL
-)
+# there's no NetworkManager on FreeBSD'
+if (LINUX)
+    find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION} CONFIG REQUIRED)
+endif()
 
 find_package(KF6QuickCharts ${KF6_MIN_VERSION} CONFIG)
 set_package_properties(KF6QuickCharts PROPERTIES
