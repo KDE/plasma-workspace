@@ -12,7 +12,7 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 
-Kirigami.Dialog {
+QQC2.Dialog {
     id: root
 
     property var fingerprintModel: kcm.fingerprintModel
@@ -31,9 +31,9 @@ Kirigami.Dialog {
 
     onRejected: root.fingerprintModel.stopEnrolling()
 
-    standardButtons: QQC2.Dialog.NoButton
+    standardButtons: doneAction.visible ? QQC2.Dialog.NoButton : QQC2.Dialog.Cancel
 
-    customFooterActions: [
+    property list<Kirigami.Action> customFooterActions: [
         // FingerprintList State
         Kirigami.Action {
             text: i18n("Add")
@@ -46,22 +46,34 @@ Kirigami.Dialog {
             }
         },
 
-        // Enrolling State
-        Kirigami.Action {
-            text: i18n("Cancel")
-            visible: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
-            icon.name: "dialog-cancel"
-            onTriggered: root.fingerprintModel.stopEnrolling()
-        },
-
         // EnrollComplete State
         Kirigami.Action {
+            id: doneAction
             text: i18n("Done")
             visible: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
             icon.name: "dialog-ok"
             onTriggered: root.fingerprintModel.stopEnrolling()
         }
     ]
+
+    footer: QQC2.DialogButtonBox {
+        Layout.fillWidth: true
+
+        Repeater {
+            id: customFooterButtons
+
+            // DialogButtonBox should NOT contain invisible buttons, because in Qt 6
+            // ListView preserves space even for invisible items.
+            model: root.customFooterActions.filter(action => action.visible)
+            // we have to use Button instead of ToolButton, because ToolButton has no visual distinction when disabled
+            delegate: QQC2.Button {
+                required property Kirigami.Action modelData
+
+                flat: root.flatFooterButtons
+                action: modelData
+            }
+        }
+    }
 
     ColumnLayout {
 
