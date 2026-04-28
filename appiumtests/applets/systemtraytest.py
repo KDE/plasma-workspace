@@ -32,7 +32,7 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gdk, GdkPixbuf, Gio, GLib, Gtk
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, WebDriverException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.interaction import POINTER_MOUSE
@@ -347,7 +347,11 @@ class SystemTrayTests(unittest.TestCase):
         self.assertTrue(success, "xembedsniproxy did not receive the click event")
 
         # The tray icon is a red square
-        rect: dict[str, int] = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(170, 0, 0))["rect"]
+        try:
+            rect: dict[str, int] = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(170, 0, 0))["rect"]
+        except WebDriverException:  # Rendering delay
+            time.sleep(1)
+            rect: dict[str, int] = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(170, 0, 0))["rect"]
 
         if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
             return
