@@ -221,7 +221,7 @@ void JobsModel::kill(const QModelIndex &idx)
     }
 }
 
-void JobsModel::clear(Notifications::ClearFlags flags)
+void JobsModel::clear()
 {
     if (d->m_jobViews.isEmpty()) {
         return;
@@ -230,11 +230,9 @@ void JobsModel::clear(Notifications::ClearFlags flags)
     for (int i = d->m_jobViews.count() - 1; i >= 0; --i) {
         Job *job = d->m_jobViews.at(i);
 
-        bool clear = (flags.testFlag(Notifications::ClearExpired) && job->expired());
-
         // Compared to notifications, the number of jobs is typically small
         // so for simplicity we can just delete one item at a time
-        if (clear) {
+        if (job->expired()) {
             d->removeAt(i);
         }
     }

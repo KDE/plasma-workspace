@@ -346,17 +346,6 @@ public:
     Q_FLAG(Urgencies)
 
     /**
-     * Which items should be cleared in a call to @c clear
-     */
-    enum ClearFlag {
-        ClearExpired = 1 << 1,
-        // TODO more
-    };
-    Q_ENUM(ClearFlag)
-    Q_DECLARE_FLAGS(ClearFlags, ClearFlag)
-    Q_FLAG(ClearFlags)
-
-    /**
      * The state an application job is in.
      */
     enum JobState {
@@ -556,10 +545,10 @@ public:
     /**
      * @brief Clear notifications
      *
-     * Removes the notifications matching th ClearFlags from the model.
+     * Removes all notifications from the model. Ongoing jobs are not removed.
      * This can be used for e.g. a "Clear History" action.
      */
-    Q_INVOKABLE void clear(ClearFlags flags);
+    Q_INVOKABLE void clear();
 
     /**
      * Returns a model index pointing to the group of a notification.

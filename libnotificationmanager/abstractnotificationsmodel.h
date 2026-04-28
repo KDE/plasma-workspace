@@ -51,7 +51,7 @@ public:
     void startTimeout(uint notificationId);
     void stopTimeout(uint notificationId);
 
-    void clear(Notifications::ClearFlags flags);
+    void clear();
 
 Q_SIGNALS:
     void lastReadChanged();

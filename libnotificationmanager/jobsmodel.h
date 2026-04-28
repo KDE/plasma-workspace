@@ -70,7 +70,7 @@ public:
      */
     void kill(const QModelIndex &idx);
 
-    void clear(Notifications::ClearFlags flags);
+    void clear();
 
 Q_SIGNALS:
     void serviceOwnershipLost();

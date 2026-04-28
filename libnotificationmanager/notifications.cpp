@@ -920,16 +920,16 @@ void Notifications::killJob(const QModelIndex &idx)
     }
 }
 
-void Notifications::clear(ClearFlags flags)
+void Notifications::clear()
 {
     if (d->notificationsModel) {
-        d->notificationsModel->clear(flags);
+        d->notificationsModel->clear();
     }
     if (d->portalNotificationsModel) {
-        d->portalNotificationsModel->clear(flags);
+        d->portalNotificationsModel->clear();
     }
     if (d->jobsModel) {
-        d->jobsModel->clear(flags);
+        d->jobsModel->clear();
     }
 }
 

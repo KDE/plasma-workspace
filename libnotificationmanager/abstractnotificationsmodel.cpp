@@ -534,7 +534,7 @@ void AbstractNotificationsModel::stopTimeout(uint notificationId)
     delete d->notificationTimeouts.take(notificationId);
 }
 
-void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
+void AbstractNotificationsModel::clear()
 {
     if (d->notifications.isEmpty()) {
         return;
@@ -545,9 +545,7 @@ void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
     for (int i = 0; i < d->notifications.count(); ++i) {
         const Notification &notification = d->notifications.at(i);
 
-        if (flags.testFlag(Notifications::ClearExpired) && (notification.expired() || notification.wasAddedDuringInhibition())) {
-            close(notification.id());
-        }
+        close(notification.id());
     }
 }
 

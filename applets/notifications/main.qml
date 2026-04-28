@@ -220,8 +220,8 @@ PlasmoidItem {
     }
 
     function clearNotificationHistoryAndShowOsd() {
-        if (historyModel.expiredNotificationsCount > 0 || historyModel.activeNotificationsCount > 0) {
-            historyModel.clear(NotificationManager.Notifications.ClearExpired);
+        if (historyModel.count > 0) {
+            historyModel.clear();
             Notifications.Globals.shortcuts.showNotificationsHistoryCleaned();
         }
     }
@@ -244,9 +244,9 @@ PlasmoidItem {
             id: clearHistory
             text: i18n("Clear All Notifications")
             icon.name: "edit-clear-history"
-            visible: historyModel.expiredNotificationsCount > 0
+            visible: (historyModel.activeNotificationsCount + historyModel.expiredNotificationsCount - historyModel.activeJobsCount) > 0
             onTriggered: {
-                historyModel.clear(NotificationManager.Notifications.ClearExpired);
+                historyModel.clear();
                 // clear is async,
                 historyModel.countChanged.connect(closeWhenCleared)
             }
