@@ -97,6 +97,7 @@ QQC2.Dialog {
             Layout.minimumHeight: Kirigami.Units.gridUnit * 18
             Layout.fillWidth: true
             Layout.fillHeight: true
+            clip: true
 
             initialItem: fingerPrints
         }
