@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-04-28 00:47+0000\n"
 "PO-Revision-Date: 2026-03-11 05:57+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -103,24 +103,24 @@ msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "დემო ხმის მინიატურა თემისთვის \"%1\""
 
-#: ui/main.qml:227
+#: ui/main.qml:225
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "თემა %1 ხმას '%2' არ შეიცავს"
 
-#: ui/main.qml:232
+#: ui/main.qml:230
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "მინიატურის ხმა ჩავარდა: \"%1\""
 
-#: ui/main.qml:248
+#: ui/main.qml:246
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
 msgstr "ხმის თემის არჩევა"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
 msgstr "თემის ფაილები (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

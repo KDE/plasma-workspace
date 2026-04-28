@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-04-28 00:47+0000\n"
 "PO-Revision-Date: 2026-03-11 14:00+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -107,24 +107,24 @@ msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Прослухати демонстраційний звук для теми «%1»"
 
-#: ui/main.qml:227
+#: ui/main.qml:225
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "У темі %1 немає звуку «%2»"
 
-#: ui/main.qml:232
+#: ui/main.qml:230
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Не вдалося прослухати звук: %1"
 
-#: ui/main.qml:248
+#: ui/main.qml:246
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
 msgstr "Вибір звукової теми"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
 msgstr "файли тем (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-11 00:49+0000\n"
+"POT-Creation-Date: 2026-04-28 00:47+0000\n"
 "PO-Revision-Date: 2026-03-12 10:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -111,24 +111,24 @@ msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "عاين الصوت التجريبي لسمة \"%1\""
 
-#: ui/main.qml:227
+#: ui/main.qml:225
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "سمة %1 لا تحوي صوت '%2'"
 
-#: ui/main.qml:232
+#: ui/main.qml:230
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "فشل في معاينة الصوت: %1"
 
-#: ui/main.qml:248
+#: ui/main.qml:246
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
 msgstr "اختر سمة الصوت"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
 msgstr "ملفات السمة (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
