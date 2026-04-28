@@ -130,7 +130,9 @@ class Mpris2:
         self.__base_reg_id = 0
         Gio.bus_unown_name(self.__owner_id)
         self.connection.flush_sync(None)
-        GLibMainLoopThread.process_events()
+        sync_event = threading.Event()
+        GLib.idle_add(lambda: sync_event.set() or False)
+        sync_event.wait(timeout=3.0)
         self._wait_for_dbus_name_released()
         logging.info("Player exit")
 
@@ -140,12 +142,7 @@ class Mpris2:
         session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
         deadline = time.time() + timeout
         while time.time() < deadline:
-            result = session_bus.call_sync(
-                "org.freedesktop.DBus", "/org/freedesktop/DBus",
-                "org.freedesktop.DBus", "NameHasOwner",
-                GLib.Variant("(s)", (bus_name,)), None,
-                Gio.DBusSendMessageFlags.NONE, 100, None
-            )
+            result = session_bus.call_sync("org.freedesktop.DBus", "/org/freedesktop/DBus", "org.freedesktop.DBus", "NameHasOwner", GLib.Variant("(s)", (bus_name, )), None, Gio.DBusSendMessageFlags.NONE, 100, None)
             if not result[0]:
                 return
             time.sleep(0.1)
