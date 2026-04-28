@@ -394,7 +394,8 @@ class SystemTrayTests(unittest.TestCase):
         asan_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
         status_notifier = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "statusnotifieritemtest.py")], stdout=subprocess.PIPE, stderr=sys.stderr, env=asan_env)
         self.addCleanup(status_notifier.kill)
-        time.sleep(1)  # Wait until the icon appears
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((AppiumBy.NAME, "StatusNotifierTest")))
+        time.sleep(0.5)  # Extra buffer for D-Bus signal connections
         rect: dict = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))["rect"]  # Red
 
         expected_result: list[str] = []
