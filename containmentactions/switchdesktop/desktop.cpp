@@ -15,8 +15,8 @@
 
 using namespace TaskManager;
 
-SwitchDesktop::SwitchDesktop(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args)
+SwitchDesktop::SwitchDesktop(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args)
+    : Plasma::ContainmentActions(parent, metadata, args)
     , m_virtualDesktopInfo(new VirtualDesktopInfo(this))
 {
 }

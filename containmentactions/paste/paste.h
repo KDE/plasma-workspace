@@ -14,7 +14,7 @@ class Paste : public Plasma::ContainmentActions
 {
     Q_OBJECT
 public:
-    explicit Paste(QObject *parent, const QVariantList &args);
+    explicit Paste(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args);
 
     QList<QAction *> contextualActions() override;
 

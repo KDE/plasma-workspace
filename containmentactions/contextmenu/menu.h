@@ -16,7 +16,7 @@ class ContextMenu : public Plasma::ContainmentActions
 {
     Q_OBJECT
 public:
-    explicit ContextMenu(QObject *parent, const QVariantList &args);
+    explicit ContextMenu(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args);
     ~ContextMenu() override;
 
     void restore(const KConfigGroup &) override;

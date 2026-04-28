@@ -31,8 +31,8 @@
 
 using namespace Qt::StringLiterals;
 
-ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args)
+ContextMenu::ContextMenu(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args)
+    : Plasma::ContainmentActions(parent, metadata, args)
     , m_session(new SessionManagement(this))
 {
 }

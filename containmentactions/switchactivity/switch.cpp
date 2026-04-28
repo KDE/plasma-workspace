@@ -15,8 +15,8 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
-SwitchActivity::SwitchActivity(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args)
+SwitchActivity::SwitchActivity(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args)
+    : Plasma::ContainmentActions(parent, metadata, args)
 {
 }
 

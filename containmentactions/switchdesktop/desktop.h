@@ -21,7 +21,7 @@ class SwitchDesktop : public Plasma::ContainmentActions
 {
     Q_OBJECT
 public:
-    explicit SwitchDesktop(QObject *parent, const QVariantList &args);
+    explicit SwitchDesktop(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args);
     ~SwitchDesktop() override;
 
     QList<QAction *> contextualActions() override;

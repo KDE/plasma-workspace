@@ -17,8 +17,8 @@
 #include <QAction>
 #include <QDebug>
 
-Paste::Paste(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args)
+Paste::Paste(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args)
+    : Plasma::ContainmentActions(parent, metadata, args)
     , m_action(new QAction(this))
 {
     QObject::connect(m_action, &QAction::triggered, this, &Paste::doPaste);

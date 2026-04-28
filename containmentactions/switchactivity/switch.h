@@ -17,7 +17,7 @@ class SwitchActivity : public Plasma::ContainmentActions
 {
     Q_OBJECT
 public:
-    explicit SwitchActivity(QObject *parent, const QVariantList &args);
+    explicit SwitchActivity(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args);
     ~SwitchActivity() override;
 
     QList<QAction *> contextualActions() override;

@@ -25,8 +25,8 @@ ActivityInfo *SwitchWindow::s_activityInfo = nullptr;
 TasksModel *SwitchWindow::s_tasksModel = nullptr;
 int SwitchWindow::s_instanceCount = 0;
 
-SwitchWindow::SwitchWindow(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args)
+SwitchWindow::SwitchWindow(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args)
+    : Plasma::ContainmentActions(parent, metadata, args)
     , m_mode(AllFlat)
     , m_virtualDesktopInfo(new VirtualDesktopInfo(this))
 {

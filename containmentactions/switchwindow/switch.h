@@ -23,7 +23,7 @@ class SwitchWindow : public Plasma::ContainmentActions
 {
     Q_OBJECT
 public:
-    explicit SwitchWindow(QObject *parent, const QVariantList &args);
+    explicit SwitchWindow(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args);
     ~SwitchWindow() override;
 
     void restore(const KConfigGroup &config) override;

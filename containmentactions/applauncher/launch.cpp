@@ -15,8 +15,8 @@
 
 using namespace Qt::StringLiterals;
 
-AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)
-    : Plasma::ContainmentActions(parent, args)
+AppLauncher::AppLauncher(QObject *parent, const KPluginMetaData &metadata, const QVariantList &args)
+    : Plasma::ContainmentActions(parent, metadata, args)
     , m_group(new KServiceGroup(QStringLiteral("/")))
 {
 }
