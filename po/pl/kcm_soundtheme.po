@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-04-28 02:51+0000\n"
 "PO-Revision-Date: 2026-03-14 07:00+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -66,13 +66,13 @@ msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Odsłuchaj dźwięk demonstracyjny dla zestawu \"%1\""
 
-#: ui/main.qml:189
+#: ui/main.qml:187
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "Zestaw %1 nie zawiera dźwięku '%2'"
 
-#: ui/main.qml:194
+#: ui/main.qml:192
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Nie udało się odsłuchać dźwięku: %1"
