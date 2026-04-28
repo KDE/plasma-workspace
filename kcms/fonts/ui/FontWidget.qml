@@ -36,6 +36,8 @@ FocusScope {
         QtControls.Button {
             icon.name: "document-edit"
             Layout.fillHeight: true
+            display: QtControls.AbstractButton.IconOnly
+            text: root.tooltipText
             Kirigami.MnemonicData.enabled: false
             focus: true
             onClicked: {
