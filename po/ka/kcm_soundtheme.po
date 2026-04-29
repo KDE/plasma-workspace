@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-28 00:47+0000\n"
-"PO-Revision-Date: 2026-03-11 05:57+0100\n"
+"PO-Revision-Date: 2026-04-28 05:54+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: kcm_soundtheme.cpp:156
 #, kde-format
@@ -45,7 +45,7 @@ msgstr "ხმის თემის არქივის გადმოწე
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr "არქივის გახსნა შეუძლებელია"
+msgstr "არქივის გახსნა შეუძლებელია."
 
 #: kcm_soundtheme.cpp:275
 #, kde-format

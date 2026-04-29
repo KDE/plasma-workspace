@@ -36,7 +36,7 @@ msgid ""
 msgstr ""
 "Môžete KDE pomôcť vylepšiť Plasmu zdieľaním informácií o jej používaní. To "
 "nám umožňuje zamerať sa na veci, na ktorých vám záleží.<nl/><nl/"
-">Prispievanie informácií o používaní je voliteľné a úplne anonymné. Nikdy "
+">Prispievanie týchto informácií je voliteľné a úplne anonymné. Nikdy "
 "nezhromažďujeme vaše osobné údaje, súbory, ktoré používate, webové stránky, "
 "ktoré navštevujete, ani informácie, ktoré by vás mohli identifikovať.<nl/>"
 
