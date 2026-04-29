@@ -42,14 +42,17 @@ void TestChromeBookmarks::bookmarkFinderShouldReportNoProfilesOnErrors()
 
 void TestChromeBookmarks::itShouldFindNothingWhenPrepareIsNotCalled()
 {
-    Chrome chrome(m_findBookmarksInCurrentDirectory.get());
+    Chrome chrome(std::move(m_findBookmarksInCurrentDirectory));
     QCOMPARE(chrome.match(u"any"_s, true).size(), 0);
 }
 
 void TestChromeBookmarks::itShouldGracefullyExitWhenFileIsNotFound()
 {
-    FakeFindProfile finder(QList<Profile>() << Profile(u"FileNotExisting.json"_s, QString(), nullptr));
-    Chrome chrome(&finder);
+    auto finder = std::make_unique<FakeFindProfile>(QList<Profile>() << Profile(u"FileNotExisting.json"_s, QString(), nullptr));
+
+    // transfer ownership
+    Chrome chrome(std::move(finder));
+
     chrome.prepare();
     QCOMPARE(chrome.match(u"any"_s, true).size(), 0);
 }
@@ -62,7 +65,7 @@ void verifyMatch(BookmarkMatch &match, const QString &title, const QString &url)
 
 void TestChromeBookmarks::itShouldFindAllBookmarks()
 {
-    Chrome chrome(m_findBookmarksInCurrentDirectory.get());
+    Chrome chrome(std::move(m_findBookmarksInCurrentDirectory));
     chrome.prepare();
     QList<BookmarkMatch> matches = chrome.match(u"any"_s, true);
     QCOMPARE(matches.size(), 3);
@@ -73,7 +76,7 @@ void TestChromeBookmarks::itShouldFindAllBookmarks()
 
 void TestChromeBookmarks::itShouldFindOnlyMatches()
 {
-    Chrome chrome(m_findBookmarksInCurrentDirectory.get());
+    Chrome chrome(std::move(m_findBookmarksInCurrentDirectory));
     chrome.prepare();
     QList<BookmarkMatch> matches = chrome.match(u"other"_s, false);
     QCOMPARE(matches.size(), 1);
@@ -82,7 +85,7 @@ void TestChromeBookmarks::itShouldFindOnlyMatches()
 
 void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
 {
-    Chrome chrome(m_findBookmarksInCurrentDirectory.get());
+    Chrome chrome(std::move(m_findBookmarksInCurrentDirectory));
     chrome.prepare();
     QCOMPARE(chrome.match(u"any"_s, true).size(), 3);
     chrome.teardown();
@@ -91,10 +94,13 @@ void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
 
 void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
 {
-    FakeFindProfile findBookmarksFromAllProfiles(
+    auto findBookmarksFromAllProfiles = std::make_unique<FakeFindProfile>(
         QList<Profile>{Profile(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, new FallbackFavicon),
                        Profile(QString(m_configHome + u"/Chrome-Bookmarks-SecondProfile.json"), u"SecondProfile"_s, new FallbackFavicon)});
-    Chrome chrome(&findBookmarksFromAllProfiles);
+
+    // transfer ownership
+    Chrome chrome(std::move(findBookmarksFromAllProfiles));
+
     chrome.prepare();
     QList<BookmarkMatch> matches = chrome.match(u"any"_s, true);
     QCOMPARE(matches.size(), 4);

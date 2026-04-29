@@ -14,6 +14,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QJsonValue>
+#include <memory>
 
 class ProfileBookmarks
 {
@@ -54,12 +55,13 @@ private:
     QJsonArray m_bookmarks;
 };
 
-Chrome::Chrome(FindProfile *findProfile)
+Chrome::Chrome(std::unique_ptr<FindProfile> findProfile)
     : QObject()
+    , m_findProfile(std::move(findProfile))
     , m_watcher(new KDirWatch(this))
     , m_dirty(false)
 {
-    const auto profiles = findProfile->find();
+    const auto profiles = m_findProfile->find();
     for (const Profile &profile : profiles) {
         updateCacheFile(profile.faviconSource(), profile.faviconCache());
         m_profileBookmarks.push_back(ProfileBookmarks(profile));

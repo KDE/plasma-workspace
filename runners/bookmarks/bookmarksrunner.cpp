@@ -110,9 +110,11 @@ std::unique_ptr<Browser> BookmarksRunner::findBrowser(const QString &browserName
     } else if (browserName.contains(QLatin1String("opera"), Qt::CaseInsensitive)) {
         return std::make_unique<Opera>();
     } else if (browserName.contains(QLatin1String("chrome"), Qt::CaseInsensitive)) {
-        return std::make_unique<Chrome>(new FindChromeProfile(QStringLiteral("google-chrome"), QDir::homePath()));
+        auto finder = std::make_unique<FindChromeProfile>(QStringLiteral("google-chrome"), QDir::homePath());
+        return std::make_unique<Chrome>(std::move(finder));
     } else if (browserName.contains(QLatin1String("chromium"), Qt::CaseInsensitive)) {
-        return std::make_unique<Chrome>(new FindChromeProfile(QStringLiteral("chromium"), QDir::homePath()));
+        auto finder = std::make_unique<FindChromeProfile>(QStringLiteral("chromium"), QDir::homePath());
+        return std::make_unique<Chrome>(std::move(finder));
     } else if (browserName.contains(QLatin1String("falkon"), Qt::CaseInsensitive)) {
         return std::make_unique<Falkon>();
     } else {
