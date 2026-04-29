@@ -67,6 +67,7 @@ private Q_SLOTS:
     void testReorderScreens();
     void testReorderContainments();
     void testPanelSizeModes();
+    void testOutputOrderChanged();
 
 private:
     ShellCorona *m_corona;
@@ -813,6 +814,35 @@ void ShellTest::testPanelSizeModes()
     panel->containment()->setLocation(Plasma::Types::LeftEdge);
     panel->containment()->setFormFactor(Plasma::Types::Vertical);
     QTRY_COMPARE(panel->size(), QSize(thickness, 800));
+}
+
+void ShellTest::testOutputOrderChanged()
+{
+    exec([this] {
+        // Remove WL-1 screen
+        remove(output(0));
+
+        // Set screen order to non-existent DP-1
+        outputOrder()->setList({u"DP-1"_s});
+    });
+    // Wait for the shell to disappear
+    QTRY_VERIFY(m_corona->m_screenPool->screenOrder().empty());
+
+    exec([this] {
+        // Add WL-1 screen again
+        OutputData data;
+        data.mode.resolution = {1920, 1080};
+        data.position = {0, 0};
+        data.physicalSize = data.mode.physicalSizeForDpi(96);
+        data.connector = u"WL-1"_s;
+        add<Output>(data);
+
+        // Set screen order to WL-1
+        outputOrder()->setList({u"WL-1"_s});
+    });
+    // Wait for the shell to move to the WL-1 screen
+    QTRY_COMPARE(m_corona->m_screenPool->screenOrder().size(), 1);
+    QCOMPARE(m_corona->m_screenPool->screenForId(0)->name(), u"WL-1"_s);
 }
 
 QCOMPOSITOR_TEST_MAIN(ShellTest)

@@ -63,6 +63,7 @@ public:
 private:
     bool hasAllScreens() const;
     QStringList m_pendingOutputOrder;
+    bool m_hasOutputOrderChanged = false;
 };
 
 template<typename T>
@@ -383,10 +384,13 @@ WaylandOutputOrderWatcher::WaylandOutputOrderWatcher(QObject *parent)
         m_pendingOutputOrder = order;
 
         if (hasAllScreens()) {
+            m_hasOutputOrderChanged = false;
             if (m_pendingOutputOrder != m_outputOrder) {
                 m_outputOrder = m_pendingOutputOrder;
                 Q_EMIT outputOrderChanged(m_outputOrder);
             }
+        } else if (m_pendingOutputOrder != m_outputOrder) {
+            m_hasOutputOrderChanged = true;
         }
         // otherwise wait for next QGuiApp screenAdded/removal
         // to keep things in sync
@@ -418,8 +422,9 @@ void WaylandOutputOrderWatcher::refresh()
         return;
     }
 
-    if (m_outputOrder != m_pendingOutputOrder) {
+    if (m_hasOutputOrderChanged || m_outputOrder != m_pendingOutputOrder) {
         m_outputOrder = m_pendingOutputOrder;
+        m_hasOutputOrderChanged = false;
         Q_EMIT outputOrderChanged(m_outputOrder);
     }
 }
