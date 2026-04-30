@@ -236,7 +236,7 @@ Item {
                 visible: actionsButton.applet && actionsButton.applet.plasmoid.internalAction("configure")
 
                 display: PlasmaComponents.AbstractButton.IconOnly
-                text: actionsButton.applet.plasmoid.internalAction("configure") ? actionsButton.applet.plasmoid.internalAction("configure").text : ""
+                text: actionsButton.applet?.plasmoid.internalAction("configure").text ?? ""
 
                 KeyNavigation.down: backButton.KeyNavigation.down
                 KeyNavigation.left: actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.left
