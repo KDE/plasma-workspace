@@ -113,9 +113,11 @@ LogindSessionBackend::LogindSessionBackend()
             *argToUpdate = false;
         } else {
             // both "yes" and "challenge" will show up in the UI
+            // also accept "inhibited" for now, TODO expose this more fine-grained and indicate in the UI that the action is inhibited (and why)
             const QString value = reply.value();
             *argToUpdate = false;
-            if (value == QLatin1String("yes") || value == QLatin1String("challenge")) {
+            if (value == QLatin1String("yes") || value == QLatin1String("challenge") || value == QLatin1String("inhibited")
+                || value == QLatin1String("inhibited-blocked") || value == QLatin1String("challenge-inhibitor-blocked")) {
                 *argToUpdate = true;
             }
         }
