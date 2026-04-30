@@ -6,6 +6,7 @@
 # pylint: disable=too-many-arguments
 
 import logging
+import signal
 from typing import Final
 
 from gi.repository import Gio, GLib
@@ -62,4 +63,16 @@ dbus_interface: OrgKdeTestdbusactivation | None = None
 if __name__ == '__main__':
     logging.getLogger().setLevel(logging.INFO)
     dbus_interface = OrgKdeTestdbusactivation()
-    GLib.MainLoop().run()
+
+    loop = GLib.MainLoop()
+
+    def on_signal(sig: int, frame) -> None:
+        logging.info(f"Received signal {sig}, quitting...")
+        if dbus_interface:
+            dbus_interface.quit()
+        loop.quit()
+
+    signal.signal(signal.SIGTERM, on_signal)
+    signal.signal(signal.SIGINT, on_signal)
+
+    loop.run()
