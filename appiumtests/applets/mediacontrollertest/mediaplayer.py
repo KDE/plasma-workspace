@@ -9,6 +9,7 @@
 # For FreeBSD CI which only has python 3.9
 from __future__ import annotations
 
+import argparse
 import logging
 import json
 import os
@@ -495,18 +496,28 @@ def __on_terminate(signal, frame) -> None:
 
 
 if __name__ == '__main__':
-    assert len(sys.argv) >= 2, "Insufficient arguments"
-    signal.signal(signal.SIGTERM, __on_terminate)
+    parser = argparse.ArgumentParser(description="MPRIS2 media player for testing")
+    parser.add_argument("json_path", nargs="?", help="Path to JSON file with player metadata")
+    parser.add_argument("--invalid", action="store_true", help="Start an invalid player for error testing")
+    parser.add_argument("--start-index", type=int, default=0, help="Starting track index")
+    args = parser.parse_args()
 
-    json_path: str = sys.argv.pop()
-    with open(json_path, "r", encoding="utf-8") as f:
-        json_dict: dict[str, list | dict] = json.load(f)
-    metadata: list[dict[str, GLib.Variant]] = read_player_metadata(json_dict)
-    base_properties: dict[str, GLib.Variant] = read_base_properties(json_dict)
-    current_index: int = 0
-    player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
+    signal.signal(signal.SIGTERM, __on_terminate)
 
     loopThread = GLibMainLoopThread()
     loopThread.start()
-    player = Mpris2(metadata, base_properties, player_properties, current_index)
-    logging.info("Player %s started", base_properties['Identity'].get_string())
+
+    if args.invalid:
+        player = InvalidMpris2()
+        logging.info("Invalid player started")
+    else:
+        if not args.json_path:
+            parser.error("json_path is required when not using --invalid")
+        with open(args.json_path, "r", encoding="utf-8") as f:
+            json_dict: dict[str, list | dict] = json.load(f)
+        metadata: list[dict[str, GLib.Variant]] = read_player_metadata(json_dict)
+        base_properties: dict[str, GLib.Variant] = read_base_properties(json_dict)
+        current_index: int = args.start_index
+        player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
+        player = Mpris2(metadata, base_properties, player_properties, current_index)
+        logging.info("Player %s started", base_properties['Identity'].get_string())

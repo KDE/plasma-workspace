@@ -26,8 +26,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest"))
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "utils"))
-from GLibMainLoopThread import GLibMainLoopThread
-from mediaplayer import (InvalidMpris2, Mpris2, read_base_properties, read_player_metadata, read_player_properties)
+from mediaplayer import Mpris2, read_player_metadata
 
 gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, GLib, Gtk
@@ -48,48 +47,53 @@ class MediaControllerTests(PlasmaAppletTest):
         "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.propertyCache.append.warning=false",
     }
 
-    loop_thread: GLibMainLoopThread
-    mpris_interface: Mpris2 | None
+    player_a: subprocess.Popen | None = None
     player_b: subprocess.Popen | None = None
     player_browser: subprocess.Popen | None = None
     player_plasma_browser_integration: subprocess.Popen | None = None
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.loop_thread = GLibMainLoopThread()
-        cls.loop_thread.start()
         super().setUpClass()
 
     def setUp(self) -> None:
-        json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_a.json")
-        with open(json_path, "r", encoding="utf-8") as f:
-            json_dict: dict[str, list | dict] = json.load(f)
-        metadata: list[dict[str, GLib.Variant]] = read_player_metadata(json_dict)
-        base_properties: dict[str, GLib.Variant] = read_base_properties(json_dict)
-        current_index: int = 1
-        player_properties: dict[str, GLib.Variant] = read_player_properties(json_dict, metadata[current_index])
-
-        self.mpris_interface = Mpris2(metadata, base_properties, player_properties, current_index)
-        assert self.mpris_interface.registered_event.wait(10)
+        self._player_a_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_a.json")
+        with open(self._player_a_json_path, "r", encoding="utf-8") as f:
+            self._player_a_data: dict[str, list | dict] = json.load(f)
+        self.player_a = subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), "--start-index", "1", self._player_a_json_path))
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:title"])))
 
     def tearDown(self) -> None:
         if not self._outcome.result.wasSuccessful():
             self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
-        if self.mpris_interface is not None:
-            self.mpris_interface.quit()
-            self.mpris_interface = None
+        if self.player_a is not None:
+            self.player_a.terminate()
+            self.player_a.wait(10)
+            self.player_a = None
         WebDriverWait(self.driver, 5, 0.2).until(EC.presence_of_element_located((AppiumBy.NAME, "No media playing")))
 
     @classmethod
     def tearDownClass(cls) -> None:
         super().tearDownClass()
-        cls.loop_thread.quit()
+
+    def _player_a_bus_name(self) -> str:
+        return f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_a.pid)}"
+
+    def _get_player_property(self, bus_name: str, property_name: str) -> GLib.Variant:
+        session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+        result = session_bus.call_sync(
+            bus_name, Mpris2.OBJECT_PATH, "org.freedesktop.DBus.Properties", "Get",
+            GLib.Variant("(ss)", ("org.mpris.MediaPlayer2.Player", property_name)),
+            None, Gio.DBusSendMessageFlags.NONE, 1000, None
+        )
+        return result.get_child_value(0).get_variant()
 
     def test_track(self) -> None:
         """
         Tests the widget can show track metadata
         """
-        assert self.mpris_interface
+        assert self.player_a
         play_button = self.driver.find_element(by=AppiumBy.NAME, value="Play")
         previous_button = self.driver.find_element(by=AppiumBy.NAME, value="Previous Track")
         next_button = self.driver.find_element(by=AppiumBy.NAME, value="Next Track")
@@ -98,11 +102,11 @@ class MediaControllerTests(PlasmaAppletTest):
 
         # Match song title, artist and album
         wait: WebDriverWait = WebDriverWait(self.driver, 5)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))  # Title
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:album"].get_string())))  # Album
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:title"])))  # Title
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:album"])))  # Album
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-5:00")))  # Remaining time
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, ', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))))  # Artists
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, ', '.join(self._player_a_data["metadata"][1]["xesam:artist"]))))  # Artists
 
         # Now click the play button
         play_button.click()
@@ -112,31 +116,31 @@ class MediaControllerTests(PlasmaAppletTest):
 
         # Now click the shuffle button
         shuffle_button.click()
-        wait.until(lambda _: self.mpris_interface.player_properties["Shuffle"].get_boolean())
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "Shuffle").get_boolean())
         # Click again to disable shuffle
         shuffle_button.click()
-        wait.until(lambda _: not self.mpris_interface.player_properties["Shuffle"].get_boolean())
+        wait.until(lambda _: not self._get_player_property(self._player_a_bus_name(), "Shuffle").get_boolean())
 
         # Now click the repeat button
         repeat_button.click()
-        wait.until(lambda _: self.mpris_interface.player_properties["LoopStatus"].get_string() == "Playlist")
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "LoopStatus").get_string() == "Playlist")
         # Click again to switch to Track mode
         repeat_button.click()
-        wait.until(lambda _: self.mpris_interface.player_properties["LoopStatus"].get_string() == "Track")
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "LoopStatus").get_string() == "Track")
         # Click again to disable repeat
         repeat_button.click()
-        wait.until(lambda _: self.mpris_interface.player_properties["LoopStatus"].get_string() == "None")
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "LoopStatus").get_string() == "None")
 
         # Switch to the previous song, and match again
         previous_button.click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Katie's Favorite")))
         self.assertFalse(previous_button.is_enabled())
         self.assertTrue(next_button.is_enabled())
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:album"].get_string())
+        self.driver.find_element(by=AppiumBy.NAME, value=self._player_a_data["metadata"][0]["xesam:title"])
+        self.driver.find_element(by=AppiumBy.NAME, value=self._player_a_data["metadata"][0]["xesam:album"])
         self.driver.find_element(by=AppiumBy.NAME, value="0:00")
         self.driver.find_element(by=AppiumBy.NAME, value="-10:00")
-        self.driver.find_element(by=AppiumBy.NAME, value=', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))
+        self.driver.find_element(by=AppiumBy.NAME, value=', '.join(self._player_a_data["metadata"][0]["xesam:artist"]))
 
         # Switch to the next song (need to click twice), and match again
         next_button.click()
@@ -144,11 +148,11 @@ class MediaControllerTests(PlasmaAppletTest):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Konqi's Favorite")))
         self.assertTrue(previous_button.is_enabled())
         self.assertFalse(next_button.is_enabled())
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:album"].get_string())
+        self.driver.find_element(by=AppiumBy.NAME, value=self._player_a_data["metadata"][2]["xesam:title"])
+        self.driver.find_element(by=AppiumBy.NAME, value=self._player_a_data["metadata"][2]["xesam:album"])
         self.driver.find_element(by=AppiumBy.NAME, value="0:00")
         self.driver.find_element(by=AppiumBy.NAME, value="-15:00")
-        self.driver.find_element(by=AppiumBy.NAME, value=', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))
+        self.driver.find_element(by=AppiumBy.NAME, value=', '.join(self._player_a_data["metadata"][2]["xesam:artist"]))
 
     @unittest.skipIf("KDECI_BUILD" in os.environ, "Too unstable to test in the CI")
     def test_touch_gestures(self) -> None:
@@ -156,7 +160,7 @@ class MediaControllerTests(PlasmaAppletTest):
         Tests touch gestures like swipe up/down/left/right to adjust volume/progress
         @see https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/2438
         """
-        assert self.mpris_interface
+        assert self.player_a
         wait: WebDriverWait = WebDriverWait(self.driver, 5)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "-5:00")))  # Remaining time
@@ -179,56 +183,50 @@ class MediaControllerTests(PlasmaAppletTest):
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x * 2, center_pos_y).pointer_up()
         action.perform()
-        self.mpris_interface.connection.flush_sync(None)
-        wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > 0)
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "Position").get_int64() > 0)
 
         # Swipe left -> Position--
-        old_position: int = self.mpris_interface.player_properties["Position"].get_int64()
+        old_position: int = self._get_player_property(self._player_a_bus_name(), "Position").get_int64()
         input_source = PointerInput(POINTER_TOUCH, "finger")
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(0, center_pos_y).pointer_up().pause(1)
         action.perform()
-        self.mpris_interface.connection.flush_sync(None)
-        wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() < old_position)
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "Position").get_int64() < old_position)
 
         # Swipe down: Volume--
         input_source = PointerInput(POINTER_TOUCH, "finger")
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, center_pos_y * 2).pointer_up().pause(1)
         action.perform()
-        self.mpris_interface.connection.flush_sync(None)
-        wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < 1.0)
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "Volume").get_double() < 1.0)
 
         # Swipe up: Volume++
-        old_volume: float = self.mpris_interface.player_properties["Volume"].get_double()
+        old_volume: float = self._get_player_property(self._player_a_bus_name(), "Volume").get_double()
         input_source = PointerInput(POINTER_TOUCH, "finger")
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, 0).pointer_up().pause(1)
         action.perform()
-        self.mpris_interface.connection.flush_sync(None)
-        wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() > old_volume)
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "Volume").get_double() > old_volume)
 
         # Swipe down and then swipe right, only volume should change
-        old_volume = self.mpris_interface.player_properties["Volume"].get_double()
-        old_position = self.mpris_interface.player_properties["Position"].get_int64()
+        old_volume = self._get_player_property(self._player_a_bus_name(), "Volume").get_double()
+        old_position = self._get_player_property(self._player_a_bus_name(), "Position").get_int64()
         input_source = PointerInput(POINTER_TOUCH, "finger")
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x, center_pos_y * 2).pause(0.5).move_to_location(center_pos_x * 2, center_pos_y * 2).pointer_up().pause(1)
         action.perform()
-        self.mpris_interface.connection.flush_sync(None)
-        wait.until(lambda _: self.mpris_interface.player_properties["Volume"].get_double() < old_volume)
-        self.assertEqual(old_position, self.mpris_interface.player_properties["Position"].get_int64())
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "Volume").get_double() < old_volume)
+        self.assertEqual(old_position, self._get_player_property(self._player_a_bus_name(), "Position").get_int64())
 
         # Swipe right and then swipe up, only position should change
-        old_volume = self.mpris_interface.player_properties["Volume"].get_double()
-        old_position = self.mpris_interface.player_properties["Position"].get_int64()
+        old_volume = self._get_player_property(self._player_a_bus_name(), "Volume").get_double()
+        old_position = self._get_player_property(self._player_a_bus_name(), "Position").get_int64()
         input_source = PointerInput(POINTER_TOUCH, "finger")
         action = ActionBuilder(self.driver, mouse=input_source, duration=500)
         action.pointer_action.move_to_location(center_pos_x, center_pos_y).pointer_down().move_to_location(center_pos_x * 2, center_pos_y).pause(0.5).move_to_location(center_pos_x * 2, 0).pointer_up().pause(1)
         action.perform()
-        self.mpris_interface.connection.flush_sync(None)
-        wait.until(lambda _: self.mpris_interface.player_properties["Position"].get_int64() > old_position)
-        self.assertAlmostEqual(old_volume, self.mpris_interface.player_properties["Volume"].get_double())
+        wait.until(lambda _: self._get_player_property(self._player_a_bus_name(), "Position").get_int64() > old_position)
+        self.assertAlmostEqual(old_volume, self._get_player_property(self._player_a_bus_name(), "Volume").get_double())
 
     def _cleanup_multiplexer(self) -> None:
         if self.player_b is not None:
@@ -247,8 +245,9 @@ class MediaControllerTests(PlasmaAppletTest):
         self.addCleanup(self._cleanup_multiplexer)
 
         # Wait until the first player is ready
+        assert self.player_a
         wait: WebDriverWait = WebDriverWait(self.driver, 3)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:title"])))
 
         # Start Player B, Total 2 players
         player_b_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_b.json")
@@ -259,7 +258,7 @@ class MediaControllerTests(PlasmaAppletTest):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "AppiumTest")))
 
         # Make sure the current index does not change after a new player appears
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())  # Title
+        self.driver.find_element(by=AppiumBy.NAME, value=self._player_a_data["metadata"][1]["xesam:title"])
 
         # Switch to Player B
         self.driver.find_element(by=AppiumBy.NAME, value="Audacious").click()
@@ -277,7 +276,7 @@ class MediaControllerTests(PlasmaAppletTest):
         # Switch to Multiplexer
         # A Paused, B Paused -> A (first added)
         self.driver.find_element(by=AppiumBy.NAME, value="Choose player automatically").click()
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:title"])))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
@@ -297,8 +296,8 @@ class MediaControllerTests(PlasmaAppletTest):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
 
         # A Playing, B Paused -> A
-        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        session_bus.call(self._player_a_bus_name(), Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:title"])))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
@@ -306,10 +305,10 @@ class MediaControllerTests(PlasmaAppletTest):
         # A Playing, B Playing -> Still A
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         sleep(1)
-        self.driver.find_element(by=AppiumBy.NAME, value=self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())  # Title
+        self.driver.find_element(by=AppiumBy.NAME, value=self._player_a_data["metadata"][1]["xesam:title"])
 
         # A Paused, B Playing -> B
-        session_bus.call(self.mpris_interface.APP_INTERFACE, Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
+        session_bus.call(self._player_a_bus_name(), Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, player_b_metadata[0]["xesam:title"].get_string())))
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until_not(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
@@ -326,7 +325,7 @@ class MediaControllerTests(PlasmaAppletTest):
 
         # A Paused, B Playing, C Playing -> Still B
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_browser.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Play", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
-        self.driver.find_element(by=AppiumBy.NAME, value=player_b_metadata[0]["xesam:title"].get_string())  # Title
+        self.driver.find_element(by=AppiumBy.NAME, value=player_b_metadata[0]["xesam:title"].get_string())
 
         # A Paused, B Paused, C Playing -> C
         session_bus.call(f"org.mpris.MediaPlayer2.appiumtest.instance{str(self.player_b.pid)}", Mpris2.OBJECT_PATH, Mpris2.PLAYER_IFACE.get_string(), "Pause", None, None, Gio.DBusSendMessageFlags.NONE, 1000)
@@ -337,13 +336,13 @@ class MediaControllerTests(PlasmaAppletTest):
         self.player_b.terminate()
         self.player_b.wait(10)
         self.player_b = None
-        self.driver.find_element(by=AppiumBy.NAME, value=browser_json_data["metadata"][0]["xesam:title"])  # Title
+        self.driver.find_element(by=AppiumBy.NAME, value=browser_json_data["metadata"][0]["xesam:title"])
 
         # Close C -> A
         self.player_browser.terminate()
         self.player_browser.wait(10)
         self.player_browser = None
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:title"])))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Play")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Next Track")))
         wait.until(EC.element_to_be_clickable((AppiumBy.NAME, "Previous Track")))
@@ -373,8 +372,9 @@ class MediaControllerTests(PlasmaAppletTest):
         self.addCleanup(self._cleanup_filter_plasma_browser_integration)
 
         # Make sure the active player is not the browser so the bug can be tested
+        assert self.player_a
         wait = WebDriverWait(self.driver, 3)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:title"].get_string())))  # Title
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, self._player_a_data["metadata"][1]["xesam:title"])))
 
         player_browser_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_browser.json")
         with open(player_browser_json_path, "r", encoding="utf-8") as f:
@@ -442,20 +442,24 @@ class MediaControllerTests(PlasmaAppletTest):
         Do not crash when a player is invalid or its DBus interface returns any errors on initialization
         @see https://bugs.kde.org/show_bug.cgi?id=477144
         """
-        if self.mpris_interface is not None:
-            self.mpris_interface.quit()
+        if self.player_a is not None:
+            self.player_a.terminate()
+            self.player_a.wait(10)
+            self.player_a = None
 
         placeholder_element: WebElement = self.driver.find_element(AppiumBy.NAME, "No media playing")
-        self.mpris_interface = InvalidMpris2()
-        self.assertTrue(self.mpris_interface.registered_event.wait(10))
+        self.player_a = subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), "--invalid"))
+        WebDriverWait(self.driver, 10).until(lambda _: placeholder_element.is_displayed())
         self.assertTrue(placeholder_element.is_displayed())
 
     def test_bug477335_decode_xesam_url(self) -> None:
         """
         Make sure "xesam_url" is decoded before using it in other places like album name
         """
-        if self.mpris_interface is not None:
-            self.mpris_interface.quit()
+        if self.player_a is not None:
+            self.player_a.terminate()
+            self.player_a.wait(10)
+            self.player_a = None
 
         player_with_encoded_url_json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_with_encoded_url.json")
         with subprocess.Popen(("python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "mediaplayer.py"), player_with_encoded_url_json_path)) as player_with_encoded_url:
