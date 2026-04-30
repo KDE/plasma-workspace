@@ -16,6 +16,7 @@
 #include <QObject>
 #include <QPixmap>
 #include <QPoint>
+#include <QTimer>
 
 #include <xcb/xcb.h>
 #include <xcb/xcb_image.h>
@@ -154,4 +155,5 @@ private:
     static int s_serviceCount;
     QPixmap m_pixmap;
     InjectMode m_injectMode;
+    QTimer m_deactivateTimer;
 };

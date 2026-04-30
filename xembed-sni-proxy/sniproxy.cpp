@@ -106,6 +106,12 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     registerNotifierItem();
     QObject::connect(&m_dbusWatcher, &QDBusServiceWatcher::serviceRegistered, this, &SNIProxy::watcherServiceRegistered);
 
+    m_deactivateTimer.setSingleShot(true);
+    m_deactivateTimer.setInterval(300);
+    connect(&m_deactivateTimer, &QTimer::timeout, this, [this]() {
+        setActiveForInput(false);
+    });
+
     auto c = m_x11Interface->connection();
 
     // create a container window
@@ -649,9 +655,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         // then kwin, then back to X
         // we need to delay slightly until that happens
         if (qgetenv("XDG_SESSION_TYPE") == QByteArrayLiteral("wayland")) {
-            QTimer::singleShot(300, this, [this]() {
-                setActiveForInput(false);
-            });
+            m_deactivateTimer.start();
         } else {
             setActiveForInput(false);
         }
