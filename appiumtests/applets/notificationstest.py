@@ -70,7 +70,7 @@ class NotificationsTest(PlasmaAppletTest):
         for button in self.driver.find_elements(AppiumBy.XPATH, "//button[@name='Close']"):
             try:
                 button.click()
-                wait.until_not(lambda _: button.is_displayed())
+                wait.until(EC.invisibility_of_element(button))
             except WebDriverException:
                 pass
 
@@ -156,7 +156,7 @@ class NotificationsTest(PlasmaAppletTest):
             "timeout": 2000,
         })
         element = self.driver.find_element(AppiumBy.NAME, summary)
-        WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
+        WebDriverWait(self.driver, 5).until(EC.invisibility_of_element(element))
 
     def test_3_accessible_description_html_to_plaintext(self) -> None:
         """
@@ -227,7 +227,7 @@ class NotificationsTest(PlasmaAppletTest):
         self.assertTrue(notification_closed)
         self.assertEqual(params_3[0], notification_id)
         self.assertEqual(params_3[1], 3)  # reason: Revoked
-        WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
+        WebDriverWait(self.driver, 5).until(EC.invisibility_of_element(element))
 
         # Test actions in the history list
         # Consolidates https://invent.kde.org/plasma/plasma-workspace/-/commit/568f4c6cb2a2e0716538350cb9b1a4469838575b
@@ -259,7 +259,7 @@ class NotificationsTest(PlasmaAppletTest):
             self.assertTrue(notification_closed)
             self.assertEqual(params_3[0], notification_ids[i])
             self.assertEqual(params_3[1], 3)  # reason: Revoked
-            WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
+            WebDriverWait(self.driver, 5).until(EC.invisibility_of_element(element))
 
     def test_5_inline_reply(self) -> None:
         """
@@ -462,7 +462,7 @@ class NotificationsTest(PlasmaAppletTest):
 
         # Notifications can only be cleared after they are expired, otherwise they will stay in the list
         self.driver.find_element(AppiumBy.NAME, "Clear All Notifications").click()
-        WebDriverWait(self.driver, 5).until_not(lambda _: title.is_displayed())
+        WebDriverWait(self.driver, 5).until(EC.invisibility_of_element(title))
 
 
 if __name__ == '__main__':

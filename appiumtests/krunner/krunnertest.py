@@ -74,7 +74,7 @@ class KRunnerTest(unittest.TestCase):
 
         actions = ActionChains(self.driver)
         actions.send_keys(Keys.ESCAPE).perform()
-        wait.until_not(lambda _: button_element.is_displayed())
+        wait.until(EC.invisibility_of_element(button_element))
 
 
 if __name__ == '__main__':

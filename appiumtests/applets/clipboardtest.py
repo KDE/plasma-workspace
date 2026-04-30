@@ -22,6 +22,7 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.common.exceptions import (NoSuchElementException, WebDriverException)
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.interaction import POINTER_MOUSE
@@ -245,14 +246,14 @@ class ClipboardTest(unittest.TestCase):
         # BUG 494145: update uuid after editing so the item can be removed
         delete_button = app.driver.find_element(AppiumBy.NAME, "Remove from history")
         delete_button.click()
-        WebDriverWait(app.driver, 5).until_not(lambda _: delete_button.is_displayed())
+        WebDriverWait(app.driver, 5).until(EC.invisibility_of_element(delete_button))
         # The first item becomes the current clipboard item
         self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "clipboard")
 
         item = app.driver.find_element(AppiumBy.NAME, "clipboard")
         app.driver.find_element(AppiumBy.NAME, "Clear History").click()
         app.driver.find_element(AppiumBy.NAME, "Delete").click()
-        WebDriverWait(app.driver, 5).until_not(lambda _: item.is_displayed())
+        WebDriverWait(app.driver, 5).until(EC.invisibility_of_element(item))
 
         # Star/Pin feature
         app.klipper_proxy.clearClipboardHistory()
@@ -271,7 +272,7 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(app.driver).send_keys(Keys.DOWN).perform()
         app.driver.find_element(AppiumBy.NAME, "Remove Star").click()
         app.driver.find_element(AppiumBy.NAME, "normal 1")
-        WebDriverWait(app.driver, 5).until_not(lambda _: tabbar_element.is_displayed())
+        WebDriverWait(app.driver, 5).until(EC.invisibility_of_element(tabbar_element))
 
     def update_config(self, group: str | list[str], key: str | list[str], new_value: str | list[str]) -> None:
         if isinstance(group, str):

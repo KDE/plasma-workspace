@@ -12,6 +12,7 @@ from typing import Final
 
 import gi
 from appium.webdriver.common.appiumby import AppiumBy
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 gi.require_version('Gdk', '4.0')
@@ -68,7 +69,7 @@ class KCMCursorThemeTest(KCMTest):
         self.driver.find_element(AppiumBy.NAME, "Blinking")
         close_button = self.driver.find_element(AppiumBy.XPATH, "//button[@name='Close' and contains(@accessibility-id, 'LaunchFeedbackDialog')]")
         close_button.click()
-        WebDriverWait(self.driver, 10).until_not(lambda _: close_button.is_displayed())
+        WebDriverWait(self.driver, 10).until(EC.invisibility_of_element(close_button))
 
     def test_1_cursor_theme_preview(self) -> None:
         """

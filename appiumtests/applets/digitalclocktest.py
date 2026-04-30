@@ -114,7 +114,7 @@ class DigitalClockTests(PlasmaAppletTest):
         plugin_checkbox.click()
         # Switch back to Appearance so there will only be one "Holidays" match
         self.driver.find_element(AppiumBy.NAME, "Appearance").click()
-        wait.until_not(lambda _: plugin_checkbox.is_displayed())
+        wait.until(EC.invisibility_of_element(plugin_checkbox))
         # Switch to the calendar plugin
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Holidays"))).click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Search")))

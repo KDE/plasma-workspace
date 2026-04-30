@@ -14,6 +14,7 @@ from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 WIDGET_ID: Final = "org.kde.plasma.appmenu"
@@ -106,8 +107,8 @@ class AppMenuTest(unittest.TestCase):
         app.terminate()
         app.wait()
         wait = WebDriverWait(self.driver, 5)
-        wait.until_not(lambda _: menu1.is_displayed())
-        wait.until_not(lambda _: menu2.is_displayed())
+        wait.until(EC.invisibility_of_element(menu1))
+        wait.until(EC.invisibility_of_element(menu2))
 
 
 if __name__ == '__main__':

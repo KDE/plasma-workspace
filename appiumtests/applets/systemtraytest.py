@@ -485,7 +485,7 @@ class SystemTrayTests(unittest.TestCase):
             # The tray icon is a red square
             self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))
             process.kill()
-        WebDriverWait(self.driver, 10).until_not(lambda _: element.is_displayed())
+        WebDriverWait(self.driver, 10).until(EC.invisibility_of_element(element))
 
     @unittest.skipIf(os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0", "In openbox, the popup is not focused by default, so sending keys will not work.")
     def test_3_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
@@ -507,7 +507,7 @@ class SystemTrayTests(unittest.TestCase):
         element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Do not disturb")))
 
         self.driver.find_element(AppiumBy.NAME, "Go Back").click()
-        wait.until_not(lambda _: element.is_displayed())
+        wait.until(EC.invisibility_of_element(element))
 
         if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
             subprocess.check_call(["xdotool", "key", "Escape"])
@@ -528,7 +528,7 @@ class SystemTrayTests(unittest.TestCase):
             )
             process.terminate()
             process.wait()
-        WebDriverWait(self.driver, 10).until_not(lambda _: element.is_displayed())
+        WebDriverWait(self.driver, 10).until(EC.invisibility_of_element(element))
 
 
 if __name__ == '__main__':
