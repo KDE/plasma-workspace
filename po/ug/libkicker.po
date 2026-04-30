@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-04-30 00:46+0000\n"
 "PO-Revision-Date: 2026-02-09 18:15-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -227,7 +227,7 @@ msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
 msgid "Power / Session"
 msgstr "توك مەنبە / جەريانچاق"
 
-#: runnermodel.cpp:226
+#: runnermodel.cpp:265
 #, kde-format
 msgid "Search results"
 msgstr "ئىزدەش نەتىجىسى"

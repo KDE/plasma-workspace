@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:48+0000\n"
-"PO-Revision-Date: 2026-03-20 03:40+0100\n"
+"PO-Revision-Date: 2026-04-29 05:44+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "%1-დან გასვლა"
 
 #: qml/config.qml:13
 #, kde-format

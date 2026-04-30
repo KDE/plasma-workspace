@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:46+0000\n"
+"POT-Creation-Date: 2026-04-30 00:46+0000\n"
 "PO-Revision-Date: 2024-07-28 22:58+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <>\n"
@@ -228,7 +228,7 @@ msgstr "Frequentmen usat applicationes"
 msgid "Power / Session"
 msgstr ""
 
-#: runnermodel.cpp:226
+#: runnermodel.cpp:265
 #, kde-format
 msgid "Search results"
 msgstr "Resultates de sercha"

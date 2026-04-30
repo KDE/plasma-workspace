@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "Ukončiť %1"
 
 #: qml/config.qml:13
 #, kde-format
