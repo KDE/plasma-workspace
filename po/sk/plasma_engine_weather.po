@@ -115,7 +115,7 @@ msgstr "prehánky krúp"
 #, kde-format
 msgctxt "weather condition"
 msgid "hazy"
-msgstr "hmlisto"
+msgstr "oparno"
 
 #: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:178
 #, kde-format
@@ -225,13 +225,13 @@ msgstr "slabé snehové prehánky"
 #, kde-format
 msgctxt "weather condition"
 msgid "mist"
-msgstr "opar"
+msgstr "hmla"
 
 #: bbcukmet_i18n.dat:35
 #, kde-format
 msgctxt "weather condition"
 msgid "misty"
-msgstr "hmlisto"
+msgstr "hmlovito"
 
 #: bbcukmet_i18n.dat:36 envcan_i18n.dat:1 noaa_i18n.dat:264
 #, kde-format
@@ -940,7 +940,7 @@ msgstr "Prevažne slnečno"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mist"
-msgstr "Opar"
+msgstr "Hmla"
 
 #: envcan_i18n.dat:50
 #, kde-format
@@ -1276,7 +1276,7 @@ msgstr "Kombinácia slnka a mrakov"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blizzard"
-msgstr "Snehová búrka"
+msgstr "Víchrica"
 
 #: envcan_i18n.dat:106
 #, kde-format
@@ -3921,7 +3921,7 @@ msgstr "Polooblačno s oparom"
 #, kde-format
 msgctxt "weather condition"
 msgid "Patchy Freezing Fog"
-msgstr "Silná mrznúca hmla"
+msgstr "Miestami mrznúca hmla"
 
 #: noaa_i18n.dat:179
 #, kde-format
@@ -4389,7 +4389,7 @@ msgstr "Búrka s krúpkami/zmrznutým dažďom"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Snow"
-msgstr "Snehová búrka"
+msgstr "Búrka so snehom"
 
 #: noaa_i18n.dat:262
 #, kde-format
@@ -4425,7 +4425,7 @@ msgstr "Morské tornádo"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Spray"
-msgstr "Mrznúci dážď"
+msgstr "Mrznúci morský aerosól"
 
 #: noaa_i18n.dat:269
 #, kde-format
@@ -4749,7 +4749,7 @@ msgstr "Dažďové prehánky"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Sleet"
-msgstr "Dážď so snehom"
+msgstr "Ľadové krúpy"
 
 #: noaa_i18n.dat:329
 #, kde-format
@@ -4875,7 +4875,7 @@ msgstr "Ubúdanie oblačnosti"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Sunny"
-msgstr "Slnečno"
+msgstr "Zlepšujúce sa na slnečno"
 
 #: noaa_i18n.dat:356
 #, kde-format
