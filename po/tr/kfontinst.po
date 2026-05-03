@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2026-03-09 21:08+0300\n"
+"PO-Revision-Date: 2026-05-02 19:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,12 +23,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Serdar Soytetir, Onur Küçük, H. İbrahim Güngör, Volkan Gezer"
+msgstr "Serdar SOYTETİR, Onur Küçük, H. İbrahim GÜNGÖR, Volkan GEZER"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -482,7 +482,7 @@ msgstr ""
 #: kcmfontinst/GroupList.cpp:702
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>“<b>%1</b>” adlı bir grup halihazırda var.</qt>"
+msgstr "<qt>“<b>%1</b>” adlı bir grup hâlihazırda var.</qt>"
 
 #: kcmfontinst/GroupList.cpp:793
 #, kde-format
@@ -622,7 +622,7 @@ msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
-"<i>%1</i>, sisteminizde halihazırda kurulu olan <b>%2</b> yazıtipini "
+"<i>%1</i>, sisteminizde hâlihazırda kurulu olan <b>%2</b> yazıtipini "
 "içeriyor."
 
 #: kcmfontinst/JobRunner.cpp:700
@@ -1195,7 +1195,7 @@ msgstr "%1 bir bitmap yazıtipi ve bu yazıtipleri sisteminizde devre dışı."
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
-"%1, sisteminizde halihazırda kurulu olan <b>%2</b> yazıtipini içeriyor."
+"%1, sisteminizde hâlihazırda kurulu olan <b>%2</b> yazıtipini içeriyor."
 
 #: kio/KioFonts.cpp:714
 #, kde-format

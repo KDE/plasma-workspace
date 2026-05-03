@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-03-21 13:16+0300\n"
+"PO-Revision-Date: 2026-05-02 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Volkan Gezer, Emir SARI"
+msgstr "Volkan GEZER, Emir SARI"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -289,7 +289,7 @@ msgstr "Onayla"
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr "Bu adda veya aynı kimliğe sahip bir global tema halihazırda var."
+msgstr "Bu adda veya aynı kimliğe sahip bir global tema hâlihazırda var."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format

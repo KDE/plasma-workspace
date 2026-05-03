@@ -66,7 +66,7 @@
 >$HOME/.config/plasma-workspace/env</filename
 > dosyasını başlangıç öncesi betikleri ve <filename class="directory"
 >$HOME/.config/plasma-workspace/shutdown</filename
-> dosyasını oturumu kapatma betikleri için; hangi programların ve betiklerin halihazırda orada olduğunu denetler ve onları görüntüler. Bu araçla ile, bunları kolayca yönetebilirsiniz. </para>
+> dosyasını oturumu kapatma betikleri için; hangi programların ve betiklerin hâlihazırda orada olduğunu denetler ve onları görüntüler. Bu araçla ile, bunları kolayca yönetebilirsiniz. </para>
 
 <para
 >Oturum açma betikleri, bir <literal
