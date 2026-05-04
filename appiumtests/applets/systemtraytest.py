@@ -528,6 +528,27 @@ class SystemTrayTests(unittest.TestCase):
             )
             process.terminate()
             process.wait()
+
+        # Wait for the DBus name to be released before checking UI.
+        # This ensures the QDBusServiceWatcher has received the NameOwnerChanged signal.
+        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+        bus_name = "org.kde.testdbusactivation"
+        for _ in range(20):  # Wait up to 20 seconds for DBus name release
+            message: Gio.DBusMessage = Gio.DBusMessage.new_method_call(
+                "org.freedesktop.DBus", "/", "org.freedesktop.DBus", "NameHasOwner"
+            )
+            message.set_body(GLib.Variant("(s)", [bus_name]))
+            reply, _ = session_bus.send_message_with_reply_sync(
+                message, Gio.DBusSendMessageFlags.NONE, 1000
+            )
+            if reply and reply.get_signature() == "b":
+                has_owner = reply.get_body().get_child_value(0).get_boolean()
+                if not has_owner:
+                    break
+            time.sleep(1)
+        else:
+            logging.warning(f"DBus name {bus_name} still has owner after 20 seconds")
+
         WebDriverWait(self.driver, 10).until(EC.invisibility_of_element(element))
 
 
