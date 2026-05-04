@@ -16,6 +16,7 @@
 #include <KRunner/RunnerManager>
 #include <chrono>
 #include <optional>
+#include <qtmetamacros.h>
 
 using namespace std::chrono_literals;
 
@@ -73,6 +74,7 @@ void RunnerModel::setFavoritesModel(AbstractModel *model)
 
         if (!m_query.isEmpty()) {
             m_queryTimer.start();
+            Q_EMIT queryingChanged();
         }
 
         Q_EMIT favoritesModelChanged();
@@ -93,6 +95,7 @@ void RunnerModel::setAppletInterface(QObject *appletInterface)
 
         if (!m_query.isEmpty()) {
             m_queryTimer.start();
+            Q_EMIT queryingChanged();
         }
 
         Q_EMIT appletInterfaceChanged();
@@ -220,7 +223,7 @@ QString RunnerModel::query() const
 
 bool RunnerModel::querying() const
 {
-    return m_queryingModels > 0;
+    return m_queryingModels > 0 || m_queryTimer.isActive();
 }
 
 void RunnerModel::setQuery(const QString &query)
@@ -234,6 +237,7 @@ void RunnerModel::setQuery(const QString &query)
     m_query = query;
     m_queryTimer.start();
     Q_EMIT queryChanged();
+    Q_EMIT queryingChanged();
 }
 
 void RunnerModel::startQuery()
@@ -242,11 +246,14 @@ void RunnerModel::startQuery()
         clear();
         QTimer::singleShot(0, this, &RunnerModel::queryFinished);
     } else {
+        const bool wasQuerying = querying();
         m_queryingModels += m_models.size();
         for (KRunner::ResultsModel *model : std::as_const(m_models)) {
             model->setQueryString(m_query);
         }
-        Q_EMIT queryingChanged();
+        if (!wasQuerying) {
+            Q_EMIT queryingChanged();
+        }
     }
 }
 
