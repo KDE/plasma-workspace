@@ -60,6 +60,8 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
         return;
     }
 
+    m_hasAppletError = QByteArrayView(m_appletInterface->metaObject()->className()).startsWith("AppletError");
+
     m_appletInterface->setParentItem(m_rootObject);
     m_rootObject->setProperty("appletInterface", QVariant::fromValue(m_appletInterface.data()));
     m_appletInterface->setVisible(true);
@@ -331,6 +333,11 @@ void PlasmaWindowedView::updateSniStatus()
         m_statusNotifier->setStatus(KStatusNotifierItem::NeedsAttention);
         break;
     }
+}
+
+bool PlasmaWindowedView::hasAppletError() const
+{
+    return m_hasAppletError;
 }
 
 #include "moc_plasmawindowedview.cpp"

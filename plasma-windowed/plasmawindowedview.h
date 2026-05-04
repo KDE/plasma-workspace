@@ -26,6 +26,8 @@ public:
     void setHasStatusNotifier(bool stay);
     void showConfigurationInterface();
 
+    bool hasAppletError() const;
+
 protected:
     void resizeEvent(QResizeEvent *ev) override;
     void exposeEvent(QExposeEvent *ev) override;
@@ -54,4 +56,5 @@ private:
     QPointer<QQuickItem> m_appletInterface;
     QPointer<KStatusNotifierItem> m_statusNotifier;
     bool m_withStatusNotifier;
+    bool m_hasAppletError = false;
 };

@@ -11,16 +11,23 @@
 #include <QCommandLineOption>
 #include <QCommandLineParser>
 #include <QQmlDebuggingEnabler>
+#include <QQmlEngine>
 #include <QSurfaceFormat>
+#include <QTimer>
 
 #include <KDBusService>
 #include <KLocalizedString>
 #include <KSignalHandler>
 
+#include <PlasmaQuick/PlasmaQuick>
+
 #include "plasmawindowedcorona.h"
 #include "plasmawindowedview.h"
 
 static const char version[] = "1.0";
+
+using namespace std::chrono_literals;
+using namespace Qt::Literals;
 
 int main(int argc, char **argv)
 {
@@ -63,6 +70,7 @@ int main(int argc, char **argv)
     parser.addOption(shellPluginOption);
     parser.addPositionalArgument(QStringLiteral("applet"), i18n("The applet to open."));
     parser.addPositionalArgument(QStringLiteral("args"), i18n("Arguments to pass to the plasmoid."), QStringLiteral("[args...]"));
+    parser.addOption(QCommandLineOption(QStringLiteral("smoke-test"), i18n("Internal, for testing")));
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
@@ -70,6 +78,12 @@ int main(int argc, char **argv)
     if (parser.positionalArguments().isEmpty()) {
         parser.showHelp(1);
     }
+
+    auto engine = PlasmaQuick::globalEngine();
+    bool hasWarning = false;
+    QObject::connect(engine.get(), &QQmlEngine::warnings, &app, [&hasWarning](const QList<QQmlError> & /*warnings*/) {
+        hasWarning = true;
+    });
 
     auto corona = std::make_unique<PlasmaWindowedCorona>(parser.value(shellPluginOption));
 
@@ -91,6 +105,16 @@ int main(int argc, char **argv)
             app.quit();
         }
     });
+
+    if (parser.isSet(u"smoke-test"_s)) {
+        QTimer::singleShot(250ms, &app, [&app, hasWarning, &corona] {
+            if (corona->hasAppletError() || hasWarning) {
+                app.exit(1);
+            } else {
+                app.quit();
+            }
+        });
+    }
 
     return app.exec();
 }

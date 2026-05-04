@@ -176,4 +176,9 @@ void PlasmaWindowedCorona::setHasStatusNotifier(bool stay)
     m_hasStatusNotifier = stay;
 }
 
+bool PlasmaWindowedCorona::hasAppletError() const
+{
+    return m_view ? m_view->hasAppletError() : false;
+}
+
 #include "moc_plasmawindowedcorona.cpp"

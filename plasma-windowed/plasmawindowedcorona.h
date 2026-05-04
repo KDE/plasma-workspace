@@ -23,6 +23,7 @@ public:
 
     void setHasStatusNotifier(bool stay);
     void loadApplet(const QString &applet, const QVariantList &arguments);
+    bool hasAppletError() const;
 
 public Q_SLOTS:
     void load();
