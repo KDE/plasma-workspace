@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014-2015, 2017, 2019-2021, 2024-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # SPDX-FileCopyrightText: 2025 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-30 00:46+0000\n"
-"PO-Revision-Date: 2025-05-18 09:02+0200\n"
-"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
+"PO-Revision-Date: 2026-04-24 18:06+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -149,10 +149,9 @@ msgid "Open Containing Folder"
 msgstr "Apri cartella contenitore"
 
 #: recentusagemodel.cpp:366
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Dimentica file"
+msgstr "Dimentica cartella"
 
 #: recentusagemodel.cpp:366
 #, kde-format
@@ -170,10 +169,9 @@ msgid "Forget All Applications"
 msgstr "Dimentica tutte le applicazioni"
 
 #: recentusagemodel.cpp:516
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Dimentica tutti i file"
+msgstr "Dimentica tutte le cartelle"
 
 #: recentusagemodel.cpp:519
 #, kde-format
@@ -196,16 +194,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Questo non dovrebbe essere visibile! Usa KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "File recenti"
+msgstr "Risorse recenti"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "File utilizzati spesso"
+msgstr "Risorse utilizzate spesso"
 
 #: rootmodel.cpp:587
 #, kde-format
