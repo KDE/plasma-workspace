@@ -314,7 +314,6 @@ KCMUtils.ScrollViewKCM {
     view: ListView {
         id: itemsList
 
-        property real visibilityColumnWidth: Kirigami.Units.gridUnit
         property real keySequenceColumnWidth: Kirigami.Units.gridUnit
         readonly property int iconSize: Kirigami.Units.iconSizes.smallMedium
 
@@ -434,8 +433,6 @@ KCMUtils.ScrollViewKCM {
                 QQC2.ComboBox {
                     id: visibilityComboBox
 
-                    property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
-
                     readonly property string currentVisibility: iconsPage.changedVisibility.has(listItem.itemId) ? iconsPage.changedVisibility.get(listItem.itemId).replace("-sni", "") : originalVisibility
                     readonly property string originalVisibility: {
                         if (iconsPage.cfg_showAllItems || iconsPage.cfg_shownItems.indexOf(listItem.itemId) !== -1) {
@@ -449,8 +446,7 @@ KCMUtils.ScrollViewKCM {
                         }
                     }
 
-                    implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
-                    Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
+                    implicitContentWidthPolicy: QQC2.ComboBox.WidestText
 
                     enabled: !iconsPage.cfg_showAllItems && listItem.itemId
                     textRole: "text"
@@ -479,6 +475,7 @@ KCMUtils.ScrollViewKCM {
                         iconsPage.changedVisibilityChanged();
                     }
                 }
+
                 KQC.KeySequenceItem {
                     id: keySequenceItem
                     Layout.minimumWidth: itemsList.keySequenceColumnWidth
