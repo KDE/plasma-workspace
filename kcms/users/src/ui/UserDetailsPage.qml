@@ -117,11 +117,14 @@ KCM.SimpleKCM {
             ? xi18nc("@info:usagetip", "%1 is currently logged in, so their files cannot be deleted. Delete just the account instead?<nl/><nl/>This will make %1 unable to log in again, and they may experience strange behaviors until they log out.", usersDetailPage.user.displayPrimaryName)
             : i18nc("@info:usagetip", "%1 is currently logged in. Deleting the account will make them unable to log in again, and they may experience strange behaviors until they log out.", usersDetailPage.user.displayPrimaryName)
         dialogType: Kirigami.PromptDialog.Warning
-        standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+        standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Discard | Kirigami.Dialog.Cancel
 
         onAccepted: kcm.mainUi.deleteUser(usersDetailPage.user.uid, false)
+        onDiscarded: kcm.terminateUser(usersDetailPage.user.uid)
 
         Component.onCompleted: {
+            standardButton(Kirigami.Dialog.Discard).text = i18nc("@action: button", "Terminate %1", usersDetailPage.user.realName)
+            standardButton(Kirigami.Dialog.Discard).icon.name = "process-stop"
             standardButton(Kirigami.Dialog.Ok).text = i18nc("@action: button", "Delete %1", usersDetailPage.user.realName)
             standardButton(Kirigami.Dialog.Ok).icon.name = "edit-delete"
         }

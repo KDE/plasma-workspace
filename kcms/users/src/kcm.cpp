@@ -21,6 +21,8 @@
 #include <QTemporaryFile>
 #include <QTimer>
 #include <QtQuick/QQuickItem>
+#include <qdbusconnection.h>
+#include <qdbuspendingreply.h>
 
 #include "accounts_interface.h"
 #include "maskmousearea.h"
@@ -31,6 +33,12 @@ Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
 K_PLUGIN_CLASS_WITH_JSON(KCMUser, "kcm_users.json")
 
 using namespace Qt::StringLiterals;
+
+static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
+static const QString s_login1Path = QStringLiteral("/org/freedesktop/login1");
+static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
+static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
+static const QString s_login1TerminateUser = QStringLiteral("TerminateUser");
 
 KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
@@ -85,6 +93,19 @@ bool KCMUser::createUser(const QString &name, const QString &realName, const QSt
 bool KCMUser::deleteUser(qint64 id, bool deleteHome)
 {
     QDBusPendingReply<> reply = m_dbusInterface->DeleteUser(id, deleteHome);
+    reply.waitForFinished();
+    if (reply.isError()) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+bool KCMUser::terminateUser(qint64 id)
+{
+    QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, s_login1TerminateUser);
+    message.setArguments({id});
+    QDBusPendingReply<> reply = QDBusConnection::systemBus().asyncCall(message);
     reply.waitForFinished();
     if (reply.isError()) {
         return false;
