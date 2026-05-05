@@ -91,3 +91,4 @@ Options:
  clang-format-versions: [14, 18]
  run-qmllint: True
  gcovr-arguments: '--merge-mode-functions=separate'
+ ctest-arguments: '--repeat until-fail:5'
