@@ -29,13 +29,6 @@ qt_add_dbus_interface(kcm_users_DBUS_SRCS
     properties_interface
 )
 
-set(login1_manager_xml org.freedesktop.login1.Manager.xml)
-set_source_files_properties(${login1_manager_xml} PROPERTIES INCLUDE "usersessions.h")
-qt_add_dbus_interface(kcm_users_DBUS_SRCS
-    ${login1_manager_xml}
-    login1_interface
-)
-
 kcmutils_add_qml_kcm(kcm_users)
 target_sources(kcm_users PRIVATE
     kcm.cpp
