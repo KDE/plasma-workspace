@@ -480,12 +480,27 @@ KCMUtils.ScrollViewKCM {
                     id: keySequenceItem
                     Layout.minimumWidth: itemsList.keySequenceColumnWidth
                     Layout.preferredWidth: itemsList.keySequenceColumnWidth
-                    Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+
+                    // We want to keep the column the same size for all items,
+                    // but only when not inputting a new shortcut, as the length
+                    // of the shortcut may vary quite a bit while inputting. So
+                    // rather than binding to widthChanged, we update the maximum
+                    // column width only at specific moments: When the item is
+                    // first added, or when we know the shortcut has changed and
+                    // no further input happens.
+                    function updateColumnWidth() {
+                        itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth);
+                    }
+
+                    // Delay this one tick to make sure the item has finished
+                    // any layout that still needs to be done.
+                    Component.onCompleted: Qt.callLater(updateColumnWidth)
 
                     visible: listItem.isPlasmoid
                     enabled: visibilityComboBox.currentValue !== "disabled"
                     readonly property string originalKeySequence: listItem.applet ? listItem.applet.plasmoid.globalShortcut : ""
                     keySequence: iconsPage.changedShortcuts.has(listItem.applet?.plasmoid) ? iconsPage.changedShortcuts.get(listItem.applet?.plasmoid) : originalKeySequence
+
                     onCaptureFinished: {
                         if (listItem.applet) {
                             if (keySequence !== listItem.applet.plasmoid.globalShortcut) {
@@ -493,9 +508,9 @@ KCMUtils.ScrollViewKCM {
                             } else {
                                 iconsPage.changedShortcuts.delete(listItem.applet.plasmoid);
                             }
-
-                            itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth);
                             iconsPage.changedShortcutsChanged();
+
+                            updateColumnWidth()
                         }
                     }
                 }
