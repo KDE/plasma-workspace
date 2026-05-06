@@ -125,7 +125,7 @@ msgstr "最近使用"
 #: recentusagemodel.cpp:158
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "位置"
 
 #: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "打开所在文件夹"
 #: recentusagemodel.cpp:366
 #, kde-format
 msgid "Forget Folder"
-msgstr ""
+msgstr "忘记文件夹"
 
 #: recentusagemodel.cpp:366
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "忘记全部应用程序"
 #: recentusagemodel.cpp:516
 #, kde-format
 msgid "Forget All Folders"
-msgstr ""
+msgstr "忘记所有文件夹"
 
 #: recentusagemodel.cpp:519
 #, kde-format
@@ -195,12 +195,12 @@ msgstr "这不应该可见！请用 KICKER_FAVORITES_MODEL"
 #: rootmodel.cpp:578
 #, kde-format
 msgid "Recent Places"
-msgstr ""
+msgstr "最近位置"
 
 #: rootmodel.cpp:578
 #, kde-format
 msgid "Often Used Places"
-msgstr ""
+msgstr "常用位置"
 
 #: rootmodel.cpp:587
 #, kde-format
