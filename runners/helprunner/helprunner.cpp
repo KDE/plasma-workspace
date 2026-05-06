@@ -12,7 +12,7 @@
 
 HelpRunner::HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData)
     : AbstractRunner(parent, pluginMetaData)
-    , m_actionList({Action(QStringLiteral("configure"), i18n("Configure plugin"), QStringLiteral("configure"))})
+    , m_actionList({Action(QStringLiteral("configure"), QStringLiteral("configure-symbolic"), i18n("Configure plugin"))})
 {
     setTriggerWords({i18nc("this is a runner keyword", "help"), QStringLiteral("?")});
     m_manager = qobject_cast<RunnerManager *>(parent);
