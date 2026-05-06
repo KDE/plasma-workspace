@@ -8,6 +8,8 @@
 import QtQuick
 import org.kde.kirigami as Kirigami
 
+import org.kde.plasma.workspace.osd
+
 OsdWindow {
 
     LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft

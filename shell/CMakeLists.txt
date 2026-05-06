@@ -75,6 +75,7 @@ ecm_add_qml_module(plasmashell
 ecm_add_qml_module(plasmashell_osd
     URI "org.kde.plasma.workspace.osd"
     GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtQuick
 )
 ecm_target_qml_sources(plasmashell_osd SOURCES
     qml/Osd.qml
