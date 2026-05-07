@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-04-13 18:25+0000\n"
+"PO-Revision-Date: 2026-05-06 10:34+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -202,10 +202,7 @@ msgstr ""
 "höfund græjunnar til að fá uppfærða útgáfu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -214,17 +211,15 @@ msgstr ""
 "Plasma til að geta notað græjuna."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Þessi græja var gerð fyrir Plasma %1 og virkar ekki í nýjustu útgáfunni af "
-"Plasma. Uppfærðu Plasma til að geta notað græjuna."
+"Þessi græja var gerð fyrir Plasma %1 og virkar ekki í eldri útgáfunni af "
+"Plasma sem er uppsett á þessu kerfi. Uppfærðu Plasma til að geta notað "
+"græjuna."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
