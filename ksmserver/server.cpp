@@ -54,7 +54,6 @@
 #include <QRegularExpression>
 #include <QScopeGuard>
 #include <QSocketNotifier>
-#include <QStandardPaths>
 
 #include <KNotification>
 #include <KSharedConfig>

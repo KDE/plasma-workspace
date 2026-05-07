@@ -12,7 +12,6 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
-#include <QGuiApplication>
 #include <QOpenGLShaderProgram>
 #include <QQmlContext>
 #include <QQmlEngine>

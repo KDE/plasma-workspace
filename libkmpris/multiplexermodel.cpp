@@ -4,8 +4,6 @@
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
-#include "multiplexermodel.h"
-
 #include <KLocalizedString>
 
 #include "mpris2sourcemodel.h"

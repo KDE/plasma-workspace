@@ -7,7 +7,6 @@
 */
 
 #include "bookmarksrunner.h"
-#include "browsers/browser.h"
 
 #include <QDebug>
 #include <QDir>

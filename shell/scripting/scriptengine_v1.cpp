@@ -15,7 +15,6 @@
 #include <QFutureWatcher>
 #include <QGuiApplication>
 #include <QJSValueIterator>
-#include <QStandardPaths>
 
 #include <KApplicationTrader>
 #include <QDebug>
