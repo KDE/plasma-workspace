@@ -9,16 +9,27 @@
 #pragma once
 
 #include "browsers/findprofile.h"
+#include "favicon.h"
 #include <QObject>
 #include <memory>
 
+/*
+  Mock implementation of FindProfile for testing purposes.
+  Manages the lifetime of profiles and their associated favicons to prevent memory leaks.
+  */
 class FakeFindProfile : public FindProfile
 {
 public:
-    FakeFindProfile(const QList<Profile> &profiles)
-        : m_profiles(profiles)
+    FakeFindProfile() = default;
+
+    /**
+     * @brief Adds a profile and takes ownership of its associated favicon.
+     */
+    void addProfile(const QString &path, const QString &name, std::unique_ptr<Favicon> icon)
     {
+        m_profiles.append(Profile(path, name, std::move(icon)));
     }
+
     QList<Profile> find() override
     {
         return m_profiles;
@@ -31,11 +42,7 @@ private:
 class TestChromeBookmarks : public QObject
 {
     Q_OBJECT
-public:
-    explicit TestChromeBookmarks(QObject *parent = nullptr)
-        : QObject(parent)
-    {
-    }
+
 private Q_SLOTS:
     void initTestCase();
     void bookmarkFinderShouldFindEachProfileDirectory();
@@ -48,6 +55,5 @@ private Q_SLOTS:
     void itShouldFindBookmarksFromAllProfiles();
 
 private:
-    std::unique_ptr<FakeFindProfile> m_findBookmarksInCurrentDirectory;
     QString m_configHome;
 };

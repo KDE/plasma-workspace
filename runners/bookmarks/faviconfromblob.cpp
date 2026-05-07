@@ -7,6 +7,7 @@
 
 #include "faviconfromblob.h"
 
+#include "bookmarks_debug.h"
 #include "bookmarksrunner_defs.h"
 #include <QDebug>
 #include <QDir>
@@ -20,6 +21,7 @@
 #include <QSqlError>
 #include <QSqlQuery>
 #include <QSqlRecord>
+#include <qloggingcategory.h>
 
 std::unique_ptr<Favicon> FaviconFromBlob::chrome(const QString &profileDirectory)
 {
@@ -115,7 +117,10 @@ QIcon FaviconFromBlob::iconFor(const QString &url)
         if (iconData.size() <= 0)
             return defaultIcon();
 
-        iconFile.open(QFile::WriteOnly);
+        if (!iconFile.open(QFile::WriteOnly)) {
+            qCWarning(RUNNER_BOOKMARKS) << "Chrome runner: could not open iconFile " << iconFile.fileName() << " for writing.";
+            return defaultIcon();
+        }
         iconFile.write(iconData);
         iconFile.close();
     }

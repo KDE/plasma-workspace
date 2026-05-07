@@ -6,15 +6,16 @@
 */
 
 #include "chrome.h"
+#include "bookmarks_debug.h"
 #include "browsers/findprofile.h"
 #include "faviconfromblob.h"
 
-#include <QDebug>
 #include <QFileInfo>
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QJsonValue>
 #include <memory>
+#include <qloggingcategory.h>
 
 class ProfileBookmarks
 {
@@ -61,6 +62,11 @@ Chrome::Chrome(std::unique_ptr<FindProfile> findProfile)
     , m_watcher(new KDirWatch(this))
     , m_dirty(false)
 {
+    if (!m_findProfile) {
+        qCWarning(RUNNER_BOOKMARKS, "Chrome runner: findProfile is null!");
+        return;
+    }
+
     const auto profiles = m_findProfile->find();
     for (const Profile &profile : profiles) {
         updateCacheFile(profile.faviconSource(), profile.faviconCache());
