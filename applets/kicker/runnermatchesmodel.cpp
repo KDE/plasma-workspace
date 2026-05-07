@@ -191,7 +191,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
             if (!recentDocuments.isEmpty()) {
                 actionList << recentDocuments;
-                needsSeparator = false;
+                needsSeparator = true;
             }
 
             if (needsSeparator) {
