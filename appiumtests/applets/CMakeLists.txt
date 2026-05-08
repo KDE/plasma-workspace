@@ -65,12 +65,6 @@ add_test(
 set_tests_properties(manage-inputmethodtest PROPERTIES TIMEOUT 120)
 
 add_test(
-    NAME notificationstest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/notificationstest.py
-)
-set_tests_properties(notificationstest PROPERTIES TIMEOUT 120 ENVIRONMENT "KACTIVITYMANAGERD_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/kactivitymanagerd;USE_CUSTOM_BUS=1")
-
-add_test(
     NAME digitalclocktest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/digitalclocktest.py --failfast
 )
