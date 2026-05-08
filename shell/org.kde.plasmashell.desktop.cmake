@@ -7,6 +7,7 @@ Name[bg]=Plasma
 Name[ca]=Plasma
 Name[ca@valencia]=Plasma
 Name[cs]=Plasma
+Name[da]=Plasma
 Name[de]=Plasma
 Name[es]=Plasma
 Name[eu]=Plasma
