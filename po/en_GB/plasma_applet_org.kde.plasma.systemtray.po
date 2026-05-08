@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:48+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2024-09-07 12:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -208,14 +208,14 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatically set to Large when in Touch Mode"
 
-#: qml/ConfigGeneral.qml:333
+#: qml/ConfigGeneral.qml:332
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Entries"
 
-#: qml/ConfigGeneral.qml:337
+#: qml/ConfigGeneral.qml:336
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@option:check, This is referring to system tray entries"

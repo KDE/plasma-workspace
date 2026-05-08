@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2025-01-25 11:55+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -379,48 +379,48 @@ msgstr "Amosar o escritorio"
 msgid "Hide Desktop"
 msgstr "Agochar o escritorio"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Activar o iniciador de aplicacións"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Amosar o cambiador de actividades"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Cambiar á actividade anterior"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Cambiar á seguinte actividade"
 
-#: shellcorona.cpp:237
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activar a entrada %1 do xestor de tarefas"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Xestionar os escritorios e os paneis…"
 
-#: shellcorona.cpp:294
+#: shellcorona.cpp:295
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre paneis"
 
-#: shellcorona.cpp:2270
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "Engadir un panel"
 
-#: shellcorona.cpp:2353
+#: shellcorona.cpp:2354
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

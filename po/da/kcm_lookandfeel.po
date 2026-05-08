@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024-2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2025-10-31 23:09+0100\n"
+"PO-Revision-Date: 2026-05-07 10:14+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,7 +32,7 @@ msgstr "mschlander@opensuse.org, rasmus@rosendahl-kaa.name"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "Billedfiler (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -245,7 +245,7 @@ msgstr "Kan ikke slette systeminstalleret temaer"
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "Gem nuværende tema"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -254,30 +254,32 @@ msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
 msgstr ""
+"Plasmas nuværende udseende- og temaindstillinger vil blive gemt i et nyt "
+"globalt tema."
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "Tilføj et forhåndsvisningsbillede…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "Tag et skærmbillede…"
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
 msgctxt "@label:textbox Name of new global theme that will be created"
 msgid "Name:"
-msgstr ""
+msgstr "Navn:"
 
 #: ui/LookAndFeelSnapshot.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "Indtast navn…"
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -285,19 +287,19 @@ msgctxt ""
 "@action:button Confirm creating new global theme from the user's current "
 "appearance settings"
 msgid "Confirm"
-msgstr ""
+msgstr "Bekræft"
 
 #: ui/LookAndFeelSnapshot.qml:113
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "Et globalt tema med dette navn eller id eksisterer allerede."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "Vælg et forhåndvisningsbillede"
 
 #: ui/main.qml:22
 #, kde-format
@@ -309,7 +311,7 @@ msgstr "Skift til mørk tilstand om natten"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "Gem nuværende tema…"
 
 #: ui/main.qml:45
 #, kde-format
@@ -379,7 +381,7 @@ msgstr "Stil for Plasma"
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "Markører"
 
 #: ui/MoreOptions.qml:77
 #, kde-format

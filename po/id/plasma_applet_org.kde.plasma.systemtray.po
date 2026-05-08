@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:48+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2024-10-02 18:49+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -210,14 +210,14 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Secara otomatis diatur ke Besar ketika dalam Mode Sentuh"
 
-#: qml/ConfigGeneral.qml:333
+#: qml/ConfigGeneral.qml:332
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Entri"
 
-#: qml/ConfigGeneral.qml:337
+#: qml/ConfigGeneral.qml:336
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@option:check, This is referring to system tray entries"

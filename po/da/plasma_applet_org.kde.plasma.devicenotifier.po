@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2011, 2012, 2014, 2016, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024-2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2025-10-31 23:20+0100\n"
+"PO-Revision-Date: 2026-05-07 10:28+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: actions/checkaction.cpp:71
 #, kde-format
@@ -56,17 +56,15 @@ msgid "Safely remove"
 msgstr "Fjern sikkert"
 
 #: messageinfo.cpp:108
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Denne enhed kan nu sikkert blive fjernet"
+msgstr "Denne enhed har filsystemfejl."
 
 #: messageinfo.cpp:110
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Denne enhed kan nu sikkert blive fjernet"
+msgstr "Denne enhed har ingen fejl"
 
 #: messageinfo.cpp:113
 #, kde-format
@@ -105,11 +103,9 @@ msgid "You are not authorized to remove this device."
 msgstr "Du er ikke autoriseret til at fjerne denne enhed"
 
 #: messageinfo.cpp:139
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Du er ikke autoriseret til at fjerne denne enhed"
+msgstr "Du er ikke autoriseret til at reparere denne enhed."
 
 #: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
@@ -160,35 +156,25 @@ msgid "Could not remove this device."
 msgstr "Kunne ikke fjerne denne enhed"
 
 #: messageinfo.cpp:206
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Kunne ikke fjerne denne enhed"
+msgstr "Kunne ikke reparere denne enhed: %1"
 
 #: qml/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
 "filesystem errors'"
 msgid "Checking…"
-msgstr "Fjerner…"
+msgstr "Tjekker…"
 
 #: qml/DeviceItem.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
 "errors and is being repaired'"
 msgid "Repairing…"
-msgstr "Fjerner…"
+msgstr "Reparerer…"
 
 #: qml/DeviceItem.qml:104
 #, kde-format

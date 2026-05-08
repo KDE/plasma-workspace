@@ -1,38 +1,34 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2025-2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2025-07-19 13:05+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2026-05-07 10:19+0200\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #, kde-format
 msgid "Inherit Language"
 msgstr "Arv sprog"
 
 #: binarydialectmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect IEC, with sigle in parentheses"
-#| msgid "International Electrotechnical Commission (IEC)"
+#, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
 msgstr "International Electrotechnical Commission (IEC)"
 
 #: binarydialectmodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect JEDEC, with sigle in parentheses"
-#| msgid "Joint Electron Device Engineering Council (JEDEC)"
+#, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
 msgstr "Joint Electron Device Engineering Council (JEDEC)"
@@ -44,22 +40,19 @@ msgid "Metric system (SI)"
 msgstr "Metersystemet (SI)"
 
 #: binarydialectmodel.cpp:75
-#, fuzzy, kde-format
-#| msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+#, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 msgstr "Binær -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 
 #: binarydialectmodel.cpp:77
-#, fuzzy, kde-format
-#| msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
 msgstr "Binær- Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 
 #: binarydialectmodel.cpp:79
-#, fuzzy, kde-format
-#| msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
@@ -297,12 +290,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Kunne ikke finde den eksekverbare fil `check-language-support`"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support fejlede, output: %1"
+msgstr "check-language-support fejlede, output: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -311,12 +302,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Ikke alle manglede pakker kunne løses! %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Kunne ikke installere pakke %1"
+msgstr "Kunne ikke installere sprogpakker (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
@@ -534,7 +523,7 @@ msgstr "Tilføj sprog"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "Systemet inkluderer ikke \"%1\""
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -543,6 +532,8 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"Lær hvordan du kan hjælpe med at <link url='%1'>oversætte KDE-software til "
+"dit sprog</link>"
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -654,10 +645,10 @@ msgstr "Telefonnummer"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "Systemet inkluderer ikke indstillinger for \"%1\""
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "Prøv at søg efter en nærliggende region."

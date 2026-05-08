@@ -3,13 +3,13 @@
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
 # scootergrisen, 2019.
-# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024-2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2025-10-31 23:19+0100\n"
+"PO-Revision-Date: 2026-05-07 22:59+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -70,11 +70,11 @@ msgstr[1] ""
 "eller genstartes, så kan brugerne miste deres arbejde."
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"Når den er blevet genstartet går computeren ind i firmwareopsætningsskærmen."
+"Når den er blevet genstartet, går computeren ind i UEFI-"
+"firmwareindstillinger."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
@@ -88,11 +88,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Når den er blevet genstartet, går computeren ind i boot loader-menuen."
 
 #: contents/logout/Logout.qml:221
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the boot loader menu."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Når den er blevet genstartet, går computeren ind i boot loader-menuen."
+msgstr "Når den er blevet genstartet, går computeren ind i %1."
 
 #: contents/logout/Logout.qml:243
 #, kde-format

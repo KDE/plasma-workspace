@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2025-10-05 22:09+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -380,48 +380,48 @@ msgstr "Rodyti darbalaukį"
 msgid "Hide Desktop"
 msgstr "Slėpti darbalaukį"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktyvuoti programų paleidyklę"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Rodyti veiklų perjungiklį"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Perjungti į ankstesnę veiklą"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Perjungti į kitą veiklą"
 
-#: shellcorona.cpp:237
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktyvuoti užduočių tvarkytuvės įrašą %1"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Tvarkyti darbalaukius ir skydelius…"
 
-#: shellcorona.cpp:294
+#: shellcorona.cpp:295
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 
-#: shellcorona.cpp:2270
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
-#: shellcorona.cpp:2353
+#: shellcorona.cpp:2354
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

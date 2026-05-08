@@ -2,27 +2,27 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2017, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:48+0000\n"
-"PO-Revision-Date: 2024-10-26 11:05+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
+"PO-Revision-Date: 2026-05-07 22:58+0200\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "Luk %1 ned"
 
 #: qml/config.qml:13
 #, kde-format
@@ -30,30 +30,28 @@ msgid "General"
 msgstr "Generelt"
 
 #: qml/ConfigGeneral.qml:45
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Vis når relevant"
 
 #: qml/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Altid vist"
+msgstr "Vis altid"
 
 #: qml/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Vis kun i pop-op"
 
 #: qml/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Vis aldrig (deaktiveret)"
 
 #: qml/ConfigGeneral.qml:128
 #, kde-format
@@ -90,12 +88,17 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Led efter en indstilling i <application>%1</application> for at deaktivere "
+"dens statusikon før du gør det her. Nogle apps' statusikoner blev ikke lavet "
+"til at kunne deaktiveres, og at bruge denne indstilling kan give uventet "
+"opførsel.<nl/><nl/>Brug denne indstilling på eget ansvar, og rapporter ikke "
+"fejl til KDE eller appens udvikler."
 
 #: qml/ConfigGeneral.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Jeg forstår risiciene"
 
 #: qml/ConfigGeneral.qml:189
 #, kde-kuit-format
@@ -108,6 +111,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"Det anbefales ikke at deaktivere udklipsholderen, da det vil medføre, at "
+"kopierede data går tabt, når programmet, det blev kopieret fra, lukkes.<nl/"
+"><nl/>Gør kun dette, hvis du, manuelt, har tilføjet en selvstændig "
+"Udklipsholder-widget et andet sted eller hvis du bruger en tredjeparts-"
+"udklipsholderhåndtør. Overvej også i stedet at konfigurere udklipsholderen "
+"til ikke at gemme historik, eller til kun at huske én ting ad gangen."
 
 #: qml/ConfigGeneral.qml:198
 #, kde-kuit-format
@@ -120,23 +129,19 @@ msgid ""
 msgstr ""
 
 #: qml/ConfigGeneral.qml:210
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Skalér med panelets højde"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Skalér med panelets bredde"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -144,8 +149,7 @@ msgid "Panel icon size:"
 msgstr "Ikonstørrelse i panel:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Lille"
@@ -154,7 +158,7 @@ msgstr "Lille"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Mellemrum:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
@@ -175,33 +179,32 @@ msgid "Large"
 msgstr "Stor"
 
 #: qml/ConfigGeneral.qml:269
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Flere handlinger"
+msgstr "Retning:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "Bund-til-top"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "Top-til-bund"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "Venstre-til-højre"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "Højre-til-venstre"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
@@ -209,19 +212,17 @@ msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Sæt automatisk til Stor når i touch-tilstand"
 
-#: qml/ConfigGeneral.qml:333
-#, fuzzy, kde-format
-#| msgid "Entries"
+#: qml/ConfigGeneral.qml:332
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Indgange"
 
-#: qml/ConfigGeneral.qml:337
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#: qml/ConfigGeneral.qml:336
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Altid vist"
+msgstr "Vis altid alle"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
@@ -263,7 +264,7 @@ msgstr "Vis skjulte ikoner"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Gitter med %1 elementer i %2 kolonner"
 
 #: qml/HiddenItemsView.qml:41
 #, kde-format

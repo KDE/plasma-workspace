@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2026-04-12 22:57+0530\n"
 "Last-Translator: Samyak Vidhan <crazycourt651@gmail.com>\n"
 "Language-Team: gu\n"
@@ -374,48 +374,48 @@ msgstr "ડેસ્કટોપ બતાવો"
 msgid "Hide Desktop"
 msgstr "ડેસ્કટોપ છુપાવો"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "એપ્લિકેશન લોન્ચર કાર્યરત કરો"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "ક્રિયા બદલનાર બતાવો"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "પાછલી ક્રિયા પર જાઓ"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "આગલી ક્રિયા પર જાઓ"
 
-#: shellcorona.cpp:237
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "ક્રિયા સંચાલકની યાદી %1 ચાલુ કરો"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "ડેસ્કટોપ અને પટ્ટીઓનુ સંચાલન કરો"
 
-#: shellcorona.cpp:294
+#: shellcorona.cpp:295
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "પટ્ટીઓ વચ્ચે કીબોર્ડનુ ફોક્સ બદલો"
 
-#: shellcorona.cpp:2270
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "પટ્ટી ઉમેરો"
 
-#: shellcorona.cpp:2353
+#: shellcorona.cpp:2354
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

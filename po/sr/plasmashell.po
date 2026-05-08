@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -386,50 +386,50 @@ msgstr "Прикажи површ"
 msgid "Hide Desktop"
 msgstr "Сакриј површ"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr ""
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr ""
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:215
 #, fuzzy, kde-format
 #| msgid "Stop Current Activity"
 msgid "Switch to Previous Activity"
 msgstr "Заустави текућу активност"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, fuzzy, kde-format
 #| msgid "Stop Current Activity"
 msgid "Switch to Next Activity"
 msgstr "Заустави текућу активност"
 
-#: shellcorona.cpp:237
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Активирај унос менаџера задатака %1"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr ""
 
-#: shellcorona.cpp:294
+#: shellcorona.cpp:295
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2270
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "Додај панел"
 
-#: shellcorona.cpp:2353
+#: shellcorona.cpp:2354
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

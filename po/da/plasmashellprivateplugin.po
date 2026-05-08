@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2016, 2019, 2021.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2024-10-26 11:40+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2026-05-07 23:07+0200\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,8 +138,7 @@ msgid "Next Decade"
 msgstr "Næste årti"
 
 #: calendar/qml/MonthViewHeader.qml:283
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "Hold åben"
@@ -184,11 +183,7 @@ msgid "Filters"
 msgstr "Filtre"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for an unknown older version of Plasma and is not "
-#| "compatible with Plasma %1. Please contact the widget's author for an "
-#| "updated version."
+#, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
@@ -199,10 +194,7 @@ msgstr ""
 "en opdateret version."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please contact the widget's author for an updated version."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
@@ -211,10 +203,7 @@ msgstr ""
 "Kontakt venligst forfatteren af widgeten for en opdateret version."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -223,17 +212,15 @@ msgstr ""
 "Opdatér venligst Plasma for at bruge widgeten."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Denne widget var skrevet til Plasma %1, og er ikke kompatibel med den "
-"seneste version af Plasma. Opdater venligst Plasma for at bruge widgeten."
+"Denne widget var skrevet til Plasma %1, og er ikke kompatibel med den ældre "
+"version af Plasma, der er installeret på systemet. Opdater venligst Plasma "
+"for at bruge widgeten."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
@@ -316,12 +303,9 @@ msgid "Online Services"
 msgstr "Online tjenester"
 
 #: shellprivate/widgetexplorer.cpp:126
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Systeminformation"
+msgstr "Personlig information"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
@@ -364,18 +348,13 @@ msgid "Running"
 msgstr "Kører"
 
 #: shellprivate/widgetexplorer.cpp:158
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Kan afinstalleres"
+msgstr "Brugerinstalleret"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -429,49 +408,50 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"Den aktuelt valgte tidszone er ikke tilgængelig for visualisering på kortet"
 
 #: timezoneselector/TimezoneSelector.qml:122
 #: timezoneselector/TimezoneSelector.qml:301
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Vælg…"
 
 #: timezoneselector/TimezoneSelector.qml:124
 #: timezoneselector/TimezoneSelector.qml:293
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Region:"
 
 #: timezoneselector/TimezoneSelector.qml:146
 #: timezoneselector/TimezoneSelector.qml:326
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Tidszone:"
 
 #: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Zoom ind"
 
 #: timezoneselector/TimezoneSelector.qml:264
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Zoom ud"
 
 #: timezoneselector/TimezoneSelector.qml:305
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Områdevælger for tidszone"
 
 #: timezoneselector/TimezoneSelector.qml:337
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Placeringsvælger for tidszone"
 
 #~ msgid "&Execute"
 #~ msgstr "&Kør"

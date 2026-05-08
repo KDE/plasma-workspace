@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2020.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-03 00:49+0000\n"
-"PO-Revision-Date: 2024-10-26 11:01+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2026-05-07 10:24+0200\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -98,17 +98,13 @@ msgid "Change Wallet Password?"
 msgstr "Skift tegnebogs-adgangskode?"
 
 #: src/ui/ChangeWalletPassword.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"Nu hvor du har ændret din login-adgangskode, burde du også ændre "
+"Nu hvor du har ændret din login-adgangskode, bør du overveje at ændre "
 "adgangskoden til din standard KWallet, så de matcher."
 
 #: src/ui/ChangeWalletPassword.qml:35
@@ -182,15 +178,13 @@ msgid "Confirm password:"
 msgstr "Bekræft adgangskode:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Opret"
 
 #: src/ui/CreateUser.qml:111
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Annullér"
@@ -565,14 +559,13 @@ msgstr "Placeholder-ikon for brugeravatar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Slet indlogget bruger uden at slette filer?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Slet bruger..."
+msgstr "Slet indlogget bruger?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -582,6 +575,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 er i øjeblikket logget ind, så deres filer kan ikke slettes. Slet bare "
+"kontoen i stedet for?<nl/><nl/>Dette vil gøre så %1 ikke kan logge ind igen, "
+"og de kan opleve mærkelige opførsler indtil de logger ud."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -590,13 +586,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 er i øjeblikket logget ind. At slette deres konto vil gøre så de ikke kan "
+"logge ind igen, og de kan opleve mærkelige opførsler indtil de logger ud."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Slet filer"
+msgstr "Slet %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -610,6 +607,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Kan ikke ændre dit eget brugernavn mens du er logg ind; log ud og log "
+"derefter ind som en anden bruger for at ændre denne kontos brugernavn."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -618,6 +617,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Kan ikke ændre brugernavn på en indlogget bruger; vent indtil denne bruger "
+"logger ud."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -657,6 +658,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Kan ikke slette digselv! Log ud og log derefter ind som en anden bruger for "
+"at slette denne brugerkonto."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
@@ -681,7 +684,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Kunne ikke beskære billede: %1"
 
 #: src/user.cpp:337
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2025-10-26 13:06+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -381,49 +381,49 @@ msgstr "Vis skrivebord"
 msgid "Hide Desktop"
 msgstr "Gøym skrivebord"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Køyr programstartar"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Vis aktivitetsbytar"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Byt til førre aktivitet"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Byt til neste aktivitet"
 
-#: shellcorona.cpp:237
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Gå til oppføring %1 på oppgåvelinja"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Handsam skrivebord og panel …"
 
-#: shellcorona.cpp:294
+#: shellcorona.cpp:295
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Flytt tastaturfokus mellom panel"
 
-#: shellcorona.cpp:2270
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "Legg til panel"
 
 # Eksempel «Oppgåvepanel for telefon (tomt)», men helst «Tomt oppgåvepanel for telefon».
-#: shellcorona.cpp:2353
+#: shellcorona.cpp:2354
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

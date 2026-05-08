@@ -1,21 +1,21 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2025-2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:48+0000\n"
-"PO-Revision-Date: 2025-07-19 13:21+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2026-05-07 10:16+0200\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -36,14 +36,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Bestem tidspunkterne for solopgang og solnedgang:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "Baseret på enhedens nuværende lokation"
+msgstr "Baseret på enhedens lokation"
 
 #: ui/main.qml:48
 #, kde-format
@@ -82,7 +79,7 @@ msgstr[1] "%1 minutter"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Find lokation automatisk"
 
 #: ui/main.qml:145
 #, kde-kuit-format
@@ -113,13 +110,10 @@ msgstr ""
 "om at skrive en detaljeret beskrivelse af, hvad tjeneste vil gøre."
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Baseret på manuel lokation"
+msgstr "Brug manuel lokation"
 
 #: ui/main.qml:175
 #, kde-format
@@ -134,9 +128,7 @@ msgid "Longitude:"
 msgstr "Længdegrad:"
 
 #: ui/SunPath.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunrise starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
 msgstr "Solopgang starter kl. %1 og slutter kl. %2"
@@ -148,9 +140,7 @@ msgid "Sunrise"
 msgstr "Solnedgang"
 
 #: ui/SunPath.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunset starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
 msgstr "Solnedgang starter kl. %1 og slutter kl. %2"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 00:47+0000\n"
+"POT-Creation-Date: 2026-05-08 00:46+0000\n"
 "PO-Revision-Date: 2025-10-05 15:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -381,48 +381,48 @@ msgstr "Pokaži namizje"
 msgid "Hide Desktop"
 msgstr "Skrij namizje"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:198
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktiviraj zaganjalnik aplikacij"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:206
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Prikaži preklopnika dejavnosti"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Preklopi na predhodno dejavnost"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Preklopi na naslednjo dejavnost"
 
-#: shellcorona.cpp:237
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Omogoči vnos %1 upravljalnika opravil"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Upravljanje namizij in pultov…"
 
-#: shellcorona.cpp:294
+#: shellcorona.cpp:295
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Prenašaj osredotočenost tipkovnice med pulti"
 
-#: shellcorona.cpp:2270
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj pult"
 
-#: shellcorona.cpp:2353
+#: shellcorona.cpp:2354
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
