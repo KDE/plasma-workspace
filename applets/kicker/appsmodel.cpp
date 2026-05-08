@@ -159,6 +159,8 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return (entry->type() == AbstractEntry::SeparatorType);
     } else if (role == Kicker::HasChildrenRole) {
         return entry->hasChildren();
+    } else if (role == Kicker::DisabledRole) {
+        return false;
     } else if (role == Kicker::HasActionListRole) {
         const auto *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
