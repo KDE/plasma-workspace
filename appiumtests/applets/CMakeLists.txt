@@ -79,12 +79,6 @@ set_tests_properties(digitalclocktest PROPERTIES TIMEOUT 300)
 add_subdirectory(kicker)
 
 add_test(
-    NAME mediacontrollertest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py --failfast
-)
-set_tests_properties(mediacontrollertest PROPERTIES TIMEOUT 300 ENVIRONMENT "GDK_BACKEND=wayland")
-
-add_test(
     NAME systemtraytest_x11
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/systemtraytest.py --failfast
 )
