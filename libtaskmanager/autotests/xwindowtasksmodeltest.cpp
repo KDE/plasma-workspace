@@ -384,6 +384,8 @@ void XWindowTasksModelTest::test_lastActivated()
     QTRY_VERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
         return list.at(2).value<QList<int>>().contains(AbstractTasksModel::LastActivated);
     }));
+    // Wait for LastActivated to be updated by the window manager
+    QTRY_VERIFY(!index.data(AbstractTasksModel::LastActivated).toDateTime().isNull());
     qDebug() << lastActivatedDateTime.toMSecsSinceEpoch() << index.data(AbstractTasksModel::LastActivated).toDateTime().toMSecsSinceEpoch();
     QVERIFY(std::abs(lastActivatedDateTime.toMSecsSinceEpoch() - index.data(AbstractTasksModel::LastActivated).toDateTime().toMSecsSinceEpoch()) < 1000);
 }
