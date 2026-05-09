@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "退出 %1"
 
 #: qml/config.qml:13
 #, kde-format
