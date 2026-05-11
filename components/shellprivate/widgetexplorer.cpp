@@ -226,6 +226,19 @@ void WidgetExplorer::setShowSpecialFilters(bool show)
     }
 }
 
+bool WidgetExplorer::showNotSupportedWidgets() const
+{
+    return d->filterItemModel.showNotSupported();
+}
+
+void WidgetExplorer::setShowNotSupportedWidgets(const bool showNotSupportedWidgets)
+{
+    if (d->filterItemModel.showNotSupported() != showNotSupportedWidgets) {
+        d->filterItemModel.setShowNotSupported(showNotSupportedWidgets);
+        Q_EMIT showNotSupportedWidgetsChanged();
+    }
+}
+
 QList<QObject *> WidgetExplorer::widgetsMenuActions()
 {
     QList<QObject *> actionList;

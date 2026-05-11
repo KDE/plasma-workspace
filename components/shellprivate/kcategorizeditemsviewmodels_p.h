@@ -43,6 +43,11 @@ public:
     virtual bool isFavorite() const;
 
     /**
+     * Returns if the item is flagged as supported
+     */
+    virtual bool isSupported() const;
+
+    /**
      * Returns the item's number of running applets
      * Default implementation just returns 0
      */
@@ -124,6 +129,7 @@ class DefaultItemFilterProxyModel : public QSortFilterProxyModel
     Q_PROPERTY(QString searchTerm READ searchTerm WRITE setSearchTerm NOTIFY searchTermChanged)
     Q_PROPERTY(QString filterType READ filterType WRITE setFilterType NOTIFY filterChanged)
     Q_PROPERTY(QVariant filterQuery READ filterQuery WRITE setFilterQuery NOTIFY filterChanged)
+    Q_PROPERTY(bool showNotSupported READ showNotSupported WRITE setShowNotSupported NOTIFY showNotSupportedChanged)
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
@@ -140,6 +146,9 @@ public:
 
     void setFilterQuery(const QVariant &query);
     QVariant filterQuery() const;
+
+    void setShowNotSupported(const bool showNotSupported);
+    bool showNotSupported() const;
 
     void setFilter(const Filter &filter);
 
@@ -161,11 +170,13 @@ public:
 Q_SIGNALS:
     void searchTermChanged(const QString &term);
     void filterChanged();
+    void showNotSupportedChanged();
     void countChanged();
 
 private:
     Filter m_filter;
     QString m_searchPattern;
+    bool m_showNotSupported{true};
 };
 
 } // end of namespace

@@ -42,6 +42,11 @@ bool AbstractItem::isFavorite() const
     return passesFiltering(Filter(QStringLiteral("favorite"), true));
 }
 
+bool AbstractItem::isSupported() const
+{
+    return true;
+}
+
 int AbstractItem::running() const
 {
     return 0;
@@ -168,7 +173,8 @@ bool DefaultItemFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIn
     auto *item = (AbstractItem *)model->itemFromIndex(index);
     // qDebug() << "ITEM " << (item ? "IS NOT " : "IS") << " NULL\n";
 
-    return item && (m_filter.first.isEmpty() || item->passesFiltering(m_filter)) && (m_searchPattern.isEmpty() || item->matches(m_searchPattern));
+    return item && (m_filter.first.isEmpty() || item->passesFiltering(m_filter)) && (m_searchPattern.isEmpty() || item->matches(m_searchPattern))
+        && (m_showNotSupported || item->isSupported());
 }
 
 QVariantHash DefaultItemFilterProxyModel::get(int row) const
@@ -240,6 +246,23 @@ void DefaultItemFilterProxyModel::setFilterQuery(const QVariant &query)
 QVariant DefaultItemFilterProxyModel::filterQuery() const
 {
     return m_filter.second;
+}
+
+void DefaultItemFilterProxyModel::setShowNotSupported(const bool showNotSupported)
+{
+    if (m_showNotSupported == showNotSupported) {
+        return;
+    }
+
+    beginFilterChange();
+    m_showNotSupported = showNotSupported;
+    endFilterChange();
+    Q_EMIT showNotSupportedChanged();
+}
+
+bool DefaultItemFilterProxyModel::showNotSupported() const
+{
+    return m_showNotSupported;
 }
 
 }

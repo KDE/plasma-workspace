@@ -61,6 +61,11 @@ class WidgetExplorer : public QObject, public QQmlParserStatus
     Q_PROPERTY(bool showSpecialFilters READ showSpecialFilters WRITE setShowSpecialFilters NOTIFY showSpecialFiltersChanged)
 
     /**
+     * Whether to show not supported widgets
+     */
+    Q_PROPERTY(bool showNotSupportedWidgets READ showNotSupportedWidgets WRITE setShowNotSupportedWidgets NOTIFY showNotSupportedWidgetsChanged)
+
+    /**
      * Actions for adding widgets, like download plasma widgets, download google gadgets, install from local file
      */
     Q_PROPERTY(QList<QObject *> widgetsMenuActions READ widgetsMenuActions NOTIFY widgetsMenuActionsChanged)
@@ -118,6 +123,9 @@ public:
     bool showSpecialFilters() const;
     void setShowSpecialFilters(bool show);
 
+    bool showNotSupportedWidgets() const;
+    void setShowNotSupportedWidgets(bool showNotSupportedWidgets);
+
     QList<QObject *> widgetsMenuActions();
 
     /**
@@ -151,6 +159,7 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void showSpecialFiltersChanged() const;
+    void showNotSupportedWidgetsChanged() const;
 
 protected Q_SLOTS:
     void immutabilityChanged(Plasma::Types::ImmutabilityType);

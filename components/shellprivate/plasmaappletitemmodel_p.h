@@ -31,7 +31,7 @@ public:
     QString email() const;
     QString apiVersion() const;
     QString unsupportedMessage() const;
-    bool isSupported() const;
+    bool isSupported() const override;
     QVariant data(int role = Qt::UserRole + 1) const override;
 
     int running() const override;
