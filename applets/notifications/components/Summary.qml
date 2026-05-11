@@ -51,12 +51,8 @@ Kirigami.Heading {
                 }
             }
         }
-        // some apps use their app name as summary, avoid showing the same text twice
-        // try very hard to match the two
-        if (modelInterface.summary && modelInterface.summary.toLocaleLowerCase().trim() != modelInterface.applicationName.toLocaleLowerCase().trim()) {
-            return modelInterface.summary;
-        }
-        return "";
+
+        return modelInterface.summary;
     }
     visible: text !== ""
 
