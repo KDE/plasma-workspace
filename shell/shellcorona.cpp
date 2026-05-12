@@ -2461,6 +2461,7 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
             }
         }
         oldAppletConfig.deleteGroup();
+        newApplet->configChanged();
     }
 
     targetGeneralConfig.writeEntry("AppletOrder", appletsOrderList.join(QStringLiteral(";")));
