@@ -205,16 +205,18 @@ void ShellTest::cleanupTestCase()
     });
     QCOMPOSITOR_COMPARE(getAll<Output>().size(), 1); // Only the default output should be left
     QTRY_COMPARE(QGuiApplication::screens().size(), 1);
-    // m_corona->deleteLater();
-    m_corona->unload();
-    QCOMPARE(m_corona->m_desktopViewForScreen.count(), 0);
+
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
+    auto *panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    m_corona->m_panelViews[panelCont]->setScreenToFollow(m_corona->m_screenPool->screenOrder()[1]);
+    delete m_corona; // Implicitly tests 515234; if we regress, the test crashes!
 
     QTRY_VERIFY2(isClean(), qPrintable(dirtyMessage()));
 
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
     cg.sync();
-    delete m_corona;
 
     // m_plasmaDir.removeRecursively();
 }

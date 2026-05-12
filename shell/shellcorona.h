@@ -270,6 +270,7 @@ private Q_SLOTS:
 
 private:
     void sanitizeScreenLayout(const QString &configFileName);
+    void destroyDesktopsAndPanels();
     void updateStruts();
     void configurationChanged(const QString &path);
     DesktopView *desktopForScreen(QScreen *screen) const;
