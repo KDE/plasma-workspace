@@ -4,13 +4,13 @@
 # Franklin, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022-2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-07 00:47+0000\n"
-"PO-Revision-Date: 2025-01-08 17:47+0900\n"
+"PO-Revision-Date: 2026-05-12 03:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "最近使用"
 #: recentusagemodel.cpp:158
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "快速存取"
 
 #: recentusagemodel.cpp:161 recentusagemodel.cpp:322
 #, kde-format
@@ -151,10 +151,9 @@ msgid "Open Containing Folder"
 msgstr "開啟包含資料夾"
 
 #: recentusagemodel.cpp:366
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "遺忘檔案"
+msgstr "遺忘資料夾"
 
 #: recentusagemodel.cpp:366
 #, kde-format
@@ -172,10 +171,9 @@ msgid "Forget All Applications"
 msgstr "遺忘所有應用程式"
 
 #: recentusagemodel.cpp:516
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "遺忘所有檔案"
+msgstr "遺忘所有資料夾"
 
 #: recentusagemodel.cpp:519
 #, kde-format
@@ -198,16 +196,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "這不應該是可見的！請使用 KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "最近使用的檔案"
+msgstr "最近的位置"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "經常使用的檔案"
+msgstr "經常使用的位置"
 
 #: rootmodel.cpp:587
 #, kde-format
