@@ -458,7 +458,6 @@ public:
     static QUuid uuid;
     QList<QString> stackingOrder;
     QTimer sycocaChangeTimer;
-    QTimer *geometryChangeTimer;
 
     void init();
     void initWayland();
@@ -516,13 +515,6 @@ void WaylandTasksModel::Private::init()
     sycocaChangeTimer.setInterval(100ms);
     sycocaChangeTimer.callOnTimeout(q, clearCacheAndRefresh);
     QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, &sycocaChangeTimer, qOverload<>(&QTimer::start));
-
-    // Use a timer to throttle geometry changes, since
-    // high polling rate mice can flood the eventloop with
-    // signals otherwise.
-    geometryChangeTimer = new QTimer(q);
-    geometryChangeTimer->setSingleShot(true);
-    geometryChangeTimer->setInterval(1ms);
 }
 
 void WaylandTasksModel::Private::initWayland()
@@ -771,13 +763,8 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         }
     });
 
-    q->connect(geometryChangeTimer, &QTimer::timeout, geometryChangeTimer, [window, this] {
+    QObject::connect(window, &PlasmaWindow::geometryChanged, q, [window, this] {
         this->dataChanged(window, QList<int>{Geometry, ScreenGeometry});
-    });
-    QObject::connect(window, &PlasmaWindow::geometryChanged, q, [this] {
-        if (!geometryChangeTimer->isActive()) {
-            this->geometryChangeTimer->start();
-        }
     });
 
     QObject::connect(window, &PlasmaWindow::demandsAttentionChanged, q, [window, this] {
