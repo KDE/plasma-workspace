@@ -57,62 +57,6 @@ private:
     bool m_prevAlwaysText;
 };
 
-class PopupWidget : public QWidget
-{
-    Q_OBJECT
-
-public:
-    explicit PopupWidget(QWidget *parent);
-    ~PopupWidget() override = default;
-
-private:
-    QCheckBox *m_enablePopupCb;
-    QCheckBox *m_historyPopupCb;
-    QCheckBox *m_stripWhitespaceCb;
-    QCheckBox *m_mimeActionsCb;
-
-    QSpinBox *m_actionTimeoutSb;
-};
-
-class ActionsWidget : public QWidget
-{
-    Q_OBJECT
-public:
-    explicit ActionsWidget(QWidget *parent);
-    ~ActionsWidget() override = default;
-
-    void setActionList(const ActionList &);
-    ActionList actionList() const;
-
-    void resetModifiedState();
-    bool hasChanged() const;
-
-Q_SIGNALS:
-    void widgetChanged();
-
-private Q_SLOTS:
-    void onSelectionChanged();
-    void onAddAction();
-    void onEditAction();
-    void onDeleteAction();
-    void onItemChanged(QTreeWidgetItem *item, int col);
-
-private:
-    void updateActionItem(QTreeWidgetItem *item, const ClipAction *action);
-    void updateActionListView();
-
-private:
-    ActionsTreeWidget *m_actionsTree;
-    QPushButton *m_addActionButton;
-    QPushButton *m_editActionButton;
-    QPushButton *m_deleteActionButton;
-
-    /**
-     * List of actions this page works with
-     */
-    ActionList m_actionList;
-};
-
 class ConfigDialog : public KConfigDialog
 {
     Q_OBJECT
@@ -139,8 +83,6 @@ protected Q_SLOTS:
 
 private:
     GeneralWidget *m_generalPage;
-    PopupWidget *m_popupPage;
-    ActionsWidget *m_actionsPage;
     KShortcutsEditor *m_shortcutsWidget;
 
     Klipper *m_klipper;
