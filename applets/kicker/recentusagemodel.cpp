@@ -231,8 +231,14 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
         return false;
     } else if (role == Kicker::IsParentRole) {
         return false;
+    } else if (role == Kicker::IsSeparatorRole) {
+        return false;
+    } else if (role == Kicker::IsNewlyInstalledRole) {
+        return false;
     } else if (role == Kicker::HasActionListRole) {
         return true;
+    } else if (role == Kicker::DisabledRole) {
+        return false;
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
 
@@ -346,6 +352,12 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
     } else if (role == Kicker::HasChildrenRole) {
         return false;
     } else if (role == Kicker::IsParentRole) {
+        return false;
+    } else if (role == Kicker::IsSeparatorRole) {
+        return false;
+    } else if (role == Kicker::IsNewlyInstalledRole) {
+        return false;
+    } else if (role == Kicker::DisabledRole) {
         return false;
     } else if (role == Kicker::HasActionListRole) {
         return true;
