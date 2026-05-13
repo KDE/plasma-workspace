@@ -260,13 +260,13 @@ void HistoryModel::clearNonStarredHistory()
 
     // Remove items from the model that were deleted
     // We need to work backwards to maintain correct indices
+    beginResetModel();
     for (qsizetype i = m_items.size() - 1; i >= 0; --i) {
         if (nonStarredUuids.contains(m_items[i]->uuid())) {
-            beginRemoveRows(QModelIndex(), i, i);
             m_items.removeAt(i);
-            endRemoveRows();
         }
     }
+    endResetModel();
 
     QSqlQuery(u"VACUUM"_s, m_db).exec();
     m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
@@ -274,45 +274,21 @@ void HistoryModel::clearNonStarredHistory()
 
 void HistoryModel::clearHistory()
 {
-    // First check if there are any starred items
-    if (m_starredCount > 0) {
-        // Offer choice to keep starred items or clear everything
-        // TODO: Consider adding a setting in Klipper configuration UI to customize this behavior
-        // (e.g., always ask, always keep starred, always clear all)
-        int clearChoice = KMessageBox::questionTwoActionsCancel(nullptr,
-                                                               i18n("The clipboard history contains starred items. Clear them too?"),
-                                                               i18n("Clear Clipboard History"),
-                                                               KGuiItem(i18n("Clear Everything"), QStringLiteral("edit-clear-history")),
-                                                               KGuiItem(i18n("Keep Starred Items"), QStringLiteral("starred-symbolic")),
-                                                               KStandardGuiItem::cancel(),
-                                                               QStringLiteral("klipperClearHistoryStarredChoice"));
-
-        if (clearChoice == KMessageBox::Cancel) {
-            return; // User cancelled
-        } else if (clearChoice == KMessageBox::ButtonCode::SecondaryAction) {
-            // Keep starred items - delete only non-starred
-            clearNonStarredHistory();
-            return;
-        }
-        // If FirstAction (Clear All), fall through to normal clear()
-    } else {
-        // No starred items, show normal confirmation
-        // TODO: Consider adding a "Reset 'Don't ask again' dialogs" button in Klipper settings
-        // to help users recover from accidentally dismissed confirmations
-        int clearHist = KMessageBox::warningContinueCancel(nullptr,
-                                                           i18n("Do you really want to clear and delete the entire clipboard history?"),
-                                                           i18n("Clear Clipboard History"),
-                                                           KStandardGuiItem::del(),
-                                                           KStandardGuiItem::cancel(),
-                                                           QStringLiteral("klipperClearHistoryAskAgain"),
-                                                           KMessageBox::Dangerous);
-        if (clearHist != KMessageBox::Continue) {
-            return; // User cancelled
-        }
+    // No starred items, show normal confirmation
+    // TODO: Consider adding a "Reset 'Don't ask again' dialogs" button in Klipper settings
+    // to help users recover from accidentally dismissed confirmations
+    int clearHist = KMessageBox::warningContinueCancel(nullptr,
+                                                       i18n("Do you really want to clear and delete the entire clipboard history?"),
+                                                       i18n("Clear Clipboard History"),
+                                                       KStandardGuiItem::del(),
+                                                       KStandardGuiItem::cancel(),
+                                                       QStringLiteral("klipperClearHistoryAskAgain"),
+                                                       KMessageBox::Dangerous);
+    if (clearHist != KMessageBox::Continue) {
+        return; // User cancelled
     }
 
-    // Clear everything (including starred items)
-    clear();
+    clearNonStarredHistory();
 }
 
 qsizetype HistoryModel::maxSize() const
