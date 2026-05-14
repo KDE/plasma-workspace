@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 02:42+0000\n"
+"POT-Creation-Date: 2026-05-14 02:41+0000\n"
 "PO-Revision-Date: 2024-10-25 23:31-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -87,12 +87,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "ਇਸ ਅਧੀਨ-ਮੇਨੂ ਵਿੱਚ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਲੁਕਾਓ"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "'%1' ਵਿੱਚ ਐਪਲੀਕੇਸਨਾਂ ਨੂੰ ਨਾ-ਲੁਕਾਓ"
@@ -123,42 +123,42 @@ msgstr "ਪਸੰਦੀਦਾ"
 msgid "Recently Used"
 msgstr "ਤਾਜ਼ਾ ਵਰਤੇ"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:326
 #, kde-format
 msgid "Files"
 msgstr "ਫਾਇਲ"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:259
 #, kde-format
 msgid "Forget Application"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:324
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:371
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:374
 #, kde-format
 msgid "Forget File"
 msgstr "ਫ਼ਾਇਲ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:518
 #, kde-format
 msgid "Forget All"
 msgstr "ਸਭ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:520
 #, kde-format
 msgid "Forget All Applications"
 msgstr "ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:523
 #, kde-format
 msgid "Forget All Files"
 msgstr "ਸਾਰੀਆਂ ਫਾਇਲ ਭੁਲਾਓ"

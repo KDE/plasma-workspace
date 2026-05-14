@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 02:42+0000\n"
+"POT-Creation-Date: 2026-05-14 02:41+0000\n"
 "PO-Revision-Date: 2025-01-07 07:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -89,12 +89,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "Programi"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Pokaži vse programe v tem podmeniju"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Pokaži vse programe v '%1'"
@@ -125,42 +125,42 @@ msgstr "Priljubljene"
 msgid "Recently Used"
 msgstr "Nedavno uporabljeno"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:326
 #, kde-format
 msgid "Files"
 msgstr "Datoteke"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:259
 #, kde-format
 msgid "Forget Application"
 msgstr "Pozabi program"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:324
 #, kde-format
 msgid "Folders"
 msgstr "Mape"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:371
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Odpri vsebovano mapo"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:374
 #, kde-format
 msgid "Forget File"
 msgstr "Pozabi datoteko"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:518
 #, kde-format
 msgid "Forget All"
 msgstr "Pozabi vse"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:520
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Pozabi vse programe"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:523
 #, kde-format
 msgid "Forget All Files"
 msgstr "Pozabi vse datoteke"

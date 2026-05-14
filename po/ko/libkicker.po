@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 02:42+0000\n"
+"POT-Creation-Date: 2026-05-14 02:41+0000\n"
 "PO-Revision-Date: 2025-04-07 00:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -86,12 +86,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "앱"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "이 하위 메뉴의 앱 숨김 해제"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "'%1'의 앱 숨김 해제"
@@ -122,42 +122,42 @@ msgstr "책갈피"
 msgid "Recently Used"
 msgstr "최근 항목"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:326
 #, kde-format
 msgid "Files"
 msgstr "파일"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:259
 #, kde-format
 msgid "Forget Application"
 msgstr "앱 잊기"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:324
 #, kde-format
 msgid "Folders"
 msgstr "폴더"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:371
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:374
 #, kde-format
 msgid "Forget File"
 msgstr "파일 잊기"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:518
 #, kde-format
 msgid "Forget All"
 msgstr "모두 잊기"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:520
 #, kde-format
 msgid "Forget All Applications"
 msgstr "모든 앱 잊기"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:523
 #, kde-format
 msgid "Forget All Files"
 msgstr "모든 파일 잊기"

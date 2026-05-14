@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-27 02:42+0000\n"
+"POT-Creation-Date: 2026-05-14 02:41+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -88,12 +88,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Tampakkan Aplikasi di Submenu ini"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Tampakkan Aplikasi di '%1'"
@@ -124,42 +124,42 @@ msgstr "Favorit"
 msgid "Recently Used"
 msgstr "Barusan Digunakan"
 
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:320
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:326
 #, kde-format
 msgid "Files"
 msgstr "File-file"
 
-#: recentusagemodel.cpp:253
+#: recentusagemodel.cpp:259
 #, kde-format
 msgid "Forget Application"
 msgstr "Lupakan Aplikasi"
 
-#: recentusagemodel.cpp:318
+#: recentusagemodel.cpp:324
 #, kde-format
 msgid "Folders"
 msgstr "Folder"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:371
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Buka Folder Konten"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:374
 #, kde-format
 msgid "Forget File"
 msgstr "Lupakan File"
 
-#: recentusagemodel.cpp:506
+#: recentusagemodel.cpp:518
 #, kde-format
 msgid "Forget All"
 msgstr "Lupakan Semua"
 
-#: recentusagemodel.cpp:508
+#: recentusagemodel.cpp:520
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Lupakan Semua Aplikasi"
 
-#: recentusagemodel.cpp:511
+#: recentusagemodel.cpp:523
 #, kde-format
 msgid "Forget All Files"
 msgstr "Lupakan Semua File"
