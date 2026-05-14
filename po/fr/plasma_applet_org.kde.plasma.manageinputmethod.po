@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2022-09-11 08:32+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -40,7 +40,17 @@ msgstr "Afficher le clavier virtuel…"
 msgid "Virtual Keyboard: visible"
 msgstr "Clavier virtuel : visible"
 
-#: qml/main.qml:129
-#, kde-format
-msgid "Virtual Keyboard: enabled"
-msgstr "Clavier virtuel : activé"
+#: qml/main.qml:128
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: visible"
+msgid "Virtual Keyboard: Show on non-mouse input"
+msgstr "Clavier virtuel : visible"
+
+#: qml/main.qml:137
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: disabled"
+msgid "Virtual Keyboard: Show with all input devices"
+msgstr "Clavier virtuel : désactivé"
+
+#~ msgid "Virtual Keyboard: enabled"
+#~ msgstr "Clavier virtuel : activé"

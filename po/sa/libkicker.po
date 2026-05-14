@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:47+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2025-03-02 14:52+0530\n"
 "Last-Translator: Shreekant Kalwar <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -88,12 +88,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "अनुप्रयोगाः"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "अस्मिन् उपमेनूमध्ये अनुप्रयोगाः अनगोपयन्तु"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "'%1' इत्यस्मिन् अनुप्रयोगाः अनगोपयन्तु ।"
@@ -129,54 +129,54 @@ msgstr "सद्यः प्रयुक्तः"
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
 #, kde-format
 msgid "Files"
 msgstr "सञ्चिकाः"
 
-#: recentusagemodel.cpp:255
+#: recentusagemodel.cpp:261
 #, kde-format
 msgid "Forget Application"
 msgstr "आवेदनं विस्मरतु"
 
-#: recentusagemodel.cpp:320
+#: recentusagemodel.cpp:326
 #, kde-format
 msgid "Folders"
 msgstr "सञ्चयाः"
 
-#: recentusagemodel.cpp:361
+#: recentusagemodel.cpp:373
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Containing Folder उद्घाटयन्तु"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "सञ्चिकां विस्मरतु"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Forget File"
 msgstr "सञ्चिकां विस्मरतु"
 
-#: recentusagemodel.cpp:512
+#: recentusagemodel.cpp:524
 #, kde-format
 msgid "Forget All"
 msgstr "सर्वं विस्मरतु"
 
-#: recentusagemodel.cpp:514
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All Applications"
 msgstr "सर्वाणि अनुप्रयोगाः विस्मरन्तु"
 
-#: recentusagemodel.cpp:516
+#: recentusagemodel.cpp:528
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "सर्वाणि सञ्चिकाः विस्मरन्तु"
 
-#: recentusagemodel.cpp:519
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Files"
 msgstr "सर्वाणि सञ्चिकाः विस्मरन्तु"

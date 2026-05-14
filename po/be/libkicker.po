@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:47+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2024-11-04 22:07\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -91,12 +91,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "Праграмы"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Паказваць праграмы ў гэтым падменю"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Паказваць праграмы ў \"%1\""
@@ -132,54 +132,54 @@ msgstr "Нядаўнія"
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
 #, kde-format
 msgid "Files"
 msgstr "Файлы"
 
-#: recentusagemodel.cpp:255
+#: recentusagemodel.cpp:261
 #, kde-format
 msgid "Forget Application"
 msgstr "Забыцца на праграму"
 
-#: recentusagemodel.cpp:320
+#: recentusagemodel.cpp:326
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:361
+#: recentusagemodel.cpp:373
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Адкрыць каталог змесціва"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Забыцца на файл"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Forget File"
 msgstr "Забыцца на файл"
 
-#: recentusagemodel.cpp:512
+#: recentusagemodel.cpp:524
 #, kde-format
 msgid "Forget All"
 msgstr "Забыцца на ўсе"
 
-#: recentusagemodel.cpp:514
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Забыцца на ўсе праграмы"
 
-#: recentusagemodel.cpp:516
+#: recentusagemodel.cpp:528
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Забыцца на ўсе файлы"
 
-#: recentusagemodel.cpp:519
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Files"
 msgstr "Забыцца на ўсе файлы"

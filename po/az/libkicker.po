@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:47+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2025-04-01 15:00+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -87,12 +87,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "Tətbiqlər"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Bu alt menyudakı Tətbiqləri göstərmək"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "\"%1\"-dəki tətbiqi göstərmək"
@@ -128,54 +128,54 @@ msgstr "Son istifadə olunan"
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
 #, kde-format
 msgid "Files"
 msgstr "Fayllar"
 
-#: recentusagemodel.cpp:255
+#: recentusagemodel.cpp:261
 #, kde-format
 msgid "Forget Application"
 msgstr "Tətbiqi unutmaq"
 
-#: recentusagemodel.cpp:320
+#: recentusagemodel.cpp:326
 #, kde-format
 msgid "Folders"
 msgstr "Qovluqlar"
 
-#: recentusagemodel.cpp:361
+#: recentusagemodel.cpp:373
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Bu tərkibli qovluğu açın"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Faylı unutmaq"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Forget File"
 msgstr "Faylı unutmaq"
 
-#: recentusagemodel.cpp:512
+#: recentusagemodel.cpp:524
 #, kde-format
 msgid "Forget All"
 msgstr "Hamısını unutmaq"
 
-#: recentusagemodel.cpp:514
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Bütün tətbiqləri unutmaq"
 
-#: recentusagemodel.cpp:516
+#: recentusagemodel.cpp:528
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Bütün faylları unutmaq"
 
-#: recentusagemodel.cpp:519
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Files"
 msgstr "Bütün faylları unutmaq"

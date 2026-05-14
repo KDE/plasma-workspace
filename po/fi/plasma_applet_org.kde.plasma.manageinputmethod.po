@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2022-11-11 22:24+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,17 @@ msgstr "Näytä näyttönäppäimistö"
 msgid "Virtual Keyboard: visible"
 msgstr "Näyttönäppäimistö: näkyvissä"
 
-#: qml/main.qml:129
-#, kde-format
-msgid "Virtual Keyboard: enabled"
-msgstr "Näyttönäppäimistö: otettu käyttöön"
+#: qml/main.qml:128
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: visible"
+msgid "Virtual Keyboard: Show on non-mouse input"
+msgstr "Näyttönäppäimistö: näkyvissä"
+
+#: qml/main.qml:137
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: disabled"
+msgid "Virtual Keyboard: Show with all input devices"
+msgstr "Näyttönäppäimistö: poistettu käytöstä"
+
+#~ msgid "Virtual Keyboard: enabled"
+#~ msgstr "Näyttönäppäimistö: otettu käyttöön"

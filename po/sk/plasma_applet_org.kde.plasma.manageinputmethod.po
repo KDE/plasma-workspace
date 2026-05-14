@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.manageinputmethod\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2023-01-22 17:03+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,17 @@ msgstr "Zobraziť virtuálnu klávesnicu"
 msgid "Virtual Keyboard: visible"
 msgstr "Virtuálna klávesnica: viditeľná"
 
-#: qml/main.qml:129
-#, kde-format
-msgid "Virtual Keyboard: enabled"
-msgstr "Virtuálna klávesnica: povolená"
+#: qml/main.qml:128
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: visible"
+msgid "Virtual Keyboard: Show on non-mouse input"
+msgstr "Virtuálna klávesnica: viditeľná"
+
+#: qml/main.qml:137
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: disabled"
+msgid "Virtual Keyboard: Show with all input devices"
+msgstr "Virtuálna klávesnica: zakázaná"
+
+#~ msgid "Virtual Keyboard: enabled"
+#~ msgstr "Virtuálna klávesnica: povolená"

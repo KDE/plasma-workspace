@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2023-02-09 01:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -46,7 +46,17 @@ msgstr "顯示虛擬鍵盤"
 msgid "Virtual Keyboard: visible"
 msgstr "虛擬鍵盤：可見"
 
-#: qml/main.qml:129
-#, kde-format
-msgid "Virtual Keyboard: enabled"
-msgstr "虛擬鍵盤：已啟用"
+#: qml/main.qml:128
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: visible"
+msgid "Virtual Keyboard: Show on non-mouse input"
+msgstr "虛擬鍵盤：可見"
+
+#: qml/main.qml:137
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: disabled"
+msgid "Virtual Keyboard: Show with all input devices"
+msgstr "虛擬鍵盤：已停用"
+
+#~ msgid "Virtual Keyboard: enabled"
+#~ msgstr "虛擬鍵盤：已啟用"

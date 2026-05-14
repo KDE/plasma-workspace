@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:47+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2025-04-08 09:32+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -91,12 +91,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "Приложения"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Вернуть все скрытые приложения в этом подменю"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Вернуть скрытые приложения в подменю «%1»"
@@ -133,54 +133,54 @@ msgstr "Последние"
 msgid "Places"
 msgstr "Точки входа"
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
 #, kde-format
 msgid "Files"
 msgstr "Файлы"
 
-#: recentusagemodel.cpp:255
+#: recentusagemodel.cpp:261
 #, kde-format
 msgid "Forget Application"
 msgstr "Убрать приложение"
 
-#: recentusagemodel.cpp:320
+#: recentusagemodel.cpp:326
 #, kde-format
 msgid "Folders"
 msgstr "Папки"
 
-#: recentusagemodel.cpp:361
+#: recentusagemodel.cpp:373
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Открыть содержащую объект папку"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Убрать этот файл"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Forget File"
 msgstr "Убрать этот файл"
 
-#: recentusagemodel.cpp:512
+#: recentusagemodel.cpp:524
 #, kde-format
 msgid "Forget All"
 msgstr "Убрать все"
 
-#: recentusagemodel.cpp:514
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Убрать все приложения"
 
-#: recentusagemodel.cpp:516
+#: recentusagemodel.cpp:528
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Убрать все файлы"
 
-#: recentusagemodel.cpp:519
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Files"
 msgstr "Убрать все файлы"

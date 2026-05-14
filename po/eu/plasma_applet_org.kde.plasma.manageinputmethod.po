@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2022-09-10 14:05+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -46,7 +46,17 @@ msgstr "Erakutsi alegiazko teklatua"
 msgid "Virtual Keyboard: visible"
 msgstr "Alegiazko teklatua: ikusgai"
 
-#: qml/main.qml:129
-#, kde-format
-msgid "Virtual Keyboard: enabled"
-msgstr "Alegiazko teklatua: gaituta"
+#: qml/main.qml:128
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: visible"
+msgid "Virtual Keyboard: Show on non-mouse input"
+msgstr "Alegiazko teklatua: ikusgai"
+
+#: qml/main.qml:137
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: disabled"
+msgid "Virtual Keyboard: Show with all input devices"
+msgstr "Alegiazko teklatua: ezgaituta"
+
+#~ msgid "Virtual Keyboard: enabled"
+#~ msgstr "Alegiazko teklatua: gaituta"

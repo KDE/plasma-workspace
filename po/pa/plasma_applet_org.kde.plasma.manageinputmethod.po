@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2023-12-22 22:12-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,17 @@ msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ ਵੇਖਾਓ"
 msgid "Virtual Keyboard: visible"
 msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ: ਦਿੱਖ"
 
-#: qml/main.qml:129
-#, kde-format
-msgid "Virtual Keyboard: enabled"
-msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ: ਸਮਰੱਥ ਹੈ"
+#: qml/main.qml:128
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: visible"
+msgid "Virtual Keyboard: Show on non-mouse input"
+msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ: ਦਿੱਖ"
+
+#: qml/main.qml:137
+#, fuzzy, kde-format
+#| msgid "Virtual Keyboard: disabled"
+msgid "Virtual Keyboard: Show with all input devices"
+msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ: ਅਸਮਰੱਥ ਹੈ"
+
+#~ msgid "Virtual Keyboard: enabled"
+#~ msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ: ਸਮਰੱਥ ਹੈ"

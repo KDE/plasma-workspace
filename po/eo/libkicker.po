@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-07 00:47+0000\n"
+"POT-Creation-Date: 2026-05-14 00:46+0000\n"
 "PO-Revision-Date: 2025-01-12 08:09+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -89,12 +89,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "Aplikoj"
 
-#: appsmodel.cpp:171
+#: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Malkaŝi Aplikojn en ĉi tiu Submenuo"
 
-#: appsmodel.cpp:180
+#: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Malkaŝi Aplikojn en '%1'"
@@ -130,54 +130,54 @@ msgstr "Lastatempe Uzita"
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:322
+#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
 #, kde-format
 msgid "Files"
 msgstr "Dosieroj"
 
-#: recentusagemodel.cpp:255
+#: recentusagemodel.cpp:261
 #, kde-format
 msgid "Forget Application"
 msgstr "Forgesi Aplikaĵon"
 
-#: recentusagemodel.cpp:320
+#: recentusagemodel.cpp:326
 #, kde-format
 msgid "Folders"
 msgstr "Dosierujoj"
 
-#: recentusagemodel.cpp:361
+#: recentusagemodel.cpp:373
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Malfermi Enhavan Dosierujon"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Forgesi Dosieron"
 
-#: recentusagemodel.cpp:366
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Forget File"
 msgstr "Forgesi Dosieron"
 
-#: recentusagemodel.cpp:512
+#: recentusagemodel.cpp:524
 #, kde-format
 msgid "Forget All"
 msgstr "Forgesi Ĉion"
 
-#: recentusagemodel.cpp:514
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Forgesi Ĉiujn Aplikaĵojn"
 
-#: recentusagemodel.cpp:516
+#: recentusagemodel.cpp:528
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Forgesi ĉiujn dosierojn"
 
-#: recentusagemodel.cpp:519
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Files"
 msgstr "Forgesi ĉiujn dosierojn"
