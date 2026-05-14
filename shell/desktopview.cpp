@@ -388,7 +388,7 @@ bool DesktopView::event(QEvent *e)
 bool DesktopView::handleKRunnerTextInput(QKeyEvent *e)
 {
     // allow only Shift and GroupSwitch modifiers
-    if (e->modifiers() & ~Qt::ShiftModifier & ~Qt::GroupSwitchModifier) {
+    if (e->modifiers() & ~Qt::ShiftModifier & ~Qt::GroupSwitchModifier & ~Qt::KeypadModifier) {
         return false;
     }
     bool krunnerTextChanged = false;
