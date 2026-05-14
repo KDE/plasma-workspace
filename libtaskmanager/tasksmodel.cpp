@@ -318,40 +318,11 @@ void TasksModel::Private::initModels()
             if (sourceIndex.data(AbstractTasksModel::IsDemandingAttention).toBool()) {
                 demandsAttentionUpdateNeeded = true;
             }
-
-            // When we get a window we have a startup for, cause the startup to be re-filtered.
-            if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()) {
-                const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
-
-                for (int j = 0; j < filterProxyModel->rowCount(); ++j) {
-                    QModelIndex filterIndex = filterProxyModel->index(j, 0);
-
-                    if (!filterIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                        continue;
-                    }
-
-                    if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
-                        || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
-                        Q_EMIT filterProxyModel->dataChanged(filterIndex, filterIndex);
-                    }
-                }
-            }
-
-            // When we get a window or startup we have a launcher for, cause the launcher to be re-filtered.
-            if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool() || sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                for (int j = 0; j < filterProxyModel->rowCount(); ++j) {
-                    const QModelIndex &filterIndex = filterProxyModel->index(j, 0);
-
-                    if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-                        continue;
-                    }
-
-                    if (appsMatch(sourceIndex, filterIndex)) {
-                        Q_EMIT filterProxyModel->dataChanged(filterIndex, filterIndex);
-                    }
-                }
-            }
         }
+
+        // If there were launchers or startup tasks related to the new window,
+        // filter them out.
+        q->invalidateFilter();
 
         if (!anyTaskDemandsAttention && demandsAttentionUpdateNeeded) {
             updateAnyTaskDemandsAttention();
