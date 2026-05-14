@@ -6,8 +6,6 @@ set(batterycontrol_SRCS
         batteriesnamesmonitor_p.cpp batteriesnamesmonitor_p.h
 )
 
-add_definitions(-DTRANSLATION_DOMAIN=\"batterycontrol\")
-
 ecm_qt_declare_logging_category(batterycontrol_SRCS
         HEADER "batterycontrol_debug.h"
         IDENTIFIER "COMPONENTS::BATTERYCONTROL"
