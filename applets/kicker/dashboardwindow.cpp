@@ -170,7 +170,8 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         && !(e->key() == Qt::Key_Return)
         && !(e->key() == Qt::Key_Menu)
         && !(e->key() == Qt::Key_Tab)
-        && !(e->key() == Qt::Key_Backtab)) {
+        && !(e->key() == Qt::Key_Backtab)
+        && !(e->key() == Qt::Key_Space)) {
         // clang-format on
         m_keyEventProxy->forceActiveFocus();
         QEvent *eventCopy = new QKeyEvent(e->type(),
