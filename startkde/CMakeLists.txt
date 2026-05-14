@@ -38,15 +38,6 @@ target_link_libraries(startplasma-wayland PRIVATE
     startplasma
 )
 
-if (WITH_X11_SESSION)
-    add_executable(startplasma-x11 ${START_PLASMA_COMMON_SRCS} startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp)
-
-    target_link_libraries(startplasma-x11 PRIVATE
-        startplasma
-        X11::X11 # for kcheckrunning
-    )
-endif()
-
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
 add_subdirectory(session-shortcuts)
@@ -61,8 +52,5 @@ endif()
 configure_file(config-startplasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-startplasma.h)
 
 install(TARGETS startplasma-wayland ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-if (WITH_X11_SESSION)
-    install(TARGETS startplasma-x11 ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-endif()
 install(PROGRAMS plasma-sourceenv.sh DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 install(PROGRAMS plasma-dbus-run-session-if-needed DESTINATION ${KDE_INSTALL_LIBEXECDIR})

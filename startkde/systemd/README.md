@@ -13,6 +13,8 @@ plasma-workspace@ is the target explicitly activated.
 plasma-workspace@ is a template file that ends with x11 or wayland. That will then require the correct kwin_
 startup order can be different between the two.
 
+This is now only for historical reasons and can be simplified.
+
 ## Wants & Order
 Note that in systemd dependencies (wants/wantedby) counter-intuitively do not determine order.
 

@@ -7,7 +7,6 @@
 #pragma once
 
 #include "config-startplasma.h"
-#include "kcheckrunning/kcheckrunning.h"
 #include <ksplashinterface.h>
 #include <optional>
 

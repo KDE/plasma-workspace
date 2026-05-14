@@ -169,10 +169,6 @@ option(PACKAGEKIT_OFFLINE_UPDATES "Integrate with PackageKit for offline updates
 add_feature_info(PACKAGEKIT_OFFLINE_UPDATES PackageKitQt6_FOUND "Integrate with PackageKit for offline updates")
 set(PACKAGEKIT_OFFLINE_UPDATES ${PackageKitQt6_FOUND})
 
-if(WITH_X11_SESSION)
-    set(WITH_X11 1)
-endif()
-
 if(WITH_X11)
     find_package(X11)
     set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"

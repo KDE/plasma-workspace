@@ -141,27 +141,11 @@ Startup::Startup(QObject *parent)
 
     const AutoStart autostart;
 
-    KJob *x11WindowManagerJob = nullptr;
-    if (qEnvironmentVariable("XDG_SESSION_TYPE") != QLatin1String("wayland")) {
-        QString windowManager;
-        if (qEnvironmentVariableIsSet("KDEWM")) {
-            windowManager = qEnvironmentVariable("KDEWM");
-        }
-        if (windowManager.isEmpty()) {
-            windowManager = QStringLiteral(KWIN_BIN);
-        }
-
-        if (windowManager == QLatin1String(KWIN_BIN)) {
-            x11WindowManagerJob = new StartServiceJob(windowManager, {}, QStringLiteral("org.kde.KWin"));
-        } else {
-            x11WindowManagerJob = new StartServiceJob(windowManager, {}, {});
-        }
-    } else {
+    {
         // This must block until started as it sets the WAYLAND_DISPLAY/DISPLAY env variables needed for the rest of the boot
         // fortunately it's very fast as it's just starting a wrapper
         StartServiceJob kwinWaylandJob(QStringLiteral("kwin_wayland_wrapper"), {QStringLiteral("--xwayland")}, QStringLiteral("org.kde.KWinWrapper"));
         kwinWaylandJob.exec();
-        // kslpash is only launched in plasma-session from the wayland mode, for X it's in startplasma-x11
 
         const KConfig cfg(QStringLiteral("ksplashrc"));
         // the splashscreen and progress indicator
@@ -177,7 +161,6 @@ Startup::Startup(QObject *parent)
     const QList<KJob *> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
         new StartServiceJob(QStringLiteral("kded6"), {}, QStringLiteral("org.kde.kded6"), {}),
-        x11WindowManagerJob,
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),
         phase1 = new StartupPhase1(autostart, this),
