@@ -1,15 +1,15 @@
 # Spanish translations for plasma_applet_org.kde.plasma.manageinputmethod.po package.
-# Copyright (C) 2021-2025 This file is copyright:
+# Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2021.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021-2022, 2025-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.manageinputmethod\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2025-06-04 19:38+0100\n"
+"PO-Revision-Date: 2026-05-15 00:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: qml/main.qml:70
 #, kde-format
@@ -46,16 +46,11 @@ msgid "Virtual Keyboard: visible"
 msgstr "Teclado virtual: visible"
 
 #: qml/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: visible"
+#, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "Teclado virtual: visible"
+msgstr "Teclado virtual: mostrar cuando no haya entrada del ratón"
 
 #: qml/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: disabled"
+#, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr "Teclado virtual: desactivado"
-
-#~ msgid "Virtual Keyboard: enabled"
-#~ msgstr "Teclado virtual: activado"
+msgstr "Teclado virtual: mostrar con todos los dispositivos de entrada"

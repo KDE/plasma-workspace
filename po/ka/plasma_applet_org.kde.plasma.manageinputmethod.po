@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2022-09-12 07:53+0200\n"
+"PO-Revision-Date: 2026-05-14 04:28+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.9\n"
 
 #: qml/main.qml:70
 #, kde-format
@@ -45,16 +45,14 @@ msgid "Virtual Keyboard: visible"
 msgstr "ვირტუალური კლავიატურა: ჩანს"
 
 #: qml/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: visible"
+#, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "ვირტუალური კლავიატურა: ჩანს"
+msgstr "ვირტუალური კლავიატურა: ჩვენება არა-თაგუნათი შეყვანისას"
 
 #: qml/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: disabled"
+#, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr "ვირტუალური კლავიატურა: გამორთულია"
+msgstr "ვირტუალური კლავიატურა: ჩვენება ყველა შეყვანის მოწყობილობით"
 
 #~ msgid "Virtual Keyboard: enabled"
 #~ msgstr "ვირტუალური კლავიატურა: ჩართული"
