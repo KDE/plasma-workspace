@@ -17,7 +17,6 @@ import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 import plasma.applet.org.kde.plasma.devicenotifier
 
-
 PlasmaExtras.ExpandableListItem {
     id: deviceItem
 
@@ -48,11 +47,11 @@ PlasmaExtras.ExpandableListItem {
     onIsOperationFinishedChanged: {
         if (deviceItem.isOperationFinished) {
             if (deviceItem.deviceOperationResult === 0) {
-                devicenotifier.popupIcon = "dialog-ok"
-                popupIconTimer.restart()
+                devicenotifier.popupIcon = "dialog-ok";
+                popupIconTimer.restart();
             } else if (deviceItem.deviceOperationResult !== 0) {
-                devicenotifier.popupIcon = "dialog-error"
-                popupIconTimer.restart()
+                devicenotifier.popupIcon = "dialog-error";
+                popupIconTimer.restart();
             }
         }
     }
@@ -77,15 +76,15 @@ PlasmaExtras.ExpandableListItem {
     iconEmblem: {
         if (deviceItem.isOperationFinished && deviceItem.hasMessage) {
             if (deviceItem.deviceOperationResult === 0) {
-                return "emblem-information"
+                return "emblem-information";
             } else {
-                return "emblem-error"
+                return "emblem-error";
             }
-        //if device is not busy then show its emblem
+            //if device is not busy then show its emblem
         } else if (!deviceItem.deviceIsBusy && deviceItem.deviceEmblems[0]) {
-            return deviceItem.deviceEmblems[0]
+            return deviceItem.deviceEmblems[0];
         } else {
-            return ""
+            return "";
         }
     }
 
@@ -93,27 +92,27 @@ PlasmaExtras.ExpandableListItem {
 
     subtitle: {
         if (deviceItem.isOperationFinished && deviceItem.hasMessage) {
-            return deviceItem.deviceMessage
+            return deviceItem.deviceMessage;
         }
         if (deviceItem.deviceState === StateInfo.Checking) {
-            return i18nc("Translation should be short and mean \'Currently checking the device for filesystem errors\'", "Checking…")
+            return i18nc("Translation should be short and mean \'Currently checking the device for filesystem errors\'", "Checking…");
         } else if (deviceItem.deviceState === StateInfo.Repairing) {
-            return i18nc("Translation should be short and mean \'The storage device contains filesystem errors and is being repaired\'", "Repairing…")
+            return i18nc("Translation should be short and mean \'The storage device contains filesystem errors and is being repaired\'", "Repairing…");
         } else if (!deviceItem.deviceIsBusy) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
-                return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
+                return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText);
             }
-            return ""
+            return "";
         } else if (deviceItem.deviceState === StateInfo.Mounting) {
-            return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
+            return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…");
         } else if (deviceItem.deviceState === StateInfo.Unmounting && unmountTimer.running) {
             // Unmounting; shown if unmount takes less than 1 second
-            return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing…")
+            return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing…");
         } else if (deviceItem.deviceState === StateInfo.Unmounting) {
             // Unmounting; shown if unmount takes longer than 1 second
-            return i18n("Don't unplug yet! Files are still being transferred…")
+            return i18n("Don't unplug yet! Files are still being transferred…");
         }
-        return ""
+        return "";
     }
 
     subtitleCanWrap: true
@@ -122,10 +121,10 @@ PlasmaExtras.ExpandableListItem {
     subtitleColor: {
         if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
             if (deviceItem.deviceFreeSpace / deviceItem.deviceSize <= 0.05) {
-                return Kirigami.Theme.negativeTextColor
+                return Kirigami.Theme.negativeTextColor;
             }
         }
-        return Kirigami.Theme.textColor
+        return Kirigami.Theme.textColor;
     }
 
     defaultActionButtonAction: deviceActions !== undefined && isFree ? defaultAction : null
@@ -138,7 +137,7 @@ PlasmaExtras.ExpandableListItem {
             if (deviceItem.deviceMounted) {
                 unmountTimer.restart();
             }
-            deviceItem.deviceActions.actionTriggered(deviceItem.deviceActions.defaultActionName)
+            deviceItem.deviceActions.actionTriggered(deviceItem.deviceActions.defaultActionName);
         }
     }
 
@@ -157,8 +156,7 @@ PlasmaExtras.ExpandableListItem {
 
             model: deviceItem.deviceActions
 
-            delegate: PlasmaComponents3.ToolButton
-            {
+            delegate: PlasmaComponents3.ToolButton {
                 required property var model //TODO rename model roles and split
 
                 width: parent.width
@@ -175,7 +173,7 @@ PlasmaExtras.ExpandableListItem {
                 }
 
                 onClicked: {
-                    deviceItem.deviceActions.actionTriggered(model.Name)
+                    deviceItem.deviceActions.actionTriggered(model.Name);
                 }
             }
         }

@@ -41,7 +41,7 @@ PlasmaExtras.Representation {
         PlasmaComponents3.ToolButton {
             id: unmountAll
             anchors.right: parent.right
-            visible: root.appletInterface.mountedRemovables > 1;
+            visible: root.appletInterface.mountedRemovables > 1
 
             icon.name: "media-eject"
             text: i18n("Remove All")
@@ -70,26 +70,30 @@ PlasmaExtras.Representation {
             to: 0
             duration: Kirigami.Units.veryLongDuration * 8
             easing.type: Easing.InOutQuad
-            Component.onCompleted: root.appletInterface.isMessageHighlightAnimatorRunning = Qt.binding(() => running);
+            Component.onCompleted: root.appletInterface.isMessageHighlightAnimatorRunning = Qt.binding(() => running)
         }
 
         Connections {
             target: root.model
             function onLastUdiChanged() {
                 if (root.model.lastUdi === "") {
-                    messageHighlightAnimator.stop()
-                    messageHighlight.visible = false
+                    messageHighlightAnimator.stop();
+                    messageHighlight.visible = false;
                 }
             }
         }
 
         function highlight(item) {
-            parent = item
-            width = Qt.binding(function() { return item.width })
-            height = Qt.binding(function() { return item.height })
-            opacity = 1 // Animator is threaded so the old opacity might be visible for a frame or two
-            visible = true
-            messageHighlightAnimator.start()
+            parent = item;
+            width = Qt.binding(function () {
+                return item.width;
+            });
+            height = Qt.binding(function () {
+                return item.height;
+            });
+            opacity = 1; // Animator is threaded so the old opacity might be visible for a frame or two
+            visible = true;
+            messageHighlightAnimator.start();
         }
     }
 
@@ -112,14 +116,12 @@ PlasmaExtras.Representation {
                 id: deviceItem
                 onHasMessageChanged: {
                     if (deviceItem.hasMessage) {
-                        messageHighlight.highlight(this)
+                        messageHighlight.highlight(this);
                     }
                 }
             }
 
-            highlight: PlasmaExtras.Highlight
-            {
-            }
+            highlight: PlasmaExtras.Highlight {}
             highlightMoveDuration: Kirigami.Units.shortDuration
             highlightResizeDuration: Kirigami.Units.shortDuration
 
@@ -155,8 +157,7 @@ PlasmaExtras.Representation {
                 visible: active
                 asynchronous: true
 
-                sourceComponent: PlasmaExtras.PlaceholderMessage
-                {
+                sourceComponent: PlasmaExtras.PlaceholderMessage {
                     width: parent.width
                     iconName: "drive-removable-media-symbolic"
                     text: Plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")

@@ -25,11 +25,11 @@ PlasmoidItem {
 
         filterType: {
             if (Plasmoid.configuration.allDevices) {
-                return DeviceFilterControl.All
+                return DeviceFilterControl.All;
             } else if (Plasmoid.configuration.removableDevices) {
-                return DeviceFilterControl.Removable
+                return DeviceFilterControl.Removable;
             } else {
-                return DeviceFilterControl.Unremovable
+                return DeviceFilterControl.Unremovable;
             }
         }
 
@@ -74,11 +74,11 @@ PlasmoidItem {
         if (filterModel.lastUdi !== "") {
             return filterModel.lastDescription;
         }
-        return ""
+        return "";
     }
     Plasmoid.icon: {
         let iconName;
-        if (popupIcon !== ""){
+        if (popupIcon !== "") {
             iconName = popupIcon;
         } else if (filterModel.lastUdi !== "") {
             iconName = filterModel.lastIcon;
@@ -210,10 +210,9 @@ PlasmoidItem {
         return iconName + symbolicSuffix;
     }
 
-
     Timer {
         id: popupIconTimer
         interval: 3000
-        onTriggered: devicenotifier.popupIcon  = "";
+        onTriggered: devicenotifier.popupIcon = ""
     }
 }
