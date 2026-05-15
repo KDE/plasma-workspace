@@ -64,8 +64,14 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     m_rootObject->setProperty("appletInterface", QVariant::fromValue(m_appletInterface.data()));
     m_appletInterface->setVisible(true);
     m_appletInterface->setProperty("hideOnWindowDeactivate", false);
+
     setTitle(applet->title());
+    connect(applet, &Plasma::Applet::titleChanged, this, &PlasmaWindowedView::setTitle);
+
     setIcon(QIcon::fromTheme(applet->icon()));
+    connect(applet, &Plasma::Applet::iconChanged, this, [this, applet] {
+        setIcon(QIcon::fromTheme(applet->icon()));
+    });
 
     const QSize switchSize(m_appletInterface->property("switchWidth").toInt(), m_appletInterface->property("switchHeight").toInt());
     QRect geom = m_applet->config().readEntry("geometry", QRect());
