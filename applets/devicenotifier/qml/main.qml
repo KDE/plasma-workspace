@@ -40,8 +40,6 @@ PlasmoidItem {
                     devicenotifier.expanded = true;
                     (devicenotifier.fullRepresentationItem as FullRepresentation).spontaneousOpen = true;
                 }
-                devicenotifier.popupIcon = "preferences-desktop-notification";
-                popupIconTimer.restart();
             }
         }
     }
@@ -52,8 +50,6 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.RightEdge
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
-
-    property string popupIcon: ""
 
     property bool itemClicked: false
     property int currentIndex: -1
@@ -78,9 +74,7 @@ PlasmoidItem {
     }
     Plasmoid.icon: {
         let iconName;
-        if (popupIcon !== ""){
-            iconName = popupIcon;
-        } else if (filterModel.lastUdi !== "") {
+        if (filterModel.lastUdi !== "") {
             iconName = filterModel.lastIcon;
         } else {
             iconName = "device-notifier";
@@ -208,12 +202,5 @@ PlasmoidItem {
         }
 
         return iconName + symbolicSuffix;
-    }
-
-
-    Timer {
-        id: popupIconTimer
-        interval: 3000
-        onTriggered: devicenotifier.popupIcon  = "";
     }
 }
