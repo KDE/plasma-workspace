@@ -89,7 +89,7 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
 
 View::~View() = default;
 
-QMargins View::margins()
+QMargins View::margins() const
 {
     if (m_floating) {
         const QRect r = screen()->availableGeometry();
@@ -99,18 +99,29 @@ QMargins View::margins()
     }
 }
 
+QSize View::constrainedMainItemImplicitSize() const
+{
+    return QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize().shrunkBy(margins()));
+}
+
+void View::fitToMainItem()
+{
+    if (auto layerSurface = LayerShellQt::Window::get(this)) {
+        layerSurface->setDesiredSize(constrainedMainItemImplicitSize());
+        update();
+    } else {
+        resize(constrainedMainItemImplicitSize());
+    }
+}
+
 void View::objectIncubated()
 {
     auto item = qobject_cast<QQuickItem *>(m_engine->rootObject());
     setMainItem(item);
+    resize(constrainedMainItemImplicitSize());
 
-    auto updateSize = [this]() {
-        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize().shrunkBy(margins())));
-    };
-
-    connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
-    connect(this, &View::paddingChanged, this, updateSize);
-    updateSize();
+    connect(item, &QQuickItem::implicitHeightChanged, this, &View::fitToMainItem);
+    connect(this, &View::paddingChanged, this, &View::fitToMainItem);
 }
 
 void View::slotFocusWindowChanged()
