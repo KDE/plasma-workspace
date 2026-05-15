@@ -1,3 +1,22 @@
+include(CheckCXXSourceCompiles)
+
+set(_appmenu_saved_required_libraries "${CMAKE_REQUIRED_LIBRARIES}")
+list(APPEND CMAKE_REQUIRED_LIBRARIES Qt::WaylandClientPrivate Qt::GuiPrivate)
+check_cxx_source_compiles("
+    #include <QtWaylandClient/private/qwaylanddisplay_p.h>
+    #include <QtWaylandClient/private/qwaylandwindow_p.h>
+
+    int main()
+    {
+        auto display = static_cast<QtWaylandClient::QWaylandDisplay *>(nullptr);
+        auto device = static_cast<QtWaylandClient::QWaylandInputDevice *>(nullptr);
+        auto window = static_cast<QtWaylandClient::QWaylandWindow *>(nullptr);
+        display->setLastInputDevice(device, 1, window->waylandSurface());
+        return 0;
+    }
+" HAVE_QT_WAYLAND_SETLASTINPUTDEVICE_SURFACE)
+set(CMAKE_REQUIRED_LIBRARIES "${_appmenu_saved_required_libraries}")
+
 set(kded_appmenu_SRCS
     appmenu.cpp
     menuimporter.cpp
@@ -17,6 +36,10 @@ qt_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
     appmenu_dbus.h AppmenuDBus appmenuadaptor AppmenuAdaptor)
 
 kcoreaddons_add_plugin(appmenu SOURCES ${kded_appmenu_SRCS} INSTALL_NAMESPACE "kf6/kded")
+
+if (HAVE_QT_WAYLAND_SETLASTINPUTDEVICE_SURFACE)
+    target_compile_definitions(appmenu PRIVATE HAVE_QT_WAYLAND_SETLASTINPUTDEVICE_SURFACE)
+endif()
 
 pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
 
