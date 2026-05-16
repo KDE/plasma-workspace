@@ -34,6 +34,7 @@ PlasmaComponents.ItemDelegate {
 
     readonly property alias dragHandler: dragHandler
     property alias mainItem: label.contentItem
+    property bool keyboardActivated: false
 
     readonly property real gradientThreshold: (label.width - toolButtonsLoader.width) / label.width
     // Consider tall to be > about 1.5x the default height for purposes of top-aligning
@@ -129,7 +130,7 @@ PlasmaComponents.ItemDelegate {
         anchors.fill: label
         cached: true
         maskSource: labelMaskSource
-        visible: !!source && menuItem.ListView.isCurrentItem
+        visible: !!source && toolButtonsLoader.active
 
         TapHandler {
             enabled: !(toolButtonsLoader.item as DelegateToolButtons)?.hovered // https://bugreports.qt.io/browse/QTBUG-108821
@@ -142,7 +143,7 @@ PlasmaComponents.ItemDelegate {
     QQC.Control {
         id: label
         height: implicitHeight
-        visible: !menuItem.ListView.isCurrentItem
+        visible: !labelMask.visible
         anchors {
             left: parent.left
             leftMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - menuItem.listMargins.left
@@ -238,7 +239,7 @@ PlasmaComponents.ItemDelegate {
             menuItem: menuItem
             shouldUseOverflowButton: menuItem.shouldUseOverflowButton
         }
-        active: (menuItem.ListView.isCurrentItem && !menuItem.shouldUseOverflowButton)
+        active: (menuItem.ListView.isCurrentItem && ((!menuItem.keyboardActivated && menuItem.hovered) || (menuItem.keyboardActivated && menuItem.ListView.view.activeFocus)) && !menuItem.shouldUseOverflowButton)
             || (menuItem.shouldUseOverflowButton && (!!(expandButtonLoader.item as PlasmaComponents.ToolButton)?.checked || opacity > 0))
         opacity: !expandButtonLoader.active || (expandButtonLoader.item as PlasmaComponents.ToolButton).checked ? 1 : 0
 

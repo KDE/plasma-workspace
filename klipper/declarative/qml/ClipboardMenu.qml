@@ -41,6 +41,9 @@ PlasmaComponents3.ScrollView {
 
     property alias view: menuListView
     property bool showHeader: true
+    // used to help determine whether the action buttons should show. visualFocus does not work,
+    // as Qt sets OtherFocusReason even if the currentItem change was initiated by keyboard
+    property bool keyboardActivated: false
 
     background: null
     contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
@@ -308,6 +311,7 @@ PlasmaComponents3.ScrollView {
                 }
                 Keys.onDownPressed: event => {
                     menuListView.forceActiveFocus(Qt.TabFocusReason);
+                    clipboardMenu.keyboardActivated = true
                     event.accepted = true;
                 }
                 Keys.onLeftPressed: event => {
@@ -379,18 +383,24 @@ PlasmaComponents3.ScrollView {
             roleValue: "2"
             delegate: TextItemDelegate {
                 listMargins: listItemSvg.margins
+                keyboardActivated: clipboardMenu.keyboardActivated
+                onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
         DelegateChoice {
             roleValue: "4"
             delegate: ImageItemDelegate  {
                 listMargins: listItemSvg.margins
+                keyboardActivated: clipboardMenu.keyboardActivated
+                onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
         DelegateChoice {
             roleValue: "8"
             delegate: UrlItemDelegate {
                 listMargins: listItemSvg.margins
+                keyboardActivated: clipboardMenu.keyboardActivated
+                onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
     }
@@ -416,7 +426,6 @@ PlasmaComponents3.ScrollView {
         bottomMargin: Kirigami.Units.largeSpacing
         leftMargin: Kirigami.Units.largeSpacing
         rightMargin: Kirigami.Units.largeSpacing
-        spacing: Kirigami.Units.smallSpacing
 
         reuseItems: true
 
@@ -425,6 +434,7 @@ PlasmaComponents3.ScrollView {
         Keys.onUpPressed: event => {
             if (menuListView.currentIndex > 0) {
                 menuListView.decrementCurrentIndex();
+                clipboardMenu.keyboardActivated = true
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
                 event.accepted = true;
             } else {
@@ -441,6 +451,7 @@ PlasmaComponents3.ScrollView {
         Keys.onDownPressed: event => {
             if (menuListView.currentIndex < menuListView.count - 1) {
                 menuListView.incrementCurrentIndex();
+                clipboardMenu.keyboardActivated = true
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
                 event.accepted = true;
             } else {

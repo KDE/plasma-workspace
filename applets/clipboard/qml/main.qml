@@ -147,6 +147,7 @@ PlasmoidItem {
                 dialogItem: dialogItem
                 model: historyModel
                 showsClearHistoryButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && clearAction.visible
+                keyboardActivated: false
                 barcodeType: Plasmoid.configuration.barcodeType
                 showHeader: Plasmoid.containment.pluginName !== "org.kde.plasma.systemtray"
 
