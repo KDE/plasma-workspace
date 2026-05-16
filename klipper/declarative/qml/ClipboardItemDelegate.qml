@@ -76,7 +76,7 @@ PlasmaComponents.ItemDelegate {
     Keys.onReturnPressed: menuItem.clicked()
     Keys.onDeletePressed: menuItem.remove()
     KeyNavigation.right: toolButtonsLoader.active ? (toolButtonsLoader.item as DelegateToolButtons).defaultButton : toolButtonsLoader
-    KeyNavigation.left: null
+    KeyNavigation.left: menuItem
 
     ListView.onIsCurrentItemChanged: {
         if (ListView.isCurrentItem) {
