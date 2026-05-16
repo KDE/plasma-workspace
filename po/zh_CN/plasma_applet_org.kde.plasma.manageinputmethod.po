@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_applet_org.kde."
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasma_applet_org.kde."
 "plasma.manageinputmethod.pot\n"
-"X-Crowdin-File-ID: 42597\n"
+"X-Crowdin-File-ID: 53026\n"
 
 #: qml/main.qml:70
 #, kde-format
@@ -45,16 +45,11 @@ msgid "Virtual Keyboard: visible"
 msgstr "虚拟键盘：可见"
 
 #: qml/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: visible"
+#, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "虚拟键盘：可见"
+msgstr ""
 
 #: qml/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: disabled"
+#, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr "虚拟键盘：已启用"
-
-#~ msgid "Virtual Keyboard: enabled"
-#~ msgstr "虚拟键盘：已启用"
+msgstr ""
