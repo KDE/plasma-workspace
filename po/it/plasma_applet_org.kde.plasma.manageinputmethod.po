@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021-2022, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2022-09-11 07:58+0200\n"
+"PO-Revision-Date: 2026-05-14 11:34+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: qml/main.qml:70
 #, kde-format
@@ -44,16 +44,16 @@ msgid "Virtual Keyboard: visible"
 msgstr "Tastiera virtuale: visibile"
 
 #: qml/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: visible"
+#, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "Tastiera virtuale: visibile"
+msgstr ""
+"Tastiera virtuale: mostrala quando si utilizza un dispositivo diverso dal "
+"mouse."
 
 #: qml/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: disabled"
+#, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr "Tastiera virtuale: disabilitata"
+msgstr "Tastiera virtuale: mostrala con tutti i dispositivi di immissione"
 
 #~ msgid "Virtual Keyboard: enabled"
 #~ msgstr "Tastiera virtuale: abilitata"

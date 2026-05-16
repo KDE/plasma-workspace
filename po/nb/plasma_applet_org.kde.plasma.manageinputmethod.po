@@ -55,6 +55,3 @@ msgstr "Virtuelt tastatur: synlig"
 #| msgid "Virtual Keyboard: disabled"
 msgid "Virtual Keyboard: Show with all input devices"
 msgstr "Virtuelt tastatur: slått av"
-
-#~ msgid "Virtual Keyboard: enabled"
-#~ msgstr "Virtuelt tastatur: slått på"
