@@ -270,7 +270,11 @@ void AppMenuModule::ensureSerial(QWindow *w)
             auto waylandWindow = dynamic_cast<QtWaylandClient::QWaylandWindow *>(w->handle());
             if (waylandWindow) {
                 const auto device = waylandWindow->display()->currentInputDevice();
+#ifdef HAVE_QT_WAYLAND_SETLASTINPUTDEVICE_SURFACE
+                waylandWindow->display()->setLastInputDevice(device, 1, waylandWindow->waylandSurface());
+#else
                 waylandWindow->display()->setLastInputDevice(device, 1, waylandWindow);
+#endif
             }
         }
     }
