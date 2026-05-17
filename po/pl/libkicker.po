@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014-2017, 2019-2022, 2024-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2025-01-11 11:27+0100\n"
+"PO-Revision-Date: 2026-05-16 12:38+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -148,10 +149,9 @@ msgid "Open Containing Folder"
 msgstr "Otwórz zawierający katalog"
 
 #: recentusagemodel.cpp:378
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Zapomnij o pliku"
+msgstr "Zapomnij o katalogu"
 
 #: recentusagemodel.cpp:378
 #, kde-format
@@ -169,10 +169,9 @@ msgid "Forget All Applications"
 msgstr "Zapomnij o wszystkich programach"
 
 #: recentusagemodel.cpp:528
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Zapomnij o wszystkich plikach"
+msgstr "Zapomnij o wszystkich katalogach"
 
 #: recentusagemodel.cpp:531
 #, kde-format
@@ -195,16 +194,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Nie powinno być tego widać! Użyj KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Ostatnie pliki"
+msgstr "Ostatnie miejsca"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Często używane pliki"
+msgstr "Często odwiedzane miejsca"
 
 #: rootmodel.cpp:587
 #, kde-format
@@ -224,7 +221,7 @@ msgstr "Często używane programy"
 #: rootmodel.cpp:611
 #, kde-format
 msgid "Power / Session"
-msgstr "Zasilanie / Sesja"
+msgstr "Zasilanie / Posiedzenie"
 
 #: runnermodel.cpp:272
 #, kde-format
@@ -244,7 +241,7 @@ msgstr "Wyloguj"
 #: systementry.cpp:199 systementry.cpp:253
 #, kde-format
 msgid "Save Session"
-msgstr "Zapisz sesję"
+msgstr "Zapisz posiedzenie"
 
 #: systementry.cpp:202
 #, kde-format
@@ -275,7 +272,7 @@ msgstr "Wyłącz"
 #: systementry.cpp:230
 #, kde-format
 msgid "Session"
-msgstr "Sesja"
+msgstr "Posiedzenie"
 
 #: systementry.cpp:235
 #, kde-format
@@ -290,12 +287,12 @@ msgstr "Zablokuj ekran"
 #: systementry.cpp:250
 #, kde-format
 msgid "End session"
-msgstr "Zakończ sesję"
+msgstr "Zakończ posiedzenie"
 
 #: systementry.cpp:256
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr "Rozpocznij sesję innego użytkownika"
+msgstr "Rozpocznij posiedzenie innego użytkownika"
 
 #: systementry.cpp:259
 #, kde-format

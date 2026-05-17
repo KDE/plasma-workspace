@@ -1,18 +1,18 @@
-# Xavier Besnard <xavier.besnard@kde.org>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021-2022, 2026 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2022-09-11 08:32+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2026-05-15 10:24+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: qml/main.qml:70
 #, kde-format
@@ -41,16 +41,14 @@ msgid "Virtual Keyboard: visible"
 msgstr "Clavier virtuel : visible"
 
 #: qml/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: visible"
+#, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "Clavier virtuel : visible"
+msgstr "Clavier virtuel : affichage sur un périphérique d'entrée sans souris"
 
 #: qml/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: disabled"
+#, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr "Clavier virtuel : désactivé"
+msgstr "Clavier virtuel : affichage sur tous les périphérique d'entrée"
 
 #~ msgid "Virtual Keyboard: enabled"
 #~ msgstr "Clavier virtuel : activé"
