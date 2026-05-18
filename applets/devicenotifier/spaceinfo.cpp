@@ -71,21 +71,22 @@ void SpaceInfo::updateSize()
     QString path = storageaccess->filePath();
 
     // create job
-    m_job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(path));
+    auto job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(path));
 
     // collect and process info
-    connect(m_job, &KJob::result, this, &SpaceInfo::onSpaceUpdated);
+    connect(job, &KJob::result, this, &SpaceInfo::onSpaceUpdated);
 }
 
 void SpaceInfo::onSpaceUpdated(KJob *job)
 {
+    auto sizeJob = qobject_cast<KIO::FileSystemFreeSpaceJob *>(job);
     const QString &udi = m_storageInfo->device().udi();
 
-    if (!job->error() && m_job) {
+    if (!job->error()) {
         // update the volume in case of 2-stage devices
         Solid::Device device = m_storageInfo->device();
         if (device.is<Solid::StorageVolume>()) {
-            if (m_job->size() == 0) {
+            if (sizeJob->size() == 0) {
                 qCDebug(APPLETS::DEVICENOTIFIER) << "Space Info " << device.udi() << " : 2-stage device arrived : " << udi;
                 auto iface = device.as<Solid::GenericInterface>();
                 if (iface) {
@@ -96,8 +97,8 @@ void SpaceInfo::onSpaceUpdated(KJob *job)
             }
         }
 
-        m_fullSize = m_job->size();
-        m_freeSize = m_job->availableSize();
+        m_fullSize = sizeJob->size();
+        m_freeSize = sizeJob->availableSize();
 
         qCDebug(APPLETS::DEVICENOTIFIER) << "Space Info " << udi << " : storage space update finished. "
                                          << "Space: " << m_fullSize << "FreeSpace: " << m_freeSize;
