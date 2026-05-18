@@ -74,7 +74,7 @@ PlasmoidItem {
     }
     Plasmoid.icon: {
         let iconName;
-        if (filterModel.lastUdi !== "") {
+        if (filterModel.lastUdi !== "" && filterModel.lastIcon !== "kdeconnect") {
             iconName = filterModel.lastIcon;
         } else {
             iconName = "device-notifier";
