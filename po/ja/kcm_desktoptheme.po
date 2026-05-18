@@ -6,14 +6,15 @@
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2010, 2015.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # SPDX-FileCopyrightText: 2025 Yuma Kakei <yumasansansan@gmail.com>
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2024-01-06 23:10+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 18:59+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -67,12 +68,12 @@ msgstr "すべてのテーマ"
 #: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
-msgstr "明るいテーマ"
+msgstr "ライトテーマ"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
-msgstr "暗いテーマ"
+msgstr "ダークテーマ"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
