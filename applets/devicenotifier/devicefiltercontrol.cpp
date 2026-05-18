@@ -191,7 +191,6 @@ void DeviceFilterControl::onDeviceAdded(const QModelIndex &parent, int first, in
 
     m_deviceCount = rowCount(parent);
 
-    m_lastDeviceAdded = true;
     QModelIndex index = DeviceFilterControl::index(first, 0, parent);
 
     handleDeviceAdded(index);
@@ -319,6 +318,9 @@ void DeviceFilterControl::handleDeviceAdded(const QModelIndex &index)
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Set new last Device " << data(index, DeviceControl::Udi).toString();
 
+    const bool isRemote = data(index, DeviceControl::IsRemote).toBool();
+    // Don't pop up for remote devices, they can come and go randomly.
+    m_lastDeviceAdded = !isRemote;
     m_lastIcon = data(index, DeviceControl::Icon).toString();
     m_lastDescription = data(index, DeviceControl::Description).toString();
     m_lastUdi = data(index, DeviceControl::Udi).toString();
