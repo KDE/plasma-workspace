@@ -148,12 +148,6 @@ void ShellCorona::init()
         }
     });
 
-#ifndef NDEBUG
-    m_invariantsTimer.setSingleShot(true);
-    m_invariantsTimer.setInterval(qEnvironmentVariableIsSet("KDECI_BUILD") > 0 ? 30000ms : 1s);
-    connect(&m_invariantsTimer, &QTimer::timeout, this, &ShellCorona::screenInvariants);
-#endif
-
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(kPackage().filePath("defaults")), u"Desktop"_s);
     m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), u"Desktop"_s);
     m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, QStringLiteral("org.kde.plasma.desktop"));
@@ -857,8 +851,11 @@ void ShellCorona::screenInvariants() const
         return;
     }
 
+    Q_ASSERT(!m_screenReorderInProgress);
+
     QSet<QScreen *> managedScreens;
     for (auto *desk : m_desktopViewForScreen) {
+        Q_ASSERT_X(desk->screenToFollow(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
         managedScreens.insert(desk->screenToFollow());
     }
 
@@ -1398,14 +1395,14 @@ void ShellCorona::handleScreenRemoved(QScreen *screen)
     // There can't be a containment that has for instance screen 0 and another 2 but nothing on 1
     // It's size() - 1 because at this point screenpool didn't remove it from screenOrder() yet
     Q_EMIT screenRemoved(m_screenPool->screenOrder().size() - 1);
-#ifndef NDEBUG
-    m_invariantsTimer.start();
-#endif
 }
 
 void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
 {
+    Q_ASSERT(!m_screenReorderInProgress);
+
     m_screenReorderInProgress = true;
+
     // First: reassign existing views if applicable, otherwise remove them
     auto allDesktops = m_desktopViewForScreen.values();
     m_desktopViewForScreen.clear();
@@ -1463,9 +1460,7 @@ void ShellCorona::addOutput(QScreen *screen)
         return;
     }
     Q_ASSERT(!screen->geometry().isNull());
-#ifndef NDEBUG
-    connect(screen, &QScreen::geometryChanged, &m_invariantsTimer, qOverload<>(&QTimer::start), Qt::UniqueConnection);
-#endif
+
     int insertPosition = m_screenPool->idForScreen(screen);
     Q_ASSERT(insertPosition >= 0);
 
@@ -1507,9 +1502,6 @@ void ShellCorona::addOutput(QScreen *screen)
         Q_EMIT availableScreenRectChanged(m_screenPool->idForScreen(screen));
     }
     Q_EMIT screenAdded(m_screenPool->idForScreen(screen));
-#ifndef NDEBUG
-    m_invariantsTimer.start();
-#endif
 }
 
 void ShellCorona::checkAllDesktopsUiReady()
