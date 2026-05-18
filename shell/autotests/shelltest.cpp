@@ -59,6 +59,7 @@ private Q_SLOTS:
     void testPanelInsertion();
     void testSecondScreenInsertion();
     void testRedundantScreenInsertion();
+    void testScreenRemovalBeforeAfterScreenOrderChanged();
     void testScreenRemovalRecyclingViews();
     void testMoveOutOfRedundant();
     void testScreenRemoval();
@@ -411,6 +412,63 @@ void ShellTest::testScreenRemoval()
     }
     QVERIFY(cont1Found);
     QVERIFY(cont2Found);
+}
+
+void ShellTest::testScreenRemovalBeforeAfterScreenOrderChanged()
+{
+    testSecondScreenInsertion();
+
+    QPointer<DesktopView> view0 = m_corona->m_desktopViewForScreen[0];
+    QPointer<QScreen> screen0 = view0->screenToFollow();
+    QVERIFY(screen0);
+    QCOMPARE(screen0->name(), u"WL-1"_s);
+
+    QPointer<DesktopView> view1 = m_corona->m_desktopViewForScreen[1];
+    QPointer<QScreen> screen1 = view1->screenToFollow();
+    QVERIFY(screen1);
+    QCOMPARE(screen1->name(), u"DP-1"_s);
+
+    QPointer<DesktopView> view2 = m_corona->m_desktopViewForScreen[2];
+    auto *screen2 = view2->screenToFollow();
+    QVERIFY(screen2);
+    QCOMPARE(screen2->name(), u"DP-2"_s);
+
+    QSignalSpy removedSpy(m_corona, &ShellCorona::screenRemoved);
+    QSignalSpy screenOrderChangedSpy(m_corona, &ShellCorona::screenOrderChanged);
+    QSignalSpy screen1DeletedSpy(screen1, &QObject::destroyed);
+    QSignalSpy view2DeletedSpy(view2, &QObject::destroyed);
+
+    exec([this] {
+        remove(output(1));
+    });
+
+    QTRY_COMPARE(removedSpy.size(), 1);
+    QTRY_COMPARE(screen1DeletedSpy.size(), 1);
+
+    // Before screenOrderChanged arrives, the desktop view for screen 1 is still kept
+    // for recycling, but the underlying QScreen object has already been destroyed.
+    QCOMPARE(removedSpy.takeFirst().at(0).value<int>(), 2);
+    QVERIFY(m_corona->m_desktopViewForScreen.contains(1));
+    QCOMPARE(m_corona->m_desktopViewForScreen[1], view1);
+    QCOMPARE(view1->screenToFollow(), nullptr);
+
+    // The next screen has not been remapped yet either; desktopForScreen() can no longer
+    // find the recycled view because it indexes through ScreenPool::idForScreen().
+    QCOMPARE(view2->screenToFollow(), screen2);
+    QCOMPARE(m_corona->desktopForScreen(screen1), nullptr);
+    QCOMPARE(m_corona->desktopForScreen(screen2), view1);
+
+    setScreenOrder({u"WL-1"_s, u"DP-2"_s}, true);
+
+    // When screenOrderChanged has finally arrived,
+    // there are 2 screens managed by view0 and view1 respectively,
+    // and view3 has been deleted
+    QTRY_COMPARE(screenOrderChangedSpy.size(), 1);
+    QTRY_COMPARE(view2DeletedSpy.size(), 1);
+
+    QCOMPARE(m_corona->m_desktopViewForScreen.size(), 2);
+    QCOMPARE(m_corona->m_desktopViewForScreen[0], view0);
+    QCOMPARE(m_corona->m_desktopViewForScreen[1], view1);
 }
 
 void ShellTest::testScreenRemovalRecyclingViews()
