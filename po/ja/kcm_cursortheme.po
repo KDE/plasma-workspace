@@ -8,20 +8,21 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008.
 # 百武 朋大 <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2007, 2011, 2019.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2024-01-09 16:09+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 13:06+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -165,25 +166,22 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(この Plasma セッションの現在のテーマ)"
 
 #: ui/Delegate.qml:48
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
-msgstr "カーソルテーマを復元"
+msgstr "ポインタテーマを削除"
 
 #: ui/Delegate.qml:50
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
-msgstr "現在のマウスカーソルテーマの名前"
+msgstr "現在使用中のポインタテーマは削除できません"
 
 #: ui/Delegate.qml:52
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
-msgstr "現在のマウスカーソルテーマの名前"
+msgstr "システムがインストールしたポインタテーマは削除できません"
 
 #: ui/Delegate.qml:60
 #, fuzzy, kde-format
@@ -204,17 +202,13 @@ msgid "Configure the animations played while an application is launching."
 msgstr "アプリケーション起動時に再生されるアニメーションを設定"
 
 #: ui/LaunchFeedbackDialog.qml:49
-#, fuzzy, kde-format
-#| msgctxt "@label"
-#| msgid "Cursor feedback:"
+#, kde-format
 msgctxt "@label"
 msgid "Pointer feedback:"
-msgstr "カーソルフィードバック:"
+msgstr "ポインタフィードバック:"
 
 #: ui/LaunchFeedbackDialog.qml:50
-#, fuzzy, kde-format
-#| msgctxt "@option:radio No cursor feedback when launching apps"
-#| msgid "None"
+#, kde-format
 msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
 msgstr "なし"
@@ -288,10 +282,9 @@ msgid "Open Theme"
 msgstr "テーマを開く"
 
 #: ui/main.qml:199
-#, fuzzy, kde-format
-#| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+#, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
-msgstr "カーソルテーマファイル (*.tar.gz *.tar.bz2)"
+msgstr "ポインタテーマファイル (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:59
 #, kde-format
@@ -300,6 +293,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(利用可能なサイズ: %1)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "テーマを削除"

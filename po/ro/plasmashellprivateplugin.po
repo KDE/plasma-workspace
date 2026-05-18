@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-04-13 13:18+0100\n"
+"PO-Revision-Date: 2026-05-16 20:55+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -204,10 +204,7 @@ msgstr ""
 "Plasma %2. Contactați autorul controlului grafic pentru o versiune mai nouă."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -216,17 +213,15 @@ msgstr ""
 "Plasma %2. Actualizați Plasma pentru a folosi controlul grafic."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
 "Acest control grafic a fost scris pentru Plasma %1 și nu e compatibil cu "
-"ultima versiune Plasma. Actualizați Plasma pentru a folosi controlul grafic."
+"versiunea mai veche de Plasma instalată în acest sistem. Actualizați Plasma "
+"pentru a folosi controlul grafic."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"

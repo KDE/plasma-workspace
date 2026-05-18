@@ -1,13 +1,14 @@
 # SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2023-12-21 19:58+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 17:49+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -25,37 +26,37 @@ msgstr "言語を引き継ぐ"
 #, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "国際電気標準会議 (IEC)"
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "半導体技術協会 (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "メートル法 (SI)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "バイナリ - キビバイト (KiB), メビバイト (MiB), ギビバイト (GiB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "バイナリ - キロバイト (KB), メガバイト (MB), ギガバイト (GB)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "十進数 - キロバイト (kB), メガバイト (MB), ギガバイト (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -97,25 +98,25 @@ msgstr ""
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "株式会社〇×"
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "開発部"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "開発棟"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr ""
+msgstr "〇〇通り"
 
 #: exampleutility.cpp:98
 #, kde-format
@@ -127,49 +128,49 @@ msgstr ""
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:101
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr ""
+msgstr "2号室"
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr ""
+msgstr "3階"
 
 #: exampleutility.cpp:104
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "〇〇町"
 
 #: exampleutility.cpp:105
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "123-4567"
 
 #: exampleutility.cpp:106
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
-msgstr ""
+msgstr "〇〇市"
 
 #: exampleutility.cpp:107
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr ""
+msgstr "〇〇県"
 
 #: exampleutility.cpp:120
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "姓"
 
 #: exampleutility.cpp:121
 #, kde-format
@@ -181,7 +182,7 @@ msgstr ""
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "名"
 
 #: exampleutility.cpp:123
 #, kde-format
@@ -217,7 +218,7 @@ msgstr ""
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
-msgstr ""
+msgstr "職業"
 
 #: exampleutility.cpp:129
 #, kde-format
@@ -229,25 +230,25 @@ msgstr ""
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
-msgstr ""
+msgstr "Dr."
 
 #: exampleutility.cpp:131
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
-msgstr ""
+msgstr "Dr."
 
 #: exampleutility.cpp:132
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:148
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:162
 #, kde-format
@@ -289,12 +290,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "実行ファイル `check-language-support` が見つかりません"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support が失敗しました。出力: %1"
+msgstr "check-language-support が失敗しました。出力: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -303,12 +302,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "パッケージの不足が完全には解決されませんでした。%1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "パッケージ %1 のインストールに失敗しました"
+msgstr "言語パッケージ (%1) のインストールに失敗しました: %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
@@ -425,25 +422,25 @@ msgstr "電話番号"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "データとストレージサイズ"
 
 #: optionsmodel.cpp:279
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -524,7 +521,7 @@ msgstr "言語を追加"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "このシステムは \"%1\" に対応していません。"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -533,12 +530,14 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"<link url='%1'>KDE ソフトウェアをお使いの言語に翻訳する</link> をご覧くださ"
+"い。"
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
-msgstr "さらに追加..."
+msgstr "さらに追加…"
 
 #: ui/main.qml:34
 #, kde-format
@@ -589,13 +588,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
-msgstr "変更..."
+msgstr "変更…"
 
 #: ui/main.qml:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "データとストレージサイズ"
 
 #: ui/main.qml:282
 #, kde-format
@@ -644,10 +643,10 @@ msgstr "電話番号"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "このシステムは \"%1\" 向けに対応していません。"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "代わりに近隣の地域を検索してください。"

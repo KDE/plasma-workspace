@@ -11,20 +11,21 @@
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2005, 2015, 2019.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2024-11-17 20:29+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 13:14+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -1343,24 +1344,22 @@ msgid "Edit Color Scheme…"
 msgstr "カラースキームを編集..."
 
 #: ui/main.qml:312
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "カラースキームを削除"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "カラースキームを編集・作成するユーティリティ"
+msgstr "現在使用中のカラースキームは削除できません"
 
 #: ui/main.qml:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "システムがインストールしたカラースキームは削除できません"
 
 #: ui/main.qml:324
 #, kde-format
@@ -1376,24 +1375,3 @@ msgstr "カラースキームを開く"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "カラースキームファイル (*.colors)"
-
-#~ msgid "You do not have permission to overwrite that scheme"
-#~ msgstr "そのスキームを上書きする権限がありません"
-
-#~ msgid "Restore Color Scheme"
-#~ msgstr "カラースキームを復元"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "枠の影付けと 3D 効果"
-
-#~ msgid "Shading"
-#~ msgstr "影付け"
-
-#~ msgid "Maximum"
-#~ msgstr "最大"
-
-#~ msgid "Minimum"
-#~ msgstr "最小"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "カスタムのアクセントカラーを選択"

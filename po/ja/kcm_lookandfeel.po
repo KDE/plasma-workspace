@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-03-31 10:22+0900\n"
+"PO-Revision-Date: 2026-05-10 18:45+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -161,55 +161,57 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"ライトに設定されたグローバルテーマは昼間に使用され、ダークは夜間に使用されま"
+"す。"
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "昼夜サイクルを設定…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "ライト"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "ダーク"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "切り替えるとき無操作状態まで待つ:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
+msgstr[0] "%1 秒間"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "コンピューターの使用中に邪魔にならないよう設定することができます。"
 
 #: ui/LookAndFeelSelector.qml:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "明るいグローバルテーマを選択"
+msgstr "ライトのグローバルテーマを選択"
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "暗いグローバルテーマを選択"
+msgstr "ダークのグローバルテーマを選択"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
@@ -227,13 +229,13 @@ msgstr "テーマを削除"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr "現在有効化されているテーマは削除できません"
+msgstr "現在使用中のテーマは削除できません"
 
 #: ui/LookAndFeelSelector.qml:61 ui/StaticLookAndFeel.qml:79
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr "システムにインストールされているテーマは削除できません"
+msgstr "システムがインストールしたテーマは削除できません"
 
 #: ui/LookAndFeelSnapshot.qml:16
 #, kde-format
@@ -297,13 +299,13 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "夜間はダークモードに切り替え"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "現在のテーマを保存…"
 
 #: ui/main.qml:45
 #, kde-format
@@ -393,7 +395,7 @@ msgstr "スプラッシュスクリーン"
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr "このグローバルテーマによって以下のものが適用されます:"
+msgstr "このグローバルテーマによって以下のものが適用されます。"
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
@@ -443,7 +445,7 @@ msgstr "%1 を適用しますか？"
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Choose what to apply…"
-msgstr "適用するものを選んでください..."
+msgstr "適用先を選択…"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format

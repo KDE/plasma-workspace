@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-13 00:48+0000\n"
-"PO-Revision-Date: 2026-05-15 05:36-0300\n"
+"PO-Revision-Date: 2026-05-17 07:53-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -192,7 +192,7 @@ msgstr "Substitui uma instância existente"
 #: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr "Lista as opções disponíveis para os comentários dos usuários"
+msgstr "Lista as opções disponíveis para o feedback do usuário"
 
 #: main.cpp:190
 #, kde-format
