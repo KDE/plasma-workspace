@@ -40,6 +40,7 @@ public:
     bool isEncrypted() const;
     bool hasRemovableParent() const;
     bool isRemovable() const;
+    bool isRemote() const;
     QString type() const;
     QString icon() const;
     QString description() const;
@@ -49,6 +50,7 @@ private:
     bool m_isValid;
     bool m_isEncrypted;
     bool m_isRemovable;
+    bool m_isRemote;
     bool m_hasRemovableParent;
     QString m_type;
     QString m_icon;

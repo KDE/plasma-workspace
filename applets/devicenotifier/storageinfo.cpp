@@ -39,6 +39,7 @@ StorageInfo::StorageInfo(const QString &udi, QObject *parent)
     , m_isValid(false)
     , m_isEncrypted(false)
     , m_isRemovable(false)
+    , m_isRemote(false)
     , m_hasRemovableParent(false)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Storage Info " << udi << " : begin initializing";
@@ -116,6 +117,10 @@ StorageInfo::StorageInfo(const QString &udi, QObject *parent)
         if (mediaplayer) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Storage Info " << udi << " : is a media player";
             m_isRemovable = true;
+
+            if (mediaplayer->supportedProtocols().contains(QLatin1StringView("kdeconnect"))) {
+                m_isRemote = true;
+            }
         }
     }
 
@@ -183,6 +188,11 @@ bool StorageInfo::hasRemovableParent() const
 bool StorageInfo::isRemovable() const
 {
     return m_isRemovable;
+}
+
+bool StorageInfo::isRemote() const
+{
+    return m_isRemote;
 }
 
 QString StorageInfo::type() const

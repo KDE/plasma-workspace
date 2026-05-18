@@ -87,6 +87,8 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     case IsRemovable: {
         return deviceInfo.storageInfo ? deviceInfo.storageInfo->isRemovable() : QVariant();
     }
+    case IsRemote:
+        return deviceInfo.storageInfo ? deviceInfo.storageInfo->isRemote() : QVariant();
     case Size: {
         std::optional<double> size = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFullSize() : std::nullopt;
         return size.has_value() ? size.value() : 0;
