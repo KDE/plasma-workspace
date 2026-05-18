@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2023-06-18 17:51+0100\n"
+"PO-Revision-Date: 2026-05-16 20:53+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: qml/main.qml:70
 #, kde-format
@@ -45,16 +45,14 @@ msgid "Virtual Keyboard: visible"
 msgstr "Tastatură virtuală: vizibilă"
 
 #: qml/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: visible"
+#, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "Tastatură virtuală: vizibilă"
+msgstr "Tastatură virtuală: Arată la introducere, cu excepția șoricelului"
 
 #: qml/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: disabled"
+#, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr "Tastatură virtuală: inactivă"
+msgstr "Tastatură virtuală: Arată cu toate dispozitivele de introducere"
 
 #~ msgid "Virtual Keyboard: enabled"
 #~ msgstr "Tastatură virtuală: activă"

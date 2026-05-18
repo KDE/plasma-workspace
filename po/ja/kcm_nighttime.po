@@ -1,0 +1,224 @@
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-02-20 00:48+0000\n"
+"PO-Revision-Date: 2026-05-10 18:02+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 26.04.1\n"
+
+#: ui/main.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Time-based features such as Night Light and dynamic wallpapers can be "
+"synchronized with the day-night cycle. Choose your preferred cycle here."
+msgstr ""
+"Night Light やダイナミック壁紙などの時間ベースの機能は、昼夜サイクルと同期さ"
+"せることができます。お好みのサイクルを設定してください。"
+
+#: ui/main.qml:42
+#, kde-format
+msgctxt ""
+"@label:listbox part of a sentence: 'Determine sunrise and sunset times "
+"[based on]'"
+msgid "Determine sunrise and sunset times:"
+msgstr "日の出と日の入りの時間:"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Based on device's location"
+msgstr "デバイスの地域に基づく"
+
+#: ui/main.qml:48
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Using custom times"
+msgstr "カスタム設定"
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "日の出:"
+
+#: ui/main.qml:75
+#, kde-format
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "日の入り:"
+
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "日の出/日の入りにかかる時間:"
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 分"
+
+#: ui/main.qml:118
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr "自動で地域を識別"
+
+#: ui/main.qml:145
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>GeoClue2</application> service will be used to periodically "
+"update the device's location using GPS or cell tower triangulation if "
+"available, or else by sending its IP address to <link url='https://geoip.com/"
+"privacy/'>GeoIP</link>."
+msgstr ""
+"利用可能な場合は GPS やジオロケーションを利用して定期的にデバイスの位置を特定"
+"するため、<application>GeoClue2</application> サービスを使用します。GPS やジ"
+"オロケーションが利用できない場合は <link url='https://geoip.com/"
+"privacy/'>GeoIP</link> に IP アドレスを送信して特定します。"
+
+#: ui/main.qml:146
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>%1</application> service will be used to periodically "
+"update the device's location. Please open a bug report at <link url='https://"
+"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
+"detailed description of what this service will do."
+msgstr ""
+"定期的にデバイスの位置を特定するため、<application>%1</application> サービス"
+"が使用されます。<link url='https://bugs.kde.org'>https://bugs.kde.org</link> "
+"でこのサービスが何をするのかについての説明を記載するよう KDE の開発者にお問い"
+"合わせください。"
+
+#: ui/main.qml:163
+#, kde-format
+msgctxt "@option:radio"
+msgid "Use manual location:"
+msgstr "手動で設定:"
+
+#: ui/main.qml:175
+#, kde-format
+msgctxt "@label"
+msgid "Latitude:"
+msgstr "緯度:"
+
+#: ui/main.qml:195
+#, kde-format
+msgctxt "@label"
+msgid "Longitude:"
+msgstr "経度:"
+
+#: ui/SunPath.qml:52
+#, kde-format
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
+msgid "Sunrise starts at %1 and ends at %2"
+msgstr "日の出の開始時刻は %1, 終了時刻は %2 です"
+
+#: ui/SunPath.qml:57
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise"
+msgstr "日の出"
+
+#: ui/SunPath.qml:77
+#, kde-format
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
+msgid "Sunset starts at %1 and ends at %2"
+msgstr "日の入りの開始時刻は %1, 終了時刻は %2 です"
+
+#: ui/SunPath.qml:82
+#, kde-format
+msgctxt "@label"
+msgid "Sunset"
+msgstr "日の入り"
+
+#: ui/SunPath.qml:107
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"day. Choose custom times instead."
+msgstr ""
+"極日のため、お住まいの地域では日の出と日の入りの時刻を特定できません。代わり"
+"にカスタム時刻を選択してください。"
+
+#: ui/SunPath.qml:109
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"night. Choose custom times instead."
+msgstr ""
+"極夜のため、お住まいの地域では日の出と日の入りの時刻を特定できません。代わり"
+"にカスタム時刻を選択してください。"
+
+#: ui/SunPath.qml:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be reliably determined at your location. "
+"Choose custom times instead."
+msgstr ""
+"お住まいの地域では、日の出と日の入りの時刻を正確に特定することができません。"
+"代わりにカスタム時刻を選択してください。"
+
+#: ui/TimeField.qml:31
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ":"
+
+#: ui/WorldMap.qml:76
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "地図をタップしてお住まいの地域を選択してください。"
+
+#: ui/WorldMap.qml:77
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "地図をクリックしてお住まいの地域を選択してください。"
+
+#: ui/WorldMap.qml:189
+#, kde-format
+msgid "Zoom in"
+msgstr "拡大"
+
+#: ui/WorldMap.qml:206
+#, kde-format
+msgid "Zoom out"
+msgstr "縮小"
+
+#: ui/WorldMap.qml:235
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"TUBS による <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> から"
+"改変 / ウィキメディア・コモンズ / <link url='https://creativecommons.org/"
+"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"

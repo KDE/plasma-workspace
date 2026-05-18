@@ -1,13 +1,14 @@
 # SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-25 00:46+0000\n"
-"PO-Revision-Date: 2024-01-06 01:24+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-10 11:58+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,74 +16,69 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "色温度は %1 に夜モードに変化しはじめ、%2 までに完全に変わります。"
+msgstr "色温度は %1 に夜間モードに変化しはじめ、%2 までに完全に変わります。"
 
 #: ui/DayNightView.qml:157
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "色温度は %1 に昼モードに変化しはじめ、%2 までに完全に変わります。"
+msgstr "色温度は %1 に昼間モードに変化しはじめ、%2 までに完全に変わります。"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr "ブルーライト軽減フィルタがスクリーンの色調を暖かくします。"
+msgstr "画面を暖色にするブルーライトフィルターです。"
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
-msgstr "切り替える時間:"
+msgstr "オン/オフのタイミング:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "常にオフ"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "常にオフ"
+msgstr "常にオン"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "日の出と日の入り"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "設定…"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
-msgstr ""
+msgstr "%1 K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
-msgstr "昼モードの色温度:"
+msgstr "昼間の色温度:"
 
 #: ui/main.qml:173 ui/main.qml:237
 #, kde-format
@@ -97,116 +93,7 @@ msgid "Warm"
 msgstr "暖かい"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr "夜モードの色温度:"
-
-#, fuzzy
-#~| msgid "Always on night light"
-#~ msgctxt "@item:inlistbox switching times"
-#~ msgid "Always on night light"
-#~ msgstr "常にオン"
-
-#~ msgctxt "Color temperature in Kelvin"
-#~ msgid "%1K"
-#~ msgstr "%1K"
-
-#~ msgctxt ""
-#~ "@label:chooser Tap should be translated to mean touching using a "
-#~ "touchscreen"
-#~ msgid "Tap to choose your location on the map."
-#~ msgstr "地図をタップしてあなたの位置を選択してください。"
-
-#~ msgctxt ""
-#~ "@label:chooser Click should be translated to mean clicking using a mouse"
-#~ msgid "Click to choose your location on the map."
-#~ msgstr "地図をクリックしてあなたの位置を選択してください。"
-
-#~ msgid "Zoom in"
-#~ msgstr "拡大"
-
-#, fuzzy
-#~| msgid "Zoom in"
-#~ msgid "Zoom out"
-#~ msgstr "拡大"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
-#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-#~ msgstr ""
-#~ "変更元の画像: <link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
-#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Latitude:"
-#~ msgstr "緯度:"
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Longitude:"
-#~ msgstr "経度:"
-
-#~ msgid "Sunset and sunrise at current location"
-#~ msgstr "現在地の日の入りと日の出"
-
-#~ msgid "Sunset and sunrise at manual location"
-#~ msgstr "手動で指定した地点の日の入りと日の出"
-
-#~ msgid "Custom times"
-#~ msgstr "指定した時間"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "現在の場所:"
-
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "緯度: %1°   経度: %2°"
-
-#~ msgid "Begin night light at:"
-#~ msgstr "夜モードを開始する時刻:"
-
-#~ msgid "Begin day light at:"
-#~ msgstr "昼モードを開始する時刻:"
-
-#~ msgid "Transition duration:"
-#~ msgstr "切り替えにかける時間:"
-
-#~ msgid "%1 minute"
-#~ msgid_plural "%1 minutes"
-#~ msgstr[0] "%1 分"
-
-#~ msgid "Input minutes - min. 1, max. 600"
-#~ msgstr "分を入力 - 1-600"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "Locating…"
-#~ msgstr "位置を特定しています..."
-
-#, fuzzy
-#~| msgid "%1 minute"
-#~| msgid_plural "%1 minutes"
-#~ msgctxt "@info:tooltip Part of a control for setting a time"
-#~ msgid "minute"
-#~ msgstr "%1 分"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The device's location will be periodically updated using GPS (if "
-#~ "available), or by sending network information to <link url='https://"
-#~ "location.services.mozilla.com'>Mozilla Location Service</link>."
-#~ msgstr ""
-#~ "デバイスの位置情報は、利用可能な場合は GPS を用いて、もしくは <link "
-#~ "url='https://location.services.mozilla.com'>Mozilla Location Service</"
-#~ "link> にネットワーク情報を送信して定期的に更新されます。"
-
-#~ msgid "Error: Transition time overlaps."
-#~ msgstr "エラー: 切り替わる時間が重複しています。"
-
-#~ msgid "Input format: HH:MM"
-#~ msgstr "入力フォーマット: HH:MM"
+msgstr "夜間の色温度:"
