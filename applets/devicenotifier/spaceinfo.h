@@ -43,8 +43,6 @@ private:
     std::optional<double> m_fullSize;
     std::optional<double> m_freeSize;
 
-    KIO::FileSystemFreeSpaceJob *m_job;
-
     std::shared_ptr<StorageInfo> m_storageInfo;
     std::shared_ptr<StateInfo> m_stateInfo;
     std::shared_ptr<SpaceUpdateMonitor> m_spaceUpdateMonitor;
