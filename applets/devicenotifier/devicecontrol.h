@@ -28,6 +28,7 @@ public:
         Emblems,
         IsBusy,
         IsRemovable,
+        IsRemote,
         FreeSpace,
         Size,
         FreeSpaceText,
