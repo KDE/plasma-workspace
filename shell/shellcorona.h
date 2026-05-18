@@ -316,9 +316,7 @@ private:
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
-#ifndef NDEBUG
-    QTimer m_invariantsTimer;
-#endif
+
     // For getting the active window on Wayland
     KWayland::Client::PlasmaWindowManagement *m_waylandWindowManagement = nullptr;
     QPointer<KWayland::Client::PlasmaWindow> m_previousPlasmaWindow;
