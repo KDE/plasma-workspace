@@ -6,10 +6,12 @@
 #include <KIO/ApplicationLauncherJob>
 #include <KSycoca>
 
+using namespace Qt::StringLiterals;
+
 ApplicationIntegration::ApplicationIntegration(QObject *parent)
     : QObject(parent)
-    , m_calendarService(KApplicationTrader::preferredService(QStringLiteral("text/calendar")))
 {
+    refresh();
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &ApplicationIntegration::refresh);
 }
 
@@ -43,7 +45,12 @@ void ApplicationIntegration::refresh()
     bool wasInstalled = calendarInstalled();
     QString oldName = calendarApplicationName();
 
-    m_calendarService = newService;
+    // This does deliberately not include inherited mime types, so that we only consider "real" calendar applications.
+    if (newService && newService->mimeTypes().contains(u"text/calendar"_s)) {
+        m_calendarService = newService;
+    } else {
+        m_calendarService = nullptr;
+    }
 
     if (wasInstalled != calendarInstalled()) {
         Q_EMIT calendarInstalledChanged();
