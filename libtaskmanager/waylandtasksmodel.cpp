@@ -521,7 +521,7 @@ void WaylandTasksModel::Private::init()
     // high polling rate mice can flood the eventloop with
     // signals otherwise.
     geometryChangeTimer.setSingleShot(true);
-    geometryChangeTimer.setInterval(1ms);
+    geometryChangeTimer.setInterval(10ms);
 }
 
 void WaylandTasksModel::Private::initWayland()
@@ -773,7 +773,11 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
     geometryChangeTimer.callOnTimeout(q, [this, window]() {
         this->dataChanged(window, QList<int>{Geometry, ScreenGeometry});
     });
-    QObject::connect(window, &PlasmaWindow::geometryChanged, &geometryChangeTimer, qOverload<>(&QTimer::start));
+    QObject::connect(window, &PlasmaWindow::geometryChanged, &geometryChangeTimer, [t = &geometryChangeTimer]() {
+        if (t && !t->isActive()) {
+            t->start();
+        }
+    });
 
     QObject::connect(window, &PlasmaWindow::demandsAttentionChanged, q, [window, this] {
         // Changes to a transient's state might change demands attention state for leader.
