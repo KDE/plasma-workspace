@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:48+0000\n"
+"POT-Creation-Date: 2026-05-19 00:47+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -364,58 +364,58 @@ msgstr "%1 %2 บน %3"
 msgid "Disconnected Screen %1"
 msgstr "หน้าจอถูกตัดการเชื่อมต่อ %1"
 
-#: shellcorona.cpp:180 shellcorona.cpp:182
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "แสดงเดสก์ท็อป"
 
-#: shellcorona.cpp:182
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "ซ่อนเดสก์ท็อป"
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "เปิดใช้งานตัวเรียกใช้งานโปรแกรม"
 
-#: shellcorona.cpp:206
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "แสดงตัวสลับกิจกรรม"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "สลับไปยังกิจกรรมก่อนหน้า"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "สลับไปยังกิจกรรมถัดไป"
 
-#: shellcorona.cpp:238
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "เปิดใช้งานรายการ Task manager %1"
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:267
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "จัดการเดสก์ท็อปและแผง..."
 
-#: shellcorona.cpp:295
+#: shellcorona.cpp:289
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "ย้ายโฟกัสของแป้นพิมพ์ระหว่างแผง"
 
-#: shellcorona.cpp:2279
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "เพิ่มแผง"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2354
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
