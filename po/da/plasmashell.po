@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-13 00:48+0000\n"
+"POT-Creation-Date: 2026-05-19 02:42+0000\n"
 "PO-Revision-Date: 2026-05-07 23:05+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -368,58 +368,58 @@ msgstr "%1 %2 på %3"
 msgid "Disconnected Screen %1"
 msgstr "Frakoblede skærm %1"
 
-#: shellcorona.cpp:180 shellcorona.cpp:182
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Vis skrivebord"
 
-#: shellcorona.cpp:182
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Skjul skrivebord"
 
-#: shellcorona.cpp:198
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktiv programstarter"
 
-#: shellcorona.cpp:206
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Vis aktivitetsskifter"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Skift til forrige aktivitet"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Skift til næste aktivitet"
 
-#: shellcorona.cpp:238
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivér opgavelinje-indgang %1"
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:267
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Håndter skriveborde og paneler…"
 
-#: shellcorona.cpp:295
+#: shellcorona.cpp:289
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Flyt tastaturfokus mellem paneler"
 
-#: shellcorona.cpp:2279
+#: shellcorona.cpp:2271
 #, kde-format
 msgid "Add Panel"
 msgstr "Tilføj panel"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2354
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
