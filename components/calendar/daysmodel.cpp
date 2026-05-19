@@ -445,7 +445,9 @@ QHash<int, QByteArray> DaysModel::roleNames() const
 QModelIndex DaysModel::index(int row, int column, const QModelIndex &parent) const
 {
     if (parent.isValid()) {
-        return createIndex(row, column, (intptr_t)parent.row());
+        // +1 so internalId is non-zero even when parent.row() == 0,
+        // avoiding collision with nullptr (internalId=0) of top-level indexes
+        return createIndex(row, column, (intptr_t)(parent.row() + 1));
     }
     return createIndex(row, column, nullptr);
 }
@@ -453,7 +455,8 @@ QModelIndex DaysModel::index(int row, int column, const QModelIndex &parent) con
 QModelIndex DaysModel::parent(const QModelIndex &child) const
 {
     if (child.internalId()) {
-        return createIndex(child.internalId(), 0, nullptr);
+        // -1 to undo the +1 offset applied in index()
+        return createIndex(child.internalId() - 1, 0, nullptr);
     }
     return {};
 }
