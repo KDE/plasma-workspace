@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-05-20 02:42+0000\n"
 "PO-Revision-Date: 2011-04-07 10:09+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -249,7 +249,7 @@ msgstr "Uklanjanje…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:123
+#: qml/FullRepresentation.qml:47 qml/main.qml:117
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -272,43 +272,43 @@ msgstr "Samo neuklonjivi uređaji"
 msgid "No disks available"
 msgstr "Nema dostupnih uređaja."
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "Najnoviji uređaj"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nema dostupnih uređaja"
 
-#: qml/main.qml:109
+#: qml/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Samo neuklonjivi uređaji"
 
-#: qml/main.qml:131
+#: qml/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Samo uklonjivi uređaji"
 
-#: qml/main.qml:146
+#: qml/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Samo neuklonjivi uređaji"
 
-#: qml/main.qml:161
+#: qml/main.qml:155
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Svi uređaji"
 
-#: qml/main.qml:178
+#: qml/main.qml:172
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

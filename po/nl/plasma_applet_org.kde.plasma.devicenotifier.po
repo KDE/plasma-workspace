@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-05-20 02:42+0000\n"
 "PO-Revision-Date: 2026-02-20 13:54+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -202,7 +202,7 @@ msgstr "Verwijderen…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Nog niet uitnemen! Er worden nog steeds bestanden overgezet…"
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:123
+#: qml/FullRepresentation.qml:47 qml/main.qml:117
 #, kde-format
 msgid "Remove All"
 msgstr "Alles verwijderen"
@@ -222,38 +222,38 @@ msgstr "Geen verwijderbare apparaten aangekoppeld"
 msgid "No disks available"
 msgstr "Geen schijven beschikbaar"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Meest recente apparaat"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "No Devices Available"
 msgstr "Geen apparaten beschikbaar"
 
-#: qml/main.qml:109
+#: qml/main.qml:103
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Verwijderbare apparaten configureren…"
 
-#: qml/main.qml:131
+#: qml/main.qml:125
 #, kde-format
 msgid "Removable Devices"
 msgstr "Verwijderbare apparaten"
 
-#: qml/main.qml:146
+#: qml/main.qml:140
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Niet-verwijderbare apparaten"
 
-#: qml/main.qml:161
+#: qml/main.qml:155
 #, kde-format
 msgid "All Devices"
 msgstr "Alle apparaten"
 
-#: qml/main.qml:178
+#: qml/main.qml:172
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Pop-up tonen wanneer een nieuw apparaat is aangesloten"

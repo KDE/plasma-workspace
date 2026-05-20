@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-05-20 02:42+0000\n"
 "PO-Revision-Date: 2009-11-09 22:59+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -214,7 +214,7 @@ msgstr ""
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:123
+#: qml/FullRepresentation.qml:47 qml/main.qml:117
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -238,41 +238,41 @@ msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙ�
 msgid "No disks available"
 msgstr "කි‍සි‍ඳු‍ මෙවලමක් අ‍මු‍ණා‍ නො‍මැ‍ත‍"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Most Recent Device"
 msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "No Devices Available"
 msgstr ""
 
-#: qml/main.qml:109
+#: qml/main.qml:103
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
-#: qml/main.qml:131
+#: qml/main.qml:125
 #, kde-format
 msgid "Removable Devices"
 msgstr ""
 
-#: qml/main.qml:146
+#: qml/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Non Removable Devices"
 msgstr "අ‍ව‍සා‍න‍ය‍ට‍ ඇ‍මි‍ණු‍ මෙවලමක්: %1"
 
-#: qml/main.qml:161
+#: qml/main.qml:155
 #, kde-format
 msgid "All Devices"
 msgstr ""
 
-#: qml/main.qml:178
+#: qml/main.qml:172
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"
