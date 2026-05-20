@@ -44,6 +44,12 @@ PlasmoidItem {
         }
     }
 
+    Timer {
+        id: popupIconTimer
+        interval: 3000
+        onTriggered: devicenotifier.popupIcon = ""
+    }
+
     readonly property bool openAutomounterKcmAuthorized: KAuthorized.authorizeControlModule("device_automounter_kcm")
 
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
@@ -54,6 +60,8 @@ PlasmoidItem {
     property bool itemClicked: false
     property int currentIndex: -1
     property int mountedRemovables: 0
+
+    property string popupIcon: ""
 
     signal unmountAllRequested
 
@@ -74,7 +82,9 @@ PlasmoidItem {
     }
     Plasmoid.icon: {
         let iconName;
-        if (filterModel.lastUdi !== "" && filterModel.lastIcon !== "kdeconnect") {
+        if (popupIcon !== "") {
+            iconName = popupIcon;
+        } else if (filterModel.lastUdi !== "" && filterModel.lastIcon !== "kdeconnect") {
             iconName = filterModel.lastIcon;
         } else {
             iconName = "device-notifier";
