@@ -77,7 +77,8 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
             continue; // Already saved
         }
 
-        if (std::ranges::none_of(s_acceptableTextFormatPrefixes, [&format](QStringView prefix) {
+        // Keep the suggested file name.
+        if (format != "application/x-kde-suggestedfilename"_L1 && std::ranges::none_of(s_acceptableTextFormatPrefixes, [&format](QStringView prefix) {
                 return format.startsWith(prefix);
             })) {
             // Don't create un-asked for DDE links in LibreOffice apps;
