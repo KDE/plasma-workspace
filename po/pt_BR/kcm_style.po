@@ -6,7 +6,7 @@
 # Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
 # Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>, 2004.
 # Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2005.
-# Marcus Gama <marcus.gama@gmail.com>, 2004, 2006.
+# SPDX-FileCopyrightText: 2004, 2006, 2026 Marcus Gama <marcus.gama@gmail.com>
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2019, 2020.
 # Aracele Torres <aracele@kde.org>, 2017.
@@ -19,14 +19,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-11-08 21:10-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2026-05-19 12:41-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: gtkpage.cpp:58
@@ -115,13 +115,13 @@ msgstr "Mostrar ícones nos menus"
 #: stylesettings.kcfg:23
 #, kde-format
 msgid "Main toolbar label"
-msgstr "Texto da barra de ferramentas principal"
+msgstr "Texto na barra de ferramentas principal"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
 #, kde-format
 msgid "Secondary toolbar label"
-msgstr "Texto da barra de ferramentas secundária"
+msgstr "Texto na barra de ferramentas secundária"
 
 #: ui/EffectSettingsPopup.qml:19
 #, kde-format
@@ -147,7 +147,7 @@ msgstr "Nos menus"
 #: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Main toolbar label:"
-msgstr "Texto da barra principal:"
+msgstr "Texto na barra de ferramentas principal:"
 
 #: ui/EffectSettingsPopup.qml:62
 #, kde-format
@@ -172,7 +172,7 @@ msgstr "Ícones embaixo"
 #: ui/EffectSettingsPopup.qml:80
 #, kde-format
 msgid "Secondary toolbar label:"
-msgstr "Texto da barra de ferramentas secundária:"
+msgstr "Texto na barra de ferramentas secundária:"
 
 #: ui/GtkStylePage.qml:17
 #, kde-format

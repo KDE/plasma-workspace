@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-05-20 00:47+0000\n"
 "PO-Revision-Date: 2026-02-27 21:28+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -157,7 +157,7 @@ msgstr "இந்த சாதனத்தை நீக்க முடியவ
 msgid "Could not repair this device: %1"
 msgstr "இந்த சாதனத்தில் பழுதுநீக்க முடியவில்லை: %1"
 
-#: qml/DeviceItem.qml:99
+#: qml/DeviceItem.qml:98
 #, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
@@ -165,7 +165,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "சோதிக்கப்படுகிறது…"
 
-#: qml/DeviceItem.qml:101
+#: qml/DeviceItem.qml:100
 #, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
@@ -173,13 +173,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "பழுதுநீக்கப்படுகிறது…"
 
-#: qml/DeviceItem.qml:104
+#: qml/DeviceItem.qml:103
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%2-இல் %1 காலி"
 
-#: qml/DeviceItem.qml:108
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -187,7 +187,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "அணுகப்படுகிறது…"
 
-#: qml/DeviceItem.qml:111
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -195,12 +195,12 @@ msgctxt ""
 msgid "Removing…"
 msgstr "நீக்கப்படுகிறது…"
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:113
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "கழற்றாதீர்கள்! கோப்புகள் இன்னும் இடமாற்றப்படுகின்றன…"
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:123
+#: qml/FullRepresentation.qml:47 qml/main.qml:117
 #, kde-format
 msgid "Remove All"
 msgstr "அனைத்தையும் நீக்கு"
@@ -210,48 +210,48 @@ msgstr "அனைத்தையும் நீக்கு"
 msgid "Click to safely remove all devices"
 msgstr "அனைத்து சாதனங்களையும் பத்திரமாக நீக்க க்ளிக் செய்யவும்"
 
-#: qml/FullRepresentation.qml:162
+#: qml/FullRepresentation.qml:163
 #, kde-format
 msgid "No removable devices attached"
 msgstr "கழற்றக்கூடிய சாதனங்கள் ஏதுமில்லை"
 
-#: qml/FullRepresentation.qml:162
+#: qml/FullRepresentation.qml:163
 #, kde-format
 msgid "No disks available"
 msgstr "வட்டுகள் ஏதுமில்லை"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "Most Recent Device"
 msgstr "மிக சமீபமான சாதனம்"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "No Devices Available"
 msgstr "எந்த சாதனமும் இல்லை"
 
-#: qml/main.qml:109
+#: qml/main.qml:103
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "கழற்றக்கூடிய சாதனங்களை அமை…"
 
-#: qml/main.qml:131
+#: qml/main.qml:125
 #, kde-format
 msgid "Removable Devices"
 msgstr "கழற்றக்கூடிய சாதனங்கள்"
 
-#: qml/main.qml:146
+#: qml/main.qml:140
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "கழற்ற முடியாத சாதனங்கள்"
 
-#: qml/main.qml:161
+#: qml/main.qml:155
 #, kde-format
 msgid "All Devices"
 msgstr "அனைத்து சாதனங்கள்"
 
-#: qml/main.qml:178
+#: qml/main.qml:172
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "புதிய சாதனம் செருகப்படும்போது தெரித்தெழும் பட்டியை காட்டு"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-05-20 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -155,7 +155,7 @@ msgstr "无法移除此设备。"
 msgid "Could not repair this device: %1"
 msgstr "无法修复此设备：%1"
 
-#: qml/DeviceItem.qml:99
+#: qml/DeviceItem.qml:98
 #, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
@@ -163,7 +163,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "正在检查…"
 
-#: qml/DeviceItem.qml:101
+#: qml/DeviceItem.qml:100
 #, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
@@ -171,13 +171,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "正在修复…"
 
-#: qml/DeviceItem.qml:104
+#: qml/DeviceItem.qml:103
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "总容量 %2，剩余容量 %1"
 
-#: qml/DeviceItem.qml:108
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -185,7 +185,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "正在访问…"
 
-#: qml/DeviceItem.qml:111
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -193,12 +193,12 @@ msgctxt ""
 msgid "Removing…"
 msgstr "正在移除…"
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:113
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "不要立即拔出设备，文件仍在传输中…"
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:123
+#: qml/FullRepresentation.qml:47 qml/main.qml:117
 #, kde-format
 msgid "Remove All"
 msgstr "移除全部"
@@ -208,48 +208,48 @@ msgstr "移除全部"
 msgid "Click to safely remove all devices"
 msgstr "单击可安全移除所有设备"
 
-#: qml/FullRepresentation.qml:162
+#: qml/FullRepresentation.qml:163
 #, kde-format
 msgid "No removable devices attached"
 msgstr "没有插入可移动设备"
 
-#: qml/FullRepresentation.qml:162
+#: qml/FullRepresentation.qml:163
 #, kde-format
 msgid "No disks available"
 msgstr "没有可用的数据盘"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "Most Recent Device"
 msgstr "最近使用的设备"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "No Devices Available"
 msgstr "没有可用的设备"
 
-#: qml/main.qml:109
+#: qml/main.qml:103
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "配置可移动设备…"
 
-#: qml/main.qml:131
+#: qml/main.qml:125
 #, kde-format
 msgid "Removable Devices"
 msgstr "可移动设备"
 
-#: qml/main.qml:146
+#: qml/main.qml:140
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "固定设备"
 
-#: qml/main.qml:161
+#: qml/main.qml:155
 #, kde-format
 msgid "All Devices"
 msgstr "所有设备"
 
-#: qml/main.qml:178
+#: qml/main.qml:172
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "插入新设备时弹窗提示"

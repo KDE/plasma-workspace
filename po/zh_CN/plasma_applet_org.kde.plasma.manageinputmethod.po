@@ -47,9 +47,9 @@ msgstr "虚拟键盘：可见"
 #: qml/main.qml:128
 #, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr ""
+msgstr "虚拟键盘：在非鼠标输入时显示"
 
 #: qml/main.qml:137
 #, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr ""
+msgstr "虚拟键盘：使用所有输入设备时显示"

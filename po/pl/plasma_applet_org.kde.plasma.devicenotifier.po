@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-05-20 00:47+0000\n"
 "PO-Revision-Date: 2026-02-21 08:56+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -165,7 +165,7 @@ msgstr "Nie można wysunąć tego urządzenia."
 msgid "Could not repair this device: %1"
 msgstr "Nie można naprawić tego urządzenia: %1"
 
-#: qml/DeviceItem.qml:99
+#: qml/DeviceItem.qml:98
 #, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
@@ -173,7 +173,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Sprawdzanie…"
 
-#: qml/DeviceItem.qml:101
+#: qml/DeviceItem.qml:100
 #, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
@@ -181,13 +181,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Naprawianie…"
 
-#: qml/DeviceItem.qml:104
+#: qml/DeviceItem.qml:103
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 wolnych z %2"
 
-#: qml/DeviceItem.qml:108
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -195,7 +195,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Podpinanie…"
 
-#: qml/DeviceItem.qml:111
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -203,12 +203,12 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Odpinanie…"
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:113
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Zaczekaj z wysuwaniem! Pliki są jeszcze przesyłane…"
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:123
+#: qml/FullRepresentation.qml:47 qml/main.qml:117
 #, kde-format
 msgid "Remove All"
 msgstr "Wysuń wszystkie"
@@ -218,48 +218,48 @@ msgstr "Wysuń wszystkie"
 msgid "Click to safely remove all devices"
 msgstr "Naciśnij, aby bezpiecznie wysunąć wszystkie urządzenia."
 
-#: qml/FullRepresentation.qml:162
+#: qml/FullRepresentation.qml:163
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Nie podpięto żadnych urządzeń wymiennych"
 
-#: qml/FullRepresentation.qml:162
+#: qml/FullRepresentation.qml:163
 #, kde-format
 msgid "No disks available"
 msgstr "Brak dysku"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Najwcześniejsze urządzenie"
 
-#: qml/main.qml:72
+#: qml/main.qml:68
 #, kde-format
 msgid "No Devices Available"
 msgstr "Brak urządzeń"
 
-#: qml/main.qml:109
+#: qml/main.qml:103
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Ustawienia urządzeń wymiennych..."
 
-#: qml/main.qml:131
+#: qml/main.qml:125
 #, kde-format
 msgid "Removable Devices"
 msgstr "Urządzenia wymienne"
 
-#: qml/main.qml:146
+#: qml/main.qml:140
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Urządzenia niewymienne"
 
-#: qml/main.qml:161
+#: qml/main.qml:155
 #, kde-format
 msgid "All Devices"
 msgstr "Wszystkie urządzenia"
 
-#: qml/main.qml:178
+#: qml/main.qml:172
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Wysuń okno, po podłączeniu nowego urządzenia"
