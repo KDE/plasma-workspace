@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QList>
+#include <QSharedPointer>
 #include <QStandardPaths>
 #include <QString>
 
@@ -14,10 +15,10 @@ class Favicon;
 class Profile
 {
 public:
-    Profile(const QString &path, const QString &name, Favicon *favicon)
+    Profile(const QString &path, const QString &name, std::unique_ptr<Favicon> favicon)
         : m_path(path)
         , m_name(name)
-        , m_favicon(favicon)
+        , m_favicon(favicon.release())
     {
         // Remove "Bookmarks" from end of path
         m_faviconSource = path.chopped(9) + QStringLiteral("Favicons");
@@ -34,7 +35,7 @@ public:
     }
     inline Favicon *favicon() const
     {
-        return m_favicon;
+        return m_favicon.data();
     }
     inline QString faviconSource() const
     {
@@ -48,7 +49,7 @@ public:
 private:
     QString m_path;
     QString m_name;
-    Favicon *m_favicon;
+    QSharedPointer<Favicon> m_favicon;
     QString m_faviconSource;
     QString m_faviconCache;
 };
