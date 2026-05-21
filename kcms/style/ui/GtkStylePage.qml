@@ -33,6 +33,23 @@ Kirigami.Page {
         }
     }
 
+    actions: [
+        Kirigami.Action {
+            text: i18nc("@action:button", "Install from File…")
+            icon.name: "document-import"
+            onTriggered: fileDialogLoader.active = true
+        },
+        NewStuff.Action {
+            text: i18nc("@action:button", "Get New…")
+            configFile: "gtk_themes.knsrc"
+            onEntryEvent: function (entry, event) {
+                if (event == NewStuff.Entry.StatusChangedEvent) {
+                    kcm.load();
+                }
+            }
+        }
+    ]
+
     ColumnLayout {
         anchors.fill: parent
 
@@ -77,27 +94,6 @@ Kirigami.Page {
 
         Item {
             Layout.fillHeight: true
-        }
-
-        Kirigami.ActionToolBar {
-            flat: false
-            alignment: Qt.AlignRight
-            actions: [
-                Kirigami.Action {
-                    text: i18n("Install from File…")
-                    icon.name: "document-import"
-                    onTriggered: fileDialogLoader.active = true
-                },
-                NewStuff.Action {
-                    text: i18n("Get New GNOME/GTK Application Styles…")
-                    configFile: "gtk_themes.knsrc"
-                    onEntryEvent: function (entry, event) {
-                        if (event == NewStuff.Entry.StatusChangedEvent) {
-                            kcm.load();
-                        }
-                    }
-                }
-            ]
         }
     }
 
