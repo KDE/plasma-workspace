@@ -83,14 +83,6 @@ target_link_libraries(taskmanager
         PW::KWorkspace
 )
 
-# Define and link Qt::Test only if available
-if(Qt6Test_FOUND)
-    target_compile_definitions(taskmanager PRIVATE HAVE_QTTEST=1)
-    target_link_libraries(taskmanager PRIVATE Qt::Test)
-else()
-    target_compile_definitions(taskmanager PRIVATE HAVE_QTTEST=0)
-endif()
-
 if (HAVE_X11)
     target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
     target_link_libraries(taskmanager PRIVATE X11::X11)
