@@ -119,6 +119,7 @@ target_link_libraries(plasmashell PRIVATE
  KF6::GlobalAccel
  KF6::GuiAddons
  KF6::I18n
+ KF6::I18nQml
  KF6::KIOCore
  KF6::Package
  KF6::Notifications

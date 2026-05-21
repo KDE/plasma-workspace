@@ -7,16 +7,12 @@
 #pragma once
 
 #include <QObject>
+#include <QQmlEngine>
 #include <QString>
 #include <QUrl>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
-
-namespace PlasmaQuick
-{
-class SharedQmlEngine;
-}
 
 class QTimer;
 class ShellCorona;
@@ -60,7 +56,8 @@ private:
     void showOsd();
 
     ShellCorona *const m_corona;
-    PlasmaQuick::SharedQmlEngine *m_osdObject = nullptr;
+    std::shared_ptr<QQmlEngine> m_engine;
+    std::unique_ptr<QObject> m_osdObject = nullptr;
     QTimer *m_osdTimer = nullptr;
     int m_timeout = 0;
 

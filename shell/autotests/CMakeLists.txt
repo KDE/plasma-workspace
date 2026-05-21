@@ -50,6 +50,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             KF6::Svg
                             KF6::XmlGui
                             KF6::I18n
+                            KF6::I18nQml
                             KF6::GlobalAccel
                             Qt::Quick
                             Qt::DBus
