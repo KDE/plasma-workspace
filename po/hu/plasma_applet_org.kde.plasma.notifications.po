@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2019, 2020.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023-2026 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2025-05-21 21:51+0200\n"
+"PO-Revision-Date: 2026-05-20 22:28+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -115,37 +115,28 @@ msgid "%2 of %1"
 msgstr "%2 / %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 / %1 fájl"
-msgstr[1] "%2 / %1 fájl"
+msgstr[0] "%3 / %2 fájl"
+msgstr[1] "%3 / %2 fájl"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 / %1 mappa"
-msgstr[1] "%2 / %1 mappa"
+msgstr[0] "%3 / %2 mappa"
+msgstr[1] "%3 / %2 mappa"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 / %1 elem"
-msgstr[1] "%2 / %1 elem"
+msgstr[0] "%3 / %2 elem"
+msgstr[1] "%3 / %2 elem"
 
 #: components/JobDetails.qml:137
 #, kde-format
@@ -406,11 +397,10 @@ msgid "Toggle do not disturb"
 msgstr "Ne zavarjanak ki/be"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Összes értesítés törlése"
+msgstr "Értesítések előzményeinek törlése"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -425,12 +415,10 @@ msgid "Notifications On"
 msgstr "Értesítések be"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Értesítések be"
+msgstr "Értesítések előzményei törölve"
 
 #: main.qml:61
 #, kde-format
@@ -469,17 +457,17 @@ msgstr[1] "%1 aktív értesítés"
 #: main.qml:101
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Ne zavarjanak eddig: %1; középső gombbal azonnal kilép"
+msgstr "Ne zavarjanak eddig: %1; középső gombbal kattintva azonnal kiléphet"
 
 #: main.qml:104
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr "Ne zavarjanak mód aktív; középső gombbal kilép"
+msgstr "Ne zavarjanak mód aktív; középső gombbal kattintva léphet ki"
 
 #: main.qml:110
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr "Középső gombbal lépjen be a ne zavarjanak módba"
+msgstr "Középső gombbal kattintva léphet ne zavarjanak módba"
 
 #: main.qml:245
 #, kde-format
