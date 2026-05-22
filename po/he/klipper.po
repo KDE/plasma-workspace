@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 02:48+0000\n"
 "PO-Revision-Date: 2025-08-30 19:59+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -579,43 +579,28 @@ msgstr "איפוס הסמל לברירת המחדל לפקודה"
 msgid "Icon:"
 msgstr "סמל:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "היסטוריית לוח הגזירים מכילה פריטים שמסומנים בכוכב. לפנות גם אותם?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "פינוי היסטוריית לוח הגזירים"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "לפנות הכול"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "להשאיר את הפריטים עם הכוכב"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הגזירים?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "פינוי היסטוריית לוח הגזירים"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "הפריט הזה מסומן בכוכב. להסיר אותו מההיסטוריה?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "הסרת פריט מסומן בכוכב"
@@ -890,6 +875,15 @@ msgstr "חלונית לוח גזירים צצה"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ביטול"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "היסטוריית לוח הגזירים מכילה פריטים שמסומנים בכוכב. לפנות גם אותם?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "לפנות הכול"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "להשאיר את הפריטים עם הכוכב"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "השתמש בעורך ביטויים רגולים חזותי"

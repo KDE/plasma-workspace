@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 02:48+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -572,46 +572,30 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "Gou&llonderiñ istorig ar golver"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr ""
-
-#: historymodel.cpp:286
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Keep Starred Items"
-msgstr "Enrollañ endalc'had ar golver pa gui&ttat"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Gou&llonderiñ istorig ar golver"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "Gou&llonderiñ istorig ar golver"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -886,6 +870,11 @@ msgstr "Ment istor ar go&lver :"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Nullañ"
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Keep Starred Items"
+#~ msgstr "Enrollañ endalc'had ar golver pa gui&ttat"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

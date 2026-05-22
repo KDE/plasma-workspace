@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 02:48+0000\n"
 "PO-Revision-Date: 2025-10-03 14:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -581,44 +581,28 @@ msgstr "Reinițializează pictograma la cea implicită pentru comandă"
 msgid "Icon:"
 msgstr "Pictogramă:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-"Istoricul clipboard-ului conține elemente cu stea. Le curățați și pe acelea?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Curăță istoricul clipboard-ului"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "Curăță tot"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "Păstrează elementele cu stea"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Sigur curățați și ștergeți întregul istoric al clipboard-ului?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Curăță istoricul clipboard-ului"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Acest element are stea. Sigur doriți să-l eliminați din istoric?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Elimină element cu stea"
@@ -901,6 +885,17 @@ msgstr "Meniu contextual pentru clipboard"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Renunță"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr ""
+#~ "Istoricul clipboard-ului conține elemente cu stea. Le curățați și pe "
+#~ "acelea?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "Curăță tot"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "Păstrează elementele cu stea"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Folosește redactor regexp grafic"

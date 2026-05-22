@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 02:48+0000\n"
 "PO-Revision-Date: 2023-08-06 11:28+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -577,46 +577,29 @@ msgstr "Obnovenie predvolenej ikony pre príkaz"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-"História schránky obsahuje položky označené hviezdičkou. Chcete ich tiež "
-"vymazať?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Vyčistiť históriu schránky"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "Vymazať všetko"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "Uložiť označené položky"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Naozaj chcete vyčistiť a odstrániť celú históriu schránky?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Vyčistiť históriu schránky"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Táto položka je označená hviezdičkou. Naozaj ju chcete odstrániť z histórie?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Odstrániť označený prvok"
@@ -895,6 +878,17 @@ msgstr "História schránky"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Zrušiť"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr ""
+#~ "História schránky obsahuje položky označené hviezdičkou. Chcete ich tiež "
+#~ "vymazať?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "Vymazať všetko"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "Uložiť označené položky"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Použiť grafický editor regulárnych výrazov"

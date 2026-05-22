@@ -3,13 +3,13 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2008.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2019, 2020.
-# SPDX-FileCopyrightText: 2022, 2023, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022-2023, 2025-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-05-21 21:53+0200\n"
+"PO-Revision-Date: 2026-05-21 22:40+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -33,16 +33,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Kijelentkezik az aktív munkamenetből"
 
 #: sessionrunner.cpp:27
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down;power;power off"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;poweroff;power off"
-msgstr "leállít;leállítás;kikapcs;kikapcsolás"
+msgstr "leállít;leállítás;kikapcs;kikapcsolás;ki kapcsolás"
 
 #: sessionrunner.cpp:30
 #, kde-format

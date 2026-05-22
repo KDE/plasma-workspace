@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 02:48+0000\n"
 "PO-Revision-Date: 2025-04-01 15:05+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -577,46 +577,29 @@ msgstr "Əmr üçün nişanı standart vəziyyətinə qaytarın"
 msgid "Icon:"
 msgstr "Nişan:"
 
-#: historymodel.cpp:283
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Mübadilə yaddaşı tarixçəsində saxlanılacaq elementlərin miqdarı."
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr ""
-
-#: historymodel.cpp:286
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
-msgid "Keep Starred Items"
-msgstr "Mübadilə yaddaşı"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Siz bütün mübadilə yaddaşı tarixçəsini təmizləmək və silmək istəyirsiniz?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -900,6 +883,16 @@ msgstr "Mübadilə yaddaşı pəncərəsi"
 #, kde-format
 msgid "&Cancel"
 msgstr "&İmtina etmək"
+
+#, fuzzy
+#~| msgid "The clipboard history will store up to this many items."
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "Mübadilə yaddaşı tarixçəsində saxlanılacaq elementlərin miqdarı."
+
+#, fuzzy
+#~| msgid "Clipboard Items"
+#~ msgid "Keep Starred Items"
+#~ msgstr "Mübadilə yaddaşı"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Müntəzəm ifadənin qrafik redaktorunu istifadə etmək"

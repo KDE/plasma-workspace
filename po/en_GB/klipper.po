@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 02:48+0000\n"
 "PO-Revision-Date: 2024-11-01 13:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -578,46 +578,29 @@ msgstr "Reset the icon to the default for the command"
 msgid "Icon:"
 msgstr "Icon:"
 
-#: historymodel.cpp:283
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "The clipboard history will store up to this many items."
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Clear Clipboard History"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr ""
-
-#: historymodel.cpp:286
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
-msgid "Keep Starred Items"
-msgstr "Clipboard Items"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Do you really want to clear and delete the entire clipboard history?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Clear Clipboard History"
+
+#: historymodel.cpp:363
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -899,6 +882,16 @@ msgstr "Clipboard Popup"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel"
+
+#, fuzzy
+#~| msgid "The clipboard history will store up to this many items."
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "The clipboard history will store up to this many items."
+
+#, fuzzy
+#~| msgid "Clipboard Items"
+#~ msgid "Keep Starred Items"
+#~ msgstr "Clipboard Items"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Use graphical regexp editor"
