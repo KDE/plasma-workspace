@@ -155,6 +155,29 @@ RunnerMatchesModel *RunnerModel::modelForRow(int row)
     return m_models.at(row);
 }
 
+bool RunnerModel::resultsPresent() const
+{
+    return m_resultsPresent;
+}
+
+void RunnerModel::checkResultsPresent()
+{
+    for (auto model : m_models) {
+        if (model->count()) {
+            if (m_resultsPresent) {
+                return;
+            }
+            m_resultsPresent = true;
+            Q_EMIT resultsPresentChanged();
+            return;
+        }
+    }
+    if (m_resultsPresent) {
+        m_resultsPresent = false;
+        Q_EMIT resultsPresentChanged();
+    }
+}
+
 QStringList RunnerModel::runners() const
 {
     return m_runners;
@@ -244,10 +267,18 @@ void RunnerModel::startQuery()
 {
     if (m_query.isEmpty()) {
         clear();
+        if (m_resultsPresent) {
+            m_resultsPresent = false;
+            Q_EMIT resultsPresentChanged();
+        }
         QTimer::singleShot(0, this, &RunnerModel::queryFinished);
     } else {
         const bool wasQuerying = querying();
         m_queryingModels += m_models.size();
+        if (m_resultsPresent) {
+            // don't always set to false - we want to keep showing old results while in flight
+            checkResultsPresent();
+        }
         for (KRunner::ResultsModel *model : std::as_const(m_models)) {
             model->setQueryString(m_query);
         }
@@ -284,7 +315,11 @@ void RunnerModel::initializeModels()
     for (auto model : std::as_const(m_models)) {
         connect(model->runnerManager(), &KRunner::RunnerManager::queryFinished, this, [this]() {
             Q_EMIT anyRunnerFinished();
+            if (!m_resultsPresent) {
+                checkResultsPresent();
+            }
             if (--m_queryingModels == 0) {
+                checkResultsPresent(); // final check in case we go from matches to no matches
                 Q_EMIT queryFinished();
                 Q_EMIT queryingChanged();
             }
