@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2025-09-01 19:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -575,45 +575,29 @@ msgstr "Nollställ ikonen till kommandots standardvärde"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-"Klippbordshistoriken innehåller värden med stjärnor. Ta också bort dem?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Töm klippbordshistorik"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "Töm allting"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "Behåll objekt med stjärnor"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vill du verkligen tömma och ta bort hela klippbordshistoriken?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Töm klippbordshistorik"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 x %2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Objektet har en stjärna. Vill du verkligen ta bort det från historiken?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Ta bort objekt med stjärnor"
@@ -894,6 +878,16 @@ msgstr "Klippbordsruta"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr ""
+#~ "Klippbordshistoriken innehåller värden med stjärnor. Ta också bort dem?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "Töm allting"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "Behåll objekt med stjärnor"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Använd grafisk editor av reguljära uttryck"

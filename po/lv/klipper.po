@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2026-01-19 16:56+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -576,45 +576,30 @@ msgstr "Atiestatīt ikonu uz komandas noklusēto"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Starpliktuves vēsture satur atzīmētus vienumus. Vai dzēst arī tos?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "&Tīrīt starpliktuves vēsturi"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "Dzēst visu"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "Paturēt atzīmētos vienumus"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vai tiešām vēlaties notīrīt un dzēst visu starpliktuves vēsturi?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "&Tīrīt starpliktuves vēsturi"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Šis vienums ir atzīmēts ar zvaigznīti. Vai tiešām vēlaties to dzēst no "
 "vēstures?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Noņemt atzīmēto vienumu"
@@ -893,6 +878,15 @@ msgstr "Starpliktuves uznirstošais lodziņš"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atcelt"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "Starpliktuves vēsture satur atzīmētus vienumus. Vai dzēst arī tos?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "Dzēst visu"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "Paturēt atzīmētos vienumus"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Lietot grafisko „regexp“ redaktoru"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2007-11-01 18:39+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -585,46 +585,30 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "क्लिपबोर्ड इतिहास खाली गर्नुहोस्"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr ""
-
-#: historymodel.cpp:286
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Keep Starred Items"
-msgstr "'अन्त्य गर्नुहोस्' बटनमा क्लिपबोर्ड सामग्री बचत गर्नुहोस्"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "क्लिपबोर्ड इतिहास खाली गर्नुहोस्"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "क्लिपबोर्ड इतिहास खाली गर्नुहोस्"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -906,6 +890,11 @@ msgstr "क्लिपबोर्ड इतिहास साइज:"
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Keep Starred Items"
+#~ msgstr "'अन्त्य गर्नुहोस्' बटनमा क्लिपबोर्ड सामग्री बचत गर्नुहोस्"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

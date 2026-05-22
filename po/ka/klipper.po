@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2025-08-30 03:34+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -572,43 +572,28 @@ msgstr "ბრძანების ნაგულისხმევ ხატ�
 msgid "Icon:"
 msgstr "ხატულა:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "ბუფერი ვარსკვლავიან ელემენტებს შეიცავს. ისინიც გავასუფთავო?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "ბუფერის ისტორიის გასუფთავება"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "ყველაფრის გასუფთავება"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "ვარსკვლავიანი ელემენტების შენარჩუნება"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "მართლა გნებავთ ბუფერის ისტორიის სრულად გასუფთავება და წაშლა?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "ბუფერის ისტორიის გასუფთავება"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "ამ ელემენტს ვარსკვლავი აქვთ. მართლა გნებავთ მისი წაშლა ისტორიიდან?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "ვარსკვლავიანი ელემენტის წაშლა"
@@ -888,6 +873,15 @@ msgstr "ბუფერის მხტუნარა"
 #, kde-format
 msgid "&Cancel"
 msgstr "&შეწყვეტა"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "ბუფერი ვარსკვლავიან ელემენტებს შეიცავს. ისინიც გავასუფთავო?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "ყველაფრის გასუფთავება"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "ვარსკვლავიანი ელემენტების შენარჩუნება"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "რეგგამოს-ის გრაფიკული რედაქტორი"

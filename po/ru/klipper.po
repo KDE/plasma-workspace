@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2025-11-13 15:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -600,43 +600,28 @@ msgstr "Вернуть стандартный значок команды"
 msgid "Icon:"
 msgstr "Значок:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Журнал содержит избранные записи. Следует ли их сохранить?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Очистить журнал буфера обмена"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "Очистить всё"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "Оставить избранные"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Очистить и удалить весь журнал буфера обмена?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Очистить журнал буфера обмена"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Эта запись добавлена в избранное. Удалить её из журнала?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Удалить запись"
@@ -921,6 +906,15 @@ msgstr "Всплывающее окно буфера обмена"
 #, kde-format
 msgid "&Cancel"
 msgstr "О&тмена"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "Журнал содержит избранные записи. Следует ли их сохранить?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "Очистить всё"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "Оставить избранные"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Использовать графический редактор регулярных выражений"

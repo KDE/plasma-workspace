@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2026-01-03 10:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -580,45 +580,30 @@ msgstr "Berrezarri komandoaren ikonoa lehenetsitakora"
 msgid "Icon:"
 msgstr "Ikonoa:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Arbeleko historiak elementu izardunak ditu. Haiek ere garbitu?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Garbitu arbeleko historia"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "Garbitu dena"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "Mantendu elementu izardunak"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Benetan garbitu eta ezabatu nahi duzu arbeleko historia osoa?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Garbitu arbeleko historia"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Elementu honek izarra du. Ziur zaude hura historiatik benetan kendu nahi "
 "duzula?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Kendu elementu izarduna"
@@ -897,6 +882,15 @@ msgstr "Arbelaren leiho gainerakorra"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Utzi"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "Arbeleko historiak elementu izardunak ditu. Haiek ere garbitu?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "Garbitu dena"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "Mantendu elementu izardunak"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Erabili adierazpen erregularren editore grafikoa"

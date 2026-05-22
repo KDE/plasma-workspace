@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -573,46 +573,30 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "&ล้างประวัติของคลิปบอร์ด"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr ""
-
-#: historymodel.cpp:286
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
-msgid "Keep Starred Items"
-msgstr "เนื้อหาในคลิปบอร์ด"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ต้องการจะลบรายการประวัติทั้งหมดในคลิปบอร์ดจริงหรือไม่ ?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "&ล้างประวัติของคลิปบอร์ด"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -893,6 +877,11 @@ msgstr "ขนาดของประวัติคลิปบอร์ด"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ยกเลิก"
+
+#, fuzzy
+#~| msgid "Clipboard Contents"
+#~ msgid "Keep Starred Items"
+#~ msgstr "เนื้อหาในคลิปบอร์ด"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "ใช้เครื่องมือแก้ไข regexp แบบกราฟิก"

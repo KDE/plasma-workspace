@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2012-06-14 13:47+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -570,46 +570,30 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "ជម្រះ​ប្រវត្តិ​ក្ដារ​តម្បៀត​ខ្ទាស់"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr ""
-
-#: historymodel.cpp:286
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
-msgid "Keep Starred Items"
-msgstr "​​មាតិកា​ក្ដារតម្បៀត​ខ្ទាស់"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ពិតជា​លុប​ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់​ទាំង​​អស់​ឬ ?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "ជម្រះ​ប្រវត្តិ​ក្ដារ​តម្បៀត​ខ្ទាស់"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -890,6 +874,11 @@ msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទា
 #, kde-format
 msgid "&Cancel"
 msgstr "បោះបង់​"
+
+#, fuzzy
+#~| msgid "Clipboard Contents"
+#~ msgid "Keep Starred Items"
+#~ msgstr "​​មាតិកា​ក្ដារតម្បៀត​ខ្ទាស់"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "ប្រើ​កម្មវិធីនិពន្ធ​ regexp ក្រាហ្វិក"

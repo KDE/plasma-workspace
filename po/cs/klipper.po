@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2026-03-13 14:15+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -574,44 +574,29 @@ msgstr "Obnovit ikonu pro příkaz na výchozí hodnotu"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Tato historie schránky obsahuje položky s hvězdičkou. Smazat i je?"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Vyčistit historii schránky"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "Vymazat vše"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "Ponechat položky s hvězdičkou"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Opravdu chcete vymazat a odstranit celou historii schránky?"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Vyčistit historii schránky"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Tato položka je s hvězdičkou. Opravdu si přejete odstranit ji z historie?"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Odstranit položku s hvězdičkou"
@@ -889,6 +874,15 @@ msgstr "Vyskakovací okno schránky"
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr "Tato historie schránky obsahuje položky s hvězdičkou. Smazat i je?"
+
+#~ msgid "Clear Everything"
+#~ msgstr "Vymazat vše"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "Ponechat položky s hvězdičkou"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "Použít grafický editor regulárních výrazů"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2026-03-31 19:23+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -580,45 +580,28 @@ msgstr "コマンドのアイコンをデフォルトにリセット"
 msgid "Icon:"
 msgstr "アイコン:"
 
-#: historymodel.cpp:283
-#, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
-"クリップボード履歴にはスターつきの項目が含まれています。スターつきの項目も消"
-"去しますか？"
-
-#: historymodel.cpp:284 historymodel.cpp:304
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "クリップボードの履歴を消去"
-
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr "すべて消去"
-
-#: historymodel.cpp:286
-#, kde-format
-msgid "Keep Starred Items"
-msgstr "スターつきを残す"
-
-#: historymodel.cpp:303
+#: historymodel.cpp:281
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "本当にクリップボードの全履歴を消去しますか？"
 
-#: historymodel.cpp:387
+#: historymodel.cpp:282
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "クリップボードの履歴を消去"
+
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "この項目はスターがついています。本当に履歴から削除しますか？"
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "スターつき項目削除"
@@ -893,6 +876,17 @@ msgstr "クリップボードのポップアップ"
 #, kde-format
 msgid "&Cancel"
 msgstr "キャンセル(&C)"
+
+#~ msgid "The clipboard history contains starred items. Clear them too?"
+#~ msgstr ""
+#~ "クリップボード履歴にはスターつきの項目が含まれています。スターつきの項目も"
+#~ "消去しますか？"
+
+#~ msgid "Clear Everything"
+#~ msgstr "すべて消去"
+
+#~ msgid "Keep Starred Items"
+#~ msgstr "スターつきを残す"
 
 #~ msgid "Use graphical regexp editor"
 #~ msgstr "グラフィカルな正規表現エディタを使う"

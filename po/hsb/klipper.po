@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:50+0000\n"
+"POT-Creation-Date: 2026-05-22 00:46+0000\n"
 "PO-Revision-Date: 2008-11-06 22:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -566,45 +566,29 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:283
+#: historymodel.cpp:281
 #, kde-format
-msgid "The clipboard history contains starred items. Clear them too?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: historymodel.cpp:284 historymodel.cpp:304
+#: historymodel.cpp:282
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Zapisnik wuprózdnić"
 
-#: historymodel.cpp:285
-#, kde-format
-msgid "Clear Everything"
-msgstr ""
-
-#: historymodel.cpp:286
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
-msgid "Keep Starred Items"
-msgstr "Wobsah zapisnika &zasunyć"
-
-#: historymodel.cpp:303
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr ""
-
-#: historymodel.cpp:387
+#: historymodel.cpp:363
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:567
+#: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:568
+#: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -881,6 +865,11 @@ msgstr "Wobsah zapisnika"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Přetorhnyć"
+
+#, fuzzy
+#~| msgid "Clipboard Contents"
+#~ msgid "Keep Starred Items"
+#~ msgstr "Wobsah zapisnika &zasunyć"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
