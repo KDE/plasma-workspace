@@ -13,6 +13,7 @@ Name[es]=Plasma
 Name[eu]=Plasma
 Name[fr]=Plasma
 Name[he]=פלזמה
+Name[hu]=Plasma
 Name[ia]=Plasma
 Name[is]=Plasma
 Name[it]=Plasma
