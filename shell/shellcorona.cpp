@@ -498,7 +498,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
         const qreal height =
             // If we do not have a panel, fallback to 4 units
-            !view ? 4 : (qreal)view->totalThickness() / gridUnit;
+            !view ? 4 : (qreal)view->thickness() / gridUnit;
 
         panelJson.insert(u"height", height);
         if (view) {
@@ -507,6 +507,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
             panelJson.insert(u"minimumLength", (qreal)view->minimumLength() / gridUnit);
             panelJson.insert(u"offset", (qreal)view->offset() / gridUnit);
             panelJson.insert(u"alignment", alignment == Qt::AlignRight ? u"right"_s : alignment == Qt::AlignCenter ? u"center"_s : u"left"_s);
+
             switch (view->visibilityMode()) {
             case PanelView::AutoHide:
                 panelJson.insert(u"hiding", u"autohide"_s);
@@ -520,6 +521,36 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
             case PanelView::NormalPanel:
             default:
                 panelJson.insert(u"hiding", u"normal"_s);
+                break;
+            }
+
+            switch (view->opacityMode()) {
+            case PanelView::OpacityMode::Adaptive:
+                panelJson.insert(u"opacity"_s, u"adaptive"_s);
+                break;
+            case PanelView::OpacityMode::Opaque:
+                panelJson.insert(u"opacity"_s, u"opaque"_s);
+                break;
+            case PanelView::OpacityMode::Translucent:
+                panelJson.insert(u"opacity"_s, u"translucent"_s);
+                break;
+            default:
+                panelJson.insert(u"opacity"_s, u"adaptive"_s);
+                break;
+            }
+
+            switch (view->lengthMode()) {
+            case PanelView::LengthMode::FillAvailable:
+                panelJson.insert(u"lengthMode"_s, u"fill"_s);
+                break;
+            case PanelView::LengthMode::FitContent:
+                panelJson.insert(u"lengthMode"_s, u"fit"_s);
+                break;
+            case PanelView::LengthMode::Custom:
+                panelJson.insert(u"lengthMode"_s, u"custom"_s);
+                break;
+            default:
+                panelJson.insert(u"lengthMode"_s, u"fill"_s);
                 break;
             }
         }
