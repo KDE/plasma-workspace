@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:47+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2025-10-21 19:50+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -205,79 +205,79 @@ msgstr ""
 "üçün başladıla bilmir\n"
 "Lütfən, qrafik sürücünün düzgün quraşdırılıb, quraşdırılmadığını yoxlayın."
 
-#: osd.cpp:63
+#: osd.cpp:67
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:91
+#: osd.cpp:95
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Səs Söndürülüb"
 
-#: osd.cpp:114
+#: osd.cpp:118
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon Söndürülüb"
 
-#: osd.cpp:130
+#: osd.cpp:134
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 Söndürülüb"
 
-#: osd.cpp:152
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Toxunma Paneli Aktivdir"
 
-#: osd.cpp:154
+#: osd.cpp:158
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Toxunma Paneli Söndürüldü"
 
-#: osd.cpp:161
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi Aktivdir"
 
-#: osd.cpp:163
+#: osd.cpp:167
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi Söndürülüb"
 
-#: osd.cpp:170
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth Aktivdir"
 
-#: osd.cpp:172
+#: osd.cpp:176
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth Söndürülüb"
 
-#: osd.cpp:179
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobil İnternet Aktivdir"
 
-#: osd.cpp:181
+#: osd.cpp:185
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobil İnternet Söndürülüb"
 
-#: osd.cpp:189
+#: osd.cpp:193
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -285,7 +285,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Ekran Klaviaturası Aktivdir"
 
-#: osd.cpp:192
+#: osd.cpp:196
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -293,31 +293,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Ekran Klaviaturası Söndürülüb"
 
-#: osd.cpp:199
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Yuxu və ekran kilidi əngəlləndi"
 
-#: osd.cpp:201
+#: osd.cpp:205
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Yuxu və ekran kilidi aktivdir"
 
-#: osd.cpp:211
+#: osd.cpp:215
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Enerjiyə qənaət rejimi"
 
-#: osd.cpp:214
+#: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Tarazlaşdırılmış ejim"
 
-#: osd.cpp:217
+#: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -414,12 +414,12 @@ msgstr "İş masalarının və Panellərin idarə edilməsi..."
 msgid "Move keyboard focus between panels"
 msgstr "Klaviatura fokusunu panellər arasında dəyişmək"
 
-#: shellcorona.cpp:2271
+#: shellcorona.cpp:2302
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel əlavə edin"
 
-#: shellcorona.cpp:2354
+#: shellcorona.cpp:2385
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

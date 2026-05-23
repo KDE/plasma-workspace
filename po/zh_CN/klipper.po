@@ -842,12 +842,3 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgid "The clipboard history contains starred items. Clear them too?"
-#~ msgstr "剪贴板历史记录包含星标项目。也要清除它们吗？"
-
-#~ msgid "Clear Everything"
-#~ msgstr "清除所有内容"
-
-#~ msgid "Keep Starred Items"
-#~ msgstr "保留星标项目"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:47+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -214,25 +214,25 @@ msgstr ""
 "Плазма не може да се покрене због непотпуне подршке за опенГЛ 2.\n"
 " Проверите да ли је графички драјвер правилно подешен."
 
-#: osd.cpp:63
+#: osd.cpp:67
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr ""
 
-#: osd.cpp:91
+#: osd.cpp:95
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Звук утишан"
 
-#: osd.cpp:114
+#: osd.cpp:118
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Микрофон утишан"
 
-#: osd.cpp:130
+#: osd.cpp:134
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
@@ -240,55 +240,55 @@ msgstr ""
 "%1 утишан|/|%1 $[по-роду-броју %1 утишан утишана утишано утишани утишане "
 "утишана]"
 
-#: osd.cpp:152
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Додирник укључен"
 
-#: osd.cpp:154
+#: osd.cpp:158
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Додирник искључен"
 
-#: osd.cpp:161
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Бежична укључена"
 
-#: osd.cpp:163
+#: osd.cpp:167
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Бежична искључена"
 
-#: osd.cpp:170
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Блутут укључен"
 
-#: osd.cpp:172
+#: osd.cpp:176
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Блутут искључен"
 
-#: osd.cpp:179
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Мобилни интернет укључен"
 
-#: osd.cpp:181
+#: osd.cpp:185
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Мобилни интернет искључен"
 
-#: osd.cpp:189
+#: osd.cpp:193
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -296,7 +296,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Тастатура на екрану активирана"
 
-#: osd.cpp:192
+#: osd.cpp:196
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -304,31 +304,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Тастатура на екрану деактивирана"
 
-#: osd.cpp:199
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr ""
 
-#: osd.cpp:201
+#: osd.cpp:205
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr ""
 
-#: osd.cpp:211
+#: osd.cpp:215
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr ""
 
-#: osd.cpp:214
+#: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr ""
 
-#: osd.cpp:217
+#: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -424,12 +424,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2271
+#: shellcorona.cpp:2302
 #, kde-format
 msgid "Add Panel"
 msgstr "Додај панел"
 
-#: shellcorona.cpp:2354
+#: shellcorona.cpp:2385
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

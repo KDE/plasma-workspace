@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:47+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2026-02-22 20:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -207,79 +207,79 @@ msgstr ""
 "softwarea.\n"
 "Egiaztatu zure grafikoen gidariak zuzen ezarrita daudela."
 
-#: osd.cpp:63
+#: osd.cpp:67
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %%2"
 
-#: osd.cpp:91
+#: osd.cpp:95
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Audioa isilduta"
 
-#: osd.cpp:114
+#: osd.cpp:118
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofonoa isilduta"
 
-#: osd.cpp:130
+#: osd.cpp:134
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 isilarazita"
 
-#: osd.cpp:152
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Ukimen-sagua piztuta"
 
-#: osd.cpp:154
+#: osd.cpp:158
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Ukimen-sagua itzalita"
 
-#: osd.cpp:161
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi piztuta"
 
-#: osd.cpp:163
+#: osd.cpp:167
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi itzalita"
 
-#: osd.cpp:170
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth piztuta"
 
-#: osd.cpp:172
+#: osd.cpp:176
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth itzalita"
 
-#: osd.cpp:179
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mugikorreko Internet piztuta"
 
-#: osd.cpp:181
+#: osd.cpp:185
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mugikorreko Internet itzalita"
 
-#: osd.cpp:189
+#: osd.cpp:193
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -287,7 +287,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Pantailako teklatua aktibatuta"
 
-#: osd.cpp:192
+#: osd.cpp:196
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -295,31 +295,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Pantailako teklatua desaktibatuta"
 
-#: osd.cpp:199
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Lokartzea eta pantaila-giltzatzea oztopatu da"
 
-#: osd.cpp:201
+#: osd.cpp:205
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Lokartzeko eta pantaila-giltzatzeko oztopoa kendu da"
 
-#: osd.cpp:211
+#: osd.cpp:215
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Energia aurrezteko modua"
 
-#: osd.cpp:214
+#: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Energia orekatuko modua"
 
-#: osd.cpp:217
+#: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -416,12 +416,12 @@ msgstr "Mahaigainak eta panelak kudeatu..."
 msgid "Move keyboard focus between panels"
 msgstr "Mugitu teklatuaren arreta panelen artean"
 
-#: shellcorona.cpp:2271
+#: shellcorona.cpp:2302
 #, kde-format
 msgid "Add Panel"
 msgstr "Gehitu panela"
 
-#: shellcorona.cpp:2354
+#: shellcorona.cpp:2385
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

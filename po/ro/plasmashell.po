@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:47+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2025-12-12 11:16+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -205,79 +205,79 @@ msgstr ""
 "randarea software\n"
 "Verificați dacă driver-ele pentru grafică sunt instalate corect."
 
-#: osd.cpp:63
+#: osd.cpp:67
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:91
+#: osd.cpp:95
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Audio muțit"
 
-#: osd.cpp:114
+#: osd.cpp:118
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Microfon muțit"
 
-#: osd.cpp:130
+#: osd.cpp:134
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 a muțit"
 
-#: osd.cpp:152
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Zonă tactilă activă"
 
-#: osd.cpp:154
+#: osd.cpp:158
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Zonă tactilă inactivă"
 
-#: osd.cpp:161
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi activ"
 
-#: osd.cpp:163
+#: osd.cpp:167
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi inactiv"
 
-#: osd.cpp:170
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth activ"
 
-#: osd.cpp:172
+#: osd.cpp:176
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth inactiv"
 
-#: osd.cpp:179
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Internet mobil activ"
 
-#: osd.cpp:181
+#: osd.cpp:185
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Internet mobil inactiv"
 
-#: osd.cpp:189
+#: osd.cpp:193
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -285,7 +285,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Tastatură pe ecran activată"
 
-#: osd.cpp:192
+#: osd.cpp:196
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -293,31 +293,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Tastatură pe ecran dezactivată"
 
-#: osd.cpp:199
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Adormirea și blocarea ecranului blocate"
 
-#: osd.cpp:201
+#: osd.cpp:205
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Adormirea și blocarea ecranului deblocate"
 
-#: osd.cpp:211
+#: osd.cpp:215
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Regim de economisire a energiei"
 
-#: osd.cpp:214
+#: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Regim de alimentare echilibrat"
 
-#: osd.cpp:217
+#: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -414,12 +414,12 @@ msgstr "Gestionează birouri și panouri…"
 msgid "Move keyboard focus between panels"
 msgstr "Mută focalizarea tastaturii între panouri"
 
-#: shellcorona.cpp:2271
+#: shellcorona.cpp:2302
 #, kde-format
 msgid "Add Panel"
 msgstr "Adaugă panou"
 
-#: shellcorona.cpp:2354
+#: shellcorona.cpp:2385
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

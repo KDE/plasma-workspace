@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:47+0000\n"
+"POT-Creation-Date: 2026-05-23 00:46+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -210,79 +210,79 @@ msgstr ""
 "рэзервовае праграмнае забеспячэнне\n"
 "Калі ласка, праверце, што вашы графічныя драйверы наладжаныя правільна."
 
-#: osd.cpp:63
+#: osd.cpp:67
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:91
+#: osd.cpp:95
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Гук адключаны"
 
-#: osd.cpp:114
+#: osd.cpp:118
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Мікрафон адключаны"
 
-#: osd.cpp:130
+#: osd.cpp:134
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "Гук у \"%1\" адключаны"
 
-#: osd.cpp:152
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Сэнсарная панэль уключаная"
 
-#: osd.cpp:154
+#: osd.cpp:158
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Сэнсарная панэль адключаная"
 
-#: osd.cpp:161
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi уключаны"
 
-#: osd.cpp:163
+#: osd.cpp:167
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi адключаны"
 
-#: osd.cpp:170
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth уключаны"
 
-#: osd.cpp:172
+#: osd.cpp:176
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth адключаны"
 
-#: osd.cpp:179
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Мабільны інтэрнэт уключаны"
 
-#: osd.cpp:181
+#: osd.cpp:185
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Мабільны інтэрнэт адключаны"
 
-#: osd.cpp:189
+#: osd.cpp:193
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -290,7 +290,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Экранная клавіятура актываваная"
 
-#: osd.cpp:192
+#: osd.cpp:196
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -298,31 +298,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Экранная клавіятура дэактываваная"
 
-#: osd.cpp:199
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Пераход у рэжым сну і блакаванне экрана адключаны"
 
-#: osd.cpp:201
+#: osd.cpp:205
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Пераход у рэжым сну і блакаванне экрана ўключаны"
 
-#: osd.cpp:211
+#: osd.cpp:215
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Энергазберагальны рэжым"
 
-#: osd.cpp:214
+#: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Збалансаваны рэжым"
 
-#: osd.cpp:217
+#: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -421,12 +421,12 @@ msgstr "Кіраванне працоўнымі сталамі і панэлям
 msgid "Move keyboard focus between panels"
 msgstr "Перамяшчэнне фокуса клавіятуры паміж панэлямі"
 
-#: shellcorona.cpp:2271
+#: shellcorona.cpp:2302
 #, kde-format
 msgid "Add Panel"
 msgstr "Дадаць панэль"
 
-#: shellcorona.cpp:2354
+#: shellcorona.cpp:2385
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
