@@ -324,7 +324,7 @@ void PanelConfigView::syncGeometry()
 {
     switch (m_containment->location()) {
     case Plasma::Types::TopEdge:
-        setPopupDirection(Qt::BottomEdge);
+        setPopupDirection(Qt::RightEdge);
         break;
     case Plasma::Types::LeftEdge:
         setPopupDirection(Qt::RightEdge);
@@ -334,7 +334,7 @@ void PanelConfigView::syncGeometry()
         break;
     case Plasma::Types::BottomEdge:
     default:
-        setPopupDirection(Qt::TopEdge);
+        setPopupDirection(Qt::RightEdge);
     }
     queuePositionUpdate();
     update();

@@ -1004,12 +1004,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 void PanelView::positionConfigView()
 {
     QQuickItem *contObject = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
-    auto *tb = contObject->property("toolBox").value<QQuickItem *>();
-    if (tb && containment()->formFactor() != Plasma::Types::Vertical) {
-        m_panelConfigView->setVisualParent(tb);
-    } else {
-        m_panelConfigView->setVisualParent(contObject);
-    }
+    m_panelConfigView->setVisualParent(contObject);
 }
 
 void PanelView::restoreAutoHide()
