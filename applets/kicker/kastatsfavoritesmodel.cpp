@@ -185,29 +185,6 @@ public:
         connect(&m_watcher, &ResultWatcher::resultUnlinked, parent, [this](const QString &resource) {
             removeResult(resource);
         });
-        connect(
-            KSycoca::self(),
-            &KSycoca::databaseChanged,
-            this,
-            [this]() {
-                QStringList keys;
-                // ResultWatcher can emit resultUnlinked when AppEntry::reload() is reparsing configuration which will modify m_itemEntries
-                // https://crash-reports.kde.org/organizations/kde/issues/23450/
-                const auto itemEntries = m_itemEntries;
-                for (auto it = itemEntries.cbegin(); it != itemEntries.cend(); it = std::next(it)) {
-                    it->second->reload();
-                    if (!it->second->isValid()) {
-                        keys << it->first;
-                    }
-                }
-                if (!keys.isEmpty()) {
-                    for (const QString &key : keys) {
-                        removeResult(key);
-                    }
-                }
-                Q_EMIT layoutChanged();
-            },
-            Qt::QueuedConnection);
 
         // Loading the items order
         const auto cfg = KSharedConfig::openConfig(QStringLiteral("kactivitymanagerd-statsrc"));
@@ -525,6 +502,18 @@ KAStatsFavoritesModel::KAStatsFavoritesModel(QObject *parent)
             initForClient(clientId);
         }
     });
+
+    connect(
+        KSycoca::self(),
+        &KSycoca::databaseChanged,
+        this,
+        [this]() {
+            if (d && m_activities->serviceStatus() == KActivities::Consumer::Running) {
+                auto clientId = d->m_clientId;
+                initForClient(clientId);
+            }
+        },
+        Qt::QueuedConnection);
 }
 
 KAStatsFavoritesModel::~KAStatsFavoritesModel()
