@@ -99,9 +99,6 @@ int main(int argc, char **argv)
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
 
     PlasmaQuick::SharedQmlEngine sharedEngine;
-    // It is important this to be done before the view is created, as it creates internally a framesvgitem for the background
-    // that needs to use the current plasma theme
-    Plasma::setupPlasmaStyle(sharedEngine.engine().get());
     sharedEngine.setInitializationDelayed(true);
     View view(&sharedEngine);
 

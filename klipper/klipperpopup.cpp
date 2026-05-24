@@ -33,7 +33,6 @@ KlipperPopup::KlipperPopup()
     : PlasmaQuick::PlasmaWindow()
     , m_model(HistoryModel::self())
 {
-    Plasma::setupPlasmaStyle(m_engine.engine().get());
     m_engine.setInitializationDelayed(true);
 
     // used only by screen readers
