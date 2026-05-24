@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-20 02:42+0000\n"
+"POT-Creation-Date: 2026-05-24 02:37+0000\n"
 "PO-Revision-Date: 2025-04-23 00:15+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -208,7 +208,7 @@ msgstr "Çıxarılır..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Elektrik şəbəkəsindən ayırmayın! Hələ də fayllar köçürülür..."
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:117
+#: qml/FullRepresentation.qml:47 qml/main.qml:127
 #, kde-format
 msgid "Remove All"
 msgstr "Hamısını çıxartmaq"
@@ -228,38 +228,38 @@ msgstr "Çıxarıla bilən cihaz əlavə edilməyib"
 msgid "No disks available"
 msgstr "Disklər mövcud deyil"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Ən son cihaz"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "No Devices Available"
 msgstr "Movcud cihaz yoxdur"
 
-#: qml/main.qml:103
+#: qml/main.qml:113
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "ÇIxarılabilən cihazları tənzimləmək..."
 
-#: qml/main.qml:125
+#: qml/main.qml:135
 #, kde-format
 msgid "Removable Devices"
 msgstr "Çıxarılabilən cihazlar"
 
-#: qml/main.qml:140
+#: qml/main.qml:150
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Çıxarıla bilməyən cihazlar"
 
-#: qml/main.qml:155
+#: qml/main.qml:165
 #, kde-format
 msgid "All Devices"
 msgstr "Bütün cihazlar"
 
-#: qml/main.qml:172
+#: qml/main.qml:182
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Yeni cihaz qoşulduqda açılan menyuda göstərmək"

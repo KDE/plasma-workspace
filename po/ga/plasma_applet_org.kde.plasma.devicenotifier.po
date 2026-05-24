@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_devicenotifier.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-20 02:42+0000\n"
+"POT-Creation-Date: 2026-05-24 02:37+0000\n"
 "PO-Revision-Date: 2007-10-23 08:08-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -252,7 +252,7 @@ msgstr "Á Bhaint..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:117
+#: qml/FullRepresentation.qml:47 qml/main.qml:127
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -275,43 +275,43 @@ msgstr "Gléasanna neamh-inbhainte amháin"
 msgid "No disks available"
 msgstr "Níl aon ghléasanna ar fáil"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "An gléas is déanaí"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "No Devices Available"
 msgstr "Níl Aon Ghléasanna Ar Fáil"
 
-#: qml/main.qml:103
+#: qml/main.qml:113
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Gléasanna neamh-inbhainte amháin"
 
-#: qml/main.qml:125
+#: qml/main.qml:135
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Gléasanna inbhainte amháin"
 
-#: qml/main.qml:140
+#: qml/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Gléasanna neamh-inbhainte amháin"
 
-#: qml/main.qml:155
+#: qml/main.qml:165
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Gach gléas"
 
-#: qml/main.qml:172
+#: qml/main.qml:182
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

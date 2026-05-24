@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-20 02:42+0000\n"
+"POT-Creation-Date: 2026-05-24 02:37+0000\n"
 "PO-Revision-Date: 2026-02-22 15:33+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -200,7 +200,7 @@ msgstr "Removente..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Non distacca nunc! File ancora es transferente ... "
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:117
+#: qml/FullRepresentation.qml:47 qml/main.qml:127
 #, kde-format
 msgid "Remove All"
 msgstr "Remove Toto"
@@ -220,38 +220,38 @@ msgstr "Necun dispositivos removibile attachate"
 msgid "No disks available"
 msgstr "Nulle discos disponibile"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Dispositivo plus recente"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nulle dispositivo disponibile"
 
-#: qml/main.qml:103
+#: qml/main.qml:113
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configura dispositivos removibile..."
 
-#: qml/main.qml:125
+#: qml/main.qml:135
 #, kde-format
 msgid "Removable Devices"
 msgstr "Dispositivos removibile"
 
-#: qml/main.qml:140
+#: qml/main.qml:150
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Dispositivos non removibile"
 
-#: qml/main.qml:155
+#: qml/main.qml:165
 #, kde-format
 msgid "All Devices"
 msgstr "Omne dispositivos"
 
-#: qml/main.qml:172
+#: qml/main.qml:182
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Monstra  popup quando un nove dispositivo es connectite"

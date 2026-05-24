@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-20 02:42+0000\n"
+"POT-Creation-Date: 2026-05-24 02:37+0000\n"
 "PO-Revision-Date: 2014-08-11 12:31+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -240,7 +240,7 @@ msgstr "An't Wegmaken..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:117
+#: qml/FullRepresentation.qml:47 qml/main.qml:127
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -263,43 +263,43 @@ msgstr "Keen Wesselreedschappen"
 msgid "No disks available"
 msgstr "Keen Reedschappen verföögbor"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "Tolest bruukt Reedschap"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "No Devices Available"
 msgstr "Keen Reedschap to finnen"
 
-#: qml/main.qml:103
+#: qml/main.qml:113
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Keen Wesselreedschappen"
 
-#: qml/main.qml:125
+#: qml/main.qml:135
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Bloots Wesselreedschappen"
 
-#: qml/main.qml:140
+#: qml/main.qml:150
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Keen Wesselreedschappen"
 
-#: qml/main.qml:155
+#: qml/main.qml:165
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "All Reedschappen"
 
-#: qml/main.qml:172
+#: qml/main.qml:182
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

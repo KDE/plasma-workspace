@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-20 02:42+0000\n"
+"POT-Creation-Date: 2026-05-24 02:37+0000\n"
 "PO-Revision-Date: 2026-02-21 14:06+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -218,7 +218,7 @@ msgstr "Отключение…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Не отключайте оборудование, выполняется передача файлов…"
 
-#: qml/FullRepresentation.qml:47 qml/main.qml:117
+#: qml/FullRepresentation.qml:47 qml/main.qml:127
 #, kde-format
 msgid "Remove All"
 msgstr "Извлечь все"
@@ -238,38 +238,38 @@ msgstr "Не подключено ни одного внешнего устро�
 msgid "No disks available"
 msgstr "Нет доступных устройств"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Последнее подключённое устройство"
 
-#: qml/main.qml:68
+#: qml/main.qml:76
 #, kde-format
 msgid "No Devices Available"
 msgstr "Нет доступных устройств"
 
-#: qml/main.qml:103
+#: qml/main.qml:113
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Настроить внешние устройства..."
 
-#: qml/main.qml:125
+#: qml/main.qml:135
 #, kde-format
 msgid "Removable Devices"
 msgstr "Подключаемые устройства"
 
-#: qml/main.qml:140
+#: qml/main.qml:150
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Несъёмные устройства"
 
-#: qml/main.qml:155
+#: qml/main.qml:165
 #, kde-format
 msgid "All Devices"
 msgstr "Все устройства"
 
-#: qml/main.qml:172
+#: qml/main.qml:182
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Открывать всплывающее окно при подключении устройств"

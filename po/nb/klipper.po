@@ -880,12 +880,3 @@ msgstr "Utklippstavle-sprettopp"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "The clipboard history contains starred items. Clear them too?"
-#~ msgstr "Utklippshistorikken inneholder stjernemerkede. Tøm dem også?"
-
-#~ msgid "Clear Everything"
-#~ msgstr "Tøm alt"
-
-#~ msgid "Keep Starred Items"
-#~ msgstr "Behold stjernemerkede"

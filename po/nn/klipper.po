@@ -879,8 +879,3 @@ msgstr "Utklippstavle-sprettopp"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#, fuzzy
-#~| msgid "The clipboard history will store up to this many items."
-#~ msgid "The clipboard history contains starred items. Clear them too?"
-#~ msgstr "Utklippshistorikken vil innehalda høgst så mange oppføringar."
