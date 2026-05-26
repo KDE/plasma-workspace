@@ -40,7 +40,9 @@ PlasmoidItem {
         (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
     }
 
-    readonly property Kirigami.Action backAction: Kirigami.Action {
+    // BUG 520144
+    // QTBUG-146886
+    readonly property var backAction: Kirigami.Action {
         enabled: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.T.StackView.view.depth === 2
         onTriggered: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu).closeBarcode()
     }
