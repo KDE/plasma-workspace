@@ -25,6 +25,7 @@
 class DesktopView;
 class PanelView;
 class QMenu;
+class QQuickWindow;
 class QScreen;
 class ScreenPool;
 class StrutManager;
@@ -296,6 +297,7 @@ private:
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
     void checkAllDesktopsUiReady();
     void activateLauncherMenu(const QString &screenName);
+    void watchSceneGraphFailure(QQuickWindow *window);
 
     void setupLookAndFeel();
     void handleColorRequestedFromDBus(const QDBusMessage &msg);

@@ -1497,9 +1497,7 @@ void ShellCorona::addOutput(QScreen *screen)
 
     auto *view = new DesktopView(this, screen);
 
-    if (view->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
-        connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
-    }
+    watchSceneGraphFailure(view);
     connect(view, &DesktopView::geometryChanged, this, [this, view]() {
         const int id = m_screenPool->idForScreen(view->screen());
         if (id >= 0 && !m_screenReorderInProgress) {
@@ -1631,9 +1629,7 @@ void ShellCorona::createWaitingPanels()
         // TODO: does a similar check make sense?
         // Q_ASSERT(qBound(0, requestedScreen, m_screenPool->count() - 1) == requestedScreen);
         auto *panel = new PanelView(this, screen);
-        if (panel->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
-            connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
-        }
+        watchSceneGraphFailure(panel);
         auto rectNotify = [this, panel]() {
             Q_ASSERT(qobject_cast<PanelView *>(panel)); // https://bugreports.qt.io/browse/QTBUG-118841
             if (!m_screenReorderInProgress && panel->containment()) {
@@ -1679,6 +1675,40 @@ void ShellCorona::createWaitingPanels()
         connect(panel, &QWindow::visibleChanged, this, checkUiReady);
     }
     m_waitingPanels = stillWaitingPanels;
+}
+
+void ShellCorona::watchSceneGraphFailure(QQuickWindow *window)
+{
+    if (window->rendererInterface()->graphicsApi() == QSGRendererInterface::Software) {
+        return;
+    }
+
+    connect(window, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
+    const QPointer<QQuickWindow> guardedWindow(window);
+    auto *recoveryTimer = new QTimer(window);
+    recoveryTimer->setSingleShot(true);
+    recoveryTimer->setInterval(5s);
+    connect(window, &QQuickWindow::sceneGraphInitialized, recoveryTimer, &QTimer::stop, Qt::QueuedConnection);
+    connect(recoveryTimer, &QTimer::timeout, this, [this, guardedWindow]() {
+        if (!guardedWindow || m_closingDown || !guardedWindow->isVisible() || !guardedWindow->isExposed()) {
+            return;
+        }
+
+        qCWarning(PLASMASHELL) << "Scene graph did not recover while shell window is visible; restarting Plasma Shell to recover graphics.";
+        Q_EMIT glInitializationFailed();
+    });
+    connect(
+        window,
+        &QQuickWindow::sceneGraphInvalidated,
+        recoveryTimer,
+        [this, guardedWindow, recoveryTimer]() {
+            if (!guardedWindow || m_closingDown || !guardedWindow->isVisible() || !guardedWindow->isExposed()) {
+                return;
+            }
+
+            recoveryTimer->start();
+        },
+        Qt::QueuedConnection);
 }
 
 void ShellCorona::panelContainmentDestroyed(QObject *obj)
