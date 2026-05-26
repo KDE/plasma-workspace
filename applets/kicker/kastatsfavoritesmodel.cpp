@@ -84,7 +84,7 @@ public:
             }
 
             if (!entry || !entry->isValid()) {
-                qCWarning(KICKER_DEBUG) << "Entry is not valid" << id << entry.get();
+                qCDebug(KICKER_DEBUG) << "Entry is not valid" << id << entry.get();
                 m_id = id;
                 return;
             }
