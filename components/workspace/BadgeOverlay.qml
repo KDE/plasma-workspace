@@ -17,5 +17,5 @@ Kirigami.Badge {
     customColor: Qt.alpha(Kirigami.Theme.backgroundColor, 0.9)
     padding: 0
     font.bold: false
-    font.pixelSize: 9
+    font.pointSize: Kirigami.Theme.smallFont.pointSize - 1
 }
