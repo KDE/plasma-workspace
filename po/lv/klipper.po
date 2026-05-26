@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2026-01-19 16:56+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -869,7 +869,7 @@ msgstr ""
 "Ja ir atlasīts datnes nosaukums vai URL, uznirstošajā izvēlnē iekļaut "
 "programmas, kas var pieņemt šādu MIME tipu."
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Starpliktuves uznirstošais lodziņš"

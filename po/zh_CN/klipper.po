@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -833,7 +833,7 @@ msgid ""
 msgstr ""
 "如果选择的是文件名或 URL，在弹出菜单中包含能够接受该 MIME 类型的应用程序。"
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "剪贴板弹窗"

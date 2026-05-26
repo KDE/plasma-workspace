@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2026-02-05 11:33+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -871,7 +871,7 @@ msgstr ""
 "Hvis et filnavn eller en nettadresse er valgt, inkluder de i menyen og alle "
 "programmer som støtter tilhørende MIME-type."
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Utklippstavle-sprettopp"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2025-08-30 13:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -884,7 +884,7 @@ msgstr ""
 "Якщо позначено назву або адресу файла, включити дані щодо програм, які "
 "можуть обробляти відповідний тип MIME до записів у контекстному меню."
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Контекстна панель буфера даних"

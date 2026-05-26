@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -895,7 +895,7 @@ msgstr ""
 "यदि यह विकल्प नियत है, और एक फ़ाइल नाम या यूआरएल चुना गया है, तो ऐसे अनुप्रयोग शामिल "
 "करें जो इसके MIME प्रकार को क्रिया पॉपअप में संभाल सकें।"
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard Popup"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2026-03-31 19:23+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -867,7 +867,7 @@ msgstr ""
 "ファイル名や URL が範囲選択された時、ポップアップにその MIME 形式に対応したア"
 "プリを含めます。"
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "クリップボードのポップアップ"

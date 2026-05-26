@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2025-09-04 13:15+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -880,7 +880,7 @@ msgstr ""
 "Jei yra pažymimas failo pavadinimas ar URL, tuomet įtraukti į iškylantįjį "
 "meniu programas, galinčias priimti failo pavadinimo ar URL adreso MIME tipą."
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Iškarpinės iškylantysis langas"

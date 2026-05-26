@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2026-02-09 18:14-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -870,7 +870,7 @@ msgstr ""
 "ئەگەر تاللانغىنى ھۆججەت ئاتى ياكى تور ئادرېسى بولسا، قاڭقىش تىزىملىكىدە "
 "مەزكۇر MIME تۈرىنى قوبۇل قىلالايدىغان پىروگرامما بولىدۇ."
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "چاپلاش تاختىسى قاڭقىش كۆزنىكى"

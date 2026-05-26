@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-26 00:46+0000\n"
 "PO-Revision-Date: 2025-09-07 18:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -838,7 +838,7 @@ msgstr ""
 "கோப்போ முகவரியோ தேர்ந்தெடுக்கப்பட்டால், அதன் மைம்வகைக்கு (கோப்புவகைக்கு) உரிய "
 "செயலிகளையும் மேல்தோன்றும் பட்டியில் காட்டு."
 
-#: klipperpopup.cpp:40
+#: klipperpopup.cpp:39
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "மேல்தோன்றும் பிடிப்புப்பலகை சாளரம்"
