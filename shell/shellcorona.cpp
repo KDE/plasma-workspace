@@ -2063,6 +2063,11 @@ void ShellCorona::cleanupOldPanelConfig()
 
         if (auto match = reg.match(groupName); match.hasMatch()) {
             const uint id = match.captured(1).toInt();
+            const KConfigGroup panelConfig = applicationConfig()->group(u"PlasmaViews"_s).group(groupName);
+            const QString panelShell = panelConfig.readEntry("shell", QString());
+            if (panelShell.isEmpty() || panelShell != m_shell) {
+                continue;
+            }
 
             const auto conts = containments();
             const bool exists = std::any_of(conts.begin(), conts.end(), [id](Plasma::Containment *c) {
