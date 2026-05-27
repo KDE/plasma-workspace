@@ -884,6 +884,8 @@ void PanelView::restore()
     if (!panelConfig.isValid()) {
         return;
     }
+    panelConfig.parent().writeEntry("shell", m_corona->shell());
+    m_corona->requestApplicationConfigSync();
 
     // All the defaults are based on whatever are the current values
     // so won't be weirdly reset after screen resolution change
