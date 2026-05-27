@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-05-27 02:42+0000\n"
 "PO-Revision-Date: 2023-05-27 13:03+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -27,12 +27,12 @@ msgstr "Clipboard Contents"
 msgid "Clipboard is empty"
 msgstr "Clipboard is empty"
 
-#: qml/main.qml:67
+#: qml/main.qml:69
 #, kde-format
 msgid "Clear History"
 msgstr "Clear History"
 
-#: qml/main.qml:87
+#: qml/main.qml:89
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configure Clipboard…"

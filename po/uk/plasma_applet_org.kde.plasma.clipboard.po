@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-05-27 02:42+0000\n"
 "PO-Revision-Date: 2023-05-26 09:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -30,12 +30,12 @@ msgstr "Вміст буфера даних"
 msgid "Clipboard is empty"
 msgstr "Буфер даних порожній"
 
-#: qml/main.qml:67
+#: qml/main.qml:69
 #, kde-format
 msgid "Clear History"
 msgstr "Спорожнити журнал"
 
-#: qml/main.qml:87
+#: qml/main.qml:89
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Налаштувати буфер обміну…"

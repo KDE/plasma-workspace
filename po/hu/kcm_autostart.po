@@ -5,13 +5,13 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-11-16 22:15+0100\n"
+"PO-Revision-Date: 2026-05-26 22:39+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: autostartmodel.cpp:381
 #, kde-format
@@ -96,14 +96,14 @@ msgstr "Legyen végrehajtható"
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
-"A(z) „%1” fájlnak végrehajthatómak kell lennie, hogy kijelentezéskor "
+"A(z) „%1” fájlnak végrehajthatónak kell lennie, hogy kijelentkezéskor "
 "futhasson."
 
 #: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
-"A(z) „%1” fájlnak végrehajthatómak kell lennie, hogy bejelentezéskor "
+"A(z) „%1” fájlnak végrehajthatónak kell lennie, hogy bejelentkezéskor "
 "futhasson."
 
 #: ui/main.qml:68
@@ -205,7 +205,7 @@ msgstr "Kijelentkezési szkriptek"
 #: ui/main.qml:198
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr "Nincsenek felhasználói autimatikusan induló elemek"
+msgstr "Nincsenek felhasználói automatikusan induló elemek"
 
 #: ui/main.qml:199
 #, kde-kuit-format
