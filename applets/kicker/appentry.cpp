@@ -132,7 +132,7 @@ QString groupName(const QString &name)
         }
     }
 #endif
-    return name.left(1);
+    return name.left(1).toUpper();
 }
 
 static constexpr int s_newlyInstalledDays = 3; // how many days an app counts as newly installed
