@@ -10,6 +10,7 @@
 #include "appsmodel.h"
 #include "debug.h"
 #include "kastatsfavoritesmodel.h"
+#include "rootmodel.h"
 #include <kio_version.h>
 
 #include <QApplication>
@@ -29,6 +30,7 @@
 #include <KNotificationJobUiDelegate>
 #include <KRecentDocument>
 #include <KService>
+#include <KSycoca>
 #include <PlasmaActivities/ResourceInstance>
 
 #include <KWindowSystem>
@@ -605,6 +607,13 @@ void RecentUsageModel::refresh()
 
     if (m_usage != OnlyDocs && m_usage != OnlyFolders) {
         model = new InvalidAppsFilterProxy(this, model);
+        if (!dynamic_cast<RootModel *>(QObject::parent())) {
+            connect(KSycoca::self(),
+                    &KSycoca::databaseChanged,
+                    dynamic_cast<InvalidAppsFilterProxy *>(model),
+                    &QSortFilterProxyModel::invalidate,
+                    Qt::QueuedConnection);
+        }
     }
 
     if (m_usage == AppsAndDocs) {
