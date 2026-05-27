@@ -1003,13 +1003,42 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 
 void PanelView::positionConfigView()
 {
-    QQuickItem *contObject = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
-    auto *tb = contObject->property("toolBox").value<QQuickItem *>();
-    if (tb && containment()->formFactor() != Plasma::Types::Vertical) {
-        m_panelConfigView->setVisualParent(tb);
-    } else {
-        m_panelConfigView->setVisualParent(contObject);
+    PlasmaQuick::TransientPlacementHint placementHint;
+    m_panelConfigView->setVisualParent(contentItem());
+
+    placementHint.setParentAnchorArea(QRect(0, 0, width(), height()));
+    placementHint.setMargin(m_panelConfigView->margin());
+
+    const Qt::Edge logicalRightEdge = qGuiApp->layoutDirection() == Qt::RightToLeft ? Qt::LeftEdge : Qt::RightEdge;
+
+    switch (location()) {
+    case Plasma::Types::TopEdge:
+        // TODO RTL
+        placementHint.setParentAnchor(Qt::BottomEdge | logicalRightEdge);
+        placementHint.setPopupAnchor(Qt::TopEdge);
+        placementHint.setSlideConstraintAdjustments(Qt::Horizontal);
+        break;
+    case Plasma::Types::BottomEdge:
+        // TODO RTL
+        placementHint.setParentAnchor(Qt::TopEdge | logicalRightEdge);
+        placementHint.setPopupAnchor(Qt::BottomEdge);
+        placementHint.setSlideConstraintAdjustments(Qt::Horizontal);
+        break;
+    case Plasma::Types::LeftEdge:
+        placementHint.setParentAnchor(Qt::BottomEdge | Qt::RightEdge);
+        placementHint.setPopupAnchor(Qt::LeftEdge);
+        placementHint.setSlideConstraintAdjustments(Qt::Vertical);
+        break;
+    case Plasma::Types::RightEdge:
+        placementHint.setParentAnchor(Qt::BottomEdge | Qt::LeftEdge);
+        placementHint.setPopupAnchor(Qt::RightEdge);
+        placementHint.setSlideConstraintAdjustments(Qt::Vertical);
+        break;
+    default:
+        qCWarning(PLASMASHELL) << "Invalid panel location";
     }
+
+    m_panelConfigView->setPlacementHint(placementHint);
 }
 
 void PanelView::restoreAutoHide()
