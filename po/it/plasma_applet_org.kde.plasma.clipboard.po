@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-05-27 00:47+0000\n"
 "PO-Revision-Date: 2023-05-26 15:19+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -27,12 +27,12 @@ msgstr "Contenuto degli appunti"
 msgid "Clipboard is empty"
 msgstr "Gli appunti sono vuoti"
 
-#: qml/main.qml:67
+#: qml/main.qml:69
 #, kde-format
 msgid "Clear History"
 msgstr "Cancella la cronologia"
 
-#: qml/main.qml:87
+#: qml/main.qml:89
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configura gli appunti..."

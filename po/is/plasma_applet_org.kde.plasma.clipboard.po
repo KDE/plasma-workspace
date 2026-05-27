@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-03 00:45+0000\n"
+"POT-Creation-Date: 2026-05-27 00:47+0000\n"
 "PO-Revision-Date: 2023-09-09 10:01+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,12 @@ msgstr "Innihald klippispjalds"
 msgid "Clipboard is empty"
 msgstr "Klippispjald er tómt"
 
-#: qml/main.qml:67
+#: qml/main.qml:69
 #, kde-format
 msgid "Clear History"
 msgstr "Hreinsa feril"
 
-#: qml/main.qml:87
+#: qml/main.qml:89
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Stilla klippispjald…"
