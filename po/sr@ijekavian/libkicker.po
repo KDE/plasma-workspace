@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 02:42+0000\n"
+"POT-Creation-Date: 2026-05-28 02:38+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -89,7 +89,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:229
 #, kde-format
 msgid "Applications"
 msgstr "Програми"
@@ -126,65 +126,65 @@ msgid "Favorites"
 msgstr "Омиљено"
 
 # Није неоходно „... коришћено“.
-#: recentusagemodel.cpp:154
+#: recentusagemodel.cpp:156
 #, kde-format
 msgid "Recently Used"
 msgstr "Недавно"
 
-#: recentusagemodel.cpp:158
+#: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
 msgid "Files"
 msgstr ""
 
-#: recentusagemodel.cpp:261
+#: recentusagemodel.cpp:263
 #, kde-format
 msgid "Forget Application"
 msgstr "Заборави програм"
 
-#: recentusagemodel.cpp:326
+#: recentusagemodel.cpp:328
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:373
+#: recentusagemodel.cpp:375
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: recentusagemodel.cpp:378
+#: recentusagemodel.cpp:380
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget Folder"
 msgstr "Заборави све"
 
-#: recentusagemodel.cpp:378
+#: recentusagemodel.cpp:380
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget File"
 msgstr "Заборави све"
 
-#: recentusagemodel.cpp:524
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All"
 msgstr "Заборави све"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:528
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Заборави све програме"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:530
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget All Folders"
 msgstr "Заборави све"
 
-#: recentusagemodel.cpp:531
+#: recentusagemodel.cpp:533
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget All Files"

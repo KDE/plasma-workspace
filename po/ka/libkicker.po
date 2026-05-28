@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 02:42+0000\n"
+"POT-Creation-Date: 2026-05-28 02:38+0000\n"
 "PO-Revision-Date: 2026-04-23 06:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -82,7 +82,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:229
 #, kde-format
 msgid "Applications"
 msgstr "აპლიკაციები"
@@ -118,62 +118,62 @@ msgstr "კომპიუტერი"
 msgid "Favorites"
 msgstr "რჩეულები"
 
-#: recentusagemodel.cpp:154
+#: recentusagemodel.cpp:156
 #, kde-format
 msgid "Recently Used"
 msgstr "ახლახანს _გამოყენებული"
 
-#: recentusagemodel.cpp:158
+#: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
 msgstr "ადგილები"
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
 msgid "Files"
 msgstr "ფაილები"
 
-#: recentusagemodel.cpp:261
+#: recentusagemodel.cpp:263
 #, kde-format
 msgid "Forget Application"
 msgstr "აპლიკაციის დავიწყება"
 
-#: recentusagemodel.cpp:326
+#: recentusagemodel.cpp:328
 #, kde-format
 msgid "Folders"
 msgstr "საქაღალდეები"
 
-#: recentusagemodel.cpp:373
+#: recentusagemodel.cpp:375
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "შემცველი საქაღალდის გახსნა"
 
-#: recentusagemodel.cpp:378
+#: recentusagemodel.cpp:380
 #, kde-format
 msgid "Forget Folder"
 msgstr "საქაღალდის დავიწყება"
 
-#: recentusagemodel.cpp:378
+#: recentusagemodel.cpp:380
 #, kde-format
 msgid "Forget File"
 msgstr "ფაილის დავიწყება"
 
-#: recentusagemodel.cpp:524
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All"
 msgstr "ყველას დავიწყება"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:528
 #, kde-format
 msgid "Forget All Applications"
 msgstr "ყველა აპლიკაციის დავიწყება"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:530
 #, kde-format
 msgid "Forget All Folders"
 msgstr "ყველა საქაღალდის დავიწყება"
 
-#: recentusagemodel.cpp:531
+#: recentusagemodel.cpp:533
 #, kde-format
 msgid "Forget All Files"
 msgstr "ყველა ფაილის დავიწყება"
