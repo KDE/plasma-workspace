@@ -41,13 +41,13 @@ generate_export_header(kworkspace)
 target_link_libraries(kworkspace
     PUBLIC
         Qt::Core
+        KF6::ConfigCore
         KF6::CoreAddons
     PRIVATE
         Qt::DBus
         Qt::WaylandClient
         KF6::I18n
         KF6::WindowSystem
-        KF6::ConfigCore
         KF6::Service
         KF6::Package
         Plasma::Plasma
