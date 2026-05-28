@@ -86,6 +86,7 @@ WallpaperItem {
             targetSize: imageView.sourceSize
             slidePaths: root.configuration.SlidePaths
             slideTimer: root.configuration.SlideInterval
+            changeAfterSuspend: root.configuration.ChangeAfterSuspend
             slideshowMode: root.configuration.SlideshowMode
             slideshowFoldersFirst: root.configuration.SlideshowFoldersFirst
             uncheckedSlides: root.configuration.UncheckedSlides

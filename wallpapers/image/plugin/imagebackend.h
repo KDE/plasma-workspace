@@ -10,6 +10,7 @@
 
 #pragma once
 
+#include <memory>
 #include <optional>
 
 #include <QAbstractItemModel>
@@ -26,6 +27,7 @@
 #include "utils/dynamicmode.h"
 
 class ImageProxyModel;
+class SessionManagement;
 class SlideModel;
 class SlideFilterModel;
 
@@ -73,6 +75,7 @@ class ImageBackend : public QObject, public QQmlParserStatus
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel NOTIFY wallpaperModelChanged)
     Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel NOTIFY slideFilterModelChanged)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
+    Q_PROPERTY(bool changeAfterSuspend READ changeAfterSuspend WRITE setChangeAfterSuspend NOTIFY changeAfterSuspendChanged)
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
     Q_PROPERTY(QStringList uncheckedSlides READ uncheckedSlides WRITE setUncheckedSlides NOTIFY uncheckedSlidesChanged)
@@ -147,6 +150,9 @@ public:
     int slideTimer() const;
     void setSlideTimer(int time);
 
+    bool changeAfterSuspend() const;
+    void setChangeAfterSuspend(bool changeAfterSuspend);
+
     QStringList slidePaths() const;
     void setSlidePaths(const QStringList &slidePaths);
 
@@ -178,6 +184,7 @@ Q_SIGNALS:
     void slideshowFoldersFirstChanged();
     void targetSizeChanged();
     void slideTimerChanged();
+    void changeAfterSuspendChanged();
     void slidePathsChanged();
     void uncheckedSlidesChanged();
     void pauseSlideshowChanged();
@@ -197,6 +204,7 @@ private:
 
     bool m_ready = false;
     int m_delay = 10;
+    bool m_changeAfterSuspend = false;
     QUrl m_image;
     DynamicMode::Mode m_dynamicMode = DynamicMode::Mode::Automatic;
     Q_OBJECT_BINDABLE_PROPERTY(ImageBackend, QSize, m_targetSize, &ImageBackend::targetSizeChanged)
@@ -223,4 +231,6 @@ private:
     SlideFilterModel *m_slideFilterModel = nullptr;
 
     QAction *m_nextSlideAction;
+
+    std::unique_ptr<SessionManagement> m_session;
 };

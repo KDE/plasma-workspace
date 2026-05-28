@@ -30,6 +30,10 @@
       <label>Interval between slides (s)</label>
       <default>900</default>
     </entry>
+    <entry name="ChangeAfterSuspend" type="Bool">
+      <label>Change image after wake up from suspend</label>
+      <default>false</default>
+    </entry>
     <entry name="UncheckedSlides" type="StringList">
       <label>Unchecked Slides</label>
       <default></default>

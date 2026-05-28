@@ -29,6 +29,8 @@
 #include <KSharedConfig>
 #include <algorithm>
 
+#include <sessionmanagement.h>
+
 #include "finder/suffixcheck.h"
 #include "model/imageproxymodel.h"
 #include "slidefiltermodel.h"
@@ -267,6 +269,28 @@ void ImageBackend::setSlideTimer(int time)
     Q_EMIT slideTimerChanged();
 
     startSlideshow();
+}
+
+bool ImageBackend::changeAfterSuspend() const
+{
+    return m_changeAfterSuspend;
+}
+
+void ImageBackend::setChangeAfterSuspend(bool changeAfterSuspend)
+{
+    if (m_changeAfterSuspend == changeAfterSuspend) {
+        return;
+    }
+
+    m_changeAfterSuspend = changeAfterSuspend;
+    Q_EMIT changeAfterSuspendChanged();
+
+    if (changeAfterSuspend) {
+        m_session = std::make_unique<SessionManagement>();
+        connect(m_session.get(), &SessionManagement::aboutToSuspend, this, &ImageBackend::nextSlide);
+    } else {
+        m_session.reset();
+    }
 }
 
 QStringList ImageBackend::slidePaths() const

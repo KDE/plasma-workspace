@@ -44,6 +44,8 @@ ColumnLayout {
     property list<string> cfg_SlidePathsDefault: []
     property int cfg_SlideInterval: 0
     property int cfg_SlideIntervalDefault: 0
+    property bool cfg_ChangeAfterSuspend
+    property bool cfg_ChangeAfterSuspendDefault: false
     property list<string> cfg_UncheckedSlides: []
     property list<string> cfg_UncheckedSlidesDefault: []
     property int cfg_DynamicMode: 0

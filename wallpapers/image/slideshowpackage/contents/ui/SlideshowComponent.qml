@@ -171,6 +171,16 @@ ColumnLayout {
                 }
             }
         }
+
+        QQC2.CheckBox {
+            text: i18nc("@option:check Change wallpaper whenever system wakes up from suspend", "Change after waking from sleep")
+            checked: root.cfg_ChangeAfterSuspend
+            onToggled: root.cfg_ChangeAfterSuspend = checked
+
+            KCM.SettingHighlighter {
+                highlight: cfg_ChangeAfterSuspend !== cfg_ChangeAfterSuspendDefault
+            }
+        }
     }
 
     RowLayout {
