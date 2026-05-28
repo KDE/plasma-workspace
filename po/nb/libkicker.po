@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-19 00:46+0000\n"
+"POT-Creation-Date: 2026-05-28 00:46+0000\n"
 "PO-Revision-Date: 2025-02-22 07:41+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -84,7 +84,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:156 recentusagemodel.cpp:227
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:229
 #, kde-format
 msgid "Applications"
 msgstr "Programmer"
@@ -120,64 +120,64 @@ msgstr "Datamaskin"
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: recentusagemodel.cpp:154
+#: recentusagemodel.cpp:156
 #, kde-format
 msgid "Recently Used"
 msgstr "Nylig brukte"
 
-#: recentusagemodel.cpp:158
+#: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
 msgstr "Steder"
 
-#: recentusagemodel.cpp:161 recentusagemodel.cpp:328
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
 msgid "Files"
 msgstr "filer"
 
-#: recentusagemodel.cpp:261
+#: recentusagemodel.cpp:263
 #, kde-format
 msgid "Forget Application"
 msgstr "Glem program"
 
-#: recentusagemodel.cpp:326
+#: recentusagemodel.cpp:328
 #, kde-format
 msgid "Folders"
 msgstr "Mapper"
 
-#: recentusagemodel.cpp:373
+#: recentusagemodel.cpp:375
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Åpne overmappa"
 
-#: recentusagemodel.cpp:378
+#: recentusagemodel.cpp:380
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Glem fila"
 
-#: recentusagemodel.cpp:378
+#: recentusagemodel.cpp:380
 #, kde-format
 msgid "Forget File"
 msgstr "Glem fila"
 
-#: recentusagemodel.cpp:524
+#: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All"
 msgstr "Glem alt"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:528
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Glem alle programmene"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:530
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Glem alle filer"
 
-#: recentusagemodel.cpp:531
+#: recentusagemodel.cpp:533
 #, kde-format
 msgid "Forget All Files"
 msgstr "Glem alle filer"
