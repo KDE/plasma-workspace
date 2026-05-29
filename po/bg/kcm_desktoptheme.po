@@ -179,9 +179,3 @@ msgstr "Отваряне на тема"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Файлове на тема ((*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "Премахване на тема"
-
-#~ msgid "Restore Theme"
-#~ msgstr "Възстановяване на тема"

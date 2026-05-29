@@ -109,35 +109,3 @@ msgstr "Хибернация"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Хибернация (записване на диск)"
-
-#~ msgctxt "@title:column"
-#~ msgid "Actions"
-#~ msgstr "Действия"
-
-#~ msgctxt ""
-#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
-#~ "suspend)"
-#~ msgid "Show actions:"
-#~ msgstr "Показване на действия:"
-
-#~ msgid "Log Out"
-#~ msgstr "Излизане от сесия"
-
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "Показване на екран за напускане на сесията"
-
-#~ msgid "Shut Down"
-#~ msgstr "Изключване"
-
-#~ msgid "Switch User"
-#~ msgstr "Превключване на потребител"
-
-#~ msgid "Shutdown…"
-#~ msgstr "Изключване…"
-
-#~ msgid "Restart…"
-#~ msgstr "Рестартиране…"
-
-#~ msgid "Logout…"
-#~ msgstr "Излизане от сесия…"

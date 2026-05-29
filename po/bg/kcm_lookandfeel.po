@@ -455,6 +455,3 @@ msgstr "Изберете какво да приложите…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Показване на по-малко опции…"
-
-#~ msgid "Cursors"
-#~ msgstr "Курсори"

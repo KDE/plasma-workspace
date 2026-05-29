@@ -107,6 +107,3 @@ msgstr "Отваряне на тема"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Файлове на тема (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Restore Icon Theme"
-#~ msgstr "Възстановяване на темата на икони"

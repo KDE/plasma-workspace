@@ -1381,9 +1381,3 @@ msgstr "Отваряне на цветова схема"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлове с цветна схема (*.colors)"
-
-#~ msgid "You do not have permission to overwrite that scheme"
-#~ msgstr "Нямате права за презапис на схемата"
-
-#~ msgid "Restore Color Scheme"
-#~ msgstr "Възстановяване на цветова схема"
