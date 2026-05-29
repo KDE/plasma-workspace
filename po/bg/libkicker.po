@@ -1,20 +1,20 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-28 00:46+0000\n"
-"PO-Revision-Date: 2025-01-07 23:18+0100\n"
+"PO-Revision-Date: 2026-05-28 13:47+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: actionlist.cpp:93
@@ -125,7 +125,7 @@ msgstr "Скоро отваряни"
 #: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Места"
 
 #: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
@@ -148,10 +148,9 @@ msgid "Open Containing Folder"
 msgstr "Отваряне на съдържащата папка"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Забравяне на файл"
+msgstr "Забравяне на тази папка"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -169,10 +168,9 @@ msgid "Forget All Applications"
 msgstr "Забравяне на всички приложения"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Забравяне на всички файлове"
+msgstr "Забравяне на всички папки"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -195,16 +193,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Това не би следвало да се показва! Изберете KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Скорошни документи"
+msgstr "Скорошни места"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Често използвани файлове"
+msgstr "Често използвани места"
 
 #: rootmodel.cpp:587
 #, kde-format

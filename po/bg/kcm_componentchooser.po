@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2011, 2013.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2024, 2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-11-09 20:04+0100\n"
+"PO-Revision-Date: 2026-05-28 13:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: applicationmodel.cpp:64
@@ -35,10 +35,9 @@ msgid "Select default browser"
 msgstr "Избиране на браузър по подразбиране"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Избиране на приложение по подразбиране за телефонно набиране"
+msgstr "Избиране на стандартно приложение за календар"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -173,7 +172,7 @@ msgstr "Електронна поща:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Календар:"
 
 #: ui/main.qml:111
 #, kde-format
