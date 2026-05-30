@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2019-09-26 18:15+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -35,19 +35,19 @@ msgstr "Намоиш додани зерфеҳрист барои ҳар як м
 msgid "Display only the current desktop's windows"
 msgstr "Намоиш додани танҳо равзанаҳои мизи кории ҷорӣ"
 
-#: switch.cpp:74
+#: switch.cpp:55
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Танзимоти васлкунаки гузариши равзанаҳо"
 
-#: switch.cpp:159
+#: switch.cpp:140
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Равзанаҳо"
 
-#: switch.cpp:184 switch.cpp:205 switch.cpp:207
+#: switch.cpp:165 switch.cpp:186 switch.cpp:188
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"

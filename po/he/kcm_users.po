@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2026-04-13 21:47+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -324,12 +324,7 @@ msgstr "הגדרת טביעות אצבע"
 msgid "Add"
 msgstr "הוספה"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "ביטול"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "בוצע"
@@ -693,6 +688,9 @@ msgstr "החשבון שלך"
 #, kde-format
 msgid "Other Accounts"
 msgstr "חשבונות אחרים"
+
+#~ msgid "Cancel"
+#~ msgstr "ביטול"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "טביעת האצבע נרשמת"

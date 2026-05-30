@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2026-01-19 16:51+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -359,12 +359,7 @@ msgstr "Konfigurēt pirkstu nospiedumus"
 msgid "Add"
 msgstr "Pievienot"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Atcelt"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Gatavs"
@@ -732,6 +727,9 @@ msgstr "Tavs konts"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Pārējie konti"
+
+#~ msgid "Cancel"
+#~ msgstr "Atcelt"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Reģistrē pirkstu nospiedumu"

@@ -1,10 +1,11 @@
+# SPDX-FileCopyrightText: 2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-29 00:45+0000\n"
-"PO-Revision-Date: 2023-07-18 21:31-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-05-24 18:33+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -13,57 +14,58 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: devicenotifications.cpp:449
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr ""
+msgstr "ディスプレイ検出"
 
 #: devicenotifications.cpp:450
 #, kde-format
 msgid "A display has been connected."
-msgstr ""
+msgstr "ディスプレイが接続されました。"
 
 #: devicenotifications.cpp:470
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr ""
+msgstr "ディスプレイ除去"
 
 #: devicenotifications.cpp:471
 #, kde-format
 msgid "A display has been disconnected."
-msgstr ""
+msgstr "ディスプレイの接続が切断されました。"
 
 #: devicenotifications.cpp:517
 #, kde-format
 msgid "%1 has been connected."
-msgstr ""
+msgstr "%1 が接続されました。"
 
 #: devicenotifications.cpp:517
 #, kde-format
 msgid "A USB device has been connected."
-msgstr ""
+msgstr "USB デバイスが接続されました。"
 
 #: devicenotifications.cpp:522
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
-msgstr ""
+msgstr "USB デバイス検出"
 
 #: devicenotifications.cpp:560
 #, kde-format
 msgid "%1 has been disconnected."
-msgstr ""
+msgstr "%1 の接続が切断されました。"
 
 #: devicenotifications.cpp:560
 #, kde-format
 msgid "A USB device has been disconnected."
-msgstr ""
+msgstr "USB デバイスが取り外されました。"
 
 #: devicenotifications.cpp:565
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr ""
+msgstr "USB デバイス除去"

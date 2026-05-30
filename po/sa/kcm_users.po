@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -331,12 +331,7 @@ msgstr "अङ्गुलिचिह्नानि विन्यस्य�
 msgid "Add"
 msgstr "संयोजयति"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "निरसयतु"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "कृतम्‌"
@@ -692,3 +687,6 @@ msgstr "भवतः खाता"
 #, kde-format
 msgid "Other Accounts"
 msgstr "अन्ये लेखा"
+
+#~ msgid "Cancel"
+#~ msgstr "निरसयतु"

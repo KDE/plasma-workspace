@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2025-12-14 00:19+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -340,12 +340,7 @@ msgstr "Barmaq izlərini tənzimləyin"
 msgid "Add"
 msgstr "Əlavə edin"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "İmtina"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Hazırdır"
@@ -712,6 +707,9 @@ msgstr "Hesabınız"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Digər hesablar"
+
+#~ msgid "Cancel"
+#~ msgstr "İmtina"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Barmaq izi qeydiyyatı"

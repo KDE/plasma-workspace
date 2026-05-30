@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2023-11-11 14:50+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -325,12 +325,7 @@ msgstr "Nastaviť odtlačky prstov"
 msgid "Add"
 msgstr "Pridať"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Zrušiť"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Hotovo"
@@ -698,6 +693,9 @@ msgstr "Vaše konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Ostatné kontá"
+
+#~ msgid "Cancel"
+#~ msgstr "Zrušiť"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Pridáva sa odtlačok"

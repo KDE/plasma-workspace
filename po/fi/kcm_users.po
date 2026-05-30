@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2026-01-10 20:56+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -346,12 +346,7 @@ msgstr "Sormenjälkiasetukset"
 msgid "Add"
 msgstr "Lisää"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Peru"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Valmis"
@@ -719,6 +714,9 @@ msgstr "Oma tilisi"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Muut tilit"
+
+#~ msgid "Cancel"
+#~ msgstr "Peru"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Kirjataan sormenjälkeä"

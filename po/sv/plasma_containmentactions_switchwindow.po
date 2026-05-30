@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2014-06-14 13:59+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -35,19 +35,19 @@ msgstr "Visa en undermeny för varje skrivbord"
 msgid "Display only the current desktop's windows"
 msgstr "Visa bara fönster på nuvarande skrivbord"
 
-#: switch.cpp:74
+#: switch.cpp:55
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Anpassa insticksprogram för fönsterbyte"
 
-#: switch.cpp:159
+#: switch.cpp:140
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Fönster"
 
-#: switch.cpp:184 switch.cpp:205 switch.cpp:207
+#: switch.cpp:165 switch.cpp:186 switch.cpp:188
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"

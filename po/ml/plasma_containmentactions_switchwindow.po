@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -37,19 +37,19 @@ msgstr "ഓരോ ഡെസ്ക്ടോപ്പിനും ഒരു ഉപ
 msgid "Display only the current desktop's windows"
 msgstr "നിലവിലെ ഡെസ്ക്ടോപ്പിന്റെ ജാലകങ്ങൾ മാത്രം പ്രദർശിപ്പിക്കുക"
 
-#: switch.cpp:74
+#: switch.cpp:55
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "ജാലക മാറ്റ പ്ലഗിൻ സജ്ജമാക്കുക"
 
-#: switch.cpp:159
+#: switch.cpp:140
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "ജാലകങ്ങൾ"
 
-#: switch.cpp:184 switch.cpp:205 switch.cpp:207
+#: switch.cpp:165 switch.cpp:186 switch.cpp:188
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"

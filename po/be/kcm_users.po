@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -361,12 +361,7 @@ msgstr "Наладжванне адбіткаў пальцаў"
 msgid "Add"
 msgstr "Дадаць"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Скасаваць"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Завершана"
@@ -723,6 +718,9 @@ msgstr "Ваш акаўнт"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Іншыя акаўнты"
+
+#~ msgid "Cancel"
+#~ msgstr "Скасаваць"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Рэгістраванне адбітка пальца"

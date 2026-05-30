@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2025-11-21 21:49+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -326,12 +326,7 @@ msgstr "Ujjlenyomatok beállítása"
 msgid "Add"
 msgstr "Hozzáadás"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Mégse"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Kész"
@@ -692,6 +687,9 @@ msgstr "Az Ön fiókja"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Egyéb fiókok"
+
+#~ msgid "Cancel"
+#~ msgstr "Mégse"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Ujjlenyomat regisztrálása"

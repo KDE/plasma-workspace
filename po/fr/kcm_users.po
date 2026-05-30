@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2026-01-11 21:43+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -366,12 +366,7 @@ msgstr "Configurer les empreintes digitales"
 msgid "Add"
 msgstr "Ajouter"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Annuler"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Terminé"
@@ -748,6 +743,9 @@ msgstr "Votre compte"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Autres comptes"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Enregistrement d'une empreinte digitale"

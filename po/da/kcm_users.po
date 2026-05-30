@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2026-05-07 10:24+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -344,12 +344,7 @@ msgstr "Konfigurér fingeraftryk"
 msgid "Add"
 msgstr "Tilføj"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Annullér"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Færdig"
@@ -719,6 +714,9 @@ msgstr "Din konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Andre konti"
+
+#~ msgid "Cancel"
+#~ msgstr "Annullér"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Registrerer fingeraftryk"

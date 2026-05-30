@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2025-12-07 23:08+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -370,12 +370,7 @@ msgstr "Konfiguratu hatz-markak"
 msgid "Add"
 msgstr "Gehitu"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Utzi"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Eginda"
@@ -747,6 +742,9 @@ msgstr "Zure kontua"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Beste kontu batzuk"
+
+#~ msgid "Cancel"
+#~ msgstr "Utzi"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Hatz-marka erroldatzea"

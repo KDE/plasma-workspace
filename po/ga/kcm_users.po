@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-30 00:47+0000\n"
 "PO-Revision-Date: 2026-01-04 02:42+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -317,12 +317,7 @@ msgstr ""
 msgid "Add"
 msgstr "Cuir Leis"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Cealaigh"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Críochnaithe"
@@ -679,3 +674,6 @@ msgstr "Do Cuntas"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Cuntais Eile"
+
+#~ msgid "Cancel"
+#~ msgstr "Cealaigh"
