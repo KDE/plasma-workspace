@@ -44,6 +44,7 @@ set (plasma_shell_SRCS
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
+    plasmashellrcmigrator.cpp
     shellcorona.cpp
     osd.cpp
     strutmanager.cpp

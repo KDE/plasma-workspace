@@ -27,6 +27,7 @@
 
 #include <KActionCollection>
 #include <KAuthorized>
+#include <KConfig>
 #include <KDirWatch>
 #include <KGlobalAccel>
 #include <KLocalizedString>
@@ -336,6 +337,7 @@ void ShellCorona::setShell(const QString &shell)
     }
 
     m_shell = shell;
+    KConfig::setMainConfigName(u"plasma-" + m_shell + u"-shellrc");
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
     package.setPath(shell);
     package.setAllowExternalPaths(true);
@@ -3104,7 +3106,7 @@ void ShellCorona::activateTaskManagerEntry(int index)
 
 QString ShellCorona::defaultShell()
 {
-    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
+    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmarc"));
     KConfigGroup startupConfGroup(startupConf, u"Shell"_s);
     const QString defaultValue = qEnvironmentVariable("PLASMA_DEFAULT_SHELL", u"org.kde.plasma.desktop"_s);
     QString value = startupConfGroup.readEntry("ShellPackage", defaultValue);
@@ -3115,7 +3117,7 @@ QString ShellCorona::defaultShell()
 
 void ShellCorona::refreshCurrentShell()
 {
-    KSharedConfig::openConfig(QStringLiteral("plasmashellrc"))->reparseConfiguration();
+    KSharedConfig::openConfig(QStringLiteral("plasmarc"))->reparseConfiguration();
     //  FIXME:   setShell(defaultShell());
     QProcess::startDetached(u"plasmashell"_s, {u"--replace"_s});
 }

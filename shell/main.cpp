@@ -8,6 +8,7 @@
 */
 
 #include "debug.h"
+#include "plasmashellrcmigrator.h"
 #include "shellcorona.h"
 #include "softwarerendernotifier.h"
 #ifdef WITH_KUSERFEEDBACKCORE
@@ -29,9 +30,11 @@
 #include <QSurfaceFormat>
 
 #include <KAboutData>
+#include <KConfigGroup>
 #include <KCrash>
 #include <KDBusService>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <KSignalHandler>
 
 #include <csignal>
@@ -112,6 +115,8 @@ int main(int argc, char *argv[])
 
     app.setQuitOnLastWindowClosed(false);
 
+    migratePlasmashellrc();
+
     bool replace = false;
 
     ShellCorona corona;
@@ -179,7 +184,7 @@ int main(int argc, char *argv[])
             s_multipleInvokations = true;
 
             qCritical("Open GL context could not be created");
-            auto configGroup = KSharedConfig::openConfig()->group(QStringLiteral("QtQuickRendererSettings"));
+            auto configGroup = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group(QStringLiteral("QtQuickRendererSettings"));
             if (configGroup.readEntry("SceneGraphBackend") != QLatin1String("software")) {
                 configGroup.writeEntry("SceneGraphBackend", "software", KConfigBase::Global | KConfigBase::Persistent);
                 configGroup.sync();

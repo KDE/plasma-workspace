@@ -152,7 +152,8 @@ KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackag
                              || configProvides(conf, u"kdeglobals/General"_s, u"activeFont"_s));
 
         contents.setFlag(WindowPlacement, configProvides(conf, u"kwinrc/Windows"_s, u"Placement"_s));
-        contents.setFlag(ShellPackage, configProvides(conf, u"plasmashellrc/Shell"_s, u"ShellPackage"_s));
+        contents.setFlag(ShellPackage,
+                         configProvides(conf, u"plasmarc/Shell"_s, u"ShellPackage"_s) || configProvides(conf, u"plasmashellrc/Shell"_s, u"ShellPackage"_s));
 
         // TODO: Currently managed together within the "DesktopLayout" content
     }
@@ -200,7 +201,7 @@ void KLookAndFeelManager::setShellPackage(const QString &value)
         return;
     }
 
-    writeNewDefaults(QStringLiteral("plasmashellrc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
+    writeNewDefaults(QStringLiteral("plasmarc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
     m_plasmashellChanged = true;
 }
 
@@ -581,9 +582,15 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
         }
 
         if (itemsToApply.testFlag(ShellPackage)) {
-            group = KConfigGroup(conf, u"plasmashellrc"_s);
+            group = KConfigGroup(conf, u"plasmarc"_s);
             group = KConfigGroup(&group, u"Shell"_s);
-            setShellPackage(group.readEntry("ShellPackage", QString()));
+            QString shellPackage = group.readEntry("ShellPackage", QString());
+            if (shellPackage.isEmpty()) {
+                group = KConfigGroup(conf, u"plasmashellrc"_s);
+                group = KConfigGroup(&group, u"Shell"_s);
+                shellPackage = group.readEntry("ShellPackage", QString());
+            }
+            setShellPackage(shellPackage);
         }
 
         if (itemsToApply.testFlag(WindowDecoration)) {
