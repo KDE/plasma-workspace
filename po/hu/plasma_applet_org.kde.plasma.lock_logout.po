@@ -4,13 +4,13 @@
 # Tamas Szanto <tszanto@interware.hu>, 2009.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023-2024, 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-03 00:49+0000\n"
-"PO-Revision-Date: 2024-09-18 21:28+0200\n"
+"PO-Revision-Date: 2026-05-30 21:41+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: config.qml:13
 #, kde-format
@@ -28,7 +28,7 @@ msgstr "Általános"
 #: ConfigGeneral.qml:120
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Nem érhető el"
 
 #: data.js:5
 #, kde-format
@@ -41,10 +41,9 @@ msgid "Lock the screen"
 msgstr "Képernyőzárolás"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Felhasználóváltás"
+msgstr "Felhasználóváltás…"
 
 #: data.js:13
 #, kde-format
@@ -52,8 +51,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Párhuzamos munkamenet indítása másik felhasználóként"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Leállítás"
 
@@ -73,8 +71,7 @@ msgid "Reboot the computer"
 msgstr "A számítógép újraindítása"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Kijelentkezés"
 
