@@ -15,6 +15,7 @@
 #include <QQuickItem>
 #include <QResizeEvent>
 
+#include <Plasma/Containment>
 #include <PlasmaQuick/AppletQuickItem>
 
 #include <KActionCollection>
@@ -227,7 +228,6 @@ void PlasmaWindowedView::hideEvent(QHideEvent *ev)
     m_applet->config().sync();
     if (!m_withStatusNotifier) {
         m_applet->deleteLater();
-        deleteLater();
     }
 }
 

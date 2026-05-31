@@ -44,7 +44,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
             return;
         }
     }
-    m_view = new PlasmaWindowedView();
+    m_view = std::make_unique<PlasmaWindowedView>();
     m_view->setHasStatusNotifier(m_hasStatusNotifier);
     m_view->show();
 
@@ -58,7 +58,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
             Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
             if (!a) {
                 qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
-                delete std::exchange(m_view, nullptr);
+                m_view.reset();
                 return;
             }
             // Some applets call corona() in their restore function,
@@ -80,7 +80,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
     Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
     if (!a) {
         qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
-        delete std::exchange(m_view, nullptr);
+        m_view.reset();
         return;
     }
 

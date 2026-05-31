@@ -71,7 +71,7 @@ int main(int argc, char **argv)
         parser.showHelp(1);
     }
 
-    auto *corona = new PlasmaWindowedCorona(parser.value(shellPluginOption));
+    auto corona = std::make_unique<PlasmaWindowedCorona>(parser.value(shellPluginOption));
 
     const QStringList arguments = parser.positionalArguments();
     QVariantList args;
@@ -82,7 +82,7 @@ int main(int argc, char **argv)
     corona->setHasStatusNotifier(parser.isSet(QStringLiteral("statusnotifier")));
     corona->loadApplet(arguments.first(), args);
 
-    app.connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);
+    app.connect(&service, &KDBusService::activateRequested, corona.get(), &PlasmaWindowedCorona::activateRequested);
 
     // Quit on SIGTERM to properly save gcov results
     KSignalHandler::self()->watchSignal(SIGTERM);

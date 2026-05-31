@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "plasmawindowedcorona.h"
+#include <Plasma/Applet>
 #include <PlasmaQuick/ConfigView>
 #include <QPointer>
 #include <QQuickView>

@@ -9,7 +9,9 @@
 
 #include <Plasma/Corona>
 
-class PlasmaWindowedView;
+#include "plasmawindowedview.h"
+
+#include <memory>
 
 class PlasmaWindowedCorona : public Plasma::Corona
 {
@@ -28,6 +30,6 @@ public Q_SLOTS:
 
 private:
     Plasma::Containment *m_containment = nullptr;
-    PlasmaWindowedView *m_view = nullptr;
+    std::unique_ptr<PlasmaWindowedView> m_view = nullptr;
     bool m_hasStatusNotifier = false;
 };
