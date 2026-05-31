@@ -4,13 +4,13 @@
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-28 02:38+0000\n"
-"PO-Revision-Date: 2025-01-24 20:48+0100\n"
+"PO-Revision-Date: 2026-05-30 21:40+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -151,10 +151,9 @@ msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Fájl elfelejtése"
+msgstr "Mappa elfelejtése"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -172,10 +171,9 @@ msgid "Forget All Applications"
 msgstr "Összes alkalmazás elfelejtése"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Összes fájl elfelejtése"
+msgstr "Összes mappa elfelejtése"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -198,16 +196,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Ennek nem szabadna megjelennie! Használja a KICKER_FAVORITES_MODEL-t"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Legutóbbi fájlok"
+msgstr "Legutóbbi helyek"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Gyakran használt fájlok"
+msgstr "Gyakran használt helyek"
 
 #: rootmodel.cpp:587
 #, kde-format

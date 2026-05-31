@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2026-02-05 15:21+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -327,12 +327,7 @@ msgstr "Configurează amprente"
 msgid "Add"
 msgstr "Adaugă"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Renunță"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Gata"
@@ -701,6 +696,9 @@ msgstr "Contul tău"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Alte conturi"
+
+#~ msgid "Cancel"
+#~ msgstr "Renunță"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Se înrolează amprenta"

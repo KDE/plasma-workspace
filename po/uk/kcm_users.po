@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2025-12-03 15:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -371,12 +371,7 @@ msgstr "Налаштувати відбитки"
 msgid "Add"
 msgstr "Додати"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Скасувати"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Виконано"
@@ -751,6 +746,9 @@ msgstr "Ваш обліковий запис"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Інші облікові записи"
+
+#~ msgid "Cancel"
+#~ msgstr "Скасувати"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Реєстрація відбитка"

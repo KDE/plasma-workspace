@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2026-01-04 15:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -323,12 +323,7 @@ msgstr "கைரேகைகளை அமை"
 msgid "Add"
 msgstr "சேர்"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "ரத்து செய்"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "முடிந்தது"
@@ -692,6 +687,9 @@ msgstr "உங்கள் கணக்கு"
 #, kde-format
 msgid "Other Accounts"
 msgstr "மற்ற கணக்குகள்"
+
+#~ msgid "Cancel"
+#~ msgstr "ரத்து செய்"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "கைரேகை பதிவிடப்படுகிறது"

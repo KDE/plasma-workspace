@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2025-12-03 08:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -371,12 +371,7 @@ msgstr "Configureu les empremtes dactilars"
 msgid "Add"
 msgstr "Afig"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Cancel·la"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Fet"
@@ -750,3 +745,6 @@ msgstr "El vostre compte"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancel·la"

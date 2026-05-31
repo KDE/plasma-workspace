@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2025-05-23 10:27+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -332,12 +332,7 @@ msgstr "Configurar as pegadas"
 msgid "Add"
 msgstr "Engadir"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Feito"
@@ -702,6 +697,9 @@ msgstr "A súa conta"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Outras contas"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Enrolando a pegada"

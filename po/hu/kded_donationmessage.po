@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:43+0000\n"
-"PO-Revision-Date: 2024-09-18 21:25+0200\n"
+"PO-Revision-Date: 2026-05-30 21:40+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: donationmessage.cpp:80
 #, kde-format
@@ -34,16 +34,12 @@ msgstr ""
 "fennmaradásához szükséges fejlesztést és infrastruktúrát."
 
 #: donationmessage.cpp:84
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Make a donation now; translate this in as short a form as "
-#| "possible"
-#| msgid "Donate"
+#, kde-format
 msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate…"
-msgstr "Adományozás"
+msgstr "Adományozás…"
 
 #: donationmessage.cpp:85
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2026-05-10 18:13+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -331,12 +331,7 @@ msgstr "指紋を設定"
 msgid "Add"
 msgstr "追加"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "完了"
@@ -700,3 +695,6 @@ msgstr "あなたのアカウント"
 #, kde-format
 msgid "Other Accounts"
 msgstr "他のアカウント"
+
+#~ msgid "Cancel"
+#~ msgstr "キャンセル"

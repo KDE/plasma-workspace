@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2026-03-13 14:14+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -329,12 +329,7 @@ msgstr "Nastavte otisky"
 msgid "Add"
 msgstr "Přidat"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Zrušit"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Hotovo"
@@ -700,3 +695,6 @@ msgstr "Váš účet"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Jiné účty"
+
+#~ msgid "Cancel"
+#~ msgstr "Zrušit"

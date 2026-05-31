@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -331,12 +331,7 @@ msgstr "अंगुलि छाप विन्यस्त करें"
 msgid "Add"
 msgstr "जोड़ें"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "रद्द करें"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "सम्पन्न"
@@ -710,6 +705,9 @@ msgstr "आपका ख़ाता"
 #, kde-format
 msgid "Other Accounts"
 msgstr "अन्य खाते"
+
+#~ msgid "Cancel"
+#~ msgstr "रद्द करें"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "अंगुलि छाप का दाखिला लिया जा रहा है"

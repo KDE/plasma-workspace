@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2026-02-03 23:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -323,12 +323,7 @@ msgstr "지문 설정"
 msgid "Add"
 msgstr "추가"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "취소"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "완료"
@@ -693,6 +688,9 @@ msgstr "내 계정"
 #, kde-format
 msgid "Other Accounts"
 msgstr "다른 계정"
+
+#~ msgid "Cancel"
+#~ msgstr "취소"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "지문 등록"

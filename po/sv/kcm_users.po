@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-05-31 02:39+0000\n"
 "PO-Revision-Date: 2026-01-23 20:40+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -326,12 +326,7 @@ msgstr "Anpassa fingeravtryck"
 msgid "Add"
 msgstr "Lägg till"
 
-#: src/ui/FingerprintDialog.qml:51
-#, kde-format
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: src/ui/FingerprintDialog.qml:59
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Done"
 msgstr "Klar"
@@ -701,6 +696,9 @@ msgstr "Ditt konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Övriga konton"
+
+#~ msgid "Cancel"
+#~ msgstr "Avbryt"
 
 #~ msgid "Enrolling Fingerprint"
 #~ msgstr "Registrerar fingeravtryck"
