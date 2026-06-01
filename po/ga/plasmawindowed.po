@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-05 00:46+0000\n"
+"POT-Creation-Date: 2026-06-01 02:37+0000\n"
 "PO-Revision-Date: 2026-01-14 06:19+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -49,7 +49,7 @@ msgstr "An feidhmchláirín le hoscailt."
 msgid "Arguments to pass to the plasmoid."
 msgstr ""
 
-#: plasmawindowedview.cpp:119
+#: plasmawindowedview.cpp:118
 #, kde-format
 msgid "Close %1"
 msgstr "Dún %1"
