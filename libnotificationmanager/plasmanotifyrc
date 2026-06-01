@@ -2,6 +2,10 @@
 [Applications][org.kde.spectacle]
 ShowPopupsInDndMode=true
 
+# Power notifications are urgent enough to avoid e.g. the device turning off mid-presentation.
+[Applications][org.kde.powerdevil]
+ShowPopupsInDndMode=true
+
 # Defaults for media players so their track change notifications don't accumulate in the history
 [Applications][vlc]
 ShowInHistory=false
