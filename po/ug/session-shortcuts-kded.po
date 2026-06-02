@@ -1,0 +1,59 @@
+# Uyghur translation for session-shortcuts-kded.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-06-01 18:28-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "جەريانچاق باشقۇرۇش"
+
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Screen"
+msgstr "تىزىمدىن چىقىش ئېكرانىنى كۆرسەت"
+
+#: main.cpp:48
+#, kde-format
+msgid "Log Out"
+msgstr "تىزىمدىن چىق"
+
+#: main.cpp:54
+#, kde-format
+msgid "Shut Down"
+msgstr "تاقا"
+
+#: main.cpp:60
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: main.cpp:68
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr ""
+
+#: main.cpp:74
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr ""
+
+#: main.cpp:80
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr ""

@@ -1,0 +1,55 @@
+# Uyghur translation for plasmawindowed.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-01 00:46+0000\n"
+"PO-Revision-Date: 2026-06-01 18:27-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: main.cpp:53 plasmawindowedcorona.cpp:104
+#, kde-format
+msgid "Plasma Windowed"
+msgstr "Plasma كۆزنەك"
+
+#: main.cpp:55
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr ""
+
+#: main.cpp:58 plasmawindowedcorona.cpp:106
+#, kde-format
+msgid ""
+"Makes the plasmoid stay alive in the Notification Area, even when the window "
+"is closed."
+msgstr ""
+
+#: main.cpp:60
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "بېرىلگەن shell قىستۇرمىنى مەجبۇرىي يۈكلەيدۇ"
+
+#: main.cpp:64 plasmawindowedcorona.cpp:107
+#, kde-format
+msgid "The applet to open."
+msgstr ""
+
+#: main.cpp:65 plasmawindowedcorona.cpp:108
+#, kde-format
+msgid "Arguments to pass to the plasmoid."
+msgstr ""
+
+#: plasmawindowedview.cpp:118
+#, kde-format
+msgid "Close %1"
+msgstr "%1 ياپ"

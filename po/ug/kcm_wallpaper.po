@@ -1,0 +1,42 @@
+# Uyghur translation for kcm_wallpaper.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-06-01 18:18-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: ui/main.qml:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Wallpaper"
+msgstr "تام قەغەز"
+
+#: ui/main.qml:41
+#, kde-format
+msgctxt "@option:check Set the wallpaper for all screens"
+msgid "Set for all screens"
+msgstr "ھەممە ئېكرانغا تەڭشە"
+
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Wallpaper type:"
+msgstr "تام قەغەز تۈرى:"
+
+#: ui/main.qml:110
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New Plugins…"
+msgstr "يېڭى قىستۇرمىغا ئېرىش…"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2026-02-09 18:11-0500\n"
+"PO-Revision-Date: 2026-06-01 18:17-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -74,18 +74,16 @@ msgid "Get New…"
 msgstr "يېڭىسىغا ئېرىش…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Icon Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
-msgstr "سىنبەلگە ئۆرنەكنى چىقىرىۋەت"
+msgstr ""
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Name of the current icon theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr "نۆۋەتتىكى سىنبەلگە ئۆرنەكنىڭ ئاتى"
+msgstr ""
 
 #: ui/main.qml:193
 #, kde-format

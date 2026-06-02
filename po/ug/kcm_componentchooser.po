@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-02-09 18:09-0500\n"
+"PO-Revision-Date: 2026-06-01 18:17-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -34,10 +34,9 @@ msgid "Select default browser"
 msgstr "كۆڭۈلدىكى تور كۆرگۈ تاللىنىدۇ"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "كۆڭۈلدىكى نومۇر بۇرىغۇچ تاللىنىدۇ"
+msgstr "كۆڭۈلدىكى يىلنامە پىروگراممىسى تاللىنىدۇ"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -171,7 +170,7 @@ msgstr "ئېلخەت خېرىدارى:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "يىلنامە:"
 
 #: ui/main.qml:111
 #, kde-format

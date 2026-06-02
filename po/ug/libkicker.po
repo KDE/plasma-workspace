@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:46+0000\n"
-"PO-Revision-Date: 2026-02-09 18:15-0500\n"
+"POT-Creation-Date: 2026-06-02 00:45+0000\n"
+"PO-Revision-Date: 2026-06-01 18:22-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "يېقىندا ئىشلەتكەن"
 #: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "ئورۇن"
 
 #: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
@@ -149,10 +149,9 @@ msgid "Open Containing Folder"
 msgstr "ئىچىدىكى قىسقۇچنى ئاچ"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "ھۆججەتنى ئۇنتۇ"
+msgstr ""
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -170,10 +169,9 @@ msgid "Forget All Applications"
 msgstr "ھەممە پىروگراممىنى ئۇنتۇ"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "ھەممە ھۆججەتنى ئۇنتۇ"
+msgstr "ھەممە قىسقۇچنى ئۇنتۇ"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -196,16 +194,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "بۇنى كۆرۈنمەسلىكى كېرەك! KICKER_FAVORITES_MODEL نى ئىشلىتىڭ"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "يېقىنقى ھۆججەت"
+msgstr "يېقىنقى ئورۇن"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "دائىم ئىشلىتىدىغان ھۆججەت"
+msgstr ""
 
 #: rootmodel.cpp:587
 #, kde-format
@@ -227,7 +223,7 @@ msgstr "دائىم ئىشلىتىدىغان پىروگرامما"
 msgid "Power / Session"
 msgstr "توك مەنبە / جەريانچاق"
 
-#: runnermodel.cpp:272
+#: runnermodel.cpp:303
 #, kde-format
 msgid "Search results"
 msgstr "ئىزدەش نەتىجىسى"

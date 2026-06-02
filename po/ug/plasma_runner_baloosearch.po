@@ -1,0 +1,91 @@
+# Uyghur translation for plasma_runner_baloosearch.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-06-01 18:25-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
+
+#: baloosearchrunner.cpp:42
+#, kde-format
+msgid "File Search"
+msgstr "ھۆججەت ئىزدە"
+
+#: baloosearchrunner.cpp:69
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "ئىچىدىكى قىسقۇچنى ئاچ"
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgctxt ""
+"Audio files; translate this as a plural noun in languages with a plural form "
+"of the word"
+msgid "Audio"
+msgstr "ئۈن"
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Images"
+msgstr "سۈرەت"
+
+#: baloosearchrunner.cpp:96
+#, kde-format
+msgid "Videos"
+msgstr "سىن"
+
+#: baloosearchrunner.cpp:97
+#, kde-format
+msgid "Spreadsheets"
+msgstr ""
+
+#: baloosearchrunner.cpp:98
+#, kde-format
+msgid "Presentations"
+msgstr ""
+
+#: baloosearchrunner.cpp:99
+#, kde-format
+msgid "Folders"
+msgstr "قىسقۇچ"
+
+#: baloosearchrunner.cpp:100
+#, kde-format
+msgid "Documents"
+msgstr "پۈتۈك"
+
+#: baloosearchrunner.cpp:101
+#, kde-format
+msgid "Archives"
+msgstr "ئارخىپلار"
+
+#: baloosearchrunner.cpp:102
+#, kde-format
+msgid "Texts"
+msgstr ""
+
+#: baloosearchrunner.cpp:103
+#, kde-format
+msgid "Files"
+msgstr "ھۆججەت"

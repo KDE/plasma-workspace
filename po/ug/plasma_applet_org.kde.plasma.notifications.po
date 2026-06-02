@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-02-09 18:16-0500\n"
+"PO-Revision-Date: 2026-06-01 18:24-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -110,34 +110,25 @@ msgid "%2 of %1"
 msgstr "%2 / %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 / %1 ھۆججەت"
+msgstr[0] ""
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 / %1 قىسقۇچ"
+msgstr[0] ""
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 / %1 تۈر"
+msgstr[0] ""
 
 #: components/JobDetails.qml:137
 #, kde-format
@@ -355,7 +346,7 @@ msgstr "پۈتۈن ئېكران ئەپ فوكۇسلاندى"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr "كۆرسەت"
+msgstr "كۆرۈنۈش"
 
 #: FullRepresentation.qml:597
 #, kde-format
@@ -395,11 +386,10 @@ msgid "Toggle do not disturb"
 msgstr "دەخلى قىلماڭ ھالىتىنى ئالماشتۇر"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "بارلىق ئۇقتۇرۇشنى تازىلا"
+msgstr ""
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -414,12 +404,10 @@ msgid "Notifications On"
 msgstr "ئۇقتۇرۇش ئوچۇق"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "ئۇقتۇرۇش ئوچۇق"
+msgstr ""
 
 #: main.qml:61
 #, kde-format

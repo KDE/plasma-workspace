@@ -1,0 +1,90 @@
+# Uyghur translation for plasma_interactiveconsole.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-06-01 18:25-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: interactiveconsole.cpp:65
+#, kde-format
+msgid "&Execute"
+msgstr "ئىجرا قىل(&E)"
+
+#: interactiveconsole.cpp:66
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr "Plasma"
+
+#: interactiveconsole.cpp:67
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr "KWin"
+
+#: interactiveconsole.cpp:68
+#, kde-format
+msgid "Templates"
+msgstr "قېلىپ"
+
+#: interactiveconsole.cpp:77
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr "ئۈستەلئۈستى Shell قوليازما تىزگىن سۇپىسى"
+
+#: interactiveconsole.cpp:84
+#, kde-format
+msgid "Editor"
+msgstr "تەھرىرلىگۈچ"
+
+#: interactiveconsole.cpp:95
+#, kde-format
+msgid "Load"
+msgstr "يۈكلە"
+
+#: interactiveconsole.cpp:101
+#, kde-format
+msgid "Use"
+msgstr ""
+
+#: interactiveconsole.cpp:161
+#, kde-format
+msgid "Output"
+msgstr "چىقار"
+
+#: interactiveconsole.cpp:274
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr ""
+
+#: interactiveconsole.cpp:323
+#, kde-format
+msgid "Open Script File"
+msgstr ""
+
+#: interactiveconsole.cpp:438
+#, kde-format
+msgid "Save Script File"
+msgstr ""
+
+#: interactiveconsole.cpp:527
+#, kde-format
+msgid "Executing script at %1"
+msgstr ""
+
+#: interactiveconsole.cpp:579
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr ""

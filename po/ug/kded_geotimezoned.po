@@ -1,0 +1,42 @@
+# Uyghur translation for kded_geotimezoned.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-06-01 18:19-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: geotimezonemodule.cpp:186
+#, kde-format
+msgctxt "OSD, keep short"
+msgid "Time zone changed to %1"
+msgstr "ۋاقىت رايونى %1 غا ئۆزگەرتىلدى"
+
+#: geotimezonemodule.cpp:189
+#, kde-format
+msgctxt ""
+"System clock was changed due to time zone change OSD, keep short: new time "
+"(time zone)"
+msgid "Clock changed to %1 (%2)"
+msgstr "سائەت %1 (%2)‎‏ غا ئۆزگەرتىلدى"
+
+#: geotimezonemodule.cpp:205
+#, kde-format
+msgid "Refresh is already in progress."
+msgstr "يېڭىلاش ئېلىپ بېرىلىۋاتىدۇ."
+
+#: geotimezonemodule.cpp:268
+#, kde-format
+msgid "Received no or an invalid time zone."
+msgstr "تاپشۇرۇۋالمىدى ياكى ئىناۋەتسىز ۋاقىت رايونى تاپشۇرۇۋالدى."

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-27 00:47+0000\n"
-"PO-Revision-Date: 2026-02-09 18:09-0500\n"
+"PO-Revision-Date: 2026-06-01 18:17-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -149,18 +149,16 @@ msgid "Edit Theme…"
 msgstr "ئۆرنەك تەھرىر…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
+msgstr ""
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "نۆۋەتتىكى Plasma ئۇسلۇبىنىڭ ئاتى"
+msgstr ""
 
 #: ui/main.qml:162
 #, kde-format

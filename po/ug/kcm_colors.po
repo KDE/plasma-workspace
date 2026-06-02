@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-02-09 18:08-0500\n"
+"PO-Revision-Date: 2026-06-01 18:16-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -729,14 +729,14 @@ msgstr "يوق"
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Desaturate"
-msgstr "ئاچۇر"
+msgstr "ئۆڭدۈر"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:51
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Fade"
-msgstr "ئاقارت"
+msgstr "سۇسلاشتۇر"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:56
@@ -763,7 +763,7 @@ msgstr "يوق"
 #, kde-format
 msgctxt "disabled intensity effect"
 msgid "Shade"
-msgstr "قاتلا"
+msgstr "يىغ"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:78
@@ -821,7 +821,7 @@ msgstr "يوق"
 #, kde-format
 msgctxt "disabled contrast"
 msgid "Fade"
-msgstr "ئاقارت"
+msgstr "سۇسلاشتۇر"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:195
@@ -1031,7 +1031,7 @@ msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "positive"
-msgstr "ئوڭ رەڭ"
+msgstr "ئوڭ"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
 #: editor/setpreview.ui:170
@@ -1345,18 +1345,16 @@ msgid "Edit Color Scheme…"
 msgstr "رەڭ لايىھەسى تەھرىرلە…"
 
 #: ui/main.qml:312
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "رەڭ لايىھەسىنى چىقىرىۋەت"
+msgstr ""
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "رەڭ لايىھەسى قۇرۇپ ۋە تەھرىرلەيدىغان قورال"
+msgstr ""
 
 #: ui/main.qml:316
 #, kde-format

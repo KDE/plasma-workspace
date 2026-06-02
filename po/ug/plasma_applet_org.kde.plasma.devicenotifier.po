@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-24 00:46+0000\n"
-"PO-Revision-Date: 2026-02-09 18:15-0500\n"
+"PO-Revision-Date: 2026-06-01 18:23-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: actions/checkaction.cpp:71
 #, kde-format
@@ -156,11 +156,7 @@ msgid "Could not repair this device: %1"
 msgstr "بۇ ئۈسكۈنىنى ئوڭشىيالمىدى: %1"
 
 #: qml/DeviceItem.qml:98
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Checking…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
 "filesystem errors'"
@@ -168,11 +164,7 @@ msgid "Checking…"
 msgstr "تەكشۈرۈۋاتىدۇ…"
 
 #: qml/DeviceItem.qml:100
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Repairing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
 "errors and is being repaired'"

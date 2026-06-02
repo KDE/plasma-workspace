@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:45+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -227,7 +227,7 @@ msgstr "प्रतिष्ठापीत केलेले अनुप्�
 msgid "Power / Session"
 msgstr "नवीन सत्र"
 
-#: runnermodel.cpp:272
+#: runnermodel.cpp:303
 #, kde-format
 msgid "Search results"
 msgstr ""

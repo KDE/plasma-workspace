@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-28 00:46+0000\n"
+"POT-Creation-Date: 2026-06-02 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -222,7 +222,7 @@ msgstr "常用应用"
 msgid "Power / Session"
 msgstr "电源 / 会话"
 
-#: runnermodel.cpp:272
+#: runnermodel.cpp:303
 #, kde-format
 msgid "Search results"
 msgstr "查找结果"
