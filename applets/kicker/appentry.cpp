@@ -128,7 +128,7 @@ QString groupName(const QString &name)
         if (transliterator) {
             icu::UnicodeString icuText(reinterpret_cast<const char16_t *>(name.data()), name.size());
             transliterator->transliterate(icuText);
-            return QStringView(icuText.getBuffer(), static_cast<int>(icuText.length())).sliced(0, 1).toString();
+            return QStringView(icuText.getBuffer(), static_cast<int>(icuText.length())).sliced(0, 1).toString().toUpper();
         }
     }
 #endif
