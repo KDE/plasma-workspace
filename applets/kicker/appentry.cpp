@@ -156,7 +156,7 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
     } else {
         m_service = KService::serviceByStorageId(url.path());
         if (!m_service) {
-            m_service = KService::serviceByStorageId(m_id);
+            m_service = KService::serviceByStorageId(id);
         } else {
             m_serviceAction = serviceActionFromUrl(m_service, url);
         }
