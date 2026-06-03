@@ -11,3 +11,8 @@ plasma_add_applet(org.kde.plasma.analogclock
         main.xml
     GENERATE_APPLET_CLASS
 )
+
+add_test(NAME applet_analogclock_smoketest COMMAND plasmawindowed --smoke-test org.kde.plasma.analogclock)
+set_tests_properties(applet_analogclock_smoketest PROPERTIES
+    ENVIRONMENT_MODIFICATION QT_PLUGIN_PATH=path_list_prepend:${CMAKE_BINARY_DIR}/bin
+)

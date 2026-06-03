@@ -25,3 +25,8 @@ target_link_libraries(org.kde.plasma.appmenu PRIVATE
     PW::LibTaskManager
     dbusmenuqt
 )
+
+add_test(NAME applet_appmenu_smoketest COMMAND plasmawindowed --smoke-test org.kde.plasma.appmenu)
+set_tests_properties(applet_appmenu_smoketest PROPERTIES
+    ENVIRONMENT_MODIFICATION QT_PLUGIN_PATH=path_list_prepend:${CMAKE_BINARY_DIR}/bin
+)
