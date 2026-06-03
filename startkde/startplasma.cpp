@@ -216,24 +216,13 @@ void runStartupConfig()
     }
 }
 
-void setupCursor(bool wayland)
+void setupCursor()
 {
 #ifdef XCURSOR_PATH
     QByteArray path(XCURSOR_PATH);
     path.replace("$XCURSOR_PATH", qgetenv("XCURSOR_PATH"));
     qputenv("XCURSOR_PATH", path);
 #endif
-
-    // TODO: consider linking directly
-    if (!wayland) {
-        const KConfig cfg(QStringLiteral("kcminputrc"));
-        const KConfigGroup inputCfg = cfg.group(QStringLiteral("Mouse"));
-
-        const auto cursorTheme = inputCfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
-        const auto cursorSize = inputCfg.readEntry("cursorSize", 24);
-
-        runSync(QStringLiteral("kapplymousetheme"), {cursorTheme, QString::number(cursorSize)});
-    }
 }
 
 std::optional<QProcessEnvironment> getSystemdEnvironment()

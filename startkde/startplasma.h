@@ -20,7 +20,7 @@ void messageBox(const QString &text);
 
 void createConfigDirectory();
 void runStartupConfig();
-void setupCursor(bool wayland);
+void setupCursor();
 std::optional<QProcessEnvironment> getSystemdEnvironment();
 void importSystemdEnvrionment();
 void runEnvironmentScripts();
