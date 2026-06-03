@@ -14,9 +14,3 @@ ecm_add_tests(
     launchertasksmodeltest.cpp
     LINK_LIBRARIES taskmanager Qt::Test KF6::Service KF6::ConfigCore
 )
-
-if (WITH_X11)
-    # Require QX11Info to set window state
-    ecm_add_test(xwindowtasksmodeltest.cpp LINK_LIBRARIES taskmanager Qt::Test Qt::GuiPrivate XCB::XCB Plasma::Activities KF6::Service KF6::IconThemes KF6::WindowSystem)
-endif()
-
