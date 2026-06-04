@@ -653,7 +653,7 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             QDBusConnection::sessionBus().send(message);
         }
 
-        runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
+        runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings);
     }
     // Reload KWin if something changed, but only once.
     if (itemsToApply & KWinSettings) {

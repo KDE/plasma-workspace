@@ -166,7 +166,8 @@ void KFonts::save()
         QDBusConnection::sessionBus().send(message);
     }
 
-    runRdb(KRdbExportXftSettings | KRdbExportGtkTheme);
+    runRdb(KRdbExportGtkTheme);
+    QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
 }
 
 void KFonts::adjustFont(const QFont &font, const QString &category)

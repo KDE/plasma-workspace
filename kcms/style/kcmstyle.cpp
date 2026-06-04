@@ -51,7 +51,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCM
 extern "C" {
 Q_DECL_EXPORT void kcminit()
 {
-    uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportXftSettings | KRdbExportGtkTheme;
+    uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportGtkTheme;
     KConfig _config(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, QStringLiteral("X11"));
 

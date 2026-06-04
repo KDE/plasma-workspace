@@ -17,7 +17,6 @@ target_sources(kcm_fonts PRIVATE
     previewimageprovider.cpp
     fonts.cpp
     fontsaasettings.cpp
-    fontinit.cpp
     ../kfontinst/lib/FcEngine.cpp
     ../kcms-common.cpp
     devicepixelratiohelper.cpp
@@ -32,14 +31,10 @@ kcmutils_generate_module_data(kcm_fonts
 kconfig_add_kcfg_files(kcm_fonts fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
 
 target_link_libraries(kcm_fonts PRIVATE Qt::Quick kcm_fonts_static)
+target_compile_definitions(kcm_fonts PRIVATE CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-
-add_custom_command(TARGET kcm_fonts POST_BUILD
-                   COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_fonts.so kcm_fonts_init.so)
-
-install( FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_fonts_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)
 
 add_subdirectory(kconf_update)
 

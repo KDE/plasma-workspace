@@ -232,18 +232,6 @@ static void applyQtSettings(KSharedConfigPtr kglobalcfg, QSettings &settings)
 
 // -----------------------------------------------------------------------------
 
-static void copyFile(QFile &tmp, QString const &filename, bool)
-{
-    QFile f(filename);
-    if (f.open(QIODevice::ReadOnly)) {
-        QByteArray buf(8192, ' ');
-        while (!f.atEnd()) {
-            int read = f.read(buf.data(), buf.size());
-            if (read > 0)
-                tmp.write(buf.data(), read);
-        }
-    }
-}
 
 // -----------------------------------------------------------------------------
 
@@ -325,41 +313,16 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
 
 // -----------------------------------------------------------------------------
 
-int xftDpi()
-{
-    KConfig cfg(QStringLiteral("kcmfonts"));
-    int dpi = 0;
-
-    if (KWindowSystem::isPlatformWayland()) {
-        KConfig cfg(QStringLiteral("kwinrc"));
-        KConfigGroup xwaylandGroup = cfg.group(QStringLiteral("Xwayland"));
-        qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
-        dpi = scale * 96;
-    } else {
-        KConfigGroup fontsCfg(&cfg, u"General"_s);
-        dpi = fontsCfg.readEntry(QStringLiteral("forceFontDPI"), 96);
-    }
-
-    return dpi;
-}
-
 void runRdb(unsigned int flags)
 {
     // Obtain the application palette that is about to be set.
     bool exportQtColors = flags & KRdbExportQtColors;
     bool exportQtSettings = flags & KRdbExportQtSettings;
-    bool exportXftSettings = flags & KRdbExportXftSettings;
     bool exportGtkTheme = flags & KRdbExportGtkTheme;
 
     KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
     KConfigGroup kglobals(kglobalcfg, u"KDE"_s);
     QPalette newPal = KColorScheme::createApplicationPalette(kglobalcfg);
-
-    QTemporaryFile tmpFile;
-    if (!tmpFile.open()) {
-        qDebug() << "Couldn't open temp file";
-        exit(0);
-    }
 
     KConfigGroup generalCfgGroup(kglobalcfg, u"General"_s);
 
@@ -371,129 +334,6 @@ void runRdb(unsigned int flags)
 
     createGtkrc(newPal, exportGtkTheme, gtkTheme, 1);
     createGtkrc(newPal, exportGtkTheme, gtkTheme, 2);
-
-    // Merge ~/.Xresources or fallback to ~/.Xdefaults
-    QString homeDir = QDir::homePath();
-    QString xResources = homeDir + "/.Xresources"_L1;
-
-    // very primitive support for ~/.Xresources by appending it
-    if (QFile::exists(xResources))
-        copyFile(tmpFile, xResources, true);
-    else
-        copyFile(tmpFile, homeDir + "/.Xdefaults"_L1, true);
-
-    // Export the Xcursor theme & size settings
-    KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), u"Mouse"_s);
-    QString theme = mousecfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
-    int cursorSize = mousecfg.readEntry("cursorSize", 24);
-
-    if (KWindowSystem::isPlatformWayland()) {
-        KConfig kwinConfig(QStringLiteral("kwinrc"));
-        KConfigGroup xwaylandGroup(&kwinConfig, u"Xwayland"_s);
-        cursorSize *= xwaylandGroup.readEntry("Scale", 1.0);
-    }
-
-    QString contents;
-    contents += "Xcursor.theme: "_L1 + theme + u'\n';
-    contents += "Xcursor.size: "_L1 + QString::number(cursorSize) + u'\n';
-
-    if (exportXftSettings) {
-        contents += QLatin1String("Xft.antialias: ");
-        if (generalCfgGroup.readEntry("XftAntialias", true))
-            contents += QLatin1String("1\n");
-        else
-            contents += QLatin1String("0\n");
-
-        QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", "hintslight");
-        contents += QLatin1String("Xft.hinting: ");
-        if (hintStyle.isEmpty())
-            contents += QLatin1String("-1\n");
-        else {
-            if (hintStyle != QLatin1String("hintnone"))
-                contents += QLatin1String("1\n");
-            else
-                contents += QLatin1String("0\n");
-            contents += "Xft.hintstyle: "_L1 + hintStyle + u'\n';
-        }
-
-        QString subPixel = generalCfgGroup.readEntry("XftSubPixel", "rgb");
-        if (!subPixel.isEmpty())
-            contents += "Xft.rgba: "_L1 + subPixel + u'\n';
-
-        int dpi = xftDpi();
-        if (dpi > 0)
-            contents += "Xft.dpi: "_L1 + QString::number(dpi) + u'\n';
-        else {
-            KProcess queryProc;
-            queryProc << QStringLiteral("xrdb") << QStringLiteral("-query");
-            queryProc.setOutputChannelMode(KProcess::OnlyStdoutChannel);
-            queryProc.start();
-            if (queryProc.waitForFinished()) {
-                QByteArray db = queryProc.readAllStandardOutput();
-                int idx1 = 0;
-                while (idx1 < db.size()) {
-                    int idx2 = db.indexOf('\n', idx1);
-                    if (idx2 == -1) {
-                        idx2 = db.size() - 1;
-                    }
-                    const auto entry = QByteArray::fromRawData(db.constData() + idx1, idx2 - idx1 + 1);
-                    if (entry.startsWith("Xft.dpi:")) {
-                        db.remove(idx1, entry.size());
-                    } else {
-                        idx1 = idx2 + 1;
-                    }
-                }
-
-                KProcess loadProc;
-                loadProc << QStringLiteral("xrdb") << QStringLiteral("-quiet") << QStringLiteral("-load") << QStringLiteral("-nocpp");
-                loadProc.start();
-                if (loadProc.waitForStarted()) {
-                    loadProc.write(db);
-                    loadProc.closeWriteChannel();
-                    loadProc.waitForFinished();
-                }
-            }
-        }
-    }
-
-    if (contents.length() > 0)
-        tmpFile.write(contents.toLatin1());
-
-    tmpFile.flush();
-
-    KProcess proc;
-#ifndef NDEBUG
-    proc << QStringLiteral("xrdb") << QStringLiteral("-merge") << tmpFile.fileName();
-#else
-    proc << u"xrdb"_s << u"-quiet"_s << u"-merge"_s << tmpFile.fileName();
-#endif
-    proc.execute();
-
-#if HAVE_X11
-    xcb_connection_t *connection = xcb_connect(nullptr, nullptr);
-    if (!xcb_connection_has_error(connection)) {
-        xcb_screen_t *screen = xcb_setup_roots_iterator(xcb_get_setup(connection)).data;
-
-        // Needed for applications that don't set their own cursor.
-        xcb_cursor_context_t *context = nullptr;
-        if (xcb_cursor_context_new(connection, screen, &context) < 0) {
-            qWarning() << "xcb_cursor_context_new() failed";
-        } else {
-            xcb_cursor_t cursor = xcb_cursor_load_cursor(context, "left_ptr");
-            auto cookie = xcb_change_window_attributes_checked(connection, screen->root, XCB_CW_CURSOR, &cursor);
-            if (auto error = xcb_request_check(connection, cookie)) {
-                qWarning() << "Failed to set root window cursor, error code:" << error->error_code;
-                free(error);
-            }
-            xcb_free_cursor(connection, cursor);
-            xcb_cursor_context_free(context);
-        }
-    } else {
-        qWarning() << "xcb_connect() failed";
-    }
-
-    xcb_disconnect(connection);
-#endif
 
     applyGtkStyles(1);
     applyGtkStyles(2);
@@ -509,36 +349,5 @@ void runRdb(unsigned int flags)
             applyQtSettings(kglobalcfg, *settings); // For kcmstyle
 
         delete settings;
-#if HAVE_X11
-        if (qApp->platformName() == QLatin1String("xcb")) {
-            // We let KIPC take care of ourselves, as we are in a KDE app with
-            // QApp::setDesktopSettingsAware(false);
-            // Instead of calling QApp::x11_apply_settings() directly, we instead
-            // modify the timestamp which propagates the settings changes onto
-            // Qt-only apps without adversely affecting ourselves.
-
-            // Cheat and use the current timestamp, since we just saved to qtrc.
-            QDateTime settingsstamp = QDateTime::currentDateTime();
-
-            static Atom qt_settings_timestamp = 0;
-            if (!qt_settings_timestamp) {
-                QString atomname(QStringLiteral("_QT_SETTINGS_TIMESTAMP_"));
-                atomname += QString::fromLocal8Bit(XDisplayName(nullptr)); // Use the $DISPLAY envvar.
-                qt_settings_timestamp = XInternAtom(QX11Info::display(), atomname.toLatin1().constData(), False);
-            }
-
-            QBuffer stamp;
-            QDataStream s(&stamp.buffer(), QIODevice::WriteOnly);
-            s << settingsstamp;
-            XChangeProperty(QX11Info::display(),
-                            QX11Info::appRootWindow(),
-                            qt_settings_timestamp,
-                            qt_settings_timestamp,
-                            8,
-                            PropModeReplace,
-                            (unsigned char *)stamp.buffer().data(),
-                            stamp.buffer().size());
-        }
-#endif
     }
 }

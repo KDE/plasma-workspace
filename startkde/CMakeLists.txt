@@ -40,6 +40,7 @@ target_link_libraries(startplasma-wayland PRIVATE
 
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
+add_subdirectory(plasma-setup-xwayland)
 add_subdirectory(session-shortcuts)
 add_subdirectory(session-restore)
 
