@@ -48,22 +48,6 @@ using namespace Qt::StringLiterals;
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>(); registerPlugin<StyleData>();)
 
-extern "C" {
-Q_DECL_EXPORT void kcminit()
-{
-    uint flags = KRdbExportQtSettings | KRdbExportQtColors | KRdbExportGtkTheme;
-    KConfig _config(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
-    KConfigGroup config(&_config, QStringLiteral("X11"));
-
-    // This key is written by the "colors" module.
-    bool exportKDEColors = config.readEntry("exportKDEColors", true);
-    if (exportKDEColors) {
-        flags |= KRdbExportColors;
-    }
-    runRdb(flags);
-}
-}
-
 KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new StyleData(this))
