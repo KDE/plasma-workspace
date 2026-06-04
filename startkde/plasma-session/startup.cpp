@@ -18,7 +18,6 @@
 
 #include <unistd.h>
 
-#include "kcminit_interface.h"
 #include "ksmserver_interface.h"
 
 #include <KCompositeJob>
@@ -83,7 +82,6 @@ public:
     {
         qCDebug(PLASMA_SESSION) << "Phase 0";
         addSubjob(new AutoStartAppsJob(m_autostart, 0));
-        addSubjob(new KCMInitJob());
         addSubjob(new SleepJob());
     }
 };
@@ -159,7 +157,6 @@ Startup::Startup(QObject *parent)
     m_lock.reset(new QEventLoopLocker);
 
     const QList<KJob *> sequence = {
-        new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
         new StartServiceJob(QStringLiteral("kded6"), {}, QStringLiteral("org.kde.kded6"), {}),
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),
@@ -210,24 +207,6 @@ bool Startup::startDetached(QProcess *process)
 }
 
 Startup *Startup::s_self = nullptr;
-
-KCMInitJob::KCMInitJob()
-    : KJob()
-{
-}
-
-void KCMInitJob::start()
-{
-    org::kde::KCMInit kcminit(QStringLiteral("org.kde.kcminit"), QStringLiteral("/kcminit"), QDBusConnection::sessionBus());
-    kcminit.setTimeout(10 * 1000);
-
-    QDBusPendingReply<void> pending = kcminit.runPhase1();
-    auto *watcher = new QDBusPendingCallWatcher(pending, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
-        emitResult();
-    });
-    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
-}
 
 RestoreSessionJob::RestoreSessionJob()
     : KJob()

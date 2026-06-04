@@ -26,10 +26,6 @@ It should behave as similarly to the systemd use case as possible.
 
 Session restore contains two binaries: `plasma-fallback-session-restore` and `plasma-fallback-session-save`. This works by recording a list of running applications on save. It runs after ksmserver to avoid recording apps compatible with session restore, which were already recorded by ksmserver. Restoration is invoked via the typical autostart mechanism.
 
-## kcminit
-
-`kcminit` loads plugins to perform one-shot operations to set up a session. It is scheduled for future deprecation; we plan to replace existing kcminits with KDED modules. However this has not been completed yet.
-
 ## waitforname
 
 `waitforname` is a DBus trick to ensure that any messages to system-invoked services are not lost. It marks itself as DBus-activatable for the relevant service names, but doesn't register those names itself. This makes the DBus daemon keep the messages queued until the real `plasmashell` starts and a notification server is running, at which point the messages are shown to the user via standard Plasma notifications.
