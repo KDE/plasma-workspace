@@ -238,13 +238,21 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         if (sourceGroup.hasGroup(u"Inactive"_s)) {
             sourceGroup = sourceGroup.group(u"Inactive"_s);
             targetGroup = targetGroup.group(u"Inactive"_s);
+            KConfigGroup windowGroup(config, u"Colors:Window"_s);
 
             for (const auto &entry : colorSetKeyList) {
                 if (tintAccent) {
                     auto base = sourceGroup.readEntry<QColor>(entry, QColor());
                     targetGroup.writeEntry(entry, tintColor(base, accent, tintFactor));
                 } else {
-                    copyEntry(sourceGroup, targetGroup, entry, writeConfigFlag);
+                    // Use Window background color by default for Inactive headers.
+                    // If needed, the file can be modified manually.
+                    // See BUG:516396
+                    if (item == u"Colors:Header") {
+                        copyEntry(windowGroup, targetGroup, entry, writeConfigFlag);
+                    } else {
+                        copyEntry(sourceGroup, targetGroup, entry, writeConfigFlag);
+                    }
                 }
             }
         }
