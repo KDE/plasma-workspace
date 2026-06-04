@@ -681,6 +681,3 @@ msgstr "您的账户"
 #, kde-format
 msgid "Other Accounts"
 msgstr "其他账户"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
