@@ -12,6 +12,7 @@
 
 #include <KQuickManagedConfigModule>
 #include <QLoggingCategory>
+#include <QPointer>
 
 #include "desktopthemesettings.h"
 #include "themesmodel.h"

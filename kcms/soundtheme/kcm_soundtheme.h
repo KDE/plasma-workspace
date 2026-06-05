@@ -10,6 +10,8 @@
 
 #include "soundthemesettings.h"
 
+#include <qqml.h>
+
 class SoundThemeData;
 struct ca_context;
 

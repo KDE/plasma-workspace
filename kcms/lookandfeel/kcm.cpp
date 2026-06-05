@@ -17,6 +17,8 @@
 #include "lookandfeelsettings.h"
 #include "screenshotmaker.h"
 
+#include <qqml.h>
+
 #include <KPackage/PackageLoader>
 
 #include <QCollator>

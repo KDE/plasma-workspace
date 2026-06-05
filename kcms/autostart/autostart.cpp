@@ -7,6 +7,9 @@
 
 #include "autostart.h"
 #include "unit.h"
+
+#include <qqml.h>
+
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(Autostart, "kcm_autostart.json")

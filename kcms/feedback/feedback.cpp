@@ -8,6 +8,8 @@
 #include "feedback.h"
 #include "kcm_feedback_debug.h"
 
+#include <qqml.h>
+
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>

@@ -6,6 +6,8 @@
 
 #include "kcm.h"
 
+#include <qqml.h>
+
 #include <QAction>
 #include <QCommandLineParser>
 #include <QFile>

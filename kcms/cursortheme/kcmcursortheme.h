@@ -10,6 +10,7 @@
 #include <KNSCore/Entry>
 #include <KQuickManagedConfigModule>
 #include <QAbstractItemModel>
+#include <QPointer>
 
 #include "cursorthemesettings.h"
 #include "launchfeedbacksettings.h"
