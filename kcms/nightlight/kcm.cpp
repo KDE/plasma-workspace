@@ -7,6 +7,8 @@
 #include "kcm.h"
 #include "daynighttimings.h"
 
+#include <qqml.h>
+
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QIcon>

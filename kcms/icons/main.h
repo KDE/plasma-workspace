@@ -17,6 +17,7 @@
 
 #include <QCache>
 #include <QTemporaryFile>
+#include <QPointer>
 
 class KIconTheme;
 class IconsSettings;
