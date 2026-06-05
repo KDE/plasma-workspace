@@ -19,6 +19,8 @@
 #include <KQuickManagedConfigModule>
 
 #include <QStandardItemModel>
+#include <QQmlParserStatus>
+#include <QPointer>
 
 class LookAndFeelData;
 class LookAndFeelSettings;
