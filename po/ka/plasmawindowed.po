@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-04 00:47+0000\n"
-"PO-Revision-Date: 2023-09-27 05:47+0200\n"
+"PO-Revision-Date: 2026-06-04 05:17+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.9\n"
 
 #: main.cpp:60 plasmawindowedcorona.cpp:104
 #, kde-format
@@ -54,7 +54,7 @@ msgstr "პლაზმოიდისთვის გადაცემულ�
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "შიდა, შესამოწმებლად"
 
 #: plasmawindowedview.cpp:121
 #, kde-format

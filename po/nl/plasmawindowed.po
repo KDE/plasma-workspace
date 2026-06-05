@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2023, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-04 00:47+0000\n"
-"PO-Revision-Date: 2023-09-26 11:12+0200\n"
+"PO-Revision-Date: 2026-06-05 01:12+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: main.cpp:60 plasmawindowedcorona.cpp:104
 #, kde-format
@@ -54,7 +54,7 @@ msgstr "De door te geven argumenten naar de plasmoid."
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "Intern, voor testen"
 
 #: plasmawindowedview.cpp:121
 #, kde-format
