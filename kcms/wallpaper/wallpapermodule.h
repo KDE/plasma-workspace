@@ -91,7 +91,6 @@ private:
     QString m_activityId;
     QString m_containmentIdx;
     QString m_defaultWallpaper;
-    QList<QScreen *> m_screens;
     bool m_allScreens = false;
 };
 
