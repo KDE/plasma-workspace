@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2020-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-31 02:39+0000\n"
-"PO-Revision-Date: 2025-11-21 21:49+0100\n"
+"PO-Revision-Date: 2026-06-05 22:38+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -584,6 +584,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Bejelentkezve nem módosíthatja a saját felhasználónevét; jelentkezzen ki, "
+"majd jelentkezzen be másik felhasználóval, hogy megváltoztassa a fiók "
+"felhasználónevét."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -592,6 +595,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"A bejelentkezett felhasználó felhasználóneve nem módosítható; várjon, amíg "
+"ez a felhasználó kijelentkezik."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -631,6 +636,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Nem törölheti saját magát! Jelentkezzen ki, majd másik felhasználóval be, "
+"hogy törölhesse ezt a fiókot."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

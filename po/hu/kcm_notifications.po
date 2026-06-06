@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2019, 2020.
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023-2026 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-19 00:47+0000\n"
-"PO-Revision-Date: 2025-05-27 22:01+0200\n"
+"PO-Revision-Date: 2026-06-05 22:18+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -90,19 +90,16 @@ msgid "Choose sound file"
 msgstr "Válasszon egy hangfájlt"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Beállítások…"
+msgstr "Rendszerértesítések…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Alkalmazásbeállítások konfigurálása…"
+msgstr "Alkalmazásértesítések…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -211,7 +208,7 @@ msgstr "Az értesítés ikonjának közelében"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Kiválasztás…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -227,13 +224,11 @@ msgid "Hide after:"
 msgstr "Felugró időtartama:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Az értesítésekben"
+msgstr "Időkorlát-jelző megjelenítése"
 
 #: ui/main.qml:318
 #, kde-format
@@ -274,12 +269,11 @@ msgid "Popup Position"
 msgstr "Felugró helye"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Alkalmazásbeállítások"
+msgstr "Alkalmazásértesítések"
 
 #: ui/SourcesPage.qml:108
 #, kde-format
