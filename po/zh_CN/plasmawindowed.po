@@ -52,7 +52,7 @@ msgstr "要传递到 Plasma 小程序的参数。"
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "内部，用于测试"
 
 #: plasmawindowedview.cpp:121
 #, kde-format
