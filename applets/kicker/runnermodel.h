@@ -8,6 +8,7 @@
 #pragma once
 
 #include "abstractmodel.h"
+#include "runnermatchesmodel.h"
 
 #include <KConfigWatcher>
 #include <KRunner/QueryMatch>
@@ -17,7 +18,6 @@
 #include <qqmlregistration.h>
 
 class AbstractModel;
-class RunnerMatchesModel;
 
 class RunnerModel : public QAbstractListModel
 {
