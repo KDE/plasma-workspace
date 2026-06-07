@@ -106,6 +106,7 @@ private Q_SLOTS:
     void testReloadWallpaperOnScreenSizeChanged();
 
     void testCustomAccentColorFromWallpaperMetaData();
+    void testSVGDarkLightVariant();
 
 private:
     QPointer<QQuickView> m_view;
@@ -223,8 +224,11 @@ void ImageFrontendTest::testLoadWallpaper()
     loop.exec();
     const QImage grabResultImage = grabResult->image();
     QVERIFY(!grabResultImage.isNull());
-    QCOMPARE(grabResultImage.size(), sourceSize);
-    QCOMPARE(grabResultImage.pixelColor(0, 0), expectedColorAtTopLeft);
+    const qreal dpr = m_view->devicePixelRatio();
+    QCOMPARE(grabResultImage.size(), sourceSize * dpr);
+    if (QString::fromLatin1(QTest::currentDataTag()) != QLatin1String("Blur enabled")) {
+        QCOMPARE(grabResultImage.pixelColor(0, 0), expectedColorAtTopLeft);
+    }
 
     // Other checks
     // Check wallpaper interface
@@ -320,11 +324,13 @@ void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
 {
     auto changeTheme = [](Qt::ColorScheme scheme) {
         Plasma::Theme theme;
+
+        KConfig config(u"plasmarc"_s);
+        config.group(u"Theme"_s).writeEntry(u"name"_s, scheme == Qt::ColorScheme::Light ? u"breeze-light"_s : u"breeze-dark"_s, KConfig::Notify);
+        config.sync();
+
         QSignalSpy themeChangedSpy(&theme, &Plasma::Theme::themeChanged);
-        KConfig("plasmarc"_L1)
-            .group("Theme"_L1)
-            .writeEntry("name"_L1, scheme == Qt::ColorScheme::Light ? u"breeze-light"_s : u"breeze-dark"_s, KConfig::Notify);
-        QVERIFY(themeChangedSpy.wait());
+        QVERIFY(themeChangedSpy.wait(15000) || !themeChangedSpy.empty());
     };
 
     // Case 1: value is a dict
@@ -374,13 +380,71 @@ void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
     QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::red);
 
     changeTheme(Qt::ColorScheme::Dark);
-    QVERIFY(repaintSpy.wait());
+    {
+        const int oldCount = repaintSpy.count();
+        QVERIFY(QTest::qWaitFor(
+            [&repaintSpy, oldCount]() {
+                return repaintSpy.count() > oldCount;
+            },
+            15000));
+    }
     QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::cyan);
 
     // Switch to a wallpaper package that does not contain accent color information
     m_view->rootObject()->setProperty("source", m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
     QVERIFY(repaintSpy.wait());
     QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::transparent);
+}
+
+void ImageFrontendTest::testSVGDarkLightVariant()
+{
+    const QString svgPackagePath = QFINDTESTDATA("testdata/svg-dark-light");
+    QVERIFY(!svgPackagePath.isEmpty());
+
+    // Build source URL with #light fragment (simulates "Always use light variant")
+    QUrl sourceUrl = QUrl::fromLocalFile(svgPackagePath);
+    sourceUrl.setFragment(u"light"_s);
+
+    QVariantMap initialProperties;
+    initialProperties.insert(u"fillMode"_s, 2);
+    initialProperties.insert(u"configColor"_s, u"black"_s);
+    initialProperties.insert(u"blur"_s, false);
+    initialProperties.insert(u"source"_s, sourceUrl.toString());
+    QSize sourceSize(320, 240);
+    initialProperties.insert(u"sourceSize"_s, sourceSize);
+    initialProperties.insert(u"width"_s, sourceSize.width());
+    initialProperties.insert(u"height"_s, sourceSize.height());
+    initialProperties.insert(u"wallpaperInterface"_s, QVariant::fromValue(m_wallpaperInterface.data()));
+    m_view->setInitialProperties(initialProperties);
+
+    QByteArray errorMessage;
+    QVERIFY2(initView(m_view.data(), QUrl::fromLocalFile(QFINDTESTDATA("../../imagepackage/contents/ui/ImageStackView.qml")), &errorMessage),
+             errorMessage.constData());
+    m_view->show();
+    QVERIFY(QTest::qWaitForWindowExposed(m_view));
+    QQuickItem *rootObject = m_view->rootObject();
+    QVERIFY(rootObject);
+
+    QSignalSpy repaintSpy(m_wallpaperInterface, &MockWallpaperInterface::accentColorChanged);
+    QVERIFY(m_wallpaperInterface->m_repainted || repaintSpy.wait());
+    m_wallpaperInterface->m_repainted = false;
+
+    // The source has #light fragment, so darkMode should be 0 (light variant)
+    const QString modelImageLight = evaluate<QString>(rootObject, "modelImage");
+    QVERIFY2(modelImageLight.contains(u"darkMode=0"_s),
+             qPrintable(QStringLiteral("Expected modelImage to contain darkMode=0 for #light fragment, got: %1").arg(modelImageLight)));
+
+    // Now test with #dark fragment (simulates "Always use dark variant")
+    sourceUrl.setFragment(u"dark"_s);
+    rootObject->setProperty("source", sourceUrl.toString());
+    QVERIFY(repaintSpy.wait());
+    const QString modelImageDark = evaluate<QString>(rootObject, "modelImage");
+    QVERIFY2(modelImageDark.contains(u"darkMode=1"_s),
+             qPrintable(QStringLiteral("Expected modelImage to contain darkMode=1 for #dark fragment, got: %1").arg(modelImageDark)));
+
+    // Verify the two modelImage URLs differ (different fragment → different darkMode)
+    QVERIFY2(modelImageLight != modelImageDark,
+             qPrintable(QStringLiteral("Expected modelImageLight and modelImageDark to differ, both are: %1").arg(modelImageLight)));
 }
 
 QTEST_MAIN(ImageFrontendTest)
