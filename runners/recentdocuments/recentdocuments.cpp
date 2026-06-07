@@ -13,6 +13,7 @@
 #include <QMimeDatabase>
 #include <QMimeType>
 
+#include <KFileItem>
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
 #include <KIO/JobUiDelegateFactory>
@@ -85,6 +86,12 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         const QMimeType mimeType = db.mimeTypeForName(m_resultsModel->data(index, ResultModel::MimeType).toString());
         match.setIconName(mimeType.iconName());
         const QUrl url = QUrl::fromLocalFile(m_resultsModel->data(index, ResultModel::ResourceRole).toString());
+
+        // Skip non-existent files and files on slow filesystems
+        if (!KFileItem(url).isSlow() && !QFileInfo(url.toLocalFile()).exists()) {
+            continue;
+        }
+
         match.setUrls({url});
         if (mimeType.isValid() && !mimeType.isDefault()) {
             match.setData(mimeType.name());
