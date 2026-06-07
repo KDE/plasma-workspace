@@ -108,7 +108,7 @@ KCM.SimpleKCM {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
 
-        visible: entryPage.unit.logs == ''
+        visible: entryPage.unit.logs === ''
 
         icon.name: "data-error-symbolic"
         text: i18n("Unable to load logs. Try refreshing.")
