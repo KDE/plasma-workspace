@@ -416,7 +416,10 @@ void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSign
         // To make modelImageChanged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
-        urlQuery.addQueryItem(QStringLiteral("darkMode"), QString::number(m_isDarkColorScheme ? 1 : 0));
+
+        const bool useDarkColorScheme =
+            m_source.fragment().contains(QLatin1StringView("dark")) || (m_isDarkColorScheme && !m_source.fragment().contains(QLatin1StringView("light")));
+        urlQuery.addQueryItem(QStringLiteral("darkMode"), QString::number(useDarkColorScheme ? 1 : 0));
 
         composedUrl.setQuery(urlQuery);
         newRealSource = composedUrl;
