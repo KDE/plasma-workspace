@@ -65,5 +65,3 @@ HistoryItemPtr HistoryItem::create(const QSqlQuery &query)
 
     return std::make_shared<HistoryItem>(std::move(uuid), std::move(mimeTypes), std::move(text));
 }
-
-#include "moc_historyitem.cpp"
