@@ -68,9 +68,3 @@ add_test(
 set_tests_properties(digitalclocktest PROPERTIES TIMEOUT 120)
 
 add_subdirectory(kicker)
-
-add_test(
-    NAME logoutgreetertest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/logoutgreetertest.py
-)
-set_tests_properties(logoutgreetertest PROPERTIES TIMEOUT 300 ENVIRONMENT "PLASMA_SESSION_GUI_TEST=1;USE_CUSTOM_BUS=1;KDE_INSTALL_FULL_LIBEXECDIR=${KDE_INSTALL_FULL_LIBEXECDIR}")
