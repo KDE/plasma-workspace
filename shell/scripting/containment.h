@@ -69,6 +69,7 @@ public:
 public Q_SLOTS:
     void remove();
     void showConfigurationInterface();
+    void reloadConfig() override;
 
 protected:
     ShellCorona *corona() const;

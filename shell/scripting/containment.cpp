@@ -7,6 +7,7 @@
 #include "containment.h"
 
 #include <QAction>
+#include <QQmlPropertyMap>
 #include <QQuickItem>
 
 #include <klocalizedstring.h>
@@ -19,6 +20,8 @@
 #include "scriptengine.h"
 #include "shellcorona.h"
 #include "widget.h"
+
+using namespace Qt::StringLiterals;
 
 namespace WorkspaceScripting
 {
@@ -268,6 +271,36 @@ void Containment::showConfigurationInterface()
         if (configAction && configAction->isEnabled()) {
             configAction->trigger();
         }
+    }
+}
+
+void Containment::reloadConfig()
+{
+    Applet::reloadConfig();
+
+    if (!d->containment) {
+        return;
+    }
+
+    // Reload wallpaper configuration
+    auto *wallpaperGraphicsObject = d->containment->property("wallpaperGraphicsObject").value<QObject *>();
+    if (!wallpaperGraphicsObject) {
+        return;
+    }
+
+    auto *wallpaperConfig = static_cast<QQmlPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
+    if (!wallpaperConfig) {
+        return;
+    }
+
+    // Read wallpaper config from KConfigGroup and update the property map
+    const QString wallpaperPlugin = d->containment->wallpaperPlugin();
+    KConfigGroup cfg = d->containment->config();
+    KConfigGroup wallpaperCfg = cfg.group(u"Wallpaper"_s).group(wallpaperPlugin).group(u"General"_s);
+
+    const auto keys = wallpaperCfg.keyList();
+    for (const QString &key : keys) {
+        wallpaperConfig->setProperty(key.toLatin1().constData(), wallpaperCfg.readEntry(key));
     }
 }
 
