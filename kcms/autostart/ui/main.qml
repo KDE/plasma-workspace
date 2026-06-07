@@ -176,16 +176,16 @@ KCM.ScrollViewKCM {
         section.delegate: Kirigami.ListSectionHeader {
             width: listView.width
             text: {
-                if (section == AutostartModel.XdgAutoStart){
+                if (section === AutostartModel.XdgAutoStart){
                     return i18n("Applications");
                 }
-                if (section == AutostartModel.XdgScripts){
+                if (section === AutostartModel.XdgScripts){
                     return i18n("Login Scripts");
                 }
-                if (section == AutostartModel.PlasmaEnvScripts){
+                if (section === AutostartModel.PlasmaEnvScripts){
                     return i18n("Pre-startup Scripts");
                 }
-                if (section == AutostartModel.PlasmaShutdown){
+                if (section === AutostartModel.PlasmaShutdown){
                     return i18n("Logout Scripts");
                 }
             }
