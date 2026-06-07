@@ -8,6 +8,7 @@
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
+#include <QUrl>
 
 #include "../model/imageproxymodel.h"
 #include "../slidemodel.h"
@@ -25,6 +26,7 @@ private Q_SLOTS:
 
     void testSlideModelData();
     void testSlideModelIndexOf();
+    void testSlideModelIndexOfUrlString();
     void testSlideModelAddDirs();
     void testSlideModelRemoveDir();
     void testSlideModelSetSlidePaths();
@@ -130,6 +132,25 @@ void SlideModelTest::testSlideModelIndexOf()
     QVERIFY(m_model->indexOf(m_packagePaths.at(1) + QDir::separator()) >= 0);
     QCOMPARE(m_model->indexOf(m_dummyWallpaperPath), -1);
     QCOMPARE(m_model->indexOf(m_dummyPackagePath + QDir::separator()), -1);
+}
+
+void SlideModelTest::testSlideModelIndexOfUrlString()
+{
+    // Test that indexOf() works correctly with URL strings (e.g., "file:///path/to/image.jpg")
+    // This is important for restoring the last shown wallpaper after restart.
+    // See bug 512559.
+    const QString urlPath1 = QUrl::fromLocalFile(m_wallpaperPaths.at(0)).toString();
+    const QString urlPath2 = QUrl::fromLocalFile(m_wallpaperPaths.at(1)).toString();
+    const QString packageUrlPath = QUrl::fromLocalFile(m_packagePaths.at(0)).toString();
+
+    QVERIFY(m_model->indexOf(urlPath1) >= 0);
+    QVERIFY(m_model->indexOf(urlPath2) >= 0);
+    QVERIFY(m_model->indexOf(packageUrlPath) >= 0);
+
+    // Verify the results are consistent with local path lookups
+    QCOMPARE(m_model->indexOf(urlPath1), m_model->indexOf(m_wallpaperPaths.at(0)));
+    QCOMPARE(m_model->indexOf(urlPath2), m_model->indexOf(m_wallpaperPaths.at(1)));
+    QCOMPARE(m_model->indexOf(packageUrlPath), m_model->indexOf(m_packagePaths.at(0)));
 }
 
 void SlideModelTest::testSlideModelAddDirs()

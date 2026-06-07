@@ -64,7 +64,7 @@ int SlideModel::indexOf(const QString &packagePath) const
     int idx = -1;
 
     for (const auto models{sourceModels()}; auto m : models) {
-        idx = static_cast<ImageProxyModel *>(m)->indexOf(QUrl::fromLocalFile(packagePath));
+        idx = static_cast<ImageProxyModel *>(m)->indexOf(QUrl::fromUserInput(packagePath));
 
         if (idx >= 0) {
             return mapFromSource(m->index(idx, 0)).row();
