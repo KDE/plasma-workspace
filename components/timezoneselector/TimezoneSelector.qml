@@ -28,21 +28,16 @@ Item {
 
 //BEGIN properties
     /**
-    * @brief This property holds the selected timezone.
-    *
-    * This timezone will be highlighted on the map and shown
-    * in the comboboxes. You can both read and write to this
-    * property.
-    * @property string selectedTimeZone
-    */
-    property string selectedTimeZone: ""
-    /**
-     * @brief This property holds the currently hovered timezone.
+     * @brief This property holds the selected timezone.
      *
-     * This is a read-only property that allows you to know
-     * which timezone the user is hovering.
+     * This timezone will be highlighted on the map and shown
+     * in the comboboxes. You can both read and write to this
+     * property.
+     * @property string selectedTimeZone
      */
-    property string hoveredTimeZone: ""
+    property string selectedTimeZone: ""
+
+    readonly property var bandData: Workspace.TimeZoneUtils.bandData()
 //END properties
 
     property var availableMapTimeZones: geoDatabase.model[0].data.map(zone => zone?.properties?.tzid)
@@ -54,8 +49,6 @@ Item {
         sourceUrl: StandardPaths.locate(StandardPaths.GenericDataLocation, "timezonefiles", StandardPaths.LocateDirectory)  + "/timezones.json"
     }
 
-    // These values get populated by GeoJsonDelegates when the
-    // component is instantiated.
     readonly property var availableTimeZones: Workspace.TimeZoneUtils.availableTimeZoneIds()
     property var areasByRegion: {
         const result = {}
@@ -231,6 +224,94 @@ Item {
             parent: view.map
             model: geoDatabase.model
             delegate: GeoJsonDelegate {}
+        }
+
+        MapPolygon {
+            id: selectionBand
+            parent: view.map
+            color: Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.25)
+            border.width: 1
+            border.color: Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.4)
+            autoFadeIn: false
+            z: 100
+            visible: false
+        }
+
+        MapPolygon {
+            id: selectionBand2
+            parent: view.map
+            color: selectionBand.color
+            border.width: selectionBand.border.width
+            border.color: selectionBand.border.color
+            autoFadeIn: false
+            z: 100
+            visible: false
+        }
+
+        MapQuickItem {
+            id: selectionDot
+            parent: view.map
+            anchorPoint: Qt.point(Kirigami.Units.iconSizes.large / 2, Kirigami.Units.iconSizes.large)
+            z: 200
+            visible: false
+            sourceItem: Kirigami.Icon {
+                width: Kirigami.Units.iconSizes.large
+                height: Kirigami.Units.iconSizes.large
+                source: "mark-location-symbolic"
+                color: Kirigami.Theme.negativeTextColor
+            }
+        }
+
+        function updateSelectionBand(): void {
+            selectionBand.path = []
+            selectionBand2.path = []
+            selectionBand.visible = false
+            selectionBand2.visible = false
+            selectionDot.visible = false
+
+            const tzData = root.bandData.tzids[root.selectedTimeZone]
+            if (!tzData) return
+
+            const minLon = tzData.bandMinLon
+            const maxLon = tzData.bandMaxLon
+            const span = maxLon - minLon
+
+            if (span <= 0 || span >= 360) return
+
+            if (maxLon > 180) {
+                selectionBand.path = [
+                    QtPositioning.coordinate(90, minLon),
+                    QtPositioning.coordinate(-90, minLon),
+                    QtPositioning.coordinate(-90, 180),
+                    QtPositioning.coordinate(90, 180),
+                ]
+                selectionBand2.path = [
+                    QtPositioning.coordinate(90, -180),
+                    QtPositioning.coordinate(-90, -180),
+                    QtPositioning.coordinate(-90, maxLon - 360),
+                    QtPositioning.coordinate(90, maxLon - 360),
+                ]
+                selectionBand.visible = true
+                selectionBand2.visible = true
+            } else {
+                selectionBand.path = [
+                    QtPositioning.coordinate(90, minLon),
+                    QtPositioning.coordinate(-90, minLon),
+                    QtPositioning.coordinate(-90, maxLon),
+                    QtPositioning.coordinate(90, maxLon),
+                ]
+                selectionBand.visible = true
+            }
+
+            selectionDot.coordinate = QtPositioning.coordinate(tzData.centerLat, tzData.centerLon)
+            selectionDot.visible = true
+        }
+
+        Connections {
+            target: root
+            function onSelectedTimeZoneChanged() {
+                view.updateSelectionBand()
+            }
         }
 
         RowLayout {

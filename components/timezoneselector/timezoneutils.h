@@ -16,4 +16,5 @@ class TimeZoneUtils : public QObject
 
 public:
     Q_INVOKABLE QList<QByteArray> availableTimeZoneIds() const;
+    Q_INVOKABLE QVariantMap bandData() const;
 };
