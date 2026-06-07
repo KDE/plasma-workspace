@@ -202,6 +202,15 @@ void MediaProxy::slotPlasmaThemeChanged()
 
     m_isDarkColorScheme = dark;
 
+    // If the source fragment forces a specific light/dark variant, don't
+    // reload the wallpaper on color scheme changes. The fragment overrides
+    // the system color scheme (e.g. "Always use light variant" or
+    // "Always use dark variant" dynamic mode).
+    const QString fragment = m_source.fragment();
+    if (fragment.contains(QLatin1StringView("light")) || fragment.contains(QLatin1StringView("dark"))) {
+        return;
+    }
+
     if (m_providerType == Provider::Type::Package) {
         // In case light and dark variants have different formats
         processSource(nullptr, true /* Immediately change the wallpaper */);
@@ -422,7 +431,6 @@ void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSign
         // To make modelImageChanged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
-
         const bool useDarkColorScheme =
             m_source.fragment().contains(QLatin1StringView("dark")) || (m_isDarkColorScheme && !m_source.fragment().contains(QLatin1StringView("light")));
         urlQuery.addQueryItem(QStringLiteral("darkMode"), QString::number(useDarkColorScheme ? 1 : 0));
