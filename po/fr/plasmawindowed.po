@@ -1,18 +1,18 @@
-# SPDX-FileCopyrightText: 2023 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2023, 2026 Xavier Besnard <xavier.besnard@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-04 00:47+0000\n"
-"PO-Revision-Date: 2023-09-28 07:49+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2026-06-05 15:46+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: main.cpp:60 plasmawindowedcorona.cpp:104
 #, kde-format
@@ -51,7 +51,7 @@ msgstr "Arguments à passer au plasmoïde."
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "Interne. Pour test uniquement"
 
 #: plasmawindowedview.cpp:121
 #, kde-format

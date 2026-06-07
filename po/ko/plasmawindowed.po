@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Shinjo Park <kde@peremen.name>, 2023.
+# SPDX-FileCopyrightText: 2023, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-04 00:47+0000\n"
-"PO-Revision-Date: 2023-10-08 23:55+0200\n"
+"PO-Revision-Date: 2026-06-06 14:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: main.cpp:60 plasmawindowedcorona.cpp:104
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "Plasmoid에 전달할 인자입니다."
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "내부, 테스트 전용"
 
 #: plasmawindowedview.cpp:121
 #, kde-format
