@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "kde@kde.org",
+                "Name": "KDE Community"
+            }
+        ],
+        "Id": "svg-dark-light",
+        "License": "CC0",
+        "Name": "SVG Dark Light Test (For test purpose, don't translate!)"
+    }
+}
