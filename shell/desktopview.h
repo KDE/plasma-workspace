@@ -128,10 +128,7 @@ private:
     QString m_krunnerText;
     QFuture<QString> m_krunnerFuture;
 
-    // KRunner config (activation on typing is always enabled)
-
-    // Accent color config
-    Plasma::Containment *m_containment = nullptr;
+    QPointer<Plasma::Containment> m_containment = nullptr;
     int m_containmentScreenId = -1;
 
     bool m_enteredEditMode;
