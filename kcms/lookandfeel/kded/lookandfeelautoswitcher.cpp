@@ -20,6 +20,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(LookAndFeelAutoSwitcher, "lookandfeelautoswitcher.json")
 
+using namespace std::chrono_literals;
+
 LookAndFeelAutoSwitcher::LookAndFeelAutoSwitcher(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
     , m_settings(std::make_unique<LookAndFeelSettings>())
@@ -93,25 +95,27 @@ void LookAndFeelAutoSwitcher::reconfigure()
     }
 }
 
+static QDateTime transitionBreakPoint(const KDarkLightTransition &transition)
+{
+    return transition.startDateTime() + (transition.endDateTime() - transition.startDateTime()) / 2;
+}
+
 QString LookAndFeelAutoSwitcher::lookAndFeelAtDateTime(const QDateTime &dateTime) const
 {
-    switch (m_previousTransition->test(dateTime)) {
-    case KDarkLightTransition::Upcoming:
-    case KDarkLightTransition::InProgress:
-        if (m_previousTransition->type() == KDarkLightTransition::Morning) {
+    if (transitionBreakPoint(*m_previousOrCurrentTransition) - dateTime > 5s) {
+        if (m_previousOrCurrentTransition->type() == KDarkLightTransition::Morning) {
             return m_settings->defaultDarkLookAndFeel();
         } else {
             return m_settings->defaultLightLookAndFeel();
         }
-    case KDarkLightTransition::Passed:
-        if (m_previousTransition->type() == KDarkLightTransition::Morning) {
+    } else {
+        // We are past or at the transition break point.
+        if (m_previousOrCurrentTransition->type() == KDarkLightTransition::Morning) {
             return m_settings->defaultLightLookAndFeel();
         } else {
             return m_settings->defaultDarkLookAndFeel();
         }
     }
-
-    Q_UNREACHABLE();
 }
 
 void LookAndFeelAutoSwitcher::applyLookAndFeel(const QString &id)
@@ -139,15 +143,13 @@ void LookAndFeelAutoSwitcher::reschedule()
     const QDateTime now = QDateTime::currentDateTime();
 
     const KDarkLightSchedule schedule = m_scheduleProvider->schedule();
-    m_previousTransition = schedule.previousTransition(now);
-    m_nextTransition = schedule.nextTransition(now);
+    m_previousOrCurrentTransition = schedule.previousTransition(now);
 
-    QDateTime rescheduleDateTime;
-    if (m_previousTransition->test(now) != KDarkLightTransition::Passed) {
-        rescheduleDateTime = m_previousTransition->endDateTime();
-    } else {
-        rescheduleDateTime = m_nextTransition->endDateTime();
+    QDateTime rescheduleDateTime = transitionBreakPoint(*m_previousOrCurrentTransition);
+    if (rescheduleDateTime - now <= 5s) {
+        rescheduleDateTime = transitionBreakPoint(*schedule.nextTransition(now));
     }
+
     m_scheduleTimer->start(rescheduleDateTime - now);
 
     qCDebug(LOOKANDFEELAUTOSWITCHER) << "Next transition will occur at" << rescheduleDateTime << "in" << (rescheduleDateTime - now).count() << "milliseconds";

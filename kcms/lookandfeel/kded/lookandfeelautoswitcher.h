@@ -49,6 +49,5 @@ private:
     std::unique_ptr<QTimer> m_scheduleTimer;
     std::unique_ptr<IdleTimeout> m_idleTimeout;
 
-    std::optional<KDarkLightTransition> m_previousTransition;
-    std::optional<KDarkLightTransition> m_nextTransition;
+    std::optional<KDarkLightTransition> m_previousOrCurrentTransition;
 };
