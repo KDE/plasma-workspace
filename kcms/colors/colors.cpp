@@ -377,26 +377,16 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
                 args << QStringLiteral("--attach") << QString::number(actualWindow->winId());
             } else if (KWindowSystem::isPlatformWayland()) {
                 m_waitForXdgForeign = true;
-                KWaylandExtras::exportWindow(actualWindow);
-                connect(
-                    KWaylandExtras::self(),
-                    &KWaylandExtras::windowExported,
-                    this,
-                    [this, actualWindow](QWindow *window, const QString &handle) {
-                        if (window != actualWindow) {
-                            return;
-                        }
+                KWaylandExtras::exportToplevel(actualWindow).then(this, [this](const QString &handle) {
+                    QStringList args = m_editDialogProcess->arguments();
+                    args << QStringLiteral("--attach") << handle;
+                    m_editDialogProcess->setArguments(args);
+                    m_waitForXdgForeign = false;
 
-                        QStringList args = m_editDialogProcess->arguments();
-                        args << QStringLiteral("--attach") << handle;
-                        m_editDialogProcess->setArguments(args);
-                        m_waitForXdgForeign = false;
-
-                        if (!m_waitForXdgActivation) {
-                            m_editDialogProcess->start();
-                        }
-                    },
-                    Qt::SingleShotConnection);
+                    if (!m_waitForXdgActivation) {
+                        m_editDialogProcess->start();
+                    }
+                });
 
                 m_waitForXdgActivation = true;
                 auto tokenFuture = KWaylandExtras::xdgActivationToken(actualWindow, QStringLiteral("org.kde.kcolorschemeeditor"));

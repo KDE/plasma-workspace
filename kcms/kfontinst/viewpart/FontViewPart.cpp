@@ -362,15 +362,7 @@ void CFontViewPart::install()
         };
 
         if (KWindowSystem::isPlatformWayland()) {
-            connect(
-                KWaylandExtras::self(),
-                &KWaylandExtras::windowExported,
-                this,
-                [runFontInst](QWindow * /*window*/, const QString &handle) {
-                    runFontInst(handle);
-                },
-                Qt::SingleShotConnection);
-            KWaylandExtras::exportWindow(m_frame->window()->windowHandle());
+            KWaylandExtras::exportToplevel(m_frame->window()->windowHandle()).then(this, runFontInst);
         } else {
             runFontInst(QStringLiteral("0x%1").arg((unsigned int)m_frame->window()->winId(), 0, 16));
         }

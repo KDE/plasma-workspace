@@ -48,11 +48,7 @@ PrompterTest::PrompterTest(QObject *parent)
             break;
         }
         case KWindowSystem::Platform::Wayland:
-            connect(KWaylandExtras::self(), &KWaylandExtras::windowExported, this, [=](QWindow *window, const QString &handle) {
-                Q_UNUSED(window)
-                createCollectionPrompt(handle);
-            });
-            KWaylandExtras::exportWindow(widget->windowHandle());
+            KWaylandExtras::exportToplevel(widget->windowHandle()).then(this, createCollectionPrompt);
             break;
         case KWindowSystem::Platform::Unknown:
             qWarning() << "Unknown windowing system, cannot create prompt with valid window id";
