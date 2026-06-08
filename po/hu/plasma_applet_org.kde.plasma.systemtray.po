@@ -3,13 +3,13 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021-2026 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 00:46+0000\n"
-"PO-Revision-Date: 2025-06-06 21:57+0200\n"
+"PO-Revision-Date: 2026-06-07 21:59+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "Kilépés: %1"
 
 #: qml/config.qml:13
 #, kde-format
@@ -31,15 +31,13 @@ msgid "General"
 msgstr "Általános"
 
 #: qml/ConfigGeneral.qml:45
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Megjelenítés, ha releváns"
 
 #: qml/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Mindig jelenjen meg"
@@ -48,13 +46,13 @@ msgstr "Mindig jelenjen meg"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Csak felugróban jelenjen meg"
 
 #: qml/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Soha ne jelenjen meg (kikapcsolva)"
 
 #: qml/ConfigGeneral.qml:128
 #, kde-format
@@ -105,13 +103,7 @@ msgid "I understand the risks"
 msgstr "Megértettem a kockázatot"
 
 #: qml/ConfigGeneral.qml:189
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -122,9 +114,11 @@ msgid ""
 "at a time."
 msgstr ""
 "A vágólap kikapcsolása nem ajánlott, mivel a másolt adatok elvesznek az "
-"adatok forrásául szolgáló alkalmazás bezárásakor.<nl/><nl/>Helyette fontolja "
-"meg a vágólap előzményeinek kikapcsolását, vagy állítsa be, hogy egyszerre "
-"egy elemet tartalmazzon."
+"adatok forrásául szolgáló alkalmazás bezárásakor.<nl/><nl/>Csak akkor tegye "
+"ezt, ha valahol máshol kézzel hozzáadott egy önálló vágólap widgetet, vagy "
+"ha harmadik féltől származó vágólapkezelőt használ. Ezenkívül fontolja meg "
+"inkább, hogy úgy állítsa be a vágólapot, hogy ne mentse el az előzményeket, "
+"vagy egyszerre csak egy elemet tartson meg."
 
 #: qml/ConfigGeneral.qml:198
 #, kde-kuit-format
@@ -135,25 +129,26 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Az Értesítések widget letiltása nem ajánlott, mivel az alkalmazások által "
+"küldött értesítések többé nem jelennek meg.<nl/><nl/>Csak akkor tegye ezt, "
+"ha kézzel hozzáadott egy önálló Értesítések widgetet valahol máshol, vagy "
+"szándékosan egy harmadik féltől származó értesítéskezelőt használ az "
+"értesítések kezelésére."
 
 #: qml/ConfigGeneral.qml:210
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Méretezés a panelmagassággal"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Méretezés a panelszélességgel"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -161,8 +156,7 @@ msgid "Panel icon size:"
 msgstr "Panelikonok mérete:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Kicsi"
@@ -171,7 +165,7 @@ msgstr "Kicsi"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Térköz:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
@@ -192,33 +186,32 @@ msgid "Large"
 msgstr "Nagy"
 
 #: qml/ConfigGeneral.qml:269
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "További műveletek"
+msgstr "Irány:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "Lentről fel"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "Fentről le"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "Balról jobbra"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "Jobbról balra"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
@@ -227,18 +220,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatikus nagyra állítás Érintés módban"
 
 #: qml/ConfigGeneral.qml:332
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Bejegyzések"
 
 #: qml/ConfigGeneral.qml:336
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Mindig jelenjen meg"
+msgstr "Mindig minden jelenjen meg"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format

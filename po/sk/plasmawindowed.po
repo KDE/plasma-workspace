@@ -52,7 +52,7 @@ msgstr "Argumenty, ktoré sa majú odovzdať plasmoidu."
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "Interné, na testovanie"
 
 #: plasmawindowedview.cpp:121
 #, kde-format
