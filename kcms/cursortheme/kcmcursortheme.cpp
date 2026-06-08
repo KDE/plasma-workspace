@@ -206,9 +206,11 @@ void CursorThemeConfig::updateSizeComboBox()
 
             // insert the items
             m_pixmap = theme->createIcon(0);
+            m_pixmap = m_pixmap.copy(QRegion(m_pixmap.createHeuristicMask(true)).boundingRect());
 
             for (int i : sizes) {
                 m_pixmap = theme->createIcon(i);
+                m_pixmap = m_pixmap.copy(QRegion(m_pixmap.createHeuristicMask(true)).boundingRect());
                 auto *item = new QStandardItem(QIcon(m_pixmap), QString::number(i));
                 item->setData(i);
                 m_sizesModel->appendRow(item);

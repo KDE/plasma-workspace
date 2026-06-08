@@ -101,9 +101,6 @@ KCM.GridViewKCM {
             displayComponent: QtControls.ComboBox {
                 id: sizeCombo
 
-                property int maxContentWidth: implicitContentWidth
-                popup.width: Math.max(availableWidth, maxContentWidth)
-
                 model: kcm.sizesModel
                 textRole: "display"
                 displayText: i18n("Size: %1", currentText)
@@ -123,18 +120,20 @@ KCM.GridViewKCM {
                 delegate: QtControls.ItemDelegate {
                     id: sizeComboDelegate
 
+                    required property var model
+                    required property var index
                     readonly property int size: parseInt(model.display)
 
-                    width: parent.width
+                    width: ListView.view?.width
                     highlighted: ListView.isCurrentItem
 
                     contentItem: RowLayout {
                         Kirigami.Icon {
-                            source: model.decoration
+                            source: sizeComboDelegate.model.decoration
                             smooth: true
                             // On wayland the cursor size is logical pixels, and on X11 it's physical pixels.
                             property real devicePixelRatio: KWindowSystem.isPlatformWayland ? 1 : Screen.devicePixelRatio
-                            property size iconSize: kcm.iconSizeFromIndex(index)
+                            property size iconSize: kcm.iconSizeFromIndex(sizeComboDelegate.index)
                             Layout.preferredWidth: iconSize.width / devicePixelRatio
                             Layout.preferredHeight: iconSize.height / devicePixelRatio
                             visible: valid && sizeComboDelegate.size > 0
@@ -144,16 +143,10 @@ KCM.GridViewKCM {
                         QtControls.Label {
                             Layout.alignment: Qt.AlignRight
                             color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                            text: i18n("Size: %1", model[sizeCombo.textRole])
+                            text: i18n("Size: %1", sizeComboDelegate.size)
                             textFormat: Text.PlainText
                             elide: Text.ElideRight
                         }
-                    }
-                    Binding {
-                        target: sizeCombo
-                        property: "maxContentWidth"
-                        value: implicitWidth
-                        when: index == sizeCombo.count - 1
                     }
                 }
             }
