@@ -333,8 +333,6 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         return;
     }
 
-    m_waitForXdgForeign = false;
-    m_waitForXdgActivation = false;
     QModelIndex idx = m_model->index(m_model->indexOfScheme(schemeName), 0);
 
     m_editDialogProcess = new QProcess(this);
@@ -366,6 +364,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
     if (idx.data(ColorsModel::RemovableRole).toBool()) {
         args << QStringLiteral("--overwrite");
     }
+    m_editDialogProcess->setArguments(args);
 
     if (ctx && ctx->window()) {
         // QQuickWidget, used for embedding QML KCMs, renders everything into an offscreen window
@@ -375,42 +374,31 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(ctx->window())) {
             if (KWindowSystem::isPlatformX11()) {
                 args << QStringLiteral("--attach") << QString::number(actualWindow->winId());
+                m_editDialogProcess->setArguments(args);
             } else if (KWindowSystem::isPlatformWayland()) {
-                m_waitForXdgForeign = true;
-                KWaylandExtras::exportToplevel(actualWindow).then(this, [this](const QString &handle) {
+                auto handleFuture = KWaylandExtras::exportToplevel(actualWindow);
+                auto setHandle = handleFuture.then(this, [this](const QString &handle) {
                     QStringList args = m_editDialogProcess->arguments();
                     args << QStringLiteral("--attach") << handle;
                     m_editDialogProcess->setArguments(args);
-                    m_waitForXdgForeign = false;
-
-                    if (!m_waitForXdgActivation) {
-                        m_editDialogProcess->start();
-                    }
                 });
-
-                m_waitForXdgActivation = true;
                 auto tokenFuture = KWaylandExtras::xdgActivationToken(actualWindow, QStringLiteral("org.kde.kcolorschemeeditor"));
-                tokenFuture.then(this, [this](const QString &token) {
+                auto setToken = tokenFuture.then(this, [this](const QString &token) {
                     if (!token.isEmpty()) {
                         QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
                         environment.insert(QStringLiteral("XDG_ACTIVATION_TOKEN"), token);
                         m_editDialogProcess->setProcessEnvironment(environment);
                     }
-
-                    m_waitForXdgActivation = false;
-                    if (!m_waitForXdgForeign) {
-                        m_editDialogProcess->start();
-                    }
                 });
+                QtFuture::whenAll(setToken, setHandle).then(this, [this](auto) {
+                    m_editDialogProcess->start();
+                });
+                return;
             }
         }
     }
 
-    m_editDialogProcess->setArguments(args);
-
-    if (!m_waitForXdgForeign && !m_waitForXdgActivation) {
-        m_editDialogProcess->start();
-    }
+    m_editDialogProcess->start();
 }
 
 bool KCMColors::isSaveNeeded() const
