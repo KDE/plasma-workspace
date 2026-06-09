@@ -209,11 +209,25 @@ KConfigGroup PanelView::panelConfigDefaults(ShellCorona *corona, Plasma::Contain
 
 int PanelView::readConfigValueWithFallBack(const QString &key, int defaultValue)
 {
-    int value = config().readEntry(key, configDefaults().readEntry(key, defaultValue));
+    int value = resolutionDependentConfig().readEntry(key, configDefaults().readEntry(key, defaultValue));
     return value;
 }
 
-KConfigGroup PanelView::config() const
+bool PanelView::hasConfig()
+{
+    return containment() && m_screenToFollow;
+}
+
+KConfigGroup PanelView::resolutionIndependentConfig()
+{
+    if (!containment()) {
+        return {};
+    }
+    KConfigGroup views(m_corona->applicationConfig(), u"PlasmaViews"_s);
+    return KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment()->id()));
+}
+
+KConfigGroup PanelView::resolutionDependentConfig()
 {
     return panelConfig(m_corona, containment(), m_screenToFollow);
 }
@@ -236,7 +250,7 @@ void PanelView::setAlignment(Qt::Alignment alignment)
 
     m_alignment = alignment;
     // alignment is not resolution dependent, doesn't save to Defaults
-    config().parent().writeEntry("alignment", (int)m_alignment);
+    resolutionIndependentConfig().writeEntry("alignment", (int)m_alignment);
     Q_EMIT alignmentChanged();
     positionPanel();
 }
@@ -263,7 +277,7 @@ void PanelView::setOffset(int offset)
     }
 
     m_offset = offset;
-    config().writeEntry("offset", m_offset);
+    resolutionDependentConfig().writeEntry("offset", m_offset);
     configDefaults().writeEntry("offset", m_offset);
     positionPanel();
     Q_EMIT offsetChanged();
@@ -341,7 +355,7 @@ void PanelView::setMaximumLength(int length)
         setMinimumLength(length);
     }
 
-    config().writeEntry("maxLength", length);
+    resolutionDependentConfig().writeEntry("maxLength", length);
     configDefaults().writeEntry("maxLength", length);
     m_maxLength = length;
     Q_EMIT maximumLengthChanged();
@@ -365,7 +379,7 @@ void PanelView::setMinimumLength(int length)
         setMaximumLength(length);
     }
 
-    config().writeEntry("minLength", length);
+    resolutionDependentConfig().writeEntry("minLength", length);
     configDefaults().writeEntry("minLength", length);
     m_minLength = length;
     Q_EMIT minimumLengthChanged();
@@ -386,8 +400,8 @@ void PanelView::setFloating(bool floating)
     }
 
     m_floating = floating;
-    if (config().isValid() && config().parent().isValid()) {
-        config().parent().writeEntry("floating", (int)floating);
+    if (hasConfig()) {
+        resolutionIndependentConfig().writeEntry("floating", (int)floating);
         m_corona->requestApplicationConfigSync();
     }
     Q_EMIT floatingChanged();
@@ -410,8 +424,8 @@ void PanelView::setFloatingApplets(bool floatingApplets)
     }
 
     m_floatingApplets = floatingApplets;
-    if (config().isValid() && config().parent().isValid()) {
-        config().parent().writeEntry("floatingApplets", (int)floatingApplets);
+    if (hasConfig()) {
+        resolutionIndependentConfig().writeEntry("floatingApplets", (int)floatingApplets);
         m_corona->requestApplicationConfigSync();
     }
     Q_EMIT floatingAppletsChanged();
@@ -504,9 +518,9 @@ void PanelView::setVisibilityMode(PanelView::VisibilityMode mode)
         connect(containment(), &Plasma::Applet::activated, this, &PanelView::showTemporarily);
     }
 
-    if (config().isValid() && config().parent().isValid()) {
+    if (hasConfig()) {
         // panelVisibility is not resolution dependent, don't write to Defaults
-        config().parent().writeEntry("panelVisibility", (int)mode);
+        resolutionIndependentConfig().writeEntry("panelVisibility", (int)mode);
         m_corona->requestApplicationConfigSync();
     }
 
@@ -544,8 +558,8 @@ void PanelView::setOpacityMode(PanelView::OpacityMode mode)
 {
     if (m_opacityMode != mode) {
         m_opacityMode = mode;
-        if (config().isValid() && config().parent().isValid()) {
-            config().parent().writeEntry("panelOpacity", (int)mode);
+        if (hasConfig()) {
+            resolutionIndependentConfig().writeEntry("panelOpacity", (int)mode);
             m_corona->requestApplicationConfigSync();
         }
         Q_EMIT opacityModeChanged();
@@ -557,8 +571,8 @@ void PanelView::setLengthMode(PanelView::LengthMode mode)
 {
     if (m_lengthMode != mode) {
         m_lengthMode = mode;
-        if (config().isValid() && config().parent().isValid()) {
-            config().parent().writeEntry("panelLengthMode", (int)mode);
+        if (hasConfig()) {
+            resolutionIndependentConfig().writeEntry("panelLengthMode", (int)mode);
             m_corona->requestApplicationConfigSync();
         }
         Q_EMIT lengthModeChanged();
@@ -861,7 +875,7 @@ QSize PanelView::preferredSize() const
 
 void PanelView::restore()
 {
-    KConfigGroup panelConfig = config();
+    KConfigGroup panelConfig = resolutionDependentConfig();
     if (!panelConfig.isValid()) {
         return;
     }
@@ -886,8 +900,8 @@ void PanelView::restore()
         m_offset = qMax(0, m_offset);
     }
 
-    setFloating((bool)config().parent().readEntry<int>("floating", defaultFloating()));
-    setFloatingApplets((bool)config().parent().readEntry<int>("floatingApplets", false));
+    setFloating((bool)resolutionIndependentConfig().readEntry<int>("floating", defaultFloating()));
+    setFloatingApplets((bool)resolutionIndependentConfig().readEntry<int>("floatingApplets", false));
     setThickness(configDefaults().readEntry("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();
@@ -904,8 +918,8 @@ void PanelView::restore()
     // the place for this config key is changed in Plasma 5.9
     // Do NOT use readConfigValueWithFallBack
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
-    setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", defaultOpacityMode()));
-    setLengthMode((LengthMode)config().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
+    setOpacityMode((OpacityMode)resolutionIndependentConfig().readEntry<int>("panelOpacity", defaultOpacityMode()));
+    setLengthMode((LengthMode)resolutionIndependentConfig().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
     positionAndResizePanel();
 
     Q_EMIT maximumLengthChanged();
