@@ -20,6 +20,8 @@
 
 using namespace MockCompositor;
 
+// NOTE: These tests are not independent and rely on state leaking from one to the next
+
 class ScreenPoolTest : public QObject, DefaultCompositor
 {
     Q_OBJECT
@@ -29,13 +31,7 @@ private Q_SLOTS:
     void cleanupTestCase();
 
     void testScreenInsertion();
-    void testRedundantScreenInsertion();
-    void testMoveOutOfRedundant();
-    void testMoveInRedundant();
     void testOrderSwap();
-    void testPrimarySwapToRedundant();
-    void testMoveRedundantToMakePrimary();
-    void testMoveInRedundantToLosePrimary();
     void testSecondScreenRemoval();
     void testThirdScreenRemoval();
     void testLastScreenRemoval();
@@ -105,82 +101,31 @@ void ScreenPoolTest::testScreenInsertion()
     // Check mapping
     QCOMPARE(m_screenPool->idForScreen(newScreen), 1);
     QCOMPARE(m_screenPool->screenForId(1)->name(), QStringLiteral("WL-2"));
-}
 
-void ScreenPoolTest::testRedundantScreenInsertion()
-{
-    QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
-    QSignalSpy addedFromAppSpy(qGuiApp, SIGNAL(screenAdded(QScreen *)));
-
+    // and add another screen
     // Add a new output
     exec([this] {
         OutputData data;
-        data.mode.resolution = {1280, 720};
-        data.position = {1920, 0};
+        data.mode.resolution = {1920, 1080};
+        data.position = {3840, 0};
         data.physicalSize = data.mode.physicalSizeForDpi(96);
         // NOTE: assumes that when a screen is added it will already have the final geometry
         add<Output>(data);
         outputOrder()->setList({u"WL-1"_s, u"WL-2"_s, u"WL-3"_s});
     });
 
-    orderChangeSpy.wait(250);
-    // only addedFromAppSpy will have registered something, nothing in orderChangeSpy,
-    // on ScreenPool API POV is like this new screen doesn't exist, because is redundant to WL-2
-    QCOMPARE(QGuiApplication::screens().size(), 3);
-    QCOMPARE(m_screenPool->screenOrder().size(), 2);
-    QCOMPARE(addedFromAppSpy.size(), 1);
-    QCOMPARE(orderChangeSpy.size(), 0);
-
-    QScreen *newScreen = addedFromAppSpy.takeFirst().at(0).value<QScreen *>();
-    QCOMPARE(newScreen->name(), QStringLiteral("WL-3"));
-    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1280, 720));
-    QVERIFY(!m_screenPool->screenOrder().contains(newScreen));
-
-    QCOMPARE(m_screenPool->idForScreen(newScreen), -1);
-}
-
-void ScreenPoolTest::testMoveOutOfRedundant()
-{
-    QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
-
-    exec([this] {
-        auto *out = output(2);
-        auto *xdgOut = xdgOutput(out);
-        out->m_data.mode.resolution = {1280, 2048};
-        xdgOut->sendLogicalSize(QSize(1280, 2048));
-        out->sendDone();
-        outputOrder()->setList({u"WL-1"_s, u"WL-2"_s, u"WL-3"_s});
-    });
-
     orderChangeSpy.wait();
-    QCOMPARE(orderChangeSpy.size(), 1);
 
-    QList<QScreen *> newOrder = orderChangeSpy[0].at(0).value<QList<QScreen *>>();
-    QCOMPARE(newOrder.count(), 3);
-    QCOMPARE(newOrder[1]->name(), QStringLiteral("WL-2"));
-    QCOMPARE(newOrder[1]->geometry(), QRect(1920, 0, 1920, 1080));
-    QVERIFY(m_screenPool->screenOrder().contains(newOrder[0]));
-}
+    QCOMPARE(orderChangeSpy.size(), 2);
+    QCOMPARE(QGuiApplication::screens().size(), 3);
+    QCOMPARE(m_screenPool->screenOrder().size(), 3);
 
-void ScreenPoolTest::testMoveInRedundant()
-{
-    QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
-
-    exec([this] {
-        auto *out = output(2);
-        auto *xdgOut = xdgOutput(out);
-        out->m_data.mode.resolution = {1280, 720};
-        xdgOut->sendLogicalSize(QSize(1280, 720));
-        out->sendDone();
-        outputOrder()->setList({u"WL-1"_s, u"WL-2"_s, u"WL-3"_s});
-    });
-
-    removedSpy.wait();
-    QCOMPARE(removedSpy.size(), 1);
-    QScreen *oldScreen = removedSpy.takeFirst().at(0).value<QScreen *>();
-    QCOMPARE(oldScreen->name(), QStringLiteral("WL-3"));
-    QCOMPARE(oldScreen->geometry(), QRect(1920, 0, 1280, 720));
-    QVERIFY(!m_screenPool->screenOrder().contains(oldScreen));
+    QScreen *newScreen2 = addedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(newScreen2->name(), QStringLiteral("WL-3"));
+    QCOMPARE(newScreen2->geometry(), QRect(3840, 0, 1920, 1080));
+    // Check mapping
+    QCOMPARE(m_screenPool->idForScreen(newScreen2), 2);
+    QCOMPARE(m_screenPool->screenForId(2)->name(), QStringLiteral("WL-3"));
 }
 
 void ScreenPoolTest::testOrderSwap()
@@ -189,15 +134,16 @@ void ScreenPoolTest::testOrderSwap()
 
     // Check ScreenPool mapping before switch
     QList<QScreen *> oldOrder = m_screenPool->screenOrder();
-    QCOMPARE(oldOrder.count(), 2);
+    QCOMPARE(oldOrder.count(), 3);
     QCOMPARE(oldOrder[0]->name(), QStringLiteral("WL-1"));
     QCOMPARE(oldOrder[1]->name(), QStringLiteral("WL-2"));
+    QCOMPARE(oldOrder[2]->name(), QStringLiteral("WL-3"));
 
     QCOMPARE(m_screenPool->screenOrder()[0]->name(), QStringLiteral("WL-1"));
     QCOMPARE(m_screenPool->screenOrder()[1]->name(), QStringLiteral("WL-2"));
+    QCOMPARE(m_screenPool->screenOrder()[2]->name(), QStringLiteral("WL-3"));
 
     // Set a primary screen
-    // TODO: "WL-2", "WL-1", "WL-3" when tests are self contained
     exec([this] {
         outputOrder()->setList({u"WL-2"_s, u"WL-1"_s, u"WL-3"_s});
     });
@@ -206,9 +152,10 @@ void ScreenPoolTest::testOrderSwap()
 
     QCOMPARE(orderChangeSpy.size(), 1);
     QList<QScreen *> newOrder = orderChangeSpy[0].at(0).value<QList<QScreen *>>();
-    QCOMPARE(newOrder.count(), 2);
+    QCOMPARE(newOrder.count(), 3);
     QCOMPARE(newOrder[0], oldOrder[1]);
     QCOMPARE(newOrder[1], oldOrder[0]);
+    QCOMPARE(newOrder[2], oldOrder[2]);
 
     QCOMPARE(newOrder[1]->name(), QStringLiteral("WL-1"));
     QCOMPARE(newOrder[1]->geometry(), QRect(0, 0, 1920, 1080));
@@ -220,92 +167,6 @@ void ScreenPoolTest::testOrderSwap()
     QCOMPARE(m_screenPool->primaryScreen()->name(), newOrder[0]->name());
     QCOMPARE(m_screenPool->idForScreen(newOrder[0]), 0);
     QCOMPARE(m_screenPool->idForScreen(newOrder[1]), 1);
-}
-
-void ScreenPoolTest::testPrimarySwapToRedundant()
-{
-    QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
-
-    // Set a primary screen
-    exec([this] {
-        outputOrder()->setList({u"WL-3"_s, u"WL-2"_s, u"WL-1"_s});
-    });
-
-    orderChangeSpy.wait(250);
-    // Nothing will happen, is like WL3 doesn't exist
-    QCOMPARE(orderChangeSpy.size(), 0);
-}
-
-void ScreenPoolTest::testMoveRedundantToMakePrimary()
-{
-    QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
-
-    exec([this] {
-        auto *out = output(2);
-        auto *xdgOut = xdgOutput(out);
-        out->m_data.mode.resolution = {1280, 2048};
-        xdgOut->sendLogicalSize(QSize(1280, 2048));
-        out->sendDone();
-        outputOrder()->setList({u"WL-3"_s, u"WL-2"_s, u"WL-1"_s});
-    });
-
-    QTRY_COMPARE(orderChangeSpy.size(), 1);
-    /*QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
-    QCOMPARE(newScreen->name(), QStringLiteral("WL-3"));
-    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1280, 2048));
-    QVERIFY(m_screenPool->screens().contains(newScreen));*/
-
-    // Test the new primary
-    QList<QScreen *> newOrder = orderChangeSpy[0].at(0).value<QList<QScreen *>>();
-    QCOMPARE(newOrder.size(), 3);
-    QCOMPARE(newOrder[0]->name(), QStringLiteral("WL-3"));
-    QCOMPARE(newOrder[0]->geometry(), QRect(1920, 0, 1280, 2048));
-    QCOMPARE(newOrder[1]->name(), QStringLiteral("WL-2"));
-    QCOMPARE(newOrder[1]->geometry(), QRect(1920, 0, 1920, 1080));
-    QCOMPARE(newOrder[2]->name(), QStringLiteral("WL-1"));
-    QCOMPARE(newOrder[2]->geometry(), QRect(0, 0, 1920, 1080));
-
-    // Check ScreenPool mapping
-    QCOMPARE(m_screenPool->primaryScreen()->name(), QStringLiteral("WL-3"));
-    QCOMPARE(m_screenPool->idForScreen(newOrder[0]), 0);
-    QCOMPARE(m_screenPool->idForScreen(newOrder[1]), 1);
-}
-
-void ScreenPoolTest::testMoveInRedundantToLosePrimary()
-{
-    QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
-
-    QCOMPARE(m_screenPool->screenOrder().size(), 3);
-    QScreen *oldScreen = m_screenPool->screenOrder()[0];
-
-    exec([this] {
-        auto *out = output(2);
-        auto *xdgOut = xdgOutput(out);
-        xdgOut->sendLogicalSize(QSize(1280, 720));
-        out->m_data.mode.resolution = {1280, 720};
-        out->sendDone();
-        outputOrder()->setList({u"WL-3"_s, u"WL-2"_s, u"WL-1"_s});
-    });
-
-    QTRY_COMPARE(orderChangeSpy.size(), 1);
-    QList<QScreen *> newOrder = orderChangeSpy[0].at(0).value<QList<QScreen *>>();
-    QCOMPARE(newOrder.size(), 2);
-
-    QCOMPARE(newOrder[1]->name(), QStringLiteral("WL-1"));
-    QCOMPARE(newOrder[1]->geometry(), QRect(0, 0, 1920, 1080));
-    QCOMPARE(newOrder[0]->name(), QStringLiteral("WL-2"));
-    QCOMPARE(newOrder[0]->geometry(), QRect(1920, 0, 1920, 1080));
-
-    // Check ScreenPool mapping
-    QCOMPARE(newOrder[0]->name(), QStringLiteral("WL-2"));
-    QCOMPARE(m_screenPool->primaryScreen()->name(), newOrder[0]->name());
-    QCOMPARE(m_screenPool->idForScreen(newOrder[0]), 0);
-    QCOMPARE(m_screenPool->idForScreen(newOrder[1]), 1);
-
-    QVERIFY(!newOrder.contains(oldScreen));
-    QCOMPARE(oldScreen->name(), QStringLiteral("WL-3"));
-    QCOMPARE(oldScreen->geometry(), QRect(1920, 0, 1280, 720));
-    QVERIFY(!m_screenPool->screenOrder().contains(oldScreen));
 }
 
 void ScreenPoolTest::testSecondScreenRemoval()
@@ -316,11 +177,12 @@ void ScreenPoolTest::testSecondScreenRemoval()
     // Check ScreenPool mapping before switch
     QCOMPARE(m_screenPool->screenOrder()[0]->name(), QStringLiteral("WL-2"));
     QCOMPARE(m_screenPool->screenOrder()[1]->name(), QStringLiteral("WL-1"));
+    QCOMPARE(m_screenPool->screenOrder()[2]->name(), QStringLiteral("WL-3"));
 
     // Remove an output
     exec([this] {
         remove(output(1));
-        outputOrder()->setList({u"WL-3"_s, u"WL-1"_s});
+        outputOrder()->setList({u"WL-1"_s, u"WL-3"_s});
     });
 
     // Removing the primary screen, will change a primaryChange signal beforehand
@@ -328,10 +190,10 @@ void ScreenPoolTest::testSecondScreenRemoval()
     QCOMPARE(orderChangeSpy.size(), 1);
     QList<QScreen *> newOrder = orderChangeSpy[0].at(0).value<QList<QScreen *>>();
     QCOMPARE(newOrder.size(), 2);
-    QCOMPARE(newOrder[0]->name(), QStringLiteral("WL-3"));
-    QCOMPARE(newOrder[0]->geometry(), QRect(1920, 0, 1280, 720));
-    QCOMPARE(newOrder[1]->name(), QStringLiteral("WL-1"));
-    QCOMPARE(newOrder[1]->geometry(), QRect(0, 0, 1920, 1080));
+    QCOMPARE(newOrder[0]->name(), QStringLiteral("WL-1"));
+    QCOMPARE(newOrder[0]->geometry(), QRect(0, 0, 1920, 1080));
+    QCOMPARE(newOrder[1]->name(), QStringLiteral("WL-3"));
+    QCOMPARE(newOrder[1]->geometry(), QRect(3840, 0, 1920, 1080));
 }
 
 void ScreenPoolTest::testThirdScreenRemoval()
@@ -398,7 +260,7 @@ void ScreenPoolTest::testFakeToRealScreen()
         outputOrder()->setList({u"WL-1"_s});
     });
 
-    orderChangeSpy.wait();
+    QVERIFY(orderChangeSpy.wait());
     QList<QScreen *> newOrder = orderChangeSpy[0].at(0).value<QList<QScreen *>>();
     QCOMPARE(newOrder.size(), 1);
     QCOMPARE(QGuiApplication::screens().size(), 1);

@@ -77,7 +77,7 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<QScreen>(uri, 1);
     qmlRegisterAnonymousType<KConfigPropertyMap>(uri, 1);
 
-    m_outputOrderWatcher = OutputOrderWatcher::instance(this);
+    m_outputOrderWatcher = new OutputOrderWatcher(this);
     connect(m_outputOrderWatcher, &OutputOrderWatcher::outputOrderChanged, this, [this](const QStringList &outputOrder) {
         if (!m_selectedScreen) {
             return;

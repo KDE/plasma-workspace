@@ -875,7 +875,7 @@ void ShellCorona::screenInvariants() const
         return message;
     };
 
-    if (m_screenPool->noRealOutputsConnected()) {
+    if (m_screenPool->screenOrder().isEmpty()) {
         Q_ASSERT_X(m_desktopViewForScreen.isEmpty(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
         Q_ASSERT_X(m_panelViews.isEmpty(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
         return;
