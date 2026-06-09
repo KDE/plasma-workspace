@@ -138,45 +138,14 @@ PanelView::~PanelView()
     }
 }
 
-static bool vendorIsNVidia()
-{
-    QOffscreenSurface surface;
-    surface.create();
-    QOpenGLContext context;
-    context.create();
-    if (context.makeCurrent(&surface)) {
-        QOpenGLFunctions funcs(&context);
-        const QString vendor = QString::fromLocal8Bit(reinterpret_cast<const char *>(funcs.glGetString(GL_VENDOR)));
-        return vendor.contains(u"NVIDIA", Qt::CaseInsensitive);
-    }
-    return false;
-}
-
-bool PanelView::isUnsupportedEnvironment() const
-{
-    // See BUG 475468 on why is this needed.
-
-    // It is a static variable: compute it once and cache the results because
-    // we don't expect such configuration to change at runtime.
-    static const bool unsupported = []() {
-#if HAVE_X11
-        const auto isX11 = KWindowSystem::isPlatformX11();
-#else
-        const auto isX11 = false;
-#endif
-        return isX11 && vendorIsNVidia();
-    }();
-    return unsupported;
-}
-
 bool PanelView::defaultFloating() const
 {
-    return isUnsupportedEnvironment() ? false : true;
+    return true;
 }
 
 PanelView::OpacityMode PanelView::defaultOpacityMode() const
 {
-    return isUnsupportedEnvironment() ? PanelView::OpacityMode::Translucent : PanelView::OpacityMode::Adaptive;
+    return PanelView::OpacityMode::Adaptive;
 }
 
 KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
@@ -391,7 +360,6 @@ void PanelView::setFloating(bool floating)
         m_corona->requestApplicationConfigSync();
     }
     Q_EMIT floatingChanged();
-    Q_EMIT unsupportedConfigurationChanged();
 
     updateFloating();
     updateEnabledBorders();
@@ -425,29 +393,6 @@ int PanelView::minThickness() const
         return m_minDrawingHeight;
     }
     return 0;
-}
-
-bool PanelView::isUnsupportedConfiguration() const
-{
-    return isUnsupportedEnvironment() && (floating() != defaultFloating() || opacityMode() == Adaptive);
-}
-
-QString PanelView::unsupportedConfigurationDescription() const
-{
-    if (isUnsupportedConfiguration()) {
-        return i18n(
-            "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are known to cause poor window drag and resize performance. Consider "
-            "using other settings.");
-    }
-    return {};
-}
-
-void PanelView::fixUnsupportedConfiguration()
-{
-    if (isUnsupportedConfiguration()) {
-        setFloating(defaultFloating());
-        setOpacityMode(defaultOpacityMode());
-    }
 }
 
 void PanelView::clonePanelTo(Plasma::Types::Location location, QScreen *screen)
@@ -549,7 +494,6 @@ void PanelView::setOpacityMode(PanelView::OpacityMode mode)
             m_corona->requestApplicationConfigSync();
         }
         Q_EMIT opacityModeChanged();
-        Q_EMIT unsupportedConfigurationChanged();
     }
 }
 
