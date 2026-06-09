@@ -9,16 +9,8 @@
 #include <QFile>
 #include <QImage>
 #include <QStyle>
-#include <private/qtx11extras_p.h>
 
 #include "cursortheme.h"
-
-#include <config-X11.h>
-
-#ifdef HAVE_XFIXES
-#include <X11/Xlib.h>
-#include <X11/extensions/Xfixes.h>
-#endif
 
 CursorTheme::CursorTheme(const QString &title, const QString &description)
 {

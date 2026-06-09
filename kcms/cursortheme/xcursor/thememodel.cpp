@@ -11,14 +11,12 @@
 #include <QDir>
 #include <QLoggingCategory>
 #include <QRegularExpression>
-#include <private/qtx11extras_p.h>
 
 #include "cursorthemesettings.h"
 #include "thememodel.h"
 #include "xcursortheme.h"
 
 #include <X11/Xcursor/Xcursor.h>
-#include <X11/Xlib.h>
 
 using namespace Qt::StringLiterals;
 

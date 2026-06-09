@@ -15,7 +15,6 @@
 #include "xcursor/cursortheme.h"
 #include "xcursor/previewwidget.h"
 #include "xcursor/sortproxymodel.h"
-#include "xcursor/themeapplicator.h"
 #include "xcursor/thememodel.h"
 
 #include <KIO/CopyJob>
@@ -29,16 +28,9 @@
 #include <KUrlRequesterDialog>
 
 #include <QDir>
+#include <QProcess>
 #include <QStandardItemModel>
 #include <QTemporaryFile>
-#include <private/qtx11extras_p.h>
-
-#include <X11/Xcursor/Xcursor.h>
-#include <X11/Xlib.h>
-
-#ifdef HAVE_XFIXES
-#include <X11/extensions/Xfixes.h>
-#endif
 
 using namespace Qt::StringLiterals;
 
@@ -304,13 +296,8 @@ void CursorThemeConfig::save()
     KQuickManagedConfigModule::save();
     setPreferredSize(cursorThemeSettings()->cursorSize());
 
-    int row = cursorThemeIndex(cursorThemeSettings()->cursorTheme());
-    QModelIndex selected = m_themeProxyModel->index(row, 0);
-    const CursorTheme *theme = selected.isValid() ? m_themeProxyModel->theme(selected) : nullptr;
+    QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
 
-    if (!applyTheme(theme, cursorThemeSettings()->cursorSize())) {
-        Q_EMIT showInfoMessage(i18n("You have to restart the Plasma session for these changes to take effect."));
-    }
     removeThemes();
 
     notifyKcmChange(GlobalChangeType::CursorChanged);

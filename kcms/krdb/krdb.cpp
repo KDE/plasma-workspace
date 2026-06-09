@@ -51,12 +51,6 @@
 #include <KUpdateLaunchEnvironmentJob>
 
 #include "krdb.h"
-#if HAVE_X11
-#include <X11/Xlib.h>
-#include <private/qtx11extras_p.h>
-#include <xcb/xcb.h>
-#include <xcb/xcb_cursor.h>
-#endif
 
 #include <filesystem>
 

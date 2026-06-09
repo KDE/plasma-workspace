@@ -105,11 +105,6 @@ public:
     /// If the theme doesn't have the cursor @p name, it should return an empty vector
     virtual std::vector<CursorImage> loadImages(const QString &name, int size = 0) const = 0;
 
-    /// Loads the cursor @p name, with the nominal size @p size.
-    /// If the theme doesn't have the cursor @p name, it should return
-    /// the default cursor from the active theme instead.
-    virtual qulonglong loadCursor(const QString &name, int size = 0) const = 0;
-
     virtual int defaultCursorSize() const = 0;
 
     /** Creates the icon returned by @ref icon(). Don't use this function

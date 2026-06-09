@@ -9,7 +9,6 @@
 #include "../kcms-common_p.h"
 
 #include "xcursor/cursortheme.h"
-#include "xcursor/themeapplicator.h"
 #include "xcursor/thememodel.h"
 
 #include <KLocalizedString>
@@ -18,36 +17,10 @@
 #include <QCommandLineParser>
 #include <QDebug>
 #include <QFile>
+#include <QProcess>
 #include <QTimer>
 
 using namespace Qt::StringLiterals;
-
-namespace
-{
-/** Apply a theme, log warnings
- *
- * Applies @p theme; if @p sizeSpecifier is an integer that is an available
- * size for the theme, use it rather than the theme's default size.
- * If @p sizeSpecifier is non-empty but doesn't name an integer that
- * is an available size, prints an error message to @p ts and uses the
- * theme's default size instead.
- */
-bool applyThemeAndSize(const CursorTheme *theme, const QString &sizeSpecifier, QTextStream &ts)
-{
-    auto chosenSize = theme->defaultCursorSize();
-    if (!sizeSpecifier.isEmpty()) {
-        bool ok = false;
-        int specificSize = sizeSpecifier.toInt(&ok);
-        if (ok && theme->availableSizes().contains(specificSize)) {
-            chosenSize = specificSize;
-        } else {
-            ts << i18n("The requested size '%1' is not available, using %2 instead.").arg(sizeSpecifier).arg(chosenSize) << Qt::endl;
-            // Not an error condition
-        }
-    }
-    return applyTheme(theme, chosenSize);
-}
-}
 
 int main(int argc, char **argv)
 {
@@ -98,8 +71,9 @@ int main(int argc, char **argv)
 
             if (theme) {
                 settings->setCursorTheme(theme->name());
-                if (settings->save() && applyThemeAndSize(theme, parser->value(u"size"_s), ts)) {
+                if (settings->save()) {
                     notifyKcmChange(GlobalChangeType::CursorChanged);
+                    QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
                     ts << i18n("Successfully applied the mouse pointer theme %1 to your current Plasma session", theme->title()) << Qt::endl;
                 } else {
                     ts << i18n("You have to restart the Plasma session for your newly applied mouse pointer theme to display correctly.") << Qt::endl;

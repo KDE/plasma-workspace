@@ -4,7 +4,6 @@ kcmutils_add_qml_kcm(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS})
 
 target_sources(kcm_cursortheme PRIVATE
     xcursor/thememodel.cpp
-    xcursor/themeapplicator.cpp
     xcursor/cursortheme.cpp
     xcursor/xcursortheme.cpp
     xcursor/previewwidget.cpp
@@ -42,8 +41,10 @@ target_link_libraries(kcm_cursortheme PRIVATE
     krdb
 )
 
+target_compile_definitions(kcm_cursortheme PRIVATE CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
+
 if (HAVE_X11)
-   target_link_libraries(kcm_cursortheme PRIVATE X11::Xcursor X11::Xfixes Qt::GuiPrivate)
+   target_link_libraries(kcm_cursortheme PRIVATE X11::Xcursor)
 endif ()
 
 # plasma-apply-cursortheme utility
@@ -53,7 +54,6 @@ target_sources(plasma-apply-cursortheme PRIVATE
     plasma-apply-cursortheme.cpp
 
     xcursor/cursortheme.cpp
-    xcursor/themeapplicator.cpp
     xcursor/thememodel.cpp
     xcursor/xcursortheme.cpp
     ../kcms-common.cpp
@@ -69,8 +69,10 @@ target_link_libraries(plasma-apply-cursortheme
     KF6::WindowSystem
 )
 
+target_compile_definitions(plasma-apply-cursortheme PRIVATE CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
+
 if (HAVE_X11)
-   target_link_libraries(plasma-apply-cursortheme X11::X11 X11::Xcursor X11::Xfixes XCB::XCB XCB::CURSOR Qt::GuiPrivate KF6::ColorScheme)
+   target_link_libraries(plasma-apply-cursortheme X11::Xcursor)
 endif()
 
 install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
