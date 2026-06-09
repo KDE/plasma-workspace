@@ -224,11 +224,6 @@ KConfigGroup PanelView::configDefaults() const
     return panelConfigDefaults(m_corona, containment(), m_screenToFollow);
 }
 
-Q_INVOKABLE QString PanelView::fileFromPackage(const QString &key, const QString &fileName)
-{
-    return corona()->kPackage().filePath(key.toUtf8(), fileName);
-}
-
 Qt::Alignment PanelView::alignment() const
 {
     return m_alignment;

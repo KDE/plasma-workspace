@@ -183,8 +183,6 @@ public:
     KConfigGroup config() const override;
     KConfigGroup configDefaults() const;
 
-    Q_INVOKABLE QString fileFromPackage(const QString &key, const QString &fileName);
-
     Qt::Alignment alignment() const;
     void setAlignment(Qt::Alignment alignment);
 
