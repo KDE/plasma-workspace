@@ -58,10 +58,8 @@ private Q_SLOTS:
     void testScreenInsertion();
     void testPanelInsertion();
     void testSecondScreenInsertion();
-    void testRedundantScreenInsertion();
     void testScreenRemovalBeforeAfterScreenOrderChanged();
     void testScreenRemovalRecyclingViews();
-    void testMoveOutOfRedundant();
     void testScreenRemoval();
     void testReorderScreens_data();
     void testReorderScreens();
@@ -209,7 +207,10 @@ void ShellTest::cleanupTestCase()
 
     insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
     setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
+    qDebug() << "A";
+
     auto *panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    Q_ASSERT(m_corona->m_panelViews[panelCont]);
     m_corona->m_panelViews[panelCont]->setScreenToFollow(m_corona->m_screenPool->screenOrder()[1]);
     delete m_corona; // Implicitly tests 515234; if we regress, the test crashes!
 
@@ -229,12 +230,14 @@ void ShellTest::cleanup()
     QVERIFY(oldCoronaNumScreens <= oldNumScreens);
     QSignalSpy coronaRemovedSpy(m_corona, SIGNAL(screenRemoved(int)));
 
+    QSignalSpy coronaScreenOrderSpy(m_corona, &ShellCorona::screenOrderChanged);
     exec([=, this] {
         for (int i = oldNumScreens - 1; i >= 0; --i) {
             remove(output(i));
         }
     });
-    setScreenOrder({}, true);
+    coronaScreenOrderSpy.wait();
+    setScreenOrder({}, false);
 
     QTRY_COMPARE(coronaRemovedSpy.size(), oldCoronaNumScreens);
 
@@ -252,7 +255,6 @@ void ShellTest::cleanup()
     QCOMPARE(qApp->screens()[0]->name(), QString());
     insertScreen(QRect(0, 0, 1920, 1080), QStringLiteral("WL-1"));
     QCOMPARE(qApp->screens().size(), 1);
-    QSignalSpy coronaScreenOrderSpy(m_corona, &ShellCorona::screenOrderChanged);
     setScreenOrder({u"WL-1"_s}, true);
 }
 
@@ -302,52 +304,6 @@ void ShellTest::testSecondScreenInsertion()
     QCOMPARE(result2->name(), name2);
 }
 
-void ShellTest::testRedundantScreenInsertion()
-{
-    QCOMPARE(m_corona->m_desktopViewForScreen.size(), 1);
-    auto *view0 = m_corona->m_desktopViewForScreen[0];
-    QCOMPARE(view0->screen()->name(), QStringLiteral("WL-1"));
-
-    auto *cont0 = m_corona->m_desktopViewForScreen[0]->containment();
-    QCOMPARE(cont0->screen(), 0);
-    auto *oldScreen0 = view0->screen();
-
-    const auto geom = QRect(0, 0, 1920, 1080);
-    const auto name = QStringLiteral("DP-1");
-    auto result = insertScreen(geom, name);
-    // false as we do not expect to be notified for screenorderchanged
-    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, false);
-    QCOMPARE(result->geometry(), geom);
-    QCOMPARE(qApp->screens().size(), 2);
-    // m_desktopViewForScreen did *not* get a view for the new screen
-    QCOMPARE(m_corona->m_desktopViewForScreen.size(), 1);
-    // associations of old things didn't change
-    QCOMPARE(view0->containment(), cont0);
-    QCOMPARE(cont0->screen(), 0);
-    QCOMPARE(view0->screen(), oldScreen0);
-}
-
-void ShellTest::testMoveOutOfRedundant()
-{
-    testRedundantScreenInsertion();
-
-    QSignalSpy coronaAddedSpy(m_corona, SIGNAL(screenAdded(int)));
-
-    exec([this] {
-        auto *out = output(1);
-        auto *xdgOut = xdgOutput(out);
-        out->m_data.mode.resolution = {1280, 2048};
-        xdgOut->sendLogicalSize(QSize(1280, 2048));
-        out->sendDone();
-        outputOrder()->setList({u"WL-1"_s, u"DP-1"_s});
-    });
-
-    coronaAddedSpy.wait();
-    QCOMPARE(coronaAddedSpy.size(), 1);
-    const int screen = coronaAddedSpy.takeFirst().at(0).value<int>();
-    QCOMPARE(screen, 1);
-}
-
 void ShellTest::testScreenRemoval()
 {
     // Create 2 new screens
@@ -380,7 +336,7 @@ void ShellTest::testScreenRemoval()
 
     QTRY_COMPARE(removedSpy.size(), 2);
 
-    setScreenOrder({u"WL-1"_s}, true);
+    setScreenOrder({u"WL-1"_s}, false);
 
     QCOMPARE(m_corona->numScreens(), 1);
     QCOMPARE(qApp->screens().size(), 1);
@@ -445,20 +401,7 @@ void ShellTest::testScreenRemovalBeforeAfterScreenOrderChanged()
     QTRY_COMPARE(removedSpy.size(), 1);
     QTRY_COMPARE(screen1DeletedSpy.size(), 1);
 
-    // Before screenOrderChanged arrives, the desktop view for screen 1 is still kept
-    // for recycling, but the underlying QScreen object has already been destroyed.
-    QCOMPARE(removedSpy.takeFirst().at(0).value<int>(), 2);
-    QVERIFY(m_corona->m_desktopViewForScreen.contains(1));
-    QCOMPARE(m_corona->m_desktopViewForScreen[1], view1);
-    QCOMPARE(view1->screenToFollow(), nullptr);
-
-    // The next screen has not been remapped yet either; desktopForScreen() can no longer
-    // find the recycled view because it indexes through ScreenPool::idForScreen().
-    QCOMPARE(view2->screenToFollow(), screen2);
-    QCOMPARE(m_corona->desktopForScreen(screen1), nullptr);
-    QCOMPARE(m_corona->desktopForScreen(screen2), view1);
-
-    setScreenOrder({u"WL-1"_s, u"DP-2"_s}, true);
+    setScreenOrder({u"WL-1"_s, u"DP-2"_s}, false);
 
     // When screenOrderChanged has finally arrived,
     // there are 2 screens managed by view0 and view1 respectively,
@@ -515,7 +458,7 @@ void ShellTest::testScreenRemovalRecyclingViews()
 
     QTRY_COMPARE(removedSpy.size(), 1);
 
-    setScreenOrder({u"WL-1"_s, u"DP-2"_s}, true);
+    setScreenOrder({u"WL-1"_s, u"DP-2"_s}, false);
 
     QTRY_COMPARE(view2DeletedSpy.count(), 1);
     QTRY_COMPARE(screen1DeletedSpy.count(), 1);

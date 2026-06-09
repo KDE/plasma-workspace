@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2016 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2026 David Edmundson <davidedmundson@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -19,6 +20,12 @@
 class QScreen;
 class OutputOrderWatcher;
 
+/**
+ * ScreenPool acts as a interface on top of QGuiApplication::screens
+ * It combines metadata about screen ordering to return an ordered list
+ *
+ * It also filters out the "fake" screen provided by Qt when no screens are attached.
+ */
 class ScreenPool : public QObject
 {
     Q_OBJECT
@@ -34,39 +41,18 @@ public:
 
     QList<QScreen *> screenOrder() const;
     QScreen *primaryScreen() const;
-    bool noRealOutputsConnected() const;
 
 Q_SIGNALS:
+    /**
+     * Notify that a screen is about to be removed, this is emitted before changing screenOrder
+     */
     void screenRemoved(QScreen *screen); // TODO: necessary?
     void screenOrderChanged(const QList<QScreen *> &screens);
 
 private:
-    void insertScreenMapping(int id, const QString &connector);
-    int firstAvailableId() const;
-
-    QScreen *outputRedundantTo(QScreen *screen) const;
-    void reconsiderOutputs();
-    void reconsiderOutputOrder();
-    bool isOutputFake(QScreen *screen) const;
-
-    void insertSortedScreen(QScreen *screen);
-    void handleScreenAdded(QScreen *screen);
     void handleScreenRemoved(QScreen *screen);
-    void handleOutputOrderChanged(const QStringList &newOrder);
-    void handleScreenGeometryChanged(QScreen *screen);
-
-    void screenInvariants();
-
-    // List correspondent to qGuiApp->screens(), but sorted first by size then by Id,
-    // determines the screen importance while figuring out the redundant ones
-    QList<QScreen *> m_sizeSortedScreens;
-    // This will always be true: m_availableScreens + m_redundantScreens + m_fakeScreens == qGuiApp->screens()
+    void handleUpdate();
     QList<QScreen *> m_availableScreens; // Those are all the screen that are available to Corona, ordered by id coming from the protocol
-    QHash<QScreen *, QScreen *> m_redundantScreens;
-    QSet<QScreen *> m_fakeScreens;
-
-    bool m_orderChangedPendingSignal = false;
-
     OutputOrderWatcher *m_outputOrderWatcher;
     friend QDebug operator<<(QDebug d, const ScreenPool *pool);
 };
