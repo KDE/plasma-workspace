@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-06-09 00:46+0000\n"
 "PO-Revision-Date: 2024-09-26 10:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -34,12 +34,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
-#: logout.cpp:269
+#: logout.cpp:267
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Вихід скасовано «%1»"
 
-#: logout.cpp:363
+#: logout.cpp:361
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"

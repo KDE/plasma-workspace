@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-23 00:46+0000\n"
-"PO-Revision-Date: 2026-05-17 18:27+0900\n"
+"PO-Revision-Date: 2026-06-01 18:49+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
@@ -99,7 +99,7 @@ msgstr "KDE Plasma %1"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr "bugs.kde.org で問題を報告してください"
+msgstr "問題の報告は bugs.kde.org へ"
 
 #: desktopview.cpp:279
 #, kde-format

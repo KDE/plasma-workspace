@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-06-09 00:46+0000\n"
 "PO-Revision-Date: 2025-04-01 15:20+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: logout.cpp:269
+#: logout.cpp:267
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Çıxış \"%1\" tərəfindən ləğv edildi"
 
-#: logout.cpp:363
+#: logout.cpp:361
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"

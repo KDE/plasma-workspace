@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-06-09 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 18:22-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
-#: logout.cpp:269
+#: logout.cpp:267
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "تىزىمدىن چىقىشتىن «%1» ۋاز كەچتى"
 
-#: logout.cpp:363
+#: logout.cpp:361
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"

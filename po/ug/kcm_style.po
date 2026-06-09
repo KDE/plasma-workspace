@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-06-09 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 18:18-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 ئىناۋەتلىك GTK ئۆرنەك ئارخىپى ئەمەس."
 
-#: kcmstyle.cpp:163 kcmstyle.cpp:170
+#: kcmstyle.cpp:147 kcmstyle.cpp:154
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "بۇ ئۇسلۇبنىڭ سەپلىمە سۆزلەشكۈسىنى يۈكلەۋاتقاندا خاتالىق كۆرۈلگەن."
 
-#: kcmstyle.cpp:276
+#: kcmstyle.cpp:260
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "تاللانغان «%1» ئۇسلۇبنى قوللىنالمىدى."

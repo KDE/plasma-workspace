@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-06-09 00:46+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -29,14 +29,14 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 не ёсць прыдатным архівам тэмы GTK."
 
-#: kcmstyle.cpp:163 kcmstyle.cpp:170
+#: kcmstyle.cpp:147 kcmstyle.cpp:154
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
 "Падчас загрузкі дыялогава акна канфігурацыі для гэтага стылю адбылася "
 "памылка."
 
-#: kcmstyle.cpp:276
+#: kcmstyle.cpp:260
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Не ўдалося ўжыць абраны стыль \"%1\"."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-06-09 00:46+0000\n"
 "PO-Revision-Date: 2024-09-28 13:30+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -32,12 +32,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus,marcos@euskalgnu.org"
 
-#: logout.cpp:269
+#: logout.cpp:267
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "'%1'(e)k saiotik irtetea bertan behera utzi du"
 
-#: logout.cpp:363
+#: logout.cpp:361
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"

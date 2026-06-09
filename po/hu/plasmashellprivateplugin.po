@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2025-05-21 21:57+0200\n"
+"PO-Revision-Date: 2026-06-08 22:52+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,8 +138,7 @@ msgid "Next Decade"
 msgstr "Következő évtized"
 
 #: calendar/qml/MonthViewHeader.qml:283
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "Tartsa nyitva"
@@ -184,11 +183,7 @@ msgid "Filters"
 msgstr "Szűrők"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for an unknown older version of Plasma and is not "
-#| "compatible with Plasma %1. Please contact the widget's author for an "
-#| "updated version."
+#, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
@@ -198,10 +193,7 @@ msgstr ""
 "verzióval. Lépjen kapcsolatba az elem szerzőjével egy frissített verzióért."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please contact the widget's author for an updated version."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
@@ -210,10 +202,7 @@ msgstr ""
 "verzióval. Lépjen kapcsolatba az elem szerzőjével egy frissített verzióért."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -222,17 +211,14 @@ msgstr ""
 "verzióval. Frissítse a Plasmát az elem használatához."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
 "Ez az elem a Plasma %1 verziójához készült, és nem kompatibilis a Plasma  "
-"legutóbbi verziójéval. Frissítse a Plasmát az elem használatához."
+"legutóbbi verziójával. Frissítse a Plasmát az elem használatához."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"

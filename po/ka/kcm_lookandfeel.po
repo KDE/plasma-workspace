@@ -451,26 +451,3 @@ msgstr "აირჩიეთ, რა გადავატარო…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "ნაკლები პარამეტრის ჩვენება…"
-
-#~ msgid "Cursors"
-#~ msgstr "კურსორები"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr ""
-#~ "ცვლილებების ძალაში შესასვლელად საჭიროა Plasma-ის სესიის გადატვირთვა."
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "კურსორის პარამეტრები შეიცვალა"
-
-#~ msgid "Apply"
-#~ msgstr "გამოყენება"
-
-#~ msgid "Cancel"
-#~ msgstr "შეწყვეტა"
-
-#~ msgid "Lock Screen"
-#~ msgstr "ეკრანის დაბლოკვა"
-
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr "ეს მოდული საშუალებას გაძლევთ შეცვალოთ გლობალური გარეგნობა."

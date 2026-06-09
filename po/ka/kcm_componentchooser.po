@@ -242,37 +242,3 @@ msgstr "არქივების მმართველი:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "რუკა:"
-
-#~ msgid ""
-#~ "The following file types are still associated with a different "
-#~ "application:"
-#~ msgstr "შემდეგი ფაილის ტიპები ჯერ კიდევ სხვა აპლიკაციაზეა მიბმული:"
-
-#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
-#~ msgid "%1 associated with %2"
-#~ msgstr "%1 ასოცირებულია %2-სთან"
-
-#~ msgctxt "@action:button %1 is an application name"
-#~ msgid "Re-assign-all to %1"
-#~ msgstr "ყველას %1-ზე მინიჭება"
-
-#~ msgid "Change file type association manually"
-#~ msgstr "ფაილის ტიპის ასოცირების ხელით შეცვლა"
-
-#~ msgctxt "Default phone app"
-#~ msgid "Dialer:"
-#~ msgstr "დამრეკი:"
-
-#~ msgid "Default web browser"
-#~ msgstr "ნაგულისხმევი ბრაუზერი"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Temuri Doghonadze"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "Temuri.doghonadze@gmail.com"
-
-#~ msgid "Component Chooser"
-#~ msgstr "კომპონენტის ამრჩევი"

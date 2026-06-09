@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-06-09 00:46+0000\n"
 "PO-Revision-Date: 2025-03-20 15:32+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -25,12 +25,12 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 ไม่ใช่ archive ธีม GTK ที่ถูกต้อง"
 
-#: kcmstyle.cpp:163 kcmstyle.cpp:170
+#: kcmstyle.cpp:147 kcmstyle.cpp:154
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "เกิดข้อผิดพลาดระหว่างเรียกกล่องการปรับแต่งสำหรับแก้ไขรูปแบบนี้"
 
-#: kcmstyle.cpp:276
+#: kcmstyle.cpp:260
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "ไม่สามารถใช้สไตล์ที่เลือก '%1' ได้"
