@@ -2512,8 +2512,8 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
     if (m_panelViews.contains(targetPanel)) {
         PanelView *targetPanelView = m_panelViews.value(targetPanel);
 
-        KConfigGroup viewConfig = oldPanelView->config().parent();
-        KConfigGroup targetViewConfig = targetPanelView->config().parent();
+        KConfigGroup viewConfig = oldPanelView->resolutionIndependentConfig();
+        KConfigGroup targetViewConfig = targetPanelView->resolutionIndependentConfig();
 
         viewConfig.copyTo(&targetViewConfig);
 
