@@ -54,6 +54,7 @@ private Q_SLOTS:
     void onDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles);
 
 private:
+    void resetCurrentPlayer();
     std::shared_ptr<MultiplexerModel> m_multiplexerModel;
     std::shared_ptr<Mpris2FilterProxyModel> m_mprisModel;
     PlayerContainer *m_currentPlayer = nullptr;

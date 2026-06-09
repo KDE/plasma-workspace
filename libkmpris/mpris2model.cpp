@@ -118,7 +118,9 @@ void Mpris2Model::onRowsInserted(const QModelIndex &, int first, int)
 {
     if (!m_currentPlayer) {
         m_currentIndex = first;
+        disconnect(m_currentPlayer, &QObject::destroyed, this, &Mpris2Model::resetCurrentPlayer);
         m_currentPlayer = index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+        connect(m_currentPlayer, &QObject::destroyed, this, &Mpris2Model::resetCurrentPlayer);
         Q_EMIT currentPlayerChanged();
         Q_EMIT currentIndexChanged();
     }
@@ -134,11 +136,13 @@ void Mpris2Model::onRowsAboutToBeRemoved(const QModelIndex &, int first, int)
     if (currentIndex == static_cast<unsigned>(first)) {
         currentIndex = 0; // Reset to Multiplexer
     }
+    disconnect(m_currentPlayer, &QObject::destroyed, this, &Mpris2Model::resetCurrentPlayer);
     if (rowCount() - 1 /* Multiplexer */ >= 2 /* At least two players */) {
         m_currentPlayer = index(currentIndex, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
     } else {
         m_currentPlayer = nullptr;
     }
+    connect(m_currentPlayer, &QObject::destroyed, this, &Mpris2Model::resetCurrentPlayer);
     if (oldPlayer != m_currentPlayer) {
         Q_EMIT currentPlayerChanged();
     }
@@ -164,7 +168,18 @@ void Mpris2Model::onDataChanged(const QModelIndex &topLeft, const QModelIndex &,
     if (m_currentIndex != static_cast<unsigned>(topLeft.row()) || (!roles.empty() && !roles.contains(Mpris2SourceModel::ContainerRole))) {
         return;
     }
+    disconnect(m_currentPlayer, &QObject::destroyed, this, &Mpris2Model::resetCurrentPlayer);
     m_currentPlayer = topLeft.data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+    connect(m_currentPlayer, &QObject::destroyed, this, &Mpris2Model::resetCurrentPlayer);
+    Q_EMIT currentPlayerChanged();
+}
+
+void Mpris2Model::resetCurrentPlayer()
+{
+    if (!m_currentPlayer) {
+        return;
+    }
+    m_currentPlayer = nullptr;
     Q_EMIT currentPlayerChanged();
 }
 
