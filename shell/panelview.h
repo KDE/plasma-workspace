@@ -180,7 +180,7 @@ public:
     explicit PanelView(ShellCorona *corona, QScreen *targetScreen = nullptr, QWindow *parent = nullptr);
     ~PanelView() override;
 
-    KConfigGroup config() const override;
+    KConfigGroup config() const;
     KConfigGroup configDefaults() const;
 
     Qt::Alignment alignment() const;
