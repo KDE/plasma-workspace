@@ -332,7 +332,6 @@ private:
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
-    bool canSetStrut() const;
     void positionConfigView();
 
     int m_offset;
