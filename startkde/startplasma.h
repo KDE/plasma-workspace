@@ -30,7 +30,7 @@ bool syncDBusEnvironment();
 void setupFontDpi();
 QProcess *setupKSplash();
 
-bool startPlasmaSession(bool wayland);
+bool startPlasmaSession();
 
 void stopSystemdSession();
 void waitForKonqi();

@@ -683,24 +683,12 @@ static void migrateUserScriptsAutostart()
     QDBusConnection::sessionBus().call(message);
 }
 
-bool startPlasmaSession(bool wayland)
+bool startPlasmaSession()
 {
     resetSystemdFailedUnits();
     reloadSystemd();
     OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
     iface.setStage(QStringLiteral("startPlasma"));
-    // finally, give the session control to the session manager
-    // see kdebase/ksmserver for the description of the rest of the startup sequence
-    // if the KDEWM environment variable has been set, then it will be used as KDE's
-    // window manager instead of kwin.
-    // if KDEWM is not set, ksmserver will ensure kwin is started.
-    // kwrapper5 is used to reduce startup time and memory usage
-    // kwrapper5 does not return useful error codes such as the exit code of ksmserver.
-    // We only check for 255 which means that the ksmserver process could not be
-    // started, any problems thereafter, e.g. ksmserver failing to initialize,
-    // will remain undetected.
-    // If the session should be locked from the start (locked autologin),
-    // lock now and do the rest of the KDE startup underneath the locker.
 
     bool rc = true;
     QEventLoop e;
@@ -710,11 +698,7 @@ bool startPlasmaSession(bool wayland)
 
     // We want to exit when both ksmserver and plasma-session-shutdown have finished
     // This also closes if ksmserver crashes unexpectedly, as in those cases plasma-shutdown is not running
-    if (wayland) {
-        serviceWatcher.addWatchedService(QStringLiteral("org.kde.KWinWrapper"));
-    } else {
-        serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
-    }
+    serviceWatcher.addWatchedService(QStringLiteral("org.kde.KWinWrapper"));
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.Shutdown"));
     serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
 
@@ -736,14 +720,7 @@ bool startPlasmaSession(bool wayland)
         startPlasmaSession.reset(new QProcess);
         qCDebug(PLASMA_STARTUP) << "Using classic boot";
 
-        QStringList plasmaSessionOptions;
-        if (wayland) {
-            plasmaSessionOptions << QStringLiteral("--no-lockscreen");
-        } else {
-            if (desktopLockedAtStart) {
-                plasmaSessionOptions << QStringLiteral("--lockscreen");
-            }
-        }
+        const QStringList plasmaSessionOptions{QStringLiteral("--no-lockscreen")};
 
         startPlasmaSession->setProcessChannelMode(QProcess::ForwardedChannels);
         QObject::connect(startPlasmaSession.get(), &QProcess::finished, &e, [&rc](int exitCode, QProcess::ExitStatus) {
@@ -757,22 +734,18 @@ bool startPlasmaSession(bool wayland)
         startPlasmaSession->start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
     } else {
         qCDebug(PLASMA_STARTUP) << "Using systemd boot";
-        const QString platform = wayland ? QStringLiteral("wayland") : QStringLiteral("x11");
-
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                                   QStringLiteral("/org/freedesktop/systemd1"),
                                                   QStringLiteral("org.freedesktop.systemd1.Manager"),
                                                   QStringLiteral("StartUnit"));
-        msg << QStringLiteral("plasma-workspace-%1.target").arg(platform) << QStringLiteral("fail");
+        msg << QStringLiteral("plasma-workspace-wayland.target") << QStringLiteral("fail");
         QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
         if (!reply.isValid()) {
             qCWarning(PLASMA_STARTUP) << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
             messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
             rc = false;
         }
-        if (wayland) {
-            startKSplashViaSystemd();
-        }
+        startKSplashViaSystemd();
     }
     if (rc) {
         QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, &e, &QEventLoop::quit);

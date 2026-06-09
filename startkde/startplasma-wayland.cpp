@@ -84,7 +84,7 @@ int main(int argc, char **argv)
     // variables (e.g. LANG and LC_*)
     importSystemdEnvrionment();
 
-    if (!startPlasmaSession(true))
+    if (!startPlasmaSession())
         return 4;
 
     // Anything after here is logout
