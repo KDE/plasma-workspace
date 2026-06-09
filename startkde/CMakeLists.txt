@@ -13,8 +13,8 @@ qt_add_dbus_interface(
 )
 ecm_qt_declare_logging_category(startplasma_SRCS HEADER debug.h IDENTIFIER PLASMA_STARTUP CATEGORY_NAME org.kde.startup)
 
-add_library(startplasma OBJECT startplasma.cpp ${startplasma_SRCS})
-target_link_libraries(startplasma PUBLIC
+add_executable(startplasma-wayland startplasma.cpp ${startplasma_SRCS})
+target_link_libraries(startplasma-wayland PRIVATE
     Qt::Core
     Qt::DBus
     KF6::ConfigGui
@@ -26,15 +26,9 @@ target_link_libraries(startplasma PUBLIC
     KNightTime
 )
 
-kconfig_target_kcfg_file(startplasma
+kconfig_target_kcfg_file(startplasma-wayland
     FILE ${CMAKE_SOURCE_DIR}/kcms/lookandfeel/lookandfeelsettings.kcfg
     CLASS_NAME LookAndFeelSettings
-)
-
-add_executable(startplasma-wayland ${START_PLASMA_COMMON_SRCS} startplasma-wayland.cpp)
-
-target_link_libraries(startplasma-wayland PRIVATE
-    startplasma
 )
 
 add_subdirectory(plasma-session)

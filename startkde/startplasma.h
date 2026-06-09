@@ -7,7 +7,7 @@
 #pragma once
 
 #include "config-startplasma.h"
-#include <ksplashinterface.h>
+
 #include <optional>
 
 extern QTextStream out;
