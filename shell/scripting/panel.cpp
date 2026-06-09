@@ -14,6 +14,7 @@
 #include <QScreen>
 
 #include "panelview.h"
+#include "screenpool.h"
 #include "scriptengine.h"
 #include "shellcorona.h"
 #include "widget.h"
@@ -112,10 +113,10 @@ KConfigGroup Panel::panelConfig() const
 {
     int screenNum = qMax(screen(), 0); // if we don't have a screen (-1) we'll be put on screen 0
 
-    if (QGuiApplication::screens().size() < screenNum) {
+    if (corona()->screenPool()->screenOrder().size() < screenNum) {
         return {};
     }
-    QScreen *s = QGuiApplication::screens().at(screenNum);
+    auto s = corona()->screenPool()->screenForId(screenNum);
     return PanelView::panelConfig(corona(), containment(), s);
 }
 
@@ -124,10 +125,10 @@ KConfigGroup Panel::panelConfigDefaults() const
 {
     int screenNum = qMax(screen(), 0); // if we don't have a screen (-1) we'll be put on screen 0
 
-    if (QGuiApplication::screens().size() < screenNum) {
+    if (corona()->screenPool()->screenOrder().size() < screenNum) {
         return {};
     }
-    QScreen *s = QGuiApplication::screens().at(screenNum);
+    auto s = corona()->screenPool()->screenForId(screenNum);
     return PanelView::panelConfigDefaults(corona(), containment(), s);
 }
 
