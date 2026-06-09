@@ -122,10 +122,6 @@ KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackag
 
     contents.setFlag(DesktopLayout, !pkg.filePath("layouts").isEmpty());
 
-    // TODO: Those seem unused... are deprecated?
-    contents.setFlag(RunCommand, !pkg.filePath("runcommandmainscript").isEmpty());
-    contents.setFlag(LogOutScript, !pkg.filePath("logoutmainscript").isEmpty());
-
     if (!pkg.filePath("layoutdefaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("layoutdefaults"));
         contents.setFlag(TitlebarLayout, configProvides(conf, u"kwinrc/org.kde.kdecoration2"_s, {u"ButtonsOnLeft"_s, u"ButtonsOnRight"_s}));

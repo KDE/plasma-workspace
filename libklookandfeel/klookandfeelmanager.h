@@ -49,9 +49,6 @@ public:
         TitlebarLayout = 1 << 17,
         WindowPlacement = 1 << 18,
         LayoutSettings = (1 << 20) - (1 << 16), // All the contents within Layout
-        // Maybe unused or deprecated?
-        RunCommand = 1 << 24,
-        LogOutScript = 1 << 25,
         // General Flag combinations
         KWinSettings = WindowSwitcher | WindowDecoration | WindowPlacement | TitlebarLayout | BorderSize,
         AllSettings = (1 << 26) - 1,
