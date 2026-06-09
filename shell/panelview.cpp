@@ -229,19 +229,6 @@ Q_INVOKABLE QString PanelView::fileFromPackage(const QString &key, const QString
     return corona()->kPackage().filePath(key.toUtf8(), fileName);
 }
 
-void PanelView::maximize()
-{
-    int length;
-    if (containment()->formFactor() == Plasma::Types::Vertical) {
-        length = m_screenToFollow->size().height();
-    } else {
-        length = m_screenToFollow->size().width();
-    }
-    setOffset(0);
-    setMinimumLength(length);
-    setMaximumLength(length);
-}
-
 Qt::Alignment PanelView::alignment() const
 {
     return m_alignment;

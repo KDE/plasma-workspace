@@ -184,7 +184,6 @@ public:
     KConfigGroup configDefaults() const;
 
     Q_INVOKABLE QString fileFromPackage(const QString &key, const QString &fileName);
-    Q_INVOKABLE void maximize();
 
     Qt::Alignment alignment() const;
     void setAlignment(Qt::Alignment alignment);
