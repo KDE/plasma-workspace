@@ -349,12 +349,5 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
     }
 
-    bool applyToAlien{true};
-    {
-        KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
-        KConfigGroup group(configOutput, u"General"_s);
-        group = KConfigGroup(&cfg, u"X11"_s);
-        applyToAlien = group.readEntry("exportKDEColors", applyToAlien);
-    }
-    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | (applyToAlien ? KRdbExportColors : 0));
+    runRdb(KRdbExportQtColors | KRdbExportGtkTheme);
 }

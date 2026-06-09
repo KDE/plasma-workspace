@@ -270,12 +270,6 @@ void KCMStyle::save()
     // applications on the fly, ensuring that we still follow the user's
     // export fonts/colors settings.
     uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
-    KConfig _kconfig(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);
-    KConfigGroup kconfig(&_kconfig, u"X11"_s);
-    bool exportKDEColors = kconfig.readEntry("exportKDEColors", true);
-    if (exportKDEColors) {
-        flags |= KRdbExportColors;
-    }
     runRdb(flags);
 
     // Now allow KDE apps to reconfigure themselves.

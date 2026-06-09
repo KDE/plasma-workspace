@@ -625,7 +625,7 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             return;
         }
 
-        runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings);
+        runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportQtSettings);
     }
     // Reload KWin if something changed, but only once.
     if (itemsToApply & KWinSettings) {
