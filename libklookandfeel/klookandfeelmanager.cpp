@@ -78,7 +78,6 @@ bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QSt
 
 KLookAndFeelManager::KLookAndFeelManager(QObject *parent)
     : QObject(parent)
-    , m_plasmashellChanged(false)
     , m_fontsChanged(false)
     , m_plasmaLocked(false)
 {
@@ -152,7 +151,6 @@ KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackag
                              || configProvides(conf, u"kdeglobals/General"_s, u"activeFont"_s));
 
         contents.setFlag(WindowPlacement, configProvides(conf, u"kwinrc/Windows"_s, u"Placement"_s));
-        contents.setFlag(ShellPackage, configProvides(conf, u"plasmashellrc/Shell"_s, u"ShellPackage"_s));
 
         // TODO: Currently managed together within the "DesktopLayout" content
     }
@@ -192,16 +190,6 @@ void KLookAndFeelManager::setWindowPlacement(const QString &value)
     }
 
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("Placement"), value);
-}
-
-void KLookAndFeelManager::setShellPackage(const QString &value)
-{
-    if (value.isEmpty()) {
-        return;
-    }
-
-    writeNewDefaults(QStringLiteral("plasmashellrc"), QStringLiteral("Shell"), QStringLiteral("ShellPackage"), value);
-    m_plasmashellChanged = true;
 }
 
 void KLookAndFeelManager::setWindowDecoration(const QString &library, const QString &theme, bool noPlugin)
@@ -580,12 +568,6 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             setWindowPlacement(group.readEntry("Placement", QStringLiteral("Centered")));
         }
 
-        if (itemsToApply.testFlag(ShellPackage)) {
-            group = KConfigGroup(conf, u"plasmashellrc"_s);
-            group = KConfigGroup(&group, u"Shell"_s);
-            setShellPackage(group.readEntry("ShellPackage", QString()));
-        }
-
         if (itemsToApply.testFlag(WindowDecoration)) {
             group = KConfigGroup(conf, u"kwinrc"_s);
             group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
@@ -645,12 +627,6 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
 
         if (m_mode == Mode::Defaults) {
             return;
-        }
-
-        if (m_plasmashellChanged) {
-            QDBusMessage message =
-                QDBusMessage::createSignal(QStringLiteral("/PlasmaShell"), QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("refreshCurrentShell"));
-            QDBusConnection::sessionBus().send(message);
         }
 
         runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings);

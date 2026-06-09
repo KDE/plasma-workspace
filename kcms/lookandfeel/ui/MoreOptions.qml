@@ -26,8 +26,7 @@ ColumnLayout {
                 model: [
                     { text: i18n("Desktop layout"),
                       flag: Private.LookandFeelManager.DesktopLayout
-                            | Private.LookandFeelManager.WindowPlacement
-                            | Private.LookandFeelManager.ShellPackage,
+                            | Private.LookandFeelManager.WindowPlacement,
                       enabled: !kcm.plasmaLocked
                     },
                     { text: i18n("Titlebar Buttons layout"), flag: Private.LookandFeelManager.TitlebarLayout, enabled: true },

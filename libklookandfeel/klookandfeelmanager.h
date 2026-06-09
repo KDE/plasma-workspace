@@ -48,7 +48,6 @@ public:
         DesktopLayout = 1 << 16,
         TitlebarLayout = 1 << 17,
         WindowPlacement = 1 << 18,
-        ShellPackage = 1 << 19,
         LayoutSettings = (1 << 20) - (1 << 16), // All the contents within Layout
         // Maybe unused or deprecated?
         RunCommand = 1 << 24,
@@ -88,7 +87,6 @@ public:
     void setBorderSize(const QString &size);
     void setBorderlessMaximized(const QString &value);
     void setWindowPlacement(const QString &value);
-    void setShellPackage(const QString &name);
 
     void setGeneralFont(const QString &font);
     void setFixedFont(const QString &font);
@@ -127,7 +125,6 @@ private:
 
     Mode m_mode = Mode::Apply;
     bool m_applyLatteLayout : 1;
-    bool m_plasmashellChanged : 1;
     bool m_fontsChanged : 1;
     bool m_plasmaLocked : 1;
 };
