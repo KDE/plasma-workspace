@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 # Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022, 2023.
 msgid ""
@@ -5,9 +6,9 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-20 00:44+0000\n"
-"PO-Revision-Date: 2023-04-07 23:40-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-06-06 19:03+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: AlbumArtStackView.qml:211
 #, kde-format
@@ -59,8 +60,7 @@ msgid "%1 (Normal)"
 msgstr ""
 
 #: ExpandedRepresentation.qml:683
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "シャッフル"
@@ -103,7 +103,7 @@ msgstr "リピート"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr ""
+msgstr "プレーヤーを自動的に選択"
 
 #: main.qml:60
 #, kde-format
