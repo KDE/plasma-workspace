@@ -536,24 +536,16 @@ bool syncDBusEnvironment()
     return true;
 }
 
-static bool desktopLockedAtStart = false;
-
 QProcess *setupKSplash()
 {
-    const auto dlstr = qgetenv("DESKTOP_LOCKED");
-    desktopLockedAtStart = dlstr == "true" || dlstr == "1";
-    qunsetenv("DESKTOP_LOCKED"); // Don't want it in the environment
-
     QProcess *p = nullptr;
-    if (!desktopLockedAtStart) {
-        const KConfig cfg(QStringLiteral("ksplashrc"));
-        // the splashscreen and progress indicator
-        KConfigGroup ksplashCfg = cfg.group(QStringLiteral("KSplash"));
-        if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
-            p = new QProcess;
-            p->setProcessChannelMode(QProcess::ForwardedChannels);
-            p->start(QStringLiteral("ksplashqml"), {ksplashCfg.readEntry("Theme", QStringLiteral("Breeze"))});
-        }
+    const KConfig cfg(QStringLiteral("ksplashrc"));
+    // the splashscreen and progress indicator
+    KConfigGroup ksplashCfg = cfg.group(QStringLiteral("KSplash"));
+    if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
+        p = new QProcess;
+        p->setProcessChannelMode(QProcess::ForwardedChannels);
+        p->start(QStringLiteral("ksplashqml"), {ksplashCfg.readEntry("Theme", QStringLiteral("Breeze"))});
     }
     return p;
 }
