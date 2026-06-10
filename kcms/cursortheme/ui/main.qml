@@ -101,7 +101,7 @@ KCM.GridViewKCM {
             displayComponent: QtControls.ComboBox {
                 id: sizeCombo
 
-                popup.width: kcm.largestSize * 2
+                popup.width: kcm.largestSize + labelMetrics.width
                 model: kcm.sizesModel
                 textRole: "display"
                 displayText: i18n("Size: %1", currentText)
@@ -111,6 +111,12 @@ KCM.GridViewKCM {
                     kcm.preferredSize = kcm.cursorSizeFromIndex(sizeCombo.currentIndex);
                 }
                 flat: true
+
+                TextMetrics {
+                    id: labelMetrics
+                    text: i18n("Size: %1", 999999)
+                    elide: Text.ElideNone
+                }
 
                 KCM.SettingStateBinding {
                 configObject: kcm.cursorThemeSettings
