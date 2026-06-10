@@ -9,6 +9,7 @@
 import QtQuick
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.workspace.keyboardlayout as Keyboards
 
 Loader {
     id: loader
@@ -74,6 +75,7 @@ Loader {
                     script: {
                         loader.item.activated = true;
                         Qt.inputMethod.show();
+                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.AnyInput
                     }
                 }
                 ParallelAnimation {
@@ -114,6 +116,7 @@ Loader {
                     script: {
                         loader.item.activated = false;
                         Qt.inputMethod.hide();
+                        Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.Never
                     }
                 }
             }
