@@ -16,6 +16,9 @@ sys.path.insert(0, _applets_dir)
 
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 from notificationstest.base import NotificationsTestBase
 from utils.notification_helpers import send_notification
@@ -54,7 +57,7 @@ class TestInlineReply(NotificationsTestBase):
         self.assertTrue(notification_replied)
         self.assertEqual(params[0], notification_id)
         self.assertEqual(params[1], reply_text)
-        self.assertFalse(element.is_displayed())
+        WebDriverWait(self.driver, 5, ignored_exceptions=(NoSuchElementException, WebDriverException)).until(EC.invisibility_of_element(element))
 
     def test_0_inline_reply(self) -> None:
         """
@@ -95,7 +98,7 @@ class TestInlineReply(NotificationsTestBase):
         element = self.driver.find_element(AppiumBy.NAME, "Replyy")
         element.click()
         self.driver.find_element(AppiumBy.NAME, "Type a reply…").send_keys("Click Replyy to reply")
-        self.assertFalse(element.is_displayed())
+        WebDriverWait(self.driver, 5, ignored_exceptions=(NoSuchElementException, WebDriverException)).until(EC.invisibility_of_element(element))
         element = self.driver.find_element(AppiumBy.NAME, "Send")
         element.click()
         loop.run()
