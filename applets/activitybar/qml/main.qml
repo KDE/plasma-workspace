@@ -68,6 +68,7 @@ PlasmoidItem {
                 text: name
                 activeFocusOnTab: true
                 width: implicitWidth
+                height: tabBar.contentHeight
 
                 Keys.onPressed: event => {
                     switch (event.key) {
