@@ -108,7 +108,6 @@ PanelView *Panel::panel() const
     return corona()->panelView(c);
 }
 
-// NOTE: this is used *only* for alignment and visibility
 KConfigGroup Panel::panelConfig() const
 {
     int screenNum = qMax(screen(), 0); // if we don't have a screen (-1) we'll be put on screen 0
@@ -132,14 +131,13 @@ KConfigGroup Panel::panelConfigDefaults() const
     return PanelView::panelConfigDefaults(corona(), containment(), s);
 }
 
-// NOTE: Alignment is the only one that reads and writes directly from panelconfig()
 QString Panel::alignment() const
 {
     int alignment;
     if (panel()) {
         alignment = panel()->alignment();
     } else {
-        alignment = panelConfig().readEntry("alignment", 0);
+        alignment = panelConfig().parent().readEntry("alignment", 0);
     }
 
     switch (alignment) {
@@ -152,7 +150,6 @@ QString Panel::alignment() const
     }
 }
 
-// NOTE: Alignment is the only one that reads and writes directly from panelconfig()
 void Panel::setAlignment(const QString &alignment)
 {
     int a = Qt::AlignCenter;
@@ -166,7 +163,7 @@ void Panel::setAlignment(const QString &alignment)
     if (panel()) {
         panel()->setAlignment(Qt::Alignment(a));
     } else {
-        panelConfig().writeEntry("alignment", a);
+        panelConfig().parent().writeEntry("alignment", a);
     }
 }
 
