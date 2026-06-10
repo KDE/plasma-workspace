@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-10 00:48+0000\n"
 "PO-Revision-Date: 2026-01-19 16:44+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -327,12 +327,12 @@ msgstr "Izkārtojuma iestatījumi:"
 msgid "Desktop layout"
 msgstr "Darbvirsmas izkārtojums"
 
-#: ui/MoreOptions.qml:33
+#: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Virsrakstjoslas pogu izkārtojums"
 
-#: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
@@ -341,57 +341,57 @@ msgstr ""
 "Darbvirsmas izkārtojuma pielietošana aizvieto pašreizējās darbvirsmas, "
 "paneļus, peldošos paneļus un logdaļas ar motīvam specifiskajiem."
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Izskata iestatījumi:"
 
-#: ui/MoreOptions.qml:70
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
 msgstr "Krāsas"
 
-#: ui/MoreOptions.qml:71
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
 msgstr "Programmas stils"
 
-#: ui/MoreOptions.qml:72
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Loga noformējuma stils"
 
-#: ui/MoreOptions.qml:73
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Loga noformējuma izmērs"
 
-#: ui/MoreOptions.qml:74
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
 msgstr "Ikonas"
 
-#: ui/MoreOptions.qml:75
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
 msgstr "„Plasma“ stils"
 
-#: ui/MoreOptions.qml:76
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Pointers"
 msgstr ""
 
-#: ui/MoreOptions.qml:77
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
 msgstr "Fonti"
 
-#: ui/MoreOptions.qml:78
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr "Uzdevumu pārslēdzējs"
 
-#: ui/MoreOptions.qml:79
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
 msgstr "Ielādēšanās ekrāns"

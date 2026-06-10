@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-10 00:48+0000\n"
 "PO-Revision-Date: 2025-10-06 15:43+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -322,7 +322,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Modalità Prestazioni"
 
-#: panelview.cpp:458
+#: panelview.cpp:439
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -334,13 +334,13 @@ msgstr ""
 "ridimensionamento della finestra. Prendi in considerazione l'utilizzo di "
 "altre impostazioni."
 
-#: panelview.cpp:1144
+#: panelview.cpp:1127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Nascondi la configurazione del pannello"
 
-#: panelview.cpp:1146
+#: panelview.cpp:1129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -414,12 +414,12 @@ msgstr "Gestisci desktop e pannelli…"
 msgid "Move keyboard focus between panels"
 msgstr "Sposta il fuoco della tastiera tra i pannelli"
 
-#: shellcorona.cpp:2302
+#: shellcorona.cpp:2307
 #, kde-format
 msgid "Add Panel"
 msgstr "Aggiungi pannello"
 
-#: shellcorona.cpp:2385
+#: shellcorona.cpp:2390
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

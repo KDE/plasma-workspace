@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 00:46+0000\n"
+"POT-Creation-Date: 2026-06-10 00:48+0000\n"
 "PO-Revision-Date: 2026-06-01 18:49+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -325,7 +325,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "パフォーマンスモード"
 
-#: panelview.cpp:458
+#: panelview.cpp:439
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -337,13 +337,13 @@ msgstr ""
 "の問題を起こすことが知られています。別の設定を使用することを検討してくださ"
 "い。"
 
-#: panelview.cpp:1144
+#: panelview.cpp:1127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "パネル設定を隠す"
 
-#: panelview.cpp:1146
+#: panelview.cpp:1129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -417,12 +417,12 @@ msgstr "デスクトップとパネルを管理..."
 msgid "Move keyboard focus between panels"
 msgstr "キーボードフォーカスをパネル間で移動"
 
-#: shellcorona.cpp:2302
+#: shellcorona.cpp:2307
 #, kde-format
 msgid "Add Panel"
 msgstr "パネルを追加"
 
-#: shellcorona.cpp:2385
+#: shellcorona.cpp:2390
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

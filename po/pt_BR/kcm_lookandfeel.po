@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-10 00:48+0000\n"
 "PO-Revision-Date: 2026-03-21 10:05-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -335,12 +335,12 @@ msgstr "Configurações de layout:"
 msgid "Desktop layout"
 msgstr "Layout da área de trabalho"
 
-#: ui/MoreOptions.qml:33
+#: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Layout dos botões da barra de título"
 
-#: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
@@ -350,57 +350,57 @@ msgstr ""
 "trabalho, painéis, encaixes e widgets, substituindo-os pelos que forem "
 "especificados no tema."
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Configurações de aparência:"
 
-#: ui/MoreOptions.qml:70
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
 msgstr "Cores"
 
-#: ui/MoreOptions.qml:71
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
 msgstr "Estilo dos aplicativos"
 
-#: ui/MoreOptions.qml:72
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Estilo das decorações de janela"
 
-#: ui/MoreOptions.qml:73
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Tamanho das decorações de janela"
 
-#: ui/MoreOptions.qml:74
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
 msgstr "Ícones"
 
-#: ui/MoreOptions.qml:75
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
 msgstr "Estilo do Plasma"
 
-#: ui/MoreOptions.qml:76
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Pointers"
 msgstr "Ponteiros"
 
-#: ui/MoreOptions.qml:77
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
 msgstr "Fontes"
 
-#: ui/MoreOptions.qml:78
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr "Seletor de tarefas"
 
-#: ui/MoreOptions.qml:79
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
 msgstr "Tela de apresentação"

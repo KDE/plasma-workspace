@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-04 00:47+0000\n"
-"PO-Revision-Date: 2024-03-30 20:52+0530\n"
+"PO-Revision-Date: 2026-06-09 21:45+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: main.cpp:60 plasmawindowedcorona.cpp:104
 #, kde-format
@@ -25,19 +25,19 @@ msgstr "சாளர பிளாஸ்மாய்டுகள்"
 #: main.cpp:62
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr ""
+msgstr "QML JavaScript பிழைநீக்கியை இயக்கு"
 
 #: main.cpp:65 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
-msgstr ""
+msgstr "சாளரத்தை மூடியபின்பும் பிளாஸ்மாய்டை கணினித் தட்டில் தக்கவைக்கும்"
 
 #: main.cpp:67
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr ""
+msgstr "குறிப்பிட்டுள்ள செருகுநிரலை கட்டாயப்படுத்தி ஏற்று"
 
 #: main.cpp:71 plasmawindowedcorona.cpp:107
 #, kde-format

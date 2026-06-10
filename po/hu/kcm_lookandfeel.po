@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-10 00:48+0000\n"
 "PO-Revision-Date: 2026-05-26 23:04+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -327,12 +327,12 @@ msgstr "Elrendezésbeállítások:"
 msgid "Desktop layout"
 msgstr "Asztali elrendezés"
 
-#: ui/MoreOptions.qml:33
+#: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Címsor gombok elrendezése"
 
-#: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
@@ -341,57 +341,57 @@ msgstr ""
 "Az asztali elrendezés alkalmazása törli a jelenlegi az asztalokat, "
 "paneleket, dokkokat és elemeket, lecserélve a téma által megadottakkal."
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Megjelenítési beállítások:"
 
-#: ui/MoreOptions.qml:70
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
 msgstr "Színek"
 
-#: ui/MoreOptions.qml:71
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
 msgstr "Alkalmazásstílus"
 
-#: ui/MoreOptions.qml:72
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Ablakdekoráció stílusa"
 
-#: ui/MoreOptions.qml:73
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Ablakdekoráció mérete"
 
-#: ui/MoreOptions.qml:74
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
 msgstr "Ikonok"
 
-#: ui/MoreOptions.qml:75
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
 msgstr "Plasma stílus"
 
-#: ui/MoreOptions.qml:76
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Pointers"
 msgstr "Mutatók"
 
-#: ui/MoreOptions.qml:77
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
 msgstr "Betűkészletek"
 
-#: ui/MoreOptions.qml:78
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr "Feladatváltó"
 
-#: ui/MoreOptions.qml:79
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
 msgstr "Nyitóképernyő"
