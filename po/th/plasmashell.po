@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 02:41+0000\n"
+"POT-Creation-Date: 2026-06-10 02:40+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -330,13 +330,13 @@ msgstr ""
 "NVIDIA GPU บน X11 เป็นที่ทราบกันดีว่ารูปแบบลอยตัวและ โหมดความทึบแบบปรับได้ "
 "ทําให้ประสิทธิภาพการลากหน้าต่างและปรับขนาดไม่ดี พิจารณาใช้อื่นๆ การตั้งค่า"
 
-#: panelview.cpp:1144
+#: panelview.cpp:1146
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "ซ่อนการกําหนดค่าแผง"
 
-#: panelview.cpp:1146
+#: panelview.cpp:1148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -410,12 +410,12 @@ msgstr "จัดการเดสก์ท็อปและแผง..."
 msgid "Move keyboard focus between panels"
 msgstr "ย้ายโฟกัสของแป้นพิมพ์ระหว่างแผง"
 
-#: shellcorona.cpp:2302
+#: shellcorona.cpp:2307
 #, kde-format
 msgid "Add Panel"
 msgstr "เพิ่มแผง"
 
-#: shellcorona.cpp:2385
+#: shellcorona.cpp:2390
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

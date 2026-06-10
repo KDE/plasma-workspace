@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-23 02:41+0000\n"
+"POT-Creation-Date: 2026-06-10 02:40+0000\n"
 "PO-Revision-Date: 2024-09-19 17:01+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -339,13 +339,13 @@ msgstr ""
 "και αλλαγής μεγέθους παραθύρων. Εξετάστε το ενδεχόμενο χρήσης άλλων "
 "ρυθμίσεων."
 
-#: panelview.cpp:1144
+#: panelview.cpp:1146
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Απόκρυψη διαμόρφωσης πίνακα"
 
-#: panelview.cpp:1146
+#: panelview.cpp:1148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -419,12 +419,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr "Μετακίνηση εστίασης του πληκτρολογίου μεταξύ πινάκων"
 
-#: shellcorona.cpp:2302
+#: shellcorona.cpp:2307
 #, kde-format
 msgid "Add Panel"
 msgstr "Προσθήκη πίνακα"
 
-#: shellcorona.cpp:2385
+#: shellcorona.cpp:2390
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
