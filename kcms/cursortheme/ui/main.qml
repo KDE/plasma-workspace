@@ -102,6 +102,7 @@ KCM.GridViewKCM {
                 id: sizeCombo
 
                 popup.width: kcm.largestSize + labelMetrics.width
+
                 model: kcm.sizesModel
                 textRole: "display"
                 displayText: i18n("Size: %1", currentText)
