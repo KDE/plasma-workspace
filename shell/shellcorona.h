@@ -15,6 +15,7 @@
 #include <QDBusArgument>
 #include <QDBusContext>
 #include <QDBusVariant>
+#include <QHash>
 #include <QPointer>
 #include <QSet>
 #include <QTimer>
@@ -27,7 +28,6 @@ class PanelView;
 class QMenu;
 class QScreen;
 class ScreenPool;
-class StrutManager;
 class ShellContainmentConfig;
 
 namespace KActivities
@@ -76,10 +76,6 @@ public:
     Q_INVOKABLE QRegion availableScreenRegion(int id) const override;
     Q_INVOKABLE QRect availableScreenRect(int id) const override;
     QRect strictAvailableScreenRect(int id) const;
-
-    // plasmashellCorona's value
-    QRegion _availableScreenRegion(int id) const;
-    QRect _availableScreenRect(int id) const;
 
     Q_INVOKABLE QStringList availableActivities() const;
 
@@ -343,7 +339,6 @@ private:
     QString m_testModeLayout;
     Plasma::Applet *m_showingAlternatives = nullptr;
 
-    StrutManager *m_strutManager;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
     // The set of all the screens which have both the desktop and all panels (if any) fully loaded
     QSet<int> m_screensWithUiReady;

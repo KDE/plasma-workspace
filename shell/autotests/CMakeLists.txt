@@ -16,7 +16,6 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                     ../alternativeshelper.cpp
                     ../screenpool.cpp
                     ../shellcorona.cpp
-                    ../strutmanager.cpp
                     ../shellcontainmentconfig.cpp
                     ../osd.cpp
                     ../panelview.cpp
