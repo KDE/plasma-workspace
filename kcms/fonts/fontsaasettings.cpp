@@ -264,8 +264,6 @@ FontsAASettings::FontsAASettings(QObject *parent)
     addItemInternal("antiAliasing", defaultAntiAliasing(), &FontsAASettings::antiAliasingChanged);
     addItemInternal("subPixel", defaultSubPixel(), &FontsAASettings::subPixelChanged);
     addItemInternal("hinting", defaultHinting(), &FontsAASettings::hintingChanged);
-
-    connect(this, &FontsAASettings::forceFontDPIChanged, this, &FontsAASettings::dpiChanged);
 }
 
 void FontsAASettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue, NotifySignalType notifySignal)
@@ -324,21 +322,6 @@ void FontsAASettings::setAntiAliasing(bool enabled)
     } else if (subPixel() == KXftConfig::SubPixel::None) {
         setSubPixel(defaultSubPixel());
     }
-}
-
-int FontsAASettings::dpi() const
-{
-    return forceFontDPI();
-}
-
-void FontsAASettings::setDpi(int newDPI)
-{
-    if (dpi() == newDPI) {
-        return;
-    }
-
-    setForceFontDPI(newDPI);
-    Q_EMIT dpiChanged();
 }
 
 KXftConfig::SubPixel::Type FontsAASettings::subPixel() const

@@ -4,10 +4,4 @@
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="kcmfonts" />
-  <group name="General">
-    <entry name="forceFontDPI" type="UInt">
-      <label>Force font DPI on X11</label>
-      <default>0</default>
-    </entry>
-  </group>
 </kcfg>

@@ -19,7 +19,6 @@ class FontsAASettings : public FontsAASettingsBase
     Q_PROPERTY(int excludeFrom READ excludeFrom WRITE setExcludeFrom NOTIFY excludeFromChanged)
     Q_PROPERTY(int excludeTo READ excludeTo WRITE setExcludeTo NOTIFY excludeToChanged)
     Q_PROPERTY(bool antiAliasing READ antiAliasing WRITE setAntiAliasing NOTIFY antiAliasingChanged)
-    Q_PROPERTY(int dpi READ dpi WRITE setDpi NOTIFY dpiChanged)
     Q_PROPERTY(KXftConfig::SubPixel::Type subPixel READ subPixel WRITE setSubPixel NOTIFY subPixelChanged)
     Q_PROPERTY(KXftConfig::Hint::Style hinting READ hinting WRITE setHinting NOTIFY hintingChanged)
     Q_PROPERTY(bool isAaImmutable READ isAaImmutable CONSTANT)
@@ -54,7 +53,6 @@ Q_SIGNALS:
     void dpiChanged();
     void subPixelChanged();
     void hintingChanged();
-    void aliasingChangeApplied();
     void excludeStateProxyChanged();
 
 private:

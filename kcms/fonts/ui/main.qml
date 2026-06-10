@@ -51,21 +51,6 @@ KCM.SimpleKCM {
         spacing: 0
 
         Kirigami.InlineMessage {
-            id: antiAliasingMessage
-            Layout.fillWidth: true
-            position: Kirigami.InlineMessage.Position.Header
-            showCloseButton: true
-            text: i18n("Some changes such as anti-aliasing or DPI will only affect newly started applications.")
-
-            Connections {
-                target: kcm
-                function onAliasingChangeApplied() {
-                    antiAliasingMessage.visible = true
-                }
-            }
-        }
-
-        Kirigami.InlineMessage {
             id: hugeFontsMessage
             Layout.fillWidth: true
             position: Kirigami.InlineMessage.Position.Header
@@ -99,15 +84,6 @@ KCM.SimpleKCM {
                     displayFontsMessage.visible = root.usingDisplayFont;
                 }
             }
-        }
-
-        Kirigami.InlineMessage {
-            id: dpiTwiddledMessage
-            Layout.fillWidth: true
-            position: Kirigami.InlineMessage.Position.Header
-            showCloseButton: true
-            text: i18n("The recommended way to scale the user interface is using the global screen scaling feature.")
-            actions: [ kscreenAction ]
         }
 
         Kirigami.InlineMessage {
@@ -416,47 +392,6 @@ KCM.SimpleKCM {
             }
             Kirigami.ContextualHelpButton {
                 toolTipText: xi18nc("@info:tooltip Hinting", "Hinting is a technique in which hints embedded in a font are used to enhance the rendering quality especially at small sizes. Stronger hinting generally leads to sharper edges but the small letters will less closely resemble their shape at big sizes.")
-            }
-        }
-
-        RowLayout {
-            Layout.preferredWidth: formLayout.maxImplicitWidth
-            // We don't want people messing with the font DPI on Wayland;
-            // they should always be using the global scaling system instead
-            visible: Qt.platform.pluginName === "xcb"
-
-            QtControls.CheckBox {
-                id: dpiCheckBox
-                checked: kcm.fontsAASettings.dpi !== 0
-                text: i18n("Force font DPI:")
-                onToggled: {
-                    kcm.fontsAASettings.dpi = checked ? dpiSpinBox.value : 0
-                    dpiTwiddledMessage.visible = checked
-                }
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.fontsAASettings
-                    settingName: "forceFontDPI"
-                    extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
-                }
-            }
-
-            QtControls.SpinBox {
-                id: dpiSpinBox
-                editable: true
-                value: kcm.fontsAASettings.dpi !== 0 ? kcm.fontsAASettings.dpi : 96
-                onValueModified: kcm.fontsAASettings.dpi = value
-                to: 999
-                from: 1
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.fontsAASettings
-                    settingName: "forceFontDPI"
-                    extraEnabledConditions: dpiCheckBox.enabled && dpiCheckBox.checked
-                }
-            }
-            Kirigami.ContextualHelpButton {
-                toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>Enter your screen's DPI here to make on-screen fonts match their physical sizes when printed. Changing this option from its default value will conflict with many apps; some icons and images may not scale as expected.</para><para>To increase text size, change the size of the fonts above. To scale everything, use the scaling slider on the <interface>Display & Monitor</interface> page.</para>")
             }
         }
     }

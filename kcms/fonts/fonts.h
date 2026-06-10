@@ -65,7 +65,6 @@ Q_SIGNALS:
     void fontsHaveChanged();
     void hintingCurrentIndexChanged();
     void subPixelCurrentIndexChanged();
-    void aliasingChangeApplied();
     void fontDpiSettingsChanged();
     void fontTooSmall();
     void imageProviderReadyChanged();
