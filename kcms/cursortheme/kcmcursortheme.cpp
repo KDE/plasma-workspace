@@ -179,6 +179,11 @@ bool CursorThemeConfig::iconsIsWritable() const
     return ((icons.exists() && icons.isDir() && icons.isWritable()) || (!icons.exists() && home.isWritable()));
 }
 
+int CursorThemeConfig::largestSize() const
+{
+    return m_largestSize;
+}
+
 void CursorThemeConfig::updateSizeComboBox()
 {
     // clear the combo box
@@ -195,7 +200,8 @@ void CursorThemeConfig::updateSizeComboBox()
         if (sizes.size() > 1) {
             QList<int> comboBoxList;
             QPixmap m_pixmap;
-
+            // Reset the largestSize
+            m_largestSize = -1;
             // insert the items
             m_pixmap = theme->createIcon(0);
 
@@ -205,7 +211,11 @@ void CursorThemeConfig::updateSizeComboBox()
                 item->setData(i);
                 m_sizesModel->appendRow(item);
                 comboBoxList << i;
+                if (m_pixmap.width() > m_largestSize) {
+                    m_largestSize = m_pixmap.width();
+                }
             }
+            Q_EMIT largestSizeChanged();
 
             // select an item
             int size = m_preferredSize;

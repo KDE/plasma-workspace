@@ -42,6 +42,7 @@ class CursorThemeConfig : public KQuickManagedConfigModule
 
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
     Q_PROPERTY(int preferredSize READ preferredSize WRITE setPreferredSize NOTIFY preferredSizeChanged)
+    Q_PROPERTY(int largestSize READ largestSize NOTIFY largestSizeChanged)
 
 public:
     CursorThemeConfig(QObject *parent, const KPluginMetaData &data);
@@ -69,6 +70,8 @@ public:
 
     bool downloadingFile() const;
 
+    int largestSize() const;
+
     QAbstractItemModel *cursorsModel();
     QAbstractItemModel *sizesModel();
 
@@ -85,6 +88,7 @@ Q_SIGNALS:
     void downloadingFileChanged();
     void preferredSizeChanged();
     void themeApplied();
+    void largestSizeChanged();
 
     void showSuccessMessage(const QString &message);
     void showInfoMessage(const QString &message);
@@ -121,6 +125,9 @@ private:
         still 36, so the UI defaults to 34. Now the user changes manually to 44. This
         will also change preferredSize. */
     int m_preferredSize;
+
+    // Holds the largest possible icon width
+    int m_largestSize;
 
     bool m_canInstall;
     bool m_canResize;

@@ -101,8 +101,7 @@ KCM.GridViewKCM {
             displayComponent: QtControls.ComboBox {
                 id: sizeCombo
 
-                property int maxContentWidth: implicitContentWidth
-                popup.width: Math.max(availableWidth, maxContentWidth)
+                popup.width: kcm.largestSize * 2
                 model: kcm.sizesModel
                 textRole: "display"
                 displayText: i18n("Size: %1", currentText)
@@ -146,21 +145,11 @@ KCM.GridViewKCM {
                         QtControls.Label {
                             id: iconLabel
                             Layout.alignment: Qt.AlignRight
-                            horizontalAlignment: Text.AlignRight
                             color: sizeComboDelegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                             text: i18n("Size: %1", sizeComboDelegate.size)
                             textFormat: Text.PlainText
                             elide: Text.ElideRight
                         }
-                    }
-                    Binding {
-                        target: sizeCombo
-                        property: "maxContentWidth"
-                        // The icon size is a square (96x96) so the text will always be pushed by it,
-                        // even when there is visibly some space.
-                        // Add the text width there to ensure we have enough space reserved.
-                        value: sizeComboDelegate.implicitWidth + iconLabel.implicitWidth
-                        when: sizeComboDelegate.index == sizeCombo.count - 1
                     }
                 }
             }
