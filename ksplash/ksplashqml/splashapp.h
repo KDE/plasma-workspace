@@ -30,7 +30,6 @@ protected:
     void setStage(int stage);
 
 private:
-    void setupWaylandIntegration();
     int m_stage;
     QList<SplashWindow *> m_windows;
     bool m_testing;
