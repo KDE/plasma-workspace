@@ -461,7 +461,9 @@ static QList<KServiceAction> additionalActions(const KService::Ptr &service)
     for (const auto &file : files) {
         KService actionsService(file);
         const auto filter = actionsService.property<QStringList>(QStringLiteral("X-KDE-OnlyForAppIds"));
-        if (filter.empty() || filter.contains(storageIdFromService(service))) {
+        const auto excludeFilter = actionsService.property<QStringList>(QStringLiteral("X-KDE-ExcludeAppIds"));
+        const QString storageId = storageIdFromService(service);
+        if ((filter.empty() || filter.contains(storageId)) && !excludeFilter.contains(storageId)) {
             actions.append(actionsService.actions());
         }
     }
