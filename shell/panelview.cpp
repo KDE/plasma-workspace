@@ -120,9 +120,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::updateEditModeLabel);
 
-    // Register enums
-    qmlRegisterUncreatableMetaObject(PanelView::staticMetaObject, "org.kde.plasma.shell.panel", 0, 1, "Global", QStringLiteral("Error: only enums"));
-
     qmlRegisterAnonymousType<QScreen>("", 1);
     rootContext()->setContextProperty(QStringLiteral("panel"), this);
     setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));

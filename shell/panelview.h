@@ -33,6 +33,9 @@ class PanelView : public PlasmaQuick::ContainmentView
 
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(Panel)
+    QML_UNCREATABLE("")
+
     /**
      * Alignment of the panel: when not fullsize it can be aligned at left,
      * right or center of the screen (left and right work as top/bottom
