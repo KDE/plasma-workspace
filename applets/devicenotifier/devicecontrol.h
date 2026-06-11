@@ -65,6 +65,7 @@ private:
     explicit DeviceControl(QObject *parent = nullptr);
 
     void deviceDelayRemove(const QString &udi, const QString &parentUdi);
+    QString findParentUdi(const QString &udi) const;
 
     struct DeviceInfo {
         std::shared_ptr<StorageInfo> storageInfo;
@@ -72,6 +73,7 @@ private:
         std::shared_ptr<SpaceInfo> spaceInfo;
         std::shared_ptr<MessageInfo> messageInfo;
         std::shared_ptr<ActionsInfo> actionsInfo;
+        bool pendingRemoval = false;
     };
 
     QList<DeviceInfo> m_devices;

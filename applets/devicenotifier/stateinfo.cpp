@@ -197,8 +197,9 @@ void StateInfo::setNotPresentState(const QString &udi)
 {
     // UnmountDone differs from NotPresent because it is triggered by
     // Solid::StorageAccess::teardownDone rather than by external removal.
-    // So there is no need to update it if the state is UnmountDone.
-    if (m_state != UnmountDone && m_storageInfo->device().udi() == udi) {
+    // Unmounting also differs because the teardown is still in progress.
+    // So there is no need to update it if the state is UnmountDone or Unmounting.
+    if (m_state != UnmountDone && m_state != Unmounting && m_storageInfo->device().udi() == udi) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : state changed to NotPresent";
         m_isBusy = false;
         m_isMounted = false;

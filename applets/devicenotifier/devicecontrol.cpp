@@ -154,7 +154,17 @@ void DeviceControl::onDeviceAdded(const QString &udi)
 {
     // There is a possibility that a device already present. Check it.
     if (m_devicesUdi.contains(udi)) {
-        return;
+        for (int i = 0; i < m_devices.size(); ++i) {
+            if (m_devices[i].storageInfo->device().udi() == udi) {
+                if (m_devices[i].pendingRemoval) {
+                    m_devices[i].pendingRemoval = false;
+                    deviceDelayRemove(udi, findParentUdi(udi));
+                } else {
+                    return;
+                }
+                break;
+            }
+        }
     }
 
     auto storageInfo = std::make_shared<StorageInfo>(udi);
@@ -230,9 +240,8 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
 
     // No need to keep device anymore because it was physically removed.
     if (auto it = m_parentDevices.constFind(udi); it != m_parentDevices.cend()) {
-        int size = it->size();
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Parent was removed for : " << udi;
-        for (int device = 0; device < size; ++device) {
+        for (int device = 0, size = it->size(); device < size; ++device) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Remove child : " << it->at(device)->device().udi();
             deviceDelayRemove(it->at(device)->device().udi(), udi);
         }
@@ -243,10 +252,23 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
         return;
     }
 
-    Q_EMIT deviceAboutToBeRemoved(udi);
-
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].storageInfo->device().udi() == udi) {
+            if (m_devices[position].stateInfo->isBusy()) {
+                // The device is performing an operation (Mounting/Unmounting/Checking/Repairing)
+                // but Solid's deviceRemoved already arrived. Defer the removal until the
+                // operation completes so the "safely removed" message can be generated.
+                //
+                // Flow: onDeviceRemoved returns → StateInfo's stateChanged signal is still
+                // connected → operation completes (e.g. teardownDone) → setIdleState emits
+                // stateChanged(udi) → onDeviceStatusChanged sees pendingRemoval and
+                // device is no longer busy → calls onDeviceRemoved to complete the removal.
+                m_devices[position].pendingRemoval = true;
+                return;
+            }
+
+            Q_EMIT deviceAboutToBeRemoved(udi);
+
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Begin remove device: " << udi << " from the model at position : " << position;
 
             // remove space monitoring because device not mounted
@@ -256,30 +278,27 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
             QModelIndex index = DeviceControl::index(position);
             Q_EMIT dataChanged(index, index, {Actions});
 
-            for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
-                for (int childPosition = 0; childPosition < it->size(); ++childPosition) {
-                    if (udi == it->at(childPosition)->device().udi()) {
-                        // If the message does not exist, don't delay the removal.
-                        if (m_devices[position].messageInfo->getMessage().isEmpty()) {
-                            deviceDelayRemove(udi, it.key());
-                            return;
-                        }
-                        auto timer = std::make_shared<QTimer>();
-                        timer->setSingleShot(true);
-                        timer->setInterval(REMOVE_INTERVAL);
-                        // this keeps the delegate around for 5 seconds after the device has been
-                        // removed in case there was a message, such as "you can now safely remove this"
-                        connect(timer.get(), &QTimer::timeout, this, [this, udi] {
-                            const RemoveTimerData &data = m_removeTimers[udi];
-                            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Timer activated for " << udi;
-                            Q_ASSERT(udi == data.udi);
-                            deviceDelayRemove(udi, data.parentUdi);
-                        });
-                        timer->start();
-                        m_removeTimers.insert(udi, {timer, udi, it.key()});
-                        return;
-                    }
+            const QString parentUdi = findParentUdi(udi);
+            if (!parentUdi.isEmpty()) {
+                // If the message does not exist, don't delay the removal.
+                if (m_devices[position].messageInfo->getMessage().isEmpty()) {
+                    deviceDelayRemove(udi, parentUdi);
+                    return;
                 }
+                auto timer = std::make_shared<QTimer>();
+                timer->setSingleShot(true);
+                timer->setInterval(REMOVE_INTERVAL);
+                // this keeps the delegate around for 5 seconds after the device has been
+                // removed in case there was a message, such as "you can now safely remove this"
+                connect(timer.get(), &QTimer::timeout, this, [this, udi] {
+                    const RemoveTimerData &data = m_removeTimers[udi];
+                    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Timer activated for " << udi;
+                    Q_ASSERT(udi == data.udi);
+                    deviceDelayRemove(udi, data.parentUdi);
+                });
+                timer->start();
+                m_removeTimers.insert(udi, {timer, udi, parentUdi});
+                return;
             }
             deviceDelayRemove(udi, QString());
             break;
@@ -352,6 +371,18 @@ void DeviceControl::onDeviceSizeChanged(const QString &udi)
     }
 }
 
+QString DeviceControl::findParentUdi(const QString &udi) const
+{
+    for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
+        for (int childPosition = 0; childPosition < it->size(); ++childPosition) {
+            if (udi == it->at(childPosition)->device().udi()) {
+                return it.key();
+            }
+        }
+    }
+    return {};
+}
+
 void DeviceControl::onDeviceStatusChanged(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Status for device : " << udi << " changed";
@@ -359,6 +390,13 @@ void DeviceControl::onDeviceStatusChanged(const QString &udi)
         if (m_devices[position].storageInfo && m_devices[position].storageInfo->device().udi() == udi) {
             QModelIndex index = DeviceControl::index(position);
             Q_EMIT dataChanged(index, index, {Mounted, State, OperationResult, Emblems, IsBusy});
+
+            // If a deferred removal is pending and the device is no longer busy,
+            // process the removal now.
+            if (m_devices[position].pendingRemoval && !m_devices[position].stateInfo->isBusy()) {
+                m_devices[position].pendingRemoval = false;
+                onDeviceRemoved(udi);
+            }
             return;
         }
     }
