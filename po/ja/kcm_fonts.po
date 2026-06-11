@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2025-09-21 16:01+0900\n"
 "Last-Translator: Yuma Kakei <yumasansansan@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -26,12 +26,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "X11 でフォントの DPI を指定"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -152,16 +146,7 @@ msgstr "ディスプレイ"
 msgid "Adjust Global Scale…"
 msgstr "グローバルスケールを調整…"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"アンチエイリアスや DPI などの一部の設定変更は、これ以降に起動されるアプリケー"
-"ションにのみ反映されます。"
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -170,7 +155,7 @@ msgstr ""
 "非常に大きいフォントを設定すると、表示が崩れる可能性があります。代わりに、ス"
 "クリーンのグローバルスケールを変更することを検討してください。"
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -182,16 +167,7 @@ msgstr ""
 "Display_typeface'>コンピュータディスプレイでの使用を想定しておらず</link>、表"
 "示が崩れる可能性があります。別のフォントを使用することを検討してください。"
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"ユーザインターフェースの大きさを変更する方法としては、グローバルスケール機能"
-"の使用が推奨されます。"
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -201,7 +177,7 @@ msgstr ""
 "Plasma は 4pt 未満のフォントでの使用を想定していません。サイズが 4pt にリセッ"
 "トされました。"
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -211,82 +187,82 @@ msgstr ""
 "非常に小さいフォントを設定すると、表示が崩れる可能性があります。代わりに、ス"
 "クリーンのグローバルスケールを変更することを検討してください。"
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "すべてのフォントを調整(&A)…"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "一般:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "一般フォントを選択"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "等幅:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "等幅フォントを選択"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "最小:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "最小フォントを選択"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "ツールバー:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "ツールバーフォントを選択"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "メニュー:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "メニューフォントを選択"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "ウィンドウタイトル:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "ウィンドウタイトルフォントを選択"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "アンチエイリアス:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "有効"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -301,28 +277,28 @@ msgstr ""
 "しないと、ブロック状に見えて不自然になります。問題が生じない限り、このオプ"
 "ションを有効にしておくことを推奨します。"
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "アンチエイリアスから除外する範囲"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "〜"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "サブピクセルレンダリング:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -344,13 +320,13 @@ msgstr ""
 "emphasis> の順であるものや、この機能には対応していない特殊な配列であるものも"
 "あります。</para>この機能は CRT モニタには対応していません。"
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "ヒンティング: "
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -364,25 +340,38 @@ msgstr ""
 "り鮮明になりますが、小さいサイズでは、大きなサイズでの本来の字形から離れて見"
 "えることがあります。"
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "フォントの DPI を指定:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "X11 でフォントの DPI を指定"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>画面の DPI を入力すると、画面上のフォントと、印刷時の物理的なサイズを合"
-"わせることができます。このオプションをデフォルト値から変更すると、多くのアプ"
-"リと競合し、一部のアイコンや画像が期待どおりに拡大縮小されない場合がありま"
-"す。</para> <para>文字サイズを大きくするには、上のフォントサイズを変更してく"
-"ださい。すべてを拡大縮小するには、<interface>ディスプレイとモニタ</interface>"
-"ページのスケールスライダーを使用してください。</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "アンチエイリアスや DPI などの一部の設定変更は、これ以降に起動されるアプリ"
+#~ "ケーションにのみ反映されます。"
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "ユーザインターフェースの大きさを変更する方法としては、グローバルスケール機"
+#~ "能の使用が推奨されます。"
+
+#~ msgid "Force font DPI:"
+#~ msgstr "フォントの DPI を指定:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>画面の DPI を入力すると、画面上のフォントと、印刷時の物理的なサイズ"
+#~ "を合わせることができます。このオプションをデフォルト値から変更すると、多く"
+#~ "のアプリと競合し、一部のアイコンや画像が期待どおりに拡大縮小されない場合が"
+#~ "あります。</para> <para>文字サイズを大きくするには、上のフォントサイズを変"
+#~ "更してください。すべてを拡大縮小するには、<interface>ディスプレイとモニタ"
+#~ "</interface>ページのスケールスライダーを使用してください。</para>"

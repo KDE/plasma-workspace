@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-04-03 22:02+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -47,39 +47,32 @@ msgstr "Название текущего набора курсоров"
 msgid "Current pointer size"
 msgstr "Текущий размер курсора"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Чтобы изменения вступили в силу, необходимо перезапустить сеанс Plasma."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не удалось создать временный файл."
 
 # BUGME: it's mouse cursor theme, not icon theme --aspotashev
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не удалось загрузить с сервера архив с набором курсоров: %1"
 
 # BUGME: it's mouse cursor theme, not icon theme --aspotashev
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Выбранный файл не является архивом темы курсоров."
 
 # BUGME: folder -> directory? --aspotashev
 # BUGME: 'cursors'? --ayavorsky 20200901
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Не удалось создать папку «icons»."
 
 # BUGME: it's mouse cursor theme, not icon theme --ayavorsky 2020091
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -88,12 +81,12 @@ msgstr ""
 "Набор с именем «%1» уже существует в папке наборов курсоров. Заменить новым "
 "набором?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Заменить набор?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Набор курсоров мыши успешно установлен."
@@ -105,13 +98,7 @@ msgstr "Набор курсоров мыши успешно установлен
 msgid "Timeout in seconds"
 msgstr "Задержка в секундах"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
-"Указанный размер курсоров (%1) недоступен, будет использоваться размер %2."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -121,7 +108,7 @@ msgstr ""
 "Этот инструмент позволяет задать набор курсоров для текущего сеанса Plasma, "
 "исключая случайный выбор отсутствующего или уже установленного набора."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -130,26 +117,26 @@ msgstr ""
 "Название набора курсоров для использования в текущем сеансе работы в Plasma "
 "(при передаче полного пути будет использована только его завершающая часть)."
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Просмотр используемого набора курсоров и списка доступных наборов курсоров"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Использовать указанный размер вместо определённого в наборе"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr "Набор курсоров «%1» уже используется в текущем сеансе Plasma."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -157,7 +144,7 @@ msgid ""
 msgstr ""
 "Набор курсоров «%1» успешно применён для текущего сеанса работы в Plasma."
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -166,7 +153,7 @@ msgstr ""
 "Чтобы новый набор курсоров отображался корректно, необходимо перезапустить "
 "сеанс Plasma."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -175,12 +162,12 @@ msgstr ""
 "Не удалось найти набор «%1». Необходимо указать один из следующих вариантов: "
 "%2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "В системе установлены следующие наборы курсоров:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Текущий набор для этого сеанса работы в Plasma)"
@@ -277,44 +264,53 @@ msgstr[1] "%1 секунды"
 msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунду"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Размер: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Настроить параметры отклика при запуске приложений…"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Установить из файла..."
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "З&агрузить наборы курсоров…"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Открытие набора"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Наборы курсоров мыши (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(доступные размеры: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Чтобы изменения вступили в силу, необходимо перезапустить сеанс Plasma."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr ""
+#~ "Указанный размер курсоров (%1) недоступен, будет использоваться размер %2."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Удалить набор"

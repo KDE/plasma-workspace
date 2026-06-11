@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2025-08-02 21:45+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,12 +31,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 25.04.3\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "אכיפת נק׳ לאינטש על גופן ב־X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -157,16 +151,7 @@ msgstr "תצוגה"
 msgid "Adjust Global Scale…"
 msgstr "התאמת קנה מידה מקיף…"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"חלק מהשינויים כגון החלקת קצוות או נק׳ לאינטש יחולו רק על יישומים חדשים "
-"שנפתחים מעתה."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -175,7 +160,7 @@ msgstr ""
 "גופנים גדולים מאוד יכולים להוליד תוצאות שנראות מוזר. במקום להשתמש בגופנים "
 "גדולים מאוד, כדאי להתאים את קנה המידה המקיף של המסך."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -187,16 +172,7 @@ msgstr ""
 "מיועדים לשימוש במסכי מחשב</link>, ועלולים לייצר תוצאות מוזרות. כדאי להשתמש "
 "בגופן אחר."
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"הדרך המומלצת לשנות את קנה המידה של ממשק המשתמש היא באמצעות יכולת קנה המידה "
-"המקיף של המסך."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -204,7 +180,7 @@ msgid ""
 "been reset to 4pt."
 msgstr "פלזמה לא תוכננה לתת מענה עם גופנים קטנים מ־4 נק׳. הגודל התאפס ל־4 נק׳."
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -214,82 +190,82 @@ msgstr ""
 "גופנים קטנים מאוד יכולים להוליד תוצאות שנראות מוזר. במקום להשתמש בגופנים "
 "קטנים מאוד, כדאי להתאים את קנה המידה המקיף של המסך."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&כיוון כל הגופנים…"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "כללי:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "בחירת גופן כללי"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "רוחב קבוע:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "בחירת גופן רוחב קבוע"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "קטן:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "בחירת גופן קטן"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "סרגל כלים:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "בחירת גופן סרגל כלים"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "תפריט:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "בחירת גופן תפריט"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "כותרת חלון:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "בחירת גופן לכותרות חלונות"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "החלקת קצוות:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "פעילה"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -304,28 +280,28 @@ msgstr ""
 "קצוות</emphasis> כדי להפחית את התופעה הזאת. בדרך כלל כדאי להשאיר את האפשרות "
 "הזאת פעילה אלא אם כן היא גורמת לבעיות."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "החרגת טווח מהחלקת קצוות"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 נק׳"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "עד"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "סוג עיבוד תת‏־פיקסלים:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -346,13 +322,13 @@ msgstr ""
 "יש <emphasis>BGR</emphasis> (כחול-ירוק-אדום) ומגוון סידורים אקזוטיים יותר לא "
 "נתמכים על ידי היכולת הזאת.</para>לא עובד עם צגי CRT (העבים הישנים)."
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "רמיזה:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -365,26 +341,39 @@ msgstr ""
 "בגדלים קטנים. רמיזה חזקה יותר בדרך כלל מחדדת את הקצוות אך האותיות הקטנות "
 "פחות דומות לצורת בגדלים גדולים יותר."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "אכיפת נק׳ לאינטש של הגופן:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "אכיפת נק׳ לאינטש על גופן ב־X11"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>כאן יש למלא את צפיפות הנקודות לאינטש של המסך שלך כדי שגופנים על גבי "
-"המסך יהיו תואמים לגודל הפיזי שלהם בהדפסה.</para><para>כדי להגדיל את גודל "
-"הטקסט, יש לשנות את גודל הגופנים להלן. כדי לשנות את הכול לפי קנה מידה, יש "
-"להשתמש במחוון הגלילה שבעמוד <interface>תצוגה וצג</interface>.</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "חלק מהשינויים כגון החלקת קצוות או נק׳ לאינטש יחולו רק על יישומים חדשים "
+#~ "שנפתחים מעתה."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "הדרך המומלצת לשנות את קנה המידה של ממשק המשתמש היא באמצעות יכולת קנה "
+#~ "המידה המקיף של המסך."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "אכיפת נק׳ לאינטש של הגופן:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>כאן יש למלא את צפיפות הנקודות לאינטש של המסך שלך כדי שגופנים על גבי "
+#~ "המסך יהיו תואמים לגודל הפיזי שלהם בהדפסה.</para><para>כדי להגדיל את גודל "
+#~ "הטקסט, יש לשנות את גודל הגופנים להלן. כדי לשנות את הכול לפי קנה מידה, יש "
+#~ "להשתמש במחוון הגלילה שבעמוד <interface>תצוגה וצג</interface>.</para>"
 
 #~ msgid "Select Font"
 #~ msgstr "בחירת גופן"

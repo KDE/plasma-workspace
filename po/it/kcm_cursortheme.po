@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-03-23 07:46+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -32,35 +32,27 @@ msgstr "Nome del tema di puntatori del mouse attuale"
 msgid "Current pointer size"
 msgstr "Dimensioni attuali del puntatore"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Affinché queste modifiche abbiano effetto devi riavviare la sessione di "
-"Plasma."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Impossibile creare un file temporaneo."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Impossibile scaricare l'archivio del tema di icone: %1"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Il file non è un archivio valido di tema di icone."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Impossibile creare la cartella «icons»."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +61,12 @@ msgstr ""
 "Esiste già un tema chiamato %1 nella tua cartella dei temi. Voi sostituirlo "
 "con questo?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Sovrascrivo il tema?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema installato correttamente."
@@ -86,13 +78,7 @@ msgstr "Tema installato correttamente."
 msgid "Timeout in seconds"
 msgstr "Timeout in secondi"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
-"La dimensione richiesta «%1» non è disponibile, sarà invece utilizzata %2."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -103,7 +89,7 @@ msgstr ""
 "la sessione attuale di Plasma, senza impostarlo casualmente su uno che non "
 "sia disponibile o già impostato."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -113,19 +99,19 @@ msgstr ""
 "attuale di Plasma (il passaggio di un percorso completo utilizzerà solo "
 "l'ultima parte del percorso)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Mostra tutti i temi disponibili sul sistema (e qual è il tema attuale)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 "Usa una dimensione specifica, anziché la dimensione predefinita del tema"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -134,7 +120,7 @@ msgstr ""
 "Il tema richiesto «%1» è già impostato come tema per l'attuale sessione di "
 "Plasma."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -143,7 +129,7 @@ msgstr ""
 "Il tema di puntatori del mouse %1 è stato applicato correttamente alla tua "
 "sessione attuale di Plasma"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -152,7 +138,7 @@ msgstr ""
 "Devi riavviare la sessione Plasma per visualizzare correttamente il tema di "
 "puntatori del mouse appena applicato."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -161,12 +147,12 @@ msgstr ""
 "Impossibile trovare il tema «%1». Il tema dovrebbe essere una delle seguenti "
 "opzioni: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Hai i seguenti temi del cursore del mouse sul tuo sistema:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tema attuale per questa sessione di Plasma)"
@@ -261,44 +247,54 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 secondo"
 msgstr[1] "%1 secondi"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Dimensione: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Configura la notifica di avvio…"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Installa da file…"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "&Scarica nuovo…"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Apri tema"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "File di tema di puntatori (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Dimensioni disponibili: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Affinché queste modifiche abbiano effetto devi riavviare la sessione di "
+#~ "Plasma."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr ""
+#~ "La dimensione richiesta «%1» non è disponibile, sarà invece utilizzata %2."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Rimuovi tema"

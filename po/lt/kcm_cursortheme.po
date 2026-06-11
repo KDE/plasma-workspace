@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-03-24 14:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -33,34 +33,27 @@ msgstr "Dabartinio rodyklės apipavidalinimo pavadinimas"
 msgid "Current pointer size"
 msgstr "Dabartinis rodyklės dydis"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Tam, kad įsigaliotų šie pakeitimai, turite paleisti Plasma seansą iš naujo."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nepavyko sukurti laikinojo failo."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nepavyko atsisiųsti piktogramų apipavidalinimo archyvo: %1"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Failas nėra teisingas piktogramų apipavidalinimo archyvas."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Nepavyko sukurti 'icons' aplanko."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +62,12 @@ msgstr ""
 "Apipavidalinimas, pavadinimu %1, jūsų piktogramų apipavidalinimo aplanke jau "
 "yra. Ar norite jį pakeisti šiuo apipavidalinimu?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Perrašyti apipavidalinimą?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Apipavidalinimas sėkmingai įdiegtas."
@@ -86,13 +79,7 @@ msgstr "Apipavidalinimas sėkmingai įdiegtas."
 msgid "Timeout in seconds"
 msgstr "Laiko limitas, sekundėmis"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
-"Užklaustas dydis „%1“ yra neprieinamas, todėl, vietoj jo, naudojamas %2."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -103,7 +90,7 @@ msgstr ""
 "apipavidalinimą ir padeda išvengti ir nenustatyti neprieinamo ar jau "
 "nustatyto pelės rodyklės apipavidalinimo."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -113,7 +100,7 @@ msgstr ""
 "seansui, pavadinimas (perduodant visą kelią, bus naudojama tik paskutinė "
 "kelio dalis)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -121,12 +108,12 @@ msgstr ""
 "Rodyti visus sistemoje prieinamus apipavidalinimus (ir kuris yra dabartinis "
 "apipavidalinimas)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Naudoti konkretų dydį, o ne numatytąjį apipavidalinimo dydį"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -135,7 +122,7 @@ msgstr ""
 "Užklaustas apipavidalinimas „%1“ jau yra nustatytas kaip dabartinio Plasma "
 "seanso apipavidalinimas."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -144,7 +131,7 @@ msgstr ""
 "Dabartiniam Plasma seansui sėkmingai pritaikytas pelės rodyklės "
 "apipavidalinimas %1"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -153,7 +140,7 @@ msgstr ""
 "Tam, kad būtų tinkamai atvaizduojamas naujai pritaikytas pelės rodyklės "
 "apipavidalinimas, reikia paleisti Plasma seansą iš naujo."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -162,12 +149,12 @@ msgstr ""
 "Nepavyko rasti apipavidalinimo „%1“. Apipavidalinimas turėtų būti vienas iš "
 "šių variantų: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Savo sistemoje turite šiuos pelės rodyklės apipavidalinimus:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Dabartinis šio Plasma seanso apipavidalinimas)"
@@ -264,44 +251,54 @@ msgstr[1] "%1 sekundės"
 msgstr[2] "%1 sekundžių"
 msgstr[3] "%1 sekundė"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Dydis: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfigūruoti paleidimo grįžtamąjį ryšį…"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "Į&diegti iš failo…"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "&Gauti naują…"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Atverti apipavidalinimą"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Rodyklės apipavidalinimo failai (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Prieinami dydžiai: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Tam, kad įsigaliotų šie pakeitimai, turite paleisti Plasma seansą iš "
+#~ "naujo."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr ""
+#~ "Užklaustas dydis „%1“ yra neprieinamas, todėl, vietoj jo, naudojamas %2."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Šalinti apipavidalinimą"

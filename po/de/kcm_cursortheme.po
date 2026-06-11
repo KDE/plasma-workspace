@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-03-26 22:39+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -29,35 +29,27 @@ msgstr "Name des aktuellen Mauszeiger-Designs"
 msgid "Current pointer size"
 msgstr "Aktuelle Zeigergröße"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen wirksam "
-"werden."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Es kann keine temporäre Datei erstellt werden."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Das Archiv für das Symboldesign %1 kann nicht heruntergeladen werden."
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Die Datei ist kein gültiges Symboldesign-Archiv."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Der Ordner „Symbole“ lässt sich nicht erzeugen."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +58,12 @@ msgstr ""
 "Ein Design namens %1 existiert bereits im Ordner für Symboldesigns. Möchten "
 "Sie es überschreiben?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Design überschreiben?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Das Design wurde erfolgreich installiert."
@@ -83,14 +75,7 @@ msgstr "Das Design wurde erfolgreich installiert."
 msgid "Timeout in seconds"
 msgstr "Zeitüberschreitung in Sekunden"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
-"Die angeforderte Größe „%1“ ist nicht verfügbar. Stattdessen wird %2 "
-"verwendet."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -101,7 +86,7 @@ msgstr ""
 "Plasma-Sitzung festzulegen, ohne versehentlich ein nicht verfügbares oder "
 "bereits ausgewähltes zu verwenden."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -111,7 +96,7 @@ msgstr ""
 "festlegen möchten (bei Angabe des vollständigen Pfades wird nur der letzte "
 "Teil verwendet)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -119,13 +104,13 @@ msgstr ""
 "Alle auf dem System verfügbaren Designs anzeigen (und welches das aktuelle "
 "ist)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 "Eine benutzerdefinierte Größe statt der Standardgröße des Designs verwenden"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -134,7 +119,7 @@ msgstr ""
 "Das gewählte Design „%1“ wird bereits für die aktuelle Plasma-Sitzung "
 "verwendet."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -143,7 +128,7 @@ msgstr ""
 "Das Mauszeiger-Design „%1“ wurde erfolgreich für die aktuelle Plasma-Sitzung "
 "übernommen"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -152,7 +137,7 @@ msgstr ""
 "Die Plasma-Sitzung muss neu gestartet werden, damit das gerade übernommene "
 "Mauszeiger-Design korrekt dargestellt wird."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -161,12 +146,12 @@ msgstr ""
 "Das Design „%1“ wurde nicht gefunden. Es sollte eines der folgenden Designs "
 "gewählt werden: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Sie haben die folgenden Mauszeiger-Designs auf Ihrem System:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Aktuelles Design dieser Plasma-Sitzung)"
@@ -262,44 +247,55 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 Sekunde"
 msgstr[1] "%1 Sekunden"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Größe: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Startanzeige einrichten …"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Aus Datei installieren …"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "&Neue holen …"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Design öffnen"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Zeigerdesigndateien (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Verfügbare Größen: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen "
+#~ "wirksam werden."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr ""
+#~ "Die angeforderte Größe „%1“ ist nicht verfügbar. Stattdessen wird %2 "
+#~ "verwendet."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Design entfernen"

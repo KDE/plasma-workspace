@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-04-04 19:28+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -30,33 +30,27 @@ msgstr "Nazwa bieżącego zestawu wskaźników"
 msgid "Current pointer size"
 msgstr "Obecny rozmiar wskaźnika"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "Zmiany zostaną zastosowane dopiero po ponownym uruchomieniu Plazmy."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nie można utworzyć pliku tymczasowego."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nie można pobrać archiwum zestawu ikon: %1"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ten plik nie jest poprawnym zestawem ikon."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Nie można utworzyć katalogu 'ikon'."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -65,12 +59,12 @@ msgstr ""
 "Zestaw o nazwie %1 już istnieje w twoim katalogu zestawów ikon. Czy chcesz "
 "go zastąpić?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Czy zastąpić zestaw?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Pomyślnie wgrano zestaw."
@@ -82,12 +76,7 @@ msgstr "Pomyślnie wgrano zestaw."
 msgid "Timeout in seconds"
 msgstr "Czas oczekiwania w sekundach"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "Żądny rozmiar '%1' jest niedostępny, więc użyto %2."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -98,7 +87,7 @@ msgstr ""
 "Plazmy bez zagrożenia przypadkowego ustawienia go na taki, który jest "
 "niedostępny lub taki, który już jest ustawiony."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -107,19 +96,19 @@ msgstr ""
 "Nazwa zestawu wskaźników, który chcesz ustawić dla bieżącej sesji Plazmy (po "
 "wpisaniu pełnej ścieżki, zostanie użyta tylko ostatnia jej część)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Pokaż wszystkie wyglądy dostępne w systemie (i który z nich jest bieżącym)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Użyj danego rozmiaru, zamiast domyślnego z wyglądu"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -128,7 +117,7 @@ msgstr ""
 "Żądany zestaw \"%1\" jest już ustawiony jako zestaw dla bieżącej sesji "
 "Plazmy."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -137,7 +126,7 @@ msgstr ""
 "Pomyślnie przestawiono na zestaw wskaźników myszy %1 w bieżącym posiedzeniu "
 "Plazmy"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -146,7 +135,7 @@ msgstr ""
 "Aby nowy zestaw wskaźników zaczął wyświetlać się poprawnie, należy uruchomić "
 "ponownie Plazmę."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -155,12 +144,12 @@ msgstr ""
 "Nie można znaleźć wyglądu \"%1\". Wygląd powinien być jednym z następujących "
 "ustawień: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Masz następujące zestawy wskaźników na swoim systemie:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Bieżący wygląd dla tej sesji Plazmy)"
@@ -258,44 +247,51 @@ msgstr[0] "%1 sekundzie"
 msgstr[1] "%1 sekundach"
 msgstr[2] "%1 sekundach"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Rozmiar: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Ustawienia odzewu przy uru&chamianiu…"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "Wgraj z pl&iku…"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "&Pobierz nowe…"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Otwórz zestaw"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Pliki zestawu wskaźników (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Dostępne rozmiary: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "Zmiany zostaną zastosowane dopiero po ponownym uruchomieniu Plazmy."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr "Żądny rozmiar '%1' jest niedostępny, więc użyto %2."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Usuń zestaw"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2024-04-24 16:19+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -36,33 +36,27 @@ msgstr "Aktīvā kursoru motīva nosaukums"
 msgid "Current pointer size"
 msgstr "Aktīvā kursora lielums"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "„Plasma“ sesija ir jāpārstartē, lai izmaiņas stātos spēkā."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Neizdodas izveidot pagaidu datni."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Neizdodas lejupielādēt ikonu motīva arhīvu: %1"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Datne nav derīgs ikonu motīva arhīvs."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Neizdodas izveidot ikonu mapi („icons“)."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -70,12 +64,12 @@ msgid ""
 msgstr ""
 "Motīvu mapē jau atrodas motīvs ar nosaukumu „%1“. Vai vēlaties to aizvietot?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Pārrakstīt motīvu?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Motīvs ir veiksmīgi instalēts."
@@ -87,12 +81,7 @@ msgstr "Motīvs ir veiksmīgi instalēts."
 msgid "Timeout in seconds"
 msgstr "Noildze sekundēs"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "Pieprasītais izmērs „%1“ nav pieejams, tā vietā izmanto „%2“."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -106,7 +95,7 @@ msgstr ""
 "Šis rīks ļauj iestatīt šīs „Plasma“ sesijas peles kursoru motīvu, to nejauši "
 "neiestatot uz nepieejamu vai jau iestatītu motīvu."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -118,18 +107,18 @@ msgstr ""
 "Kursoru motīva nosaukums, kuru vēlaties iestatīt šai „Plasma“ sesijai "
 "(norādot pilnu ceļu, vērā tiks ņemta tika šī ceļa beigu daļa)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Parādīt visus sistēmā pieejamos motīvus (un šobrīd aktīvo motīvu)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Izmantot noteiktu izmēru motīva noklusējuma izmēra vietā"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -140,7 +129,7 @@ msgid ""
 msgstr ""
 "Pieprasītais motīvs „%1“ jau ir iestatīts kā šīs „Plasma“ sesijas motīvs"
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -150,7 +139,7 @@ msgid ""
 "session"
 msgstr "Šai „Plasma“ sesijai ir veiksmīgi pielietots peles kursoru motīvs „%1“"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -162,7 +151,7 @@ msgstr ""
 "„Plasma“ sesija ir jāpārstartē, lai pielietotais peles kursoru motīvs "
 "darbotos pareizi."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -172,13 +161,13 @@ msgid ""
 "%2"
 msgstr "Nevar atrast motīvu „%1“. Motīvs var būt viens no šiem: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Sistēmā šobrīd ir šādi peles kursoru motīvi:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Aktīvais motīvs šajā „Plasma“ sesijā)"
@@ -282,45 +271,52 @@ msgstr[0] "%1 sekundes"
 msgstr[1] "%1 sekundēm"
 msgstr[2] "%1 sekundēm"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Izmērs: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfigurēt palaišanas animāciju..."
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalēt no datnes..."
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "&Iegūt jaunu..."
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Atvērt motīvu"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, fuzzy, kde-format
 #| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kursoru motīva datnes (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Pieejamie izmēri: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "„Plasma“ sesija ir jāpārstartē, lai izmaiņas stātos spēkā."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr "Pieprasītais izmērs „%1“ nav pieejams, tā vietā izmanto „%2“."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Noņemt motīvu"

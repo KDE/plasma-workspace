@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2025-07-10 19:57+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -27,13 +27,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-# Jätetty toistaiseksi kääntämättä, kunnes löytyy, mitä ”display font/typeface” on suomeksi!
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Pakota fontin DPI X11:ssä"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -155,16 +148,7 @@ msgstr "Display"
 msgid "Adjust Global Scale…"
 msgstr "Säädä yleismittakaavaa…"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"Pehmennyksen tai DPI:n muutokset tulevat voimaan vasta myöhemmin "
-"käynnistetyissä ohjelmissa."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -173,7 +157,7 @@ msgstr ""
 "Hyvin suuret fontit voivat näyttää oudolta. Suuren fonttikoon sijaan saattaa "
 "kannattaa säätää yleismittakaavaa."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -185,14 +169,7 @@ msgstr ""
 "Display_typeface'>ei ole tarkoitettu tietokonenäytöille</link>, ja ne voivat "
 "aiheuttaa outoja tuloksia. Harkitse toista fonttia."
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr "Käyttöliittymän skaalaukseen suositellaan yleismittakaavan säätämistä."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -202,7 +179,7 @@ msgstr ""
 "Plasmaa ei ole suunniteltu käyttämään 4:ää pistettä pienempiä fontteja. "
 "Kooksi on palautettu 4 pt."
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -212,82 +189,82 @@ msgstr ""
 "Hyvin pienet fontit voivat näyttää oudolta. Pienen fonttikoon sijaan saattaa "
 "kannattaa säätää yleismittakaavaa."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Säädä kaikkia fontteja…"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "Yleinen:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "Valitse yleisfontti"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "Tasavälinen:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Valitse tasavälinen fontti"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "Pieni:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "Valitse pieni fontti"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "Työkalurivi:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Valitse työkalurivin fontti"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "Valikko:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "Valitse valikkofontti"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "Ikkunan otsikko:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "Valitse ikkunaotsikon fontti"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Pehmennys:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "Käytä"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -302,28 +279,28 @@ msgstr ""
 "paranneta <emphasis>antialiasoinnilla</emphasis>. Asetusta kannattaa "
 "käyttää, ellei se aiheuta ongelmia."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Pehmentämättä jätettävä väli"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "–"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Alipikselihahmonnus:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -345,13 +322,13 @@ msgstr ""
 "jotkin <emphasis>BGR</emphasis>-järjestystä tai jotakin oudompaa, mitä tämä "
 "ominaisuus ei tue.</para>Tämä ei toimi kuvaputkinäytöissä (CRT)."
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Vihjeistys:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -365,26 +342,39 @@ msgstr ""
 "vihjeistys johtaa yleensä terävämpiin reunoihin, mutta pienet kirjaimet "
 "muistuttavat muodoltaan vähemmän suurikokoisia vastineitaan."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "Pakota fontin DPI:"
+# Jätetty toistaiseksi kääntämättä, kunnes löytyy, mitä ”display font/typeface” on suomeksi!
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Pakota fontin DPI X11:ssä"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>Syötä tähän näytön DPI-luku, jotta näyttöfonttien koko vastaisivat "
-"niiden fyysistä kokoa tulostettaessa. Joissakin sovelluksissa asetuksen "
-"muuttaminen voi aiheuttaa ongelmia: kuvakkeet tai kuvat eivät esimerkiksi "
-"skaalaudu odotetusti.</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "Pehmennyksen tai DPI:n muutokset tulevat voimaan vasta myöhemmin "
+#~ "käynnistetyissä ohjelmissa."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "Käyttöliittymän skaalaukseen suositellaan yleismittakaavan säätämistä."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "Pakota fontin DPI:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>Syötä tähän näytön DPI-luku, jotta näyttöfonttien koko vastaisivat "
+#~ "niiden fyysistä kokoa tulostettaessa. Joissakin sovelluksissa asetuksen "
+#~ "muuttaminen voi aiheuttaa ongelmia: kuvakkeet tai kuvat eivät esimerkiksi "
+#~ "skaalaudu odotetusti.</para>"
 
 #~ msgid "Select Font"
 #~ msgstr "Valitse fontti"

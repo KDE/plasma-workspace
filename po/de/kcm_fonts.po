@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-01-11 19:41+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -20,12 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.08.3\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "DPI für Schriften erzwingen (X11)"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -146,16 +140,7 @@ msgstr "Display"
 msgid "Adjust Global Scale…"
 msgstr "Globale Skalierung anpassen …"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"Bestimmte Einstellungen, wie die der Kantenglättung oder DPI, werden sich "
-"nur auf neu gestartete Anwendungen auswirken."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -165,7 +150,7 @@ msgstr ""
 "der Verwendung sehr großer Schriftgrößen sollten Sie die Verwendung der "
 "„Globalen Skalierung“ in Erwägung ziehen."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -178,16 +163,7 @@ msgstr ""
 "link> und können zu seltsam aussehenden Ergebnissen führen. Erwägen Sie die "
 "Verwendung einer anderen Schriftart."
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"Der bevorzugte Weg, die Benutzeroberfläche zu skalieren, ist die Verwendung "
-"der Funktion „Globale Skalierung“."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -197,7 +173,7 @@ msgstr ""
 "Plasma ist nicht dafür gemacht, mit Schriftarten kleiner als 4 pt verwendet "
 "zu werden. Die Schriftgröße wurde auf 4 pt zurückgesetzt."
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -208,82 +184,82 @@ msgstr ""
 "Statt der Verwendung sehr kleiner Schriftgrößen sollten Sie die Verwendung "
 "der „Globalen Skalierung“ in Erwägung ziehen."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Alle Schriftarten anpassen …"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "Allgemein:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "Allgemeine Schriftart auswählen"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "Feste Breite:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Schrift mit fester Zeichenbreite auswählen"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "Klein:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "Kleine Schrift auswählen"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "Werkzeugleiste:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Schriftart für Werkzeugleisten auswählen"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "Menü:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "Schriftart für Menü auswählen"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "Fenstertitel:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "Schriftart für Fenstertitel auswählen"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Kantenglättung:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "Aktivieren"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -299,28 +275,28 @@ msgstr ""
 "angewendet wird, um diesen Effekt zu reduzieren. Sie sollten diese "
 "Einstellung generell aktivieren, sofern keine Probleme damit auftreten."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Bereich von Kantenglättung ausschließen"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "bis"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Sub-Pixel-Rendering:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -344,13 +320,13 @@ msgstr ""
 "und einige exotische Anordnungen werden von dieser Funktion nicht "
 "unterstützt.</para>Dies funktioniert nicht mit CRT-Monitoren."
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hinting:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -364,30 +340,43 @@ msgstr ""
 "verbessern. Stärkeres Hinting führt im Allgemeinen zu schärferen Kanten, "
 "aber die kleinen Buchstaben ähneln ihrer Form in großen Größen weniger stark."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "DPI für Schriften erzwingen:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "DPI für Schriften erzwingen (X11)"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>Geben Sie hier den DPI-Wert Ihres Bildschirms ein, damit die Schrift "
-"auf dem Bildschirm mit ihrer physischen Größe übereinstimmt, wenn sie "
-"ausgegeben wird. Das Ändern dieser Option gegenüber dem Standardwert führt "
-"bei vielen Anwendungen zu Konflikten; einige Symbole und Bilder werden "
-"möglicherweise nicht wie erwartet skaliert.</para><para>Um die Textgröße zu "
-"erhöhen, ändern Sie die Größe der Schriftarten oben. Um alles zu skalieren, "
-"verwenden Sie den Skalierungsschieber auf der Seite <interface>Anzeige & "
-"Monitor</interface>.</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "Bestimmte Einstellungen, wie die der Kantenglättung oder DPI, werden sich "
+#~ "nur auf neu gestartete Anwendungen auswirken."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "Der bevorzugte Weg, die Benutzeroberfläche zu skalieren, ist die "
+#~ "Verwendung der Funktion „Globale Skalierung“."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "DPI für Schriften erzwingen:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>Geben Sie hier den DPI-Wert Ihres Bildschirms ein, damit die "
+#~ "Schrift auf dem Bildschirm mit ihrer physischen Größe übereinstimmt, wenn "
+#~ "sie ausgegeben wird. Das Ändern dieser Option gegenüber dem Standardwert "
+#~ "führt bei vielen Anwendungen zu Konflikten; einige Symbole und Bilder "
+#~ "werden möglicherweise nicht wie erwartet skaliert.</para><para>Um die "
+#~ "Textgröße zu erhöhen, ändern Sie die Größe der Schriftarten oben. Um "
+#~ "alles zu skalieren, verwenden Sie den Skalierungsschieber auf der Seite "
+#~ "<interface>Anzeige & Monitor</interface>.</para>"
 
 #~ msgid "Select Font"
 #~ msgstr "Schriftart auswählen"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2024-06-11 14:10+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -32,35 +32,27 @@ msgstr "Cari kursor mövzusunun adı"
 msgid "Current pointer size"
 msgstr "Cari kursorun ölçüsü"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Bu dəyişikliklərin qüvvəyə minməsi üçün Plazma seansını yenidən "
-"başlatmalısınız."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Müvəqqəti fayl yaradıla bilmir."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Yüklənə bilməyən İkon mövzu arxivi: %1"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fayl düzgün İkon mövzu arxivi deyil."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "\"icons\" qovluğu yaradıla bilmədi."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +61,12 @@ msgstr ""
 "%1 adlı mövzu artıq sizin ikon mövzu arxivinizdə mövcuddur. Mövcud olanı "
 "yenisi ilə əvəz etmək istəyirsiniz?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Mövzu üstünə yazılsın?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Mövzu uğurla quraşdırıldı."
@@ -86,12 +78,7 @@ msgstr "Mövzu uğurla quraşdırıldı."
 msgid "Timeout in seconds"
 msgstr "Gecikmə saniyələr ilə"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "Tələb etdiyiniz \"%1\" ölçü əlçatan deyil, əvəzinə %2 istifadə olunur."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -106,7 +93,7 @@ msgstr ""
 "kursoru mövzusunu seçmədən cari Plasma sesiyası üçün siçan kursoru mövzusu "
 "quraşdırmağa imkan verir."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -118,18 +105,18 @@ msgstr ""
 "Cari Plasma sesiyanız üçün quraşdırmaq istədiyiniz siçan kursoru mövzusunun  "
 "adı (tam yolu keçərkən, yalnız yolun son hissəsini istifadə edəcək)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Sistemdə mövcud olan bütün mövzuları göstərmək (həmçinin cari mövzunu)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Mövzudakı standart ölçü yerinə göstərilmiş ölçüdən istifadə edin."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -141,7 +128,7 @@ msgstr ""
 "Tələb olunan \"%1\" mövzusu, artıq cari Plasma sesiyası üçün mövzu kimi "
 "quraşdırılıb."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -152,7 +139,7 @@ msgid ""
 msgstr ""
 "%1 siçan kursor mövzusu cari Plasma sesiyanız üçün uğurla tətbiq edildi"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -164,7 +151,7 @@ msgstr ""
 "Yeni təyin edilən siçan kursoru mövzusunun lazımi qaydada görünməsi  üçün "
 "Plazma sesiyasını yenidən başlatmalısınız."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -175,13 +162,13 @@ msgid ""
 msgstr ""
 "\"%1\" mövzusu tapılmadı. Mövzu aşağıdakı variantlardan biri olmalıdır: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Sisteminizdə aşağıdakı siçan kursoru mövzuları var:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Bu Plasma sessiyası üçün hazırkı mövzu)"
@@ -284,45 +271,55 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 saniyə"
 msgstr[1] "%1 saniyə"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Ölçüsü: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Tətbiq başladılmasının görünüşünü &tənzimlə..."
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Fayldan quraşdırın..."
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "&Yenisini quraşdırın..."
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Mövzunu Açmaq"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, fuzzy, kde-format
 #| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Mövcud ölçüsü: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Bu dəyişikliklərin qüvvəyə minməsi üçün Plazma seansını yenidən "
+#~ "başlatmalısınız."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr ""
+#~ "Tələb etdiyiniz \"%1\" ölçü əlçatan deyil, əvəzinə %2 istifadə olunur."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Mövzunu Silmək"

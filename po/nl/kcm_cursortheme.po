@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-03-21 11:08+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -29,35 +29,27 @@ msgstr "Naam van het huidige aanwijzerthema"
 msgid "Current pointer size"
 msgstr "Huidige grootte aanwijzer"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Om deze wijzigingen te bekrachtigen dient u de Plasma sessie opnieuw op te "
-"starten."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kon geen tijdelijk bestand aanmaken."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Het pictogramthema-archief %1 kan niet gedownload worden"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Het bestand is geen geldig pictogramthema-archief."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Map 'pictogrammen' kon niet aangemaakt worden."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +58,12 @@ msgstr ""
 "Een stijl met naam %1 bestaat al in uw pictogramstijlmap. Wilt u die "
 "vervangen door deze?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Thema overschrijven?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Het thema werd succesvol geïnstalleerd."
@@ -83,12 +75,7 @@ msgstr "Het thema werd succesvol geïnstalleerd."
 msgid "Timeout in seconds"
 msgstr "Timeout in seconden"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "De gevraagde grootte '%1' is niet beschikbaar, %2 wordt gebruikt."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -99,7 +86,7 @@ msgstr ""
 "huidige Plasma sessie, zonder per ongeluk deze te zetten op een die ofwel "
 "niet beschikbaar is of die al is gezet."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -109,21 +96,21 @@ msgstr ""
 "sessie (doorgegeven van een volledig pad zal alleen het laatste deel van het "
 "pad gebruiken)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Alle thema's beschikbaar op het systeem tonen (en welke het huidige thema is)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 "Een specifieke grootte gebruiken, in plaats van de standaard grootte van het "
 "thema"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -132,7 +119,7 @@ msgstr ""
 "Het gevraagde thema “%1” is al ingesteld als het thema voor de huidige "
 "Plasma sessie."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -141,7 +128,7 @@ msgstr ""
 "Het aanwijzerthema %1 van de muis is met succes toegepast op uw huidige "
 "Plasma sessie"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -150,7 +137,7 @@ msgstr ""
 "U moet de Plasma sessie opnieuw starten om uw nieuwe toegepaste "
 "aanwijzerthema voor de muis op de juiste manier te tonen."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -159,12 +146,12 @@ msgstr ""
 "Kon thema “%1” niet vinden. Het thema zou een van de volgende opties moeten "
 "zijn: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "U hebt de volgende aanwijzerthema's voor de muis op uw system:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Huidige thema voor deze Plasma-sessie)"
@@ -259,44 +246,53 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 seconde"
 msgstr[1] "%1 seconden"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Grootte: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Opstartnotificatie &configureren…"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "Uit bestand &installeren…"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "Nieuwe op&halen…"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Thema openen"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Aanwijzerthemabestanden (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Beschikbare afmetingen: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Om deze wijzigingen te bekrachtigen dient u de Plasma sessie opnieuw op "
+#~ "te starten."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr "De gevraagde grootte '%1' is niet beschikbaar, %2 wordt gebruikt."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Thema verwijderen"

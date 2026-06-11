@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2023-08-26 18:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -45,46 +45,39 @@ msgstr "Nykyisen osoitinteeman nimi"
 msgid "Current pointer size"
 msgstr "Osoittimen nykyinen koko"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Plasma-istunto on käynnistettävä uudestaan, jotta muutokset tulevat voimaan."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Väliaikaistiedostoa ei voida luoda."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Kuvaketeemapaketin %1 lataus epäonnistui"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Tiedosto ei vaikuta kelvolliselta kuvaketeemapaketilta."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "”icons”-kansiota ei voida luoda."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "Teema %1 löytyy jo kuvaketeemakansiostasi. Haluatko korvata sen tällä?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Korvataanko teema?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Teeman asennus onnistui."
@@ -96,12 +89,7 @@ msgstr "Teeman asennus onnistui."
 msgid "Timeout in seconds"
 msgstr "Aikakatkaisu sekunteina"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "Pyydetty koko ”%1” ei ole käytettävissä, käytetään sen sijaan %2."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -116,7 +104,7 @@ msgstr ""
 "vahingossa aseta sitä sellaiseksi, joka ei ole käytettävissä tai on jo "
 "käytössä."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -128,19 +116,19 @@ msgstr ""
 "Plasma-istuntoon haluamasi osoitinteeman nimi (täydestä polkunimestä "
 "käytetään vain viimeistä osaa)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Näytä kaikki järjestelmään asennetut teemat (ja mikä niistä on käytössä)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Käytä haluttua kokoa teeman oletuskoon sijaan"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -150,7 +138,7 @@ msgid ""
 "session."
 msgstr "Pyydetty teema ”%1” on jo asetettu Plasma-teemaksi."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -160,7 +148,7 @@ msgid ""
 "session"
 msgstr "Osoitinteeman %1 käyttöönotto nykyiseen Plasma-istuntoon onnistui"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -172,7 +160,7 @@ msgstr ""
 "Plasma-istunto on käynnistettävä uudestaan, jotta käyttöön otettu "
 "osoitinteema näkyisi oikein."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -182,13 +170,13 @@ msgid ""
 "%2"
 msgstr "Teemaa ”%1” ei löytynyt. Teeman tulisi olla yksi seuraavista: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Järjestelmään on asennettu seuraavat osoitinteemat:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tämän Plasma-istunnon nykyinen teema)"
@@ -291,45 +279,54 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 sekunti"
 msgstr[1] "%1 sekuntia"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Koko: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Aseta käynnistyksen palaute…"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Asenna tiedostosta…"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "&Hae uusia…"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Avaa teema"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, fuzzy, kde-format
 #| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Osoitinteematiedostot (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Saatavilla koot: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Plasma-istunto on käynnistettävä uudestaan, jotta muutokset tulevat "
+#~ "voimaan."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr "Pyydetty koko ”%1” ei ole käytettävissä, käytetään sen sijaan %2."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Poista teema"

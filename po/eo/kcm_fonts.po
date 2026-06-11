@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2023-05-25 20:30+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,12 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Devigi tiparan DPI sur X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -146,15 +140,7 @@ msgstr ""
 msgid "Adjust Global Scale…"
 msgstr "Alĝustigi Globalan Skalon…"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"Kelkaj ŝanĝoj kiel glatigo kaj DPI influos nur poste lanĉatajn programojn."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -163,7 +149,7 @@ msgstr ""
 "Tre grandaj tiparoj povas produkti strangajn rezultojn. Anstataŭ uzi tre "
 "grandan tiparon, konsideru ĝustigi la ĉiean ekranskalon."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -172,16 +158,7 @@ msgid ""
 "produce odd results. Consider using a different font."
 msgstr ""
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"La rekomendita maniero por skali la uzantinterfacon estas uzi la ĉiean "
-"ekranan skalan funkcion."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -189,7 +166,7 @@ msgid ""
 "been reset to 4pt."
 msgstr ""
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgid ""
 #| "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -202,82 +179,82 @@ msgstr ""
 "Tre grandaj tiparoj povas produkti strangajn rezultojn. Anstataŭ uzi tre "
 "grandan tiparon, konsideru ĝustigi la ĉiean ekranskalon."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Alĝustigi Ĉiujn Tiparojn…"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "Normala:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "Elekti normalan tiparon"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "Egallarĝa:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Elekti egallarĝan tiparon"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "Malgranda:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "Elekti malgrandan tiparon"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "Ilobreto:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Elekti ilobretan tiparon"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "Menuo:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "Elekti tiparon de la menuo"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "Fenestra titolo:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "Elekti fenestrotitolan tiparon"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Glatigo:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "Ebligita"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -293,28 +270,28 @@ msgstr ""
 "ĉi tiun efikon. Vi ĝenerale volas teni ĉi tiun opcion ebligita krom se ĝi "
 "kaŭzas problemojn."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Ekskludi gamon de kontraŭ-aliasing"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 p"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "al "
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Subpunkta bildigo:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -337,13 +314,13 @@ msgstr ""
 "ekzotikaj ordigoj ne estas subtenataj de ĉi tiu funkcio.</para>Ĉi tio ne "
 "funkcias kun CRT. monitoroj."
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Aludado:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -357,29 +334,41 @@ msgstr ""
 "sugesto ĝenerale kondukas al pli akraj randoj sed la malgrandaj literoj "
 "malpli proksime similos sian formon ĉe grandaj grandecoj."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "Devigi tiparan DPI:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Devigi tiparan DPI sur X11"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>Enigu la DPI de via ekrano ĉi tie por fari surekranajn tiparojn "
-"kongrui kun siaj fizikaj grandecoj kiam estas presitaj. Ŝanĝi ĉi tiun opcion "
-"de ĝia defaŭlta valoro konfliktos kun multaj programoj; iuj piktogramoj kaj "
-"bildoj eble ne skalas kiel atendite.</para><para>Por pligrandigi "
-"tekstograndecon, ŝanĝu la grandecon de la supraj tiparoj. Por skali ĉion, "
-"uzu la skalan glitilon sur la paĝo <interface>Vidigu & Monitoro</interface>."
-"</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "Kelkaj ŝanĝoj kiel glatigo kaj DPI influos nur poste lanĉatajn programojn."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "La rekomendita maniero por skali la uzantinterfacon estas uzi la ĉiean "
+#~ "ekranan skalan funkcion."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "Devigi tiparan DPI:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>Enigu la DPI de via ekrano ĉi tie por fari surekranajn tiparojn "
+#~ "kongrui kun siaj fizikaj grandecoj kiam estas presitaj. Ŝanĝi ĉi tiun "
+#~ "opcion de ĝia defaŭlta valoro konfliktos kun multaj programoj; iuj "
+#~ "piktogramoj kaj bildoj eble ne skalas kiel atendite.</para><para>Por "
+#~ "pligrandigi tekstograndecon, ŝanĝu la grandecon de la supraj tiparoj. Por "
+#~ "skali ĉion, uzu la skalan glitilon sur la paĝo <interface>Vidigu & "
+#~ "Monitoro</interface>.</para>"
 
 #~ msgid "Select Font"
 #~ msgstr "Elekti Tiparon"

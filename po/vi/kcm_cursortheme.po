@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2023-01-08 16:09+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -32,33 +32,27 @@ msgstr "Tên chủ đề hiện tại của con trỏ"
 msgid "Current pointer size"
 msgstr "Cỡ con trỏ hiện tại"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "Bạn cần phải khởi động lại phiên Plasma để các thay đổi có tác dụng."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Không thể tạo một tệp tạm."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Không thể tải về kho trữ chủ đề của biểu tượng: %1"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Tệp này không phải là một kho trữ chủ đề của biểu tượng hợp lệ."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Tạo thư mục 'icons' thất bại."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -67,12 +61,12 @@ msgstr ""
 "Chủ đề tên %1 đã có trong thư mục chủ đề của biểu tượng của bạn. Bạn có muốn "
 "thay thế nó bằng cái này không?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Ghi đè chủ đề?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Cài đặt chủ đề thành công."
@@ -84,12 +78,7 @@ msgstr "Cài đặt chủ đề thành công."
 msgid "Timeout in seconds"
 msgstr "Khoảng thời gian tính bằng giây"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "Kích thước được yêu cầu '%1' hiện không có, dùng %2 để thay thế."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -103,7 +92,7 @@ msgstr ""
 "Công cụ này cho phép bạn đặt chủ đề con trỏ chuột cho phiên Plasma hiện tại, "
 "mà không bị lỡ đặt nó thành một cái hiện không có hoặc đã được đặt rồi."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -115,19 +104,19 @@ msgstr ""
 "Tên của chủ đề con trỏ mà bạn muốn đặt cho phiên Plasma hiện tại (truyền vào "
 "một đường dẫn đầy đủ sẽ chỉ dùng phần cuối của đường dẫn)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Hiện tất cả các chủ đề đang có trong hệ thống (và cái nào là chủ đề hiện tại)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Dùng một kích thước nhất định, thay vì kích thước mặc định của chủ đề"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -139,7 +128,7 @@ msgstr ""
 "Chủ đề được yêu cầu \"%1\" đã được đặt làm chủ đề cho phiên Plasma hiện tại "
 "rồi."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -149,7 +138,7 @@ msgid ""
 "session"
 msgstr "Áp dụng chủ đề con trỏ chuột %1 cho phiên Plasma hiện tại thành công"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -161,7 +150,7 @@ msgstr ""
 "Bạn cần phải khởi động lại phiên Plasma để chủ đề con trỏ chuột mới được áp "
 "dụng có thể hiển thị đúng đắn."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -172,13 +161,13 @@ msgid ""
 msgstr ""
 "Không tìm được chủ đề \"%1\". Chủ đề nên là một trong các lựa chọn sau: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Bạn có các chủ đề con trỏ chuột sau trong hệ thống:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Chủ đề hiện tại cho phiên Plasma này)"
@@ -282,47 +271,55 @@ msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 giây"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "Cỡ:"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Cấu hình phản hồi khởi chạy…"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Cài từ tệp…"
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, fuzzy, kde-format
 #| msgid "&Get New Cursors…"
 msgid "&Get New…"
 msgstr "&Lấy con trỏ mới…"
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Mở chủ đề"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, fuzzy, kde-format
 #| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Tệp chủ đề của con trỏ (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Cỡ khả dụng: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Bạn cần phải khởi động lại phiên Plasma để các thay đổi có tác dụng."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr "Kích thước được yêu cầu '%1' hiện không có, dùng %2 để thay thế."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Xoá chủ đề"

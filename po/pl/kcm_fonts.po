@@ -1,6 +1,6 @@
 # translation of kcmfonts.po to Polish
 # translation of kcmfonts.po to
-# Version: $Revision: 1737303 $
+# Version: $Revision: 1738880 $
 # SPDX-FileCopyrightText: 2012, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2006, 2008.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-04-11 09:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -22,12 +22,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 25.08.2\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Wymuś DPI czcionek na X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -148,16 +142,7 @@ msgstr "Wyświetlacz"
 msgid "Adjust Global Scale…"
 msgstr "Dostosuj globalną skalę…"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"Niektóre zmiany, m. in dotyczące antyaliasingu lub DPI, zostaną uwzględnione "
-"jedynie w nowo uruchamianych programach."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -166,7 +151,7 @@ msgstr ""
 "Bardzo duże czcionki mogą dziwnie wyglądać. Spróbuj dostosować globalną "
 "skalę ekranu, zanim zwiększysz rozmiar czcionki."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -178,16 +163,7 @@ msgstr ""
 "Display_typeface'>nie są przeznaczone dla wyświetlaczy komputerowych</link> "
 "i mogą dawać dziwny wynik. Rozważ użycie innej czcionki."
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"Zalecanym sposobem na przeskalowanie interfejsu użytkownika jest użycie "
-"globalnej skali ekranu."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -197,7 +173,7 @@ msgstr ""
 "Plazma nie została stworzona do używania z czcionkami mniejszymi niż 4 pt. "
 "Rozmiar został przywrócony do 4 pt."
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -207,82 +183,82 @@ msgstr ""
 "Bardzo małe czcionki mogą dziwnie wyglądać. Spróbuj dostosować globalną "
 "skalę ekranu, zanim zmniejszysz rozmiar czcionki."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "Dostosuj &wszystkie czcionki…"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "Ogólna:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "Wybierz ogólną czcionkę"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "O stałej szerokości:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Wybierz czcionkę o stałej szerokości"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "Mała:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "Wybierz małą czcionkę"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "W paskach narzędzi:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Wybierz czcionkę do wyświetlania wpisów na pasku narzędzi"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "W menu:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "Wybierz czcionkę do wyświetlania wpisów w menu"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "W nazwach okien:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "Wybierz czcionkę do wyświetlania nazw okien"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Wygładzanie:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "Włącz"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -298,28 +274,28 @@ msgstr ""
 "krawędzi</emphasis>, aby temu przeciwdziałać. Zalecamy pozostawienie tego "
 "ustawienia włączonym, chyba że powoduje kłopoty."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Nie wygładzaj z tego zakresu"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "do"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Wyświetlanie podpikselowe:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -342,13 +318,13 @@ msgstr ""
 "wyrównania są nieobsługiwane przez nas.</para>Nie działa to na monitorach "
 "CRT."
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hinting:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -363,29 +339,42 @@ msgstr ""
 "litery będą mniej przypominać swój kształt względem tego z większych "
 "rozmiarów."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "Wymuś DPI czcionek:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Wymuś DPI czcionek na X11"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>Wpisz tutaj DPI swojego ekranu, aby sprawić, że czcionki na ekranie są "
-"tego samego rozmiaru, co gdyby były wydrukowane. Zmiana tego ustawienia z "
-"jego wartości domyślnej spowoduje kłopoty w wielu aplikacjach; pewne ikony i "
-"obrazy mogą nie przeskalować się zgodnie z oczekiwaniami.</para><para>Aby "
-"zwiększyć rozmiar tekstu, zwiększ rozmiar czcionek powyżej. Aby przeskalować "
-"wszystko, użyj suwaka skalowania na stronie <interface>Wyświetlanie i "
-"monitor</interface>.</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "Niektóre zmiany, m. in dotyczące antyaliasingu lub DPI, zostaną "
+#~ "uwzględnione jedynie w nowo uruchamianych programach."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "Zalecanym sposobem na przeskalowanie interfejsu użytkownika jest użycie "
+#~ "globalnej skali ekranu."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "Wymuś DPI czcionek:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>Wpisz tutaj DPI swojego ekranu, aby sprawić, że czcionki na ekranie "
+#~ "są tego samego rozmiaru, co gdyby były wydrukowane. Zmiana tego "
+#~ "ustawienia z jego wartości domyślnej spowoduje kłopoty w wielu "
+#~ "aplikacjach; pewne ikony i obrazy mogą nie przeskalować się zgodnie z "
+#~ "oczekiwaniami.</para><para>Aby zwiększyć rozmiar tekstu, zwiększ rozmiar "
+#~ "czcionek powyżej. Aby przeskalować wszystko, użyj suwaka skalowania na "
+#~ "stronie <interface>Wyświetlanie i monitor</interface>.</para>"
 
 #~ msgid "Select Font"
 #~ msgstr "Wybierz czcionkę"

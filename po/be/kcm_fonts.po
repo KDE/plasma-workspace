@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -23,12 +23,6 @@ msgstr ""
 "X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
 "kcm_fonts.po\n"
 "X-Crowdin-File-ID: 10764\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Прымусовае значэнне DPI шрыфту для X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -149,16 +143,7 @@ msgstr ""
 msgid "Adjust Global Scale…"
 msgstr "Падладжванне глабальнага маштабавання…"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"Змена некаторых параметраў, такія як згладжванне або DPI, паўплывае толькі "
-"на нанова запушчаныя праграмы."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -167,7 +152,7 @@ msgstr ""
 "Пры выкарыстанні вялікіх шрыфтоў могуць могуць быць нечаканыя наступствы. "
 "Замест гэтага лепш падладзіць глабальнае маштабаванне."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -176,16 +161,7 @@ msgid ""
 "produce odd results. Consider using a different font."
 msgstr ""
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"Рэкамендаваны спосаб маштабавання інтэрфейсу карыстальніка - выкарыстанне "
-"глабальнай функцыі маштабавання экрана."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -193,7 +169,7 @@ msgid ""
 "been reset to 4pt."
 msgstr ""
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgid ""
 #| "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -206,82 +182,82 @@ msgstr ""
 "Пры выкарыстанні вялікіх шрыфтоў могуць могуць быць нечаканыя наступствы. "
 "Замест гэтага лепш падладзіць глабальнае маштабаванне."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Падладжванне ўсіх шрыфтоў…"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "Асноўны:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "Абраць асноўны шрыфт"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "Монашырынны:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Абраць монашырынны шрыфт"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "Малы:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "Абраць малы шрыфт"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "Панэль інструментаў:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Абраць шрыфт панэляў інструментаў"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "Меню:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "Абраць шрыфт меню"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "Загаловак акна:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "Абраць шрыфт загалоўкаў акон"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Згладжванне:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "Уключыць"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -296,28 +272,28 @@ msgstr ""
 "не выкарыстоўваць <emphasis>згладжванне</emphasis>. Лепш пакінуць гэты "
 "параметр уключаным, калі ён не выклікае праблем."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Выключыць дыяпазон са згладжвання"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 пікс"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "у"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Субпіксельны рэндэрынг:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -339,13 +315,13 @@ msgstr ""
 "<emphasis>BGR</emphasis>, а некаторыя рэдкія парадкі не падтрымліваюцца "
 "гэтай функцыяй.</para>Гэта не працуе на маніторах CRT."
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Хінтынг:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -359,29 +335,42 @@ msgstr ""
 "шрыфтоў. Чым большае значэнне, тым большая рэзкасць абрысаў літар, але "
 "маленькія літары будуць менш нагадваць сваю форму пры вялікіх памерах."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "Прымусовае значэнне DPI шрыфту:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Прымусовае значэнне DPI шрыфту для X11"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>Увядзіце тут DPI вашага экрана, каб шрыфты на экране адпавядалі іх "
-"фізічным памерам пры друкаванні. Калі змяніць прадвызначанае значэння гэтага "
-"параметра, то ўзнікне канфлікт з многімі праграмамі. Некаторыя значкі і "
-"малюнкі могуць не маштабавацца належным чынам.</para><para>Каб павялічыць "
-"памер тэксту, змяніце памер шрыфтоў вышэй. Каб змяніць маштаб усіх "
-"элементаў, скарыстайцеся паўзунком маштабавання на старонцы "
-"<interface>Дысплэй і манітор</interface>.</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "Змена некаторых параметраў, такія як згладжванне або DPI, паўплывае "
+#~ "толькі на нанова запушчаныя праграмы."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "Рэкамендаваны спосаб маштабавання інтэрфейсу карыстальніка - выкарыстанне "
+#~ "глабальнай функцыі маштабавання экрана."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "Прымусовае значэнне DPI шрыфту:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>Увядзіце тут DPI вашага экрана, каб шрыфты на экране адпавядалі іх "
+#~ "фізічным памерам пры друкаванні. Калі змяніць прадвызначанае значэння "
+#~ "гэтага параметра, то ўзнікне канфлікт з многімі праграмамі. Некаторыя "
+#~ "значкі і малюнкі могуць не маштабавацца належным чынам.</para><para>Каб "
+#~ "павялічыць памер тэксту, змяніце памер шрыфтоў вышэй. Каб змяніць маштаб "
+#~ "усіх элементаў, скарыстайцеся паўзунком маштабавання на старонцы "
+#~ "<interface>Дысплэй і манітор</interface>.</para>"
 
 #~ msgid "Select Font"
 #~ msgstr "Абраць шрыфт"

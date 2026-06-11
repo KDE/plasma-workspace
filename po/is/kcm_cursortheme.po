@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-03-23 11:55+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -37,33 +37,27 @@ msgstr "Heiti á núverandi bendilþema"
 msgid "Current pointer size"
 msgstr "Núverandi stærð bendils"
 
-#: kcmcursortheme.cpp:312
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "Þú þarft að endurræsa Plasma-setuna til að breytingarnar taki gildi."
-
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:373
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ekki tókst að búa til bráðabirgðaskrá."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:384
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ekki tókst að sækja bendilþemusafnið %1."
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:415
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Skráin er ekki gilt bendilþemusafn."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Mistókst að útbúa möppuna 'tákn'."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:431
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -72,12 +66,12 @@ msgstr ""
 "Þema nefnt %1 er til nú þegar í möppu fyrir táknaþemu. Viltu nota það í "
 "staðinn fyrir þetta?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Skrifa yfir þema?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:459
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Uppsetning á þema er lokið."
@@ -89,12 +83,7 @@ msgstr "Uppsetning á þema er lokið."
 msgid "Timeout in seconds"
 msgstr "Tímamörk í sekúndum"
 
-#: plasma-apply-cursortheme.cpp:44
-#, kde-format
-msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "Umbeðin stærð '%1' er ekki í boði, nota %2 í staðinn."
-
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:38
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -105,7 +94,7 @@ msgstr ""
 "Plasma-setu, án þess að velja fyrir slysni þema sem er annað hvort ekki til "
 "eða sem búið er að velja nú þegar."
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -114,19 +103,19 @@ msgstr ""
 "Heiti bendilþemans sem þú vilt nota fyrir núverandi Plasma-setu (ef öll "
 "slóðin er sett inn er einungis síðasti hluti hennar notaður)"
 
-#: plasma-apply-cursortheme.cpp:70
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Sýna öll þemu sem eru í boði í tölvunni (og hvert þeirra er núverandi þema)"
 
-#: plasma-apply-cursortheme.cpp:71
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Nota tiltekna stærð, frekar en sjálfgefna stærð þemans"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -134,14 +123,14 @@ msgid ""
 msgstr ""
 "Umbeðið þema \"%1\" er nú þegar valið sem þema fyrir núverandi Plasma-setu."
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "Tókst að nota músarbendilsþema %1 á núverandi Plasma-setu þína"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:79
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -150,7 +139,7 @@ msgstr ""
 "Þú þarft að endurræsa Plasma-setuna til að nýja músarbendilsþemað birtist "
 "rétt."
 
-#: plasma-apply-cursortheme.cpp:115
+#: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -159,12 +148,12 @@ msgstr ""
 "Tókst ekki að finna þemað \"%1\". Þemað þarf að vera einn af eftirfarandi "
 "valkostum: %2"
 
-#: plasma-apply-cursortheme.cpp:123
+#: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Þú ert með eftirfarandi músarbendilsþemu í tölvunni þinni:"
 
-#: plasma-apply-cursortheme.cpp:128
+#: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Núverandi þema fyrir þessa Plasma-setu)"
@@ -259,44 +248,52 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 sekúnda"
 msgstr[1] "%1 sekúndur"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:109 ui/main.qml:145
 #, kde-format
 msgid "Size: %1"
 msgstr "Stærð: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:160
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Grunnstilla svörun við ræsingu..."
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Setja upp úr skrá..."
 
-#: ui/main.qml:183
+#: ui/main.qml:181
 #, kde-format
 msgid "&Get New…"
 msgstr "Sækja &nýtt..."
 
-#: ui/main.qml:197
+#: ui/main.qml:195
 #, kde-format
 msgid "Open Theme"
 msgstr "Opna þema"
 
-#: ui/main.qml:199
+#: ui/main.qml:197
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Bendilþemaskrár (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:59
+#: xcursor/xcursortheme.cpp:58
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tiltækar stærðir: %1)"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Þú þarft að endurræsa Plasma-setuna til að breytingarnar taki gildi."
+
+#~ msgid "The requested size '%1' is not available, using %2 instead."
+#~ msgstr "Umbeðin stærð '%1' er ekki í boði, nota %2 í staðinn."
 
 #~ msgid "Remove Theme"
 #~ msgstr "Fjarlægja þema"

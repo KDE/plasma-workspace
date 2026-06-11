@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2008-01-26 12:34+0400\n"
 "Last-Translator: Vardan Gevorgyan <vardangevorgyan@yahoo.com>\n"
 "Language-Team: Armenian <translation-team-hy@lists.sourceforge.net>\n"
@@ -1520,12 +1520,12 @@ msgstr ""
 msgid "Could not read font."
 msgstr ""
 
-#: viewpart/FontViewPart.cpp:403
+#: viewpart/FontViewPart.cpp:395
 #, kde-format
 msgid "Preview String"
 msgstr ""
 
-#: viewpart/FontViewPart.cpp:403
+#: viewpart/FontViewPart.cpp:395
 #, kde-format
 msgid "Please enter new string:"
 msgstr ""

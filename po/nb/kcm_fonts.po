@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2026-01-18 19:45+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -24,12 +24,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Tving skrift-PPT på X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -150,16 +144,7 @@ msgstr "Skjerm"
 msgid "Adjust Global Scale…"
 msgstr "Tilpass global skalering …"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"Noen skriftinnstillinger, som for eksempel kantutjevning og PPT, vil bare "
-"tre i kraft for nystartede programmer."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -168,7 +153,7 @@ msgstr ""
 "Veldig stor skriftstørrelse kan føre til rar utseende. Vurder i stedet å "
 "tilpasse den globale skjermskaleringa."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -180,16 +165,7 @@ msgstr ""
 "Display_typeface'>ikke ment for bruk av dataskjermer</link>, og kan føre til "
 "feil. Vurder derfor å bruke andre skrifter."
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"Anbefalte måten for skalering av brukergrensesnitt er å bruke global "
-"skjermskalering."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -199,7 +175,7 @@ msgstr ""
 "Plasma er ikke laget for å kunne brukes i lavere størrelse enn 4 pt. "
 "Størrelsen er derfor stilt tilbake til 4 pt."
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -210,82 +186,82 @@ msgstr ""
 "en veldig liten skriftstørrelse, vurder i stedet å tilpasse den globale "
 "skjermskaleringa."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Tilpass alle skriftene …"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "Generelt:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "Velg generell skrift"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "Fast bredde:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Velg fastbreddeskrift"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "Liten:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "Velg liten skrift"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "Verktøylinje:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Velg verktøylinje-skrift"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "Menyer:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "Velg menyskrift"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "Vindustittel:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "Velg vindustittel-skrift"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Kantutjevning:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "Slå på"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -301,28 +277,28 @@ msgstr ""
 "til å redusere effekten av rutenettavviket. Du bør vanligvis ha "
 "kantutgjevning slått på, og bare slå det av dersom det fører til problemer."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Utelat kantutjevning for noen størrelser"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 punkt"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "til"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Delpikselvisning:"
 
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -345,13 +321,13 @@ msgstr ""
 "har mer eksotiske mønster, som ikke støttes av denne funksjonen.</"
 "para><para>Dette virker ikke med CRT-skjermar.</para>"
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hintstil:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -365,27 +341,40 @@ msgstr ""
 "hinting fører generelt til skarpere kanter, men bokstavene vil ved liten "
 "skriftstørrelse ligne mindre på hvordan de egentlig skal se ut."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "Tving skrift-PPT:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Tving skrift-PPT på X11"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>Skriv inn PPT-verdien (punkt per tomme, også kalt DPI) her, slik at "
-"tekst på skjermen får nøyaktig samme størrelse som ved utskrift. Merk at "
-"hvis du endrer denne verdien fra standardverdien, kan det føre til problemer "
-"i mange programer, ved at ikon og bilde ikke blir skalert slik du forventer."
-"</para><para>Vil du endre størrelsen bare på tekst, kan du justere "
-"skriftstørrelsesverdiene ovenfor. Vil du endre størrelsen på alt, kan du "
-"tilpasse den globale skaleringen under siden <interface>Skjerm og "
-"skjermbilde</interface>.</para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "Noen skriftinnstillinger, som for eksempel kantutjevning og PPT, vil bare "
+#~ "tre i kraft for nystartede programmer."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "Anbefalte måten for skalering av brukergrensesnitt er å bruke global "
+#~ "skjermskalering."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "Tving skrift-PPT:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>Skriv inn PPT-verdien (punkt per tomme, også kalt DPI) her, slik at "
+#~ "tekst på skjermen får nøyaktig samme størrelse som ved utskrift. Merk at "
+#~ "hvis du endrer denne verdien fra standardverdien, kan det føre til "
+#~ "problemer i mange programer, ved at ikon og bilde ikke blir skalert slik "
+#~ "du forventer.</para><para>Vil du endre størrelsen bare på tekst, kan du "
+#~ "justere skriftstørrelsesverdiene ovenfor. Vil du endre størrelsen på alt, "
+#~ "kan du tilpasse den globale skaleringen under siden <interface>Skjerm og "
+#~ "skjermbilde</interface>.</para>"

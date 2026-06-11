@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-21 00:46+0000\n"
+"POT-Creation-Date: 2026-06-11 00:46+0000\n"
 "PO-Revision-Date: 2025-06-07 10:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,12 +22,6 @@ msgstr ""
 "X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Força els ppp de les lletres a l'X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -148,16 +142,7 @@ msgstr "Display"
 msgid "Adjust Global Scale…"
 msgstr "Ajusta l'escala global…"
 
-#: ui/main.qml:58
-#, kde-format
-msgid ""
-"Some changes such as anti-aliasing or DPI will only affect newly started "
-"applications."
-msgstr ""
-"Alguns canvis com ara l'antialiàsing o els ppp només afectaran les "
-"aplicacions engegades de nou."
-
-#: ui/main.qml:74
+#: ui/main.qml:59
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -166,7 +151,7 @@ msgstr ""
 "Les lletres molt grans poden produir resultats estranys. En lloc d'usar una "
 "mida de lletra molt gran, considereu ajustar l'escala global de la pantalla."
 
-#: ui/main.qml:92
+#: ui/main.qml:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -178,16 +163,7 @@ msgstr ""
 "Display_typeface'>no estan destinades a les pantalles d'ordinador</link>, i "
 "poden produir resultats estranys. Considereu l'ús d'una lletra diferent."
 
-#: ui/main.qml:109
-#, kde-format
-msgid ""
-"The recommended way to scale the user interface is using the global screen "
-"scaling feature."
-msgstr ""
-"La manera recomanada d'escalar la interfície d'usuari és emprant la "
-"funcionalitat d'escalat global de la pantalla."
-
-#: ui/main.qml:119
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -197,7 +173,7 @@ msgstr ""
 "El Plasma no s'ha dissenyat per a que es pugui utilitzar amb lletres "
 "inferiors a 4pt. La mida s'ha restaurat a 4pt."
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -208,82 +184,82 @@ msgstr ""
 "una mida de lletra molt petita, considereu ajustar l'escala global de la "
 "pantalla."
 
-#: ui/main.qml:161
+#: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Ajusta totes les lletres…"
 
-#: ui/main.qml:174
+#: ui/main.qml:150
 #, kde-format
 msgid "General:"
 msgstr "General:"
 
-#: ui/main.qml:175
+#: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
 msgstr "Selecciona la lletra general"
 
-#: ui/main.qml:186
+#: ui/main.qml:162
 #, kde-format
 msgid "Fixed width:"
 msgstr "Amplada fixa:"
 
-#: ui/main.qml:187
+#: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Selecciona la lletra d'amplada fixa"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Small:"
 msgstr "Petita:"
 
-#: ui/main.qml:199
+#: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
 msgstr "Selecciona la lletra petita"
 
-#: ui/main.qml:210
+#: ui/main.qml:186
 #, kde-format
 msgid "Toolbar:"
 msgstr "Barra d'eines:"
 
-#: ui/main.qml:211
+#: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Selecciona la lletra de les barres d'eines"
 
-#: ui/main.qml:222
+#: ui/main.qml:198
 #, kde-format
 msgid "Menu:"
 msgstr "Menú:"
 
-#: ui/main.qml:223
+#: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
 msgstr "Selecciona la lletra dels menús"
 
-#: ui/main.qml:233
+#: ui/main.qml:209
 #, kde-format
 msgid "Window title:"
 msgstr "Títol de la finestra:"
 
-#: ui/main.qml:234
+#: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
 msgstr "Selecciona la lletra dels títols de finestra"
 
-#: ui/main.qml:249
+#: ui/main.qml:225
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Antialiàsing:"
 
-#: ui/main.qml:254
+#: ui/main.qml:230
 #, kde-format
 msgid "Enable"
 msgstr "Activa"
 
-#: ui/main.qml:258
+#: ui/main.qml:234
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -299,29 +275,29 @@ msgstr ""
 "d'<emphasis>antialiàsing</emphasis> per a reduir aquest efecte. En general, "
 "voldreu mantenir aquesta opció habilitada llevat que causi problemes."
 
-#: ui/main.qml:272
+#: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Exclou l'interval de l'antialiàsing"
 
-#: ui/main.qml:291 ui/main.qml:315
+#: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:306
+#: ui/main.qml:282
 #, kde-format
 msgid "to"
 msgstr "a"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Renderització dels subpíxels:"
 
 # skip-rule: tags-spaces-end
-#: ui/main.qml:376
+#: ui/main.qml:352
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -344,13 +320,13 @@ msgstr ""
 "emphasis> i alguns ordenaments exòtics no estan admesos per aquesta "
 "característica.</para>Això no funciona amb els monitors CRT."
 
-#: ui/main.qml:381
+#: ui/main.qml:357
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Correcció de les lletres:"
 
-#: ui/main.qml:418
+#: ui/main.qml:394
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -365,27 +341,40 @@ msgstr ""
 "definides, però les lletres petites s'assemblaran menys a la seva forma en "
 "mides grans."
 
-#: ui/main.qml:431
-#, kde-format
-msgid "Force font DPI:"
-msgstr "Força els ppp de les lletres:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Força els ppp de les lletres a l'X11"
 
-#: ui/main.qml:459
-#, kde-kuit-format
-msgctxt "@info:tooltip Force fonts DPI"
-msgid ""
-"<para>Enter your screen's DPI here to make on-screen fonts match their "
-"physical sizes when printed. Changing this option from its default value "
-"will conflict with many apps; some icons and images may not scale as "
-"expected.</para><para>To increase text size, change the size of the fonts "
-"above. To scale everything, use the scaling slider on the <interface>Display "
-"& Monitor</interface> page.</para>"
-msgstr ""
-"<para>Introduïu aquí els PPP de la pantalla per a fer que les lletres de la "
-"pantalla coincideixin amb la seva mida física quan s'imprimeixen. El canvi "
-"d'aquesta opció del seu valor predeterminat entrarà en conflicte amb moltes "
-"aplicacions; algunes icones i imatges poden no canviar d'escala com "
-"s'esperaria.</para><para>Per a incrementar la mida del text, canvieu a dalt "
-"la mida de la lletra. Per a canviar tot d'escala, useu el control lliscant "
-"de canvi d'escala a la pàgina <interface>Pantalla i monitor</interface>.</"
-"para>"
+#~ msgid ""
+#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
+#~ "applications."
+#~ msgstr ""
+#~ "Alguns canvis com ara l'antialiàsing o els ppp només afectaran les "
+#~ "aplicacions engegades de nou."
+
+#~ msgid ""
+#~ "The recommended way to scale the user interface is using the global "
+#~ "screen scaling feature."
+#~ msgstr ""
+#~ "La manera recomanada d'escalar la interfície d'usuari és emprant la "
+#~ "funcionalitat d'escalat global de la pantalla."
+
+#~ msgid "Force font DPI:"
+#~ msgstr "Força els ppp de les lletres:"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
+#~ "physical sizes when printed. Changing this option from its default value "
+#~ "will conflict with many apps; some icons and images may not scale as "
+#~ "expected.</para><para>To increase text size, change the size of the fonts "
+#~ "above. To scale everything, use the scaling slider on the "
+#~ "<interface>Display & Monitor</interface> page.</para>"
+#~ msgstr ""
+#~ "<para>Introduïu aquí els PPP de la pantalla per a fer que les lletres de "
+#~ "la pantalla coincideixin amb la seva mida física quan s'imprimeixen. El "
+#~ "canvi d'aquesta opció del seu valor predeterminat entrarà en conflicte "
+#~ "amb moltes aplicacions; algunes icones i imatges poden no canviar "
+#~ "d'escala com s'esperaria.</para><para>Per a incrementar la mida del text, "
+#~ "canvieu a dalt la mida de la lletra. Per a canviar tot d'escala, useu el "
+#~ "control lliscant de canvi d'escala a la pàgina <interface>Pantalla i "
+#~ "monitor</interface>.</para>"
