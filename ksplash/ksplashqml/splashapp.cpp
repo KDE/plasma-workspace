@@ -126,7 +126,6 @@ void SplashApp::adoptScreen(QScreen *screen)
     w->setVisible(true);
     m_windows << w;
 
-    connect(screen, &QScreen::geometryChanged, w, &SplashWindow::setGeometry);
     connect(screen, &QObject::destroyed, w, [this, w]() {
         m_windows.removeAll(w);
         w->deleteLater();
