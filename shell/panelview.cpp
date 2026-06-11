@@ -77,7 +77,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         setScreenToFollow(targetScreen);
         setScreen(targetScreen);
     }
-    setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::WindowDoesNotAcceptFocus);
     updateAdaptiveOpacityEnabled();
@@ -88,7 +87,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(this, &PanelView::backgroundHintsChanged, this, &PanelView::updateEnabledBorders);
     // TODO: add finished/componentComplete signal to QuickViewSharedEngine,
     // so we exactly know when rootobject is available
-    connect(this, &QuickViewSharedEngine::statusChanged, this, &PanelView::handleQmlStatusChange);
+    connect(this, &ContainmentView::statusChanged, this, &PanelView::handleQmlStatusChange);
 
     m_unhideTimer.setSingleShot(true);
     m_unhideTimer.setInterval(500ms);
@@ -1509,7 +1508,7 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
 
     QQuickItem *rootObject = this->rootObject();
     if (rootObject) {
-        disconnect(this, &QuickViewSharedEngine::statusChanged, this, &PanelView::handleQmlStatusChange);
+        disconnect(this, &ContainmentView::statusChanged, this, &PanelView::handleQmlStatusChange);
 
         updatePadding();
         const int paddingSignal = rootObject->metaObject()->indexOfSignal("bottomPaddingChanged()");
