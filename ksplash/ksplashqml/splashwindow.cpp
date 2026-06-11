@@ -23,8 +23,6 @@
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
 
-#include <KWindowSystem>
-
 using namespace Qt::StringLiterals;
 
 SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScreen *screen)
@@ -34,14 +32,12 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
     , m_window(window)
     , m_theme(theme)
 {
-    if (KWindowSystem::isPlatformWayland()) {
-        if (auto layerShellWindow = LayerShellQt::Window::get(this)) {
-            layerShellWindow->setScope(QStringLiteral("ksplashqml"));
-            layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
-            layerShellWindow->setExclusiveZone(-1);
-            layerShellWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
-            layerShellWindow->setScreen(screen);
-        }
+    if (auto layerShellWindow = LayerShellQt::Window::get(this)) {
+        layerShellWindow->setScope(QStringLiteral("ksplashqml"));
+        layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
+        layerShellWindow->setExclusiveZone(-1);
+        layerShellWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
+        layerShellWindow->setScreen(screen);
     }
 
     setCursor(Qt::BlankCursor);
@@ -52,21 +48,6 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
 
     if (!m_window) {
         setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
-    }
-
-    if (!m_testing && !m_window) {
-        if (KWindowSystem::isPlatformX11()) {
-            // X11 specific hint only on X11
-            setFlags(Qt::BypassWindowManagerHint);
-        } else if (!KWindowSystem::isPlatformWayland()) {
-            // on other platforms go fullscreen
-            // on Wayland we cannot go fullscreen due to QTBUG 54883
-            setWindowState(Qt::WindowFullScreen);
-        }
-    }
-
-    if (m_testing && !m_window && !KWindowSystem::isPlatformWayland()) {
-        setWindowState(Qt::WindowFullScreen);
     }
 
     // be sure it will be eventually closed

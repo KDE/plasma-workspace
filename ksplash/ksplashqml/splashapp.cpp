@@ -16,8 +16,6 @@
 #include <QPixmap>
 #include <QScreen>
 
-#include <KWindowSystem>
-
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -70,10 +68,7 @@ SplashApp::SplashApp(int &argc, char **argv)
 
     setStage(QStringLiteral("initial"));
     setStage(QStringLiteral("kcminit"));
-
-    if (KWindowSystem::isPlatformWayland()) {
-        setStage(QStringLiteral("wm"));
-    }
+    setStage(QStringLiteral("wm"));
 
     if (m_testing) {
         m_timer.start(TEST_STEP_INTERVAL, this);
