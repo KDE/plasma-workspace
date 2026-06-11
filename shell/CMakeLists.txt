@@ -165,6 +165,17 @@ install( FILES dbus/org.kde.PlasmaShell.xml DESTINATION ${KDE_INSTALL_DBUSINTERF
 
 ecm_install_configured_files(INPUT plasma-plasmashell.service.in @ONLY DESTINATION  ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 
+# manually install typeinfo for plasmashell module since it's not installed automatically for modules backed by executables
+# we want the type info to be accessible from other repos though
+qt6_query_qml_module(plasmashell
+        TARGET_PATH plasmashell_module_target_path
+        QMLDIR plasmashell_module_qmldir
+        TYPEINFO plasmashell_module_typeinfo
+)
+
+install(FILES "${plasmashell_module_qmldir}"   DESTINATION ${KDE_INSTALL_QMLDIR}/${plasmashell_module_target_path})
+install(FILES "${plasmashell_module_typeinfo}" DESTINATION ${KDE_INSTALL_QMLDIR}/${plasmashell_module_target_path})
+
 add_subdirectory(packageplugins)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
