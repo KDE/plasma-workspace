@@ -9,9 +9,12 @@
 
 #include "greeter.h"
 
+#include <PlasmaQuick/PlasmaQuick>
 #include <QApplication>
 #include <QDebug>
 #include <QScreen>
+
+#include <KLocalizedQmlContext>
 
 #include "debug.h"
 #include "logoutpromptadaptor.h"
@@ -25,10 +28,13 @@ using namespace Qt::StringLiterals;
 Greeter::Greeter(const KPackage::Package &package)
     : QObject()
     , m_package(package)
+    , m_engine(PlasmaQuick::globalEngine())
 {
     new LogoutPromptAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/LogoutPrompt"), this);
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.LogoutPrompt"));
+
+    KLocalization::setupLocalizedContext(m_engine.get());
 }
 
 Greeter::~Greeter()
@@ -94,7 +100,7 @@ void Greeter::adoptScreen(QScreen *screen)
         return;
     }
     // TODO: last argument is the theme, maybe add command line option for it?
-    auto *w = new KSMShutdownDlg(nullptr, m_shutdownType, m_windowed, screen);
+    auto *w = new KSMShutdownDlg(m_engine.get(), m_shutdownType, m_windowed, screen);
     w->installEventFilter(this);
     m_dialogs << w;
 

@@ -72,8 +72,8 @@ static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFir
 static const QString s_login1RebootToBootLoaderMenu = QStringLiteral("RebootToBootLoaderMenu");
 static const QString s_login1RebootToBootLoaderEntry = QStringLiteral("RebootToBootLoaderEntry");
 
-KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen)
-    : QuickViewSharedEngine(parent)
+KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen)
+    : QQuickView(engine, nullptr)
     , m_result(false)
     , m_windowed(windowed)
 // this is a WType_Popup on purpose. Do not change that! Not
@@ -92,7 +92,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         }
     }
 
-    setResizeMode(PlasmaQuick::QuickViewSharedEngine::SizeRootObjectToView);
+    setResizeMode(QQuickView::SizeRootObjectToView);
 
     // Qt doesn't set this on unmanaged windows
     // FIXME: or does it?
@@ -243,10 +243,6 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     rebootOptionsMap->insert(QStringLiteral("options"), QVariant::fromValue(rebootOptions));
     rebootOptionsMap->insert(QStringLiteral("default"), QVariant::fromValue(def));
     context->setContextProperty(QStringLiteral("rebootOptions"), rebootOptionsMap);
-
-    // engine stuff
-    engine()->rootContext()->setContextObject(new KLocalizedContext(engine().get()));
-    Plasma::setupPlasmaStyle(engine().get());
 }
 
 void KSMShutdownDlg::init(const KPackage::Package &package)

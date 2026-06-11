@@ -12,19 +12,20 @@
 #include <PackageKit/Offline>
 #endif
 
-#include <PlasmaQuick/QuickViewSharedEngine>
+#include <QQuickView>
+
 #include <kworkspace.h>
 #include <sessionmanagement.h>
 
 #include <KPackage/Package>
 
 // The confirmation dialog
-class KSMShutdownDlg : public PlasmaQuick::QuickViewSharedEngine
+class KSMShutdownDlg : public QQuickView
 {
     Q_OBJECT
 
 public:
-    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen);
+    KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen);
 
     void init(const KPackage::Package &package);
     bool result() const;

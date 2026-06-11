@@ -11,6 +11,7 @@
 
 #include <QList>
 #include <QObject>
+#include <QQmlEngine>
 
 #include <kworkspace.h>
 
@@ -48,4 +49,5 @@ private:
     QList<KSMShutdownDlg *> m_dialogs;
     bool m_windowed = false;
     const KPackage::Package m_package;
+    std::shared_ptr<QQmlEngine> m_engine;
 };
