@@ -28,7 +28,13 @@ PlasmoidItem {
     switchHeight: Kirigami.Units.gridUnit * 5
     Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     toolTipMainText: i18n("Clipboard Contents")
-    toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : historyModel.currentText
+    toolTipSubText: if (isClipboardEmpty) {
+        i18n("Clipboard is empty")
+    } else if (historyModel.sourceModel.hasPassword) {
+        i18nc("@info", "The clipboard currently holds sensitive data")
+    } else {
+        historyModel.currentText
+    }
     toolTipTextFormat: Text.PlainText
     Plasmoid.icon: "klipper-symbolic"
 
