@@ -825,6 +825,7 @@ void HistoryModel::moveToTop(qsizetype row)
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
+    setHasPassword(false);
 }
 
 void HistoryModel::saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid)
@@ -889,8 +890,10 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     }
 
     if (data->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayView("secret")) {
+        setHasPassword(true);
         return;
     }
+    setHasPassword(false);
 
     if (!m_displayImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
@@ -937,6 +940,21 @@ bool HistoryModel::isItemStarred(const QString &uuid) const
         return query.value(0).toBool();
     }
     return false;
+}
+
+bool HistoryModel::hasPassword() const
+{
+    return m_hasPassword;
+}
+
+void HistoryModel::setHasPassword(bool hasPassword)
+{
+    if (m_hasPassword == hasPassword) {
+        return;
+    }
+
+    m_hasPassword = hasPassword;
+    Q_EMIT hasPasswordChanged();
 }
 
 #include "moc_historymodel.cpp"

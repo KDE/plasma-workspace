@@ -23,6 +23,9 @@ class UpdateDatabaseJob;
 class KLIPPER_EXPORT HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
+
+    Q_PROPERTY(bool hasPassword READ hasPassword NOTIFY hasPasswordChanged)
+
 public:
     enum RoleType {
         HistoryItemConstPtrRole = Qt::UserRole,
@@ -96,10 +99,14 @@ public:
 
     int pendingJobs() const;
 
+    [[nodiscard]] bool hasPassword() const;
+
 Q_SIGNALS:
     void changed(bool isTop = false);
 
     void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
+
+    void hasPasswordChanged();
 
 private Q_SLOTS:
     /**
@@ -129,6 +136,8 @@ private:
      */
     bool isItemStarred(const QString &uuid) const;
 
+    void setHasPassword(bool hasPassword);
+
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(HistoryModel, int, m_starredCount, 0)
@@ -142,6 +151,7 @@ private:
     bool m_bKeepContents = true;
     bool m_bSynchronize = false;
     bool m_bSelectionTextOnly = true;
+    bool m_hasPassword = false;
 
     friend class DeclarativeHistoryModel;
     friend class HistoryModelTest;
