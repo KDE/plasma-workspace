@@ -129,6 +129,9 @@ MouseArea {
             when: compactRoot.unreadCount > 0
             PropertyChanges {
                 notificationIcon.source: "notification-active-symbolic"
+                // Needed so the Transition with the bell animation restores properly
+                // should the animation get interrupted by switching to do not disturb while it's running.
+                notificationIcon.rotation: 0
             }
         }
     ]
