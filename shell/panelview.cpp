@@ -103,8 +103,9 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
             break;
         default:
             break;
-            restore();
-        });
+        }
+        restore();
+    });
 
     if (!m_corona->kPackage().isValid()) {
         qCWarning(PLASMASHELL) << "Invalid home screen package";
