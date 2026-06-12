@@ -181,6 +181,7 @@ void AppEntry::init(NameFormat nameFormat)
     switch (nameFormat) {
     case NameOnly:
         m_description = comment;
+        [[fallthrough]];
     case NameAndGenericName:
         if (m_serviceAction) {
             m_compactName = m_serviceAction->text();
