@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -320,23 +320,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "โหมดประสิทธิภาพ"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"NVIDIA GPU บน X11 เป็นที่ทราบกันดีว่ารูปแบบลอยตัวและ โหมดความทึบแบบปรับได้ "
-"ทําให้ประสิทธิภาพการลากหน้าต่างและปรับขนาดไม่ดี พิจารณาใช้อื่นๆ การตั้งค่า"
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "ซ่อนการกําหนดค่าแผง"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -452,6 +442,14 @@ msgstr "จํานวนแผง"
 #, kde-format
 msgid "Counts the panels"
 msgstr "นับแผง"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "NVIDIA GPU บน X11 เป็นที่ทราบกันดีว่ารูปแบบลอยตัวและ โหมดความทึบแบบปรับได้ "
+#~ "ทําให้ประสิทธิภาพการลากหน้าต่างและปรับขนาดไม่ดี พิจารณาใช้อื่นๆ การตั้งค่า"
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "หยุดกิจกรรมปัจจุบัน"

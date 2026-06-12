@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2025-10-30 17:49+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -324,25 +324,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Leistungsmodus"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"Mit einer Grafikkarte von NVIDIA sind mit X11 der schwebende Stil und die "
-"adaptive Deckkraft für eine schlechte Leistung beim Ziehen und der "
-"Größenänderung der Fenster bekannt. Bitte ziehen Sie andere Einstellungen in "
-"Betracht."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Kontrollleisteneinstellungen ausblenden"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -458,6 +446,16 @@ msgstr "Kontrollleistenanzahl"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Zahlt die Kontrollleisten"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "Mit einer Grafikkarte von NVIDIA sind mit X11 der schwebende Stil und die "
+#~ "adaptive Deckkraft für eine schlechte Leistung beim Ziehen und der "
+#~ "Größenänderung der Fenster bekannt. Bitte ziehen Sie andere Einstellungen "
+#~ "in Betracht."
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "Aktuelle Aktivität anhalten"

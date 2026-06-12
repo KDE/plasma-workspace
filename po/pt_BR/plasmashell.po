@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2026-05-17 07:53-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -328,24 +328,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Modo de desempenho máximo"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"Com uma GPU NVIDIA no X11, o estilo flutuante e o modo de opacidade "
-"adaptável são conhecidos por causar baixo desempenho de arrastar e "
-"redimensionar janelas. Considere usar outras configurações."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ocultar configuração do painel"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -461,6 +450,15 @@ msgstr "Número de painéis"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Conta os painéis"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "Com uma GPU NVIDIA no X11, o estilo flutuante e o modo de opacidade "
+#~ "adaptável são conhecidos por causar baixo desempenho de arrastar e "
+#~ "redimensionar janelas. Considere usar outras configurações."
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "Parar a atividade atual"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2025-10-05 15:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -326,24 +326,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Zmogljivostni način"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"Pri grafičnem procesorju NVIDIA na X11 je znano, da plavajoči slog in način "
-"prilagodljive neprosojnosti povzročata slabo vlečenje in spreminjanje "
-"velikosti oken. Razmislite o uporabi drugih nastavitev."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Skrij nastavitve pulta"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -459,6 +448,15 @@ msgstr "Število pultov"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Prešteje pulte"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "Pri grafičnem procesorju NVIDIA na X11 je znano, da plavajoči slog in "
+#~ "način prilagodljive neprosojnosti povzročata slabo vlečenje in "
+#~ "spreminjanje velikosti oken. Razmislite o uporabi drugih nastavitev."
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "Zaustavi trenutno dejavnost"

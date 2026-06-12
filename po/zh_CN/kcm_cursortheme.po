@@ -268,10 +268,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(可用大小：%1)"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "要让这些更改生效，您必须重新启动 Plasma 会话。"
-
-#~ msgid "The requested size '%1' is not available, using %2 instead."
-#~ msgstr "要求的大小“%1”不可用，将使用 %2 替代。"

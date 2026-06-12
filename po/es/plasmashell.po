@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2025-10-05 14:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -326,24 +326,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Modo de rendimiento"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"Con las GPU NVIDIA en X11, se sabe que el estilo flotante y el modo de "
-"opacidad adaptativa provocan un rendimiento deficiente al arrastrar y "
-"cambiar el tamaño de las ventanas. Considere el uso de otros ajustes."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ocultar configuración del panel"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -459,3 +448,12 @@ msgstr "Contador de paneles"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Cuenta los paneles"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "Con las GPU NVIDIA en X11, se sabe que el estilo flotante y el modo de "
+#~ "opacidad adaptativa provocan un rendimiento deficiente al arrastrar y "
+#~ "cambiar el tamaño de las ventanas. Considere el uso de otros ajustes."

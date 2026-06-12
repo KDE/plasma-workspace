@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -328,25 +328,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Прадукцыйны рэжым"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"Вядома, што з графічным працэсарам NVIDIA на X11 плывучы стыль і рэжым "
-"адаптыўнай непразрыстасці прыводзяць да нізкай прадукцыйнасці пры "
-"перацягванні і змене памеру акон. Падумайце над тым, каб скарыстацца іншымі "
-"наладамі."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Схаваць панэль канфігурацыі"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -463,6 +451,16 @@ msgstr "Колькасць панэляў"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Падлік колькасці панэляў"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "Вядома, што з графічным працэсарам NVIDIA на X11 плывучы стыль і рэжым "
+#~ "адаптыўнай непразрыстасці прыводзяць да нізкай прадукцыйнасці пры "
+#~ "перацягванні і змене памеру акон. Падумайце над тым, каб скарыстацца "
+#~ "іншымі наладамі."
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "Спыніць бягучы пакой"

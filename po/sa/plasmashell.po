@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -322,24 +322,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "कार्यप्रदर्शनविधिः"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"X11 इत्यस्मिन् NVIDIA GPU इत्यनेन सह Floating शैली तथा Adaptive opacity mode "
-"इत्येतयोः विण्डो-ड्रैग् तथा आकार-परिवर्तनस्य कार्यक्षमतायाः दुर्बलं कारणं भवति इति ज्ञायते । "
-"अन्येषां सेटिङ्ग्स् इत्यस्य उपयोगं विचारयन्तु।"
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "फलकविन्यासं गोपयन्तु"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -455,6 +444,15 @@ msgstr "पैनलसंख्या"
 #, kde-format
 msgid "Counts the panels"
 msgstr "पैनलानि गणयतु"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "X11 इत्यस्मिन् NVIDIA GPU इत्यनेन सह Floating शैली तथा Adaptive opacity mode "
+#~ "इत्येतयोः विण्डो-ड्रैग् तथा आकार-परिवर्तनस्य कार्यक्षमतायाः दुर्बलं कारणं भवति इति "
+#~ "ज्ञायते । अन्येषां सेटिङ्ग्स् इत्यस्य उपयोगं विचारयन्तु।"
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "वर्तमानक्रियाकलापम् स्थगयन्तु"

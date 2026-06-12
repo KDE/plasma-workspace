@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2025-02-13 22:22+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -323,24 +323,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Mode Performa"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"Memakai GPU NVIDIA pada X11, mode opasitas Adaptive dan gaya Mengambang "
-"diketahui menyebabkan kinerja sèrèt dan ubah ukuran jendela menjadi buruk. "
-"Pertimbangkan untuk menggunakan pengaturan lain."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Sembunyikan Panel Konfigurasi"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -456,6 +445,15 @@ msgstr "Cacah Panel"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Cacahnya panel-panel"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "Memakai GPU NVIDIA pada X11, mode opasitas Adaptive dan gaya Mengambang "
+#~ "diketahui menyebabkan kinerja sèrèt dan ubah ukuran jendela menjadi "
+#~ "buruk. Pertimbangkan untuk menggunakan pengaturan lain."
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "Hentikan Aktivitas Saat Ini"

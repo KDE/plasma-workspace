@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2025-11-02 14:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -321,25 +321,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "அதிவேக பயன்முறை"
 
-# Condition in the code is: nvidia AND (floating OR adaptive)
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"X11-உடன் NVIDIA வரைகலை அட்டையைப் பயன்படுத்தம்போது, பலகை மிதப்பதாக இருந்தாலோ அதன் "
-"ஒளிபுகாமை மாறக்கூடியதாக இருந்தாலோ, சாளரங்களை இழுக்கும்போதும் அளவுமாற்றும்போதும் "
-"சாளரநிரலின் வேகம் பாதிக்கப்படலாம். அமைப்புகளை மாற்றுமாறு பரிந்துரைக்கிறோம்."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "பலகை அமைப்புகளை மறை"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -455,6 +443,16 @@ msgstr "பலகைகளின் எண்ணிக்கை"
 #, kde-format
 msgid "Counts the panels"
 msgstr "பலகைகளை எண்ணும்"
+
+# Condition in the code is: nvidia AND (floating OR adaptive)
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "X11-உடன் NVIDIA வரைகலை அட்டையைப் பயன்படுத்தம்போது, பலகை மிதப்பதாக இருந்தாலோ அதன் "
+#~ "ஒளிபுகாமை மாறக்கூடியதாக இருந்தாலோ, சாளரங்களை இழுக்கும்போதும் அளவுமாற்றும்போதும் "
+#~ "சாளரநிரலின் வேகம் பாதிக்கப்படலாம். அமைப்புகளை மாற்றுமாறு பரிந்துரைக்கிறோம்."
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "தற்போதைய செயல்பாட்டை நிறுத்து"

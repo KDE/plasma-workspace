@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-10 00:48+0000\n"
+"POT-Creation-Date: 2026-06-12 00:46+0000\n"
 "PO-Revision-Date: 2024-09-19 17:01+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -327,25 +327,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Λειτουργία απόδοσης"
 
-#: panelview.cpp:439
-#, kde-format
-msgid ""
-"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
-"known to cause poor window drag and resize performance. Consider using other "
-"settings."
-msgstr ""
-"Με μια κάρτα γραφικών NVIDIA στο X11, το αιωρούμενο στυλ και η λειτουργία "
-"προσαρμοστικής αδιαφάνειας είναι γνωστό ότι προκαλούν κακή απόδοση σύρσης "
-"και αλλαγής μεγέθους παραθύρων. Εξετάστε το ενδεχόμενο χρήσης άλλων "
-"ρυθμίσεων."
-
-#: panelview.cpp:1127
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Απόκρυψη διαμόρφωσης πίνακα"
 
-#: panelview.cpp:1129
+#: panelview.cpp:1070
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -461,6 +449,16 @@ msgstr "Αριθμός πινάκων"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Μετράει τους πίνακες"
+
+#~ msgid ""
+#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
+#~ "are known to cause poor window drag and resize performance. Consider "
+#~ "using other settings."
+#~ msgstr ""
+#~ "Με μια κάρτα γραφικών NVIDIA στο X11, το αιωρούμενο στυλ και η λειτουργία "
+#~ "προσαρμοστικής αδιαφάνειας είναι γνωστό ότι προκαλούν κακή απόδοση σύρσης "
+#~ "και αλλαγής μεγέθους παραθύρων. Εξετάστε το ενδεχόμενο χρήσης άλλων "
+#~ "ρυθμίσεων."
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "Διακοπή τρέχουσας δραστηριότητας"
