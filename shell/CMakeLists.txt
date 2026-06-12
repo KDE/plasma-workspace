@@ -148,10 +148,6 @@ endif()
 target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
-if(HAVE_X11)
-  target_link_libraries(plasmashell PRIVATE XCB::XCB XCB::RANDR)
-endif()
-
 if(PROJECT_VERSION_PATCH GREATER_EQUAL 80 OR PROJECT_VERSION_MINOR GREATER_EQUAL 80)
     target_link_libraries(plasmashell PRIVATE KF6::KIOGui)
 endif()

@@ -23,10 +23,6 @@ target_link_libraries(screenpoolmanualtest
             Wayland::Client
             PW::KWorkspace
                         )
-if(HAVE_X11)
-    target_link_libraries(screenpoolmanualtest XCB::XCB XCB::RANDR)
-    target_link_libraries(screenpoolmanualtest Qt::GuiPrivate)
-endif()
 if(QT_QTOPENGL_FOUND)
     target_link_libraries(screenpoolmanualtest Qt::OpenGL)
 endif()
