@@ -69,6 +69,8 @@ void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QP
     // there's no beating around the bush unfortunately, const_cast is only one of the few options we have left.
     auto self = const_cast<AbstractImageListModel *>(this);
 
+    self->m_sizeJobsUrls.insert(path, index);
+
     QtConcurrent::run(MediaMetadata::read, path).then(self, [self, path](const MediaMetadata &metadata) {
         const QPersistentModelIndex index = self->m_sizeJobsUrls.take(path);
 
@@ -88,8 +90,6 @@ void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QP
             Q_EMIT self->dataChanged(index, index, dirtyRoles);
         }
     });
-
-    self->m_sizeJobsUrls.insert(path, index);
 #else
     Q_UNUSED(path)
     Q_UNUSED(index)
