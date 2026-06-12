@@ -562,7 +562,7 @@ bool ActionsWidget::hasChanged() const
     return (m_actionsTree->actionsChanged() != -1);
 }
 
-void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int col)
+void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int /*col*/)
 {
     QTreeWidgetItem *parentItem = item->parent(); // parent of the command item
     if (parentItem == nullptr) { // this is a top level action
