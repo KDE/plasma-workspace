@@ -656,7 +656,7 @@ void PanelView::positionAndResizePanel()
     updateLayerWindow();
 
     // At least one QWindow setGeometry is needed to avoid a protocol error
-    if (m_layerWindow && !size().isEmpty()) {
+    if (!size().isEmpty()) {
         m_layerWindow->setDesiredSize(geom.size());
 
         // Should not be needed on Wayland in general, but popups and things like that still need it.
@@ -1098,9 +1098,7 @@ void PanelView::setScreenToFollow(QScreen *screen)
 
     m_screenToFollow = screen;
 
-    if (m_layerWindow) {
-        m_layerWindow->setScreen(screen);
-    }
+    m_layerWindow->setScreen(screen);
 
     setScreen(screen);
     adaptToScreen();
@@ -1545,19 +1543,16 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
         showTemporarily();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
 
-        if (m_layerWindow) {
-            m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
-            requestUpdate();
-        }
+        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
+        requestUpdate();
+
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         m_corona->savePreviousWindow();
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
         showTemporarily();
 
-        if (m_layerWindow) {
-            m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-            requestUpdate();
-        }
+        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+        requestUpdate();
 
         const auto nextItem = rootObject()->nextItemInFocusChain();
         if (nextItem) {
@@ -1574,11 +1569,8 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
 
         restoreAutoHide();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
-
-        if (m_layerWindow) {
-            m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
+        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();
-        }
     }
 }
 
