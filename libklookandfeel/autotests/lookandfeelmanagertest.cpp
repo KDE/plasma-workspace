@@ -61,7 +61,7 @@ void LookAndFeelManagerTest::initTestCase()
     // we need an existing colorscheme file, even if empty
     QVERIFY(m_dataDir.mkpath(QStringLiteral("color-schemes")));
     QFile f(m_dataDir.path() + QStringLiteral("/color-schemes/TestValue.colors"));
-    f.open(QIODevice::WriteOnly);
+    QVERIFY(f.open(QIODevice::WriteOnly));
     f.close();
 
     const QString packagePath = QFINDTESTDATA("lookandfeel");
