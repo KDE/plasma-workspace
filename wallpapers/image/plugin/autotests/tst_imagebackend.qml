@@ -137,7 +137,7 @@ TestCase {
         imageWallpaper.slideshowFoldersFirst = false;
 
         imageWallpaper.renderingMode = Wallpaper.ImageBackend.SlideShow;
-        wait(1000); // &SlideModel::done
+        tryCompare(imageWallpaper, "loading", false);
 
         let image = mediaProxy.modelImage;
 
@@ -145,6 +145,36 @@ TestCase {
         verify(image != mediaProxy.modelImage);
 
         image = mediaProxy.modelImage;
+        imageWallpaper.nextSlide();
+        verify(image != mediaProxy.modelImage);
+    }
+
+    function test_manualOnlySlideshow() {
+        verify(testDirs[0].length > 0);
+
+        imageWallpaper.slidePaths = testDirs;
+        imageWallpaper.slideTimer = 0;
+        imageWallpaper.slideshowMode = Wallpaper.SortingMode.Alphabetical;
+        imageWallpaper.slideshowFoldersFirst = false;
+
+        imageWallpaper.renderingMode = Wallpaper.ImageBackend.SlideShow;
+        tryCompare(imageWallpaper, "loading", false);
+
+        let image = mediaProxy.modelImage;
+
+        // nextSlide() should still work manually
+        imageWallpaper.nextSlide();
+        verify(image != mediaProxy.modelImage);
+
+        image = mediaProxy.modelImage;
+
+        // Timer should not fire automatically
+        modelImageChangedSignalSpy.clear();
+        wait(200);
+        compare(modelImageChangedSignalSpy.count, 0);
+        compare(mediaProxy.modelImage, image);
+
+        // But nextSlide() should still work
         imageWallpaper.nextSlide();
         verify(image != mediaProxy.modelImage);
     }
