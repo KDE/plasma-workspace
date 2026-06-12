@@ -10,9 +10,6 @@
 #include <QPointer>
 #include <QPropertyAnimation>
 #include <QTimer>
-#ifdef HAVE_X11
-#include <QWindow> // For WId
-#endif
 
 #include <KSvg/FrameSvg>
 #include <kwindoweffects.h>

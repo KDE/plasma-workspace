@@ -29,18 +29,11 @@
 #include <QScreen>
 
 #include <KLocalizedString>
-#include <KX11Extras>
-#include <kwindowsystem.h>
 
 #include <Plasma/Containment>
 #include <PlasmaQuick/AppletQuickItem>
 
 #include <LayerShellQt/Window>
-
-#if HAVE_X11
-#include <NETWM>
-#include <qpa/qplatformwindow_p.h>
-#endif
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -629,7 +622,7 @@ void PanelView::positionPanel()
 
     updateLayerWindow();
 
-    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+    // TODO: should we remove this? It's still relevant on wayland because of popup positioning.
     const QPoint pos = geometryByDistance(0).topLeft();
     setPosition(pos);
     updateMask();
@@ -654,7 +647,7 @@ void PanelView::positionAndResizePanel()
         return;
     }
 
-    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+    // TODO: can be removed? It's still relevant on wayland because of popup positioning.
     const QPoint pos = geometryByDistance(0).topLeft();
 
     const QRect geom = {pos, sizeHint};
@@ -986,7 +979,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     // don't setGeometry() to make really sure we aren't doing a resize loop
     if (m_screenToFollow && containment()) {
         updateEnabledBorders();
-        // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+        // TODO: Can be removed? It's still relevant on wayland because of popup positioning.
         const QPoint pos = geometryByDistance(0).topLeft();
         setPosition(pos);
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
@@ -1041,15 +1034,7 @@ void PanelView::keyPressEvent(QKeyEvent *event)
 void PanelView::integrateScreen()
 {
     updateMask();
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setOnAllDesktops(winId(), true);
-        KX11Extras::setType(winId(), NET::Dock);
-        if (auto xcbWindow = nativeInterface<QNativeInterface::Private::QXcbWindow>()) {
-            xcbWindow->setWindowType(QNativeInterface::Private::QXcbWindow::Dock);
-        }
-    }
-#endif
+
     setVisibilityMode(m_visibilityMode);
 
     if (containment()) {
@@ -1385,29 +1370,25 @@ void PanelView::updateMask()
                                                  mask);
     }
 
-    if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
-        const QRect bounding = mask.boundingRect();
-        // Always go to screen edge, to preserve fitts law
-        switch (containment()->location()) {
-        case Plasma::Types::LeftEdge:
-            screenPanelRect.setRight(bounding.right());
-            break;
-        case Plasma::Types::TopEdge:
-            screenPanelRect.setBottom(bounding.bottom());
-            break;
-        case Plasma::Types::RightEdge:
-            screenPanelRect.setLeft(bounding.left());
-            break;
-        case Plasma::Types::BottomEdge:
-            screenPanelRect.setTop(bounding.top());
-            break;
-        default:
-            break;
-        }
-        setMask(screenPanelRect);
-    } else {
-        setMask(mask);
+    const QRect bounding = mask.boundingRect();
+    // Always go to screen edge, to preserve fitts law
+    switch (containment()->location()) {
+    case Plasma::Types::LeftEdge:
+        screenPanelRect.setRight(bounding.right());
+        break;
+    case Plasma::Types::TopEdge:
+        screenPanelRect.setBottom(bounding.bottom());
+        break;
+    case Plasma::Types::RightEdge:
+        screenPanelRect.setLeft(bounding.left());
+        break;
+    case Plasma::Types::BottomEdge:
+        screenPanelRect.setTop(bounding.top());
+        break;
+    default:
+        break;
     }
+    setMask(screenPanelRect);
 }
 
 void PanelView::updateExclusiveZone()
@@ -1563,9 +1544,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
-        if (KWindowSystem::isPlatformX11()) {
-            KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
-        }
+
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();
@@ -1573,11 +1552,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         m_corona->savePreviousWindow();
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
-        if (KWindowSystem::isPlatformX11()) {
-            KX11Extras::forceActiveWindow(winId());
-        } else {
-            showTemporarily();
-        }
+        showTemporarily();
 
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
@@ -1599,9 +1574,7 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
 
         restoreAutoHide();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
-        if (KWindowSystem::isPlatformX11()) {
-            KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
-        }
+
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();
