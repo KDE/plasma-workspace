@@ -114,7 +114,7 @@ QFileInfo ShellRunnerTest::createExecutableFile(const QString &fileName)
     const QString tmpPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir(tmpPath).mkpath(u"."_s);
     QFile testFile(tmpPath + QDir::separator() + fileName);
-    QVERIFY(testFile.open(QIODevice::WriteOnly));
+    (void)testFile.open(QIODevice::WriteOnly);
     testFile.setPermissions(QFile::ExeOwner);
     return QFileInfo(testFile);
 }
