@@ -25,6 +25,7 @@ PrompterTest::PrompterTest(QObject *parent)
 {
     QDBusObjectPath path(QDBusObjectPath(u"/org/kde/secretprompter/request/1"_s));
     Request *req = new Request(path);
+    Q_UNUSED(req);
 
     auto widget = new QWidget;
     widget->setMinimumSize(QSize(300, 300));

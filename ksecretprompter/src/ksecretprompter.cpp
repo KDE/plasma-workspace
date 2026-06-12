@@ -162,7 +162,7 @@ void KSecretPrompter::onDismissRequest()
 
 void KSecretPrompter::UnlockCollectionPrompt(const QDBusObjectPath &path,
                                              const QString &windowId,
-                                             const QString &activationToken,
+                                             const QString & /*activationToken*/,
                                              const QString &collectionName)
 {
     Prompt(path,
@@ -173,7 +173,7 @@ void KSecretPrompter::UnlockCollectionPrompt(const QDBusObjectPath &path,
 
 void KSecretPrompter::CreateCollectionPrompt(const QDBusObjectPath &path,
                                              const QString &windowId,
-                                             const QString &activationToken,
+                                             const QString & /*activationToken*/,
                                              const QString &collectionName)
 {
     Prompt(path,

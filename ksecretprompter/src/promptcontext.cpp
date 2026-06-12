@@ -24,7 +24,7 @@ PromptContext::PromptContext(const QString &callerAddress, const QDBusObjectPath
 {
     qCDebug(KSecretPrompterDaemon) << "Creating PromptContext for caller:" << callerAddress << "path:" << path.path();
 
-    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
+    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString & /*serviceName*/) {
         m_valid = false;
         deleteLater();
     });
