@@ -83,7 +83,11 @@ void Calendar::setDisplayedDate(const QDate &dateTime)
 
 void Calendar::setDisplayedDate(const QDateTime &dateTime)
 {
-    setDisplayedDate(dateTime.date());
+    // Like setToday(), convert through local time so that QDateTime values
+    // with Qt::UTC timeSpec (e.g. from Clock::jsDateTime()) resolve to the
+    // correct local date.  For any other timeSpec, toLocalTime() is a no-op
+    // that returns the same date.
+    setDisplayedDate(dateTime.toLocalTime().date());
 }
 
 QDateTime Calendar::today() const
@@ -93,7 +97,14 @@ QDateTime Calendar::today() const
 
 void Calendar::setToday(const QDateTime &dateTime)
 {
-    QDate date = dateTime.date();
+    // dateTime originates from Clock::jsDateTime() which returns a QDateTime
+    // with Qt::UTC timeSpec whose value is adjusted so that JS Date methods
+    // like getDate() return the correct date in the configured timezone.
+    // Calling .date() directly on a Qt::UTC QDateTime gives the UTC date,
+    // which can differ from the local date when the system timezone is ahead
+    // of UTC and local time is before UTC midnight (bug 521114).
+    // Convert to local time first to get the date that JS getDate() would return.
+    QDate date = dateTime.toLocalTime().date();
     if (date == d->today) {
         return;
     }
