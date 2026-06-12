@@ -14,6 +14,7 @@
 
 #include <clocale>
 
+
 using namespace Qt::StringLiterals;
 
 class ShellRunnerTest : public KRunner::AbstractRunnerTest
@@ -113,7 +114,7 @@ QFileInfo ShellRunnerTest::createExecutableFile(const QString &fileName)
     const QString tmpPath = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QDir(tmpPath).mkpath(u"."_s);
     QFile testFile(tmpPath + QDir::separator() + fileName);
-    testFile.open(QIODevice::WriteOnly);
+    QVERIFY(testFile.open(QIODevice::WriteOnly));
     testFile.setPermissions(QFile::ExeOwner);
     return QFileInfo(testFile);
 }
