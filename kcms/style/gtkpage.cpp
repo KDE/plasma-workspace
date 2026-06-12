@@ -52,14 +52,15 @@ void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
     QString themesInstallDirectoryPath(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/themes"));
     QDir::home().mkpath(themesInstallDirectoryPath);
     KTar themeArchive(fileUrl.path());
-    if (!themeArchive.open(QIODevice::ReadOnly)) {
-        showError();
-        return;
-    }
 
     auto showError = [this, fileUrl]() {
         Q_EMIT showErrorMessage(i18n("%1 is not a valid GTK Theme archive.", fileUrl.fileName()));
     };
+
+    if (!themeArchive.open(QIODevice::ReadOnly)) {
+        showError();
+        return;
+    }
 
     QString firstEntryName = themeArchive.directory()->entries().constFirst();
     const KArchiveEntry *possibleThemeDirectory = themeArchive.directory()->entry(firstEntryName);
