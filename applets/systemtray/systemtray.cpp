@@ -251,7 +251,6 @@ void SystemTray::migrateFromSystrayContainer()
     }
 
     // Delete the the old systray
-    bool oldSystrayInstantiated = false;
     for (Plasma::Containment *cont : corona()->containments()) {
         if (cont->id() == oldSystrayId) {
             delete cont;
