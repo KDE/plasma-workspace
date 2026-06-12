@@ -194,8 +194,6 @@ if(WITH_X11)
 
     find_package(XCB MODULE REQUIRED COMPONENTS AUX XCB CURSOR RANDR IMAGE)
     set_package_properties(XCB PROPERTIES TYPE REQUIRED)
-
-    find_package(KScreenLocker ${PROJECT_DEP_VERSION} REQUIRED)
 else()
     set(HAVE_X11 0)
     set(HAVE_XCURSOR 0)

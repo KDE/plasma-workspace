@@ -32,7 +32,6 @@ configure_package_config_file(KSMServerDBusInterfaceConfig.cmake.in
     INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR})
 
 target_link_libraries(ksmserver
-    PW::KScreenLocker
     PW::KWorkspace
     KF6::XmlGui
     KF6::I18n

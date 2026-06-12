@@ -71,8 +71,6 @@
 #include <KIO/DesktopExecParser>
 #include <KService>
 
-#include <KScreenLocker/KsldApp>
-
 #include <QStandardPaths>
 #include <krandom.h>
 #include <startup_interface.h>
@@ -514,13 +512,6 @@ KSMServer::KSMServer(InitFlags flags)
     , m_kwinInterface(new OrgKdeKWinSessionInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/Session"), QDBusConnection::sessionBus(), this))
     , sockets{-1, -1}
 {
-    if (!flags.testFlag(InitFlag::NoLockScreen)) {
-        ScreenLocker::KSldApp::self()->initialize();
-        if (flags.testFlag(InitFlag::ImmediateLockScreen)) {
-            ScreenLocker::KSldApp::self()->lock(ScreenLocker::EstablishLock::Immediate);
-        }
-    }
-
     if (::socketpair(AF_UNIX, SOCK_STREAM | SOCK_CLOEXEC, 0, sockets) != 0) {
         qFatal("Could not create socket pair, error %d (%s)", errno, strerror(errno));
     }

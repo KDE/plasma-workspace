@@ -727,8 +727,6 @@ bool startPlasmaSession()
         startPlasmaSession.reset(new QProcess);
         qCDebug(PLASMA_STARTUP) << "Using classic boot";
 
-        const QStringList plasmaSessionOptions{QStringLiteral("--no-lockscreen")};
-
         startPlasmaSession->setProcessChannelMode(QProcess::ForwardedChannels);
         QObject::connect(startPlasmaSession.get(), &QProcess::finished, &e, [&rc](int exitCode, QProcess::ExitStatus) {
             if (exitCode == 255) {
@@ -738,7 +736,7 @@ bool startPlasmaSession()
             }
         });
 
-        startPlasmaSession->start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
+        startPlasmaSession->start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"));
     } else {
         qCDebug(PLASMA_STARTUP) << "Using systemd boot";
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),

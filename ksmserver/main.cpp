@@ -136,13 +136,6 @@ int main(int argc, char *argv[])
     QCommandLineOption nolocalOption(QStringLiteral("nolocal"), i18n("Also allow remote connections"));
     parser.addOption(nolocalOption);
 
-    QCommandLineOption lockscreenOption(QStringLiteral("lockscreen"), i18n("Starts the session in locked mode"));
-    parser.addOption(lockscreenOption);
-
-    QCommandLineOption noLockscreenOption(QStringLiteral("no-lockscreen"),
-                                          i18n("Starts without lock screen support. Only needed if other component provides the lock screen."));
-    parser.addOption(noLockscreenOption);
-
     parser.process(*a);
 
     bool only_local = !parser.isSet(nolocalOption);
@@ -160,18 +153,6 @@ int main(int argc, char *argv[])
     KSMServer::InitFlags flags = KSMServer::InitFlag::None;
     if (only_local) {
         flags |= KSMServer::InitFlag::OnlyLocal;
-    }
-    if (parser.isSet(lockscreenOption)) {
-        flags |= KSMServer::InitFlag::ImmediateLockScreen;
-    }
-    if (parser.isSet(noLockscreenOption)) {
-        flags |= KSMServer::InitFlag::NoLockScreen;
-    }
-
-    // we use the session_type here as ksmserver is already forced as X above
-    // in wayland, kwin manages the lock screen
-    if (qgetenv("XDG_SESSION_TYPE") == QByteArrayLiteral("wayland")) {
-        flags |= KSMServer::InitFlag::NoLockScreen;
     }
 
     auto server = new KSMServer(flags);

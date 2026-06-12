@@ -62,8 +62,6 @@ public:
     enum class InitFlag {
         None = 0,
         OnlyLocal = 1 << 0,
-        ImmediateLockScreen = 1 << 1,
-        NoLockScreen = 1 << 2,
     };
 
     Q_DECLARE_FLAGS(InitFlags, InitFlag)
