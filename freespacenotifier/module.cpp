@@ -40,7 +40,7 @@ FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject *parent, const QList<QV
         Solid::Device device(udi);
 
         // Required for two stage devices
-        if (auto volume = device.as<Solid::StorageVolume>()) {
+        if (device.as<Solid::StorageVolume>()) {
             auto *iface = device.as<Solid::GenericInterface>();
             if (iface) {
                 iface->setProperty("udi", udi);
