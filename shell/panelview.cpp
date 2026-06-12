@@ -100,9 +100,11 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         case Plasma::Types::TopEdge:
         case Plasma::Types::BottomEdge:
             containment()->setFormFactor(Plasma::Types::Horizontal);
-        }
-        restore();
-    });
+            break;
+        default:
+            break;
+            restore();
+        });
 
     if (!m_corona->kPackage().isValid()) {
         qCWarning(PLASMASHELL) << "Invalid home screen package";
