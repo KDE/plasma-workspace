@@ -14,6 +14,7 @@
 #include <ranges>
 
 #include <QDir>
+#include <QElapsedTimer>
 #include <QEventLoop>
 #include <QProcess>
 #include <QStandardPaths>
@@ -21,8 +22,9 @@
 
 #include <QDBusArgument>
 #include <QDBusConnection>
-#include <QDBusInterface>
 #include <QDBusConnectionInterface>
+#include <QDBusInterface>
+#include <QDBusMetaType>
 #include <QDBusServiceWatcher>
 
 #include <KConfig>
@@ -37,8 +39,6 @@
 #include <autostartscriptdesktopfile.h>
 
 #include <KUpdateLaunchEnvironmentJob>
-
-#include <ksplashinterface.h>
 
 #include <signal.h>
 #include "startplasma.h"
@@ -690,10 +690,12 @@ static void migrateUserScriptsAutostart()
 
 bool startPlasmaSession()
 {
+    QDBusConnection::sessionBus().interface()->registerService(QStringLiteral("org.kde.PlasmaLoading"),
+                                                               QDBusConnectionInterface::ServiceQueueOptions::DontQueueService,
+                                                               QDBusConnectionInterface::AllowReplacement);
+
     resetSystemdFailedUnits();
     reloadSystemd();
-    OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
-    iface.setStage(QStringLiteral("startPlasma"));
 
     bool rc = true;
     QEventLoop e;

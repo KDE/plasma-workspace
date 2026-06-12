@@ -12,6 +12,9 @@
 #include <QCommandLineParser>
 #include <QCursor>
 #include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
+
 #include <QLoggingCategory>
 #include <QPixmap>
 #include <QScreen>
@@ -20,10 +23,11 @@
 #include <KSharedConfig>
 
 #include <LayerShellQt/Shell>
+#include <qdbusconnectioninterface.h>
 
 #include <PlasmaQuick/PlasmaQuick>
 
-#define TEST_STEP_INTERVAL 2000
+#define STEP_INTERVAL 200
 
 /**
  * There are 6 stages in ksplash
@@ -37,7 +41,7 @@
 
 SplashApp::SplashApp(int &argc, char **argv)
     : QGuiApplication(argc, argv)
-    , m_stage(0)
+    , m_stage(1)
     , m_testing(false)
     , m_window(false)
     , m_engine(PlasmaQuick::globalEngine())
@@ -61,21 +65,21 @@ SplashApp::SplashApp(int &argc, char **argv)
         }
     }
 
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject(QStringLiteral("/KSplash"), this, QDBusConnection::ExportScriptableSlots);
-    dbus.registerService(QStringLiteral("org.kde.KSplash"));
+    if (!m_testing) {
+        QDBusServiceWatcher* watcher = new QDBusServiceWatcher(QStringLiteral("org.kde.PlasmaLoading"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this);
+        connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, []() {
+            qGuiApp->quit();
+        });
+        if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.PlasmaLoading"))) {
+            qGuiApp->quit();
+        }
+    }
 
     for (const auto screenList{screens()}; QScreen * screen : screenList) {
         adoptScreen(screen);
     }
 
-    setStage(QStringLiteral("initial"));
-    setStage(QStringLiteral("kcminit"));
-    setStage(QStringLiteral("wm"));
-
-    if (m_testing) {
-        m_timer.start(TEST_STEP_INTERVAL, this);
-    }
+    m_timer.start(STEP_INTERVAL, this);
 
     connect(this, &QGuiApplication::screenAdded, this, &SplashApp::adoptScreen);
 }
@@ -92,19 +96,8 @@ void SplashApp::timerEvent(QTimerEvent *event)
 
         setStage(m_stage + 1);
 
-        m_timer.start(TEST_STEP_INTERVAL, this);
+        m_timer.start(STEP_INTERVAL, this);
     }
-}
-
-void SplashApp::setStage(const QString &stage)
-{
-    qCDebug(KSPLASHQML_DEBUG) << "Loading stage " << stage << ", current count " << m_stages.count();
-
-    if (m_stages.contains(stage)) {
-        return;
-    }
-    m_stages.append(stage);
-    setStage(m_stages.count());
 }
 
 void SplashApp::setStage(int stage)
