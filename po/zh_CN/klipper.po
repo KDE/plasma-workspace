@@ -54,14 +54,14 @@ msgstr ""
 "界面对选中内容进行了<interface>复制</interface>或者<interface>剪切</"
 "interface>操作，它们将被保存到<emphasis>剪贴板</emphasis>中。剪贴板中的内容可"
 "以通过<interface>粘贴</interface>操作进行粘贴。<nl/><nl/>启用此选项后，选中内"
-"容和剪贴板内容将被一视同仁，任何选中的内容都可以立即通过任意方式进行粘贴。禁"
-"用此选项后，选中内容可能还会被保存到剪贴板的历史记录中 (通过下面的选项控制)，"
-"但只能通过鼠标中键进行粘贴。"
+"容将自动被复制到剪贴板，任意选中内容均可立即通过任意方式进行粘贴。禁用此选项"
+"后，选中内容可能还会被保存到剪贴板的历史记录中 (通过下面的选项控制)，但只能通"
+"过鼠标中键进行粘贴。"
 
 #: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
-msgstr "总是保存到历史记录"
+msgstr "总是保存到剪贴板"
 
 #: configdialog.cpp:139
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "选中的文本内容："
 #: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr "仅在明确复制时"
+msgstr "仅在明确复制时保存到剪贴板"
 
 #: configdialog.cpp:146
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "选中的非文本内容："
 #: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
-msgstr "永不保存到历史记录"
+msgstr "不保存到剪贴板"
 
 #: configdialog.cpp:189
 #, kde-format
@@ -110,9 +110,9 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
-"当选择的文本、或者从剪贴板历史选择的文本匹配一个操作模式时，自动显示包含可应"
-"用操作的弹出菜单。如果在此关闭了自动菜单，或者因为位于已排除窗口而不显示时，"
-"该菜单可以通过 <shortcut>%1</shortcut> 快捷键显示。"
+"当选中的文本、或者从剪贴板历史记录中选中的文本匹配某个操作模式时，自动显示包"
+"含可用操作的弹出菜单。如果在此关闭了自动菜单，或者因为属于已排除窗口而不显示"
+"时，该菜单可以通过 <shortcut>%1</shortcut> 快捷键显示。"
 
 #: configdialog.cpp:285
 #, kde-format
@@ -686,7 +686,7 @@ msgstr "不允许清除剪贴板内容，例如在应用程序退出时。"
 #: klipper.kcfg:27
 #, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "保持选中内容和剪贴板内容一致"
+msgstr "选中内容自动复制到剪贴板"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29

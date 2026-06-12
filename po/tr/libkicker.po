@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2023-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-11 02:35+0000\n"
-"PO-Revision-Date: 2026-04-23 07:21+0300\n"
+"PO-Revision-Date: 2026-06-11 20:43+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 "X-POOTLE-MTIME: 1413102230.000000\n"
 
 #: actionlist.cpp:93
@@ -47,12 +47,12 @@ msgstr "Araç Takımı Olarak Panele Ekle"
 #: actionlist.cpp:316 rootmodel.cpp:587
 #, kde-format
 msgid "Recent Files"
-msgstr "Son Dosyalar"
+msgstr "Son Kullanılan Dosyalar"
 
 #: actionlist.cpp:326
 #, kde-format
 msgid "Forget Recent Files"
-msgstr "Son Dosyaları Unut"
+msgstr "Son Kullanılan Dosyaları Unut"
 
 #: actionlist.cpp:393
 #, kde-format
@@ -197,7 +197,7 @@ msgstr "Bu görülmemeli! KICKER_FAVORITES_MODEL’i kullan"
 #: rootmodel.cpp:578
 #, kde-format
 msgid "Recent Places"
-msgstr "Son Yerler"
+msgstr "Son Gidilen Yerler"
 
 #: rootmodel.cpp:578
 #, kde-format
