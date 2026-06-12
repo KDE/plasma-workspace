@@ -14,7 +14,6 @@
 
 #include "previewwidget.h"
 
-#include "config-X11.h"
 #include "cursortheme.h"
 
 namespace
@@ -259,11 +258,7 @@ void PreviewWidget::layoutItems()
 {
     if (!list.isEmpty()) {
         double deviceCoordinateWidth = width();
-#if HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            deviceCoordinateWidth *= window()->devicePixelRatio();
-        }
-#endif
+
         int nextX = m_padding;
         int nextY = m_padding;
 
@@ -311,16 +306,6 @@ void PreviewWidget::paint(QPainter *painter)
 
     painter->setRenderHint(QPainter::SmoothPixmapTransform, true);
 
-    // for cursor themes we must ignore the native scaling,
-    // as they will be rendered by X11/KWin, ignoring whatever Qt
-    // scaling
-    double devicePixelRatio = 1;
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        devicePixelRatio = window()->devicePixelRatio();
-    }
-    painter->scale(1 / devicePixelRatio, 1 / devicePixelRatio);
-#endif
     for (const auto *c : std::as_const(list)) {
         const QImage image = !c->images().empty() ? c->images().front().image : QImage();
         if (image.isNull()) {
@@ -339,11 +324,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
         layoutItems();
 
     double devicePixelRatio = 1.0;
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        devicePixelRatio = window()->devicePixelRatio();
-    }
-#endif
+
     auto it = std::ranges::find_if(list, [this, e, devicePixelRatio](const PreviewCursor *c) {
         // Increase hit area.
         const int padding = m_spacing / 2;

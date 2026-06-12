@@ -118,8 +118,6 @@ public:
         be used as icon for this theme. */
     virtual QPixmap createIcon(int size) const;
 
-    static bool haveXfixes();
-
 protected:
     void setTitle(const QString &title)
     {
@@ -154,9 +152,6 @@ protected:
     {
         m_hidden = val;
     }
-
-    // Convenience function that uses Xfixes to tag a cursor with a name
-    void setCursorName(qulonglong cursor, const QString &name) const;
 
     QString m_title;
     QString m_description;

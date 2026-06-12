@@ -73,32 +73,3 @@ QPixmap CursorTheme::createIcon(int size) const
 
     return pixmap;
 }
-
-void CursorTheme::setCursorName(qulonglong cursor, const QString &name) const
-{
-#ifdef HAVE_XFIXES
-
-    if (haveXfixes()) {
-        XFixesSetCursorName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
-    }
-#endif
-}
-
-bool CursorTheme::haveXfixes()
-{
-    bool result = false;
-
-#ifdef HAVE_XFIXES
-    if (!QX11Info::isPlatformX11()) {
-        return result;
-    }
-    int event_base, error_base;
-    if (XFixesQueryExtension(QX11Info::display(), &event_base, &error_base)) {
-        int major, minor;
-        XFixesQueryVersion(QX11Info::display(), &major, &minor);
-        result = (major >= 2);
-    }
-#endif
-
-    return result;
-}
