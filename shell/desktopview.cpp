@@ -24,7 +24,6 @@
 #include <KAuthorized>
 #include <KStartupInfo>
 #include <KWaylandExtras>
-#include <KX11Extras>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
 #include <plasmaactivities/controller.h>
@@ -44,18 +43,13 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     setColor(Qt::black);
     setFlags(Qt::Window | Qt::FramelessWindowHint);
 
-    if (KWindowSystem::isPlatformWayland()) {
-        m_layerWindow = LayerShellQt::Window::get(this);
-        m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        m_layerWindow->setExclusiveZone(-1);
-        m_layerWindow->setLayer(LayerShellQt::Window::LayerBackground);
-        m_layerWindow->setScope(QStringLiteral("desktop"));
-        m_layerWindow->setCloseOnDismissed(false);
-        m_layerWindow->setActivateOnShow(false);
-    } else {
-        KX11Extras::setType(winId(), NET::Desktop);
-        KX11Extras::setState(winId(), NET::KeepBelow);
-    }
+    m_layerWindow = LayerShellQt::Window::get(this);
+    m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+    m_layerWindow->setExclusiveZone(-1);
+    m_layerWindow->setLayer(LayerShellQt::Window::LayerBackground);
+    m_layerWindow->setScope(QStringLiteral("desktop"));
+    m_layerWindow->setCloseOnDismissed(false);
+    m_layerWindow->setActivateOnShow(false);
 
     if (targetScreen) {
         setScreenToFollow(targetScreen);
@@ -106,7 +100,7 @@ void DesktopView::setScreenToFollow(QScreen *screen)
     }
 
     // layer surfaces can't be moved between outputs, so hide and show the window on a new output
-    const bool remap = m_layerWindow && isVisible();
+    const bool remap = isVisible();
     if (remap) {
         setVisible(false);
     }
@@ -115,9 +109,8 @@ void DesktopView::setScreenToFollow(QScreen *screen)
         disconnect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
     m_screenToFollow = screen;
-    if (m_layerWindow) {
-        m_layerWindow->setScreen(screen);
-    }
+    m_layerWindow->setScreen(screen);
+
     setScreen(screen);
     connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
 
@@ -476,10 +469,6 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
             m_configView->deleteLater();
         } else {
             m_configView->show();
-            auto window = qobject_cast<QWindow *>(m_configView);
-            if (window && qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
-                KStartupInfo::setNewStartupId(window, qgetenv("DESKTOP_STARTUP_ID"));
-            }
             m_configView->requestActivate();
             return;
         }
@@ -519,10 +508,6 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
         m_configView->deleteLater();
     });
 
-    auto window = qobject_cast<QWindow *>(m_configView);
-    if (window && qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
-        KStartupInfo::setNewStartupId(window, qgetenv("DESKTOP_STARTUP_ID"));
-    }
     m_configView->requestActivate();
 }
 
