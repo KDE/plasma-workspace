@@ -6,11 +6,6 @@ if (SYSTEMD_FOUND)
     add_subdirectory(systemd)
 endif()
 
-qt_add_dbus_interface(
-    startplasma_SRCS
-    ${CMAKE_SOURCE_DIR}/ksplash/ksplashqml/org.kde.KSplash.xml
-    ksplashinterface
-)
 ecm_qt_declare_logging_category(startplasma_SRCS HEADER debug.h IDENTIFIER PLASMA_STARTUP CATEGORY_NAME org.kde.startup)
 
 add_executable(startplasma-wayland startplasma.cpp ${startplasma_SRCS})

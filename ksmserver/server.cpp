@@ -619,13 +619,6 @@ KSMServer::KSMServer(InitFlags flags)
     connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, this, &KSMServer::cleanUp);
 
     setupXIOErrorHandler();
-
-    QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("/KSplash"),
-                                                                         QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("setStage"));
-    ksplashProgressMessage.setArguments({QStringLiteral("ksmserver")});
-    QDBusConnection::sessionBus().call(ksplashProgressMessage, QDBus::NoBlock);
 }
 
 KSMServer::~KSMServer()
