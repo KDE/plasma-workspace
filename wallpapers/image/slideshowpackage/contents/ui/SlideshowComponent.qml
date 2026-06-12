@@ -154,7 +154,7 @@ ColumnLayout {
             QQC2.SpinBox {
                 id: secondsInterval
                 value: slideshowComponent.secondsIntervalValue
-                from: slideshowComponent.hoursIntervalValue === 0 && slideshowComponent.minutesIntervalValue === 0 ? 1 : 0
+                from: 0
                 to: 60
                 editable: true
                 onValueChanged: cfg_SlideInterval = hoursInterval.value * 3600 + minutesInterval.value * 60 + secondsInterval.value
@@ -169,6 +169,10 @@ ColumnLayout {
                 KCM.SettingHighlighter {
                     highlight: slideshowComponent.secondsIntervalValue != slideshowComponent.secondsIntervalValueDefault
                 }
+            }
+
+            Kirigami.ContextualHelpButton {
+                toolTipText: i18ndc("plasma_wallpaper_org.kde.image", "@info:tooltip", "Set to 0 to disable automatic wallpaper changing. You can still change wallpapers manually using the \"Next Wallpaper Image\" shortcut.")
             }
         }
     }

@@ -547,25 +547,27 @@ void ImageBackend::nextSlide()
 
     saveCurrentWallpaper();
 
-    // Synchronize wallpaper transitions across desktops on all screens and activities
-    // by updating the wallpaper in strict time intervals since UNIX epoch, defined by `m_delay`.
-    QDateTime dtnow = QDateTime::currentDateTimeUtc();
-    qint64 now = dtnow.toMSecsSinceEpoch();
-    int interval_ms = m_delay * 1000;
-    int offset_ms = now % interval_ms;
-    int duration_ms = interval_ms - offset_ms;
+    if (m_delay > 0) {
+        // Synchronize wallpaper transitions across desktops on all screens and activities
+        // by updating the wallpaper in strict time intervals since UNIX epoch, defined by `m_delay`.
+        QDateTime dtnow = QDateTime::currentDateTimeUtc();
+        qint64 now = dtnow.toMSecsSinceEpoch();
+        int interval_ms = m_delay * 1000;
+        int offset_ms = now % interval_ms;
+        int duration_ms = interval_ms - offset_ms;
 
-    // Avoid overlap of wallpaper transition animations by adding a whole interval if `duration_ms` is too short:
-    // 1. Despite `m_timer` being a `Qt::PreciseTimer`, it can still sometimes trigger a bit too early,
-    //    causing `duration_ms` to be only a couple of milliseconds.
-    // 2. The slideshow could have been started right before the end of the current interval,
-    //    resulting in the same issue.
-    if (duration_ms < m_timer_duration_min) {
-        duration_ms += interval_ms;
+        // Avoid overlap of wallpaper transition animations by adding a whole interval if `duration_ms` is too short:
+        // 1. Despite `m_timer` being a `Qt::PreciseTimer`, it can still sometimes trigger a bit too early,
+        //    causing `duration_ms` to be only a couple of milliseconds.
+        // 2. The slideshow could have been started right before the end of the current interval,
+        //    resulting in the same issue.
+        if (duration_ms < m_timer_duration_min) {
+            duration_ms += interval_ms;
+        }
+
+        // Always add a tiny offset, as `Qt::PreciseTimer` timers are actually not precise.
+        m_timer.start(duration_ms + m_timer_duration_offset);
     }
-
-    // Always add a tiny offset, as `Qt::PreciseTimer` timers are actually not precise.
-    m_timer.start(duration_ms + m_timer_duration_offset);
 }
 
 void ImageBackend::slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles)
@@ -630,13 +632,15 @@ void ImageBackend::setPauseSlideshow(bool pauseSlideshow)
         m_remainingTime = m_timer.remainingTimeAsDuration();
         m_timer.stop();
     } else if (!pauseSlideshow && !m_timer.isActive()) {
-        if (m_slideFilterModel->rowCount() > 0) {
-            // Resume from the last point
-            m_timer.start(m_remainingTime.value_or(std::chrono::seconds(m_delay)));
-            m_remainingTime.reset();
-        } else {
-            // Start a new slideshow
-            startSlideshow();
+        if (m_delay > 0) {
+            if (m_slideFilterModel->rowCount() > 0) {
+                // Resume from the last point
+                m_timer.start(m_remainingTime.value_or(std::chrono::seconds(m_delay)));
+                m_remainingTime.reset();
+            } else {
+                // Start a new slideshow
+                startSlideshow();
+            }
         }
     }
 }
