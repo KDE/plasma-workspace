@@ -38,8 +38,6 @@
 
 #include <KUpdateLaunchEnvironmentJob>
 
-#include <ksplashinterface.h>
-
 #include <signal.h>
 #include "startplasma.h"
 
@@ -692,10 +690,12 @@ static void migrateUserScriptsAutostart()
 
 bool startPlasmaSession()
 {
+    QDBusConnection::sessionBus().interface()->registerService(QStringLiteral("org.kde.PlasmaLoading"),
+                                                               QDBusConnectionInterface::ServiceQueueOptions::DontQueueService,
+                                                               QDBusConnectionInterface::AllowReplacement);
+
     resetSystemdFailedUnits();
     reloadSystemd();
-    OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
-    iface.setStage(QStringLiteral("startPlasma"));
 
     bool rc = true;
     QEventLoop e;

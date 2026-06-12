@@ -115,6 +115,8 @@ ShellCorona::ShellCorona(QObject *parent)
 {
     setupWaylandIntegration();
 
+    QDBusConnection::sessionBus().interface()->registerService(QStringLiteral("org.kde.PlasmaLoading"),
+                                                               QDBusConnectionInterface::ServiceQueueOptions::ReplaceExistingService);
     qDBusRegisterMetaType<QColor>();
 
     setupLookAndFeel();
@@ -1526,12 +1528,7 @@ void ShellCorona::checkAllDesktopsUiReady()
     createWaitingPanels();
 
     qCDebug(PLASMASHELL) << "Plasma Shell startup completed";
-    QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("/KSplash"),
-                                                                         QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("setStage"));
-    ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
-    QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+    QDBusConnection::sessionBus().unregisterService(QStringLiteral("org.kde.PlasmaLoading"));
 
     m_waitingPanels.removeAll(nullptr);
     if (!m_waitingPanels.isEmpty()) {
