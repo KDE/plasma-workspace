@@ -169,14 +169,17 @@ void KSMServer::performLegacySessionSave()
                 break;
             }
             /* Wait for more events */
-            fd_set fds;
-            FD_ZERO(&fds);
+            fd_set read_fds;
+            FD_ZERO(&read_fds);
             int fd = ConnectionNumber(newdisplay);
-            FD_SET(fd, &fds);
+            FD_SET(fd, &read_fds);
+            fd_set write_fds;
+            FD_ZERO(&write_fds);
+            FD_SET(fd, &write_fds);
             struct timeval tmwait;
             tmwait.tv_sec = (wmSaveYourselfTimeout - msecs) / 1000;
             tmwait.tv_usec = ((wmSaveYourselfTimeout - msecs) % 1000) * 1000;
-            ::select(fd + 1, &fds, nullptr, &fds, &tmwait);
+            ::select(fd + 1, &read_fds, nullptr, &write_fds, &tmwait);
         }
     }
     // Terminate work in new display

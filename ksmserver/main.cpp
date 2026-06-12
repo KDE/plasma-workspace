@@ -57,7 +57,7 @@ bool writeTest(QByteArray path)
     return true;
 }
 
-void sanity_check(int argc, char *argv[])
+void sanity_check(int /*argc*/, char * /*argv*/[])
 {
     QString msg;
     QByteArray path;
