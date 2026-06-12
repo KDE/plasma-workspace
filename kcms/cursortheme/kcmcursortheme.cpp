@@ -394,7 +394,10 @@ void CursorThemeConfig::installThemeFromFile(const QUrl &url)
 void CursorThemeConfig::installThemeFile(const QString &path)
 {
     KTar archive(path);
-    archive.open(QIODevice::ReadOnly);
+    if (!archive.open(QIODevice::ReadOnly)) {
+        Q_EMIT showErrorMessage(i18nc("@info", "Unable to open the icon theme archive."));
+        return;
+    }
 
     const KArchiveDirectory *archiveDir = archive.directory();
     QStringList themeDirs;

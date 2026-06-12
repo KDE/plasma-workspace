@@ -189,7 +189,9 @@ QStringList IconModule::findThemeDirs(const QString &archiveName)
     QStringList foundThemes;
 
     KTar archive(archiveName);
-    archive.open(QIODevice::ReadOnly);
+    if (!archive.open(QIODevice::ReadOnly)) {
+        return foundThemes;
+    }
     const KArchiveDirectory *themeDir = archive.directory();
 
     KArchiveEntry *possibleDir = nullptr;
@@ -225,7 +227,9 @@ bool IconModule::installThemes(const QStringList &themes, const QString &archive
     Q_EMIT showProgress(i18n("Installing icon themes…"));
 
     KTar archive(archiveName);
-    archive.open(QIODevice::ReadOnly);
+    if (!archive.open(QIODevice::ReadOnly)) {
+        return false;
+    }
     qApp->processEvents(QEventLoop::ExcludeUserInputEvents);
 
     const KArchiveDirectory *rootDir = archive.directory();
