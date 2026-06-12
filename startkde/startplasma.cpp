@@ -432,8 +432,7 @@ void setupPlasmaEnvironment()
 
     const auto &[lookAndFeelName, lookAndFeelContents] = determineLookAndFeel();
     QFile activeLnf(extraConfigDir + QLatin1String("/package"));
-    activeLnf.open(QIODevice::ReadOnly);
-    if (activeLnf.readLine() != lookAndFeelName.toUtf8()) {
+    if (!activeLnf.open(QIODevice::ReadOnly) || activeLnf.readLine() != lookAndFeelName.toUtf8()) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), lookAndFeelName);
         KLookAndFeelManager lnfManager;
         lnfManager.setMode(KLookAndFeelManager::Mode::Defaults);
