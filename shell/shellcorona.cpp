@@ -34,7 +34,6 @@
 #include <KPackage/PackageLoader>
 #include <KSycoca>
 #include <KWindowSystem>
-#include <KX11Extras>
 
 #include <Plasma/Plasma>
 #include <Plasma/PluginLoader>
@@ -1361,11 +1360,6 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 void ShellCorona::savePreviousWindow()
 {
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11() && m_previousWId == 0) {
-        m_previousWId = KX11Extras::activeWindow();
-    }
-#endif
     if (m_waylandWindowManagement && !m_previousPlasmaWindow) {
         m_previousPlasmaWindow = m_waylandWindowManagement->activeWindow();
     }
@@ -1377,11 +1371,6 @@ void ShellCorona::restorePreviousWindow()
         return;
     }
 
-#if HAVE_X11
-    if (KWindowSystem::isPlatformX11() && m_previousWId) {
-        KX11Extras::forceActiveWindow(m_previousWId);
-    }
-#endif
     if (m_previousPlasmaWindow) {
         m_previousPlasmaWindow->requestActivate();
     }
@@ -1391,9 +1380,6 @@ void ShellCorona::restorePreviousWindow()
 
 void ShellCorona::clearPreviousWindow()
 {
-#if HAVE_X11
-    m_previousWId = 0;
-#endif
     m_previousPlasmaWindow = nullptr;
 }
 
@@ -1781,19 +1767,12 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
 void ShellCorona::toggleWidgetExplorer()
 {
     auto viewIt = m_desktopViewForScreen.cbegin();
-    if (KWindowSystem::isPlatformWayland()) {
-        auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
-        QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
-        if (reply.isValid()) {
-            const QString activeOutputName = reply.value();
-            viewIt = std::find_if(m_desktopViewForScreen.cbegin(), m_desktopViewForScreen.cend(), [&activeOutputName](DesktopView *view) {
-                return view->screen()->name() == activeOutputName;
-            });
-        }
-    } else {
-        const QPoint cursorPos = QCursor::pos();
-        viewIt = std::find_if(m_desktopViewForScreen.cbegin(), m_desktopViewForScreen.cend(), [&cursorPos](DesktopView *view) {
-            return view->screen()->geometry().contains(cursorPos);
+    auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
+    QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
+    if (reply.isValid()) {
+        const QString activeOutputName = reply.value();
+        viewIt = std::find_if(m_desktopViewForScreen.cbegin(), m_desktopViewForScreen.cend(), [&activeOutputName](DesktopView *view) {
+            return view->screen()->name() == activeOutputName;
         });
     }
 
@@ -2858,7 +2837,7 @@ void ShellCorona::previousActivity()
  * menus, etc.
  *
  * If user clicks outside a popup window, it's expected that the popup window
- * will be closed.  On X11, it's achieved by establishing both a keyboard grab
+ * will be closed.  On X11, it was achieved by establishing both a keyboard grab
  * and a pointer grab. But on Wayland, you can't grab keyboard or pointer. If
  * user clicks a surface of another app, the compositor will dismiss the popup
  * surface.  However, if user clicks some surface of the same application, the
@@ -2875,8 +2854,7 @@ void ShellCorona::previousActivity()
  *
  * In order to work around the popup dismissal bug, we install an event filter
  * that monitors Qt::MouseButtonPress events. If it happens that user has
- * clicked outside an active popup widget, that popup will be closed. This
- * event filter is not needed on X11!
+ * clicked outside an active popup widget, that popup will be closed.
  */
 class DismissPopupEventFilter : public QObject
 {
@@ -2942,9 +2920,6 @@ bool DismissPopupEventFilter::eventFilter(QObject *watched, QEvent *event)
 
 void ShellCorona::setupWaylandIntegration()
 {
-    if (!KWindowSystem::isPlatformWayland()) {
-        return;
-    }
     using namespace KWayland::Client;
     ConnectionThread *connection = ConnectionThread::fromApplication(this);
     if (!connection) {
