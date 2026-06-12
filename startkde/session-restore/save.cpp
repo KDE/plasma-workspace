@@ -31,11 +31,10 @@ using namespace Qt::StringLiterals;
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
+    QGuiApplication::setDesktopSettingsAware(false);
     QGuiApplication::setDesktopFileName(u"plasma-fallback-session-save"_s);
     QGuiApplication a(argc, argv);
     a.setApplicationName(u"plasmasessionrestore"_s);
-
-    a.setDesktopSettingsAware(false);
 
     TaskManager::WindowTasksModel tasksModel(&a);
 
