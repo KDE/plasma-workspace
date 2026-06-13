@@ -379,9 +379,9 @@ void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
     QVERIFY(repaintSpy.wait());
     QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::red);
 
-    changeTheme(Qt::ColorScheme::Dark);
     {
         const int oldCount = repaintSpy.count();
+        changeTheme(Qt::ColorScheme::Dark);
         QVERIFY(QTest::qWaitFor(
             [&repaintSpy, oldCount]() {
                 return repaintSpy.count() > oldCount;
