@@ -278,6 +278,10 @@ def unmount_filesystem(self, device_name):
 
     obj.Set(UDISKS2_FILESYSTEM_IFACE, "MountPoints", mount_points)
 
+    obj.EmitSignal(
+        "org.freedesktop.DBus.Properties", "PropertiesChanged", "sa{sv}as", [dbus.ObjectPath(path), UDISKS2_FILESYSTEM_IFACE, {"MountPoints": mount_points}, []]
+    )
+
     userspace_mount_options = dbus.Array([], signature="s")
 
     obj.Set(UDISKS2_BLOCK_IFACE, "UserspaceMountOptions", userspace_mount_options)
