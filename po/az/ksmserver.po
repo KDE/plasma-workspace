@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2025-04-01 15:20+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -88,27 +88,13 @@ msgstr "Əgər mövcuddursa saxlanılan istifadəçi sesiyalarını bərpa edir"
 msgid "Also allow remote connections"
 msgstr "Həmçinin məsafəli rabitəyə icazə vermək"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Sesiyanı kilidlənmiş rejimdə başladır"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Kilid ekranını dəstəklənmədən başladılır. Kilid ekranını yalnız başqa "
-"komponentlər təmin etdikdə tələb olunur."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[naməlum]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -121,7 +107,7 @@ msgstr ""
 "sessiyanın resurslarını ən çox istifadə edən üç tətbiq göstərilir\n"
 " %1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -132,6 +118,16 @@ msgstr ""
 "<application>%1</application> bərpa etmək mümkün olmadı, çünki o pozulub və "
 "sistem sessiyasını bərpa ertmək üçün resurslar tükənib. Bu xəta haqqında "
 "tətbiqin tərtibatçılarına bildirməniz xahiş olunur."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Sesiyanı kilidlənmiş rejimdə başladır"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Kilid ekranını dəstəklənmədən başladılır. Kilid ekranını yalnız başqa "
+#~ "komponentlər təmin etdikdə tələb olunur."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME təyin olunmayıb"

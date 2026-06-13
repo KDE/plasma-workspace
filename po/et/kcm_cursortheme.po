@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2020-09-26 10:21+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -45,17 +45,24 @@ msgstr "Ajutise faili loomine nurjus."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ikooniteema arhiivi allalaadimine nurjus: %1"
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "Ikooniteema arhiivi allalaadimine nurjus: %1"
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fail ei ole korrektne ikooniteema arhiiv."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Kataloogi 'icons' loomine nurjus."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -63,12 +70,12 @@ msgid ""
 msgstr ""
 "Teema nimega %1 on ikooniteemade kataloogis juba olemas. Kas asendada see?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Kas kirjutada teema üle?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Teema paigaldati edukalt."

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-26 08:34+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -104,28 +104,13 @@ msgstr "Restaure la session précédente, si disponible"
 msgid "Also allow remote connections"
 msgstr "Autoriser aussi les connexions distantes"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Démarre la session dans un mode verrouillé"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Démarrer sans prise en charge du verrouillage de l'écran. Ne doit être "
-"utilisé que quand un composant tiers prend en charge le verrouillage de "
-"l'écran."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[inconnu]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -138,7 +123,7 @@ msgstr ""
 "consommateurs de ressources de la session : \n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -149,6 +134,17 @@ msgstr ""
 "Impossible de restaurer l'application <application>%1</application> car elle "
 "est plantée et a épuisée les ressources de restauration de la session du "
 "système. Veuillez le signaler à l'équipe de développement de l'application."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Démarre la session dans un mode verrouillé"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Démarrer sans prise en charge du verrouillage de l'écran. Ne doit être "
+#~ "utilisé que quand un composant tiers prend en charge le verrouillage de "
+#~ "l'écran."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME n'est pas défini"

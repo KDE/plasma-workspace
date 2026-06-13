@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-05-02 18:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -52,17 +52,24 @@ msgstr "Geçici dosya oluşturulamadı."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Simge tema arşivi indirilemedi: %1"
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "Simge tema arşivi indirilemedi: %1"
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Dosya geçerli bir ikon tema arşivi değil."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "“icons” klasörü oluşturulamadı."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -71,12 +78,12 @@ msgstr ""
 "%1 adında bir tema, simge temaları klasöründe var. Üzerine yazmak istiyor "
 "musunuz?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Temanın Üzerine Yazılsın mı?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema başarıyla kuruldu."

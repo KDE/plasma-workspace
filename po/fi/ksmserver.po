@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-10-16 19:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -101,27 +101,13 @@ msgstr "Palauttaa tallennetun käyttäjän istunnon, jos mahdollista"
 msgid "Also allow remote connections"
 msgstr "Salli myös etäyhteydet"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Aloittaa istunnon lukittuna"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Käynnistyy ilman lukitusnäyttötukea. Tarvitaan vain, jos jokin toinen "
-"komponentti tarjoaa lukitusnäytön."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[tuntematon]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -133,7 +119,7 @@ msgstr ""
 "ovat lopussa. Niitä kuluttavat eniten seuraavat kolme:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -144,6 +130,16 @@ msgstr ""
 "Sovellusta <application>%1</application> ei voitu palauttaa, koska se on "
 "rikki ja kuluttanut järjestelmän palautusresurssit loppuun. Ilmoita "
 "ongelmasta sovelluksen kehittäjille."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Aloittaa istunnon lukittuna"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Käynnistyy ilman lukitusnäyttötukea. Tarvitaan vain, jos jokin toinen "
+#~ "komponentti tarjoaa lukitusnäytön."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME-muuttujaa ei ole asetettu!"

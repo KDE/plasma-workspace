@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-26 10:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -94,27 +94,13 @@ msgstr "Якщо можливо відновлює попередній сеан
 msgid "Also allow remote connections"
 msgstr "Дозволити також з'єднання по мережі"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Розпочинає сеанс у режимі блокування"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Запуск без підтримки блокування екрана. Потрібен, лише якщо блокування "
-"екрана забезпечується іншим компонентом."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[невідомий]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -126,7 +112,7 @@ msgstr ""
 "керування сеансом системи. Ось три найбільших споживачів ресурсів сеансу:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -137,6 +123,16 @@ msgstr ""
 "Не вдалося відновити роботу <application>%1</application>, оскільки програму "
 "пошкоджено і вичерпано ресурси засобу відновлення сеансу системи. Будь "
 "ласка, повідомте про це розробників програми."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Розпочинає сеанс у режимі блокування"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Запуск без підтримки блокування екрана. Потрібен, лише якщо блокування "
+#~ "екрана забезпечується іншим компонентом."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "Змінну $HOME не встановлено!"

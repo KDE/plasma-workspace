@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-03-26 22:39+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -39,17 +39,24 @@ msgstr "Es kann keine temporäre Datei erstellt werden."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Das Archiv für das Symboldesign %1 kann nicht heruntergeladen werden."
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "Das Archiv für das Symboldesign %1 kann nicht heruntergeladen werden."
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Die Datei ist kein gültiges Symboldesign-Archiv."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Der Ordner „Symbole“ lässt sich nicht erzeugen."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -58,12 +65,12 @@ msgstr ""
 "Ein Design namens %1 existiert bereits im Ordner für Symboldesigns. Möchten "
 "Sie es überschreiben?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Design überschreiben?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Das Design wurde erfolgreich installiert."

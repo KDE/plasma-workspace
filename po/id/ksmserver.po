@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-10-02 18:21+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -90,27 +90,13 @@ msgstr "Mengembalikan sesi pengguna tersimpan jika tersedia"
 msgid "Also allow remote connections"
 msgstr "Juga mengizinkan koneksi jarak jauh"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Jalankan sesi dalam mode terkunci"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Jalankan tanpa dukungan layar kunci. Hanya diperlukan jika komponen lain "
-"menyediakan layar kunci."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "(tak diketahui)"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -122,7 +108,7 @@ msgstr ""
 "sistem kepayahan. Berikut adalah tiga pengonsumsi teratas sumberdaya sesi:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -133,6 +119,16 @@ msgstr ""
 "Tidak dapat memulihkan <application>%1</application> karena ia rusak dan "
 "sumberdaya pemulihan sesi sistem kepayahan. Silakan laporkan ini ke "
 "pengembang aplikasi."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Jalankan sesi dalam mode terkunci"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Jalankan tanpa dukungan layar kunci. Hanya diperlukan jika komponen lain "
+#~ "menyediakan layar kunci."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME belum diatur!"

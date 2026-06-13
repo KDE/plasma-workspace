@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-01-11 15:56-0500\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -41,17 +41,24 @@ msgstr "mi ken ala lon e lipu pi tenpo lili."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "mi ken ala kama jo e poki pi sitelen lili tan ni: %1"
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "mi ken ala kama jo e poki pi sitelen lili tan ni: %1"
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "lipu ni li poki pi sitelen lili ala."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "mi ken ala lon e poki 'icons'."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -60,12 +67,12 @@ msgstr ""
 "nasin '%1' ante li lon poki nasin pi sitelen lili. sina wile ala wile weka e "
 "ona la sina ken awen e nasin sina?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "o weka ala weka e nasin?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "mi kama jo e nasin pi sitelen lili."

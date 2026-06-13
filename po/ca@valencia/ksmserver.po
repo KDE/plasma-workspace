@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-25 09:12+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -95,27 +95,13 @@ msgstr "Restaura la sessió d'usuari guardada si està disponible"
 msgid "Also allow remote connections"
 msgstr "Admet també les connexions remotes"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Inicia la sessió en el mode bloquejat"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Inicia sense el suport del bloqueig de la pantalla. Només cal si altres "
-"components proporcionen el bloqueig de la pantalla."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[desconegut]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -128,7 +114,7 @@ msgstr ""
 "consumidors de recursos de sessió:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -139,3 +125,13 @@ msgstr ""
 "No s'ha pogut restaurar l'aplicació <application>%1</application> perquè "
 "està trencada i ha exhaurit els recursos de restauració de la sessió del "
 "sistema. Informeu-ne als desenvolupadors de l'aplicació."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Inicia la sessió en el mode bloquejat"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Inicia sense el suport del bloqueig de la pantalla. Només cal si altres "
+#~ "components proporcionen el bloqueig de la pantalla."

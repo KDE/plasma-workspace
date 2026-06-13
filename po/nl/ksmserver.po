@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-25 10:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -97,27 +97,13 @@ msgstr "Herstelt, indien beschikbaar, de vorige sessie"
 msgid "Also allow remote connections"
 msgstr "Ook externe verbindingen toestaan"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Start de sessie in de modus vergrendeld"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Start zonder ondersteuning van schermvergrendeling. Is alleen nodig als een "
-"andere component de schermvergrendeling levert."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[onbekend]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -130,7 +116,7 @@ msgstr ""
 "van sessiehulpbronnen:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -141,6 +127,16 @@ msgstr ""
 "Kan <application>%1</application> niet herstellen omdat het gebroken is en "
 "de hulpbronnen voor herstel van de sessie zijn uitgeput. Rapporteer dit aan "
 "de ontwikkelaars van de toepassing."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Start de sessie in de modus vergrendeld"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Start zonder ondersteuning van schermvergrendeling. Is alleen nodig als "
+#~ "een andere component de schermvergrendeling levert."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME niet ingesteld!"

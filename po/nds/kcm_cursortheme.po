@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2014-09-18 15:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -43,18 +43,25 @@ msgstr ""
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Dat Wiesermuster-Archiv \"%1\" lett sik nich finnen."
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "Dat Wiesermuster-Archiv \"%1\" lett sik nich finnen."
+
+#: kcmcursortheme.cpp:418
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "As dat lett gellt de Datei \"%1\" nich as Wiesermuster-Archiv."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -63,12 +70,12 @@ msgstr ""
 "Dat gifft al en Muster mit den Naam \"%1\" binnen Dien Lüttbildmuster-Orner. "
 "Wullt Du dat överschrieven?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Muster överschrieven?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -59,14 +59,14 @@ msgid "Theme installed successfully."
 msgstr ""
 
 # >> @title:window
-#: main.cpp:225
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing icon themes…"
 msgstr "Instaliranje teme ikonica"
 
 # >> @title:window
-#: main.cpp:235
+#: main.cpp:239
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing %1 theme…"

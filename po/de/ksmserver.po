@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2025-10-31 10:58+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -90,27 +90,13 @@ msgstr "Stellt die vorherige Sitzung wieder her, falls verfügbar."
 msgid "Also allow remote connections"
 msgstr "Verbindungen mit fremden Rechnern zulassen"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Startet die Sitzung im gesperrten Modus"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Startet ohne Unterstützung für die Bildschirmsperre. Dies wird nur benötigt, "
-"wenn eine andere Komponente das SPerren des Bildschirms bereitstellt."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[unbekannt]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -123,7 +109,7 @@ msgstr ""
 "Verbraucher von Systemressourcen:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -134,6 +120,17 @@ msgstr ""
 "<application>%1</application> kann nicht wiederhergestellt werden, da es "
 "defekt ist und die Systemressourcen für die Sitzungsverwaltung erschöpft "
 "hat. Bitte melden Sie dies an die Entwickler der Anwendung."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Startet die Sitzung im gesperrten Modus"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Startet ohne Unterstützung für die Bildschirmsperre. Dies wird nur "
+#~ "benötigt, wenn eine andere Komponente das SPerren des Bildschirms "
+#~ "bereitstellt."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME ist nicht angegeben"

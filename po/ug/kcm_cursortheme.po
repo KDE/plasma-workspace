@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 18:17-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -40,29 +40,36 @@ msgstr "ۋاقىتلىق ھۆججەت قۇرالمايدۇ."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "سىنبەلگە ئۆرنەك ئارخىپىنى چۈشۈرەلمەيدۇ: %1"
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "سىنبەلگە ئۆرنەك ئارخىپىنى چۈشۈرەلمەيدۇ: %1"
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "بۇ ھۆججەت ئىناۋەتلىك سىنبەلگە ئۆرنەك ئارخىپى ئەمەس."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "«icons» قىسقۇچىنى قۇرالمىدى."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "سىنبەلگە  ئۆرنەك قىسقۇچىدا %1 ئاتلىق ئۆرنەك مەۋجۇت. ئالماشتۇرامسىز؟"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "ئۆرنەكنى قاپلامسىز؟"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ئۆرنەك ئوڭۇشلۇق ئورنىتىلدى."

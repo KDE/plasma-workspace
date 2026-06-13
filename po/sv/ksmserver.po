@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-25 17:31+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -91,27 +91,13 @@ msgstr "Återställer den sparade användarsessionen om tillgänglig"
 msgid "Also allow remote connections"
 msgstr "Tillåt också fjärranslutningar"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Startar sessionen i låst läge"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Starta utan stöd för skärmlåsning. Behövs bara om en annan komponent "
-"tillhandahåller skärmlåsningen."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[okänd]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -124,7 +110,7 @@ msgstr ""
 "konsumenterna av sessionsresurser:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -135,6 +121,16 @@ msgstr ""
 "Det gick inte att återställa <application>%1</application> eftersom det är "
 "trasigt och har förbrukat systemets resurser för återställning av sessioner. "
 "Rapportera det till programmets utvecklare."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Startar sessionen i låst läge"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Starta utan stöd för skärmlåsning. Behövs bara om en annan komponent "
+#~ "tillhandahåller skärmlåsningen."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME inte angiven."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-05-26 23:02+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -55,12 +55,12 @@ msgstr ""
 msgid "Theme installed successfully."
 msgstr "A téma sikeresen települt."
 
-#: main.cpp:225
+#: main.cpp:227
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Ikontémák telepítése…"
 
-#: main.cpp:235
+#: main.cpp:239
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "A(z) %1 téma telepítése…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-10-05 19:30+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -89,27 +89,13 @@ msgstr "Atkuria įrašytą naudotojo seansą, jeigu jis prieinamas"
 msgid "Also allow remote connections"
 msgstr "Taip pat leisti nuotolinius ryšius"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Paleidžia seansą užrakintoje veiksenoje"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Paleidžia be ekrano užrakto palaikymo. Reikalinga tik tuo atveju, jei kitas "
-"komponentas pateikia ekrano užraktą."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[nežinoma]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -121,7 +107,7 @@ msgstr ""
 "valdymo ištekliai. Štai trys didžiausi seanso išteklių vartotojai:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -132,6 +118,16 @@ msgstr ""
 "Nepavyko atkurti <application>%1</application> vykdomojo, nes jis sugadintas "
 "ir išeikvojo sistemos seanso atkūrimo išteklius. Prašome pranešti apie tai "
 "programos kūrėjams."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Paleidžia seansą užrakintoje veiksenoje"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Paleidžia be ekrano užrakto palaikymo. Reikalinga tik tuo atveju, jei "
+#~ "kitas komponentas pateikia ekrano užraktą."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME nenustatyta!"

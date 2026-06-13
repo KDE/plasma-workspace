@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2012-01-12 16:57+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -42,18 +42,25 @@ msgstr ""
 msgid "Unable to download the icon theme archive: %1"
 msgstr "قادر به یافتن بایگانی چهره مکان‌نمای %1 نیست."
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "قادر به یافتن بایگانی چهره مکان‌نمای %1 نیست."
+
+#: kcmcursortheme.cpp:418
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "به نظر نمی‌رسد پرونده %1یک بایگانی چهره مکان‌نمای معتبر باشد."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -62,12 +69,12 @@ msgstr ""
 "هم اکنون، چهره‌ای با نام %1در پوشه چهره شمایل شما وجود دارد. آیا می‌خواهید با "
 "این جایگزین کنید؟"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "چهره جای‌نوشت شود؟"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

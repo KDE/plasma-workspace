@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 18:22-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -87,27 +87,13 @@ msgstr "ئەگەر مۇمكىن بولسا ساقلانغان ئىشلەتكۈچ
 msgid "Also allow remote connections"
 msgstr "يىراقتىن باغلىنىشقا يول قويىدۇ"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr ""
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"ئېكران قۇلۇپلاشنى قوللىمىغان ئاساستا قوزغىتىدۇ، پەقەت باشقا بۆلەك ئېكران "
-"قۇلۇپلاش بىلەن تەمىنلىگەندىلا ئاندىن لازىم بولىدۇ."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "(يوچۇن)"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -119,7 +105,7 @@ msgstr ""
 "تۈگىدى. تۆۋەندىكىسى جەريانچاق مەنبەسىنى ئەڭ كۆپ ئىشلىتىۋاتقان ئۈچى:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -130,6 +116,13 @@ msgstr ""
 "<application>%1</application> نى ئەسلىگە كەلتۈرەلمەيدۇ چۈنكى ئۇ بۇزۇلغان ۋە "
 "سىستېمىنىڭ جەريانچاق مەنبەسىنى خورىتىپ تۈگەتتى. بۇنى ئەپ ئىجادكارىغا مەلۇم "
 "قىلىڭ."
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "ئېكران قۇلۇپلاشنى قوللىمىغان ئاساستا قوزغىتىدۇ، پەقەت باشقا بۆلەك ئېكران "
+#~ "قۇلۇپلاش بىلەن تەمىنلىگەندىلا ئاندىن لازىم بولىدۇ."
 
 #~| msgid "The KDE Session Manager"
 #~ msgid "Session Management"

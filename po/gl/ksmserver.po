@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-25 21:09+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -100,27 +100,13 @@ msgstr "Restaura a sesión de persoa usuaria gardada se está dispoñíbel."
 msgid "Also allow remote connections"
 msgstr "Permitir tamén conexións remotas"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Inicia a sesión no modo trancado"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Inicia sen a funcionalidade de bloquear a pantalla. Só é necesario se outro "
-"compoñente xa fornece esa funcionalidade."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "(descoñecido)"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -133,7 +119,7 @@ msgstr ""
 "dos recursos da sesión:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -144,6 +130,16 @@ msgstr ""
 "Non é posíbel restaurar <application>%1</application> porque rompeu e "
 "esgotou os recursos de restauración da sesión do sistema. Informe disto ao "
 "equipo desenvolvedor da aplicación."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Inicia a sesión no modo trancado"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Inicia sen a funcionalidade de bloquear a pantalla. Só é necesario se "
+#~ "outro compoñente xa fornece esa funcionalidade."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME non está definida."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2020-04-25 13:41+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -91,27 +91,13 @@ msgstr "Võimaluse korral taastab eelmise seansi"
 msgid "Also allow remote connections"
 msgstr "Lubatud on ka kaugühendused"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Seansi käivitamine lukustatud režiimis"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Käivitamine lukustusekraani toetuseta. Vajalik ainult siis, kui mõni muu "
-"komponent pakub lukustusekraani."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -120,7 +106,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -128,6 +114,16 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Seansi käivitamine lukustatud režiimis"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Käivitamine lukustusekraani toetuseta. Vajalik ainult siis, kui mõni muu "
+#~ "komponent pakub lukustusekraani."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME pole määratud!"

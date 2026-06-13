@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-27 07:46+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -101,25 +101,13 @@ msgstr "משחזר את ההפעלה שנשמרה, אם יש"
 msgid "Also allow remote connections"
 msgstr "לאפשר גם חיבורים מרוחקים"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "מתחיל את ההפעלה במצב נעול"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr "מתחיל ללא תמיכה במסך נעילה. נחוץ רק אם רכיבים אחרים מספקים מסך נעילה."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[לא ידוע]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -131,7 +119,7 @@ msgstr ""
 "שלושת הצרכנים התובעניים ביותר ממשאבי המערכת:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -142,6 +130,15 @@ msgstr ""
 "Unable to restore <application>%1</application> because it is broken and has "
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "מתחיל את ההפעלה במצב נעול"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "מתחיל ללא תמיכה במסך נעילה. נחוץ רק אם רכיבים אחרים מספקים מסך נעילה."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "‎$HOME אינו מוגדר!"

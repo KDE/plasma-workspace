@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2025-04-08 09:32+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -106,27 +106,13 @@ msgstr "Восстанавливать предыдущий сеанс (если
 msgid "Also allow remote connections"
 msgstr "Разрешить также удалённые соединения"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Запускать сеанс в режиме блокировки"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Запустить без поддержки блокировки экрана. Необходимо только если другой "
-"компонент обеспечивает блокировку экрана."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[неизвестное приложение]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -139,7 +125,7 @@ msgstr ""
 "с максимальным потреблением ресурсов сеанса:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -150,6 +136,16 @@ msgstr ""
 "Невозможно восстановить <application>%1</application>: данные некорректны и "
 "привели к исчерпанию лимита набора данных, используемых для восстановления "
 "сеанса работы. Сообщите об этой ошибке разработчику приложения."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Запускать сеанс в режиме блокировки"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Запустить без поддержки блокировки экрана. Необходимо только если другой "
+#~ "компонент обеспечивает блокировку экрана."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "Переменная $HOME не установлена."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-25 19:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -91,27 +91,13 @@ msgstr "Olanaklıysa kaydedilen oturumu geri yükler"
 msgid "Also allow remote connections"
 msgstr "Uzaktan bağlantılara izin ver"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Oturumu kilitli kipte başlatır"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Kilit ekranı desteği olmadan başlatılır. Yalnızca diğer bileşen kilit "
-"ekranını sağlarsa gereklidir."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[bilinmeyen]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -123,7 +109,7 @@ msgstr ""
 "yönetilemiyor. Oturum kaynaklarının ilk üç tüketicisi şunlardır:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -134,6 +120,16 @@ msgstr ""
 "<application>%1</application> bozuk olduğundan ve sistemin oturum geri "
 "yükleme kaynaklarını tükettiğinden geri yüklenemiyor. Lütfen bunu "
 "uygulamanın geliştiricilerine bildirin."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Oturumu kilitli kipte başlatır"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Kilit ekranı desteği olmadan başlatılır. Yalnızca diğer bileşen kilit "
+#~ "ekranını sağlarsa gereklidir."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME ayarlanmamış!"

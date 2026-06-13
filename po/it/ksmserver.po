@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-25 13:04+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -93,27 +93,13 @@ msgstr "Ripristina la sessione utente salvata se disponibile"
 msgid "Also allow remote connections"
 msgstr "Permetti anche le connessioni remote"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Avvia la sessione come bloccata"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Avvia senza supporto per la schermata di blocco. Necessario solo se la "
-"schermata di blocco è fornita da un altro componente."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[sconosciuto]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -126,7 +112,7 @@ msgstr ""
 "risorse di sessione:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -137,6 +123,16 @@ msgstr ""
 "Impossibile ripristinare <application>%1</application> perché è danneggiata "
 "e ha esaurito le risorse di ripristino della sessione del sistema. Segnalalo "
 "agli sviluppatori dell'applicazione."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Avvia la sessione come bloccata"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Avvia senza supporto per la schermata di blocco. Necessario solo se la "
+#~ "schermata di blocco è fornita da un altro componente."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME non impostata!"

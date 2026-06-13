@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -52,13 +52,13 @@ msgstr ""
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:225
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Installing icon themes…"
 msgstr "Installar un tèma novèl..."
 
-#: main.cpp:235
+#: main.cpp:239
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Installing %1 theme…"

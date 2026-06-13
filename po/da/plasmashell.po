@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-12 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-05-07 23:05+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -33,103 +33,103 @@ msgstr "mschlander@opensuse.org,rasmus@rosendahl-kaa.name"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Plugin til at indstille musehandlinger"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:206
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "Kde Plasma 6.0 Dev"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:209
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 Alfa"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:212
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 Beta 1"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:215
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 Beta 2"
 
-#: desktopview.cpp:225
+#: desktopview.cpp:218
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 RC1"
 
-#: desktopview.cpp:228
+#: desktopview.cpp:221
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 RC2"
 
-#: desktopview.cpp:254
+#: desktopview.cpp:247
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 Dev"
 
-#: desktopview.cpp:258
+#: desktopview.cpp:251
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 Beta"
 
-#: desktopview.cpp:261
+#: desktopview.cpp:254
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 Beta %2"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:258
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:271
+#: desktopview.cpp:264
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Besøg bugs.kde.org for at rapportere problemer"
 
-#: desktopview.cpp:279
+#: desktopview.cpp:272
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
 msgstr "Kopier Plasma-version"
 
-#: desktopview.cpp:285
+#: desktopview.cpp:278
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
 msgstr "Rapportér en fejl..."
 
-#: desktopview.cpp:295
+#: desktopview.cpp:288
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
 msgstr "Skjul forhåndsvisningsbanner"
 
-#: desktopview.cpp:297
+#: desktopview.cpp:290
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
 msgstr "Skjul indtil genstart"
 
-#: desktopview.cpp:304
+#: desktopview.cpp:297
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
 msgstr "Skjul permanent..."
 
-#: desktopview.cpp:310
+#: desktopview.cpp:303
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -143,18 +143,18 @@ msgstr ""
 "<icode>ShowDesktopPreviewBanner</icode> i <filename>kdeglobals</filename> "
 "konfigurationsfilen."
 
-#: desktopview.cpp:312
+#: desktopview.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Skjul forhåndsvisningsbanner?"
 
-#: desktopview.cpp:543 desktopview.cpp:559
+#: desktopview.cpp:528 desktopview.cpp:544
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Skift til redigeringstilstand"
 
-#: desktopview.cpp:557
+#: desktopview.cpp:542
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Afslut redigeringstilstand"
@@ -323,13 +323,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Performancestilstand"
 
-#: panelview.cpp:1068
+#: panelview.cpp:1056
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Skjul panelkonfiguration"
 
-#: panelview.cpp:1070
+#: panelview.cpp:1058
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -357,58 +357,58 @@ msgstr "%1 %2 på %3"
 msgid "Disconnected Screen %1"
 msgstr "Frakoblede skærm %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:173 shellcorona.cpp:175
 #, kde-format
 msgid "Show Desktop"
 msgstr "Vis skrivebord"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:175
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Skjul skrivebord"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktiv programstarter"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Vis aktivitetsskifter"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Skift til forrige aktivitet"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Skift til næste aktivitet"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivér opgavelinje-indgang %1"
 
-#: shellcorona.cpp:267
+#: shellcorona.cpp:266
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Håndter skriveborde og paneler…"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:288
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Flyt tastaturfokus mellem paneler"
 
-#: shellcorona.cpp:2307
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "Tilføj panel"
 
-#: shellcorona.cpp:2390
+#: shellcorona.cpp:2369
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -53,13 +53,13 @@ msgstr ""
 msgid "Theme installed successfully."
 msgstr "പ്രമേയം വിജയകരമായി ഇന്‍സ്റ്റാള്‍ ചെയ്തു."
 
-#: main.cpp:225
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing icon themes…"
 msgstr "ചിഹ്ന പ്രമേയങ്ങള്‍ ചേര്‍ക്കുന്നു..."
 
-#: main.cpp:235
+#: main.cpp:239
 #, fuzzy, kde-format
 #| msgid "Installing %1 theme..."
 msgid "Installing %1 theme…"

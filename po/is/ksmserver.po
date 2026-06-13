@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 21:20+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -100,27 +100,13 @@ msgstr "Endurheimtir síðustu setu notanda, ef hægt er"
 msgid "Also allow remote connections"
 msgstr "Leyfa einnig utanaðkomandi tengingar"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Byrja setuna í læstri stillingu"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Byrjar án stuðnings við lásskjá. Einungis er þörf á þessu ef aðrir hlutar "
-"útvega lásskjáinn."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[óþekkt]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -133,7 +119,7 @@ msgstr ""
 "setutilfanga:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -144,6 +130,16 @@ msgstr ""
 "Get ekki endurheimt <application>%1</application> því það er bilað og hefur "
 "klárað tilföng sem kerfið hefur til að endurheimta setu. Tilkynntu þetta "
 "endilega til þróunaraðila forritsins."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Byrja setuna í læstri stillingu"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Byrjar án stuðnings við lásskjá. Einungis er þörf á þessu ef aðrir hlutar "
+#~ "útvega lásskjáinn."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME ekki stillt!"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -44,17 +44,24 @@ msgstr "अस्थायी फ़ाइल बनाने में अक�
 msgid "Unable to download the icon theme archive: %1"
 msgstr "संकेतक प्रसंग संग्रह %1 डाउनलोड करने में अक्षम ।"
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "संकेतक प्रसंग संग्रह %1 डाउनलोड करने में अक्षम ।"
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "फ़ाइल एक वैध संकेतक प्रसंग संग्रह नहीं है।"
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "प्रतीक फ़ोल्डर बनाने में विफल ।"
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -63,12 +70,12 @@ msgstr ""
 "एक प्रसंग %1 नाम से प्रतीक प्रसंग फ़ोल्डर में पहले से ही उपलब्ध है. क्या आप उसे इससे बदलना "
 "चाहते हैं?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "प्रसंग मिटाकर लिखें?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "प्रसंग सफलतापूर्वक स्थापित।"

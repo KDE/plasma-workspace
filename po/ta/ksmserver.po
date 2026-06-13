@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-10-09 20:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -90,27 +90,13 @@ msgstr "முந்தைய அமர்வு இருந்தால் அ
 msgid "Also allow remote connections"
 msgstr "தொலை இணைப்புகளையும் அனுமதி"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "அமர்வை பூட்டிய நிலையில் தொடங்கும்"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"திரையை பூட்டும் ஆதரவில்லாமல் தொடங்கும். திரையை பூட்டும் சேவையை வேறொரு கூறு வழங்கினால் "
-"இது பயன்படும்."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[தெரியாதது]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -122,7 +108,7 @@ msgstr ""
 "மேலாண்மை வசதியை அதிகப்படியாக பயன்படுத்தும் மூன்று செயலிகள் பின்வருவன:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -132,6 +118,16 @@ msgid ""
 msgstr ""
 "<application>%1</application> எனும் செயலி கணினியின் அமர்வு மீட்பு ஆற்றலை "
 "தீர்த்துள்ளதால் அதை மீட்டமைக்க முடியாது. அச்செயலியின் நிரலாளர்களிடம் இதைத் தெரிவிக்கவும்."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "அமர்வை பூட்டிய நிலையில் தொடங்கும்"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "திரையை பூட்டும் ஆதரவில்லாமல் தொடங்கும். திரையை பூட்டும் சேவையை வேறொரு கூறு "
+#~ "வழங்கினால் இது பயன்படும்."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME அமைக்கப்படவில்லை!"

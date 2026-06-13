@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-10-26 11:01+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -90,27 +90,13 @@ msgstr "Genopretter den gemte brugersession hvis den er tilgængelig."
 msgid "Also allow remote connections"
 msgstr "Tillad også fjernforbindelser"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Starter sessionen i låst tilstand"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Starter uden understøttelse af låseskærm. Kun nødvendigt hvis en anden "
-"komponent giver en låseskærm."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[ukendt]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -123,7 +109,7 @@ msgstr ""
 "af sessionsressourcer:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -134,6 +120,16 @@ msgstr ""
 "Kunne ikke gendanne <application>%1</application> på grund den er i stykker "
 "og har opbrugt systemets sessiongendannelsesressourcer. Venligt rapportér "
 "dette til appens udviklere."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Starter sessionen i låst tilstand"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Starter uden understøttelse af låseskærm. Kun nødvendigt hvis en anden "
+#~ "komponent giver en låseskærm."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME er ikke angivet!"

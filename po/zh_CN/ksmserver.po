@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -87,25 +87,13 @@ msgstr "如果可以则恢复上次会话"
 msgid "Also allow remote connections"
 msgstr "允许远程连接"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "在锁定模式下启动会话"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr "在没有锁屏支持的情况下启动。仅在其他组件提供了锁屏时需要。"
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[未知]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -117,7 +105,7 @@ msgstr ""
 "程序：\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -127,3 +115,11 @@ msgid ""
 msgstr ""
 "无法恢复 <application>%1</application>，因为它已经损坏，而且还耗尽了系统会话"
 "恢复资源。请将此情况报告给该应用程序的开发人员。"
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "在锁定模式下启动会话"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr "在没有锁屏支持的情况下启动。仅在其他组件提供了锁屏时需要。"

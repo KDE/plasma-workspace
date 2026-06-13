@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -43,17 +43,24 @@ msgstr "अस्थायीसञ्चिकां निर्मातु�
 msgid "Unable to download the icon theme archive: %1"
 msgstr "चिह्नविषयसङ्ग्रहं डाउनलोड् कर्तुं असमर्थः: %1"
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "चिह्नविषयसङ्ग्रहं डाउनलोड् कर्तुं असमर्थः: %1"
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "सञ्चिका वैधः चिह्नविषयसङ्ग्रहः नास्ति ।"
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' पुटस्य निर्माणे असफलम् ।"
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -62,12 +69,12 @@ msgstr ""
 "%1 इति नामकं विषयवस्तु भवतः चिह्नविषयपुटे पूर्वमेव विद्यते । किं भवन्तः तस्य स्थाने एतेन "
 "प्रतिस्थापयितुं इच्छन्ति ?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "विषयं अधिलिखयतु?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "विषयः सफलतया संस्थापितः।"

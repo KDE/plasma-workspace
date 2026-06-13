@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -41,18 +41,25 @@ msgstr ""
 msgid "Unable to download the icon theme archive: %1"
 msgstr "కర్సర్ థీమ్ ఆర్చివ్‌ను %1 కనుగొనలేక పోయింది."
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "కర్సర్ థీమ్ ఆర్చివ్‌ను %1 కనుగొనలేక పోయింది."
+
+#: kcmcursortheme.cpp:418
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "ఫైలు %1 చెల్లునటువంటి కర్సర్ థీమ్ ఆర్చివ్ వలె అనిపించుటలేదు."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -61,12 +68,12 @@ msgstr ""
 "%1 నామముతో వున్న థీమ్ యిప్పటికే మీ ప్రతిమ థీమ్ ఫోల్డర్‌లో వుంది. మీరు దానిని దీనితో పునఃస్థాపించుదామని "
 "అనుకొనుచున్నారా?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "థీమ్‌ను వోవర్‌రైట్ చేయాలా?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

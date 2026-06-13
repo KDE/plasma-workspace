@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2021-07-06 20:27+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -90,27 +90,13 @@ msgstr "यदि उपलब्ध हो तो सहेजा गया उ
 msgid "Also allow remote connections"
 msgstr "रिमोट कनेक्शन की भी अनुमति दें"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "सत्र को तालाबंद मोड में प्रारंभ करता है"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"तालाबंद स्क्रीन के समर्थन के बिना शुरू होता है। केवल तभी आवश्यक है जब अन्य घटक तालाबंद "
-"स्क्रीन प्रदान करें।"
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -119,7 +105,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -127,6 +113,16 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "सत्र को तालाबंद मोड में प्रारंभ करता है"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "तालाबंद स्क्रीन के समर्थन के बिना शुरू होता है। केवल तभी आवश्यक है जब अन्य घटक तालाबंद "
+#~ "स्क्रीन प्रदान करें।"
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME सेट नहीं किया है"

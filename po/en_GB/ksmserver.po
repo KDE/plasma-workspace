@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-10-18 17:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -89,27 +89,13 @@ msgstr "Restores the saved user session if available"
 msgid "Also allow remote connections"
 msgstr "Also allow remote connections"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Starts the session in locked mode"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[unknown]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -121,7 +107,7 @@ msgstr ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -132,6 +118,16 @@ msgstr ""
 "Unable to restore <application>%1</application> because it is broken and has "
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Starts the session in locked mode"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME not set!"

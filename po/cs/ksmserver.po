@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-03-13 14:16+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -90,27 +90,13 @@ msgstr "Obnovuje uložené uživatelské sezení, je-li dostupné"
 msgid "Also allow remote connections"
 msgstr "Povolit taktéž vzdálená připojení"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Spustí sezení v uzamčeném režimu"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Spouští se bez podpory zamykání obrazovky. Je potřeba pouze pokud jiná "
-"komponenta zamykání poskytuje."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[neznámý]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -123,7 +109,7 @@ msgstr ""
 "pro relace:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -134,3 +120,13 @@ msgstr ""
 "Nelze obnovit <application>%1</application>, protože je poškozená a "
 "vyčerpala systémové prostředky pro obnovení relace. Nahlaste to prosím "
 "vývojářům aplikace."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Spustí sezení v uzamčeném režimu"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Spouští se bez podpory zamykání obrazovky. Je potřeba pouze pokud jiná "
+#~ "komponenta zamykání poskytuje."

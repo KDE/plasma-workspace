@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2024-09-28 13:30+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -92,27 +92,13 @@ msgstr "Erabiltzailearen saio gordea berreskuratzen du, erabilgarria bada."
 msgid "Also allow remote connections"
 msgstr "Urruneko konexioak ere onartzen ditu."
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Giltzatuta moduan hasten du saioa"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Pantaila giltzatzeko euskarri gabe abiatzen da. Beharrezkoa soilik beste "
-"osagaiek pantaila giltzatzea hornitzen badute."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[ezezaguna]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -125,7 +111,7 @@ msgstr ""
 "kontsumitzaile nagusiak:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -136,6 +122,16 @@ msgstr ""
 "Ez da <application>%1</application> lehengoratzeko gai, hautsita dagoelako "
 "eta sistemaren saioa lehengoratzeko baliabideak ahitu dituelako. Mesedez, "
 "eman horren berri aplikazioaren garatzaileari."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Giltzatuta moduan hasten du saioa"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Pantaila giltzatzeko euskarri gabe abiatzen da. Beharrezkoa soilik beste "
+#~ "osagaiek pantaila giltzatzea hornitzen badute."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME ezarri gabe!"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2025-08-19 11:23-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -98,27 +98,13 @@ msgstr "Restaura a sessão salva pelo usuário, se disponível"
 msgid "Also allow remote connections"
 msgstr "Permitir também conexões remotas"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Inicia a sessão em modo bloqueado"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Inicia sem suporte a bloqueio de tela. Necessário apenas se houver suporte "
-"por outro componente."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[Desconhecido]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -131,7 +117,7 @@ msgstr ""
 "principais consumidores de recursos de sessão:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -142,6 +128,16 @@ msgstr ""
 "Não foi possível restaurar <application>%1</application> porque ele está "
 "quebrado e esgotou os recursos de restauração de sessão do sistema. Informe "
 "isso aos desenvolvedores do aplicativo."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Inicia a sessão em modo bloqueado"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Inicia sem suporte a bloqueio de tela. Necessário apenas se houver "
+#~ "suporte por outro componente."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME não definido!"

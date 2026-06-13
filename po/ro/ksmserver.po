@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-09 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2025-10-03 14:28+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -89,27 +89,13 @@ msgstr "reface sesiunea precedentă dacă este disponibilă"
 msgid "Also allow remote connections"
 msgstr "Permite și conexiuni distante"
 
-#: main.cpp:139
-#, kde-format
-msgid "Starts the session in locked mode"
-msgstr "Pornește sesiunea în regim blocat"
-
-#: main.cpp:143
-#, kde-format
-msgid ""
-"Starts without lock screen support. Only needed if other component provides "
-"the lock screen."
-msgstr ""
-"Pornește cu suport pentru ecranul de blocare. Necesar doar dacă altă "
-"componentă furnizează ecranul de blocare."
-
-#: server.cpp:775
+#: server.cpp:766
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[necunoscut]"
 
-#: server.cpp:798
+#: server.cpp:789
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -122,7 +108,7 @@ msgstr ""
 "resurselor de sesiune:\n"
 "%1"
 
-#: server.cpp:1055
+#: server.cpp:1046
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
@@ -133,6 +119,16 @@ msgstr ""
 "<application>%1</application> nu se poate restabili deoarece e defectă și a "
 "epuizat resursele de restabilire a sesiunii ale sistemului. Raportați acest "
 "lucru dezvoltatorilor aplicației."
+
+#~ msgid "Starts the session in locked mode"
+#~ msgstr "Pornește sesiunea în regim blocat"
+
+#~ msgid ""
+#~ "Starts without lock screen support. Only needed if other component "
+#~ "provides the lock screen."
+#~ msgstr ""
+#~ "Pornește cu suport pentru ecranul de blocare. Necesar doar dacă altă "
+#~ "componentă furnizează ecranul de blocare."
 
 #~ msgid "$HOME not set!"
 #~ msgstr "$HOME nu e definit!"

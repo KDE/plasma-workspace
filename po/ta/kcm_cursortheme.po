@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
 "PO-Revision-Date: 2026-04-12 18:22+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -38,17 +38,24 @@ msgstr "தற்காலிக கோப்பை உருவாக்க ம
 msgid "Unable to download the icon theme archive: %1"
 msgstr "தோற்றத்திட்ட பெட்டகத்தை பதிவிறக்க முடியவில்லை: %1"
 
-#: kcmcursortheme.cpp:415
+#: kcmcursortheme.cpp:398
+#, fuzzy, kde-format
+#| msgid "Unable to download the icon theme archive: %1"
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "தோற்றத்திட்ட பெட்டகத்தை பதிவிறக்க முடியவில்லை: %1"
+
+#: kcmcursortheme.cpp:418
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "இக்கோப்பு ஒரு முறையான திட்டமுறையை கொண்ட பெட்டகம் போல் தெரியவில்லை."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:425
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' அடைவை உருவாக்க முடியவில்லை."
 
-#: kcmcursortheme.cpp:431
+#: kcmcursortheme.cpp:434
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -56,12 +63,12 @@ msgid ""
 msgstr ""
 "%1 என்ற பெயருள்ள தோற்றத்திட்டம் ஏற்கனவே உள்ளது. அதற்கு பதிலாக இதை நிறுவ வேண்டுமா?"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "திட்டமுறையை மேலெழுதலாமா?"
 
-#: kcmcursortheme.cpp:459
+#: kcmcursortheme.cpp:462
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "திட்டம் வெற்றிகரமாக நிறுவப்பட்டது."
