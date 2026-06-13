@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+# SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: MIT
+
+import os
+import sys
+import unittest
+
+_applets_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir)
+_appiumtests_dir = os.path.join(_applets_dir, os.pardir)
+sys.path.insert(0, _appiumtests_dir)
+sys.path.insert(0, _applets_dir)
+
+from appium.webdriver.common.appiumby import AppiumBy
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+from mediacontrollertest.base import MediaControllerTestBase
+
+
+class TestPlasmaBrowserIntegration(MediaControllerTestBase):
+
+    def test_0_player_with_kde_pid(self) -> None:
+        """
+        Players with plasma-browser-integration (kde:pid metadata) should work.
+        """
+        player = self.start_player("player_plasma_browser_integration.json", start_index=0)
+        try:
+            wait = WebDriverWait(self.driver, 10)
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Browser with p-b-i")))
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "ABC, DEF")))
+            self.driver.find_element(AppiumBy.NAME, "Next Track").click()
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Browser with p-b-i 2")))
+        finally:
+            self.stop_player(player)
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -165,32 +165,48 @@ PlasmoidItem {
     ]
 
     function previous(): void {
-        mpris2Model.currentPlayer.Previous();
+        if (mpris2Model.currentPlayer) {
+            mpris2Model.currentPlayer.Previous();
+        }
     }
     function next(): void {
-        mpris2Model.currentPlayer.Next();
+        if (mpris2Model.currentPlayer) {
+            mpris2Model.currentPlayer.Next();
+        }
     }
     function play(): void {
-        mpris2Model.currentPlayer.Play();
-    }
-    function pause(): void {
-        mpris2Model.currentPlayer.Pause();
-    }
-    function togglePlaying(): void {
-        if (root.isPlaying) {
-            mpris2Model.currentPlayer.Pause();
-        } else {
+        if (mpris2Model.currentPlayer) {
             mpris2Model.currentPlayer.Play();
         }
     }
+    function pause(): void {
+        if (mpris2Model.currentPlayer) {
+            mpris2Model.currentPlayer.Pause();
+        }
+    }
+    function togglePlaying(): void {
+        if (mpris2Model.currentPlayer) {
+            if (root.isPlaying) {
+                mpris2Model.currentPlayer.Pause();
+            } else {
+                mpris2Model.currentPlayer.Play();
+            }
+        }
+    }
     function stop(): void {
-        mpris2Model.currentPlayer.Stop();
+        if (mpris2Model.currentPlayer) {
+            mpris2Model.currentPlayer.Stop();
+        }
     }
     function quit(): void {
-        mpris2Model.currentPlayer.Quit();
+        if (mpris2Model.currentPlayer) {
+            mpris2Model.currentPlayer.Quit();
+        }
     }
     function raise(): void {
-        mpris2Model.currentPlayer.Raise();
+        if (mpris2Model.currentPlayer) {
+            mpris2Model.currentPlayer.Raise();
+        }
     }
 
     Mpris.Mpris2Model {

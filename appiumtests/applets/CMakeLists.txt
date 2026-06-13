@@ -59,6 +59,7 @@ add_test(
 )
 
 add_subdirectory(notificationstest)
+add_subdirectory(mediacontrollertest)
 
 add_test(
     NAME digitalclocktest
