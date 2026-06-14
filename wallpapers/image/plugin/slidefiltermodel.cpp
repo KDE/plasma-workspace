@@ -214,7 +214,6 @@ void SlideFilterModel::invalidate()
         std::shuffle(m_randomOrder.begin(), m_randomOrder.end(), m_random);
     }
     QSortFilterProxyModel::invalidate();
-    sort(0);
 }
 
 void SlideFilterModel::invalidateFilter()
