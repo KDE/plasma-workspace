@@ -326,6 +326,11 @@ def eject_drive(self, drive_name):
     """
     Convenience method to eject a mock block device object which
     simulates org.freedesktop.UDisks2.Drive.Eject
+
+    Updates block and drive properties in-place and removes the
+    Filesystem interface via InterfacesRemoved, matching real UDisks2
+    behavior. Avoids RemoveObject/AddObject which break Solid's
+    property cache by silently replacing the D-Bus object.
     """
 
     drive_path = UDISKS2_DRIVE_DEVICES + drive_name
@@ -334,52 +339,7 @@ def eject_drive(self, drive_name):
 
     block_path = UDISKS2_BLOCK_DEVICES + drive_obj.block_name
 
-    old_block_obj = dbusmock.get_object(block_path)
-
-    # Workaround: python-dbusmock does not support removing of individual dbus ifaces.
-    # So remove the block_devices object and then add a new object without the
-    # 'org.freedesktop.UDisks2.Filesystem' iface.
-    block_props = {
-        "Device": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Device"),
-        "PreferredDevice": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "PreferredDevice"),
-        "Symlinks": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Symlinks"),
-        "DeviceNumber": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "DeviceNumber"),
-        "Id": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Id"),
-        "Size": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Size"),
-        "ReadOnly": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "ReadOnly"),
-        "Drive": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Drive"),
-        "MDRaid": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "MDRaid"),
-        "MDRaidMember": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "MDRaidMember"),
-        "IdUsage": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdUsage"),
-        "IdType": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdType"),
-        "IdVersion": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdVersion"),
-        "IdLabel": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdLabel"),
-        "IdUUID": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdUUID"),
-        "Configuration": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Configuration"),
-        "CryptoBackingDevice": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "CryptoBackingDevice"),
-        "HintPartitionable": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintPartitionable"),
-        "HintSystem": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintSystem"),
-        "HintIgnore": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintIgnore"),
-        "HintAuto": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintAuto"),
-        "HintName": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintName"),
-        "HintIconName": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintIconName"),
-        "HintSymbolicIconName": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintSymbolicIconName"),
-        "UserspaceMountOptions": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "UserspaceMountOptions"),
-    }
-
-    block_methods = [
-        ("AddConfigurationItem", "(sa{sv})a{sv}", "", "pass"),
-        ("RemoveConfigurationItem", "(sa{sv})a{sv}", "", "pass"),
-        ("UpdateConfigurationItem", "(sa{sv})(sa{sv})", "", "pass"),
-        ("GetSecretInformation", "a{sv}", "a(sa{sv})", "pass"),
-        ("Format", "sa{sv}", "", "pass"),
-        ("OpenForBackup", "sa{sv}", "h", "pass"),
-        ("OpenForRestore", "sa{sv}", "h", "pass"),
-        ("OpenForBenchmark", "sa{sv}", "h", "pass"),
-        ("OpenDevice", "sa{sv}", "h", "pass"),
-        ("Rescan", "a{sv}", "", "pass"),
-        ("RestoreEncryptedHeader", "sa{sv}", "", "pass"),
-    ]
+    block_obj = dbusmock.get_object(block_path)
 
     changed_block_props = {
         "HintAuto": dbus.Boolean(0),
@@ -401,19 +361,19 @@ def eject_drive(self, drive_name):
 
     self.finish_job(job_path)
 
-    self.RemoveObject(block_path)
-
-    self.AddObject(block_path, UDISKS2_BLOCK_IFACE, block_props, block_methods)
-
-    main_obj = dbusmock.get_object(MAIN_OBJ)
-
     drive_obj.UpdateProperties(UDISKS2_DRIVE_IFACE, changed_drive_props)
 
-    new_block_obj = dbusmock.get_object(block_path)
-    new_block_obj.block_name = old_block_obj.block_name
-    new_block_obj.drive_name = old_block_obj.drive_name
-    new_block_obj.is_damaged = old_block_obj.is_damaged
-    new_block_obj.UpdateProperties(UDISKS2_BLOCK_IFACE, changed_block_props)
+    block_obj.UpdateProperties(UDISKS2_BLOCK_IFACE, changed_block_props)
+
+    # Clear MountPoints before removing the Filesystem interface so Solid
+    # processes the unmount before the interface disappears.
+    mount_points = dbus.Array([], signature="ay")
+    block_obj.Set(UDISKS2_FILESYSTEM_IFACE, "MountPoints", mount_points)
+
+    userspace_mount_options = dbus.Array([], signature="s")
+    block_obj.Set(UDISKS2_BLOCK_IFACE, "UserspaceMountOptions", userspace_mount_options)
+
+    main_obj = dbusmock.get_object(MAIN_OBJ)
 
     main_obj.EmitSignal(
         dbusmock.OBJECT_MANAGER_IFACE, "InterfacesRemoved", "oas", [dbus.ObjectPath(block_path), [dbus.String(UDISKS2_FILESYSTEM_IFACE)]]
