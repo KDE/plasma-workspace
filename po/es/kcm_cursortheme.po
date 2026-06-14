@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2015.
 #
-# SPDX-FileCopyrightText: 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2015-2016, 2018-2023, 2025-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2026-03-22 00:37+0100\n"
+"PO-Revision-Date: 2026-06-13 19:04+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -42,11 +42,10 @@ msgid "Unable to download the icon theme archive: %1"
 msgstr "No se ha podido descargar el archivo del tema de iconos: %1"
 
 #: kcmcursortheme.cpp:398
-#, fuzzy, kde-format
-#| msgid "Unable to download the icon theme archive: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "No se ha podido descargar el archivo del tema de iconos: %1"
+msgstr "No se ha podido abrir el archivo del tema de iconos."
 
 #: kcmcursortheme.cpp:418
 #, kde-format
@@ -292,12 +291,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tamaños disponibles: %1)"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr ""
-#~ "Debe reiniciar la sesión de Plasma para que estos cambios tengan efecto."
-
-#~ msgid "The requested size '%1' is not available, using %2 instead."
-#~ msgstr ""
-#~ "El tamaño «%1» solicitado no está disponible; se usa %2 en su lugar."

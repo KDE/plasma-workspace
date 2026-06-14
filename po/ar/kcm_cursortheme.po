@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2026-03-23 22:12+0400\n"
+"PO-Revision-Date: 2026-06-13 19:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -49,11 +49,10 @@ msgid "Unable to download the icon theme archive: %1"
 msgstr "لم يتمكن من تنزيل سمة الأيقونات: %1"
 
 #: kcmcursortheme.cpp:398
-#, fuzzy, kde-format
-#| msgid "Unable to download the icon theme archive: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "لم يتمكن من تنزيل سمة الأيقونات: %1"
+msgstr "لم يتمكن من فتح أرشيف سمة الأيقونات"
 
 #: kcmcursortheme.cpp:418
 #, kde-format

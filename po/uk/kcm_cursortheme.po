@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2026-03-21 14:20+0200\n"
+"PO-Revision-Date: 2026-06-13 10:18+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -43,11 +43,10 @@ msgid "Unable to download the icon theme archive: %1"
 msgstr "Не вдалося отримати архів теми вказівника %1."
 
 #: kcmcursortheme.cpp:398
-#, fuzzy, kde-format
-#| msgid "Unable to download the icon theme archive: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "Не вдалося отримати архів теми вказівника %1."
+msgstr "Не вдалося відкрити архів із темою піктограм."
 
 #: kcmcursortheme.cpp:418
 #, kde-format

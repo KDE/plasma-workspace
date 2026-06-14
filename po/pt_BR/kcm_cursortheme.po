@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2026-03-21 10:03-0300\n"
+"PO-Revision-Date: 2026-06-13 05:22-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -46,11 +46,10 @@ msgid "Unable to download the icon theme archive: %1"
 msgstr "Não foi possível baixar o arquivo do tema de ícones: %1"
 
 #: kcmcursortheme.cpp:398
-#, fuzzy, kde-format
-#| msgid "Unable to download the icon theme archive: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "Não foi possível baixar o arquivo do tema de ícones: %1"
+msgstr "Não foi possível abrir o arquivo do tema de ícones."
 
 #: kcmcursortheme.cpp:418
 #, kde-format
