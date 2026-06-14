@@ -14,13 +14,13 @@
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010, 2011.
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-21 00:47+0000\n"
-"PO-Revision-Date: 2026-05-02 18:53+0300\n"
+"PO-Revision-Date: 2026-06-13 19:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -53,12 +53,12 @@ msgstr ""
 #: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr "Geçici dosya oluşturulamadı."
+msgstr "Geçici dosya oluşturulamıyor."
 
 #: kcmcursortheme.cpp:397
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Simge tema arşivi indirilemedi: %1"
+msgstr "Simge teması arşivi indirilemedi: %1"
 
 #: kcmcursortheme.cpp:428
 #, kde-format
@@ -76,13 +76,13 @@ msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr ""
-"%1 adında bir tema, simge temaları klasöründe var. Üzerine yazmak istiyor "
-"musunuz?"
+"Simge temaları klasörünüzde %1 adında bir tema hâlihazırda var. Onu, bununla "
+"değiştirmek istiyor musunuz?"
 
 #: kcmcursortheme.cpp:448
 #, kde-format
 msgid "Overwrite Theme?"
-msgstr "Temanın Üzerine Yazılsın mı?"
+msgstr "Temanın Üzerine Yaz?"
 
 #: kcmcursortheme.cpp:472
 #, kde-format
@@ -109,7 +109,8 @@ msgid ""
 "available, or which is already set."
 msgstr ""
 "Bu araç, yanlışlıkla var olmayan veya önceden ayarlanmış olana ayarlamadan, "
-"geçerli Plasma oturumu için fare işaretçi temasını ayarlamanıza olanak tanır."
+"geçerli Plasma oturumu için fare işaretçisi temasını ayarlamanıza olanak "
+"tanır."
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
@@ -125,12 +126,13 @@ msgstr ""
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
-"Sistemde kullanılabilir olan tüm temaları göster (ve hangisi geçerli olan)"
+"Sistemde kullanılabilir olan tüm temaları göster (ve hangisinin şu anki "
+"olduğunu)"
 
 #: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr "Tema öntanımlı boyutu yerine belirli bir boyut kullanın"
+msgstr "Tema öntanımlı boyutu yerine belirli bir boyut kullan"
 
 #: plasma-apply-cursortheme.cpp:92
 #, kde-format
@@ -138,7 +140,7 @@ msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr ""
-"İstenen tema “%1”, hâlihazırda geçerli Plasma oturumu için tema olarak "
+"İstenen tema “%1”, hâlihazırda geçerli Plasma oturumu teması olarak "
 "ayarlanmış."
 
 #: plasma-apply-cursortheme.cpp:103
@@ -147,7 +149,7 @@ msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr ""
-"Fare işaretçi teması %1, başarıyla geçerli Plasma oturumunuza uygulandı"
+"Fare işaretçisi teması %1, başarıyla geçerli Plasma oturumunuza uygulandı"
 
 #: plasma-apply-cursortheme.cpp:105
 #, kde-format
