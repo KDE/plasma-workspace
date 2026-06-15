@@ -24,7 +24,6 @@
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/surface.h>
-#include <KWindowSystem>
 
 #include "configdialog.h"
 #include "historycycler.h"
@@ -34,12 +33,7 @@
 #include "klippersettings.h"
 #include "systemclipboard.h"
 
-#include <config-X11.h>
 #include <wayland-client-core.h>
-#if HAVE_X11
-#include <xcb/xcb.h>
-#include <xcb/xcb_aux.h>
-#endif
 
 std::shared_ptr<Klipper> Klipper::self()
 {
@@ -147,7 +141,6 @@ Klipper::Klipper(QObject *parent)
         }
     });
 
-    if (KWindowSystem::isPlatformWayland()) {
         auto registry = new KWayland::Client::Registry(this);
         auto connection = KWayland::Client::ConnectionThread::fromApplication(qGuiApp);
         connect(registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [registry, this](quint32 name, quint32 version) {
@@ -161,7 +154,6 @@ Klipper::Klipper(QObject *parent)
         });
         registry->create(connection);
         registry->setup();
-    }
 }
 
 Klipper::~Klipper()
@@ -199,7 +191,6 @@ void Klipper::setClipboardContents(const QString &s)
 {
     if (s.isEmpty())
         return;
-    updateTimestamp();
     auto data = std::make_unique<QMimeData>();
     data->setText(s);
     m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
@@ -209,14 +200,12 @@ void Klipper::setClipboardContents(const QString &s)
 // DBUS - don't call from Klipper itself
 void Klipper::clearClipboardContents()
 {
-    updateTimestamp();
     m_clip->clear();
 }
 
 // DBUS - don't call from Klipper itself
 void Klipper::clearClipboardHistory()
 {
-    updateTimestamp();
     m_historyModel->clear();
     saveSession();
 }
@@ -385,15 +374,6 @@ QStringList Klipper::getClipboardHistoryMenu()
 QString Klipper::getClipboardHistoryItem(int i)
 {
     return m_historyModel->index(i).data(Qt::DisplayRole).toString();
-}
-
-void Klipper::updateTimestamp()
-{
-#if HAVE_X11
-    if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
-        xcb_aux_sync(interface->connection());
-    }
-#endif
 }
 
 void Klipper::slotCycleNext()
