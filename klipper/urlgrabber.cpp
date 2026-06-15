@@ -22,7 +22,6 @@
 #include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KStringHandler>
-#include <KWindowSystem>
 
 #include "clipcommandprocess.h"
 #include "klippersettings.h"
@@ -158,9 +157,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
         m_myMenu.reset(new QMenu);
         m_myMenu->setWindowFlag(Qt::FramelessWindowHint, true);
-        if (KWindowSystem::isPlatformWayland()) {
-            m_myMenu->setWindowFlag(Qt::Popup, false);
-        }
+        m_myMenu->setWindowFlag(Qt::Popup, false);
         m_myMenu->setObjectName(QStringLiteral("klipperActionPopup"));
 
         connect(m_myMenu.get(), &QMenu::triggered, this, &URLGrabber::slotItemSelected);

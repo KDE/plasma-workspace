@@ -104,8 +104,6 @@ private Q_SLOTS:
     void loadSettings();
 
 private:
-    static void updateTimestamp();
-
     std::shared_ptr<SystemClipboard> m_clip;
     HistoryCycler *m_historyCycler = nullptr;
 
