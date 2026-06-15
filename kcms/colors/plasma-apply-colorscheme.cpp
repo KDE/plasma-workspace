@@ -9,7 +9,6 @@
 #include "colorssettings.h"
 
 #include "../kcms-common_p.h"
-#include "../krdb/krdb.h"
 
 #include <KColorScheme>
 #include <KConfig>

@@ -37,8 +37,6 @@
 #include <QWidget>
 #include <QWindow>
 
-#include "krdb.h"
-
 #include "kded_interface.h"
 
 #include "previewitem.h"
@@ -265,12 +263,6 @@ void KCMStyle::save()
     }
 
     KQuickManagedConfigModule::save();
-
-    // Export the changes we made to qtrc, and update all qt-only
-    // applications on the fly, ensuring that we still follow the user's
-    // export fonts/colors settings.
-    uint flags = KRdbExportQtSettings | KRdbExportGtkTheme;
-    runRdb(flags);
 
     // Now allow KDE apps to reconfigure themselves.
     if (newStyleLoaded) {

@@ -1,5 +1,3 @@
-add_subdirectory(krdb)
-
 add_subdirectory(desktoptheme)
 add_subdirectory(icons)
 

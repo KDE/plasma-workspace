@@ -34,7 +34,6 @@
 
 #include "../kcms-common_p.h"
 #include "devicepixelratiohelper.h"
-#include "krdb.h"
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
 
@@ -136,7 +135,6 @@ void KFonts::save()
         QDBusConnection::sessionBus().send(message);
     }
 
-    runRdb(KRdbExportGtkTheme);
     QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
 }
 

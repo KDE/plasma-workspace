@@ -12,7 +12,6 @@
 #include "klookandfeelmanager.h"
 #include "../kcms/colors/colorsapplicator.h"
 #include "../kcms/kcms-common_p.h"
-#include "krdb.h"
 #include <KIO/CommandLauncherJob>
 #include <KIconLoader>
 #include <KPackage/PackageLoader>
@@ -583,8 +582,6 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
         if (m_mode == Mode::Defaults) {
             return;
         }
-
-        runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportQtSettings);
     }
     // Reload KWin if something changed, but only once.
     if (itemsToApply & KWinSettings) {

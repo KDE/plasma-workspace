@@ -8,7 +8,6 @@ kcmutils_generate_module_data(kcm_colors
     SETTINGS_HEADERS colorssettings.h
     SETTINGS_CLASSES ColorsSettings
 )
-# needed for krdb
 kconfig_add_kcfg_files(kcm_colors colorssettings.kcfgc GENERATE_MOC)
 target_link_libraries(kcm_colors PRIVATE
     Qt::DBus
@@ -23,7 +22,6 @@ target_link_libraries(kcm_colors PRIVATE
     KF6::KCMUtilsQuick
     KF6::WindowSystem
     KF6::ColorScheme
-    krdb
 )
 
 if(HAVE_X11)
@@ -73,7 +71,6 @@ target_link_libraries(plasma-apply-colorscheme
     KF6::ColorScheme
     PW::KWorkspace
     X11::X11
-    krdb
 )
 
 kcoreaddons_add_plugin(plasma_accentcolor_service INSTALL_NAMESPACE "kf6/kded")
@@ -99,7 +96,6 @@ target_link_libraries(plasma_accentcolor_service
     KF6::ColorScheme
     PW::KWorkspace
     X11::X11
-    krdb
 )
 
 install(FILES colorssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

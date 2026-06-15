@@ -13,7 +13,7 @@ target_sources(kcm_cursortheme PRIVATE
     xcursor/xcursor.c
 )
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ ${CMAKE_CURRENT_BINARY_DIR}/../krdb/ )
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/)
 
 kcmutils_generate_module_data(kcm_cursortheme
     MODULE_DATA_HEADER cursorthemedata.h
@@ -39,7 +39,6 @@ target_link_libraries(kcm_cursortheme PRIVATE
     KF6::KIOWidgets
     KF6::NewStuffCore
     KF6::KCMUtilsQuick
-    krdb
 )
 
 target_compile_definitions(kcm_cursortheme PRIVATE CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
@@ -54,7 +53,6 @@ target_sources(plasma-apply-cursortheme PRIVATE
     xcursor/thememodel.cpp
     xcursor/xcursortheme.cpp
     ../kcms-common.cpp
-    ../krdb/krdb.cpp
      xcursor/xcursor.c
 )
 kconfig_add_kcfg_files(plasma-apply-cursortheme cursorthemesettings.kcfgc GENERATE_MOC)
