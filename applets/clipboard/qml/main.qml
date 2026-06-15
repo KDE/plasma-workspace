@@ -126,6 +126,8 @@ PlasmoidItem {
                 if (expanded) {
                     ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = -1;
                     ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
+                } else {
+                    clipboardMenu.clearFilter();
                 }
             }
         }
@@ -134,6 +136,7 @@ PlasmoidItem {
             id: stack
             anchors.fill: parent
             initialItem: Private.ClipboardMenu {
+                id: clipboardMenu
                 expanded: main.expanded
                 dialogItem: dialogItem
                 model: historyModel

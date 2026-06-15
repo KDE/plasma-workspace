@@ -8,6 +8,7 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as QQC
+import QtQuick.Window
 
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.private.clipboard as Private
@@ -55,6 +56,8 @@ PlasmaExtras.Representation {
         function onVisibleChanged() {
             if (!dialogItem.Window.window.visible) {
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
+            } else {
+                clipboardMenu.clearFilter();
             }
             ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
         }
