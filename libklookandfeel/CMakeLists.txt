@@ -49,7 +49,6 @@ target_link_libraries(klookandfeel
         KF6::I18n
         KF6::IconThemes
         KF6::KIOGui
-        krdb
 )
 
 target_include_directories(klookandfeel

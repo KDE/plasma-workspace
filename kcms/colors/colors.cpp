@@ -40,8 +40,6 @@
 
 #include <algorithm>
 
-#include "krdb.h"
-
 #include "colorsapplicator.h"
 #include "colorsdata.h"
 #include "filterproxymodel.h"

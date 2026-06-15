@@ -5,8 +5,6 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#include "../krdb/krdb.h"
-
 #include <KColorScheme>
 #include <KConfigGroup>
 
@@ -348,6 +346,4 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             groupEffectOut.writeEntry(effect, groupEffectTheme.readEntry(effect), writeConfigFlag);
         }
     }
-
-    runRdb(KRdbExportQtColors | KRdbExportGtkTheme);
 }

@@ -57,7 +57,6 @@ target_sources(plasma-apply-cursortheme PRIVATE
     xcursor/thememodel.cpp
     xcursor/xcursortheme.cpp
     ../kcms-common.cpp
-    ../krdb/krdb.cpp
 )
 kconfig_add_kcfg_files(plasma-apply-cursortheme cursorthemesettings.kcfgc GENERATE_MOC)
 target_link_libraries(plasma-apply-cursortheme
