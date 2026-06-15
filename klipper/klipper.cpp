@@ -20,7 +20,6 @@
 #include <KLocalizedString>
 #include <KNotification>
 #include <KToggleAction>
-#include <KWindowSystem>
 
 #include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
@@ -32,12 +31,7 @@
 #include "klippersettings.h"
 #include "systemclipboard.h"
 
-#include <config-X11.h>
 #include <wayland-client-core.h>
-#if HAVE_X11
-#include <xcb/xcb.h>
-#include <xcb/xcb_aux.h>
-#endif
 
 std::shared_ptr<Klipper> Klipper::self()
 {
@@ -188,7 +182,6 @@ void Klipper::setClipboardContents(const QString &s)
 {
     if (s.isEmpty())
         return;
-    updateTimestamp();
     auto data = std::make_unique<QMimeData>();
     data->setText(s);
     m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
@@ -198,14 +191,12 @@ void Klipper::setClipboardContents(const QString &s)
 // DBUS - don't call from Klipper itself
 void Klipper::clearClipboardContents()
 {
-    updateTimestamp();
     m_clip->clear();
 }
 
 // DBUS - don't call from Klipper itself
 void Klipper::clearClipboardHistory()
 {
-    updateTimestamp();
     m_historyModel->clear();
     saveSession();
 }
@@ -377,15 +368,6 @@ QStringList Klipper::getClipboardHistoryMenu()
 QString Klipper::getClipboardHistoryItem(int i)
 {
     return m_historyModel->index(i).data(Qt::DisplayRole).toString();
-}
-
-void Klipper::updateTimestamp()
-{
-#if HAVE_X11
-    if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
-        xcb_aux_sync(interface->connection());
-    }
-#endif
 }
 
 void Klipper::slotCycleNext()

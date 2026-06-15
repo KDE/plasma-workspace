@@ -15,8 +15,6 @@
 #include <QQuickItem>
 
 #include <KLocalizedString>
-#include <KWindowSystem>
-#include <KX11Extras>
 
 #include <Plasma/Plasma>
 #include <PlasmaQuick/PlasmaQuick>
@@ -92,57 +90,31 @@ void KlipperPopup::resizePopup()
     // If the popup is off-screen, move it to the closest edge of the screen
     const QSize popupSize = QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize());
 
-    if (KWindowSystem::isPlatformX11()) {
-        const QRect screenGeometry = screen()->geometry();
-        QRect popupGeometry(position(), popupSize);
-        if (!screenGeometry.contains(popupGeometry)) {
-            popupGeometry.moveTo(std::clamp(x(), screenGeometry.left(), screenGeometry.right() - popupSize.width()),
-                                 std::clamp(y(), screenGeometry.top(), screenGeometry.bottom() - popupSize.height()));
-        }
-        setGeometry(popupGeometry);
-    } else {
-        resize(popupSize);
-    }
+    resize(popupSize);
 }
 
 void KlipperPopup::showEvent(QShowEvent *event)
 {
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setOnAllDesktops(winId(), true);
-    }
     PlasmaWindow::showEvent(event); // NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher
     requestActivate();
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::forceActiveWindow(winId());
-    }
 }
 
 void KlipperPopup::positionOnScreen()
 {
     const QList<QScreen *> screens = QGuiApplication::screens();
-    if (KWindowSystem::isPlatformX11()) {
-        auto screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
-            return screen->geometry().contains(QCursor::pos(screen));
-        });
-        QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
-        setPosition(QCursor::pos(shownOnScreen));
-        setScreen(shownOnScreen);
-        KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
-    } else if (KWindowSystem::isPlatformWayland()) {
-        auto integration = PlasmaShellWaylandIntegration::get(this);
-        integration->openUnderCursor();
-        integration->setRole(QtWayland::org_kde_plasma_surface::role_appletpopup);
+    auto integration = PlasmaShellWaylandIntegration::get(this);
+    integration->openUnderCursor();
+    integration->setRole(QtWayland::org_kde_plasma_surface::role_appletpopup);
 
-        if (screens.size() > 1) {
-            auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
-            QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
-            if (reply.isValid()) {
-                const QString activeOutputName = reply.value();
-                auto screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
-                    return screen->name() == activeOutputName;
-                });
-                setScreen(screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen());
-            }
+    if (screens.size() > 1) {
+        auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
+        QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
+        if (reply.isValid()) {
+            const QString activeOutputName = reply.value();
+            auto screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
+                return screen->name() == activeOutputName;
+            });
+            setScreen(screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen());
         }
     }
 }
