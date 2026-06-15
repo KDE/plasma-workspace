@@ -206,6 +206,10 @@ PlasmaComponents3.ScrollView {
         }
     }
 
+    function clearFilter(): void {
+        filter.clear();
+    }
+
     function clearHistory(): void {
         clipboardMenu.model.clearHistory();
         if (!clipboardMenu.T.StackView.visible) {
