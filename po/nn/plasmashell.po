@@ -450,12 +450,3 @@ msgstr "Paneltal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Talet på panel."
-
-#~ msgid ""
-#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
-#~ "are known to cause poor window drag and resize performance. Consider "
-#~ "using other settings."
-#~ msgstr ""
-#~ "For NVIDIA-skjermkort på X11 fører stilen «flytande» og gjennomsikts­"
-#~ "modusen «adaptiv» dårleg yting ved draging og endring av storleiken til "
-#~ "vindauge. Vurder derfor å bruka andre innstillingar."

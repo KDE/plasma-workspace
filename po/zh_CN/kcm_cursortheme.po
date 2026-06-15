@@ -40,11 +40,10 @@ msgid "Unable to download the icon theme archive: %1"
 msgstr "无法下载图标主题压缩文件：%1"
 
 #: kcmcursortheme.cpp:398
-#, fuzzy, kde-format
-#| msgid "Unable to download the icon theme archive: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "无法下载图标主题压缩文件：%1"
+msgstr ""
 
 #: kcmcursortheme.cpp:418
 #, kde-format

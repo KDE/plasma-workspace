@@ -318,11 +318,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tilgjengelige størrelser: %1)"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "Du må starte økta på nytt for at endringene skal tre i kraft."
-
-#~ msgid "The requested size '%1' is not available, using %2 instead."
-#~ msgstr ""
-#~ "Den forespurte størrelsen «%1» er ikke tilgjengelig. Bruker i stedet %2."

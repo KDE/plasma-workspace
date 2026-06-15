@@ -115,11 +115,3 @@ msgid ""
 msgstr ""
 "无法恢复 <application>%1</application>，因为它已经损坏，而且还耗尽了系统会话"
 "恢复资源。请将此情况报告给该应用程序的开发人员。"
-
-#~ msgid "Starts the session in locked mode"
-#~ msgstr "在锁定模式下启动会话"
-
-#~ msgid ""
-#~ "Starts without lock screen support. Only needed if other component "
-#~ "provides the lock screen."
-#~ msgstr "在没有锁屏支持的情况下启动。仅在其他组件提供了锁屏时需要。"

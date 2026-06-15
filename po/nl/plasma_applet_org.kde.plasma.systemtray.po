@@ -44,7 +44,7 @@ msgstr "Altijd tonen"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr "Allen in pop-up tonen"
+msgstr "Alleen in pop-up tonen"
 
 #: qml/ConfigGeneral.qml:57
 #, kde-format

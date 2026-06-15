@@ -119,13 +119,3 @@ msgstr ""
 "Kan ikkje gjenoppretta <application>%1</application>, då programmet er "
 "øydelagt og har brukt opp ressursane for økthandsaming på dette systemet. "
 "Meld frå om feilen til utviklarane av appen."
-
-#~ msgid "Starts the session in locked mode"
-#~ msgstr "Startar økta i låst modus"
-
-#~ msgid ""
-#~ "Starts without lock screen support. Only needed if other component "
-#~ "provides the lock screen."
-#~ msgstr ""
-#~ "Startar utan støtte for skjermlåsing. Berre nødvendig viss andre "
-#~ "komponentar står for skjermlåsinga."
