@@ -24,15 +24,6 @@ set(taskmanager_LIB_SRCS
     screencastingrequest.cpp screencastingrequest.h
 )
 
-if (HAVE_X11)
-    set(taskmanager_LIB_SRCS
-        ${taskmanager_LIB_SRCS}
-        xstartuptasksmodel.cpp
-        xwindowsystemeventbatcher.cpp xwindowsystemeventbatcher.h
-        xwindowtasksmodel.cpp
-    )
-endif()
-
 add_library(taskmanager ${taskmanager_LIB_SRCS})
 add_library(PW::LibTaskManager ALIAS taskmanager)
 
@@ -81,11 +72,6 @@ target_link_libraries(taskmanager
         PW::KWorkspace
 )
 
-if (HAVE_X11)
-    target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
-    target_link_libraries(taskmanager PRIVATE X11::X11)
-endif()
-
 set_target_properties(taskmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}
                       SOVERSION 6
@@ -124,14 +110,6 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/taskmanager_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
 )
-
-if (HAVE_X11)
-    install(FILES
-        xstartuptasksmodel.h
-        xwindowtasksmodel.h
-        DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
-    )
-endif()
 
 ecm_finalize_qml_module(taskmanager)
 

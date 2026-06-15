@@ -22,12 +22,6 @@
 #include <QWaylandClientExtension>
 #include <algorithm>
 
-#include <config-X11.h>
-
-#if HAVE_X11
-#include <netwm.h>
-#endif // HAVE_X11
-
 namespace X11Info
 {
 [[nodiscard]] inline auto connection()
@@ -120,151 +114,6 @@ void VirtualDesktopInfo::Private::navigationWrappingAroundChanged(bool newVal)
     navigationWrappingAround = newVal;
     Q_EMIT navigationWrappingAroundChanged();
 }
-
-#if HAVE_X11
-class Q_DECL_HIDDEN VirtualDesktopInfo::XWindowPrivate : public VirtualDesktopInfo::Private
-{
-    Q_OBJECT
-public:
-    XWindowPrivate();
-
-    void init() override;
-    QVariant currentDesktop() const override;
-    QVariant currentDesktopByScreenName(const QString &screeName) const override;
-    int numberOfDesktops() const override;
-    QVariantList desktopIds() const override;
-    QStringList desktopNames() const override;
-    quint32 position(const QVariant &desktop) const override;
-    int desktopLayoutRows() const override;
-    void requestActivate(const QVariant &desktop) override;
-    void requestActivateOnScreen(const QVariant &desktop, const QString &screenName) override;
-    void requestCreateDesktop(quint32 position) override;
-    void requestRemoveDesktop(quint32 position) override;
-};
-
-VirtualDesktopInfo::XWindowPrivate::XWindowPrivate()
-    : VirtualDesktopInfo::Private()
-{
-    init();
-}
-
-void VirtualDesktopInfo::XWindowPrivate::init()
-{
-    connect(KX11Extras::self(), &KX11Extras::currentDesktopChanged, this, [this]() {
-        for (auto screen : qGuiApp->screens()) {
-            Q_EMIT currentDesktopForScreenChanged(screen->name());
-        }
-
-        Q_EMIT currentDesktopChanged();
-    });
-
-    connect(KX11Extras::self(), &KX11Extras::numberOfDesktopsChanged, this, &VirtualDesktopInfo::XWindowPrivate::numberOfDesktopsChanged);
-
-    connect(KX11Extras::self(), &KX11Extras::desktopNamesChanged, this, &VirtualDesktopInfo::XWindowPrivate::desktopNamesChanged);
-
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.connect(QString(),
-                 QStringLiteral("/VirtualDesktopManager"),
-                 QStringLiteral("org.kde.KWin.VirtualDesktopManager"),
-                 QStringLiteral("rowsChanged"),
-                 this,
-                 SIGNAL(desktopLayoutRowsChanged()));
-}
-
-QVariant VirtualDesktopInfo::XWindowPrivate::currentDesktop() const
-{
-    return KX11Extras::currentDesktop();
-}
-
-QVariant VirtualDesktopInfo::XWindowPrivate::currentDesktopByScreenName(const QString &) const
-{
-    // Per-screen virtual desktops are not supported on X11.
-    return currentDesktop();
-}
-
-int VirtualDesktopInfo::XWindowPrivate::numberOfDesktops() const
-{
-    return KX11Extras::numberOfDesktops();
-}
-
-QVariantList VirtualDesktopInfo::XWindowPrivate::desktopIds() const
-{
-    QVariantList ids;
-
-    for (int i = 1; i <= KX11Extras::numberOfDesktops(); ++i) {
-        ids << i;
-    }
-
-    return ids;
-}
-
-QStringList VirtualDesktopInfo::XWindowPrivate::desktopNames() const
-{
-    QStringList names;
-
-    // Virtual desktop numbers start at 1.
-    for (int i = 1; i <= KX11Extras::numberOfDesktops(); ++i) {
-        names << KX11Extras::desktopName(i);
-    }
-
-    return names;
-}
-
-quint32 VirtualDesktopInfo::XWindowPrivate::position(const QVariant &desktop) const
-{
-    bool ok = false;
-
-    const quint32 desktopNumber = desktop.toUInt(&ok);
-
-    if (!ok) {
-        return -1;
-    }
-
-    return desktopNumber;
-}
-
-int VirtualDesktopInfo::XWindowPrivate::desktopLayoutRows() const
-{
-    const NETRootInfo info(X11Info::connection(), NET::NumberOfDesktops | NET::DesktopNames, NET::WM2DesktopLayout);
-    return info.desktopLayoutColumnsRows().height();
-}
-
-void VirtualDesktopInfo::XWindowPrivate::requestActivate(const QVariant &desktop)
-{
-    bool ok = false;
-    const int desktopNumber = desktop.toInt(&ok);
-
-    // Virtual desktop numbers start at 1.
-    if (ok && desktopNumber > 0 && desktopNumber <= KX11Extras::numberOfDesktops()) {
-        KX11Extras::setCurrentDesktop(desktopNumber);
-    }
-}
-
-void VirtualDesktopInfo::XWindowPrivate::requestActivateOnScreen(const QVariant &desktop, const QString &)
-{
-    // Per-screen virtual desktops are not supported on X11.
-    requestActivate(desktop);
-}
-
-void VirtualDesktopInfo::XWindowPrivate::requestCreateDesktop(quint32 position)
-{
-    Q_UNUSED(position)
-
-    NETRootInfo info(X11Info::connection(), NET::NumberOfDesktops);
-    info.setNumberOfDesktops(info.numberOfDesktops() + 1);
-}
-
-void VirtualDesktopInfo::XWindowPrivate::requestRemoveDesktop(quint32 position)
-{
-    Q_UNUSED(position)
-
-    NETRootInfo info(X11Info::connection(), NET::NumberOfDesktops);
-
-    if (info.numberOfDesktops() > 1) {
-        info.setNumberOfDesktops(info.numberOfDesktops() - 1);
-    }
-}
-#endif // HAVE_X11
 
 class PlasmaVirtualDesktop : public QObject, public QtWayland::org_kde_plasma_virtual_desktop
 {
@@ -621,14 +470,7 @@ VirtualDesktopInfo::VirtualDesktopInfo(QObject *parent)
     : QObject(parent)
 {
     if (!d) {
-#if HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            d = new VirtualDesktopInfo::XWindowPrivate;
-        } else
-#endif // HAVE_X11
-        {
-            d = new VirtualDesktopInfo::WaylandPrivate;
-        }
+        d = new VirtualDesktopInfo::WaylandPrivate;
     } else {
         ++d->refCount;
     }
