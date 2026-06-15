@@ -467,7 +467,7 @@ void KCMLookandFeel::apply()
     save();
 
     if (!settings()->automaticLookAndFeel()) {
-        m_lnf->save(package, m_selectedContents);
+        m_lnf->save(package, m_selectedContents | KLookAndFeelManager::BlendChanges);
     }
 }
 

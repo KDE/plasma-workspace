@@ -96,7 +96,7 @@ int main(int argc, char **argv)
         }
 
         // By default do not modify the layout, unless explicitly specified
-        KLookAndFeelManager::Contents selection = KLookAndFeelManager::AppearanceSettings;
+        KLookAndFeelManager::Contents selection = KLookAndFeelManager::AppearanceSettings | KLookAndFeelManager::BlendChanges;
         if (parser.isSet(_resetLayout)) {
             selection |= KLookAndFeelManager::LayoutSettings;
         }
