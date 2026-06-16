@@ -167,5 +167,6 @@
         "Name[zh_TW]": "書籤"
     },
     "X-Plasma-Runner-Unique-Results": true,
-    "X-Plasma-Runner-Weak-Results": true
+    "X-Plasma-Runner-Weak-Results": true,
+    "X-Plasma-Runner-Min-Letter-Count": 2
 }
