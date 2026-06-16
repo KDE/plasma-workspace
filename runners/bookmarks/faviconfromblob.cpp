@@ -75,7 +75,7 @@ FaviconFromBlob::FaviconFromBlob(const QString &profileName, const QString &quer
         QStringLiteral("%1/bookmarksrunner/KRunner-Favicons-%2").arg(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation), profileName);
     // qDebug() << "got cache directory: " << m_profileCacheDirectory;
     cleanCacheDirectory();
-    QDir().mkpath(m_profileCacheDirectory);
+    ensureCacheDirectory();
 }
 
 FaviconFromBlob::~FaviconFromBlob()
@@ -93,6 +93,11 @@ void FaviconFromBlob::teardown()
     m_fetchsqlite->teardown();
 }
 
+void FaviconFromBlob::ensureCacheDirectory()
+{
+    QDir().mkpath(m_profileCacheDirectory);
+}
+
 void FaviconFromBlob::cleanCacheDirectory()
 {
     QDir(m_profileCacheDirectory).removeRecursively();
@@ -106,6 +111,8 @@ QIcon FaviconFromBlob::iconFor(const QString &url)
     if (iconFile.size() == 0)
         iconFile.remove();
     if (!iconFile.exists()) {
+        ensureCacheDirectory();
+
         QMap<QString, QVariant> bindVariables;
         bindVariables.insert(QStringLiteral(":url"), url);
         QList<QVariantMap> faviconFound = m_fetchsqlite->query(m_query, bindVariables);
