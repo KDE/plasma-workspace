@@ -35,6 +35,7 @@ Name[ko]=KRunner
 Name[lt]=KRunner
 Name[lv]=KRunner
 Name[ml]=കെറെണ്ണർ
+Name[nan_TW@latin]=KRunner
 Name[nb]=KRunner
 Name[nds]=KRunner
 Name[nl]=KRunner

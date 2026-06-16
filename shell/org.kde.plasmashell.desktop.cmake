@@ -21,6 +21,7 @@ Name[ja]=Plasma
 Name[ka]=Plasma
 Name[ko]=Plasma
 Name[lt]=Plasma
+Name[nan_TW@latin]=Plasma
 Name[nl]=Plasma
 Name[nn]=Plasma
 Name[pl]=Plazma
