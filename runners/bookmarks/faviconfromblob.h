@@ -33,5 +33,6 @@ private:
     QString m_query;
     QString const m_blobcolumn;
     std::unique_ptr<FetchSqlite> m_fetchsqlite;
+    void ensureCacheDirectory();
     void cleanCacheDirectory();
 };
