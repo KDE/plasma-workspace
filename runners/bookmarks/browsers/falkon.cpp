@@ -30,8 +30,11 @@ QList<BookmarkMatch> Falkon::match(const QString &term, bool addEverything)
     for (const auto &bookmark : std::as_const(m_falkonBookmarkEntries)) {
         const auto obj = bookmark.toObject();
         const QString url = obj.value(u"url").toString();
-        BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, obj.value(u"name").toString(), url);
-        bookmarkMatch.addTo(matches, addEverything);
+        BookmarkMatch bookmarkMatch(term, obj.value(u"name").toString(), url);
+        if (addEverything || bookmarkMatch.matches()) {
+            bookmarkMatch.setIcon(m_favicon->iconFor(url));
+            matches << bookmarkMatch;
+        }
     }
     return matches;
 }

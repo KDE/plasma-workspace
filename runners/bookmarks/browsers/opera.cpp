@@ -50,8 +50,11 @@ QList<BookmarkMatch> Opera::match(const QString &term, bool addEverything)
             }
         }
 
-        BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, name, url, description);
-        bookmarkMatch.addTo(matches, addEverything);
+        BookmarkMatch bookmarkMatch(term, name, url, description);
+        if (addEverything || bookmarkMatch.matches()) {
+            bookmarkMatch.setIcon(m_favicon->iconFor(url));
+            matches << bookmarkMatch;
+        }
     }
     return matches;
 }

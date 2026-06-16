@@ -15,12 +15,8 @@
 class BookmarkMatch
 {
 public:
-    BookmarkMatch(const QIcon &icon,
-                  const QString &searchTerm,
-                  const QString &bookmarkTitle,
-                  const QString &bookmarkURL,
-                  const QString &description = QString());
-    void addTo(QList<BookmarkMatch> &listOfResults, bool addEvenOnNoMatch);
+    BookmarkMatch(const QString &searchTerm, const QString &bookmarkTitle, const QString &bookmarkURL, const QString &description = QString());
+    bool matches() const;
     KRunner::QueryMatch asQueryMatch(KRunner::AbstractRunner *runner);
 
     Q_REQUIRED_RESULT QString bookmarkTitle() const
@@ -33,8 +29,18 @@ public:
         return m_bookmarkURL;
     }
 
+    Q_REQUIRED_RESULT QIcon icon() const
+    {
+        return m_icon;
+    }
+
+    void setIcon(const QIcon &icon)
+    {
+        m_icon = icon;
+    }
+
 private:
-    bool matches(const QString &search, const QString &matchingField);
+    bool matches(const QString &search, const QString &matchingField) const;
 
 private:
     QIcon m_icon;

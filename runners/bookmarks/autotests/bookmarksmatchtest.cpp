@@ -31,7 +31,7 @@ void TestBookmarksMatch::testQueryMatchConversion()
     QFETCH(int, expectedMatchCategoryRelevance);
     QFETCH(qreal, expectedRelevance);
 
-    BookmarkMatch bookmarkMatch(QIcon::fromTheme(u"unknown"_s), searchTerm, u"KDE Community"_s, u"https://somehost.com/"_s, bookmarkDescription);
+    BookmarkMatch bookmarkMatch(searchTerm, u"KDE Community"_s, u"https://somehost.com/"_s, bookmarkDescription);
     QueryMatch match = bookmarkMatch.asQueryMatch(nullptr);
 
     QCOMPARE(match.text(), u"KDE Community");
@@ -62,18 +62,11 @@ void TestBookmarksMatch::testQueryMatchConversion_data()
 
 void TestBookmarksMatch::testAddToList()
 {
-    BookmarkMatch noMatch(QIcon(), u"krunner"_s, u"KDE Community"_s, u"https://somehost.com/"_s);
-    BookmarkMatch match(QIcon(), u"kde"_s, u"KDE Community"_s, u"https://somehost.com/"_s);
+    BookmarkMatch noMatch(u"krunner"_s, u"KDE Community"_s, u"https://somehost.com/"_s);
+    BookmarkMatch match(u"kde"_s, u"KDE Community"_s, u"https://somehost.com/"_s);
 
-    QList<BookmarkMatch> onlyMatching;
-    noMatch.addTo(onlyMatching, false);
-    match.addTo(onlyMatching, false);
-    QCOMPARE(onlyMatching.count(), 1);
-
-    QList<BookmarkMatch> allMatches;
-    noMatch.addTo(allMatches, true);
-    match.addTo(allMatches, true);
-    QCOMPARE(allMatches.count(), 2);
+    QVERIFY(!noMatch.matches());
+    QVERIFY(match.matches());
 }
 
 QTEST_MAIN(TestBookmarksMatch)

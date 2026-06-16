@@ -10,9 +10,8 @@
 
 // TODO: test
 
-BookmarkMatch::BookmarkMatch(const QIcon &icon, const QString &searchTerm, const QString &bookmarkTitle, const QString &bookmarkURL, const QString &description)
-    : m_icon(icon)
-    , m_searchTerm(searchTerm)
+BookmarkMatch::BookmarkMatch(const QString &searchTerm, const QString &bookmarkTitle, const QString &bookmarkURL, const QString &description)
+    : m_searchTerm(searchTerm)
     , m_bookmarkTitle(bookmarkTitle)
     , m_bookmarkURL(bookmarkURL)
     , m_description(description)
@@ -55,15 +54,12 @@ KRunner::QueryMatch BookmarkMatch::asQueryMatch(KRunner::AbstractRunner *runner)
     return match;
 }
 
-void BookmarkMatch::addTo(QList<BookmarkMatch> &listOfResults, bool addEvenOnNoMatch)
+bool BookmarkMatch::matches() const
 {
-    if (!addEvenOnNoMatch && !(matches(m_searchTerm, m_bookmarkTitle) || matches(m_searchTerm, m_description) || matches(m_searchTerm, m_bookmarkURL))) {
-        return;
-    }
-    listOfResults << *this;
+    return matches(m_searchTerm, m_bookmarkTitle) || matches(m_searchTerm, m_description) || matches(m_searchTerm, m_bookmarkURL);
 }
 
-bool BookmarkMatch::matches(const QString &search, const QString &matchingField)
+bool BookmarkMatch::matches(const QString &search, const QString &matchingField) const
 {
     return !matchingField.simplified().isEmpty() && matchingField.contains(search, Qt::CaseInsensitive);
 }
