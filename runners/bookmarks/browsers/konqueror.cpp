@@ -76,8 +76,11 @@ QList<BookmarkMatch> Konqueror::match(const QString &term, bool addEverything)
         }
 
         const QString url = bookmark.url().url();
-        BookmarkMatch bookmarkMatch(m_favicon->iconFor(url), term, bookmark.text(), url);
-        bookmarkMatch.addTo(matches, addEverything);
+        BookmarkMatch bookmarkMatch(term, bookmark.text(), url);
+        if (addEverything || bookmarkMatch.matches()) {
+            bookmarkMatch.setIcon(m_favicon->iconFor(url));
+            matches << bookmarkMatch;
+        }
 
         bookmark = bookmarkGroup.next(bookmark);
         while (bookmark.isNull() && !groups.isEmpty()) {

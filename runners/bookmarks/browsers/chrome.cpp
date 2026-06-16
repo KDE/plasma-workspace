@@ -103,8 +103,11 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, cons
     for (const QJsonValue &bookmarkValue : bookmarks) {
         const QJsonObject bookmark = bookmarkValue.toObject();
         const QString url = bookmark.value(u"url").toString();
-        BookmarkMatch bookmarkMatch(favicon->iconFor(url), term, bookmark.value(u"name").toString(), url);
-        bookmarkMatch.addTo(results, addEveryThing);
+        BookmarkMatch bookmarkMatch(term, bookmark.value(u"name").toString(), url);
+        if (addEveryThing || bookmarkMatch.matches()) {
+            bookmarkMatch.setIcon(favicon->iconFor(url));
+            results << bookmarkMatch;
+        }
     }
     return results;
 }
