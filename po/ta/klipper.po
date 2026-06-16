@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 02:48+0000\n"
+"POT-Creation-Date: 2026-06-16 02:41+0000\n"
 "PO-Revision-Date: 2025-09-07 18:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -286,27 +286,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "விரி"
 
-#: declarative/qml/ClipboardMenu.qml:281
+#: declarative/qml/ClipboardMenu.qml:285
 #, kde-format
 msgid "Clear History"
 msgstr "வரலாற்றை காலியாக்கு"
 
-#: declarative/qml/ClipboardMenu.qml:335
+#: declarative/qml/ClipboardMenu.qml:339
 #, kde-format
 msgid "All History"
 msgstr "முழு வரலாறு"
 
-#: declarative/qml/ClipboardMenu.qml:340
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "Starred Only"
 msgstr "நட்சத்திரமிட்டவை மட்டும்"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"

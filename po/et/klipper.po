@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 02:48+0000\n"
+"POT-Creation-Date: 2026-06-16 02:41+0000\n"
 "PO-Revision-Date: 2019-12-18 18:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -301,30 +301,30 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:281
+#: declarative/qml/ClipboardMenu.qml:285
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Lõikepuhvri ajalugu"
 
-#: declarative/qml/ClipboardMenu.qml:335
+#: declarative/qml/ClipboardMenu.qml:339
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Lõikepuhvri ajalugu"
 
-#: declarative/qml/ClipboardMenu.qml:340
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<sobivused puuduvad>"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Lõikepuhver on tühi"

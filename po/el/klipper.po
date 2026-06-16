@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 02:48+0000\n"
+"POT-Creation-Date: 2026-06-16 02:41+0000\n"
 "PO-Revision-Date: 2024-09-19 16:56+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -314,28 +314,28 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:281
+#: declarative/qml/ClipboardMenu.qml:285
 #, kde-format
 msgid "Clear History"
 msgstr "Εκκαθάριση ιστορικού"
 
-#: declarative/qml/ClipboardMenu.qml:335
+#: declarative/qml/ClipboardMenu.qml:339
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgid "All History"
 msgstr "Εκκαθάριση ιστορικού"
 
-#: declarative/qml/ClipboardMenu.qml:340
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "No matches"
 msgstr "Κανένα αντίστοιχο"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι άδειο"

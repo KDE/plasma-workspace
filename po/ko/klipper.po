@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 02:48+0000\n"
+"POT-Creation-Date: 2026-06-16 02:41+0000\n"
 "PO-Revision-Date: 2025-10-09 01:51+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -295,27 +295,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "펴기"
 
-#: declarative/qml/ClipboardMenu.qml:281
+#: declarative/qml/ClipboardMenu.qml:285
 #, kde-format
 msgid "Clear History"
 msgstr "과거 기록 비우기"
 
-#: declarative/qml/ClipboardMenu.qml:335
+#: declarative/qml/ClipboardMenu.qml:339
 #, kde-format
 msgid "All History"
 msgstr "모든 과거 기록"
 
-#: declarative/qml/ClipboardMenu.qml:340
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "Starred Only"
 msgstr "별표 표시된 것만"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "No matches"
 msgstr "검색 결과 없음"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "클립보드가 비었습니다"

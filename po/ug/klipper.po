@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-22 02:48+0000\n"
+"POT-Creation-Date: 2026-06-16 02:41+0000\n"
 "PO-Revision-Date: 2026-02-09 18:14-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -300,27 +300,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "ياي"
 
-#: declarative/qml/ClipboardMenu.qml:281
+#: declarative/qml/ClipboardMenu.qml:285
 #, kde-format
 msgid "Clear History"
 msgstr "تارىخنى تازىلا"
 
-#: declarative/qml/ClipboardMenu.qml:335
+#: declarative/qml/ClipboardMenu.qml:339
 #, kde-format
 msgid "All History"
 msgstr "بارلىق تارىخ خاتىرىسى"
 
-#: declarative/qml/ClipboardMenu.qml:340
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "Starred Only"
 msgstr "يۇلتۇزلانغانلا"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "No matches"
 msgstr "ماس كەلگىنى يوق"
 
-#: declarative/qml/ClipboardMenu.qml:447
+#: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "چاپلاش تاختىسى بوش"
