@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 00:47+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2023-05-26 06:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -25,17 +25,23 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Vsebina odložišča"
 
-#: qml/main.qml:31
+#: qml/main.qml:32
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
 
-#: qml/main.qml:69
+#: qml/main.qml:34
+#, kde-format
+msgctxt "@info"
+msgid "The clipboard currently holds sensitive data"
+msgstr ""
+
+#: qml/main.qml:75
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"
 
-#: qml/main.qml:89
+#: qml/main.qml:95
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Nastavi odložišče…"

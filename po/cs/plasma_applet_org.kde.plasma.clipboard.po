@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 00:47+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2023-05-31 11:46+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -23,17 +23,23 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Obsah schránky"
 
-#: qml/main.qml:31
+#: qml/main.qml:32
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdná"
 
-#: qml/main.qml:69
+#: qml/main.qml:34
+#, kde-format
+msgctxt "@info"
+msgid "The clipboard currently holds sensitive data"
+msgstr ""
+
+#: qml/main.qml:75
 #, kde-format
 msgid "Clear History"
 msgstr "Vyprázdnit historii"
 
-#: qml/main.qml:89
+#: qml/main.qml:95
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Nastavit schránku…"

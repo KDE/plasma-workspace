@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-27 00:47+0000\n"
+"POT-Creation-Date: 2026-06-16 00:47+0000\n"
 "PO-Revision-Date: 2021-11-09 18:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -18,17 +18,23 @@ msgstr ""
 msgid "Clipboard Contents"
 msgstr "Conteúdo da Área de Transferência"
 
-#: qml/main.qml:31
+#: qml/main.qml:32
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
 
-#: qml/main.qml:69
+#: qml/main.qml:34
+#, kde-format
+msgctxt "@info"
+msgid "The clipboard currently holds sensitive data"
+msgstr ""
+
+#: qml/main.qml:75
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar o Histórico"
 
-#: qml/main.qml:89
+#: qml/main.qml:95
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a Área de Transferência…"
