@@ -487,6 +487,11 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
         // if we changed containment with the config open, relaunch the config dialog but for the new containment
         // third arg is used to disconnect when the config closes
         connect(this, &ContainmentView::containmentChanged, m_configView.data(), [this]() {
+            // If m_configView is not visible anymore, the user clicked OK instead of apply:
+            // don't reopen it anymore
+            if (!m_configView->isVisible()) {
+                return;
+            }
             if (containment()->property("wallpaperGraphicsObject").value<QObject *>()) {
                 showConfigurationInterface(containment());
             } else {
