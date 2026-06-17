@@ -23,14 +23,12 @@
 #include <KService>
 #include <KWindowEffects>
 #include <KWindowSystem>
-#include <KX11Extras>
 
 #include <LayerShellQt/Window>
 #include <algorithm>
 #include <qnamespace.h>
 
 #include "appadaptor.h"
-#include "x11windowscreenrelativepositioner.h"
 
 KCONFIGGROUP_DECLARE_ENUM_QOBJECT(View, HistoryBehavior)
 
@@ -40,10 +38,6 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     , m_floating(false)
 {
     KCrash::initialize();
-
-    if (KWindowSystem::isPlatformX11()) {
-        m_x11Positioner = new X11WindowScreenRelativePositioner(this);
-    }
 
     // used only by screen readers
     setTitle(i18n("KRunner"));
@@ -153,68 +147,42 @@ void View::loadConfig()
 
 void View::showEvent(QShowEvent *event)
 {
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setOnAllDesktops(winId(), true);
-    }
     QQuickWindow::showEvent(event);
     requestActivate();
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::forceActiveWindow(winId());
-    }
 }
 
 void View::positionOnScreen()
 {
     const auto screens = QGuiApplication::screens();
-    auto screenIt = screens.cend();
-    if (KWindowSystem::isPlatformWayland() && m_floating) {
+    if (m_floating) {
         auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
         QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
         if (reply.isValid()) {
             const QString activeOutputName = reply.value();
-            screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
+            const auto screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
                 return screen->name() == activeOutputName;
             });
+            if (screenIt != screens.end()) {
+                setScreen(*screenIt);
+            }
         }
-    } else if (KWindowSystem::isPlatformX11()) {
-        screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
-            return screen->geometry().contains(QCursor::pos(screen));
-        });
     }
 
-    QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
-    setScreen(shownOnScreen);
-
-    if (KWindowSystem::isPlatformWayland()) {
-        auto layerWindow = LayerShellQt::Window::get(this);
-        layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
-        layerWindow->setLayer(LayerShellQt::Window::LayerTop);
-        layerWindow->setScope(u"krunner"_s);
-        layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        layerWindow->setMargins(margins());
-        if (m_floating) {
-            layerWindow->setScreen(shownOnScreen);
-        } else {
-            layerWindow->setWantsToBeOnActiveScreen(true);
-        }
-    } else if (KWindowSystem::isPlatformX11()) {
-        m_x11Positioner->setAnchors(Qt::TopEdge);
-        m_x11Positioner->setMargins(margins());
-        if (m_floating) {
-            KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
-        } else {
-            KX11Extras::setOnAllDesktops(winId(), true);
-        }
-        KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
+    auto layerWindow = LayerShellQt::Window::get(this);
+    layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
+    layerWindow->setLayer(LayerShellQt::Window::LayerTop);
+    layerWindow->setScope(u"krunner"_s);
+    layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
+    layerWindow->setMargins(margins());
+    if (m_floating) {
+        layerWindow->setScreen(screen());
+    } else {
+        layerWindow->setWantsToBeOnActiveScreen(true);
     }
 }
 
 void View::toggleDisplay()
 {
-    if (isVisible() && !QGuiApplication::focusWindow() && KWindowSystem::isPlatformX11()) {
-        KX11Extras::forceActiveWindow(winId());
-        return;
-    }
     if (isVisible()) {
         setVisible(false);
     } else {

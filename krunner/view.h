@@ -19,7 +19,6 @@
 
 using namespace Qt::StringLiterals;
 
-class X11WindowScreenRelativePositioner;
 class ViewPrivate;
 
 class View : public PlasmaQuick::PlasmaWindow
@@ -115,7 +114,6 @@ private:
     bool m_retainPriorSearch = false;
     bool m_requestedClipboardSelection = false;
     QStringList m_history;
-    X11WindowScreenRelativePositioner *m_x11Positioner = nullptr;
     HistoryBehavior m_historyBehavior = HistoryBehavior::CompletionSuggestion;
     KActivities::Consumer m_consumer;
 };
