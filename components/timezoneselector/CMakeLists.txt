@@ -20,6 +20,7 @@ ecm_target_qml_sources(timezoneplugin SOURCES
 )
 
 target_link_libraries(timezoneplugin PRIVATE
+    Qt6::Core
     Qt6::Quick
     Qt6::Qml
     KF6::ConfigCore
@@ -34,3 +35,7 @@ qt_add_resources(
     PREFIX "plasma-workspace/timezone"
     FILES "offline_tiles/"
 )
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()

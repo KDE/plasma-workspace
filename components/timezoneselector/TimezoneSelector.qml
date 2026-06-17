@@ -28,21 +28,63 @@ Item {
 
 //BEGIN properties
     /**
-    * @brief This property holds the selected timezone.
-    *
-    * This timezone will be highlighted on the map and shown
-    * in the comboboxes. You can both read and write to this
-    * property.
-    * @property string selectedTimeZone
-    */
-    property string selectedTimeZone: ""
-    /**
-     * @brief This property holds the currently hovered timezone.
+     * @brief This property holds the selected timezone.
      *
-     * This is a read-only property that allows you to know
-     * which timezone the user is hovering.
+     * This timezone will be highlighted on the map and shown
+     * in the comboboxes. You can both read and write to this
+     * property.
+     * @property string selectedTimeZone
      */
-    property string hoveredTimeZone: ""
+    property string selectedTimeZone: ""
+
+    readonly property var bandData: Workspace.TimeZoneUtils.bandData()
+
+    readonly property var allOutlinePaths: {
+        const outlines = root.bandData.outlines
+        if (!outlines) return []
+        const allPaths = []
+        for (const groupKey of Object.keys(outlines)) {
+            const rings = outlines[groupKey]
+            for (const ring of rings) {
+                const path = []
+                for (const pt of ring) {
+                    path.push(QtPositioning.coordinate(pt[1], pt[0]))
+                }
+                allPaths.push(path)
+            }
+        }
+        return allPaths
+    }
+
+    readonly property var selectedOutlinePaths: {
+        const tzData = root.bandData.tzids[root.selectedTimeZone]
+        if (!tzData) return []
+        const groupKey = tzData.bandGroup
+        const outlines = root.bandData.outlines[groupKey]
+        if (!outlines) return []
+        const paths = []
+        for (const ring of outlines) {
+            const path = []
+            for (const pt of ring) {
+                path.push(QtPositioning.coordinate(pt[1], pt[0]))
+            }
+            paths.push(path)
+        }
+        return paths
+    }
+
+    readonly property var zoneLabelModel: {
+        const tzids = root.bandData.tzids
+        if (!tzids) return []
+        const labels = []
+        for (const tzid of Object.keys(root.bandData.tzids)) {
+            const data = root.bandData.tzids[tzid]
+            const slash = tzid.lastIndexOf('/')
+            const name = slash >= 0 ? tzid.slice(slash + 1).replace(/_/g, ' ') : tzid
+            labels.push({ tzid, name, coordinate: QtPositioning.coordinate(data.centerLat, data.centerLon) })
+        }
+        return labels
+    }
 //END properties
 
     property var availableMapTimeZones: geoDatabase.model[0].data.map(zone => zone?.properties?.tzid)
@@ -54,8 +96,6 @@ Item {
         sourceUrl: StandardPaths.locate(StandardPaths.GenericDataLocation, "timezonefiles", StandardPaths.LocateDirectory)  + "/timezones.json"
     }
 
-    // These values get populated by GeoJsonDelegates when the
-    // component is instantiated.
     readonly property var availableTimeZones: Workspace.TimeZoneUtils.availableTimeZoneIds()
     property var areasByRegion: {
         const result = {}
@@ -233,6 +273,89 @@ Item {
             delegate: GeoJsonDelegate {}
         }
 
+        MapItemView {
+            parent: view.map
+            model: root.allOutlinePaths
+            delegate: MapPolygon {
+                color: "transparent"
+                border.width: 1
+                border.color: Qt.rgba(Kirigami.Theme.textColor.r, Kirigami.Theme.textColor.g, Kirigami.Theme.textColor.b, 0.15)
+                autoFadeIn: false
+                z: 90
+                path: modelData
+            }
+        }
+
+        MapItemView {
+            parent: view.map
+            model: root.selectedOutlinePaths
+            delegate: MapPolygon {
+                color: "transparent"
+                border.width: 2
+                border.color: Qt.rgba(Kirigami.Theme.highlightColor.r, Kirigami.Theme.highlightColor.g, Kirigami.Theme.highlightColor.b, 0.6)
+                autoFadeIn: false
+                z: 100
+                path: modelData
+            }
+        }
+
+        // Always-visible timezone name labels, centered horizontally
+        // relative to the zone center and placed just below it.
+        // Clicking a label selects the corresponding timezone.
+        MapItemView {
+            parent: view.map
+            model: root.zoneLabelModel
+            delegate: MapQuickItem {
+                id: tzLabelItem
+                z: 200
+                visible: view.map.zoomLevel > 3
+                coordinate: modelData.coordinate
+                anchorPoint: Qt.point((sourceItem as Text).implicitWidth / 2, 0)
+                sourceItem: Text {
+                    text: modelData.name
+                    color: Kirigami.Theme.textColor
+                    font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+                    style: Text.Outline
+                    styleColor: Kirigami.Theme.backgroundColor
+                    horizontalAlignment: Text.AlignHCenter
+                }
+                TapHandler {
+                    onTapped: root.selectedTimeZone = modelData.tzid
+                }
+            }
+        }
+
+        MapQuickItem {
+            id: selectionDot
+            parent: view.map
+            anchorPoint: Qt.point(Kirigami.Units.iconSizes.large / 2, Kirigami.Units.iconSizes.large)
+            z: 200
+            visible: false
+            sourceItem: Kirigami.Icon {
+                width: Kirigami.Units.iconSizes.large
+                height: Kirigami.Units.iconSizes.large
+                source: "mark-location-symbolic"
+                color: Kirigami.Theme.negativeTextColor
+            }
+        }
+
+        function updateSelection(): void {
+            selectionDot.visible = false
+
+            const tzData = root.bandData.tzids[root.selectedTimeZone]
+            if (!tzData) return
+
+            selectionDot.coordinate = QtPositioning.coordinate(tzData.centerLat, tzData.centerLon)
+            selectionDot.visible = true
+        }
+
+        Connections {
+            target: root
+            function onSelectedTimeZoneChanged() {
+                view.updateSelection()
+            }
+        }
+
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
             anchors {
@@ -273,6 +396,16 @@ Item {
                 QQC2.ToolTip.visible: hovered
                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
             }
+        }
+
+        Kirigami.ContextualHelpButton {
+            anchors {
+                left: parent.left
+                leftMargin: Kirigami.Units.largeSpacing
+                bottom: parent.bottom
+                bottomMargin: Kirigami.Units.largeSpacing
+            }
+            toolTipText: i18ndc("plasmashellprivateplugin", "@info:tooltip", "The boundaries shown on this map only represent time zone boundaries, not country borders.")
         }
 
         Components.FloatingToolBar {
