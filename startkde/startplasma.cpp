@@ -42,6 +42,7 @@
 #include "klookandfeelmanager.h"
 #include "lookandfeelsettings.h"
 
+using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
 QTextStream out(stderr);
@@ -365,17 +366,15 @@ static std::optional<std::pair<QString, KLookAndFeelManager::Contents>> dayNight
     }
 
     const QDateTime now = QDateTime::currentDateTime();
-    const auto previousTransition = darkLightSchedule->previousTransition(now);
+    const auto previousOrCurrentTransition = darkLightSchedule->previousTransition(now);
+    const QDateTime transitionBreakPoint = previousOrCurrentTransition->startDateTime() + (previousOrCurrentTransition->endDateTime() - previousOrCurrentTransition->startDateTime()) / 2;
 
     bool wantsDarkTheme = false;
-    switch (previousTransition->test(now)) {
-    case KDarkLightTransition::Upcoming:
-    case KDarkLightTransition::InProgress:
-        wantsDarkTheme = previousTransition->type() == KDarkLightTransition::Morning;
-        break;
-    case KDarkLightTransition::Passed:
-        wantsDarkTheme = previousTransition->type() != KDarkLightTransition::Morning;
-        break;
+    if (transitionBreakPoint - now > 5s) {
+        wantsDarkTheme = previousOrCurrentTransition->type() == KDarkLightTransition::Morning;
+    } else {
+        // We are past or at the transition break point.
+        wantsDarkTheme = previousOrCurrentTransition->type() == KDarkLightTransition::Evening;
     }
 
     const QString lookAndFeelName = wantsDarkTheme ? settings.defaultDarkLookAndFeel() : settings.defaultLightLookAndFeel();
