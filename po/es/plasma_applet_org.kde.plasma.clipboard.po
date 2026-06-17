@@ -1,14 +1,14 @@
 # Spanish translations for plasma_applet_org.kde.plasma.clipboard.po package.
-# Copyright (C) 2014-2025 This file is copyright:
+# Copyright (C) 2014-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2020, 2021, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014-2015, 2018-2021, 2023, 2025-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-16 00:47+0000\n"
-"PO-Revision-Date: 2025-06-04 19:38+0100\n"
+"PO-Revision-Date: 2026-06-16 15:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: qml/main.qml:30
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "El portapapeles está vacío"
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
-msgstr ""
+msgstr "El portapapeles contiene actualmente datos confidenciales"
 
 #: qml/main.qml:75
 #, kde-format
