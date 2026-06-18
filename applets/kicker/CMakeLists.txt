@@ -26,7 +26,6 @@ set(kickerplugin_SRCS
     submenu.cpp
     systementry.cpp
     systemmodel.cpp
-    systemsettings.cpp
     wheelinterceptor.cpp
     windowsystem.cpp
     funnelmodel.cpp
