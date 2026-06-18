@@ -913,7 +913,6 @@ void KSMServer::storeSession()
 
     KConfigGroup cg2(config, QStringLiteral("General"));
 
-    storeLegacySession(config.data());
     config->sync();
 }
 
@@ -981,7 +980,6 @@ void KSMServer::restoreSession()
         if (reply.isError()) {
             qWarning() << "Failed to notify kwin of current session " << reply.error().message();
         }
-        restoreLegacySession(KSharedConfig::openConfig().data());
         tryRestore();
     });
 }

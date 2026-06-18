@@ -10,7 +10,6 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 set(ksmserver_SRCS
     main.cpp
     server.cpp
-    legacy.cpp
     logout.cpp
     client.cpp client.h
 )
