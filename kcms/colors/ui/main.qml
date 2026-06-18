@@ -121,7 +121,6 @@ KCM.GridViewKCM {
 
                 QtControls.ComboBox {
                     id: filterCombo
-                    Layout.rightMargin: parent.spacing * 3
                     textRole: "text"
                     model: [
                         {text: i18nc("@item:inlistbox filter displayed schemes", "All schemes"), filter: Private.KCM.AllSchemes},
