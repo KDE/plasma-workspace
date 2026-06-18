@@ -21,7 +21,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KRuntimePlatform>
-#include <KSelectionOwner>
 #include <KSharedConfig>
 #include <kconfig.h>
 #include <kconfiggroup.h>
@@ -157,10 +156,6 @@ int main(int argc, char *argv[])
 
     auto server = new KSMServer(flags);
 
-    // for the KDE-already-running check in startkde
-    KSelectionOwner kde_running("_KDE_RUNNING", 0);
-    kde_running.claim(false);
-
     IceSetIOErrorHandler(IoErrorHandler);
 
     KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
@@ -185,7 +180,6 @@ int main(int argc, char *argv[])
     KDBusService service(KDBusService::Unique);
 
     int ret = a->exec();
-    kde_running.release(); // needs to be done before QGuiApplication destruction
     delete a;
     return ret;
 }
