@@ -1320,6 +1320,7 @@ QStringList ShellCorona::availableActivities() const
 void ShellCorona::removeDesktop(DesktopView *desktopView)
 {
     const int screenId = desktopView->containment()->lastScreen();
+    const bool wasReady = isScreenUiReady(screenId);
 
     auto result = std::ranges::find_if(m_desktopViewForScreen, [desktopView](DesktopView *v) {
         return v == desktopView;
@@ -1342,7 +1343,10 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
             panelView->containment()->reactToScreenChange();
             if (m_screensWithUiReady.contains(screenId)) {
                 m_screensWithUiReady.remove(screenId);
-                screenUiReadyChanged(screenId, false);
+                if (wasReady) {
+                    // Emit only if an actual change occurred
+                    Q_EMIT screenUiReadyChanged(screenId, false);
+                }
             }
         }
     }
@@ -1529,6 +1533,10 @@ void ShellCorona::checkAllDesktopsUiReady()
     if (!ready) {
         return;
     }
+
+    // Finish initialization of all pending panels that were blocked by
+    // a desktop containment still loading
+    createWaitingPanels();
 
     qCDebug(PLASMASHELL) << "Plasma Shell startup completed";
     QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
@@ -2319,6 +2327,10 @@ bool ShellCorona::isScreenUiReady(int screen)
 {
     DesktopView *dv = m_desktopViewForScreen.value(screen);
     if (!dv || !dv->isVisible()) {
+        return false;
+    }
+
+    if (!dv->containment() || !dv->containment()->isUiReady()) {
         return false;
     }
 

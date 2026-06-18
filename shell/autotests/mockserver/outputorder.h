@@ -41,6 +41,7 @@ public:
     explicit OutputOrder(CoreCompositor *compositor);
 
     void setList(const QStringList &list);
+    QStringList list() const;
 
 protected:
     void kde_output_order_v1_bind_resource(Resource *resource) override;

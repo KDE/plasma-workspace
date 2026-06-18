@@ -47,6 +47,11 @@ void OutputOrder::setList(const QStringList &list)
     }
 }
 
+QStringList OutputOrder::list() const
+{
+    return m_list;
+}
+
 void OutputOrder::kde_output_order_v1_bind_resource(Resource *resource)
 {
     for (const auto &s : std::as_const(m_list)) {

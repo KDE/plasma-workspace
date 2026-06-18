@@ -6,6 +6,7 @@
 
 #include <QObject>
 
+#include <QDBusConnection>
 #include <QDir>
 #include <QScreen>
 #include <QSignalSpy>
@@ -44,11 +45,15 @@ void copyDirectory(const QString &srcDir, const QString &dstDir)
 class ShellTest : public QObject, DefaultCompositor
 {
     Q_OBJECT
+    Q_CLASSINFO("D-Bus Interface", "org.kde.KWin")
 
     QScreen *insertScreen(const QRect &geometry, const QString &name);
     void setScreenOrder(const QStringList &order, bool expectOrderChanged);
     void resetScreen();
     Plasma::Containment *addTestPanel(const QString &plugin);
+
+public Q_SLOTS:
+    QString activeOutputName();
 
 private Q_SLOTS:
     void initTestCase();
@@ -70,6 +75,15 @@ private:
     ShellCorona *m_corona;
     QDir m_plasmaDir;
 };
+
+QString ShellTest::activeOutputName()
+{
+    if (outputOrder()->list().isEmpty()) {
+        return {};
+    }
+
+    return outputOrder()->list().first();
+}
 
 QScreen *ShellTest::insertScreen(const QRect &geometry, const QString &name)
 {
@@ -161,10 +175,11 @@ void ShellTest::resetScreen()
 Plasma::Containment *ShellTest::addTestPanel(const QString &plugin)
 {
     QSignalSpy uiReadySpy(m_corona, &ShellCorona::screenUiReadyChanged);
+
     auto panelCont = m_corona->addPanel(plugin);
-    if (!m_corona->isScreenUiReady(panelCont->screen())) {
-        QVERIFY(uiReadySpy.wait());
-    }
+
+    // Wait and make sure the desktop and the new panel are loaded
+    QTRY_VERIFY(m_corona->isScreenUiReady(panelCont->lastScreen()));
 
     return panelCont;
 }
@@ -173,6 +188,8 @@ void ShellTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
     qRegisterMetaType<QScreen *>();
+    QVERIFY(QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.KWin")));
+    QVERIFY(QDBusConnection::sessionBus().registerObject(QStringLiteral("/KWin"), this, QDBusConnection::ExportAllSlots));
 
     m_plasmaDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"plasma");
     m_plasmaDir.removeRecursively();
@@ -204,10 +221,10 @@ void ShellTest::cleanupTestCase()
     });
     QCOMPOSITOR_COMPARE(getAll<Output>().size(), 1); // Only the default output should be left
     QTRY_COMPARE(QGuiApplication::screens().size(), 1);
+    QTRY_VERIFY(m_corona->m_desktopViewForScreen[0]->containment()->isUiReady());
 
     insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
     setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
-    qDebug() << "A";
 
     auto *panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
     Q_ASSERT(m_corona->m_panelViews[panelCont]);
@@ -221,6 +238,8 @@ void ShellTest::cleanupTestCase()
     cg.sync();
 
     // m_plasmaDir.removeRecursively();
+    QDBusConnection::sessionBus().unregisterObject(QStringLiteral("/KWin"));
+    QDBusConnection::sessionBus().unregisterService(QStringLiteral("org.kde.KWin"));
 }
 
 void ShellTest::cleanup()
