@@ -258,7 +258,3 @@ msgstr "Всички устройства"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Показване на известие при свързване на ново устройство"
-
-#~ msgctxt "@action:button Mount a disk without verifying for errors"
-#~ msgid "Mount without verifying"
-#~ msgstr "Монтиране без проверка"

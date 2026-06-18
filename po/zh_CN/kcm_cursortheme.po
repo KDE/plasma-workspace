@@ -43,7 +43,7 @@ msgstr "无法下载图标主题压缩文件：%1"
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr ""
+msgstr "无法打开图标主题压缩文件。"
 
 #: kcmcursortheme.cpp:418
 #, kde-format

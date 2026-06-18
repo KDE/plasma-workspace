@@ -444,13 +444,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgid ""
-#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
-#~ "are known to cause poor window drag and resize performance. Consider "
-#~ "using other settings."
-#~ msgstr ""
-#~ "Известно е, че при графичен процесор NVIDIA в X11 комбинацията от Плаващ "
-#~ "стил и режим адаптивна прозрачност причиняват лошо представяне на "
-#~ "прозорците при влачене и при промяна на размера. Обмислете използването "
-#~ "на други настройки."

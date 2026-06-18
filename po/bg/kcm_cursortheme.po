@@ -287,13 +287,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Налични размери: %1)"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "Трябва да рестартирате сесията, за да влязат в сила тези промени."
-
-#~ msgid "The requested size '%1' is not available, using %2 instead."
-#~ msgstr "Заявеният размер „%1“ не е наличен, вместо него се използва %2."
-
-#~ msgid "Remove Theme"
-#~ msgstr "Изтриване на тема"

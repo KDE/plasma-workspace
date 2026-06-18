@@ -97,11 +97,3 @@ msgstr "Топло"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Температура на вечерни цветове:"
-
-#~ msgctxt "@item:inlistbox switching times"
-#~ msgid "Always on night light"
-#~ msgstr "Вечерни цветове са винаги включени"
-
-#~ msgctxt "Color temperature in Kelvin"
-#~ msgid "%1K"
-#~ msgstr "%1K"
