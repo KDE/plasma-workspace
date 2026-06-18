@@ -36,7 +36,6 @@
 #include <time.h>
 #include <unistd.h>
 
-#include <QApplication>
 #include <QFile>
 #include <QFutureWatcher>
 #include <QTimer>

@@ -45,12 +45,10 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#include <QAction>
-#include <QApplication>
+#include <QCoreApplication>
 #include <QDBusConnection>
 #include <QDebug>
 #include <QFile>
-#include <QPushButton>
 #include <QRegularExpression>
 #include <QScopeGuard>
 #include <QSocketNotifier>
@@ -517,7 +515,7 @@ KSMServer::KSMServer(InitFlags flags)
     }
     wake_up_socket = sockets[0];
     auto notifier = new QSocketNotifier(sockets[1], QSocketNotifier::Read, this);
-    qApp->connect(notifier, &QSocketNotifier::activated, &QApplication::quit);
+    connect(notifier, &QSocketNotifier::activated, QCoreApplication::instance(), &QCoreApplication::quit);
 
     const QString runtimeDirectory = QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation);
     iceAuthFile.setFileTemplate(runtimeDirectory + QStringLiteral("/iceauth_XXXXXX"));
@@ -618,7 +616,7 @@ KSMServer::KSMServer(InitFlags flags)
         QDBusConnection::sessionBus().send(reply);
         m_restoreSessionCall = QDBusMessage();
     });
-    connect(qApp, &QApplication::aboutToQuit, this, &KSMServer::cleanUp);
+    connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, this, &KSMServer::cleanUp);
 
     setupXIOErrorHandler();
 

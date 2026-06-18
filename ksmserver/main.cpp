@@ -19,17 +19,15 @@
 #include <KAboutData>
 #include <KCrash>
 #include <KLocalizedString>
-#include <KMessageBox>
 #include <KRuntimePlatform>
 #include <KSharedConfig>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <kdbusservice.h>
 #include <ksmserver_debug.h>
-#include <kwindowsystem.h>
 
-#include <QApplication>
 #include <QCommandLineParser>
+#include <QCoreApplication>
 #include <QFile>
 
 void IoErrorHandler(IceConn iceConn)
@@ -101,28 +99,13 @@ int main(int argc, char *argv[])
 
     QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
 
-    // force xcb QPA plugin as ksmserver is very X11 specific
-    const QByteArray origQpaPlatform = qgetenv("QT_QPA_PLATFORM");
-    qputenv("QT_QPA_PLATFORM", QByteArrayView("xcb"));
-
     QCoreApplication::setQuitLockEnabled(false);
-    auto a = new QGuiApplication(argc, argv);
-
-    // now the QPA platform is set, unset variable again to not launch apps with incorrect environment
-    if (origQpaPlatform.isEmpty()) {
-        qunsetenv("QT_QPA_PLATFORM");
-    } else {
-        qputenv("QT_QPA_PLATFORM", origQpaPlatform);
-    }
+    auto a = new QCoreApplication(argc, argv);
 
     KAboutData about(QStringLiteral("ksmserver"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
     KAboutData::setApplicationData(about);
 
     KCrash::initialize();
-
-    fcntl(ConnectionNumber(a->nativeInterface<QNativeInterface::QX11Application>()->display()), F_SETFD, 1);
-
-    a->setQuitOnLastWindowClosed(false); // #169486
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("The reliable Plasma session manager that talks the standard X11R6 \nsession management protocol (XSMP)."));
