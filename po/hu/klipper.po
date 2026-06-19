@@ -4,13 +4,13 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
 # SPDX-FileCopyrightText: 2017, 2020, 2021, 2024 Kiszel Kristóf <kiszel.kristof@gmail.com>
-# SPDX-FileCopyrightText: 2022, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022, 2024-2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-16 02:41+0000\n"
-"PO-Revision-Date: 2025-11-22 22:02+0100\n"
+"PO-Revision-Date: 2026-06-18 21:41+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: configdialog.cpp:84
 #, kde-format
@@ -878,7 +878,7 @@ msgstr "Felugró vágólap"
 #: urlgrabber.cpp:197
 #, kde-format
 msgid "&Cancel"
-msgstr "&Mégsem"
+msgstr "&Mégse"
 
 #~ msgid "The clipboard history contains starred items. Clear them too?"
 #~ msgstr ""
