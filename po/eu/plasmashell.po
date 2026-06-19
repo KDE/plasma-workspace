@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-02-22 20:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -151,12 +151,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Aurreikusteko iragarki-bada ezkutatu?"
 
-#: desktopview.cpp:528 desktopview.cpp:544
+#: desktopview.cpp:533 desktopview.cpp:549
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Sartu editatzeko modura"
 
-#: desktopview.cpp:542
+#: desktopview.cpp:547
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Irten editatzeko modutik"

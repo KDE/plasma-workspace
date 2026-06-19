@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-05-02 19:50+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -1281,110 +1281,110 @@ msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "“%1” renk şeması kurulu değil. Yerine öntanımlı tema seçiliyor."
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Tüm şemalar"
 
-#: ui/main.qml:128
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "Açık şemalar"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Koyu şemalar"
 
-#: ui/main.qml:140
+#: ui/main.qml:139
 #, kde-format
 msgid "Install from File…"
 msgstr "Dosyadan Kur…"
 
-#: ui/main.qml:145
+#: ui/main.qml:144
 #, kde-format
 msgid "Get New…"
 msgstr "Yeni Al…"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Window Title"
 msgstr "Pencere Metni"
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Window text"
 msgstr "Pencere metni"
 
-#: ui/main.qml:223
+#: ui/main.qml:222
 #, kde-format
 msgid "Button"
 msgstr "Düğme"
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "bağlantı"
 
-#: ui/main.qml:265
+#: ui/main.qml:264
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "ziyaret edilmiş"
 
-#: ui/main.qml:273
+#: ui/main.qml:272
 #, kde-format
 msgid "Normal text"
 msgstr "Normal metin"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgid "Highlighted text"
 msgstr "Vurgulanmış metin"
 
-#: ui/main.qml:287
+#: ui/main.qml:286
 #, kde-format
 msgid "Disabled text"
 msgstr "Devre dışı metin"
 
-#: ui/main.qml:305
+#: ui/main.qml:304
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Renk Şemasını Düzenle…"
 
-#: ui/main.qml:312
+#: ui/main.qml:311
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Renk şemasını kaldır"
 
-#: ui/main.qml:314
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Etkin renk şeması silinemez"
 
-#: ui/main.qml:316
+#: ui/main.qml:315
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr "Sistem ile kurulu gelen renk şemaları silinemez"
 
-#: ui/main.qml:324
+#: ui/main.qml:323
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr "Bu renk şemasını silme"
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Renk Şeması Aç"
 
-#: ui/main.qml:370
+#: ui/main.qml:369
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Renk şeması dosyaları (*.colors)"

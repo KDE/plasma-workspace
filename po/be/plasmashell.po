@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -153,12 +153,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Схаваць банер папярэдняга прагляду?"
 
-#: desktopview.cpp:528 desktopview.cpp:544
+#: desktopview.cpp:533 desktopview.cpp:549
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Увайсці ў рэжым рэдагавання"
 
-#: desktopview.cpp:542
+#: desktopview.cpp:547
 #, fuzzy, kde-format
 #| msgid "Enter Edit Mode"
 msgid "Exit Edit Mode"

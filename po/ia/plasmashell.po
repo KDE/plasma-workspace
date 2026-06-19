@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-02-04 19:08+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -149,12 +149,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Cela Standardo de Vista Preliminar?"
 
-#: desktopview.cpp:528 desktopview.cpp:544
+#: desktopview.cpp:533 desktopview.cpp:549
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Entra modo de modificar"
 
-#: desktopview.cpp:542
+#: desktopview.cpp:547
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Exi modo de modificar"

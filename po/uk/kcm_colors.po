@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 11:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1280,110 +1280,110 @@ msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "Схему кольорів «%1» не встановлено. Вибираємо замість неї типову тему."
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Усі схеми"
 
-#: ui/main.qml:128
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "Світлі схеми"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Темні схеми"
 
-#: ui/main.qml:140
+#: ui/main.qml:139
 #, kde-format
 msgid "Install from File…"
 msgstr "Встановити з файла…"
 
-#: ui/main.qml:145
+#: ui/main.qml:144
 #, kde-format
 msgid "Get New…"
 msgstr "Отримати ще…"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Window Title"
 msgstr "Заголовок вікна"
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Window text"
 msgstr "Текст вікна"
 
-#: ui/main.qml:223
+#: ui/main.qml:222
 #, kde-format
 msgid "Button"
 msgstr "Кнопка"
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "посилання"
 
-#: ui/main.qml:265
+#: ui/main.qml:264
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "відвідане"
 
-#: ui/main.qml:273
+#: ui/main.qml:272
 #, kde-format
 msgid "Normal text"
 msgstr "Звичайний текст"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgid "Highlighted text"
 msgstr "Підсвічений текст"
 
-#: ui/main.qml:287
+#: ui/main.qml:286
 #, kde-format
 msgid "Disabled text"
 msgstr "Вимкнений текст"
 
-#: ui/main.qml:305
+#: ui/main.qml:304
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Змінити схему кольорів…"
 
-#: ui/main.qml:312
+#: ui/main.qml:311
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Вилучити схему кольорів"
 
-#: ui/main.qml:314
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Не можна вилучати активну схему кольорів"
 
-#: ui/main.qml:316
+#: ui/main.qml:315
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr "Не можна вилучати встановлені на рівні системи схеми кольорів"
 
-#: ui/main.qml:324
+#: ui/main.qml:323
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr "Не вилучати цю схему кольорів"
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Відкрити схему кольорів"
 
-#: ui/main.qml:370
+#: ui/main.qml:369
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "файли схем кольорів (*.colors)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2026-04-27 16:15+0100\n"
 "Last-Translator: charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -153,13 +153,13 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Cuir Fógra Meirge I bhFolach?"
 
-#: desktopview.cpp:528 desktopview.cpp:544
+#: desktopview.cpp:533 desktopview.cpp:549
 #, fuzzy, kde-format
 #| msgid "Enter Edit Mode"
 msgid "Enter Edit Mode"
 msgstr "Tar Isteach Mód Eagarthóireacht"
 
-#: desktopview.cpp:542
+#: desktopview.cpp:547
 #, fuzzy, kde-format
 #| msgid "Exit Edit Mode"
 msgid "Exit Edit Mode"

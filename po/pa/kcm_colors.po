@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2025-10-16 11:34-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -1237,112 +1237,112 @@ msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "'%1' ਰੰਗ ਸਕੀਮ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ। ਇਸ ਦੀ ਬਜਾਏ ਮੂਲ ਥੀਮ ਚੁਣਿਆ ਜਾ ਰਿਹਾ ਹੈ।"
 
-#: ui/main.qml:127
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "ਸਭ ਸਕੀਮਾਂ"
 
-#: ui/main.qml:128
+#: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "ਹਲਕੀਆਂ  ਸਕੀਮਾਂ"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "ਗੂੜ੍ਹੀਆਂ ਸਕੀਮਾਂ"
 
-#: ui/main.qml:140
+#: ui/main.qml:139
 #, kde-format
 msgid "Install from File…"
 msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
 
-#: ui/main.qml:145
+#: ui/main.qml:144
 #, kde-format
 msgid "Get New…"
 msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ…"
 
-#: ui/main.qml:192
+#: ui/main.qml:191
 #, kde-format
 msgid "Window Title"
 msgstr "ਵਿੰਡੋ ਟਾਈਟਲ"
 
-#: ui/main.qml:215
+#: ui/main.qml:214
 #, kde-format
 msgid "Window text"
 msgstr "ਵਿੰਡੋ ਲਿਖਤ"
 
-#: ui/main.qml:223
+#: ui/main.qml:222
 #, kde-format
 msgid "Button"
 msgstr "ਬਟਨ"
 
-#: ui/main.qml:263
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ਲਿੰਕ"
 
-#: ui/main.qml:265
+#: ui/main.qml:264
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "ਖੋਲ੍ਹੇ"
 
-#: ui/main.qml:273
+#: ui/main.qml:272
 #, kde-format
 msgid "Normal text"
 msgstr "ਸਧਾਰਨ ਲਿਖਤ"
 
-#: ui/main.qml:280
+#: ui/main.qml:279
 #, kde-format
 msgid "Highlighted text"
 msgstr "ਉਘਾੜੀ ਲਿਖਤ"
 
-#: ui/main.qml:287
+#: ui/main.qml:286
 #, kde-format
 msgid "Disabled text"
 msgstr "ਅਸਮਰੱਥ ਕੀਤੀ ਲਿਖਤ"
 
-#: ui/main.qml:305
+#: ui/main.qml:304
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "…ਰੰਗ ਸਕੀਮ ਸੋਧੋ"
 
-#: ui/main.qml:312
+#: ui/main.qml:311
 #, fuzzy, kde-format
 #| msgid "Remove Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "ਰੰਗ ਸਕੀਮ ਹਟਾਓ"
 
-#: ui/main.qml:314
+#: ui/main.qml:313
 #, fuzzy, kde-format
 #| msgid "Utility to edit and create color schemes"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "ਰੰਗ ਸਕੀਮਾਂ ਸੋਧਣ ਅਤੇ ਬਣਾਉਣ ਵਾਲੀ ਸਹੂਲਤ"
 
-#: ui/main.qml:316
+#: ui/main.qml:315
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:324
+#: ui/main.qml:323
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr ""
 
-#: ui/main.qml:368
+#: ui/main.qml:367
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "ਰੰਗ ਸਕੀਮ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:370
+#: ui/main.qml:369
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "ਰੰਗ ਸਕੀਮ ਫਾਇਲਾਂ (*.colors)"

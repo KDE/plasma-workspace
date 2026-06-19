@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2025-10-12 20:10+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -164,12 +164,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Скрыть баннер?"
 
-#: desktopview.cpp:528 desktopview.cpp:544
+#: desktopview.cpp:533 desktopview.cpp:549
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Перейти в режим редактирования"
 
-#: desktopview.cpp:542
+#: desktopview.cpp:547
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Выйти из режима редактирования"

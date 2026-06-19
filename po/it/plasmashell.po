@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-06-19 00:46+0000\n"
 "PO-Revision-Date: 2025-10-06 15:43+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -148,12 +148,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Vuoi nascondere la riga di anteprima?"
 
-#: desktopview.cpp:528 desktopview.cpp:544
+#: desktopview.cpp:533 desktopview.cpp:549
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Entra in modalità di modifica"
 
-#: desktopview.cpp:542
+#: desktopview.cpp:547
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Esci dalla modalità di modifica"
