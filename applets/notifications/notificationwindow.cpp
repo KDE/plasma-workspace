@@ -5,8 +5,6 @@
 
 #include "notificationwindow.h"
 
-#include <KWindowSystem>
-#include <KX11Extras>
 #include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
 NotificationWindow::NotificationWindow()
@@ -14,11 +12,6 @@ NotificationWindow::NotificationWindow()
 {
     PlasmaShellWaylandIntegration::get(this)->setRole(QtWayland::org_kde_plasma_surface::role_notification);
     PlasmaShellWaylandIntegration::get(this)->setTakesFocus(false);
-
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setOnAllDesktops(winId(), true);
-        KX11Extras::setType(winId(), NET::Notification);
-    }
 }
 
 NotificationWindow::~NotificationWindow() = default;
@@ -55,10 +48,6 @@ void NotificationWindow::setIsCritical(bool critical)
 
     auto role = critical ? QtWayland::org_kde_plasma_surface::role_criticalnotification : QtWayland::org_kde_plasma_surface::role_notification;
     PlasmaShellWaylandIntegration::get(this)->setRole(role);
-
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setType(winId(), critical ? NET::CriticalNotification : NET::Notification);
-    }
 
     Q_EMIT isCriticalChanged();
 }
