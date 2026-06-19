@@ -12,8 +12,6 @@
 #include <QQuickWindow>
 #include <QScreen>
 
-#include <KX11Extras>
-
 #include <Plasma/Containment>
 #include <PlasmaQuick/AppletQuickItem>
 #include <PlasmaQuick/Dialog>
@@ -91,13 +89,6 @@ bool NotificationApplet::isPrimaryScreen(const QRect &rect) const
 
     // HACK
     return rect == screen->geometry();
-}
-
-void NotificationApplet::forceActivateWindow(QWindow *window)
-{
-    if (window && window->winId()) {
-        KX11Extras::forceActiveWindow(window->winId());
-    }
 }
 
 K_PLUGIN_CLASS_WITH_JSON(NotificationApplet, "metadata.json")
