@@ -659,10 +659,6 @@ QtObject {
                         model.expired = true;
                     }
                 }
-                onForceActiveFocusRequested: {
-                    // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-                    globals.plasmoid.forceActivateWindow(popup);
-                }
 
                 onSuspendJobClicked: globals.popupNotificationsModel.suspendJob(globals.popupNotificationsModel.index(index, 0))
                 onResumeJobClicked: globals.popupNotificationsModel.resumeJob(globals.popupNotificationsModel.index(index, 0))
