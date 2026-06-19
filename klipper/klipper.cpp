@@ -75,7 +75,6 @@ Klipper::Klipper(QObject *parent)
     m_toggleURLGrabAction = new KToggleAction(this);
     m_collection->addAction(QStringLiteral("clipboard_action"), m_toggleURLGrabAction);
     m_toggleURLGrabAction->setText(i18nc("@action:inmenu Toggle automatic action", "Automatic Action Popup Menu"));
-    KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::META | Qt::CTRL | Qt::Key_X));
     connect(m_toggleURLGrabAction, &QAction::toggled, this, &Klipper::setURLGrabberEnabled);
 
     /*
