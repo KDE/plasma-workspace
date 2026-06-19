@@ -32,17 +32,9 @@
 #include <KUser>
 #include <KWindowEffects>
 #include <KWindowSystem>
-#include <KX11Extras>
 #include <LayerShellQt/Window>
 
 #include <Plasma/Plasma>
-
-#include <cstdio>
-#include <netwm.h>
-
-#include <X11/Xatom.h>
-#include <X11/Xutil.h>
-#include <fixx11h.h>
 
 #include <debug.h>
 
@@ -76,8 +68,6 @@ KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdty
     : QQuickView(engine, nullptr)
     , m_result(false)
     , m_windowed(windowed)
-// this is a WType_Popup on purpose. Do not change that! Not
-// having a popup here has severe side effects.
 {
     // window stuff
     setColor(QColor(Qt::transparent));
@@ -93,29 +83,6 @@ KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdty
     }
 
     setResizeMode(QQuickView::SizeRootObjectToView);
-
-    // Qt doesn't set this on unmanaged windows
-    // FIXME: or does it?
-    if (KWindowSystem::isPlatformX11()) {
-        constexpr auto role = std::string_view("logoutdialog");
-        constexpr std::size_t roleLength = role.length();
-
-        auto x11App = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
-        XChangeProperty(x11App->display(),
-                        winId(),
-                        XInternAtom(x11App->display(), "WM_WINDOW_ROLE", False),
-                        XA_STRING,
-                        8,
-                        PropModeReplace,
-                        reinterpret_cast<const unsigned char *>(role.data()),
-                        roleLength);
-
-        XClassHint classHint;
-        classHint.res_name = const_cast<char *>("ksmserver-logout-greeter");
-        classHint.res_class = const_cast<char *>("ksmserver-logout-greeter");
-        XSetClassHint(x11App->display(), winId(), &classHint);
-        KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher);
-    }
 
     // QQuickView *windowContainer = QQuickView::createWindowContainer(m_view, this);
     // windowContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -277,10 +244,6 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     connect(rootObject(), SIGNAL(cancelRequested()), SLOT(reject()));
     connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
     connect(rootObject(), SIGNAL(cancelSoftwareUpdateRequested()), SLOT(slotCancelSoftwareUpdate()));
-
-    connect(screen(), &QScreen::geometryChanged, this, [this] {
-        setGeometry(screen()->geometry());
-    });
 
     KWindowEffects::enableBlurBehind(this, true);
     if (m_windowed) {
