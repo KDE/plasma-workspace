@@ -6,4 +6,17 @@ The script "timezone_geojson_update.py" automates the download and compress proc
 
 ## offline_tiles
 
-These tiles are based on the top-most world tile that's available at https://vector.openstreetmap.org/shortbread_v1/0/0/0.mvt, converted to SVG through https://mapbox.github.io/mvt-cruncher/html/mvt2svg.html, replacing the hardcoded red sea color with #AAD3DF; the SVG is then split into sub-tyles using tiles_split.py.
+These are borderless raster tiles (land/water only, no administrative boundaries or
+coastlines).  The generation pipeline:
+
+  1. python tiles_split.py --download-mvt
+     → downloads the z0 world vector tile (shortbread_v1) to world.mvt
+
+  2. Open https://mapbox.github.io/mvt-cruncher/html/mvt2svg.html
+     drag world.mvt onto the page, copy the SVG output, save as world.svg
+
+  3. python tiles_split.py world.svg --min-zoom 0 --max-zoom 4 --outdir offline_tiles
+     → automatically replaces the sea colour (#B5D0D0 → #AAD3DF), strips all
+     border strokes, and splits the SVG into 256×256 PNG tiles.
+
+Requirements: pip install cairosvg pillow
