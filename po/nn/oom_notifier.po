@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-18 00:47+0000\n"
-"PO-Revision-Date: 2025-10-26 12:45+0100\n"
+"PO-Revision-Date: 2026-06-19 23:10+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
-msgstr ""
+msgstr "Unngjekk å sleppa opp for minne"
 
 #: module.cpp:71
 #, kde-kuit-format
@@ -32,6 +32,9 @@ msgid ""
 "system is low on memory. Consider closing unused applications or browser "
 "tabs."
 msgstr ""
+"<command>%1</command> har blitt tvangsavslutta av Linux-kjernen, då systemet "
+"heldt på å sleppa opp for minne. Vurder å lukka ubrukte program eller "
+"nettlesarfaner."
 
 #: module.cpp:77
 #, kde-kuit-format
@@ -41,6 +44,9 @@ msgid ""
 "Linux kernel because the system is low on memory. Consider closing unused "
 "applications or browser tabs."
 msgstr ""
+"Bakgrunnstenesta <command>%1</command> har blitt tvangsavslutta av Linux-"
+"kjernen, då systemet heldt på å sleppa opp for minne. Vurder å lukka ubrukte "
+"program eller nettlesarfaner."
 
 #: module.cpp:85
 #, kde-format

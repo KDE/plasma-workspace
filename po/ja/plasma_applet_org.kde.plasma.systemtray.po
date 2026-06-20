@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 00:46+0000\n"
-"PO-Revision-Date: 2026-02-20 22:33+0900\n"
+"PO-Revision-Date: 2026-06-14 21:46+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "%1 を終了"
 
 #: qml/config.qml:13
 #, kde-format
@@ -143,9 +143,7 @@ msgid "Scale with Panel width"
 msgstr "パネルの幅に合わせる"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -153,9 +151,7 @@ msgid "Panel icon size:"
 msgstr "パネルアイコンのサイズ:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Icon spacing"
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "小"
@@ -164,7 +160,7 @@ msgstr "小"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "間隔:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
@@ -185,33 +181,32 @@ msgid "Large"
 msgstr "大"
 
 #: qml/ConfigGeneral.qml:269
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "その他のアクション"
+msgstr "方向:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "下から上"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "上から下"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "左から右"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "右から左"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
@@ -278,10 +273,3 @@ msgstr "%2列に%1項目のグリッド"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Automatically enabled when in Touch Mode"
-#~ msgstr "タッチモードで自動的に有効化"
-
-#~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#~ msgid "Panel icon spacing:"
-#~ msgstr "アイコン間のスペース:"
