@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2024-09-25 13:04+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -33,28 +33,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "smart2128vr@gmail.com,,,,"
 
-#: logout.cpp:267
+#: logout.cpp:260
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Uscita annullata da «%1»"
 
-#: logout.cpp:361
+#: logout.cpp:354
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "La sessione sta per terminare"
 
-#: main.cpp:72 main.cpp:80
+#: main.cpp:69 main.cpp:77
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Nessun accesso in scrittura a «%1»."
 
-#: main.cpp:74 main.cpp:82
+#: main.cpp:71 main.cpp:79
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Nessun accesso in lettura a «%1»."
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -63,7 +63,7 @@ msgstr ""
 "Il seguente problema di installazione è stato rilevato\n"
 "durante il tentativo di avvio di Plasma:"
 
-#: main.cpp:90
+#: main.cpp:87
 #, kde-format
 msgid ""
 "\n"
@@ -74,7 +74,7 @@ msgstr ""
 "\n"
 "Plasma non può essere avviato.\n"
 
-#: main.cpp:129
+#: main.cpp:111
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -83,23 +83,23 @@ msgstr ""
 "L'affidabile gestore di sessione di Plasma che usa il protocollo standard\n"
 "di X11R6 per la gestione delle sessioni (XSMP)."
 
-#: main.cpp:133
+#: main.cpp:115
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Ripristina la sessione utente salvata se disponibile"
 
-#: main.cpp:136
+#: main.cpp:118
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permetti anche le connessioni remote"
 
-#: server.cpp:766
+#: server.cpp:764
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[sconosciuto]"
 
-#: server.cpp:789
+#: server.cpp:787
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 "risorse di sessione:\n"
 "%1"
 
-#: server.cpp:1046
+#: server.cpp:1042
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

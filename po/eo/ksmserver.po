@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -31,28 +31,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "olivermkellogg@gmail.com"
 
-#: logout.cpp:267
+#: logout.cpp:260
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "'%1' nuligis la elsaluton"
 
-#: logout.cpp:361
+#: logout.cpp:354
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Seanco estas finiĝanta"
 
-#: main.cpp:72 main.cpp:80
+#: main.cpp:69 main.cpp:77
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Neniu skribaliro al '%1'."
 
-#: main.cpp:74 main.cpp:82
+#: main.cpp:71 main.cpp:79
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Neniu leg-aliro al '%1'."
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -61,7 +61,7 @@ msgstr ""
 "La sekva instalproblemo estis detektita\n"
 "dum provo startigi Plasma:"
 
-#: main.cpp:90
+#: main.cpp:87
 #, kde-format
 msgid ""
 "\n"
@@ -72,7 +72,7 @@ msgstr ""
 "\n"
 "Plasma estas nekapabla starti.\n"
 
-#: main.cpp:129
+#: main.cpp:111
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -81,23 +81,23 @@ msgstr ""
 "La fidinda Plasma-seancadministrilo kiu parolas la norman X11R6-\n"
 "seancadministran protokolon XSMP."
 
-#: main.cpp:133
+#: main.cpp:115
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Restarigas la antaŭan uzantoseancon, se ekzistas"
 
-#: main.cpp:136
+#: main.cpp:118
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permesi ankaŭ forajn konektojn"
 
-#: server.cpp:766
+#: server.cpp:764
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[nekonata]"
 
-#: server.cpp:789
+#: server.cpp:787
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -108,7 +108,7 @@ msgstr ""
 "Ne eblas administri iujn programojn ĉar la seancadministraj rimedoj de la "
 "sistemo estas elĉerpitaj. Jen la pintaj tri konsumantoj de seancorimedoj:%1"
 
-#: server.cpp:1046
+#: server.cpp:1042
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

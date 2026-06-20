@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2024-08-13 19:19+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -327,7 +327,7 @@ msgstr "Άνοιγμα θέματος"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Αρχεία θέματος δρομέα (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:56
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

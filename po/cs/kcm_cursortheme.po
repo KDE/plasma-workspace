@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2026-06-13 12:03+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -282,7 +282,7 @@ msgstr "Otevřít motiv"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Soubory motivů ukazatelů (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:56
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

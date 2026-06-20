@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2020-04-25 13:41+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -31,28 +31,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "hasso@linux.ee, bald@starman.ee"
 
-#: logout.cpp:267
+#: logout.cpp:260
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "'%1' katkestas väljalogimise"
 
-#: logout.cpp:361
+#: logout.cpp:354
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr ""
 
-#: main.cpp:72 main.cpp:80
+#: main.cpp:69 main.cpp:77
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Kataloogis \"%1\" puudub kirjutamisõigus."
 
-#: main.cpp:74 main.cpp:82
+#: main.cpp:71 main.cpp:79
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Kataloogis \"%1\" puudub lugemisõigus."
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -61,7 +61,7 @@ msgstr ""
 "Plasma käivitamise ajal tuvastati\n"
 "järgmine paigaldusprobleem:"
 
-#: main.cpp:90
+#: main.cpp:87
 #, kde-format
 msgid ""
 "\n"
@@ -72,7 +72,7 @@ msgstr ""
 "\n"
 "Plasma käivitamine ei õnnestunud.\n"
 
-#: main.cpp:129
+#: main.cpp:111
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -81,23 +81,23 @@ msgstr ""
 "Töökindel Plasma seansihaldur, mis suhtleb standardse X11R6 \n"
 "seansihalduse protokolli (XSMP) abil."
 
-#: main.cpp:133
+#: main.cpp:115
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Võimaluse korral taastab eelmise seansi"
 
-#: main.cpp:136
+#: main.cpp:118
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Lubatud on ka kaugühendused"
 
-#: server.cpp:766
+#: server.cpp:764
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:789
+#: server.cpp:787
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -106,7 +106,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1046
+#: server.cpp:1042
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

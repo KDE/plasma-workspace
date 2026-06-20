@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2024-10-25 23:38-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -295,7 +295,7 @@ msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ਕਰਸਰ ਥੀਮ ਫਾਇਲਾਂ (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:56
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

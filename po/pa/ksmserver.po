@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2025-03-24 14:52-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -29,35 +29,35 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aalam@punlinx.org"
 
-#: logout.cpp:267
+#: logout.cpp:260
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "ਲਾਗ ਆਉਟ '%1' ਵਲੋਂ ਰੱਦ ਕੀਤਾ ਹੈ"
 
-#: logout.cpp:361
+#: logout.cpp:354
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "ਸ਼ੈਸ਼ਨ ਬੰਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 
-#: main.cpp:72 main.cpp:80
+#: main.cpp:69 main.cpp:77
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' ਲਈ ਕੋਈ ਲਿਖਣ ਅਧਿਕਾਰ ਨਹੀਂ ਹੈ।"
 
-#: main.cpp:74 main.cpp:82
+#: main.cpp:71 main.cpp:79
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' ਲਈ ਕੋਈ ਪੜ੍ਹਨ ਪਹੁੰਚ ਨਹੀਂ ਹੈ।"
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
 
-#: main.cpp:90
+#: main.cpp:87
 #, kde-format
 msgid ""
 "\n"
@@ -68,7 +68,7 @@ msgstr ""
 "\n"
 "ਪਲਾਜ਼ਮਾ ਸ਼ੁਰੂ ਹੋਣ ਲਈ ਅਸਫ਼ਲ ਹੈ।\n"
 
-#: main.cpp:129
+#: main.cpp:111
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -77,23 +77,23 @@ msgstr ""
 "ਇੱਕ ਭਰੋਸੇਯੋਗ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ, ਜੋ ਕਿ ਸਟੈਂਡਰਡ X11R6 \n"
 "ਸ਼ੈਸ਼ਨ ਪਰਬੰਧ ਪਰੋਟੋਕਾਲ (XSMP) ਨਾਲ ਸੰਚਾਰ ਕਰਦਾ ਹੈ।"
 
-#: main.cpp:133
+#: main.cpp:115
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "ਵਰਤੋਂਕਾਰ ਦਾ, ਜੇ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਹੈ, ਤਾਂ ਮੁੜ-ਸਟੋਰ ਕਰੋ"
 
-#: main.cpp:136
+#: main.cpp:118
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "ਰਿਮੋਟ ਕੁਨੈਕਸ਼ਨ ਵੀ ਮਨਜ਼ੂਰ ਹਨ"
 
-#: server.cpp:766
+#: server.cpp:764
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[ਅਣਪਛਾਤਾ]"
 
-#: server.cpp:789
+#: server.cpp:787
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -102,7 +102,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1046
+#: server.cpp:1042
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

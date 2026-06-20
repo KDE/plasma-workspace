@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-20 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,28 +29,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: logout.cpp:267
+#: logout.cpp:260
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "'%1' द्वारा लॉगआउट् रद्दम्।"
 
-#: logout.cpp:361
+#: logout.cpp:354
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "सत्रं निर्गच्छति"
 
-#: main.cpp:72 main.cpp:80
+#: main.cpp:69 main.cpp:77
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' कृते लेखनप्रवेशः नास्ति ।"
 
-#: main.cpp:74 main.cpp:82
+#: main.cpp:71 main.cpp:79
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' इत्यस्य पठनप्रवेशः नास्ति ।"
 
-#: main.cpp:87
+#: main.cpp:84
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -59,7 +59,7 @@ msgstr ""
 "निम्नलिखितस्थापनसमस्या ज्ञाता\n"
 "प्लाज्मा आरभ्यतुं प्रयतमानोऽपि :"
 
-#: main.cpp:90
+#: main.cpp:87
 #, kde-format
 msgid ""
 "\n"
@@ -70,7 +70,7 @@ msgstr ""
 "\n"
 "प्लाज्मा आरम्भं कर्तुं असमर्थः अस्ति।\n"
 
-#: main.cpp:129
+#: main.cpp:111
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -79,23 +79,23 @@ msgstr ""
 "विश्वसनीयः प्लाज्मा सत्रप्रबन्धकः यः मानक X11R6 इत्यस्य चर्चां करोति \n"
 "सत्रप्रबन्धनप्रोटोकॉल (XSMP)।"
 
-#: main.cpp:133
+#: main.cpp:115
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "यदि उपलब्धं भवति तर्हि रक्षितं उपयोक्तृसत्रं पुनः स्थापयति"
 
-#: main.cpp:136
+#: main.cpp:118
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "दूरस्थसंयोजनानि अपि अनुमन्यताम्"
 
-#: server.cpp:766
+#: server.cpp:764
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[अज्ञात]"
 
-#: server.cpp:789
+#: server.cpp:787
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -107,7 +107,7 @@ msgstr ""
 "सत्रसंसाधनानाम् शीर्षत्रयग्राहकाः सन्ति ।\n"
 "%1"
 
-#: server.cpp:1046
+#: server.cpp:1042
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
