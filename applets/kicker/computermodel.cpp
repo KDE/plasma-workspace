@@ -204,6 +204,7 @@ QVariant ComputerModel::data(const QModelIndex &index, int role) const
                     return QString();
                 }
             }
+            return QString();
         } else if (role == Kicker::FavoriteIdRole) {
             if (!m_filteredPlacesModel->isDevice(sourceIndex)) {
                 return m_filteredPlacesModel->url(sourceIndex);
