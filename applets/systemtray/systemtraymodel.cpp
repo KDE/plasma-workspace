@@ -78,7 +78,7 @@ Plasma::Types::ItemStatus BaseModel::calculateEffectiveStatus(bool canRender, Pl
 
     bool forcedShown = m_showAllItems || m_shownItems.contains(itemId);
     bool forcedHidden = m_hiddenItems.contains(itemId);
-    bool isDisabledSni = m_settings->isDisabledStatusNotifier(itemId);
+    bool isDisabledSni = m_settings ? m_settings->isDisabledStatusNotifier(itemId) : false;
 
     if (!forcedShown && (status == Plasma::Types::ItemStatus::HiddenStatus || isDisabledSni)) {
         return Plasma::Types::ItemStatus::HiddenStatus;
@@ -99,6 +99,8 @@ PlasmoidModel::PlasmoidModel(const QPointer<SystemTraySettings> &settings, const
     : BaseModel(settings, parent)
     , m_plasmoidRegistry(plasmoidRegistry)
 {
+    Q_ASSERT(m_plasmoidRegistry);
+
     connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginRegistered, this, &PlasmoidModel::appendRow);
     connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginUnregistered, this, &PlasmoidModel::removeRow);
 
