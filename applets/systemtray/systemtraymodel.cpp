@@ -78,7 +78,7 @@ Plasma::Types::ItemStatus BaseModel::calculateEffectiveStatus(bool canRender, Pl
 
     bool forcedShown = m_showAllItems || m_shownItems.contains(itemId);
     bool forcedHidden = m_hiddenItems.contains(itemId);
-    bool isDisabledSni = m_settings ? m_settings->isDisabledStatusNotifier(itemId) : false;
+    bool isDisabledSni = m_settings && m_settings->isDisabledStatusNotifier(itemId);
 
     if (!forcedShown && (status == Plasma::Types::ItemStatus::HiddenStatus || isDisabledSni)) {
         return Plasma::Types::ItemStatus::HiddenStatus;
