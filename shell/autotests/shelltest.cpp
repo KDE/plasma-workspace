@@ -190,6 +190,8 @@ void ShellTest::initTestCase()
     qRegisterMetaType<QScreen *>();
     QVERIFY(QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.KWin")));
     QVERIFY(QDBusConnection::sessionBus().registerObject(QStringLiteral("/KWin"), this, QDBusConnection::ExportAllSlots));
+    // Register KSplash so we dont start it accidentally which prevents ctest from exiting
+    QVERIFY(QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.KSplash")));
 
     m_plasmaDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"plasma");
     m_plasmaDir.removeRecursively();
