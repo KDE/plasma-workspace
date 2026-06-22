@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-21 00:46+0000\n"
-"PO-Revision-Date: 2025-10-28 06:50+0100\n"
+"PO-Revision-Date: 2026-06-21 08:17+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -349,6 +349,9 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"Nastavite vse čase na 0, če želite onemogočiti samodejno spreminjanje "
+"ozadja. Ozadja lahko še vedno ročno spremenite z možnostjo "
+"<interface>Naslednja slika ozadja</interface> v kontekstnem meniju namizja."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format

@@ -1,17 +1,17 @@
 # Translation of plasma_wallpaper_org.kde.image.po to Catalan
-# Copyright (C) 2007-2025 This_file_is_part_of_KDE
+# Copyright (C) 2007-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2 or later.
 #
 # SPDX-FileCopyrightText: 2008 Orestes Mas Casals <orestes@tsc.upc.edu>
 # SPDX-FileCopyrightText: 2009 Robert Millan <rmh@aybabtu.com>
 # SPDX-FileCopyrightText: 2014, 2015 Antoni Bella Pérez <antonibella5@yahoo.com>
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-21 00:46+0000\n"
-"PO-Revision-Date: 2025-10-28 09:42+0100\n"
+"PO-Revision-Date: 2026-06-21 09:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -355,6 +355,10 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"Establiu tots els temps a 0 per a desactivar el canvi automàtic del fons de "
+"pantalla. Encara podeu canviar els fons de pantalla manualment amb l'element "
+"de menú <interface>Fons de pantalla següent</interface> al menú contextual "
+"de l'escriptori."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format

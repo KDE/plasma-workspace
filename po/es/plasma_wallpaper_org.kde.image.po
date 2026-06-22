@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014-2015, 2017-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-21 00:46+0000\n"
-"PO-Revision-Date: 2025-10-29 11:59+0100\n"
+"PO-Revision-Date: 2026-06-21 12:07+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -351,6 +351,10 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"Defina todos los tiempos a 0 para desactivar el cambio automático del fondo "
+"del escritorio. Se puede seguir cambiando el fondo de forma manual con la "
+"entrada <interface>Siguiente imagen de fondo del escritorio</interface> del "
+"menú de contexto del escritorio."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
@@ -422,7 +426,3 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Ha ocurrido un error al intentar abrir el archivo de configuración "
 "«kscreenlockerrc»."
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Tiled"
-#~ msgstr "En mosaico"
