@@ -305,7 +305,7 @@ msgstr "按文件夹分组"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:113
 #, kde-format
 msgid "Change every:"
-msgstr "壁纸更换间隔："
+msgstr "壁纸切换间隔："
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:123
 #, kde-format
