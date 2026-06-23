@@ -305,7 +305,7 @@ msgstr "按文件夹分组"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:113
 #, kde-format
 msgid "Change every:"
-msgstr "壁纸更换间隔："
+msgstr "壁纸切换间隔："
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:123
 #, kde-format
@@ -333,6 +333,8 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"将所有时间设置为 0 以禁用自动切换壁纸功能。禁用后，您仍可点击桌面右键菜单中"
+"的 <interface>下一张壁纸图像</interface> 手动切换壁纸。"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
