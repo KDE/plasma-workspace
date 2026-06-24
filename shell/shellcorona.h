@@ -159,6 +159,9 @@ public:
     */
     [[nodiscard]] bool grabContainmentImage(const QString &name, int width, int height, const QString &targetPath);
 
+    int screenId(QScreen *screen) const override;
+    QScreen *screenForId(int screenId) const override;
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
@@ -259,8 +262,6 @@ protected Q_SLOTS:
      */
     void processUpdateScripts();
 
-    int screenForContainment(const Plasma::Containment *containment) const override;
-
     void showAlternativesForApplet(Plasma::Applet *applet);
 
 private Q_SLOTS:
@@ -317,7 +318,6 @@ private:
     QMap<const Plasma::Containment *, PanelView *> m_panelViews;
     // map from QScreen to desktop view
     QHash<int, DesktopView *> m_desktopViewForScreen;
-    QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;
     QList<QPointer<Plasma::Containment>> m_waitingPanels;

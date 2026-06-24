@@ -1052,10 +1052,6 @@ void PanelView::integrateScreen()
     updateMask();
 
     setVisibilityMode(m_visibilityMode);
-
-    if (containment()) {
-        containment()->reactToScreenChange();
-    }
 }
 
 void PanelView::updateEditModeLabel()
