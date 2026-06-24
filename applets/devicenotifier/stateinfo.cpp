@@ -218,7 +218,7 @@ void StateInfo::setIdleState(Solid::ErrorType operationResult, QVariant operatio
     if (m_state == Checking) {
         auto access = m_storageInfo->device().as<Solid::StorageAccess>();
         m_isChecked = true;
-        m_needRepair = (operationResult == Solid::NoError) ? !operationInfo.toBool() && access->canRepair() : false;
+        m_needRepair = (operationResult == Solid::NoError) ? !operationInfo.toBool() && access && access->canRepair() : false;
         qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : check done, need repair : " << m_needRepair;
         m_state = CheckDone;
     } else if (m_state == Repairing) {
@@ -227,13 +227,13 @@ void StateInfo::setIdleState(Solid::ErrorType operationResult, QVariant operatio
         m_state = RepairDone;
     } else if (m_state == Mounting) {
         auto access = m_storageInfo->device().as<Solid::StorageAccess>();
-        m_isMounted = access->isAccessible();
-        qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : Mount signal arrived. State changed : " << access->isAccessible();
+        m_isMounted = access && access->isAccessible();
+        qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : Mount signal arrived. State changed : " << m_isMounted;
         m_state = MountDone;
     } else if (m_state == Unmounting) {
         auto access = m_storageInfo->device().as<Solid::StorageAccess>();
-        m_isMounted = access->isAccessible();
-        qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : Unmount signal arrived. State changed : " << access->isAccessible();
+        m_isMounted = access && access->isAccessible();
+        qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : Unmount signal arrived. State changed : " << m_isMounted;
         m_state = UnmountDone;
     } else {
         m_state = Idle;
