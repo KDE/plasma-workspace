@@ -6,17 +6,16 @@
 
 #pragma once
 
+#include <QQuickView>
 #include <QScreen>
-
-#include <PlasmaQuick/QuickViewSharedEngine>
 
 class QMouseEvent;
 class QKeyEvent;
 
-class SplashWindow : public PlasmaQuick::QuickViewSharedEngine
+class SplashWindow : public QQuickView
 {
 public:
-    SplashWindow(bool testing, bool window, const QString &theme, QScreen *screen);
+    SplashWindow(QQmlEngine *engine, bool testing, bool window, const QString &theme, QScreen *screen);
 
     void setStage(int stage);
     virtual void setGeometry(const QRect &rect);

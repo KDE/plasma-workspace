@@ -12,6 +12,7 @@
 #include <QObject>
 
 class SplashWindow;
+class QQmlEngine;
 
 class SplashApp : public QGuiApplication
 {
@@ -37,6 +38,7 @@ private:
     QStringList m_stages;
     QBasicTimer m_timer;
     QString m_theme;
+    std::shared_ptr<QQmlEngine> m_engine;
 
 private Q_SLOTS:
     void adoptScreen(QScreen *);

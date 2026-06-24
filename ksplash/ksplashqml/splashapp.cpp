@@ -21,6 +21,8 @@
 
 #include <LayerShellQt/Shell>
 
+#include <PlasmaQuick/PlasmaQuick>
+
 #define TEST_STEP_INTERVAL 2000
 
 /**
@@ -38,6 +40,7 @@ SplashApp::SplashApp(int &argc, char **argv)
     , m_stage(0)
     , m_testing(false)
     , m_window(false)
+    , m_engine(PlasmaQuick::globalEngine())
 {
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringLiteral("test"), QStringLiteral("Run in test mode")));
@@ -120,7 +123,7 @@ void SplashApp::adoptScreen(QScreen *screen)
     if (screen->geometry().isNull()) {
         return;
     }
-    auto *w = new SplashWindow(m_testing, m_window, m_theme, screen);
+    auto *w = new SplashWindow(m_engine.get(), m_testing, m_window, m_theme, screen);
     w->setGeometry(screen->geometry());
     w->setStage(m_stage);
     w->setVisible(true);
