@@ -15,13 +15,13 @@
 # Netanel_h <netanel@gmx.com>, 2009.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-03-07 08:02+0200\n"
+"PO-Revision-Date: 2026-06-23 08:44+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -50,12 +50,12 @@ msgstr "לא ניתן ליצור קובץ זמני."
 #: colors.cpp:266
 #, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "לא ניתן להוריד את סכמת הצבעים: %1"
+msgstr "לא ניתן להוריד את ערכת הצבעים: %1"
 
 #: colors.cpp:284
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr "זה לא קובץ סכמת צבעים."
+msgstr "זה לא קובץ ערכת צבעים."
 
 #: colors.cpp:303
 #, kde-format
@@ -65,18 +65,18 @@ msgstr "יצירת תיקיית הנתונים ‚color-scheme’ נכשלה."
 #: colors.cpp:310
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr "העתקת סכמת הצבעים לתיקיית הנתונים ‚color-scheme’ נכשלה."
+msgstr "העתקת ערכת הצבעים לתיקיית הנתונים ‚color-scheme’ נכשלה."
 
 #: colors.cpp:327
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr "סכמת הצבעים הותקנה בהצלחה."
+msgstr "ערכת הצבעים הותקנה בהצלחה."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr "שם סכמת צבעים"
+msgstr "שם ערכת צבעים"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
@@ -103,12 +103,12 @@ msgstr "האם להחיל צבע משני מתמונת הרקע"
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
-msgstr "עורך סכמות צבעים של KDE"
+msgstr "עורך ערכות צבעים של KDE"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "כלי לעריכת ויצירת סכמות צבעים"
+msgstr "כלי לעריכת ויצירת ערכות צבעים"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
@@ -684,7 +684,7 @@ msgstr "שמירת ערכת צבעים"
 #: editor/scmeditordialog.cpp:117
 #, kde-format
 msgid "&Enter a name for the color scheme:"
-msgstr "נא למלא שם לסכמת הצבעים:"
+msgstr "נא למלא שם לערכת הצבעים:"
 
 #: editor/scmeditordialog.cpp:141
 #, kde-format
@@ -692,7 +692,7 @@ msgid ""
 "A color scheme with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"כבר קיימת סכמת צבעים בשם זה.\n"
+"כבר קיימת ערכת צבעים בשם זה.\n"
 "לדרוס אותה?"
 
 #: editor/scmeditordialog.cpp:178
@@ -1160,7 +1160,7 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
-"הכלי הזה מאפשר לך להגדיר את סכמת הצבעים להפעלת הפלזמה הנוכחית מבלי להגדיר "
+"הכלי הזה מאפשר לך להגדיר את ערכת הצבעים להפעלת הפלזמה הנוכחית מבלי להגדיר "
 "בטעות ערכה שלא זמינה או שכבר מוגדרת."
 
 #: plasma-apply-colorscheme.cpp:45
@@ -1169,7 +1169,7 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
-"שם סכמת הצבעים להגדרה בהפעלת הפלזמה הנוכחית שלך (העברת נתיב מלא תשתמש רק "
+"שם ערכת הצבעים להגדרה בהפעלת הפלזמה הנוכחית שלך (העברת נתיב מלא תשתמש רק "
 "בחלק האחרון של הנתיב)"
 
 #: plasma-apply-colorscheme.cpp:48
@@ -1177,7 +1177,7 @@ msgstr ""
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
-msgstr "הצגת כל סכמות הצבעים שזמינות במערכת (ומה הסכמה הנוכחית)"
+msgstr "הצגת כל ערכות הצבעים שזמינות במערכת (ומה הסכמה הנוכחית)"
 
 #: plasma-apply-colorscheme.cpp:53
 #, kde-format
@@ -1201,7 +1201,7 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr "סכמת הצבעים %1 הוחלה בהצלחה על הפעלת הפלזמה הנוכחית שלך"
+msgstr "ערכת הצבעים %1 הוחלה בהצלחה על הפעלת הפלזמה הנוכחית שלך"
 
 #: plasma-apply-colorscheme.cpp:115
 #, kde-format
@@ -1217,14 +1217,14 @@ msgstr ""
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
-msgstr "הצלחת להעביר שם ריק לסכמת צבעים, אין תמיכה בהתנהגות כזאת."
+msgstr "הצלחת להעביר שם ריק לערכת צבעים, אין תמיכה בהתנהגות כזאת."
 
 #: plasma-apply-colorscheme.cpp:127
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
-msgstr "הקובץ שניסית להגדיר בתור הסכמה שלך, %1, לא מזוהה כסכמת צבעים."
+msgstr "הקובץ שניסית להגדיר בתור הערכה שלך, %1, לא מזוהה כערכת צבעים."
 
 #: plasma-apply-colorscheme.cpp:151
 #, kde-format
@@ -1239,12 +1239,12 @@ msgstr "צבע משני שגוי "
 #: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr "אלו סכמות הצבעים שקיימות במערכת שלך:"
+msgstr "אלו ערכות הצבעים שקיימות במערכת שלך:"
 
 #: plasma-apply-colorscheme.cpp:163
 #, kde-format
 msgid " * %1 (current color scheme)"
-msgstr " * %1 (סכמת הצבעים הנוכחית)"
+msgstr " * %1 (ערכת הצבעים הנוכחית)"
 
 #: ui/AccentColorUI.qml:27
 #, kde-format
@@ -1268,7 +1268,7 @@ msgstr "צבע משני מותאם אישית"
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr "סכמת הצבעים ‚%1’ לא מותקנת. סכמת ברירת המחדל נבחרת במקומה."
+msgstr "ערכת הצבעים ‚%1’ לא מותקנת. ערכת ברירת המחדל נבחרת במקומה."
 
 #: ui/main.qml:127
 #, kde-format
@@ -1343,40 +1343,40 @@ msgstr "טקסט מושבת"
 #: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "עריכת סכמת צבעים…"
+msgstr "עריכת ערכת צבעים…"
 
 #: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "הסרת סכמת צבעים"
+msgstr "הסרת ערכת צבעים"
 
 #: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "לא ניתן למחוק את סכמת הצבעים הפעילה"
+msgstr "לא ניתן למחוק את ערכת הצבעים הפעילה"
 
 #: ui/main.qml:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr "לא ניתן למחוק סכמות צבעים מערכתיות"
+msgstr "לא ניתן למחוק ערכות צבעים מערכתיות"
 
 #: ui/main.qml:324
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr "לא ניתן למחוק את סכמת הצבעים הזאת"
+msgstr "לא ניתן למחוק את ערכת הצבעים הזאת"
 
 #: ui/main.qml:368
 #, kde-format
 msgid "Open Color Scheme"
-msgstr "פתיחת סכמת צבעים"
+msgstr "פתיחת ערכת צבעים"
 
 #: ui/main.qml:370
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr "קובצי סכמות צבעים (‎*.colors)"
+msgstr "קובצי ערכות צבעים (‎*.colors)"
 
 #~ msgid "You do not have permission to overwrite that scheme"
 #~ msgstr "אין לך הרשאות לדרוס את הסכמה הזאת"

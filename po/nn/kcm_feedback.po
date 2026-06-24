@@ -1,13 +1,12 @@
 # Translation of kcm_feedback to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2021, 2022.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2022-01-15 18:13+0100\n"
+"PO-Revision-Date: 2026-06-23 18:27+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -27,16 +26,7 @@ msgid ""
 msgstr "Tilbakemeldingar er slått av sentralt. Ta kontakt med leverandøren."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -49,15 +39,13 @@ msgstr ""
 "korleis du brukar programmet, slik at me kan fokusera på det som er "
 "viktigast for deg.<nl/><nl/>Dette er frivillig og heilt anonymt. Me samlar "
 "aldri inn personleg informasjon, filer du brukar, nettsider du vitjar eller "
-"informasjon som kan brukast til å identifisera deg.<nl/><nl/>Les meir om "
-"<link url='https://kde.org/privacypolicy-apps.php'>personvernreglane våre</"
-"link>."
+"informasjon som kan brukast til å identifisera deg.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Les meir om korleis me handterer personvern"
 
 #: ui/main.qml:64
 #, kde-format
