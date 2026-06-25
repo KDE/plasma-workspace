@@ -51,7 +51,6 @@ ListView {
         DecadeView
     }
 
-    property bool changeDate: false // To control whether to animate or animate + date change after start up complete. Should always be false on start up.
     property bool dragHandled: false
 
     highlightRangeMode: ListView.StrictlyEnforceRange
@@ -96,27 +95,23 @@ ListView {
         if (handleDrag()) {
             return;
         }
-        if (changeDate) {
-            if (direction < 0) {
-                previousView();
-            } else {
-                nextView();
-            }
+        if (direction < 0) {
+            previousView();
         } else {
-            changeDate = true;
+            nextView();
         }
         resetViewPosition();
     }
 
     // These signal handlers animate the view. They are the only ones through which date (and should as well) changes.
     onAtYEndChanged: {
-        if (atYEnd) {
+        if (atYEnd && width > 0 && height > 0) {
             handleDateChange(1);
         }
     }
 
     onAtYBeginningChanged: {
-        if (atYBeginning) {
+        if (atYBeginning && width > 0 && height > 0) {
             handleDateChange(-1);
         }
     }
