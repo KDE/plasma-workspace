@@ -39,7 +39,7 @@
 #include <Plasma/Plasma>
 #include <Plasma/PluginLoader>
 #include <PlasmaQuick/AppletQuickItem>
-#include <PlasmaQuick/SharedQmlEngine>
+#include <PlasmaQuick/PlasmaQuick>
 
 #include <PlasmaActivities/Consumer>
 #include <PlasmaActivities/Controller>
@@ -946,22 +946,20 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     // an alternatives dialog.
     applet->containment()->setStatus(Plasma::Types::RequiresAttentionStatus);
 
-    auto *qmlObj = new PlasmaQuick::SharedQmlEngine(this);
-    qmlObj->setInitializationDelayed(true);
-    qmlObj->setSource(alternativesQML);
+    QQmlComponent component(PlasmaQuick::globalEngine().get(), alternativesQML);
 
-    auto *helper = new AlternativesHelper(applet, qmlObj);
+    auto *helper = new AlternativesHelper(applet);
+    auto obj = component.createWithInitialProperties({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
 
-    qmlObj->completeInitialization({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
-
-    auto dialog = qobject_cast<QQuickWindow *>(qmlObj->rootObject());
+    auto dialog = qobject_cast<QQuickWindow *>(obj);
     if (!dialog) {
         qCWarning(PLASMASHELL) << "Alternatives UI does not inherit from Dialog";
-        delete qmlObj;
+        delete obj;
+        delete helper;
         return;
     }
     m_showingAlternatives = applet;
-    connect(applet, &Plasma::Applet::destroyedChanged, qmlObj, [qmlObj, this](bool destroyed) {
+    connect(applet, &Plasma::Applet::destroyedChanged, obj, [obj, helper, this](bool destroyed) {
         if (!destroyed) {
             return;
         }
@@ -969,9 +967,10 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
             m_showingAlternatives->containment()->setStatus(Plasma::Types::ActiveStatus);
             m_showingAlternatives = nullptr;
         }
-        qmlObj->deleteLater();
+        obj->deleteLater();
+        helper->deleteLater();
     });
-    connect(dialog, &QQuickWindow::visibleChanged, qmlObj, [qmlObj, this](bool visible) {
+    connect(dialog, &QQuickWindow::visibleChanged, obj, [obj, helper, this](bool visible) {
         if (visible) {
             return;
         }
@@ -979,7 +978,8 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
             m_showingAlternatives->containment()->setStatus(Plasma::Types::ActiveStatus);
             m_showingAlternatives = nullptr;
         }
-        qmlObj->deleteLater();
+        obj->deleteLater();
+        helper->deleteLater();
     });
 }
 
