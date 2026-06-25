@@ -57,6 +57,8 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return entry->actions();
     } else if (role == Kicker::DisabledRole) {
         return !entry->isValid();
+    } else if (role == Kicker::UrlRole) {
+        return QUrl();
     } else if (role == Kicker::HasChildrenRole) {
         return false;
     } else if (role == Kicker::IsParentRole) {
