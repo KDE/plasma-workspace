@@ -144,7 +144,7 @@ msgstr "General"
 #~ msgstr ""
 #~ "Tu ha pauc spatio libere sur le disco de tu dossier domo (currentemente "
 #~ "%2%,%1 MiB libere).\n"
-#~ "Tu vole executar un gerente de file pro liberar un pauc de spatio de "
+#~ "Tu vole executar un gerente de file pro liberar un pauco de spatio de "
 #~ "disco?"
 
 #~ msgctxt "Closes the notification"
