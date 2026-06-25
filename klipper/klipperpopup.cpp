@@ -21,6 +21,7 @@
 #include <KX11Extras>
 
 #include <Plasma/Plasma>
+#include <PlasmaQuick/PlasmaQuick>
 
 #include <algorithm>
 
@@ -32,17 +33,26 @@ using namespace Qt::StringLiterals;
 KlipperPopup::KlipperPopup()
     : PlasmaQuick::PlasmaWindow()
     , m_model(HistoryModel::self())
+    , m_engine(PlasmaQuick::globalEngine())
 {
-    m_engine.setInitializationDelayed(true);
-
     // used only by screen readers
     setTitle(i18n("Clipboard Popup"));
 
-    connect(&m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &KlipperPopup::onObjectIncubated);
-    m_engine.setSourceFromModule(u"org.kde.plasma.private.clipboard", u"KlipperPopup");
-    m_engine.completeInitialization();
+    QQmlComponent component(m_engine.get(), u"org.kde.plasma.private.clipboard", u"KlipperPopup");
+
+    auto item = qobject_cast<QQuickItem *>(component.create());
+    setMainItem(item);
+
+    connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::resizePopup);
+
+    connect(item, SIGNAL(requestHidePopup()), this, SLOT(hide()));
 
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &KlipperPopup::onFocusWindowChanged);
+}
+
+KlipperPopup::~KlipperPopup()
+{
+    delete mainItem();
 }
 
 void KlipperPopup::show()
@@ -146,16 +156,6 @@ void KlipperPopup::positionOnScreen()
             }
         }
     }
-}
-
-void KlipperPopup::onObjectIncubated()
-{
-    auto item = qobject_cast<QQuickItem *>(m_engine.rootObject());
-    setMainItem(item);
-
-    connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::resizePopup);
-
-    connect(item, SIGNAL(requestHidePopup()), this, SLOT(hide()));
 }
 
 void KlipperPopup::onFocusWindowChanged(QWindow *focusWindow)
