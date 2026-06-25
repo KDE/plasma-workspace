@@ -67,6 +67,7 @@ public:
 private:
     void reload();
     void mimeTypeFound(const QString &mimeType);
+    void updatePreferredService();
 
     void setBusy(bool busy);
     void setError(int error);

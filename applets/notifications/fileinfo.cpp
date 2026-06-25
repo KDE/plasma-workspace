@@ -18,6 +18,7 @@
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <KSycoca>
 
 FileInfo::FileInfo(QObject *parent)
     : QObject(parent)
@@ -134,8 +135,6 @@ void FileInfo::mimeTypeFound(const QString &mimeType)
         return;
     }
 
-    const QString oldOpenActionIconName = openActionIconName();
-
     bool emitOpenActionChanged = false;
     if (!m_openAction) {
         m_openAction = new QAction(this);
@@ -155,13 +154,30 @@ void FileInfo::mimeTypeFound(const QString &mimeType)
 
     m_mimeType = mimeType;
 
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &FileInfo::updatePreferredService, Qt::UniqueConnection);
+    updatePreferredService();
+
+    Q_EMIT mimeTypeChanged();
+
+    if (emitOpenActionChanged) {
+        Q_EMIT openActionChanged();
+    }
+}
+
+void FileInfo::updatePreferredService()
+{
+    if (!m_openAction) {
+        return;
+    }
+
+    const QString oldOpenActionIconName = openActionIconName();
     m_preferredApplication.reset();
 
-    if (!mimeType.isEmpty()) {
-        const auto type = QMimeDatabase().mimeTypeForName(mimeType);
+    if (!m_mimeType.isEmpty()) {
+        const auto type = QMimeDatabase().mimeTypeForName(m_mimeType);
         m_iconName = type.iconName();
 
-        m_preferredApplication = KApplicationTrader::preferredService(mimeType);
+        m_preferredApplication = KApplicationTrader::preferredService(m_mimeType);
     } else {
         m_iconName.clear();
     }
@@ -176,11 +192,6 @@ void FileInfo::mimeTypeFound(const QString &mimeType)
         m_openAction->setEnabled(KAuthorized::authorizeAction(KAuthorized::OPEN_WITH));
     }
 
-    Q_EMIT mimeTypeChanged();
-
-    if (emitOpenActionChanged) {
-        Q_EMIT openActionChanged();
-    }
     if (oldOpenActionIconName != openActionIconName()) {
         Q_EMIT openActionIconNameChanged();
     }

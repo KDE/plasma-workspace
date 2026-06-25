@@ -86,6 +86,7 @@ target_link_libraries(org.kde.plasma.notifications PRIVATE
                       KF6::KIOGui
                       KF6::KIOWidgets # for PreviewJob
                       KF6::Notifications # for KNotificationJobUiDelegate
+                      KF6::Service # KSycoca
                       PW::LibNotificationManager
                       Wayland::Client
                       )
