@@ -303,7 +303,7 @@ void WidgetExplorerPrivate::screenRemoved(int screen)
 {
     const QList<Containment *> containments = containment->corona()->containments();
     for (auto c : containments) {
-        if (c->lastScreen() == screen) {
+        if (c->screen() == screen) {
             removeContainment(c);
         }
     }

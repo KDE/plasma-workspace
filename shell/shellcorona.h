@@ -159,9 +159,6 @@ public:
     */
     [[nodiscard]] bool grabContainmentImage(const QString &name, int width, int height, const QString &targetPath);
 
-    int screenId(QScreen *screen) const override;
-    QScreen *screenForId(int screenId) const override;
-
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk

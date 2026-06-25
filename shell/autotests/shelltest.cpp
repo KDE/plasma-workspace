@@ -180,7 +180,7 @@ Plasma::Containment *ShellTest::addTestPanel(const QString &plugin)
     auto panelCont = m_corona->addPanel(plugin);
 
     // Wait and make sure the desktop and the new panel are loaded
-    QTRY_VERIFY(m_corona->isScreenUiReady(panelCont->lastScreen()));
+    QTRY_VERIFY(m_corona->isScreenUiReady(panelCont->screen()));
 
     return panelCont;
 }
@@ -380,12 +380,10 @@ void ShellTest::testScreenRemoval()
     for (auto *cont : m_corona->containments()) {
         if (cont == cont1) {
             cont1Found = true;
-            QCOMPARE(cont->screen(), -1);
-            QCOMPARE(cont->lastScreen(), 1);
+            QCOMPARE(cont->screen(), 1);
         } else if (cont == cont2) {
             cont2Found = true;
-            QCOMPARE(cont->screen(), -1);
-            QCOMPARE(cont->lastScreen(), 2);
+            QCOMPARE(cont->screen(), 2);
         }
     }
     QVERIFY(cont1Found);

@@ -14,6 +14,7 @@
 #include "panelconfigview.h"
 #include "panelshadows_p.h"
 #include "panelview.h"
+#include "screenpool.h"
 #include "shellcorona.h"
 
 #include <QAction>
@@ -1050,6 +1051,9 @@ void PanelView::keyPressEvent(QKeyEvent *event)
 
 void PanelView::integrateScreen()
 {
+    if (int screenId = m_corona->screenPool()->idForScreen(m_screenToFollow); screenId >= 0 && containment()) {
+        containment()->setScreen(screenId);
+    }
     updateMask();
 
     setVisibilityMode(m_visibilityMode);

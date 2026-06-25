@@ -95,7 +95,7 @@ void ScreenPoolModel::load()
     for (auto *cont : m_corona->containments()) {
         connect(cont, &Plasma::Containment::destroyedChanged, this, &ScreenPoolModel::load, Qt::UniqueConnection);
         if (!cont->destroyed()) {
-            unknownScreenIds.insert(cont->lastScreen());
+            unknownScreenIds.insert(cont->screen());
         }
     }
     int knownId = 0;
@@ -316,7 +316,7 @@ void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int ne
         m_corona->setScreenForContainment(cont, newScreen);
     } else {
         // If it's a desktop, for now move all desktops for all activities
-        const int oldScreen = cont->screen() >= 0 ? cont->screen() : cont->lastScreen();
+        const int oldScreen = cont->screen() >= 0 ? cont->screen() : cont->screen();
         m_corona->swapDesktopScreens(oldScreen, newScreen);
     }
 }
@@ -348,22 +348,22 @@ void ShellContainmentModel::load()
             && cont->activity() != m_activityConsumer->currentActivity()) {
             continue;
         }
-        if (!m_edgeCount.contains(cont->lastScreen())) {
-            m_edgeCount[cont->lastScreen()] = QHash<Plasma::Types::Location, QList<int>>();
-            m_edgeCount[cont->lastScreen()][cont->location()] = QList<int>();
+        if (!m_edgeCount.contains(cont->screen())) {
+            m_edgeCount[cont->screen()] = QHash<Plasma::Types::Location, QList<int>>();
+            m_edgeCount[cont->screen()][cont->location()] = QList<int>();
         }
-        m_edgeCount[cont->lastScreen()][cont->location()].append(cont->id());
+        m_edgeCount[cont->screen()][cont->location()].append(cont->id());
         m_corona->grabContainmentPreview(const_cast<Plasma::Containment *>(cont));
         Data d;
         d.id = cont->id();
-        d.screen = cont->lastScreen();
+        d.screen = cont->screen();
         d.edge = cont->location();
         d.activity = cont->activity();
         d.isActive = cont->screen() != -1;
         d.containment = cont;
         d.image = containmentPreview(const_cast<Plasma::Containment *>(cont));
 
-        if (cont->lastScreen() == m_screenId || (cont->lastScreen() == -1 && cont->screen() == m_screenId)) {
+        if (cont->screen() == m_screenId || (cont->screen() == -1 && cont->screen() == m_screenId)) {
             m_containments.push_back(d);
             connect(cont, &QObject::destroyed, this, &ShellContainmentModel::load);
             connect(cont, &Plasma::Containment::destroyedChanged, this, &ShellContainmentModel::load);
