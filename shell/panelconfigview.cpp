@@ -28,6 +28,7 @@
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
 #include <PlasmaQuick/Dialog>
+#include <PlasmaQuick/PlasmaQuick>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
@@ -170,7 +171,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     : PlasmaQuick::PopupPlasmaWindow()
     , m_containment(containment)
     , m_panelView(panelView)
-    , m_sharedQmlEngine(std::make_unique<PlasmaQuick::SharedQmlEngine>(this))
+    , m_engine(PlasmaQuick::globalEngine())
 {
     auto *c = qobject_cast<ShellCorona *>(m_containment->corona());
     setProperty("restrictedPopupGeometry", QVariant(c->availableScreenRect(m_containment->screen())));
@@ -195,7 +196,8 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
         syncGeometry();
     });
 
-    m_sharedQmlEngine->rootContext()->setContextProperties({
+    m_qmlContext = std::make_unique<QQmlContext>(m_engine.get());
+    m_qmlContext->setContextProperties({
         QQmlContext::PropertyPair{u"plasmoid"_s, QVariant::fromValue(containment)},
         QQmlContext::PropertyPair{u"panel"_s, QVariant::fromValue(panelView)},
         QQmlContext::PropertyPair{u"configDialog"_s, QVariant::fromValue(this)},
@@ -217,14 +219,18 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_focusWindow = qApp->focusWindow();
 }
 
-PanelConfigView::~PanelConfigView() = default;
+PanelConfigView::~PanelConfigView()
+{
+    delete mainItem();
+}
 
 void PanelConfigView::init()
 {
-    m_sharedQmlEngine->setInitializationDelayed(true);
-    m_sharedQmlEngine->setSource(m_containment->corona()->kPackage().fileUrl("panelconfigurationui"));
-    m_sharedQmlEngine->completeInitialization({{QStringLiteral("panelConfiguration"), QVariant::fromValue(this)}});
-    setMainItem(qobject_cast<QQuickItem *>(m_sharedQmlEngine->rootObject()));
+    QQmlComponent component(m_engine.get(), m_containment->corona()->kPackage().fileUrl("panelconfigurationui"));
+
+    auto obj = component.createWithInitialProperties({{QStringLiteral("panelConfiguration"), QVariant::fromValue(this)}}, m_qmlContext.get());
+
+    setMainItem(qobject_cast<QQuickItem *>(obj));
     if (mainItem()) {
         if (m_panelRulerView) {
             auto *ruler = mainItem()->property("panelRuler").value<QQuickItem *>();
