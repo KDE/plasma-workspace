@@ -15,7 +15,6 @@
 #include <qqmlregistration.h>
 
 #include <PlasmaQuick/PlasmaWindow>
-#include <PlasmaQuick/SharedQmlEngine>
 
 using namespace Qt::StringLiterals;
 
@@ -34,7 +33,7 @@ class View : public PlasmaQuick::PlasmaWindow
     Q_PROPERTY(HistoryBehavior historyBehavior READ historyBehavior NOTIFY historyBehaviorChanged)
 
 public:
-    explicit View(PlasmaQuick::SharedQmlEngine *engine, QWindow *parent = nullptr);
+    explicit View(QWindow *parent = nullptr);
     ~View() override;
 
     enum HistoryBehavior {
@@ -105,7 +104,7 @@ private:
     void writeHistory();
     QPoint m_customPos;
     QMargins margins();
-    PlasmaQuick::SharedQmlEngine *m_engine;
+    std::shared_ptr<QQmlEngine> m_engine;
     KConfigGroup m_config;
     KConfigGroup m_stateData;
     KConfigWatcher::Ptr m_configWatcher;

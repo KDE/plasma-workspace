@@ -22,7 +22,6 @@
 #include <KRunner/RunnerManager>
 
 #include <Plasma/Plasma>
-#include <PlasmaQuick/SharedQmlEngine>
 
 #include <QQmlEngine>
 #include <iostream>
@@ -98,9 +97,7 @@ int main(int argc, char **argv)
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
 
-    PlasmaQuick::SharedQmlEngine sharedEngine;
-    sharedEngine.setInitializationDelayed(true);
-    View view(&sharedEngine);
+    View view;
 
     auto updateVisibility = [&]() {
         const QString query = parser.positionalArguments().value(0);
