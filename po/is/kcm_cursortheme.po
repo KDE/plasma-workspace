@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-20 00:46+0000\n"
-"PO-Revision-Date: 2026-03-23 11:55+0000\n"
+"PO-Revision-Date: 2026-06-24 11:16+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -48,11 +48,10 @@ msgid "Unable to download the icon theme archive: %1"
 msgstr "Ekki tókst að sækja bendilþemusafnið %1."
 
 #: kcmcursortheme.cpp:398
-#, fuzzy, kde-format
-#| msgid "Unable to download the icon theme archive: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "Ekki tókst að sækja bendilþemusafnið %1."
+msgstr "Ekki tókst að opna táknmyndaþemusafnið."
 
 #: kcmcursortheme.cpp:418
 #, kde-format
