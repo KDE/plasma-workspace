@@ -212,7 +212,9 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
 void PlasmaWindowedView::keyPressEvent(QKeyEvent *ev)
 {
     if (ev->matches(QKeySequence::Quit)) {
-        m_statusNotifier->deleteLater();
+        if (m_statusNotifier) {
+            m_statusNotifier->deleteLater();
+        }
         close();
     }
     QQuickView::keyReleaseEvent(ev);
