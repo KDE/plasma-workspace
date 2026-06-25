@@ -132,23 +132,6 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
     loadApplet(positionalArguments.first(), args);
 }
 
-int PlasmaWindowedCorona::screenId(QScreen *screen) const
-{
-    const auto screens = qApp->screens();
-    return screens.indexOf(screen);
-}
-
-QScreen *PlasmaWindowedCorona::screenForId(int screenId) const
-{
-    const auto screens = qApp->screens();
-
-    if (screenId < 0 || screenId >= screens.size()) {
-        return nullptr;
-    }
-
-    return screens[screenId];
-}
-
 QRect PlasmaWindowedCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);

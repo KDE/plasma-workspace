@@ -19,8 +19,6 @@ class PlasmaWindowedCorona : public Plasma::Corona
 
 public:
     explicit PlasmaWindowedCorona(const QString &shell, QObject *parent = nullptr);
-    int screenId(QScreen *screen) const override;
-    QScreen *screenForId(int screenId) const override;
     QRect screenGeometry(int id) const override;
 
     void setHasStatusNotifier(bool stay);
