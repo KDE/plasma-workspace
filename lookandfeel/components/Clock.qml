@@ -26,6 +26,7 @@ ColumnLayout {
         font.weight: Font.DemiBold
         font.letterSpacing: -3.0
         font.wordSpacing: 3.0
+        font.features: { "tnum": 1 }
         renderType: Text.NativeRendering // looks better than QtTextRendering at large size, while CurveRendering suffers from jagged diagonals with some fonts (QTBUG-146898)
         Layout.alignment: Qt.AlignHCenter
     }
