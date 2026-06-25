@@ -24,6 +24,8 @@
 #include <KWindowEffects>
 #include <KWindowSystem>
 
+#include <PlasmaQuick/PlasmaQuick>
+
 #include <LayerShellQt/Window>
 #include <algorithm>
 #include <qnamespace.h>
@@ -32,9 +34,9 @@
 
 KCONFIGGROUP_DECLARE_ENUM_QOBJECT(View, HistoryBehavior)
 
-View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
+View::View(QWindow *)
     : PlasmaQuick::PlasmaWindow()
-    , m_engine(engine)
+    , m_engine(PlasmaQuick::globalEngine())
     , m_floating(false)
 {
     KCrash::initialize();
@@ -64,11 +66,20 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(u"/App"_s, this);
 
-    connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
-    m_engine->setSourceFromModule("org.kde.krunner.private.view", "RunCommand");
-    m_engine->completeInitialization({
-        {u"runnerWindow"_s, QVariant::fromValue(this)},
-    });
+    QQmlComponent component(m_engine.get(), u"org.kde.krunner.private.view"_s, u"RunCommand"_s);
+    QVariantMap properties{{u"runnerWindow"_s, QVariant::fromValue(this)}};
+    auto obj = component.createWithInitialProperties(properties);
+
+    auto item = qobject_cast<QQuickItem *>(obj);
+    setMainItem(item);
+
+    auto updateSize = [this]() {
+        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize().shrunkBy(margins())));
+    };
+
+    connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
+    connect(this, &View::paddingChanged, this, updateSize);
+    updateSize();
 
     auto screenRemoved = [this](QScreen *screen) {
         if (screen == this->screen()) {
@@ -81,7 +92,10 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
 }
 
-View::~View() = default;
+View::~View()
+{
+    delete mainItem();
+}
 
 QMargins View::margins()
 {
@@ -95,16 +109,6 @@ QMargins View::margins()
 
 void View::objectIncubated()
 {
-    auto item = qobject_cast<QQuickItem *>(m_engine->rootObject());
-    setMainItem(item);
-
-    auto updateSize = [this]() {
-        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize().shrunkBy(margins())));
-    };
-
-    connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
-    connect(this, &View::paddingChanged, this, updateSize);
-    updateSize();
 }
 
 void View::slotFocusWindowChanged()
@@ -200,8 +204,8 @@ void View::displaySingleRunner(const QString &runnerName)
 {
     display();
 
-    m_engine->rootObject()->setProperty("singleRunner", runnerName);
-    m_engine->rootObject()->setProperty("query", QString());
+    mainItem()->setProperty("singleRunner", runnerName);
+    mainItem()->setProperty("query", QString());
 }
 
 void View::displayWithClipboardContents()
@@ -211,8 +215,8 @@ void View::displayWithClipboardContents()
     // On Wayland we cannot retrieve the clipboard selection until we get the focus
     if (QGuiApplication::focusWindow()) {
         m_requestedClipboardSelection = false;
-        m_engine->rootObject()->setProperty("singleRunner", QString());
-        m_engine->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
+        mainItem()->setProperty("singleRunner", QString());
+        mainItem()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
     } else {
         m_requestedClipboardSelection = true;
     }
@@ -222,16 +226,16 @@ void View::query(const QString &term)
 {
     display();
 
-    m_engine->rootObject()->setProperty("singleRunner", QString());
-    m_engine->rootObject()->setProperty("query", term);
+    mainItem()->setProperty("singleRunner", QString());
+    mainItem()->setProperty("query", term);
 }
 
 void View::querySingleRunner(const QString &runnerName, const QString &term)
 {
     display();
 
-    m_engine->rootObject()->setProperty("singleRunner", runnerName);
-    m_engine->rootObject()->setProperty("query", term);
+    mainItem()->setProperty("singleRunner", runnerName);
+    mainItem()->setProperty("query", term);
 }
 
 bool View::pinned() const
