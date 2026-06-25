@@ -7,7 +7,6 @@
 #pragma once
 
 #include <PlasmaQuick/PlasmaWindow>
-#include <PlasmaQuick/SharedQmlEngine>
 
 class QWindow;
 
@@ -24,7 +23,7 @@ class KlipperPopup : public PlasmaQuick::PlasmaWindow
 
 public:
     explicit KlipperPopup();
-    ~KlipperPopup() override = default;
+    ~KlipperPopup() override;
 
     void show();
 
@@ -42,7 +41,6 @@ protected:
 
 private:
     void positionOnScreen();
-    void onObjectIncubated();
     void onFocusWindowChanged(QWindow *focusWindow);
 
     /**
@@ -50,6 +48,6 @@ private:
      */
     std::shared_ptr<HistoryModel> m_model;
 
-    PlasmaQuick::SharedQmlEngine m_engine;
+    std::shared_ptr<QQmlEngine> m_engine;
     KWayland::Client::PlasmaShell *m_plasmashell = nullptr;
 };
