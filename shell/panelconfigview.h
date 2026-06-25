@@ -8,7 +8,6 @@
 
 #include <Plasma/Theme>
 #include <PlasmaQuick/PopupPlasmaWindow>
-#include <PlasmaQuick/SharedQmlEngine>
 
 #include "panelview.h"
 
@@ -97,5 +96,6 @@ private:
     KSvg::FrameSvg::EnabledBorders m_enabledBorders = KSvg::FrameSvg::AllBorders;
     Plasma::Theme m_theme;
     QTimer m_screenSyncTimer;
-    std::unique_ptr<PlasmaQuick::SharedQmlEngine> m_sharedQmlEngine;
+    std::shared_ptr<QQmlEngine> m_engine;
+    std::unique_ptr<QQmlContext> m_qmlContext;
 };
