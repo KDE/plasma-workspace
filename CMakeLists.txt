@@ -25,6 +25,7 @@ include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMMarkNonGuiExecutable)
 include(CMakePackageConfigHelpers)
+include(CMakeDependentOption)
 include(WriteBasicConfigVersionFile)
 include(CheckIncludeFiles)
 include(FeatureSummary)
@@ -98,7 +99,8 @@ set_package_properties(KF6KirigamiAddons PROPERTIES
 )
 
 # there's no NetworkManager on FreeBSD'
-if (LINUX)
+cmake_dependent_option(BUILD_GEOTIMEZONED "Support location-based system time zone changes" TRUE "LINUX" FALSE)
+if (BUILD_GEOTIMEZONED)
     find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION} CONFIG REQUIRED)
 endif()
 
