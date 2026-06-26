@@ -214,6 +214,7 @@ int KCMSoundTheme::playSound(const QString &themeId, const QStringList &soundLis
     int result = CA_SUCCESS;
     for (const QString &soundName : soundList) {
         ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
+        ca_proplist_sets(props, CA_PROP_MEDIA_ROLE, "test");
         result = ca_context_play_full(canberraContext(), 0, props, &ca_finish_callback, this);
         qCDebug(KCM_SOUNDTHEME) << "Try playing sound" << soundName << "for theme" << themeId << ":" << ca_strerror(result);
         if (result == CA_SUCCESS) {
