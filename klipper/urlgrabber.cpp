@@ -40,6 +40,31 @@ URLGrabber::URLGrabber(QObject *parent)
 {
     m_myPopupKillTimer->setSingleShot(true);
     connect(m_myPopupKillTimer, &QTimer::timeout, this, &URLGrabber::slotKillPopupMenu);
+
+    // migrate actions config from plasmashellrc to klipperrc
+    KSharedConfig::Ptr newConfig = KSharedConfig::openConfig(QStringLiteral("klipperrc"));
+    KConfigGroup newGeneral(newConfig, QStringLiteral("General"));
+
+    KSharedConfig::Ptr oldConfig = KSharedConfig::openConfig();
+    KConfigGroup oldGeneral(oldConfig, QStringLiteral("General"));
+
+    int numActions = oldGeneral.readEntry("Number of Actions", 0);
+    oldGeneral.moveValuesTo({"Number of Actions"}, newGeneral);
+
+    for (int i = 0; i < numActions; i++) {
+        const QString actionGroupName = QStringLiteral("Action_%1").arg(i);
+        KConfigGroup oldActionGroup(oldConfig.get(), actionGroupName);
+        int numCommands = oldActionGroup.readEntry("Number of commands", 0);
+        KConfigGroup newActionGroup(newConfig, actionGroupName);
+        oldActionGroup.moveValuesTo(newActionGroup);
+
+        for (int j = 0; j < numCommands; ++j) {
+            const QString commandGroupName = actionGroupName + QStringLiteral("/Command_%1").arg(j);
+            KConfigGroup oldCommandGroup(oldConfig.get(), commandGroupName);
+            KConfigGroup newCommandGroup(newConfig, commandGroupName);
+            oldCommandGroup.moveValuesTo(newCommandGroup);
+        }
+    }
 }
 
 URLGrabber::~URLGrabber()
@@ -267,7 +292,7 @@ void URLGrabber::loadSettings()
     qDeleteAll(m_myActions);
     m_myActions.clear();
 
-    const KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("klipperrc"));
     const KConfigGroup cg(config, QStringLiteral("General"));
     int num = cg.readEntry("Number of Actions", 0);
     for (int i = 0; i < num; i++) {
@@ -278,7 +303,7 @@ void URLGrabber::loadSettings()
 
 void URLGrabber::saveSettings() const
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("klipperrc"));
     KConfigGroup cg(config, QStringLiteral("General"));
     cg.writeEntry("Number of Actions", m_myActions.count());
 
