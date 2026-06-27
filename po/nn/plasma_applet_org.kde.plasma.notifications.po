@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2025-10-26 12:53+0100\n"
+"PO-Revision-Date: 2026-06-24 22:20+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -116,37 +116,28 @@ msgid "%2 of %1"
 msgstr "%2 av %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 av %1 fil"
-msgstr[1] "%2 av %1 filer"
+msgstr[0] "%3 av %2 fil"
+msgstr[1] "%3 av %2 filer"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 av %1 mappe"
-msgstr[1] "%2 av %1 mapper"
+msgstr[0] "%3 av %2 mappe"
+msgstr[1] "%3 av %2 mapper"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 av %1 element"
-msgstr[1] "%2 av %1 element"
+msgstr[0] "%3 av %2 element"
+msgstr[1] "%3 av %2 element"
 
 #: components/JobDetails.qml:137
 #, kde-format
@@ -407,11 +398,10 @@ msgid "Toggle do not disturb"
 msgstr "Slå på/av «Ikkje forstyrr»"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Tøm varslingar"
+msgstr "Tøm varslingsloggen"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -426,12 +416,10 @@ msgid "Notifications On"
 msgstr "Varslingar på"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Varslingar på"
+msgstr "Varslingsloggen er no tømt"
 
 #: main.qml:61
 #, kde-format
