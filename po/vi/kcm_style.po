@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-28 00:46+0000\n"
 "PO-Revision-Date: 2021-08-18 21:45+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -168,32 +168,35 @@ msgstr "Nhãn trên thanh công cụ thứ:"
 msgid "GNOME/GTK Application Style"
 msgstr "Kiểu cách ứng dụng GNOME/GTK"
 
+#: ui/GtkStylePage.qml:38
+#, fuzzy, kde-format
+#| msgid "Install from File…"
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr "Cài từ tệp…"
+
 #: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
 msgstr "Chủ đề GTK:"
 
-#: ui/GtkStylePage.qml:68
+#: ui/GtkStylePage.qml:85
 #, kde-format
 msgid "Preview…"
 msgstr "Xem thử…"
 
-#: ui/GtkStylePage.qml:87
-#, kde-format
-msgid "Install from File…"
-msgstr "Cài từ tệp…"
-
-#: ui/GtkStylePage.qml:92
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Lấy kiểu cách ứng dụng GNOME/GTK mới…"
-
-#: ui/GtkStylePage.qml:108
+#: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Chọn kho trữ chủ đề GTK"
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Kho trữ chủ đề GTK (*.tar.xz *.tar.gz *.tar.bz2)"
@@ -213,6 +216,9 @@ msgstr "Cấu hình kiểu cách ứng dụng GNOME/GTK…"
 #, kde-format
 msgid "Configure Style…"
 msgstr "Cấu hình kiểu cách…"
+
+#~ msgid "Get New GNOME/GTK Application Styles…"
+#~ msgstr "Lấy kiểu cách ứng dụng GNOME/GTK mới…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-28 00:46+0000\n"
 "PO-Revision-Date: 2010-11-12 09:11+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -191,35 +191,35 @@ msgstr "អត្ថបទ​របារ​ឧបករណ៍​រងSecondary
 msgid "GNOME/GTK Application Style"
 msgstr "កម្មវិធី "
 
+#: ui/GtkStylePage.qml:38
+#, kde-format
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr ""
+
 #: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
 msgstr ""
 
-#: ui/GtkStylePage.qml:68
+#: ui/GtkStylePage.qml:85
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgid "Preview…"
 msgstr "មើល​ជាមុន"
 
-#: ui/GtkStylePage.qml:87
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/GtkStylePage.qml:92
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "កម្មវិធី "
-
-#: ui/GtkStylePage.qml:108
+#: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr ""
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
@@ -240,6 +240,12 @@ msgstr "កំណត់​រចនាសម្ព័ន្ធ..."
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "កំណត់​រចនាសម្ព័ន្ធ..."
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Get New GNOME/GTK Application Styles…"
+#~ msgstr "កម្មវិធី "
 
 #, fuzzy
 #~| msgid ""

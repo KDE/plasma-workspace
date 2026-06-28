@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-28 00:46+0000\n"
 "PO-Revision-Date: 2024-11-28 23:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -167,32 +167,35 @@ msgstr "보조 도구 모음 텍스트:"
 msgid "GNOME/GTK Application Style"
 msgstr "그놈/GTK 앱 스타일"
 
+#: ui/GtkStylePage.qml:38
+#, fuzzy, kde-format
+#| msgid "Install from File…"
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr "파일에서 설치…"
+
 #: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
 msgstr "GTK 테마:"
 
-#: ui/GtkStylePage.qml:68
+#: ui/GtkStylePage.qml:85
 #, kde-format
 msgid "Preview…"
 msgstr "미리 보기…"
 
-#: ui/GtkStylePage.qml:87
-#, kde-format
-msgid "Install from File…"
-msgstr "파일에서 설치…"
-
-#: ui/GtkStylePage.qml:92
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "새 그놈/GTK 앱 스타일 가져오기…"
-
-#: ui/GtkStylePage.qml:108
+#: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "GTK 테마 압축 파일 선택"
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK 테마 압축 파일 (*.tar.xz *.tar.gz *.tar.bz2)"
@@ -211,6 +214,9 @@ msgstr "그놈/GTK 앱 스타일 설정…"
 #, kde-format
 msgid "Configure Style…"
 msgstr "스타일 설정…"
+
+#~ msgid "Get New GNOME/GTK Application Styles…"
+#~ msgstr "새 그놈/GTK 앱 스타일 가져오기…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

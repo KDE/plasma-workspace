@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-28 00:46+0000\n"
 "PO-Revision-Date: 2006-03-05 12:04+0100\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -177,34 +177,35 @@ msgstr ""
 msgid "GNOME/GTK Application Style"
 msgstr "Дастур даражаси"
 
+#: ui/GtkStylePage.qml:38
+#, kde-format
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr ""
+
 #: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
 msgstr ""
 
-#: ui/GtkStylePage.qml:68
+#: ui/GtkStylePage.qml:85
 #, fuzzy, kde-format
 #| msgid "Preview"
 msgid "Preview…"
 msgstr "Кўриб чиқиш"
 
-#: ui/GtkStylePage.qml:87
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/GtkStylePage.qml:92
-#, fuzzy, kde-format
-#| msgid "Application Level"
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Дастур даражаси"
-
-#: ui/GtkStylePage.qml:108
+#: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr ""
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
@@ -225,6 +226,11 @@ msgstr "&Мослаш..."
 #| msgid "Con&figure..."
 msgid "Configure Style…"
 msgstr "&Мослаш..."
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Get New GNOME/GTK Application Styles…"
+#~ msgstr "Дастур даражаси"
 
 #, fuzzy
 #~| msgid ""

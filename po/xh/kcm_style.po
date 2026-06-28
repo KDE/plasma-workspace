@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-28 00:46+0000\n"
 "PO-Revision-Date: 2002-11-08 09:44+0200\n"
 "Last-Translator: Thelma Lungcuzo <thelma@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -184,33 +184,34 @@ msgstr ""
 msgid "GNOME/GTK Application Style"
 msgstr "Umphakamo Wesicelo"
 
+#: ui/GtkStylePage.qml:38
+#, kde-format
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr ""
+
 #: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
 msgstr ""
 
-#: ui/GtkStylePage.qml:68
+#: ui/GtkStylePage.qml:85
 #, fuzzy, kde-format
 msgid "Preview…"
 msgstr "Uhlobo Lwemboniso yangaphambili"
 
-#: ui/GtkStylePage.qml:87
-#, kde-format
-msgid "Install from File…"
-msgstr ""
-
-#: ui/GtkStylePage.qml:92
-#, fuzzy, kde-format
-#| msgid "Application Level"
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Umphakamo Wesicelo"
-
-#: ui/GtkStylePage.qml:108
+#: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr ""
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
@@ -231,6 +232,11 @@ msgstr "Uhlobo lwe Widget"
 #| msgid "Widget Style"
 msgid "Configure Style…"
 msgstr "Uhlobo lwe Widget"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Get New GNOME/GTK Application Styles…"
+#~ msgstr "Umphakamo Wesicelo"
 
 #, fuzzy
 #~ msgid ""

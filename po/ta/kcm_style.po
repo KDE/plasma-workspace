@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-28 00:46+0000\n"
 "PO-Revision-Date: 2024-08-04 17:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -169,32 +169,35 @@ msgstr "மற்ற கருவிப்பட்டைகளில் பெ�
 msgid "GNOME/GTK Application Style"
 msgstr "GNOME/GTK செயலி தோற்றம்"
 
+#: ui/GtkStylePage.qml:38
+#, fuzzy, kde-format
+#| msgid "Install from File…"
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr "கோப்பிலிருந்து நிறுவு…"
+
 #: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
 msgstr "GTK தோற்றத்திட்டம்:"
 
-#: ui/GtkStylePage.qml:68
+#: ui/GtkStylePage.qml:85
 #, kde-format
 msgid "Preview…"
 msgstr "முன்தோற்றம்…"
 
-#: ui/GtkStylePage.qml:87
-#, kde-format
-msgid "Install from File…"
-msgstr "கோப்பிலிருந்து நிறுவு…"
-
-#: ui/GtkStylePage.qml:92
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "புதிய GNOME/GTK செயலி தோற்றத்திட்டங்களை பதிவிறக்கு…"
-
-#: ui/GtkStylePage.qml:108
+#: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "GTK தோற்றத்திட்ட பெட்டகத்தை தேர்வு செய்தல்"
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK தோற்றத்திட்ட பெட்டகம் (*.tar.xz *.tar.gz *.tar.bz2)"
@@ -213,6 +216,9 @@ msgstr "GNOME/GTK செயலி தோற்றத்தை அமை…"
 #, kde-format
 msgid "Configure Style…"
 msgstr "தோற்றத்தை அமை…"
+
+#~ msgid "Get New GNOME/GTK Application Styles…"
+#~ msgstr "புதிய GNOME/GTK செயலி தோற்றத்திட்டங்களை பதிவிறக்கு…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

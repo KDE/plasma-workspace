@@ -733,8 +733,8 @@ msgstr ""
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
-"Ha fallat mentre es redimensionava la imatge: ha fallat mentre s'escrivia al "
-"fitxer temporal"
+"Ha fallat mentre es redimensionava la imatge: ha fallat mentre s'escrivia en "
+"el fitxer temporal"
 
 #: src/usermodel.cpp:170
 #, kde-format
@@ -745,6 +745,3 @@ msgstr "El vostre compte"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancel·la"

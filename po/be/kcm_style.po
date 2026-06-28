@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-06-28 00:46+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -175,32 +175,35 @@ msgstr "Адмеціна другаснай панэлі інструмента�
 msgid "GNOME/GTK Application Style"
 msgstr "Стыль праграм GNOME/GTK"
 
+#: ui/GtkStylePage.qml:38
+#, fuzzy, kde-format
+#| msgid "Install from File…"
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr "Усталяваць з файла…"
+
 #: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr ""
+
+#: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
 msgstr "Тэма GTK:"
 
-#: ui/GtkStylePage.qml:68
+#: ui/GtkStylePage.qml:85
 #, kde-format
 msgid "Preview…"
 msgstr "Папярэдні прагляд…"
 
-#: ui/GtkStylePage.qml:87
-#, kde-format
-msgid "Install from File…"
-msgstr "Усталяваць з файла…"
-
-#: ui/GtkStylePage.qml:92
-#, kde-format
-msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Атрымаць новыя стылі праграм GNOME/GTK…"
-
-#: ui/GtkStylePage.qml:108
+#: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Абраць архіў тэмы GTK"
 
-#: ui/GtkStylePage.qml:110
+#: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Архіў тэмы GTK (*.tar.xz *.tar.gz *.tar.bz2)"
@@ -219,6 +222,9 @@ msgstr "Наладжванне стылю праграм GNOME/GTK…"
 #, kde-format
 msgid "Configure Style…"
 msgstr "Наладжванне стылю…"
+
+#~ msgid "Get New GNOME/GTK Application Styles…"
+#~ msgstr "Атрымаць новыя стылі праграм GNOME/GTK…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "
