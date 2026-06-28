@@ -247,8 +247,9 @@ private:
 
         match.setText(name);
 
-        QUrl url(service->storageId());
+        QUrl url;
         url.setScheme(QStringLiteral("applications"));
+        url.setPath(service->storageId());
         match.setData(url);
         match.setUrls({QUrl::fromLocalFile(service->entryPath())});
 
@@ -477,8 +478,9 @@ private:
                                     action.text(),
                                     service->name()));
 
-                QUrl url(service->storageId());
+                QUrl url;
                 url.setScheme(QStringLiteral("applications"));
+                url.setPath(service->storageId());
 
                 QUrlQuery urlQuery;
                 urlQuery.addQueryItem(QStringLiteral("action"), action.name());
