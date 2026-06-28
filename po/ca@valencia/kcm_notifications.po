@@ -114,7 +114,7 @@ msgid ""
 "a standalone widget."
 msgstr ""
 "No s'ha trobat cap giny «Notificacions» que es requerix per a mostrar les "
-"notificacions. Assegureu-vos que s'ha activat a la Safata del sistema o com "
+"notificacions. Assegureu-vos que s'ha activat en la Safata del sistema o com "
 "a giny autònom."
 
 #: ui/main.qml:107

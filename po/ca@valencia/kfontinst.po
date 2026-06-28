@@ -348,7 +348,7 @@ msgstr "…i %1 més"
 #: kcmfontinst/FontList.cpp:1001
 #, kde-format
 msgid "%1 [%2]"
-msgstr "%1 - [%2]"
+msgstr "%1 – [%2]"
 
 #: kcmfontinst/FontList.cpp:1300
 #, kde-format
