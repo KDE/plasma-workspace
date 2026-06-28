@@ -345,7 +345,7 @@ msgstr "…i %1 més"
 #: kcmfontinst/FontList.cpp:1007
 #, kde-format
 msgid "%1 [%2]"
-msgstr "%1 - [%2]"
+msgstr "%1 – [%2]"
 
 #: kcmfontinst/FontList.cpp:1306
 #, kde-format
@@ -472,7 +472,7 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Tots els tipus de lletra</i> conté tots els tipus de lletra "
-"instal·lats en el sistema - tant a «Sistema» com a «Personal».</"
+"instal·lats en el sistema – tant a «Sistema» com a «Personal».</"
 "li><li><i>Sistema</i> conté tots els tipus de lletra que estan instal·lats a "
 "tot el sistema (disponible per a tots els usuaris).</li><li><i>Personal</i> "
 "conté els tipus de lletra personals.</li> <li><i>Sense classificar</i> conté "
@@ -678,7 +678,7 @@ msgstr "Gestioneu els tipus de lletra"
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format
 msgid "(C) Craig Drummond, 2000 - 2009"
-msgstr "(C) Craig Drummond, 2000 - 2009"
+msgstr "(C) Craig Drummond, 2000 – 2009"
 
 #: kcmfontinst/KCmFontInst.cpp:174
 #, kde-format
@@ -785,7 +785,7 @@ msgstr ""
 "tipus de lletra utilitzant Konqueror: teclejant fonts:/ en la barra "
 "d'ubicació de Konqueror es mostraran els tipus de lletra instal·lats. Per a "
 "instal·lar un tipus de lletra, senzillament copieu-lo a dins de la carpeta "
-"apropiada -  «%1» sols per als vostres tipus de lletra, o «%2» per als tipus "
+"apropiada –  «%1» sols per als vostres tipus de lletra, o «%2» per als tipus "
 "de lletra per a tot el sistema (disponibles per a tothom).</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:437

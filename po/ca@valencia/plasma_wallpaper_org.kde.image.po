@@ -143,7 +143,7 @@ msgid ""
 "yourself: %1"
 msgstr ""
 "Hi ha una cometa simple extraviada en el nom de fitxer d'este fons de "
-"pantalla (') - contacteu amb l'autor dels fons de pantalla perquè ho "
+"pantalla (') – contacteu amb l'autor dels fons de pantalla perquè ho "
 "corregisca, o canvieu de nom el fitxer: %1"
 
 #: plasma-apply-wallpaperimage.cpp:85

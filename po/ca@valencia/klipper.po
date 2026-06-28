@@ -564,7 +564,7 @@ msgstr "Mostra els elements a la posició del ratolí"
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "%1 - Eina de porta-retalls"
+msgstr "%1 – Eina de porta-retalls"
 
 #: klipper.cpp:567
 #, kde-kuit-format
@@ -855,7 +855,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "%1 - Elements del porta-retalls"
+msgstr "%1 – Elements del porta-retalls"
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -962,7 +962,7 @@ msgstr "Mantenidor"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "SPDX-FileCopyrightText: 2019 Empar Montoro Martín,Sebastià Pla i Sanz"
+msgstr "Empar Montoro Martín,Sebastià Pla i Sanz"
 
 #: main.cpp:46
 #, kde-format

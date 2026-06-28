@@ -185,7 +185,7 @@ msgstr[1] "%1 minuts"
 #: package/contents/ui/main.qml:386
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
-msgstr "Entrada en minuts - mín. 1, màx. 600"
+msgstr "Entrada en minuts – mín. 1, màx. 600"
 
 #: package/contents/ui/main.qml:404
 #, kde-format

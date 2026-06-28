@@ -24,7 +24,7 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "SPDX-FileCopyrightText: 2019 Empar Montoro Martín,Josep M. Ferrer"
+msgstr "Empar Montoro Martín,Josep M. Ferrer"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -39,7 +39,7 @@ msgstr "KCMInit"
 #: main.cpp:172
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
-msgstr "KCMInit - executa les inicialitzacions dels mòduls de control."
+msgstr "KCMInit – executa les inicialitzacions dels mòduls de control."
 
 #: main.cpp:178
 #, kde-format
