@@ -56,24 +56,11 @@ InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbst
     : QSortFilterProxyModel(parentModel)
     , m_parentModel(parentModel)
 {
-    connect(parentModel, &AbstractModel::favoritesModelChanged, this, &InvalidAppsFilterProxy::connectNewFavoritesModel);
-    connectNewFavoritesModel();
-
     sourceModel->setParent(this);
     setSourceModel(sourceModel);
 }
 
 InvalidAppsFilterProxy::~InvalidAppsFilterProxy() = default;
-
-void InvalidAppsFilterProxy::connectNewFavoritesModel()
-{
-    auto *favoritesModel = static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel());
-    if (favoritesModel) {
-        connect(favoritesModel, &KAStatsFavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
-    }
-
-    invalidate();
-}
 
 bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
