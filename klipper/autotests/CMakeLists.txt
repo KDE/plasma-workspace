@@ -22,8 +22,10 @@ target_link_libraries(testKlipperUtils
 add_test(NAME klipper-testUtils COMMAND testKlipperUtils)
 ecm_mark_as_test(testKlipperUtils)
 # Klipper test
-ecm_add_test(klippertest.cpp TEST_NAME klippertest
-    LINK_LIBRARIES Qt::Test KF6::KIOCore klipper)
+add_executable(klippertest klippertest.cpp)
+target_link_libraries(klippertest PRIVATE klipper Qt::Test KF6::Service KF6::ConfigCore)
+
+add_test(NAME klippertest COMMAND dbus-run-session kwin_wayland --exit-with-session=$<TARGET_FILE:klippertest>)
 
 add_test(
     NAME klipper_v3migrationtest
