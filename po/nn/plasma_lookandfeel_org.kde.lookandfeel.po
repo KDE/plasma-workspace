@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-10-26 12:28+0100\n"
+"PO-Revision-Date: 2026-03-05 20:25+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -246,7 +246,7 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Når maskina vert starta på nytt, vil ho starta systeminnstillingane for "
-"oppsett av fastvara."
+"oppsett av fastvare."
 
 #: contents/logout/Logout.qml:201
 #, kde-format
