@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-23 02:42+0000\n"
-"PO-Revision-Date: 2025-10-26 12:46+0100\n"
+"PO-Revision-Date: 2026-06-28 11:15+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Nyleg brukte"
 #: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Stadar"
 
 #: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
@@ -151,10 +151,9 @@ msgid "Open Containing Folder"
 msgstr "Opna foreldermappa"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Gløym fila"
+msgstr "Gløym mappa"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -172,10 +171,9 @@ msgid "Forget All Applications"
 msgstr "Gløym alle programma"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Gløym alle filer"
+msgstr "Gløym alle mappene"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -198,16 +196,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Denne meldinga skal aldri vera synleg! Bruk KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Nyleg brukte filer"
+msgstr "Nyleg brukte stadar"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Ofte brukte filer"
+msgstr "Ofte brukte stadar"
 
 #: rootmodel.cpp:587
 #, kde-format

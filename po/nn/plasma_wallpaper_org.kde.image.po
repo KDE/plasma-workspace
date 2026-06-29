@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2025-10-26 12:52+0100\n"
+"PO-Revision-Date: 2026-06-28 11:17+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -83,7 +83,7 @@ msgstr "Byt dynamiske bakgrunnsbilete:"
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "Basert på om Plasma-stilen er lyd eller mørk "
+msgstr "Basert på om Plasma-stilen er lys eller mørk "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format
@@ -167,25 +167,25 @@ msgstr "Hent nye bakgrunnsbilete …"
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Merk alle"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Merk alle lysbileta"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "Fjern merking"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Fjern all merking"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
