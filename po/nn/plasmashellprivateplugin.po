@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2024-09-01 15:09+0200\n"
+"PO-Revision-Date: 2026-06-28 11:40+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -138,8 +138,7 @@ msgid "Next Decade"
 msgstr "Neste tiår"
 
 #: calendar/qml/MonthViewHeader.qml:283
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "Hald open"
@@ -184,11 +183,7 @@ msgid "Filters"
 msgstr "Filter"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for an unknown older version of Plasma and is not "
-#| "compatible with Plasma %1. Please contact the widget's author for an "
-#| "updated version."
+#, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
@@ -199,10 +194,7 @@ msgstr ""
 "å skaffa ein oppdatert versjon."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please contact the widget's author for an updated version."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
@@ -212,10 +204,7 @@ msgstr ""
 "oppdatert versjon."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
@@ -224,18 +213,15 @@ msgstr ""
 "med Plasma %2. Oppdater Plasma-versjonen din for å ta elementet i bruk."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
 "Dette skjermelementet er laga for Plasma versjon %1 og er ikkje kompatibelt "
-"med den nyaste versjonen av Plasma. Oppdater Plasma-versjonen din for å ta "
-"elementet i bruk."
+"med den eldre versjonen av Plasma som er installert. Oppdater Plasma-"
+"versjonen din for å ta elementet i bruk."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
@@ -318,10 +304,9 @@ msgid "Online Services"
 msgstr "Nett-tenester"
 
 #: shellprivate/widgetexplorer.cpp:126
-#, fuzzy
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Systeminformasjon"
+msgstr "Personinformasjon"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
@@ -364,13 +349,13 @@ msgid "Running"
 msgstr "Element som køyrer"
 
 #: shellprivate/widgetexplorer.cpp:158
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Avinstallerbare element"
+msgstr "Brukar­installert"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -423,47 +408,47 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "Den valde tidssona er ikkje tilgjengeleg for visualisering på kartet"
 
 #: timezoneselector/TimezoneSelector.qml:122
 #: timezoneselector/TimezoneSelector.qml:301
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Vel …"
 
 #: timezoneselector/TimezoneSelector.qml:124
 #: timezoneselector/TimezoneSelector.qml:293
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Region:"
 
 #: timezoneselector/TimezoneSelector.qml:146
 #: timezoneselector/TimezoneSelector.qml:326
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Tidssone:"
 
 #: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Vis større"
 
 #: timezoneselector/TimezoneSelector.qml:264
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Vis mindre"
 
 #: timezoneselector/TimezoneSelector.qml:305
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Val av tidssone-region"
 
 #: timezoneselector/TimezoneSelector.qml:337
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Val av tidssone"

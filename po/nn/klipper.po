@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-16 00:47+0000\n"
-"PO-Revision-Date: 2024-10-27 14:40+0100\n"
+"PO-Revision-Date: 2026-06-28 11:37+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -260,20 +260,19 @@ msgstr "Tilbake til utklippstavla"
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #: declarative/qml/BarcodePage.qml:75
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "Eit bilete av QR-koden er no kopiert til utklippstavla"
 
 #: declarative/qml/BarcodePage.qml:78
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Legg til på utklippstavla"
+msgstr "Kopier bilete av QR-koden til utklippstavla"
 
 #: declarative/qml/BarcodePage.qml:113
 #, kde-format
@@ -309,15 +308,14 @@ msgid "Clear History"
 msgstr "Tøm loggen"
 
 #: declarative/qml/ClipboardMenu.qml:339
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Tøm loggen"
+msgstr "Fullstendig logg"
 
 #: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Berre stjernemerkte"
 
 #: declarative/qml/ClipboardMenu.qml:451
 #, kde-format
@@ -350,15 +348,14 @@ msgid "Remove from history"
 msgstr "Fjern frå loggen"
 
 #: declarative/qml/DelegateToolButtons.qml:59
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Fjern frå loggen"
+msgstr "Fjern stjerne"
 
 #: declarative/qml/DelegateToolButtons.qml:59
 #, kde-format
 msgid "Star"
-msgstr ""
+msgstr "Stjerne"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
@@ -587,20 +584,21 @@ msgid "Clear Clipboard History"
 msgstr "Tøm utklippshistorikken"
 
 #: historymodel.cpp:363
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1 × %2 %3 b/p"
+msgstr "%1 × %2"
 
 #: historymodel.cpp:543
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Elementet er stjernemerkt. Er du sikker på at du vil sletta det frå loggen?"
 
 #: historymodel.cpp:544
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Fjern stjernemerkt element"
 
 #: klipper.cpp:77
 #, kde-format

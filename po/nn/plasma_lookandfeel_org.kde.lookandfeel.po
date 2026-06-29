@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2025-02-16 12:36+0100\n"
+"PO-Revision-Date: 2026-06-28 11:10+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 26.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -70,19 +70,17 @@ msgstr[1] ""
 "nytt, vil dei mista eventuelt ulagra arbeid."
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"Når maskina vert starta på nytt, vil ho starta systeminnstillingane for "
-"oppsett av fastvara."
+"Når maskina vert starta på nytt, vil ho gå til UEFI-oppsett av fastvare."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Når maskina vert starta på nytt, vil ho starta systeminnstillingane for "
-"oppsett av fastvara."
+"oppsett av fastvare."
 
 #: contents/logout/Logout.qml:208
 #, kde-format
@@ -90,11 +88,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Når maskina vert starta på nytt, vil ho starta oppstartslastar-menyen."
 
 #: contents/logout/Logout.qml:221
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the boot loader menu."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Når maskina vert starta på nytt, vil ho starta oppstartslastar-menyen."
+msgstr "Når maskina vert starta på nytt, vil ho byta til %1."
 
 #: contents/logout/Logout.qml:243
 #, kde-format

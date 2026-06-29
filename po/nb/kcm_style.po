@@ -220,6 +220,3 @@ msgstr "Sett opp GNOME/GTK-programstil …"
 #, kde-format
 msgid "Configure Style…"
 msgstr "Sett opp stil …"
-
-#~ msgid "Get New GNOME/GTK Application Styles…"
-#~ msgstr "Hent nye GNOME/GTK-programstiler …"
