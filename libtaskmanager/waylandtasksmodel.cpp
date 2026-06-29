@@ -89,8 +89,6 @@ Q_SIGNALS:
     void maximizeableChanged();
     void fullscreenableChanged();
     void skiptaskbarChanged();
-    void shadeableChanged();
-    void shadedChanged();
     void canSetNoBorderChanged();
     void hasNoBorderChanged();
     void excludeFromCaptureChanged();
@@ -233,14 +231,6 @@ protected:
         if (diff & state::state_skiptaskbar) {
             windowState.setFlag(state::state_skiptaskbar, flags & state::state_skiptaskbar);
             Q_EMIT skipTaskbarChanged();
-        }
-        if (diff & state::state_shadeable) {
-            windowState.setFlag(state::state_shadeable, flags & state::state_shadeable);
-            Q_EMIT shadeableChanged();
-        }
-        if (diff & state::state_shaded) {
-            windowState.setFlag(state::state_shaded, flags & state::state_shaded);
-            Q_EMIT shadedChanged();
         }
         if (diff & state::state_movable) {
             windowState.setFlag(state::state_movable, flags & state::state_movable);
@@ -724,10 +714,6 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         this->dataChanged(window, IsKeepBelow);
     });
 
-    QObject::connect(window, &PlasmaWindow::shadeableChanged, q, [window, this] {
-        this->dataChanged(window, IsShadeable);
-    });
-
     QObject::connect(window, &PlasmaWindow::canSetNoBorderChanged, q, [window, this] {
         this->dataChanged(window, CanSetNoBorder);
     });
@@ -945,10 +931,6 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->windowState.testFlag(PlasmaWindow::state::state_fullscreenable);
     } else if (role == IsFullScreen) {
         return window->windowState.testFlag(PlasmaWindow::state::state_fullscreen);
-    } else if (role == IsShadeable) {
-        return window->windowState.testFlag(PlasmaWindow::state::state_shadeable);
-    } else if (role == IsShaded) {
-        return window->windowState.testFlag(PlasmaWindow::state::state_shaded);
     } else if (role == CanSetNoBorder) {
         return window->windowState.testFlag(PlasmaWindow::state::state_can_set_no_border);
     } else if (role == HasNoBorder) {
@@ -1151,21 +1133,6 @@ void WaylandTasksModel::requestToggleFullScreen(const QModelIndex &index)
     } else {
         window->set_state(PlasmaWindow::state::state_fullscreen, PlasmaWindow::state::state_fullscreen);
     }
-}
-
-void WaylandTasksModel::requestToggleShaded(const QModelIndex &index)
-{
-    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
-        return;
-    }
-
-    auto &window = d->windows.at(index.row());
-
-    if (window->windowState & PlasmaWindow::state::state_shaded) {
-        window->set_state(PlasmaWindow::state::state_shaded, 0);
-    } else {
-        window->set_state(PlasmaWindow::state::state_shaded, PlasmaWindow::state::state_shaded);
-    };
 }
 
 void WaylandTasksModel::requestToggleNoBorder(const QModelIndex &index)

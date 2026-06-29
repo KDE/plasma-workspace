@@ -132,16 +132,6 @@ public:
     void requestToggleFullScreen(const QModelIndex &index) override;
 
     /**
-     * Request toggling the shaded state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleShaded(const QModelIndex &index) override;
-
-    /**
      * Request toggling the no border state of the task at given index.
      *
      * This is meant for tasks that have an associated window, and may be

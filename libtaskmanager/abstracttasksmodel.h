@@ -64,8 +64,6 @@ public:
         IsKeepBelow, /**< Task (i.e. window) is keep-below. */
         IsFullScreenable, /**< requestToggleFullScreen (see below) available. */
         IsFullScreen, /**< Task (i.e. window) is fullscreen. */
-        IsShadeable, /**< requestToggleShade (see below) available. */
-        IsShaded, /**< Task (i.e. window) is shaded. */
         IsVirtualDesktopsChangeable, /**< requestVirtualDesktop (see below) available. */
         VirtualDesktops, /**< Virtual desktops for the task (i.e. window). */
         IsOnAllVirtualDesktops, /**< Task is on all virtual desktops. */
@@ -231,18 +229,6 @@ public:
      * @param index An index in this tasks model.
      **/
     void requestToggleFullScreen(const QModelIndex &index) override;
-
-    /**
-     * Request toggling the shaded state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * This base implementation does nothing.
-     *
-     * @param index An index in this tasks model.
-     **/
-    void requestToggleShaded(const QModelIndex &index) override;
 
     /**
      * Request toggling the no border state of the task at given index.

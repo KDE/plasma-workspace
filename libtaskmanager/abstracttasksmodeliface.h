@@ -131,16 +131,6 @@ public:
     virtual void requestToggleFullScreen(const QModelIndex &index) = 0;
 
     /**
-     * Request toggling the shaded state of the task at the given index.
-     *
-     * This is meant for tasks that have an associated window, and may be
-     * a no-op when there is no window.
-     *
-     * @param index An index in this tasks model.
-     **/
-    virtual void requestToggleShaded(const QModelIndex &index) = 0;
-
-    /**
      * Request entering the window at the given index on the specified virtual desktops,
      * leaving any other desktops.
      *

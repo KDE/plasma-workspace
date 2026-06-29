@@ -1595,13 +1595,6 @@ void TasksModel::requestToggleFullScreen(const QModelIndex &index)
     }
 }
 
-void TasksModel::requestToggleShaded(const QModelIndex &index)
-{
-    if (index.isValid() && index.model() == this) {
-        d->abstractTasksSourceModel->requestToggleShaded(mapToSource(index));
-    }
-}
-
 void TasksModel::requestToggleNoBorder(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {

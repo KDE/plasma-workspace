@@ -443,31 +443,6 @@ void testRequest(AbstractWindowTasksModel &model)
         QTRY_VERIFY(!index.data(AbstractTasksModel::IsFullScreen).toBool());
     }
 
-    if (KWindowSystem::isPlatformX11()) {
-        qDebug("requestToggleShaded");
-        QCoreApplication::processEvents();
-        dataChangedSpy.clear();
-        model.requestToggleShaded(index);
-        if (KWindowSystem::isPlatformX11()) {
-            QX11Info::getTimestamp(); // roundtrip
-        }
-        if (dataChangedSpy.empty()) {
-            QVERIFY(dataChangedSpy.wait(timeout));
-        }
-        QTRY_VERIFY(index.data(AbstractTasksModel::IsShaded).toBool());
-
-        QCoreApplication::processEvents();
-        dataChangedSpy.clear();
-        model.requestToggleShaded(index);
-        if (KWindowSystem::isPlatformX11()) {
-            QX11Info::getTimestamp(); // roundtrip
-        }
-        if (dataChangedSpy.empty()) {
-            QVERIFY(dataChangedSpy.wait(timeout));
-        }
-        QTRY_VERIFY(!index.data(AbstractTasksModel::IsShaded).toBool());
-    }
-
     QSignalSpy rowsRemovedSpy(&model, &AbstractWindowTasksModel::rowsRemoved);
     {
         qDebug("requestClose");

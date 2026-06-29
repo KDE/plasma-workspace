@@ -710,10 +710,6 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             return d->all(proxyIndex, AbstractTasksModel::IsFullScreenable);
         } else if (role == AbstractTasksModel::IsFullScreen) {
             return d->all(proxyIndex, AbstractTasksModel::IsFullScreen);
-        } else if (role == AbstractTasksModel::IsShadeable) {
-            return d->all(proxyIndex, AbstractTasksModel::IsShadeable);
-        } else if (role == AbstractTasksModel::IsShaded) {
-            return d->all(proxyIndex, AbstractTasksModel::IsShaded);
         } else if (role == AbstractTasksModel::CanSetNoBorder) {
             return d->all(proxyIndex, AbstractTasksModel::CanSetNoBorder);
         } else if (role == AbstractTasksModel::HasNoBorder) {
@@ -1108,27 +1104,6 @@ void TaskGroupingProxyModel::requestToggleFullScreen(const QModelIndex &index)
 
             if (child.data(AbstractTasksModel::IsFullScreen).toBool() != goalState) {
                 d->abstractTasksSourceModel->requestToggleFullScreen(mapToSource(child));
-            }
-        }
-    }
-}
-
-void TaskGroupingProxyModel::requestToggleShaded(const QModelIndex &index)
-{
-    if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
-        return;
-    }
-
-    if (index.parent().isValid() || !d->isGroup(index.row())) {
-        d->abstractTasksSourceModel->requestToggleShaded(mapToSource(index));
-    } else {
-        const bool goalState = !index.data(AbstractTasksModel::IsShaded).toBool();
-
-        for (int i = 0; i < rowCount(index); ++i) {
-            const QModelIndex &child = this->index(i, 0, index);
-
-            if (child.data(AbstractTasksModel::IsShaded).toBool() != goalState) {
-                d->abstractTasksSourceModel->requestToggleShaded(mapToSource(child));
             }
         }
     }

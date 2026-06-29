@@ -164,20 +164,6 @@ void AbstractTasksProxyModelIface::requestToggleFullScreen(const QModelIndex &in
     }
 }
 
-void AbstractTasksProxyModelIface::requestToggleShaded(const QModelIndex &index)
-{
-    if (!index.isValid()) {
-        return;
-    }
-
-    const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
-
-    if (m) {
-        const_cast<AbstractTasksModelIface *>(m)->requestToggleShaded(sourceIndex);
-    }
-}
-
 void AbstractTasksProxyModelIface::requestToggleNoBorder(const QModelIndex &index)
 {
     if (!index.isValid()) {

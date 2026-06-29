@@ -72,8 +72,6 @@ QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
     case IsKeepBelow:
     case IsFullScreenable:
     case IsFullScreen:
-    case IsShadeable:
-    case IsShaded:
     case IsVirtualDesktopsChangeable:
         return false;
     case VirtualDesktops:
@@ -166,11 +164,6 @@ void AbstractTasksModel::requestToggleKeepBelow(const QModelIndex &index)
 }
 
 void AbstractTasksModel::requestToggleFullScreen(const QModelIndex &index)
-{
-    Q_UNUSED(index)
-}
-
-void AbstractTasksModel::requestToggleShaded(const QModelIndex &index)
 {
     Q_UNUSED(index)
 }
