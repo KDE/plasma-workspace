@@ -291,7 +291,7 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType operationResult, QVarian
         if (it->state == Checking) {
             auto *access = device.as<Solid::StorageAccess>();
             it->isChecked = true;
-            it->needRepair = (operationResult == Solid::NoError) ? !operationInfo.toBool() && access->canRepair() : false;
+            it->needRepair = (operationResult == Solid::NoError) ? !operationInfo.toBool() && access && access->canRepair() : false;
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " check done, need repair : " << it->needRepair;
             it->state = CheckDone;
         } else if (it->state == Repairing) {
@@ -300,14 +300,14 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType operationResult, QVarian
             it->state = RepairDone;
         } else if (it->state == Mounting) {
             auto access = device.as<Solid::StorageAccess>();
-            it->isMounted = access->isAccessible();
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " Mount signal arrived. State changed : " << access->isAccessible();
+            it->isMounted = access && access->isAccessible();
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " Mount signal arrived. State changed : " << it->isMounted;
             it->state = MountDone;
         } else if (it->state == Unmounting) {
             auto access = device.as<Solid::StorageAccess>();
-            it->isMounted = access->isAccessible();
+            it->isMounted = access && access->isAccessible();
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi
-                                             << " Unmount signal arrived. State changed : " << access->isAccessible();
+                                             << " Unmount signal arrived. State changed : " << it->isMounted;
             it->state = UnmountDone;
         } else {
             it->state = Idle;
