@@ -166,7 +166,7 @@
         "Name[zh_CN]": "书签",
         "Name[zh_TW]": "書籤"
     },
+    "X-Plasma-Runner-Min-Letter-Count": 2,
     "X-Plasma-Runner-Unique-Results": true,
-    "X-Plasma-Runner-Weak-Results": true,
-    "X-Plasma-Runner-Min-Letter-Count": 2
+    "X-Plasma-Runner-Weak-Results": true
 }
