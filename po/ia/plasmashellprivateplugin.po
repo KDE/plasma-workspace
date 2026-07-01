@@ -505,4 +505,4 @@ msgstr "Selector delocation de fuso horari"
 #~ msgstr "Tempore de execution: %1ms"
 
 #~ msgid "Download Wallpaper Plugins"
-#~ msgstr "Discarga plugins de tapete de papiro"
+#~ msgstr "Discarga plugins de fundo de schermo"

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-28 00:46+0000\n"
-"PO-Revision-Date: 2024-07-18 11:22+0200\n"
+"PO-Revision-Date: 2026-06-30 22:09+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -172,8 +172,7 @@ msgid "GNOME/GTK Application Style"
 msgstr "GNOME/GTK-programstil"
 
 #: ui/GtkStylePage.qml:38
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
 msgstr "Installer frå fil …"
@@ -182,7 +181,7 @@ msgstr "Installer frå fil …"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr ""
+msgstr "Hent nye …"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format

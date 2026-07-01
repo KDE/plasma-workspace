@@ -62,7 +62,7 @@ msgstr "[Altere actiones]"
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
-msgstr "Actiones de tapete de papiro"
+msgstr "Actiones de fundo de schermo"
 
 #: menu.cpp:295
 #, kde-format

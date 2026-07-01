@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Wallpaper"
-msgstr "Tapete de papiro"
+msgstr "Fundo de schermo"
 
 #: ui/main.qml:41
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "Assignaper Omne Schermos"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
-msgstr "Typo de Tapete de papiro:"
+msgstr "Typo de Fundo de schermo:"
 
 #: ui/main.qml:110
 #, kde-format
