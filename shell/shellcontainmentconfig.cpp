@@ -103,12 +103,16 @@ void ScreenPoolModel::load()
         Data d;
         unknownScreenIds.remove(knownId);
         d.id = knownId;
-        if (screen->name().contains(u"eDP"_s)) {
-            d.name = i18n("Internal Screen on %1", screen->name());
-        } else if (screen->model().contains(screen->name())) {
+        if (screen->name().contains(u"eDP"_s)
+            || screen->name().contains(u"LVDS"_s)
+            || screen->name().contains(u"DSI"_s)) {
+            d.name = i18n("Built-in Screen");
+        } else if (!screen->manufacturer().isEmpty() && !screen->model().isEmpty()) {
+            d.name = screen->manufacturer() + u' ' + screen->model();
+        } else if (!screen->model().isEmpty()) {
             d.name = screen->model();
         } else {
-            d.name = i18nc("Screen manufacturer and model on connector", "%1 %2 on %3", screen->manufacturer(), screen->model(), screen->name());
+            d.name = screen->name();
         }
         d.primary = knownId == 0;
         d.enabled = true;
