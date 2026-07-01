@@ -489,7 +489,7 @@ msgstr "Monstra Minus Optiones ..."
 #~ "selected theme."
 #~ msgstr ""
 #~ "Tu disposition currente e configuration de pannellos, widgets de "
-#~ "scriptorio, e tapetes de papiro essera perdite e ponite al disposition "
+#~ "scriptorio, e fundos de schermo essera perdite e ponite al disposition "
 #~ "predefinite fornite per le thema seligite."
 
 #~ msgid "Use desktop layout from theme"

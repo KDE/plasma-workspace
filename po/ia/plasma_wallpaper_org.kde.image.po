@@ -38,7 +38,7 @@ msgstr "Aperi imagine"
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr "Directorio con le tapete de papiro desde que monstrar diapositivas"
+msgstr "Directorio con le fundo de schermo desde que monstrar diapositivas"
 
 #: imagepackage/contents/ui/config.qml:156
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "Centrate"
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Commuta Tapetes de papiro dynamic:"
+msgstr "Commuta Fundos de schermo dynamic:"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
@@ -130,7 +130,7 @@ msgstr "Selige le color de fundo"
 #: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Aperi imagine de tapete de papiro"
+msgstr "Aperi imagine de fundo de schermo"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, kde-format
@@ -147,7 +147,7 @@ msgstr "Adde…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Asse imagine de tapete de papiro…"
+msgstr "Asse imagine de fundo de schermo…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:99
 #, kde-format
@@ -159,7 +159,7 @@ msgstr "Obtene Nove…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Obtene nove imagines de tapete de papiro..."
+msgstr "Obtene nove imagines de fundo de schermo..."
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
@@ -193,19 +193,19 @@ msgstr "Aperi dossier continente"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, kde-format
 msgid "Restore wallpaper"
-msgstr "Restabili Tapete de papiro"
+msgstr "Restabili Fundo de schermo"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, kde-format
 msgid "Remove Wallpaper"
-msgstr "Remove Tapete de papiro"
+msgstr "Remove Fundo de schermo"
 
 #: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
-"Iste instrumento te permitte fixar un image como tapete de papiro per le "
+"Iste instrumento te permitte fixar un image como fundo de schermo per le "
 "session de Plasma. "
 
 #: plasma-apply-wallpaperimage.cpp:30
@@ -214,8 +214,8 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
-"Un file de image o un pacchetto kpackage de tapete de papiro installate que "
-"tu vole fixar como le tapete de papiro de tu session de Plasma"
+"Un file de image o un pacchetto kpackage de fundo de schermo installate que "
+"tu vole fixar como le fundo de schermo de tu session de Plasma"
 
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
@@ -231,7 +231,7 @@ msgid ""
 "yourself: %1"
 msgstr ""
 "Il ha un singule citation sporadic in le nomine de file de iste tapete de "
-"papiro (') - per favor tu continge le autor de tapete de papiro per corriger "
+"papiro (') - per favor tu continge le autor de fundo de schermo per corriger "
 "lo, o renomina le file per te mesme: %1"
 
 #: plasma-apply-wallpaperimage.cpp:96
@@ -243,7 +243,7 @@ msgstr "Modo de remplir specificate invalide: %1"
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr ""
-"Un error occurreva durante que essayava fixar le tapete de papiro de "
+"Un error occurreva durante que essayava fixar le fundo de schermo de "
 "Plasma:\n"
 
 #: plasma-apply-wallpaperimage.cpp:116
@@ -251,14 +251,14 @@ msgstr ""
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr ""
-"Fixate con successo le tapete de papiro per omne le scriptorios al %1 basate "
+"Fixate con successo le fundo de schermo per omne le scriptorios al %1 basate "
 "sur KPackage"
 
 #: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
-"Fixate con successo le tapete de papiro per omne le scriptorios al  imagine "
+"Fixate con successo le fundo de schermo per omne le scriptorios al  imagine "
 "%1"
 
 #: plasma-apply-wallpaperimage.cpp:125
@@ -267,13 +267,13 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
-"Le file passate per esser fixate como tapete de papiro non exite, o nos non "
-"pote identificar lo como tapete de papiro: %1"
+"Le file passate per esser fixate como fundo de schermo non exite, o nos non "
+"pote identificar lo como fundo de schermo: %1"
 
 #: plugin/imagebackend.cpp:42
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr "Proxime imagine de tapete de papiro"
+msgstr "Proxime imagine de fundo de schermo"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:384
@@ -372,13 +372,13 @@ msgstr "Aperi dossier…"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr "Il non ha locationes de tapete de papiro configurate"
+msgstr "Il non ha locationes de fundo de schermo configurate"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Fixa como Tapete de papiro"
+msgstr "Fixa como Fundo de schermo"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
@@ -403,7 +403,7 @@ msgstr "Ambe"
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr ""
-"Un error occurreva durante que essayava fixar le tapete de papiro de Plasma:"
+"Un error occurreva durante que essayava fixar le fundo de schermo de Plasma:"
 "<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:108
@@ -437,27 +437,27 @@ msgstr ""
 #~ msgstr "Adde imagine..."
 
 #~ msgid "Recommended wallpaper file"
-#~ msgstr "Reccomendate file de tapete de papiro"
+#~ msgstr "Reccomendate file de fundo de schermo"
 
 #~ msgid "There are no wallpapers in this slideshow"
-#~ msgstr "Il non ha  tapetes de papiro in iste sequentia de diapositivas"
+#~ msgstr "Il non ha  fundos de schermo in iste sequentia de diapositivas"
 
 #~ msgid "Add Custom Wallpaper"
-#~ msgstr "Adde Tapete de papiro personalisate"
+#~ msgstr "Adde Fundo de schermo personalisate"
 
 #~ msgid "Remove wallpaper"
-#~ msgstr "Remove Tapete de papiro"
+#~ msgstr "Remove Fundo de schermo"
 
 #~ msgid "%1 by %2"
 #~ msgstr "%1 per %2"
 
 #~ msgid "Wallpapers"
-#~ msgstr "Tapetes de papiro"
+#~ msgstr "Fundos de schermo"
 
 #, fuzzy
 #~| msgid "Download new wallpapers"
 #~ msgid "Download Wallpapers"
-#~ msgstr "Discarga nove tapetes de papiro"
+#~ msgstr "Discarga nove fundos de schermo"
 
 #~ msgid "Open..."
 #~ msgstr "Aperir..."
@@ -488,7 +488,7 @@ msgstr ""
 #~ msgstr "&Color:"
 
 #~ msgid "Change wallpaper frame color"
-#~ msgstr "Modifica color de quadro de tapete de papiro"
+#~ msgstr "Modifica color de quadro de fundo de schermo"
 
 #~ msgid ""
 #~ "Change the color of the frame that it may be visible when the wallpaper "
@@ -507,13 +507,13 @@ msgstr ""
 #~ msgstr "hh 'Horas' mm 'Mins' ss 'Secs'"
 
 #~ msgid "&My downloaded wallpapers:"
-#~ msgstr "&Mi discargate tapetes de papiro"
+#~ msgstr "&Mi discargate fundos de schermo"
 
 #~ msgid ""
 #~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
 #~ "slideshow"
 #~ msgstr ""
-#~ "Usa tapetes de papiros que io ha discargate con \"Obtene nove tapetes de "
+#~ "Usa fundos de schermos que io ha discargate con \"Obtene nove tapetes de "
 #~ "papiro...\" in sequentia de diapositivas"
 
 #~ msgid "Custom folders:"
@@ -543,10 +543,10 @@ msgstr ""
 #~ "weight:600;\">Imagines</span></p></body></html>"
 
 #~ msgid "Finding images for the wallpaper slideshow."
-#~ msgstr "Trovar images pro le monstra de diapositivas del tapete de papiro."
+#~ msgstr "Trovar images pro le monstra de diapositivas del fundo de schermo."
 
 #~ msgid "Adding wallpaper package in %1"
-#~ msgstr "Adder pacchetto de tapete de papiro in %1"
+#~ msgstr "Adder pacchetto de fundo de schermo in %1"
 
 #~ msgid "Adding image %1"
 #~ msgstr "Adder image %1"

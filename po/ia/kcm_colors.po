@@ -77,13 +77,13 @@ msgid ""
 "generated color or default color"
 msgstr ""
 "Le ultime color de accento personalisate usate ante que le usator commutava "
-"al color generate de  tapete de papiro o color predefinite "
+"al color generate de  fundo de schermo o color predefinite "
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr "Si color de accento ex tapete de papiro deberea esser applicate"
+msgstr "Si color de accento ex fundo de schermo deberea esser applicate"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -1262,7 +1262,7 @@ msgstr "Color de accento ex  schema de color"
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
-msgstr "Color de accento ex tapete de papiro "
+msgstr "Color de accento ex fundo de schermo "
 
 #: ui/AccentColorUI.qml:29
 #, kde-format
@@ -1421,7 +1421,7 @@ msgstr "Files de Schema de Color (*.colors)"
 
 #~ msgctxt "@option:radio wallpaper accent color option"
 #~ msgid "From current wallpaper"
-#~ msgstr "Ex le tapete de papiro currente"
+#~ msgstr "Ex le fundo de schermo currente"
 
 #~ msgid "Custom:"
 #~ msgstr "Personalisa:"
