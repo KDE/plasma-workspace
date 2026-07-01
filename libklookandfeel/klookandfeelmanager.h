@@ -83,7 +83,6 @@ public:
     void setPlasmaTheme(const QString &theme);
     void setCursorTheme(const QString theme);
     void setSplashScreen(const QString &theme);
-    void setLatteLayout(const QString &filepath, const QString &name);
     void setWindowSwitcher(const QString &theme);
     void setWindowDecoration(const QString &library, const QString &theme, bool noPlugin);
     void setTitlebarLayout(const QString &leftbtns, const QString &rightbtns);
@@ -128,7 +127,6 @@ private:
     static KConfig configDefaults(const QString &filename);
 
     Mode m_mode = Mode::Apply;
-    bool m_applyLatteLayout : 1;
     bool m_plasmashellChanged : 1;
     bool m_fontsChanged : 1;
     bool m_plasmaLocked : 1;
