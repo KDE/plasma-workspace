@@ -74,8 +74,9 @@ PlasmoidItem {
             return "";
         }
 
-        const hourOffset  = Math.abs(Math.floor(offset / 60));
-        const minuteOffset = offset % 60;
+        const absoluteOffset = Math.abs(offset);
+        const hourOffset = Math.floor(absoluteOffset / 60);
+        const minuteOffset = absoluteOffset % 60;
 
         if (offset > 0) {
             if (minuteOffset === 0) {
