@@ -101,7 +101,6 @@ protected Q_SLOTS:
 
 private Q_SLOTS:
     void slotContainmentChanged();
-    void slotScreenChanged(int newId);
     void screenGeometryChanged();
 
 Q_SIGNALS:
@@ -129,7 +128,6 @@ private:
     QFuture<QString> m_krunnerFuture;
 
     QPointer<Plasma::Containment> m_containment = nullptr;
-    int m_containmentScreenId = -1;
 
     bool m_enteredEditMode;
 

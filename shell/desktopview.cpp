@@ -519,15 +519,15 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 void DesktopView::slotContainmentChanged()
 {
     if (m_containment) {
-        disconnect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::slotScreenChanged);
+        disconnect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::usedInAccentColorChanged);
         disconnect(m_containment, &Plasma::Containment::availableRelativeScreenRectChanged, this, &DesktopView::strictAvailableScreenRectChanged);
     }
 
     m_containment = containment();
 
     if (m_containment) {
-        connect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::slotScreenChanged);
-        slotScreenChanged(m_containment->screen());
+        connect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::usedInAccentColorChanged);
+        Q_EMIT usedInAccentColorChanged();
         connect(m_containment, &Plasma::Containment::availableRelativeScreenRectChanged, this, &DesktopView::strictAvailableScreenRectChanged);
 
         auto *desktopEditMode = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Enter Edit Mode"), m_containment);
@@ -576,16 +576,6 @@ void DesktopView::slotContainmentChanged()
 bool DesktopView::enteredEditMode() const
 {
     return m_enteredEditMode;
-}
-
-void DesktopView::slotScreenChanged(int newId)
-{
-    if (m_containmentScreenId == newId) {
-        return;
-    }
-
-    m_containmentScreenId = newId;
-    Q_EMIT usedInAccentColorChanged();
 }
 
 void DesktopView::screenGeometryChanged()
