@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 02:41+0000\n"
 "PO-Revision-Date: 2026-01-18 20:21+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -394,7 +394,7 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Velg tidssone"
 
-#: main.qml:82
+#: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
@@ -402,13 +402,13 @@ msgid_plural " • %1 hours later"
 msgstr[0] ""
 msgstr[1] ""
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
 msgstr ""
 
-#: main.qml:88
+#: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
@@ -416,13 +416,13 @@ msgid_plural " • %1 hours earlier"
 msgstr[0] ""
 msgstr[1] ""
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
 msgstr ""
 
-#: main.qml:185
+#: main.qml:186
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavla"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 02:41+0000\n"
 "PO-Revision-Date: 2026-04-14 08:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -397,7 +397,7 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Виберіть часовий пояс"
 
-#: main.qml:82
+#: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
@@ -407,13 +407,13 @@ msgstr[1] " • на %1 години пізніше"
 msgstr[2] " • на %1 годин пізніше"
 msgstr[3] " • на %1 годину пізніше"
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
 msgstr " • на %1:%2 пізніше"
 
-#: main.qml:88
+#: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
@@ -423,13 +423,13 @@ msgstr[1] " • на %1 години раніше"
 msgstr[2] " • на %1 годин раніше"
 msgstr[3] " • на %1 годину раніше"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
 msgstr " • на %1:%2 раніше"
 
-#: main.qml:185
+#: main.qml:186
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Скопіювати до буфера"

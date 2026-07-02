@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 02:41+0000\n"
 "PO-Revision-Date: 2026-04-14 18:39+0200\n"
 "Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
 "Language-Team: \n"
@@ -396,7 +396,7 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Vyberte časové pásmo"
 
-#: main.qml:82
+#: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
@@ -405,13 +405,13 @@ msgstr[0] " • %1 hodinu později"
 msgstr[1] " • %1 hodiny později"
 msgstr[2] " • %1 hodin později"
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
 msgstr " • %1:%2 později"
 
-#: main.qml:88
+#: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
@@ -420,13 +420,13 @@ msgstr[0] " • %1 hodinu dříve"
 msgstr[1] " • %1 hodiny dříve"
 msgstr[2] " • %1 hodin dříve"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
 msgstr " • %1:%2 dříve"
 
-#: main.qml:185
+#: main.qml:186
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Zkopírovat do schránky"
