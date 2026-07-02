@@ -22,8 +22,6 @@ class Panel : public Containment
     Q_PROPERTY(QStringList configKeys READ configKeys)
     Q_PROPERTY(QStringList configGroups READ configGroups)
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
-    Q_PROPERTY(QStringList globalConfigKeys READ globalConfigKeys)
-    Q_PROPERTY(QStringList globalConfigGroups READ globalConfigGroups)
 
     Q_PROPERTY(QString version READ version)
     Q_PROPERTY(QString type READ type)

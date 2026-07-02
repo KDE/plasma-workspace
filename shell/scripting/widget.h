@@ -26,8 +26,6 @@ class Widget : public Applet
     Q_PROPERTY(int id READ id)
     Q_PROPERTY(QStringList configKeys READ configKeys)
     Q_PROPERTY(QStringList configGroups READ configGroups)
-    Q_PROPERTY(QStringList globalConfigKeys READ globalConfigKeys)
-    Q_PROPERTY(QStringList globalConfigGroups READ globalConfigGroups)
     Q_PROPERTY(int index WRITE setIndex READ index)
     // We pass our js based QRect wrapper instead of a simple QRectF
     Q_PROPERTY(QJSValue geometry WRITE setGeometry READ geometry)

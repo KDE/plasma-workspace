@@ -36,12 +36,6 @@ public:
     void setCurrentConfigGroup(const QStringList &groupNames);
     QStringList currentConfigGroup() const;
 
-    QStringList globalConfigKeys() const;
-    QStringList globalConfigGroups() const;
-
-    void setCurrentGlobalConfigGroup(const QStringList &groupNames);
-    QStringList currentGlobalConfigGroup() const;
-
     QString version() const;
 
     void setLocked(bool locked);
@@ -57,8 +51,6 @@ protected:
 public Q_SLOTS:
     virtual QVariant readConfig(const QString &key, const QJSValue &def = QString()) const;
     virtual void writeConfig(const QString &key, const QJSValue &value);
-    virtual QVariant readGlobalConfig(const QString &key, const QJSValue &def = QString()) const;
-    virtual void writeGlobalConfig(const QString &key, const QJSValue &value);
     virtual void reloadConfig();
 
 private:
