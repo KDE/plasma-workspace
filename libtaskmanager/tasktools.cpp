@@ -631,15 +631,6 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
             job->start();
 
             KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + service->storageId())), QStringLiteral("org.kde.libtaskmanager"));
-        } else {
-            auto *job = new KIO::OpenUrlJob(appData.url);
-            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
-            job->setRunExecutables(true);
-            job->start();
-
-            if (!appData.id.isEmpty()) {
-                KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + appData.id)), QStringLiteral("org.kde.libtaskmanager"));
-            }
         }
     }
 }
@@ -657,7 +648,21 @@ bool canLauchNewInstance(const AppData &appData)
         desktopEntry.chop(8);
     }
 
-    const KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+    KService::Ptr service;
+
+    // applications: URLs are used to refer to applications by their KService::menuId
+    // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+    if (appData.url.scheme() == QLatin1String("applications")) {
+        service = KService::serviceByMenuId(appData.url.path());
+    } else if (appData.url.scheme() == QLatin1String("preferred")) {
+        service = KService::serviceByStorageId(defaultApplication(appData.url));
+    } else {
+        service = KService::serviceByDesktopPath(appData.url.toLocalFile());
+    }
+
+    if (!service) {
+        return false;
+    }
 
     if (service) {
         if (service->noDisplay()) {
@@ -686,7 +691,6 @@ bool canLauchNewInstance(const AppData &appData)
             }
         }
     }
-
     return true;
 }
 }
