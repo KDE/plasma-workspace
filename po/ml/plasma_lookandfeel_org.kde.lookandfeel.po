@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:47+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -13,162 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: contents/logout/Logout.qml:152
-#, kde-format
-msgid "Installing software updates and restarting in 1 second"
-msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-
-#: contents/logout/Logout.qml:153
-#, kde-format
-msgid "Restarting in 1 second"
-msgid_plural "Restarting in %1 seconds"
-msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
-msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
-
-#: contents/logout/Logout.qml:155
-#, kde-format
-msgid "Logging out in 1 second"
-msgid_plural "Logging out in %1 seconds"
-msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
-msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
-
-#: contents/logout/Logout.qml:158
-#, kde-format
-msgid "Installing software updates and shutting down in 1 second"
-msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-
-#: contents/logout/Logout.qml:159
-#, kde-format
-msgid "Shutting down in 1 second"
-msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
-msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
-
-#: contents/logout/Logout.qml:174
-#, kde-format
-msgid ""
-"One other user is currently logged in. If the computer is shut down or "
-"restarted, that user may lose work."
-msgid_plural ""
-"%1 other users are currently logged in. If the computer is shut down or "
-"restarted, those users may lose work."
-msgstr[0] ""
-"മറ്റൊരു ഉപയോക്താവ് നിലവിൽ ലോഗിൻ ചെയ്തിട്ടുണ്ട്. കമ്പ്യൂട്ടർ ഷട്ട് ഡൗൺ ചെയ്യുകയോ പുനരാരംഭിക്കുകയോ "
-"ചെയ്താൽ, ആ ഉപയോക്താവ് ചെയ്ത ജോലി നഷ്‌ടപ്പെടാം."
-msgstr[1] ""
-"%1 ഉപയോക്താക്കൾ  നിലവിൽ ലോഗിൻ ചെയ്തിട്ടുണ്ട്. കമ്പ്യൂട്ടർ ഷട്ട് ഡൗൺ ചെയ്യുകയോ പുനരാരംഭിക്കുകയോ "
-"ചെയ്താൽ, ആ ഉപയോക്താക്കൾ ചെയ്ത ജോലി നഷ്‌ടപ്പെടാം."
-
-#: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
-msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
-
-#: contents/logout/Logout.qml:193
-#, kde-format
-msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
-
-#: contents/logout/Logout.qml:208
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
-msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
-
-#: contents/logout/Logout.qml:221
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
-msgctxt "%1 is a boot loader entry"
-msgid "When restarted, the computer will switch to %1."
-msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
-
-#: contents/logout/Logout.qml:243
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
-msgctxt "Suspend to RAM"
-msgid "Slee&p"
-msgstr "സ്ലീപ്"
-
-#: contents/logout/Logout.qml:244
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
-msgctxt "Suspend to RAM"
-msgid "Slee&p Now"
-msgstr "സ്ലീപ്"
-
-#: contents/logout/Logout.qml:253
-#, fuzzy, kde-format
-#| msgid "Hibernate"
-msgid "&Hibernate"
-msgstr "ഹൈബർ‌നേറ്റ്"
-
-#: contents/logout/Logout.qml:254
-#, fuzzy, kde-format
-#| msgid "Hibernate"
-msgid "&Hibernate Now"
-msgstr "ഹൈബർ‌നേറ്റ്"
-
-#: contents/logout/Logout.qml:265
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates and Restart"
-msgstr ""
-
-#: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
-#, fuzzy, kde-format
-#| msgid "Restart"
-msgid "&Restart"
-msgstr "പുനരാരംഭിക്കുക"
-
-#: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
-#, fuzzy, kde-format
-#| msgid "Restart"
-msgid "&Restart Now"
-msgstr "പുനരാരംഭിക്കുക"
-
-#: contents/logout/Logout.qml:300
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates and Shut Down"
-msgstr ""
-
-#: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
-#, fuzzy, kde-format
-#| msgid "Shut Down"
-msgid "&Shut Down"
-msgstr "ഷട്ട് ഡൌൺ"
-
-#: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
-#, fuzzy, kde-format
-#| msgid "Shut Down"
-msgid "&Shut Down Now"
-msgstr "ഷട്ട് ഡൌൺ"
-
-#: contents/logout/Logout.qml:334
-#, fuzzy, kde-format
-#| msgid "Log Out"
-msgid "&Log Out"
-msgstr "പുറത്തുകടക്കുക"
-
-#: contents/logout/Logout.qml:335
-#, fuzzy, kde-format
-#| msgid "Log Out"
-msgid "&Log Out Now"
-msgstr "പുറത്തുകടക്കുക"
-
-#: contents/logout/Logout.qml:345
-#, fuzzy, kde-format
-#| msgid "Cancel"
-msgid "&Cancel"
-msgstr "റദ്ദാക്കുക"
-
 #: contents/splash/Splash.qml:79
 #, kde-format
 msgctxt ""
@@ -177,6 +21,112 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "കെ‌ഡി‌ഇ നിർമ്മിച്ച പ്ലാസ്മ"
+
+#~ msgid "Restarting in 1 second"
+#~ msgid_plural "Restarting in %1 seconds"
+#~ msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
+#~ msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
+
+#~ msgid "Logging out in 1 second"
+#~ msgid_plural "Logging out in %1 seconds"
+#~ msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
+#~ msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
+
+#~ msgid "Shutting down in 1 second"
+#~ msgid_plural "Shutting down in %1 seconds"
+#~ msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
+#~ msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
+
+#~ msgid ""
+#~ "One other user is currently logged in. If the computer is shut down or "
+#~ "restarted, that user may lose work."
+#~ msgid_plural ""
+#~ "%1 other users are currently logged in. If the computer is shut down or "
+#~ "restarted, those users may lose work."
+#~ msgstr[0] ""
+#~ "മറ്റൊരു ഉപയോക്താവ് നിലവിൽ ലോഗിൻ ചെയ്തിട്ടുണ്ട്. കമ്പ്യൂട്ടർ ഷട്ട് ഡൗൺ ചെയ്യുകയോ "
+#~ "പുനരാരംഭിക്കുകയോ ചെയ്താൽ, ആ ഉപയോക്താവ് ചെയ്ത ജോലി നഷ്‌ടപ്പെടാം."
+#~ msgstr[1] ""
+#~ "%1 ഉപയോക്താക്കൾ  നിലവിൽ ലോഗിൻ ചെയ്തിട്ടുണ്ട്. കമ്പ്യൂട്ടർ ഷട്ട് ഡൗൺ ചെയ്യുകയോ "
+#~ "പുനരാരംഭിക്കുകയോ ചെയ്താൽ, ആ ഉപയോക്താക്കൾ ചെയ്ത ജോലി നഷ്‌ടപ്പെടാം."
+
+#, fuzzy
+#~| msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgid "When restarted, the computer will enter UEFI firmware settings."
+#~ msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
+
+#~ msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
+
+#, fuzzy
+#~| msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgid "When restarted, the computer will enter the boot loader menu."
+#~ msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
+
+#, fuzzy
+#~| msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgctxt "%1 is a boot loader entry"
+#~ msgid "When restarted, the computer will switch to %1."
+#~ msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
+
+#, fuzzy
+#~| msgctxt "Suspend to RAM"
+#~| msgid "Sleep"
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Slee&p"
+#~ msgstr "സ്ലീപ്"
+
+#, fuzzy
+#~| msgctxt "Suspend to RAM"
+#~| msgid "Sleep"
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Slee&p Now"
+#~ msgstr "സ്ലീപ്"
+
+#, fuzzy
+#~| msgid "Hibernate"
+#~ msgid "&Hibernate"
+#~ msgstr "ഹൈബർ‌നേറ്റ്"
+
+#, fuzzy
+#~| msgid "Hibernate"
+#~ msgid "&Hibernate Now"
+#~ msgstr "ഹൈബർ‌നേറ്റ്"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "&Restart"
+#~ msgstr "പുനരാരംഭിക്കുക"
+
+#, fuzzy
+#~| msgid "Restart"
+#~ msgid "&Restart Now"
+#~ msgstr "പുനരാരംഭിക്കുക"
+
+#, fuzzy
+#~| msgid "Shut Down"
+#~ msgid "&Shut Down"
+#~ msgstr "ഷട്ട് ഡൌൺ"
+
+#, fuzzy
+#~| msgid "Shut Down"
+#~ msgid "&Shut Down Now"
+#~ msgstr "ഷട്ട് ഡൌൺ"
+
+#, fuzzy
+#~| msgid "Log Out"
+#~ msgid "&Log Out"
+#~ msgstr "പുറത്തുകടക്കുക"
+
+#, fuzzy
+#~| msgid "Log Out"
+#~ msgid "&Log Out Now"
+#~ msgstr "പുറത്തുകടക്കുക"
+
+#, fuzzy
+#~| msgid "Cancel"
+#~ msgid "&Cancel"
+#~ msgstr "റദ്ദാക്കുക"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

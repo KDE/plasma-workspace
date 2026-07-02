@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -352,18 +352,12 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:107
+#: shellcontainmentconfig.cpp:109
 #, kde-format
-msgid "Internal Screen on %1"
+msgid "Built-in Screen"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:111
-#, kde-format
-msgctxt "Screen manufacturer and model on connector"
-msgid "%1 %2 on %3"
-msgstr ""
-
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr ""

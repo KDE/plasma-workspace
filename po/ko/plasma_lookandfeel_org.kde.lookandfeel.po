@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:47+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2026-04-26 20:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -18,138 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: contents/logout/Logout.qml:152
-#, kde-format
-msgid "Installing software updates and restarting in 1 second"
-msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] "소프트웨어 업데이트 설치 후 %1초 후 다시 시작"
-
-#: contents/logout/Logout.qml:153
-#, kde-format
-msgid "Restarting in 1 second"
-msgid_plural "Restarting in %1 seconds"
-msgstr[0] "%1초 후 다시 시작"
-
-#: contents/logout/Logout.qml:155
-#, kde-format
-msgid "Logging out in 1 second"
-msgid_plural "Logging out in %1 seconds"
-msgstr[0] "%1초 후 로그아웃"
-
-#: contents/logout/Logout.qml:158
-#, kde-format
-msgid "Installing software updates and shutting down in 1 second"
-msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "소프트웨어 업데이트 설치 후 %1초 후 컴퓨터 끄기"
-
-#: contents/logout/Logout.qml:159
-#, kde-format
-msgid "Shutting down in 1 second"
-msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "%1초 후 컴퓨터 끄기"
-
-#: contents/logout/Logout.qml:174
-#, kde-format
-msgid ""
-"One other user is currently logged in. If the computer is shut down or "
-"restarted, that user may lose work."
-msgid_plural ""
-"%1 other users are currently logged in. If the computer is shut down or "
-"restarted, those users may lose work."
-msgstr[0] ""
-"다른 사용자 %1명이 로그인되어 있습니다. 컴퓨터를 끄거나 다시 시작하면 다음 사"
-"용자의 작업이 손실됩니다."
-
-#: contents/logout/Logout.qml:191
-#, kde-format
-msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "컴퓨터를 다시 시작하면 UEFI 펌웨어 설정으로 진입합니다."
-
-#: contents/logout/Logout.qml:193
-#, kde-format
-msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
-
-#: contents/logout/Logout.qml:208
-#, kde-format
-msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "컴퓨터를 다시 시작하면 부트 로더 메뉴 화면으로 진입합니다."
-
-#: contents/logout/Logout.qml:221
-#, kde-format
-msgctxt "%1 is a boot loader entry"
-msgid "When restarted, the computer will switch to %1."
-msgstr "컴퓨터를 다시 시작하면 %1(으)로 전환합니다."
-
-#: contents/logout/Logout.qml:243
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Slee&p"
-msgstr "대기 모드(&P)"
-
-#: contents/logout/Logout.qml:244
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Slee&p Now"
-msgstr "지금 대기 모드로 전환(&P)"
-
-#: contents/logout/Logout.qml:253
-#, kde-format
-msgid "&Hibernate"
-msgstr "최대 절전 모드(&H)"
-
-#: contents/logout/Logout.qml:254
-#, kde-format
-msgid "&Hibernate Now"
-msgstr "지금 최대 절전 모드로 전환(&H)"
-
-#: contents/logout/Logout.qml:265
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates and Restart"
-msgstr "업데이트 설치 후 다시 시작"
-
-#: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
-#, kde-format
-msgid "&Restart"
-msgstr "다시 시작(&R)"
-
-#: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
-#, kde-format
-msgid "&Restart Now"
-msgstr "지금 다시 시작(&R)"
-
-#: contents/logout/Logout.qml:300
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates and Shut Down"
-msgstr "업데이트 설치 후 컴퓨터 끄기"
-
-#: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
-#, kde-format
-msgid "&Shut Down"
-msgstr "컴퓨터 끄기(&S)"
-
-#: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
-#, kde-format
-msgid "&Shut Down Now"
-msgstr "지금 컴퓨터 끄기(&S)"
-
-#: contents/logout/Logout.qml:334
-#, kde-format
-msgid "&Log Out"
-msgstr "로그아웃(&L)"
-
-#: contents/logout/Logout.qml:335
-#, kde-format
-msgid "&Log Out Now"
-msgstr "지금 로그아웃(&L)"
-
-#: contents/logout/Logout.qml:345
-#, kde-format
-msgid "&Cancel"
-msgstr "취소(&C)"
-
 #: contents/splash/Splash.qml:79
 #, kde-format
 msgctxt ""
@@ -158,6 +26,92 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma"
+
+#~ msgid "Installing software updates and restarting in 1 second"
+#~ msgid_plural "Installing software updates and restarting in %1 seconds"
+#~ msgstr[0] "소프트웨어 업데이트 설치 후 %1초 후 다시 시작"
+
+#~ msgid "Restarting in 1 second"
+#~ msgid_plural "Restarting in %1 seconds"
+#~ msgstr[0] "%1초 후 다시 시작"
+
+#~ msgid "Logging out in 1 second"
+#~ msgid_plural "Logging out in %1 seconds"
+#~ msgstr[0] "%1초 후 로그아웃"
+
+#~ msgid "Installing software updates and shutting down in 1 second"
+#~ msgid_plural "Installing software updates and shutting down in %1 seconds"
+#~ msgstr[0] "소프트웨어 업데이트 설치 후 %1초 후 컴퓨터 끄기"
+
+#~ msgid "Shutting down in 1 second"
+#~ msgid_plural "Shutting down in %1 seconds"
+#~ msgstr[0] "%1초 후 컴퓨터 끄기"
+
+#~ msgid ""
+#~ "One other user is currently logged in. If the computer is shut down or "
+#~ "restarted, that user may lose work."
+#~ msgid_plural ""
+#~ "%1 other users are currently logged in. If the computer is shut down or "
+#~ "restarted, those users may lose work."
+#~ msgstr[0] ""
+#~ "다른 사용자 %1명이 로그인되어 있습니다. 컴퓨터를 끄거나 다시 시작하면 다"
+#~ "음 사용자의 작업이 손실됩니다."
+
+#~ msgid "When restarted, the computer will enter UEFI firmware settings."
+#~ msgstr "컴퓨터를 다시 시작하면 UEFI 펌웨어 설정으로 진입합니다."
+
+#~ msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
+
+#~ msgid "When restarted, the computer will enter the boot loader menu."
+#~ msgstr "컴퓨터를 다시 시작하면 부트 로더 메뉴 화면으로 진입합니다."
+
+#~ msgctxt "%1 is a boot loader entry"
+#~ msgid "When restarted, the computer will switch to %1."
+#~ msgstr "컴퓨터를 다시 시작하면 %1(으)로 전환합니다."
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Slee&p"
+#~ msgstr "대기 모드(&P)"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Slee&p Now"
+#~ msgstr "지금 대기 모드로 전환(&P)"
+
+#~ msgid "&Hibernate"
+#~ msgstr "최대 절전 모드(&H)"
+
+#~ msgid "&Hibernate Now"
+#~ msgstr "지금 최대 절전 모드로 전환(&H)"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates and Restart"
+#~ msgstr "업데이트 설치 후 다시 시작"
+
+#~ msgid "&Restart"
+#~ msgstr "다시 시작(&R)"
+
+#~ msgid "&Restart Now"
+#~ msgstr "지금 다시 시작(&R)"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates and Shut Down"
+#~ msgstr "업데이트 설치 후 컴퓨터 끄기"
+
+#~ msgid "&Shut Down"
+#~ msgstr "컴퓨터 끄기(&S)"
+
+#~ msgid "&Shut Down Now"
+#~ msgstr "지금 컴퓨터 끄기(&S)"
+
+#~ msgid "&Log Out"
+#~ msgstr "로그아웃(&L)"
+
+#~ msgid "&Log Out Now"
+#~ msgstr "지금 로그아웃(&L)"
+
+#~ msgid "&Cancel"
+#~ msgstr "취소(&C)"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

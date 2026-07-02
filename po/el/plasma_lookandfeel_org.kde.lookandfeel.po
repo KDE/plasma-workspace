@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-24 00:47+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2024-08-24 14:05+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -18,161 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: contents/logout/Logout.qml:152
-#, kde-format
-msgid "Installing software updates and restarting in 1 second"
-msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-"Εγκατάσταση ενημερώσεων λογισμικού και επανεκκίνηση σε 1 δευτερόλεπτο"
-msgstr[1] ""
-"Εγκατάσταση ενημερώσεων λογισμικού και επανεκκίνηση σε %1 δευτερόλεπτα"
-
-#: contents/logout/Logout.qml:153
-#, kde-format
-msgid "Restarting in 1 second"
-msgid_plural "Restarting in %1 seconds"
-msgstr[0] "Επανεκκίνηση σε 1 δευτερόλεπτο"
-msgstr[1] "Επανεκκίνηση σε %1 δευτερόλεπτα"
-
-#: contents/logout/Logout.qml:155
-#, kde-format
-msgid "Logging out in 1 second"
-msgid_plural "Logging out in %1 seconds"
-msgstr[0] "Αποσύνδεση σε 1 δευτερόλεπτο"
-msgstr[1] "Αποσύνδεση σε %1 δευτερόλεπτα"
-
-#: contents/logout/Logout.qml:158
-#, kde-format
-msgid "Installing software updates and shutting down in 1 second"
-msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-"Εγκατάσταση ενημερώσεων λογισμικού και τερματισμός σε 1 δευτερόλεπτο"
-msgstr[1] ""
-"Εγκατάσταση ενημερώσεων λογισμικού και τερματισμός σε %1 δευτερόλεπτα"
-
-#: contents/logout/Logout.qml:159
-#, kde-format
-msgid "Shutting down in 1 second"
-msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "Τερματισμός σε 1 δευτερόλεπτο"
-msgstr[1] "Τερματισμός σε %1 δευτερόλεπτα"
-
-#: contents/logout/Logout.qml:174
-#, kde-format
-msgid ""
-"One other user is currently logged in. If the computer is shut down or "
-"restarted, that user may lose work."
-msgid_plural ""
-"%1 other users are currently logged in. If the computer is shut down or "
-"restarted, those users may lose work."
-msgstr[0] ""
-"Ένας άλλος χρήστης είναι συνδεδεμένος αυτή τη στιγμή. Εάν ο υπολογιστής "
-"κλείσει ή επανεκκινηθεί, αυτός ο χρήστης ενδέχεται να χάσει την εργασία του."
-msgstr[1] ""
-"%1 άλλοι χρήστες είναι συνδεδεμένοι. Εάν ο υπολογιστής κλείσει ή "
-"επανεκκινηθεί, οι χρήστες αυτοί ενδέχεται να χάσουν την εργασία τους."
-
-#: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
-msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
-"Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
-"υλικολογισμικού."
-
-#: contents/logout/Logout.qml:193
-#, kde-format
-msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr ""
-"Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
-"υλικολογισμικού."
-
-#: contents/logout/Logout.qml:208
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
-msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
-"υλικολογισμικού."
-
-#: contents/logout/Logout.qml:221
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
-msgctxt "%1 is a boot loader entry"
-msgid "When restarted, the computer will switch to %1."
-msgstr ""
-"Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
-"υλικολογισμικού."
-
-#: contents/logout/Logout.qml:243
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Slee&p"
-msgstr "Κοί&μηση"
-
-#: contents/logout/Logout.qml:244
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Slee&p Now"
-msgstr "&Κοίμηση τώρα"
-
-#: contents/logout/Logout.qml:253
-#, kde-format
-msgid "&Hibernate"
-msgstr "&Νάρκη"
-
-#: contents/logout/Logout.qml:254
-#, kde-format
-msgid "&Hibernate Now"
-msgstr "Νάρκ&η τώρα"
-
-#: contents/logout/Logout.qml:265
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates and Restart"
-msgstr "Εγκατάσταση ενημερώσεων και επανεκκίνηση"
-
-#: contents/logout/Logout.qml:267 contents/logout/Logout.qml:286
-#, kde-format
-msgid "&Restart"
-msgstr "Επανε&κκίνηση"
-
-#: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
-#, kde-format
-msgid "&Restart Now"
-msgstr "&Επανεκκίνηση τώρα"
-
-#: contents/logout/Logout.qml:300
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates and Shut Down"
-msgstr "Εγκατάσταση ενημερώσεων και τερματισμός"
-
-#: contents/logout/Logout.qml:302 contents/logout/Logout.qml:321
-#, kde-format
-msgid "&Shut Down"
-msgstr "Τε&ρματισμός"
-
-#: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
-#, kde-format
-msgid "&Shut Down Now"
-msgstr "Τερ&ματισμός τώρα"
-
-#: contents/logout/Logout.qml:334
-#, kde-format
-msgid "&Log Out"
-msgstr "Αποσύν&δεση"
-
-#: contents/logout/Logout.qml:335
-#, kde-format
-msgid "&Log Out Now"
-msgstr "Αποσύν&δεση τώρα"
-
-#: contents/logout/Logout.qml:345
-#, kde-format
-msgid "&Cancel"
-msgstr "Ακύρ&ωση"
-
 #: contents/splash/Splash.qml:79
 #, kde-format
 msgctxt ""
@@ -181,6 +26,119 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma από το KDE"
+
+#~ msgid "Installing software updates and restarting in 1 second"
+#~ msgid_plural "Installing software updates and restarting in %1 seconds"
+#~ msgstr[0] ""
+#~ "Εγκατάσταση ενημερώσεων λογισμικού και επανεκκίνηση σε 1 δευτερόλεπτο"
+#~ msgstr[1] ""
+#~ "Εγκατάσταση ενημερώσεων λογισμικού και επανεκκίνηση σε %1 δευτερόλεπτα"
+
+#~ msgid "Restarting in 1 second"
+#~ msgid_plural "Restarting in %1 seconds"
+#~ msgstr[0] "Επανεκκίνηση σε 1 δευτερόλεπτο"
+#~ msgstr[1] "Επανεκκίνηση σε %1 δευτερόλεπτα"
+
+#~ msgid "Logging out in 1 second"
+#~ msgid_plural "Logging out in %1 seconds"
+#~ msgstr[0] "Αποσύνδεση σε 1 δευτερόλεπτο"
+#~ msgstr[1] "Αποσύνδεση σε %1 δευτερόλεπτα"
+
+#~ msgid "Installing software updates and shutting down in 1 second"
+#~ msgid_plural "Installing software updates and shutting down in %1 seconds"
+#~ msgstr[0] ""
+#~ "Εγκατάσταση ενημερώσεων λογισμικού και τερματισμός σε 1 δευτερόλεπτο"
+#~ msgstr[1] ""
+#~ "Εγκατάσταση ενημερώσεων λογισμικού και τερματισμός σε %1 δευτερόλεπτα"
+
+#~ msgid "Shutting down in 1 second"
+#~ msgid_plural "Shutting down in %1 seconds"
+#~ msgstr[0] "Τερματισμός σε 1 δευτερόλεπτο"
+#~ msgstr[1] "Τερματισμός σε %1 δευτερόλεπτα"
+
+#~ msgid ""
+#~ "One other user is currently logged in. If the computer is shut down or "
+#~ "restarted, that user may lose work."
+#~ msgid_plural ""
+#~ "%1 other users are currently logged in. If the computer is shut down or "
+#~ "restarted, those users may lose work."
+#~ msgstr[0] ""
+#~ "Ένας άλλος χρήστης είναι συνδεδεμένος αυτή τη στιγμή. Εάν ο υπολογιστής "
+#~ "κλείσει ή επανεκκινηθεί, αυτός ο χρήστης ενδέχεται να χάσει την εργασία "
+#~ "του."
+#~ msgstr[1] ""
+#~ "%1 άλλοι χρήστες είναι συνδεδεμένοι. Εάν ο υπολογιστής κλείσει ή "
+#~ "επανεκκινηθεί, οι χρήστες αυτοί ενδέχεται να χάσουν την εργασία τους."
+
+#, fuzzy
+#~| msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgid "When restarted, the computer will enter UEFI firmware settings."
+#~ msgstr ""
+#~ "Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
+#~ "υλικολογισμικού."
+
+#~ msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgstr ""
+#~ "Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
+#~ "υλικολογισμικού."
+
+#, fuzzy
+#~| msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgid "When restarted, the computer will enter the boot loader menu."
+#~ msgstr ""
+#~ "Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
+#~ "υλικολογισμικού."
+
+#, fuzzy
+#~| msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgctxt "%1 is a boot loader entry"
+#~ msgid "When restarted, the computer will switch to %1."
+#~ msgstr ""
+#~ "Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
+#~ "υλικολογισμικού."
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Slee&p"
+#~ msgstr "Κοί&μηση"
+
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Slee&p Now"
+#~ msgstr "&Κοίμηση τώρα"
+
+#~ msgid "&Hibernate"
+#~ msgstr "&Νάρκη"
+
+#~ msgid "&Hibernate Now"
+#~ msgstr "Νάρκ&η τώρα"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates and Restart"
+#~ msgstr "Εγκατάσταση ενημερώσεων και επανεκκίνηση"
+
+#~ msgid "&Restart"
+#~ msgstr "Επανε&κκίνηση"
+
+#~ msgid "&Restart Now"
+#~ msgstr "&Επανεκκίνηση τώρα"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates and Shut Down"
+#~ msgstr "Εγκατάσταση ενημερώσεων και τερματισμός"
+
+#~ msgid "&Shut Down"
+#~ msgstr "Τε&ρματισμός"
+
+#~ msgid "&Shut Down Now"
+#~ msgstr "Τερ&ματισμός τώρα"
+
+#~ msgid "&Log Out"
+#~ msgstr "Αποσύν&δεση"
+
+#~ msgid "&Log Out Now"
+#~ msgstr "Αποσύν&δεση τώρα"
+
+#~ msgid "&Cancel"
+#~ msgstr "Ακύρ&ωση"
 
 #~ msgctxt "Percentage value"
 #~ msgid "%1%"

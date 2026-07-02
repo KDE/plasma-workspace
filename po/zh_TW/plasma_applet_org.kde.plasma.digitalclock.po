@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2026-04-17 19:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -395,7 +395,7 @@ msgstr "選擇時區"
 # later 是 +, +8 = 8 hours later than UTC = 比 UTC 快/早 8 小時
 # ie. it's exactly backwards when accurate
 # --Kisaragi
-#: main.qml:82
+#: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
@@ -405,7 +405,7 @@ msgstr[0] " • 快 %1 個小時"
 # later 是 +, +8 = 8 hours later than UTC = 比 UTC 快/早 8 小時
 # ie. it's exactly backwards when accurate
 # --Kisaragi
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
@@ -414,20 +414,20 @@ msgstr " • 快 %1:%2"
 # earlier 是 -, -4 = 4 hours earlier than UTC = 比 UTC 慢/晚 4 小時
 # ie. it's exactly backwards when accurate
 # --Kisaragi
-#: main.qml:88
+#: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
 msgstr[0] " • 慢 %1 個小時"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
 msgstr " • 慢 %1:%2"
 
-#: main.qml:185
+#: main.qml:186
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "複製到剪貼簿"

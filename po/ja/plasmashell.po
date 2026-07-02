@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 18:49+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -343,18 +343,12 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: shellcontainmentconfig.cpp:107
+#: shellcontainmentconfig.cpp:109
 #, kde-format
-msgid "Internal Screen on %1"
-msgstr "%1 の内部スクリーン"
+msgid "Built-in Screen"
+msgstr ""
 
-#: shellcontainmentconfig.cpp:111
-#, kde-format
-msgctxt "Screen manufacturer and model on connector"
-msgid "%1 %2 on %3"
-msgstr "%3 の %1 %2"
-
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "切断されたスクリーン %1"
@@ -447,6 +441,13 @@ msgstr "パネルの数"
 #, kde-format
 msgid "Counts the panels"
 msgstr "パネルの数を数えます"
+
+#~ msgid "Internal Screen on %1"
+#~ msgstr "%1 の内部スクリーン"
+
+#~ msgctxt "Screen manufacturer and model on connector"
+#~ msgid "%1 %2 on %3"
+#~ msgstr "%3 の %1 %2"
 
 #~ msgid ""
 #~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "

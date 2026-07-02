@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2026-04-14 21:38+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -392,7 +392,7 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "בחירת אזור זמן"
 
-#: main.qml:82
+#: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
@@ -402,13 +402,13 @@ msgstr[1] " • שעתיים לאחר מכן"
 msgstr[2] " • %1 שעות לאחר מכן"
 msgstr[3] " • %1 שעות לאחר מכן"
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
 msgstr " • %1:%2 לאחר מכן"
 
-#: main.qml:88
+#: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
@@ -418,13 +418,13 @@ msgstr[1] " • שעתיים לפני כן"
 msgstr[2] " • %1 שעות לפני כן"
 msgstr[3] " • %1 שעות לפני כן"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
 msgstr " • %1:%2 לפני כן"
 
-#: main.qml:185
+#: main.qml:186
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "העתקה ללוח הגזירים"

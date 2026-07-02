@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2025-11-02 14:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -339,18 +339,12 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: shellcontainmentconfig.cpp:107
+#: shellcontainmentconfig.cpp:109
 #, kde-format
-msgid "Internal Screen on %1"
-msgstr "%1-இலுள்ள உள்ளகத் திரை"
+msgid "Built-in Screen"
+msgstr ""
 
-#: shellcontainmentconfig.cpp:111
-#, kde-format
-msgctxt "Screen manufacturer and model on connector"
-msgid "%1 %2 on %3"
-msgstr "%3-இல் %1 %2"
-
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "செருகப்படாத %1 திரை"
@@ -443,6 +437,13 @@ msgstr "பலகைகளின் எண்ணிக்கை"
 #, kde-format
 msgid "Counts the panels"
 msgstr "பலகைகளை எண்ணும்"
+
+#~ msgid "Internal Screen on %1"
+#~ msgstr "%1-இலுள்ள உள்ளகத் திரை"
+
+#~ msgctxt "Screen manufacturer and model on connector"
+#~ msgid "%1 %2 on %3"
+#~ msgstr "%3-இல் %1 %2"
 
 # Condition in the code is: nvidia AND (floating OR adaptive)
 #~ msgid ""

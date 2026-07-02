@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -390,33 +390,33 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "选择时区"
 
-#: main.qml:82
+#: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
 msgstr[0] " • %1 小时之后"
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
 msgstr " • %1:%2 之后"
 
-#: main.qml:88
+#: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
 msgstr[0] " • %1 小时之前"
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
 msgstr " • %1:%2 之前"
 
-#: main.qml:185
+#: main.qml:186
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "复制到剪贴板"

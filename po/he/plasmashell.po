@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2025-10-05 09:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -342,18 +342,12 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: shellcontainmentconfig.cpp:107
+#: shellcontainmentconfig.cpp:109
 #, kde-format
-msgid "Internal Screen on %1"
-msgstr "מסך פנימי ב־%1"
+msgid "Built-in Screen"
+msgstr ""
 
-#: shellcontainmentconfig.cpp:111
-#, kde-format
-msgctxt "Screen manufacturer and model on connector"
-msgid "%1 %2 on %3"
-msgstr "%1 %2 ב־%3"
-
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "מסך מנותק %1"
@@ -446,6 +440,13 @@ msgstr "ספירת לוחות"
 #, kde-format
 msgid "Counts the panels"
 msgstr "סופר את הלוחות"
+
+#~ msgid "Internal Screen on %1"
+#~ msgstr "מסך פנימי ב־%1"
+
+#~ msgctxt "Screen manufacturer and model on connector"
+#~ msgid "%1 %2 on %3"
+#~ msgstr "%1 %2 ב־%3"
 
 #~ msgid ""
 #~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "

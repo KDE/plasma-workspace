@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-14 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2021-11-18 21:06+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -406,7 +406,7 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Časowe pasy"
 
-#: main.qml:82
+#: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
@@ -416,13 +416,13 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: main.qml:84
+#: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
 msgstr ""
 
-#: main.qml:88
+#: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
@@ -432,13 +432,13 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: main.qml:90
+#: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
 msgstr ""
 
-#: main.qml:185
+#: main.qml:186
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Do zapisnika kopěrować"

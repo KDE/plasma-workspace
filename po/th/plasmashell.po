@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -338,18 +338,12 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:107
+#: shellcontainmentconfig.cpp:109
 #, kde-format
-msgid "Internal Screen on %1"
-msgstr "หน้าจอภายในบน %1"
+msgid "Built-in Screen"
+msgstr ""
 
-#: shellcontainmentconfig.cpp:111
-#, kde-format
-msgctxt "Screen manufacturer and model on connector"
-msgid "%1 %2 on %3"
-msgstr "%1 %2 บน %3"
-
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "หน้าจอถูกตัดการเชื่อมต่อ %1"
@@ -442,6 +436,13 @@ msgstr "จํานวนแผง"
 #, kde-format
 msgid "Counts the panels"
 msgstr "นับแผง"
+
+#~ msgid "Internal Screen on %1"
+#~ msgstr "หน้าจอภายในบน %1"
+
+#~ msgctxt "Screen manufacturer and model on connector"
+#~ msgid "%1 %2 on %3"
+#~ msgstr "%1 %2 บน %3"
 
 #~ msgid ""
 #~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "

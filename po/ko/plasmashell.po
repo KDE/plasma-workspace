@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2026-04-08 19:39+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -339,18 +339,12 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: shellcontainmentconfig.cpp:107
+#: shellcontainmentconfig.cpp:109
 #, kde-format
-msgid "Internal Screen on %1"
-msgstr "%1의 내장 화면"
+msgid "Built-in Screen"
+msgstr ""
 
-#: shellcontainmentconfig.cpp:111
-#, kde-format
-msgctxt "Screen manufacturer and model on connector"
-msgid "%1 %2 on %3"
-msgstr "%3(으)로 연결된 %1 %2"
-
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "연결 해제된 화면 %1"
@@ -443,6 +437,13 @@ msgstr "패널 개수"
 #, kde-format
 msgid "Counts the panels"
 msgstr "패널 개수를 셉니다"
+
+#~ msgid "Internal Screen on %1"
+#~ msgstr "%1의 내장 화면"
+
+#~ msgctxt "Screen manufacturer and model on connector"
+#~ msgid "%1 %2 on %3"
+#~ msgstr "%3(으)로 연결된 %1 %2"
 
 #~ msgid ""
 #~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-02 00:46+0000\n"
 "PO-Revision-Date: 2026-04-12 22:57+0530\n"
 "Last-Translator: Samyak Vidhan <crazycourt651@gmail.com>\n"
 "Language-Team: gu\n"
@@ -338,18 +338,12 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
 
-#: shellcontainmentconfig.cpp:107
+#: shellcontainmentconfig.cpp:109
 #, kde-format
-msgid "Internal Screen on %1"
-msgstr "આંતરિક સ્ક્રિન %1 પર છે"
+msgid "Built-in Screen"
+msgstr ""
 
-#: shellcontainmentconfig.cpp:111
-#, kde-format
-msgctxt "Screen manufacturer and model on connector"
-msgid "%1 %2 on %3"
-msgstr "%3 પર %1 %2"
-
-#: shellcontainmentconfig.cpp:134
+#: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "સ્ક્રિન %1 દૂર થઇ"
@@ -442,6 +436,13 @@ msgstr "પટ્ટીઓની સંખ્યા"
 #, kde-format
 msgid "Counts the panels"
 msgstr "પટ્ટીઓની સંખ્યા ગણશે"
+
+#~ msgid "Internal Screen on %1"
+#~ msgstr "આંતરિક સ્ક્રિન %1 પર છે"
+
+#~ msgctxt "Screen manufacturer and model on connector"
+#~ msgid "%1 %2 on %3"
+#~ msgstr "%3 પર %1 %2"
 
 #~ msgid ""
 #~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
