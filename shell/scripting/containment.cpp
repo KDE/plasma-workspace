@@ -44,7 +44,6 @@ Containment::Containment(Plasma::Containment *containment, ScriptEngine *engine)
     d->corona = qobject_cast<ShellCorona *>(containment->corona());
 
     setCurrentConfigGroup(QStringList());
-    setCurrentGlobalConfigGroup(QStringList());
     if (containment) {
         d->oldWallpaperPlugin = d->wallpaperPlugin = containment->wallpaperPlugin();
     }

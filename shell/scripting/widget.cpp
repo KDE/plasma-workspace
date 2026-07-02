@@ -32,7 +32,6 @@ Widget::Widget(Plasma::Applet *applet, ScriptEngine *parent)
 {
     d->applet = applet;
     setCurrentConfigGroup(QStringList());
-    setCurrentGlobalConfigGroup(QStringList());
 }
 
 Widget::~Widget()

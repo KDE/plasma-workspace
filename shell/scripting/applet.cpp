@@ -31,8 +31,6 @@ public:
     QPointer<ScriptEngine> engine = nullptr;
     KConfigGroup configGroup;
     QStringList configGroupPath;
-    KConfigGroup globalConfigGroup;
-    QStringList globalConfigGroupPath;
     bool configDirty : 1;
     bool inWallpaperConfig : 1;
 };
@@ -125,63 +123,6 @@ void Applet::writeConfig(const QString &key, const QJSValue &value)
         }
 
         d->configGroup.writeEntry(key, value.toVariant());
-        d->configDirty = true;
-    }
-}
-
-void Applet::setCurrentGlobalConfigGroup(const QStringList &groupNames)
-{
-    Plasma::Applet *app = applet();
-    if (!app) {
-        d->globalConfigGroup = KConfigGroup();
-        d->globalConfigGroupPath.clear();
-        return;
-    }
-
-    d->globalConfigGroup = app->globalConfig();
-    d->globalConfigGroupPath = groupNames;
-
-    for (const QString &groupName : groupNames) {
-        d->globalConfigGroup = KConfigGroup(&d->globalConfigGroup, groupName);
-    }
-}
-
-QStringList Applet::currentGlobalConfigGroup() const
-{
-    return d->globalConfigGroupPath;
-}
-
-QStringList Applet::globalConfigKeys() const
-{
-    if (d->globalConfigGroup.isValid()) {
-        return d->globalConfigGroup.keyList();
-    }
-
-    return {};
-}
-
-QStringList Applet::globalConfigGroups() const
-{
-    if (d->globalConfigGroup.isValid()) {
-        return d->globalConfigGroup.groupList();
-    }
-
-    return {};
-}
-
-QVariant Applet::readGlobalConfig(const QString &key, const QJSValue &def) const
-{
-    if (d->globalConfigGroup.isValid()) {
-        return d->globalConfigGroup.readEntry(key, def.toVariant());
-    } else {
-        return {};
-    }
-}
-
-void Applet::writeGlobalConfig(const QString &key, const QJSValue &value)
-{
-    if (d->globalConfigGroup.isValid()) {
-        d->globalConfigGroup.writeEntry(key, value.toVariant());
         d->configDirty = true;
     }
 }
