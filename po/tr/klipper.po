@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-07-03 00:47+0000\n"
 "PO-Revision-Date: 2025-08-30 18:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -611,64 +611,64 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Otomatik Eylem Açılır Menüsü"
 
-#: klipper.cpp:95
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Pano Geçmişini &Temizle"
 
-#: klipper.cpp:100
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Geçerli Panoda Elle İşlem Yap"
 
-#: klipper.cpp:108
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "İçeriği Dü&zenle…"
 
-#: klipper.cpp:114
+#: klipper.cpp:113
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Barkodu Göster…"
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Sonraki Geçmiş Ögesi"
 
-#: klipper.cpp:126
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Önceki Geçmiş Ögesi"
 
-#: klipper.cpp:133
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Fare Konumunda Pano Ögelerini Göster"
 
-#: klipper.cpp:404 klipper.cpp:413
+#: klipper.cpp:403 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "Pano geçmişi"
 
-#: klipper.cpp:430
+#: klipper.cpp:429
 #, kde-format
 msgid "up"
 msgstr "üstteki"
 
-#: klipper.cpp:437
+#: klipper.cpp:436
 #, kde-format
 msgid "current"
 msgstr "geçerli"
 
-#: klipper.cpp:444
+#: klipper.cpp:443
 #, kde-format
 msgid "down"
 msgstr "alttaki"

@@ -1,15 +1,15 @@
 # Spanish translations for plasmashell.po package.
-# Copyright (C) 2014-2025 This file is copyright:
+# Copyright (C) 2014-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014-2016, 2018, 2020, 2022-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 00:46+0000\n"
-"PO-Revision-Date: 2025-10-05 14:50+0100\n"
+"PO-Revision-Date: 2026-07-02 12:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -347,7 +347,7 @@ msgstr "%1 %"
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "Pantalla integrada"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format
@@ -442,19 +442,3 @@ msgstr "Contador de paneles"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Cuenta los paneles"
-
-#~ msgid "Internal Screen on %1"
-#~ msgstr "Pantalla interna en %1"
-
-#~ msgctxt "Screen manufacturer and model on connector"
-#~ msgid "%1 %2 on %3"
-#~ msgstr "%1 %2 en %3"
-
-#~ msgid ""
-#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
-#~ "are known to cause poor window drag and resize performance. Consider "
-#~ "using other settings."
-#~ msgstr ""
-#~ "Con las GPU NVIDIA en X11, se sabe que el estilo flotante y el modo de "
-#~ "opacidad adaptativa provocan un rendimiento deficiente al arrastrar y "
-#~ "cambiar el tamaño de las ventanas. Considere el uso de otros ajustes."

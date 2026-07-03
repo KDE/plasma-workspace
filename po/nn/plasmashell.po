@@ -444,10 +444,3 @@ msgstr "Paneltal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Talet på panel."
-
-#~ msgid "Internal Screen on %1"
-#~ msgstr "Intern skjerm på %1"
-
-#~ msgctxt "Screen manufacturer and model on connector"
-#~ msgid "%1 %2 on %3"
-#~ msgstr "%1 %2 på %3"

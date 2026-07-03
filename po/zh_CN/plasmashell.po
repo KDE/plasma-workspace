@@ -437,10 +437,3 @@ msgstr "面板数量"
 #, kde-format
 msgid "Counts the panels"
 msgstr "统计面板数量"
-
-#~ msgid "Internal Screen on %1"
-#~ msgstr "位于 %1 的内建屏幕"
-
-#~ msgctxt "Screen manufacturer and model on connector"
-#~ msgid "%1 %2 on %3"
-#~ msgstr "%1 %2，位于 %3"
