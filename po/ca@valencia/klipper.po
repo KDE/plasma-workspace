@@ -888,36 +888,3 @@ msgstr "Menú emergent del porta-retalls"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgid "The clipboard history contains starred items. Clear them too?"
-#~ msgstr ""
-#~ "L'historial del porta-retalls conté elements amb estrela. Els netege "
-#~ "també?"
-
-#~ msgid "Clear Everything"
-#~ msgstr "Neteja-ho tot"
-
-#~ msgid "Keep Starred Items"
-#~ msgstr "Mantín els elements amb estrela"
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Utilitza un editor gràfic d'expressions regulars"
-
-#~ msgid "Data Matrix"
-#~ msgstr "Data Matrix"
-
-#~ msgctxt "Aztec barcode"
-#~ msgid "Aztec"
-#~ msgstr "Aztec"
-
-#~ msgid "Code 39"
-#~ msgstr "Codi 39"
-
-#~ msgid "Code 93"
-#~ msgstr "Codi 93"
-
-#~ msgid "Code 128"
-#~ msgstr "Codi 128"
-
-#~ msgid "Change the QR code type"
-#~ msgstr "Canvia el tipus de codi QR"

@@ -112,35 +112,3 @@ msgstr "Hiberna"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hiberna (suspèn al disc)"
-
-#~ msgctxt "@title:column"
-#~ msgid "Actions"
-#~ msgstr "Accions"
-
-#~ msgctxt ""
-#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
-#~ "suspend)"
-#~ msgid "Show actions:"
-#~ msgstr "Mostra les accions:"
-
-#~ msgid "Log Out"
-#~ msgstr "Sortida"
-
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "Mostra la pantalla de sortida"
-
-#~ msgid "Shut Down"
-#~ msgstr "Atura"
-
-#~ msgid "Switch User"
-#~ msgstr "Commuta d'usuari"
-
-#~ msgid "Shutdown…"
-#~ msgstr "Atura…"
-
-#~ msgid "Restart…"
-#~ msgstr "Reinicia…"
-
-#~ msgid "Logout…"
-#~ msgstr "Sortida…"

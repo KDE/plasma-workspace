@@ -737,6 +737,3 @@ msgstr "El vostre compte"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancel·la"

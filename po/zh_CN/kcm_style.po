@@ -179,7 +179,7 @@ msgstr "预览…"
 #: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
-msgstr "从文件安装…"
+msgstr ""
 
 #: ui/GtkStylePage.qml:92
 #, kde-format

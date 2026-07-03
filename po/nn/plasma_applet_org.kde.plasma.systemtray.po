@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 00:46+0000\n"
-"PO-Revision-Date: 2026-07-01 20:14+0200\n"
+"PO-Revision-Date: 2026-07-02 20:36+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -113,6 +113,13 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"Det er ikkje tilrådd å slå av utklippstavla, då det medfører at kopiert data "
+"går tapt når du lukkar programmet det vart kopiert frå.<nl/><nl/>Du bør "
+"berre slå av utklipps­tavla dersom du alt har lagt til eit fritt­ståande "
+"utklippstavle­element ein annan stad eller dersom du brukar ein tredje­parts "
+"utklippstavle­handsamar. Du kan òg vurdera om du heller vil setja opp utklipps­"
+"tavla til å ikkje å lagra logg eller til berre å hugsa eitt element om "
+"gongen."
 
 #: qml/ConfigGeneral.qml:198
 #, kde-kuit-format
@@ -123,6 +130,10 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Det er ikkje tilrådd å slå av varslings­elementet, sidan du då ikkje lenger "
+"kan sjå varslingar frå ulike program.<nl/><nl/>Du bør berre slå av elementet "
+"dersom du alt har lagt til eit fritt­ståande varslings­element ein annan stad "
+"eller dersom du brukar ein tredje­parts varslings­handsamar."
 
 #: qml/ConfigGeneral.qml:210
 #, kde-format

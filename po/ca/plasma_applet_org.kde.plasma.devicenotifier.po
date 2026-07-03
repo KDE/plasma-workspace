@@ -264,13 +264,3 @@ msgstr "Tots els dispositius"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Mostra un missatge emergent quan s'endolli un dispositiu nou"
-
-#~ msgctxt "@action:button Mount a disk without verifying for errors"
-#~ msgid "Mount without verifying"
-#~ msgstr "Munta sense verificar"
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "El sistema de fitxers no respon"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "El sistema de fitxers muntat a «%1» no respon"

@@ -306,21 +306,3 @@ msgid ""
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu arranjament "
 "de notificacions i el comportament"
-
-#~ msgctxt "@action:button Plasma-specific notifications"
-#~ msgid "System Notifications"
-#~ msgstr "Notificacions del sistema"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings"
-#~ msgstr "Configuració de l'aplicació"
-
-#~ msgctxt "@action:button choose custom notification position"
-#~ msgid "Custom…"
-#~ msgstr "Personalitzat…"
-
-#~ msgid "Normal notifications:"
-#~ msgstr "Notificacions normals:"
-
-#~ msgid "Show over full screen windows"
-#~ msgstr "Mostra sobre les finestres a pantalla completa"

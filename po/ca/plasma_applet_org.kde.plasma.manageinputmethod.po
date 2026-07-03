@@ -54,6 +54,3 @@ msgstr "Teclat virtual: mostra en l'entrada que no sigui de ratolí"
 #, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
 msgstr "Teclat virtual: mostra en tots els dispositius d'entrada"
-
-#~ msgid "Virtual Keyboard: enabled"
-#~ msgstr "Teclat virtual: activat"
