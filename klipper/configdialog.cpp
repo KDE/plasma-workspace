@@ -18,6 +18,7 @@
 #include <QRadioButton>
 #include <QSpinBox>
 #include <QToolTip>
+#include <QVBoxLayout>
 #include <QWindow>
 
 #include <KActionCollection>
@@ -601,8 +602,12 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     addPage(m_popupPage, i18nc("Popup Menu Config", "Action Menu"), QStringLiteral("open-menu-symbolic"), i18n("Action Menu"));
     addPage(m_actionsPage, i18nc("Actions Config", "Actions Configuration"), QStringLiteral("system-run"), i18n("Actions Configuration"));
 
-    m_shortcutsWidget = new KShortcutsEditor(collection, this, KShortcutsEditor::GlobalAction);
-    addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
+    QWidget *shortcutsPage = new QWidget(this);
+    QVBoxLayout *shortcutsLayout = new QVBoxLayout(shortcutsPage);
+    m_shortcutsWidget = new KShortcutsEditor(collection, shortcutsPage, KShortcutsEditor::GlobalAction);
+    shortcutsLayout->addWidget(m_shortcutsWidget);
+    
+    addPage(shortcutsPage, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
     connect(m_generalPage, &GeneralWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
