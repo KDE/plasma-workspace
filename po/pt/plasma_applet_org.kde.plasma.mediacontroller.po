@@ -111,7 +111,7 @@ msgid ""
 msgstr ""
 "de %1 (%2)\n"
 "Botão do meio para pausar\n"
-"Deslocar para ajustar o volume"
+"Rodar para ajustar o volume"
 
 #: main.qml:61
 #, kde-format
@@ -123,7 +123,7 @@ msgid ""
 msgstr ""
 "%1\n"
 "Botão do meio para pausar\n"
-"Deslocar para ajustar o volume"
+"Rodar para ajustar o volume"
 
 #: main.qml:63
 #, kde-format
@@ -135,7 +135,7 @@ msgid ""
 msgstr ""
 "de %1 (em pausa, %2)\n"
 "Botão do meio para reproduzir\n"
-"Deslocar para ajustar o volume"
+"Rodar para ajustar o volume"
 
 #: main.qml:64
 #, kde-format
@@ -147,7 +147,7 @@ msgid ""
 msgstr ""
 "Em pausa (%1)\n"
 "Botão do meio para reproduzir\n"
-"Deslocar para ajustar o volume"
+"Rodar para ajustar o volume"
 
 #: main.qml:107
 #, kde-format
