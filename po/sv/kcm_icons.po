@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2016-2018, 2020-2021, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-06-21 09:24+0200\n"
+"PO-Revision-Date: 2026-07-04 09:33+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -73,30 +73,28 @@ msgid "Get New…"
 msgstr "Hämta nytt…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Icon Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
 msgstr "Ta bort ikontema"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Name of the current icon theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr "Namn på aktuellt ikontema"
+msgstr "Kan inte ta bort det aktiva ikontemat"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed icon themes"
-msgstr ""
+msgstr "Kan inte ta bort systeminstallerade ikonteman"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "Ta inte bort det här ikontemat"
 
 #: ui/main.qml:250
 #, kde-format

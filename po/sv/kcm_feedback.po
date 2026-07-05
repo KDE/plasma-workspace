@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2019-2022, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2022-01-05 21:58+0100\n"
+"PO-Revision-Date: 2026-07-04 09:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -25,16 +25,7 @@ msgstr ""
 "Användaråterkoppling har inaktiverats centralt. Kontakta din distribution."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -48,14 +39,13 @@ msgstr ""
 "<nl/><nl/>Att bidra med information är frivilligt och helt anonymt. Vi "
 "samlar aldrig in din personliga information, filer som du använder, "
 "webbplatser som du besöker, eller information som skulle kunna identifiera "
-"dig.<nl/><nl/>Du kan läsa om <link url='https://kde.org/privacypolicy-apps."
-"php'>vår integritetspolicy här</link>."
+"dig.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Läs mer om vår integritetspolicy"
 
 #: ui/main.qml:64
 #, kde-format

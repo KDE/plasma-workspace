@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2020-2022, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2026-01-23 20:42+0100\n"
+"PO-Revision-Date: 2026-07-04 09:38+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -686,7 +686,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "Schemat är skrivskyddat. Spara ändringarna med ett annat namn."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -1346,29 +1346,27 @@ msgid "Edit Color Scheme…"
 msgstr "Redigera färgschema…"
 
 #: ui/main.qml:312
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Ta bort färgschema"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Verktyg för att redigera och skapa färgscheman"
+msgstr "Kan inte ta bort det aktiva färgschemat"
 
 #: ui/main.qml:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Kan inte ta bort systeminstallerade färgscheman"
 
 #: ui/main.qml:324
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Ta inte bort det här färgschemat"
 
 #: ui/main.qml:368
 #, kde-format

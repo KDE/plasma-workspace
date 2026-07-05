@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014-2017, 2019-2021, 2024-2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-23 02:42+0000\n"
-"PO-Revision-Date: 2025-01-11 12:29+0100\n"
+"PO-Revision-Date: 2026-07-04 09:30+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -148,10 +148,9 @@ msgid "Open Containing Folder"
 msgstr "Öppna katalog med innehåll"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Glöm fil"
+msgstr "Glöm katalog"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -169,10 +168,9 @@ msgid "Forget All Applications"
 msgstr "Glöm alla program"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Glöm alla filer"
+msgstr "Glöm alla kataloger"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -195,16 +193,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Det här ska inte vara synligt. Använd KICKER_FAVORITES_MODEL."
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Senaste filer"
+msgstr "Senaste platser"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Ofta använda filer"
+msgstr "Ofta använda platser"
 
 #: rootmodel.cpp:587
 #, kde-format

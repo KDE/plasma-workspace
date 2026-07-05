@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-28 00:47+0000\n"
-"PO-Revision-Date: 2024-06-21 09:25+0200\n"
+"PO-Revision-Date: 2026-07-04 09:44+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: kcm_soundtheme.cpp:156
 #, kde-format
@@ -32,39 +32,39 @@ msgstr "Reservljudtema från freedesktop.org"
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Kan inte skapa en tillfällig fil."
 
 #: kcm_soundtheme.cpp:259
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
-msgstr ""
+msgstr "Kan inte ladda ner ljudtemats arkiv: %1"
 
 #: kcm_soundtheme.cpp:270
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr ""
+msgstr "Arkivet kunde inte öppnas."
 
 #: kcm_soundtheme.cpp:275
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tema installerat med lyckat resultat."
+msgstr[1] "Teman installerade med lyckat resultat."
 
 #: kcm_soundtheme.cpp:278
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
-msgstr ""
+msgstr "Arkivet innehåller inte ett giltigt ljudtema."
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@action:button Install sound theme from file"
 msgid "Install from File…"
-msgstr ""
+msgstr "Installera från fil…"
 
 #: ui/main.qml:42
 #, kde-format
@@ -117,9 +117,9 @@ msgstr "Misslyckades lyssna på ljudet: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
-msgstr ""
+msgstr "Välj ljudtema"
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
-msgstr ""
+msgstr "Temafiler (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
