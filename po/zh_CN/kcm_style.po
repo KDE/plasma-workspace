@@ -170,13 +170,13 @@ msgstr "GNOME/GTK 应用程序外观样式"
 #, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
-msgstr ""
+msgstr "安装样式主题文件…"
 
 #: ui/GtkStylePage.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr ""
+msgstr "获取新样式主题文件…"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format

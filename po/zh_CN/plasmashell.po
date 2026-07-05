@@ -342,7 +342,7 @@ msgstr "%1%"
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "内置屏幕"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format
