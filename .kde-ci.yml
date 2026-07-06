@@ -89,6 +89,7 @@ RuntimeDependencies:
 Options:
  ctest-arguments: '--repeat until-pass:5'
  use-ccache: True
+ setup-x-environment: True
  require-passing-tests-on: ['@all']
  clang-format-versions: [14, 18]
  run-qmllint: True
