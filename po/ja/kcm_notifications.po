@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2022-2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 # SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-06 00:45+0000\n"
-"PO-Revision-Date: 2026-02-21 20:12+0900\n"
-"Last-Translator: Mint <5602mint@gmail.com>\n"
-"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-07-04 14:45+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -93,13 +93,13 @@ msgstr "音声ファイルを選択"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "システム通知の設定…"
+msgstr "システム通知を設定…"
 
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "アプリケーションの通知を設定..."
+msgstr "アプリケーション通知を設定..."
 
 #: ui/main.qml:96
 #, kde-format
@@ -273,7 +273,7 @@ msgstr "ポップアップの位置"
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "アプリケーションの通知"
+msgstr "アプリケーション通知"
 
 #: ui/SourcesPage.qml:108
 #, kde-format
