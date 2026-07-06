@@ -1,12 +1,11 @@
 # Translation of plasma_runner_windowedwidgets to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2015-10-09 17:33+0100\n"
+"PO-Revision-Date: 2026-07-05 16:17+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -17,7 +16,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: windowedwidgetsrunner.cpp:30
 #, kde-format
@@ -33,4 +32,4 @@ msgstr "mobile program"
 #: windowedwidgetsrunner.cpp:32
 #, kde-format
 msgid "list all Plasma widgets that can run as standalone applications"
-msgstr "Vis alle skjermelement som kan køyrast som frittstående program"
+msgstr "Vis alle skjermelement som kan køyrast som frittståande program"

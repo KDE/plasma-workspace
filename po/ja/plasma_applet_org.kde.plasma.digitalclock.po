@@ -1,5 +1,5 @@
+# SPDX-FileCopyrightText: 2022-2023, 2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Toda Ryunosuke <toda.ryunosuke@gmail.com>, 2021.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
