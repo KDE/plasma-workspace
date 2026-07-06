@@ -1,13 +1,13 @@
+# SPDX-FileCopyrightText: 2022-2023, 2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Toda Ryunosuke <toda.ryunosuke@gmail.com>, 2021.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-02 02:41+0000\n"
-"PO-Revision-Date: 2024-09-11 19:46+0900\n"
-"Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
+"PO-Revision-Date: 2026-07-04 12:23+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Lokalize 26.04.2\n"
 
 #: CalendarView.qml:148
 #, kde-format
@@ -148,11 +148,10 @@ msgid "Offset from UTC time"
 msgstr "UTC 時刻からのオフセット"
 
 #: configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "システム全体のタイムゾーンを切り替え…"
+msgstr "タイムゾーンを切り替え…"
 
 #: configAppearance.qml:153
 #, kde-format
@@ -266,7 +265,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "注意: パネルが十分に厚くない場合、サイズが小さくなる可能性があります。"
 
 #: configAppearance.qml:350
 #, kde-format
@@ -275,15 +274,13 @@ msgid "Choose a Font"
 msgstr "フォントを選択"
 
 #: configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "全般:"
 
 #: configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "週番号を表示"
@@ -301,26 +298,23 @@ msgid "Use region defaults"
 msgstr "地域の標準を使用"
 
 #: configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "利用可能なプラグイン:"
+msgstr "利用可能なアドオン"
 
 #: configTimeZones.qml:70
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: configTimeZones.qml:77
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "タイムゾーンを追加"
+msgstr "選択されたタイムゾーンを追加"
 
 #: configTimeZones.qml:94
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
 msgstr "タイムゾーン追加…"
 
@@ -374,6 +368,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"ヒント: 自宅のタイムゾーンをこのリストに追加すると、旅行中もそのタイムゾーン"
+"の時刻を確認できます。自宅にいるときは重複して表示されません。"
 
 #: configTimeZones.qml:245
 #, kde-format
@@ -391,36 +387,35 @@ msgstr ""
 "ださい。"
 
 #: configTimeZones.qml:264
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "タイムゾーン"
+msgstr "タイムゾーンを選択"
 
 #: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
+msgstr[0] " • %1時間早い"
 
 #: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 早い"
 
 #: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
+msgstr[0] " • %1時間遅い"
 
 #: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 遅い"
 
 #: main.qml:186
 #, kde-format
@@ -433,6 +428,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"タイムゾーンが設定されていません。ここをクリックして「日付と時刻」設定を開"
+"き、設定してください。"
 
 #: plugin/clipboardmenu.cpp:111
 #, kde-format
@@ -469,12 +466,11 @@ msgid "Today is %1"
 msgstr "今日は %1"
 
 #: Tooltip.qml:76
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "タイムゾーン"
+msgstr "タイムゾーンは設定されていません"
 
 #: Tooltip.qml:97
 #, kde-format
@@ -482,6 +478,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"タイムゾーンを設定するには、時計アイコンをクリックして「日付と時刻」設定を開"
+"いてください。"
 
 #: Tooltip.qml:154
 #, kde-format
@@ -493,32 +491,4 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
-
-#~ msgid ""
-#~ "Tip: if you travel frequently, add your home time zone to this list. It "
-#~ "will only appear when you change the systemwide time zone to something "
-#~ "else."
-#~ msgstr ""
-#~ "ヒント: 頻繁に旅行されるのであれば、このリストにご自宅のタイムゾーンを追加"
-#~ "してください。システム全体のタイムゾーンが別のものに変更されたときのみ表示"
-#~ "されます。"
-
-#~ msgid "Adjust Date and Time…"
-#~ msgstr "日付と時刻の調整…"
-
-#~ msgid "Set Time Format…"
-#~ msgstr "日付と時間の書式…"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr ""
-#~ "少なくとも1つのタイムゾーンを有効にする必要があります。ローカルタイムゾー"
-#~ "ンが自動的に有効になりました。"
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
+msgstr "中クリックして %1 を開く"
