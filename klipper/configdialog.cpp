@@ -314,7 +314,7 @@ ActionsWidget::ActionsWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto *layout = new QGridLayout(this);
-    layout->setContentsMargins(0, 0, 0, 0);
+    
 
     // General information label
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
