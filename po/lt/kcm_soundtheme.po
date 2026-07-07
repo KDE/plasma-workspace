@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:47+0000\n"
+"POT-Creation-Date: 2026-07-07 00:45+0000\n"
 "PO-Revision-Date: 2026-03-14 22:10+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -30,25 +30,25 @@ msgstr "FreeDesktop"
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Atsarginis garsų rinkinys iš freedesktop.org"
 
-#: kcm_soundtheme.cpp:249
+#: kcm_soundtheme.cpp:250
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
 msgstr "Nepavyko sukurti laikinojo failo."
 
-#: kcm_soundtheme.cpp:259
+#: kcm_soundtheme.cpp:260
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
 msgstr "Nepavyko atsisiųsti garsų rinkinio archyvo: %1"
 
-#: kcm_soundtheme.cpp:270
+#: kcm_soundtheme.cpp:271
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
 msgstr "Nepavyko atverti archyvo."
 
-#: kcm_soundtheme.cpp:275
+#: kcm_soundtheme.cpp:276
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
@@ -58,7 +58,7 @@ msgstr[1] "Rinkiniai sėkmingai įdiegti."
 msgstr[2] "Rinkiniai sėkmingai įdiegti."
 msgstr[3] "Rinkiniai sėkmingai įdiegti."
 
-#: kcm_soundtheme.cpp:278
+#: kcm_soundtheme.cpp:279
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."

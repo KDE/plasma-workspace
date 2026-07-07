@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:47+0000\n"
+"POT-Creation-Date: 2026-07-07 00:45+0000\n"
 "PO-Revision-Date: 2026-04-03 22:04+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -30,25 +30,25 @@ msgstr "FreeDesktop"
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Резервное звуковое оформление от freedesktop.org"
 
-#: kcm_soundtheme.cpp:249
+#: kcm_soundtheme.cpp:250
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
 msgstr "Не удалось создать временный файл."
 
-#: kcm_soundtheme.cpp:259
+#: kcm_soundtheme.cpp:260
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
 msgstr "Не удалось загрузить архив звукового оформления: %1"
 
-#: kcm_soundtheme.cpp:270
+#: kcm_soundtheme.cpp:271
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
 msgstr "Не удалось открыть архив."
 
-#: kcm_soundtheme.cpp:275
+#: kcm_soundtheme.cpp:276
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
@@ -58,7 +58,7 @@ msgstr[1] "Оформления установлены успешно."
 msgstr[2] "Оформления установлены успешно."
 msgstr[3] "Оформление установлено успешно."
 
-#: kcm_soundtheme.cpp:278
+#: kcm_soundtheme.cpp:279
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."

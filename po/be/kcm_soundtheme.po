@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:47+0000\n"
+"POT-Creation-Date: 2026-07-07 00:45+0000\n"
 "PO-Revision-Date: 2024-05-25 23:56\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -33,25 +33,25 @@ msgstr "FreeDesktop"
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Альтэрнатыўная гукавая тэма з freedesktop.org"
 
-#: kcm_soundtheme.cpp:249
+#: kcm_soundtheme.cpp:250
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcm_soundtheme.cpp:259
+#: kcm_soundtheme.cpp:260
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
 msgstr ""
 
-#: kcm_soundtheme.cpp:270
+#: kcm_soundtheme.cpp:271
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
 msgstr ""
 
-#: kcm_soundtheme.cpp:275
+#: kcm_soundtheme.cpp:276
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
@@ -61,7 +61,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: kcm_soundtheme.cpp:278
+#: kcm_soundtheme.cpp:279
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."

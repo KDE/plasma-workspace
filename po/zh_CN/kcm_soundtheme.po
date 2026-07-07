@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-28 00:47+0000\n"
+"POT-Creation-Date: 2026-07-07 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,32 +28,32 @@ msgstr "FreeDesktop"
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "来自 freedesktop.org 的备用声音主题"
 
-#: kcm_soundtheme.cpp:249
+#: kcm_soundtheme.cpp:250
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
 msgstr "无法创建临时文件。"
 
-#: kcm_soundtheme.cpp:259
+#: kcm_soundtheme.cpp:260
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
 msgstr "无法下载声音主题压缩文件：%1"
 
-#: kcm_soundtheme.cpp:270
+#: kcm_soundtheme.cpp:271
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
 msgstr "无法打开此压缩包文件。"
 
-#: kcm_soundtheme.cpp:275
+#: kcm_soundtheme.cpp:276
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
 msgstr[0] "主题安装成功。"
 
-#: kcm_soundtheme.cpp:278
+#: kcm_soundtheme.cpp:279
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
