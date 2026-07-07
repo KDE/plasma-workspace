@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 02:41+0000\n"
+"POT-Creation-Date: 2026-07-07 02:40+0000\n"
 "PO-Revision-Date: 2025-01-19 13:39+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -31,12 +31,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.0\n"
 
-#: configdialog.cpp:84
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Historial do portapapeis:"
 
-#: configdialog.cpp:90
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -44,12 +44,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v entrada"
 msgstr[1] "%v entradas"
 
-#: configdialog.cpp:99
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Selección e portapapeis:"
 
-#: configdialog.cpp:106
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -76,37 +76,37 @@ msgstr ""
 "portapapeis (dependendo das seguintes opcións), pero só se pode pegar "
 "mediante o botón central do rato."
 
-#: configdialog.cpp:135 configdialog.cpp:173
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "Gardar sempre no historial"
 
-#: configdialog.cpp:139
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "Selección de texto:"
 
-#: configdialog.cpp:141 configdialog.cpp:179
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Só cando se copia explicitamente"
 
-#: configdialog.cpp:146
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Se as seleccións de texto se gardan no historial do portapapeis."
 
-#: configdialog.cpp:177
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Selección de non texto:"
 
-#: configdialog.cpp:184
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "Nunca gardar no historial"
 
-#: configdialog.cpp:189
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -115,12 +115,12 @@ msgstr ""
 "Se as seleccións de non texto (p. ex. imaxes) se gardan no historial do "
 "portapapeis."
 
-#: configdialog.cpp:263
+#: configdialog.cpp:264
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Amosar un menú emerxente de accións:"
 
-#: configdialog.cpp:273
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -136,7 +136,7 @@ msgstr ""
 "amosa para unha xanela excluída, pode amosarse usando o atallo de teclado "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:285
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -144,18 +144,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v segundo"
 msgstr[1] "%v segundos"
 
-#: configdialog.cpp:286
+#: configdialog.cpp:287
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Cero"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, kde-format
 msgid "Options:"
 msgstr "Opcións:"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:321
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -167,34 +167,34 @@ msgstr ""
 "portapapeis, as súas <interface>ordes</interface> aparecen no menú emerxente "
 "de Klipper e poden executarse."
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Padrón de coincidencia e ordes"
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descrición"
 
-#: configdialog.cpp:335
+#: configdialog.cpp:336
 #, kde-format
 msgid "Add Action..."
 msgstr "Engadir unha acción…"
 
-#: configdialog.cpp:339
+#: configdialog.cpp:340
 #, kde-format
 msgid "Edit Action..."
 msgstr "Editar a acción…"
 
-#: configdialog.cpp:344
+#: configdialog.cpp:345
 #, kde-format
 msgid "Delete Action"
 msgstr "Eliminar a acción"
 
-#: configdialog.cpp:351
+#: configdialog.cpp:352
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -204,7 +204,7 @@ msgstr ""
 "Estas accións aparecen no menú emerxente que se pode configurar na páxina "
 "<interface>Menú de accións</interface>."
 
-#: configdialog.cpp:546
+#: configdialog.cpp:547
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -214,51 +214,51 @@ msgstr ""
 "Eliminar a acción seleccionada <resource>%1</resource><nl/>e todas as súas "
 "ordes?"
 
-#: configdialog.cpp:547
+#: configdialog.cpp:548
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Confirmar a eliminación da acción"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Xeral"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:601
 #, kde-format
 msgid "General Configuration"
 msgstr "Configuración xeral"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menú de accións"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:602
 #, kde-format
 msgid "Action Menu"
 msgstr "Menú de accións"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:603
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configuración das accións"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:603
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Configuración das accións"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:610
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Atallos"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:610
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Configuración dos atallos"

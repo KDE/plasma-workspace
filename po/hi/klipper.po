@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 02:41+0000\n"
+"POT-Creation-Date: 2026-07-07 02:40+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: configdialog.cpp:84
+#: configdialog.cpp:85
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard history:"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: configdialog.cpp:90
+#: configdialog.cpp:91
 #, fuzzy, kde-format
 #| msgctxt "NUmber of entries"
 #| msgid " entry"
@@ -37,12 +37,12 @@ msgid_plural "%v entries"
 msgstr[0] " प्रविष्टि"
 msgstr[1] " प्रविष्टियाँ"
 
-#: configdialog.cpp:99
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "चयन तथा क्लिपबोर्ड :"
 
-#: configdialog.cpp:106
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -67,50 +67,50 @@ msgstr ""
 "बंद कर दिया जाता है, तो चयन अभी भी क्लिपबोर्ड इतिहास में सहेजा जा सकता है (नीचे दिए "
 "गए विकल्पों के अधीन), लेकिन इसे केवल मध्य माउस बटन का उपयोग करके चिपकाया जा सकता है।"
 
-#: configdialog.cpp:135 configdialog.cpp:173
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "इतिहास में हमेशा सहेजें"
 
-#: configdialog.cpp:139
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "पाठ चयन :"
 
-#: configdialog.cpp:141 configdialog.cpp:179
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "केवल स्पष्ट रूप से नकल किए जाने पर"
 
-#: configdialog.cpp:146
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "क्या पाठ चयन क्लिपबोर्ड इतिहास में सहेजे गए हैं।"
 
-#: configdialog.cpp:177
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "गैर-पाठ चयन :"
 
-#: configdialog.cpp:184
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "इतिहास में में कभी न सहेजें"
 
-#: configdialog.cpp:189
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr "क्या गैर-पाठ चयन (जैसे छवियां) क्लिपबोर्ड इतिहास में सहेजे गए हैं।"
 
-#: configdialog.cpp:263
+#: configdialog.cpp:264
 #, fuzzy, kde-format
 #| msgid "Automatic action popup time:"
 msgid "Show action popup menu:"
 msgstr "स्वचालित कार्रवाई पॉपअप समय :"
 
-#: configdialog.cpp:273
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -121,7 +121,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:285
+#: configdialog.cpp:286
 #, fuzzy, kde-format
 #| msgctxt "Unit of time"
 #| msgid " second"
@@ -132,20 +132,20 @@ msgid_plural "%v seconds"
 msgstr[0] " सेकंड"
 msgstr[1] " सेकंड"
 
-#: configdialog.cpp:286
+#: configdialog.cpp:287
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "कोई नहीं"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "क्रियाएं"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:321
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -154,35 +154,35 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "वर्णन"
 
-#: configdialog.cpp:335
+#: configdialog.cpp:336
 #, kde-format
 msgid "Add Action..."
 msgstr "क्रिया जोड़ें..."
 
-#: configdialog.cpp:339
+#: configdialog.cpp:340
 #, kde-format
 msgid "Edit Action..."
 msgstr "क्रिया संपादित करें..."
 
-#: configdialog.cpp:344
+#: configdialog.cpp:345
 #, kde-format
 msgid "Delete Action"
 msgstr "क्रिया मिटाएँ"
 
-#: configdialog.cpp:351
+#: configdialog.cpp:352
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -190,7 +190,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:546
+#: configdialog.cpp:547
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -198,24 +198,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:547
+#: configdialog.cpp:548
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "क्रिया मिटाएँ"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "सामान्य"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:601
 #, kde-format
 msgid "General Configuration"
 msgstr "सामान्य विन्यास"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:602
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -223,32 +223,32 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "क्रियाएं"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:602
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "क्रियाएं"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:603
 #, fuzzy, kde-format
 #| msgid "Actions Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "क्रियाओं का विन्यास"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:603
 #, kde-format
 msgid "Actions Configuration"
 msgstr "क्रियाओं का विन्यास"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:610
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "शॉर्टकट्स"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:610
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "शॉर्टकट्स विन्यास"

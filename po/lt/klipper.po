@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 02:41+0000\n"
+"POT-Creation-Date: 2026-07-07 02:40+0000\n"
 "PO-Revision-Date: 2025-09-04 13:15+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -22,12 +22,12 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.6\n"
 
-#: configdialog.cpp:84
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Iškarpinės istorija:"
 
-#: configdialog.cpp:90
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -37,12 +37,12 @@ msgstr[1] "%v įrašai"
 msgstr[2] "%v įrašų"
 msgstr[3] "%v įrašas"
 
-#: configdialog.cpp:99
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Žymėjimas ir iškarpinė:"
 
-#: configdialog.cpp:106
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -70,37 +70,37 @@ msgstr ""
 "nuo žemiau pasirinktų parinkčių), bet gali būti įdėtas tik naudojant "
 "vidurinįjį pelės mygtuką."
 
-#: configdialog.cpp:135 configdialog.cpp:173
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "Visada įrašyti į istoriją"
 
-#: configdialog.cpp:139
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "Teksto žymėjimas:"
 
-#: configdialog.cpp:141 configdialog.cpp:179
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Tik tada, kai sąmoningai nukopijuotas"
 
-#: configdialog.cpp:146
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Ar teksto žymėjimai bus įrašomi į iškarpinės istoriją."
 
-#: configdialog.cpp:177
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Ne teksto žymėjimai:"
 
-#: configdialog.cpp:184
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "Niekada neįrašyti į istoriją"
 
-#: configdialog.cpp:189
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -108,12 +108,12 @@ msgid ""
 msgstr ""
 "Ar ne teksto žymėjimai (pvz., paveikslai) bus įrašomi į iškarpinės istoriją."
 
-#: configdialog.cpp:263
+#: configdialog.cpp:264
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Rodyti veiksmų iškylantįjį meniu:"
 
-#: configdialog.cpp:273
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -129,7 +129,7 @@ msgstr ""
 "nėra rodomas išskirtam langui, tuomet jis gali būti parodytas naudojant "
 "spartųjį klavišą <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:285
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -139,18 +139,18 @@ msgstr[1] "%v sekundės"
 msgstr[2] "%v sekundžių"
 msgstr[3] "%v sekundė"
 
-#: configdialog.cpp:286
+#: configdialog.cpp:287
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nėra"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, kde-format
 msgid "Options:"
 msgstr "Parinktys:"
 
-#: configdialog.cpp:320
+#: configdialog.cpp:321
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -162,34 +162,34 @@ msgstr ""
 "<interface>komandos</interface> atsiranda Klipper iškylančiajame meniu ir "
 "gali būti įvykdytos."
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Atitikimo šablonas ir komandos"
 
-#: configdialog.cpp:329
+#: configdialog.cpp:330
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Aprašas"
 
-#: configdialog.cpp:335
+#: configdialog.cpp:336
 #, kde-format
 msgid "Add Action..."
 msgstr "Pridėti veiksmą..."
 
-#: configdialog.cpp:339
+#: configdialog.cpp:340
 #, kde-format
 msgid "Edit Action..."
 msgstr "Keisti veiksmą..."
 
-#: configdialog.cpp:344
+#: configdialog.cpp:345
 #, kde-format
 msgid "Delete Action"
 msgstr "Ištrinti veiksmą"
 
-#: configdialog.cpp:351
+#: configdialog.cpp:352
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -199,7 +199,7 @@ msgstr ""
 "Šie veiksmai atsiras iškylančiajame meniu, kurį galima konfigūruoti "
 "<interface>Veiksmų meniu</interface> puslapyje."
 
-#: configdialog.cpp:546
+#: configdialog.cpp:547
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -208,51 +208,51 @@ msgid ""
 msgstr ""
 "Ištrinti pažymėtą veiksmą <resource>%1</resource><nl/>ir visas jo komandas?"
 
-#: configdialog.cpp:547
+#: configdialog.cpp:548
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Patvirtinti veiksmo ištrynimą"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Bendri"
 
-#: configdialog.cpp:600
+#: configdialog.cpp:601
 #, kde-format
 msgid "General Configuration"
 msgstr "Bendra konfigūracija"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Veiksmų meniu"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:602
 #, kde-format
 msgid "Action Menu"
 msgstr "Veiksmų meniu"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:603
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Veiksmų konfigūracija"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:603
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Veiksmų konfigūracija"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:610
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Spartieji klavišai"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:610
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Sparčiųjų klavišų konfigūracija"
