@@ -292,6 +292,7 @@ void XWindowTasksModelTest::test_modelData()
     QTRY_VERIFY(!index.data(AbstractTasksModel::SkipPager).toBool());
     QTRY_COMPARE(index.data(AbstractTasksModel::AppPid).toInt(), info.pid());
 
+    QEXPECT_FAIL("", "CanLaunchNewInstance is expected to be false now after the security fix in 3fc54a48", Continue);
     QVERIFY(index.data(AbstractTasksModel::CanLaunchNewInstance).toBool());
 }
 
