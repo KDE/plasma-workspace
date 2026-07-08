@@ -30,6 +30,7 @@ Name[ro]=Plasma
 Name[ru]=Plasma
 Name[sk]=Plasma
 Name[sl]=Plasma
+Name[sv]=Plasma
 Name[ta]=பிளாஸ்மா
 Name[tr]=Plasma
 Name[ug]=Plasma
