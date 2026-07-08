@@ -117,6 +117,7 @@ void RunnerModel::setMergeResults(bool merge)
         if (!m_models.isEmpty()) {
             qDeleteAll(m_models);
             m_models.clear();
+            m_queryingModels = 0;
             // Just re-create all models,
             initializeModels();
         }
@@ -214,6 +215,7 @@ void RunnerModel::setEnabledRunners(const QStringList &runners)
             // Just re-create all the models, it is an edge-case anyway
             qDeleteAll(m_models);
             m_models.clear();
+            m_queryingModels = 0;
             initializeModels();
         }
     }
@@ -273,8 +275,6 @@ void RunnerModel::startQuery()
         }
         QTimer::singleShot(0, this, &RunnerModel::queryFinished);
     } else {
-        const bool wasQuerying = querying();
-        m_queryingModels += m_models.size();
         if (m_resultsPresent) {
             // don't always set to false - we want to keep showing old results while in flight
             checkResultsPresent();
@@ -282,9 +282,9 @@ void RunnerModel::startQuery()
         for (KRunner::ResultsModel *model : std::as_const(m_models)) {
             model->setQueryString(m_query);
         }
-        if (!wasQuerying) {
-            Q_EMIT queryingChanged();
-        }
+    }
+    if (!querying()) {
+        Q_EMIT queryingChanged();
     }
 }
 
@@ -313,15 +313,25 @@ void RunnerModel::initializeModels()
         }
     }
     for (auto model : std::as_const(m_models)) {
+        connect(model, &RunnerMatchesModel::queryingChanged, this, [this, model]() {
+            const bool wasQuerying = querying();
+            if (model->querying()) {
+                m_queryingModels++;
+            } else {
+                m_queryingModels--;
+            }
+            if (wasQuerying != querying()) {
+                Q_EMIT queryingChanged();
+            }
+        });
         connect(model->runnerManager(), &KRunner::RunnerManager::queryFinished, this, [this]() {
             Q_EMIT anyRunnerFinished();
             if (!m_resultsPresent) {
                 checkResultsPresent();
             }
-            if (--m_queryingModels == 0) {
+            if (m_queryingModels == 0) {
                 checkResultsPresent(); // final check in case we go from matches to no matches
                 Q_EMIT queryFinished();
-                Q_EMIT queryingChanged();
             }
         });
     }
