@@ -33,7 +33,7 @@ msgstr "zepires@gmail.com"
 #| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Abrir a Imagem do Papel de Parede"
+msgstr "Abrir imagem de fundo"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:68
 #, fuzzy, kde-format
@@ -138,7 +138,7 @@ msgstr "Seleccionar a Cor de Fundo"
 #: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Abrir a Imagem do Papel de Parede"
+msgstr "Abrir imagem de fundo"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, fuzzy, kde-format
@@ -157,7 +157,7 @@ msgstr ""
 #| msgid "Open Wallpaper Image"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Abrir a Imagem do Papel de Parede"
+msgstr "Abrir imagem de fundo"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:99
 #, fuzzy, kde-format
@@ -171,7 +171,7 @@ msgstr "Obter Novos Papéis de Parede…"
 #| msgid "Next Wallpaper Image"
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Papel de Parede Seguinte"
+msgstr "Imagem de fundo seguinte"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
@@ -205,12 +205,12 @@ msgstr "Abrir a Pasta Respectiva"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, kde-format
 msgid "Restore wallpaper"
-msgstr "Repor o papel de parede"
+msgstr "Repor a imagem de fundo"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, kde-format
 msgid "Remove Wallpaper"
-msgstr "Remover o Papel de Parede"
+msgstr "Remover a imagem de fundo"
 
 #: plasma-apply-wallpaperimage.cpp:28
 #, kde-format

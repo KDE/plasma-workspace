@@ -78,7 +78,7 @@ msgid ""
 "generated color or default color"
 msgstr ""
 "A cor acentuada personalizada usada pela última vez antes de o utilizador "
-"mudar para uma cor gerada pelo papel de parede ou cor predefinida"
+"mudar para uma cor gerada pela imagem de fundo ou cor predefinida"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21

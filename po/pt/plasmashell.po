@@ -157,12 +157,12 @@ msgstr ""
 #: desktopview.cpp:533 desktopview.cpp:549
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Entrar no Modo de Edição"
 
 #: desktopview.cpp:547
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Sair do Modo de Edição"
 
 #: main.cpp:108
 #, kde-format
