@@ -36,8 +36,9 @@ public:
     };
 
     std::unique_ptr<EventPluginsModel> model;
-    // These pointers are owned and managed by QPluginLoader internals and deleted once all consumers unload.
-    QMap<QString, CalendarEvents::CalendarEventsPlugin *> plugins;
+    // One QPluginLoader per plugin; its refcount keeps the shared root alive
+    // until the last manager unloads, so one manager can't dangle another.
+    QMap<QString, QPluginLoader *> plugins;
     QMap<QString, PluginData> availablePlugins;
     QStringList enabledPlugins;
 };
@@ -165,6 +166,10 @@ EventPluginsManagerPrivate::EventPluginsManagerPrivate()
 EventPluginsManagerPrivate::~EventPluginsManagerPrivate()
 {
     // Don't try to delete the root component. - the Qt documentation
+    for (QPluginLoader *loader : std::as_const(plugins)) {
+        loader->unload();
+        delete loader;
+    }
     plugins.clear();
 }
 
@@ -200,7 +205,12 @@ void EventPluginsManager::setEnabledPlugins(QStringList &pluginsList)
             pluginsList.removeAll(pluginId);
             ++i;
         } else {
-            i.value()->deleteLater();
+            QPluginLoader *loader = i.value();
+            if (auto *plugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(loader->instance())) {
+                disconnect(plugin, nullptr, this, nullptr);
+            }
+            loader->unload();
+            delete loader;
             i = d->plugins.erase(i);
         }
     }
@@ -221,10 +231,19 @@ QStringList EventPluginsManager::enabledPlugins() const
 
 void EventPluginsManager::loadPlugin(const QString &pluginId)
 {
-    QPluginLoader loader(QString(u"plasmacalendarplugins/" + QDir::cleanPath(pluginId)));
-    if (auto eventsPlugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(loader.instance())) {
+    if (d->plugins.contains(pluginId)) {
+        return;
+    }
+    auto *loader = new QPluginLoader(QString(u"plasmacalendarplugins/" + QDir::cleanPath(pluginId)));
+    if (!loader->load()) {
+        qCWarning(COMPONENTS::CALENDAR) << "Could not load Plasma Calendar Plugin: " << pluginId;
+        qCWarning(COMPONENTS::CALENDAR) << loader->errorString();
+        delete loader;
+        return;
+    }
+    if (auto eventsPlugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(loader->instance())) {
         qCDebug(COMPONENTS::CALENDAR) << "Loading Calendar plugin" << eventsPlugin;
-        d->plugins.insert(pluginId, eventsPlugin);
+        d->plugins.insert(pluginId, loader);
 
         // Connect the relay signals
         connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::dataReady, this, &EventPluginsManager::dataReady);
@@ -234,14 +253,22 @@ void EventPluginsManager::loadPlugin(const QString &pluginId)
         connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::subLabelReady, this, &EventPluginsManager::subLabelReady);
     } else {
         qCWarning(COMPONENTS::CALENDAR) << "Could not create Plasma Calendar Plugin: " << pluginId;
-        qCWarning(COMPONENTS::CALENDAR) << loader.errorString();
-        loader.unload();
+        qCWarning(COMPONENTS::CALENDAR) << loader->errorString();
+        loader->unload();
+        delete loader;
     }
 }
 
 QList<CalendarEvents::CalendarEventsPlugin *> EventPluginsManager::plugins() const
 {
-    return d->plugins.values();
+    QList<CalendarEvents::CalendarEventsPlugin *> result;
+    result.reserve(d->plugins.size());
+    for (QPluginLoader *loader : d->plugins) {
+        if (auto *plugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(loader->instance())) {
+            result.append(plugin);
+        }
+    }
+    return result;
 }
 
 QAbstractListModel *EventPluginsManager::pluginsModel() const
