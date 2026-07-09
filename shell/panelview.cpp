@@ -1050,9 +1050,6 @@ void PanelView::keyPressEvent(QKeyEvent *event)
 
 void PanelView::integrateScreen()
 {
-    if (int screenId = m_corona->screenPool()->idForScreen(m_screenToFollow); screenId >= 0 && containment()) {
-        containment()->setScreen(screenId);
-    }
     updateMask();
 
     setVisibilityMode(m_visibilityMode);
@@ -1078,6 +1075,15 @@ void PanelView::showEvent(QShowEvent *event)
 
     integrateScreen();
     updateEditModeLabel();
+}
+
+void PanelView::moveToScreen(QScreen *screen)
+{
+    // FIXME: perhaps the screenId >= 0 won't be necessary anymore
+    if (int screenId = m_corona->screenPool()->idForScreen(screen); screenId >= 0 && containment()) {
+        containment()->setScreen(screenId);
+    }
+    setScreenToFollow(screen);
 }
 
 void PanelView::setScreenToFollow(QScreen *screen)

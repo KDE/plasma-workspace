@@ -85,7 +85,7 @@ class PanelView : public PlasmaQuick::ContainmentView
     /**
      * information about the screen in which the panel is in
      */
-    Q_PROPERTY(QScreen *screenToFollow READ screenToFollow WRITE setScreenToFollow NOTIFY screenToFollowChanged)
+    Q_PROPERTY(QScreen *screenToFollow READ screenToFollow NOTIFY screenToFollowChanged)
 
     /**
      *  how the panel behaves, visible, autohide etc.
@@ -242,6 +242,12 @@ public:
       change this property, unlike QWindow::screen()*/
     void setScreenToFollow(QScreen *screen);
     QScreen *screenToFollow() const;
+
+    /*
+     * This is intended to be used by the panel configuration QML for the user
+     * to move the panel to another screen
+     */
+    Q_INVOKABLE void moveToScreen(QScreen *screen);
 
     bool isUserConfiguring() const;
     void restore();
