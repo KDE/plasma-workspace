@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-02 00:46+0000\n"
+"POT-Creation-Date: 2026-07-09 00:46+0000\n"
 "PO-Revision-Date: 2026-01-18 20:02+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -324,13 +324,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Ytelsesmodus"
 
-#: panelview.cpp:1070
+#: panelview.cpp:1069
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Skjul panelinnstillinger"
 
-#: panelview.cpp:1072
+#: panelview.cpp:1071
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
