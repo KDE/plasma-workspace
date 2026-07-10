@@ -96,6 +96,7 @@ void TasksModelTest::test_moveBug444816()
     model.setSortMode(TasksModel::SortManual);
 
     QSignalSpy rowInsertedSpy(&model, &TasksModel::rowsInserted);
+    rowInsertedSpy.wait(1000);
 
     int rowCount = model.rowCount();
     QVERIFY(model.launcherList().empty());
@@ -103,7 +104,8 @@ void TasksModelTest::test_moveBug444816()
     model.setLauncherList(QStringList{launcherUrl.toString()});
     // A launcher is added as expected
     QCOMPARE(model.launcherList().size(), 1);
-    QCOMPARE(++rowCount, model.rowCount());
+    rowCount += 1;
+    QCOMPARE(rowCount, model.rowCount());
 
     // Create two new windows
     QVariantMap firstWindowProperties;
@@ -122,7 +124,8 @@ void TasksModelTest::test_moveBug444816()
     for (int i = 0; i < initialProperties[QStringLiteral("windowInitialProperties")].toList().size(); ++i) {
         rowInsertedSpy.wait(1000);
     }
-    QCOMPARE(++ ++rowCount, model.rowCount());
+    rowCount += 2;
+    QCOMPARE(rowCount, model.rowCount());
 
     // TasksModel now looks like: [Launcher] [...] [__testwindow__firstwindow__] [__testwindow__secondwindow__]
     // This test tries to move [Launcher] to the position between the two tasks
