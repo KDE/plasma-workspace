@@ -24,9 +24,6 @@ KCM.GridView {
     KCM.ConfigModule.buttons: KCM.ConfigModule.Default | KCM.ConfigModule.Help
 
     function showConfirmation() { //Show the Kirigami Sheet
-        if (stackSwitcher.depth !== 1) {
-            stackSwitcher.pop();
-        }
         resetCheckboxes()
         globalThemeConfirmSheet.open()
         globalThemeConfirmSheet.standardButton(Kirigami.Dialog.Apply).forceActiveFocus()
@@ -124,34 +121,9 @@ KCM.GridView {
             view.forceActiveFocus()
         }
 
-        QtControls.StackView {
-            id: stackSwitcher
-            initialItem: simpleOptions
-            implicitHeight: currentItem.implicitHeight
-            implicitWidth: Kirigami.Units.gridUnit * 30
-            Component {
-                id: simpleOptions
-                SimpleOptions {}
-            }
-            Component {
-                id: moreOptions
-                MoreOptions {}
-            }
-        }
+        implicitWidth: Kirigami.Units.gridUnit * 30
 
-        footerLeadingComponent: QtControls.Button {
-            text: stackSwitcher.depth === 1 ? i18n("Choose what to apply…") : i18n("Show fewer options…")
-            icon.name: stackSwitcher.depth === 1 ? "settings-configure" : "go-previous"
-            QtControls.DialogButtonBox.buttonRole: QtControls.DialogButtonBox.HelpRole
-            enabled: hasAppearance
-            onClicked: {
-                if (stackSwitcher.depth === 1) {
-                    stackSwitcher.push(moreOptions);
-                } else {
-                    stackSwitcher.pop();
-                }
-                resetCheckboxes() //Force a refresh to reset button states
-            }
+        SimpleOptions {
         }
 
         Component.onCompleted: {
