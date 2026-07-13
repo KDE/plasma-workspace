@@ -132,7 +132,7 @@ void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const
     loadApplet(positionalArguments.first(), args);
 }
 
-QRect PlasmaWindowedCorona::screenGeometry(int id) const
+QRect PlasmaWindowedCorona::screenGeometry(uint id) const
 {
     Q_UNUSED(id);
     // TODO?

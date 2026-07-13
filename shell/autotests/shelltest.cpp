@@ -626,7 +626,6 @@ void ShellTest::testReorderScreens()
         }
         for (PanelView *v : m_corona->m_panelViews) {
             Plasma::Containment *cont = v->containment();
-            QVERIFY(cont->screen() >= 0);
             QVERIFY(allScreenIds.contains(cont->screen()));
             panelViewsAfter[cont->screen()] = v;
             panelContainmentsAfter[cont->screen()] = cont;

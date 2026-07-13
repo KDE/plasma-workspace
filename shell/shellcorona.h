@@ -70,15 +70,15 @@ public:
      */
     KSharedConfig::Ptr applicationConfig();
 
-    int numScreens() const override;
-    Q_INVOKABLE QRect screenGeometry(int id) const override;
-    Q_INVOKABLE QRegion availableScreenRegion(int id) const override;
-    Q_INVOKABLE QRect availableScreenRect(int id) const override;
-    QRect strictAvailableScreenRect(int id) const;
+    uint numScreens() const override;
+    Q_INVOKABLE QRect screenGeometry(uint id) const override;
+    Q_INVOKABLE QRegion availableScreenRegion(uint id) const override;
+    Q_INVOKABLE QRect availableScreenRect(uint id) const override;
+    QRect strictAvailableScreenRect(uint id) const;
 
     // plasmashellCorona's value
-    QRegion _availableScreenRegion(int id) const;
-    QRect _availableScreenRect(int id) const;
+    QRegion _availableScreenRegion(uint id) const;
+    QRect _availableScreenRect(uint id) const;
 
     Q_INVOKABLE QStringList availableActivities() const;
 
@@ -100,7 +100,7 @@ public:
     /**
      * @returns a new containment associated with the specified @p activity and @p screen.
      */
-    Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
+    Plasma::Containment *createContainmentForActivity(const QString &activity, uint screenNum);
 
     ScreenPool *screenPool() const;
 
@@ -139,7 +139,7 @@ public:
 
     Q_INVOKABLE bool enteredEditModeViaDesktop();
 
-    Q_INVOKABLE bool isScreenUiReady(int screen);
+    Q_INVOKABLE bool isScreenUiReady(uint screen);
 
     /*!
         \internal
