@@ -133,11 +133,6 @@ set_package_properties(Canberra PROPERTIES
     PURPOSE "Needed to preview notification sounds"
     TYPE REQUIRED)
 
-find_package(Breeze ${PROJECT_DEP_VERSION} CONFIG)
-set_package_properties(Breeze PROPERTIES
-                       TYPE OPTIONAL
-                       PURPOSE "For setting the default window decoration plugin")
-
 find_package(ZLIB)
 set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed files and data streams"
                        URL "https://www.zlib.net"

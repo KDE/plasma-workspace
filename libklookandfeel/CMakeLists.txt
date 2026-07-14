@@ -6,14 +6,6 @@ if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
 
-if(Breeze_FOUND)
-    if(BREEZE_WITH_KDECORATION)
-        set(HAVE_BREEZE_DECO TRUE)
-    endif()
-endif()
-
-configure_file(config-klookandfeel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klookandfeel.h)
-
 add_library(klookandfeel)
 add_library(PW::KLookAndFeel ALIAS klookandfeel)
 

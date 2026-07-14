@@ -12,7 +12,6 @@
 #include "klookandfeelmanager.h"
 #include "../kcms/colors/colorsapplicator.h"
 #include "../kcms/kcms-common_p.h"
-#include "config-klookandfeel.h"
 #include "krdb.h"
 #include <KIO/CommandLauncherJob>
 #include <KIconLoader>
@@ -534,15 +533,9 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             group = KConfigGroup(conf, u"kwinrc"_s);
             group = KConfigGroup(&group, u"org.kde.kdecoration2"_s);
 
-#ifdef HAVE_BREEZE_DECO
-            setWindowDecoration(group.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)),
+            setWindowDecoration(group.readEntry("library", QStringLiteral("org.kde.breeze")),
                                 group.readEntry("theme", QStringLiteral("Breeze")),
                                 group.readEntry("NoPlugin", false));
-#else
-            setWindowDecoration(group.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")),
-                                group.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")),
-                                group.readEntry("NoPlugin", false));
-#endif
         }
 
         if (itemsToApply.testFlag(Fonts)) {
