@@ -1079,8 +1079,8 @@ void PanelView::showEvent(QShowEvent *event)
 
 void PanelView::moveToScreen(QScreen *screen)
 {
-    // FIXME: perhaps the screenId >= 0 won't be necessary anymore
-    if (int screenId = m_corona->screenPool()->idForScreen(screen); screenId >= 0 && containment()) {
+    if (containment()) {
+        const int screenId = m_corona->screenPool()->idForScreen(screen);
         containment()->setScreen(screenId);
     }
     setScreenToFollow(screen);

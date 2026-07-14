@@ -231,7 +231,7 @@ void ShellTest::cleanupTestCase()
 
     auto *panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
     Q_ASSERT(m_corona->m_panelViews[panelCont]);
-    m_corona->m_panelViews[panelCont]->setScreenToFollow(m_corona->m_screenPool->screenOrder()[1]);
+    m_corona->m_panelViews[panelCont]->moveToScreen(m_corona->m_screenPool->screenOrder()[1]);
     delete m_corona; // Implicitly tests 515234; if we regress, the test crashes!
 
     QTRY_VERIFY2(isClean(), qPrintable(dirtyMessage()));
@@ -250,7 +250,7 @@ void ShellTest::cleanup()
     const int oldNumScreens = qApp->screens().size();
     const int oldCoronaNumScreens = m_corona->numScreens();
     QVERIFY(oldCoronaNumScreens <= oldNumScreens);
-    QSignalSpy coronaRemovedSpy(m_corona, SIGNAL(screenRemoved(int)));
+    QSignalSpy coronaRemovedSpy(m_corona, &ShellCorona::screenRemoved);
 
     QSignalSpy coronaScreenOrderSpy(m_corona, &ShellCorona::screenOrderChanged);
     exec([=, this] {
@@ -343,12 +343,12 @@ void ShellTest::testScreenRemoval()
 
     QCOMPARE(m_corona->m_panelViews.size(), 0);
     auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
-    m_corona->m_panelViews[panelCont]->setScreenToFollow(m_corona->m_screenPool->screenForId(2));
+    m_corona->m_panelViews[panelCont]->moveToScreen(m_corona->m_screenPool->screenForId(2));
     QCOMPARE(panelCont->screen(), 2);
     QCOMPARE(m_corona->m_panelViews[panelCont]->screen(), m_corona->m_screenPool->screenForId(2));
     QCOMPARE(m_corona->m_panelViews.size(), 1);
 
-    QSignalSpy removedSpy(m_corona, SIGNAL(screenRemoved(int)));
+    QSignalSpy removedSpy(m_corona, &ShellCorona::screenRemoved);
 
     // Remove outputs
     exec([this] {
@@ -464,12 +464,12 @@ void ShellTest::testScreenRemovalRecyclingViews()
     auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     auto panelView = m_corona->m_panelViews[panelCont];
-    panelView->setScreenToFollow(m_corona->m_screenPool->screenForId(1));
+    panelView->moveToScreen(m_corona->m_screenPool->screenForId(1));
     QCOMPARE(panelCont->screen(), 1);
     QCOMPARE(panelView->screen(), m_corona->m_screenPool->screenForId(1));
     QCOMPARE(m_corona->m_panelViews.size(), 1);
 
-    QSignalSpy removedSpy(m_corona, SIGNAL(screenRemoved(int)));
+    QSignalSpy removedSpy(m_corona, &ShellCorona::screenRemoved);
 
     // Remove output
     exec([this] {
@@ -578,7 +578,7 @@ void ShellTest::testReorderScreens()
         // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
         QVERIFY(m_corona->m_panelViews.contains(panelCont));
         QCOMPARE(panelCont->screen(), 0);
-        m_corona->m_panelViews[panelCont]->setScreenToFollow(s);
+        m_corona->m_panelViews[panelCont]->moveToScreen(s);
         QCOMPARE(panelCont->screen(), i);
         panelViews.append(m_corona->m_panelViews[panelCont]);
         panelContainments.append(panelCont);

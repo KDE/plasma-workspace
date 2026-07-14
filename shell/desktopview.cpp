@@ -324,22 +324,9 @@ QRect DesktopView::strictAvailableScreenRect() const
         return {};
     }
 
-    int screenId = m_containment->screen();
+    const uint screenId = m_containment->screen();
 
-    // If corona returned an invalid screenId, try to use lastScreen value if it is valid
-    if (screenId == -1) {
-        screenId = m_containment->screen();
-        // Is this a screen not actually valid?
-        if (screenId >= corona()->numScreens()) {
-            screenId = -1;
-        }
-    }
-
-    if (screenId < 0) {
-        return {};
-    }
-
-    QRect rect = static_cast<ShellCorona *>(corona())->strictAvailableScreenRect(containment()->screen());
+    QRect rect = static_cast<ShellCorona *>(corona())->strictAvailableScreenRect(screenId);
     // make it relative
     QRect geometry = corona()->screenGeometry(screenId);
     rect.moveTo(rect.topLeft() - geometry.topLeft());

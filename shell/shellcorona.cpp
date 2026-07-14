@@ -1466,6 +1466,7 @@ void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
     for (int i = 0; i < screens.count(); ++i) {
         Q_EMIT screenGeometryChanged(i);
         Q_EMIT availableScreenRectChanged(i);
+        Q_EMIT availableScreenRegionChanged(i);
     }
 
     CHECK_SCREEN_INVARIANTS
@@ -1556,7 +1557,6 @@ void ShellCorona::checkAllDesktopsUiReady()
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &activity, uint screenNum)
 {
-    Plasma::Containment *orphanCont = nullptr;
     const auto containments = containmentsForActivity(activity);
     for (Plasma::Containment *cont : containments) {
         // in the case of a corrupt config file
@@ -1569,14 +1569,7 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &ac
         if (cont->screen() == screenNum) {
             // Always prefer a containment that already has a view
             return cont;
-        } else {
-            // Last resort, if we found a desktop for the activity that for whatever reason had screen -1 (very unlikely) recycle it
-            orphanCont = cont;
         }
-    }
-
-    if (orphanCont) {
-        return orphanCont;
     }
 
     QString plugin = m_activityContainmentPlugins.value(activity);
@@ -2091,7 +2084,13 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
     //     qCDebug(PLASMASHELL) << "Activity changed:" << newActivity;
 
     for (auto it = m_desktopViewForScreen.constBegin(); it != m_desktopViewForScreen.constEnd(); ++it) {
-        Plasma::Containment *c = createContainmentForActivity(newActivity, it.key());
+        const int screen = it.key();
+        Plasma::Containment *c = createContainmentForActivity(newActivity, screen);
+        connect(c, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady, Qt::UniqueConnection);
+
+        if (!c->isUiReady() && m_screensWithUiReady.remove(screen)) {
+            Q_EMIT screenUiReadyChanged(screen, false);
+        }
 
         QAction *removeAction = c->internalAction(QStringLiteral("remove"));
         if (removeAction) {
@@ -2150,7 +2149,7 @@ void ShellCorona::insertActivity(const QString &id, const QString &plugin)
     }
 }
 
-Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const QString &plugin)
+Plasma::Containment *ShellCorona::setContainmentTypeForScreen(uint screen, const QString &plugin)
 {
     // search but not create
     Plasma::Containment *oldContainment = containmentForScreen(screen, m_activityController->currentActivity(), QString());
@@ -2595,8 +2594,9 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     }
 
     Q_ASSERT(panel);
+    const int screen = std::max(0, m_screenPool->idForScreen(wantedScreen));
+    panel->setScreen(screen);
     m_waitingPanels << panel;
-    const int screen = panel->screen();
     if (m_screensWithUiReady.contains(screen)) {
         m_screensWithUiReady.remove(screen);
         screenUiReadyChanged(screen, false);
@@ -2611,7 +2611,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     return panel;
 }
 
-void ShellCorona::swapDesktopScreens(int oldScreen, int newScreen)
+void ShellCorona::swapDesktopScreens(uint oldScreen, uint newScreen)
 {
     for (auto *containment : containmentsForScreen(oldScreen)) {
         if (containment->containmentType() != Plasma::Containment::Panel && containment->containmentType() != Plasma::Containment::CustomPanel) {
@@ -2620,9 +2620,9 @@ void ShellCorona::swapDesktopScreens(int oldScreen, int newScreen)
     }
 }
 
-void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int newScreenId)
+void ShellCorona::setScreenForContainment(Plasma::Containment *containment, uint newScreenId)
 {
-    const int oldScreenId = containment->screen();
+    const uint oldScreenId = containment->screen();
 
     if (oldScreenId == newScreenId) {
         return;
@@ -2900,9 +2900,9 @@ ScreenPool *ShellCorona::screenPool() const
     return m_screenPool;
 }
 
-QList<int> ShellCorona::screenIds() const
+QList<uint> ShellCorona::screenIds() const
 {
-    QList<int> ids;
+    QList<uint> ids;
     for (int i = 0; i < m_screenPool->screenOrder().size(); ++i) {
         ids.append(i);
     }

@@ -175,10 +175,10 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 {
     auto *c = qobject_cast<ShellCorona *>(m_containment->corona());
     setProperty("restrictedPopupGeometry", QVariant(c->availableScreenRect(m_containment->screen())));
-    connect(m_containment, &Plasma::Containment::screenChanged, this, [this, c](int screen) {
+    connect(m_containment, &Plasma::Containment::screenChanged, this, [this, c](uint screen) {
         setProperty("restrictedPopupGeometry", QVariant(c->availableScreenRect(screen)));
     });
-    connect(m_containment->corona(), &Plasma::Corona::availableScreenRectChanged, this, [this, c](int screen) {
+    connect(m_containment->corona(), &Plasma::Corona::availableScreenRectChanged, this, [this, c](uint screen) {
         if (screen == m_containment->screen()) {
             setProperty("restrictedPopupGeometry", QVariant(c->availableScreenRect(screen)));
         }

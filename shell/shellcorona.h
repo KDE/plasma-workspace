@@ -54,7 +54,7 @@ class ShellCorona : public Plasma::Corona, QDBusContext
 {
     Q_OBJECT
     Q_PROPERTY(QString shell READ shell NOTIFY shellChanged)
-    Q_PROPERTY(int numScreens READ numScreens)
+    Q_PROPERTY(uint numScreens READ numScreens)
     Q_PROPERTY(PanelView *panelBeingConfigured READ panelBeingConfigured NOTIFY panelBeingConfiguredChanged)
     Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
 
@@ -93,7 +93,7 @@ public:
     // This one is a bit of an hack but are just for desktop scripting
     void insertActivity(const QString &id, const QString &plugin);
 
-    Plasma::Containment *setContainmentTypeForScreen(int screen, const QString &plugin);
+    Plasma::Containment *setContainmentTypeForScreen(uint screen, const QString &plugin);
 
     void removeDesktop(DesktopView *desktopView);
 
@@ -104,7 +104,7 @@ public:
 
     ScreenPool *screenPool() const;
 
-    QList<int> screenIds() const;
+    QList<uint> screenIds() const;
 
     QString defaultContainmentPlugin() const;
 
@@ -112,11 +112,11 @@ public:
 
     // Set all Desktop containments (for all activities) associated to a given screen to this new screen.
     // swapping ones that had newScreen to oldScreen if existing. Panels are ignored
-    void swapDesktopScreens(int oldScreen, int newScreen);
+    void swapDesktopScreens(uint oldScreen, uint newScreen);
 
     // Set a single containment to a new screen.
     // If it is a Desktop contaiment, swap it with the other containment that was associated with same screen and activity if existent
-    void setScreenForContainment(Plasma::Containment *containment, int screen);
+    void setScreenForContainment(Plasma::Containment *containment, uint screen);
 
     // Grab a screenshot of the contaiment if it has a view in an async fashion
     // containmentPreviewReady will be emitted when done
@@ -174,7 +174,7 @@ Q_SIGNALS:
     void shellAboutToChange(const QString &shell);
     // Emitted after the new shell has loaded
     void shellChanged(const QString &shell);
-    void screenUiReadyChanged(int screen, bool ready);
+    void screenUiReadyChanged(uint screen, bool ready);
 
 public Q_SLOTS:
     /**
@@ -314,7 +314,7 @@ private:
     KActivities::Controller *m_activityController;
     QMap<const Plasma::Containment *, PanelView *> m_panelViews;
     // map from QScreen to desktop view
-    QHash<int, DesktopView *> m_desktopViewForScreen;
+    QHash<uint, DesktopView *> m_desktopViewForScreen;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;
     QList<QPointer<Plasma::Containment>> m_waitingPanels;
@@ -339,7 +339,7 @@ private:
     StrutManager *m_strutManager;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
     // The set of all the screens which have both the desktop and all panels (if any) fully loaded
-    QSet<int> m_screensWithUiReady;
+    QSet<uint> m_screensWithUiReady;
     friend class ShellTest;
 };
 
