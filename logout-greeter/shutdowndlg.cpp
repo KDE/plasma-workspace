@@ -214,8 +214,6 @@ KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdty
 
 void KSMShutdownDlg::init(const KPackage::Package &package)
 {
-    rootContext()->setContextProperty(QStringLiteral("screenGeometry"), screen()->geometry());
-
     const QString fileName = package.filePath("logoutmainscript");
 
     if (QFile::exists(fileName)) {
