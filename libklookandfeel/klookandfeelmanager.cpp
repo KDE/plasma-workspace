@@ -61,37 +61,7 @@ bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QSt
 KLookAndFeelManager::KLookAndFeelManager(QObject *parent)
     : QObject(parent)
     , m_fontsChanged(false)
-    , m_plasmaLocked(false)
 {
-    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                          QStringLiteral("/PlasmaShell"),
-                                                          QStringLiteral("org.kde.PlasmaShell"),
-                                                          QStringLiteral("immutable"));
-    QDBusPendingCall async = QDBusConnection::sessionBus().asyncCall(message);
-
-    // Create watcher for the pending call
-    auto *watcher = new QDBusPendingCallWatcher(async, this);
-
-    // Connect watcher finished signal to our slot
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *call) {
-        QDBusPendingReply<bool> reply = *call;
-
-        if (reply.isError()) {
-            qWarning() << "Error:" << reply.error().message();
-        } else {
-            const bool locked = reply.value();
-            if (locked != m_plasmaLocked) {
-                m_plasmaLocked = locked;
-                Q_EMIT plasmaLockedChanged(locked);
-            }
-        }
-        call->deleteLater();
-    });
-}
-
-bool KLookAndFeelManager::isPlasmaLocked() const
-{
-    return m_plasmaLocked;
 }
 
 KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackage::Package &pkg) const
