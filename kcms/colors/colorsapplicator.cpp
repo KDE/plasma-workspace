@@ -9,8 +9,10 @@
 #include <KConfigGroup>
 
 #include <QColorSpace>
+#include <QCryptographicHash>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QFile>
 #include <QGenericMatrix>
 #include <QtMath>
 
@@ -133,6 +135,15 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             || accentColor.has_value(); // It's obvious that when accentColor.hasValue, it has (non-default/non-transparent) accent. reading configOutput for
                                         // any config is unreliable in this file.
     }();
+
+    // Keep it in sync with setupPlasmaEnvironment() in startplasma.
+    if (QFile colorSchemeFile(colorSchemePath); colorSchemeFile.open(QFile::ReadOnly)) {
+        QCryptographicHash hash(QCryptographicHash::Sha1);
+        hash.addData(&colorSchemeFile);
+        const QString fileHash = QString::fromUtf8(hash.result().toHex());
+
+        configOutput->group(QStringLiteral("General")).writeEntry("ColorSchemeHash", fileHash);
+    }
 
     // Using KConfig::SimpleConfig because otherwise Header colors won't be
     // rewritten when a new color scheme is loaded.

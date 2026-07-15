@@ -447,6 +447,7 @@ void setupPlasmaEnvironment()
         const QString colorScheme = generalGroup.readEntry("ColorScheme", QStringLiteral("BreezeLight"));
         QString path = lnfManager.colorSchemeFile(colorScheme);
 
+        // If you change ColorSchemeHash code, also update applyScheme() in colorsapplicator.cpp.
         if (!path.isEmpty()) {
             QFile f(path);
             QCryptographicHash hash(QCryptographicHash::Sha1);
