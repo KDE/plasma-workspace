@@ -29,6 +29,7 @@ target_link_libraries(startplasma-wayland PRIVATE
 kconfig_target_kcfg_file(startplasma-wayland
     FILE ${CMAKE_SOURCE_DIR}/kcms/lookandfeel/lookandfeelsettings.kcfg
     CLASS_NAME LookAndFeelSettings
+    MUTATORS
 )
 
 add_subdirectory(plasma-session)
