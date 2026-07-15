@@ -457,11 +457,6 @@ void setupPlasmaEnvironment()
                     lnfManager.setColors(colorScheme, path);
                     generalGroup.writeEntry("ColorSchemeHash", fileHash);
                     generalGroup.sync();
-                    const QString svgCache =
-                        QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QStringLiteral("plasma-svgelements");
-                    if (!svgCache.isEmpty()) {
-                        QFile::remove(svgCache);
-                    }
                 }
             }
         }
