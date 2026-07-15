@@ -2971,13 +2971,6 @@ QString ShellCorona::defaultContainmentPlugin() const
     return plugin;
 }
 
-void ShellCorona::updateStruts()
-{
-    for (PanelView *view : std::as_const(m_panelViews)) {
-        view->updateExclusiveZone();
-    }
-}
-
 void ShellCorona::configurationChanged(const QString &path)
 {
     if (path == m_configPath) {
