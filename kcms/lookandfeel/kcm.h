@@ -205,4 +205,5 @@ private:
     KLookAndFeelManager::Contents m_selectedContents;
 
     QStandardItemModel *m_model;
+    bool m_plasmaLocked = false;
 };
