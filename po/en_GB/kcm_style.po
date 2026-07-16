@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2024-08-03 12:57+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -24,12 +24,12 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 is not a valid GTK Theme archive."
 
-#: kcmstyle.cpp:147 kcmstyle.cpp:154
+#: kcmstyle.cpp:145 kcmstyle.cpp:152
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "There was an error loading the configuration dialogue for this style."
 
-#: kcmstyle.cpp:260
+#: kcmstyle.cpp:258
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Failed to apply selected style '%1'."

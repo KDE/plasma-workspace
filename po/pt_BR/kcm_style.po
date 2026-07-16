@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2026-06-28 08:21-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -34,13 +34,13 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "O %1 não é um arquivo de tema GTK."
 
-#: kcmstyle.cpp:147 kcmstyle.cpp:154
+#: kcmstyle.cpp:145 kcmstyle.cpp:152
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
 "Ocorreu um erro ao carregar o diálogo de configuração para este estilo."
 
-#: kcmstyle.cpp:260
+#: kcmstyle.cpp:258
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Não foi possível aplicar o estilo selecionado '%1'."

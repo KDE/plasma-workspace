@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-28 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -22,12 +22,12 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 不是有效的 GTK 应用程序外观样式包。"
 
-#: kcmstyle.cpp:147 kcmstyle.cpp:154
+#: kcmstyle.cpp:145 kcmstyle.cpp:152
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "加载此外观样式的配置对话框时出错。"
 
-#: kcmstyle.cpp:260
+#: kcmstyle.cpp:258
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "无法应用选择的外观样式“%1”。"

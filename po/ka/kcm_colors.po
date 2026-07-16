@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 03:06+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -28,32 +28,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: colors.cpp:253
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "დროებითი ფაილის შექმნის შეცდომა."
 
-#: colors.cpp:266
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "ფერთა სქემის გადმოწერის შეცდომა: %1"
 
-#: colors.cpp:284
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "ფაილი ფერების სქემის ფაილი არა."
 
-#: colors.cpp:303
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "საქაღალდე \"color-scheme\"-ის შექმნის შეცდომა."
 
-#: colors.cpp:310
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "საქაღალდეში \"color-scheme\" ფაილების კოპირების შეცდომა."
 
-#: colors.cpp:327
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "ფერთა სქემის დაყენება წარმატებით დასრულდა."
@@ -1148,7 +1148,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "ფოკუსი"
 
-#: plasma-apply-colorscheme.cpp:41
+#: plasma-apply-colorscheme.cpp:40
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1158,7 +1158,7 @@ msgstr ""
 "ეს პროგრამა მიმდინარე Plasma-ის სესიის ფერის სქემის დაყენების საშუალებას "
 "გაძლევთ უკვე დაყენებულის ან მიუწვდომელის შემთხვევითად მითითებისგან დაცვით."
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:44
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1167,7 +1167,7 @@ msgstr ""
 "ფერთა სქემის სახელი, რომელიც მიმდინარე Plasma-ის სესიაზე დაყენებაც გნებავთ "
 "(სრული ბილიკის მითითების შემთხვევაში გამოყენებული იქნება მხოლოდ ბოლო ნაწილი)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:47
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1175,7 +1175,7 @@ msgid ""
 msgstr ""
 "სისტემაში ხელმისაწვდომი ყველა ფერის სქემის ჩვენება (მიმდინარე თემის ჩათვლით)"
 
-#: plasma-apply-colorscheme.cpp:53
+#: plasma-apply-colorscheme.cpp:52
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1187,7 +1187,7 @@ msgstr ""
 "კოდები. გარსის გაფართოების შესაძლებლობის შემთხვევაში ფერის თექვსმეტობითი "
 "კოდი ბრჭყალებში ჩასვით"
 
-#: plasma-apply-colorscheme.cpp:80
+#: plasma-apply-colorscheme.cpp:79
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1195,19 +1195,19 @@ msgid ""
 msgstr ""
 "მოთხოვნილი თემა \"%1\" უკვე წარმოადგენს Plasma-ის მიმდინარე სესიის თემას."
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:112
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "ფერთა სქემა %1 თქვენს მიმდინარე Plasma-ის სესიაზე წარმატებით გადატარდა"
 
-#: plasma-apply-colorscheme.cpp:115
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "თემა \"%1\" ვერ ვიპოვე. თემა ერთ-ერთი უნდა იყოს შემდეგიდან: %2"
 
-#: plasma-apply-colorscheme.cpp:123
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1216,7 +1216,7 @@ msgstr ""
 "თქვენ მოახერხეთ ცარიელი ფერის სქემის სახელის გადაცემა, რაც მხარდაუჭერელი "
 "ქცევაა."
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1224,22 +1224,22 @@ msgid ""
 msgstr ""
 "ფაილი, რომელიც სცადეთ, თემად მიგეთითებინათ, %1, ფერის სქემას არ წარმოადგენს."
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "აქცენტის ფერი %1 წარმატებით გადატარდა"
 
-#: plasma-apply-colorscheme.cpp:153
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "აქცენტის არასწორი ფერი "
 
-#: plasma-apply-colorscheme.cpp:158
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "თქვენს სისტემაში გაქვთ შემდეგი ფერის სქემები:"
 
-#: plasma-apply-colorscheme.cpp:163
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (მიმდინარე ფერის სქემა)"

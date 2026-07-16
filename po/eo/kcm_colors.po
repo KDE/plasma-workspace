@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2024-09-18 19:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -32,32 +32,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "pedrotpmx@wanadoo.fr"
 
-#: colors.cpp:253
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ne eblas krei provizoran dosieron."
 
-#: colors.cpp:266
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Ne eblas elŝuti la koloraron: %1"
 
-#: colors.cpp:284
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Tiu dosiero ne estas kolorardosiero."
 
-#: colors.cpp:303
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Malsukcesis krei 'color-scheme' datumdosierujon."
 
-#: colors.cpp:310
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Malsukcesis kopii kolorskemon en 'color-scheme' datumdosierujon."
 
-#: colors.cpp:327
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Kolorskemo instalita sukcese."
@@ -1146,7 +1146,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "fokuso"
 
-#: plasma-apply-colorscheme.cpp:41
+#: plasma-apply-colorscheme.cpp:40
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1157,7 +1157,7 @@ msgstr ""
 "sen hazarde agordi ĝin al iu, kiu aŭ ne disponeblas, aŭ kiu jam estas "
 "agordita."
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:44
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1166,7 +1166,7 @@ msgstr ""
 "La nomo de la kolorskemo, kiun vi volas agordi por via nuna Plasma-seanco "
 "(pasi plenan vojon uzos nur la lastan parton de la vojo)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:47
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1175,7 +1175,7 @@ msgstr ""
 "Montru ĉiujn kolorskemojn disponeblajn en la sistemo (kaj montri kiu estas "
 "la nuna etoso)"
 
-#: plasma-apply-colorscheme.cpp:53
+#: plasma-apply-colorscheme.cpp:52
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1186,7 +1186,7 @@ msgstr ""
 "www.w3.org/TR/SVG11/types.html#ColorKeywords) kaj heks-kolorkodoj estas "
 "subtenataj. Citu la deksesuman kodon se ekzistas ebleco de ŝel-ekspansio"
 
-#: plasma-apply-colorscheme.cpp:80
+#: plasma-apply-colorscheme.cpp:79
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1195,12 +1195,12 @@ msgstr ""
 "La petita temo \"%1\" jam estas agordita kiel la temo por la nuna Plasma "
 "seanco."
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:112
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "Sukcesis apliki la koloraron %1 al via aktuala Plasma-seanco"
 
-#: plasma-apply-colorscheme.cpp:115
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1208,7 +1208,7 @@ msgid ""
 msgstr ""
 "Ne eblis trovi etoson \"%1\". La etoso devus esti unu el la sekvaj opcioj: %2"
 
-#: plasma-apply-colorscheme.cpp:123
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1217,7 +1217,7 @@ msgstr ""
 "Vi sukcesis transdoni malplenan kolorskemnomon, kiu ne estas subtenata "
 "konduto."
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1226,22 +1226,22 @@ msgstr ""
 "La dosiero, kiun vi provis agordi kiel vian skemon, %1, ne povis esti "
 "identigita kiel kolorskemo."
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Sukcesis apliki la emfazkoloron %1"
 
-#: plasma-apply-colorscheme.cpp:153
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Nevalida emfazkoloro "
 
-#: plasma-apply-colorscheme.cpp:158
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Vi havas la sekvajn kolorarojn en via sistemo:"
 
-#: plasma-apply-colorscheme.cpp:163
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (aktuala koloraro)"

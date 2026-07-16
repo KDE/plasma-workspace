@@ -1,7 +1,7 @@
 # translation of kcmcolors.po to Slovenian
 # Translation of kcmcolors.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_colors.po 1739390 2026-06-19 01:28:25Z scripty $
+# $Id: kcm_colors.po 1741464 2026-07-16 01:28:31Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2026-03-07 06:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,32 +42,32 @@ msgid "Your emails"
 msgstr ""
 "jlp@holodeck1.com,andrejm@ubuntu.si,matjaz.jeran@amis.net,miles@filmsi.net"
 
-#: colors.cpp:253
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ne moč ustvariti začasne datoteke."
 
-#: colors.cpp:266
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Ni mogoče prenesti barvne sheme: %1"
 
-#: colors.cpp:284
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Ta datoteka ni take vrste, ki vsebuje barvne sheme."
 
-#: colors.cpp:303
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Ni bilo mogoče ustvariti mape 'color-scheme'."
 
-#: colors.cpp:310
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Ni bilo mogoče kopirati barvne sheme v mapo 'color-scheme'."
 
-#: colors.cpp:327
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Barvna shema uspešno nameščena."
@@ -1161,7 +1161,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "žarišče"
 
-#: plasma-apply-colorscheme.cpp:41
+#: plasma-apply-colorscheme.cpp:40
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1172,7 +1172,7 @@ msgstr ""
 "da bi jo pomotoma nastavili na tisto, ki ali ni na voljo alipa že "
 "nastavljena."
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:44
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1181,7 +1181,7 @@ msgstr ""
 "Ime barvne sheme, ki jo želite nastaviti za trenutno sejo Plasme (od popolne "
 "poti bo uporabljen samo zadnji del poti)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:47
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1190,7 +1190,7 @@ msgstr ""
 "Prikaži vse barvne sheme, ki so na voljo v sistemu (in katera je trenutna "
 "tema)"
 
-#: plasma-apply-colorscheme.cpp:53
+#: plasma-apply-colorscheme.cpp:52
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1201,7 +1201,7 @@ msgstr ""
 "org/TR/SVG11/types.html#ColorKeywords) in šestnajstiške kode barv so "
 "podprte. Omenite šestnajstiško kodo, če je možnost razširitve shella"
 
-#: plasma-apply-colorscheme.cpp:80
+#: plasma-apply-colorscheme.cpp:79
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1209,13 +1209,13 @@ msgid ""
 msgstr ""
 "Zahtevana tema \"%1\" je že nastavljena kot tema za trenutno sejo Plasme."
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:112
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
 "Barvna shema %1 je bila uspešno uveljavljena za vašo trenutno sejo Plasme"
 
-#: plasma-apply-colorscheme.cpp:115
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1224,7 +1224,7 @@ msgstr ""
 "Teme \"%1\" ni bilo mogoče najti. Tema bi morala biti ena od naslednjih "
 "možnosti: %2"
 
-#: plasma-apply-colorscheme.cpp:123
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1233,7 +1233,7 @@ msgstr ""
 "Uspelo vam je posredovati prazno ime barvne sheme, kar pa ni podprto "
 "obnašanje."
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1242,22 +1242,22 @@ msgstr ""
 "Datoteke, ki ste jo poskušali nastaviti kot svojo shemo %1, ni bilo mogoče "
 "prepoznati kot barvno shemo."
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Uspešno uveljavljena poudarjena barva %1"
 
-#: plasma-apply-colorscheme.cpp:153
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Neveljavna poudarjena barva "
 
-#: plasma-apply-colorscheme.cpp:158
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "V sistemu imate naslednje barvne sheme:"
 
-#: plasma-apply-colorscheme.cpp:163
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (trenutna barvna shema)"

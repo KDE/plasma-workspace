@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2026-01-19 16:42+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -34,32 +34,32 @@ msgid "Your emails"
 msgstr ""
 "locale@aleksejs.id.lv, viesturs.zarins@mii.lu.lv, toms.trasuns@posteo.net"
 
-#: colors.cpp:253
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Neizdevās izveidot pagaidu datni."
 
-#: colors.cpp:266
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Neizdevās lejupielādēt krāsu shēmu: %1"
 
-#: colors.cpp:284
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Šī datne nav krāsu shēmas datne."
 
-#: colors.cpp:303
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Neizdevās izveidot „color-scheme“ datu mapi."
 
-#: colors.cpp:310
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Neizdevās krāsu shēmu iekopēt „color-scheme“ datu mapē."
 
-#: colors.cpp:327
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Krāsu shēma ir veiksmīgi ieinstalēta."
@@ -1152,7 +1152,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "fokuss"
 
-#: plasma-apply-colorscheme.cpp:41
+#: plasma-apply-colorscheme.cpp:40
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1162,7 +1162,7 @@ msgstr ""
 "Šis rīks ļauj iestatīt šīs „Plasma“ sesijas krāsu shēmu, to nejauši "
 "neiestatot uz nepieejamu vai jau iestatītu krāsu shēmu."
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:44
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1171,14 +1171,14 @@ msgstr ""
 "Krāsu shēmas nosaukums, kuru vēlaties iestatīt šai „Plasma“ sesijai (norādot "
 "pilnu ceļu, vērā tiks ņemta tika šī ceļa beigu daļa)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:47
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "Parādīt visas sistēmā pieejamās krāsu shēmas (un pašreizējo motīvu)"
 
-#: plasma-apply-colorscheme.cpp:53
+#: plasma-apply-colorscheme.cpp:52
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1190,7 +1190,7 @@ msgstr ""
 "kodi. Heksadecimālos kodus ievietojiet pēdiņās, ja pastāv čaulas "
 "paplašināšanas iespējamība"
 
-#: plasma-apply-colorscheme.cpp:80
+#: plasma-apply-colorscheme.cpp:79
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1198,26 +1198,26 @@ msgid ""
 msgstr ""
 "Pieprasītais motīvs „%1“ jau ir iestatīts kā motīvs šai „Plasma“ sesijai."
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:112
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "Šai „Plasma“ sesijai ir veiksmīgi pielietota krāsu shēma „%1“"
 
-#: plasma-apply-colorscheme.cpp:115
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "Nevar atrast motīvu „%1“. Motīvam ir jābūt kādam no šiem: %2"
 
-#: plasma-apply-colorscheme.cpp:123
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "Programma neatbalsta tukšu krāsu shēmas nosaukumu."
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1225,22 +1225,22 @@ msgid ""
 msgstr ""
 "Datne „%1“, kuru mēģināt iestatīt par shēmu, nav identificēta kā krāsu shēma."
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Veiksmīgi pielietota akcenta krāsa %1"
 
-#: plasma-apply-colorscheme.cpp:153
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Nederīga akcenta krāsa "
 
-#: plasma-apply-colorscheme.cpp:158
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Sistēmā ir šīs krāsu shēmas:"
 
-#: plasma-apply-colorscheme.cpp:163
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (šī krāsu shēma)"

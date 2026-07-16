@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -25,32 +25,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: colors.cpp:253
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "अस्थायीसञ्चिकां निर्मातुं असमर्थः ।."
 
-#: colors.cpp:266
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "वर्णयोजनां अवारोपण कर्तुं असमर्थः: %1"
 
-#: colors.cpp:284
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "इयं सञ्चिका वर्णयोजनासञ्चिका नास्ति ।."
 
-#: colors.cpp:303
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "'रङ्ग योजना' इति दत्तांशपुटस्य निर्माणे असफलम् ।."
 
-#: colors.cpp:310
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "'रङ्ग योजना' दत्तांशपुटे वर्णयोजनां प्रतिलिखितुं असफलम् ।."
 
-#: colors.cpp:327
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "रङ्ग योजना सफलतया स्थापिता।."
@@ -1138,7 +1138,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "केंद्रबिन्दुः"
 
-#: plasma-apply-colorscheme.cpp:41
+#: plasma-apply-colorscheme.cpp:40
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1148,7 +1148,7 @@ msgstr ""
 "एतत् साधनं वर्तमानस्य प्लाज्मा सत्रस्य वर्णयोजनां निरूपयत् कर्तुं शक्नोति, आकस्मिकतया एकं न "
 "उपलभ्यते, अथवा यत् पूर्वमेव निरूपयत् कृतम् अस्ति इति निरूपयत् कर्तुं न शक्नोति ।."
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:44
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1157,14 +1157,14 @@ msgstr ""
 "यस्य वर्णयोजनायाः नाम भवान् स्वस्य वर्तमानस्य प्लाज्मा सत्रस्य कृते निरूपय कर्तुम् इच्छति "
 "(पूर्णमार्गं पारयन् केवलं मार्गस्य अन्तिमभागस्य उपयोगं करिष्यति)"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:47
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "प्रणाल्यां उपलभ्यमानानि सर्वाणि वर्णयोजनानि दर्शयन्तु (वर्तमानः विषयः च कः)"
 
-#: plasma-apply-colorscheme.cpp:53
+#: plasma-apply-colorscheme.cpp:52
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1175,7 +1175,7 @@ msgstr ""
 "org/TR/SVG11/types.html#ColorKeywords) तथा हेक्स रङ्गसङ्केताः समर्थिताः सन्ति । यदि "
 "शेल् विस्तारस्य सम्भावना अस्ति तर्हि हेक्स कोड् उद्धृत्य स्थापयन्तु"
 
-#: plasma-apply-colorscheme.cpp:80
+#: plasma-apply-colorscheme.cpp:79
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1183,26 +1183,26 @@ msgid ""
 msgstr ""
 "अनुरोधितः विषयः \"%1\" पूर्वमेव वर्तमानप्लाज्मासत्रस्य विषयवस्तुरूपेण निरूपय कृतः अस्ति ।."
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:112
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "भवतः वर्तमानप्लाज्मासत्रे %1 इति वर्णयोजना सफलतया प्रयुक्ता"
 
-#: plasma-apply-colorscheme.cpp:115
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "\"%1\" इति विषयः न लब्धः । विषयः निम्नलिखितविकल्पेषु अन्यतमः भवेत्: %2"
 
-#: plasma-apply-colorscheme.cpp:123
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "भवान् रिक्तं वर्णयोजनानाम पारयितुं सफलः अभवत्, यत् समर्थितः व्यवहारः नास्ति ।."
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1211,22 +1211,22 @@ msgstr ""
 "भवता स्वयोजनारूपेण निरूपयत् कर्तुं प्रयतितायाः सञ्चिकायाः %1 इत्यस्य वर्णयोजनारूपेण परिचयः "
 "कर्तुं न शक्यते स्म ।."
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "शिरस्कन्धवर्णं %1 सफलतया प्रयुक्तम्"
 
-#: plasma-apply-colorscheme.cpp:153
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "अमान्य शिरस्कन्धवर्णः "
 
-#: plasma-apply-colorscheme.cpp:158
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "भवतः प्रणाल्यां निम्नलिखितवर्णयोजनाः सन्ति :"
 
-#: plasma-apply-colorscheme.cpp:163
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (वर्तमानवर्णयोजना)"

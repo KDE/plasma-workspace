@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-19 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 18:16-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -28,32 +28,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
-#: colors.cpp:253
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ۋاقىتلىق ھۆججەت قۇرالمايدۇ."
 
-#: colors.cpp:266
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "رەڭ لايىھەسىنى چۈشۈرەلمەيدۇ: %1"
 
-#: colors.cpp:284
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "بۇ ھۆججەت رەڭ لايىھە ھۆججىتى ئەمەس."
 
-#: colors.cpp:303
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "«color-scheme» سانلىق مەلۇمات قىسقۇچى قۇرالمىدى."
 
-#: colors.cpp:310
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "رەڭ لايىھەسىنى «color-scheme» سانلىق مەلۇمات قىسقۇچىغا كۆچۈرەلمىدى."
 
-#: colors.cpp:327
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "رەڭ لايىھەسى مۇۋەپپەقىيەتلىك ئورنىتىلدى."
@@ -1147,7 +1147,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "فوكۇس"
 
-#: plasma-apply-colorscheme.cpp:41
+#: plasma-apply-colorscheme.cpp:40
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1158,7 +1158,7 @@ msgstr ""
 "ئۇنى ئىشلەتكىلى بولمايدىغان لايىھە قىلىپ تەڭشەش ياكى  ئىشلىتىلىۋاتقان لايىھە "
 "قىلىپ تەڭشەشتىن ساقلىنىدۇ."
 
-#: plasma-apply-colorscheme.cpp:45
+#: plasma-apply-colorscheme.cpp:44
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1167,7 +1167,7 @@ msgstr ""
 "نۆۋەتتىكى Plasma جەريانچاق (تولۇق يول يەتكۈزۈلسە يولنىڭ پەقەت ئاخىرقى "
 "بۆلىكىلا ئىشلىتىلىدۇ) قا تەڭشىمەكچى بولغان رەڭ لايىھە ئىسمى"
 
-#: plasma-apply-colorscheme.cpp:48
+#: plasma-apply-colorscheme.cpp:47
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1176,7 +1176,7 @@ msgstr ""
 "سىستېمىدا ئىشلەتكىلى بولىدىغان ھەممە رەڭ لايىھەسى (ۋە قايسىسىنىڭ نۆۋەتتە "
 "ئۆرنەك ئىكەنلىكى) نى كۆرسىتىدۇ"
 
-#: plasma-apply-colorscheme.cpp:53
+#: plasma-apply-colorscheme.cpp:52
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1187,7 +1187,7 @@ msgstr ""
 "SVG11/types.html#ColorKeywords) ۋە ئون ئالتىلىك رەڭ كودىنى قوللايدۇ. ئەگەر "
 "shell كېڭەيتىلمىسى ئىشلىتىش مۇمكىن بولسا ئون ئالتىلىك رەڭ كودى نەقىل ئېلىنىدۇ"
 
-#: plasma-apply-colorscheme.cpp:80
+#: plasma-apply-colorscheme.cpp:79
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1196,14 +1196,14 @@ msgstr ""
 "ئىلتىماس قىلىنغان ئۆرنەك «%1» ئاللىبۇرۇن نۆۋەتتىكى  Plasma جەريانچاقنىڭ "
 "ئۆرنىكىگە تەڭشەلگەن."
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:112
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
 "رەڭ لايىھە ئۆرنىكى «%1» نۆۋەتتىكى Plasma جەريانچاققا مۇۋەپپەقىيەتلىك "
 "قوللىنىلدى"
 
-#: plasma-apply-colorscheme.cpp:115
+#: plasma-apply-colorscheme.cpp:114
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1211,36 +1211,36 @@ msgid ""
 msgstr ""
 "«%1» ئۆرنەكنى تاپالمىدى. ئۆرنەك تۆۋەندىكى تاللانمىدىن بىرى بولۇشى كېرەك: %2"
 
-#: plasma-apply-colorscheme.cpp:123
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "قىلمىشىنى قوللىمايدىغان بوش رەڭ لايىھە ئىسمىدىن بىرنى تەمىنلىدىڭىز."
 
-#: plasma-apply-colorscheme.cpp:127
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr "سىز تەڭشەشنى سىناۋاتقان ھۆججەت %1 نى رەڭ لايىھەسى دەپ تونۇيالمىدى."
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "روشەن رەڭ %1 مۇۋەپپەقىيەتلىك قوللىنىلدى"
 
-#: plasma-apply-colorscheme.cpp:153
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "ئىناۋەتسىز روشەن رەڭ "
 
-#: plasma-apply-colorscheme.cpp:158
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "سىستېمىڭىزدا تۆۋەندىكى رەڭ لايىھەلىرى بار:"
 
-#: plasma-apply-colorscheme.cpp:163
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (نۆۋەتتىكى رەڭ لايىھەسى)"

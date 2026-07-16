@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -30,36 +30,36 @@ msgstr "Ná hathraigh an téama cúrsóra"
 msgid "Current pointer size"
 msgstr ""
 
-#: kcmcursortheme.cpp:373
+#: kcmcursortheme.cpp:375
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:384
+#: kcmcursortheme.cpp:386
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ní féidir cartlann téama cúrsóra %1 a aimsiú."
 
-#: kcmcursortheme.cpp:398
+#: kcmcursortheme.cpp:400
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Ní féidir cartlann téama cúrsóra %1 a aimsiú."
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:420
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "Ní cartlann bhailí téama cúrsóra é an comhad %1 de réir cosúlachta."
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgstr ""
 "Tá téama darb ainm %1 i bhfillteáin do théamaí deilbhíní. An bhfuil fonn ort "
 "an ceann seo a chur ina ionad?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Forscríobh an Téama?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
@@ -248,38 +248,38 @@ msgstr[2] ""
 msgstr[3] ""
 msgstr[4] ""
 
-#: ui/main.qml:109 ui/main.qml:145
+#: ui/main.qml:106 ui/main.qml:144
 #, fuzzy, kde-format
 #| msgctxt "@label:listbox cursor size"
 #| msgid "Size:"
 msgid "Size: %1"
 msgstr "Méid:"
 
-#: ui/main.qml:160
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:175
+#: ui/main.qml:168
 #, fuzzy, kde-format
 #| msgid "Install From File..."
 msgid "&Install from File…"
 msgstr "Suiteáil Ó Chomhad..."
 
-#: ui/main.qml:181
+#: ui/main.qml:174
 #, fuzzy, kde-format
 #| msgid "Get New Theme..."
 msgid "&Get New…"
 msgstr "Faigh Téama Nua..."
 
-#: ui/main.qml:195
+#: ui/main.qml:188
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Bain Téama"
 
-#: ui/main.qml:197
+#: ui/main.qml:190
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

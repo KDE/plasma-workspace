@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2026-05-07 22:53+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -33,34 +33,34 @@ msgstr "Navnet på det aktuelle markørtema"
 msgid "Current pointer size"
 msgstr "Aktuel markørstørrelse"
 
-#: kcmcursortheme.cpp:373
+#: kcmcursortheme.cpp:375
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kan ikke oprette en midlertidig fil."
 
-#: kcmcursortheme.cpp:384
+#: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Kan ikke downloade ikontema-arkiv: %1"
 
-#: kcmcursortheme.cpp:398
+#: kcmcursortheme.cpp:400
 #, fuzzy, kde-format
 #| msgid "Unable to download the icon theme archive: %1"
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Kan ikke downloade ikontema-arkiv: %1"
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:420
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Filen er ikke et gyldigt ikontema-arkiv."
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Kunne ikke oprette mappen \"icons\"."
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "Et tema ved navn %1 eksisterer allerede i din ikontema-mappe. Ønsker du at "
 "erstatte det med dette?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Overskriv tema?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema installeret korrekt."
@@ -251,33 +251,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 sekund"
 msgstr[1] "%1 sekunder"
 
-#: ui/main.qml:109 ui/main.qml:145
+#: ui/main.qml:106 ui/main.qml:144
 #, kde-format
 msgid "Size: %1"
 msgstr "Størrelse: %1"
 
-#: ui/main.qml:160
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfigurér opstartsfeedback..."
 
-#: ui/main.qml:175
+#: ui/main.qml:168
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Installér fra fil..."
 
-#: ui/main.qml:181
+#: ui/main.qml:174
 #, kde-format
 msgid "&Get New…"
 msgstr "&Hent nye..."
 
-#: ui/main.qml:195
+#: ui/main.qml:188
 #, kde-format
 msgid "Open Theme"
 msgstr "Åbn tema"
 
-#: ui/main.qml:197
+#: ui/main.qml:190
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Markørtemafiler (*.tar.gz *.tar.bz2)"

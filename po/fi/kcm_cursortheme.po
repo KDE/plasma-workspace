@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
 "PO-Revision-Date: 2023-08-26 18:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -45,46 +45,46 @@ msgstr "Nykyisen osoitinteeman nimi"
 msgid "Current pointer size"
 msgstr "Osoittimen nykyinen koko"
 
-#: kcmcursortheme.cpp:373
+#: kcmcursortheme.cpp:375
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Väliaikaistiedostoa ei voida luoda."
 
-#: kcmcursortheme.cpp:384
+#: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Kuvaketeemapaketin %1 lataus epäonnistui"
 
-#: kcmcursortheme.cpp:398
+#: kcmcursortheme.cpp:400
 #, fuzzy, kde-format
 #| msgid "Unable to download the icon theme archive: %1"
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Kuvaketeemapaketin %1 lataus epäonnistui"
 
-#: kcmcursortheme.cpp:418
+#: kcmcursortheme.cpp:420
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Tiedosto ei vaikuta kelvolliselta kuvaketeemapaketilta."
 
-#: kcmcursortheme.cpp:425
+#: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "”icons”-kansiota ei voida luoda."
 
-#: kcmcursortheme.cpp:434
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "Teema %1 löytyy jo kuvaketeemakansiostasi. Haluatko korvata sen tällä?"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Korvataanko teema?"
 
-#: kcmcursortheme.cpp:462
+#: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Teeman asennus onnistui."
@@ -286,33 +286,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 sekunti"
 msgstr[1] "%1 sekuntia"
 
-#: ui/main.qml:109 ui/main.qml:145
+#: ui/main.qml:106 ui/main.qml:144
 #, kde-format
 msgid "Size: %1"
 msgstr "Koko: %1"
 
-#: ui/main.qml:160
+#: ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Aseta käynnistyksen palaute…"
 
-#: ui/main.qml:175
+#: ui/main.qml:168
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Asenna tiedostosta…"
 
-#: ui/main.qml:181
+#: ui/main.qml:174
 #, kde-format
 msgid "&Get New…"
 msgstr "&Hae uusia…"
 
-#: ui/main.qml:195
+#: ui/main.qml:188
 #, kde-format
 msgid "Open Theme"
 msgstr "Avaa teema"
 
-#: ui/main.qml:197
+#: ui/main.qml:190
 #, fuzzy, kde-format
 #| msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"

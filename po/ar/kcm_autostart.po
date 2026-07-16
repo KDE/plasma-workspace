@@ -3,7 +3,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # محمد ابراهيم الحرقان <malham1@hotmail.com>, 2008.
-# SPDX-FileCopyrightText: 2008, 2021, 2022, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021, 2022, 2024, 2025, 2026 zayed <zayed.alsaidi@gmail.com>
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-09-20 20:24+0400\n"
+"PO-Revision-Date: 2026-07-15 18:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: autostartmodel.cpp:381
 #, kde-format
@@ -200,7 +200,7 @@ msgstr "سكربتات الخروج"
 #: ui/main.qml:198
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr "لا توجد عناصر بدء آليّ حددها المستخدم"
+msgstr "لا توجد عناصر تبدأ آليًّا حددها المستخدم"
 
 #: ui/main.qml:199
 #, kde-kuit-format
