@@ -111,7 +111,7 @@ private:
     QString containmentPreview(Plasma::Containment *containment);
 
 private:
-    int m_screenId = -1;
+    uint m_screenId = 0;
     ShellCorona *m_corona;
     struct Data {
         unsigned int id;
