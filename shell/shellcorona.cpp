@@ -223,19 +223,6 @@ void ShellCorona::init()
     connect(m_activityController, &KActivities::Controller::activityAdded, this, &ShellCorona::activityAdded);
     connect(m_activityController, &KActivities::Controller::activityRemoved, this, &ShellCorona::activityRemoved);
 
-    auto *taskbarActions = new KActionCollection(this);
-    for (int i = 0; i < 10; ++i) {
-        const int entryNumber = i + 1;
-        const auto key = static_cast<Qt::Key>(Qt::Key_0 + (entryNumber % 10));
-
-        QAction *action = taskbarActions->addAction(QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
-        action->setText(i18n("Activate Task Manager Entry %1", entryNumber));
-        KGlobalAccel::setGlobalShortcut(action, entryNumber < 10 ? QKeySequence(Qt::META | key) : QKeySequence());
-        connect(action, &QAction::triggered, this, [this, i] {
-            activateTaskManagerEntry(i);
-        });
-    }
-
     new Osd(m_config, this);
 
     // catch when plasmarc changes, so we e.g. enable/disable the OSd
@@ -2988,56 +2975,6 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
     }
 
     activateLauncherMenu(QString());
-}
-
-void ShellCorona::activateTaskManagerEntry(int index)
-{
-    auto activateTaskManagerEntryOnContainment = [](const Plasma::Containment *c, int index) {
-        const auto &applets = c->applets();
-        for (auto *applet : applets) {
-            const auto &provides = applet->pluginMetaData().value(u"X-Plasma-Provides", QStringList());
-            if (provides.contains(QLatin1String("org.kde.plasma.multitasking"))) {
-                if (QQuickItem *appletInterface = PlasmaQuick::AppletQuickItem::itemForApplet(applet)) {
-                    if (auto *metaObject = appletInterface->metaObject()) {
-                        // not using QMetaObject::invokeMethod to avoid warnings when calling
-                        // this on applets that don't have it or other child items since this
-                        // is pretty much trial and error.
-
-                        // Also, "var" arguments are treated as QVariant in QMetaObject
-                        int methodIndex = metaObject->indexOfMethod("activateTaskAtIndex(QVariant)");
-                        if (methodIndex == -1) {
-                            continue;
-                        }
-
-                        QMetaMethod method = metaObject->method(methodIndex);
-                        if (method.invoke(appletInterface, Q_ARG(QVariant, index))) {
-                            return true;
-                        }
-                    }
-                }
-            }
-        }
-        return false;
-    };
-
-    // To avoid overly complex configuration, we'll try to get the 90% usecase to work
-    // which is activating a task on the task manager on a panel on the primary screen.
-
-    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
-        if (it.value()->screen() != m_screenPool->primaryScreen()) {
-            continue;
-        }
-        if (activateTaskManagerEntryOnContainment(it.key(), index)) {
-            return;
-        }
-    }
-
-    // we didn't find anything on primary, try all the panels
-    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
-        if (activateTaskManagerEntryOnContainment(it.key(), index)) {
-            return;
-        }
-    }
 }
 
 QString ShellCorona::defaultShell()

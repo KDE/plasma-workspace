@@ -281,8 +281,6 @@ private Q_SLOTS:
     void handleScreenRemoved(QScreen *screen);
     void handleScreenOrderChanged(QList<QScreen *> screens);
 
-    void activateTaskManagerEntry(int index);
-
 private:
     void sanitizeScreenLayout(const QString &configFileName);
     void destroyDesktopsAndPanels();
