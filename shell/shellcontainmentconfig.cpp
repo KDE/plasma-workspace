@@ -316,8 +316,7 @@ void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int ne
         m_corona->setScreenForContainment(cont, newScreen);
     } else {
         // If it's a desktop, for now move all desktops for all activities
-        const int oldScreen = cont->screen() >= 0 ? cont->screen() : cont->screen();
-        m_corona->swapDesktopScreens(oldScreen, newScreen);
+        m_corona->swapDesktopScreens(cont->screen(), newScreen);
     }
 }
 
@@ -359,11 +358,11 @@ void ShellContainmentModel::load()
         d.screen = cont->screen();
         d.edge = cont->location();
         d.activity = cont->activity();
-        d.isActive = cont->screen() != -1;
+        d.isActive = cont->screen() < m_corona->numScreens();
         d.containment = cont;
         d.image = containmentPreview(const_cast<Plasma::Containment *>(cont));
 
-        if (cont->screen() == m_screenId || (cont->screen() == -1 && cont->screen() == m_screenId)) {
+        if (cont->screen() == m_screenId) {
             m_containments.push_back(d);
             connect(cont, &QObject::destroyed, this, &ShellContainmentModel::load);
             connect(cont, &Plasma::Containment::destroyedChanged, this, &ShellContainmentModel::load);

@@ -32,7 +32,7 @@ StrutManager::StrutManager(ShellCorona *plasmashellCorona)
         m_availableScreenRegions.remove(service);
         m_serviceWatcher->removeWatchedService(service);
 
-        for (int i = 0; i < m_plasmashellCorona->numScreens(); ++i) {
+        for (uint i = 0; i < m_plasmashellCorona->numScreens(); ++i) {
             Q_EMIT m_plasmashellCorona->availableScreenRectChanged(i);
         }
     });
