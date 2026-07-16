@@ -114,6 +114,7 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_strutManager(new StrutManager(this))
     , m_shellContainmentConfig(nullptr)
 {
+    connect(this, &Plasma::Corona::containmentUiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
     setupWaylandIntegration();
 
     qDBusRegisterMetaType<QColor>();
@@ -1341,12 +1342,9 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
             m_waitingPanels << panelView->containment();
             it.remove();
             panelView->destroy();
-            if (m_screensWithUiReady.contains(screenId)) {
-                m_screensWithUiReady.remove(screenId);
-                if (wasReady) {
-                    // Emit only if an actual change occurred
-                    Q_EMIT screenUiReadyChanged(screenId, false);
-                }
+            if (m_screensWithUiReady.remove(screenId) && wasReady) {
+                // Emit only if an actual change occurred
+                Q_EMIT screenUiReadyChanged(screenId, false);
             }
         }
     }
@@ -1485,6 +1483,12 @@ void ShellCorona::addOutput(QScreen *screen)
     Q_ASSERT(insertPosition >= 0);
 
     auto *view = new DesktopView(this, screen);
+    connect(view, &DesktopView::containmentChanged, this, [this, view]() {
+        const uint screen = view->containment()->screen();
+        if (!view->containment()->isUiReady() && m_screensWithUiReady.remove(screen)) {
+            Q_EMIT screenUiReadyChanged(screen, false);
+        }
+    });
 
     if (view->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
         connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
@@ -1512,7 +1516,6 @@ void ShellCorona::addOutput(QScreen *screen)
     Q_ASSERT(screen == view->screen());
 
     checkAllDesktopsUiReady();
-    connect(containment, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
 
     if (!m_screenReorderInProgress) {
         Q_EMIT availableScreenRectChanged(m_screenPool->idForScreen(screen));
@@ -1650,7 +1653,6 @@ void ShellCorona::createWaitingPanels()
                 Q_EMIT screenUiReadyChanged(screen, newLayoutReady);
             }
         };
-        connect(cont, &Plasma::Containment::uiReadyChanged, this, checkUiReady);
         connect(panel, &QWindow::visibleChanged, this, checkUiReady);
     }
     m_waitingPanels = stillWaitingPanels;
@@ -2086,11 +2088,6 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
     for (auto it = m_desktopViewForScreen.constBegin(); it != m_desktopViewForScreen.constEnd(); ++it) {
         const int screen = it.key();
         Plasma::Containment *c = createContainmentForActivity(newActivity, screen);
-        connect(c, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady, Qt::UniqueConnection);
-
-        if (!c->isUiReady() && m_screensWithUiReady.remove(screen)) {
-            Q_EMIT screenUiReadyChanged(screen, false);
-        }
 
         QAction *removeAction = c->internalAction(QStringLiteral("remove"));
         if (removeAction) {
@@ -2501,7 +2498,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     m_waitingPanels << panel;
     if (m_screensWithUiReady.contains(screen)) {
         m_screensWithUiReady.remove(screen);
-        screenUiReadyChanged(screen, false);
+        Q_EMIT screenUiReadyChanged(screen, false);
     }
     // immediately create the panel here so that we have access to the panel view
     createWaitingPanels();
