@@ -381,10 +381,8 @@ static std::optional<std::pair<QString, KLookAndFeelManager::Contents>> dayNight
     return std::make_pair(lookAndFeelName, KLookAndFeelManager::AppearanceSettings);
 }
 
-static std::pair<QString, KLookAndFeelManager::Contents> determineLookAndFeel()
+static std::pair<QString, KLookAndFeelManager::Contents> determineLookAndFeel(const LookAndFeelSettings &settings)
 {
-    const LookAndFeelSettings settings;
-
     if (settings.automaticLookAndFeel()) {
         if (const auto lookAndFeel = dayNightLookAndFeel(settings)) {
             return *lookAndFeel;
@@ -414,8 +412,15 @@ void setupPlasmaEnvironment()
     QDir().mkpath(extraConfigDir);
     qputenv("XDG_CONFIG_DIRS", QByteArray(QFile::encodeName(extraConfigDir) + ':' + currentConfigDirs));
 
-    const auto &[lookAndFeelName, lookAndFeelContents] = determineLookAndFeel();
+    LookAndFeelSettings lookAndFeelSettings;
+    const auto &[lookAndFeelName, lookAndFeelContents] = determineLookAndFeel(lookAndFeelSettings);
     qCDebug(PLASMA_STARTUP) << "Applying" << lookAndFeelName << "global theme";
+
+    if (lookAndFeelSettings.lookAndFeelPackage() != lookAndFeelName) {
+        lookAndFeelSettings.setLookAndFeelPackage(lookAndFeelName);
+        lookAndFeelSettings.save();
+    }
+
     QFile activeLnf(extraConfigDir + QLatin1String("/package"));
     activeLnf.open(QIODevice::ReadOnly);
     if (activeLnf.readLine() != lookAndFeelName.toUtf8()) {
