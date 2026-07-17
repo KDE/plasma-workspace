@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-09 00:46+0000\n"
+"POT-Creation-Date: 2026-07-17 00:46+0000\n"
 "PO-Revision-Date: 2024-09-19 17:01+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -150,12 +150,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Απόκρυψη πλαισίου προεπισκόπησης;"
 
-#: desktopview.cpp:533 desktopview.cpp:549
+#: desktopview.cpp:520 desktopview.cpp:536
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Έναρξη επεξεργασίας"
 
-#: desktopview.cpp:547
+#: desktopview.cpp:534
 #, fuzzy, kde-format
 #| msgid "Enter Edit Mode"
 msgid "Exit Edit Mode"
@@ -327,13 +327,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Λειτουργία απόδοσης"
 
-#: panelview.cpp:1069
+#: panelview.cpp:1066
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Απόκρυψη διαμόρφωσης πίνακα"
 
-#: panelview.cpp:1071
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -401,12 +401,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr "Μετακίνηση εστίασης του πληκτρολογίου μεταξύ πινάκων"
 
-#: shellcorona.cpp:2295
+#: shellcorona.cpp:2281
 #, kde-format
 msgid "Add Panel"
 msgstr "Προσθήκη πίνακα"
 
-#: shellcorona.cpp:2382
+#: shellcorona.cpp:2368
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

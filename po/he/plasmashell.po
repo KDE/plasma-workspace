@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-09 00:46+0000\n"
+"POT-Creation-Date: 2026-07-17 00:46+0000\n"
 "PO-Revision-Date: 2026-07-02 08:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -150,12 +150,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "להסתיר את כרזת התצוגה המקדימה?"
 
-#: desktopview.cpp:533 desktopview.cpp:549
+#: desktopview.cpp:520 desktopview.cpp:536
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "כניסה למצב עריכה"
 
-#: desktopview.cpp:547
+#: desktopview.cpp:534
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "יציאה ממצב עריכה"
@@ -324,13 +324,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "מצב ביצועים משופרים"
 
-#: panelview.cpp:1069
+#: panelview.cpp:1066
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "הסתרת הגדרות לוח"
 
-#: panelview.cpp:1071
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -398,12 +398,12 @@ msgstr "ניהול שולחנות עבודה ולוחות…"
 msgid "Move keyboard focus between panels"
 msgstr "העברת מיקוד המקלדת בין לוחות"
 
-#: shellcorona.cpp:2295
+#: shellcorona.cpp:2281
 #, kde-format
 msgid "Add Panel"
 msgstr "הוספת לוח"
 
-#: shellcorona.cpp:2382
+#: shellcorona.cpp:2368
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

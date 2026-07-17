@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-09 00:46+0000\n"
+"POT-Creation-Date: 2026-07-17 00:46+0000\n"
 "PO-Revision-Date: 2026-07-03 10:40+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -155,12 +155,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Voulez-vous masquer la bannière d'aperçu ?"
 
-#: desktopview.cpp:533 desktopview.cpp:549
+#: desktopview.cpp:520 desktopview.cpp:536
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Entrer en mode « Édition »"
 
-#: desktopview.cpp:547
+#: desktopview.cpp:534
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Sortir du mode « Édition »"
@@ -330,13 +330,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Mode « Performance »"
 
-#: panelview.cpp:1069
+#: panelview.cpp:1066
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Masquer la configuration du panneau"
 
-#: panelview.cpp:1071
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -404,12 +404,12 @@ msgstr "Gérer les bureaux et les panneaux..."
 msgid "Move keyboard focus between panels"
 msgstr "Déplacer le focus de clavier entre les panneaux"
 
-#: shellcorona.cpp:2295
+#: shellcorona.cpp:2281
 #, kde-format
 msgid "Add Panel"
 msgstr "Ajouter un panneau"
 
-#: shellcorona.cpp:2382
+#: shellcorona.cpp:2368
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-09 00:46+0000\n"
+"POT-Creation-Date: 2026-07-17 00:46+0000\n"
 "PO-Revision-Date: 2026-04-12 22:57+0530\n"
 "Last-Translator: Samyak Vidhan <crazycourt651@gmail.com>\n"
 "Language-Team: gu\n"
@@ -147,12 +147,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "પૂર્વદર્શન પટ્ટી છુપાવો?"
 
-#: desktopview.cpp:533 desktopview.cpp:549
+#: desktopview.cpp:520 desktopview.cpp:536
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "ફેરફાર કરવાની સ્થિતિમાં પ્રવેશો"
 
-#: desktopview.cpp:547
+#: desktopview.cpp:534
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "ફેરફાર કરવાની સ્થિતિમાંથી બહાર નીકળો"
@@ -320,13 +320,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "કાર્યક્ષમ મોડ"
 
-#: panelview.cpp:1069
+#: panelview.cpp:1066
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "કોન્ફિગરેશન પટ્ટી છુપાવો"
 
-#: panelview.cpp:1071
+#: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -394,12 +394,12 @@ msgstr "ડેસ્કટોપ અને પટ્ટીઓનુ સંચા
 msgid "Move keyboard focus between panels"
 msgstr "પટ્ટીઓ વચ્ચે કીબોર્ડનુ ફોક્સ બદલો"
 
-#: shellcorona.cpp:2295
+#: shellcorona.cpp:2281
 #, kde-format
 msgid "Add Panel"
 msgstr "પટ્ટી ઉમેરો"
 
-#: shellcorona.cpp:2382
+#: shellcorona.cpp:2368
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
