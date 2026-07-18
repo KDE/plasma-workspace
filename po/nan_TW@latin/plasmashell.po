@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-17 00:46+0000\n"
-"PO-Revision-Date: 2026-07-16 15:42+0900\n"
+"PO-Revision-Date: 2026-07-18 03:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 26.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -170,7 +170,7 @@ msgstr "Khé-iōng QML Javascript debugger"
 #: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr "Bái tī plasma-shell pang--khì liáu-āu tsū-tōng tîng-khí-tōng"
+msgstr "Mài tī plasma-shell pang--khì liáu-āu tsū-tōng tîng-khí-tōng"
 
 #: main.cpp:127
 #, kde-format
@@ -185,7 +185,7 @@ msgstr "Tshú-tāi hiān-tsûn ê si̍t-thé"
 #: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "Kā iōng-tsiá feedback ē-sái iōng ê suán-hāng lia̍t--tshut-lâi"
 
 #: main.cpp:190
 #, kde-format
@@ -281,7 +281,7 @@ msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
 "short"
 msgid "On-Screen Keyboard Activated"
-msgstr ""
+msgstr "Îng-bōo Khí-puânn Tsit-má ē Sú-iōng"
 
 #: osd.cpp:196
 #, kde-format
@@ -289,19 +289,21 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr ""
+msgstr "Îng-bōo Khí-puânn Tsit-má bē Sú-iōng"
 
+# Like Japanese, use "disabled locking" for "blocked locking"
+# --Kisaragi
 #: osd.cpp:203
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Khùn-bîn kap Îng-bōo Só-tīng Thîng-iōng--ah"
 
 #: osd.cpp:205
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Khùn-bîn kap Îng-bōo Só-tīng Khé-iōng--ah"
 
 #: osd.cpp:215
 #, kde-format
@@ -313,13 +315,13 @@ msgstr ""
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Pîng-hîng Bôo-sik"
 
 #: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Hāu-lîng Bôo-sik"
 
 #: panelview.cpp:1066
 #, kde-format
@@ -362,7 +364,7 @@ msgstr "Ún-tsông Toh-bīn"
 #: shellcorona.cpp:192
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Phah-khui Ìng-iōng-tîng-sik Khé-tōng-khì"
 
 #: shellcorona.cpp:200
 #, kde-format
@@ -382,7 +384,7 @@ msgstr "Tshiat-uānn kàu Ē-tsi̍t-ê Ua̍h-tōng"
 #: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr ""
+msgstr "Tshiat-uānn kàu Kang-khuè-kuán-lí-khì Hāng-bo̍k %1"
 
 #: shellcorona.cpp:267
 #, kde-format
@@ -393,7 +395,7 @@ msgstr "Kuán-lí Toh-bīn kah Bīn-pán…"
 #: shellcorona.cpp:289
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "Tī bīn-pán tsi-king î-tōng khí-puânn tsiau-tiám"
 
 #: shellcorona.cpp:2281
 #, kde-format
@@ -426,7 +428,7 @@ msgstr "Rendering hāu-kó khó-lîng ē khah bái"
 #: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
-msgstr "Bái koh hián-sī--ah"
+msgstr "Mài koh hián-sī--ah"
 
 #: userfeedback.cpp:36
 #, kde-format
