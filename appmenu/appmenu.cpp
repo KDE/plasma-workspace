@@ -24,10 +24,8 @@
 #include <private/qwaylandinputdevice_p.h>
 #include <private/qwaylandwindow_p.h>
 
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/registry.h>
-#include <KWayland/Client/surface.h>
+#include <PlasmaQuick/PlasmaShellWaylandIntegration>
+
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory, "appmenu.json", registerPlugin<AppMenuModule>();)
@@ -97,16 +95,6 @@ AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
         m_xcbConn = xcb_connect(nullptr, nullptr);
     }
 #endif
-    if (qGuiApp->platformName() == QLatin1String("wayland")) {
-        auto connection = KWayland::Client::ConnectionThread::fromApplication();
-        KWayland::Client::Registry registry;
-        registry.create(connection);
-        connect(&registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [this, &registry](quint32 name, quint32 version) {
-            m_plasmashell = registry.createPlasmaShell(name, version, this);
-        });
-        registry.setup();
-        connection->roundtrip();
-    }
 }
 
 AppMenuModule::~AppMenuModule()
@@ -201,38 +189,31 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
             importer->deleteLater();
         });
 
-        if (m_plasmashell) {
-            QScreen *screen = QGuiApplication::screenAt(QPoint(x, y));
-            if (!screen) {
-                screen = QGuiApplication::primaryScreen();
-            }
-
-            const QRect screenRect = screen->geometry();
-            if (!m_menu->isVisible()) {
-                // We create a invisible toplevel so the menu can be an xdg_popup which is important
-                // to have the expected UX of an menu. By using the ToolTip role it cannot receive
-                // focus which is important because some apps misbehave when they dont have focus when
-                // a menu is triggered
-                auto toplevelWindow = new ToplevelWindow;
-                toplevelWindow->setFlag(Qt::FramelessWindowHint);
-                toplevelWindow->QObject::setParent(menu);
-                toplevelWindow->setGeometry(QRect(screenRect.topLeft(), QSize(1, 1)));
-                auto surface = KWayland::Client::Surface::fromWindow(toplevelWindow);
-                auto plasmaSurface = m_plasmashell->createSurface(surface, surface);
-                plasmaSurface->setSkipSwitcher(true);
-                plasmaSurface->setSkipTaskbar(true);
-                plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::ToolTip);
-                plasmaSurface->setPosition({x - 1, y - 1});
-                toplevelWindow->show();
-                connect(m_menu, &QMenu::aboutToShow, toplevelWindow, [toplevelWindow, this] {
-                    m_menu->windowHandle()->setTransientParent(toplevelWindow);
-                });
-                ensureSerial(toplevelWindow);
-            }
-            m_menu.data()->popup(screenRect.topLeft());
-        } else {
-            m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
+        QScreen *screen = QGuiApplication::screenAt(QPoint(x, y));
+        if (!screen) {
+            screen = QGuiApplication::primaryScreen();
         }
+
+        const QRect screenRect = screen->geometry();
+        if (!m_menu->isVisible()) {
+            // We create a invisible toplevel so the menu can be an xdg_popup which is important
+            // to have the expected UX of an menu. By using the ToolTip role it cannot receive
+            // focus which is important because some apps misbehave when they dont have focus when
+            // a menu is triggered
+            auto toplevelWindow = new ToplevelWindow;
+            toplevelWindow->setFlag(Qt::FramelessWindowHint);
+            toplevelWindow->QObject::setParent(menu);
+            toplevelWindow->setGeometry(QRect(screenRect.topLeft(), QSize(1, 1)));
+            auto integration = PlasmaShellWaylandIntegration::get(toplevelWindow);
+            integration->setRole(QtWayland::org_kde_plasma_surface::role_tooltip);
+            integration->setPosition({x - 1, y - 1});
+            toplevelWindow->show();
+            connect(m_menu, &QMenu::aboutToShow, toplevelWindow, [toplevelWindow, this] {
+                m_menu->windowHandle()->setTransientParent(toplevelWindow);
+            });
+            ensureSerial(toplevelWindow);
+        }
+        m_menu.data()->popup(screenRect.topLeft());
 
         QAction *actiontoActivate = importer->actionForId(actionId);
 

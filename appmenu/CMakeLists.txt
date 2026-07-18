@@ -43,15 +43,21 @@ endif()
 
 pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
 
+qt_generate_wayland_protocol_client_sources(appmenu
+    PRIVATE_CODE
+    FILES
+        "${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml"
+)
+
 target_link_libraries(appmenu
     Qt::DBus
     Qt::WaylandClientPrivate
     KF6::DBusAddons
     KF6::KIOCore
-    Plasma::KWaylandClient
     KF6::WindowSystem
     Wayland::Client
     PkgConfig::XKBCommon
+    Plasma::PlasmaQuick
     dbusmenuqt
 )
 if (HAVE_X11)
