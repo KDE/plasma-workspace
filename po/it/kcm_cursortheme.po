@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-21 00:47+0000\n"
+"POT-Creation-Date: 2026-07-18 02:44+0000\n"
 "PO-Revision-Date: 2026-03-23 07:46+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Nome del tema di puntatori del mouse attuale"
 msgid "Current pointer size"
 msgstr "Dimensioni attuali del puntatore"
 
-#: kcmcursortheme.cpp:312
+#: kcmcursortheme.cpp:314
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -40,27 +40,27 @@ msgstr ""
 "Affinché queste modifiche abbiano effetto devi riavviare la sessione di "
 "Plasma."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Impossibile creare un file temporaneo."
 
-#: kcmcursortheme.cpp:397
+#: kcmcursortheme.cpp:399
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Impossibile scaricare l'archivio del tema di icone: %1"
 
-#: kcmcursortheme.cpp:428
+#: kcmcursortheme.cpp:430
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Il file non è un archivio valido di tema di icone."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Impossibile creare la cartella «icons»."
 
-#: kcmcursortheme.cpp:444
+#: kcmcursortheme.cpp:446
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "Esiste già un tema chiamato %1 nella tua cartella dei temi. Voi sostituirlo "
 "con questo?"
 
-#: kcmcursortheme.cpp:448
+#: kcmcursortheme.cpp:450
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Sovrascrivo il tema?"
 
-#: kcmcursortheme.cpp:472
+#: kcmcursortheme.cpp:474
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema installato correttamente."
@@ -261,33 +261,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 secondo"
 msgstr[1] "%1 secondi"
 
-#: ui/main.qml:109 ui/main.qml:147
+#: ui/main.qml:106 ui/main.qml:146
 #, kde-format
 msgid "Size: %1"
 msgstr "Dimensione: %1"
 
-#: ui/main.qml:162
+#: ui/main.qml:155
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Configura la notifica di avvio…"
 
-#: ui/main.qml:177
+#: ui/main.qml:170
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Installa da file…"
 
-#: ui/main.qml:183
+#: ui/main.qml:176
 #, kde-format
 msgid "&Get New…"
 msgstr "&Scarica nuovo…"
 
-#: ui/main.qml:197
+#: ui/main.qml:190
 #, kde-format
 msgid "Open Theme"
 msgstr "Apri tema"
 
-#: ui/main.qml:199
+#: ui/main.qml:192
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "File di tema di puntatori (*.tar.gz *.tar.bz2)"
