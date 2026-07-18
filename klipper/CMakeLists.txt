@@ -26,6 +26,13 @@ kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
 
 add_library(klipper SHARED ${libklipper_common_SRCS})
 generate_export_header(klipper)
+
+qt_generate_wayland_protocol_client_sources(klipper
+    PRIVATE_CODE
+    FILES
+        "${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml"
+)
+
 target_link_libraries(klipper
     Qt::Concurrent
     Qt::DBus
@@ -45,7 +52,6 @@ target_link_libraries(klipper
     KF6::WidgetsAddons
     KF6::WindowSystem
     KF6::XmlGui
-    Plasma::KWaylandClient
     Plasma::PlasmaQuick
     Wayland::Client
     LayerShellQt::Interface

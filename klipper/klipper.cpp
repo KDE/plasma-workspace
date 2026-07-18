@@ -20,11 +20,9 @@
 #include <KLocalizedString>
 #include <KNotification>
 #include <KToggleAction>
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/registry.h>
-#include <KWayland/Client/surface.h>
 #include <KWindowSystem>
+
+#include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
 #include "configdialog.h"
 #include "historycycler.h"
@@ -57,7 +55,6 @@ Klipper::Klipper(QObject *parent)
     : QObject(parent)
     , m_clip(SystemClipboard::self())
     , m_historyCycler(new HistoryCycler(this))
-    , m_plasmashell(nullptr)
 {
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"),
@@ -145,22 +142,6 @@ Klipper::Klipper(QObject *parent)
             m_notification->setHint(QStringLiteral("desktop-entry"), QStringLiteral("org.kde.klipper"));
         }
     });
-
-    if (KWindowSystem::isPlatformWayland()) {
-        auto registry = new KWayland::Client::Registry(this);
-        auto connection = KWayland::Client::ConnectionThread::fromApplication(qGuiApp);
-        connect(registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [registry, this](quint32 name, quint32 version) {
-            if (!m_plasmashell) {
-                m_plasmashell = registry->createPlasmaShell(name, version);
-                m_popup->setPlasmaShell(m_plasmashell);
-            }
-        });
-        connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, registry, [registry] {
-            delete registry; // Avoid freeing resource when gui is deleted
-        });
-        registry->create(connection);
-        registry->setup();
-    }
 }
 
 Klipper::~Klipper()
@@ -253,14 +234,10 @@ void Klipper::saveSettings() const
 void Klipper::showPopupMenu(QMenu *menu)
 {
     Q_ASSERT(menu != nullptr);
-    if (m_plasmashell) {
-        menu->hide();
-    }
+    menu->hide();
     menu->popup(QCursor::pos());
     QWindow *menuWindow = menu->windowHandle();
-    if (m_plasmashell) {
-        menuWindow->installEventFilter(this);
-    }
+    menuWindow->installEventFilter(this);
     if (!menu->windowFlags().testFlag(Qt::Popup)) {
         connect(menuWindow, &QWindow::activeChanged, menu, [menu] {
             if (!menu->windowHandle()->isActive()) {
@@ -275,12 +252,10 @@ bool Klipper::eventFilter(QObject *filtered, QEvent *event)
     const bool ret = QObject::eventFilter(filtered, event);
     auto menuWindow = qobject_cast<QWindow *>(filtered);
     if (menuWindow && event->type() == QEvent::Expose && menuWindow->isVisible()) {
-        auto surface = KWayland::Client::Surface::fromWindow(menuWindow);
-        auto plasmaSurface = m_plasmashell->createSurface(surface, menuWindow);
-        plasmaSurface->openUnderCursor();
-        plasmaSurface->setSkipTaskbar(true);
-        plasmaSurface->setSkipSwitcher(true);
-        plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::AppletPopup);
+        auto integration = PlasmaShellWaylandIntegration::get(menuWindow);
+        integration->openUnderCursor();
+        integration->setRole(QtWayland::org_kde_plasma_surface::role_appletpopup);
+
         menuWindow->removeEventFilter(this);
     }
     return ret;
