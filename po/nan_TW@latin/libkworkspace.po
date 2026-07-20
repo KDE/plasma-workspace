@@ -1,0 +1,53 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-07-19 11:10+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.07.70\n"
+
+#: kdisplaymanager.cpp:767
+#, kde-format
+msgctxt "user: …"
+msgid "%1: TTY login"
+msgstr "%1: TTY ting-ji̍p"
+
+#: kdisplaymanager.cpp:772
+#, kde-format
+msgctxt "… location (TTY or X display)"
+msgid "Unused"
+msgstr "Bô-teh iōng"
+
+#: kdisplaymanager.cpp:773
+#, kde-format
+msgid "X login on remote host"
+msgstr "Tī uán-tuan tsú-ki ê X ting-ji̍p"
+
+#: kdisplaymanager.cpp:773
+#, kde-format
+msgctxt "… host"
+msgid "X login on %1"
+msgstr "Tī %1 ê X ting-ji̍p"
+
+#: kdisplaymanager.cpp:775
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:786
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"

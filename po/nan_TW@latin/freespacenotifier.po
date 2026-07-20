@@ -1,0 +1,120 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-07-19 10:50+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.07.70\n"
+
+#: freespacenotifier.cpp:121
+#, kde-format
+msgid "Open in Filelight"
+msgstr "Tī Filelight Phah-khui"
+
+#: freespacenotifier.cpp:127
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Tī Tóng-àn Kuán-lí-khì Phah-khui"
+
+#: freespacenotifier.cpp:134
+#, kde-format
+msgid "Configure Warning…"
+msgstr "Siat-tīng Kíng-kò…"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Thong-ti iōng-tsiá tsìn-tsîng ê siōng tsió ē-sái iōng ê khang-king."
+
+#. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Minimum percentage free space before user starts being notified."
+msgstr ""
+"Thong-ti iōng-tsiá tsìn-tsîng ê siōng tsió ē-sái iōng ê khang-king pah-hun-"
+"pí."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:21
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Ē-sái iōng ê khang-king ê thong-ti kám ū khé-iōng."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Tsû-tia̍p khang-king beh bô-kàu ê sî-tsūn thê-tshut kíng-kò"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Ē-sái iōng ê khang-king pí tse koh tsió ê sî-tsūn kíng-kò:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:44
+#, kde-format
+msgid "And when free space is under:"
+msgstr "Á-koh ū tī khang-king pí-lu̍t pí tse khah tsió ê sî-tsūn:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:54
+#, no-c-format, kde-format
+msgid "%"
+msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, label_info)
+#: freespacenotifier_prefs_base.ui:67
+#, kde-format
+msgid ""
+"The system will notify you if the free space drops below the specified MiB "
+"and the specified percentage of available space."
+msgstr ""
+"Hē-thóng ē tī ē-sái iōng ê khang-king pí tsí-tīng ê MiB sòo á-sī tsí-tīng ê "
+"tsóng khang-king pí-lu̍t koh tsió ê sî-tsūn kā lí thong-ti."
+
+#: module.cpp:121
+#, kde-format
+msgid ""
+"Your %1 partition is running out of disk space; %2 MiB of space remaining "
+"(%3%)."
+msgstr "Lí ê %1 tsû-tia̍p-khu beh bô khang-king--ah; koh tshun %2 MiB (%3%)."
+
+#: module.cpp:123
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space; %1 MiB of space remaining "
+"(%2%)."
+msgstr "Lí ê kin tsû-tia̍p-khu beh bô khang-king--ah; koh tshun %1 MiB (%2%)."
+
+#: module.cpp:125
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space; %1 MiB of space remaining "
+"(%2%)."
+msgstr "Lí ê ke-bo̍k-lo̍k beh bô khang-king--ah; koh tshun %1 MiB (%2%)."
+
+#: module.cpp:150
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "It-puann"
