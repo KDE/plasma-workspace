@@ -1080,7 +1080,11 @@ void PanelView::showEvent(QShowEvent *event)
 void PanelView::moveToScreen(QScreen *screen)
 {
     if (containment()) {
-        const int screenId = m_corona->screenPool()->idForScreen(screen);
+        const auto screenOpt = m_corona->screenPool()->idForScreen(screen);
+        if (!screenOpt.has_value()) {
+            return;
+        }
+        const int screenId = screenOpt.value();
         containment()->setScreen(screenId);
     }
     setScreenToFollow(screen);

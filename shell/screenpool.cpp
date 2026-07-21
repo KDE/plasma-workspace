@@ -35,16 +35,16 @@ ScreenPool::ScreenPool(QObject *parent)
 
 ScreenPool::~ScreenPool() = default;
 
-int ScreenPool::idForName(const QString &connector) const
+std::optional<uint> ScreenPool::idForName(const QString &connector) const
 {
-    int i = 0;
+    uint i = 0;
     for (auto *s : m_availableScreens) {
         if (s->name() == connector) {
             return i;
         }
         ++i;
     }
-    return -1;
+    return {};
 }
 
 QList<QScreen *> ScreenPool::screenOrder() const
@@ -89,9 +89,9 @@ void ScreenPool::handleUpdate()
         return;
     }
 
-    QHash<QString, int> order;
+    QHash<QString, uint> order;
     order.reserve(outputOrder.count());
-    for (int i = 0; i < outputOrder.count(); i++) {
+    for (uint i = 0; i < outputOrder.count(); i++) {
         order.insert(outputOrder[i], i);
     }
 
@@ -109,18 +109,23 @@ void ScreenPool::handleUpdate()
     }
 }
 
-QScreen *ScreenPool::screenForId(int id) const
+QScreen *ScreenPool::screenForId(uint id) const
 {
-    if (id < 0 || m_availableScreens.size() <= id) {
+    if (m_availableScreens.size() <= id) {
         return nullptr;
     }
 
     return m_availableScreens[id];
 }
 
-int ScreenPool::idForScreen(const QScreen *screen) const
+std::optional<uint> ScreenPool::idForScreen(const QScreen *screen) const
 {
-    return m_availableScreens.indexOf(screen);
+    const int idx = m_availableScreens.indexOf(screen);
+    if (idx >= 0) {
+        return uint(idx);
+    }
+
+    return {};
 }
 
 QDebug operator<<(QDebug debug, const ScreenPool *pool)

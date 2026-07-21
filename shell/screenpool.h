@@ -34,10 +34,10 @@ public:
     explicit ScreenPool(QObject *parent = nullptr);
     ~ScreenPool() override;
 
-    int idForName(const QString &connector) const;
-    int idForScreen(const QScreen *screen) const;
+    std::optional<uint> idForName(const QString &connector) const;
+    std::optional<uint> idForScreen(const QScreen *screen) const;
 
-    QScreen *screenForId(int id) const;
+    QScreen *screenForId(uint id) const;
 
     QList<QScreen *> screenOrder() const;
     QScreen *primaryScreen() const;

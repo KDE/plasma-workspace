@@ -208,7 +208,7 @@ QJSValue ScriptEngine::V1::screenForConnector(const QJSValue &param) const
     const QString connector = param.toString();
     auto *sc = qobject_cast<ShellCorona *>(m_engine->m_corona);
     if (sc) {
-        return m_engine->toScriptValue<int>(sc->screenPool()->idForName(connector));
+        return m_engine->toScriptValue<int>(sc->screenPool()->idForName(connector).value_or(-1));
     }
     return m_engine->toScriptValue<int>(-1);
 }

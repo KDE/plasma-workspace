@@ -881,7 +881,9 @@ void ShellCorona::screenInvariants() const
 
     QSet<QScreen *> screens;
     for (QScreen *knownScreen : managedScreens) {
-        const uint id = m_screenPool->idForScreen(knownScreen);
+        const auto idOpt = m_screenPool->idForScreen(knownScreen);
+        Q_ASSERT_X(idOpt.has_value(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
+        const uint id = idOpt.value();
         const DesktopView *view = desktopForScreen(knownScreen);
         Q_ASSERT_X(view->isVisible(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
         QScreen *screen = view->screenToFollow();
@@ -1380,7 +1382,11 @@ DesktopView *ShellCorona::desktopForScreen(QScreen *screen) const
     if (!screen) {
         return nullptr;
     }
-    if (auto *v = m_desktopViewForScreen.value(m_screenPool->idForScreen(screen))) {
+    const auto id = m_screenPool->idForScreen(screen);
+    if (!id.has_value()) {
+        return nullptr;
+    }
+    if (auto *v = m_desktopViewForScreen.value(id.value())) {
         return v;
     }
 
@@ -1462,14 +1468,16 @@ void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
 void ShellCorona::addOutput(QScreen *screen)
 {
     Q_ASSERT(screen);
+    if (!m_screenPool->idForScreen(screen).has_value()) {
+        return;
+    }
+    uint insertPosition = m_screenPool->idForScreen(screen).value();
+
     if (desktopForScreen(screen)) {
-        Q_EMIT screenAdded(m_screenPool->idForScreen(screen));
+        Q_EMIT screenAdded(insertPosition);
         return;
     }
     Q_ASSERT(!screen->geometry().isNull());
-
-    int insertPosition = m_screenPool->idForScreen(screen);
-    Q_ASSERT(insertPosition >= 0);
 
     auto *view = new DesktopView(this, screen);
 
@@ -1477,8 +1485,12 @@ void ShellCorona::addOutput(QScreen *screen)
         connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
     }
     connect(view, &DesktopView::geometryChanged, this, [this, view]() {
-        const int id = m_screenPool->idForScreen(view->screen());
-        if (id >= 0 && !m_screenReorderInProgress) {
+        const auto idOpt = m_screenPool->idForScreen(view->screen());
+        if (!idOpt.has_value()) {
+            return;
+        }
+        const uint id = m_screenPool->idForScreen(view->screen()).value();
+        if (!m_screenReorderInProgress) {
             Q_EMIT screenGeometryChanged(id);
             Q_EMIT availableScreenRectChanged(id);
         }
@@ -1502,9 +1514,9 @@ void ShellCorona::addOutput(QScreen *screen)
     connect(containment, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
 
     if (!m_screenReorderInProgress) {
-        Q_EMIT availableScreenRectChanged(m_screenPool->idForScreen(screen));
+        Q_EMIT availableScreenRectChanged(insertPosition);
     }
-    Q_EMIT screenAdded(m_screenPool->idForScreen(screen));
+    Q_EMIT screenAdded(insertPosition);
 }
 
 void ShellCorona::checkAllDesktopsUiReady()
@@ -2581,7 +2593,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     }
 
     Q_ASSERT(panel);
-    const int screen = std::max(0, m_screenPool->idForScreen(wantedScreen));
+    const int screen = m_screenPool->idForScreen(wantedScreen).value_or(0);
     panel->setScreen(screen);
     m_waitingPanels << panel;
     if (m_screensWithUiReady.contains(screen)) {
@@ -2943,8 +2955,8 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
         return false;
     };
 
-    const int rawId = m_screenPool->idForName(screenName);
-    const uint screenId = rawId >= 0 ? uint(rawId) : 0;
+    const auto screenOpt = m_screenPool->idForName(screenName);
+    const uint screenId = screenOpt.value_or(0);
 
     QList<Plasma::Containment *> conts = containments();
 
@@ -2998,12 +3010,14 @@ bool ShellCorona::grabContainmentImage(const QString &name, int width, int heigh
 {
     Q_ASSERT(calledFromDBus());
 
-    auto screenId = m_screenPool->idForName(name);
-    if (screenId < 0) {
+    const auto screenIdOpt = m_screenPool->idForName(name);
+    if (!screenIdOpt.has_value()) {
         qCWarning(PLASMASHELL) << "grabContainmentImage: unknown screen name" << name;
         sendErrorReply(QDBusError::InvalidArgs, QStringLiteral("Unknown screen name"));
         return false;
     }
+
+    const uint screenId = screenIdOpt.value();
 
     auto currentActivity = m_activityController->currentActivity();
     currentActivity = QUuid::fromString(currentActivity).isNull() ? QString() : currentActivity;
