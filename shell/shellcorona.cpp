@@ -2943,38 +2943,37 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
         return false;
     };
 
-    uint screenId = m_screenPool->idForName(screenName);
+    const int rawId = m_screenPool->idForName(screenName);
+    const uint screenId = rawId >= 0 ? uint(rawId) : 0;
 
-    for (auto *cont : containments()) {
-        if (cont->screen() == screenId
-            && (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel)) {
-            const auto applets = cont->applets();
-            for (auto applet : applets) {
-                if (activateLauncher(applet)) {
-                    return;
-                }
-            }
-            if (activateLauncher(cont)) {
+    QList<Plasma::Containment *> conts = containments();
+
+    // Sort in a way that containments with the "proper" screen are before the others,
+    // and panels go before desktops
+    std::sort(conts.begin(), conts.end(), [screenId](Plasma::Containment *conta, Plasma::Containment *contb) {
+        if (conta->screen() == screenId && contb->screen() != screenId) {
+            return true;
+        }
+
+        if ((conta->containmentType() == Plasma::Containment::Panel || conta->containmentType() == Plasma::Containment::CustomPanel)
+            && (contb->containmentType() != Plasma::Containment::Panel && contb->containmentType() != Plasma::Containment::CustomPanel)) {
+            return true;
+        }
+        // Make it stable
+        return conta->id() < contb->id();
+    });
+
+    for (auto *cont : std::as_const(conts)) {
+        const auto applets = cont->applets();
+        for (auto applet : applets) {
+            if (activateLauncher(applet)) {
                 return;
             }
         }
-    }
-
-    for (auto *cont : containments()) {
-        if (cont->screen() == screenId && cont->containmentType() == Plasma::Containment::Desktop) {
-            const auto applets = cont->applets();
-            for (auto applet : applets) {
-                if (activateLauncher(applet)) {
-                    return;
-                }
-            }
-            if (activateLauncher(cont)) {
-                return;
-            }
+        if (activateLauncher(cont)) {
+            return;
         }
     }
-
-    activateLauncherMenu(QString());
 }
 
 QString ShellCorona::defaultShell()
