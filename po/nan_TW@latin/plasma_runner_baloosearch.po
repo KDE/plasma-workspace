@@ -1,0 +1,91 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-07-21 02:25+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kisaragi Hiu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "mail@kisaragi-hiu.com"
+
+#: baloosearchrunner.cpp:42
+#, kde-format
+msgid "File Search"
+msgstr "Tóng-àn Tshiau-tshuē"
+
+#: baloosearchrunner.cpp:69
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Phah-khui Pó-tsûn Tsu-liāu-giap-á"
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgctxt ""
+"Audio files; translate this as a plural noun in languages with a plural form "
+"of the word"
+msgid "Audio"
+msgstr "Im-sìn"
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Images"
+msgstr "Iánn-siōng"
+
+#: baloosearchrunner.cpp:96
+#, kde-format
+msgid "Videos"
+msgstr "Iánn-phìnn"
+
+#: baloosearchrunner.cpp:97
+#, kde-format
+msgid "Spreadsheets"
+msgstr ""
+
+#: baloosearchrunner.cpp:98
+#, kde-format
+msgid "Presentations"
+msgstr ""
+
+#: baloosearchrunner.cpp:99
+#, kde-format
+msgid "Folders"
+msgstr "Tsu-liāu-giap-á"
+
+#: baloosearchrunner.cpp:100
+#, kde-format
+msgid "Documents"
+msgstr "Bûn-kiānn"
+
+#: baloosearchrunner.cpp:101
+#, kde-format
+msgid "Archives"
+msgstr ""
+
+#: baloosearchrunner.cpp:102
+#, kde-format
+msgid "Texts"
+msgstr "Bûn-jī"
+
+#: baloosearchrunner.cpp:103
+#, kde-format
+msgid "Files"
+msgstr "Tóng-àn"

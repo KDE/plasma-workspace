@@ -1,0 +1,43 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-03-18 00:47+0000\n"
+"PO-Revision-Date: 2026-07-21 02:24+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: webshortcutrunner.cpp:43 webshortcutrunner.cpp:135 webshortcutrunner.cpp:152
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Tī %1 tshuē %2"
+
+#: webshortcutrunner.cpp:67
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Tī liû-lám-khì khui \"%1\" lâi tshuē :q:."
+
+#: webshortcutrunner.cpp:72
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr "Iōng DuckDuckGo ê bang gí-huat tshuē"
+
+#: webshortcutrunner.cpp:100
+#, kde-format
+msgid "Search in private window"
+msgstr "Tī su-bi̍t sī-thang tshuē"
+
+#: webshortcutrunner.cpp:100
+#, kde-format
+msgid "Search in incognito window"
+msgstr "Tī bô-hûn sī-thang tshuē"
