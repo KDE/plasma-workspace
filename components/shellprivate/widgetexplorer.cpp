@@ -430,6 +430,22 @@ void WidgetExplorer::setProvides(const QStringList &provides)
     Q_EMIT providesChanged();
 }
 
+bool WidgetExplorer::requireExplicitFormFactor() const
+{
+    return d->itemModel.requireExplicitFormFactor();
+}
+
+void WidgetExplorer::setRequireExplicitFormFactor(bool require)
+{
+    if (d->itemModel.requireExplicitFormFactor() == require) {
+        return;
+    }
+
+    d->itemModel.setRequireExplicitFormFactor(require);
+    d->initFilters();
+    Q_EMIT requireExplicitFormFactorChanged();
+}
+
 void WidgetExplorer::setContainment(Plasma::Containment *containment)
 {
     if (d->containment != containment) {

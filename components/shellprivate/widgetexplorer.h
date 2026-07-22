@@ -76,6 +76,12 @@ class WidgetExplorer : public QObject, public QQmlParserStatus
      */
     Q_PROPERTY(QStringList provides READ provides WRITE setProvides NOTIFY providesChanged)
 
+    /**
+     * Whether listed applets must explicitly declare a matching runtime form factor.
+     * Applets without FormFactors metadata are normally considered compatible.
+     */
+    Q_PROPERTY(bool requireExplicitFormFactor READ requireExplicitFormFactor WRITE setRequireExplicitFormFactor NOTIFY requireExplicitFormFactorChanged)
+
     Q_PROPERTY(Plasma::Containment *containment READ containment WRITE setContainment NOTIFY containmentChanged)
 
 public:
@@ -95,6 +101,9 @@ public:
 
     QStringList provides() const;
     void setProvides(const QStringList &provides);
+
+    bool requireExplicitFormFactor() const;
+    void setRequireExplicitFormFactor(bool require);
 
     /**
      * Changes the current default containment to add applets to
@@ -140,6 +149,7 @@ Q_SIGNALS:
     void applicationChanged();
     void containmentChanged();
     void providesChanged();
+    void requireExplicitFormFactorChanged();
 
 public Q_SLOTS:
     /**

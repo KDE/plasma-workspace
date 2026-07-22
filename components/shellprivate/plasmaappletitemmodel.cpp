@@ -325,6 +325,7 @@ QVariant PlasmaAppletItem::data(int role) const
 PlasmaAppletItemModel::PlasmaAppletItemModel(QObject *parent)
     : QStandardItemModel(parent)
     , m_startupCompleted(false)
+    , m_requireExplicitFormFactor(false)
 {
     setSortRole(Qt::DisplayRole);
 }
@@ -378,7 +379,7 @@ void PlasmaAppletItemModel::populateModel()
         bool inFormFactor = formFactors.isEmpty();
 
         for (const QString &formFactor : formFactors) {
-            if (plugin.formFactors().isEmpty() || plugin.formFactors().contains(formFactor)) {
+            if ((!m_requireExplicitFormFactor && plugin.formFactors().isEmpty()) || plugin.formFactors().contains(formFactor)) {
                 inFormFactor = true;
                 break;
             }
@@ -498,6 +499,23 @@ void PlasmaAppletItemModel::setProvides(const QStringList &provides)
     }
 
     m_provides = provides;
+    if (m_startupCompleted) {
+        populateModel();
+    }
+}
+
+bool PlasmaAppletItemModel::requireExplicitFormFactor() const
+{
+    return m_requireExplicitFormFactor;
+}
+
+void PlasmaAppletItemModel::setRequireExplicitFormFactor(bool require)
+{
+    if (m_requireExplicitFormFactor == require) {
+        return;
+    }
+
+    m_requireExplicitFormFactor = require;
     if (m_startupCompleted) {
         populateModel();
     }

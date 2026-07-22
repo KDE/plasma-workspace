@@ -92,6 +92,9 @@ public:
     QStringList provides() const;
     void setProvides(const QStringList &provides);
 
+    bool requireExplicitFormFactor() const;
+    void setRequireExplicitFormFactor(bool require);
+
     QHash<int, QByteArray> roleNames() const override;
 
     bool startupCompleted() const;
@@ -105,6 +108,7 @@ private:
     QStringList m_provides;
     KConfigGroup m_configGroup;
     bool m_startupCompleted : 1;
+    bool m_requireExplicitFormFactor : 1;
 
 private Q_SLOTS:
     void populateModel();
