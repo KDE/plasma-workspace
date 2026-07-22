@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2020-10-08 10:40+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -386,28 +386,23 @@ msgstr "Lülitu eelmisele tegevusele"
 msgid "Switch to Next Activity"
 msgstr "Lülitu järgmiseele tegevusele"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Aktiveeri ülesannete halduri kirje %1"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr ""
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Lisa paneel"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"
@@ -445,6 +440,9 @@ msgstr "Paneelide arv"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Paneelide arv"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Aktiveeri ülesannete halduri kirje %1"
 
 #~ msgid "Stop Current Activity"
 #~ msgstr "Peata aktiivne tegevus"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2025-02-13 22:22+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -381,28 +381,23 @@ msgstr "Beralih ke Aktivitas Sebelumnya"
 msgid "Switch to Next Activity"
 msgstr "Beralih ke Aktivitas Selanjutnya"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Aktifkan Entri Task Manager %1"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Kelola Desktop dan Panel..."
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Pindah fokus keyboard antar panel"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Tambahkan Panel"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -439,6 +434,9 @@ msgstr "Cacah Panel"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Cacahnya panel-panel"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Aktifkan Entri Task Manager %1"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Layar Internal pada %1"

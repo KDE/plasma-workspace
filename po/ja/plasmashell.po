@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-06-01 18:49+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -383,28 +383,23 @@ msgstr "前のアクティビティに切り替え"
 msgid "Switch to Next Activity"
 msgstr "次のアクティビティに切り替え"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "タスクマネージャのエントリ %1 をアクティベート"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "デスクトップとパネルを管理..."
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "キーボードフォーカスをパネル間で移動"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "パネルを追加"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -441,6 +436,9 @@ msgstr "パネルの数"
 #, kde-format
 msgid "Counts the panels"
 msgstr "パネルの数を数えます"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "タスクマネージャのエントリ %1 をアクティベート"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "%1 の内部スクリーン"

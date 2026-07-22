@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-02-22 20:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -383,28 +383,23 @@ msgstr "Aldatu aurreko jarduerara"
 msgid "Switch to Next Activity"
 msgstr "Aldatu hurrengo jarduerara"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Aktibatu Ataza Kudeatzaileko %1 sarrera"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Mahaigainak eta panelak kudeatu..."
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mugitu teklatuaren arreta panelen artean"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Gehitu panela"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -441,6 +436,9 @@ msgstr "Panel kopurua"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Panelak zenbatzen ditu"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Aktibatu Ataza Kudeatzaileko %1 sarrera"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Barneko pantaila %1(e)an"

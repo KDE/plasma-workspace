@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -378,28 +378,23 @@ msgstr "สลับไปยังกิจกรรมก่อนหน้า
 msgid "Switch to Next Activity"
 msgstr "สลับไปยังกิจกรรมถัดไป"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "เปิดใช้งานรายการ Task manager %1"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "จัดการเดสก์ท็อปและแผง..."
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "ย้ายโฟกัสของแป้นพิมพ์ระหว่างแผง"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "เพิ่มแผง"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -436,6 +431,9 @@ msgstr "จํานวนแผง"
 #, kde-format
 msgid "Counts the panels"
 msgstr "นับแผง"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "เปิดใช้งานรายการ Task manager %1"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "หน้าจอภายในบน %1"

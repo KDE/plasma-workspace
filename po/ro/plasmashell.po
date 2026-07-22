@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2025-12-12 11:16+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -381,28 +381,23 @@ msgstr "Treci la activitatea precedentă"
 msgid "Switch to Next Activity"
 msgstr "Treci la activitatea următoare"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Activează înregistrarea %1 din gestionarul de sarcini"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gestionează birouri și panouri…"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mută focalizarea tastaturii între panouri"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Adaugă panou"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -439,6 +434,9 @@ msgstr "Contor panouri"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Numără panourile"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Activează înregistrarea %1 din gestionarul de sarcini"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Ecran intern pe %1"

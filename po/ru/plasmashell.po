@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2025-10-12 20:10+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -396,28 +396,23 @@ msgstr "Переключиться в предыдущую комнату"
 msgid "Switch to Next Activity"
 msgstr "Переключиться в следующую комнату"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Открыть %1-ю кнопку на панели задач"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Управление рабочими столами и панелями…"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Перемещение фокуса ввода с клавиатуры между панелями"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавить панель"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -457,6 +452,9 @@ msgstr "Количество панелей"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Подсчёт количества панелей"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Открыть %1-ю кнопку на панели задач"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Встроенный экран (%1)"

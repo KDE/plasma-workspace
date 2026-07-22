@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
-"PO-Revision-Date: 2026-07-18 03:49+0900\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
+"PO-Revision-Date: 2026-07-21 11:57+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -369,40 +369,35 @@ msgstr "Phah-khui Ìng-iōng-tîng-sik Khé-tōng-khì"
 #: shellcorona.cpp:200
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr "Hián-sī Ua̍h-tōng Tshiat-uānn-khì"
+msgstr "Hián-sī Ua̍h-tāng Tshiat-uānn-khì"
 
 #: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
-msgstr "Tshiat-uānn kàu Tíng-tsi̍t-ê Ua̍h-tōng"
+msgstr "Tshiat-uānn kàu Tíng-tsi̍t-ê Ua̍h-tāng"
 
 #: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
-msgstr "Tshiat-uānn kàu Ē-tsi̍t-ê Ua̍h-tōng"
+msgstr "Tshiat-uānn kàu Ē-tsi̍t-ê Ua̍h-tāng"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Tshiat-uānn kàu Kang-khuè-kuán-lí-khì Hāng-bo̍k %1"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Kuán-lí Toh-bīn kah Bīn-pán…"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Tī bīn-pán tsi-king î-tōng khí-puânn tsiau-tiám"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Thiam Bīn-pán"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -439,6 +434,9 @@ msgstr "Bīn-pán Sòo"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Sǹg bīn-pán sòo"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Tshiat-uānn kàu Kang-khuè-kuán-lí-khì Hāng-bo̍k %1"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "%1 ê Luē-pōo Îng-bōo"

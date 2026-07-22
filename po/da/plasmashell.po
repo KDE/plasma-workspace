@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-05-07 23:05+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -381,28 +381,23 @@ msgstr "Skift til forrige aktivitet"
 msgid "Switch to Next Activity"
 msgstr "Skift til næste aktivitet"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Aktivér opgavelinje-indgang %1"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Håndter skriveborde og paneler…"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Flyt tastaturfokus mellem paneler"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Tilføj panel"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -439,6 +434,9 @@ msgstr "Panelantal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Tæller panelerne"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Aktivér opgavelinje-indgang %1"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Intern skærm på %1"

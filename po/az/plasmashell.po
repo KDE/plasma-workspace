@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2025-10-21 19:50+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -381,28 +381,23 @@ msgstr "Əvvəlki İş otağına Keçid"
 msgid "Switch to Next Activity"
 msgstr "Növbəti İş otağına Keçid"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Tapşırıq Panelində %1 açmaq"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "İş masalarının və Panellərin idarə edilməsi..."
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Klaviatura fokusunu panellər arasında dəyişmək"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel əlavə edin"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -439,6 +434,9 @@ msgstr "Panellərin sayı"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Panellərin sayını göstərir"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Tapşırıq Panelində %1 açmaq"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Daxili ekran (%1)"

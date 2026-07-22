@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-07-02 13:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -382,28 +382,23 @@ msgstr "Naar vorige activiteit omschakelen"
 msgid "Switch to Next Activity"
 msgstr "Naar volgende activiteit omschakelen"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Item %1 in takenbeheer activeren"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Bureaubladen en Panelen beheren…"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Toetsenbordfocus tussen panelen verplaatsen"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Paneel toevoegen"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -440,6 +435,9 @@ msgstr "Aantal panelen"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Telt de panelen"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Item %1 in takenbeheer activeren"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Intern scherm op %1"

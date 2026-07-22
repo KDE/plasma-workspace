@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2025-02-12 07:01+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -383,28 +383,23 @@ msgstr "Ŝanĝi al Antaŭa Agado"
 msgid "Switch to Next Activity"
 msgstr "Ŝanĝi al Sekva Agado"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Aktivigi Task-Administran Eniron %1"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Administri Labortablojn kaj Panelojn…"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Movi klavaran fokuson inter paneloj"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Aldoni Panelon"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -441,6 +436,9 @@ msgstr "Panelo-kalkulo"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Nombras la panelojn"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Aktivigi Task-Administran Eniron %1"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Interna Ekrano sur %1"

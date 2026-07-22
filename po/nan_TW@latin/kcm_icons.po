@@ -1,0 +1,107 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"PO-Revision-Date: 2026-07-21 12:31+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Tsit-má tôo-sī tsú-tê ê miâ"
+
+#: main.cpp:147
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Bô-huat-tōo kiàn-li̍p tsiām-sî-tóng-àn."
+
+#: main.cpp:158
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Bô-huat-tōo hā-tsài tôo-sī tsú-tê hong-tsûn: %1"
+
+#: main.cpp:172
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Tse tóng-àn m̄-sī ū-hāu ê tôo-sī tsú-tê hong-tsûn."
+
+#: main.cpp:177
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"An-tsong ê sî-tsūn huat-sing būn-tê--ah; m̄-koh hong-tsûn lāi-té tāi-pōo-hūn "
+"ê tsú-tê lóng í-king an-tsong hó-sè--ah"
+
+#: main.cpp:181
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tsú-tê an-tsong hó-sè--ah."
+
+#: main.cpp:227
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Leh an-tsong tôo-sī tsú-tê…"
+
+#: main.cpp:239
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Leh an-tsong %1 tsú-tê…"
+
+#: ui/main.qml:67
+#, kde-format
+msgid "Install from File…"
+msgstr "Uì Tóng-àn An-tsong…"
+
+#: ui/main.qml:72
+#, kde-format
+msgid "Get New…"
+msgstr "Tshú-tit Sin-ê…"
+
+#: ui/main.qml:189
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
+msgstr "Î-tû tôo-sī tsú-tê"
+
+#: ui/main.qml:191
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr "Bē-sái thâi-tiāu tsit-má leh iōng ê tôo-sī tsú-tê"
+
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
+msgstr "Bē-sái thâi-tiāu hē-thóng an-tsong ê tôo-sī tsú-tê"
+
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr "Mài thâi-tiāu tsit-ê tôo-sī tsú-tê"
+
+#: ui/main.qml:250
+#, kde-format
+msgid "Open Theme"
+msgstr "Phah-khui Tsú-tê"
+
+#: ui/main.qml:252
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Tsú-tê Tóng-àn (*.tar.gz *.tar.bz2)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2026-04-12 22:57+0530\n"
 "Last-Translator: Samyak Vidhan <crazycourt651@gmail.com>\n"
 "Language-Team: gu\n"
@@ -378,28 +378,23 @@ msgstr "પાછલી ક્રિયા પર જાઓ"
 msgid "Switch to Next Activity"
 msgstr "આગલી ક્રિયા પર જાઓ"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "ક્રિયા સંચાલકની યાદી %1 ચાલુ કરો"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "ડેસ્કટોપ અને પટ્ટીઓનુ સંચાલન કરો"
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "પટ્ટીઓ વચ્ચે કીબોર્ડનુ ફોક્સ બદલો"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "પટ્ટી ઉમેરો"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -436,6 +431,9 @@ msgstr "પટ્ટીઓની સંખ્યા"
 #, kde-format
 msgid "Counts the panels"
 msgstr "પટ્ટીઓની સંખ્યા ગણશે"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "ક્રિયા સંચાલકની યાદી %1 ચાલુ કરો"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "આંતરિક સ્ક્રિન %1 પર છે"

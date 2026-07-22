@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:46+0000\n"
+"POT-Creation-Date: 2026-07-22 00:47+0000\n"
 "PO-Revision-Date: 2023-01-08 09:29+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -386,29 +386,24 @@ msgstr "Chuyển sang Hoạt động trước"
 msgid "Switch to Next Activity"
 msgstr "Chuyển sang Hoạt động sau"
 
-#: shellcorona.cpp:232
-#, kde-format
-msgid "Activate Task Manager Entry %1"
-msgstr "Mở mục %1 của trình quản lí tác vụ"
-
-#: shellcorona.cpp:267
+#: shellcorona.cpp:254
 #, fuzzy, kde-format
 #| msgid "Manage Desktops And Panels..."
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Quản lí các bảng và bàn làm việc..."
 
-#: shellcorona.cpp:289
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Di chuyển nhắm của bàn phím giữa các bảng"
 
-#: shellcorona.cpp:2281
+#: shellcorona.cpp:2280
 #, kde-format
 msgid "Add Panel"
 msgstr "Thêm bảng"
 
-#: shellcorona.cpp:2368
+#: shellcorona.cpp:2367
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -445,6 +440,9 @@ msgstr "Số lượng bảng"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Đếm số bảng"
+
+#~ msgid "Activate Task Manager Entry %1"
+#~ msgstr "Mở mục %1 của trình quản lí tác vụ"
 
 #~ msgid "Internal Screen on %1"
 #~ msgstr "Màn hình nội bộ ở %1"
