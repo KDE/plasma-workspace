@@ -9,7 +9,6 @@
 #include "tasktools.h"
 #include "virtualdesktopinfo.h"
 
-#include <KDirWatch>
 #include <KSharedConfig>
 #include <KSycoca>
 #include <KWindowSystem>

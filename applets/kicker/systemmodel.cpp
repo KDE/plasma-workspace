@@ -10,7 +10,6 @@
 
 #include <QStandardPaths>
 
-#include <KDirWatch>
 #include <KLocalizedString>
 
 SystemModel::SystemModel(QObject *parent)
