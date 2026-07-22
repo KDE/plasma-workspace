@@ -32,6 +32,7 @@ Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     , m_corona(corona)
     , m_engine(PlasmaQuick::globalEngine())
     , m_osdConfigGroup(config, u"OSD"_s)
+    , m_configWatcher(KConfigWatcher::create(config)) // will automatically refresh m_osdConfigGroup
 {
     QDBusConnection::sessionBus().registerObject(u"/org/kde/osdService"_s, this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 }

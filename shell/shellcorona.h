@@ -285,7 +285,6 @@ private:
     void sanitizeScreenLayout(const QString &configFileName);
     void destroyDesktopsAndPanels();
     void updateStruts();
-    void configurationChanged(const QString &path);
     DesktopView *desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
@@ -300,7 +299,6 @@ private:
 #endif
 
     KSharedConfig::Ptr m_config;
-    QString m_configPath;
 
     // Accent color setting
     KConfigWatcher::Ptr m_kdeGlobalsConfigWatcher;

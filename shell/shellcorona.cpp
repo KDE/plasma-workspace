@@ -28,7 +28,6 @@
 
 #include <KActionCollection>
 #include <KAuthorized>
-#include <KDirWatch>
 #include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -224,12 +223,6 @@ void ShellCorona::init()
     connect(m_activityController, &KActivities::Controller::activityRemoved, this, &ShellCorona::activityRemoved);
 
     new Osd(m_config, this);
-
-    // catch when plasmarc changes, so we e.g. enable/disable the OSd
-    m_configPath = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/') + m_config->name();
-    KDirWatch::self()->addFile(m_configPath);
-    connect(KDirWatch::self(), &KDirWatch::dirty, this, &ShellCorona::configurationChanged);
-    connect(KDirWatch::self(), &KDirWatch::created, this, &ShellCorona::configurationChanged);
 
     connect(qApp, &QGuiApplication::focusWindowChanged, this, [this](QWindow *focusWindow) {
         if (!focusWindow) {
@@ -2921,13 +2914,6 @@ void ShellCorona::updateStruts()
 {
     for (PanelView *view : std::as_const(m_panelViews)) {
         view->updateExclusiveZone();
-    }
-}
-
-void ShellCorona::configurationChanged(const QString &path)
-{
-    if (path == m_configPath) {
-        m_config->reparseConfiguration();
     }
 }
 

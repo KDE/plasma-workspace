@@ -12,6 +12,7 @@
 #include <QUrl>
 
 #include <KConfigGroup>
+#include <KConfigWatcher>
 #include <KSharedConfig>
 
 class QTimer;
@@ -62,6 +63,7 @@ private:
     int m_timeout = 0;
 
     KConfigGroup m_osdConfigGroup;
+    KConfigWatcher::Ptr m_configWatcher;
 
     struct ScreenBrightnessInfo {
         QString id;
