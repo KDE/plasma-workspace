@@ -128,6 +128,10 @@ MouseArea {
         function onUse24hFormatChanged() {
             main.timeFormatCorrection();
         }
+
+        function onShowSecondsChanged() {
+            main.setupLabels();
+        }
     }
 
     function pointToPixel(pointSize: int): int {
