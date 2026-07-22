@@ -430,6 +430,7 @@ MouseArea {
             PlasmaComponents.Label {
                 id: timeZoneLabel
 
+                font.family: timeLabel.font.family
                 font.weight: timeLabel.font.weight
                 font.italic: timeLabel.font.italic
                 font.pixelSize: 1024
