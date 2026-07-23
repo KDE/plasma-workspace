@@ -10,38 +10,5 @@
       <label>Screen lock enabled</label>
       <whatsthis>Sets whether the screen will be locked after the specified time.</whatsthis>
     </entry>
-    <entry key="Timeout" type="Int">
-      <default>5</default>
-      <min>1</min>
-      <label>Screen saver timeout</label>
-      <whatsthis>Sets the minutes after which the screen is locked.</whatsthis>
-    </entry>
-    <entry key="Lock" type="Bool">
-      <default>true</default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
-    <entry key="LockGrace" type="Int">
-      <default>5</default>
-      <min>0</min>
-      <max>300</max>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
-    <entry key="LockOnResume" type="Bool">
-        <default>true</default>
-    </entry>
-  </group>
-  <group name="Greeter">
-    <entry key="Theme" type="String">
-      <default></default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
-    <entry key="ThemeBackground" type="String">
-      <default></default>
-      <label></label>
-      <whatsthis></whatsthis>
-    </entry>
   </group>
 </kcfg>
