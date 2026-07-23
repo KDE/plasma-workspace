@@ -17,9 +17,12 @@
 #include <QPointer>
 #include <QSet>
 #include <QTimer>
+#include <QWaylandClientExtensionTemplate>
 
 #include <KConfigWatcher>
 #include <KPackage/Package>
+
+#include <qwayland-plasma-window-management.h>
 
 class DesktopView;
 class PanelView;
@@ -44,11 +47,70 @@ namespace Plasma
 class Applet;
 } // namespace Plasma
 
-namespace KWayland::Client
+class PlasmaWindow : public QObject, public QtWayland::org_kde_plasma_window
 {
-class PlasmaWindow;
-class PlasmaWindowManagement;
-}
+    Q_OBJECT
+public:
+    PlasmaWindow(::org_kde_plasma_window *id)
+        : org_kde_plasma_window(id)
+    {
+    }
+    ~PlasmaWindow()
+    {
+        destroy();
+    }
+    using state = QtWayland::org_kde_plasma_window_management::state;
+    QFlags<state> windowState;
+
+Q_SIGNALS:
+    void unmapped();
+    void activeChanged();
+
+protected:
+    void org_kde_plasma_window_unmapped() override
+    {
+        Q_EMIT unmapped();
+    }
+    void org_kde_plasma_window_state_changed(uint32_t flags) override
+    {
+        auto diff = windowState ^ flags;
+        if (diff & state::state_active) {
+            windowState.setFlag(state::state_active, flags & state::state_active);
+            Q_EMIT activeChanged();
+        }
+    }
+};
+
+class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWindowManagement>, public QtWayland::org_kde_plasma_window_management
+{
+    Q_OBJECT
+public:
+    static constexpr int s_version = 20;
+    PlasmaWindowManagement()
+        : QWaylandClientExtensionTemplate(s_version)
+    {
+        connect(this, &QWaylandClientExtension::activeChanged, this, [this] {
+            if (!isActive()) {
+                wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+            }
+        });
+        initialize();
+    }
+    ~PlasmaWindowManagement()
+    {
+        if (isActive()) {
+            wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
+        }
+    }
+    void org_kde_plasma_window_management_window_with_uuid(uint32_t id, const QString &uuid) override
+    {
+        Q_UNUSED(id)
+        Q_EMIT windowCreated(new PlasmaWindow(get_window_by_uuid(uuid)));
+    }
+
+Q_SIGNALS:
+    void windowCreated(PlasmaWindow *window);
+};
 
 class ShellCorona : public Plasma::Corona, QDBusContext
 {
@@ -325,8 +387,9 @@ private:
     QTimer m_appConfigSyncTimer;
 
     // For getting the active window on Wayland
-    KWayland::Client::PlasmaWindowManagement *m_waylandWindowManagement = nullptr;
-    QPointer<KWayland::Client::PlasmaWindow> m_previousPlasmaWindow;
+    std::unique_ptr<PlasmaWindowManagement> m_waylandWindowManagement = nullptr;
+    QPointer<PlasmaWindow> m_previousPlasmaWindow;
+    QPointer<PlasmaWindow> m_activePlasmaWindow;
     bool m_closingDown : 1;
     bool m_screenReorderInProgress = false;
     QString m_testModeLayout;

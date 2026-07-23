@@ -43,10 +43,6 @@
 #include <PlasmaActivities/Consumer>
 #include <PlasmaActivities/Controller>
 
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/plasmawindowmanagement.h>
-#include <KWayland/Client/registry.h>
 #include <qassert.h>
 
 #include "alternativeshelper.h"
@@ -1345,8 +1341,8 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 
 void ShellCorona::savePreviousWindow()
 {
-    if (m_waylandWindowManagement && !m_previousPlasmaWindow) {
-        m_previousPlasmaWindow = m_waylandWindowManagement->activeWindow();
+    if (!m_previousPlasmaWindow) {
+        m_previousPlasmaWindow = m_activePlasmaWindow;
     }
 }
 
@@ -1357,7 +1353,7 @@ void ShellCorona::restorePreviousWindow()
     }
 
     if (m_previousPlasmaWindow) {
-        m_previousPlasmaWindow->requestActivate();
+        m_previousPlasmaWindow->set_state(ORG_KDE_PLASMA_WINDOW_MANAGEMENT_STATE_ACTIVE, ORG_KDE_PLASMA_WINDOW_MANAGEMENT_STATE_ACTIVE);
     }
 
     clearPreviousWindow();
@@ -2872,18 +2868,31 @@ bool DismissPopupEventFilter::eventFilter(QObject *watched, QEvent *event)
 
 void ShellCorona::setupWaylandIntegration()
 {
-    using namespace KWayland::Client;
-    ConnectionThread *connection = ConnectionThread::fromApplication(this);
-    if (!connection) {
-        return;
-    }
-    auto *registry = new Registry(this);
-    registry->create(connection);
-    connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, this, [this, registry](quint32 name, quint32 version) {
-        m_waylandWindowManagement = registry->createPlasmaWindowManagement(name, version, this);
+    m_waylandWindowManagement = std::make_unique<PlasmaWindowManagement>();
+
+    connect(m_waylandWindowManagement.get(), &PlasmaWindowManagement::windowCreated, this, [this](PlasmaWindow *window) {
+        if (window->windowState.testFlag(QtWayland::org_kde_plasma_window_management::state_active)) {
+            m_activePlasmaWindow = window;
+        }
+
+        connect(window, &PlasmaWindow::activeChanged, this, [this, window] {
+            if (window->windowState.testFlag(QtWayland::org_kde_plasma_window_management::state_active)) {
+                m_activePlasmaWindow = window;
+            } else {
+                m_activePlasmaWindow = nullptr;
+            }
+        });
+
+        const auto windowRemoved = [this, window] {
+            if (m_activePlasmaWindow == window) {
+                m_activePlasmaWindow = nullptr;
+            }
+        };
+
+        connect(window, &QObject::destroyed, this, windowRemoved);
+        connect(window, &PlasmaWindow::unmapped, this, windowRemoved);
     });
-    registry->setup();
-    connection->roundtrip();
+
     qApp->installEventFilter(new DismissPopupEventFilter(this));
 }
 

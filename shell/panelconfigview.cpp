@@ -30,9 +30,6 @@
 #include <PlasmaQuick/Dialog>
 #include <PlasmaQuick/PlasmaQuick>
 
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/surface.h>
-
 #include <chrono>
 
 using namespace std::chrono_literals;

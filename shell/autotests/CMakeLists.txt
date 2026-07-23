@@ -2,6 +2,16 @@ add_subdirectory(mockserver)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
+add_library(plasma-window-management STATIC)
+
+qt6_generate_wayland_protocol_client_sources(plasma-window-management
+    PRIVATE_CODE
+    FILES
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-window-management.xml
+)
+
+target_link_libraries(plasma-window-management PRIVATE Qt::Core)
+
 MACRO(PLASMASHELL_UNIT_TESTS)
        FOREACH(_testname ${ARGN})
                 ecm_qt_declare_logging_category(${_testname} HEADER debug.h
@@ -42,7 +52,6 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Plasma::Activities
                             KF6::ConfigCore
                             KF6::Service
-                            Plasma::KWaylandClient
                             KF6::WindowSystem
                             KF6::Package
                             Plasma::Plasma
@@ -59,6 +68,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             PW::KWorkspace
                             LayerShellQt::Interface
                             SharedClientTest
+                            plasma-window-management
                                      )
                target_link_libraries(${_testname} KF6::ConfigQml)
                if(QT_QTOPENGL_FOUND)
