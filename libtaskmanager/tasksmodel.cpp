@@ -68,6 +68,8 @@ public:
 
     bool groupInline = false;
     int groupingWindowTasksThreshold = -1;
+    // A "stable" way to remember the active tasks without having to instantiate complex QPersistentModelIndex
+    QVariantList activeTaskWinIds;
 
     bool usedByQml = false;
     bool componentComplete = false;
@@ -78,6 +80,7 @@ public:
     void updateManualSortMap();
     void consolidateManualSortMapForGroup(const QModelIndex &groupingProxyIndex);
     void updateGroupInline();
+    void updateActiveTask();
     QModelIndex preFilterIndex(const QModelIndex &sourceIndex) const;
     void updateActivityTaskCounts();
     void forceResort();
@@ -160,9 +163,6 @@ void TasksModel::Private::initModels()
             updateActivityTaskCounts();
             forceResort();
         }
-        // the active task may have potentially changed, so signal that so that users
-        // will recompute it
-        Q_EMIT q->activeTaskChanged();
     });
 
     QObject::connect(windowTasksModel,
@@ -174,10 +174,6 @@ void TasksModel::Private::initModels()
 
                          if (sortMode == SortActivity && roles.contains(AbstractTasksModel::Activities)) {
                              updateActivityTaskCounts();
-                         }
-
-                         if (roles.contains(AbstractTasksModel::IsActive)) {
-                             Q_EMIT q->activeTaskChanged();
                          }
 
                          // In manual sort mode, updateManualSortMap() may consult the sortRowInsertQueue
@@ -685,7 +681,40 @@ void TasksModel::Private::updateGroupInline()
         QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::countChanged, Qt::UniqueConnection);
         QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::countChanged, Qt::UniqueConnection);
         QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::countChanged, Qt::UniqueConnection);
+
+        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, [this]() {
+            updateActiveTask();
+        });
+        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, [this]() {
+            updateActiveTask();
+        });
+        QObject::connect(q, &QAbstractItemModel::modelReset, q, [this]() {
+            updateActiveTask();
+        });
+
+        QObject::connect(q, &QAbstractItemModel::dataChanged, q, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
+            Q_UNUSED(topLeft)
+            Q_UNUSED(bottomRight)
+
+            if (roles.contains(AbstractTasksModel::IsActive)) {
+                updateActiveTask();
+            }
+        });
+
+        activeTaskWinIds = q->activeTask().data(AbstractTasksModel::WinIdList).toList();
     }
+}
+
+void TasksModel::Private::updateActiveTask()
+{
+    const QVariantList currentActiveTaskWinIds = q->activeTask().data(AbstractTasksModel::WinIdList).toList();
+
+    if (activeTaskWinIds == currentActiveTaskWinIds) {
+        return;
+    }
+
+    activeTaskWinIds = currentActiveTaskWinIds;
+    Q_EMIT q->activeTaskChanged();
 }
 
 QModelIndex TasksModel::Private::preFilterIndex(const QModelIndex &sourceIndex) const
