@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-23 00:48+0000\n"
+"POT-Creation-Date: 2026-07-23 00:46+0000\n"
 "PO-Revision-Date: 2024-08-31 14:44+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -324,7 +324,7 @@ msgstr "Επανεκκίνηση υπολογιστή"
 msgid "Turn off computer"
 msgstr "Κλείσιμο του υπολογιστή"
 
-#: systemmodel.cpp:31
+#: systemmodel.cpp:30
 #, kde-format
 msgid "System actions"
 msgstr "Ενέργειες συστήματος"

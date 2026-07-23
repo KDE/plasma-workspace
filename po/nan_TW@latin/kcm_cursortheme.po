@@ -1,0 +1,274 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"PO-Revision-Date: 2026-07-23 02:19+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current pointer theme"
+msgstr "Tsit-má iû-piau tsú-tê ê miâ"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current pointer size"
+msgstr ""
+
+#: kcmcursortheme.cpp:375
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Bô-huat-tōo kiàn-li̍p tsiām-sî-tóng-àn."
+
+#: kcmcursortheme.cpp:386
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Bô-huat-tōo hā-tsài tôo-sī tsú-tê hong-tsûn: %1"
+
+#: kcmcursortheme.cpp:400
+#, kde-format
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "Bô-huat-tōo khui tôo-sī tsú-tê hong-tsûn."
+
+#: kcmcursortheme.cpp:420
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Tse tóng-àn m̄-sī ū-hāu ê tôo-sī tsú-tê hong-tsûn."
+
+#: kcmcursortheme.cpp:427
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "Kiàn-li̍p 'icons' tsu-liāu-giap-á sit-pāi--ah."
+
+#: kcmcursortheme.cpp:436
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Lí ê tsú-tê tsu-liāu-giap-á lāi-té í-king ū tsi̍t-ê hō-tsò %1 ê tsú-tê--ah. "
+"Lí kám ài kā i tshú-tāi tsò tsit-má tsit-ê?"
+
+#: kcmcursortheme.cpp:440
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr ""
+
+#: kcmcursortheme.cpp:464
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tsú-tê an-tsong hó-sè--ah."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Kuè-sî bió-sòo"
+
+#: plasma-apply-cursortheme.cpp:38
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse pointer theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:42
+#, kde-format
+msgid ""
+"The name of the pointer theme you wish to set for your current Plasma "
+"session (passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:43
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:44
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:65
+#, kde-format
+msgid ""
+"The requested theme “%1” is already set as the theme for the current Plasma "
+"session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:77
+#, kde-format
+msgid ""
+"Successfully applied the mouse pointer theme %1 to your current Plasma "
+"session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:79
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse pointer "
+"theme to display correctly."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"Could not find theme “%1”. The theme should be one of the following options: "
+"%2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:97
+#, kde-format
+msgid "You have the following mouse pointer themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove pointer theme"
+msgstr "Î-tû iû-piau tsú-tê"
+
+#: ui/Delegate.qml:50
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active pointer theme"
+msgstr ""
+
+#: ui/Delegate.qml:52
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed pointer themes"
+msgstr ""
+
+#: ui/Delegate.qml:60
+#, kde-format
+msgid "Don’t delete this pointer theme"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr "Khí-tōng Huê-kuī"
+
+#: ui/LaunchFeedbackDialog.qml:27
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:49
+#, kde-format
+msgctxt "@label"
+msgid "Pointer feedback:"
+msgstr "Iû-piau huê-kuī:"
+
+#: ui/LaunchFeedbackDialog.qml:50
+#, kde-format
+msgctxt "@option:radio No pointer feedback when launching apps"
+msgid "None"
+msgstr "Bô"
+
+#: ui/LaunchFeedbackDialog.qml:59
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:68
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:77
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:92
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "Kang-khuè-kuán-lí-khì huê-kuī:"
+
+#: ui/LaunchFeedbackDialog.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:113
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr ""
+
+#: ui/LaunchFeedbackDialog.qml:127 ui/LaunchFeedbackDialog.qml:139
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 bió"
+
+#: ui/main.qml:106 ui/main.qml:144
+#, kde-format
+msgid "Size: %1"
+msgstr "Tuā-sè: %1"
+
+#: ui/main.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr "Siat-tīng Khí-tōng Huê-kuī(&C)…"
+
+#: ui/main.qml:168
+#, kde-format
+msgid "&Install from File…"
+msgstr "Uì Tóng-àn An-tsong(&I)…"
+
+#: ui/main.qml:174
+#, kde-format
+msgid "&Get New…"
+msgstr ""
+
+#: ui/main.qml:188
+#, kde-format
+msgid "Open Theme"
+msgstr "Phah-khui Tsú-tê"
+
+#: ui/main.qml:190
+#, kde-format
+msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:56
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""

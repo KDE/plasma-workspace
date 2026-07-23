@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2026-07-22 00:42+0900\n"
+"PO-Revision-Date: 2026-07-23 01:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -33,11 +33,13 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
+"Lí kám ài kā jī-hîng an-tsong hōo ka-kī iōng (tsí-ū lí ê iōng-tsiá ē-sái "
+"iōng), á-sī ài an-tsong kàu kui-ê hē-thóng (sóo-ū iōng-tsiá lóng ē-sái iōng)?"
 
 #: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
 msgid "Where to Install"
-msgstr ""
+msgstr "An-tsong kàu Tó-uī"
 
 #: apps/Installer.cpp:113
 #, kde-format
@@ -47,12 +49,12 @@ msgstr "Jī-hîng An-tsong-khì"
 #: apps/Installer.cpp:115
 #, kde-format
 msgid "Simple font installer"
-msgstr ""
+msgstr "Kán-tan ê jī-hîng an-tsong-khì"
 
 #: apps/Installer.cpp:117 apps/Printer.cpp:327
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
-msgstr ""
+msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:124
 #, kde-format
@@ -62,7 +64,7 @@ msgstr ""
 #: apps/Installer.cpp:127
 #, kde-format
 msgid "URL to install"
-msgstr ""
+msgstr "Ài an-tsong ê URL"
 
 #: apps/Printer.cpp:239
 #, kde-format
@@ -72,17 +74,17 @@ msgstr "Lia̍t-ìn"
 #: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
 #, kde-format
 msgid "Canceling…"
-msgstr ""
+msgstr "Leh Tshú-siau…"
 
 #: apps/Printer.cpp:323
 #, kde-format
 msgid "Font Printer"
-msgstr ""
+msgstr "Jī-hîng Ìn-suat-khì"
 
 #: apps/Printer.cpp:325
 #, kde-format
 msgid "Simple font printer"
-msgstr ""
+msgstr "Kán-tan ê jī-hîng ìn-suat-khì"
 
 #: apps/Printer.cpp:333
 #, kde-format
@@ -92,7 +94,7 @@ msgstr ""
 #: apps/Printer.cpp:335
 #, kde-format
 msgid "Size index to print fonts"
-msgstr ""
+msgstr "Ìn-suat jī-hîng ê sî-tsūn iōng ê tuā-sè"
 
 #: apps/Printer.cpp:339
 #, kde-format
@@ -114,22 +116,22 @@ msgstr ""
 #: apps/Viewer.cpp:50
 #, kde-format
 msgid "Open an existing font file"
-msgstr ""
+msgstr "Khui hiān-tsûn ê jī-hîng tóng-àn"
 
 #: apps/Viewer.cpp:51
 #, kde-format
 msgid "Print font preview"
-msgstr ""
+msgstr "Ìn-suat jī-hîng ī-lám"
 
 #: apps/Viewer.cpp:68
 #, kde-format
 msgid "Select Font to View"
-msgstr ""
+msgstr "Suán Ài Kiám-sī ê Jī-hîng"
 
 #: apps/Viewer.cpp:108
 #, kde-format
 msgid "URL to open"
-msgstr ""
+msgstr "Ài khui ê URL"
 
 #: apps/Viewer.cpp:150
 #, kde-format
@@ -139,38 +141,38 @@ msgstr "Jī-hîng Kiám-sī-khì"
 #: apps/Viewer.cpp:152
 #, kde-format
 msgid "Simple font viewer"
-msgstr ""
+msgstr "Kán-tan ê jī-hîng kiám-sī-khì"
 
 #: apps/Viewer.cpp:154
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr ""
+msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
 msgid "Duplicate Fonts"
-msgstr ""
+msgstr "Tiông-ho̍k ê Jī-hîng"
 
 #: kcmfontinst/DuplicatesDialog.cpp:79
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr ""
+msgstr "Leh tshuē kám ū tiông-ho̍k ê jī-hîng. Tshiánn sió-tán…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:98
 #, kde-format
 msgid "No duplicate fonts found."
-msgstr ""
+msgstr "Bô tshuē-tio̍h tiông-ho̍k ê jī-hîng."
 
 #: kcmfontinst/DuplicatesDialog.cpp:106
 #, kde-format
 msgid "Delete Marked Files"
-msgstr ""
+msgstr "Thâi-tiāu Piau-kì ê Tóng-àn"
 
 #: kcmfontinst/DuplicatesDialog.cpp:108
 #, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
-msgstr[0] ""
+msgstr[0] "Tshuē-tio̍h %1 ê tiông-ho̍k ê jī-hîng--ah."
 
 #: kcmfontinst/DuplicatesDialog.cpp:189
 #, kde-format
@@ -178,21 +180,23 @@ msgid ""
 "Are you sure you wish to delete:\n"
 "%1"
 msgstr ""
+"Lí kám khak-tīng ài thâi-tiāu:\n"
+"%1"
 
 #: kcmfontinst/DuplicatesDialog.cpp:195
 #, kde-format
 msgid "Are you sure you wish to delete:"
-msgstr ""
+msgstr "Lí kám khak-tīng ài thâi-tiāu:"
 
 #: kcmfontinst/DuplicatesDialog.cpp:223
 #, kde-format
 msgid "Cancel font scan?"
-msgstr ""
+msgstr "Kám ài tshú-siau jī-hîng sàu-biâu?"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
 msgid "Font/File"
-msgstr ""
+msgstr "Jī-hîng/Tóng-àn"
 
 #: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
@@ -207,12 +211,12 @@ msgstr "Ji̍t-kî"
 #: kcmfontinst/DuplicatesDialog.cpp:388
 #, kde-format
 msgid "Links To"
-msgstr ""
+msgstr "Liân-kiat Kàu"
 
 #: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
 #, kde-format
 msgid "Open in Font Viewer"
-msgstr ""
+msgstr "Tī Jī-hîng Kiám-sī-khì Phah-khui"
 
 #: kcmfontinst/DuplicatesDialog.cpp:403
 #, kde-format
@@ -222,28 +226,28 @@ msgstr "Sio̍k-sìng"
 #: kcmfontinst/DuplicatesDialog.cpp:405
 #, kde-format
 msgid "Unmark for Deletion"
-msgstr ""
+msgstr "Piau-tsò Bô-beh-ài Thâi-tiāu"
 
 #: kcmfontinst/DuplicatesDialog.cpp:406
 #, kde-format
 msgid "Mark for Deletion"
-msgstr ""
+msgstr "Piau-tsò Ài Thâi-tiāu"
 
 #: kcmfontinst/DuplicatesDialog.cpp:504
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] ""
+msgstr[0] "Kám ài tī jī-hîng kiám-sī-khì phah-khui tse %1 ê jī-hîng?"
 
 #: kcmfontinst/FontFilter.cpp:106
 #, kde-format
 msgid "Family"
-msgstr ""
+msgstr "Ka-tso̍k"
 
 #: kcmfontinst/FontFilter.cpp:108
 #, kde-format
 msgid "Style"
-msgstr ""
+msgstr "Hong-keh"
 
 #: kcmfontinst/FontFilter.cpp:110
 #, kde-format
@@ -253,52 +257,52 @@ msgstr ""
 #: kcmfontinst/FontFilter.cpp:112
 #, kde-format
 msgid "FontConfig Match"
-msgstr ""
+msgstr "FontConfig Hû-ha̍p"
 
 #: kcmfontinst/FontFilter.cpp:114
 #, kde-format
 msgid "File Type"
-msgstr ""
+msgstr "Tóng-àn Luī"
 
 #: kcmfontinst/FontFilter.cpp:116
 #, kde-format
 msgid "File Name"
-msgstr ""
+msgstr "Tóng-àn-miâ"
 
 #: kcmfontinst/FontFilter.cpp:118
 #, kde-format
 msgid "File Location"
-msgstr ""
+msgstr "Tóng-àn Uī-tì"
 
 #: kcmfontinst/FontFilter.cpp:120
 #, kde-format
 msgid "Writing System"
-msgstr ""
+msgstr "Su-siá Hē-thóng"
 
 #: kcmfontinst/FontFilter.cpp:131
 #, kde-format
 msgid "Set Criteria"
-msgstr ""
+msgstr "Siat-tīng Ki-tsún"
 
 #: kcmfontinst/FontFilter.cpp:190
 #, kde-format
 msgid "Symbol/Other"
-msgstr ""
+msgstr "Hû-hō/Kî-thann"
 
 #: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "Tsiàu %1 Kè-lī…"
 
 #: kcmfontinst/FontList.cpp:548
 #, kde-format
 msgid "Font"
-msgstr ""
+msgstr "Jī-hîng"
 
 #: kcmfontinst/FontList.cpp:550
 #, kde-format
 msgid "Status"
-msgstr ""
+msgstr "Tsōng-thài"
 
 #: kcmfontinst/FontList.cpp:564
 #, kde-format
@@ -319,17 +323,17 @@ msgstr ""
 #: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, kde-format
 msgid "…plus %1 more"
-msgstr ""
+msgstr "…á-koh ū kî-thann %1 ê"
 
 #: kcmfontinst/FontList.cpp:1001
 #, kde-format
 msgid "%1 [%2]"
-msgstr ""
+msgstr "%1 [%2]"
 
 #: kcmfontinst/FontList.cpp:1300
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Thâi-tiāu"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
 #: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
@@ -341,12 +345,12 @@ msgstr "Khé-iōng"
 #: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
-msgstr ""
+msgstr "Thîng-iōng"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
 #, kde-format
 msgid "Print…"
-msgstr ""
+msgstr "Lia̍t-ìn…"
 
 #: kcmfontinst/FontList.cpp:1312
 #, kde-format
@@ -356,27 +360,27 @@ msgstr "Tîng Tsài-ji̍p"
 #: kcmfontinst/FontList.cpp:1690
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
-msgstr ""
+msgstr "Kám ài tī jī-hîng kiám-sī-khì phah-khui tse %1 ê jī-hîng?"
 
 #: kcmfontinst/GroupList.cpp:62
 #, kde-format
 msgid "All Fonts"
-msgstr ""
+msgstr "Sóo-ū Jī-hîng"
 
 #: kcmfontinst/GroupList.cpp:65
 #, kde-format
 msgid "Personal Fonts"
-msgstr ""
+msgstr "Kò-jîn Jī-hîng"
 
 #: kcmfontinst/GroupList.cpp:68
 #, kde-format
 msgid "System Fonts"
-msgstr ""
+msgstr "Hē-thóng Jī-hîng"
 
 #: kcmfontinst/GroupList.cpp:71
 #, kde-format
 msgid "Unclassified"
-msgstr ""
+msgstr "Bô Hun-luī"
 
 #: kcmfontinst/GroupList.cpp:353
 #, kde-format
@@ -393,7 +397,7 @@ msgstr ""
 #: kcmfontinst/GroupList.cpp:542
 #, kde-format
 msgid "Remove Group"
-msgstr ""
+msgstr "Î-tû Kûn-tsoo"
 
 #: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
 #, kde-format
@@ -403,7 +407,7 @@ msgstr "Î-tû"
 #: kcmfontinst/GroupList.cpp:543
 #, kde-format
 msgid "Remove group"
-msgstr ""
+msgstr "Î-tû kûn-tsoo"
 
 #: kcmfontinst/GroupList.cpp:589
 #, kde-format
@@ -444,7 +448,7 @@ msgstr ""
 #: kcmfontinst/GroupList.cpp:793
 #, kde-format
 msgid "Rename…"
-msgstr ""
+msgstr "Kái-miâ…"
 
 #: kcmfontinst/GroupList.cpp:802
 #, kde-format
@@ -454,22 +458,22 @@ msgstr "Huē-tshut…"
 #: kcmfontinst/GroupList.cpp:896
 #, kde-format
 msgid "Add to \"%1\"."
-msgstr ""
+msgstr "Thiam kàu \"%1\"."
 
 #: kcmfontinst/GroupList.cpp:898
 #, kde-format
 msgid "Remove from current group."
-msgstr ""
+msgstr "Uì tsit-má ê kûn-tsoo Î-tû."
 
 #: kcmfontinst/GroupList.cpp:900
 #, kde-format
 msgid "Move to personal folder."
-msgstr ""
+msgstr "Suá-khì kò-jîn tsu-liāu-giap-á."
 
 #: kcmfontinst/GroupList.cpp:902
 #, kde-format
 msgid "Move to system folder."
-msgstr ""
+msgstr "Suá-khì hē-thóng tsu-liāu-giap-á."
 
 #: kcmfontinst/JobRunner.cpp:139
 #, kde-format
@@ -479,7 +483,7 @@ msgstr "Thiàu-kuè"
 #: kcmfontinst/JobRunner.cpp:142
 #, kde-format
 msgid "AutoSkip"
-msgstr ""
+msgstr "Tsū-tōng Thiàu-kuè"
 
 #: kcmfontinst/JobRunner.cpp:187
 #, kde-format
@@ -501,7 +505,7 @@ msgstr "Mài koh hiān-sî tsi̍t-ê sìn-sit"
 #: kcmfontinst/JobRunner.cpp:315
 #, kde-format
 msgid "Installing"
-msgstr ""
+msgstr "Leh An-tsong"
 
 #: kcmfontinst/JobRunner.cpp:318
 #, kde-format
@@ -511,37 +515,37 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
 #, kde-format
 msgid "Enabling"
-msgstr ""
+msgstr "Leh Khé-iōng"
 
 #: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Moving"
-msgstr ""
+msgstr "Leh Suá-uī"
 
 #: kcmfontinst/JobRunner.cpp:327
 #, kde-format
 msgid "Updating"
-msgstr ""
+msgstr "Leh King-sin"
 
 #: kcmfontinst/JobRunner.cpp:331
 #, kde-format
 msgid "Removing"
-msgstr ""
+msgstr "Leh Î-tû"
 
 #: kcmfontinst/JobRunner.cpp:335
 #, kde-format
 msgid "Disabling"
-msgstr ""
+msgstr "Leh Thîng-iōng"
 
 #: kcmfontinst/JobRunner.cpp:372
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr ""
+msgstr "Leh king-sin jī-hîng siat-tīng. Tshiánn sió-tán…"
 
 #: kcmfontinst/JobRunner.cpp:444
 #, kde-format
 msgid "Unable to start backend."
-msgstr ""
+msgstr "Bô-huat-tōo khí-tōng āu-tuan"
 
 #: kcmfontinst/JobRunner.cpp:453
 #, kde-format
@@ -551,12 +555,12 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
 #, kde-format
 msgid "<h3>Error</h3>"
-msgstr ""
+msgstr "<h3>Tshò-gōo</h3>"
 
 #: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid "Failed to download <i>%1</i>"
-msgstr ""
+msgstr "Hā-tsài <i>%1</i> sit-pāi--ah"
 
 #: kcmfontinst/JobRunner.cpp:694
 #, kde-format
@@ -579,7 +583,7 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid "<i>%1</i> is not a font."
-msgstr ""
+msgstr "<i>%1</i> m̄-sī jī-hîng."
 
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
@@ -594,47 +598,47 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:707 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
-msgstr ""
+msgstr "<i>%1</i> í-king ū--ah."
 
 #: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "<i>%1</i> does not exist."
-msgstr ""
+msgstr "<i>%1</i> bô tsûn-tsāi."
 
 #: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
-msgstr ""
+msgstr "Kī-tsua̍t tsûn-tshú.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
-msgstr ""
+msgstr "Bô tsi-uān ê tōng-tsok.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
-msgstr ""
+msgstr "Jīn-tsìng sit-pāi.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
-msgstr ""
+msgstr "Tshú-lí ê sî-tsūn hiông-hiông ū tshò-gōo: <i>%1</i>"
 
 #: kcmfontinst/KCmFontInst.cpp:211
 #, kde-format
 msgid "Create New Group…"
-msgstr ""
+msgstr "Kiàn-li̍p Sin-ê Kûn-tsoo…"
 
 #: kcmfontinst/KCmFontInst.cpp:214
 #, kde-format
 msgid "Remove Group…"
-msgstr ""
+msgstr "Î-tû Kûn-tsoo…"
 
 #: kcmfontinst/KCmFontInst.cpp:217
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr ""
+msgstr "Khé-iōng"
 
 #: kcmfontinst/KCmFontInst.cpp:220
 #, kde-format
@@ -689,7 +693,7 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:428
 #, kde-format
 msgid "Add Fonts"
-msgstr ""
+msgstr "Thiam Jī-hîng"
 
 #: kcmfontinst/KCmFontInst.cpp:552
 #, kde-format
@@ -711,7 +715,7 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:582
 #, kde-format
 msgid "Cannot Print"
-msgstr ""
+msgstr "Bô-huat-tōo Ìn-suat"
 
 #: kcmfontinst/KCmFontInst.cpp:597
 #, kde-format
@@ -731,7 +735,7 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:615
 #, kde-format
 msgid "Delete Font"
-msgstr ""
+msgstr "Thâi-tiāu Jī-hîng"
 
 #: kcmfontinst/KCmFontInst.cpp:622
 #, kde-format
@@ -742,12 +746,12 @@ msgstr[0] ""
 #: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "Delete Fonts"
-msgstr ""
+msgstr "Thâi-tiāu Jī-hîng"
 
 #: kcmfontinst/KCmFontInst.cpp:629
 #, kde-format
 msgid "Deleting font(s)…"
-msgstr ""
+msgstr "Leh thâi-tiāu jī-hîng…"
 
 #: kcmfontinst/KCmFontInst.cpp:644
 #, kde-format
@@ -769,12 +773,12 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:659
 #, kde-format
 msgid "Move Font"
-msgstr ""
+msgstr "Kā Jī-hîng Suá-uī"
 
 #: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
 #, kde-format
 msgid "Move"
-msgstr ""
+msgstr "Suá-uī"
 
 #: kcmfontinst/KCmFontInst.cpp:665
 #, kde-format
@@ -787,7 +791,7 @@ msgstr[0] ""
 #: kcmfontinst/KCmFontInst.cpp:671
 #, kde-format
 msgid "Move Fonts"
-msgstr ""
+msgstr "Kā Jī-hîng Suá-uī"
 
 #: kcmfontinst/KCmFontInst.cpp:676
 #, kde-format
@@ -797,7 +801,7 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:690
 #, kde-format
 msgid "Export Group"
-msgstr ""
+msgstr "Huē-tshut Kûn-tsoo"
 
 #: kcmfontinst/KCmFontInst.cpp:716
 #, kde-format
@@ -822,12 +826,12 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:739
 #, kde-format
 msgid "New Group"
-msgstr ""
+msgstr "Sin Kûn-tsoo"
 
 #: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
 msgid "Preview Text"
-msgstr ""
+msgstr "Ī-lám Bûn-jī"
 
 #: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
@@ -842,13 +846,13 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:878
 #, kde-format
 msgid "No fonts"
-msgstr ""
+msgstr "Bô jī-hîng"
 
 #: kcmfontinst/KCmFontInst.cpp:883
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
-msgstr[0] ""
+msgstr[0] "%1 ê Jī-hîng"
 
 #: kcmfontinst/KCmFontInst.cpp:892
 #, kde-format
@@ -1016,27 +1020,27 @@ msgstr ""
 #: kcmfontinst/PrintDialog.cpp:42
 #, kde-format
 msgid "12pt"
-msgstr ""
+msgstr "12pt"
 
 #: kcmfontinst/PrintDialog.cpp:43
 #, kde-format
 msgid "18pt"
-msgstr ""
+msgstr "18pt"
 
 #: kcmfontinst/PrintDialog.cpp:44
 #, kde-format
 msgid "24pt"
-msgstr ""
+msgstr "24pt"
 
 #: kcmfontinst/PrintDialog.cpp:45
 #, kde-format
 msgid "36pt"
-msgstr ""
+msgstr "36pt"
 
 #: kcmfontinst/PrintDialog.cpp:46
 #, kde-format
 msgid "48pt"
-msgstr ""
+msgstr "48pt"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1053,17 +1057,17 @@ msgstr ""
 #: kio/KioFonts.cpp:434
 #, kde-format
 msgid "Cannot copy fonts"
-msgstr ""
+msgstr "Bô-huat-tōo kā jī-hîng khóo-pih"
 
 #: kio/KioFonts.cpp:439
 #, kde-format
 msgid "Cannot move fonts"
-msgstr ""
+msgstr "Bô-huat-tōo kā jī-hîng suá-uī"
 
 #: kio/KioFonts.cpp:450
 #, kde-format
 msgid "Only fonts may be deleted."
-msgstr ""
+msgstr "Tsí ē-sái thâi-tiāu jī-hîng."
 
 #: kio/KioFonts.cpp:455
 #, kde-format
@@ -1109,7 +1113,7 @@ msgstr ""
 #: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is not a font."
-msgstr ""
+msgstr "%1 m̄-sī jī-hîng."
 
 #: kio/KioFonts.cpp:716
 #, kde-format
@@ -1137,7 +1141,7 @@ msgstr ""
 #: lib/FcEngine.cpp:1059
 #, kde-format
 msgid "No characters found."
-msgstr ""
+msgstr "Tshuē-bô jī-guân."
 
 #: lib/FcEngine.cpp:1097
 #, kde-format
@@ -1176,7 +1180,7 @@ msgstr[0] ""
 
 #: lib/KfiConstants.h:22
 msgid "Personal"
-msgstr ""
+msgstr "Kò-jîn"
 
 #: lib/KfiConstants.h:23
 msgid "System"
@@ -1184,11 +1188,11 @@ msgstr "Hē-thóng"
 
 #: lib/KfiConstants.h:24
 msgid "All"
-msgstr ""
+msgstr "Tsuân-pōo"
 
 #: lib/KfiConstants.h:38
 msgid "Administrator"
-msgstr ""
+msgstr "Kuán-lí-tsiá"
 
 #: lib/KfiConstants.h:75
 msgid "Thin"
@@ -1305,27 +1309,27 @@ msgstr ""
 #: viewpart/CharTip.cpp:44
 #, kde-format
 msgid "Other, Control"
-msgstr ""
+msgstr "Kî-thann, Khòng-tsè-iōng"
 
 #: viewpart/CharTip.cpp:46
 #, kde-format
 msgid "Other, Format"
-msgstr ""
+msgstr "Kî-thann, Keh-sik Bûn-jī"
 
 #: viewpart/CharTip.cpp:48
 #, kde-format
 msgid "Other, Not Assigned"
-msgstr ""
+msgstr "Kî-thann, Bô Tīng-gī"
 
 #: viewpart/CharTip.cpp:50
 #, kde-format
 msgid "Other, Private Use"
-msgstr ""
+msgstr "Kî-thann, Su-jîn-iōng"
 
 #: viewpart/CharTip.cpp:52
 #, kde-format
 msgid "Other, Surrogate"
-msgstr ""
+msgstr "Kî-thann, Surrogate"
 
 #: viewpart/CharTip.cpp:54
 #, kde-format
@@ -1420,22 +1424,22 @@ msgstr ""
 #: viewpart/CharTip.cpp:90
 #, kde-format
 msgid "Symbol, Currency"
-msgstr ""
+msgstr "Hû-hō, Huè-pè"
 
 #: viewpart/CharTip.cpp:92
 #, kde-format
 msgid "Symbol, Modifier"
-msgstr ""
+msgstr "Hû-hō, Siu-sik-bûn-jī"
 
 #: viewpart/CharTip.cpp:94
 #, kde-format
 msgid "Symbol, Math"
-msgstr ""
+msgstr "Hû-hō, Sòo-ha̍k"
 
 #: viewpart/CharTip.cpp:96
 #, kde-format
 msgid "Symbol, Other"
-msgstr ""
+msgstr "Hû-hō, Kî-thann"
 
 #: viewpart/CharTip.cpp:98
 #, kde-format
@@ -1455,22 +1459,22 @@ msgstr ""
 #: viewpart/CharTip.cpp:152
 #, kde-format
 msgid "Category"
-msgstr ""
+msgstr "Luī-pia̍t"
 
 #: viewpart/CharTip.cpp:154
 #, kde-format
 msgid "UCS-4"
-msgstr ""
+msgstr "UCS-4"
 
 #: viewpart/CharTip.cpp:158
 #, kde-format
 msgid "UTF-16"
-msgstr ""
+msgstr "UTF-16"
 
 #: viewpart/CharTip.cpp:169
 #, kde-format
 msgid "UTF-8"
-msgstr ""
+msgstr "UTF-8"
 
 #: viewpart/CharTip.cpp:186
 #, kde-format
@@ -1485,17 +1489,17 @@ msgstr ""
 #: viewpart/FontViewPart.cpp:93
 #, kde-format
 msgid "Install…"
-msgstr ""
+msgstr "An-tsong…"
 
 #: viewpart/FontViewPart.cpp:114
 #, kde-format
 msgid "Change Text…"
-msgstr ""
+msgstr "Kái-piàn Bûn-jī…"
 
 #: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
-msgstr ""
+msgstr "Bô-huat-tōo tho̍k-tshú jī-hîng."
 
 #: viewpart/FontViewPart.cpp:395
 #, kde-format
@@ -1511,7 +1515,7 @@ msgstr ""
 #: viewpart/kfontviewpart.rc:4
 #, kde-format
 msgid "&Main Toolbar"
-msgstr ""
+msgstr "Tsú Kang-kū-lia̍t(&M)"
 
 #: viewpart/PreviewSelectAction.cpp:15
 #, kde-format
@@ -1540,19 +1544,19 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:17
 msgid "Basic Latin"
-msgstr ""
+msgstr "Ki-tshóo Lô-má-jī"
 
 #: viewpart/UnicodeBlocks.h:18
 msgid "Latin-1 Supplement"
-msgstr ""
+msgstr "Lô-má-jī-1 Póo-tsi̍p"
 
 #: viewpart/UnicodeBlocks.h:19
 msgid "Latin Extended-A"
-msgstr ""
+msgstr "Lô-má-jī Khok-tiong A"
 
 #: viewpart/UnicodeBlocks.h:20
 msgid "Latin Extended-B"
-msgstr ""
+msgstr "Lô-má-jī Khok-tiong B"
 
 #: viewpart/UnicodeBlocks.h:21
 msgid "IPA Extensions"
@@ -1572,23 +1576,23 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
 msgid "Cyrillic"
-msgstr ""
+msgstr "Kilil Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:26
 msgid "Cyrillic Supplement"
-msgstr ""
+msgstr "Kilil Bûn-jī Póo-tsi̍p"
 
 #: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
 msgid "Armenian"
-msgstr "A-bí-nî-a-gí"
+msgstr "A-bí-nî-a Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:28 viewpart/UnicodeScripts.h:42
 msgid "Hebrew"
-msgstr "Hi-pik-lâi-gí"
+msgstr "Hi-pik-lâi Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:15
 msgid "Arabic"
-msgstr "A-lá-pik-gí"
+msgstr "A-lá-pik Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:30 viewpart/UnicodeScripts.h:69
 msgid "Syriac"
@@ -1596,7 +1600,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:31
 msgid "Arabic Supplement"
-msgstr ""
+msgstr "A-lá-pik Bûn-jī Póo-tsi̍p"
 
 #: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
 msgid "Thaana"
@@ -1612,7 +1616,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
 msgid "Bengali"
-msgstr "Bengal-gí"
+msgstr "Bengal Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
 msgid "Gurmukhi"
@@ -1620,35 +1624,35 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
 msgid "Gujarati"
-msgstr "Gujarat-gí"
+msgstr "Gujarat Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
 msgid "Oriya"
-msgstr "Odia-gí"
+msgstr "Odia Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
 msgid "Tamil"
-msgstr "Tamil-gí"
+msgstr "Tamil Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
 msgid "Telugu"
-msgstr "Telugu-gí"
+msgstr "Telugu Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
 msgid "Kannada"
-msgstr "Kannada-gí"
+msgstr "Kannada Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
 msgid "Malayalam"
-msgstr "Malayalam-gí"
+msgstr "Malayalam Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
 msgid "Sinhala"
-msgstr "Sinhala-gí"
+msgstr "Sinhala Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
 msgid "Thai"
-msgstr "Thài-kok-gí"
+msgstr "Thài-gí Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
 msgid "Lao"
@@ -1664,11 +1668,11 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
 msgid "Georgian"
-msgstr "Georgia-gí"
+msgstr "Georgia Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:49
 msgid "Hangul Jamo"
-msgstr ""
+msgstr "Hân-kok Jī-bú"
 
 #: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
 msgid "Ethiopic"
@@ -1712,7 +1716,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
 msgid "Khmer"
-msgstr "Khmer-gí"
+msgstr "Khmer Bûn-jī"
 
 #: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
 msgid "Mongolian"
@@ -1732,7 +1736,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:65
 msgid "Khmer Symbols"
-msgstr ""
+msgstr "Khmer Hû-hō"
 
 #: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
 msgid "Buginese"
@@ -1744,11 +1748,11 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:68
 msgid "Phonetic Extensions"
-msgstr ""
+msgstr "Pió-im Khok-tiong"
 
 #: viewpart/UnicodeBlocks.h:69
 msgid "Phonetic Extensions Supplement"
-msgstr ""
+msgstr "Pió-im Khok-tiong Póo-tsi̍p"
 
 #: viewpart/UnicodeBlocks.h:70
 msgid "Combining Diacritical Marks Supplement"
@@ -1756,15 +1760,15 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:71
 msgid "Latin Extended Additional"
-msgstr ""
+msgstr "Lô-má-jī Khok-tiong Kî-thann"
 
 #: viewpart/UnicodeBlocks.h:72
 msgid "Greek Extended"
-msgstr ""
+msgstr "Hi-lia̍p Bûn-jī Khok-tiong"
 
 #: viewpart/UnicodeBlocks.h:73
 msgid "General Punctuation"
-msgstr ""
+msgstr "It-puann Piau-tiám-hû-hō"
 
 #: viewpart/UnicodeBlocks.h:74
 msgid "Superscripts and Subscripts"
@@ -1772,7 +1776,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:75
 msgid "Currency Symbols"
-msgstr ""
+msgstr "Huè-pè Hû-hō"
 
 #: viewpart/UnicodeBlocks.h:76
 msgid "Combining Diacritical Marks for Symbols"
@@ -1788,7 +1792,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:79
 msgid "Arrows"
-msgstr ""
+msgstr "Tsìnn-thâu"
 
 #: viewpart/UnicodeBlocks.h:80
 msgid "Mathematical Operators"
@@ -1864,7 +1868,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:98
 msgid "Latin Extended-C"
-msgstr ""
+msgstr "Lô-má-jī Khok-tiong C"
 
 #: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
 msgid "Coptic"
@@ -1872,7 +1876,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:100
 msgid "Georgian Supplement"
-msgstr ""
+msgstr "Georgia Bûn-jī Póo-tsi̍p"
 
 #: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
 msgid "Tifinagh"
@@ -1912,11 +1916,11 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
 msgid "Bopomofo"
-msgstr ""
+msgstr "Tsù-im-hû-hō"
 
 #: viewpart/UnicodeBlocks.h:111
 msgid "Hangul Compatibility Jamo"
-msgstr ""
+msgstr "Hân-kok Jī-bú Siong-iông"
 
 #: viewpart/UnicodeBlocks.h:112
 msgid "Kanbun"
@@ -1924,7 +1928,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:113
 msgid "Bopomofo Extended"
-msgstr ""
+msgstr "Tsù-im-hû-hō Khok-tiong"
 
 #: viewpart/UnicodeBlocks.h:114
 msgid "CJK Strokes"
@@ -1940,7 +1944,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:117
 msgid "CJK Compatibility"
-msgstr ""
+msgstr "CJK Siong-iông"
 
 #: viewpart/UnicodeBlocks.h:118
 msgid "CJK Unified Ideographs Extension A"
@@ -1968,7 +1972,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:124
 msgid "Latin Extended-D"
-msgstr ""
+msgstr "Lô-má-jī Khok-tiong D"
 
 #: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
 msgid "Syloti Nagri"
@@ -2164,7 +2168,7 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:25
 msgid "Common"
-msgstr ""
+msgstr "Kiōng-thong"
 
 #: viewpart/UnicodeScripts.h:28
 msgid "Cypriot"
@@ -2172,11 +2176,11 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:36
 msgid "Greek"
-msgstr "Hi-lia̍p-gí"
+msgstr "Hi-lia̍p Bûn-jī"
 
 #: viewpart/UnicodeScripts.h:39
 msgid "Han"
-msgstr ""
+msgstr "Hàn-jī"
 
 #: viewpart/UnicodeScripts.h:40
 msgid "Hangul"
@@ -2188,7 +2192,7 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:50
 msgid "Latin"
-msgstr ""
+msgstr "Lô-má-jī"
 
 #: viewpart/UnicodeScripts.h:52
 msgid "Linear B"

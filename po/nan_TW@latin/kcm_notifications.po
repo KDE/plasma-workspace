@@ -1,0 +1,293 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-06 00:45+0000\n"
+"PO-Revision-Date: 2026-07-23 01:10+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr ""
+
+#: sourcesmodel.cpp:404
+#, kde-format
+msgid "Other Applications"
+msgstr "Kî-thann Îng-ióng-tîng-sik"
+
+#: ui/ApplicationConfiguration.qml:105
+#, kde-format
+msgid "Show popups"
+msgstr "Hián-sī tuânn-tshut"
+
+#: ui/ApplicationConfiguration.qml:119
+#, kde-format
+msgid "Show in do not disturb mode"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
+#, kde-format
+msgid "Show in history"
+msgstr "Tī li̍k-sú hián-sī"
+
+#: ui/ApplicationConfiguration.qml:143
+#, kde-format
+msgid "Show notification badges"
+msgstr "Hián-sī thong-ti badge"
+
+#: ui/ApplicationConfiguration.qml:180
+#, kde-format
+msgctxt "@title:table Configure individual notification events in an app"
+msgid "Configure Events"
+msgstr "Siat-tīng Sū-kiānn"
+
+#: ui/ApplicationConfiguration.qml:188
+#, kde-format
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:282
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:291
+#, kde-format
+msgid "Play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:302
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:328
+#, kde-format
+msgctxt "Reset the notification sound to a default one"
+msgid "Reset"
+msgstr "Tîng-siat"
+
+#: ui/ApplicationConfiguration.qml:340
+#, kde-format
+msgid "Choose sound file"
+msgstr "Suán im-hāu tóng-àn"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt "@action:button Plasma-specific notifications"
+msgid "Configure for System…"
+msgstr "Siat-tīng Hē-thóng Thong-ti…"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@action:button Application-specific notifications"
+msgid "Configure for Applications…"
+msgstr "Siat-tīng îng-ióng-tîng-sik Thong-ti…"
+
+#: ui/main.qml:96
+#, kde-format
+msgid ""
+"Could not find a 'Notifications' widget, which is required for displaying "
+"notifications. Make sure that it is enabled either in your System Tray or as "
+"a standalone widget."
+msgstr ""
+
+#: ui/main.qml:107
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
+msgstr ""
+
+#: ui/main.qml:111
+#, kde-format
+msgid "Notifications are currently not provided by Plasma."
+msgstr ""
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@title:group"
+msgid "Do Not Disturb mode"
+msgstr ""
+
+#: ui/main.qml:131
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr "Tsū-tōng khé-iōng:"
+
+#: ui/main.qml:132
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "When screens are mirrored"
+msgstr ""
+
+#: ui/main.qml:144
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
+msgid "During screen sharing"
+msgstr ""
+
+#: ui/main.qml:158
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr ""
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+msgid "Manually toggle with shortcut:"
+msgstr ""
+
+#: ui/main.qml:177
+#, kde-format
+msgctxt "@title:group"
+msgid "Visibility conditions"
+msgstr ""
+
+#: ui/main.qml:182
+#, kde-format
+msgid "Critical notifications:"
+msgstr ""
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Show in Do Not Disturb mode"
+msgstr ""
+
+#: ui/main.qml:195
+#, kde-format
+msgid "Low priority notifications:"
+msgstr ""
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Show popup"
+msgstr "Hián-sī tuânn-tshut"
+
+#: ui/main.qml:225
+#, kde-format
+msgctxt "@title:group As in: 'notification popups'"
+msgid "Popups"
+msgstr "Tuânn-tshut"
+
+#: ui/main.qml:231
+#, kde-format
+msgctxt "@label"
+msgid "Location:"
+msgstr "Uī-tì:"
+
+#: ui/main.qml:232
+#, kde-format
+msgctxt "Popup position near notification plasmoid"
+msgid "Near notification icon"
+msgstr "Thong-ti tôo-sī hù-kīn"
+
+#: ui/main.qml:269
+#, kde-format
+msgctxt "@action:button choose custom notification position"
+msgid "Choose…"
+msgstr "Suán…"
+
+#: ui/main.qml:278 ui/main.qml:294
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 bió"
+
+#: ui/main.qml:283
+#, kde-format
+msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
+msgid "Hide after:"
+msgstr "Guā-kú liáu-āu ún-tsông:"
+
+#: ui/main.qml:306
+#, kde-format
+msgctxt ""
+"@option:check Show progress bar on notifications indicating when it will hide"
+msgid "Show timeout indicator"
+msgstr "Hián-sī kuè-sî-lia̍t"
+
+#: ui/main.qml:318
+#, kde-format
+msgctxt "@title:group"
+msgid "Additional feedback"
+msgstr "Kî-thann huê-kuī"
+
+#: ui/main.qml:324
+#, kde-format
+msgctxt "Show application jobs in notification widget"
+msgid "Show in notifications"
+msgstr "Tī thong-ti hián-sī"
+
+#: ui/main.qml:325
+#, kde-format
+msgid "Application progress:"
+msgstr "Ìng-iōng-tîng-sik tsìn-tōo:"
+
+#: ui/main.qml:339
+#, kde-format
+msgctxt "Keep application job popup open for entire duration of job"
+msgid "Keep popup open during progress"
+msgstr "Ū tsìn-tōo ê sî-tsūn pó-tshî tuânn-tshut khui-ê"
+
+#: ui/main.qml:352
+#, kde-format
+msgid "Notification badges:"
+msgstr ""
+
+#: ui/main.qml:353
+#, kde-format
+msgid "Show in task manager"
+msgstr "Tī kang-khuè-kuán-lí-khì hián-sī"
+
+#: ui/PopupPositionDialog.qml:15
+#, kde-format
+msgid "Popup Position"
+msgstr "Tuânn-tshut Uī-tì"
+
+#: ui/SourcesPage.qml:20
+#, kde-format
+msgctxt ""
+"@title:window kcm page title, configure app-specific notification settings"
+msgid "Application Notifications"
+msgstr "Ìng-iōng-tîng-sik Thong-ti"
+
+#: ui/SourcesPage.qml:108
+#, kde-format
+msgid "Applications"
+msgstr "Îng-ióng-tîng-sik"
+
+#: ui/SourcesPage.qml:109
+#, kde-format
+msgid "System Services"
+msgstr "Hē-thóng Ho̍k-bū"
+
+#: ui/SourcesPage.qml:157
+#, kde-format
+msgid "No application or event matches your search term"
+msgstr "Bô hû-ha̍p tshiau-tshuē ê îng-ióng-tîng-sik á-sī sū-kiānn"
+
+#: ui/SourcesPage.qml:181
+#, kde-format
+msgid ""
+"Select an application from the list to configure its notification settings "
+"and behavior"
+msgstr ""

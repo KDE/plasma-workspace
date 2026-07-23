@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-07-19 11:00+0900\n"
+"PO-Revision-Date: 2026-07-23 01:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -383,7 +383,7 @@ msgstr "Sî-kan"
 #, kde-format
 msgctxt "@info:title"
 msgid "Currency"
-msgstr ""
+msgstr "Huè-pè"
 
 #: optionsmodel.cpp:50
 #, kde-format
@@ -596,7 +596,7 @@ msgstr "Sî-kan"
 #: ui/main.qml:286
 #, kde-format
 msgid "Currency"
-msgstr ""
+msgstr "Huè-pè"
 
 #: ui/main.qml:288
 #, kde-format

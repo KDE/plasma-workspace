@@ -1,0 +1,123 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"PO-Revision-Date: 2026-07-23 02:37+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: kcm_soundtheme.cpp:156
+#, kde-format
+msgctxt "Name of the fallback \"freedesktop\" sound theme"
+msgid "FreeDesktop"
+msgstr "FreeDesktop"
+
+#: kcm_soundtheme.cpp:157
+#, kde-format
+msgid "Fallback sound theme from freedesktop.org"
+msgstr ""
+
+#: kcm_soundtheme.cpp:250
+#, kde-format
+msgctxt "@info:status"
+msgid "Unable to create a temporary file."
+msgstr "Bô-huat-tōo kiàn-li̍p tsiām-sî-tóng-àn."
+
+#: kcm_soundtheme.cpp:260
+#, kde-format
+msgctxt "@info:status"
+msgid "Unable to download the sound theme archive: %1"
+msgstr "Bô-huat-tōo hā-tsài im-hāu tsú-tê hong-tsûn: %1"
+
+#: kcm_soundtheme.cpp:271
+#, kde-format
+msgctxt "@info:status"
+msgid "The archive could not be opened."
+msgstr "Bô-huat-tōo khui hong-tsûn."
+
+#: kcm_soundtheme.cpp:276
+#, kde-format
+msgctxt "@info:status"
+msgid "Theme installed successfully."
+msgid_plural "Themes installed successfully."
+msgstr[0] "Tsú-tê an-tsong hó-sè--ah."
+
+#: kcm_soundtheme.cpp:279
+#, kde-format
+msgctxt "@info:status"
+msgid "The archive does not contain a valid sound theme."
+msgstr ""
+
+#: ui/main.qml:35
+#, kde-format
+msgctxt "@action:button Install sound theme from file"
+msgid "Install from File…"
+msgstr "Uì Tóng-àn An-tsong…"
+
+#: ui/main.qml:42
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable notification sounds"
+msgstr "Khé-iōng thong-ti im-hāu"
+
+#: ui/main.qml:134
+#, kde-format
+msgctxt ""
+"%2 is a theme name or a list of theme names that the current theme inherits "
+"from"
+msgid "Based on: %2"
+msgid_plural "Based on: %2"
+msgstr[0] ""
+
+#: ui/main.qml:147
+#, kde-format
+msgctxt ""
+"@label Precedes a list of buttons which can be clicked to preview the "
+"theme's sounds. Keep it very short"
+msgid "Preview:"
+msgstr "Ī-lám:"
+
+#: ui/main.qml:166
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound \"%1\""
+msgstr "Ī-lám im-hāu \"%1\""
+
+#: ui/main.qml:188
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview the demo sound for the theme \"%1\""
+msgstr ""
+
+#: ui/main.qml:225
+#, kde-format
+msgctxt "%1 is a sound theme name. %2 is a sound name"
+msgid "The %1 theme doesn't include the sound '%2'"
+msgstr ""
+
+#: ui/main.qml:230
+#, kde-format
+msgid "Failed to preview sound: %1"
+msgstr "Ī-lám im-hāu sit-pāi: %1"
+
+#: ui/main.qml:246
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Sound Theme"
+msgstr "Suán Im-hāu Tsú-tê"
+
+#: ui/main.qml:248
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
+msgstr "Tsú-tê Tóng-àn (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

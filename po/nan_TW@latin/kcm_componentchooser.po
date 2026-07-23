@@ -1,0 +1,239 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-04-07 00:46+0000\n"
+"PO-Revision-Date: 2026-07-23 02:34+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: applicationmodel.cpp:64
+#, kde-format
+msgid "Other…"
+msgstr "Kî-thann…"
+
+#: components/componentchooserarchivemanager.cpp:15
+#, kde-format
+msgid "Select default archive manager"
+msgstr ""
+
+#: components/componentchooserbrowser.cpp:13
+#, kde-format
+msgid "Select default browser"
+msgstr "Suán ū-siat liû-lám-khì"
+
+#: components/componentchoosercalendar.cpp:10
+#, kde-format
+msgid "Select default calendar application"
+msgstr ""
+
+#: components/componentchooseremail.cpp:20
+#, kde-format
+msgid "Select default e-mail client"
+msgstr ""
+
+#: components/componentchooserfilemanager.cpp:15
+#, kde-format
+msgid "Select default file manager"
+msgstr ""
+
+#: components/componentchoosergeo.cpp:13
+#, kde-format
+msgid "Select default map"
+msgstr ""
+
+#: components/componentchooserimageviewer.cpp:15
+#, kde-format
+msgid "Select default image viewer"
+msgstr ""
+
+#: components/componentchoosermusicplayer.cpp:15
+#, kde-format
+msgid "Select default music player"
+msgstr ""
+
+#: components/componentchooserpdfviewer.cpp:11
+#, kde-format
+msgid "Select default PDF viewer"
+msgstr ""
+
+#: components/componentchoosertel.cpp:17
+#, kde-format
+msgid "Select default dialer application"
+msgstr ""
+
+#: components/componentchooserterminal.cpp:25
+#, kde-format
+msgid "Select default terminal emulator"
+msgstr ""
+
+#: components/componentchoosertexteditor.cpp:15
+#, kde-format
+msgid "Select default text editor"
+msgstr ""
+
+#: components/componentchooservideoplayer.cpp:15
+#, kde-format
+msgid "Select default video player"
+msgstr ""
+
+#: ui/ComponentOverlay.qml:54
+#, kde-format
+msgid "Details"
+msgstr "Siông-sè"
+
+#: ui/ComponentOverlay.qml:84
+#, kde-format
+msgid "This application can also open these file types:"
+msgstr ""
+
+#: ui/ComponentOverlay.qml:98
+#, kde-format
+msgctxt "@label %1 is a MIME type and %2 is an application name"
+msgid "%1 (Currently opens in %2)"
+msgstr ""
+
+#: ui/ComponentOverlay.qml:111
+#, kde-format
+msgctxt "@action:button %1 is an application name"
+msgid "Open All in %1"
+msgstr ""
+
+#: ui/ComponentOverlay.qml:130
+#, kde-format
+msgid ""
+"This application does not advertise support for the following file types, "
+"but may be able to open them anyway:"
+msgstr ""
+
+#: ui/ComponentOverlay.qml:147
+#, kde-format
+msgctxt "@action:button"
+msgid "Force All to Open in %1"
+msgstr ""
+
+#: ui/ComponentOverlay.qml:159
+#, kde-format
+msgid "Configure Manually…"
+msgstr ""
+
+#: ui/main.qml:17
+#, kde-format
+msgid ""
+"’%1’ seems to not support the following mimetypes associated with this kind "
+"of application: %2"
+msgstr ""
+
+#: ui/main.qml:34
+#, kde-format
+msgctxt "@info:status"
+msgid "This application may not be able to open all file types."
+msgstr ""
+
+#: ui/main.qml:36
+#, kde-format
+msgctxt "@action:button"
+msgid "View Details"
+msgstr ""
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "Internet related application’s category’s name"
+msgid "Internet"
+msgstr ""
+
+#: ui/main.qml:69
+#, kde-format
+msgid "Web browser:"
+msgstr "Bāng-lōo liû-lám-khì:"
+
+#: ui/main.qml:83
+#, kde-format
+msgid "Email client:"
+msgstr ""
+
+#: ui/main.qml:97
+#, kde-format
+msgctxt "Default calendar application"
+msgid "Calendar:"
+msgstr "La̍h-ji̍t:"
+
+#: ui/main.qml:111
+#, kde-format
+msgctxt "Default phone app"
+msgid "Phone Numbers:"
+msgstr ""
+
+#: ui/main.qml:125
+#, kde-format
+msgctxt "Multimedia related application’s category’s name"
+msgid "Multimedia"
+msgstr ""
+
+#: ui/main.qml:131
+#, kde-format
+msgid "Image viewer:"
+msgstr "Iánn-siōng kiám-sī-khì:"
+
+#: ui/main.qml:145
+#, kde-format
+msgid "Music player:"
+msgstr "Im-ga̍k hòng-sàng-khì:"
+
+#: ui/main.qml:159
+#, kde-format
+msgid "Video player:"
+msgstr "Iánn-phìnn hòng-sàng-khì:"
+
+#: ui/main.qml:173
+#, kde-format
+msgctxt "Documents related application’s category’s name"
+msgid "Documents"
+msgstr "Bûn-kiānn"
+
+#: ui/main.qml:179
+#, kde-format
+msgid "Text editor:"
+msgstr "Bûn-jī pian-tsi̍p-khì:"
+
+#: ui/main.qml:194
+#, kde-format
+msgid "PDF viewer:"
+msgstr "PDF kiám-sī-khì:"
+
+#: ui/main.qml:208
+#, kde-format
+msgctxt "Utilities related application’s category’s name"
+msgid "Utilities"
+msgstr "Kang-khū"
+
+#: ui/main.qml:214
+#, kde-format
+msgid "File manager:"
+msgstr "Tóng-àn kuán-lí-khì:"
+
+#: ui/main.qml:228
+#, kde-format
+msgid "Terminal emulator:"
+msgstr "Tsiong-tuan-ki:"
+
+#: ui/main.qml:242
+#, kde-format
+msgid "Archive manager:"
+msgstr "Hong-tsûn kuán-lí-khì:"
+
+#: ui/main.qml:256
+#, kde-format
+msgctxt "Map related application’s category’s name"
+msgid "Map:"
+msgstr "Tē-tôo:"
