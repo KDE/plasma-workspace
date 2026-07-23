@@ -24,6 +24,9 @@ QString GridLayoutManager::serializeLayout() const
     for (auto *item : layout()->childItems()) {
         auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
+            if (!ItemContainer::hasValidGeometry(itemCont->x(), itemCont->y(), itemCont->width(), itemCont->height(), itemCont->rotation())) {
+                continue;
+            }
             result += itemCont->key() + QLatin1Char(':') + QString::number(itemCont->x()) + QLatin1Char(',') + QString::number(itemCont->y()) + QLatin1Char(',')
                 + QString::number(itemCont->width()) + QLatin1Char(',') + QString::number(itemCont->height()) + QLatin1Char(',')
                 + QString::number(itemCont->rotation()) + QLatin1Char(';');
@@ -50,7 +53,15 @@ void GridLayoutManager::parseLayout(const QString &savedLayout)
             continue;
         }
 
-        m_parsedConfig[id] = {itemGeom[0].toDouble(), itemGeom[1].toDouble(), itemGeom[2].toDouble(), itemGeom[3].toDouble(), itemGeom[4].toDouble()};
+        const qreal gx = itemGeom[0].toDouble();
+        const qreal gy = itemGeom[1].toDouble();
+        const qreal gwidth = itemGeom[2].toDouble();
+        const qreal gheight = itemGeom[3].toDouble();
+        const qreal grotation = itemGeom[4].toDouble();
+        if (!ItemContainer::hasValidGeometry(gx, gy, gwidth, gheight, grotation)) {
+            continue;
+        }
+        m_parsedConfig[id] = {gx, gy, gwidth, gheight, grotation};
     }
 }
 

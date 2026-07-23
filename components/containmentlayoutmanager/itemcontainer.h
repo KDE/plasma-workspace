@@ -74,6 +74,8 @@ public:
     ItemContainer(QQuickItem *parent = nullptr);
     ~ItemContainer();
 
+    static bool hasValidGeometry(qreal x, qreal y, qreal width, qreal height, qreal rotation);
+
     QQmlListProperty<QObject> contentData();
 
     QString key() const;

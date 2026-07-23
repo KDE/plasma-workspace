@@ -827,4 +827,9 @@ int ItemContainer::contentHeight() const
     return height() - m_topPadding - m_bottomPadding;
 }
 
+bool ItemContainer::hasValidGeometry(qreal x, qreal y, qreal width, qreal height, qreal rotation)
+{
+    return std::isfinite(x) && std::isfinite(y) && std::isfinite(width) && std::isfinite(height) && std::isfinite(rotation);
+}
+
 #include "moc_itemcontainer.cpp"
