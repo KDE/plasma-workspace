@@ -35,3 +35,4 @@ target_link_libraries(kcm_componentchooser PRIVATE
     KF6::KCMUtils
 )
 
+install(FILES terminal_settings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

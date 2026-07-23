@@ -33,6 +33,7 @@ target_link_libraries( plasma-fallback-session-restore
 
 install(TARGETS plasma-fallback-session-restore DESTINATION ${KDE_INSTALL_FULL_LIBEXECDIR})
 install(TARGETS plasma-fallback-session-save DESTINATION ${KDE_INSTALL_FULL_LIBEXECDIR})
+install(FILES smserversettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
 ecm_install_configured_files(INPUT org.kde.plasma-fallback-session-save.desktop.in @ONLY DESTINATION ${KDE_INSTALL_APPDIR})
 ecm_install_configured_files(INPUT org.kde.plasma-fallback-session-restore.desktop.in @ONLY DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})

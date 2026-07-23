@@ -160,4 +160,11 @@ install(FILES libnotificationmanager.notifyrc
 install(FILES plasmanotify.portal
     DESTINATION ${KDE_INSTALL_DATADIR}/xdg-desktop-portal/portals)
 
+install(FILES kcfg/donotdisturbsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME notifications_donotdisturbsettings.kcfg)
+install(FILES kcfg/notificationsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+install(FILES kcfg/jobsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME notifications_jobsettings.kcfg)
+install(FILES kcfg/badgesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME notifications_badgesettings.kcfg)
+install(FILES kcfg/behaviorsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME notifications_behaviorsettings.kcfg)
+install(FILES kcfg/eventsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR} RENAME notifications_eventsettings.kcfg)
+
 add_subdirectory(kconf_update)
