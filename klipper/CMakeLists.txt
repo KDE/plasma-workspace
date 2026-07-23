@@ -71,6 +71,8 @@ add_subdirectory(declarative)
 
 install(FILES org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
+install(FILES klipper.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()

@@ -81,6 +81,8 @@ if(UBUNTU_LOCALE)
     target_link_libraries(kcm_regionandlang PRIVATE PK::packagekitqt6)
 endif()
 
+install(FILES regionandlangsettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
+
 ########### unit tests ##############
 if(BUILD_TESTING)
     add_subdirectory(autotests)

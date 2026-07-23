@@ -35,3 +35,4 @@ target_link_libraries(kcm_soundtheme PRIVATE
     Canberra::Canberra
 )
 
+install(FILES soundthemesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})

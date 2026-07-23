@@ -38,3 +38,5 @@ target_link_libraries(kcm_nighttime PRIVATE
     KF6::KCMUtilsQuick
     KNightTime
 )
+
+install(FILES nighttimesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
