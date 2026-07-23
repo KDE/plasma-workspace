@@ -19,7 +19,6 @@ target_link_libraries(screenpoolmanualtest
             KF6::ConfigCore
             KF6::Service
             KF6::WindowSystem
-            Plasma::KWaylandClient
             Wayland::Client
             PW::KWorkspace
                         )

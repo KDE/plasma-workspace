@@ -97,6 +97,7 @@ qt6_generate_wayland_protocol_client_sources(plasmashell
     PRIVATE_CODE
     FILES
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-window-management.xml
 )
 
 qt6_generate_wayland_protocol_client_sources(plasmashell_osd
@@ -129,7 +130,6 @@ target_link_libraries(plasmashell PRIVATE
  KF6::XmlGui
  LayerShellQt::Interface
  Plasma::Activities
- Plasma::KWaylandClient
  Plasma::Plasma
  Plasma::PlasmaQuick
  PW::KWorkspace

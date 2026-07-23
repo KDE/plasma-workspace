@@ -12,11 +12,6 @@
 
 #include "taskmanager_export.h"
 
-namespace KWayland::Client
-{
-class Surface;
-}
-
 namespace TaskManager
 {
 /**
