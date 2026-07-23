@@ -1053,6 +1053,7 @@ protected:
 
 private:
     Q_INVOKABLE void updateLauncherCount();
+    void updateCounts();
 
     class Private;
     class TasksModelLessThan;
