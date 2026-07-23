@@ -674,32 +674,9 @@ void TasksModel::Private::updateGroupInline()
     // Minor optimization: We only make these connections after we populate for
     // the first time to avoid some churn.
     if (!hadSourceModel) {
-        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
-        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
-        QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
-
-        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::countChanged, Qt::UniqueConnection);
-        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::countChanged, Qt::UniqueConnection);
-        QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::countChanged, Qt::UniqueConnection);
-
-        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, [this]() {
-            updateActiveTask();
-        });
-        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, [this]() {
-            updateActiveTask();
-        });
-        QObject::connect(q, &QAbstractItemModel::modelReset, q, [this]() {
-            updateActiveTask();
-        });
-
-        QObject::connect(q, &QAbstractItemModel::dataChanged, q, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
-            Q_UNUSED(topLeft)
-            Q_UNUSED(bottomRight)
-
-            if (roles.contains(AbstractTasksModel::IsActive)) {
-                updateActiveTask();
-            }
-        });
+        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::updateCounts, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::updateCounts, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::updateCounts, Qt::UniqueConnection);
 
         activeTaskWinIds = q->activeTask().data(AbstractTasksModel::WinIdList).toList();
     }
@@ -1035,6 +1012,15 @@ TasksModel::TasksModel(QObject *parent)
     QTimer::singleShot(0, this, [this]() {
         d->updateGroupInline();
     });
+
+    QObject::connect(this, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles) {
+        Q_UNUSED(topLeft)
+        Q_UNUSED(bottomRight)
+
+        if (roles.contains(AbstractTasksModel::IsActive)) {
+            d->updateActiveTask();
+        }
+    });
 }
 
 TasksModel::~TasksModel() = default;
@@ -1103,6 +1089,13 @@ void TasksModel::updateLauncherCount()
         d->launcherCount = count;
         Q_EMIT launcherCountChanged();
     }
+}
+
+void TasksModel::updateCounts()
+{
+    updateLauncherCount();
+    Q_EMIT countChanged();
+    d->updateActiveTask();
 }
 
 int TasksModel::launcherCount() const
