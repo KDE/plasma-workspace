@@ -20,6 +20,6 @@ Item {
     width: InputMethod.keyboardRectangle.width
 
     onActivatedChanged: if (activated) {
-        Keyboards.KWinVirtualKeyboard.enabled = true
+        Keyboards.KWinVirtualKeyboard.forceActivate()
     }
 }
