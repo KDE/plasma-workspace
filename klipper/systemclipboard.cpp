@@ -152,10 +152,9 @@ QMimeData *DatabaseRecordToMimeDataJob::mimeData() const
 {
     auto mimeData = new QMimeData;
     for (auto &[format, data] : m_mimeDataList) {
+        mimeData->setData(format, data);
         if (format == s_imageFormat) {
             mimeData->setImageData(QImage::fromData(data, "PNG"));
-        } else {
-            mimeData->setData(format, data);
         }
     }
     return mimeData;
