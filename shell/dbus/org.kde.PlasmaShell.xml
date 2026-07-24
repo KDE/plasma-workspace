@@ -33,7 +33,6 @@
     </method>
     <method name="activateLauncherMenu">
     </method>
-    <method name="refreshCurrentShell" />
 
     <method name="wallpaper">
       <arg name="screenNum" type="u" direction="in"/>

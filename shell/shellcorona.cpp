@@ -2985,13 +2985,6 @@ QString ShellCorona::defaultShell()
     return value.isEmpty() ? defaultValue : value;
 }
 
-void ShellCorona::refreshCurrentShell()
-{
-    KSharedConfig::openConfig(QStringLiteral("plasmashellrc"))->reparseConfiguration();
-    //  FIXME:   setShell(defaultShell());
-    QProcess::startDetached(u"plasmashell"_s, {u"--replace"_s});
-}
-
 bool ShellCorona::grabContainmentImage(const QString &name, int width, int height, const QString &targetPath)
 {
     Q_ASSERT(calledFromDBus());

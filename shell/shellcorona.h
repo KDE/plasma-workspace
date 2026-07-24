@@ -236,8 +236,6 @@ public Q_SLOTS:
         return m_panelViews.count();
     }
 
-    void refreshCurrentShell();
-
 protected Q_SLOTS:
     /**
      * Loads the layout and performs the needed checks
