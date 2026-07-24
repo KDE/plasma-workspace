@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2025-09-07 18:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -572,70 +572,70 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr "நட்சத்திரமிட்ட பதிவை நீக்கு"
 
-#: klipper.cpp:77
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "செயல்முறைகளுக்கான தானாக மேல்தோன்றும் பட்டி"
 
-#: klipper.cpp:94
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை &காலியாக்கு"
 
-#: klipper.cpp:99
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "தற்போதைய பிடிப்பின்மீது கைமுறையாக ஒரு செயலை இயக்கு"
 
-#: klipper.cpp:107
+#: klipper.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&உள்ளடக்கத்தை திருத்து…"
 
-#: klipper.cpp:113
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&பட்டைக்குறியீட்டை காட்டு…"
 
-#: klipper.cpp:120
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "வரலாற்றிலுள்ள அடுத்த உருப்படி"
 
-#: klipper.cpp:125
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "வரலாற்றிலுள்ள முந்தைய உருப்படி"
 
-#: klipper.cpp:132
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "பிடிப்புப்பலகையை சுட்டிக்குறியின் இருப்பிடத்திலேயே காட்டு"
 
-#: klipper.cpp:403 klipper.cpp:412
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "பிடிப்புப்பலகை வரலாறு"
 
-#: klipper.cpp:429
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "மேலே"
 
-#: klipper.cpp:436
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "தற்போதையது"
 
-#: klipper.cpp:443
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "கீழே"
@@ -838,7 +838,7 @@ msgstr ""
 "கோப்போ முகவரியோ தேர்ந்தெடுக்கப்பட்டால், அதன் மைம்வகைக்கு (கோப்புவகைக்கு) உரிய "
 "செயலிகளையும் மேல்தோன்றும் பட்டியில் காட்டு."
 
-#: klipperpopup.cpp:39
+#: klipperpopup.cpp:38
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "மேல்தோன்றும் பிடிப்புப்பலகை சாளரம்"

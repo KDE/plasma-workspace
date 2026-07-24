@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1740780 $
+# Version: $Revision: 1742089 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2025-09-06 05:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -607,70 +607,70 @@ msgstr "Ta rzecz zawiera gwiazdkę. Czy na pewno usunąć ją z historii?"
 msgid "Remove Starred Item"
 msgstr "Usuń rzecz z gwiazdką"
 
-#: klipper.cpp:77
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu wysuwne domyślnego działania"
 
-#: klipper.cpp:94
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Wyczyść historię schowka"
 
-#: klipper.cpp:99
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ręcznie wywołaj działanie na zawartości schowka"
 
-#: klipper.cpp:107
+#: klipper.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Zmi&eń zawartość..."
 
-#: klipper.cpp:113
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Pokaż kod kre&skowy..."
 
-#: klipper.cpp:120
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Następny wpis w historii"
 
-#: klipper.cpp:125
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Poprzedni wpis w historii"
 
-#: klipper.cpp:132
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Pokaż rzeczy schowka pod wskaźnikiem myszy"
 
-#: klipper.cpp:403 klipper.cpp:412
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historia schowka"
 
-#: klipper.cpp:429
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "w górę"
 
-#: klipper.cpp:436
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "aktualna"
 
-#: klipper.cpp:443
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "w dół"
@@ -873,7 +873,7 @@ msgstr ""
 "Jeśli zaznaczono nazwę pliku lub adres URL, to dodaj aplikacje, które są w "
 "stanie obsłużyć ten rodzaj MIME, w menu wysuwnym."
 
-#: klipperpopup.cpp:39
+#: klipperpopup.cpp:38
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Okno wysuwne schowka"

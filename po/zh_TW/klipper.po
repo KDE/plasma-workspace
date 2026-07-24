@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2025-09-05 17:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -596,70 +596,70 @@ msgstr "此項目已固定。您確定要將它從歷史紀錄中移除嗎？"
 msgid "Remove Starred Item"
 msgstr "移除已固定的項目"
 
-#: klipper.cpp:77
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "自動動作彈出選單"
 
-#: klipper.cpp:94
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "清除剪貼簿歷史紀錄(&L)"
 
-#: klipper.cpp:99
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "手動在目前剪貼簿上觸發動作"
 
-#: klipper.cpp:107
+#: klipper.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "編輯內容(%E)…"
 
-#: klipper.cpp:113
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "顯示條碼(&S)…"
 
-#: klipper.cpp:120
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "下一個歷史紀錄項目"
 
-#: klipper.cpp:125
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "前一個歷史紀錄項目"
 
-#: klipper.cpp:132
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "在滑鼠位置顯示剪貼簿項目"
 
-#: klipper.cpp:403 klipper.cpp:412
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "剪貼簿歷史紀錄"
 
-#: klipper.cpp:429
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "上"
 
-#: klipper.cpp:436
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "目前"
 
-#: klipper.cpp:443
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "下"
@@ -850,7 +850,7 @@ msgid ""
 msgstr ""
 "選取檔案名稱或網址時，在彈出選單中包含可以接受它的 MIME 類型的應用程式。"
 
-#: klipperpopup.cpp:39
+#: klipperpopup.cpp:38
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "剪貼簿彈出視窗"

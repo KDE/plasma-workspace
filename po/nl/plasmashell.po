@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:47+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2026-07-02 13:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -206,79 +206,79 @@ msgstr ""
 "Controleer of uw grafische stuurprogramma's op de juiste manier zijn "
 "ingesteld."
 
-#: osd.cpp:67
+#: osd.cpp:68
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:95
+#: osd.cpp:96
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Geluid gedempt"
 
-#: osd.cpp:118
+#: osd.cpp:119
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Microfoon is gedempt"
 
-#: osd.cpp:134
+#: osd.cpp:135
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 gedempt"
 
-#: osd.cpp:156
+#: osd.cpp:157
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Touchpad aan"
 
-#: osd.cpp:158
+#: osd.cpp:159
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Touchpad uit"
 
-#: osd.cpp:165
+#: osd.cpp:166
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi aan"
 
-#: osd.cpp:167
+#: osd.cpp:168
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi uit"
 
-#: osd.cpp:174
+#: osd.cpp:175
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth aan"
 
-#: osd.cpp:176
+#: osd.cpp:177
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth uit"
 
-#: osd.cpp:183
+#: osd.cpp:184
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobiel internet aan"
 
-#: osd.cpp:185
+#: osd.cpp:186
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobiel internet uit"
 
-#: osd.cpp:193
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -286,7 +286,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Toetsenbord op het scherm geactiveerd"
 
-#: osd.cpp:196
+#: osd.cpp:197
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -294,31 +294,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Toetsenbord op het scherm gedeactiveerd"
 
-#: osd.cpp:203
+#: osd.cpp:204
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Slapen en vergrendelen van scherm geblokkeerd"
 
-#: osd.cpp:205
+#: osd.cpp:206
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Slapen en vergrendelen van scherm gedeblokkeerd"
 
-#: osd.cpp:215
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Modus energiebesparing"
 
-#: osd.cpp:218
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Modus gebalanceerde energie"
 
-#: osd.cpp:221
+#: osd.cpp:222
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -352,53 +352,53 @@ msgstr "Ingebouwd scherm"
 msgid "Disconnected Screen %1"
 msgstr "Afgekoppeld scherm %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:173 shellcorona.cpp:175
 #, kde-format
 msgid "Show Desktop"
 msgstr "Bureaublad tonen"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:175
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Bureaublad verbergen"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Toepassingen-menu activeren"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Omschakelaar van activiteiten tonen"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Naar vorige activiteit omschakelen"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Naar volgende activiteit omschakelen"
 
-#: shellcorona.cpp:254
+#: shellcorona.cpp:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Bureaubladen en Panelen beheren…"
 
-#: shellcorona.cpp:276
+#: shellcorona.cpp:269
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Toetsenbordfocus tussen panelen verplaatsen"
 
-#: shellcorona.cpp:2280
+#: shellcorona.cpp:2273
 #, kde-format
 msgid "Add Panel"
 msgstr "Paneel toevoegen"
 
-#: shellcorona.cpp:2367
+#: shellcorona.cpp:2360
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -608,70 +608,70 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:77
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu Tindakan Sembulan Otomatis"
 
-#: klipper.cpp:94
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Bersihkan Riwayat Papan Klip"
 
-#: klipper.cpp:99
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Panggil Tindakan Secara Manual di Papan Klip Saat Ini"
 
-#: klipper.cpp:107
+#: klipper.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Edit Konten..."
 
-#: klipper.cpp:113
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Tampilkan Kode Bilah..."
 
-#: klipper.cpp:120
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Item Riwayat Selanjutnya"
 
-#: klipper.cpp:125
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Item Riwayat Sebelumnya"
 
-#: klipper.cpp:132
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Tampilkan Item Papan Klip di Posisi Mouse"
 
-#: klipper.cpp:403 klipper.cpp:412
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "Riwayat papan klip"
 
-#: klipper.cpp:429
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "atas"
 
-#: klipper.cpp:436
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "saat ini"
 
-#: klipper.cpp:443
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "bawah"
@@ -875,7 +875,7 @@ msgstr ""
 "Jika nama berkas atau URL dipilih, aplikasi yang dapat menerima jenis MIME "
 "di menu sembulan juga termasuk."
 
-#: klipperpopup.cpp:39
+#: klipperpopup.cpp:38
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Sembulan Papan Klip"

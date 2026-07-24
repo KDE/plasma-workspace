@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2026-06-01 18:22-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -600,70 +600,70 @@ msgstr "بۇ تۈر يۇلتۇزلانغان. ئۇنى راستتىنلا تار
 msgid "Remove Starred Item"
 msgstr "يۇلتۇزلانغان تۈرنى چىقىرىۋەت"
 
-#: klipper.cpp:77
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ئۆزلۈكىدىن قاڭقىش مەشغۇلات تىزىملىكى"
 
-#: klipper.cpp:94
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "چاپلاش تاختىسى تارىخىنى تازىلا(&L)"
 
-#: klipper.cpp:99
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "نۆۋەتتىكى چاپلاش تاختىسىدا مەشغۇلاتنى قولدا ئىجرا قىلىدۇ"
 
-#: klipper.cpp:107
+#: klipper.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "مەزمۇن تەھرىر(&E)…"
 
-#: klipper.cpp:113
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "سىزىقلىق كودىنى كۆرسەت(&S)"
 
-#: klipper.cpp:120
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "كېيىنكى تارىخ خاتىرىسى"
 
-#: klipper.cpp:125
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ئالدىنقى تارىخ خاتىرىسى"
 
-#: klipper.cpp:132
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "چاشقىنەك ئورنىدا چاپلاش تاختىسى تۈرىنى كۆرسىتىدۇ"
 
-#: klipper.cpp:403 klipper.cpp:412
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "چاپلاش تاختىسى تارىخى"
 
-#: klipper.cpp:429
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "ئۈستىگە"
 
-#: klipper.cpp:436
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "نۆۋەتتىكى"
 
-#: klipper.cpp:443
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "ئاستى"
@@ -870,7 +870,7 @@ msgstr ""
 "ئەگەر تاللانغىنى ھۆججەت ئاتى ياكى تور ئادرېسى بولسا، قاڭقىش تىزىملىكىدە "
 "مەزكۇر MIME تۈرىنى قوبۇل قىلالايدىغان پىروگرامما بولىدۇ."
 
-#: klipperpopup.cpp:39
+#: klipperpopup.cpp:38
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "چاپلاش تاختىسى قاڭقىش كۆزنىكى"

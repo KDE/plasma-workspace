@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:47+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2026-07-20 20:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -204,79 +204,79 @@ msgstr ""
 "2 или резервен софтуер\n"
 "Моля, проверете дали вашите графични драйвери са настроени правилно."
 
-#: osd.cpp:67
+#: osd.cpp:68
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:95
+#: osd.cpp:96
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Аудиото е изключено"
 
-#: osd.cpp:118
+#: osd.cpp:119
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Микрофонът е изключен"
 
-#: osd.cpp:134
+#: osd.cpp:135
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 е заглушен"
 
-#: osd.cpp:156
+#: osd.cpp:157
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Тъчпадът е включен"
 
-#: osd.cpp:158
+#: osd.cpp:159
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Тъчпадът е изключен"
 
-#: osd.cpp:165
+#: osd.cpp:166
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi включен"
 
-#: osd.cpp:167
+#: osd.cpp:168
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi изключен"
 
-#: osd.cpp:174
+#: osd.cpp:175
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth е включен"
 
-#: osd.cpp:176
+#: osd.cpp:177
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth е изключен"
 
-#: osd.cpp:183
+#: osd.cpp:184
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Мобилен интернет е включен"
 
-#: osd.cpp:185
+#: osd.cpp:186
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Мобилен интернет е изключен"
 
-#: osd.cpp:193
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -284,7 +284,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Екранна клавиатура е активирана"
 
-#: osd.cpp:196
+#: osd.cpp:197
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -292,31 +292,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Екранна клавиатура е деактивирана"
 
-#: osd.cpp:203
+#: osd.cpp:204
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Блокиране на приспиване и заключване на екрана"
 
-#: osd.cpp:205
+#: osd.cpp:206
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Отблокиране на приспиване и заключване на екрана"
 
-#: osd.cpp:215
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Режим на пестене на енергия"
 
-#: osd.cpp:218
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Режим на балансирана производителност"
 
-#: osd.cpp:221
+#: osd.cpp:222
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -350,53 +350,53 @@ msgstr "Вграден екран"
 msgid "Disconnected Screen %1"
 msgstr "Прекъснат екран %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:173 shellcorona.cpp:175
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показване на работния плот"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:175
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скриване на работния плот"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Активиране на Стартер на приложения"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показване на превключвател на дейности"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Превключване към предишна дейност"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Превключване към следваща дейност"
 
-#: shellcorona.cpp:254
+#: shellcorona.cpp:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Настройки на работния плот и панелите…"
 
-#: shellcorona.cpp:276
+#: shellcorona.cpp:269
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:2280
+#: shellcorona.cpp:2273
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:2367
+#: shellcorona.cpp:2360
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

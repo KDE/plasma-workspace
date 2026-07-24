@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:47+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2026-07-02 06:59+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -208,79 +208,79 @@ msgstr ""
 "2.\n"
 "Preverite, ali so vaši grafični gonilniki pravilno nastavljeni."
 
-#: osd.cpp:67
+#: osd.cpp:68
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:95
+#: osd.cpp:96
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Zvok utišan"
 
-#: osd.cpp:118
+#: osd.cpp:119
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon utišan"
 
-#: osd.cpp:134
+#: osd.cpp:135
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 utišan"
 
-#: osd.cpp:156
+#: osd.cpp:157
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Sledilna pl. vklopljena"
 
-#: osd.cpp:158
+#: osd.cpp:159
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Sledilna pl. izklopljena"
 
-#: osd.cpp:165
+#: osd.cpp:166
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Brezžično vklopljeno"
 
-#: osd.cpp:167
+#: osd.cpp:168
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Brezžično izklopljeno"
 
-#: osd.cpp:174
+#: osd.cpp:175
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth vklopljen"
 
-#: osd.cpp:176
+#: osd.cpp:177
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth izklopljen"
 
-#: osd.cpp:183
+#: osd.cpp:184
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobilni int. vklopljen"
 
-#: osd.cpp:185
+#: osd.cpp:186
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobilni int. izklopljen"
 
-#: osd.cpp:193
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -288,7 +288,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Zaslonska tipkovnica vklopljena"
 
-#: osd.cpp:196
+#: osd.cpp:197
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -296,31 +296,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Zaslonska tipkovnica izklopljena"
 
-#: osd.cpp:203
+#: osd.cpp:204
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Spanje in zaklepanje zaslona sta blokirana"
 
-#: osd.cpp:205
+#: osd.cpp:206
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Spanje in zaklepanje zaslona sta odblokirana"
 
-#: osd.cpp:215
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Način varčevanja z energijo"
 
-#: osd.cpp:218
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Način uravnotežene moči"
 
-#: osd.cpp:221
+#: osd.cpp:222
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -354,53 +354,53 @@ msgstr "Vgrajeni zaslon"
 msgid "Disconnected Screen %1"
 msgstr "Odklopljen zaslon %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:173 shellcorona.cpp:175
 #, kde-format
 msgid "Show Desktop"
 msgstr "Pokaži namizje"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:175
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Skrij namizje"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktiviraj zaganjalnik aplikacij"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Prikaži preklopnika dejavnosti"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Preklopi na predhodno dejavnost"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Preklopi na naslednjo dejavnost"
 
-#: shellcorona.cpp:254
+#: shellcorona.cpp:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Upravljanje namizij in pultov…"
 
-#: shellcorona.cpp:276
+#: shellcorona.cpp:269
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Prenašaj osredotočenost tipkovnice med pulti"
 
-#: shellcorona.cpp:2280
+#: shellcorona.cpp:2273
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj pult"
 
-#: shellcorona.cpp:2367
+#: shellcorona.cpp:2360
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

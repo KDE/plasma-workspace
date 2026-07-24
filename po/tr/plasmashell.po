@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-22 00:47+0000\n"
+"POT-Creation-Date: 2026-07-24 00:46+0000\n"
 "PO-Revision-Date: 2026-07-02 19:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -206,79 +206,79 @@ msgstr ""
 "Plasma, OpenGL 2’yi doğru kullanamadığı için başlatılamadı.\n"
 "Lütfen grafik sürücülerinizin doğru şekilde kurulduğundan emin olun."
 
-#: osd.cpp:67
+#: osd.cpp:68
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %​%2"
 
-#: osd.cpp:95
+#: osd.cpp:96
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Ses Kapalı"
 
-#: osd.cpp:118
+#: osd.cpp:119
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon Kapalı"
 
-#: osd.cpp:134
+#: osd.cpp:135
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 Sessiz"
 
-#: osd.cpp:156
+#: osd.cpp:157
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Dokunmatik Yüzey Açık"
 
-#: osd.cpp:158
+#: osd.cpp:159
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Dokunmatik Yüzey Kapalı"
 
-#: osd.cpp:165
+#: osd.cpp:166
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wi-Fi Açık"
 
-#: osd.cpp:167
+#: osd.cpp:168
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wi-Fi Kapalı"
 
-#: osd.cpp:174
+#: osd.cpp:175
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth Açık"
 
-#: osd.cpp:176
+#: osd.cpp:177
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth Kapalı"
 
-#: osd.cpp:183
+#: osd.cpp:184
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Taşınabilir İnternet Açık"
 
-#: osd.cpp:185
+#: osd.cpp:186
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Taşınabilir İnternet Kapalı"
 
-#: osd.cpp:193
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -286,7 +286,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Ekran Klavyesi Etkin"
 
-#: osd.cpp:196
+#: osd.cpp:197
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -294,31 +294,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Ekran Klavyesi Kapalı"
 
-#: osd.cpp:203
+#: osd.cpp:204
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Uyku ve Ekran Kilidi Engelli"
 
-#: osd.cpp:205
+#: osd.cpp:206
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Uyku ve Ekran Kilidi Engeli Açık"
 
-#: osd.cpp:215
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Güç Tasarrufu Kipi"
 
-#: osd.cpp:218
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Dengeli Güç Kipi"
 
-#: osd.cpp:221
+#: osd.cpp:222
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -352,53 +352,53 @@ msgstr "Yerleşik Ekran"
 msgid "Disconnected Screen %1"
 msgstr "%1. Ekran Bağlantısı Kesildi"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:173 shellcorona.cpp:175
 #, kde-format
 msgid "Show Desktop"
 msgstr "Masaüstünü Göster"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:175
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Masaüstünü Gizle"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Uygulama Başlatıcısını Etkinleştir"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Etkinlik Değiştiriciyi Göster"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Önceki Etkinliğe Geç"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Sonraki Etkinliğe Geç"
 
-#: shellcorona.cpp:254
+#: shellcorona.cpp:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Masaüstlerini ve Panelleri Yönet…"
 
-#: shellcorona.cpp:276
+#: shellcorona.cpp:269
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Klavye odağını paneller arasında taşı"
 
-#: shellcorona.cpp:2280
+#: shellcorona.cpp:2273
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel Ekle"
 
-#: shellcorona.cpp:2367
+#: shellcorona.cpp:2360
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

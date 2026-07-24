@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-23 00:46+0000\n"
-"PO-Revision-Date: 2026-07-19 11:09+0900\n"
+"PO-Revision-Date: 2026-07-23 22:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "Thiam kàu Toh-bīn"
 #: actionlist.cpp:160
 #, kde-format
 msgid "Pin to Task Manager"
-msgstr ""
+msgstr "Tìng kàu Kang-khuè-kuán-lí-khì"
 
 #: actionlist.cpp:164
 #, kde-format
@@ -89,12 +89,12 @@ msgstr "Îng-ióng-tîng-sik"
 #: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr ""
+msgstr "Tī tsit-ê Tsí-suán-tuann Tîng-sin Hián-sī Îng-ióng-tîng-sik"
 
 #: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr ""
+msgstr "Tī '%1' Tîng-sin Hián-sī Îng-ióng-tîng-sik"
 
 #: computermodel.cpp:87
 #, kde-format
@@ -104,7 +104,7 @@ msgstr "Hián-sī KRunner"
 #: computermodel.cpp:91
 #, kde-format
 msgid "Search, calculate, or run a command"
-msgstr ""
+msgstr "Tshiau-tshuē, kè-sǹg, á-sī tsip-hîng tsí-līng"
 
 #: computermodel.cpp:142
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Tiān-náu"
 #: kastatsfavoritesmodel.cpp:538 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
-msgstr ""
+msgstr "Siu-tsông"
 
 #: recentusagemodel.cpp:156
 #, kde-format
