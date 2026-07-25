@@ -439,6 +439,3 @@ msgstr "Paneltal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Talet på panel."
-
-#~ msgid "Activate Task Manager Entry %1"
-#~ msgstr "Gå til oppføring %1 på oppgåvelinja"
