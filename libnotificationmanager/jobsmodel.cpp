@@ -149,6 +149,7 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     // Qt doesn't like the model not returning anything, for example
     // casting it to  "undefined" as a string (when put in a required property string)
     // blowing up in client code left and right.
+    case Notifications::IconNameRole:
     case Notifications::NotifyRcNameRole:
     case Notifications::OriginNameRole:
     case Notifications::DefaultActionLabelRole:
