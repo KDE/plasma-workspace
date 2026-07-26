@@ -432,6 +432,3 @@ msgstr "面板数量"
 #, kde-format
 msgid "Counts the panels"
 msgstr "统计面板数量"
-
-#~ msgid "Activate Task Manager Entry %1"
-#~ msgstr "激活任务管理器条目 %1"
