@@ -568,12 +568,19 @@ QModelIndex TaskGroupingProxyModel::mapToSource(const QModelIndex &proxyIndex) c
 
     const QModelIndex &parent = proxyIndex.parent();
 
+    int sourceRow = -1;
+
     if (parent.isValid()) {
         if (parent.row() < 0 || parent.row() >= d->rowMap.count()) {
             return {};
         }
 
-        return sourceModel()->index(d->rowMap.at(parent.row())->at(proxyIndex.row()), 0);
+        const QList<int> *sourceRows = d->rowMap.at(parent.row());
+        if (proxyIndex.row() < 0 || proxyIndex.row() >= sourceRows->count()) {
+            return {};
+        }
+
+        sourceRow = sourceRows->at(proxyIndex.row());
     } else {
         // Group parents items therefore equate to the first child item; the source
         // row logically appears twice in the proxy.
@@ -581,10 +588,21 @@ QModelIndex TaskGroupingProxyModel::mapToSource(const QModelIndex &proxyIndex) c
         // filter out rows, too) and opts to map to the child item, as the group parent
         // has its Qt::DisplayRole mangled by data(), and it's more useful for trans-
         // lating dataChanged() from the source model.
-        return sourceModel()->index(d->rowMap.at(proxyIndex.row())->at(0), 0);
+        if (proxyIndex.row() < 0 || proxyIndex.row() >= d->rowMap.count()) {
+            return {};
+        }
+
+        sourceRow = d->rowMap.at(proxyIndex.row())->at(0);
     }
 
-    return {};
+    // rowMap holds source rows maintained by hand across source inserts and removals;
+    // if it has fallen out of sync and points past the source model, return an invalid
+    // index rather than handing an out-of-range row to the source proxies.
+    if (sourceRow < 0 || sourceRow >= sourceModel()->rowCount()) {
+        return {};
+    }
+
+    return sourceModel()->index(sourceRow, 0);
 }
 
 int TaskGroupingProxyModel::rowCount(const QModelIndex &parent) const
