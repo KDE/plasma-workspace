@@ -45,6 +45,7 @@ public:
     void sourceLayoutChanged();
     void sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight, const QList<int> &roles = QList<int>());
     void adjustMap(int anchor, int delta);
+    void validateRowMap() const;
 
     void rebuildMap();
     bool shouldGroupTasks();
@@ -130,6 +131,7 @@ void TaskGroupingProxyModel::Private::sourceRowsInserted(const QModelIndex &pare
     }
 
     checkGrouping();
+    validateRowMap();
 }
 
 void TaskGroupingProxyModel::Private::sourceRowsAboutToBeRemoved(const QModelIndex &parent, int first, int last)
@@ -187,6 +189,7 @@ void TaskGroupingProxyModel::Private::sourceRowsRemoved(const QModelIndex &paren
     adjustMap(start + 1, -((end - start) + 1));
 
     checkGrouping();
+    validateRowMap();
 }
 
 void TaskGroupingProxyModel::Private::sourceModelAboutToBeReset()
@@ -197,6 +200,7 @@ void TaskGroupingProxyModel::Private::sourceModelAboutToBeReset()
 void TaskGroupingProxyModel::Private::sourceModelReset()
 {
     rebuildMap();
+    validateRowMap();
 
     q->endResetModel();
 }
@@ -209,6 +213,7 @@ void TaskGroupingProxyModel::Private::sourceLayoutAboutToBeChanged()
 void TaskGroupingProxyModel::Private::sourceLayoutChanged()
 {
     rebuildMap();
+    validateRowMap();
     q->endResetModel();
 }
 
@@ -251,6 +256,8 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
             Q_EMIT q->dataChanged(proxyIndex, proxyIndex, roles);
         }
     }
+
+    validateRowMap();
 }
 
 void TaskGroupingProxyModel::Private::adjustMap(int anchor, int delta)
@@ -263,6 +270,35 @@ void TaskGroupingProxyModel::Private::adjustMap(int anchor, int delta)
             }
         }
     }
+}
+
+// Debug-only invariant: rowMap must partition exactly the source rows (every source
+// row present once, in range, no empty group). Called after each mutation so a
+// handler that corrupts rowMap trips here, rather than crashing later in mapToSource.
+void TaskGroupingProxyModel::Private::validateRowMap() const
+{
+#ifndef QT_NO_DEBUG
+    if (!q->sourceModel()) {
+        return;
+    }
+
+    const int sourceRows = q->sourceModel()->rowCount();
+    QSet<int> seen;
+    int mapped = 0;
+
+    for (const QList<int> *group : rowMap) {
+        Q_ASSERT(group);
+        Q_ASSERT(!group->isEmpty());
+        for (const int sourceRow : *group) {
+            Q_ASSERT(sourceRow >= 0 && sourceRow < sourceRows);
+            Q_ASSERT(!seen.contains(sourceRow));
+            seen.insert(sourceRow);
+            ++mapped;
+        }
+    }
+
+    Q_ASSERT(mapped == sourceRows);
+#endif
 }
 
 void TaskGroupingProxyModel::Private::rebuildMap()
