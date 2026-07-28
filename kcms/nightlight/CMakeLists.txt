@@ -22,5 +22,3 @@ target_link_libraries(kcm_nightlight PRIVATE
     Qt::DBus
     KNightTime
 )
-
-install(FILES nightlightsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
