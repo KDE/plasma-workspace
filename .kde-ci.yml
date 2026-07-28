@@ -61,7 +61,7 @@ Dependencies:
     'plasma/plasma-activities-stats': '@same'
     'plasma/knighttime': '@same'
     'plasma/kwin': '@same'
-    'libraries/plasma-wayland-protocols': 'Frameworks/6.24'
+    'libraries/plasma-wayland-protocols': 'v1.20.0'
     'libraries/kirigami-addons': 'v1.11.0'
     'graphics/libkexiv2': 'release/25.12'
     'third-party/appstream': '@latest'
