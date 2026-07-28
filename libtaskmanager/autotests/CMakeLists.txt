@@ -11,6 +11,7 @@ target_link_libraries(samplewidgetwindow Qt::Core Qt::Gui)
 ecm_add_tests(
     tasktoolstest.cpp
     launchertasksmodeltest.cpp
+    taskgroupingtest.cpp
     LINK_LIBRARIES taskmanager Qt::Test KF6::Service KF6::ConfigCore
 )
 
