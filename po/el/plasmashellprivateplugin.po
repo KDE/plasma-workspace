@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2024-08-24 18:43+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -160,18 +160,6 @@ msgstr "Κλείδωμα οθόνης ενεργό"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Ορίζει εάν η οθόνη θα κλειδώνει μετά τον καθορισμένο χρόνο."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Χρονικό όριο οθόνης προφύλαξης"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Ορίζει μετά από πόσα λεπτά θα κλειδωθεί η οθόνη."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -475,6 +463,12 @@ msgstr ""
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Χρονικό όριο οθόνης προφύλαξης"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Ορίζει μετά από πόσα λεπτά θα κλειδωθεί η οθόνη."
 
 #~ msgid "&Execute"
 #~ msgstr "&Εκτέλεση"

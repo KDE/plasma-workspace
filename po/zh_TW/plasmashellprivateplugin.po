@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-05-12 03:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -161,18 +161,6 @@ msgstr "螢幕鎖定已開啟"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "設定螢幕多久之後要鎖定。"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "螢幕保護程式逾時"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "設定螢幕鎖定的執行時間（分）。"
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -450,6 +438,12 @@ msgstr "時區區域選擇器"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "時區位置選擇器"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "螢幕保護程式逾時"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "設定螢幕鎖定的執行時間（分）。"
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

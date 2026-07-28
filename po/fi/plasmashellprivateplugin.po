@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2025-11-30 15:49+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -160,18 +160,6 @@ msgstr "Näyttölukko käytössä"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Asettaa, lukitaanko näyttö määräajan kuluessa."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Näytönsäästäjän aikakatkaisu"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Asettaa minuutteina ajan, jossa näyttö lukitaan."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -464,6 +452,12 @@ msgstr "Aikavyöhykkeen valinta"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Aikavyöhykkeen valinta"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Näytönsäästäjän aikakatkaisu"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Asettaa minuutteina ajan, jossa näyttö lukitaan."
 
 #~ msgid "&Execute"
 #~ msgstr "&Suorita"

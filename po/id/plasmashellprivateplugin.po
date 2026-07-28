@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2025-02-13 22:25+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -160,18 +160,6 @@ msgstr "Kunci layar difungsikan"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Atur apakah layar akan dikunci sesudah waktu yang ditentukan."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Batas waktu screensaver"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Atur menit sesudah layar dikunci."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -469,6 +457,12 @@ msgstr "Untuk memilih wilayah zona waktu"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Untuk memilih lokasi zona waktu"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Batas waktu screensaver"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Atur menit sesudah layar dikunci."
 
 #~ msgid "&Execute"
 #~ msgstr "&Eksekusi"

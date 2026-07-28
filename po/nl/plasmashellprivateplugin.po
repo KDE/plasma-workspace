@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-04-24 12:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -159,18 +159,6 @@ msgstr "Schermvergrendeling ingeschakeld"
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr ""
 "Stelt in of het scherm vergrendeld zal worden na de gespecificeerde tijd."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tijdslimiet op de schermbeveiliging"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Stelt de minuten in waarna het scherm wordt vergrendeld."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -453,6 +441,12 @@ msgstr "Kiezer van tijdzoneregio"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Kiezer van tijdzonelocatie"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tijdslimiet op de schermbeveiliging"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Stelt de minuten in waarna het scherm wordt vergrendeld."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

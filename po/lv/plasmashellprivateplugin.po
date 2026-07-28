@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-01-19 17:09+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -160,18 +160,6 @@ msgstr "Ekrāna slēgšana ir ieslēgta"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Nosaka, vai sistēma slēgs ekrānu pēc noteikta laika."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Laiks, pēc kura ieslēdzas ekrāna saudzētājs"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Norāda minūtes, pēc kurām sistēma slēdz ekrānu."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -464,6 +452,12 @@ msgstr "Laika joslas reģiona atlasītājs"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Laika joslas vietas atlasītājs"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Laiks, pēc kura ieslēdzas ekrāna saudzētājs"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Norāda minūtes, pēc kurām sistēma slēdz ekrānu."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

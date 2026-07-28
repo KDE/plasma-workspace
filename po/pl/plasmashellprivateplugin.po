@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-07-18 16:31+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -161,18 +161,6 @@ msgstr "Włączono blokadę ekranu"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Określa czy ekran będzie blokowany po danym czasie."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Czas oczekiwania do wygaszacza ekranu"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Ustawia czas, po jakim jest blokowany ekran."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -454,6 +442,12 @@ msgstr "Wybór regionu strefy czasowej"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Wybór miejsca strefy czasowej"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Czas oczekiwania do wygaszacza ekranu"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Ustawia czas, po jakim jest blokowany ekran."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

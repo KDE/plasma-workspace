@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-05-28 13:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -158,18 +158,6 @@ msgstr "Заключването на екрана е активирано"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Задава дали екранът да се заключва след определеното време."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Време за изчакване на скрийнсейвъра"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Задава минутите, след които екранът се заключва."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -451,3 +439,9 @@ msgstr "Избиране на област на часова зона"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Избиране на местоположение на часова зона"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Време за изчакване на скрийнсейвъра"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Задава минутите, след които екранът се заключва."

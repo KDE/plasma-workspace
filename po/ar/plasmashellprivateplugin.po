@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-04-30 08:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -164,18 +164,6 @@ msgstr "قفل الشاشة مفعل"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "يضبط إذا كان سيقفل الشاشة بعد الوقت المحدد أم لا."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "مهلة حافظة الشاشة"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "يضبط الدقائق التي تقفل بعدها الشاشة."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -454,6 +442,12 @@ msgstr "محدد المنطقة الزمنية"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "محدد موقع المنطقة الزمنية"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "مهلة حافظة الشاشة"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "يضبط الدقائق التي تقفل بعدها الشاشة."
 
 #~ msgid "&Execute"
 #~ msgstr "&نفّذ"

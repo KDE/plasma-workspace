@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-05-06 10:34+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -159,18 +159,6 @@ msgstr "Skjálæsing virk"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Stillir hvort skjárinn verði læstur eftir tiltekinn tíma."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tímamörk skjáhvílu"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Stillir hversu margar mínútur líða þar til skjárinn er læstur."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -452,3 +440,9 @@ msgstr "Svæðisval tímabeltis"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Staðarval tímabeltis"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tímamörk skjáhvílu"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Stillir hversu margar mínútur líða þar til skjárinn er læstur."

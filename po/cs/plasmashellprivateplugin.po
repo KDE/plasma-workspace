@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-05-03 23:11+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -161,18 +161,6 @@ msgstr "Zámek obrazovky povolen"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Nastavuje, zda bude zámek obrazovky po daném čase povolen."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Prodleva spořiče obrazovky"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Nastavuje počet minut, po jejichž uplynutí se zamkne obrazovka."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -454,3 +442,9 @@ msgstr "Výběr oblasti časového pásma"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Výběr umístění časového pásma"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Prodleva spořiče obrazovky"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Nastavuje počet minut, po jejichž uplynutí se zamkne obrazovka."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -161,18 +161,6 @@ msgstr "स्क्रीन ताला सक्षमम्"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "निर्दिष्टसमयानन्तरं पटलः ताडितः भविष्यति वा इति सेट् करोति ।"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "स्क्रीन सेवर समय समाप्त"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "ततः परं स्क्रीन लॉक् भवति इति निमेषान् सेट् करोति ।"
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -472,3 +460,9 @@ msgstr ""
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "स्क्रीन सेवर समय समाप्त"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "ततः परं स्क्रीन लॉक् भवति इति निमेषान् सेट् करोति ।"

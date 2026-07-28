@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2025-12-07 22:58+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -161,18 +161,6 @@ msgstr "Pantaila giltzatzea gaituta"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Zehaztutako denbora igarotakoan pantaila giltzatuko den ezartzen du."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Pantaila-babeslearen denbora-muga"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Pantaila giltzatzeko minutu kopurua ezartzen du."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -468,6 +456,12 @@ msgstr "Ordu-eremu eskualde hautatzailea"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Ordu-eremu kokaleku hautatzailea"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Pantaila-babeslearen denbora-muga"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Pantaila giltzatzeko minutu kopurua ezartzen du."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

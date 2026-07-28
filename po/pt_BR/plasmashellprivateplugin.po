@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-04-24 08:52-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -164,18 +164,6 @@ msgstr "Bloqueio de tela ativo"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Define se a tela será bloqueada após o tempo indicado."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tempo de espera do protetor de tela"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Define a quantidade de minutos para bloquear a tela."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -458,6 +446,12 @@ msgstr "Seletor de região de fuso horário"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Seletor de localização de fuso horário"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tempo de espera do protetor de tela"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Define a quantidade de minutos para bloquear a tela."
 
 #~ msgid "&Execute"
 #~ msgstr "&Executar"

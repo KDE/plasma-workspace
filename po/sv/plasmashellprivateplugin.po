@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-07-07 21:59+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -158,18 +158,6 @@ msgstr "Skärmlåsning aktiverad"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Ställer in om skärmen kommer att låsas efter angiven tid."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Skärmsläckarens tidsgräns"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Ställer in antal minuter innan skärmen låses."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -452,6 +440,12 @@ msgstr "Tidszonsområdesväljare"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Tidszonsplatsväljare"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Skärmsläckarens tidsgräns"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Ställer in antal minuter innan skärmen låses."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

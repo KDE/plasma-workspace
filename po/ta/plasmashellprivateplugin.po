@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-05-02 17:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -158,18 +158,6 @@ msgstr "திரைப்பூட்டு இயக்கப்பட்ட�
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "குறிப்பிட்ட நேர இடைவெளிக்குப் பிறகு திரை பூட்டப்படுமா என்பதை அமைக்கும்."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "திரைப்பூட்டும் காலாவதி"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "எத்தனை நிமிடங்களுக்குப் பிறகு திரை பூட்டப்படும் என்பதை அமைக்கும்"
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -448,6 +436,12 @@ msgstr "பகுதித் தேர்வி"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "நேர மண்டல தேர்வி"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "திரைப்பூட்டும் காலாவதி"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "எத்தனை நிமிடங்களுக்குப் பிறகு திரை பூட்டப்படும் என்பதை அமைக்கும்"
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-04-24 03:34+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -159,18 +159,6 @@ msgstr "ეკრანის ჩაკეტვა ჩართულია"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "დროის მითითება, რამდენ ხანში ჩაიკეტება ეკრანი."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "ეკრანის დაცვის ვადა"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "ეკრანის ჩაკეტვის ვადის დაყენება."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -451,6 +439,12 @@ msgstr "დროის სარტყლის რეგიონის არ
 #, kde-format
 msgid "Timezone location selector"
 msgstr "დროის სარტყლის მდებარეობის ამრჩევი"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "ეკრანის დაცვის ვადა"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "ეკრანის ჩაკეტვის ვადის დაყენება."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

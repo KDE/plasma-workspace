@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-04-24 19:47+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -163,18 +163,6 @@ msgstr "מסך נעילה פעיל"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "מגדיר אם המסך יינעל לאחר זמן מוקצב."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "זמן מוקצב לשומר מסך"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "מגדיר תוך כמה דקות המסך יינעל."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -453,6 +441,12 @@ msgstr "בורר אזורי זמן"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "בורר מקום אזור זמן"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "זמן מוקצב לשומר מסך"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "מגדיר תוך כמה דקות המסך יינעל."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

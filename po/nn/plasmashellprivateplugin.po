@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-06-28 11:40+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -159,18 +159,6 @@ msgstr "Skjermlås er slått på"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Vel om skjermen skal låsast etter vald tid."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tid før pauseskjermen startar"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Skjermen vert låst etter så mange minutt."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -452,3 +440,9 @@ msgstr "Val av tidssone-region"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Val av tidssone"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tid før pauseskjermen startar"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Skjermen vert låst etter så mange minutt."

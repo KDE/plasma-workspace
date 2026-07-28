@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2016-11-23 19:27+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -161,18 +161,6 @@ msgstr "Закључавање екрана активно"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Поставља да ли ће се екран закључати после одређеног времена."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Прековреме чувара екрана"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Поставља после колико минута се екран закључава."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -449,6 +437,12 @@ msgstr ""
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Прековреме чувара екрана"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Поставља после колико минута се екран закључава."
 
 #~ msgid "&Execute"
 #~ msgstr "&Изврши"

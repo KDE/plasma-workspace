@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -160,18 +160,6 @@ msgstr "സ്ക്രീൻ ലോക്ക് പ്രവർത്തനക�
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "നിർദ്ദിഷ്ട സമയത്തിന് ശേഷം സ്‌ക്രീൻ ലോക്കുചെയ്യണോ എന്നത് സജ്ജമാക്കുന്നു."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "സ്ക്രീൻ സേവർ ടൈം ഔട്ട്"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "സ്‌ക്രീൻ ലോക്കുചെയ്‌തതിന് ശേഷം മിനിറ്റുകൾ സജ്ജമാക്കുന്നു."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -448,6 +436,12 @@ msgstr ""
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "സ്ക്രീൻ സേവർ ടൈം ഔട്ട്"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "സ്‌ക്രീൻ ലോക്കുചെയ്‌തതിന് ശേഷം മിനിറ്റുകൾ സജ്ജമാക്കുന്നു."
 
 #~ msgid "&Execute"
 #~ msgstr "&പ്രവർത്തിപ്പിക്കുക"

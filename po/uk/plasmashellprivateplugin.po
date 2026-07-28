@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-04-24 08:22+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -165,20 +165,6 @@ msgid "Sets whether the screen will be locked after the specified time."
 msgstr ""
 "Встановлює, чи буде заблоковано екран, якщо реєструватиметься бездіяльність "
 "протягом вказаного часу."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Очікування зберігача екрана"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr ""
-"Визначає проміжок часу бездіяльності у хвилинах, перш ніж буде заблоковано "
-"екран."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -459,6 +445,14 @@ msgstr "Засіб вибору регіону часового поясу"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Засіб вибору місця часового поясу"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Очікування зберігача екрана"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr ""
+#~ "Визначає проміжок часу бездіяльності у хвилинах, перш ніж буде "
+#~ "заблоковано екран."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

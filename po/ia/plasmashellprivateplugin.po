@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-04-24 12:06+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -159,18 +159,6 @@ msgstr "Bloco de schermo habilitate"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Fixa si le schermo essera blocate post le tempore specificate."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Salvator de schermo expirava"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Fixa le secundas post le quales le salvator de schermo es serrate."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -453,6 +441,12 @@ msgstr "Selector de region de fuso horari"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selector delocation de fuso horari"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Salvator de schermo expirava"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Fixa le secundas post le quales le salvator de schermo es serrate."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

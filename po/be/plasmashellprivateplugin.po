@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -166,18 +166,6 @@ msgstr "Уключэнне блакаванне экрана"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Вызначае, ці будзе экран блакавацца праз вызначаны час."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Час да ўключэння ахоўніка экрана"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Вызначае час у хвілінах, пасля мінання якога экран будзе блакавацца."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -478,3 +466,10 @@ msgstr ""
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Час да ўключэння ахоўніка экрана"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr ""
+#~ "Вызначае час у хвілінах, пасля мінання якога экран будзе блакавацца."

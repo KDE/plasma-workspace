@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2025-05-03 07:00+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -160,19 +160,6 @@ msgstr "Activouse o bloqueo da pantalla"
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr "Define se se bloqueará ou non a pantalla pasado o tempo indicado."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tempo de agarda do protector de pantalla"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr ""
-"Define o número de minutos que deben pasar para que se bloquee a pantalla."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -467,6 +454,13 @@ msgstr "Selector de rexión de fuso horario"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selector de localización de fuso horario"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tempo de agarda do protector de pantalla"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr ""
+#~ "Define o número de minutos que deben pasar para que se bloquee a pantalla."
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

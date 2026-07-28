@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:46+0000\n"
+"POT-Creation-Date: 2026-07-28 00:47+0000\n"
 "PO-Revision-Date: 2026-05-16 12:40+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -162,18 +162,6 @@ msgstr "Bildschirmsperre aktiviert"
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr ""
 "Legt fest, ob der Bildschirm nach einer angegebenen Zeit gesperrt wird."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Bildschirmschoner-Startzeit"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Legt die Zeit fest, nach der der Bildschirm gesperrt wird."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -459,6 +447,12 @@ msgstr "Zeitzonen-Regionsauswahl"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Zeitzonen-Standortauswahl"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Bildschirmschoner-Startzeit"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Legt die Zeit fest, nach der der Bildschirm gesperrt wird."
 
 #~ msgid "&Execute"
 #~ msgstr "&Ausführen"
