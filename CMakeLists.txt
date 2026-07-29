@@ -52,6 +52,12 @@ if(PipeWire_FOUND)
 endif()
 option(BUILD_CAMERAINDICATOR "Build the camera indicator Plasma applet" ${BUILD_CAMERAINDICATOR_DEFAULT})
 
+find_package(AccountsService "23.11.69")
+set_package_properties(AccountsService PROPERTIES
+    URL https://www.freedesktop.org/wiki/Software/AccountsService/
+    TYPE RUNTIME
+)
+
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
                     Concurrent DBus Location Network Positioning Quick QuickWidgets
                     ShaderTools Sql Svg Widgets)
