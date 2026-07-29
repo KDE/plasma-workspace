@@ -43,6 +43,7 @@ class Panel : public Containment
     Q_PROPERTY(int height READ height WRITE setHeight)
     Q_PROPERTY(QString hiding READ hiding WRITE setHiding)
     Q_PROPERTY(bool floating READ floating WRITE setFloating)
+    Q_PROPERTY(bool floatingApplets READ floatingApplets WRITE setFloatingApplets)
     Q_PROPERTY(QString opacity READ opacity WRITE setOpacity)
 
 public:
@@ -78,6 +79,9 @@ public:
 
     bool floating() const;
     void setFloating(bool floating);
+
+    bool floatingApplets() const;
+    void setFloatingApplets(bool floatingApplets);
 
     QString opacity() const;
     void setOpacity(const QString &mode);

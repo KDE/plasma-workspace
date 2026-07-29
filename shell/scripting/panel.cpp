@@ -356,6 +356,24 @@ void Panel::setFloating(bool floating)
     }
 }
 
+bool Panel::floatingApplets() const
+{
+    if (panel()) {
+        return panel()->floatingApplets();
+    } else {
+        return panelConfig().parent().readEntry("floatingApplets", false);
+    }
+}
+
+void Panel::setFloatingApplets(bool floatingApplets)
+{
+    if (panel()) {
+        panel()->setFloatingApplets(floatingApplets);
+    } else {
+        panelConfig().parent().writeEntry("floatingApplets", (int)floatingApplets);
+    }
+}
+
 QString Panel::opacity() const
 {
     int opacity;
