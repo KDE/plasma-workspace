@@ -4,6 +4,7 @@
     SPDX-FileCopyrightText: 2021 Han Young <hanyoung@protonmail.com>
     SPDX-FileCopyrightText: 2023 Serenity Cybersecurity, LLC <license@futurecrew.ru>
                                  Author: Gleb Popov <arrowd@FreeBSD.org>
+    SPDX-FileCopyrightText: 2026 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -138,21 +139,24 @@ void KCMRegionAndLang::save()
 #ifdef GLIBC_LOCALE
         if (!settings()->language().isEmpty()) {
             QStringList languages = settings()->language().split(QLatin1Char(':'));
-            for (const QString &lang : languages) {
+            for (const QString &lang : languages | std::views::reverse) {
                 auto glibcLocale = GlibcLocaleConstructor::instance()->toGlibcLocale(lang);
                 if (glibcLocale.has_value()) {
-                    locales.append(glibcLocale.value());
+                    // Mind that we prepend so we are ordered correctly for AccountsService! This is also why the languages are reversed.
+                    locales.prepend(glibcLocale.value());
                 }
             }
         }
 #endif
+        locales.removeDuplicates();
 
-        auto setLangCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),
-                                                          QStringLiteral("/org/freedesktop/Accounts/User%1").arg(getuid()),
-                                                          QStringLiteral("org.freedesktop.Accounts.User"),
-                                                          QStringLiteral("SetLanguage"));
-        setLangCall.setArguments({settings()->lang()});
-        QDBusConnection::systemBus().asyncCall(setLangCall);
+        // This implicitly sets the first locale as main language.
+        auto setLanguagesCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),
+                                                               QStringLiteral("/org/freedesktop/Accounts/User%1").arg(getuid()),
+                                                               QStringLiteral("org.freedesktop.Accounts.User"),
+                                                               QStringLiteral("SetLanguages"));
+        setLanguagesCall << locales;
+        QDBusConnection::systemBus().asyncCall(setLanguagesCall);
 
         if (!locales.isEmpty()) {
             Q_EMIT startGenerateLocale();
