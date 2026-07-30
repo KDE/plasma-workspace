@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-06-30 16:07+0200\n"
+"PO-Revision-Date: 2026-07-29 12:03+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -194,7 +194,7 @@ msgstr "Retorno de lanceamento"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr "Configura le animationes executate quando unapplication es lanceante."
+msgstr "Configura le animationes executate quando un application es lanceante."
 
 #: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
