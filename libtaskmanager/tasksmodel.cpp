@@ -678,6 +678,10 @@ void TasksModel::Private::updateGroupInline()
         QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
         QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
 
+        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::countChanged, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::countChanged, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::countChanged, Qt::UniqueConnection);
+
         activeTaskWinIds = q->activeTask().data(AbstractTasksModel::WinIdList).toList();
     }
 }
@@ -1022,6 +1026,9 @@ TasksModel::TasksModel(QObject *parent)
         }
     });
     connect(this, &TasksModel::countChanged, this, [this]() {
+        d->updateActiveTask();
+    });
+    connect(this, &TasksModel::layoutChanged, this, [this]() {
         d->updateActiveTask();
     });
 }
