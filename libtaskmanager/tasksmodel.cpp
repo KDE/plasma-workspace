@@ -674,9 +674,9 @@ void TasksModel::Private::updateGroupInline()
     // Minor optimization: We only make these connections after we populate for
     // the first time to avoid some churn.
     if (!hadSourceModel) {
-        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::updateCounts, Qt::UniqueConnection);
-        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::updateCounts, Qt::UniqueConnection);
-        QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::updateCounts, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::rowsInserted, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::rowsRemoved, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
+        QObject::connect(q, &QAbstractItemModel::modelReset, q, &TasksModel::updateLauncherCount, Qt::UniqueConnection);
 
         activeTaskWinIds = q->activeTask().data(AbstractTasksModel::WinIdList).toList();
     }
@@ -1021,6 +1021,9 @@ TasksModel::TasksModel(QObject *parent)
             d->updateActiveTask();
         }
     });
+    connect(this, &TasksModel::countChanged, this, [this]() {
+        d->updateActiveTask();
+    });
 }
 
 TasksModel::~TasksModel() = default;
@@ -1088,14 +1091,8 @@ void TasksModel::updateLauncherCount()
     if (d->launcherCount != count) {
         d->launcherCount = count;
         Q_EMIT launcherCountChanged();
+        Q_EMIT countChanged();
     }
-}
-
-void TasksModel::updateCounts()
-{
-    updateLauncherCount();
-    Q_EMIT countChanged();
-    d->updateActiveTask();
 }
 
 int TasksModel::launcherCount() const
