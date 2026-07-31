@@ -454,9 +454,3 @@ msgstr "Valg av tidssone region"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Valg av tidssone plassering"
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Tid før pauseskjermen starter"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Skjermen låses etter så mange minutter."

@@ -222,7 +222,7 @@ msgstr ""
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
-"Den Füllmodus festlegen (z. B. strecken, nach Seitenverhältnis "
+"Den Füllmodus festlegen (z. B. strecken, nach Seitenverhältnis "
 "zuschneiden, …)"
 
 #: plasma-apply-wallpaperimage.cpp:58
