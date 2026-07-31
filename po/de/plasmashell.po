@@ -203,7 +203,7 @@ msgid ""
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
 "Plasma kann nicht gestartet werden, da OpenGL 2 oder die Ausweichlösung "
-"nicht richtig benutzt werden kann.\n"
+"nicht richtig verwendet werden kann.\n"
 "Bitte überprüfen Sie, dass Ihre Grafiktreiber richtig eingerichtet sind."
 
 #: osd.cpp:63
