@@ -1,15 +1,15 @@
 # Translation of plasma_applet_lockout into Japanese.
+# SPDX-FileCopyrightText: 2022, 2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2009, 2010.
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-03 00:49+0000\n"
-"PO-Revision-Date: 2022-08-18 09:24+0900\n"
+"PO-Revision-Date: 2026-07-18 19:02+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: config.qml:13
 #, kde-format
@@ -29,7 +29,7 @@ msgstr "全般"
 #: ConfigGeneral.qml:120
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "利用できません"
 
 #: data.js:5
 #, kde-format
@@ -42,10 +42,9 @@ msgid "Lock the screen"
 msgstr "スクリーンをロック"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "ユーザを切り替え"
+msgstr "ユーザを切り替え..."
 
 #: data.js:13
 #, kde-format
@@ -53,8 +52,7 @@ msgid "Start a parallel session as a different user"
 msgstr "現在のセッションと並行して、別のユーザとしてセッションを開始"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shutdown"
+#, kde-format
 msgid "Shut down"
 msgstr "シャットダウン"
 
@@ -64,10 +62,9 @@ msgid "Turn off the computer"
 msgstr "コンピュータを停止"
 
 #: data.js:26
-#, fuzzy, kde-format
-#| msgid "Restart…"
+#, kde-format
 msgid "Restart"
-msgstr "再起動..."
+msgstr "再起動"
 
 #: data.js:27
 #, kde-format
@@ -77,7 +74,7 @@ msgstr "コンピュータを再起動"
 #: data.js:33
 #, kde-format
 msgid "Log out"
-msgstr ""
+msgstr "ログアウト"
 
 #: data.js:34
 #, kde-format
@@ -85,17 +82,15 @@ msgid "End the session"
 msgstr "セッションを終了する"
 
 #: data.js:40
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "スクリーンをロック"
+msgstr "ログアウト画面を表示"
 
 #: data.js:41
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "コンピュータを停止"
+msgstr "ログアウト、コンピュータを停止または再起動"
 
 #: data.js:47
 #, kde-format
@@ -117,32 +112,3 @@ msgstr "ハイバネート"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ハイバネート (作業状態をディスクに保存)"
-
-#~ msgctxt ""
-#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
-#~ "suspend)"
-#~ msgid "Show actions:"
-#~ msgstr "表示するアクション:"
-
-#, fuzzy
-#~| msgid "Lock the screen"
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "スクリーンをロック"
-
-#, fuzzy
-#~| msgid "Shutdown"
-#~ msgid "Shut Down"
-#~ msgstr "シャットダウン"
-
-#~ msgid "Switch User"
-#~ msgstr "ユーザを切り替え"
-
-#~ msgid "Shutdown…"
-#~ msgstr "シャットダウン..."
-
-#~ msgid "Restart…"
-#~ msgstr "再起動..."
-
-#~ msgid "Logout…"
-#~ msgstr "ログアウト..."
