@@ -1,12 +1,12 @@
+# SPDX-FileCopyrightText: 2023, 2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-02-23 18:21+0900\n"
+"PO-Revision-Date: 2026-07-31 23:14+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: package/contents/ui/DeviceItem.qml:185
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "リムーバブルデバイス"
 #: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Non Removable Devices"
-msgstr "取り外しできないデバイス"
+msgstr "取り外せないデバイス"
 
 #: package/contents/ui/main.qml:257
 #, kde-format
