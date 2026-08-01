@@ -1,12 +1,12 @@
+# SPDX-FileCopyrightText: 2023, 2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-24 02:37+0000\n"
-"PO-Revision-Date: 2023-02-23 18:21+0900\n"
+"PO-Revision-Date: 2026-07-31 23:14+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: actions/checkaction.cpp:71
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "エラーを確認"
 
 #: actions/mountaction.cpp:93
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "ファイルマネージャで開く"
 #: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "修復を試みる"
 
 #: actions/mountandopenaction.cpp:180
 #, kde-format
@@ -57,70 +57,70 @@ msgstr "安全に取り外し"
 #: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
-msgstr ""
+msgstr "このデバイスにはファイルシステムのエラーがあります。"
 
 #: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr ""
+msgstr "このデバイスにはエラーはありません"
 
 #: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "修復に成功しました！"
 
 #: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "デバイスの状態"
 
 #: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "デバイスを安全に取り外せます"
 
 #: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "このデバイスを安全に取り外せます。"
 
 #: messageinfo.cpp:129
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr ""
+msgstr "このデバイスをマウントする権限がありません。"
 
 #: messageinfo.cpp:133
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr ""
+msgstr "このディスクをイジェクトする権限がありません。"
 
 #: messageinfo.cpp:136
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "このデバイスを取り外す権限がありません。"
 
 #: messageinfo.cpp:139
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "クリックしてすべてのデバイスを安全に取り外す"
+msgstr "このデバイスを修復する権限がありません。"
 
 #: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "不明なエラータイプ"
 
 #: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "このデバイスはビジー状態のためマウントできませんでした。"
 
 #: messageinfo.cpp:173
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
+"このデバイス上の1つ以上のファイルがアプリケーションによって開かれています。"
 
 #: messageinfo.cpp:175
 #, kde-format
@@ -128,59 +128,51 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"このデバイス上の1つ以上のファイルが次のアプリケーションによって開かれていま"
+"す: %2"
 
 #: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: messageinfo.cpp:197
 #, kde-format
 msgid "Could not mount this device."
-msgstr ""
+msgstr "このデバイスをマウントできませんでした。"
 
 #: messageinfo.cpp:201
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
+msgstr "このディスクをイジェクトできませんでした。"
 
 #: messageinfo.cpp:203
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "クリックしてすべてのデバイスを安全に取り外す"
+msgstr "このデバイスを取り外せませんでした。"
 
 #: messageinfo.cpp:206
-#, fuzzy, kde-format
-#| msgid "Click to safely remove all devices"
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "クリックしてすべてのデバイスを安全に取り外す"
+msgstr "このデバイスを修復できませんでした: %1"
 
 #: qml/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
 "filesystem errors'"
 msgid "Checking…"
-msgstr "取り外し中…"
+msgstr "確認中..."
 
 #: qml/DeviceItem.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
 "errors and is being repaired'"
 msgid "Repairing…"
-msgstr "取り外し中…"
+msgstr "修復中..."
 
 #: qml/DeviceItem.qml:104
 #, kde-format
@@ -205,10 +197,9 @@ msgid "Removing…"
 msgstr "取り外し中…"
 
 #: qml/DeviceItem.qml:114
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "まだ取り外さないでください。ファイルが転送されています..."
+msgstr "まだ取り外さないでください。ファイルが転送されています…"
 
 #: qml/FullRepresentation.qml:47 qml/main.qml:127
 #, kde-format
@@ -254,7 +245,7 @@ msgstr "リムーバブルデバイス"
 #: qml/main.qml:150
 #, kde-format
 msgid "Non Removable Devices"
-msgstr "取り外しできないデバイス"
+msgstr "取り外せないデバイス"
 
 #: qml/main.qml:165
 #, kde-format
