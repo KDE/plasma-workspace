@@ -9,6 +9,8 @@ import subprocess
 import zipfile
 import os
 
+from add_additional_properties import add_additional_properties
+
 def download_latest_release_file(owner, repo, file_name, download_dir="."):
     # GitHub API URL for latest release
     api_url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
@@ -77,6 +79,8 @@ download_latest_release_file(owner, repo, file_name, download_dir)
 unzip_file(file_name)
 
 run_mapshaper(json_file, output_name)
+
+add_additional_properties(output_name)
 
 os.remove(file_name)
 

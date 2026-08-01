@@ -192,9 +192,27 @@ Item {
             easing.type: Easing.InOutCubic
             running: false
         }
+
         function animateCenterTo(coordinate) {
             coordAnimation.to = coordinate
             coordAnimation.running = true
+        }
+
+        function suggestedZoomOf(rect) {
+            const deltaLat = Math.abs(rect.topLeft.latitude - rect.bottomRight.latitude);
+            const deltaLon = Math.abs(rect.topLeft.longitude - rect.bottomRight.longitude);
+            const delta = Math.max(deltaLat, deltaLon);
+            let zoom = Math.round(Math.log2(360 / delta)) * 0.7;
+            zoom = Math.min(Math.max(zoom, 1), view.map.maximumZoomLevel);
+            if (Math.abs(zoom - view.map.zoomLevel) < 1) {
+                return view.map.zoomLevel
+            }
+            return zoom
+        }
+
+        function animateZoomLevel(target: var): void {
+            zoomLevelAnimation.to = target
+            zoomLevelAnimation.running = true
         }
 
         map {
@@ -230,7 +248,23 @@ Item {
         MapItemView {
             parent: view.map
             model: geoDatabase.model
-            delegate: GeoJsonDelegate {}
+            delegate: GeoJsonDelegate {
+                selectedTimeZone: root.selectedTimeZone
+                hoveredTimeZone: root.hoveredTimeZone
+
+                onTimeZoneselected: (timeZoneId, centroid, bounds) => {
+                    root.selectedTimeZone = timeZoneId
+                    view.animateCenterTo(centroid)
+                    view.animateZoomLevel(view.suggestedZoomOf(bounds))
+                }
+                onTimeZoneHovered: (timeZoneId, hovered) => {
+                    if (hovered) {
+                        root.hoveredTimeZone = timeZoneId;
+                    } else if (root.hoveredTimeZone === timeZoneId) {
+                        root.hoveredTimeZone = "";
+                    }
+                }
+            }
         }
 
         RowLayout {

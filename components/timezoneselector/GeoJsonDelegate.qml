@@ -4,6 +4,8 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtPositioning
 import QtLocation
@@ -12,95 +14,58 @@ import Qt.labs.qmlmodels
 import org.kde.kirigami as Kirigami
 
 DelegateChooser {
-    id: delegateChooser
-    role: "type"
+    id: root
+
+    required property string selectedTimeZone
+    required property string hoveredTimeZone
 
     property color defaultColor: Kirigami.Theme.highlightColor
     property real selectedOpacity: 0.8
     property real hoveredOpacity: 0.6
     property real defaultOpacity: 0.1
 
-    property var timezoneRectById: ({})
+    signal timeZoneselected(timeZoneId: string, centroid: var, bounds: var)
 
-    function centerOf(rect) {
-        return QtPositioning.coordinate((rect.minLat + rect.maxLat) / 2,
-                                        (rect.minLon + rect.maxLon) / 2)
-    }
+    signal timeZoneHovered(timeZoneId: string, hovered: bool)
 
-    function suggestedZoomOf(rect) {
-        const deltaLat = Math.abs(rect.maxLat - rect.minLat);
-        const deltaLon = Math.abs(rect.maxLon - rect.minLon);
-        const delta = Math.max(deltaLat, deltaLon);
-        let zoom = Math.round(Math.log2(360 / delta)) * 0.7;
-        zoom = Math.min(Math.max(zoom, 1), view.map.maximumZoomLevel);
-        if (Math.abs(zoom - view.map.zoomLevel) < 1) {
-            return view.map.zoomLevel
-        }
-        return zoom
-    }
-
-    function animateZoomLevel(target: var): void {
-        zoomLevelAnimation.to = target
-        zoomLevelAnimation.running = true
-    }
-
+    role: "type"
 
     DelegateChoice {
         roleValue: "Polygon"
         delegate: MapPolygon {
             id: mapPolygon
+            required property var modelData
             readonly property string tzid: modelData?.properties?.tzid || parent.tzid || ""
-            readonly property string region: tzid ? tzid.split('/')[0] : ""
-            readonly property string area: tzid ? tzid.split('/')[1] : ""
-
-            readonly property var rect: {
-                let rect = {minLat: Infinity, maxLat: -Infinity, minLon: Infinity, maxLon: -Infinity}
-                path.forEach(point => {
-                    rect = {
-                        minLat: Math.min(rect.minLat, point.latitude),
-                        maxLat: Math.max(rect.maxLat, point.latitude),
-                        minLon: Math.min(rect.minLon, point.longitude),
-                        maxLon: Math.max(rect.maxLon, point.longitude)
-                    }
-                })
-                return rect
+            readonly property var centroid: {
+                let raw = modelData?.properties?.centroid || parent?.modelData?.properties?.centroid || [0, 0]
+                return QtPositioning.coordinate(raw[1], raw[0])
+            }
+            readonly property var bounds: {
+                let raw = modelData?.properties?.bounds || parent?.modelData?.properties?.bounds || [0, 0, 0, 0]
+                return QtPositioning.rectangle(QtPositioning.coordinate(raw[3], raw[0]), QtPositioning.coordinate(raw[1], raw[2]))
             }
 
-            property bool thisItemSelected: root.selectedTimeZone == modelData?.properties?.tzid
-            onThisItemSelectedChanged: {
-                if (!thisItemSelected) return;
-                view.animateCenterTo(delegateChooser.centerOf(rect))
-                delegateChooser.animateZoomLevel(delegateChooser.suggestedZoomOf(rect))
-            }
-
-            property bool tzidhover: root.hoveredTimeZone == tzid
-            property bool tzidselected: root.selectedTimeZone == tzid
+            readonly property bool tzidselected: tzid.length > 0 && root.selectedTimeZone === tzid
+            readonly property bool tzidhover: tzid.length > 0 && root.hoveredTimeZone === tzid
 
             geoShape: modelData.data
-            opacity: tzidselected ? selectedOpacity : (tzidhover ? delegateChooser.hoveredOpacity : delegateChooser.defaultOpacity)
-            color: delegateChooser.defaultColor
+            opacity: tzidselected ? root.selectedOpacity : (tzidhover ? root.hoveredOpacity : root.defaultOpacity)
+            color: root.defaultColor
             border {
                 width: 2
                 color: Qt.darker(color)
             }
             autoFadeIn: false
-            referenceSurface: view.referenceSurface
+            referenceSurface: QtLocation.ReferenceSurface.Map
 
             TapHandler {
-                onTapped: {
-                    root.selectedTimeZone = tzid
-                }
+                enabled: !!mapPolygon.tzid
+                onTapped: root.timeZoneselected(mapPolygon.tzid, mapPolygon.centroid, mapPolygon.bounds)
             }
 
             HoverHandler {
-                enabled: !!tzid
-                onHoveredChanged: {
-                    if (hovered) {
-                        root.hoveredTimeZone = tzid
-                    } else if (root.hoveredTimeZone == tzid) {
-                        root.hoveredTimeZone = ""
-                    }
-                }
+                enabled: !!mapPolygon.tzid
+                onHoveredChanged: root.timeZoneHovered(mapPolygon.tzid, hovered)
             }
         }
     }
@@ -108,40 +73,20 @@ DelegateChooser {
     DelegateChoice {
         roleValue: "MultiPolygon"
         delegate: MapItemView {
+            id: mapMultiPoly
             required property var modelData
-            property string tzid: modelData?.properties?.tzid
+            readonly property string tzid: modelData?.properties?.tzid
             model: modelData.data
-            delegate: delegateChooser
-
-            property var rect: {
-                let rect = {minLat: Infinity, maxLat: -Infinity, minLon: Infinity, maxLon: -Infinity}
-                modelData.data.forEach(polygon => {
-                    polygon.data.perimeter.forEach(point => {
-                        rect = {
-                            minLat: Math.min(rect.minLat, point.latitude),
-                            maxLat: Math.max(rect.maxLat, point.latitude),
-                            minLon: Math.min(rect.minLon, point.longitude),
-                            maxLon: Math.max(rect.maxLon, point.longitude)
-                        }
-                    })
-                })
-                return rect
-            }
-
-            property bool thisItemSelected: root.selectedTimeZone === tzid
-            onThisItemSelectedChanged: {
-                if (!thisItemSelected) return;
-                view.animateCenterTo(delegateChooser.centerOf(rect))
-                delegateChooser.animateZoomLevel(delegateChooser.suggestedZoomOf(rect))
-            }
+            delegate: root
         }
     }
 
     DelegateChoice {
         roleValue: "FeatureCollection"
         delegate: MapItemView {
+            required property var modelData
             model: modelData.data
-            delegate: delegateChooser
+            delegate: root
         }
     }
 }
