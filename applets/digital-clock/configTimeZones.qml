@@ -269,6 +269,7 @@ Kirigami.PageRow {
         TimeZone.TimezoneSelector {
             id: timeZoneSelector
             anchors.fill: parent
+            anchors.margins: Kirigami.Units.largeSpacing
         }
     }
 
