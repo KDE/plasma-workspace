@@ -1,5 +1,6 @@
 # Translation of libnotificationmanager to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2019, 2023, 2025.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 msgid ""
 msgstr ""

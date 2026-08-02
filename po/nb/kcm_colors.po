@@ -6,6 +6,7 @@
 # Knut Yrvin <knut.yrvin@gmail.com>, 2005.
 # Nils Kristian Tomren <slx@nilsk.net>, 2005.
 # Bjørn Kvisli <bjorn.kvisli@gmail.com>, 2007.
+# Martin Hansen <mh306602@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"

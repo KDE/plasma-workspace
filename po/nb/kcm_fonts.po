@@ -7,6 +7,7 @@
 # Espen Talberg <espental@gmail.com>, 2007.
 # Bjørn Kvisli <bjorn.kvisli@gmail.com>, 2007.
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2007, 2008, 2010, 2011, 2012, 2015.
+# Martin Hansen <mh306602@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"

@@ -1,5 +1,6 @@
 # Translation of plasma_applet_org.kde.plasma.appmenu to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2017, 2021, 2026.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 msgid ""
 msgstr ""
