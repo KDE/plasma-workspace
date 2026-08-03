@@ -3,6 +3,7 @@
 # Karl Ove Hufthammer <karl@huftis.org>, 2009.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2009.
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2009, 2011.
+# Martin Hansen <mh306602@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"

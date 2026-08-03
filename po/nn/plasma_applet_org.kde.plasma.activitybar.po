@@ -1,5 +1,6 @@
 # Translation of plasma_applet_org.kde.plasma.activitybar to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"

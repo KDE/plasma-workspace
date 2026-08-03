@@ -7,6 +7,7 @@
 # Axel Bojer <fri_programvare@bojer.no>, 2005, 2006.
 # Nils Kristian Tomren <slx@nilsk.net>, 2005, 2007.
 # Bjørn Kvisli <bjorn.kvisli@gmail.com>, 2007.
+# Martin Hansen <mh306602@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"

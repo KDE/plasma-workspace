@@ -1,6 +1,7 @@
 # Translation of plasma_applet_org.kde.plasma.appmenu to Norwegian Bokmål
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
+# Martin Hansen <mh306602@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"

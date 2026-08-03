@@ -1,6 +1,7 @@
 # Translation of plasma_runner_powerdevil to Norwegian Nynorsk
 #
 # Eirik U. Birkeland <eirbir@gmail.com>, 2008, 2010.
+# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4\n"

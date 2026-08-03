@@ -1,5 +1,6 @@
 # Translation of plasma_runner_windowedwidgets to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"

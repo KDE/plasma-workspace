@@ -1,5 +1,6 @@
 # Translation of freespacenotifier to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2011, 2015, 2017, 2020, 2025, 2026.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""

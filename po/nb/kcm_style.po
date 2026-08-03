@@ -6,6 +6,7 @@
 # Eskild Hustvedt <zerodogg@skolelinux.no>, 2005.
 # Bjørn Kvisli <bjorn.kvisli@gmail.com>, 2007.
 # Nils Kristian Tomren <slx@nilsk.net>, 2007.
+# Martin Hansen <mh306602@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
