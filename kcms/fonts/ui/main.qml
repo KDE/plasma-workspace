@@ -36,7 +36,7 @@ KCM.SimpleKCM {
         smallFontWidget.font.family,
         toolbarFontWidget.font.family,
         menuFontWidget.font.family
-    ].find(a => a.includes("Display") || a.includes(i18nc("Sub-string in a font name; 'Display' as in display font — a type of font inappropriate for computer screens", "Display")))
+    ].some(a => a.includes("Display") || a.includes(i18nc("Sub-string in a font name; 'Display' as in display font — a type of font inappropriate for computer screens", "Display")))
 
     Kirigami.Action {
         id: kscreenAction
