@@ -17,6 +17,8 @@ KCM.SimpleKCM {
     onVisibleChanged: {
         realNameField.text = "";
         userNameField.text = "";
+        userNameField.hadUppercase = false;
+        userNameField.hadInvalidChars = false;
         passwordField.text = "";
         verifyField.text = "";
         usertypeBox.currentIndex = 0;
@@ -40,10 +42,49 @@ KCM.SimpleKCM {
         QQC2.TextField {
             id: userNameField
             Kirigami.FormData.label: i18n("Username:")
-            validator: RegularExpressionValidator {
-                regularExpression: /^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$/
+
+            property bool hadUppercase: false
+            property bool hadInvalidChars: false
+            readonly property bool isUsernameValid: /^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$/.test(text)
+
+            onTextEdited: {
+                if (text === "") {
+                    hadUppercase = false;
+                    hadInvalidChars = false;
+                    return;
+                }
+
+                const pos = cursorPosition;
+                const original = text;
+                const lower = original.toLowerCase();
+                const cleaned = lower.replace(/[^a-z0-9_$-]/g, "");
+
+                if (original !== cleaned) {
+                    hadUppercase = original !== lower;
+                    hadInvalidChars = lower !== cleaned;
+                    text = cleaned;
+                    cursorPosition = Math.min(pos, text.length);
+                } else {
+                    hadUppercase = false;
+                    hadInvalidChars = false;
+                }
             }
         }
+
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Warning
+            showCloseButton: false
+            visible: userNameField.text !== ""
+                && (userNameField.hadUppercase || userNameField.hadInvalidChars)
+            text: {
+                if (userNameField.hadInvalidChars) {
+                    return i18nc("@info:usagetip", "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid characters were removed.");
+                }
+                return i18nc("@info:usagetip", "Usernames must be lowercase. Uppercase characters were converted to lowercase.");
+            }
+        }
+
         QQC2.ComboBox {
             id: usertypeBox
 
@@ -88,7 +129,7 @@ KCM.SimpleKCM {
                 text: i18nc("@action:button Create a new user", "Create")
                 enabled: !passwordWarning.visible
                     && realNameField.text !== ""
-                    && userNameField.text !== ""
+                    && userNameField.isUsernameValid
                     && passwordField.text !== ""
                     && verifyField.text !== ""
 
