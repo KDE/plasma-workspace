@@ -1,5 +1,6 @@
 # Translation of kcm_wallpaper to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"

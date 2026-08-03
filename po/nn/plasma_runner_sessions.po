@@ -1,5 +1,6 @@
 # Translation of plasma_runner_sessions to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2009, 2018, 2020, 2022, 2023, 2024, 2025.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2010, 2011.
 msgid ""
 msgstr ""

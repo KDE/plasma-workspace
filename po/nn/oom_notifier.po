@@ -1,5 +1,6 @@
 # Translation of oom_notifier to Norwegian Nynorsk
 #
+# Karl Ove Hufthammer <karl@huftis.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"

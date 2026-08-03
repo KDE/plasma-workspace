@@ -5,6 +5,7 @@
 # Håvard Korsvoll <korsvoll@skulelinux.no>, 2004.
 # Eskild Hustvedt <zerodogg@skolelinux.no>, 2005.
 # Axel Bojer <fri_programvare@bojer.no>, 2005.
+# Martin Hansen <mh306602@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
