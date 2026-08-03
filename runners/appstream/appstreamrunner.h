@@ -24,5 +24,5 @@ protected:
 
 private:
     QList<AppStream::Component> findComponentsByString(const QString &query);
-    AppStream::Pool m_db;
+    static AppStream::Pool s_db;
 };

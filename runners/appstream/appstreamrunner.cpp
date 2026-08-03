@@ -150,18 +150,20 @@ void InstallerRunner::init()
 QList<AppStream::Component> InstallerRunner::findComponentsByString(const QString &query)
 {
     static bool warnedOnce = false;
-    static bool opened = m_db.load();
+    static bool opened = s_db.load();
     if (!opened) {
         if (warnedOnce) {
-            qCDebug(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << m_db.lastError();
+            qCDebug(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << s_db.lastError();
         } else {
-            qCWarning(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << m_db.lastError();
+            qCWarning(RUNNER_APPSTREAM) << "Had errors when loading AppStream metadata pool" << s_db.lastError();
             warnedOnce = true;
         }
     }
 
-    return m_db.search(query).toList();
+    return s_db.search(query).toList();
 }
+
+AppStream::Pool InstallerRunner::s_db;
 
 #include "appstreamrunner.moc"
 
