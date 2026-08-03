@@ -436,9 +436,3 @@ msgstr "时区地域选择器"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "时区位置选择器"
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "屏幕保护程序超时时间"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "设置屏幕锁定前等待的分钟数。"
