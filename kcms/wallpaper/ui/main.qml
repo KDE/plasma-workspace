@@ -93,12 +93,9 @@ Kirigami.ScrollablePage {
                     id: wallpaperComboBox
                     model: kcm.wallpaperConfigModel
                     textRole: "name"
+                    valueRole: "pluginName"
                     onActivated: {
-                        var pluginName = kcm.wallpaperConfigModel.data(kcm.wallpaperConfigModel.index(currentIndex, 0), ConfigModel.PluginNameRole)
-                        if (appearanceRoot.currentWallpaper === pluginName) {
-                            return;
-                        }
-                        kcm.currentWallpaper = pluginName
+                        kcm.currentWallpaper = currentValue
                     }
 
                     KCM.SettingHighlighter {
@@ -125,9 +122,13 @@ Kirigami.ScrollablePage {
             Layout.fillHeight: true;
             Layout.fillWidth: true;
 
+            property string sourceFile: "tbd"
+
+            onSourceFileChanged: loadSourceFile()
+
             Connections {
                 target: kcm
-                function onCurrentWallpaperChanged () { main.loadSourceFile() }
+                function onCurrentWallpaperChanged () { main.updateSourceFile() }
                 function onSelectedScreenChanged () { main.onScreenChanged() }
 
                 function onConfigurationChanged() { main.onWallpaperConfigurationChanged() }
@@ -148,11 +149,30 @@ Kirigami.ScrollablePage {
             Connections {
                 enabled: true
                 target: kcm.wallpaperConfigModel
-                function onWallpaperPluginsChanged() { main.loadSourceFile() }
+                function onWallpaperPluginsChanged() { main.updateSourceFile() }
             }
+
+            // Assign sourceFile only to a useful value so StackView won't load emptyConfig on startup.
+            function updateSourceFile() {
+                const index = wallpaperComboBox.indexOfValue(kcm.currentWallpaper)
+                wallpaperComboBox.currentIndex = index
+
+                // An empty source means the plugin has no config page and the previous one
+                // must still go; index < 0 means the plugin isn't resolved yet and nothing
+                // should load, so that StackView stays empty on startup.
+                if (index >= 0 && kcm.configuration) {
+                    main.sourceFile = kcm.wallpaperPluginSource
+                }
+            }
+
 
             function onWallpaperConfigurationChanged() {
                 let wallpaperConfig = kcm.configuration
+                if (!main.currentItem) {
+                    // The configuration became available before any page was loaded
+                    main.updateSourceFile()
+                    return
+                }
                 wallpaperConfig.keys().forEach(key => {
                     const cfgKey = "cfg_" + key;
                     if (cfgKey in main.currentItem) {
@@ -173,23 +193,15 @@ Kirigami.ScrollablePage {
 
             function onScreenChanged() {
                 if (!main.currentItem) {
-                    main.loadSourceFile();
+                    main.updateSourceFile();
                     return ;
                 }
                 main.currentItem.screen = kcm.selectedScreen;
             }
 
             function loadSourceFile() {
-                for (var i = 0; i < kcm.wallpaperConfigModel.count; ++i) {
-                    var pluginName = kcm.wallpaperConfigModel.data(kcm.wallpaperConfigModel.index(i, 0), ConfigModel.PluginNameRole)
-                    if (kcm.currentWallpaper === pluginName) {
-                        wallpaperComboBox.currentIndex = i;
-                        break;
-                    }
-                }
-
                 const wallpaperConfig = kcm.configuration;
-                const wallpaperPluginSource = kcm.wallpaperPluginSource
+                const wallpaperPluginSource = main.sourceFile
                 // BUG 407619: wallpaperConfig can be null before calling `ContainmentItem::loadWallpaper()`
                 if (wallpaperConfig && wallpaperPluginSource) {
                     var props = {
