@@ -65,6 +65,11 @@ KCM.SimpleKCM {
                         }
                         kcm.nightLightSettings.active = (currentIndex !== 0);
                     }
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.nightLightSettings
+                        settingName: "Active"
+                    }
                 }
 
                 QQC2.Button {
