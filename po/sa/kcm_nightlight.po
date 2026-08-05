@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-25 00:46+0000\n"
+"POT-Creation-Date: 2026-08-05 02:46+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -69,38 +69,38 @@ msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
 msgstr ""
 
-#: ui/main.qml:72
+#: ui/main.qml:77
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
+#: ui/main.qml:120 ui/main.qml:171 ui/main.qml:235
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
 msgstr ""
 
-#: ui/main.qml:123
+#: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid "Day light temperature:"
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "दिवसस्य प्रकाशस्य तापमानम् :"
 
-#: ui/main.qml:173 ui/main.qml:237
+#: ui/main.qml:178 ui/main.qml:242
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "शीतलम् (कोऽपि छानकं नास्ति)"
 
-#: ui/main.qml:180 ui/main.qml:244
+#: ui/main.qml:185 ui/main.qml:249
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "उष्णम्‌"
 
-#: ui/main.qml:187
+#: ui/main.qml:192
 #, fuzzy, kde-format
 #| msgid "Night light temperature:"
 msgctxt "@label:slider"

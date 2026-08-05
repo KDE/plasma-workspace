@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-25 00:46+0000\n"
+"POT-Creation-Date: 2026-08-05 02:46+0000\n"
 "PO-Revision-Date: 2026-05-10 11:58+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -62,37 +62,37 @@ msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
 msgstr "日の出と日の入り"
 
-#: ui/main.qml:72
+#: ui/main.qml:77
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "設定…"
 
-#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
+#: ui/main.qml:120 ui/main.qml:171 ui/main.qml:235
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
 msgstr "%1 K"
 
-#: ui/main.qml:123
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "昼間の色温度:"
 
-#: ui/main.qml:173 ui/main.qml:237
+#: ui/main.qml:178 ui/main.qml:242
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "冷たい (フィルタなし)"
 
-#: ui/main.qml:180 ui/main.qml:244
+#: ui/main.qml:185 ui/main.qml:249
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "暖かい"
 
-#: ui/main.qml:187
+#: ui/main.qml:192
 #, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
