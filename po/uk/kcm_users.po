@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022, 2023, 2024, 2025.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-03 15:23+0200\n"
+"PO-Revision-Date: 2026-08-04 12:07+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -165,6 +165,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"Можна використовувати лише малі літери, цифри, дефіси та символи "
+"підкреслення. Некоректні символи було вилучено."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -173,6 +175,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"Імена користувачів має бути записано малими літерами. Великі літери було "
+"перетворено на малі."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format

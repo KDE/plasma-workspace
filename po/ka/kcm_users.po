@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-03 03:40+0100\n"
+"PO-Revision-Date: 2026-08-04 05:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -156,6 +156,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"დაშვებულია, მხოლოდ, მხედრული ასოები, ციფრები, ტირეები და ქვედა ტირეები. "
+"არასწორი სიმბოლოები წაიშალა."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -164,6 +166,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"მომხმარებლის სახელები უნდა შეიცავდეს, მხოლოდ, მხედრულ ასოებს. მთავრული "
+"ასოები გადაკეთდა მხედრულებად."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format

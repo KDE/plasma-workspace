@@ -1,16 +1,16 @@
 # Translation of kcm_users.po to Catalan
-# Copyright (C) 2020-2025 This_file_is_part_of_KDE
+# Copyright (C) 2020-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020-2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2023, 2024 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-03 08:53+0100\n"
+"PO-Revision-Date: 2026-08-04 09:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 "X-Accelerator-Marker: &\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
@@ -163,6 +163,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"Només es permeten lletres en minúscules, dígits, guions i subratllats. Els "
+"caràcters no vàlid s'eliminen."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -171,6 +173,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"Els noms d'usuaris cal que siguin minúscules. Els caràcters en majúscules es "
+"convertiran a minúscules."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format
