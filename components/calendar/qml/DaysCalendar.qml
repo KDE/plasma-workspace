@@ -45,6 +45,30 @@ Item {
     // Take the calendar height, subtract the inner spacings and divide by number of rows (root.weeks + one row for day names)
     readonly property int cellHeight: Math.floor((swipeView.height - viewHeader.heading.height - calendarGrid.rows * borderWidth) / calendarGrid.rows)
 
+    function indexOfFirstCurrentEntry() : int {
+        const daysModel = gridModel as PlasmaCalendar.DaysModel
+        if (daysModel) {
+            return daysModel.indexOfFirstCurrentEntry
+        }
+        const listModel = gridModel as ListModel
+        for (let i = 0; i < listModel.count; i++) {
+            if (listModel.get(i).isCurrent) {
+                return i
+            }
+        }
+        return -1
+    }
+
+    function focusFirstCurrentEntry() {
+        const firstIndex = indexOfFirstCurrentEntry()
+        if (firstIndex > -1) {
+            gridRepeater.itemAt(firstIndex).forceActiveFocus(Qt.TabFocusReason)
+        }
+    }
+    onActiveFocusChanged: if (activeFocus && Window.window.activeFocusItem == daysCalendar) {
+        focusFirstCurrentEntry()
+    }
+
     Column {
         visible: daysCalendar.showWeekNumbers
         anchors {
@@ -156,14 +180,14 @@ Item {
                 KeyNavigation.tab: daysCalendar.KeyNavigation.tab
 
                 Keys.onUpPressed: event => {
-                    if (index >= daysCalendar.columns) {
+                    if (index >= daysCalendar.columns && (gridRepeater.itemAt(index - daysCalendar.columns) as DayDelegate).isCurrent) {
                         gridRepeater.itemAt(index - daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     } else {
                         event.accepted = false;
                     }
                 }
                 Keys.onDownPressed: event => {
-                    if (index < (daysCalendar.rows - 1) * daysCalendar.columns) {
+                    if (index < (daysCalendar.rows - 1) * daysCalendar.columns && (gridRepeater.itemAt(index + daysCalendar.columns) as DayDelegate).isCurrent) {
                         gridRepeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
                     }
                 }

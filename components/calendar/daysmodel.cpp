@@ -52,6 +52,7 @@ void DaysModel::setSourceData(QList<DayData> *data)
         beginResetModel();
         d->data = data;
         endResetModel();
+        Q_EMIT indexOfFirstCurrentEntryChanged();
     }
 }
 
@@ -71,6 +72,16 @@ int DaysModel::columnCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent)
     return 1;
+}
+
+int DaysModel::indexOfFirstCurrentEntry() const
+{
+    for (int row = 0; row < rowCount(); row++) {
+        if (index(row, 0).data(Roles::isCurrent).toBool()) {
+            return row;
+        }
+    }
+    return -1;
 }
 
 QVariant DaysModel::data(const QModelIndex &index, int role) const

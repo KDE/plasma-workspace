@@ -114,7 +114,16 @@ PlasmoidItem {
 
     preferredRepresentation: compactRepresentation
 
-    fullRepresentation: CalendarView { }
+    fullRepresentation: CalendarView {
+        id: calendarView
+        Connections {
+            target: root
+            function onExpandedChanged() : void {
+                calendarView.monthView.viewHeader.configureButton.forceActiveFocus(Qt.OtherFocusReason)
+                calendarView.monthView.resetToToday();
+            }
+        }
+    }
 
     compactRepresentation: Loader {
         id: conditionalLoader

@@ -109,6 +109,19 @@ Item {
             PlasmaComponents.TabBar {
                 id: tabBar
 
+                // default to otherFocusReason, as arrow keys from a tab button will
+                // also set that (and not show focus markers on the tab button itself).
+                // This avoids the focus markers from randomly appearing and disappearing
+                // while arrowing through the elements
+                function focusFirstButton(focusReason=Qt.OtherFocusReason) : void {
+                    currentIndex = 0
+                    monthViewTabButton.forceActiveFocus(focusReason)
+                }
+                function focusLastButton(focusReason=Qt.OtherFocusReason) : void {
+                    currentIndex = 2
+                    decadeViewTabButton.forceActiveFocus(focusReason)
+                }
+
                 currentIndex: root.swipeView.currentIndex
                 Layout.fillWidth: true
                 Layout.bottomMargin: root.isDigitalClock ? 0 : Kirigami.Units.smallSpacing
@@ -127,6 +140,7 @@ Item {
                 }
 
                 PlasmaComponents.TabButton {
+                    id: monthViewTabButton
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Days");
                     onClicked: (root.monthViewRoot as MonthView).showMonthView();
@@ -143,6 +157,7 @@ Item {
                     Keys.onEnterPressed: animateClick()
                 }
                 PlasmaComponents.TabButton {
+                    id: decadeViewTabButton
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Years");
                     onClicked: (root.monthViewRoot as MonthView).showDecadeView();
@@ -175,6 +190,13 @@ Item {
         readonly property alias nextButton: nextButton
 
         KeyNavigation.up: root.configureButton
+        Keys.onDownPressed: (event) => {
+            if (root.isDigitalClock) {
+                event.accepted = false
+            } else {
+                tabBar.focusFirstButton()
+            }
+        }
 
         PlasmaComponents.ToolButton {
             id: previousButton
@@ -193,6 +215,7 @@ Item {
 
             icon.name: Application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
             display: T.AbstractButton.IconOnly
+            Keys.onLeftPressed: if (root.isDigitalClock) { tabBar.focusLastButton() }
             KeyNavigation.right: todayButton
 
             onClicked: (root.monthViewRoot as MonthView).previousView()

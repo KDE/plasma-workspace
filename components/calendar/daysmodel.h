@@ -22,6 +22,8 @@ class DaysModel : public QAbstractItemModel
     QML_ELEMENT
     QML_UNCREATABLE("")
 
+    Q_PROPERTY(int indexOfFirstCurrentEntry READ indexOfFirstCurrentEntry NOTIFY indexOfFirstCurrentEntryChanged)
+
 public:
     enum Roles {
         isCurrent = Qt::UserRole + 1,
@@ -53,6 +55,7 @@ public:
     void setSourceData(QList<DayData> *data);
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent) const override;
+    int indexOfFirstCurrentEntry() const;
     QModelIndex index(int row, int column, const QModelIndex &parent = QModelIndex()) const override;
     QModelIndex parent(const QModelIndex &index) const override;
 
@@ -67,6 +70,7 @@ public:
 
 Q_SIGNALS:
     void agendaUpdated(const QDate &updatedDate);
+    void indexOfFirstCurrentEntryChanged();
 
 public Q_SLOTS:
     void update();

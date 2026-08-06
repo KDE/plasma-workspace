@@ -56,19 +56,6 @@ PlasmaExtras.Representation {
     // We cannot use Kirigami.SizeGroup here because monthView's header is not in a layout.
     readonly property double headerHeight: Math.max(agendaHeader.implicitHeight, monthView.viewHeader.implicitHeight)
 
-    Keys.onDownPressed: event => {
-        monthView.Keys.downPressed(event);
-    }
-
-    Connections {
-        target: root
-
-        function onExpandedChanged() {
-            // clear all the selections when the plasmoid is showing/hiding
-            monthView.resetToToday();
-        }
-    }
-
     PlasmaCalendar.EventPluginsManager {
         id: eventPluginsManager
         enabledPlugins: Plasmoid.configuration.enabledCalendarPlugins
@@ -160,7 +147,7 @@ PlasmaExtras.Representation {
 
                         Accessible.description: i18nc("@info:tooltip", "Add a new event")
                         KeyNavigation.down: KeyNavigation.tab
-                        KeyNavigation.right: monthView.viewHeader.tabBar
+                        Keys.onRightPressed: monthView.viewHeader.tabBar.focusFirstButton()
 
                         onClicked: ApplicationIntegration.launchCalendar()
                         KeyNavigation.tab: calendar.showAgenda && eventsList.count ? eventsList : eventsList.KeyNavigation.down
@@ -630,10 +617,6 @@ PlasmaExtras.Representation {
         // Not anchoring to horizontalCenter to avoid sub-pixel misalignments
         width: (calendar.showAgenda || calendar.showClocks) ? Math.round(parent.width / 2) : parent.width
 
-        onActiveFocusChanged: if (activeFocus) {
-            monthViewWrapper.nextItemInFocusChain().forceActiveFocus();
-        }
-
         PlasmaCalendar.MonthView {
             id: monthView
             viewHeader.height: calendar.headerHeight
@@ -660,9 +643,7 @@ PlasmaExtras.Representation {
 
             KeyNavigation.left: KeyNavigation.tab
             KeyNavigation.tab: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
-            Keys.onUpPressed: event => {
-                viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
-            }
+            Keys.onUpPressed: viewHeader.previousButton.forceActiveFocus(Qt.BacktabFocusReason);
         }
     }
 }

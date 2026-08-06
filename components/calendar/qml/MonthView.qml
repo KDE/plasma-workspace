@@ -69,10 +69,13 @@ Item {
     property alias cellHeight: mainDaysCalendar.cellHeight
     readonly property alias daysModel: calendarBackend.daysModel
 
-    KeyNavigation.up: viewHeader.previousButton
+    Keys.onUpPressed: event => {
+        viewHeader.previousButton.forceActiveFocus(Qt.BacktabFocusReason)
+    }
     // The view can have no highlighted item, so always highlight the first item
     Keys.onDownPressed: event => {
-        (swipeView.currentItem as InfiniteList).focusFirstCellOfView();
+        const infList = swipeView.currentItem as InfiniteList
+        infList.focusFirstCellOfView();
     }
 
     function isToday(date: date): bool {
@@ -245,6 +248,7 @@ Item {
         anchors.top: parent.top
         swipeView: swipeView
         monthViewRoot: root
+        KeyNavigation.down: (swipeView?.currentItem as InfiniteList)?.currentItem ?? null
     }
 
     PlasmaComponents.SwipeView {
@@ -273,7 +277,7 @@ Item {
             Keys.upPressed(event);
         }
         Keys.onUpPressed: event => {
-            viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+            viewHeader.tabBar.focusFirstButton()
         }
 
         onCurrentIndexChanged: if (currentIndex > 1) {

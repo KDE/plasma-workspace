@@ -119,6 +119,13 @@ PlasmoidItem {
         Layout.minimumHeight: _minimumHeight
         Layout.maximumHeight: Kirigami.Units.gridUnit * 40
 
+        Connections {
+            target: root
+            function onExpandedChanged() {
+                calendar.viewHeader.previousButton.forceActiveFocus(Qt.OtherFocusReason)
+            }
+        }
+
         MonthView {
             id: calendar
             today: clockSource.dateTime
@@ -126,5 +133,7 @@ PlasmoidItem {
 
             anchors.fill: parent
         }
+
+        Component.onCompleted: calendar.viewHeader.previousButton.forceActiveFocus(Qt.OtherFocusReason)
     }
 }

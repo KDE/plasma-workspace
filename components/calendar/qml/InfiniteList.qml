@@ -63,7 +63,8 @@ ListView {
     keyNavigationEnabled: false // It's actually enabled. The default behaviour is not desirable
 
     function focusFirstCellOfView() {
-        (currentItem as DaysCalendar).repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
+        const daysCalendar = currentItem as DaysCalendar
+        daysCalendar.focusFirstCurrentEntry()
     }
 
     function finishChangeIfNeeded() {
