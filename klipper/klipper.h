@@ -67,10 +67,7 @@ public:
 
     void saveSettings() const;
 
-    KlipperPopup *popup()
-    {
-        return m_popup.get();
-    }
+    KlipperPopup *popup();
 
 public Q_SLOTS:
     void saveSession();

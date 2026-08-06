@@ -62,7 +62,6 @@ Klipper::Klipper(QObject *parent)
                                                  QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
     m_historyModel = HistoryModel::self();
-    m_popup = std::make_unique<KlipperPopup>();
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
 
@@ -103,14 +102,18 @@ Klipper::Klipper(QObject *parent)
     m_editAction->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
     m_editAction->setText(i18nc("@action:inmenu", "&Edit Contents…"));
     KGlobalAccel::setGlobalShortcut(m_editAction, QKeySequence());
-    connect(m_editAction, &QAction::triggered, m_popup.get(), &KlipperPopup::editCurrentClipboard);
+    connect(m_editAction, &QAction::triggered, this, [this] {
+        popup()->editCurrentClipboard();
+    });
 
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
     m_showBarcodeAction->setText(i18nc("@action:inmenu", "&Show Barcode…"));
     m_showBarcodeAction->setIcon(QIcon::fromTheme(QStringLiteral("view-barcode-qr")));
     KGlobalAccel::setGlobalShortcut(m_showBarcodeAction, QKeySequence());
-    connect(m_showBarcodeAction, &QAction::triggered, m_popup.get(), &KlipperPopup::showCurrentBarcode);
+    connect(m_showBarcodeAction, &QAction::triggered, this, [this] {
+        popup()->showCurrentBarcode();
+    });
 
     // Cycle through history
     m_cycleNextAction = m_collection->addAction(QStringLiteral("cycleNextAction"));
@@ -157,7 +160,7 @@ QString Klipper::getClipboardContents()
 
 void Klipper::showKlipperPopupMenu()
 {
-    m_popup->show();
+    popup()->show();
 }
 
 void Klipper::showKlipperManuallyInvokeActionMenu()
@@ -231,6 +234,15 @@ void Klipper::saveSettings() const
     // other settings should be saved automatically by KConfigDialog
 }
 
+KlipperPopup *Klipper::popup()
+{
+    if (!m_popup) {
+        m_popup = std::make_unique<KlipperPopup>();
+    }
+
+    return m_popup.get();
+}
+
 void Klipper::showPopupMenu(QMenu *menu)
 {
     Q_ASSERT(menu != nullptr);
@@ -287,10 +299,10 @@ void Klipper::slotConfigure()
 
 void Klipper::slotPopupMenu()
 {
-    if (m_popup->isVisible()) {
-        m_popup->hide();
+    if (popup()->isVisible()) {
+        popup()->hide();
     } else {
-        m_popup->show();
+        popup()->show();
     }
 }
 
