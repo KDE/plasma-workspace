@@ -112,6 +112,9 @@ set_package_properties(KF6QuickCharts PROPERTIES
 
 find_package(KF6UserFeedback)
 
+find_package(Union CONFIG REQUIRED)
+set_package_properties(Union PROPERTIES PURPOSE "Required for the Union style selection KCM")
+
 find_package(KF6Baloo)
 set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
                        TYPE RECOMMENDED

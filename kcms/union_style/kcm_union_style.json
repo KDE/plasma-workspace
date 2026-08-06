@@ -1,0 +1,11 @@
+{
+    "KPlugin": {
+        "Description": "Configure Union application style",
+        "Icon": "preferences-desktop-theme-applications",
+        "Name": "Application Style (Union)"
+    },
+    "X-KDE-Init-Phase": 0,
+    "X-KDE-Keywords": "style,styles",
+    "X-KDE-System-Settings-Parent-Category": "themes",
+    "X-KDE-Weight": 40
+}
