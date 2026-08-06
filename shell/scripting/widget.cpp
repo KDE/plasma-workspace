@@ -94,43 +94,59 @@ int Widget::index() const
     }
 
     Plasma::Containment *c = d->applet->containment();
-    if (!c) {
+    if (!c || (c->containmentType() != Plasma::Containment::Panel && c->containmentType() != Plasma::Containment::CustomPanel)) {
         return -1;
     }
 
-    /*QGraphicsLayout *layout = c->layout();
-    if (!layout) {
-        return - 1;
-    }
+    KConfigGroup cg = c->config();
+    cg = KConfigGroup(&cg, QStringLiteral("General"));
+    const QString orderString = cg.readEntry("AppletOrder", QString());
+    auto parts = orderString.split(u';');
+    QList<int> order;
+    std::ranges::transform(parts, std::back_inserter(order), [](const QString &s) {
+        return s.toInt();
+    });
 
-    for (int i = 0; i < layout->count(); ++i) {
-        if (layout->itemAt(i) == applet) {
-            return i;
-        }
-    }*/
-
-    return -1;
+    return order.indexOf(d->applet->id());
 }
 
 void Widget::setIndex(int index)
 {
-    Q_UNUSED(index)
-    /*
     if (!d->applet) {
         return;
     }
 
     Plasma::Containment *c = d->applet->containment();
-    if (!c) {
-        return;
-    }
-    //FIXME: this is hackish. would be nice to define this for gridlayouts too
-    QGraphicsLinearLayout *layout = dynamic_cast<QGraphicsLinearLayout *>(c->layout());
-    if (!layout) {
+    if (!c || (c->containmentType() != Plasma::Containment::Panel && c->containmentType() != Plasma::Containment::CustomPanel)) {
         return;
     }
 
-    layout->insertItem(index, applet);*/
+    KConfigGroup cg = c->config();
+    cg = KConfigGroup(&cg, QStringLiteral("General"));
+    const QString orderString = cg.readEntry("AppletOrder", QString());
+    auto parts = orderString.split(u';');
+    QList<int> order;
+    order.reserve(parts.size());
+    std::ranges::transform(std::as_const(parts), std::back_inserter(order), [](const QString &s) {
+        return s.toInt();
+    });
+
+    order.removeAll(d->applet->id());
+
+    order.insert(std::min(std::max(0, index), int(order.length()) - 1), d->applet->id());
+
+    parts.clear();
+    std::ranges::transform(std::as_const(order), std::back_inserter(parts), [](int val) {
+        return QString::number(val);
+    });
+
+    QQuickItem *containmentItem = PlasmaQuick::AppletQuickItem::itemForApplet(c);
+
+    bool success = QMetaObject::invokeMethod(containmentItem, "reorderApplets", Q_ARG(QVariant, QVariant::fromValue(order)));
+
+    if (!success) {
+        qWarning() << "Impossible to invoke reorderApplets() on the panel";
+    }
 }
 
 QJSValue Widget::geometry() const
