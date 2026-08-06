@@ -176,8 +176,7 @@ void MediaProxy::useSingleImageDefaults()
 
     WallpaperPackage::findPreferredImageInPackage(package, m_targetSize);
 
-    // Make sure the image can be read, or there will be dead loops.
-    if (m_source.isEmpty() || QImage(package.filePath("preferred")).isNull()) {
+    if (m_source.isEmpty()) {
         return;
     }
 
