@@ -1,16 +1,16 @@
 # Translation for kcm_feedback to Euskara/Basque (eu).
-# Copyright (C) 2019-2022, This file is copyright:
+# Copyright (C) 2019-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektako arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2026 KDE euskaratzeko proiektako arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2022-08-11 20:08+0200\n"
+"PO-Revision-Date: 2026-08-05 11:58+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,27 +18,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: ui/main.qml:32
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr ""
-"Erabiltzaileen berrelikadura erdigunetik ezgaitu da. Jar zaitez zure "
-"banatzailearekin harremanean."
+"Erabiltzaileen berrelikadura modu zentralizatuan ezgaitu da. Jar zaitez zure "
+"banatzailearekin harremanetan."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -47,19 +38,18 @@ msgid ""
 "personal data, files you use, websites you visit, or information that could "
 "identify you.<nl/>"
 msgstr ""
-"KDEri lagundu diezaiokezu Plasma hobetzen, berau nola erabiltzen duzun "
-"inguruko informazioa emanez, fokua zuri inporta zaizkizun gauzetan ipini "
-"ahal izan dezagun.<nl/><nl/>Informazio hori ematea aukerakoa da, eta erabat "
-"anonimoa. Ez dugu biltzen zure datu pertsonalik, erabiltzen duzun "
-"fitxategirik, bisitatzen duzun webgunerik, edo zu identifika zaitzakeen "
-"informaziorik.<nl/><nl/><link url='https://kde.org/privacypolicy-apps."
-"php'>Hemen gure pribatutasun gidalerroei</link> buruz irakur dezakezu."
+"Plasma nola erabiltzen duzun adierazten duen informazioa emanez, KDEri "
+"Plasma hobetzen lagundu diezaiokezu; horrela, arreta zuretzat garrantzitsuak "
+"diren gauzetan jar dezakegu.<nl/><nl/>Informazio hori ematea aukerakoa eta "
+"erabat anonimoa da. Ez dugu inoiz zure datu pertsonalik, erabiltzen duzun "
+"fitxategirik, bisitatzen duzun webgunerik, edo identifika zaitzakeen "
+"informaziorik biltzen.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Gure pribatutasun-gidalerroei buruz gehiago irakurri"
 
 #: ui/main.qml:64
 #, kde-format
@@ -79,7 +69,7 @@ msgstr "Ondoko informazioa bidaliko da:"
 #: ui/main.qml:149
 #, kde-format
 msgid "View sent data:"
-msgstr "Ikusi bidalitako datuak:"
+msgstr "Bidalitako datuak ikusi:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -1,7 +1,7 @@
 # Translation for kcm_nightlight.po to Euskara/Basque (eu).
 # Copyright (C) 2018-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2021, 2023, 2024, 2025, 2026.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 00:48+0000\n"
-"PO-Revision-Date: 2026-02-18 21:32+0100\n"
+"PO-Revision-Date: 2026-08-05 23:26+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -26,8 +26,8 @@ msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr ""
-"Kolorearen tenperatura gauekora %1(e)tan aldatzen hasten da eta %2(e)tarako "
-"erabat aldatuta dago"
+"Kolore-tenperatura %1(e)tan hasten da gaueko baliora aldatzen, eta "
+"%2(e)tarako erabat aldatuta dago"
 
 #: ui/DayNightView.qml:157
 #, kde-format
@@ -35,8 +35,8 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr ""
-"Kolorearen tenperatura egunekora %1(e)tan aldatzen hasten da eta %2(e)tarako "
-"erabat aldatuta dago"
+"Kolore-tenperatura %1(e)tan hasten da eguneko baliora aldatzen, eta "
+"%2(e)tarako erabat aldatuta dago"
 
 #: ui/main.qml:39
 #, kde-format
@@ -57,24 +57,22 @@ msgid "Always off"
 msgstr "Beti itzalita"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox switching times"
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "Beti itzalita"
+msgstr "Beti piztuta"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr "Egunsentian edo iluntzean"
+msgstr "Egunsentia eta ilunabarra"
 
 #: ui/main.qml:77
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr "Konfiguratu..."
+msgstr "Konfiguratu…"
 
 #: ui/main.qml:120 ui/main.qml:171 ui/main.qml:235
 #, kde-format
@@ -86,7 +84,7 @@ msgstr "%1 K"
 #, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
-msgstr "Eguneko argiaren tenperatura:"
+msgstr "Eguneko argiaren kolore-tenperatura:"
 
 #: ui/main.qml:178 ui/main.qml:242
 #, kde-format
@@ -104,11 +102,11 @@ msgstr "Epela"
 #, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr "Gaueko argiaren tenperatura:"
+msgstr "Gaueko argiaren kolore-tenperatura:"
 
 #~ msgctxt "@item:inlistbox switching times"
 #~ msgid "Always on night light"
-#~ msgstr "Beti gaueko argiarekin"
+#~ msgstr "Gaueko argia beti aktibatuta"
 
 #~ msgctxt "Color temperature in Kelvin"
 #~ msgid "%1K"
@@ -118,12 +116,12 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ "@label:chooser Tap should be translated to mean touching using a "
 #~ "touchscreen"
 #~ msgid "Tap to choose your location on the map."
-#~ msgstr "Tak egin mapan zure kokalekua hautatzeko."
+#~ msgstr "Egin tak mapan zure kokalekua hautatzeko."
 
 #~ msgctxt ""
 #~ "@label:chooser Click should be translated to mean clicking using a mouse"
 #~ msgid "Click to choose your location on the map."
-#~ msgstr "Klik egin mapan zure kokalekua hautatzeko."
+#~ msgstr "Egin klik mapan zure kokalekua hautatzeko."
 
 #~ msgid "Zoom in"
 #~ msgstr "Zooma gerturatu"
@@ -138,10 +136,10 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 #~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 #~ msgstr ""
-#~ "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link> <link url='https://commons."
-#~ "wikimedia.org/wiki/File:World_location_map_(equirectangular_180)."
-#~ "svg'>Munduko kokapen mapatik</link> aldatua"
+#~ "TUBSen <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>munduko kokapen-mapa</"
+#~ "link>tik / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link> moldatua"
 
 #~ msgctxt "@label: textbox"
 #~ msgid "Latitude:"
@@ -152,20 +150,20 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ msgstr "Longitudea:"
 
 #~ msgid "Sunset and sunrise at current location"
-#~ msgstr "Iluntzea eta egunsentia uneko kokalekuan"
+#~ msgstr "Ilunabarra eta egunsentia uneko kokalekuan"
 
 #~ msgid "Sunset and sunrise at manual location"
-#~ msgstr "Iluntzea eta egunsentia eskuz ezarritako kokalekuan"
+#~ msgstr "Ilunabarra eta egunsentia eskuz ezarritako kokalekuan"
 
 #~ msgid "Custom times"
-#~ msgstr "Norberak finkatutako orduak"
+#~ msgstr "Neurrira ezarritako orduak"
 
 #~ msgctxt "@label The coordinates for the current location"
 #~ msgid "Current location:"
 #~ msgstr "Uneko kokalekua:"
 
 #~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "Latitudea: %1°   Longitudea: %2º"
+#~ msgstr "Latitudea: %1°   Longitudea: %2°"
 
 #~ msgctxt "@info"
 #~ msgid ""
@@ -174,10 +172,10 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ "triangulation if available, or else by sending its IP address to <link "
 #~ "url='https://geoip.com/privacy/'>GeoIP</link>."
 #~ msgstr ""
-#~ "<application>GeoClue2</application> zerbitzua, gailuaren kokapena aldizka "
-#~ "eguneratzeko erabiliko da, erabilgarri badago, GPS edo mugikor-dorre "
-#~ "triangulazioa erabiliz, edo bestela, bere IP helbidea <link url='https://"
-#~ "geoip.com/privacy/'>GeoIP</link>era bidaliz."
+#~ "<application>GeoClue2</application> zerbitzua gailuaren kokapena aldizka "
+#~ "eguneratzeko erabiliko da, erabilgarri badaude GPSa edo telefonia "
+#~ "mugikorreko dorreen triangulazioa erabiliz; bestela, gailuaren IP "
+#~ "helbidea <link url='https://geoip.com/privacy/'>GeoIP</link>era bidaliz."
 
 #~ msgctxt "@info"
 #~ msgid ""
@@ -186,11 +184,10 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
 #~ "developers to write a detailed description of what this service will do."
 #~ msgstr ""
-#~ "<application>%1</application> zerbitzua, gailuaren kokapena aldizka "
-#~ "eguneratzeko erabiliko da. Mesedez, akats txosten bat ireki <link "
-#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link>en KDE garatzaileei "
-#~ "zerbitzu honek egiten duenari buruzko deskribapen zehatz bat idaztea "
-#~ "eskatzeko."
+#~ "<application>%1</application> zerbitzua gailuaren kokapena aldizka "
+#~ "eguneratzeko erabiliko da. Ireki akats-txosten bat <link url='https://"
+#~ "bugs.kde.org'>https://bugs.kde.org</link> helbidean, eta eskatu KDEren "
+#~ "garatzaileei zerbitzu honek egingo duenaren deskribapen zehatza idazteko."
 
 #~ msgid "Begin night light at:"
 #~ msgstr "Gaueko argiaren hasiera:"
@@ -199,7 +196,7 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ msgstr "Eguneko argiaren hasiera:"
 
 #~ msgid "Transition duration:"
-#~ msgstr "Iragaite iraupena:"
+#~ msgstr "Iragaite-iraupena:"
 
 #~ msgid "%1 minute"
 #~ msgid_plural "%1 minutes"
@@ -207,11 +204,11 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ msgstr[1] "%1 minutu"
 
 #~ msgid "Input minutes - min. 1, max. 600"
-#~ msgstr "Sarrera minututan - txikiena 1, handiena 600"
+#~ msgstr "Sartu minutuak - gutxienez 1, gehienez 600"
 
 #~ msgctxt "@info:placeholder"
 #~ msgid "Locating…"
-#~ msgstr "Kokatzen..."
+#~ msgstr "Kokalekua aurkitze…"
 
 #~ msgctxt "@info:tooltip Part of a control for setting a time"
 #~ msgid "hour"
@@ -232,11 +229,11 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ "location.services.mozilla.com'>Mozilla Location Service</link>."
 #~ msgstr ""
 #~ "Gailuaren kokapena aldian-aldian eguneratuko da GPSa erabiliz "
-#~ "(erabilgarri balego), edo<link url='https://location.services.mozilla."
-#~ "com'>Mozillaren kokapen zerbitzura</link> sareko informazioa bidaliz."
+#~ "(erabilgarri badago), edo sareko informazioa <link url='https://location."
+#~ "services.mozilla.com'>Mozilla Location Service</link> zerbitzura bidaliz."
 
 #~ msgid "Error: Transition time overlaps."
-#~ msgstr "Errorea: Iragaite denbora gainezartzen da."
+#~ msgstr "Errorea: iragaite-denborak gainjartzen dira."
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "Sarrerako formatua: HH:MM"
@@ -247,15 +244,14 @@ msgstr "Gaueko argiaren tenperatura:"
 
 #~ msgid "This is what day color temperature will look like when active."
 #~ msgstr ""
-#~ "Hori da eguneko kolorearen tenperatura aktibo dagoenean izango duen "
-#~ "itxura."
+#~ "Honelakoa izango da eguneko kolore-tenperaturaren itxura aktibo dagoenean."
 
 #~ msgid "This is what night color temperature will look like when active."
 #~ msgstr ""
-#~ "Hori da gaueko kolorearen tenperatura aktibo dagoenean izango duen itxura."
+#~ "Honelakoa izango da gaueko kolore-tenperaturaren itxura aktibo dagoenean."
 
 #~ msgid "Activate blue light filter"
-#~ msgstr "Aktibatu argi urdinaren iragazkia"
+#~ msgstr "Argi urdinaren iragazkia aktibatu"
 
 #~ msgid "Turn on at:"
 #~ msgstr "Noiz piztu:"
@@ -265,29 +261,29 @@ msgstr "Gaueko argiaren tenperatura:"
 
 #~ msgid "Night Color begins changing back at %1 and ends at %2"
 #~ msgstr ""
-#~ "Gaueko kolorea %1(r)etan atzera aldatzen hasiko da eta %2(r)etan amaituko "
-#~ "da"
+#~ "Gaueko kolorea %1(e)tan hasten da lehengora aldatzen, eta %2(r)etan "
+#~ "amaitzen da"
 
 #~ msgid "Error: Morning is before evening."
-#~ msgstr "Errorea: Goiza arratsa baino lehenago da."
+#~ msgstr "Errorea: goiza arratsa baino lehenago da."
 
 #~ msgid ""
 #~ "The device's location will be detected using GPS (if available), or by "
 #~ "sending network information to <a href=\"https://location.services."
 #~ "mozilla.com\">Mozilla Location Service</a>."
 #~ msgstr ""
-#~ "Gailuaren kokapena GPSa erabiliz (erabilgarri balego), edo <a href="
-#~ "\"https://location.services.mozilla.com\">Mozillaren kokapen zerbitzura</"
-#~ "a> sareko informazioa bidaliz aurkituko da."
+#~ "Gailuaren kokapena GPSa erabiliz hautemango da, erabilgarri balego; "
+#~ "bestela, sareko informazioa <a href=\"https://location.services.mozilla."
+#~ "com\">Mozilla Location Service</a> zerbitzura bidaliz egingo da."
 
 #~ msgid "Night Color begins at %1"
-#~ msgstr "Gaueko kolorea %1(r)etan hasten da"
+#~ msgstr "Gaueko kolorea %1(e)tan hasten da"
 
 #~ msgid "Color fully changed at %1"
-#~ msgstr "Kolorea erabat aldatua %1(r)etan"
+#~ msgstr "Kolorea %1(e)tan dago erabat aldatuta"
 
 #~ msgid "Normal coloration restored by %1"
-#~ msgstr "Koloreztatze arrunta %1(r)etan berrezartzen da"
+#~ msgstr "Koloreztatze arrunta %1(e)tarako berrezartzen da"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -308,7 +304,7 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ msgstr " K"
 
 #~ msgid "Operation mode:"
-#~ msgstr "Operazio modua:"
+#~ msgstr "Funtzionamendu-modua:"
 
 #~ msgid "Automatic"
 #~ msgstr "Automatikoa"
@@ -320,13 +316,13 @@ msgstr "Gaueko argiaren tenperatura:"
 #~ msgstr "Konstantea"
 
 #~ msgid "(Input format: HH:MM)"
-#~ msgstr "(Sarrera formatua: HH:MM)"
+#~ msgstr "(Sarrera-formatua: HH:MM)"
 
 #~ msgid "Sunset begins:"
-#~ msgstr "Eguzki-sartzea hasten da:"
+#~ msgstr "Ilunabarra hasten da:"
 
 #~ msgid "...and ends:"
-#~ msgstr "...eta amaitzen da:"
+#~ msgstr "…eta amaitzen da:"
 
 #~ msgid "Manual"
 #~ msgstr "Eskuz"

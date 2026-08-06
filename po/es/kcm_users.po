@@ -1,15 +1,15 @@
 # Spanish translations for kcm_users.po package.
-# Copyright (C) 2020-2025 This file is copyright:
+# Copyright (C) 2020-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2020.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2020-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-04 01:07+0100\n"
+"PO-Revision-Date: 2026-08-04 12:18+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -161,6 +161,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"Solo se permiten letras minúsculas, números, guiones y subrayados. Se han "
+"eliminado los caracteres no válidos."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -169,6 +171,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"Los nombres de usuario deben estar en minúscula. Los caracteres en mayúscula "
+"se han convertido a minúscula."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format
@@ -735,6 +739,3 @@ msgstr "Su cuenta"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Otras cuentas"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
