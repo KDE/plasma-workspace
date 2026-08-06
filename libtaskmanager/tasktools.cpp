@@ -105,14 +105,14 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                     data.icon = QIcon::fromTheme(service->icon());
                 }
             } else {
-                KDesktopFile f(url.toLocalFile());
-                if (f.tryExec()) {
-                    data.name = f.readName();
-                    data.genericName = appropriateCaption(KService::serviceByDesktopPath(url.toLocalFile()));
-                    data.id = QUrl::fromLocalFile(f.fileName()).fileName();
+                KService::Ptr service(new KService(url.toLocalFile()));
+                if (service->isValid()) {
+                    data.name = service->name();
+                    data.genericName = appropriateCaption(service);
+                    data.id = service->storageId();
 
                     if (data.icon.isNull()) {
-                        const QString iconValue = f.readIcon();
+                        const QString iconValue = service->icon();
                         if (QIcon::hasThemeIcon(iconValue)) {
                             data.icon = QIcon::fromTheme(iconValue);
                         } else if (!iconValue.startsWith(QDir::separator())) {
