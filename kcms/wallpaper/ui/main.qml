@@ -216,7 +216,10 @@ Kirigami.ScrollablePage {
                     // page in a temp variable first, then use that to figure out which ones we need to
                     // set initially.
                     // TODO Plasma 7: consider whether we can drop this workaround
-                    const temp = Qt.createComponent(Qt.resolvedUrl(wallpaperPluginSource)).createObject(appearanceRoot, props)
+                    // Hidden because destroy() only takes effect at the end of the event loop,
+                    // so this second copy of the config page would be painted meanwhile.
+                    const temp = Qt.createComponent(Qt.resolvedUrl(wallpaperPluginSource))
+                                   .createObject(appearanceRoot, Object.assign({"visible": false}, props))
                     wallpaperConfig.keys().forEach(key => {
                         const cfgKey = "cfg_" + key;
                         if (cfgKey in temp) {
