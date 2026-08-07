@@ -37,6 +37,16 @@ Item {
     * @property string selectedTimeZone
     */
     property string selectedTimeZone: ""
+    onSelectedTimeZoneChanged: {
+        const data = geoDatabase.dataForTimeZone(root.selectedTimeZone)
+        if (data?.properties?.centroid) {
+            view.animateCenterTo(QtPositioning.coordinate(data.properties.centroid[1], data.properties.centroid[0]))
+        }
+        if (data?.properties?.bounds) {
+            view.animateZoomLevel(view.suggestedZoomOf(QtPositioning.rectangle(QtPositioning.coordinate(data.properties.bounds[3], data.properties.bounds[0]), QtPositioning.coordinate(data.properties.bounds[1], data.properties.bounds[2]))))
+        }
+    }
+
     /**
      * @brief This property holds the currently hovered timezone.
      *
@@ -44,6 +54,10 @@ Item {
      * which timezone the user is hovering.
      */
     property string hoveredTimeZone: ""
+
+    property bool framed: true
+
+    property real comboHorizontalPadding: 0
 //END properties
 
     property var availableMapTimeZones: geoDatabase.model[0].data.map(zone => zone?.properties?.tzid)
@@ -53,6 +67,10 @@ Item {
         // GeoJsonData does not support qrc paths, so we have to install
         // the timezones file into the shared folder.
         sourceUrl: StandardPaths.locate(StandardPaths.GenericDataLocation, "timezonefiles", StandardPaths.LocateDirectory)  + "/timezones.json"
+
+        function dataForTimeZone(timeZone: string): var {
+            return geoDatabase.model[0].data.find(zone => zone?.properties?.tzid === timeZone)
+        }
     }
 
     // These values get populated by GeoJsonDelegates when the
@@ -163,33 +181,29 @@ Item {
 
     ColumnLayout {
         anchors.fill: parent
+        visible: !Kirigami.Settings.isMobile
         spacing: Kirigami.Units.largeSpacing
-        Rectangle {
-            id: boundaryRect
+
+        Kirigami.AbstractCard {
+            id: card
             Layout.fillWidth: true
             Layout.fillHeight: true
-
-            visible: !Kirigami.Settings.isMobile
-
-            radius: Kirigami.Units.cornerRadius
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
-
+            padding: root.framed ? 1 : 0
+            background.visible: root.framed
 
             Rectangle {
                 id: maskRect
                 layer.enabled: true
                 width: view.width
                 height: view.height
-                radius: Kirigami.Units.cornerRadius + 1
+                radius: (card.background as Kirigami.ShadowedRectangle).radius + 1
                 visible: false
             }
 
-            MapView {
+            contentItem: MapView {
                 id: view
-                anchors.fill: parent
-                anchors.margins: 1
 
-                layer.enabled: true
+                layer.enabled: root.framed
                 layer.effect: MultiEffect {
                     maskEnabled: true
                     maskSource: maskRect
@@ -220,11 +234,6 @@ Item {
                     duration: Kirigami.Units.shortDuration + 1
                     easing.type: Easing.InOutCubic
                     running: false
-                }
-
-                function animateCenterTo(coordinate) {
-                    coordAnimation.to = coordinate
-                    coordAnimation.running = true
                 }
 
                 function animateCenterTo(coordinate) {
@@ -286,11 +295,7 @@ Item {
                         selectedTimeZone: root.selectedTimeZone
                         hoveredTimeZone: root.hoveredTimeZone
 
-                        onTimeZoneselected: (timeZoneId, centroid, bounds) => {
-                            root.selectedTimeZone = timeZoneId
-                            view.animateCenterTo(centroid)
-                            view.animateZoomLevel(view.suggestedZoomOf(bounds))
-                        }
+                        onTimeZoneselected: (timeZoneId, centroid, bounds) => root.selectedTimeZone = timeZoneId
                         onTimeZoneHovered: (timeZoneId, hovered) => {
                             if (hovered) {
                                 root.hoveredTimeZone = timeZoneId;
@@ -345,6 +350,8 @@ Item {
             }
         }
         RowLayout {
+            Layout.leftMargin: root.comboHorizontalPadding
+            Layout.rightMargin: root.comboHorizontalPadding
             spacing: Kirigami.Units.largeSpacing
             QQC2.Label {
                 text: i18ndc("kcm_clock", "@label:listbox In the context of time zone selection", "Region:")
@@ -401,7 +408,7 @@ Item {
                     }
                 }
 
-                onActivated: root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText);
+                onActivated: root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText)
             }
         }
     }
