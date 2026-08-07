@@ -121,8 +121,8 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                             const QDir sameDir = QFileInfo(url.toLocalFile()).absoluteDir();
                             const auto iconList = sameDir.entryInfoList(
                                 {
-                                    QStringLiteral("%1.png").arg(iconValueWithoutSuffix),
-                                    QStringLiteral("%1.svg").arg(iconValueWithoutSuffix),
+                                    QStringLiteral("*.png").arg(iconValueWithoutSuffix),
+                                    QStringLiteral("*.svg").arg(iconValueWithoutSuffix),
                                 },
                                 QDir::Files);
                             if (!iconList.empty()) {
