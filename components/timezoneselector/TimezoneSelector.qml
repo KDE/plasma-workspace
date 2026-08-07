@@ -37,6 +37,16 @@ Item {
     * @property string selectedTimeZone
     */
     property string selectedTimeZone: ""
+    onSelectedTimeZoneChanged: {
+        const data = geoDatabase.dataForTimeZone(root.selectedTimeZone)
+        if (data?.properties?.centroid) {
+            view.animateCenterTo(QtPositioning.coordinate(data.properties.centroid[1], data.properties.centroid[0]))
+        }
+        if (data?.properties?.bounds) {
+            view.animateZoomLevel(view.suggestedZoomOf(QtPositioning.rectangle(QtPositioning.coordinate(data.properties.bounds[3], data.properties.bounds[0]), QtPositioning.coordinate(data.properties.bounds[1], data.properties.bounds[2]))))
+        }
+    }
+
     /**
      * @brief This property holds the currently hovered timezone.
      *
@@ -44,6 +54,10 @@ Item {
      * which timezone the user is hovering.
      */
     property string hoveredTimeZone: ""
+
+    property bool framed: true
+
+    property real comboHorizontalPadding: 0
 //END properties
 
     property var availableMapTimeZones: geoDatabase.model[0].data.map(zone => zone?.properties?.tzid)
@@ -53,6 +67,10 @@ Item {
         // GeoJsonData does not support qrc paths, so we have to install
         // the timezones file into the shared folder.
         sourceUrl: StandardPaths.locate(StandardPaths.GenericDataLocation, "timezonefiles", StandardPaths.LocateDirectory)  + "/timezones.json"
+
+        function dataForTimeZone(timeZone: string): var {
+            return geoDatabase.model[0].data.find(zone => zone?.properties?.tzid === timeZone)
+        }
     }
 
     // These values get populated by GeoJsonDelegates when the
@@ -168,188 +186,185 @@ Item {
 
     ColumnLayout {
         anchors.fill: parent
+        visible: !Kirigami.Settings.isMobile
         spacing: Kirigami.Units.largeSpacing
-        Rectangle {
-            id: boundaryRect
+
+        ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
+            spacing: 0
+            Kirigami.AbstractCard {
+                id: card
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                padding: root.framed ? 1 : 0
+                background.visible: root.framed
 
-            visible: !Kirigami.Settings.isMobile
-
-            radius: Kirigami.Units.cornerRadius
-            color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
-
-
-            Rectangle {
-                id: maskRect
-                layer.enabled: true
-                width: view.width
-                height: view.height
-                radius: Kirigami.Units.cornerRadius + 1
-                visible: false
-            }
-
-            MapView {
-                id: view
-                anchors.fill: parent
-                anchors.margins: 1
-
-                layer.enabled: true
-                layer.effect: MultiEffect {
-                    maskEnabled: true
-                    maskSource: maskRect
+                Rectangle {
+                    id: maskRect
+                    layer.enabled: true
+                    width: view.width
+                    height: view.height
+                    radius: (card.background as Kirigami.ShadowedRectangle).radius + 1
+                    visible: false
                 }
 
-                // HACK: to work around the Qt bug QTBUG-136711,
-                // we use the "target" property instead of
-                // "NumberAnimotion on map.zoomLevel"
-                NumberAnimation {
-                    target: view
-                    property: "map.zoomLevel"
-                    id: zoomLevelAnimation
-                    running: false
-                    duration: Kirigami.Units.shortDuration
-                    easing.type: Easing.InOutCubic
-                }
-                CoordinateAnimation {
-                    id: coordAnimation
-                    target: view
-                    property: "map.center"
-                    // HACK: The Map QML element has a bug that sometimes resets
-                    // its center to the default value when assigned a new
-                    // (valid) coordinate. To avoid this, we make the animation
-                    // always last at least one frame, which effectively acts
-                    // as a timer and re-sets the coordinate to the correct one
-                    // after that frame. This is not visible by the user but
-                    // works around the map bug.
-                    duration: Kirigami.Units.shortDuration + 1
-                    easing.type: Easing.InOutCubic
-                    running: false
-                }
-
-                function animateCenterTo(coordinate) {
-                    coordAnimation.to = coordinate
-                    coordAnimation.running = true
-                }
-
-                function animateCenterTo(coordinate) {
-                    coordAnimation.to = coordinate
-                    coordAnimation.running = true
-                }
-
-                function suggestedZoomOf(rect) {
-                    const deltaLat = Math.abs(rect.topLeft.latitude - rect.bottomRight.latitude);
-                    const deltaLon = Math.abs(rect.topLeft.longitude - rect.bottomRight.longitude);
-                    const delta = Math.max(deltaLat, deltaLon);
-                    let zoom = Math.round(Math.log2(360 / delta)) * 0.7;
-                    zoom = Math.min(Math.max(zoom, 1), view.map.maximumZoomLevel);
-                    if (Math.abs(zoom - view.map.zoomLevel) < 1) {
-                        return view.map.zoomLevel
+                contentItem: MapView {
+                    id: view
+                    layer.enabled: root.framed
+                    layer.effect: MultiEffect {
+                        maskEnabled: true
+                        maskSource: maskRect
                     }
-                    return zoom
-                }
 
-                function animateZoomLevel(target: var): void {
-                    zoomLevelAnimation.to = target
-                    zoomLevelAnimation.running = true
-                }
-
-                map {
-                    plugin: Plugin {
-                        name: "osm"
-                        PluginParameter {
-                            name: 'osm.mapping.offline.directory'
-                            value: ":/plasma-workspace/timezone/offline_tiles"
-                        }
-                        PluginParameter {
-                            name: "osm.mapping.providersrepository.disabled"
-                            value: true
-                        }
+                    // HACK: to work around the Qt bug QTBUG-136711,
+                    // we use the "target" property instead of
+                    // "NumberAnimotion on map.zoomLevel"
+                    NumberAnimation {
+                        target: view
+                        property: "map.zoomLevel"
+                        id: zoomLevelAnimation
+                        running: false
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.InOutCubic
                     }
-                    zoomLevel: 0
-                    minimumZoomLevel: 0
-                    // Weirdly enough, the included offline maps of zoom level 0-4
-                    // only work until a zoom level of ~4.90, whereas zoom level
-                    // 5 (or even 4.99) would require offline maps for zoom level 5.
-                    maximumZoomLevel: 4.90
-                    maximumTilt: 0
-                    // No maximumBearing property exists, apparently
-                    onBearingChanged: {
-                        view.map.bearing = 0
+                    CoordinateAnimation {
+                        id: coordAnimation
+                        target: view
+                        property: "map.center"
+                        // HACK: The Map QML element has a bug that sometimes resets
+                        // its center to the default value when assigned a new
+                        // (valid) coordinate. To avoid this, we make the animation
+                        // always last at least one frame, which effectively acts
+                        // as a timer and re-sets the coordinate to the correct one
+                        // after that frame. This is not visible by the user but
+                        // works around the map bug.
+                        duration: Kirigami.Units.shortDuration + 1
+                        easing.type: Easing.InOutCubic
+                        running: false
                     }
-                    activeMapType: view.map.supportedMapTypes[0]
 
-                    onCopyrightLinkActivated: (link) => { Qt.openUrlExternally(link); }
-                }
+                    function animateCenterTo(coordinate) {
+                        coordAnimation.to = coordinate
+                        coordAnimation.running = true
+                    }
 
-                property variant referenceSurface: QtLocation.ReferenceSurface.Map
-
-                MapItemView {
-                    parent: view.map
-                    model: geoDatabase.model
-                    delegate: GeoJsonDelegate {
-                        selectedTimeZone: root.selectedTimeZone
-                        hoveredTimeZone: root.hoveredTimeZone
-
-                        onTimeZoneselected: (timeZoneId, centroid, bounds) => {
-                            root.selectedTimeZone = timeZoneId
-                            view.animateCenterTo(centroid)
-                            view.animateZoomLevel(view.suggestedZoomOf(bounds))
+                    function suggestedZoomOf(rect) {
+                        const deltaLat = Math.abs(rect.topLeft.latitude - rect.bottomRight.latitude);
+                        const deltaLon = Math.abs(rect.topLeft.longitude - rect.bottomRight.longitude);
+                        const delta = Math.max(deltaLat, deltaLon);
+                        let zoom = Math.round(Math.log2(360 / delta)) * 0.7;
+                        zoom = Math.min(Math.max(zoom, 1), view.map.maximumZoomLevel);
+                        if (Math.abs(zoom - view.map.zoomLevel) < 1) {
+                            return view.map.zoomLevel
                         }
-                        onTimeZoneHovered: (timeZoneId, hovered) => {
-                            if (hovered) {
-                                root.hoveredTimeZone = timeZoneId;
-                            } else if (root.hoveredTimeZone === timeZoneId) {
-                                root.hoveredTimeZone = "";
+                        return zoom
+                    }
+
+                    function animateZoomLevel(target: var): void {
+                        zoomLevelAnimation.to = target
+                        zoomLevelAnimation.running = true
+                    }
+
+                    map {
+                        plugin: Plugin {
+                            name: "osm"
+                            PluginParameter {
+                                name: 'osm.mapping.offline.directory'
+                                value: ":/plasma-workspace/timezone/offline_tiles"
+                            }
+                            PluginParameter {
+                                name: "osm.mapping.providersrepository.disabled"
+                                value: true
+                            }
+                        }
+                        zoomLevel: 0
+                        minimumZoomLevel: 0
+                        // Weirdly enough, the included offline maps of zoom level 0-4
+                        // only work until a zoom level of ~4.90, whereas zoom level
+                        // 5 (or even 4.99) would require offline maps for zoom level 5.
+                        maximumZoomLevel: 4.90
+                        maximumTilt: 0
+                        // No maximumBearing property exists, apparently
+                        onBearingChanged: {
+                            view.map.bearing = 0
+                        }
+                        activeMapType: view.map.supportedMapTypes[0]
+
+                        onCopyrightLinkActivated: (link) => { Qt.openUrlExternally(link); }
+                    }
+
+                    property variant referenceSurface: QtLocation.ReferenceSurface.Map
+
+                    MapItemView {
+                        parent: view.map
+                        model: geoDatabase.model
+                        delegate: GeoJsonDelegate {
+                            selectedTimeZone: root.selectedTimeZone
+                            hoveredTimeZone: root.hoveredTimeZone
+
+                            onTimeZoneselected: (timeZoneId, centroid, bounds) => root.selectedTimeZone = timeZoneId
+                            onTimeZoneHovered: (timeZoneId, hovered) => {
+                                if (hovered) {
+                                    root.hoveredTimeZone = timeZoneId;
+                                } else if (root.hoveredTimeZone === timeZoneId) {
+                                    root.hoveredTimeZone = "";
+                                }
                             }
                         }
                     }
-                }
 
-                RowLayout {
-                    spacing: Kirigami.Units.smallSpacing
-                    anchors {
-                        right: parent.right
-                        rightMargin: Kirigami.Units.largeSpacing
-                        bottom: parent.bottom
-                        bottomMargin: Kirigami.Units.largeSpacing
-                    }
+                    RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+                        anchors {
+                            right: parent.right
+                            rightMargin: Kirigami.Units.largeSpacing
+                            bottom: parent.bottom
+                            bottomMargin: Kirigami.Units.largeSpacing
+                        }
 
-                    QQC2.Button {
-                        id: zoomInButton
+                        QQC2.Button {
+                            id: zoomInButton
 
-                        text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom in")
-                        display: QQC2.AbstractButton.IconOnly
-                        icon.name: "zoom-in-map-symbolic"
-                        enabled: view.map.zoomLevel < view.map.maximumZoomLevel
+                            text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom in")
+                            display: QQC2.AbstractButton.IconOnly
+                            icon.name: "zoom-in-map-symbolic"
+                            enabled: view.map.zoomLevel < view.map.maximumZoomLevel
 
-                        onClicked: view.map.zoomLevel += 0.5
-                        onDoubleClicked: view.map.zoomLevel += 0.5
+                            onClicked: view.map.zoomLevel += 0.5
+                            onDoubleClicked: view.map.zoomLevel += 0.5
 
-                        QQC2.ToolTip.text: zoomInButton.text
-                        QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    }
+                            QQC2.ToolTip.text: zoomInButton.text
+                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        }
 
-                    QQC2.Button {
-                        id: zoomOutButton
+                        QQC2.Button {
+                            id: zoomOutButton
 
-                        text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom out")
-                        display: QQC2.AbstractButton.IconOnly
-                        icon.name: "zoom-out-map-symbolic"
-                        enabled: view.map.zoomLevel > view.map.minimumZoomLevel
+                            text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom out")
+                            display: QQC2.AbstractButton.IconOnly
+                            icon.name: "zoom-out-map-symbolic"
+                            enabled: view.map.zoomLevel > view.map.minimumZoomLevel
 
-                        onClicked: view.map.zoomLevel -= 0.5
-                        onDoubleClicked: view.map.zoomLevel -= 0.5
+                            onClicked: view.map.zoomLevel -= 0.5
+                            onDoubleClicked: view.map.zoomLevel -= 0.5
 
-                        QQC2.ToolTip.text: zoomOutButton.text
-                        QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                            QQC2.ToolTip.text: zoomOutButton.text
+                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        }
                     }
                 }
             }
+            Kirigami.Separator {
+                Layout.fillWidth: true
+                visible: !root.framed
+            }
         }
         RowLayout {
+            Layout.leftMargin: root.comboHorizontalPadding
+            Layout.rightMargin: root.comboHorizontalPadding
             spacing: Kirigami.Units.largeSpacing
             QQC2.Label {
                 text: i18ndc("kcm_clock", "@label:listbox In the context of time zone selection", "Region:")
@@ -406,7 +421,7 @@ Item {
                     }
                 }
 
-                onActivated: root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText);
+                onActivated: root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText)
             }
         }
     }
