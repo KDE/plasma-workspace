@@ -1,16 +1,16 @@
 # Translation for kcm_regionandlang.po to Euskara/Basque (eu).
-# Copyright (C) 2022-2025 This file is copyright:
+# Copyright (C) 2022-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2025-12-07 23:02+0100\n"
+"PO-Revision-Date: 2026-08-07 00:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,27 +18,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgid "Inherit Language"
-msgstr "Heredatutako hizkuntza"
+msgstr "Hizkuntza heredatu"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
-"Nazioarteko Batzorde Elektroteknikoa (IEC: International Electrotechnical "
-"Commission)"
+msgstr "Nazioarteko Batzorde Elektroteknikoa (IEC)"
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
-"Gailu Elektronikoen Ingeniaritza Kontseilu Bateratua (JEDEC: Joint Electron "
-"Device Engineering Council)"
+msgstr "Gailu Elektronikoen Ingeniaritzarako Kontseilu Bateratua (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
@@ -56,7 +52,7 @@ msgstr "Bitarra -  Kibibyteak (KiB), Mebibyteak (MiB), Gibibyteak (GiB)"
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Bitarra - Kilobyteak (kB), Megabyteak (MB), Gigabyteak (GB)"
+msgstr "Bitarra - Kilobyteak (KB), Megabyteak (MB), Gigabyteak (GB)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
@@ -112,13 +108,13 @@ msgstr "Acme Korporazioa"
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr "Garapen saila"
+msgstr "Garapen-saila"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr "Garapen eraikina"
+msgstr "Garapen-eraikina"
 
 #: exampleutility.cpp:97
 #, kde-format
@@ -130,7 +126,7 @@ msgstr "Kale Nagusia"
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr "1 Etxea"
+msgstr "1. etxea"
 
 #: exampleutility.cpp:100
 #, kde-format
@@ -142,13 +138,13 @@ msgstr " "
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr "2 Gela"
+msgstr "2. gela"
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr "3 Solairua"
+msgstr "3. solairua"
 
 #: exampleutility.cpp:104
 #, kde-format
@@ -208,13 +204,13 @@ msgstr "Izena"
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr "BesteIzena"
+msgstr "Beste izena"
 
 #: exampleutility.cpp:126
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr "IzenGehigarria"
+msgstr "Izen gehigarria"
 
 #: exampleutility.cpp:127
 #, kde-format
@@ -264,7 +260,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr "Ezin izan du tokiko honen adibiderik aurkitu"
+msgstr "Ezin izan da tokiko ezarpen hauetarako adibiderik aurkitu"
 
 #: glibclocaleconstructor.cpp:165
 #, kde-kuit-format
@@ -274,9 +270,10 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
-"Ezin izan ditu sistemaren tokiko ezarpen erabilgarriak <command>localectl</"
-"command> tresna erabiliz aurkitu. Mesedez, bete honi buruzko akats txosten "
-"bat <link>https://bugs.kde.org</link> lekuan."
+"<command>localectl</command> tresna erabiliz ezin izan dira sisteman "
+"erabilgarri dauden tokiko ezarpenak aurkitu. Mesedez, bidali honi buruzko "
+"akats-txosten bat <link url='https://bugs.kde.org'>https://bugs.kde.org</"
+"link> helbidera."
 
 #: languagelistmodel.cpp:97
 #, kde-format
@@ -296,45 +293,45 @@ msgstr "%1 (Brasil)"
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
-msgstr "Ezin da aurkitu `check-language-support` exekutagarria"
+msgstr "`check-language-support` exekutagarria ezin da aurkitu"
 
 #: localegeneratorubuntu.cpp:56
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "'check-language-support'-ek huts egin du, irteerakoa: %1 %2"
+msgstr "`check-language-support` komandoak huts egin du; irteera: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr "Ez du lortu falta diren pakete guztiak ebaztea! %1"
+msgstr "Falta diren pakete guztiak ezin izan dira ebatzi! %1"
 
 #: localegeneratorubuntu.cpp:96
 #, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Hizkuntza-paketeak instalatzea huts egin du (%1): %2"
+msgstr "Hizkuntza-paketeak instalatzean huts egin du (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
 msgid "Another process is already running, please retry later"
-msgstr "Beste prozesu bat abian da, mesedez, saiatu geroago"
+msgstr "Beste prozesu bat abian da; geroago berriro saiatu"
 
 #: localegenhelper/localegenhelper.cpp:65
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr "Tokiko konfigurazio fitxategia editatzeko baimenik gabe"
+msgstr "Ez dago tokiko ezarpenen konfigurazio-fitxategia editatzeko baimenik"
 
 #: localegenhelper/localegenhelper.cpp:115
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
-msgstr "Ezin ireki `/etc/locale.gen` fitxategia"
+msgstr "`/etc/locale.gen` fitxategia ezin da ireki"
 
 #: localegenhelper/localegenhelper.cpp:148
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
-msgstr "Ezin aurkitu `locale-gen` exekutagarria"
+msgstr "`locale-gen` exekutagarria ezin da aurkitu"
 
 #: localegenhelper/localegenhelper.cpp:161
 #, kde-format
@@ -344,7 +341,7 @@ msgstr "Ezezaguna"
 #: localelistmodel.cpp:24
 #, kde-format
 msgid "Default for System"
-msgstr "Sistemaren lehenetsia"
+msgstr "Sistemarako lehenetsia"
 
 #: localelistmodel.cpp:24 localelistmodel.cpp:146 ui/main.qml:388
 #, kde-format
@@ -364,14 +361,14 @@ msgstr "%1 (%2)"
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
-msgstr "Sistemako C lehenetsia"
+msgstr "Sistemaren lehenetsia: C"
 
 #: localelistmodel.cpp:232
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
-msgstr "%1(e)ren lehenetsia"
+msgstr "%1(r)ako lehenetsia"
 
 #: optionsmodel.cpp:46
 #, kde-format
@@ -407,7 +404,7 @@ msgstr "Neurriak"
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
-msgstr "Paperaren neurria"
+msgstr "Paper-formatua"
 
 #: optionsmodel.cpp:53
 #, kde-format
@@ -425,13 +422,13 @@ msgstr "Izen-estiloa"
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
-msgstr "Telefono zenbakiak"
+msgstr "Telefono-zenbakiak"
 
 #: optionsmodel.cpp:57
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr "Datu eta biltegiratze neurriak"
+msgstr "Datu- eta biltegiratze-neurriak"
 
 #: optionsmodel.cpp:279
 #, kde-format
@@ -455,14 +452,14 @@ msgstr "kB, MB, GB; %1"
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
-msgstr "Sistemako lehenetsia"
+msgstr "Sistemarako lehenetsia"
 
 #: optionsmodel.cpp:359
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
-msgstr " (%1ren formatu estandarra)"
+msgstr " (%1(r)ako formatu estandarra)"
 
 #: ui/AdvancedLanguageSelectPage.qml:24
 #, kde-format
@@ -476,39 +473,38 @@ msgid ""
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Ingelesaren azpian beste hizkuntza batzuk ipintzeak jartzeak, aplikazio "
-"batzuetan ustekabeko jokabidea eragingo du. Zure sistemak ingelesa "
-"erabiltzea nahi baduzu, kendu gainerako hizkuntza guztiak."
+"Ingelesaren azpian beste hizkuntza batzuk ipintzeak aplikazio batzuetan nahi "
+"gabeko portaera eragingo du. Sistema ingelesez erabili nahi baduzu, kendu "
+"gainerako hizkuntza guztiak."
 
 #: ui/AdvancedLanguageSelectPage.qml:46
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr "\"%1\" hizkuntza ez da onartzen"
+msgstr "Ez dago «%1» hizkuntzaren euskarrik"
 
 #: ui/AdvancedLanguageSelectPage.qml:59
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr ""
-"Gehitu hizkuntzak, zure aplikazioetan haiek ikusi nahi dituzun ordenan."
+msgstr "Gehitu hizkuntzak zure aplikazioetan ikusi nahi dituzun hurrenkeran."
 
 #: ui/AdvancedLanguageSelectPage.qml:101
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
-msgstr "Aldatu hizkuntza"
+msgstr "Hizkuntza aldatu"
 
 #: ui/AdvancedLanguageSelectPage.qml:105
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
-msgstr "Aldatu hizkuntza"
+msgstr "Hizkuntza aldatu"
 
 #: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
-msgstr "Eraman goraino"
+msgstr "Goraino eraman"
 
 #: ui/AdvancedLanguageSelectPage.qml:123
 #, kde-format
@@ -526,13 +522,13 @@ msgstr "Ez da hizkuntzarik konfiguratu"
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
-msgstr "Gehitu hizkuntzak"
+msgstr "Hizkuntzak gehitu"
 
 #: ui/AdvancedLanguageSelectPage.qml:236
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "Sistema honek ez du «%1» barne hartzen"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -541,23 +537,25 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"<link url='%1'>KDE softwarea zure hizkuntzara itzultzen nola</link> lagundu "
+"ikasi."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
-msgstr "Gehitu gehiago…"
+msgstr "Gehiago gehitu…"
 
 #: ui/main.qml:34
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr "Aldaketak indarrean jarriko dira saio-hasten duzun hurrengoan."
+msgstr "Aldaketak hurrengo saio-hasieran jarriko dira indarrean."
 
 #: ui/main.qml:40
 #, kde-format
 msgid "Restart now"
-msgstr "Berrabiarazi orain"
+msgstr "Orain berrabiarazi"
 
 #: ui/main.qml:55
 #, kde-format
@@ -566,8 +564,8 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
-"Tokiko eta hizkuntza euskarri fitxategiak sortzen; oraindik ez itzali "
-"ordenagailua."
+"Tokiko ezarpenen eta hizkuntza-euskarriaren fitxategiak sortzen ari dira; ez "
+"itzali ordenagailua oraindik."
 
 #: ui/main.qml:65
 #, kde-format
@@ -578,10 +576,10 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
-"Tokiko eta hizkuntza euskarri fitxategiak sortu dira, baino hizkuntzaren "
-"berariazko letra-tipoak ezin izan dira automatikoki instalatu. Zure "
-"hizkuntzak behar bezala azaltzeko letra-tipo berezituak behar baditu, zein "
-"diren aurkitu eta zuk zeuk instalatu behar dituzu."
+"Tokiko ezarpenen eta hizkuntza-euskarriaren fitxategiak sortu dira, baina "
+"hizkuntzaren berariazko letra-tipoak ezin izan dira automatikoki instalatu. "
+"Zure hizkuntza behar bezala bistaratzeko letra-tipo berezituak behar badira, "
+"zein diren aurkitu eta zuk zeuk instalatu behar dituzu."
 
 #: ui/main.qml:81
 #, kde-format
@@ -590,8 +588,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
-"Beharrezko tokiko eta hizkuntza euskarri fitxategiak instalatu dira. Orain "
-"segurua da ordenagailua itzaltzea."
+"Tokiko ezarpenetarako eta hizkuntza-euskarrirako beharrezko fitxategiak "
+"instalatu dira. Orain ordenagailua segurtasunez itzal daiteke."
 
 #: ui/main.qml:179
 #, kde-format
@@ -603,7 +601,7 @@ msgstr "Aldatu…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr "Datu eta biltegiratze neurriak"
+msgstr "Datu- eta biltegiratze-neurriak"
 
 #: ui/main.qml:282
 #, kde-format
@@ -628,7 +626,7 @@ msgstr "Neurriak"
 #: ui/main.qml:290
 #, kde-format
 msgid "Paper Size"
-msgstr "Paperaren neurria"
+msgstr "Paper-formatua"
 
 #: ui/main.qml:292
 #, kde-format
@@ -646,26 +644,26 @@ msgstr "Izena"
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
-msgstr "Telefono zenbakia"
+msgstr "Telefono-zenbakia"
 
 #: ui/main.qml:431
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "Sistema honek ez du «%1» eskualdeko ezarpenik"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "Gertuko eskualde bat bilatzen saiatu."
 
 #~ msgid ""
 #~ "You can configure the formats used for time, dates, money and other "
 #~ "numbers here."
 #~ msgstr ""
-#~ "Ordu, data, moneta eta beste zenbakietarako formatuak hemen konfigura "
-#~ "ditzakezu."
+#~ "Hemen konfigura ditzakezu orduetarako, datetarako, monetetarako eta beste "
+#~ "zenbaki batzuetarako erabiltzen diren formatuak."
 
 #~ msgctxt "@info:warning"
 #~ msgid ""
@@ -674,6 +672,6 @@ msgstr ""
 #~ "distribution's manual to install fonts and generate locales"
 #~ msgstr ""
 #~ "Tokiko ezarpenak konfiguratu dira, baina KCM honek une honetan ez du "
-#~ "onartzen tokiko ezarpenen sorrera automatikoa «glibc» ez diren "
-#~ "sistemetan, mesedez, mesedez, kontsultatu banatzailearen eskuliburua "
-#~ "letra-tipoak instalatzeko eta tokiko ezarpenak sortzeko"
+#~ "tokiko ezarpenak automatikoki sortzeko euskarririk glibc erabilten ez "
+#~ "duten sistemetan. Kontsultatu banaketaren eskuliburua letra-tipoak "
+#~ "instalatzeko eta tokiko ezarpenak sortzeko."
