@@ -136,6 +136,14 @@ Item {
 
                 framedView: false
 
+                // The grid must lay out and settle its margins before it becomes visible.
+                opacity: imageWallpaper.loading ? 0 : 1
+                Behavior on opacity {
+                    OpacityAnimator {
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                }
 
                 function resetCurrentIndex() {
                     //that min is needed as the module will be populated in an async way
