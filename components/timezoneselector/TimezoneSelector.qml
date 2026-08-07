@@ -44,6 +44,12 @@ Item {
      * which timezone the user is hovering.
      */
     property string hoveredTimeZone: ""
+
+    property real cornerRadius: Kirigami.Units.cornerRadius
+
+    property real mapBorder: 1
+
+    property real comboPadding: 0
 //END properties
 
     property var availableMapTimeZones: geoDatabase.model[0].data.map(zone => zone?.properties?.tzid)
@@ -171,7 +177,7 @@ Item {
 
             visible: !Kirigami.Settings.isMobile
 
-            radius: Kirigami.Units.cornerRadius
+            radius: root.cornerRadius
             color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, Kirigami.Theme.frameContrast)
 
 
@@ -180,14 +186,14 @@ Item {
                 layer.enabled: true
                 width: view.width
                 height: view.height
-                radius: Kirigami.Units.cornerRadius + 1
+                radius: root.cornerRadius + 1
                 visible: false
             }
 
             MapView {
                 id: view
                 anchors.fill: parent
-                anchors.margins: 1
+                anchors.margins: root.mapBorder
 
                 layer.enabled: true
                 layer.effect: MultiEffect {
@@ -306,6 +312,8 @@ Item {
             }
         }
         RowLayout {
+            Layout.leftMargin: root.comboPadding
+            Layout.rightMargin: root.comboPadding
             spacing: Kirigami.Units.largeSpacing
             QQC2.Label {
                 text: i18ndc("kcm_clock", "@label:listbox In the context of time zone selection", "Region:")
