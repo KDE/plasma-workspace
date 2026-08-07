@@ -15,7 +15,7 @@ import org.kde.kcmutils as KCM
 KCM.GridDelegate {
     id: wallpaperDelegate
 
-    property alias color: backgroundRect.color
+    property color color
     property alias previewSize: previewImage.sourceSize
     property string key: model.source
     property list<string> selectors: model.selectors
@@ -57,7 +57,7 @@ KCM.GridDelegate {
 
     thumbnail: Rectangle {
         id: backgroundRect
-        color: cfg_Color
+        color: previewImage.status === Image.Ready ? wallpaperDelegate.color : Kirigami.Theme.backgroundColor
         anchors.fill: parent
 
         Kirigami.Icon {
