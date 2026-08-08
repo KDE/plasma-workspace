@@ -1,14 +1,14 @@
 # Translation for kcm_style.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2024 This file is copyright:
+# Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2004, 2005, 2006, 2007.
 # Juan Irigoien <juanirigoien@irakasle.net>, 2004.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2011, 2014, 2018, 2019, 2020, 2021, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2011, 2014, 2018, 2019, 2020, 2021, 2023, 2024, 2026.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
