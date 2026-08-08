@@ -91,9 +91,27 @@ TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId, quint32 pid 
 TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid);
 
 /**
- * Tries to map a given application to a desktop file
- * by looking into its process environment.
+ * Takes several bits of window metadata as input and tries to find
+ * the .desktop file for the application owning this window, or,
+ * failing that, the path to its executable.
+ *
+ * The source for the metadata is generally the window's appId on
+ * Wayland, or the window class part of the WM_CLASS window property
+ * on X Windows.
+ *
+ * @param appId A string uniquely identifying the application owning
+ * the window, ideally matching a .desktop file name.
+ * @param pid The process id for the process owning the window.
+ * @param xWindowsWMClassName The instance name part of X Windows'
+ * WM_CLASS window property.
+ * @returns A KService object matching the window
  */
+KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName);
+
+/**
+* Tries to map a given application to a desktop file
+* by looking into its process environment.
+*/
 KService::List servicesFromEnvironment(quint32 pid);
 
 /**

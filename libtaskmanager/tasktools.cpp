@@ -182,7 +182,27 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 
 QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
 {
-    QUrl url;
+    const auto service = serviceFromMetadata(appId, pid, xWindowsWMClassName);
+
+    if (service) {
+        // applications: URLs are used to refer to applications by their KService::menuId
+        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+        if (!service->menuId().isEmpty()) {
+            return QUrl(u"applications:" + service->menuId());
+        }
+
+        if (!service->entryPath().isEmpty()) {
+            return QUrl::fromLocalFile(service->entryPath());
+        }
+
+        return QUrl::fromLocalFile(service->exec());
+    }
+
+    return QUrl();
+}
+
+KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
+{
     KService::List services;
     bool triedPid = false;
 
@@ -249,14 +269,14 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWi
             if (services.isEmpty() && appId.startsWith(QLatin1String("/"))) {
                 // Check if it's a path to a .desktop file.
                 if (KDesktopFile::isDesktopFile(appId) && QFile::exists(appId)) {
-                    return QUrl::fromLocalFile(appId);
+                    return KService::Ptr(new KService(appId));
                 }
 
                 // Check if the appId passes as a .desktop file path if we add the extension.
                 const QString appIdPlusExtension(appId + QStringLiteral(".desktop"));
 
                 if (KDesktopFile::isDesktopFile(appIdPlusExtension) && QFile::exists(appIdPlusExtension)) {
-                    return QUrl::fromLocalFile(appIdPlusExtension);
+                    return KService::Ptr(new KService(appIdPlusExtension));
                 }
             }
 
@@ -323,30 +343,10 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWi
     }
 
     if (!services.isEmpty()) {
-        const QString &menuId = services.at(0)->menuId();
-
-        // applications: URLs are used to refer to applications by their KService::menuId
-        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-        if (!menuId.isEmpty()) {
-            url.setUrl(QString(u"applications:" + menuId));
-            return url;
-        }
-
-        QString path = services.at(0)->entryPath();
-
-        if (path.isEmpty()) {
-            path = services.at(0)->exec();
-        }
-
-        if (!path.isEmpty()) {
-            QString query = url.query();
-            url = QUrl::fromLocalFile(path);
-            url.setQuery(query);
-            return url;
-        }
+        return services.first();
     }
 
-    return url;
+    return {};
 }
 
 KService::List servicesFromEnvironment(quint32 pid)
