@@ -18,7 +18,6 @@
 #include <KProcessList>
 #include <KWindowSystem>
 #include <PlasmaActivities/ResourceInstance>
-#include <kemailsettings.h>
 
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/OpenUrlJob>
@@ -487,27 +486,10 @@ QString defaultApplication(const QUrl &url)
     }
 
     if (application.compare(QLatin1String("mailer"), Qt::CaseInsensitive) == 0) {
-        KEMailSettings settings;
+        KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/mailto"));
 
-        // In KToolInvocation, the default is kmail; but let's be friendlier.
-        QString command = settings.getSetting(KEMailSettings::ClientProgram);
-
-        if (command.isEmpty()) {
-            if (KService::Ptr kontact = KService::serviceByStorageId(QStringLiteral("kontact"))) {
-                return kontact->storageId();
-            } else if (KService::Ptr kmail = KService::serviceByStorageId(QStringLiteral("kmail"))) {
-                return kmail->storageId();
-            }
-        }
-
-        if (!command.isEmpty()) {
-            if (settings.getSetting(KEMailSettings::ClientTerminal) == QLatin1String("true")) {
-                KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
-                const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
-                command = preferredTerminal + QLatin1String(" -e ") + command;
-            }
-
-            return command;
+        if (service) {
+            return service->storageId();
         }
     } else if (application.compare(QLatin1String("browser"), Qt::CaseInsensitive) == 0) {
         const auto service = DefaultService::browser();
