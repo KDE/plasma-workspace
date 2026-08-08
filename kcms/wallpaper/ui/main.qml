@@ -30,6 +30,8 @@ Kirigami.ScrollablePage {
 
     property alias parentLayout: parentLayout
 
+    readonly property bool contentReady: main.currentItem !== null
+
     implicitWidth: Kirigami.Units.gridUnit * 15
     implicitHeight: Kirigami.Units.gridUnit * 30
 
@@ -62,6 +64,10 @@ Kirigami.ScrollablePage {
     }
 
     ColumnLayout {
+
+        // We want to hide the content until the plugin is loaded, otherwise layout will flicker for a couple of frames
+        opacity: appearanceRoot.contentReady ? 1 : 0
+
         height: Math.max(implicitHeight, appearanceRoot.availableHeight)
         width: appearanceRoot.availableWidth
 
