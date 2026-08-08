@@ -133,15 +133,35 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
     if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
         KDesktopFile f(url.toLocalFile());
 
-        const KService::Ptr service = KService::serviceByStorageId(f.fileName());
-
-        // Resolve to non-absolute menuId-based URL if possible.
-        if (service) {
-            const QString &menuId = service->menuId();
-
-            if (!menuId.isEmpty()) {
-                url = QUrl(QLatin1String("applications:") + menuId);
+        auto getMenuId = [](const KService::Ptr &service) {
+            if (service) {
+                return service->menuId();
             }
+            return QString();
+        };
+
+        // try the final resolved filename - in case url is a symlink to a
+        // .desktop file in the database
+        QString menuId = getMenuId(KService::serviceByStorageId(f.fileName()));
+
+        // try _url directly, in case url is a symlink that's directly stored in
+        // the database
+        if (menuId.isEmpty()) {
+            menuId = getMenuId(KService::serviceByStorageId(url.toLocalFile()));
+        }
+
+        // in case there are multiple layers of (partially resolved) symlinks,
+        // just try the .desktop file name as a menuId, and see if that ends
+        // up at the same .desktop file when fully resolved as url.
+        if (menuId.isEmpty()) {
+            KService::Ptr service = KService::serviceByMenuId(url.fileName());
+            if (KDesktopFile(service->entryPath()).fileName() == f.fileName()) {
+                menuId = getMenuId(service);
+            }
+        }
+
+        if (!menuId.isEmpty()) {
+            url = QUrl(QLatin1String("applications:") + menuId);
         }
     }
 
