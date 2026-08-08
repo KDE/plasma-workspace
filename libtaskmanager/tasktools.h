@@ -91,6 +91,12 @@ TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId, quint32 pid 
 TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid);
 
 /**
+ * Tries to map a given application to a desktop file
+ * by looking into its process environment.
+ */
+KService::List servicesFromEnvironment(quint32 pid);
+
+/**
  * Returns a list of (usually application) KService instances for the
  * given process command line and process name, by mangling the command
  * line in various ways and checking the data against the Exec keys in

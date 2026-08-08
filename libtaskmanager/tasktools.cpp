@@ -278,6 +278,10 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWi
             }
         }
 
+        if (services.isEmpty()) {
+            services = servicesFromEnvironment(pid);
+        }
+
         // Ok, absolute *last* chance, try matching via pid (but only if we have not already tried this!) ...
         if (services.isEmpty() && !triedPid) {
             services = servicesFromPid(pid);
@@ -345,7 +349,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWi
     return url;
 }
 
-KService::List servicesFromPid(quint32 pid)
+KService::List servicesFromEnvironment(quint32 pid)
 {
     if (pid == 0) {
         return {};
@@ -385,7 +389,11 @@ KService::List servicesFromPid(quint32 pid)
             }
         }
     }
+    return {};
+}
 
+KService::List servicesFromPid(quint32 pid)
+{
     auto proc = KProcessList::processInfo(pid);
     if (!proc.isValid()) {
         return {};
