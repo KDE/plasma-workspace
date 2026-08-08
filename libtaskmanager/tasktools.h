@@ -59,19 +59,9 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
  * Wayland, or the window class part of the WM_CLASS window property
  * on X Windows.
  *
- * TODO: The supplied config object can contain various mapping and
- * mangling rules that affect the behavior of this function, allowing
- * to map bits of metadata to different values and other things. This
- * config file format still needs to be documented fully; in the
- * meantime the bundled default rules in taskmanagerrulesrc (the
- * config file opened by various models in this library) can be used
- * for reference.
- *
  * @param appId A string uniquely identifying the application owning
  * the window, ideally matching a .desktop file name.
  * @param pid The process id for the process owning the window.
- * @param config A KConfig object parameterizing the matching
- * behavior.
  * @param xWindowsWMClassName The instance name part of X Windows'
  * WM_CLASS window property.
  * @returns A .desktop file or executable path for the application
