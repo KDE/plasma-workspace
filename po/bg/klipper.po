@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-24 00:46+0000\n"
+"POT-Creation-Date: 2026-08-08 00:47+0000\n"
 "PO-Revision-Date: 2025-09-01 00:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -605,70 +605,70 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr "Премахване на елемент, означен със звезда"
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Автоматично изскачащо меню за действие:"
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Изчистване историята на клипборда"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Мануално извършване на действие в текущия клипборд"
 
-#: klipper.cpp:104
+#: klipper.cpp:103
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Редактиране на съдържание…"
 
-#: klipper.cpp:110
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Показване на баркод…"
 
-#: klipper.cpp:117
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Следващ елемент от историята"
 
-#: klipper.cpp:122
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Предишен елемент от историята"
 
-#: klipper.cpp:129
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показване на елементи на клипборда в позицията на мишката"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:390 klipper.cpp:399
 #, kde-format
 msgid "Clipboard history"
 msgstr "Историята на буфера"
 
-#: klipper.cpp:404
+#: klipper.cpp:416
 #, kde-format
 msgid "up"
 msgstr "нагоре"
 
-#: klipper.cpp:411
+#: klipper.cpp:423
 #, kde-format
 msgid "current"
 msgstr "текущо"
 
-#: klipper.cpp:418
+#: klipper.cpp:430
 #, kde-format
 msgid "down"
 msgstr "надолу"

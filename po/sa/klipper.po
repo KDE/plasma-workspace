@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-24 00:46+0000\n"
+"POT-Creation-Date: 2026-08-08 00:47+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -596,71 +596,71 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "स्वचालित क्रिया पॉपअप मेनू"
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "C&lear क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "वर्तमान क्लिप्बोर्ड् मध्ये मैन्युअल् रूपेण क्रियाम् आह्वयन्तु"
 
-#: klipper.cpp:104
+#: klipper.cpp:103
 #, fuzzy, kde-format
 #| msgid "Edit contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "सामग्रीं सम्पादयन्तु"
 
-#: klipper.cpp:110
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&बारकोडं दर्शयतु..."
 
-#: klipper.cpp:117
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "अग्रिमः इतिहासः मदः"
 
-#: klipper.cpp:122
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "पूर्व इतिहास मद"
 
-#: klipper.cpp:129
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:390 klipper.cpp:399
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:404
+#: klipper.cpp:416
 #, kde-format
 msgid "up"
 msgstr "उपरि"
 
-#: klipper.cpp:411
+#: klipper.cpp:423
 #, kde-format
 msgid "current"
 msgstr "वर्त्तमानः"
 
-#: klipper.cpp:418
+#: klipper.cpp:430
 #, kde-format
 msgid "down"
 msgstr "अधः"

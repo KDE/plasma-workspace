@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-24 00:46+0000\n"
+"POT-Creation-Date: 2026-08-08 00:47+0000\n"
 "PO-Revision-Date: 2010-07-16 13:01+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -604,77 +604,77 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Tiidslimyt foar alsje popups:"
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Klamboerdskiednis &leechje"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Mei de hân in aksje op it hjoeddeiske klamboerd útfiere"
 
-#: klipper.cpp:104
+#: klipper.cpp:103
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Bewurkje ynhâld"
 
-#: klipper.cpp:110
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:117
+#: klipper.cpp:120
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Folgend skiednis item"
 
-#: klipper.cpp:122
+#: klipper.cpp:125
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Foarich skiednis item"
 
-#: klipper.cpp:129
+#: klipper.cpp:132
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Popup by mûsposysje"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:390 klipper.cpp:399
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klamboerdskiednis"
 
-#: klipper.cpp:404
+#: klipper.cpp:416
 #, kde-format
 msgid "up"
 msgstr "omheech"
 
-#: klipper.cpp:411
+#: klipper.cpp:423
 #, kde-format
 msgid "current"
 msgstr "aktive"
 
-#: klipper.cpp:418
+#: klipper.cpp:430
 #, kde-format
 msgid "down"
 msgstr "omleech"

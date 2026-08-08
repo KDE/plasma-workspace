@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-24 00:46+0000\n"
+"POT-Creation-Date: 2026-08-08 00:47+0000\n"
 "PO-Revision-Date: 2025-08-30 19:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -601,70 +601,70 @@ msgstr "هذا العنصر مميز بنجمة. هل تريد حقا إزالت
 msgid "Remove Starred Item"
 msgstr "أزل العنصر مُفضّل"
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "قائمة الإجراءات المنبثقة الآليّة"
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ام&حُ تاريخ الحافظة"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "استدع إجراء على الحافظة الحالية يدوياً"
 
-#: klipper.cpp:104
+#: klipper.cpp:103
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&حرّر المحتويات"
 
-#: klipper.cpp:110
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "أظهر &شفرة شريطية..."
 
-#: klipper.cpp:117
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "العنصر التالي في التاريخ"
 
-#: klipper.cpp:122
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "العنصر السابق في التاريخ"
 
-#: klipper.cpp:129
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "اعرض عناصر الحافظة عند موضع الفأرة"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:390 klipper.cpp:399
 #, kde-format
 msgid "Clipboard history"
 msgstr "تاريخ الحافظة: "
 
-#: klipper.cpp:404
+#: klipper.cpp:416
 #, kde-format
 msgid "up"
 msgstr "أعلى"
 
-#: klipper.cpp:411
+#: klipper.cpp:423
 #, kde-format
 msgid "current"
 msgstr "الحالي"
 
-#: klipper.cpp:418
+#: klipper.cpp:430
 #, kde-format
 msgid "down"
 msgstr "أسفل"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-24 00:46+0000\n"
+"POT-Creation-Date: 2026-08-08 00:47+0000\n"
 "PO-Revision-Date: 2025-10-16 12:38-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -561,70 +561,70 @@ msgstr "ਇਹ ਚੀਜ਼ ਤਾਰਾ ਲਗਾਈ ਹੈ। ਕੀ ਤੁਸੀ
 msgid "Remove Starred Item"
 msgstr "ਤਾਰਾ ਲੱਗੀ ਚੀਜ਼ ਨੂੰ ਹਟਾਓ"
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ਆਟੋਮੈਟਿਕ ਕਾਰਵਾਈ ਪੌਪਅੱਪ ਮੇਨੂ"
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ(&l)"
 
-#: klipper.cpp:96
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ਮੌਜੂਦਾ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਰਵਾਈ ਦਸਤੀ ਸ਼ਾਮਿਲ ਕਰੋ"
 
-#: klipper.cpp:104
+#: klipper.cpp:103
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "…ਸਮੱਗਰੀ ਨੂੰ ਸੋਧੋ(&E)"
 
-#: klipper.cpp:110
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "…ਬਾਰਕੋਡ ਵੇਖੋ(&S)"
 
-#: klipper.cpp:117
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ਅਗਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:122
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ਪਿਛਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:129
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "ਮਾਊਸ ਸਥਿਤੀ ਉੱਤੇ ਕਲਿੱਪਬੋਰਡ ਆਈਟਮਾਂ ਵੇਖਾਓ"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:390 klipper.cpp:399
 #, kde-format
 msgid "Clipboard history"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
 
-#: klipper.cpp:404
+#: klipper.cpp:416
 #, kde-format
 msgid "up"
 msgstr "ਉੱਤੇ"
 
-#: klipper.cpp:411
+#: klipper.cpp:423
 #, kde-format
 msgid "current"
 msgstr "ਮੌਜੂਦਾ"
 
-#: klipper.cpp:418
+#: klipper.cpp:430
 #, kde-format
 msgid "down"
 msgstr "ਹੇਠਾਂ"
