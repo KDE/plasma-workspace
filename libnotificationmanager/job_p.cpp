@@ -20,6 +20,7 @@
 #include "jobviewv2adaptor.h"
 #include "jobviewv3adaptor.h"
 
+using namespace Qt::StringLiterals;
 using namespace NotificationManager;
 
 JobPrivate::JobPrivate(uint id, QObject *parent)
@@ -476,7 +477,13 @@ void JobPrivate::update(const QVariantMap &properties)
 
     it = properties.find(QStringLiteral("destUrl"));
     if (it != end) {
-        const QUrl destUrl = QUrl(it->toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
+        QUrl destUrl = QUrl(it->toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
+        if (it->toString().startsWith('/'_L1)) {
+            qCWarning(NOTIFICATIONMANAGER)
+                << "Job from" << m_applicationName << "set a destUrl" << destUrl
+                << "as a string starting with a slash. This is a bug in the application! Set a **url**. Assuming it's a local file for now.";
+            destUrl = QUrl::fromLocalFile(it->toString());
+        }
         updateField(destUrl, m_destUrl, &Job::destUrlChanged);
     }
 
