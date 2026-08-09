@@ -63,12 +63,32 @@ Item {
             }
         }
 
-        border {
-            color: isSelected ? Kirigami.Theme.highlightColor : Kirigami.Theme.disabledTextColor
-            width: 1
+        border.width: 1
 
-            Behavior on color {
-                PropertyAnimation {
+        StateGroup {
+            state: isSelected ? "selected" : "unselected"
+
+            states: [
+                State {
+                    name: "selected"
+                    PropertyChanges {
+                        target: outline
+                        border.color: Kirigami.Theme.highlightColor
+                    }
+                },
+                State {
+                    name: "unselected"
+                    PropertyChanges {
+                        target: outline
+                        border.color: Kirigami.Theme.disabledTextColor
+                    }
+                }
+            ]
+
+            transitions: Transition {
+                ColorAnimation {
+                    target: outline
+                    property: "border.color"
                     duration: Kirigami.Units.longDuration
                 }
             }
