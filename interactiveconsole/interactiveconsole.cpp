@@ -132,7 +132,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
         KTextEditor::Document *result = loadResult.plugin;
 
-        result->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
+        result->setHighlightingMode(QStringLiteral("JavaScript"));
 
         KTextEditor::View *view = result->createView(widget);
         view->setContextMenu(view->defaultContextMenu());
@@ -260,7 +260,7 @@ void InteractiveConsole::loadScript(const QString &script)
     if (m_editorPart) {
         m_editorPart->closeUrl(false);
         if (m_editorPart->openUrl(QUrl::fromLocalFile(script))) {
-            m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
+            m_editorPart->setHighlightingMode(QStringLiteral("JavaScript"));
             return;
         }
     } else {
@@ -352,7 +352,7 @@ void InteractiveConsole::loadScriptFromUrl(const QUrl &url)
     if (m_editorPart) {
         m_editorPart->closeUrl(false);
         m_editorPart->openUrl(url);
-        m_editorPart->setHighlightingMode(QStringLiteral("JavaScript/PlasmaDesktop"));
+        m_editorPart->setHighlightingMode(QStringLiteral("JavaScript"));
     } else {
         m_editor->clear();
         m_editor->setEnabled(false);
