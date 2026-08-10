@@ -647,8 +647,10 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         return onlyExec(DefaultService::legacyBrowserExec());
     } else if (matches(application, QLatin1String("terminal"))) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
-        return onlyExec(confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole")));
-
+        const auto service = KService::serviceByStorageId(confGroup.readEntry("TerminalService", QStringLiteral("org.kde.konsole.desktop")));
+        if (service) {
+            return storageId ? service->storageId() : onlyExec(service->exec());
+        }
     } else if (matches(application, QLatin1String("filemanager"))) {
         KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
         if (service) {

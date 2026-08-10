@@ -496,8 +496,10 @@ QString defaultApplication(const QUrl &url)
         return service ? service->storageId() : DefaultService::legacyBrowserExec();
     } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
-
-        return confGroup.readPathEntry("TerminalApplication", KService::serviceByStorageId(QStringLiteral("konsole")) ? QStringLiteral("konsole") : QString());
+        const auto service = KService::serviceByStorageId(confGroup.readEntry("TerminalService", QStringLiteral("org.kde.konsole.desktop")));
+        if (service) {
+            return service->storageId();
+        }
     } else if (application.compare(QLatin1String("filemanager"), Qt::CaseInsensitive) == 0) {
         KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
 
