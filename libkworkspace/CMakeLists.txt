@@ -11,8 +11,6 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
     autostartscriptdesktopfile.h
     login1_manager_interface.cpp
     login1_manager_interface.h
-    defaultservice.cpp
-    defaultservice.h
     defaultwallpaper.cpp
     defaultwallpaper.h
     outputorderwatcher.cpp

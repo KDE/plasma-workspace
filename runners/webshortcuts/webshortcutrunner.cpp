@@ -18,7 +18,6 @@
 #include <KSycoca>
 #include <KUriFilter>
 #include <QDBusConnection>
-#include <defaultservice.h>
 
 using namespace Qt::StringLiterals;
 
@@ -87,7 +86,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
 {
     m_match.setActions({});
 
-    auto service = DefaultService::browser();
+    auto service = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
     if (!service) {
         return;
     }

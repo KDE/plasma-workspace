@@ -30,7 +30,6 @@ private Q_SLOTS:
     void shouldFindApp();
     void shouldFindApp_data();
     void testApplicationsUrl();
-    void shouldFindDefaultApp();
     void shouldCompareLauncherUrls();
     void testWindowUrlFromMetadata();
     void testWindowUrlFromMetadata_data();
@@ -125,17 +124,6 @@ void TaskToolsTest::testApplicationsUrl()
     QCOMPARE(data.name, u"Konversation"_s);
     QCOMPARE(data.genericName, u"IRC Client"_s);
     QCOMPARE(data.url, url);
-}
-
-void TaskToolsTest::shouldFindDefaultApp()
-{
-    // FIXME Test other recognized default app types.
-
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
-    config.writePathEntry("BrowserApplication", QLatin1String("konqueror"));
-
-    QVERIFY(defaultApplication(QUrl(u"wrong://url"_s)).isEmpty());
-    QCOMPARE(defaultApplication(QUrl(u"preferred://browser"_s)), QLatin1String("konqueror"));
 }
 
 void TaskToolsTest::shouldCompareLauncherUrls()

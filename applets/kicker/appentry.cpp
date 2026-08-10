@@ -29,8 +29,6 @@
 #include <KWindowSystem>
 #include <PlasmaActivities/ResourceInstance>
 
-#include <defaultservice.h>
-
 #include <Plasma/Plasma>
 
 #ifdef HAVE_ICU
@@ -469,7 +467,7 @@ QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameF
 KService::Ptr AppEntry::defaultAppByName(const QString &name)
 {
     Q_UNUSED(name)
-    return DefaultService::browser();
+    return KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
 }
 
 AppEntry::~AppEntry() = default;

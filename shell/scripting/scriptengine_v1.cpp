@@ -32,8 +32,6 @@
 #include <Plasma/PluginLoader>
 #include <QStandardPaths>
 
-#include <defaultservice.h>
-
 #include "../screenpool.h"
 #include "appinterface.h"
 #include "configgroup.h"
@@ -621,11 +619,10 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
             return storageId ? service->storageId() : onlyExec(service->exec());
         }
     } else if (matches(application, QLatin1String("browser"))) {
-        auto service = DefaultService::browser();
+        const auto service = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
         if (service) {
-            return onlyExec(storageId ? service->storageId() : service->exec());
+            return storageId ? service->storageId() : onlyExec(service->exec());
         }
-        return onlyExec(DefaultService::legacyBrowserExec());
     } else if (matches(application, QLatin1String("terminal"))) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
         const auto service = KService::serviceByStorageId(confGroup.readEntry("TerminalService", QStringLiteral("org.kde.konsole.desktop")));

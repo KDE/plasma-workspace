@@ -21,8 +21,6 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
-#include <defaultservice.h>
-
 #include "bookmarkmatch.h"
 #include "bookmarksrunner_defs.h"
 #include "browsers/browser.h"
@@ -70,8 +68,8 @@ void BookmarksRunner::match(KRunner::RunnerContext &context)
 
 QString BookmarksRunner::findBrowserName()
 {
-    const auto service = DefaultService::browser();
-    return service ? service->exec() : DefaultService::legacyBrowserExec();
+    const auto service = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
+    return service ? service->exec() : QString();
 }
 
 void BookmarksRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &action)

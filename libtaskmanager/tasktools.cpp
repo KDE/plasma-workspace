@@ -29,8 +29,6 @@
 #include <QUrlQuery>
 #include <qnamespace.h>
 
-#include <defaultservice.h>
-
 using namespace Qt::StringLiterals;
 
 static const QString appropriateCaption(const KService::Ptr &service)
@@ -451,8 +449,10 @@ QString defaultApplication(const QUrl &url)
             return service->storageId();
         }
     } else if (application.compare(QLatin1String("browser"), Qt::CaseInsensitive) == 0) {
-        const auto service = DefaultService::browser();
-        return service ? service->storageId() : DefaultService::legacyBrowserExec();
+        const auto service = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
+        if (service) {
+            return service->storageId();
+        }
     } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
         const auto service = KService::serviceByStorageId(confGroup.readEntry("TerminalService", QStringLiteral("org.kde.konsole.desktop")));
