@@ -1,16 +1,16 @@
 # Translation for plasmashellprivateplugin.po to Euskara/Basque (eu).
-# Copyright (C) 2018-2025 This file is copyright:
+# Copyright (C) 2018-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-24 00:46+0000\n"
-"PO-Revision-Date: 2025-12-07 22:58+0100\n"
+"PO-Revision-Date: 2026-08-09 09:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -185,58 +185,45 @@ msgid "Filters"
 msgstr "Iragazkiak"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for an unknown older version of Plasma and is not "
-#| "compatible with Plasma %1. Please contact the widget's author for an "
-#| "updated version."
+#, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
-"Trepeta hori Plasmaren bertsio ezezagun zaharrago baterako idatzi zen eta ez "
+"Trepeta hau Plasmaren bertsio ezezagun zaharrago baterako idatzi zen eta ez "
 "da Plasma %1(r)ekin bateragarria. Mesedez, jar zaitez trepeta-egilearekin "
-"harremanean bertsio eguneratu baterako."
+"harremanetan bertsio eguneratu baterako."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please contact the widget's author for an updated version."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
-"Trepeta hori Plasma %1(e)rako idatzi zen eta ez da Plasma %2(r)ekin "
-"bateragarria. Mesedez, jar zaitez trepeta-egilearekin harremanean bertsio "
+"Trepeta hau Plasma %1(e)rako idatzi zen eta ez da Plasma %2(r)ekin "
+"bateragarria. Mesedez, jar zaitez trepeta-egilearekin harremanetan bertsio "
 "eguneratu baterako."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
-"Trepeta hori Plasma %1(e)rako idatzi zen eta ez da Plasma %2(r)ekin "
+"Trepeta hau Plasma %1(e)rako idatzi zen eta ez da Plasma %2(r)ekin "
 "bateragarria. Mesedez, eguneratu Plasma trepeta erabili ahal izateko."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Trepeta hori Plasma %1(e)rako idatzi zen eta ez da Plasmaren bertsio "
-"berrienarekin bateragarria. Mesedez, eguneratu Plasma trepeta erabili ahal "
-"izateko."
+"Trepeta hau Plasma %1(e)rako idatzi zen eta ez da sistema honetan "
+"instalatuta dagoen Plasmaren bertsio zaharragoarekin bateragarria. Mesedez, "
+"eguneratu Plasma trepeta erabili ahal izateko."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
