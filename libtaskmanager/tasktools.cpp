@@ -203,7 +203,6 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWi
 KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
 {
     KService::List services;
-    bool triedPid = false;
 
     // The code below this function goes on a hunt for services based on the metadata
     // that has been passed in. Occasionally, it will find more than one matching
@@ -301,8 +300,8 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
             services = servicesFromEnvironment(pid);
         }
 
-        // Ok, absolute *last* chance, try matching via pid (but only if we have not already tried this!) ...
-        if (services.isEmpty() && !triedPid) {
+        // Ok, absolute *last* chance, try matching via pid
+        if (services.isEmpty()) {
             services = servicesFromPid(pid);
         }
     }
