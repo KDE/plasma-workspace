@@ -52,18 +52,6 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     AppData data;
     data.url = url;
 
-    if (url.hasQuery()) {
-        QUrlQuery uQuery(url);
-
-        if (uQuery.hasQueryItem(QLatin1String("iconData"))) {
-            QString iconData(uQuery.queryItemValue(QLatin1String("iconData")));
-            QPixmap pixmap;
-            QByteArray bytes = QByteArray::fromBase64(iconData.toLocal8Bit(), QByteArray::Base64UrlEncoding);
-            pixmap.loadFromData(bytes);
-            data.icon.addPixmap(pixmap);
-        }
-    }
-
     // applications: URLs are used to refer to applications by their KService::menuId
     // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
     if (url.scheme() == QLatin1String("applications")) {
