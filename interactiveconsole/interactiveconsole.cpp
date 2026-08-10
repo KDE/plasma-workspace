@@ -80,12 +80,17 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
     auto *widget = new QWidget(m_splitter);
     auto *editorLayout = new QVBoxLayout(widget);
+    auto margins = editorLayout->contentsMargins();
+    margins.setLeft(0);
+    margins.setRight(0);
+    editorLayout->setContentsMargins(margins);
+    editorLayout->setSpacing(0);
 
     auto *label = new QLabel(i18n("Editor"), widget);
     QFont f = label->font();
     f.setBold(true);
     label->setFont(f);
-    editorLayout->addWidget(label);
+    editorLayout->addWidget(label, {}, Qt::AlignHCenter);
 
     connect(m_snippetsMenu, &QMenu::aboutToShow, this, &InteractiveConsole::populateTemplatesMenu);
 
@@ -157,12 +162,17 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
     widget = new QWidget(m_splitter);
     auto *outputLayout = new QVBoxLayout(widget);
+    margins = outputLayout->contentsMargins();
+    margins.setLeft(0);
+    margins.setRight(0);
+    outputLayout->setContentsMargins(margins);
+    outputLayout->setSpacing(0);
 
     label = new QLabel(i18n("Output"), widget);
     f = label->font();
     f.setBold(true);
     label->setFont(f);
-    outputLayout->addWidget(label);
+    outputLayout->addWidget(label, {}, Qt::AlignHCenter);
 
     auto *outputToolBar = new KToolBar(widget, true, false);
     outputToolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
@@ -176,6 +186,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
     auto *l = new QVBoxLayout(this);
     l->addWidget(m_splitter);
+    l->setContentsMargins({});
 
     // Clean up old values
     KConfigGroup cg(KSharedConfig::openConfig(), u"InteractiveConsole"_s);
