@@ -633,13 +633,6 @@ bool canLauchNewInstance(const AppData &appData)
         return false;
     }
 
-    QString desktopEntry = appData.id;
-
-    // Remove suffix if necessary
-    if (desktopEntry.endsWith(QLatin1String(".desktop"))) {
-        desktopEntry.chop(8);
-    }
-
     KService::Ptr service;
 
     // applications: URLs are used to refer to applications by their KService::menuId
