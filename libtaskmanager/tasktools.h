@@ -33,9 +33,6 @@ enum UrlComparisonMode {
 /**
  * Fills in and returns an AppData struct based on the given URL.
  *
- * If the URL contains iconData in its query string, it is decoded and
- * set as AppData.icon, taking precedence over normal icon discovery.
- *
  * If the URL is using the preferred:// scheme, the URL it resolves to
  * is set as AppData.url.
  *
