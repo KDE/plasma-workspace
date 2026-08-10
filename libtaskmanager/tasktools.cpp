@@ -305,40 +305,6 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
         }
     }
 
-    // Try to improve on a possible from-binary fallback.
-    // If no services were found or we got a fake-service back from getServicesViaPid()
-    // we attempt to improve on this by adding a loosely matched reverse-domain-name
-    // DesktopEntryName. Namely anything that is '*.appId.desktop' would qualify here.
-    //
-    // Illustrative example of a case where the above heuristics would fail to produce
-    // a reasonable result:
-    // - org.kde.dragonplayer.desktop
-    // - binary is 'dragon'
-    // - qapp appname and thus appId is 'dragonplayer'
-    // - appId cannot directly match the desktop file because of RDN
-    // - appId also cannot match the binary because of name mismatch
-    // - in the following code *.appId can match org.kde.dragonplayer though
-    if (!appId.isEmpty() /* BUG 472576 */ && (services.isEmpty() || services.at(0)->desktopEntryName().isEmpty())) {
-        auto matchingServices = KApplicationTrader::query([&appId](const KService::Ptr &service) {
-            return !service->noDisplay() && service->desktopEntryName().contains(appId, Qt::CaseInsensitive);
-        });
-
-        QMutableListIterator<KService::Ptr> it(matchingServices);
-        while (it.hasNext()) {
-            auto service = it.next();
-            if (!service->desktopEntryName().endsWith(u'.' + appId)) {
-                it.remove();
-            }
-        }
-        // Exactly one match is expected, otherwise we discard the results as to reduce
-        // the likelihood of false-positive mappings. Since we essentially eliminate the
-        // uniqueness that RDN is meant to bring to the table we could potentially end
-        // up with more than one match here.
-        if (matchingServices.length() == 1) {
-            services = matchingServices;
-        }
-    }
-
     if (!services.isEmpty()) {
         return services.first();
     }
@@ -461,11 +427,6 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
         if (ignore) {
             return servicesFromCmdLine(_cmdLine.mid(firstSpace + 1), processName);
         }
-    }
-
-    if (services.isEmpty() && !processName.isEmpty() && !QStandardPaths::findExecutable(cmdLine).isEmpty()) {
-        // cmdLine now exists without arguments if there were any.
-        services << QExplicitlySharedDataPointer<KService>(new KService(processName, cmdLine, QString()));
     }
 
     return services;
