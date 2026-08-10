@@ -616,29 +616,10 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
     // see
     // kdebase-runtime/kcontrol/componentchooser/ for all the gory details ;)
     if (matches(application, QLatin1String("mailer"))) {
-        // KEMailSettings settings;
-
-        // in KToolInvocation, the default is kmail; but let's be friendlier :)
-        // QString command = settings.getSetting(KEMailSettings::ClientProgram);
-        QString command;
-        if (command.isEmpty()) {
-            if (KService::Ptr kontact = KService::serviceByStorageId(QStringLiteral("kontact"))) {
-                return storageId ? kontact->storageId() : onlyExec(kontact->exec());
-            } else if (KService::Ptr kmail = KService::serviceByStorageId(QStringLiteral("kmail"))) {
-                return storageId ? kmail->storageId() : onlyExec(kmail->exec());
-            }
+        KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/mailto"));
+        if (service) {
+            return storageId ? service->storageId() : onlyExec(service->exec());
         }
-
-        if (!command.isEmpty()) {
-            if (false) {
-                KConfigGroup confGroup(KSharedConfig::openConfig(), u"General"_s);
-                const QString preferredTerminal = confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole"));
-                command = preferredTerminal + QLatin1String(" -e ") + command;
-            }
-
-            return command;
-        }
-
     } else if (matches(application, QLatin1String("browser"))) {
         auto service = DefaultService::browser();
         if (service) {
