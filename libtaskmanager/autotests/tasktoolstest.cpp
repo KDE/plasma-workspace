@@ -29,6 +29,7 @@ private Q_SLOTS:
 
     void shouldFindApp();
     void shouldFindApp_data();
+    void testApplicationsUrl();
     void shouldFindDefaultApp();
     void shouldCompareLauncherUrls();
     void testWindowUrlFromMetadata();
@@ -117,6 +118,18 @@ void TaskToolsTest::shouldFindApp()
     QCOMPARE(data.id, id);
     QCOMPARE(data.name, name);
     QCOMPARE(data.genericName, genericName);
+    QCOMPARE(data.url, url);
+}
+
+void TaskToolsTest::testApplicationsUrl()
+{
+    const QUrl url(u"applications:org.kde.konversation.desktop"_s);
+
+    const AppData &data = appDataFromUrl(url);
+
+    QCOMPARE(data.id, u"org.kde.konversation.desktop"_s);
+    QCOMPARE(data.name, u"Konversation"_s);
+    QCOMPARE(data.genericName, u"IRC Client"_s);
     QCOMPARE(data.url, url);
 }
 
