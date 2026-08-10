@@ -655,11 +655,6 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
             return storageId ? service->storageId() : onlyExec(service->exec());
         }
 
-    } else if (matches(application, QLatin1String("windowmanager"))) {
-        KConfig cfg(QStringLiteral("ksmserverrc"), KConfig::NoGlobals);
-        KConfigGroup confGroup(&cfg, u"General"_s);
-        return onlyExec(confGroup.readEntry("windowManager", QStringLiteral("kwin")));
-
     } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {
         return storageId ? service->storageId() : onlyExec(service->exec());
     }
