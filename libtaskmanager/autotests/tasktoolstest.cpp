@@ -189,8 +189,6 @@ void TaskToolsTest::testWindowUrlFromMetadata_data()
                                     << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
 
     QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QUrl();
-
-    // TODO test mapping rules
 }
 
 QTEST_MAIN(TaskToolsTest)
