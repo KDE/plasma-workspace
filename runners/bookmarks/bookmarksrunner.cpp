@@ -11,8 +11,10 @@
 
 #include <QDebug>
 #include <QDir>
+#include <QFileInfo>
 #include <QList>
 #include <QStack>
+#include <QStandardPaths>
 #include <QUrl>
 
 #include <KApplicationTrader>
@@ -103,10 +105,21 @@ void BookmarksRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
     job->start();
 }
 
+static QString firefoxProfilesDirectory()
+{
+    const QString homeDirectory = QDir::homePath() + QStringLiteral("/.mozilla/firefox");
+    if (QFileInfo::exists(homeDirectory + QStringLiteral("/profiles.ini"))) {
+        return homeDirectory;
+    }
+
+    // new path, fallback
+    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/mozilla/firefox");
+}
+
 std::unique_ptr<Browser> BookmarksRunner::findBrowser(const QString &browserName)
 {
     if (browserName.contains(QLatin1String("firefox"), Qt::CaseInsensitive) || browserName.contains(QLatin1String("iceweasel"), Qt::CaseInsensitive)) {
-        return std::make_unique<Firefox>(QDir::homePath() + QStringLiteral("/.mozilla/firefox"));
+        return std::make_unique<Firefox>(firefoxProfilesDirectory());
     } else if (browserName.contains(QLatin1String("opera"), Qt::CaseInsensitive)) {
         return std::make_unique<Opera>();
     } else if (browserName.contains(QLatin1String("chrome"), Qt::CaseInsensitive)) {
