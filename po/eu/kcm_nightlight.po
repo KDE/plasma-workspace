@@ -5,6 +5,13 @@
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2018, 2019, 2021, 2023, 2024, 2025, 2026.
+#
+# Egoera:
+# Proiektu osoaren berrikuspen integrala: 2026-08-05ean hasita, osatu gabe dago.
+# Itzulpen-fitxategi honen berrikuspen integrala: 2026-08-05
+# Terminologia, estiloa, ortotipografia, kohesioa eta koherentzia berrikusi dira.
+# Erreferentzia-gida: -
+# Ikus, halaber: KDE-eu-berrikuspen-integralen-erregistroa.md
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
