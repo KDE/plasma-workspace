@@ -47,6 +47,8 @@ enum UrlComparisonMode {
  */
 TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon = QIcon());
 
+TASKMANAGER_EXPORT AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIcon = QIcon());
+
 /**
  * Takes several bits of window metadata as input and tries to find
  * the .desktop file for the application owning this window, or,
