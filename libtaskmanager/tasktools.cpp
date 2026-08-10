@@ -136,10 +136,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             if (data.id.endsWith(u".desktop")) {
                 data.id = data.id.left(data.id.length() - 8);
             }
-        } else {
-            data.id = url.fileName();
         }
-
     } else if (url.scheme() == QLatin1String("preferred")) {
         const KService::Ptr service = KService::serviceByStorageId(defaultApplication(url));
 
