@@ -74,7 +74,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
         if (service && url.path() == service->menuId()) {
             data.name = service->name();
             data.genericName = appropriateCaption(service);
-            data.id = service->storageId();
+            data.id = service->desktopEntryName();
 
             if (data.icon.isNull()) {
                 data.icon = QIcon::fromTheme(service->icon());
@@ -98,7 +98,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             if (service && QUrl::fromLocalFile(service->entryPath()) == url) {
                 data.name = service->name();
                 data.genericName = appropriateCaption(service);
-                data.id = service->storageId();
+                data.id = service->desktopEntryName();
 
                 if (data.icon.isNull()) {
                     data.icon = QIcon::fromTheme(service->icon());
@@ -108,7 +108,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                 if (service->isValid()) {
                     data.name = service->name();
                     data.genericName = appropriateCaption(service);
-                    data.id = service->storageId();
+                    data.id = service->desktopEntryName();
 
                     if (data.icon.isNull()) {
                         const QString iconValue = service->icon();
@@ -143,9 +143,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
         }
 
     } else if (url.scheme() == QLatin1String("preferred")) {
-        data.id = defaultApplication(url);
-
-        const KService::Ptr service = KService::serviceByStorageId(data.id);
+        const KService::Ptr service = KService::serviceByStorageId(defaultApplication(url));
 
         if (service) {
             const QString &menuId = service->menuId();
@@ -153,7 +151,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 
             data.name = service->name();
             data.genericName = appropriateCaption(service);
-            data.id = service->storageId();
+            data.id = service->desktopEntryName();
 
             if (data.icon.isNull()) {
                 data.icon = QIcon::fromTheme(service->icon());
