@@ -818,7 +818,8 @@ const AppData &WaylandTasksModel::Private::appData(PlasmaWindow *window)
         return *it;
     }
 
-    return *appDataCache.emplace(window, appDataFromUrl(windowUrlFromMetadata(window->appId, window->pid, window->resourceName)));
+    const auto service = serviceFromMetadata(window->appId, window->pid, window->resourceName);
+    return *appDataCache.emplace(window, appDataFromService(service));
 }
 
 QIcon WaylandTasksModel::Private::icon(PlasmaWindow *window)
