@@ -293,11 +293,6 @@ PlasmaExtras.Representation {
                             return !(startIsMidnight && endIsMidnight && sameDay);
                         }
 
-                        PlasmaComponents.ToolTip {
-                            text: eventItem.modelData.description
-                            visible: text !== "" && eventItem.hovered
-                        }
-
                         contentItem: GridLayout {
                             id: eventGrid
                             columns: 3
@@ -344,6 +339,7 @@ PlasmaExtras.Representation {
 
                                 Layout.row: 1
                                 Layout.column: 1
+                                Layout.alignment: Qt.AlignTop
                                 Layout.minimumWidth: dateLabelMetrics.width
 
                                 text: endsToday || endsTomorrowInLessThan12Hours
@@ -369,6 +365,22 @@ PlasmaExtras.Representation {
                                 verticalAlignment: Text.AlignVCenter
                                 maximumLineCount: 2
                                 wrapMode: Text.Wrap
+                            }
+
+                            Kirigami.SelectableLabel {
+                                id: eventDescription
+
+                                Layout.row: 1
+                                Layout.column: 2
+                                Layout.fillWidth: true
+                                spacing: 0
+                                
+                                visible: text.length > 0
+                                text: eventItem.modelData.description
+                                                                    
+                                wrapMode: Text.Wrap
+                                
+                                onLinkActivated: link => Qt.openUrlExternally(link)
                             }
                         }
                     }
