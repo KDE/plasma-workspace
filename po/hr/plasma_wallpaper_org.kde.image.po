@@ -140,10 +140,9 @@ msgid "Select Background Color"
 msgstr ""
 
 #: imagepackage/contents/ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Sljedeća slika podloge"
+msgstr "Otvori sliku podloge"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, fuzzy, kde-format
