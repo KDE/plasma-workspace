@@ -190,10 +190,11 @@ PlasmaExtras.Representation {
             }
 
             function dateEquals(date1: date, date2: date): bool {
-                // Compare two dates without taking time into account
-                return date1.getFullYear() === date2.getFullYear()
-                    && date1.getMonth() === date2.getMonth()
-                    && date1.getDate() === date2.getDate();
+                // QDate is exposed to QML as midnight UTC, while MonthView's
+                // current date is constructed in the local time zone.
+                return date1.getUTCFullYear() === date2.getFullYear()
+                    && date1.getUTCMonth() === date2.getMonth()
+                    && date1.getUTCDate() === date2.getDate();
             }
 
             function updateEventsForCurrentDate() {
