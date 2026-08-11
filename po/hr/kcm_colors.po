@@ -164,9 +164,7 @@ msgstr "Tekst prozotra na pozadini prozora"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/preview.ui:32
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Window text"
 msgstr "Tekst prozora"
@@ -210,9 +208,7 @@ msgstr "Odabrani tekst poveznice protiv Odabrane normalne pozadine"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection3)
 #. i18n: ectx: property (text), widget (QLabel, labelView3)
 #: editor/preview.ui:141 editor/preview.ui:265
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "link"
 msgstr "veza"
@@ -228,9 +224,7 @@ msgstr "Odabrani tekst posjećene poveznice protiv odabrane normalne pozadine"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection4)
 #. i18n: ectx: property (text), widget (QLabel, labelView4)
 #: editor/preview.ui:156 editor/preview.ui:280
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "visited"
 msgstr "posjećeno"
@@ -324,9 +318,7 @@ msgstr "Pogled normalnog teksta protiv pogleda normalne pozadine"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
 #: editor/preview.ui:250
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
 msgstr "Normalni Tekst"
@@ -488,9 +480,7 @@ msgstr "Prozor"
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:55
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgctxt "color-sets"
 msgid "Button"
 msgstr "Gumb"
@@ -670,11 +660,9 @@ msgid "Colors"
 msgstr "Boje"
 
 #: editor/scmeditordialog.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled"
-msgstr "Onemogućeno"
+msgstr "Onemogućen"
 
 #: editor/scmeditordialog.cpp:96
 #, kde-format
@@ -717,9 +705,7 @@ msgid "Error"
 msgstr "Greška"
 
 #: editor/scmeditordialog.cpp:194
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on inactive elements"
-#| msgid "Inactive"
+#, kde-format
 msgid "Inactive"
 msgstr "Neaktivno"
 
@@ -1329,16 +1315,12 @@ msgid "Window Title"
 msgstr "Tekst prozora"
 
 #: ui/main.qml:215
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgid "Window text"
 msgstr "Tekst prozora"
 
 #: ui/main.qml:223
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgid "Button"
 msgstr "Gumb"
 
@@ -1359,11 +1341,9 @@ msgid "visited"
 msgstr "posjećeno"
 
 #: ui/main.qml:273
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgid "Normal text"
-msgstr "Normalni Tekst"
+msgstr "Tekst"
 
 #: ui/main.qml:280
 #, fuzzy, kde-format
