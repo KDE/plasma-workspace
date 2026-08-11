@@ -99,10 +99,9 @@ msgid "Get New Wallpapers…"
 msgstr "Preuzmi nove pozadinske slike…"
 
 #: imagepackage/contents/ui/main.qml:66
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Sljedeća slika podloge"
+msgstr "Otvori sliku podloge"
 
 #: imagepackage/contents/ui/main.qml:67
 #, kde-format

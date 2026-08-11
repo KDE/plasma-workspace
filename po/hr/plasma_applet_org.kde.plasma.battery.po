@@ -141,8 +141,7 @@ msgid "Battery"
 msgstr "Baterija %1:"
 
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power Management"
 msgstr "Upravljanje potrošnjom energije"
 
@@ -343,10 +342,9 @@ msgid "Performance"
 msgstr ""
 
 #: package/contents/ui/PowerProfileItem.qml:59
-#, fuzzy, kde-format
-#| msgid "Power Profile:"
+#, kde-format
 msgid "Power Profile"
-msgstr "Energetski profil:"
+msgstr "Energetski profil"
 
 #: package/contents/ui/PowerProfileItem.qml:191
 #, kde-format
