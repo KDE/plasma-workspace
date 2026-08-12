@@ -532,31 +532,29 @@ bool canLauchNewInstance(const AppData &appData)
         return false;
     }
 
-    if (service) {
-        if (service->noDisplay()) {
+    if (service->noDisplay()) {
+        return false;
+    }
+
+    if (service->property<bool>(QStringLiteral("SingleMainWindow"))) {
+        return false;
+    }
+
+    // GNOME-specific key, for backwards compatibility with apps that haven't
+    // started using the XDG "SingleMainWindow" key yet
+    if (service->property<bool>(QStringLiteral("X-GNOME-SingleWindow"))) {
+        return false;
+    }
+
+    // Hide our own action if there's already a "New Window" action
+    const auto actions = service->actions();
+    for (const KServiceAction &action : actions) {
+        if (action.name().startsWith(u"new", Qt::CaseInsensitive) && action.name().endsWith(u"window", Qt::CaseInsensitive)) {
             return false;
         }
 
-        if (service->property<bool>(QStringLiteral("SingleMainWindow"))) {
+        if (action.name() == QLatin1String("WindowNew")) {
             return false;
-        }
-
-        // GNOME-specific key, for backwards compatibility with apps that haven't
-        // started using the XDG "SingleMainWindow" key yet
-        if (service->property<bool>(QStringLiteral("X-GNOME-SingleWindow"))) {
-            return false;
-        }
-
-        // Hide our own action if there's already a "New Window" action
-        const auto actions = service->actions();
-        for (const KServiceAction &action : actions) {
-            if (action.name().startsWith(u"new", Qt::CaseInsensitive) && action.name().endsWith(u"window", Qt::CaseInsensitive)) {
-                return false;
-            }
-
-            if (action.name() == QLatin1String("WindowNew")) {
-                return false;
-            }
         }
     }
     return true;
