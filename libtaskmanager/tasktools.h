@@ -23,6 +23,7 @@ struct AppData {
     QString genericName; // Generic application name.
     QIcon icon;
     QUrl url;
+    KService::Ptr service;
 };
 
 enum UrlComparisonMode {

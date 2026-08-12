@@ -984,7 +984,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     case ApplicationMenuServiceName:
         return window->applicationMenuService;
     case CanLaunchNewInstance:
-        return canLauchNewInstance(serviceForUrl(d->appData(window).url));
+        return canLauchNewInstance(d->appData(window).service);
     case StorageId:
         if (const auto service = KService::serviceByDesktopName(d->appData(window).id)) {
             return service->storageId();
@@ -1037,7 +1037,7 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    const auto service = serviceForUrl(d->appData(d->windows.at(index.row()).get()).url);
+    const auto service = d->appData(d->windows.at(index.row()).get()).service;
 
     if (service) {
         runApp(service);
@@ -1050,7 +1050,7 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
         return;
     }
 
-    const auto service = serviceForUrl(d->appData(d->windows.at(index.row()).get()).url);
+    const auto service = d->appData(d->windows.at(index.row()).get()).service;
 
     if (service) {
         runApp(service, urls);
