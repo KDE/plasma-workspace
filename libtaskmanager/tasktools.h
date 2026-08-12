@@ -50,25 +50,6 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
 TASKMANAGER_EXPORT AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIcon = QIcon());
 
 /**
- * Takes several bits of window metadata as input and tries to find
- * the .desktop file for the application owning this window, or,
- * failing that, the path to its executable.
- *
- * The source for the metadata is generally the window's appId on
- * Wayland, or the window class part of the WM_CLASS window property
- * on X Windows.
- *
- * @param appId A string uniquely identifying the application owning
- * the window, ideally matching a .desktop file name.
- * @param pid The process id for the process owning the window.
- * @param xWindowsWMClassName The instance name part of X Windows'
- * WM_CLASS window property.
- * @returns A .desktop file or executable path for the application
- * owning the window.
- */
-TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId, quint32 pid = 0, const QString &xWindowsWMClassName = QString());
-
-/**
  * Returns a list of (usually application) KService instances for the
  * given process id, by examining the process and querying the service
  * database for process metadata.
