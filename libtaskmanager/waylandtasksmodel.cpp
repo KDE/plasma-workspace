@@ -984,7 +984,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     case ApplicationMenuServiceName:
         return window->applicationMenuService;
     case CanLaunchNewInstance:
-        return canLauchNewInstance(d->appData(window));
+        return canLauchNewInstance(serviceForUrl(d->appData(window).url));
     case StorageId:
         if (const auto service = KService::serviceByDesktopName(d->appData(window).id)) {
             return service->storageId();
