@@ -105,36 +105,8 @@ AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIc
 
 AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 {
-    // applications: URLs are used to refer to applications by their KService::menuId
-    // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-    if (url.scheme() == QLatin1String("applications")) {
-        const KService::Ptr service = KService::serviceByMenuId(url.path());
-
-        if (service) {
-            return appDataFromService(service);
-        }
-    }
-
-    if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
-        const KService::Ptr service = KService::serviceByStorageId(url.fileName());
-
-        if (service) {
-            return appDataFromService(service);
-        }
-    } else if (url.scheme() == QLatin1String("preferred")) {
-        const KService::Ptr service = KService::serviceByStorageId(defaultApplication(url));
-
-        if (service) {
-            return appDataFromService(service);
-        }
-    }
-
-    AppData data;
-    data.url = url;
-    data.name = url.fileName();
-    data.icon = fallbackIcon;
-
-    return data;
+    const auto service = serviceForUrl(url);
+    return appDataFromService(service, fallbackIcon);
 }
 
 QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
@@ -530,17 +502,7 @@ QRect screenGeometry(const QPoint &pos)
 void runApp(const AppData &appData, const QList<QUrl> &urls)
 {
     if (appData.url.isValid()) {
-        KService::Ptr service;
-
-        // applications: URLs are used to refer to applications by their KService::menuId
-        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-        if (appData.url.scheme() == QLatin1String("applications")) {
-            service = KService::serviceByMenuId(appData.url.path());
-        } else if (appData.url.scheme() == QLatin1String("preferred")) {
-            service = KService::serviceByStorageId(defaultApplication(appData.url));
-        } else {
-            service = KService::serviceByDesktopPath(appData.url.toLocalFile());
-        }
+        const KService::Ptr service = serviceForUrl(appData.url);
 
         if (service && service->isApplication()) {
             auto *job = new KIO::ApplicationLauncherJob(service);
@@ -559,19 +521,14 @@ bool canLauchNewInstance(const AppData &appData)
         return false;
     }
 
-    KService::Ptr service;
-
-    // applications: URLs are used to refer to applications by their KService::menuId
-    // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-    if (appData.url.scheme() == QLatin1String("applications")) {
-        service = KService::serviceByMenuId(appData.url.path());
-    } else if (appData.url.scheme() == QLatin1String("preferred")) {
-        service = KService::serviceByStorageId(defaultApplication(appData.url));
-    } else {
-        service = KService::serviceByDesktopPath(appData.url.toLocalFile());
-    }
+    const KService::Ptr service = serviceForUrl(appData.url);
 
     if (!service) {
+        return false;
+    }
+
+    // don't allow launching new instance when there's no desktop file
+    if (service->desktopEntryName().isEmpty()) {
         return false;
     }
 
@@ -603,5 +560,20 @@ bool canLauchNewInstance(const AppData &appData)
         }
     }
     return true;
+}
+
+KService::Ptr serviceForUrl(const QUrl &url)
+{
+    // applications: URLs are used to refer to applications by their KService::menuId
+    // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
+    if (url.scheme() == QLatin1String("applications")) {
+        return KService::serviceByMenuId(url.path());
+    } else if (url.scheme() == QLatin1String("preferred")) {
+        return KService::serviceByStorageId(defaultApplication(url));
+    } else if (KDesktopFile::isDesktopFile(url.toLocalFile())) {
+        return KService::serviceByStorageId(url.toLocalFile());
+    } else {
+        return KService::Ptr(new KService(url.fileName(), url.fileName(), QString()));
+    }
 }
 }
