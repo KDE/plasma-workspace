@@ -33,6 +33,8 @@ private Q_SLOTS:
     void shouldCompareLauncherUrls();
     void testWindowUrlFromMetadata();
     void testWindowUrlFromMetadata_data();
+    void testServiceFromMetadata();
+    void testServiceFromMetadata_data();
     void testServiceFromCmdLine();
     void testServiceFromCmdLine_data();
     void testServiceForUrl();
@@ -188,6 +190,43 @@ void TaskToolsTest::testWindowUrlFromMetadata_data()
                                     << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
 
     QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QUrl();
+}
+
+void TaskToolsTest::testServiceFromMetadata()
+{
+    QFETCH(QString, appId);
+    QFETCH(QString, xWindowsWMClassName);
+    QFETCH(QString, resultStorageId);
+
+    const auto service = serviceFromMetadata(appId, 0, xWindowsWMClassName);
+
+    QCOMPARE(service->storageId(), resultStorageId);
+}
+
+void TaskToolsTest::testServiceFromMetadata_data()
+{
+    QTest::addColumn<QString>("appId");
+    QTest::addColumn<QString>("xWindowsWMClassName");
+    QTest::addColumn<QString>("resultStorageId");
+
+    QTest::addRow("Dolphin") << "org.kde.dolphin" << QString() << "org.kde.dolphin.desktop";
+    QTest::addRow("Element (Flatpak)") << "Element" << "element" << "im.riot.Riot.desktop";
+    QTest::addRow("Telegram (Flatpak)") << "TelegramDesktop" << "telegram-desktop"
+                                        << "org.telegram.desktop.desktop";
+    QTest::addRow("Spotify (Flatpak)") << "Spotify" << "spotify"
+                                       << "com.spotify.Client.desktop";
+    QTest::addRow("GammaRay") << "GammaRay" << "gammary-client" << "GammaRay.desktop";
+    QTest::addRow("Gwenview Importer") << "org.kde.gwenview_importer" << "gwenview_importer"
+                                       << "org.kde.gwenview_importer.desktop";
+    QTest::addRow("kcm_autostart") << "kcm_autostart" << QString() << "kcm_autostart.desktop";
+    QTest::addRow("brave") << "Brave-browser" << "brave-browser" << "brave-browser.desktop";
+    QTest::addRow("brave_webapp") << "Brave-browser" << "crx_efmjfjelnicpmdcmfikempdhlmainjcb"
+                                  << "brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop";
+
+    const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    QTest::addRow("kcm_kdeconnect") << dataDir + u"/kservices6/kcm_kdeconnect" << QString() << dataDir + u"/kservices6/kcm_kdeconnect.desktop";
+
+    QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QString();
 }
 
 void TaskToolsTest::testServiceFromCmdLine_data()

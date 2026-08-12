@@ -95,7 +95,7 @@ TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid);
  * WM_CLASS window property.
  * @returns A KService object matching the window
  */
-KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName);
+TASKMANAGER_EXPORT KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName);
 
 /**
 * Tries to map a given application to a desktop file
