@@ -241,7 +241,7 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
         return services.first();
     }
 
-    return {};
+    return KService::Ptr(new KService(QString(), QString(), QString()));
 }
 
 KService::List servicesFromEnvironment(quint32 pid)
