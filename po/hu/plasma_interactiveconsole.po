@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-08-12 00:49+0000\n"
 "PO-Revision-Date: 2024-03-20 13:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -44,47 +44,47 @@ msgstr "Sablonok"
 msgid "Desktop Shell Scripting Console"
 msgstr "Asztali felület parancsfájlkonzol"
 
-#: interactiveconsole.cpp:84
+#: interactiveconsole.cpp:89
 #, kde-format
 msgid "Editor"
 msgstr "Szerkesztő"
 
-#: interactiveconsole.cpp:95
+#: interactiveconsole.cpp:100
 #, kde-format
 msgid "Load"
 msgstr "Betöltés"
 
-#: interactiveconsole.cpp:101
+#: interactiveconsole.cpp:106
 #, kde-format
 msgid "Use"
 msgstr "Használat"
 
-#: interactiveconsole.cpp:161
+#: interactiveconsole.cpp:171
 #, kde-format
 msgid "Output"
 msgstr "Kimenet"
 
-#: interactiveconsole.cpp:274
+#: interactiveconsole.cpp:285
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Nem lehet betölteni a(z) <b>%1</b> parancsfájlt"
 
-#: interactiveconsole.cpp:323
+#: interactiveconsole.cpp:334
 #, kde-format
 msgid "Open Script File"
 msgstr "Parancsfájl megnyitása"
 
-#: interactiveconsole.cpp:438
+#: interactiveconsole.cpp:449
 #, kde-format
 msgid "Save Script File"
 msgstr "Parancsfájl mentése"
 
-#: interactiveconsole.cpp:527
+#: interactiveconsole.cpp:538
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Parancsfájl végrehajtása ekkor: %1"
 
-#: interactiveconsole.cpp:579
+#: interactiveconsole.cpp:590
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Futásidő: %1 ms"

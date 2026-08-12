@@ -132,7 +132,7 @@ msgstr "صفّر تخطيط سطح مكتب بلازما"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr "احذف نهائياً"
+msgstr "احذف نهائيًا"
 
 #: ui/ConfirmDeletionDialog.qml:17
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "أمتأكد من حذف هذه السمة بشكل نهائي؟"
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr "احذف نهائياً"
+msgstr "احذف نهائيًا"
 
 #: ui/ConfirmDeletionDialog.qml:26
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-08-12 00:49+0000\n"
 "PO-Revision-Date: 2024-05-15 10:28+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
@@ -45,47 +45,47 @@ msgstr "Ŝablonoj"
 msgid "Desktop Shell Scripting Console"
 msgstr "Labortabla Ŝelskripta Konzolo"
 
-#: interactiveconsole.cpp:84
+#: interactiveconsole.cpp:89
 #, kde-format
 msgid "Editor"
 msgstr "Redaktilo"
 
-#: interactiveconsole.cpp:95
+#: interactiveconsole.cpp:100
 #, kde-format
 msgid "Load"
 msgstr "Ŝargi"
 
-#: interactiveconsole.cpp:101
+#: interactiveconsole.cpp:106
 #, kde-format
 msgid "Use"
 msgstr "Uzo"
 
-#: interactiveconsole.cpp:161
+#: interactiveconsole.cpp:171
 #, kde-format
 msgid "Output"
 msgstr "Eligo"
 
-#: interactiveconsole.cpp:274
+#: interactiveconsole.cpp:285
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Neebla ŝargi skriptodosieron <b>%1</b>"
 
-#: interactiveconsole.cpp:323
+#: interactiveconsole.cpp:334
 #, kde-format
 msgid "Open Script File"
 msgstr "Malfermi Skriptodosieron"
 
-#: interactiveconsole.cpp:438
+#: interactiveconsole.cpp:449
 #, kde-format
 msgid "Save Script File"
 msgstr "Konservi Skriptodosieron"
 
-#: interactiveconsole.cpp:527
+#: interactiveconsole.cpp:538
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Rulante skripton je %1"
 
-#: interactiveconsole.cpp:579
+#: interactiveconsole.cpp:590
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Rultempo: %1ms"

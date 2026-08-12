@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-08-12 00:49+0000\n"
 "PO-Revision-Date: 2024-07-12 21:06+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -46,48 +46,48 @@ msgstr "Malar"
 msgid "Desktop Shell Scripting Console"
 msgstr "Konsoll for skrivebordsskal-skript"
 
-#: interactiveconsole.cpp:84
+#: interactiveconsole.cpp:89
 #, kde-format
 msgid "Editor"
 msgstr "Skriveprogram"
 
-#: interactiveconsole.cpp:95
+#: interactiveconsole.cpp:100
 #, kde-format
 msgid "Load"
 msgstr "Opna"
 
-#: interactiveconsole.cpp:101
+#: interactiveconsole.cpp:106
 #, kde-format
 msgid "Use"
 msgstr "Bruk"
 
-#: interactiveconsole.cpp:161
+#: interactiveconsole.cpp:171
 #, kde-format
 msgid "Output"
 msgstr "Utdata"
 
-#: interactiveconsole.cpp:274
+#: interactiveconsole.cpp:285
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Klarte ikkje opna skriptfila <b>%1</b>"
 
-#: interactiveconsole.cpp:323
+#: interactiveconsole.cpp:334
 #, kde-format
 msgid "Open Script File"
 msgstr "Opna skriptfil"
 
-#: interactiveconsole.cpp:438
+#: interactiveconsole.cpp:449
 #, kde-format
 msgid "Save Script File"
 msgstr "Lagra skriptfil"
 
 # %1 er tidspunkt, eks. «fredag 12. juli 2024 kl. 21:04:42 CEST».
-#: interactiveconsole.cpp:527
+#: interactiveconsole.cpp:538
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Køyrer skript %1"
 
-#: interactiveconsole.cpp:579
+#: interactiveconsole.cpp:590
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Køyretid: %1 ms"

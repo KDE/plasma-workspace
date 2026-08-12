@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-08-12 00:49+0000\n"
 "PO-Revision-Date: 2025-02-22 07:46+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -46,47 +46,47 @@ msgstr "Maler"
 msgid "Desktop Shell Scripting Console"
 msgstr "Konsoll for skrivebordsskall-skript"
 
-#: interactiveconsole.cpp:84
+#: interactiveconsole.cpp:89
 #, kde-format
 msgid "Editor"
 msgstr "Skriveprogram"
 
-#: interactiveconsole.cpp:95
+#: interactiveconsole.cpp:100
 #, kde-format
 msgid "Load"
 msgstr "Åpne"
 
-#: interactiveconsole.cpp:101
+#: interactiveconsole.cpp:106
 #, kde-format
 msgid "Use"
 msgstr "Bruk"
 
-#: interactiveconsole.cpp:161
+#: interactiveconsole.cpp:171
 #, kde-format
 msgid "Output"
 msgstr "Utdata"
 
-#: interactiveconsole.cpp:274
+#: interactiveconsole.cpp:285
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Klarte ikke åpne skriptfila <b>%1</b>"
 
-#: interactiveconsole.cpp:323
+#: interactiveconsole.cpp:334
 #, kde-format
 msgid "Open Script File"
 msgstr "Åpne skriptfil"
 
-#: interactiveconsole.cpp:438
+#: interactiveconsole.cpp:449
 #, kde-format
 msgid "Save Script File"
 msgstr "Lagre skriptfil"
 
-#: interactiveconsole.cpp:527
+#: interactiveconsole.cpp:538
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Kjører skript %1"
 
-#: interactiveconsole.cpp:579
+#: interactiveconsole.cpp:590
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Kjøretid: %1 ms"

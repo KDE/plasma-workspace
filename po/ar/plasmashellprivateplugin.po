@@ -146,7 +146,7 @@ msgstr "العقد القادم"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
-msgstr "أبقه مفتوحاً"
+msgstr "أبقه مفتوحًا"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:287
 #, kde-format

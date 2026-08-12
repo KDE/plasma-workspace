@@ -267,7 +267,7 @@ msgid ""
 "org</link>"
 msgstr ""
 "تعذر العثور على قائمة المحليات المتوفرة للنظام باستخدام أداة "
-"<command>localectl</command>. فضلاً أبلغ عن هذا بواسطة <link>https://bugs.kde."
+"<command>localectl</command>. فضلًا أبلغ عن هذا بواسطة <link>https://bugs.kde."
 "org</link>"
 
 #: languagelistmodel.cpp:97

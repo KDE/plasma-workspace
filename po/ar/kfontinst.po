@@ -479,7 +479,7 @@ msgstr ""
 #: kcmfontinst/GroupList.cpp:702
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>المجموعة المسماة <b>'%1'</b> موجودة مسبقاً.</qt>"
+msgstr "<qt>المجموعة المسماة <b>'%1'</b> موجودة مسبقًا.</qt>"
 
 #: kcmfontinst/GroupList.cpp:793
 #, kde-format
@@ -533,7 +533,7 @@ msgid ""
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
 "<h3>انتهى</h3><p>من فضلك لاحظ أنك بحاجة إلى إعادة تشغيل أي تطبيقات مفتوحة "
-"حالياً كي تستطيع رؤية التغييرات.</p>"
+"حاليًا كي تستطيع رؤية التغييرات.</p>"
 
 #: kcmfontinst/JobRunner.cpp:207
 #, kde-format
@@ -616,7 +616,7 @@ msgstr "<i>%1</i>خط بتماب،وهي معطلة على نظامك."
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
-msgstr "الملف <i>%1</i> يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقاً على نظامك."
+msgstr "الملف <i>%1</i> يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقًا على نظامك."
 
 #: kcmfontinst/JobRunner.cpp:700
 #, kde-format
@@ -906,7 +906,7 @@ msgstr[0] "لا خط"
 msgstr[1] "خط واحد"
 msgstr[2] "خطان"
 msgstr[3] "%1 خطوط"
-msgstr[4] "%1 خطاً"
+msgstr[4] "%1 خطًا"
 msgstr[5] "%1 خط"
 
 #: kcmfontinst/KCmFontInst.cpp:892
@@ -1201,7 +1201,7 @@ msgstr "%1خط بتماب،وهي معطلة على نظامك."
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
-msgstr "الملف %1 يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقاً على نظامك."
+msgstr "الملف %1 يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقًا على نظامك."
 
 #: kio/KioFonts.cpp:714
 #, kde-format

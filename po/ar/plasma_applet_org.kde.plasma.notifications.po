@@ -361,7 +361,7 @@ msgstr "حتى الإثنين"
 #: FullRepresentation.qml:174
 #, kde-format
 msgid "Until manually disabled"
-msgstr "حتى تعطل يدوياً"
+msgstr "حتى تعطل يدويًا"
 
 #: FullRepresentation.qml:226
 #, kde-format

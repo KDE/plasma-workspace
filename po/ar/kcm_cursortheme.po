@@ -116,7 +116,7 @@ msgstr "اعرض جميع السمات المتوفرة على النظام (و�
 #: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr "استخدم حجم المحدد عوضاً عن الحجم المبدئي السمة"
+msgstr "استخدم حجم المحدد عوضًا عن الحجم المبدئي السمة"
 
 #: plasma-apply-cursortheme.cpp:65
 #, kde-format

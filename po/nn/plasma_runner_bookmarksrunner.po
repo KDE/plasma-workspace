@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-21 00:47+0000\n"
+"POT-Creation-Date: 2026-08-12 00:49+0000\n"
 "PO-Revision-Date: 2010-01-19 21:58+0100\n"
 "Last-Translator: Eirik U. Birkeland <eirbir@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: bookmarksrunner.cpp:41
+#: bookmarksrunner.cpp:39
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Finn bokmerke i nettlesaren i samsvar med :q:."
 
-#: bookmarksrunner.cpp:42
+#: bookmarksrunner.cpp:40
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "bokmerke"
 
-#: bookmarksrunner.cpp:42
+#: bookmarksrunner.cpp:40
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Viser alle bokmerke i nettlesaren"
 
-#: bookmarksrunner.cpp:61
+#: bookmarksrunner.cpp:59
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

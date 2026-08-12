@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2018-2019, 2021-2026 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 00:48+0000\n"
-"PO-Revision-Date: 2026-03-28 15:35+0100\n"
+"PO-Revision-Date: 2026-08-03 22:28+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -57,7 +57,7 @@ msgstr "Sempre disattivata"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr "Sempre attivo"
+msgstr "Sempre attiva"
 
 #: ui/main.qml:60
 #, kde-format
