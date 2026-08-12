@@ -318,7 +318,7 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == Qt::DecorationRole) {
         return data.icon;
     } else if (role == AppId) {
-        return data.id;
+        return data.service->desktopEntryName();
     } else if (role == AppName) {
         return data.name;
     } else if (role == GenericName) {
@@ -348,11 +348,7 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == CanLaunchNewInstance) {
         return false;
     } else if (role == StorageId) {
-        const auto service = KService::serviceByDesktopName(data.id);
-        if (service) {
-            return service->storageId();
-        }
-        return QString();
+        return data.service->storageId();
     }
 
     return AbstractTasksModel::data(index, role);
