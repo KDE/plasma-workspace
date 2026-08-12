@@ -113,7 +113,7 @@ void TaskToolsTest::shouldFindApp()
     QFETCH(QUrl, url);
 
     QCOMPARE(data.service->desktopEntryName(), id);
-    QCOMPARE(data.name, name);
+    QCOMPARE(data.service->name(), name);
     QCOMPARE(data.genericName, genericName);
     QCOMPARE(data.url, url);
 }
@@ -125,7 +125,7 @@ void TaskToolsTest::testApplicationsUrl()
     const AppData &data = appDataFromUrl(url);
 
     QCOMPARE(data.service->desktopEntryName(), u"org.kde.konversation"_s);
-    QCOMPARE(data.name, u"Konversation"_s);
+    QCOMPARE(data.service->name(), u"Konversation"_s);
     QCOMPARE(data.genericName, u"IRC Client"_s);
     QCOMPARE(data.url, url);
 }

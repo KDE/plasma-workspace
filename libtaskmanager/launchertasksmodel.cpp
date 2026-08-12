@@ -314,13 +314,13 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     const QUrl &url = d->launchersOrder.at(index.row());
     const AppData &data = d->appData(url);
     if (role == Qt::DisplayRole) {
-        return data.name;
+        return data.service->name();
     } else if (role == Qt::DecorationRole) {
         return data.icon;
     } else if (role == AppId) {
         return data.service->desktopEntryName();
     } else if (role == AppName) {
-        return data.name;
+        return data.service->name();
     } else if (role == GenericName) {
         return data.genericName;
     } else if (role == LauncherUrl) {
