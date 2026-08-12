@@ -578,7 +578,7 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    const auto service = d->appData(d->launchersOrder.at(index.row())).service;
+    const auto service = serviceForUrl(d->launchersOrder.at(index.row()));
 
     if (service) {
         runApp(service);
