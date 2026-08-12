@@ -18,7 +18,6 @@
 namespace TaskManager
 {
 struct AppData {
-    QString genericName; // Generic application name.
     QIcon icon;
     QUrl url;
     KService::Ptr service;
@@ -157,4 +156,6 @@ TASKMANAGER_EXPORT void runApp(const KService::Ptr &service, const QList<QUrl> &
 TASKMANAGER_EXPORT KService::Ptr serviceForUrl(const QUrl &url);
 
 bool canLauchNewInstance(const KService::Ptr &service);
+
+TASKMANAGER_EXPORT QString appropriateCaption(const KService::Ptr &service);
 }

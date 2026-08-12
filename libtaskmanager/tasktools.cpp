@@ -31,7 +31,10 @@
 
 using namespace Qt::StringLiterals;
 
-static const QString appropriateCaption(const KService::Ptr &service)
+namespace TaskManager
+{
+
+QString appropriateCaption(const KService::Ptr &service)
 {
     if (!service) {
         return {};
@@ -45,8 +48,6 @@ static const QString appropriateCaption(const KService::Ptr &service)
     return service->comment();
 }
 
-namespace TaskManager
-{
 AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIcon)
 {
     AppData data;
@@ -66,8 +67,6 @@ AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIc
     } else {
         data.url = QUrl::fromLocalFile(service->exec());
     }
-
-    data.genericName = appropriateCaption(service);
 
     if (QIcon::hasThemeIcon(service->icon())) {
         data.icon = QIcon::fromTheme(service->icon());
