@@ -114,7 +114,7 @@ void TaskToolsTest::shouldFindApp()
 
     QCOMPARE(data.service->desktopEntryName(), id);
     QCOMPARE(data.service->name(), name);
-    QCOMPARE(data.genericName, genericName);
+    QCOMPARE(appropriateCaption(data.service), genericName);
     QCOMPARE(data.url, url);
 }
 
@@ -126,7 +126,7 @@ void TaskToolsTest::testApplicationsUrl()
 
     QCOMPARE(data.service->desktopEntryName(), u"org.kde.konversation"_s);
     QCOMPARE(data.service->name(), u"Konversation"_s);
-    QCOMPARE(data.genericName, u"IRC Client"_s);
+    QCOMPARE(appropriateCaption(data.service), u"IRC Client"_s);
     QCOMPARE(data.url, url);
 }
 

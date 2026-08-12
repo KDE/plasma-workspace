@@ -322,7 +322,7 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == AppName) {
         return data.service->name();
     } else if (role == GenericName) {
-        return data.genericName;
+        return appropriateCaption(data.service);
     } else if (role == LauncherUrl) {
         // Take resolved URL from cache.
         return data.url;
