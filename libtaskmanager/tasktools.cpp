@@ -412,6 +412,11 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
         }
     }
 
+    if (services.isEmpty() && !processName.isEmpty() && !QStandardPaths::findExecutable(cmdLine).isEmpty()) {
+        // cmdLine now exists without arguments if there were any.
+        services << QExplicitlySharedDataPointer<KService>(new KService(processName, cmdLine, QString()));
+    }
+
     return services;
 }
 
