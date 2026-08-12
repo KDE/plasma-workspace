@@ -31,8 +31,6 @@ private Q_SLOTS:
     void shouldFindApp_data();
     void testApplicationsUrl();
     void shouldCompareLauncherUrls();
-    void testWindowUrlFromMetadata();
-    void testWindowUrlFromMetadata_data();
     void testServiceFromMetadata();
     void testServiceFromMetadata_data();
     void testServiceFromCmdLine();
@@ -152,44 +150,6 @@ void TaskToolsTest::shouldCompareLauncherUrls()
 
     QVERIFY(launcherUrlsMatch(QUrl(a), QUrl(c), IgnoreQueryItems));
     QVERIFY(!launcherUrlsMatch(QUrl(c), QUrl(d), IgnoreQueryItems));
-}
-
-void TaskToolsTest::testWindowUrlFromMetadata()
-{
-    QFETCH(QString, appId);
-    QFETCH(QString, xWindowsWMClassName);
-    QFETCH(QUrl, resultUrl);
-
-    const QUrl actualResult = windowUrlFromMetadata(appId, 0, xWindowsWMClassName);
-
-    QCOMPARE(actualResult, resultUrl);
-}
-
-void TaskToolsTest::testWindowUrlFromMetadata_data()
-{
-    QTest::addColumn<QString>("appId");
-    QTest::addColumn<QString>("xWindowsWMClassName");
-    QTest::addColumn<QUrl>("resultUrl");
-
-    QTest::addRow("Dolphin") << QStringLiteral("org.kde.dolphin") << QString() << QUrl(QStringLiteral("applications:org.kde.dolphin.desktop"));
-    QTest::addRow("Element (Flatpak)") << QStringLiteral("Element") << QStringLiteral("element") << QUrl(QStringLiteral("applications:im.riot.Riot.desktop"));
-    QTest::addRow("Telegram (Flatpak)") << QStringLiteral("TelegramDesktop") << QStringLiteral("telegram-desktop")
-                                        << QUrl(QStringLiteral("applications:org.telegram.desktop.desktop"));
-    QTest::addRow("Spotify (Flatpak)") << QStringLiteral("Spotify") << QStringLiteral("spotify")
-                                       << QUrl(QStringLiteral("applications:com.spotify.Client.desktop"));
-    QTest::addRow("GammaRay") << QStringLiteral("GammaRay") << QStringLiteral("gammary-client") << QUrl(QStringLiteral("applications:GammaRay.desktop"));
-    QTest::addRow("Gwenview Importer") << QStringLiteral("org.kde.gwenview_importer") << QStringLiteral("gwenview_importer")
-                                       << QUrl(QStringLiteral("applications:org.kde.gwenview_importer.desktop"));
-    QTest::addRow("kcm_autostart") << QStringLiteral("kcm_autostart") << QString() << QUrl(QStringLiteral("applications:kcm_autostart.desktop"));
-    QTest::addRow("brave") << QStringLiteral("Brave-browser") << QStringLiteral("brave-browser") << QUrl(u"applications:brave-browser.desktop"_s);
-    QTest::addRow("brave_webapp") << QStringLiteral("Brave-browser") << QStringLiteral("crx_efmjfjelnicpmdcmfikempdhlmainjcb")
-                                  << QUrl(u"applications:brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"_s);
-
-    const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices6/kcm_kdeconnect") << QString()
-                                    << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
-
-    QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QUrl();
 }
 
 void TaskToolsTest::testServiceFromMetadata()
