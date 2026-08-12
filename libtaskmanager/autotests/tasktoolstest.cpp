@@ -33,6 +33,8 @@ private Q_SLOTS:
     void shouldCompareLauncherUrls();
     void testWindowUrlFromMetadata();
     void testWindowUrlFromMetadata_data();
+    void testServiceFromCmdLine();
+    void testServiceFromCmdLine_data();
 
 private:
     void createIcon();
@@ -184,6 +186,35 @@ void TaskToolsTest::testWindowUrlFromMetadata_data()
                                     << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
 
     QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QUrl();
+}
+
+void TaskToolsTest::testServiceFromCmdLine_data()
+{
+    QTest::addColumn<QString>("cmdLine");
+    QTest::addColumn<QString>("processName");
+    QTest::addColumn<QString>("serviceName");
+    QTest::addColumn<QString>("serviceExec");
+    QTest::addColumn<QString>("serviceDesktopName");
+
+    QTest::addRow("gammaray_with_arg") << "gammaray --foo" << "gammaray" << "GammaRay" << "gammaray" << "GammaRay";
+    QTest::addRow("gammaray_absolute") << "/usr/bin/gammaray" << "gammaray" << "GammaRay" << "gammaray" << "GammaRay";
+    QTest::addRow("no_desktop_file") << "ls -la" << "ls" << "ls" << "ls" << "";
+}
+
+void TaskToolsTest::testServiceFromCmdLine()
+{
+    QFETCH(QString, cmdLine);
+    QFETCH(QString, processName);
+    QFETCH(QString, serviceName);
+    QFETCH(QString, serviceExec);
+    QFETCH(QString, serviceDesktopName);
+
+    const auto services = servicesFromCmdLine(cmdLine, processName);
+
+    QCOMPARE(services.size(), 1);
+    QCOMPARE(services.first()->name(), serviceName);
+    QCOMPARE(services.first()->exec(), serviceExec);
+    QCOMPARE(services.first()->desktopEntryName(), serviceDesktopName);
 }
 
 QTEST_MAIN(TaskToolsTest)
