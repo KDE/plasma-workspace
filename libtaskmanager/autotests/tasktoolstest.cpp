@@ -35,6 +35,8 @@ private Q_SLOTS:
     void testWindowUrlFromMetadata_data();
     void testServiceFromCmdLine();
     void testServiceFromCmdLine_data();
+    void testServiceForUrl();
+    void testServiceForUrl_data();
 
 private:
     void createIcon();
@@ -215,6 +217,37 @@ void TaskToolsTest::testServiceFromCmdLine()
     QCOMPARE(services.first()->name(), serviceName);
     QCOMPARE(services.first()->exec(), serviceExec);
     QCOMPARE(services.first()->desktopEntryName(), serviceDesktopName);
+}
+
+void TaskToolsTest::testServiceForUrl_data()
+{
+    QTest::addColumn<QString>("url");
+    QTest::addColumn<QString>("expectedDesktopName");
+    QTest::addColumn<QString>("expectedStorageId");
+
+    QTest::addRow("applicationsUrl") << "applications:org.kde.dolphin.desktop" << "org.kde.dolphin" << "org.kde.dolphin.desktop";
+
+    QTest::addRow("absolute_app") << u"file://" + QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"applications/org.kde.dolphin.desktop"_s)
+                                  << "org.kde.dolphin" << "org.kde.dolphin.desktop";
+
+    QTest::addRow("absolute_desktop") << u"file://" + QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"kservices6/kcm_kdeconnect.desktop"_s)
+                                      << "kcm_kdeconnect"
+                                      << QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"kservices6/kcm_kdeconnect.desktop"_s);
+
+    QTest::addRow("executable") << "file:curl" << "" << "";
+
+    // TODO test preferred:// URL
+}
+
+void TaskToolsTest::testServiceForUrl()
+{
+    QFETCH(QString, url);
+    QFETCH(QString, expectedDesktopName);
+    QFETCH(QString, expectedStorageId);
+
+    const auto service = serviceForUrl(QUrl(url));
+    QCOMPARE(service->desktopEntryName(), expectedDesktopName);
+    QCOMPARE(service->storageId(), expectedStorageId);
 }
 
 QTEST_MAIN(TaskToolsTest)
