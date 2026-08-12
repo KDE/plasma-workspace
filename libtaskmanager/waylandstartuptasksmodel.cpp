@@ -157,15 +157,13 @@ void WaylandStartupTasksModel::Private::addActivation(PlasmaActivation *activati
             return;
         }
 
-        const AppData appData = appDataFromService(service);
-
         const int count = startups.size();
         q->beginInsertRows(QModelIndex(), count, count);
         startups.push_back(Startup{
-            .name = appData.service->name(),
-            .icon = appData.icon,
+            .name = service->name(),
+            .icon = QIcon::fromTheme(service->icon()),
             .applicationId = appId,
-            .launcherUrl = appData.url,
+            .launcherUrl = QUrl(u"applications:" + service->menuId()),
             .activation = std::unique_ptr<PlasmaActivation>(activation),
         });
         q->endInsertRows();
