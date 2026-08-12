@@ -131,11 +131,8 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
     const auto activities = ActivitiesSet(_activities.cbegin(), _activities.cend());
 
     if (url.isLocalFile() && KDesktopFile::isDesktopFile(url.toLocalFile())) {
-        KDesktopFile f(url.toLocalFile());
-
-        const KService::Ptr service = KService::serviceByStorageId(f.fileName());
-
         // Resolve to non-absolute menuId-based URL if possible.
+        const KService::Ptr service = KService::serviceByStorageId(url.toLocalFile());
         if (service) {
             const QString &menuId = service->menuId();
 
