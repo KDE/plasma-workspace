@@ -5,6 +5,7 @@
 */
 
 #include "updateclipboardjob.h"
+#include "mimetypes.h"
 
 #include <QBuffer>
 #include <QCryptographicHash>
@@ -24,11 +25,20 @@ using namespace Qt::StringLiterals;
 
 namespace
 {
-constexpr std::array<QStringView, 3> s_acceptableTextFormatPrefixes{
-    u"text/",
-    u"application/json",
-    u"application/xml",
+inline constexpr std::array s_acceptableTextFormatPrefixes{
+    MimeTypes::textPrefix,
+    MimeTypes::json,
+    MimeTypes::xml,
 };
+}
+
+constexpr bool hasAcceptableTextFormatPrefix(QStringView format)
+{
+    // text/plain and text/plain;charset=utf-8 are handled separately.
+    // We only keep UTF-8 plain text.
+    return !format.startsWith(MimeTypes::plainText) && std::ranges::any_of(s_acceptableTextFormatPrefixes, [format](const auto &prefix) {
+        return format.startsWith(prefix);
+    });
 }
 
 UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
@@ -43,44 +53,77 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
     std::list<MimeData> mimeDataList;
     const QStringList formats = mimeData->formats();
 
-    if (mimeData->hasText()) {
-        QByteArray data = mimeData->text().toUtf8();
-        hash.addData(data);
-        mimeDataList.emplace_back(s_plainTextPrefix, std::move(data), QString::fromLatin1(hash.result().toHex()));
-        mimeDataList.emplace_back(s_plainUtf8Text, QByteArray() /*Same uuid*/, QString::fromLatin1(hash.result().toHex()));
-    }
-
-    if (mimeData->hasImage()) {
-        QByteArray data;
-        QImage image;
-        // If png is available directly do not do a needless encoding
-        if (mimeData->hasFormat(QLatin1String("image/png"))) {
-            data = mimeData->data(QLatin1String("image/png"));
-            image = QImage::fromData(data, "PNG");
-        } else {
-            image = mimeData->imageData().value<QImage>();
-            QBuffer buffer(&data);
-            QImageWriter encoder(&buffer, "PNG");
-            encoder.write(image);
-        }
-        hash.reset();
-        hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
-        mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
-    }
-
+    bool isUriListSet = false;
+    bool isPlainTextSet = false;
+    bool isPngSet = false;
+    const bool usePng = mimeData->hasFormat(MimeTypes::png);
     for (const QString &format : formats) {
         if (!format.contains(u'/')) {
             continue;
         }
 
-        if (format.startsWith(s_plainTextPrefix) || format.startsWith(u"image/") || format == u"application/x-qt-image") {
-            continue; // Already saved
+        if (format == MimeTypes::uriList) {
+            if (isUriListSet) {
+                continue;
+            }
+            isUriListSet = true;
+            QByteArray data = mimeData->data(format);
+            hash.reset();
+            hash.addData(data);
+            mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            continue;
         }
 
-        // Keep the suggested file name.
-        if (format != "application/x-kde-suggestedfilename"_L1 && std::ranges::none_of(s_acceptableTextFormatPrefixes, [&format](QStringView prefix) {
-                return format.startsWith(prefix);
-            })) {
+        const bool isPlainText = MimeTypes::isPlainText(format);
+        if (isPlainText) {
+            if (isPlainTextSet) {
+                continue;
+            }
+            isPlainTextSet = true;
+            // On the web, text/plain is US-ASCII by default according to MDN.
+            // On Plasma/Qt, text/plain is effectively UTF-8 (superset of ASCII)
+            // by default. QMimeData, QWaylandMimeData, QWaylandClipboard and
+            // KSystemClipboard treat text/plain and text/plain;charset=utf-8
+            // like they are interchangeable with each other.
+            // QMimeData::text prefers UTF-8 data for its QString.
+            // QMimeData::setText only sets text/plain with a QVariant(QString),
+            // but QWaylandMimeData, QWaylandClipboard and KSystemClipboard
+            // automatically offer text/plain;charset=utf-8 with text/plain.
+            QByteArray data = mimeData->text().toUtf8();
+            hash.reset();
+            hash.addData(data);
+            mimeDataList.emplace_back(MimeTypes::plainText, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            mimeDataList.emplace_back(MimeTypes::plainUtf8Text, QByteArray() /*Same uuid*/, QString::fromLatin1(hash.result().toHex()));
+            continue;
+        }
+
+        const bool isImage = MimeTypes::isImage(format);
+        if (isImage) {
+            if (isPngSet) {
+                continue;
+            }
+            isPngSet = true;
+            QByteArray data;
+            QImage image;
+            // If png is available directly do not do a needless encoding
+            if (usePng) {
+                data = mimeData->data(MimeTypes::png);
+                image = QImage::fromData(data, "PNG");
+            } else {
+                image = mimeData->imageData().value<QImage>();
+                QBuffer buffer(&data);
+                QImageWriter encoder(&buffer, "PNG");
+                encoder.write(image);
+            }
+            auto imageHashBytes = reinterpret_cast<const char *>(image.constBits());
+            hash.reset();
+            hash.addData({imageHashBytes, image.sizeInBytes()});
+            mimeDataList.emplace_back(MimeTypes::png, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            continue;
+        }
+
+        // Keep the suggested file name and text formats that aren't plain text.
+        if (format != MimeTypes::kdeSuggestedFileName && !hasAcceptableTextFormatPrefix(format)) {
             // Don't create un-asked for DDE links in LibreOffice apps;
             // we don't want them.
             continue;
@@ -96,6 +139,15 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
         hash.reset();
         hash.addData(data);
         mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
+    }
+
+    // put fallback plain text for urls after original formats
+    if (!isPlainTextSet && isUriListSet) {
+        QByteArray data = mimeData->text().toUtf8(); // also returns urls
+        hash.reset();
+        hash.addData(data);
+        mimeDataList.emplace_back(MimeTypes::plainText, std::move(data), QString::fromLatin1(hash.result().toHex()));
+        mimeDataList.emplace_back(MimeTypes::plainUtf8Text, QByteArray() /*Same uuid*/, QString::fromLatin1(hash.result().toHex()));
     }
 
     return new UpdateDatabaseJob(parent, database, databaseFolder, uuid, text, std::move(mimeDataList), timestamp);
