@@ -67,7 +67,6 @@ AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIc
         data.url = QUrl::fromLocalFile(service->exec());
     }
 
-    data.name = service->name();
     data.genericName = appropriateCaption(service);
 
     if (QIcon::hasThemeIcon(service->icon())) {

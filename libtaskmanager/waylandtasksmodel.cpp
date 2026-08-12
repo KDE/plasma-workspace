@@ -894,7 +894,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
             return id;
         }
     } else if (role == AppName) {
-        return d->appData(window).name;
+        return d->appData(window).service->name();
     } else if (role == GenericName) {
         return d->appData(window).genericName;
     } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
