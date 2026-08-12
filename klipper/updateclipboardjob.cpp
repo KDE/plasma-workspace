@@ -29,6 +29,17 @@ constexpr std::array<QStringView, 3> s_acceptableTextFormatPrefixes{
     u"application/json",
     u"application/xml",
 };
+constexpr auto s_uriList = "text/uri-list"_L1;
+constexpr auto s_qImageFormat = "application/x-qt-image"_L1;
+constexpr auto s_imageFormatPrefix = "image/"_L1;
+constexpr auto s_suggestedFileNameFormat = "application/x-kde-suggestedfilename"_L1;
+}
+
+constexpr bool hasAcceptableTextFormatPrefix(QStringView format)
+{
+    return std::ranges::any_of(s_acceptableTextFormatPrefixes, [format](QStringView prefix) {
+        return format.startsWith(prefix);
+    });
 }
 
 UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
@@ -43,44 +54,68 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
     std::list<MimeData> mimeDataList;
     const QStringList formats = mimeData->formats();
 
-    if (mimeData->hasText()) {
-        QByteArray data = mimeData->text().toUtf8();
-        hash.addData(data);
-        mimeDataList.emplace_back(s_plainTextPrefix, std::move(data), QString::fromLatin1(hash.result().toHex()));
-        mimeDataList.emplace_back(s_plainUtf8Text, QByteArray() /*Same uuid*/, QString::fromLatin1(hash.result().toHex()));
-    }
-
-    if (mimeData->hasImage()) {
-        QByteArray data;
-        QImage image;
-        // If png is available directly do not do a needless encoding
-        if (mimeData->hasFormat(QLatin1String("image/png"))) {
-            data = mimeData->data(QLatin1String("image/png"));
-            image = QImage::fromData(data, "PNG");
-        } else {
-            image = mimeData->imageData().value<QImage>();
-            QBuffer buffer(&data);
-            QImageWriter encoder(&buffer, "PNG");
-            encoder.write(image);
-        }
-        hash.reset();
-        hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
-        mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
-    }
-
+    bool isUriListSet = false;
+    bool isPlainTextSet = false;
+    bool isPngSet = false;
+    const bool usePng = mimeData->hasFormat(s_imageFormat);
     for (const QString &format : formats) {
         if (!format.contains(u'/')) {
             continue;
         }
 
-        if (format.startsWith(s_plainTextPrefix) || format.startsWith(u"image/") || format == u"application/x-qt-image") {
-            continue; // Already saved
+        if (format == s_uriList) {
+            if (isUriListSet) {
+                continue;
+            }
+            isUriListSet = true;
+            QByteArray data = mimeData->data(format);
+            hash.reset();
+            hash.addData(data);
+            mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            continue;
+        }
+
+        const bool isPlainText = format == s_plainTextPrefix || format == s_plainUtf8Text;
+        if (isPlainText) {
+            if (isPlainTextSet) {
+                continue;
+            }
+            isPlainTextSet = true;
+            QByteArray data = mimeData->data(format);
+            hash.reset();
+            hash.addData(data);
+            mimeDataList.emplace_back(s_plainTextPrefix, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            mimeDataList.emplace_back(s_plainUtf8Text, QByteArray() /*Same uuid*/, QString::fromLatin1(hash.result().toHex()));
+            continue;
+        }
+
+        const bool isImage = format.startsWith(s_imageFormatPrefix) || format == s_qImageFormat;
+        if (isImage) {
+            if (isPngSet) {
+                continue;
+            }
+            isPngSet = true;
+            QByteArray data;
+            QImage image;
+            // If png is available directly do not do a needless encoding
+            if (usePng) {
+                data = mimeData->data(s_imageFormat);
+                image = QImage::fromData(data, "PNG");
+            } else {
+                image = mimeData->imageData().value<QImage>();
+                QBuffer buffer(&data);
+                QImageWriter encoder(&buffer, "PNG");
+                encoder.write(image);
+            }
+            auto imageHashBytes = reinterpret_cast<const char *>(image.constBits());
+            hash.reset();
+            hash.addData({imageHashBytes, image.sizeInBytes()});
+            mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            continue;
         }
 
         // Keep the suggested file name.
-        if (format != "application/x-kde-suggestedfilename"_L1 && std::ranges::none_of(s_acceptableTextFormatPrefixes, [&format](QStringView prefix) {
-                return format.startsWith(prefix);
-            })) {
+        if (format != s_suggestedFileNameFormat && !hasAcceptableTextFormatPrefix(format)) {
             // Don't create un-asked for DDE links in LibreOffice apps;
             // we don't want them.
             continue;
@@ -96,6 +131,15 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
         hash.reset();
         hash.addData(data);
         mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
+    }
+
+    // put fallback plain text for urls after original formats
+    if (!isPlainTextSet && isUriListSet) {
+        QByteArray data = mimeData->text().toUtf8(); // also returns urls
+        hash.reset();
+        hash.addData(data);
+        mimeDataList.emplace_back(s_plainTextPrefix, std::move(data), QString::fromLatin1(hash.result().toHex()));
+        mimeDataList.emplace_back(s_plainUtf8Text, QByteArray() /*Same uuid*/, QString::fromLatin1(hash.result().toHex()));
     }
 
     return new UpdateDatabaseJob(parent, database, databaseFolder, uuid, text, std::move(mimeDataList), timestamp);
