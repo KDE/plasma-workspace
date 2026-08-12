@@ -69,7 +69,6 @@ AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIc
 
     data.name = service->name();
     data.genericName = appropriateCaption(service);
-    data.id = service->desktopEntryName();
 
     if (QIcon::hasThemeIcon(service->icon())) {
         data.icon = QIcon::fromTheme(service->icon());
