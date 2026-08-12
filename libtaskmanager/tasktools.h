@@ -171,5 +171,10 @@ TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
  */
 TASKMANAGER_EXPORT void runApp(const AppData &appData, const QList<QUrl> &urls = QList<QUrl>());
 
+/**
+ * Attemps to create a service object for a given launcher url.
+ */
+TASKMANAGER_EXPORT KService::Ptr serviceForUrl(const QUrl &url);
+
 bool canLauchNewInstance(const AppData &appData);
 }
