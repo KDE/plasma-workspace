@@ -55,6 +55,8 @@ AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIc
         return data;
     }
 
+    data.service = service;
+
     // applications: URLs are used to refer to applications by their KService::menuId
     // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
     if (!service->menuId().isEmpty()) {
