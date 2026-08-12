@@ -109,27 +109,6 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     return appDataFromService(service, fallbackIcon);
 }
 
-QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
-{
-    const auto service = serviceFromMetadata(appId, pid, xWindowsWMClassName);
-
-    if (service) {
-        // applications: URLs are used to refer to applications by their KService::menuId
-        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-        if (!service->menuId().isEmpty()) {
-            return QUrl(u"applications:" + service->menuId());
-        }
-
-        if (!service->entryPath().isEmpty()) {
-            return QUrl::fromLocalFile(service->entryPath());
-        }
-
-        return QUrl::fromLocalFile(service->exec());
-    }
-
-    return QUrl();
-}
-
 KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
 {
     KService::List services;
