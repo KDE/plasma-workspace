@@ -886,7 +886,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == Qt::DecorationRole) {
         return d->icon(window);
     } else if (role == AppId) {
-        const QString &id = d->appData(window).id;
+        const QString &id = d->appData(window).service->desktopEntryName();
 
         if (id.isEmpty()) {
             return window->appId;
@@ -970,11 +970,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == CanLaunchNewInstance) {
         return canLauchNewInstance(d->appData(window).service);
     } else if (role == StorageId) {
-        const auto service = KService::serviceByDesktopName(d->appData(window).id);
-        if (service) {
-            return service->storageId();
-        }
-        return QString();
+        return d->appData(window).service->storageId();
     }
 
     return AbstractTasksModel::data(index, role);
