@@ -150,7 +150,7 @@ TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
  * @param appData An application data struct.
  * @param urls A list of URLs for the application to open.
  */
-TASKMANAGER_EXPORT void runApp(const AppData &appData, const QList<QUrl> &urls = QList<QUrl>());
+TASKMANAGER_EXPORT void runApp(const KService::Ptr &service, const QList<QUrl> &urls = QList<QUrl>());
 
 /**
  * Attemps to create a service object for a given launcher url.

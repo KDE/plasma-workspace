@@ -582,7 +582,11 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    runApp(d->appData(d->launchersOrder.at(index.row())));
+    const auto service = serviceForUrl(d->appData(d->launchersOrder.at(index.row())).url);
+
+    if (service) {
+        runApp(service);
+    }
 }
 
 void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
