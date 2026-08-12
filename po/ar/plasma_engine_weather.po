@@ -627,7 +627,7 @@ msgstr "ممتازة"
 #, kde-format
 msgctxt "visibility"
 msgid "Very Good"
-msgstr "جيدة جداً"
+msgstr "جيدة جدًا"
 
 #: bbcukmet_i18n.dat:102
 #, kde-format

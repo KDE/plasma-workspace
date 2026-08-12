@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-05-15 18:05+0400\n"
+"PO-Revision-Date: 2026-04-30 08:52+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -149,7 +149,7 @@ msgstr "كبير"
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "اجعله كبيراً آليّاً في وضع اللمس"
+msgstr "اجعله كبيرًا آليًّا في وضع اللمس"
 
 #: package/contents/ui/ExpandedRepresentation.qml:64
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "إجراءات أكثر"
 #: package/contents/ui/ExpandedRepresentation.qml:230
 #, kde-format
 msgid "Keep Open"
-msgstr "أبقه مفتوحاً"
+msgstr "أبقه مفتوحًا"
 
 #: package/contents/ui/ExpanderArrow.qml:23
 #, kde-format

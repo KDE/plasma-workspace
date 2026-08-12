@@ -474,7 +474,7 @@ msgstr ""
 #: kcmfontinst/GroupList.cpp:699
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>المجموعة المسماة <b>'%1'</b> موجودة مسبقاً.</qt>"
+msgstr "<qt>المجموعة المسماة <b>'%1'</b> موجودة مسبقًا.</qt>"
 
 #: kcmfontinst/GroupList.cpp:792
 #, kde-format
@@ -528,7 +528,7 @@ msgid ""
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
 "<h3>انتهى</h3><p>من فضلك لاحظ أنك بحاجة إلى إعادة تشغيل أي تطبيقات مفتوحة "
-"حالياً كي تستطيع رؤية التغييرات.</p>"
+"حاليًا كي تستطيع رؤية التغييرات.</p>"
 
 #: kcmfontinst/JobRunner.cpp:211
 #, kde-format
@@ -611,7 +611,7 @@ msgstr "<i>%1</i>خط بتماب،وهي معطلة على نظامك."
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
-msgstr "الملف <i>%1</i> يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقاً على نظامك."
+msgstr "الملف <i>%1</i> يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقًا على نظامك."
 
 #: kcmfontinst/JobRunner.cpp:705
 #, kde-format
@@ -752,7 +752,7 @@ msgid ""
 "installed fonts. To install a font, simply copy one into the folder.</p>"
 msgstr ""
 "<h1>مثبّت الخطوط</h1><p> تسمح لك هذه الوحدة بتثبيت الخطوط TrueType، Type1، و "
-"Bitmap.</p><p>يمكنك أيضاً تثبيت الخطوط مستخدماً كونكيورر: اكتب fonts:/ في شريط "
+"Bitmap.</p><p>يمكنك أيضًا تثبيت الخطوط مستخدمًا كونكيورر: اكتب fonts:/ في شريط "
 "المواقع لِــ كونكيورر و سيظهر لك هذا الخطوط المثبتة. لتثبيت خط ما، فقط انسخ "
 "أي خط إلى المجلد .</p>"
 
@@ -950,7 +950,7 @@ msgstr[0] "لا خط"
 msgstr[1] "خط واحد"
 msgstr[2] "خطان"
 msgstr[3] "%1 خطوط"
-msgstr[4] "%1 خطاً"
+msgstr[4] "%1 خطًا"
 msgstr[5] "%1 خط"
 
 #: kcmfontinst/KCmFontInst.cpp:902
@@ -1245,7 +1245,7 @@ msgstr "%1خط بتماب،وهي معطلة على نظامك."
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
-msgstr "الملف %1 يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقاً على نظامك."
+msgstr "الملف %1 يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقًا على نظامك."
 
 #: kio/KioFonts.cpp:720
 #, kde-format

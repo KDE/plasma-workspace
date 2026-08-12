@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-06-09 17:50+0400\n"
+"PO-Revision-Date: 2026-04-16 09:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -229,7 +229,7 @@ msgstr "يدويّ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr "اختر نمطاً…"
+msgstr "اختر نمطًا…"
 
 #: package/contents/ui/configAppearance.qml:260
 #, kde-format
@@ -241,7 +241,7 @@ msgstr "%1نقطة %2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr "اختر خطاً"
+msgstr "اختر خطًا"
 
 #: package/contents/ui/configCalendar.qml:45
 #, kde-format
@@ -334,7 +334,7 @@ msgid ""
 "travel, switch the systemwide time zone instead."
 msgstr ""
 "استخدام هذه الميزة لن يغير المنطقة الزمنية لكل النظام. عندما تسافر، بدّل "
-"المنطقة الزمنية لكامل النظام بدلاً من ذلك."
+"المنطقة الزمنية لكامل النظام بدلًا من ذلك."
 
 #: package/contents/ui/configTimeZones.qml:198
 #, kde-format

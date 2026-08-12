@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-08-14 13:13+0400\n"
+"PO-Revision-Date: 2025-08-30 19:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -520,7 +520,7 @@ msgstr "أ&نهِ"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "استدع إجراء على الحافظة الحالية يدوياً"
+msgstr "استدع إجراء على الحافظة الحالية يدويًا"
 
 #: klipper.cpp:222
 #, kde-format
@@ -576,7 +576,7 @@ msgstr "هل يجب أن يبدأ Klipper آليّا عند الولوج؟"
 #: klipper.cpp:607
 #, kde-format
 msgid "Automatically Start Klipper?"
-msgstr "تشغيل Klipper آليّاً ؟"
+msgstr "تشغيل Klipper آليًّا ؟"
 
 #: klipper.cpp:608
 #, kde-format

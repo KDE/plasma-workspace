@@ -161,7 +161,7 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "قد ينتج عن الخطوط الكبيرة جدًا نتائج غريبة المظهر. ضع في اعتبارك تعديل مقياس "
-"الشاشة العامل العام بدلاً من استخدام حجم خط كبير جدًا."
+"الشاشة العامل العام بدلًا من استخدام حجم خط كبير جدًا."
 
 #: package/contents/ui/main.qml:72
 #, kde-format
