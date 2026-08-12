@@ -478,20 +478,16 @@ QRect screenGeometry(const QPoint &pos)
     return screenGeometry;
 }
 
-void runApp(const AppData &appData, const QList<QUrl> &urls)
+void runApp(const KService::Ptr &service, const QList<QUrl> &urls)
 {
-    if (appData.url.isValid()) {
-        const KService::Ptr service = serviceForUrl(appData.url);
+    Q_ASSERT(service);
 
-        if (service && service->isApplication()) {
-            auto *job = new KIO::ApplicationLauncherJob(service);
-            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
-            job->setUrls(urls);
-            job->start();
+    auto *job = new KIO::ApplicationLauncherJob(service);
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->setUrls(urls);
+    job->start();
 
-            KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + service->storageId())), QStringLiteral("org.kde.libtaskmanager"));
-        }
-    }
+    KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + service->storageId())), QStringLiteral("org.kde.libtaskmanager"));
 }
 
 bool canLauchNewInstance(const AppData &appData)
