@@ -904,7 +904,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
             return id;
         }
     case AppName:
-        return d->appData(window).name;
+        return d->appData(window).service->name();
     case GenericName:
         return d->appData(window).genericName;
     case LauncherUrl:

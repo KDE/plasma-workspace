@@ -18,7 +18,6 @@
 namespace TaskManager
 {
 struct AppData {
-    QString name; // Application name.
     QString genericName; // Generic application name.
     QIcon icon;
     QUrl url;
