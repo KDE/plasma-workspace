@@ -617,7 +617,7 @@ msgstr "ام&حُ تاريخ الحافظة"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "استدع إجراء على الحافظة الحالية يدوياً"
+msgstr "استدع إجراء على الحافظة الحالية يدويًا"
 
 #: klipper.cpp:108
 #, kde-format

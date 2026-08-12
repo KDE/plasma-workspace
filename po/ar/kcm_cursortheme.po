@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 02:44+0000\n"
-"PO-Revision-Date: 2026-03-23 22:12+0400\n"
+"PO-Revision-Date: 2026-06-13 19:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -91,7 +91,7 @@ msgstr "المهلة بالثواني"
 #: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr "لا يتوفر الحجم '%1'، سيستعمل %2 عوضاً عن ذلك."
+msgstr "لا يتوفر الحجم '%1'، سيستعمل %2 عوضًا عن ذلك."
 
 #: plasma-apply-cursortheme.cpp:65
 #, kde-format
@@ -121,7 +121,7 @@ msgstr "اعرض جميع السمات المتوفرة على النظام (و�
 #: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr "استخدم حجم المحدد عوضاً عن الحجم المبدئي السمة"
+msgstr "استخدم حجم المحدد عوضًا عن الحجم المبدئي السمة"
 
 #: plasma-apply-cursortheme.cpp:92
 #, kde-format

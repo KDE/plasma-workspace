@@ -114,7 +114,7 @@ msgstr ""
 "لا يُنصح بتعطيل الحافظة، إذ سيؤدي ذلك إلى فقدان البيانات المنسوخة عند إغلاق "
 "التطبيق الذي نُسخت منه.<nl/><nl/>لا تقم بذلك إلا إذا كنت قد أضفت يدويًا أداة "
 "الحافظة المستقلة في مكان آخر، أو إذا كنت تستخدم مدير حافظة تابع لجهة خارجية. "
-"بدلاً من ذلك، فكر في ضبط الحافظة بحيث لا تحفظ السجل، أو بحيث تتذكر عنصرًا "
+"بدلًا من ذلك، فكر في ضبط الحافظة بحيث لا تحفظ السجل، أو بحيث تتذكر عنصرًا "
 "واحدًا فقط في كل مرة."
 
 #: qml/ConfigGeneral.qml:198
@@ -213,7 +213,7 @@ msgstr "من اليمين إلى اليسار"
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "اجعله كبيراً آليّاً في وضع اللمس"
+msgstr "اجعله كبيرًا آليًّا في وضع اللمس"
 
 #: qml/ConfigGeneral.qml:332
 #, kde-format
@@ -246,7 +246,7 @@ msgstr "إجراءات أكثر"
 #: qml/ExpandedRepresentation.qml:259
 #, kde-format
 msgid "Keep Open"
-msgstr "أبقه مفتوحاً"
+msgstr "أبقه مفتوحًا"
 
 #: qml/ExpanderArrow.qml:25
 #, kde-format

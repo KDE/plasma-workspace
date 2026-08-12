@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2025-10-30 10:48+0400\n"
+"PO-Revision-Date: 2026-06-21 20:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -89,7 +89,7 @@ msgstr "بناءً على ما إذا كان نمط بلازما مظلمًا أ
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr "استناداً إلى دورة الليل والنهار"
+msgstr "استنادًا إلى دورة الليل والنهار"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
@@ -371,7 +371,7 @@ msgstr "أزل مجلد"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Open Folder…"
-msgstr "افتح مجلداً…"
+msgstr "افتح مجلدًا…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
@@ -400,7 +400,7 @@ msgstr "شاشة القفل"
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr "معاً"
+msgstr "معًا"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:95
 #, kde-kuit-format

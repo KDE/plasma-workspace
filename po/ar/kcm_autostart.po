@@ -25,7 +25,7 @@ msgstr ""
 #: autostartmodel.cpp:381
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr "\"%1\" ليس عنواناً مطلقًا."
+msgstr "\"%1\" ليس عنوانًا مطلقًا."
 
 #: autostartmodel.cpp:384
 #, kde-format

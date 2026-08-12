@@ -125,7 +125,7 @@ msgstr "ثبّت البحث"
 #: qml/RunCommand.qml:311
 #, kde-format
 msgid "Keep Open"
-msgstr "أبقه مفتوحاً"
+msgstr "أبقه مفتوحًا"
 
 #: qml/RunCommand.qml:373 qml/RunCommand.qml:379
 #, kde-format

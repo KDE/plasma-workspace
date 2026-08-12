@@ -82,7 +82,7 @@ msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"مدير جلسة بلازما الموثوق به و الذي يتطابق معيارياً مع X11R6 \n"
+"مدير جلسة بلازما الموثوق به و الذي يتطابق معياريًا مع X11R6 \n"
 "بروتوكول إدارة الجلسة (XSMP)."
 
 #: main.cpp:133
@@ -93,7 +93,7 @@ msgstr "يستعيد جلسة المستخدم المحفوظة إذا كانت 
 #: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
-msgstr "اسمح أيضاً بالاتصال عن بعد"
+msgstr "اسمح أيضًا بالاتصال عن بعد"
 
 #: main.cpp:139
 #, kde-format
