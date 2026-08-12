@@ -157,5 +157,5 @@ TASKMANAGER_EXPORT void runApp(const KService::Ptr &service, const QList<QUrl> &
  */
 TASKMANAGER_EXPORT KService::Ptr serviceForUrl(const QUrl &url);
 
-bool canLauchNewInstance(const AppData &appData);
+bool canLauchNewInstance(const KService::Ptr &service);
 }

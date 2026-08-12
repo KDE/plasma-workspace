@@ -490,14 +490,8 @@ void runApp(const KService::Ptr &service, const QList<QUrl> &urls)
     KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + service->storageId())), QStringLiteral("org.kde.libtaskmanager"));
 }
 
-bool canLauchNewInstance(const AppData &appData)
+bool canLauchNewInstance(const KService::Ptr &service)
 {
-    if (appData.url.isEmpty()) {
-        return false;
-    }
-
-    const KService::Ptr service = serviceForUrl(appData.url);
-
     if (!service) {
         return false;
     }
