@@ -1037,7 +1037,11 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    runApp(d->appData(d->windows.at(index.row()).get()));
+    const auto service = serviceForUrl(d->appData(d->windows.at(index.row()).get()).url);
+
+    if (service) {
+        runApp(service);
+    }
 }
 
 void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
@@ -1046,7 +1050,11 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
         return;
     }
 
-    runApp(d->appData(d->windows.at(index.row()).get()), urls);
+    const auto service = serviceForUrl(d->appData(d->windows.at(index.row()).get()).url);
+
+    if (service) {
+        runApp(service, urls);
+    }
 }
 
 void WaylandTasksModel::requestClose(const QModelIndex &index)
