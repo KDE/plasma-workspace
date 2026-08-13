@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-08-13 00:52+0000\n"
 "PO-Revision-Date: 2025-10-07 08:53+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -24,19 +24,19 @@ msgctxt "@title:window"
 msgid "Wallpaper"
 msgstr "תמונת רקע"
 
-#: ui/main.qml:41
+#: ui/main.qml:43
 #, kde-format
 msgctxt "@option:check Set the wallpaper for all screens"
 msgid "Set for all screens"
 msgstr "הגדרה לכל המסכים"
 
-#: ui/main.qml:89
+#: ui/main.qml:95
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
 msgstr "סוג תמונת רקע:"
 
-#: ui/main.qml:110
+#: ui/main.qml:113
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
