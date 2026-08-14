@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2026-02-25 19:22+0100\n"
+"PO-Revision-Date: 2026-08-13 10:20+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "Приспи&ване"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "М&оментално приспиване"
+msgstr "&Приспиване сега"
 
 #: contents/logout/Logout.qml:253
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Рес&тартиране"
 #: contents/logout/Logout.qml:268 contents/logout/Logout.qml:287
 #, kde-format
 msgid "&Restart Now"
-msgstr "Моментално &рестартиране"
+msgstr "&Рестартиране сега"
 
 #: contents/logout/Logout.qml:300
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "Из&ключване"
 #: contents/logout/Logout.qml:303 contents/logout/Logout.qml:322
 #, kde-format
 msgid "&Shut Down Now"
-msgstr "&Моментално изключване"
+msgstr "&Изключване сега"
 
 #: contents/logout/Logout.qml:334
 #, kde-format
