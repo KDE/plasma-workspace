@@ -32,5 +32,6 @@ target_link_libraries(kcm_wallpaper PRIVATE
     Plasma::PlasmaQuick
     Plasma::Activities
     PW::KWorkspace
+    plasma_defaultwallpaper
 )
 

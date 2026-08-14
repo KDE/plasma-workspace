@@ -5,7 +5,6 @@
 #include "kcm_wallpaper_debug.h"
 #include <QDBusInterface>
 #include <QDBusReply>
-#include <defaultwallpaper.h>
 #include <outputorderwatcher.h>
 
 #include <KPackage/Package>

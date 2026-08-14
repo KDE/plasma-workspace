@@ -3,8 +3,6 @@
 
 #pragma once
 
-#include "kworkspace_export.h"
-
 #include <KPackage/Package>
 
 namespace DefaultWallpaper
@@ -12,5 +10,5 @@ namespace DefaultWallpaper
 /**
  * @returns the package containing the default wallpaper
  */
-[[nodiscard]] KWORKSPACE_EXPORT KPackage::Package defaultWallpaperPackage();
+[[nodiscard]] KPackage::Package defaultWallpaperPackage();
 } // namespace DefaultWallpaper

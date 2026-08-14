@@ -52,6 +52,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     PW::LibTaskManager
     PW::KWorkspace
     KNightTime
+    plasma_defaultwallpaper
     )
 
 if(HAVE_KExiv2)
