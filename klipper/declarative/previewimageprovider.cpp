@@ -24,7 +24,7 @@ public:
     QQuickTextureFactory *textureFactory() const override;
 
 protected:
-    void saveImage(QImage &&image);
+    void saveImage(const QImage &image);
     QImage m_image;
 };
 
@@ -43,17 +43,17 @@ AsyncPreviewImageResponse::AsyncPreviewImageResponse(const QString &path, const 
 
     KIO::PreviewJob *job = KIO::filePreview(KFileItemList{fileItem}, requestedSize);
     job->setIgnoreMaximumSize(true);
-    connect(job, &KIO::PreviewJob::gotPreview, this, [this](const KFileItem &, const QPixmap &preview) {
-        saveImage(preview.toImage());
+    connect(job, &KIO::PreviewJob::generated, this, [this](const KFileItem &, const QImage &preview) {
+        saveImage(preview);
     });
     connect(job, &KIO::PreviewJob::failed, this, saveIcon);
 
     job->start();
 }
 
-void AsyncPreviewImageResponse::saveImage(QImage &&image)
+void AsyncPreviewImageResponse::saveImage(const QImage &image)
 {
-    m_image = std::move(image);
+    m_image = image;
     Q_EMIT finished();
 }
 
