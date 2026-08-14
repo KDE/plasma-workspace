@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QImage>
 #include <QObject>
 #include <QPixmap>
 #include <QQuickItem>
@@ -33,6 +34,7 @@ public:
     void setDragPixmapSize(int dragPixmapSize);
 
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QString &iconName);
+    Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QImage &image);
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
 
 Q_SIGNALS:

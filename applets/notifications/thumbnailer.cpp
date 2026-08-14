@@ -82,17 +82,17 @@ bool Thumbnailer::busy() const
 
 bool Thumbnailer::hasPreview() const
 {
-    return !m_pixmap.isNull();
+    return !m_image.isNull();
 }
 
-QPixmap Thumbnailer::pixmap() const
+QImage Thumbnailer::image() const
 {
-    return m_pixmap;
+    return m_image;
 }
 
-QSize Thumbnailer::pixmapSize() const
+QSize Thumbnailer::imageSize() const
 {
-    return m_pixmap.size();
+    return m_image.size();
 }
 
 QString Thumbnailer::iconName() const
@@ -124,10 +124,10 @@ void Thumbnailer::generatePreview()
     job->setScaleType(KIO::PreviewJob::Scaled);
     job->setIgnoreMaximumSize(true);
 
-    connect(job, &KIO::PreviewJob::gotPreview, this, [this](const KFileItem &item, const QPixmap &preview) {
+    connect(job, &KIO::PreviewJob::generated, this, [this](const KFileItem &item, const QImage &preview) {
         Q_UNUSED(item);
-        m_pixmap = preview;
-        Q_EMIT pixmapChanged();
+        m_image = preview;
+        Q_EMIT imageChanged();
 
         if (!m_iconName.isEmpty()) {
             m_iconName.clear();
@@ -136,8 +136,8 @@ void Thumbnailer::generatePreview()
     });
 
     connect(job, &KIO::PreviewJob::failed, this, [this](const KFileItem &item) {
-        m_pixmap = QPixmap();
-        Q_EMIT pixmapChanged();
+        m_image = QImage();
+        Q_EMIT imageChanged();
 
         const QString &iconName = item.determineMimeType().iconName();
         if (m_iconName != iconName) {

@@ -44,6 +44,11 @@ void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QString &ico
     startDrag(item, url, QIcon::fromTheme(iconName).pixmap(m_dragPixmapSize, m_dragPixmapSize));
 }
 
+void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QImage &image)
+{
+    startDrag(item, url, QPixmap::fromImage(image));
+}
+
 void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)
 {
     // This allows the caller to return, making sure we don't crash if

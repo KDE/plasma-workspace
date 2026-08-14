@@ -44,7 +44,7 @@ Item {
     Notifications.Thumbnailer {
         id: thumbnailer
 
-        readonly property real ratio: pixmapSize.height ? pixmapSize.width / pixmapSize.height : 1
+        readonly property real ratio: imageSize.height ? imageSize.width / imageSize.height : 1
 
         url: thumbnailArea.urls[0]
         // height is dynamic, so request a "square" size and then show it fitting to aspect ratio
@@ -53,7 +53,7 @@ Item {
         size: Qt.size(Notifications.Globals.popupWidth, Notifications.Globals.popupWidth)
     }
 
-    KQCAddons.QPixmapItem {
+    KQCAddons.QImageItem {
         id: previewBackground
         anchors {
             fill: parent
@@ -65,7 +65,7 @@ Item {
         fillMode: Image.PreserveAspectCrop
         layer.enabled: true
         opacity: 0.25
-        pixmap: thumbnailer.pixmap
+        image: thumbnailer.image
         layer.effect: FastBlur {
             source: previewBackground
             anchors.fill: previewBackground
@@ -78,7 +78,7 @@ Item {
         anchors.fill: previewBackground
         dragParent: previewIcon
         dragPixmapSize: previewIcon.height
-        dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
+        dragPixmap: thumbnailer.hasPreview ? thumbnailer.image : thumbnailer.iconName
         dragUrl: thumbnailer.url
 
         onActivated: thumbnailArea.modelInterface.openUrl(thumbnailer.url)
@@ -91,13 +91,13 @@ Item {
         }
     }
 
-    KQCAddons.QPixmapItem {
+    KQCAddons.QImageItem {
         id: previewPixmap
         anchors {
             fill: previewBackground
             margins: Kirigami.Units.smallSpacing
         }
-        pixmap: thumbnailer.pixmap
+        image: thumbnailer.image
         smooth: true
         fillMode: Image.PreserveAspectFit
 
