@@ -31,7 +31,7 @@ msgstr "Schránka je prázdna"
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
-msgstr ""
+msgstr "Schránka práve obsahuje citlivé údaje"
 
 #: qml/main.qml:75
 #, kde-format

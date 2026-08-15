@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-07-23 22:33+0900\n"
+"PO-Revision-Date: 2026-08-14 22:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -35,7 +35,7 @@ msgstr "Thiam kàu Toh-bīn"
 #: actionlist.cpp:160
 #, kde-format
 msgid "Pin to Task Manager"
-msgstr "Tìng kàu Kang-khuè-kuán-lí-khì"
+msgstr "Tìng kàu Kang-khuè Kuán-lí-khì"
 
 #: actionlist.cpp:164
 #, kde-format
@@ -291,7 +291,7 @@ msgstr "Kiat-sok kang-tsok-kai-tuānn"
 #: systementry.cpp:256
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr ""
+msgstr "Iōng pa̍t-ê iōng-tsiá khai-sí tông-sî tsip-hîng ê kang-tsok-kai-tuānn"
 
 #: systementry.cpp:259
 #, kde-format

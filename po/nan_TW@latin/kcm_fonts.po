@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:46+0000\n"
-"PO-Revision-Date: 2026-07-23 02:04+0900\n"
+"PO-Revision-Date: 2026-08-14 22:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -57,7 +57,7 @@ msgstr "Sī-thang piau-tê jī-hîng"
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr ""
+msgstr "Tshiúnn-siong ê Ū-siat"
 
 #: kxftconfig.cpp:456
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "Suî-ti̍t BGR"
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr ""
+msgstr "Tshiúnn-siong ê Ū-siat"
 
 #: kxftconfig.cpp:494
 #, kde-format
@@ -134,7 +134,7 @@ msgstr ""
 #: ui/main.qml:44
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Tshiâu Tsuân-i̍k Pí-lē…"
 
 #: ui/main.qml:59
 #, kde-format
@@ -142,6 +142,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"Siōng-tuā ê jī-hîng khó-lîng ē piáu-sī--ê tsiok kuài. Tshiánn khó-lū kái-tsò "
+"tshiâu tsuân-i̍k îng-bōo pí-lē, mài siat-tīng tsiok-tuā ê jī-hîng."
 
 #: ui/main.qml:77
 #, kde-kuit-format
@@ -159,6 +161,8 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma ê siat-kè bô-huat-tōo tī jī-hîng put-tsok 4pt ê sî-tsūn sú-iōng. Tuā-"
+"sè í-king tîng-siat tńg-khì 4pt--ah."
 
 #: ui/main.qml:111
 #, kde-format
@@ -167,11 +171,13 @@ msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
+"Siōng-sè ê jī-hîng khó-lîng ē piáu-sī--ê tsiok kuài. Tshiánn khó-lū kái-tsò "
+"tshiâu tsuân-i̍k îng-bōo pí-lē, mài siat-tīng tsiok-sè ê jī-hîng."
 
 #: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
-msgstr ""
+msgstr "Tshiâu Sóo-ū--ê Jī-hîng(&A)…"
 
 #: ui/main.qml:150
 #, kde-format

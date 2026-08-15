@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"POT-Creation-Date: 2026-08-15 00:48+0000\n"
 "PO-Revision-Date: 2022-03-29 20:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -44,64 +44,64 @@ msgstr ""
 "रात्रि का रंग आपके चयनित समय में आंखों के तनाव को कम करने के लिए स्क्रीन पर रंगों की उष्णता "
 "बढाता है।"
 
-#: ui/main.qml:49
+#: ui/main.qml:50
 #, fuzzy, kde-format
 #| msgid "Activation time:"
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "सक्रियण समय :"
 
-#: ui/main.qml:58
+#: ui/main.qml:61
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr ""
 
-#: ui/main.qml:59
+#: ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "Always on"
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
 msgstr "हमेशा चालू"
 
-#: ui/main.qml:60
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
 msgstr ""
 
-#: ui/main.qml:77
+#: ui/main.qml:80
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: ui/main.qml:120 ui/main.qml:171 ui/main.qml:235
+#: ui/main.qml:131 ui/main.qml:182 ui/main.qml:248
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
 msgstr ""
 
-#: ui/main.qml:128
+#: ui/main.qml:138
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "रात्रि का रंग का तापक्रम:"
 
-#: ui/main.qml:178 ui/main.qml:242
+#: ui/main.qml:189 ui/main.qml:255
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
-#: ui/main.qml:185 ui/main.qml:249
+#: ui/main.qml:196 ui/main.qml:262
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "गरम"
 
-#: ui/main.qml:192
+#: ui/main.qml:204
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgctxt "@label:slider"

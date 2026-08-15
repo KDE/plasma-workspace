@@ -157,6 +157,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"Povolené sú len malé písmená, číslice, pomlčky a podčiarkovníky. Neplatné "
+"znaky boli odstránené."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -165,6 +167,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"Používateľské mená musia byť malými písmenami. Veľké písmená boli prevedené "
+"na malé."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format

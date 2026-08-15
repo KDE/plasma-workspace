@@ -41,11 +41,10 @@ msgid "Unable to download the icon theme archive: %1"
 msgstr "Nepodarilo sa stiahnuť archív témy ikon: %1."
 
 #: kcmcursortheme.cpp:400
-#, fuzzy, kde-format
-#| msgid "Unable to download the icon theme archive: %1"
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "Nepodarilo sa stiahnuť archív témy ikon: %1."
+msgstr "Nepodarilo sa otvoriť archív témy ikon."
 
 #: kcmcursortheme.cpp:420
 #, kde-format

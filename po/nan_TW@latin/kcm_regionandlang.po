@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-07-23 01:50+0900\n"
+"PO-Revision-Date: 2026-08-14 22:58+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -157,7 +157,7 @@ msgstr ""
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
-msgstr ""
+msgstr "Too-tshī"
 
 #: exampleutility.cpp:107
 #, kde-format

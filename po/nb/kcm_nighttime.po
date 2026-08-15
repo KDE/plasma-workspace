@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 00:48+0000\n"
+"POT-Creation-Date: 2026-08-15 00:48+0000\n"
 "PO-Revision-Date: 2026-01-18 19:59+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -30,7 +30,7 @@ msgstr ""
 "synkroniseres med dag–natt-syklusen. Her kan du velge hvilken type syklus du "
 "vil bruke."
 
-#: ui/main.qml:42
+#: ui/main.qml:63
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
@@ -38,39 +38,39 @@ msgctxt ""
 msgid "Determine sunrise and sunset times:"
 msgstr "Fastsett tid for soloppgang og solnedgang basert på:"
 
-#: ui/main.qml:47
+#: ui/main.qml:68
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
 msgstr "Geografisk posisjon"
 
-#: ui/main.qml:48
+#: ui/main.qml:69
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
 msgstr "Brukervalgte klokkeslett"
 
-#: ui/main.qml:60
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise:"
 msgstr "Soloppgang:"
 
-#: ui/main.qml:75
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@label"
 msgid "Sunset:"
 msgstr "Solnedgang:"
 
-#: ui/main.qml:89
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Transition duration:"
 msgstr "Overgangstid:"
 
-#: ui/main.qml:95
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@item:valuesuffix transition duration"
 msgid "%1 minute"
@@ -78,13 +78,7 @@ msgid_plural "%1 minutes"
 msgstr[0] "%1 minutt"
 msgstr[1] "%1 minutter"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:radio"
-msgid "Automatically detect location"
-msgstr "Finn automatisk geografisk posisjon"
-
-#: ui/main.qml:145
+#: ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -98,7 +92,7 @@ msgstr ""
 "dersom tilgjengelig, eller ved å sende IP-adressen til <link url='https://"
 "geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:146
+#: ui/main.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -112,19 +106,25 @@ msgstr ""
 "org'>https://bugs.kde.org</link> der du ber KDE-utviklerne å skrive en "
 "detaljert beskrivelse av hva tjenesten gjør."
 
-#: ui/main.qml:163
+#: ui/main.qml:144
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr "Finn automatisk geografisk posisjon"
+
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Bruk manuell posisjon:"
 
-#: ui/main.qml:175
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "breiddegrad:"
 
-#: ui/main.qml:195
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -204,17 +204,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "Trykk for å velge din posisjon på kartet."
 
-#: ui/WorldMap.qml:189
+#: ui/WorldMap.qml:190
 #, kde-format
 msgid "Zoom in"
 msgstr "Forstørr"
 
-#: ui/WorldMap.qml:206
+#: ui/WorldMap.qml:207
 #, kde-format
 msgid "Zoom out"
 msgstr "Forminsk"
 
-#: ui/WorldMap.qml:235
+#: ui/WorldMap.qml:236
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

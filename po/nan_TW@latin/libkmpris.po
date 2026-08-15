@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2026-07-19 11:10+0900\n"
+"PO-Revision-Date: 2026-08-14 21:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: kded/mprisservice.cpp:131
 #, kde-format
@@ -27,70 +27,70 @@ msgstr "Muî-thé Khòng-tsè"
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr ""
+msgstr "Muî-thé ê Hòng-sàng/Tsiām-thîng"
 
 #: kded/mprisservice.cpp:141
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
-msgstr ""
+msgstr "Muî-thé hòng-sàng ē-tsi̍t-ê"
 
 #: kded/mprisservice.cpp:142
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
-msgstr ""
+msgstr "Muî-thé hòng-sàng tíng-tsi̍t-ê"
 
 #: kded/mprisservice.cpp:144
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
-msgstr ""
+msgstr "Muî-thé hòng-sàng hiòng-tsiân 5 bió"
 
 #: kded/mprisservice.cpp:148
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
-msgstr ""
+msgstr "Muî-thé hòng-sàng hiòng-āu 5 bió"
 
 #: kded/mprisservice.cpp:152
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
-msgstr ""
+msgstr "Muî-thé hòng-sàng hiòng-tsiân 30 bió"
 
 #: kded/mprisservice.cpp:156
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
-msgstr ""
+msgstr "Muî-thé hòng-sàng hiòng-āu 30 bió"
 
 #: kded/mprisservice.cpp:159
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
-msgstr ""
+msgstr "Thîng-tsí muî-thé hòng-sàng"
 
 #: kded/mprisservice.cpp:160
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
-msgstr ""
+msgstr "Tsiām-thîng muî-thé hòng-sàng"
 
 #: kded/mprisservice.cpp:161
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
-msgstr ""
+msgstr "Hòng-sàng muî-thé"
 
 #: kded/mprisservice.cpp:162
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
-msgstr ""
+msgstr "Muî-thé im-liōng tsing-ka"
 
 #: kded/mprisservice.cpp:163
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"
-msgstr ""
+msgstr "Muî-thé im-liōng kiám-tsió"

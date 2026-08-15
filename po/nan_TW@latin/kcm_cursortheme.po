@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-07-23 02:19+0900\n"
+"PO-Revision-Date: 2026-08-14 18:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -214,7 +214,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr "Kang-khuè-kuán-lí-khì huê-kuī:"
+msgstr "Kang-khuè Kuán-lí-khì huê-kuī:"
 
 #: ui/LaunchFeedbackDialog.qml:94
 #, kde-format

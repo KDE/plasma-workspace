@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 00:48+0000\n"
+"POT-Creation-Date: 2026-08-15 00:48+0000\n"
 "PO-Revision-Date: 2025-11-01 06:22+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Časovno omejene funkcije, kot sta nočna svetloba in dinamična ozadja, je "
 "mogoče sinhronizirati s ciklom dneva in noči. Tukaj izberite želeni cikel."
 
-#: ui/main.qml:42
+#: ui/main.qml:63
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
@@ -37,39 +37,39 @@ msgctxt ""
 msgid "Determine sunrise and sunset times:"
 msgstr "Določite čas sončnega vzhoda in sončnega zahoda:"
 
-#: ui/main.qml:47
+#: ui/main.qml:68
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
 msgstr "Na podlagi lokacije naprave"
 
-#: ui/main.qml:48
+#: ui/main.qml:69
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
 msgstr "Uporaba časov po meri"
 
-#: ui/main.qml:60
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise:"
 msgstr "Sončni vzhod:"
 
-#: ui/main.qml:75
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@label"
 msgid "Sunset:"
 msgstr "Sončni zahod:"
 
-#: ui/main.qml:89
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Transition duration:"
 msgstr "Trajanje prehoda:"
 
-#: ui/main.qml:95
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@item:valuesuffix transition duration"
 msgid "%1 minute"
@@ -79,13 +79,7 @@ msgstr[1] "%1 minuti"
 msgstr[2] "%1 minute"
 msgstr[3] "%1 minut"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:radio"
-msgid "Automatically detect location"
-msgstr "Samodejno zaznaj lokacijo"
-
-#: ui/main.qml:145
+#: ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -99,7 +93,7 @@ msgstr ""
 "postaje, če je na voljo, ali pa s pošiljanjem njenega naslova IP na <link "
 "url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:146
+#: ui/main.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,19 +107,25 @@ msgstr ""
 "url='https://bugs.kde.org'>https://bugs.kde.org</link> in prosite razvijalce "
 "KDE, naj napišejo podroben opis, kaj bo ta storitev počela."
 
-#: ui/main.qml:163
+#: ui/main.qml:144
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr "Samodejno zaznaj lokacijo"
+
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Uporabi ročno lokacijo:"
 
-#: ui/main.qml:175
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Zemljepisna širina:"
 
-#: ui/main.qml:195
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -205,17 +205,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "Kliknite, da izberete svojo lokacijo na zemljevidu."
 
-#: ui/WorldMap.qml:189
+#: ui/WorldMap.qml:190
 #, kde-format
 msgid "Zoom in"
 msgstr "Približaj"
 
-#: ui/WorldMap.qml:206
+#: ui/WorldMap.qml:207
 #, kde-format
 msgid "Zoom out"
 msgstr "Oddalji"
 
-#: ui/WorldMap.qml:235
+#: ui/WorldMap.qml:236
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

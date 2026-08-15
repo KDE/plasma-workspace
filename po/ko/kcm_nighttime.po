@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 00:48+0000\n"
+"POT-Creation-Date: 2026-08-15 00:48+0000\n"
 "PO-Revision-Date: 2026-02-03 23:20+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "야간 조명과 배경 그림 자동 변경 등 시간 기반 기능을 일출-일몰 전환에 따라서 "
 "동기화할 수 있습니다. 선호하는 방식을 선택하십시오."
 
-#: ui/main.qml:42
+#: ui/main.qml:63
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
@@ -35,52 +35,46 @@ msgctxt ""
 msgid "Determine sunrise and sunset times:"
 msgstr "일출과 일몰 시간 결정:"
 
-#: ui/main.qml:47
+#: ui/main.qml:68
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
 msgstr "장치의 위치 기반"
 
-#: ui/main.qml:48
+#: ui/main.qml:69
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
 msgstr "사용자 정의 시간 사용"
 
-#: ui/main.qml:60
+#: ui/main.qml:84
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise:"
 msgstr "일출:"
 
-#: ui/main.qml:75
+#: ui/main.qml:101
 #, kde-format
 msgctxt "@label"
 msgid "Sunset:"
 msgstr "일몰:"
 
-#: ui/main.qml:89
+#: ui/main.qml:117
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Transition duration:"
 msgstr "전환 시간:"
 
-#: ui/main.qml:95
+#: ui/main.qml:122
 #, kde-format
 msgctxt "@item:valuesuffix transition duration"
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1분"
 
-#: ui/main.qml:118
-#, kde-format
-msgctxt "@option:radio"
-msgid "Automatically detect location"
-msgstr "자동으로 위치 감지"
-
-#: ui/main.qml:145
+#: ui/main.qml:140
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -94,7 +88,7 @@ msgstr ""
 "url='https://geoip.com/privacy/'>GeoIP</link> 서비스에 현재 IP 주소 정보를 전"
 "송합니다."
 
-#: ui/main.qml:146
+#: ui/main.qml:141
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -108,19 +102,25 @@ msgstr ""
 "<link url='https://bugs.kde.org'>https://bugs.kde.org</link> 사이트에 버그 보"
 "고서를 작성해 주십시오."
 
-#: ui/main.qml:163
+#: ui/main.qml:144
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr "자동으로 위치 감지"
+
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "수동으로 위치 지정:"
 
-#: ui/main.qml:175
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "위도:"
 
-#: ui/main.qml:195
+#: ui/main.qml:199
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -200,17 +200,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "클릭하여 지도에서 위치를 선택하십시오."
 
-#: ui/WorldMap.qml:189
+#: ui/WorldMap.qml:190
 #, kde-format
 msgid "Zoom in"
 msgstr "확대"
 
-#: ui/WorldMap.qml:206
+#: ui/WorldMap.qml:207
 #, kde-format
 msgid "Zoom out"
 msgstr "축소"
 
-#: ui/WorldMap.qml:235
+#: ui/WorldMap.qml:236
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

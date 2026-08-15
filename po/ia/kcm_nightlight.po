@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 00:48+0000\n"
+"POT-Creation-Date: 2026-08-15 00:48+0000\n"
 "PO-Revision-Date: 2026-03-26 10:16+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -41,61 +41,61 @@ msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Filtro de blau legier face le colores sur le schermo plus calide."
 
-#: ui/main.qml:49
+#: ui/main.qml:50
 #, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Commuta Tempores:"
 
-#: ui/main.qml:58
+#: ui/main.qml:61
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Sempre Off"
 
-#: ui/main.qml:59
+#: ui/main.qml:62
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
 msgstr "Sempre On"
 
-#: ui/main.qml:60
+#: ui/main.qml:63
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
 msgstr "Alba e poner del sol"
 
-#: ui/main.qml:77
+#: ui/main.qml:80
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "Configura…"
 
-#: ui/main.qml:120 ui/main.qml:171 ui/main.qml:235
+#: ui/main.qml:131 ui/main.qml:182 ui/main.qml:248
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
 msgstr "%1 K"
 
-#: ui/main.qml:128
+#: ui/main.qml:138
 #, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Temperatura de Color de Die:"
 
-#: ui/main.qml:178 ui/main.qml:242
+#: ui/main.qml:189 ui/main.qml:255
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Fresc (necun filtro)"
 
-#: ui/main.qml:185 ui/main.qml:249
+#: ui/main.qml:196 ui/main.qml:262
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Calide"
 
-#: ui/main.qml:192
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"

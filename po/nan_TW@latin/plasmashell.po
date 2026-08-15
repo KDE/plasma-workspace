@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-24 00:46+0000\n"
-"PO-Revision-Date: 2026-07-21 11:57+0900\n"
+"PO-Revision-Date: 2026-08-14 21:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -309,7 +309,7 @@ msgstr "Khùn-bîn kap Îng-bōo Só-tīng Khé-iōng--ah"
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Síng-tiān Bôo-sik"
 
 #: osd.cpp:219
 #, kde-format
@@ -349,7 +349,7 @@ msgstr "Luē-kiàn Îng-bōo"
 #: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Bô Liân-suànn ê Îng-bōo %1"
 
 #: shellcorona.cpp:173 shellcorona.cpp:175
 #, kde-format
