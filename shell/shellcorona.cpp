@@ -9,6 +9,8 @@
 
 #include "shellcorona.h"
 
+#include "scenegraphatlas.h"
+
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 #include <config-plasma.h>
 #include <config-workspace.h>
@@ -1473,6 +1475,7 @@ void ShellCorona::addOutput(QScreen *screen)
     Q_ASSERT(!screen->geometry().isNull());
 
     auto *view = new DesktopView(this, screen);
+    SceneGraphAtlas::capFor(view);
 
     if (view->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
         connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
@@ -1599,6 +1602,7 @@ void ShellCorona::createWaitingPanels()
         // TODO: does a similar check make sense?
         // Q_ASSERT(qBound(0, requestedScreen, m_screenPool->count() - 1) == requestedScreen);
         auto *panel = new PanelView(this, screen);
+        SceneGraphAtlas::capFor(panel);
         if (panel->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
