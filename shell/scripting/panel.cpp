@@ -390,7 +390,7 @@ void Panel::setOpacity(const QString &mode)
     }
 
     if (panel()) {
-        panel()->setOpacity(opacityMode);
+        panel()->setOpacityMode(opacityMode);
     } else {
         panelConfig().parent().writeEntry("panelOpacity", (int)opacityMode);
     }
