@@ -82,7 +82,7 @@ ListView {
     // prevents keep changing the date by dragging and holding; returns true if date should not change else returns false
     function handleDrag(): bool {
         if (dragHandled) { // if already date changed for dragging once (drag still going on like streams) then
-            resetViewPosition(); //reset so that further dragging is not broken when this dragging session is over
+            // resetViewPosition(); //reset so that further dragging is not broken when this dragging session is over
             return true;        // return true so that still ongoing drags do not change date
         } else { //  else if drag not handled then
             if (draggingVertically) { // if reached view edge because of drag (and not wheel or buttons) then
@@ -105,7 +105,7 @@ ListView {
         } else {
             changeDate = true;
         }
-        resetViewPosition();
+        // resetViewPosition();
     }
 
     // These signal handlers animate the view. They are the only ones through which date (and should as well) changes.
