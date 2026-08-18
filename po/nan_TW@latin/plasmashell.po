@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-24 00:46+0000\n"
-"PO-Revision-Date: 2026-08-14 21:55+0900\n"
+"PO-Revision-Date: 2026-08-18 02:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -120,7 +120,7 @@ msgstr "Ún-tsông Ī-lám Banner"
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr "Ún-tsông Kàu Tîng-khí-tōng"
+msgstr "Ún-tsông Kàu Tîng-khé-tōng"
 
 #: desktopview.cpp:297
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "Khé-iōng QML Javascript debugger"
 #: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr "Mài tī plasma-shell pang--khì liáu-āu tsū-tōng tîng-khí-tōng"
+msgstr "Mài tī plasma-shell pang--khì liáu-āu tsū-tōng tîng-khé-tōng"
 
 #: main.cpp:127
 #, kde-format
@@ -190,7 +190,7 @@ msgstr "Kā iōng-tsiá feedback ē-sái iōng ê suán-hāng lia̍t--tshut-lâi
 #: main.cpp:190
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr "Plasma Khí-tōng Sit-pāi"
+msgstr "Plasma Khé-tōng Sit-pāi"
 
 #: main.cpp:191
 #, kde-format
@@ -199,7 +199,7 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"Plasma bô-huat-tōo khí-tōng, in-uī i bô-huat-tōo tsìng-khak lâi iōng OpenGL "
+"Plasma bô-huat-tōo khé-tōng, in-uī i bô-huat-tōo tsìng-khak lâi iōng OpenGL "
 "2 á-sī nńg-thé āu-pī\n"
 "Tshiánn kiám-tsa lí ê tôo-hîng khu-tōng-tîng-sik kám ū siat-tīng hó-sè."
 
@@ -231,13 +231,13 @@ msgstr "%1 Tsīng-im"
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr "Touchpad Khui--ah"
+msgstr "Tshiok-khòng-pán Khui--ah"
 
 #: osd.cpp:159
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr "Touchpad Kuainn--ah"
+msgstr "Tshiok-khòng-pán Kuainn--ah"
 
 #: osd.cpp:166
 #, kde-format

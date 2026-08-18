@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-08-18 04:10+0900\n"
+"PO-Revision-Date: 2026-08-18 03:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
-"Language: nan_TW@latin\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,42 +20,42 @@ msgstr ""
 #: actionlist.cpp:93
 #, kde-format
 msgid "Open with:"
-msgstr "Iōng tîng-sik khui:"
+msgstr "用程式開："
 
 #: actionlist.cpp:106
 #, kde-format
 msgid "Properties"
-msgstr "Sio̍k-sìng"
+msgstr "屬性"
 
 #: actionlist.cpp:153
 #, kde-format
 msgid "Add to Desktop"
-msgstr "Thiam kàu Toh-bīn"
+msgstr "添到桌面"
 
 #: actionlist.cpp:160
 #, kde-format
 msgid "Pin to Task Manager"
-msgstr "Tìng kàu Kang-khuè Kuán-lí-khì"
+msgstr "釘到工課管理器"
 
 #: actionlist.cpp:164
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Thiam kàu Bīn-pán (Guân-kiānn)"
+msgstr "添到面板（元件）"
 
 #: actionlist.cpp:316 rootmodel.cpp:587
 #, kde-format
 msgid "Recent Files"
-msgstr "Kīn-lâi ê Tóng-àn"
+msgstr "近來 ê 檔案"
 
 #: actionlist.cpp:326
 #, kde-format
 msgid "Forget Recent Files"
-msgstr "Kā Kīn-lâi ê Tóng-àn Bē-kì-tit"
+msgstr "Kā 近來 ê 檔案袂記得"
 
 #: actionlist.cpp:393
 #, kde-format
 msgid "Edit Application…"
-msgstr "Pian-tsi̍p Ìng-iōng-tîng-sik…"
+msgstr "編輯應用程式…"
 
 #: actionlist.cpp:425
 #, kde-format
@@ -66,7 +66,7 @@ msgstr ""
 #: appentry.cpp:399
 #, kde-format
 msgid "Hide Application"
-msgstr "Ún-tsông Ìng-iōng-tîng-sik"
+msgstr "隱藏應用程式"
 
 #: appentry.cpp:461
 #, kde-format
@@ -84,108 +84,108 @@ msgstr "%1 (%2)"
 #: recentusagemodel.cpp:158 recentusagemodel.cpp:229
 #, kde-format
 msgid "Applications"
-msgstr "Ìng-iōng-tîng-sik"
+msgstr "應用程式"
 
 #: appsmodel.cpp:173
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr "Tī tsit-ê Tsí-suán-tuann Tîng-sin Hián-sī Ìng-iōng-tîng-sik"
+msgstr "佇這个子選單重新顯示應用程式"
 
 #: appsmodel.cpp:182
 #, kde-format
 msgid "Unhide Applications in '%1'"
-msgstr "Tī '%1' Tîng-sin Hián-sī Ìng-iōng-tîng-sik"
+msgstr "佇 '%1' 重新顯示應用程式"
 
 #: computermodel.cpp:87
 #, kde-format
 msgid "Show KRunner"
-msgstr "Hián-sī KRunner"
+msgstr "顯示 KRunner"
 
 #: computermodel.cpp:91
 #, kde-format
 msgid "Search, calculate, or run a command"
-msgstr "Tshiau-tshuē, kè-sǹg, á-sī tsip-hîng tsí-līng"
+msgstr "搜揣、計算，猶是執行指令"
 
 #: computermodel.cpp:142
 #, kde-format
 msgid "Computer"
-msgstr "Tiān-náu"
+msgstr "電腦"
 
 #. i18n.
 #: kastatsfavoritesmodel.cpp:538 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
-msgstr "Siu-tsông"
+msgstr "收藏"
 
 #: recentusagemodel.cpp:156
 #, kde-format
 msgid "Recently Used"
-msgstr "Kīn-lâi Ū Iōng-ê"
+msgstr "近來有用的"
 
 #: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
-msgstr "Uī-tì"
+msgstr "位置"
 
 #: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
 msgid "Files"
-msgstr "Tóng-àn"
+msgstr "檔案"
 
 #: recentusagemodel.cpp:263
 #, kde-format
 msgid "Forget Application"
-msgstr "Kā Ìng-iōng-tîng-sik Bē-kì-tit"
+msgstr "Kā 應用程式袂記得"
 
 #: recentusagemodel.cpp:328
 #, kde-format
 msgid "Folders"
-msgstr "Tsu-liāu-giap-á"
+msgstr "資料鋏仔"
 
 #: recentusagemodel.cpp:375
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "Phah-khui Pó-tsûn Tsu-liāu-giap-á"
+msgstr "拍開保存資料鋏仔"
 
 #: recentusagemodel.cpp:380
 #, kde-format
 msgid "Forget Folder"
-msgstr "Kā Tsu-liāu-giap-á Bē-kì-tit"
+msgstr "Kā 資料鋏仔袂記得"
 
 #: recentusagemodel.cpp:380
 #, kde-format
 msgid "Forget File"
-msgstr "Kā Tóng-àn Bē-kì-tit"
+msgstr "Kā 檔案袂記得"
 
 #: recentusagemodel.cpp:526
 #, kde-format
 msgid "Forget All"
-msgstr "Kā Tsuân-pōo Bē-kì-tit"
+msgstr "Kā 全部袂記得"
 
 #: recentusagemodel.cpp:528
 #, kde-format
 msgid "Forget All Applications"
-msgstr "Kā Sóo-ū Ìng-iōng-tîng-sik Bē-kì-tit"
+msgstr "Kā 所有應用程式袂記得"
 
 #: recentusagemodel.cpp:530
 #, kde-format
 msgid "Forget All Folders"
-msgstr "Kā Sóo-ū Tsu-liāu-giap-á Bē-kì-tit"
+msgstr "Kā 所有資料鋏仔袂記得"
 
 #: recentusagemodel.cpp:533
 #, kde-format
 msgid "Forget All Files"
-msgstr "Kā Sóo-ū Tóng-àn Bē-kì-tit"
+msgstr "Kā 所有檔案袂記得"
 
 #: rootmodel.cpp:80
 #, kde-format
 msgid "All Applications"
-msgstr "Sóo-ū Ìng-iōng-tîng-sik"
+msgstr "所有應用程式"
 
 #: rootmodel.cpp:134
 #, kde-format
 msgid "Hide %1"
-msgstr "Ún-tsông %1"
+msgstr "隱藏 %1"
 
 #: rootmodel.cpp:565
 #, kde-format
@@ -195,27 +195,27 @@ msgstr ""
 #: rootmodel.cpp:578
 #, kde-format
 msgid "Recent Places"
-msgstr "Kīn-lâi ê Uī-tì"
+msgstr "近來 ê 位置"
 
 #: rootmodel.cpp:578
 #, kde-format
 msgid "Often Used Places"
-msgstr "Tiānn-tiānn Iōng-ê Uī-tì"
+msgstr "定定用 ê 位置"
 
 #: rootmodel.cpp:587
 #, kde-format
 msgid "Often Used Files"
-msgstr "Tiānn-tiānn Iōng-ê Tóng-àn"
+msgstr "定定用 ê 檔案"
 
 #: rootmodel.cpp:596
 #, kde-format
 msgid "Recent Applications"
-msgstr "Kīn-lâi ê Ìng-iōng-tîng-sik"
+msgstr "近來 ê 應用程式"
 
 #: rootmodel.cpp:596
 #, kde-format
 msgid "Often Used Applications"
-msgstr "Tiānn-tiānn Iōng-ê Ìng-iōng-tîng-sik"
+msgstr "定定用 ê 應用程式"
 
 #: rootmodel.cpp:611
 #, kde-format
@@ -225,95 +225,95 @@ msgstr ""
 #: runnermodel.cpp:303
 #, kde-format
 msgid "Search results"
-msgstr "Tshiau-tshuē kiat-kó"
+msgstr "搜揣結果"
 
 #: systementry.cpp:193
 #, kde-format
 msgid "Lock"
-msgstr "Só-tīng"
+msgstr "鎖定"
 
 #: systementry.cpp:196
 #, kde-format
 msgid "Log Out"
-msgstr "Ting-tshut"
+msgstr "登出"
 
 #: systementry.cpp:199 systementry.cpp:253
 #, kde-format
 msgid "Save Session"
-msgstr "Tû-tsûn Kang-tsok-kai-tuānn"
+msgstr "儲存工作階段"
 
 #: systementry.cpp:202
 #, kde-format
 msgid "Switch User"
-msgstr "Tshiat-uānn Iōng-tsiá"
+msgstr "切換用者"
 
 #: systementry.cpp:205
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Khùn-bîn"
+msgstr "睏眠"
 
 #: systementry.cpp:208
 #, kde-format
 msgid "Hibernate"
-msgstr "Kuè-tang"
+msgstr "過冬"
 
 #: systementry.cpp:211
 #, kde-format
 msgid "Restart"
-msgstr "Tîng-khé-tōng"
+msgstr "重啟動"
 
 #: systementry.cpp:214
 #, kde-format
 msgid "Shut Down"
-msgstr "Kuainn-ki"
+msgstr "關機"
 
 #: systementry.cpp:230
 #, kde-format
 msgid "Session"
-msgstr "Kang-tsok-kai-tuānn"
+msgstr "工作階段"
 
 #: systementry.cpp:235
 #, kde-format
 msgid "System"
-msgstr "Hē-thóng"
+msgstr "系統"
 
 #: systementry.cpp:247
 #, kde-format
 msgid "Lock screen"
-msgstr "Só-tīng îng-bōo"
+msgstr "鎖定螢幕"
 
 #: systementry.cpp:250
 #, kde-format
 msgid "End session"
-msgstr "Kiat-sok kang-tsok-kai-tuānn"
+msgstr "結束工作階段"
 
 #: systementry.cpp:256
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr "Iōng pa̍t-ê iōng-tsiá khai-sí tông-sî tsip-hîng ê kang-tsok-kai-tuānn"
+msgstr "用別个用者開始同時執行 ê 工作階段"
 
 #: systementry.cpp:259
 #, kde-format
 msgid "Suspend to RAM"
-msgstr ""
+msgstr "暫停到 RAM"
 
 #: systementry.cpp:262
 #, kde-format
 msgid "Suspend to disk"
-msgstr ""
+msgstr "暫停到磁碟"
 
 #: systementry.cpp:265
 #, kde-format
 msgid "Restart computer"
-msgstr "Kā tiān-náu tîng-khé-tōng"
+msgstr "Kā 電腦重啟動"
 
 #: systementry.cpp:268
 #, kde-format
 msgid "Turn off computer"
-msgstr "Kā tiān-náu kuainn-tiāu"
+msgstr "Kā 電腦關掉"
 
 #: systemmodel.cpp:30
 #, kde-format
 msgid "System actions"
-msgstr "Hē-thóng tōng-tsok"
+msgstr "系統動作"

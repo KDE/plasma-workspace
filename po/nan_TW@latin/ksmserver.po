@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-20 00:46+0000\n"
-"PO-Revision-Date: 2026-07-18 04:12+0900\n"
+"PO-Revision-Date: 2026-08-18 02:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -54,7 +54,7 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
-"Khí-tōng Plasma ê sî-tsūn tsing-tshik kàu\n"
+"Khé-tōng Plasma ê sî-tsūn tsing-tshik kàu\n"
 "í-hā ê an-tsong būn-tê:"
 
 #: main.cpp:87
@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"Plasma bô-huat-tōo khí-tōng.\n"
+"Plasma bô-huat-tōo khé-tōng.\n"
 
 #: main.cpp:111
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-24 00:46+0000\n"
-"PO-Revision-Date: 2026-07-23 02:29+0900\n"
+"PO-Revision-Date: 2026-08-18 04:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -119,7 +119,7 @@ msgstr ""
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
-"Tsit-ê tsong-tì tíng-kuân ū tóng-àn ia̍h hōo îng-ióng-tîng-sik khui--leh."
+"Tsit-ê tsong-tì tíng-kuân ū tóng-àn ia̍h hōo ìng-iōng-tîng-sik khui--leh."
 
 #: messageinfo.cpp:175
 #, kde-format

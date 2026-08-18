@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2024-01-15 18:52+0200\n"
+"PO-Revision-Date: 2026-08-14 22:59+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -27,16 +27,7 @@ msgstr ""
 "ar operētājsistēmas izplatītāju."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -49,15 +40,13 @@ msgstr ""
 "Tas izstrādātājiem ļaus koncentrēties uz tām sistēmas daļām, kas jums ir "
 "svarīgas.<nl/><nl/>Šīs informācija sniegšana nav obligāta un notiek pilnīgi "
 "anonīmi. Mēs nekad nevāksim jūsu personas datus, lietotās datnes, apmeklētās "
-"tīmekļa vietnes vai jebkādu informāciju, kas varētu jūs identificēt.<nl/><nl/"
-">Vairāk varat uzzināt mūsu <link url='https://kde.org/privacypolicy-apps."
-"php'>privātuma politikā.</link>"
+"tīmekļa vietnes vai jebkādu informāciju, kas varētu jūs identificēt."
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Vairāk varat uzzināt mūsu privātuma politikā"
 
 #: ui/main.qml:64
 #, kde-format

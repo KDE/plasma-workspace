@@ -1,74 +1,72 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
-# Yasen Pramatarov <yasen@lindeas.com>, 2009, 2011.
-# SPDX-FileCopyrightText: 2022-2024, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmstyle\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-06-30 09:46+0200\n"
-"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
-"Language: bg\n"
+"PO-Revision-Date: 2026-08-18 04:38+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.2\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: gtkpage.cpp:57
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr "%1 не е валиден архив на GTK тема."
+msgstr "%1 毋是有效 ê GTK 主題封存。"
 
 #: kcmstyle.cpp:145 kcmstyle.cpp:152
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
-msgstr "Грешка по време на зареждане диалога за настройка на избрания стил."
+msgstr ""
 
 #: kcmstyle.cpp:258
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr "Прилагането на избрания стил „%1“ не бе успешно."
+msgstr "套用選擇風格 '%1' 失敗--ah。"
 
 #: styleconfdialog.cpp:21
 #, kde-format
 msgid "Configure %1"
-msgstr "Конфигуриране на %1"
+msgstr "設定 %1"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_1)
 #: stylepreview.ui:33
 #, kde-format
 msgid "Tab 1"
-msgstr "Раздел 1"
+msgstr "分頁 1"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
 #, kde-format
 msgid "Push Button"
-msgstr "Бутон"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
 #, kde-format
 msgid "Combo box"
-msgstr "Комбинирана листа"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
 #: stylepreview.ui:96
 #, kde-format
 msgid "Checkbox"
-msgstr "Поле за отметка"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
 #: stylepreview.ui:106 stylepreview.ui:116
 #, kde-format
 msgid "Radio button"
-msgstr "Радио бутон"
+msgstr ""
 
 #. i18n: ectx: property (format), widget (QProgressBar, progressBar)
 #: stylepreview.ui:128
@@ -80,137 +78,137 @@ msgstr "%p%"
 #: stylepreview.ui:136
 #, kde-format
 msgid "Tab 2"
-msgstr "Раздел 2"
+msgstr "分頁 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
 #, kde-format
 msgid "Application style"
-msgstr "Стил на приложение"
+msgstr "應用程式風格"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Show icons on buttons"
-msgstr "Показване на икони на бутоните"
+msgstr "佇揤鈕顯示圖示"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
 #, kde-format
 msgid "Show icons in menus"
-msgstr "Показване на икони в менютата"
+msgstr "佇選單內底顯示圖示"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
 #, kde-format
 msgid "Main toolbar label"
-msgstr "Етикет на основната лента с инструменти"
+msgstr ""
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
 #, kde-format
 msgid "Secondary toolbar label"
-msgstr "Етикет на вторичната лента с инструменти"
+msgstr ""
 
 #: ui/EffectSettingsPopup.qml:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr "Конфигуриране на икони и ленти с инструменти"
+msgstr "設定圖示 kap 工具列"
 
 #: ui/EffectSettingsPopup.qml:36
 #, kde-format
 msgid "Show icons:"
-msgstr "Показване на икони:"
+msgstr "顯示圖示："
 
 #: ui/EffectSettingsPopup.qml:37
 #, kde-format
 msgid "On buttons"
-msgstr "На бутони"
+msgstr "佇揤鈕頂懸"
 
 #: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
-msgstr "В менютата"
+msgstr "佇選單內底"
 
 #: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Main toolbar label:"
-msgstr "Етикет на основната лента с инструменти:"
+msgstr ""
 
 #: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
-msgstr "Без"
+msgstr "無"
 
 #: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Text only"
-msgstr "Само текст"
+msgstr "干焦文字"
 
 #: ui/EffectSettingsPopup.qml:64
 #, kde-format
 msgid "Beside icons"
-msgstr "Отстрани на иконите"
+msgstr "圖示邊仔"
 
 #: ui/EffectSettingsPopup.qml:65
 #, kde-format
 msgid "Below icon"
-msgstr "Под иконата"
+msgstr "圖示下跤"
 
 #: ui/EffectSettingsPopup.qml:80
 #, kde-format
 msgid "Secondary toolbar label:"
-msgstr "Етикет на вторичната лента с инструменти:"
+msgstr ""
 
 #: ui/GtkStylePage.qml:17
 #, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "Стил на приложение на GNOME/GTK"
+msgstr "GNOME/GTK 應用程式風格"
 
 #: ui/GtkStylePage.qml:38
 #, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
-msgstr "Инсталиране от файл…"
+msgstr "Uì 檔案安裝…"
 
 #: ui/GtkStylePage.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr "Изтегляне на нови…"
+msgstr "取得新的…"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
-msgstr "GTK тема:"
+msgstr "GTK 主題："
 
 #: ui/GtkStylePage.qml:85
 #, kde-format
 msgid "Preview…"
-msgstr "Преглед…"
+msgstr "預覽…"
 
 #: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr "Избиране на архив с теми на GTK"
+msgstr "選 GTK 主題封存"
 
 #: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr "Архив с теми на GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK 主題封存 (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr "Конфигуриране на икони и ленти с инструменти…"
+msgstr "設定圖示 kap 工具列…"
 
 #: ui/main.qml:73
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Конфигуриране на стила на GNOME/GTK приложения…"
+msgstr "設定 GNOME/GTK 應用程式風格…"
 
 #: ui/main.qml:106
 #, kde-format
 msgid "Configure Style…"
-msgstr "Конфигуриране на стил…"
+msgstr "設定風格…"

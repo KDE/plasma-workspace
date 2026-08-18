@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2019.
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2025-01-27 15:49+0200\n"
+"PO-Revision-Date: 2026-08-14 23:11+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "Nesen lietotās"
 #: recentusagemodel.cpp:160
 #, kde-format
 msgid "Places"
-msgstr ""
+msgstr "Vietas"
 
 #: recentusagemodel.cpp:163 recentusagemodel.cpp:330
 #, kde-format
@@ -150,10 +150,9 @@ msgid "Open Containing Folder"
 msgstr "Atvērt saturošo mapi"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Aizmirst datni"
+msgstr "Aizmirst mapi"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -171,10 +170,9 @@ msgid "Forget All Applications"
 msgstr "Aizmirst visas programmas"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Aizmirst visas datnes"
+msgstr "Aizmirst visas mapes"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -197,16 +195,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Šim nav jābūt redzamam! Lietojiet KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Nesenās datnes"
+msgstr "Nesenās vietas"
 
 #: rootmodel.cpp:578
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Biežāk lietotās datnes"
+msgstr "Biežāk atvērtās vietas"
 
 #: rootmodel.cpp:587
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-03 00:49+0000\n"
-"PO-Revision-Date: 2026-08-14 22:57+0900\n"
+"PO-Revision-Date: 2026-08-18 02:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -60,7 +60,7 @@ msgstr "Kā tiān-náu kuainn-tiāu"
 #: data.js:26
 #, kde-format
 msgid "Restart"
-msgstr "Tîng-khí-tōng"
+msgstr "Tîng-khé-tōng"
 
 #: data.js:27
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "Hián-sī ting-tshut uē-bīn"
 #: data.js:41
 #, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Ting-tshut, kuainn-ki, á-sī kā tiān-náu tîng-khí-tōng"
+msgstr "Ting-tshut, kuainn-ki, á-sī kā tiān-náu tîng-khé-tōng"
 
 #: data.js:47
 #, kde-format
@@ -102,9 +102,9 @@ msgstr "Khùn-bîn (tsiām-thîng khì kì-ik-thé)"
 #: data.js:54
 #, kde-format
 msgid "Hibernate"
-msgstr ""
+msgstr "Kuè-tang"
 
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
-msgstr ""
+msgstr "Kuè-tang (tsiām-thîng khì tsû-tia̍p)"

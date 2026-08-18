@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2019.
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:46+0000\n"
-"PO-Revision-Date: 2024-01-17 14:06+0200\n"
+"PO-Revision-Date: 2026-08-14 23:13+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: appmenumodel.cpp:85
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "Rādīt pilnu programmas izvēlni"
 #: qml/configGeneral.qml:32
 #, kde-format
 msgid "Show menus for apps on different screens"
-msgstr ""
+msgstr "Rādīt programmu izvēlnes dažādos ekrānos"
 
 #: qml/MenuDelegate.qml:62
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-10 00:46+0000\n"
-"PO-Revision-Date: 2026-07-21 02:29+0900\n"
+"PO-Revision-Date: 2026-08-18 03:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -45,7 +45,7 @@ msgstr ""
 #: main.cpp:65
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr "Tī puē-kíng khí-tōng KRunner, mài hián-sī."
+msgstr "Tī puē-kíng khé-tōng KRunner, mài hián-sī."
 
 #: main.cpp:66
 #, kde-format
@@ -55,7 +55,7 @@ msgstr "Tshú-tāi hiān-tsûn ê si̍t-thé"
 #: main.cpp:67
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Kan-na hián-sī tsí-tīng guā-kuà-tîng-sik lâi ê kiat-kó"
 
 #: main.cpp:68
 #, kde-format
@@ -81,7 +81,7 @@ msgstr "Hián-sī Sú-iōng-hong-huat ê Suat-bîng"
 #: qml/RunCommand.qml:125
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Tsit-má kan-na hián-sī uì %1 lâi ê kiat-kó"
 
 #: qml/RunCommand.qml:139
 #, kde-format
@@ -113,12 +113,12 @@ msgstr "Siat-tīng KRunner…"
 #: qml/RunCommand.qml:308
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "Tìng-leh"
 
 #: qml/RunCommand.qml:309
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "Kā Tshiau-tshuē Tìng-leh"
 
 #: qml/RunCommand.qml:311
 #, kde-format

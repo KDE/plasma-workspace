@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-07-23 00:50+0900\n"
+"PO-Revision-Date: 2026-08-18 04:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -156,7 +156,7 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
-"%1 á-buē hōo tsū-tōng-khí-tōng. Siông-sè tsu-sìn tī hē-thóng tîng-khí-tōng "
+"%1 á-buē hōo tsū-tōng-khé-tōng. Siông-sè tsu-sìn tī hē-thóng tîng-khé-tōng "
 "liáu-āu tsiah ū-huat-tōo tsai-iánn."
 
 #: ui/main.qml:144
@@ -164,7 +164,7 @@ msgstr ""
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr "Á-buē tsū-tōng-khí-tōng"
+msgstr "Á-buē tsū-tōng-khé-tōng"
 
 #: ui/main.qml:153
 #, kde-format
@@ -181,7 +181,7 @@ msgstr "Î-tû hāng-bo̍k"
 #: ui/main.qml:180
 #, kde-format
 msgid "Applications"
-msgstr "Îng-ióng-tîng-sik"
+msgstr "Ìng-iōng-tîng-sik"
 
 #: ui/main.qml:183
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "Ting-ji̍p Tsí-līng-kó"
 #: ui/main.qml:186
 #, kde-format
 msgid "Pre-startup Scripts"
-msgstr "Khí-tōng Tsìn-tsîng ê Tsí-līng-kó"
+msgstr "Khé-tōng Tsìn-tsîng ê Tsí-līng-kó"
 
 #: ui/main.qml:189
 #, kde-format
@@ -201,7 +201,7 @@ msgstr "Ting-tshut Tsí-līng-kó"
 #: ui/main.qml:198
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr "Bô iōng-tsiá tsí-tīng ê tsū-tōng-khí-tōng hāng-bo̍k"
+msgstr "Bô iōng-tsiá tsí-tīng ê tsū-tōng-khé-tōng hāng-bo̍k"
 
 #: ui/main.qml:199
 #, kde-kuit-format
@@ -235,7 +235,7 @@ msgstr "Bô leh tsip-hîng"
 #, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "Leh khí-tōng"
+msgstr "Leh khé-tōng"
 
 #: unit.cpp:29
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2024-01-17 14:58+0200\n"
+"PO-Revision-Date: 2026-08-16 21:40+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: qml/main.qml:70
 #, kde-format
@@ -45,16 +45,14 @@ msgid "Virtual Keyboard: visible"
 msgstr "Virtuālā tastatūra: redzama"
 
 #: qml/main.qml:128
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: visible"
+#, kde-format
 msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "Virtuālā tastatūra: redzama"
+msgstr "Virtuālā tastatūra: rādīt pie ievades, kas nav peles ievade"
 
 #: qml/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard: disabled"
+#, kde-format
 msgid "Virtual Keyboard: Show with all input devices"
-msgstr "Virtuālā tastatūra: izslēgta"
+msgstr "Virtuālā tastatūra: rādīt ar visām ievades ierīcēm"
 
 #~ msgid "Virtual Keyboard: enabled"
 #~ msgstr "Virtuālā tastatūra: ieslēgta"

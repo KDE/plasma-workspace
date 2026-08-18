@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-24 00:46+0000\n"
-"PO-Revision-Date: 2026-08-08 15:10+0900\n"
+"PO-Revision-Date: 2026-08-18 03:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW\n"
@@ -120,7 +120,7 @@ msgstr "隱藏預覽 banner"
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr "隱藏到重起動"
+msgstr "隱藏到重啟動"
 
 #: desktopview.cpp:297
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "啟用 QML Javascript debugger"
 #: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr "莫佇 plasma-shell 崩去了後自動重起動"
+msgstr "莫佇 plasma-shell 崩去了後自動重啟動"
 
 #: main.cpp:127
 #, kde-format
@@ -190,7 +190,7 @@ msgstr "Kā 用者 feedback ē-sái 用 ê 選項列出來"
 #: main.cpp:190
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr "Plasma 起動失敗"
+msgstr "Plasma 啟動失敗"
 
 #: main.cpp:191
 #, kde-format
@@ -199,7 +199,7 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"Plasma 無法度起動，因為伊無法度正確來用 OpenGL 2 猶是軟體後備\n"
+"Plasma 無法度啟動，因為伊無法度正確來用 OpenGL 2 猶是軟體後備\n"
 "請檢查你 ê 圖形驅動程式 kám 有設定好勢。"
 
 #: osd.cpp:68
@@ -230,13 +230,13 @@ msgstr "%1 靜音"
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr "Touchpad 開--ah"
+msgstr "觸控板開--ah"
 
 #: osd.cpp:159
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr "Touchpad 關--ah"
+msgstr "觸控板關--ah"
 
 #: osd.cpp:166
 #, kde-format
@@ -280,7 +280,7 @@ msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
 "short"
 msgid "On-Screen Keyboard Activated"
-msgstr ""
+msgstr "螢幕齒盤這馬 ē 使用"
 
 #: osd.cpp:197
 #, kde-format
@@ -288,106 +288,106 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr ""
+msgstr "螢幕齒盤這馬 bē 使用"
 
 #: osd.cpp:204
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "睏眠 kap 螢幕鎖定停用--ah"
 
 #: osd.cpp:206
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "睏眠 kap 螢幕鎖定啟用--ah"
 
 #: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "省電模式"
 
 #: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "平衡模式"
 
 #: osd.cpp:222
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "效能模式"
 
 #: panelview.cpp:1066
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "隱藏面板設定"
 
 #: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "顯示面板設定"
 
 #: qml/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "內建螢幕"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "無連線 ê 螢幕 %1"
 
 #: shellcorona.cpp:173 shellcorona.cpp:175
 #, kde-format
 msgid "Show Desktop"
-msgstr ""
+msgstr "顯示桌面"
 
 #: shellcorona.cpp:175
 #, kde-format
 msgid "Hide Desktop"
-msgstr ""
+msgstr "隱藏桌面"
 
 #: shellcorona.cpp:191
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "拍開應用程式啟動器"
 
 #: shellcorona.cpp:199
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr ""
+msgstr "顯示活動切換器"
 
 #: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
-msgstr ""
+msgstr "切換到頂一个活動"
 
 #: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
-msgstr ""
+msgstr "切換到下一个活動"
 
 #: shellcorona.cpp:247
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "管理桌面 kap 面板…"
 
 #: shellcorona.cpp:269
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "佇面板之間移動齒盤焦點"
 
 #: shellcorona.cpp:2273
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-28 00:47+0000\n"
-"PO-Revision-Date: 2026-08-14 22:58+0900\n"
+"PO-Revision-Date: 2026-08-18 04:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -97,17 +97,17 @@ msgstr "Nî"
 #: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Tíng-tsi̍t-kò Gue̍h"
 
 #: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Tíng-tsi̍t Nî"
 
 #: calendar/qml/MonthViewHeader.qml:188
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Tíng-tsi̍t-ê Tsa̍p-nî"
 
 #: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
@@ -123,17 +123,17 @@ msgstr "Hōo la̍h-ji̍t tńg-khì kin-á-ji̍t"
 #: calendar/qml/MonthViewHeader.qml:220
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Ē-tsi̍t-kò Gue̍h"
 
 #: calendar/qml/MonthViewHeader.qml:222
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Ē-tsi̍t Nî"
 
 #: calendar/qml/MonthViewHeader.qml:224
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Ē-tsi̍t-ē Tsa̍p-nî"
 
 #: calendar/qml/MonthViewHeader.qml:283
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "Siat-tīng…"
 #: sessionsprivate/kscreenlockersettings.kcfg:10
 #, kde-format
 msgid "Screen lock enabled"
-msgstr ""
+msgstr "Khé-iōng îng-bōo só-tīng"
 
 #. i18n: ectx: whatsthis, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:11
@@ -226,7 +226,7 @@ msgstr "Khai-huat Ke-si"
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Kàu-io̍k"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
@@ -251,7 +251,7 @@ msgstr ""
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Tôo-hîng"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
@@ -281,7 +281,7 @@ msgstr "Suànn-tíng Ho̍k-bū"
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr ""
+msgstr "Kò-jîn Tsu-sìn"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
@@ -359,7 +359,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr ""
+msgstr "Tshú-tit Sin-ê Guân-kiānn"
 
 #: shellprivate/widgetexplorer.cpp:503
 #, kde-format
@@ -421,9 +421,9 @@ msgstr "Sok-sió"
 #: timezoneselector/TimezoneSelector.qml:305
 #, kde-format
 msgid "Timezone region selector"
-msgstr "Sî-khu khu-i̍k suán-ti̍k-khì"
+msgstr "Sî-khu khu-i̍k kíng-suán-khì"
 
 #: timezoneselector/TimezoneSelector.qml:337
 #, kde-format
 msgid "Timezone location selector"
-msgstr "Sî-khu uī-tì suán-ti̍k-khì"
+msgstr "Sî-khu uī-tì kíng-suán-khì"

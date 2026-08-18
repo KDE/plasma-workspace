@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-06 00:45+0000\n"
-"PO-Revision-Date: 2026-08-14 18:52+0900\n"
+"PO-Revision-Date: 2026-08-18 04:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: sourcesmodel.cpp:404
 #, kde-format
 msgid "Other Applications"
-msgstr "Kî-thann Îng-ióng-tîng-sik"
+msgstr "Kî-thann Ìng-iōng-tîng-sik"
 
 #: ui/ApplicationConfiguration.qml:105
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "Siat-tīng Hē-thóng Thong-ti…"
 #, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Siat-tīng îng-ióng-tîng-sik Thong-ti…"
+msgstr "Siat-tīng ìng-iōng-tîng-sik Thong-ti…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -273,7 +273,7 @@ msgstr "Ìng-iōng-tîng-sik Thong-ti"
 #: ui/SourcesPage.qml:108
 #, kde-format
 msgid "Applications"
-msgstr "Îng-ióng-tîng-sik"
+msgstr "Ìng-iōng-tîng-sik"
 
 #: ui/SourcesPage.qml:109
 #, kde-format
@@ -283,7 +283,7 @@ msgstr "Hē-thóng Ho̍k-bū"
 #: ui/SourcesPage.qml:157
 #, kde-format
 msgid "No application or event matches your search term"
-msgstr "Bô hû-ha̍p tshiau-tshuē ê îng-ióng-tîng-sik á-sī sū-kiānn"
+msgstr "Bô hû-ha̍p tshiau-tshuē ê ìng-iōng-tîng-sik á-sī sū-kiānn"
 
 #: ui/SourcesPage.qml:181
 #, kde-format

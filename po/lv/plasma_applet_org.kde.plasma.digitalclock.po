@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Māris Nartišs <maris.kde@gmail.com>, 2023.
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2025-06-18 16:52+0300\n"
+"PO-Revision-Date: 2026-08-16 21:39+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #: CalendarView.qml:148
 #, kde-format
@@ -397,30 +397,30 @@ msgstr "Izvēlieties laika joslu"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • %1 stundu vēlāk"
+msgstr[1] " • %1 stundas vēlāk"
+msgstr[2] " • %1 stundu vēlāk"
 
 #: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 vēlāk"
 
 #: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] " • %1 stundu agrāk"
+msgstr[1] " • %1 stundas agrāk"
+msgstr[2] " • %1 stundu agrāk"
 
 #: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 agrāk"
 
 #: main.qml:186
 #, kde-format
@@ -496,7 +496,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
+msgstr "Atveriet „%1“ ar peles vidējās pogas klikšķi"
 
 #~ msgid ""
 #~ "Tip: if you travel frequently, add your home time zone to this list. It "

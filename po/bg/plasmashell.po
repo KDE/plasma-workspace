@@ -433,13 +433,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgid "Activate Task Manager Entry %1"
-#~ msgstr "Активиране на запис от управление на задачите %1"
-
-#~ msgid "Internal Screen on %1"
-#~ msgstr "Вътрешен екран на %1"
-
-#~ msgctxt "Screen manufacturer and model on connector"
-#~ msgid "%1 %2 on %3"
-#~ msgstr "%1 %2 on %3"

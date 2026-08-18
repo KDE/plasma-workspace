@@ -439,9 +439,3 @@ msgstr "Избиране на област на часова зона"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Избиране на местоположение на часова зона"
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Време за изчакване на скрийнсейвъра"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Задава минутите, след които екранът се заключва."
