@@ -353,18 +353,16 @@ PlasmaExtras.Representation {
                                 visible: eventItem.hasTime
                             }
 
-                            PlasmaComponents.Label {
+                            Kirigami.SelectableLabel {
                                 id: eventTitle
 
                                 Layout.row: 0
                                 Layout.column: 2
                                 Layout.fillWidth: true
 
-                                elide: Text.ElideRight
                                 text: eventItem.modelData.title
                                 textFormat: Text.PlainText
                                 verticalAlignment: Text.AlignVCenter
-                                maximumLineCount: 2
                                 wrapMode: Text.Wrap
                             }
 
