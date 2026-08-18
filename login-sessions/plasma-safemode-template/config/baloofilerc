@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Jakob Petsovits <jpetso@petsovits.com>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+[Basic Settings]
+Indexing-Enabled=false

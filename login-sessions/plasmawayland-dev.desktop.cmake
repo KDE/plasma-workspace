@@ -93,3 +93,4 @@ Comment[vi]=Plasma, do KDE
 Comment[zh_CN]=KDE Plasma
 Comment[zh_TW]=Plasma by KDE
 X-KDE-PluginInfo-Version=${PROJECT_VERSION}
+X-KDE-SafeModeSession=plasma-safemode.desktop
