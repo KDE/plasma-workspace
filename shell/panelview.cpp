@@ -84,7 +84,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(this, &ContainmentView::statusChanged, this, &PanelView::handleQmlStatusChange);
 
     m_unhideTimer.setSingleShot(true);
-    m_unhideTimer.setInterval(500ms);
+    m_unhideTimer.setInterval(50ms);
     connect(&m_unhideTimer, &QTimer::timeout, this, &PanelView::restoreAutoHide);
 
     connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::restoreAutoHide);
