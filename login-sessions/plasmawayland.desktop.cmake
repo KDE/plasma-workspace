@@ -95,6 +95,7 @@ Comment[ko]=KDE Plasma
 Comment[lt]=Plasma pagal KDE
 Comment[lv]=„Plasma“ no KDE
 Comment[ml]=കെഡിഇയുടെ പ്ലാസ്മ
+Comment[nan_TW@latin]=KDE ê Plasma
 Comment[nb]=Plasma fra KDE
 Comment[nds]=Plasma vun KDE
 Comment[nl]=Plasma door KDE
