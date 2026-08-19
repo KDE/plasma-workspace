@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-08-19 00:48+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -488,14 +488,14 @@ msgstr "lokalno"
 msgid "System's local time zone"
 msgstr "lokalna vremenska zona"
 
-#: Tooltip.qml:36
+#: Tooltip.qml:37
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr ""
 
 # >> @option:radio Display time zone as:
-#: Tooltip.qml:76
+#: Tooltip.qml:75
 #, fuzzy, kde-format
 #| msgid "Time zone city"
 msgctxt ""
@@ -503,20 +503,20 @@ msgctxt ""
 msgid "Time zone is not set"
 msgstr "po gradu"
 
-#: Tooltip.qml:97
+#: Tooltip.qml:96
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
 
-#: Tooltip.qml:154
+#: Tooltip.qml:151
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
 msgstr ""
 
-#: Tooltip.qml:182
+#: Tooltip.qml:178
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
