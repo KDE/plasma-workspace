@@ -902,7 +902,9 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     if (changed && insert(data)) [[likely]] {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize) { // applyClipChanges can return nullptr
-            m_clip->setMimeData(data, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
+            m_clip->setMimeData(data,
+                                mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection,
+                                SystemClipboard::ClipboardUpdateReason::SyncSelection);
         }
     }
 }

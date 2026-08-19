@@ -403,7 +403,10 @@ void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeDat
         Ignore lock(m_selectionLocklevel);
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
             selectionMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
+            selectionMimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
         }
+
         qCDebug(KLIPPER_LOG) << "Setting selection to <" << (selectionMimeData->hasImage() ? u"image"_s : selectionMimeData->text()) << ">";
         m_clip->setMimeData(selectionMimeData, QClipboard::Selection);
     }
