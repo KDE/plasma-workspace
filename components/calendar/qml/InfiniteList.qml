@@ -59,6 +59,7 @@ ListView {
     highlightMoveVelocity: -1
     reuseItems: true
     model: 3
+    currentIndex: 1
     keyNavigationEnabled: false // It's actually enabled. The default behaviour is not desirable
 
     function focusFirstCellOfView() {
