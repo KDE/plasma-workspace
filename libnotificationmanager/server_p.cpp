@@ -275,6 +275,10 @@ void ServerPrivate::CloseNotification(uint id)
     }
     // spec says "If the notification no longer exists, an empty D-BUS Error message is sent back."
     static_cast<Server *>(parent())->closeNotification(id, Server::CloseReason::Revoked);
+
+    if (m_lastNotification.id() == id) {
+        m_lastNotification = Notification();
+    }
 }
 
 QStringList ServerPrivate::GetCapabilities() const
