@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 03:13+0000\n"
+"POT-Creation-Date: 2026-08-19 02:45+0000\n"
 "PO-Revision-Date: 2026-05-07 10:30+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -461,20 +461,20 @@ msgstr "Lokal"
 msgid "System's local time zone"
 msgstr "Systemets lokale tidszone"
 
-#: Tooltip.qml:36
+#: Tooltip.qml:37
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "I dag er %1"
 
-#: Tooltip.qml:76
+#: Tooltip.qml:75
 #, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
 msgstr "Tidszonen er ikke indstillet"
 
-#: Tooltip.qml:97
+#: Tooltip.qml:96
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
@@ -483,13 +483,13 @@ msgstr ""
 "Klik klokkeikonet for at åbne Dato & Tid-indstillingerne og indstil en "
 "tidszone."
 
-#: Tooltip.qml:154
+#: Tooltip.qml:151
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
 msgstr "%1:"
 
-#: Tooltip.qml:182
+#: Tooltip.qml:178
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"

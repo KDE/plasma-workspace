@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 03:13+0000\n"
+"POT-Creation-Date: 2026-08-19 02:45+0000\n"
 "PO-Revision-Date: 2025-02-13 22:14+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -468,20 +468,20 @@ msgstr "Setempat"
 msgid "System's local time zone"
 msgstr "Zona waktu sistem setempat"
 
-#: Tooltip.qml:36
+#: Tooltip.qml:37
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hari ini adalah %1"
 
-#: Tooltip.qml:76
+#: Tooltip.qml:75
 #, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
 msgstr "Zona waktu tidak disetel"
 
-#: Tooltip.qml:97
+#: Tooltip.qml:96
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
@@ -489,13 +489,13 @@ msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
 "Klik ikon jam untuk membuka setelan Tanggal & Waktu dan setel zona waktu."
 
-#: Tooltip.qml:154
+#: Tooltip.qml:151
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
 msgstr "%1:"
 
-#: Tooltip.qml:182
+#: Tooltip.qml:178
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
