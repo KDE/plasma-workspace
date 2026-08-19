@@ -153,7 +153,7 @@ msgctxt "@info:usagetip"
 msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
-msgstr ""
+msgstr "仅允许使用小写字母、数字、连字符和下划线。无效字符已被移除。"
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -161,7 +161,7 @@ msgctxt "@info:usagetip"
 msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
-msgstr ""
+msgstr "用户名必须是小写。大写字符已转换为小写。"
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format
