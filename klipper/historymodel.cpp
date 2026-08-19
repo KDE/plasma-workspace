@@ -170,7 +170,6 @@ HistoryModel::HistoryModel()
         }
     });
 
-    connect(m_clip.get(), &SystemClipboard::ignored, this, &HistoryModel::slotIgnored);
     connect(m_clip.get(), &SystemClipboard::newClipData, this, &HistoryModel::checkClipData);
 }
 
@@ -907,18 +906,6 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
                                 mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection,
                                 SystemClipboard::ClipboardUpdateReason::SyncSelection);
         }
-    }
-}
-
-void HistoryModel::slotIgnored(QClipboard::Mode mode)
-{
-    // internal to klipper, ignoring QSpinBox selections
-    // keep our old clipboard, thanks
-    // This won't quite work, but it's close enough for now.
-    // The trouble is that the top selection =! top clipboard
-    // but we don't track that yet. We will....
-    if (auto top = first()) {
-        m_clip->setMimeData(top, mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard);
     }
 }
 

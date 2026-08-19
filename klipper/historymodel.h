@@ -117,7 +117,6 @@ private Q_SLOTS:
      */
     void checkClipData(QClipboard::Mode mode, const QMimeData *data);
 
-    void slotIgnored(QClipboard::Mode mode);
     void slotReceivedEmptyClipboard(QClipboard::Mode mode);
 
 private:
