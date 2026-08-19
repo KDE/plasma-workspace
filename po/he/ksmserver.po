@@ -14,25 +14,26 @@
 # Diego Iastrubni <elcuco@kde.org>, 2006, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2017-05-16 12:20-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-08-18 10:39+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: logout.cpp:340
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "היציאה בוטלה על ידי \"%1\""
+msgstr "היציאה בוטלה על ידי ‚%1’"
 
 #: main.cpp:118
 #, kde-format
@@ -42,42 +43,42 @@ msgstr "משתנה הסביבה $HOME אינו מוגדר"
 #: main.cpp:122 main.cpp:128
 #, kde-format
 msgid "$HOME directory (%1) does not exist."
-msgstr "תיקית הבית (%1) אינה קיימת"
+msgstr "תיקיית ‎$HOME‏ (%1) אינה קיימת."
 
 #: main.cpp:124
 #, kde-format
 msgid "No write access to $HOME directory (%1)."
-msgstr "אין הרשאות כתיבה לתיקית הבית (%1)."
+msgstr "אין הרשאות לכתוב לתיקיית הבית (%1)."
 
 #: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
-msgstr "אין הרשאות קריאה לתיקית הבית (%1)."
+msgstr "אין הרשאות לקרוא מתיקיית הבית (%1)."
 
 #: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
-msgstr "המקום בתיקית הבית נגמר (%1)."
+msgstr "המקום בתיקיית ‎$HOME נגמר (%1)."
 
 #: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "הכתיבה לתיקית הבית (%2) נכשלה עם השגיאה \"%1\""
+msgstr "הכתיבה לתיקיית ‎$HOME‏ (%2) נכשלה עם השגיאה ‚%1’"
 
 #: main.cpp:150 main.cpp:185
 #, kde-format
 msgid "No write access to '%1'."
-msgstr "אין הרשאות כתיבה ל־'%1'."
+msgstr "אין הרשאות כתיבה אל ‚%1’."
 
 #: main.cpp:152 main.cpp:187
 #, kde-format
 msgid "No read access to '%1'."
-msgstr "אין הרשאות קריאה ל־'%1'."
+msgstr "אין הרשאות קריאה מ־‚%1’."
 
 #: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
-msgstr "לתיקיה הזמנית (%1) אין מקום פנוי"
+msgstr "שטח האחסון בתיקייה הזמנית (%1) אזל."
 
 #: main.cpp:163 main.cpp:176
 #, kde-format
@@ -85,27 +86,20 @@ msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
-"הכתיבה לתיקיה הזמנית נכשלה (%2) נכשל עם\n"
-"   השגיאה: '%1'"
+"כתיבה לתיקייה הזמנית (%2) נכשלה עם\n"
+"   השגיאה: ‚%1’"
 
 #: main.cpp:191
-#, fuzzy, kde-format
-#| msgid ""
-#| "The following installation problem was detected\n"
-#| "while trying to start KDE:"
+#, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
 "הבעיות האלו התגלו בהתקנה\n"
-"בנסיון להפעיל את KDE:"
+"בניסיון להפעיל את פלזמה:"
 
 #: main.cpp:194
-#, fuzzy, kde-format
-#| msgid ""
-#| "\n"
-#| "\n"
-#| "KDE is unable to start.\n"
+#, kde-format
 msgid ""
 "\n"
 "\n"
@@ -113,51 +107,48 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"KDE לא יכול להתחיל.\n"
+"ההפעלה של פלזמה נכשלה.\n"
 
 #: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr "בעיה בהתקנת סביבת העבודה פלזמה"
+msgstr "בעיה בהתקנת סביבת העבודה פלזמה!"
 
 #: main.cpp:237
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
+#, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"מנהל ההפעלה האמין של KDE שעושה שימוש בפרוטוקול ניהול\n"
+"מנהל ההפעלה האמין של פלזמה שמשתמש בפרוטוקול ניהול\n"
 "ההפעלה הסטנדרטי של XSMP) X11R6)."
 
 #: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "משחזר את ההפעלה שנשמרה, אם זמינה כזאת"
+msgstr "ההפעלה שנשמרה משוחזרת, אם יש אחת כזאת"
 
 #: main.cpp:244
 #, kde-format
 msgid "Also allow remote connections"
-msgstr "אפשר גם חיבורים מרוחקים"
+msgstr "לאפשר גם חיבורים מרוחקים"
 
 #: main.cpp:247
 #, kde-format
 msgid "Starts the session in locked mode"
-msgstr "מתחיל את ההפעלה במצב נעול"
+msgstr "ההפעלה עולה במצב נעול"
 
 #: main.cpp:251
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
-msgstr "מתחיל ללא תמיכה במסך נעילה. נצרך רק אם רכיבים אחרים מספקים מסך נעילה"
+msgstr "התחלה ללא תמיכה במסך נעילה. נחוץ רק אם רכיב אחר מספק את מסך הנעילה."
 
 #: server.cpp:857
 #, kde-format
 msgid "Session Management"
-msgstr ""
+msgstr "ניהול הפעלות"
 
 #: server.cpp:860
 #, kde-format
@@ -167,17 +158,17 @@ msgstr "יציאה"
 #: server.cpp:865
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "צא מבלי לבקש אישור"
+msgstr "יציאה ללא בקשת אישור"
 
 #: server.cpp:870
 #, kde-format
 msgid "Halt Without Confirmation"
-msgstr "כבה מבלי לבקש אישור"
+msgstr "כיבוי ללא בקשת אישור"
 
 #: server.cpp:875
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "הפעל מחדש מבלי לבקש אישור"
+msgstr "הפעלה מחדש ללא בקשת אישור"
 
 #~ msgid ""
 #~ "Starts <wm> in case no other window manager is \n"
