@@ -56,6 +56,7 @@ public:
     bool reloadEntry(const QModelIndex &index, const QString &fileName);
 
     Q_INVOKABLE void removeEntry(int row);
+    Q_INVOKABLE void setEntryEnabled(int row, bool enabled);
     Q_INVOKABLE void editApplication(int row, QQuickItem *context);
     Q_INVOKABLE void addScript(const QUrl &url, AutostartEntrySource kind);
     Q_INVOKABLE void showApplicationDialog(QQuickItem *context);

@@ -125,9 +125,24 @@ KCM.ScrollViewKCM {
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
 
+                CheckBox {
+                    visible: model.source === AutostartModel.XdgAutoStart || model.source === AutostartModel.XdgScripts
+                    checked: model.enabled
+                    onToggled: kcm.model.setEntryEnabled(model.index, checked)
+                    Accessible.name: checked
+                        ? i18nc("@action:button", "Disable autostart for %1", model.name)
+                        : i18nc("@action:button", "Enable autostart for %1", model.name)
+                    ToolTip.delay: Kirigami.Units.toolTipDelay
+                    ToolTip.text: checked
+                        ? i18nc("@info:tooltip", "Disable autostart")
+                        : i18nc("@info:tooltip", "Enable autostart")
+                    ToolTip.visible: (Kirigami.Settings.tabletMode ? pressed : hovered) || activeFocus
+                }
+
                 Kirigami.IconTitleSubtitle {
                     Layout.fillWidth: true
                     icon.name: model.iconName
+                    enabled: model.enabled
 
                     reserveSpaceForSubtitle: true
 

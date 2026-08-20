@@ -58,20 +58,15 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
     const auto name = config.readName();
     const bool hidden = grp.readEntry("Hidden", false);
 
-    if (hidden) {
-        return {};
-    }
-
     const QStringList notShowList = grp.readXdgListEntry("NotShowIn");
     const QStringList onlyShowList = grp.readXdgListEntry("OnlyShowIn");
-    const bool enabled = !(notShowList.contains(QLatin1String("KDE")) || (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE"))));
+    const bool appliesToKDE = !(notShowList.contains(QLatin1String("KDE")) || (!onlyShowList.isEmpty() && !onlyShowList.contains(QLatin1String("KDE"))));
 
-    if (!enabled) {
+    if (!appliesToKDE) {
         return {};
     }
 
-    const auto lstEntry = grp.readXdgListEntry("OnlyShowIn");
-    const bool onlyInPlasma = lstEntry.contains(QLatin1String("KDE"));
+    const bool onlyInPlasma = onlyShowList.contains(QLatin1String("KDE"));
     const QString iconName = !config.readIcon().isEmpty() ? config.readIcon() : QStringLiteral("dialog-scripts");
     const auto kind = AutostartScriptDesktopFile::isAutostartScript(config) ? XdgScripts : XdgAutoStart; // .config/autostart load desktop at startup
     const QString tryCommand = grp.readEntry("TryExec");
@@ -82,6 +77,8 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
     if (!tryCommand.isEmpty() && QStandardPaths::findExecutable(tryCommand).isEmpty() && !QFile::exists(tryCommand)) {
         return {};
     }
+
+    const bool enabled = !hidden;
 
     if (kind == XdgScripts) {
         const QString targetScriptPath = grp.readEntry("Exec");
@@ -475,6 +472,37 @@ void AutostartModel::insertScriptEntry(int index, const QString &name, const QSt
     endInsertRows();
 
     sort();
+}
+
+void AutostartModel::setEntryEnabled(int row, bool enabled)
+{
+    if (row < 0 || row >= m_entries.size()) {
+        return;
+    }
+
+    AutostartEntry &entry = m_entries[row];
+
+    if (entry.source != XdgAutoStart && entry.source != XdgScripts) {
+        return;
+    }
+
+    if (entry.enabled == enabled) {
+        return;
+    }
+
+    KDesktopFile desktopFile(entry.fileName);
+    KConfigGroup grp = desktopFile.desktopGroup();
+    if (enabled) {
+        grp.deleteEntry("Hidden");
+    } else {
+        grp.writeEntry("Hidden", true);
+    }
+    desktopFile.sync();
+
+    entry.enabled = enabled;
+
+    const QModelIndex idx = index(row, 0);
+    Q_EMIT dataChanged(idx, idx, {Enabled});
 }
 
 void AutostartModel::removeEntry(int row)
