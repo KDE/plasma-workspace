@@ -101,6 +101,8 @@ QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
     case HasNoBorder:
     case IsExcludedFromCapture:
         return false;
+    case IsReadyForPainting:
+        return true;
     default:
         return {};
     }

@@ -103,6 +103,7 @@ Q_SIGNALS:
     void activitiesChanged();
     void parentWindowChanged();
     void initialStateDone();
+    void readyForPaintingChanged();
 
 protected:
     void org_kde_plasma_window_unmapped() override
@@ -259,6 +260,10 @@ protected:
             windowState.setFlag(state::state_exclude_from_capture, flags & state::state_exclude_from_capture);
             Q_EMIT excludeFromCaptureChanged();
         }
+        if (diff & state::state_ready_for_painting) {
+            windowState.setFlag(state::state_ready_for_painting, flags & state::state_ready_for_painting);
+            Q_EMIT readyForPaintingChanged();
+        }
     }
     void org_kde_plasma_window_virtual_desktop_entered(const QString &id) override
     {
@@ -373,7 +378,7 @@ class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWind
 {
     Q_OBJECT
 public:
-    static constexpr int s_version = 20;
+    static constexpr int s_version = 21;
     PlasmaWindowManagement()
         : QWaylandClientExtensionTemplate(s_version)
     {
@@ -725,6 +730,10 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         this->dataChanged(window, IsExcludedFromCapture);
     });
 
+    QObject::connect(window, &PlasmaWindow::readyForPaintingChanged, q, [window, this] {
+        this->dataChanged(window, IsReadyForPainting);
+    });
+
     QObject::connect(window, &PlasmaWindow::virtualDesktopChangeableChanged, q, [window, this] {
         this->dataChanged(window, IsVirtualDesktopsChangeable);
     });
@@ -936,6 +945,8 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->windowState.testFlag(PlasmaWindow::state::state_no_border);
     } else if (role == IsExcludedFromCapture) {
         return window->windowState.testFlag(PlasmaWindow::state::state_exclude_from_capture);
+    } else if (role == IsReadyForPainting) {
+        return window->windowState.testFlag(PlasmaWindow::state::state_ready_for_painting);
     } else if (role == IsVirtualDesktopsChangeable) {
         return window->windowState.testFlag(PlasmaWindow::state::state_virtual_desktop_changeable);
     } else if (role == VirtualDesktops) {

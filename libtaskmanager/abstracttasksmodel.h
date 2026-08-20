@@ -94,6 +94,7 @@ public:
         HasNoBorder, /**< Whether the task's window has the no border state set. @since 6.4 */
         CanSetNoBorder, /**< Whether the task can set no border state. @since 6.4 */
         IsExcludedFromCapture, /**< Whether the task's window has been hidden from screencasts. @since 6.6 */
+        IsReadyForPainting, /**< Whether the window is mapped, @since 6.8 */
     };
     Q_ENUM(AdditionalRoles)
 

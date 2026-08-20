@@ -716,6 +716,8 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             return d->all(proxyIndex, AbstractTasksModel::HasNoBorder);
         } else if (role == AbstractTasksModel::IsExcludedFromCapture) {
             return d->all(proxyIndex, AbstractTasksModel::IsExcludedFromCapture);
+        } else if (role == AbstractTasksModel::IsReadyForPainting) {
+            return d->any(proxyIndex, AbstractTasksModel::IsReadyForPainting);
         } else if (role == AbstractTasksModel::IsVirtualDesktopsChangeable) {
             return d->all(proxyIndex, AbstractTasksModel::IsVirtualDesktopsChangeable);
         } else if (role == AbstractTasksModel::VirtualDesktops) {
