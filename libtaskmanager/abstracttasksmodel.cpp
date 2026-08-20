@@ -103,6 +103,8 @@ QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
         return false;
     case StorageId:
         return QString();
+    case IsMapped:
+        return true;
     default:
         return {};
     }

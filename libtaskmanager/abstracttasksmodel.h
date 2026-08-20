@@ -95,6 +95,7 @@ public:
         CanSetNoBorder, /**< Whether the task can set no border state. @since 6.4 */
         IsExcludedFromCapture, /**< Whether the task's window has been hidden from screencasts. @since 6.6 */
         StorageId, /** The KService storageId for the underlying service. @since 6.8  */
+        IsMapped, /**< Whether the window is mapped, @since 6.8 */
     };
     Q_ENUM(AdditionalRoles)
 

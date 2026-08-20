@@ -69,8 +69,10 @@ public:
     QString resourceName;
     QPointer<PlasmaWindow> parentWindow;
     bool wasUnmapped = false;
+    bool wasMapped = false;
 
 Q_SIGNALS:
+    void mapped();
     void unmapped();
     void titleChanged();
     void appIdChanged();
@@ -105,6 +107,11 @@ Q_SIGNALS:
     void initialStateDone();
 
 protected:
+    void org_kde_plasma_window_mapped() override
+    {
+        wasMapped = true;
+        Q_EMIT mapped();
+    }
     void org_kde_plasma_window_unmapped() override
     {
         wasUnmapped = true;
@@ -373,7 +380,7 @@ class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWind
 {
     Q_OBJECT
 public:
-    static constexpr int s_version = 20;
+    static constexpr int s_version = 21;
     PlasmaWindowManagement()
         : QWaylandClientExtensionTemplate(s_version)
     {
@@ -725,6 +732,10 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         this->dataChanged(window, IsExcludedFromCapture);
     });
 
+    QObject::connect(window, &PlasmaWindow::mapped, q, [window, this] {
+        this->dataChanged(window, IsMapped);
+    });
+
     QObject::connect(window, &PlasmaWindow::virtualDesktopChangeableChanged, q, [window, this] {
         this->dataChanged(window, IsVirtualDesktopsChangeable);
     });
@@ -936,6 +947,8 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->windowState.testFlag(PlasmaWindow::state::state_no_border);
     } else if (role == IsExcludedFromCapture) {
         return window->windowState.testFlag(PlasmaWindow::state::state_exclude_from_capture);
+    } else if (role == IsMapped) {
+        return window->wasMapped;
     } else if (role == IsVirtualDesktopsChangeable) {
         return window->windowState.testFlag(PlasmaWindow::state::state_virtual_desktop_changeable);
     } else if (role == VirtualDesktops) {
