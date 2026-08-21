@@ -29,5 +29,7 @@ public:
     };
     Q_ENUM(VirtualKeyboardVisibility);
 
+    Q_INVOKABLE void forceActivate();
+
     KwinVirtualKeyboardInterface();
 };

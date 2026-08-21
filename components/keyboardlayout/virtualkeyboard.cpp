@@ -11,4 +11,11 @@ KwinVirtualKeyboardInterface::KwinVirtualKeyboardInterface()
 {
 }
 
+// We need to wrap the D-Bus call in a Q_INVOKABLE method, otherwise the qml tooling
+// doesn't know about this.
+void KwinVirtualKeyboardInterface::forceActivate()
+{
+    OrgKdeKwinVirtualKeyboardInterface::forceActivate();
+}
+
 #include "moc_virtualkeyboard.cpp"
