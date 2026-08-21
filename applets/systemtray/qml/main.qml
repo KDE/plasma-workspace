@@ -56,6 +56,7 @@ ContainmentItem {
     KItemModels.KSortFilterProxyModel {
         id: activeModel
         filterRoleName: "effectiveStatus"
+        dynamicSortFilter: !systemTrayState.expanded
         filterRowCallback: (sourceRow, sourceParent) => {
             let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
             return value === PlasmaCore.Types.ActiveStatus;
@@ -66,11 +67,24 @@ ContainmentItem {
     KItemModels.KSortFilterProxyModel {
         id: hiddenModel
         filterRoleName: "effectiveStatus"
+        dynamicSortFilter: !systemTrayState.expanded
         filterRowCallback: (sourceRow, sourceParent) => {
             let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
             return value === PlasmaCore.Types.PassiveStatus
         }
         Component.onCompleted: sourceModel = Plasmoid.systemTrayModel // avoid unnecessary binding, it causes loops
+    }
+
+    // Re-evaluate filters when the popup closes to apply any status changes
+    // that accumulated while the popup was open
+    Connections {
+        target: systemTrayState
+        function onExpandedChanged() {
+            if (!systemTrayState.expanded) {
+                activeModel.invalidateFilter();
+                hiddenModel.invalidateFilter();
+            }
+        }
     }
 
     Instantiator {
