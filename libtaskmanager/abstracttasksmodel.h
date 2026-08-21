@@ -37,7 +37,7 @@ class TASKMANAGER_EXPORT AbstractTasksModel : public QAbstractListModel, public 
     QML_UNCREATABLE("")
 public:
     enum AdditionalRoles {
-        AppId = Qt::UserRole + 1, /**< KService storage id (.desktop name sans extension). */
+        AppId = Qt::UserRole + 1, /**< KService desktopEntryName (.desktop name sans extension). */
         AppName, /**< Application name. */
         GenericName, /**< Generic application name. */
         LauncherUrl, /**< URL that can be used to launch this application (.desktop or executable). */
@@ -94,6 +94,7 @@ public:
         HasNoBorder, /**< Whether the task's window has the no border state set. @since 6.4 */
         CanSetNoBorder, /**< Whether the task can set no border state. @since 6.4 */
         IsExcludedFromCapture, /**< Whether the task's window has been hidden from screencasts. @since 6.6 */
+        StorageId, /** The KService storageId for the underlying service. @since 6.8  */
     };
     Q_ENUM(AdditionalRoles)
 

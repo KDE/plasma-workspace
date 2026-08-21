@@ -347,6 +347,12 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
         return QStringList(d->activitiesForLauncher[url].values());
     } else if (role == CanLaunchNewInstance) {
         return false;
+    } else if (role == StorageId) {
+        const auto service = KService::serviceByDesktopName(data.id);
+        if (service) {
+            return service->storageId();
+        }
+        return QString();
     }
 
     return AbstractTasksModel::data(index, role);

@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     QSet<QString> seenAppIds;
     for (int i = 0; i < tasksModel.rowCount(); ++i) {
         const QModelIndex index = tasksModel.index(i, 0);
-        QString appId = tasksModel.data(index, TaskManager::AbstractTasksModel::AppId).toString();
+        QString appId = tasksModel.data(index, TaskManager::AbstractTasksModel::StorageId).toString();
 
         if (seenAppIds.contains(appId)) {
             qCDebug(FALLBACK_SESSION_RESTORE) << "Skipping duplicate" << appId;

@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
     // finally look through our list and do the actual launching
     for (const QString &groupName : config->groupList()) {
         const QString appId = config->group(groupName).readEntry("appId");
-        auto service = KService::serviceByMenuId(appId);
+        auto service = KService::serviceByStorageId(appId);
         if (!service || !service->isValid()) {
             qCDebug(FALLBACK_SESSION_RESTORE) << "skipping " << appId << "no service found.";
             continue;

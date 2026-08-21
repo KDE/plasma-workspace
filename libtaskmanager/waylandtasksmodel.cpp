@@ -968,6 +968,12 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->applicationMenuService;
     } else if (role == CanLaunchNewInstance) {
         return canLauchNewInstance(d->appData(window));
+    } else if (role == StorageId) {
+        const auto service = KService::serviceByDesktopName(d->appData(window).id);
+        if (service) {
+            return service->storageId();
+        }
+        return QString();
     }
 
     return AbstractTasksModel::data(index, role);

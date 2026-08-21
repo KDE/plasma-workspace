@@ -101,6 +101,8 @@ QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
     case HasNoBorder:
     case IsExcludedFromCapture:
         return false;
+    case StorageId:
+        return QString();
     default:
         return {};
     }
