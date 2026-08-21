@@ -60,6 +60,11 @@ int main(int argc, char *argv[])
         const QModelIndex index = tasksModel.index(i, 0);
         QString appId = tasksModel.data(index, TaskManager::AbstractTasksModel::StorageId).toString();
 
+        if (appId.isEmpty()) {
+            qCDebug(FALLBACK_SESSION_RESTORE) << "Skipping due to no appId";
+            continue;
+        }
+
         if (seenAppIds.contains(appId)) {
             qCDebug(FALLBACK_SESSION_RESTORE) << "Skipping duplicate" << appId;
             continue;
