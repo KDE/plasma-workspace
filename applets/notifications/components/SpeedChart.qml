@@ -24,39 +24,16 @@ Item {
     property ModelInterface modelInterface
     property bool expanded
 
-    property int speed
-    property int averageSpeed
+    readonly property int speed: modelInterface.jobDetails.speed
+    readonly property int averageSpeed: modelInterface.jobDetails.elapsedTime > 0
+        ? modelInterface.jobDetails.processedBytes / modelInterface.jobDetails.elapsedTime * 1000
+        : 0
 
-    property int previousSpeed: 0
-    property int previousProcessed: 0
+    // The job keeps the readings itself, from the moment it starts, so there is a chart to show
+    // even the first time anyone looks at it.
+    readonly property var speedHistory: modelInterface.jobDetails.speedHistory
 
     readonly property real xRange: 100
-
-    readonly property real resolution: modelInterface.jobDetails.totalBytes / xRange
-
-    ListModel {
-        id: dataSource
-
-        function appendSpeed(processedBytes, speed) {
-            let speedChange = speed - root.previousSpeed
-
-            if (root.resolution > 0) {
-                let processed = Math.round(processedBytes / root.resolution)
-                let processedChange = processed - root.previousProcessed
-
-                if (processedChange > 0) {
-                    let newSpeed = root.previousSpeed
-                    for (let i = 0; i < processedChange; ++i) {
-                        newSpeed += speedChange / processedChange
-                        dataSource.append({data: newSpeed})
-                    }
-
-                    root.previousProcessed = processed
-                    root.previousSpeed = speed
-                }
-            }
-        }
-    }
 
     Layout.minimumHeight: chartContainer.active ? Kirigami.Units.gridUnit * 10 :
         // Even when indeterminate, we want to reserve the height for the text, otherwise it's too tightly spaced
@@ -76,7 +53,7 @@ Item {
     Loader {
         id: chartContainer
 
-        active: dataSource.count >= 2 && root.expanded
+        active: root.speedHistory.length >= 2 && root.expanded
         visible: active
 
         anchors.fill: parent
@@ -138,9 +115,8 @@ Item {
                 lineWidth: 1
                 interpolate: true
 
-                valueSources: Charts.ModelSource {
-                    model: dataSource
-                    roleName: "data"
+                valueSources: Charts.ArraySource {
+                    array: root.speedHistory
                 }
 
                 nameSource: Charts.SingleValueSource {
@@ -211,23 +187,6 @@ Item {
                     }
                 }
             }
-        }
-    }
-
-    Component.onCompleted: () => {
-        if (modelInterface.jobDetails.processedBytes > 0) {
-            dataSource.appendSpeed(modelInterface.jobDetails.processedBytes, modelInterface.jobDetails.speed)
-        }
-    }
-
-    Connections {
-        target: root.modelInterface.jobDetails
-
-        function onProcessedBytesChanged() {
-            dataSource.appendSpeed(root.modelInterface.jobDetails.processedBytes, root.modelInterface.jobDetails.speed)
-
-            root.speed = root.modelInterface.jobDetails.speed
-            root.averageSpeed = root.modelInterface.jobDetails.processedBytes / root.modelInterface.jobDetails.elapsedTime * 1000;
         }
     }
 

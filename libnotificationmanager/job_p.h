@@ -12,6 +12,7 @@
 #include <QDateTime>
 #include <QObject>
 #include <QString>
+#include <QElapsedTimer>
 #include <QTimer>
 #include <QUrl>
 #include <memory>
@@ -55,6 +56,7 @@ public:
     void setProcessedAmount(quint64 amount, const QString &unit);
     void setPercent(uint percent);
     void setSpeed(quint64 bytesPerSecond);
+    void recordProgressSample();
     void setElapsedTime(qint64 elapsedTime);
     void setInfoMessage(const QString &infoMessage);
     bool setDescriptionField(uint number, const QString &name, const QString &value);
@@ -146,6 +148,20 @@ private:
     bool m_transient = false;
 
     QUrl m_destUrl;
+
+    /**
+     * How far the job had got, and when. Held from the start of the job, so that the chart does
+     * not have to have been watching to be able to draw it. Both the speed and the progress are
+     * worked out from these two numbers when they are asked for, so a total revised partway
+     * through simply places the same readings elsewhere, and a job that never says how fast it is
+     * going still has a speed to show.
+     */
+    struct ProgressSample {
+        qint64 elapsedMilliseconds;
+        qulonglong processedBytes;
+    };
+    QList<ProgressSample> m_progressSamples;
+    QElapsedTimer m_progressTimer;
 
     qulonglong m_speed = 0;
     qint64 m_elapsedTime = 0;

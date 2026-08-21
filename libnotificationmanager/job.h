@@ -105,6 +105,14 @@ class NOTIFICATIONMANAGER_EXPORT Job : public QObject
     Q_PROPERTY(qulonglong totalDirectories READ totalDirectories NOTIFY totalDirectoriesChanged)
     Q_PROPERTY(qulonglong totalItems READ totalItems NOTIFY totalItemsChanged)
 
+    /**
+     * The speed readings taken so far, spread over 100 points of progress.
+     *
+     * Kept by the job itself rather than by whatever draws it, so that a chart opened halfway
+     * through has the whole story rather than only what happened since it was opened.
+     */
+    Q_PROPERTY(QVariantList speedHistory READ speedHistory NOTIFY speedHistoryChanged)
+
     Q_PROPERTY(QString descriptionLabel1 READ descriptionLabel1 NOTIFY descriptionLabel1Changed)
     Q_PROPERTY(QString descriptionValue1 READ descriptionValue1 NOTIFY descriptionValue1Changed)
 
@@ -187,6 +195,7 @@ public:
     QUrl effectiveDestUrl() const;
 
     qulonglong speed() const;
+    QVariantList speedHistory() const;
 
     qint64 elapsedTime() const;
 
@@ -231,6 +240,7 @@ Q_SIGNALS:
     void destUrlChanged();
     void effectiveDestUrlChanged();
     void speedChanged();
+    void speedHistoryChanged();
     void elapsedTimeChanged();
     void processedBytesChanged();
     void processedFilesChanged();

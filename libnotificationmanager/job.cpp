@@ -8,6 +8,7 @@
 #include "job_p.h"
 
 #include <QDebug>
+#include <QVariant>
 
 using namespace NotificationManager;
 
@@ -205,6 +206,59 @@ QUrl Job::effectiveDestUrl() const
 qulonglong Job::speed() const
 {
     return d->m_speed;
+}
+
+QVariantList Job::speedHistory() const
+{
+    // The chart draws a hundred points across the width of the job. Each reading says how far the
+    // job had got and when, so the speed over the stretch between two of them is the bytes they are
+    // apart over the time they are apart, and the stretch is drawn at that speed throughout. Working
+    // both out here rather than as the readings arrive means a total that changes partway through,
+    // which happens once a copy has finished working out what it is about to copy, simply places
+    // the same readings elsewhere.
+    constexpr int pointCount = 100;
+
+    if (d->m_totalBytes == 0 || d->m_progressSamples.count() < 2) {
+        return {};
+    }
+
+    const qreal bytesPerPoint = qreal(d->m_totalBytes) / pointCount;
+
+    QVariantList history;
+    history.reserve(pointCount);
+
+    // A job can be further along than it said it would be: KIO raises the total only once it
+    // notices, and until then everything beyond it belongs at the far end of the chart. Deciding
+    // that in floating point keeps a job that claims a total of a few bytes from asking for a
+    // point somewhere past the end of an int.
+    const auto pointFor = [bytesPerPoint](qulonglong processedBytes) {
+        const qreal position = processedBytes / bytesPerPoint;
+        return position >= pointCount ? pointCount : qRound(position);
+    };
+
+    for (int i = 1; i < d->m_progressSamples.count(); ++i) {
+        const auto &previous = d->m_progressSamples.at(i - 1);
+        const auto &current = d->m_progressSamples.at(i);
+
+        const qint64 milliseconds = current.elapsedMilliseconds - previous.elapsedMilliseconds;
+        const int point = pointFor(current.processedBytes);
+        if (milliseconds <= 0 || point - history.count() <= 0) {
+            continue;
+        }
+
+        const qreal speed = qreal(current.processedBytes - previous.processedBytes) * 1000 / milliseconds;
+
+        // Whatever the job did before the first reading was taken went unwatched, and drawing it
+        // as a climb out of nothing would show an acceleration that never happened. The speed it
+        // was found to be going is the best there is to say about it.
+        if (history.isEmpty()) {
+            history.insert(history.end(), pointFor(previous.processedBytes), speed);
+        }
+
+        history.insert(history.end(), point - history.count(), speed);
+    }
+
+    return history;
 }
 
 qulonglong Job::processedBytes() const

@@ -339,7 +339,11 @@ void JobPrivate::setSuspended(bool suspended)
 void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
 {
     if (unit == QLatin1String("bytes")) {
-        updateField(amount, m_totalBytes, &Job::totalBytesChanged);
+        if (updateField(amount, m_totalBytes, &Job::totalBytesChanged)) {
+            // The readings are spread across the width of the job, so a different width places
+            // them differently, even though no new reading has come in.
+            Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
+        }
     } else if (unit == QLatin1String("files")) {
         updateField(amount, m_totalFiles, &Job::totalFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
@@ -353,7 +357,9 @@ void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
 void JobPrivate::setProcessedAmount(quint64 amount, const QString &unit)
 {
     if (unit == QLatin1String("bytes")) {
-        updateField(amount, m_processedBytes, &Job::processedBytesChanged);
+        if (updateField(amount, m_processedBytes, &Job::processedBytesChanged)) {
+            recordProgressSample();
+        }
     } else if (unit == QLatin1String("files")) {
         updateField(amount, m_processedFiles, &Job::processedFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
@@ -377,6 +383,25 @@ void JobPrivate::setSpeed(quint64 bytesPerSecond)
 {
     updateField(bytesPerSecond, m_speed, &Job::speedChanged);
     updateHasDetails();
+}
+
+void JobPrivate::recordProgressSample()
+{
+    if (!m_progressTimer.isValid()) {
+        m_progressTimer.start();
+    }
+
+    // More readings than this tell the chart nothing it can draw, it has a hundred points to fill,
+    // so once there are too many every second one goes and the rest keep coming.
+    constexpr int maximumSamples = 512;
+    if (m_progressSamples.count() >= maximumSamples) {
+        for (int i = m_progressSamples.count() - 2; i > 0; i -= 2) {
+            m_progressSamples.removeAt(i);
+        }
+    }
+
+    m_progressSamples.append({m_progressTimer.elapsed(), m_processedBytes});
+    Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
 }
 
 void JobPrivate::setElapsedTime(qint64 elapsedTime)
