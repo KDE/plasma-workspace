@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 00:47+0000\n"
-"PO-Revision-Date: 2025-09-19 07:16+0200\n"
+"PO-Revision-Date: 2026-08-21 06:10+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.9\n"
 
 #: autostartmodel.cpp:378
 #, kde-format
@@ -160,25 +160,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
-msgstr ""
+msgstr "ავტოგაშვების გათიშვა %1-ისთვის"
 
 #: ui/main.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
-msgstr ""
+msgstr "ავტოგაშვების ჩართვა %1-ისთვის"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
-msgstr ""
+msgstr "ავტოგაშვების გათიშვა"
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
-msgstr ""
+msgstr "ავტოგაშვების ჩართვა"
 
 #: ui/main.qml:159
 #, kde-format
