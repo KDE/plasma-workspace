@@ -111,6 +111,7 @@ FocusScope {
             Layout.fillHeight: false
             Layout.topMargin: Kirigami.Units.largeSpacing
             spacing: 0
+            visible: root.authenticationTypeItem !== null
             children: [root.authenticationTypeItem]
         }
 
