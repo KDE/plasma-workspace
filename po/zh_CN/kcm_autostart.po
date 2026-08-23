@@ -157,25 +157,25 @@ msgstr "%1 尚未自动启动。详细信息将在系统重启后可用。"
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
-msgstr ""
+msgstr "禁用 %1 的自动启动"
 
 #: ui/main.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
-msgstr ""
+msgstr "启用 %1 的自动启动"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
-msgstr ""
+msgstr "禁用自动启动"
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
-msgstr ""
+msgstr "启用自动启动"
 
 #: ui/main.qml:159
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-28 00:47+0000\n"
+"POT-Creation-Date: 2026-08-23 00:47+0000\n"
 "PO-Revision-Date: 2025-11-16 19:25+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -410,44 +410,44 @@ msgid ""
 msgstr "Hal-hazırda seçilmiş saat qurşağını bu xəritədə görüntüləmək olmur "
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:301
+#: timezoneselector/TimezoneSelector.qml:335
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Seçin..."
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:293
+#: timezoneselector/TimezoneSelector.qml:327
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Bölgə:"
 
 #: timezoneselector/TimezoneSelector.qml:146
-#: timezoneselector/TimezoneSelector.qml:326
+#: timezoneselector/TimezoneSelector.qml:360
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Saat qurşağı:"
 
-#: timezoneselector/TimezoneSelector.qml:248
+#: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Yaxınlaşdırmaq"
 
-#: timezoneselector/TimezoneSelector.qml:264
+#: timezoneselector/TimezoneSelector.qml:298
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Uzaqlaşdırmaq"
 
-#: timezoneselector/TimezoneSelector.qml:305
+#: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Saat qurşağı bölgəsi seçicisi"
 
-#: timezoneselector/TimezoneSelector.qml:337
+#: timezoneselector/TimezoneSelector.qml:371
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Saat qurşağı yeri seçicisi"

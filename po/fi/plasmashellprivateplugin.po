@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-28 00:47+0000\n"
+"POT-Creation-Date: 2026-08-23 00:47+0000\n"
 "PO-Revision-Date: 2025-11-30 15:49+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -411,44 +411,44 @@ msgid ""
 msgstr "Valittu aikavyöhyke ei ole käytettävissä tämän kartan visualisointiin"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:301
+#: timezoneselector/TimezoneSelector.qml:335
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Valitse…"
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:293
+#: timezoneselector/TimezoneSelector.qml:327
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Alue:"
 
 #: timezoneselector/TimezoneSelector.qml:146
-#: timezoneselector/TimezoneSelector.qml:326
+#: timezoneselector/TimezoneSelector.qml:360
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Aikavyöhyke:"
 
-#: timezoneselector/TimezoneSelector.qml:248
+#: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Lähennä"
 
-#: timezoneselector/TimezoneSelector.qml:264
+#: timezoneselector/TimezoneSelector.qml:298
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Loitonna"
 
-#: timezoneselector/TimezoneSelector.qml:305
+#: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Aikavyöhykkeen valinta"
 
-#: timezoneselector/TimezoneSelector.qml:337
+#: timezoneselector/TimezoneSelector.qml:371
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Aikavyöhykkeen valinta"
