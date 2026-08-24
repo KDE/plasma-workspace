@@ -119,11 +119,11 @@ Item {
             }
             spacing: Kirigami.Units.smallSpacing
 
-            Item {
-                Layout.fillWidth: true
-            }
             ActionContainer {
                 id: actionContainer
+                Layout.alignment: Qt.AlignRight
+                Layout.horizontalStretchFactor: 1000 // Compress layout...
+                Layout.maximumWidth: thumbnailActionRow.width - menuButton.width - thumbnailActionRow.spacing
                 modelInterface: thumbnailArea.modelInterface
             }
 
