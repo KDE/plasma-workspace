@@ -55,7 +55,7 @@ Item {
 
             dragParent: jobDragIcon
             dragUrl: jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl
-            dragPixmap: jobDragIcon.source
+            dragImage: jobDragIcon.source
 
             onActivated: {
                 if (fileInfo.openAction) {

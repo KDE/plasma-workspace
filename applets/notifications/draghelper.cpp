@@ -83,4 +83,9 @@ void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pix
         Qt::QueuedConnection);
 }
 
+void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QImage &image)
+{
+    startDrag(item, url, QPixmap::fromImage(image));
+}
+
 #include "moc_draghelper.cpp"

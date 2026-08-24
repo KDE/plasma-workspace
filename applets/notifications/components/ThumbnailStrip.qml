@@ -60,7 +60,7 @@ Item {
             bottomMargin: -thumbnailArea.modelInterface.popupBottomPadding
         }
         source: ShaderEffectSource {
-            sourceItem: previewPixmap
+            sourceItem: previewImage
         }
         radius: 30
         opacity: 0.25
@@ -71,7 +71,7 @@ Item {
         anchors.fill: previewBackground
         dragParent: previewIcon
         dragPixmapSize: previewIcon.height
-        dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
+        dragImage: thumbnailer.hasPreview ? thumbnailer.image : thumbnailer.iconName
         dragUrl: thumbnailer.url
 
         onActivated: thumbnailArea.modelInterface.openUrl(thumbnailer.url)
@@ -83,12 +83,12 @@ Item {
             fileMenu.open(pos.x, pos.y);
         }
 
-        KQCAddons.QPixmapItem {
-            id: previewPixmap
+        KQCAddons.QImageItem {
+            id: previewImage
             anchors.centerIn: parent
             width: nativeHeight > 0 ? Math.round(height * (nativeWidth / nativeHeight)) : 0
             height: parent.height - 2 * Kirigami.Units.smallSpacing
-            pixmap: thumbnailer.pixmap
+            image: thumbnailer.image
             smooth: true
         }
 

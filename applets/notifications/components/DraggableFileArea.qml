@@ -19,7 +19,7 @@ Item {
     required property Item dragParent
     property int dragPixmapSize: Kirigami.Units.iconSizes.large
     property url dragUrl
-    property var dragPixmap
+    property var dragImage
 
     readonly property bool dragging: NotificationsApplet.DragHelper.dragActive
     readonly property alias hovered: hoverHandler.hovered
@@ -59,7 +59,7 @@ Item {
         onActiveChanged: {
             if (active) {
                 NotificationsApplet.DragHelper.dragPixmapSize = area.dragPixmapSize;
-                NotificationsApplet.DragHelper.startDrag(area.dragParent, area.dragUrl, area.dragPixmap);
+                NotificationsApplet.DragHelper.startDrag(area.dragParent, area.dragUrl, area.dragImage);
             }
         }
     }

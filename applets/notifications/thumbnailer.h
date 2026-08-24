@@ -10,7 +10,7 @@
 #include <QQmlParserStatus>
 #include <qqmlregistration.h>
 
-#include <QPixmap>
+#include <QImage>
 #include <QSize>
 #include <QUrl>
 
@@ -24,8 +24,8 @@ class Thumbnailer : public QObject, public QQmlParserStatus
     Q_PROPERTY(QSize size READ size WRITE setSize NOTIFY sizeChanged)
 
     Q_PROPERTY(bool busy READ busy NOTIFY busyChanged)
-    Q_PROPERTY(bool hasPreview READ hasPreview NOTIFY pixmapChanged)
-    Q_PROPERTY(QPixmap pixmap READ pixmap NOTIFY pixmapChanged)
+    Q_PROPERTY(bool hasPreview READ hasPreview NOTIFY imageChanged)
+    Q_PROPERTY(QImage image READ image NOTIFY imageChanged)
 
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
 
@@ -43,7 +43,7 @@ public:
 
     bool busy() const;
     bool hasPreview() const;
-    QPixmap pixmap() const;
+    QImage image() const;
 
     QString iconName() const;
 
@@ -58,7 +58,7 @@ Q_SIGNALS:
     void urlChanged();
     void sizeChanged();
     void busyChanged();
-    void pixmapChanged();
+    void imageChanged();
     void iconNameChanged();
 
 private:
@@ -73,7 +73,7 @@ private:
 
     bool m_busy = false;
 
-    QPixmap m_pixmap;
+    QImage m_image;
 
     QString m_iconName;
 };

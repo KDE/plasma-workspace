@@ -34,6 +34,7 @@ public:
 
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QString &iconName);
     Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
+    Q_INVOKABLE void startDrag(QQuickItem *item, const QUrl &url, const QImage &image);
 
 Q_SIGNALS:
     void dragActiveChanged();
