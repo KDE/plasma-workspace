@@ -53,7 +53,7 @@ Item {
         size: Qt.size(Notifications.Globals.popupWidth, Notifications.Globals.popupWidth)
     }
 
-    KQCAddons.QPixmapItem {
+    FastBlur {
         id: previewBackground
         anchors {
             fill: parent
@@ -62,15 +62,11 @@ Item {
             rightMargin: -thumbnailArea.modelInterface.popupRightPadding
             bottomMargin: -thumbnailArea.modelInterface.popupBottomPadding
         }
-        fillMode: Image.PreserveAspectCrop
-        layer.enabled: true
-        opacity: 0.25
-        pixmap: thumbnailer.pixmap
-        layer.effect: FastBlur {
-            source: previewBackground
-            anchors.fill: previewBackground
-            radius: 30
+        source: ShaderEffectSource {
+            sourceItem: previewPixmap
         }
+        radius: 30
+        opacity: 0.25
     }
 
     DraggableFileArea {
@@ -89,17 +85,15 @@ Item {
             fileMenu.visualParent = this;
             fileMenu.open(pos.x, pos.y);
         }
-    }
 
-    KQCAddons.QPixmapItem {
-        id: previewPixmap
-        anchors {
-            fill: previewBackground
-            margins: Kirigami.Units.smallSpacing
+        KQCAddons.QPixmapItem {
+            id: previewPixmap
+            anchors.centerIn: parent
+            width: nativeHeight > 0 ? Math.round(height * (nativeWidth / nativeHeight)) : 0
+            height: parent.height - 2 * Kirigami.Units.smallSpacing
+            pixmap: thumbnailer.pixmap
+            smooth: true
         }
-        pixmap: thumbnailer.pixmap
-        smooth: true
-        fillMode: Image.PreserveAspectFit
 
         Kirigami.Icon {
             id: previewIcon
@@ -122,7 +116,9 @@ Item {
                 top: parent.top
                 left: parent.left
                 right: parent.right
-                margins: Kirigami.Units.smallSpacing
+                // The thumbnail has small spacing around it,
+                // and the buttons should have small spacing to the thumbnail.
+                margins: 2 * Kirigami.Units.smallSpacing
             }
             spacing: Kirigami.Units.smallSpacing
 
