@@ -26,7 +26,6 @@ class Thumbnailer : public QObject, public QQmlParserStatus
     Q_PROPERTY(bool busy READ busy NOTIFY busyChanged)
     Q_PROPERTY(bool hasPreview READ hasPreview NOTIFY pixmapChanged)
     Q_PROPERTY(QPixmap pixmap READ pixmap NOTIFY pixmapChanged)
-    Q_PROPERTY(QSize pixmapSize READ pixmapSize NOTIFY pixmapChanged)
 
     Q_PROPERTY(QString iconName READ iconName NOTIFY iconNameChanged)
 
@@ -45,7 +44,6 @@ public:
     bool busy() const;
     bool hasPreview() const;
     QPixmap pixmap() const;
-    QSize pixmapSize() const;
 
     QString iconName() const;
 

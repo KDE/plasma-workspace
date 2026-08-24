@@ -43,9 +43,6 @@ Item {
 
     Notifications.Thumbnailer {
         id: thumbnailer
-
-        readonly property real ratio: pixmapSize.height ? pixmapSize.width / pixmapSize.height : 1
-
         url: thumbnailArea.urls[0]
         // height is dynamic, so request a "square" size and then show it fitting to aspect ratio
         // Also use popupWidth instead of our width to ensure it is fixed and doesn't

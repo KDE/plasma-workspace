@@ -90,11 +90,6 @@ QPixmap Thumbnailer::pixmap() const
     return m_pixmap;
 }
 
-QSize Thumbnailer::pixmapSize() const
-{
-    return m_pixmap.size();
-}
-
 QString Thumbnailer::iconName() const
 {
     return m_iconName;
