@@ -50,11 +50,12 @@ RowLayout {
         icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
 
         onClicked: {
-            if (Keyboards.KWinVirtualKeyboard.visible) {
+            if (Keyboards.KWinVirtualKeyboard.mode == Keyboards.KWinVirtualKeyboard.AnyInput) {
                 Keyboards.KWinVirtualKeyboard.active = false;
+                Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.NonMouseInput;
             } else {
+                Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.AnyInput;
                 root.oskActivated();
-                Keyboards.KWinVirtualKeyboard.forceActivate();
             }
         }
 
