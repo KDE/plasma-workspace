@@ -204,6 +204,10 @@ void Widget::setUserBackgroundHints(const QString &hint)
     }
 }
 
+QString Widget::launchErrorMessage() const
+{
+    return applet()->launchErrorMessage();
+}
 }
 
 #include "moc_widget.cpp"

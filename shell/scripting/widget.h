@@ -33,6 +33,7 @@ class Widget : public Applet
     Q_PROPERTY(QString globalShortcut WRITE setGlobalShortcut READ globalShorcut)
     Q_PROPERTY(bool locked READ locked WRITE setLocked)
     Q_PROPERTY(QString userBackgroundHints WRITE setUserBackgroundHints READ userBackgroundHints)
+    Q_PROPERTY(QString launchErrorMessage READ launchErrorMessage)
 
 public:
     explicit Widget(Plasma::Applet *applet, ScriptEngine *parent = nullptr);
@@ -52,6 +53,8 @@ public:
 
     QString userBackgroundHints() const;
     void setUserBackgroundHints(const QString &hint);
+
+    QString launchErrorMessage() const;
 
     Plasma::Applet *applet() const override;
 
