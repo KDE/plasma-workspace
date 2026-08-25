@@ -129,6 +129,8 @@ TasksModel::Private::~Private()
     --instanceCount;
 
     if (!instanceCount) {
+        concatProxyModel->removeSourceModel(windowTasksModel);
+        concatProxyModel->removeSourceModel(startupTasksModel);
         delete std::exchange(windowTasksModel, nullptr);
         delete std::exchange(startupTasksModel, nullptr);
     }
