@@ -54,7 +54,7 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data)
 
     qmlRegisterUncreatableType<KCMStyle>(uri, 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
     qmlRegisterAnonymousType<StyleSettings>(uri, 1);
-    qmlRegisterAnonymousType<StylesModel>(uri, 1);
+    qmlRegisterUncreatableType<StylesModel>(uri, 1, 0, "StylesModel", u"Cannot create instances of StylesModel"_s);
     qmlRegisterType<PreviewItem>(uri, 1, 0, "PreviewItem");
 
     m_sortFilterModel = new QSortFilterProxyModel(this);

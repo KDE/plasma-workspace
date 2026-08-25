@@ -14,11 +14,33 @@ KCM.GridViewKCM {
     id: root
 
     view.model: kcm.model
-    view.currentIndex: kcm.model.selectedStyleIndex
+    view.currentIndex: {
+        let widgetStyle = kcm.styleSettings.widgetStyle
+        let unionStyle = kcm.styleSettings.unionStyle
+
+        for (let i = 0; i < view.count; ++i) {
+            let styleId = kcm.model.data(kcm.model.index(i, 0), Private.StylesModel.StyleIdRole)
+            let isUnionStyle = kcm.model.data(kcm.model.index(i, 0), Private.StylesModel.IsUnionStyle)
+
+            if (widgetStyle === "Union") {
+                if (isUnionStyle && styleId == unionStyle) {
+                    return i
+                }
+            } else if (styleId == widgetStyle) {
+                return i
+            }
+        }
+        return -1
+    }
 
     KCM.SettingStateBinding {
         configObject: kcm.styleSettings
         settingName: "widgetStyle"
+    }
+
+    KCM.SettingStateBinding {
+        configObject: kcm.styleSettings
+        settingName: "unionStyle"
     }
 
     function openGtkStyleSettings() {
@@ -116,6 +138,11 @@ KCM.GridViewKCM {
                     property bool valid: true
 
                     styleId: model.styleId
+
+                    onSelected: {
+                        kcm.styleSettings.widgetStyle = "Union"
+                        kcm.styleSettings.unionStyle = model.styleId
+                    }
                 }
             }
 
@@ -131,7 +158,13 @@ KCM.GridViewKCM {
             }
         ]
         onClicked: {
-            kcm.model.selectedStyle = model.styleName;
+            if (model.isUnionStyle) {
+                kcm.styleSettings.widgetStyle = "Union"
+                kcm.styleSettings.unionStyle = model.styleId
+            } else {
+                kcm.styleSettings.widgetStyle = model.styleId
+                kcm.styleSettings.unionStyle = kcm.styleSettings.defaultUnionStyleValue
+            }
             view.forceActiveFocus();
         }
         onDoubleClicked: {
