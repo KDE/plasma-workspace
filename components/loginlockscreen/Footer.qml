@@ -49,12 +49,16 @@ RowLayout {
         text: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to show/hide virtual keyboard", "Virtual Keyboard")
         icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
 
-        onClicked: {
-            if (Keyboards.KWinVirtualKeyboard.visible) {
-                Keyboards.KWinVirtualKeyboard.active = false;
-            } else {
+        TapHandler {
+            onTapped: (eventPoint, button) => {
+                if (button === Qt.NoButton) {
+                    // Touchscreen
+                    Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.NonMouseInput;
+                } else if (button === Qt.LeftButton) {
+                    Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.AnyInput;
+                }
+
                 root.oskActivated();
-                Keyboards.KWinVirtualKeyboard.forceActivate();
             }
         }
 
