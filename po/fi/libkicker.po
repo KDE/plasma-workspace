@@ -124,7 +124,8 @@ msgid "Recently Used"
 msgstr "Viimeisimmät"
 
 #: recentusagemodel.cpp:160
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Places"
 msgid "Places"
 msgstr "Sijainnit"
 
