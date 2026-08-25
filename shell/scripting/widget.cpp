@@ -180,9 +180,12 @@ void Widget::setGeometry(const QJSValue &geometry)
 
 void Widget::showConfigurationInterface()
 {
-    /* if (d->applet) {
-         d->applet->showConfigurationInterface();
-     }*/
+    if (d->applet) {
+        QAction *configAction = d->applet->internalAction(QStringLiteral("configure"));
+        if (configAction && configAction->isEnabled()) {
+            configAction->trigger();
+        }
+    }
 }
 
 QString Widget::userBackgroundHints() const
