@@ -269,6 +269,7 @@ void HistoryModel::clearNonStarredHistory()
     endResetModel();
 
     QSqlQuery(u"VACUUM"_s, m_db).exec();
+    // Clear system clipboard in case it contains secrets, BUG 516403
     m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
 }
 
