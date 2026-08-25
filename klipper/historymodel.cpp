@@ -931,6 +931,7 @@ void HistoryModel::slotReceivedEmptyClipboard(QClipboard::Mode mode)
                             mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
                             SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
     }
+    setHasPassword(false);
 }
 
 bool HistoryModel::isItemStarred(const QString &uuid) const
@@ -957,6 +958,11 @@ void HistoryModel::setHasPassword(bool hasPassword)
 
     m_hasPassword = hasPassword;
     Q_EMIT hasPasswordChanged();
+}
+
+void HistoryModel::clearSecret()
+{
+    m_clip->clear();
 }
 
 #include "moc_historymodel.cpp"

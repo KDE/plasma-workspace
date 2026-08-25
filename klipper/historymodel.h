@@ -101,6 +101,8 @@ public:
 
     [[nodiscard]] bool hasPassword() const;
 
+    Q_INVOKABLE void clearSecret();
+
 Q_SIGNALS:
     void changed(bool isTop = false);
 

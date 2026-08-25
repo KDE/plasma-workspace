@@ -345,6 +345,22 @@ PlasmaComponents3.ScrollView {
                     Accessible.onPressAction: tabBar.currentIndex = PlasmaComponents3.TabBar.index
                 }
             }
+            Kirigami.InlineMessage {
+                text: i18nc("@info", "The clipboard currently holds a sensitive piece of data that will not be stored in the history.")
+                visible: clipboardMenu.model.sourceModel.hasPassword
+                icon.name: "preferences-security-symbolic"
+                Layout.fillWidth: true
+                Layout.bottomMargin: Kirigami.Units.smallSpacing
+                Layout.topMargin: Kirigami.Units.smallSpacing
+
+                actions: [
+                    Kirigami.Action {
+                        text: i18nc("@action:button", "Clear Secret Data")
+                        icon.name: "list-remove"
+                        onTriggered: clipboardMenu.model.sourceModel.clearSecret()
+                    }
+                ]
+            }
         }
     }
 
