@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>360</width>
-    <height>172</height>
+    <width>361</width>
+    <height>214</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -43,13 +43,33 @@
          </property>
         </widget>
        </item>
-       <item row="8" column="0">
+       <item row="9" column="0">
         <widget class="QSlider" name="horizontalSlider">
          <property name="value">
           <number>30</number>
          </property>
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="tickPosition">
+          <enum>QSlider::TickPosition::NoTicks</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1" colspan="2">
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>70</number>
+         </property>
+         <property name="format">
+          <string>%p%</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3" rowspan="5">
+        <widget class="QScrollBar" name="verticalScrollBar">
+         <property name="maximum">
+          <number>10</number>
          </property>
         </widget>
        </item>
@@ -62,14 +82,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>Push Button</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="3" rowspan="4">
-        <widget class="QScrollBar" name="verticalScrollBar">
-         <property name="maximum">
-          <number>10</number>
+          <string>Button</string>
          </property>
         </widget>
        </item>
@@ -88,7 +101,7 @@
          </item>
         </widget>
        </item>
-       <item row="6" column="0" rowspan="2">
+       <item row="6" column="0" rowspan="3">
         <layout class="QVBoxLayout" name="verticalLayout_1">
          <item>
           <widget class="QCheckBox" name="checkBox">
@@ -120,12 +133,9 @@
         </layout>
        </item>
        <item row="8" column="1" colspan="2">
-        <widget class="QProgressBar" name="progressBar">
-         <property name="value">
-          <number>70</number>
-         </property>
-         <property name="format">
-          <string>%p%</string>
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="placeholderText">
+          <string>Text Field</string>
          </property>
         </widget>
        </item>
