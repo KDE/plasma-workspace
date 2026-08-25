@@ -30,9 +30,12 @@ public:
     ~StylesModel() override;
 
     enum Roles {
-        StyleNameRole = Qt::UserRole + 1,
+        StyleIdRole = Qt::UserRole + 1,
+        StyleNameRole,
         DescriptionRole,
         ConfigurableRole,
+        IsUnionStyleRole,
+        CanUninstallRole,
     };
 
     int rowCount(const QModelIndex &parent) const override;

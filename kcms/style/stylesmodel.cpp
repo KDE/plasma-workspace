@@ -48,12 +48,17 @@ QVariant StylesModel::data(const QModelIndex &index, int role) const
             return item.display;
         }
         return item.styleName;
+    case StyleIdRole:
     case StyleNameRole:
         return item.styleName;
     case DescriptionRole:
         return item.description;
     case ConfigurableRole:
         return !item.configPage.isEmpty();
+    case IsUnionStyleRole:
+        return false;
+    case CanUninstallRole:
+        return false;
     }
 
     return {};
@@ -62,10 +67,13 @@ QVariant StylesModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> StylesModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
-        {StyleNameRole, QByteArrayLiteral("styleName")},
-        {DescriptionRole, QByteArrayLiteral("description")},
-        {ConfigurableRole, QByteArrayLiteral("configurable")},
+        {Qt::DisplayRole, "display"_ba},
+        {StyleIdRole, "styleId"_ba},
+        {StyleNameRole, "styleName"_ba},
+        {DescriptionRole, "description"_ba},
+        {ConfigurableRole, "configurable"_ba},
+        {IsUnionStyleRole, "isUnionStyle"_ba},
+        {CanUninstallRole, "canUninstall"_ba},
     };
 }
 

@@ -353,6 +353,8 @@ set_package_properties(KIOFuse PROPERTIES DESCRIPTION "Provide KIO support to le
 
 find_package(KNightTime ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 
+find_package(Union ${PROJECT_VERSION} CONFIG REQUIRED)
+
 # Clipboard applet
 ecm_find_qmlmodule(org.kde.prison 1.0)
 

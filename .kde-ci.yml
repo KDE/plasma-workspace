@@ -60,6 +60,7 @@ Dependencies:
     'plasma/plasma-activities-stats': '@same'
     'plasma/knighttime': '@same'
     'plasma/kwin': '@same'
+    'plasma/union': '@same'
     'libraries/plasma-wayland-protocols': '@latest-kf6'
     'libraries/kirigami-addons': '@latest-kf6'
     'graphics/libkexiv2': '@latest-kf6'

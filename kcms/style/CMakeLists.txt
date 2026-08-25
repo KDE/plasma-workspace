@@ -21,6 +21,8 @@ target_sources(kcm_style PRIVATE
     gtkpage.h
     previewitem.h
     styledata.h
+    unionstylesmodel.cpp
+    unionstylesmodel.h
 )
 kcmutils_generate_module_data(kcm_style
     MODULE_DATA_HEADER styledata.h
@@ -49,6 +51,7 @@ target_link_libraries(kcm_style PRIVATE
     KF6::NewStuffCore
     KF6::XmlGui
     KF6::ColorScheme
+    Union::Union
 )
 
 install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
