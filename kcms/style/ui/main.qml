@@ -82,22 +82,44 @@ KCM.GridViewKCM {
         text: model.display
         toolTip: model.description
 
-        thumbnailAvailable: thumbnailItem.valid
-        thumbnail: Private.PreviewItem {
-            id: thumbnailItem
+        thumbnailAvailable: thumbnailLoader.item?.valid ?? false
+        thumbnail: Loader {
+            id: thumbnailLoader
+
             anchors.fill: parent
+            clip: true
 
-            smooth: false
-            styleName: model.styleName
+            Component {
+                id: widgetsThumbnail
 
-            Connections {
-                target: kcm
-                function onStyleReconfigured(message) {
-                    if (styleName === model.styleName) {
-                        thumbnailItem.reload();
+                Private.PreviewItem {
+                    id: thumbnailItem
+
+                    smooth: false
+                    styleName: model.styleName
+
+                    Connections {
+                        target: kcm
+                        function onStyleReconfigured(message) {
+                            if (model.styleName === model.styleName) {
+                                thumbnailItem.reload();
+                            }
+                        }
                     }
                 }
             }
+
+            Component {
+                id: unionThumbnail
+
+                UnionThumbnailItem {
+                    property bool valid: true
+
+                    styleId: model.styleId
+                }
+            }
+
+            sourceComponent: model.isUnionStyle ? unionThumbnail : widgetsThumbnail
         }
 
         actions: [
