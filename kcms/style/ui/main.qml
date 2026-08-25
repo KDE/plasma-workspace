@@ -165,6 +165,11 @@ KCM.GridViewKCM {
 
         actions: [
             Kirigami.Action {
+                icon.name: "info-symbolic"
+                visible: model.isUnionStyle
+                tooltip: i18nc("@info:tooltip", "This style is using the Union style engine which is still under development. Some things may look or behave incorrectly when using this style.")
+            },
+            Kirigami.Action {
                 icon.name: "document-edit"
                 tooltip: i18n("Configure Style…")
                 enabled: model.configurable
