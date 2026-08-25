@@ -1,6 +1,6 @@
 # Copyright © 2010, 2011, 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kde-workspace package.
-# SPDX-FileCopyrightText: 2010, 2012, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2010, 2012, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2024 Lasse Liehu <lasse.liehu@gmail.com>
 # Jiri Grönroos <jiri.gronroos@iki.fi>, 2012.
 # SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2025-05-25 10:34+0300\n"
+"PO-Revision-Date: 2026-02-25 19:00+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -412,11 +412,10 @@ msgid "Toggle do not disturb"
 msgstr "Vaihda Älä häiritse -tilaa"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Tyhjennä kaikki ilmoitukset"
+msgstr "Tyhjennä ilmoitushistoria"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -431,12 +430,10 @@ msgid "Notifications On"
 msgstr "Ilmoitukset käytössä"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Ilmoitukset käytössä"
+msgstr "Ilmoitushistoria tyhjennetty"
 
 #: main.qml:61
 #, kde-format
