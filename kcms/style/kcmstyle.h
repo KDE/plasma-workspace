@@ -23,6 +23,7 @@
 #include "gtkpage.h"
 #include "stylesettings.h"
 #include "stylesmodel.h"
+#include "unionstylesmodel.h"
 
 class QQuickItem;
 
@@ -34,7 +35,7 @@ class KCMStyle : public KQuickManagedConfigModule
     Q_OBJECT
 
     Q_PROPERTY(GtkPage *gtkPage READ gtkPage CONSTANT)
-    Q_PROPERTY(StylesModel *model READ model CONSTANT)
+    Q_PROPERTY(QAbstractItemModel *model READ model CONSTANT)
     Q_PROPERTY(StyleSettings *styleSettings READ styleSettings CONSTANT)
     Q_PROPERTY(ToolBarStyle mainToolBarStyle READ mainToolBarStyle WRITE setMainToolBarStyle NOTIFY mainToolBarStyleChanged)
     Q_PROPERTY(ToolBarStyle otherToolBarStyle READ otherToolBarStyle WRITE setOtherToolBarStyle NOTIFY otherToolBarStyleChanged)
@@ -54,7 +55,7 @@ public:
 
     GtkPage *gtkPage() const;
 
-    StylesModel *model() const;
+    QAbstractItemModel *model() const;
 
     StyleSettings *styleSettings() const;
 
@@ -87,7 +88,9 @@ private:
     void checkGtkConfigKdedModuleLoaded();
 
     StyleData *const m_data;
-    StylesModel *const m_model;
+    QSortFilterProxyModel *m_sortFilterModel = nullptr;
+    StylesModel *m_stylesModel = nullptr;
+    UnionStylesModel *m_unionStylesModel = nullptr;
 
     QString m_previousStyle;
     bool m_effectsDirty = false;

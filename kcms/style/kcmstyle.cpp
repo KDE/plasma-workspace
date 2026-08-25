@@ -49,7 +49,6 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCM
 KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new StyleData(this))
-    , m_model(new StylesModel(this))
 {
     const char *uri{"org.kde.private.kcms.style"};
 
@@ -58,12 +57,21 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<StylesModel>(uri, 1);
     qmlRegisterType<PreviewItem>(uri, 1, 0, "PreviewItem");
 
-    connect(m_model, &StylesModel::selectedStyleChanged, this, [this](const QString &style) {
-        styleSettings()->setWidgetStyle(style);
-    });
-    connect(styleSettings(), &StyleSettings::widgetStyleChanged, this, [this] {
-        m_model->setSelectedStyle(styleSettings()->widgetStyle());
-    });
+    m_sortFilterModel = new QSortFilterProxyModel(this);
+    m_sortFilterModel->setDynamicSortFilter(true);
+    m_sortFilterModel->setSortRole(Qt::DisplayRole);
+
+    auto concatenateModel = new QConcatenateTablesProxyModel(this);
+    m_sortFilterModel->setSourceModel(concatenateModel);
+
+    m_stylesModel = new StylesModel(this);
+    concatenateModel->addSourceModel(m_stylesModel);
+
+    m_unionStylesModel = new UnionStylesModel(this);
+    concatenateModel->addSourceModel(m_unionStylesModel);
+
+    m_sortFilterModel->sort(0, Qt::AscendingOrder);
+
     connect(styleSettings(), &StyleSettings::iconsOnButtonsChanged, this, [this] {
         m_effectsDirty = true;
     });
@@ -84,9 +92,9 @@ GtkPage *KCMStyle::gtkPage() const
     return m_gtkPage;
 }
 
-StylesModel *KCMStyle::model() const
+QAbstractItemModel *KCMStyle::model() const
 {
-    return m_model;
+    return m_sortFilterModel;
 }
 
 StyleSettings *KCMStyle::styleSettings() const
@@ -134,7 +142,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         return;
     }
 
-    const QString configPage = m_model->styleConfigPage(styleName);
+    const QString configPage = m_stylesModel->styleConfigPage(styleName);
     if (configPage.isEmpty()) {
         return;
     }
@@ -233,7 +241,7 @@ void KCMStyle::load()
     m_gtkPage->load();
 
     KQuickManagedConfigModule::load();
-    m_model->load();
+    m_stylesModel->load();
     m_previousStyle = styleSettings()->widgetStyle();
 
     loadSettingsToModel();
@@ -254,7 +262,8 @@ void KCMStyle::save()
             newStyleLoaded = true;
             m_previousStyle = styleSettings()->widgetStyle();
         } else {
-            const QString styleDisplay = m_model->data(m_model->index(m_model->indexOfStyle(styleSettings()->widgetStyle()), 0), Qt::DisplayRole).toString();
+            const QString styleDisplay =
+                m_stylesModel->data(m_stylesModel->index(m_stylesModel->indexOfStyle(styleSettings()->widgetStyle()), 0), Qt::DisplayRole).toString();
             Q_EMIT showErrorMessage(i18n("Failed to apply selected style '%1'.", styleDisplay));
 
             // Reset selected style back to current in case of failure
