@@ -4,4 +4,4 @@ Mutators=true
 DefaultValueGetters=true
 GenerateProperties=true
 ParentInConstructor=true
-Notifiers=iconsOnButtons,iconsInMenus,toolButtonStyle
+Notifiers=iconsOnButtons,iconsInMenus,toolButtonStyle,unionStyle

@@ -9,6 +9,10 @@
       <label>Application style</label>
       <default>Breeze</default>
     </entry>
+    <entry name="unionStyle" type="String">
+      <label>Union Style ID</label>
+      <default>breeze</default>
+    </entry>
     <entry name="iconsOnButtons" key="ShowIconsOnPushButtons" type="Bool">
       <label>Show icons on buttons</label>
       <default>true</default>
