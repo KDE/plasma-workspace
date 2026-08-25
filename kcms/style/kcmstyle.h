@@ -40,6 +40,7 @@ class KCMStyle : public KQuickManagedConfigModule
     Q_PROPERTY(ToolBarStyle mainToolBarStyle READ mainToolBarStyle WRITE setMainToolBarStyle NOTIFY mainToolBarStyleChanged)
     Q_PROPERTY(ToolBarStyle otherToolBarStyle READ otherToolBarStyle WRITE setOtherToolBarStyle NOTIFY otherToolBarStyleChanged)
     Q_PROPERTY(bool gtkConfigKdedModuleLoaded READ gtkConfigKdedModuleLoaded NOTIFY gtkConfigKdedModuleLoadedChanged)
+    Q_PROPERTY(QStringList stylesToUninstall READ stylesToUninstall WRITE setStylesToUninstall NOTIFY stylesToUninstallChanged)
 
 public:
     KCMStyle(QObject *parent, const KPluginMetaData &data);
@@ -60,6 +61,8 @@ public:
     StyleSettings *styleSettings() const;
 
     Q_INVOKABLE void installUnionStyle(const QUrl &url);
+    Q_INVOKABLE void uninstallUnionStyles(const QStringList &styleIds);
+
     ToolBarStyle mainToolBarStyle() const;
     void setMainToolBarStyle(ToolBarStyle style);
     Q_SIGNAL void mainToolBarStyleChanged();
@@ -70,6 +73,10 @@ public:
 
     bool gtkConfigKdedModuleLoaded() const;
     Q_SIGNAL void gtkConfigKdedModuleLoadedChanged();
+
+    QStringList stylesToUninstall() const;
+    void setStylesToUninstall(const QStringList &newStylesToUninstall);
+    Q_SIGNAL void stylesToUninstallChanged();
 
     Q_INVOKABLE void configure(const QString &title, const QString &styleName, QQuickItem *ctx = nullptr);
 
@@ -104,4 +111,6 @@ private:
 
     bool m_gtkConfigKdedModuleLoaded = false;
     GtkPage *m_gtkPage = nullptr;
+
+    QStringList m_stylesToUninstall;
 };

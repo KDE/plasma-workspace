@@ -123,6 +123,7 @@ KCM.GridViewKCM {
 
             anchors.fill: parent
             clip: true
+            opacity: kcm.stylesToUninstall.includes(model.styleId) ? 0.3 : 1.0
 
             Component {
                 id: widgetsThumbnail
@@ -168,6 +169,35 @@ KCM.GridViewKCM {
                 tooltip: i18n("Configure Style…")
                 enabled: model.configurable
                 onTriggered: kcm.configure(model.display, model.styleName, delegate)
+            },
+            Kirigami.Action {
+                icon.name:  "delete-symbolic"
+                tooltip: {
+                    if (model.canUninstall) {
+                        return i18nc("@action:button", "Uninstall…")
+                    } else if (model.isUnionStyle) {
+                        return i18nc("@action:button", "Cannot uninstall system-installed styles.")
+                    } else {
+                        return i18nc("@action:button", "Can only uninstall Union styles.")
+                    }
+                }
+                enabled: model.canUninstall
+                visible: !kcm.stylesToUninstall.includes(model.styleId)
+                onTriggered: {
+                    let uninstall = kcm.stylesToUninstall
+                    uninstall.push(model.styleId)
+                    kcm.stylesToUninstall = uninstall
+                }
+            },
+            Kirigami.Action {
+                icon.name: "edit-undo"
+                tooltip: i18n("Do not uninstall this style.")
+                visible: kcm.stylesToUninstall.includes(model.styleId)
+                onTriggered: {
+                    let uninstall = kcm.stylesToUninstall
+                    uninstall.splice(uninstall.indexOf(model.styleId), 1)
+                    kcm.stylesToUninstall = uninstall
+                }
             }
         ]
         onClicked: {

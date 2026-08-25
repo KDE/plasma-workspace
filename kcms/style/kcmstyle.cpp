@@ -179,6 +179,65 @@ void KCMStyle::installUnionStyle(const QUrl &url)
     showInfoMessage(i18nc("@info:status", "Successfully installed “%1”.", styleName));
 }
 
+void KCMStyle::uninstallUnionStyles(const QStringList &styleIds)
+{
+    auto handler = Union::StyleRegistry::instance()->packageHandler();
+
+    QStringList errors;
+    QStringList uninstalled;
+
+    for (const auto &id : styleIds) {
+        auto package = handler->package(id);
+        if (!package.isValid()) {
+            errors.append(i18nc("@info:status", "Uninstall failed: The style with ID “%1” could not be found.", id));
+            continue;
+        }
+
+        auto styleName = package.name();
+
+        std::error_code errorCode;
+        handler->uninstall(package, errorCode);
+        if (errorCode) {
+            if (errorCode.default_error_condition() == std::errc::permission_denied) {
+                errors.append(i18nc("@info:status", "Uninstalling “%1” failed: Permission was denied.", styleName));
+            } else if (errorCode.default_error_condition() == std::errc::no_such_file_or_directory) {
+                errors.append(i18nc("@info:status", "Uninstalling “%1” failed: The style is not installed.", styleName));
+            } else if (errorCode.default_error_condition() == std::errc::device_or_resource_busy) {
+                errors.append(i18nc("@info:status", "Uninstalling “%1” failed: The style is in use.", styleName));
+            } else {
+                errors.append(i18nc("@info:status", "Uninstalling “%1” failed: %2", styleName, QString::fromStdString(errorCode.message())));
+            }
+        } else {
+            if (styleSettings()->unionStyle() == id) {
+                styleSettings()->setUnionStyle(styleSettings()->defaultUnionStyleValue());
+            }
+            uninstalled.append(styleName);
+        }
+    }
+
+    m_unionStylesModel->refresh();
+
+    if (errors.size() > 0) {
+        QString message;
+        if (uninstalled.empty()) {
+            message = i18nc("@info:status", "Could not uninstall styles:\n");
+        } else {
+            message = i18ncp("@info:status",
+                             "Successfully uninstalled “%2” but could not uninstall others:\n",
+                             "Successfully uninstalled %1 styles but could not uninstall others:\n",
+                             uninstalled.size(),
+                             uninstalled.first());
+        }
+        for (const auto &error : errors) {
+            message.append(u"- %1\n"_s.arg(error));
+        }
+        showErrorMessage(message);
+    } else {
+        showInfoMessage(
+            i18ncp("@info:status", "Successfully uninstalled “%2”.", "Successfully uninstalled %1 styles.", uninstalled.size(), uninstalled.first()));
+    }
+}
+
 void KCMStyle::setMainToolBarStyle(ToolBarStyle style)
 {
     if (m_mainToolBarStyle != style) {
@@ -206,6 +265,22 @@ void KCMStyle::setOtherToolBarStyle(ToolBarStyle style)
         styleSettings()->setToolButtonStyleOtherToolbars(QString::fromLatin1(toolBarStyleEnum.valueToKey(m_otherToolBarStyle)));
         m_effectsDirty = true;
     }
+}
+
+QStringList KCMStyle::stylesToUninstall() const
+{
+    return m_stylesToUninstall;
+}
+
+void KCMStyle::setStylesToUninstall(const QStringList &newStylesToUninstall)
+{
+    if (newStylesToUninstall == m_stylesToUninstall) {
+        return;
+    }
+
+    m_stylesToUninstall = newStylesToUninstall;
+    Q_EMIT stylesToUninstallChanged();
+    Q_EMIT settingsChanged();
 }
 
 void KCMStyle::configure(const QString &title, const QString &styleName, QQuickItem *ctx)
@@ -362,6 +437,11 @@ void KCMStyle::save()
     }
 
     m_effectsDirty = false;
+
+    if (!m_stylesToUninstall.isEmpty()) {
+        uninstallUnionStyles(m_stylesToUninstall);
+        m_stylesToUninstall.clear();
+    }
 }
 
 void KCMStyle::defaults()
@@ -392,7 +472,7 @@ bool KCMStyle::isDefaults() const
 
 bool KCMStyle::isSaveNeeded() const
 {
-    return m_gtkPage->isSaveNeeded();
+    return !m_stylesToUninstall.isEmpty() || m_gtkPage->isSaveNeeded();
 }
 
 #include "kcmstyle.moc"
