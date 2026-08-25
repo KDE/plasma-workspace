@@ -59,6 +59,7 @@ public:
 
     StyleSettings *styleSettings() const;
 
+    Q_INVOKABLE void installUnionStyle(const QUrl &url);
     ToolBarStyle mainToolBarStyle() const;
     void setMainToolBarStyle(ToolBarStyle style);
     Q_SIGNAL void mainToolBarStyleChanged();
@@ -80,6 +81,7 @@ public:
     bool isSaveNeeded() const override;
 
 Q_SIGNALS:
+    void showInfoMessage(const QString &message);
     void showErrorMessage(const QString &message);
     void styleReconfigured(const QString &styleName);
 

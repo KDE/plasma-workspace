@@ -6,6 +6,8 @@
 
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Dialogs
+
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.private.kcms.style as Private
@@ -58,17 +60,31 @@ KCM.GridViewKCM {
         showCloseButton: true
         visible: false
 
+        function showMessage(messageType, message)
+        {
+            type = messageType
+            text = message
+            visible = true
+        }
+
         Connections {
             target: kcm
             function onShowErrorMessage(message) {
-                infoLabel.type = Kirigami.MessageType.Error;
-                infoLabel.text = message;
-                infoLabel.visible = true;
+                infoLabel.showMessage(Kirigami.MessageType.Error, message)
+            }
+
+            function onShowInfoMessage(message) {
+                infoLabel.showMessage(Kirigami.MessageType.Information, message)
             }
         }
     }
 
     actions: [
+        Kirigami.Action {
+            icon.name: "document-import-symbolic"
+            text: i18nc("@action:button", "Install From File…")
+            onTriggered: installDialog.open()
+        },
         Kirigami.Action {
             id: effectSettingsButton
             text: i18n("Configure Icons and Toolbars…")
@@ -186,5 +202,17 @@ KCM.GridViewKCM {
                 effectSettingsPopupLoader.active = false;
             }
         }
+    }
+
+    FileDialog {
+        id: installDialog
+
+        title: i18nc("@title:dialog", "Choose Union Style to Install")
+        acceptLabel: i18nc("@action:button", "Install")
+        options: FileDialog.ReadOnly
+
+        nameFilters: ["Union Styles (*.unionstyle)"]
+
+        onAccepted: kcm.installUnionStyle(selectedFile)
     }
 }

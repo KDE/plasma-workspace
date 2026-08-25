@@ -24,7 +24,11 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KTar>
 #include <KToolBar>
+
+#include <Union/PackageHandler.h>
+#include <Union/StyleRegistry.h>
 
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
@@ -105,6 +109,74 @@ StyleSettings *KCMStyle::styleSettings() const
 KCMStyle::ToolBarStyle KCMStyle::mainToolBarStyle() const
 {
     return m_mainToolBarStyle;
+}
+
+void KCMStyle::installUnionStyle(const QUrl &url)
+{
+    if (!url.isLocalFile()) {
+        showErrorMessage(i18nc("@info:status", "Installation failed: Cannot install a style from a remote location."));
+        return;
+    }
+
+    KTar styleFile(url.toLocalFile(), u"application/gzip"_s);
+    if (!styleFile.open(QIODevice::ReadOnly)) {
+        showErrorMessage(i18nc("@info:status", "Installation failed: The style file could not be read."));
+        return;
+    }
+
+    if (styleFile.directory()->entries().isEmpty()) {
+        showErrorMessage(i18nc("@info:status", "Installation failed: The style file does not contain any data."));
+        return;
+    }
+
+    QTemporaryDir tempDir;
+    if (!styleFile.directory()->copyTo(tempDir.path())) {
+        showErrorMessage(i18nc("@info:status", "Installation failed: The style file could not be unpacked."));
+        return;
+    }
+
+    auto packagePath = std::filesystem::path(tempDir.path().toStdString()) / styleFile.directory()->entries().first().toStdString();
+
+    auto package = Union::StylePackage(packagePath);
+    if (!package.isValid()) {
+        switch (package.error()) {
+        case Union::StylePackage::Error::NotFound:
+            showErrorMessage(i18nc("@info:status", "Installation failed: The style could not be found."));
+            return;
+        case Union::StylePackage::Error::MissingFiles:
+        case Union::StylePackage::Error::InvalidMetaData:
+            showErrorMessage(i18nc("@info:status", "Installation failed: The selected file is not a valid Union style."));
+            return;
+        case Union::StylePackage::Error::UnknownInputType:
+            showErrorMessage(i18nc("@info:status", "Installation failed: The selected style is not supported."));
+            return;
+        case Union::StylePackage::Error::None:
+            break;
+        }
+    }
+
+    auto styleName = package.name();
+
+    auto handler = Union::StyleRegistry::instance()->packageHandler();
+    std::error_code errorCode;
+    handler->install(package, errorCode);
+    if (errorCode) {
+        if (errorCode.default_error_condition() == std::errc::file_exists) {
+            showErrorMessage(i18nc("@info:status", "Installing “%1” failed: The style is already installed.", styleName));
+            return;
+        }
+
+        if (errorCode.default_error_condition() == std::errc::permission_denied) {
+            showErrorMessage(i18nc("@info:status", "Installing “%1” failed: Permission was denied.", styleName));
+            return;
+        }
+
+        showErrorMessage(i18nc("@info:status", "Installing “%1” failed: %2", styleName, QString::fromStdString(errorCode.message())));
+        return;
+    }
+
+    m_unionStylesModel->refresh();
+    showInfoMessage(i18nc("@info:status", "Successfully installed “%1”.", styleName));
 }
 
 void KCMStyle::setMainToolBarStyle(ToolBarStyle style)
