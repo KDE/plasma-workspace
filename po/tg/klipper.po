@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:47+0000\n"
+"POT-Creation-Date: 2026-08-26 00:51+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -306,12 +306,26 @@ msgstr "Таърихи ҳофизаи муваққатиро нест мекун
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:349
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in the history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:358
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Secret Data"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "No matches"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "Clipboard is empty"
 msgstr ""

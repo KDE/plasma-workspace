@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:47+0000\n"
+"POT-Creation-Date: 2026-08-26 00:51+0000\n"
 "PO-Revision-Date: 2026-01-19 16:56+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -320,12 +320,26 @@ msgstr "Visa vēsture"
 msgid "Starred Only"
 msgstr "Tikai ar zvaigznīti"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:349
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in the history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:358
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Secret Data"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "No matches"
 msgstr "Nav atbilsmju"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Starpliktuve ir tukša"

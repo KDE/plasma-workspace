@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:48+0000\n"
+"POT-Creation-Date: 2026-08-26 00:51+0000\n"
 "PO-Revision-Date: 2013-02-07 13:16+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -212,7 +212,7 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr ""
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:159
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:152
 #, kde-format
 msgid "More Options…"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:48+0000\n"
+"POT-Creation-Date: 2026-08-26 00:51+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -205,7 +205,7 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "റദ്ദാക്കുക"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:159
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:152
 #, kde-format
 msgid "More Options…"
 msgstr "കൂടുതൽ സാധ്യതകൾ…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:47+0000\n"
+"POT-Creation-Date: 2026-08-26 00:51+0000\n"
 "PO-Revision-Date: 2025-10-03 14:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -323,12 +323,26 @@ msgstr "Tot istoricul"
 msgid "Starred Only"
 msgstr "Doar cu stea"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:349
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in the history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:358
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Secret Data"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "No matches"
 msgstr "Nicio potrivire"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Clipboard-ul e gol"

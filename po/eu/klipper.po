@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:47+0000\n"
+"POT-Creation-Date: 2026-08-26 00:51+0000\n"
 "PO-Revision-Date: 2026-01-03 10:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -323,12 +323,26 @@ msgstr "Historia osoa"
 msgid "Starred Only"
 msgstr "Izardunak bakarrik"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:349
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in the history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:358
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Secret Data"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "No matches"
 msgstr "Ez dago bat datorrenik"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Arbela hutsik dago"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-08 00:47+0000\n"
+"POT-Creation-Date: 2026-08-26 00:51+0000\n"
 "PO-Revision-Date: 2025-08-30 11:58+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -331,12 +331,26 @@ msgstr "Gehele geschiedenis"
 msgid "Starred Only"
 msgstr "Alleen met ster"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:349
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in the history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:358
+#, kde-format
+msgctxt "@action:button"
+msgid "Clear Secret Data"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "No matches"
 msgstr "geen overeenkomsten"
 
-#: declarative/qml/ClipboardMenu.qml:451
+#: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"
