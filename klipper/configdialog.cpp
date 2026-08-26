@@ -233,18 +233,6 @@ void GeneralWidget::slotWidgetModified()
         m_prevAlwaysText = m_alwaysTextRb->isChecked();
         m_prevAlwaysImage = m_alwaysImageRb->isChecked();
         m_havePrevAlwaysImageTextConfig = true;
-
-        if (m_alwaysImageRb->isChecked()) {
-            m_copiedImageRb->setChecked(true);
-        }
-
-        if (m_alwaysTextRb->isChecked()) {
-            m_copiedTextRb->setChecked(true);
-        }
-
-        m_alwaysImageRb->setEnabled(false);
-        m_alwaysTextRb->setEnabled(false);
-        m_copiedTextRb->setEnabled(false);
     }
 }
 
