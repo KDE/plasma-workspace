@@ -351,21 +351,14 @@ void KSMServer::completeShutdownOrCheckpoint()
     qCDebug(KSMSERVER) << "state is " << state;
     if (state == Shutdown) {
         KNotification *n = KNotification::event(QStringLiteral("exitkde"),
-                                                i18nc("@info:status", "Session is exiting"),
-                                                QPixmap(),
-                                                KNotification::DefaultEvent); // Plasma says good bye
-        connect(n, &KNotification::closed, this, &KSMServer::startKilling);
-        state = WaitingForKNotify;
-        // https://bugs.kde.org/show_bug.cgi?id=228005
-        // if sound is not working for some reason (e.g. no phonon
-        // backends are installed) the closed() signal never happens
-        // and logoutSoundFinished() never gets called. Add this timer to make
-        // sure the shutdown procedure continues even if sound system is broken.
-        QTimer::singleShot(5000, this, [this] {
-            if (state == WaitingForKNotify) {
-                startKilling();
-            }
-        });
+                                                  i18nc("@info:status", "Session is exiting"),
+                                                  QPixmap(),
+                                                  KNotification::DefaultEvent); // Plasma says good bye
+        m_waitingForLogoutSound = true;
+        m_killingDone = false;
+        connect(n, &KNotification::closed, this, &KSMServer::logoutSoundFinished);
+        QTimer::singleShot(5000, this, &KSMServer::logoutSoundFinished);
+        startKilling();
     } else if (state == Checkpoint) {
         for (KSMClient *c : std::as_const(clients)) {
             SmsSaveComplete(c->connection());
@@ -409,7 +402,22 @@ void KSMServer::completeKilling()
 // shutdown is fully complete
 void KSMServer::killingCompleted()
 {
+    if (m_waitingForLogoutSound) {
+        m_killingDone = true;
+        return;
+    }
     Q_EMIT logoutFinished(true);
+}
+
+void KSMServer::logoutSoundFinished()
+{
+    if (!m_waitingForLogoutSound) {
+        return;
+    }
+    m_waitingForLogoutSound = false;
+    if (m_killingDone) {
+        Q_EMIT logoutFinished(true);
+    }
 }
 
 void KSMServer::timeoutQuit()

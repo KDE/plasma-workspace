@@ -122,6 +122,8 @@ private:
     void discardSession();
     void storeSession();
 
+    void logoutSoundFinished();
+
     void startProtection();
     void endProtection();
 
@@ -163,13 +165,14 @@ private:
         Shutdown,
         Checkpoint,
         Killing,
-        WaitingForKNotify, // shutdown
     };
     State state;
     bool saveSession;
     int saveType;
 
     bool clean;
+    bool m_waitingForLogoutSound = false;
+    bool m_killingDone = false;
     KSMClient *clientInteracting;
     QString sessionGroup;
     QTimer protectionTimer;
