@@ -30,6 +30,7 @@ KCMUtils.ScrollViewKCM {
     property bool unsavedChanges: !(changedVisibility.size === 0 && changedShortcuts.size === 0)
 
     property bool cfg_scaleIconsToFit
+    property int cfg_iconSize
     property int cfg_iconSpacing
     property bool cfg_reverseIconOrder
     property bool cfg_showAllItems
@@ -214,20 +215,29 @@ KCMUtils.ScrollViewKCM {
                 Layout.preferredWidth: formLayout.maxComboboxWidth
                 model: [
                     {
-                        "label": i18nc("@item:inlistbox Icon size", "Small"),
+                        "label": scaleString,
+                        "size": "scale"
+                    },
+                    {
+                        "label": i18nc("@item:inlistbox Icon size", "Tiny"),
                         "size": "small"
                     },
                     {
-                        "label": scaleString,
-                        "size": "scale"
+                        "label": i18nc("@item:inlistbox Icon size", "Small"),
+                        "size": "smallMedium"
                     }
                 ]
                 textRole: "label"
 
-                currentIndex: iconsPage.cfg_scaleIconsToFit ? 1 : 0
+                currentIndex: iconsPage.cfg_scaleIconsToFit ? 0 : iconsPage.cfg_iconSize + 1;
 
                 onActivated: index => {
-                    iconsPage.cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
+                    if (currentIndex === 0) {
+                        iconsPage.cfg_scaleIconsToFit = true;
+                    } else {
+                        iconsPage.cfg_scaleIconsToFit = false;
+                        iconsPage.cfg_iconSize = currentIndex - 1;
+                    }
                 }
             }
 

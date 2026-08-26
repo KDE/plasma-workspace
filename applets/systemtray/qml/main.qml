@@ -190,7 +190,7 @@ ContainmentItem {
                 verticalLayoutDirection: (root.vertical && root.reverseLayout) ? GridView.BottomToTop : GridView.TopToBottom
 
                 // The icon size to display when not using the auto-scaling setting
-                readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
+                readonly property int smallIconSize: Plasmoid.configuration.iconSize === 0 ? Kirigami.Units.iconSizes.small : Kirigami.Units.iconSizes.smallMedium
 
                 readonly property bool autoSize: Plasmoid.configuration.scaleIconsToFit
 
