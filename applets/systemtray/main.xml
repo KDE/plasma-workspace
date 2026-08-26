@@ -43,7 +43,8 @@
         <choice name="Small" />
         <choice name="SmallMedium" />
       </choices>
-    <default>1</default>    
+      <default>1</default>
+    </entry>
     <entry name="iconSpacing" type="int">
       <label>spacing between icons, determined by this number multiplied by Kirigami.Units.smallSpacing</label>
       <default>2</default>
