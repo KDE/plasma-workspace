@@ -70,7 +70,7 @@ Item {
 
             Kirigami.Heading {
                 Layout.fillWidth: true
-                leftPadding: systemTrayState.activeApplet ? 0 : Kirigami.Units.largeSpacing
+                leftPadding: backButton.visible ? 0 : Kirigami.Units.largeSpacing
 
                 level: 1
                 text: systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications")
