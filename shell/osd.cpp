@@ -7,6 +7,7 @@
 
 #include "osd.h"
 #include "debug.h"
+#include "screenpool.h"
 #include "shellcorona.h"
 
 #include <QDBusConnection>
@@ -15,6 +16,7 @@
 #include <QDebug>
 #include <QQmlComponent>
 #include <QQmlContext>
+#include <QScreen>
 #include <QTimer>
 #include <QWindow>
 
@@ -53,7 +55,7 @@ void Osd::screenBrightnessChanged(int percent, const QString &displayId, const Q
 
     // Don't show screen brightness OSD on mobile, only emit event (specified in showProgress parameters)
 
-    if (m_corona->numScreens() == 1 && m_screenBrightnessInfo.size() == 1 && screenRect == m_corona->screenGeometry(0)) {
+    if (m_corona->numScreens() == 1 && m_screenBrightnessInfo.size() == 1 && m_corona->screenPool()->primaryScreen()->name() == displayId) {
         showProgress(u"video-display-brightness"_s, percent, 100, {}, false);
     } else if (m_screenBrightnessInfo.size() == 1) {
         showProgress(u"video-display-brightness"_s, percent, 100, displayLabel, false);
