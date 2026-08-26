@@ -656,7 +656,8 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
 
     if (isWindowGroup) {
         // For group parent items, DisplayRole is mapped to AppName of the first child.
-        if (role == Qt::DisplayRole) {
+        switch (role) {
+        case Qt::DisplayRole: {
             const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
 
             // Groups are formed by app id or launcher URL; neither requires
@@ -667,7 +668,9 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             }
 
             return appName;
-        } else if (role == AbstractTasksModel::WinIdList) {
+        }
+
+        case AbstractTasksModel::WinIdList: {
             QVariantList winIds;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
@@ -675,52 +678,56 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             }
 
             return winIds;
-        } else if (role == AbstractTasksModel::MimeType) {
+        }
+
+        case AbstractTasksModel::MimeType:
             return QStringLiteral("windowsystem/multiple-winids");
-        } else if (role == AbstractTasksModel::MimeData) {
+
+        case AbstractTasksModel::MimeData:
             // FIXME TODO: Implement.
             return {};
-        } else if (role == AbstractTasksModel::IsGroupParent) {
+
+        case AbstractTasksModel::IsGroupParent:
             return true;
-        } else if (role == AbstractTasksModel::ChildCount) {
+        case AbstractTasksModel::ChildCount:
             return rowCount(proxyIndex);
-        } else if (role == AbstractTasksModel::IsActive) {
+        case AbstractTasksModel::IsActive:
             return d->any(proxyIndex, AbstractTasksModel::IsActive);
-        } else if (role == AbstractTasksModel::IsClosable) {
+        case AbstractTasksModel::IsClosable:
             return d->all(proxyIndex, AbstractTasksModel::IsClosable);
-        } else if (role == AbstractTasksModel::IsMovable) {
+        case AbstractTasksModel::IsMovable:
             // Moving groups makes no sense.
             return false;
-        } else if (role == AbstractTasksModel::IsResizable) {
+        case AbstractTasksModel::IsResizable:
             // Resizing groups makes no sense.
             return false;
-        } else if (role == AbstractTasksModel::IsMaximizable) {
+        case AbstractTasksModel::IsMaximizable:
             return d->all(proxyIndex, AbstractTasksModel::IsMaximizable);
-        } else if (role == AbstractTasksModel::IsMaximized) {
+        case AbstractTasksModel::IsMaximized:
             return d->all(proxyIndex, AbstractTasksModel::IsMaximized);
-        } else if (role == AbstractTasksModel::IsMinimizable) {
+        case AbstractTasksModel::IsMinimizable:
             return d->all(proxyIndex, AbstractTasksModel::IsMinimizable);
-        } else if (role == AbstractTasksModel::IsMinimized) {
+        case AbstractTasksModel::IsMinimized:
             return d->all(proxyIndex, AbstractTasksModel::IsMinimized);
-        } else if (role == AbstractTasksModel::IsKeepAbove) {
+        case AbstractTasksModel::IsKeepAbove:
             return d->all(proxyIndex, AbstractTasksModel::IsKeepAbove);
-        } else if (role == AbstractTasksModel::IsKeepBelow) {
+        case AbstractTasksModel::IsKeepBelow:
             return d->all(proxyIndex, AbstractTasksModel::IsKeepBelow);
-        } else if (role == AbstractTasksModel::IsFullScreenable) {
+        case AbstractTasksModel::IsFullScreenable:
             return d->all(proxyIndex, AbstractTasksModel::IsFullScreenable);
-        } else if (role == AbstractTasksModel::IsFullScreen) {
+        case AbstractTasksModel::IsFullScreen:
             return d->all(proxyIndex, AbstractTasksModel::IsFullScreen);
-        } else if (role == AbstractTasksModel::CanSetNoBorder) {
+        case AbstractTasksModel::CanSetNoBorder:
             return d->all(proxyIndex, AbstractTasksModel::CanSetNoBorder);
-        } else if (role == AbstractTasksModel::HasNoBorder) {
+        case AbstractTasksModel::HasNoBorder:
             return d->all(proxyIndex, AbstractTasksModel::HasNoBorder);
-        } else if (role == AbstractTasksModel::IsExcludedFromCapture) {
+        case AbstractTasksModel::IsExcludedFromCapture:
             return d->all(proxyIndex, AbstractTasksModel::IsExcludedFromCapture);
-        } else if (role == AbstractTasksModel::IsMapped) {
+        case AbstractTasksModel::IsMapped:
             return d->any(proxyIndex, AbstractTasksModel::IsMapped);
-        } else if (role == AbstractTasksModel::IsVirtualDesktopsChangeable) {
+        case AbstractTasksModel::IsVirtualDesktopsChangeable:
             return d->all(proxyIndex, AbstractTasksModel::IsVirtualDesktopsChangeable);
-        } else if (role == AbstractTasksModel::VirtualDesktops) {
+        case AbstractTasksModel::VirtualDesktops: {
             QStringList desktops;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
@@ -729,12 +736,13 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
 
             desktops.removeDuplicates();
             return desktops;
-        } else if (role == AbstractTasksModel::ScreenGeometry) {
+        }
+        case AbstractTasksModel::ScreenGeometry:
             // TODO: Nothing needs this for now and it would add complexity to
             // make it a list; skip it until needed. Once it is, do it similarly
             // to the AbstractTasksModel::VirtualDesktop case.
             return {};
-        } else if (role == AbstractTasksModel::Activities) {
+        case AbstractTasksModel::Activities: {
             QStringList activities;
 
             for (int i = 0; i < rowCount(proxyIndex); ++i) {
@@ -743,11 +751,12 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
 
             activities.removeDuplicates();
             return activities;
-        } else if (role == AbstractTasksModel::IsDemandingAttention) {
+        }
+        case AbstractTasksModel::IsDemandingAttention:
             return d->any(proxyIndex, AbstractTasksModel::IsDemandingAttention);
-        } else if (role == AbstractTasksModel::SkipTaskbar) {
+        case AbstractTasksModel::SkipTaskbar:
             return d->all(proxyIndex, AbstractTasksModel::SkipTaskbar);
-        } else if (role == AbstractTasksModel::LastActivated) {
+        case AbstractTasksModel::LastActivated: {
             // Find the last activated task in the single group
             const int groupSize = d->rowMap.at(proxyIndex.row())->size();
             QDateTime lastActivated = mapToSource(index(0, 0, proxyIndex)).data(AbstractTasksModel::LastActivated).toDateTime();
@@ -761,6 +770,7 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             }
 
             return lastActivated;
+        }
         }
     }
 
