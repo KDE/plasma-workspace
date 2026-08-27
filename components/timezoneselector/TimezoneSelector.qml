@@ -407,10 +407,15 @@ Item {
                     if (regionComboBox.currentText !== root.split(root.selectedTimeZone)[0]) {
                         let locations = root.areasByRegion[regionComboBox.currentText]
                         locationComboBox.forceActiveFocus();
-                        locationComboBox.model = locations
+                        if (locations.length > 0) {
+                            const technicalRegion = root.technical(regionComboBox.currentText)
+                            const technicalLocation = root.technical(locations[0])
+                            root.selectedTimeZone = technicalRegion + '/' + technicalLocation
+                        }
                         locationComboBox.popup.visible = true
                     }
                 }
+
             }
             QQC2.Label {
                 text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
