@@ -219,24 +219,37 @@ KCMUtils.ScrollViewKCM {
                         "size": "scale"
                     },
                     {
-                        "label": i18nc("@item:inlistbox Icon size", "Tiny"),
-                        "size": "small"
-                    },
-                    {
                         "label": i18nc("@item:inlistbox Icon size", "Small"),
                         "size": "smallMedium"
+                    },
+                    {
+                        "label": i18nc("@item:inlistbox Icon size", "Tiny"),
+                        "size": "small"
                     }
                 ]
                 textRole: "label"
 
-                currentIndex: iconsPage.cfg_scaleIconsToFit ? 0 : iconsPage.cfg_iconSize + 1;
+                currentIndex: {
+                    if (iconsPage.cfg_scaleIconsToFit) {
+                        return 0;
+                    } else {
+                        switch (iconsPage.cfg_iconSize) {
+                            case 0: return 2; // Small
+                            case 1: return 1; // SmallMedium
+                        }
+                    }
+                }
 
                 onActivated: index => {
                     if (currentIndex === 0) {
                         iconsPage.cfg_scaleIconsToFit = true;
+                        iconsPage.cfg_iconSize = 1; // iconSize is unused when scaling is enabled, but we reset it to the default value to avoid confusion.
                     } else {
                         iconsPage.cfg_scaleIconsToFit = false;
-                        iconsPage.cfg_iconSize = currentIndex - 1;
+                        switch (model[currentIndex]["size"]) {
+                            case "small": iconsPage.cfg_iconSize = 0; break;
+                            case "smallMedium": iconsPage.cfg_iconSize = 1; break;
+                        }
                     }
                 }
             }
