@@ -224,7 +224,7 @@ void TaskFilterProxyModel::setFilterByRegion(RegionFilterMode::Mode mode)
 
     d->filterByRegion = mode;
     invalidateFilter();
-    Q_EMIT filterByActivityChanged();
+    Q_EMIT filterByRegionChanged();
 }
 
 bool TaskFilterProxyModel::filterMinimized() const
