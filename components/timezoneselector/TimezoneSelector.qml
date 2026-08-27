@@ -55,8 +55,22 @@ Item {
      */
     property string hoveredTimeZone: ""
 
+    /**
+     * @brief Whether a frame should be shown around the map.
+     *
+     * When a frame is active the map corners are rounded, there is a boarder around
+     * the map and a shadow. When not framed the corners are square and there is an
+     * underline.
+     *
+     * @note This has no effect in mobile mode which does not show a map.
+     */
     property bool framed: true
 
+    /**
+     * @brief The horizontal padding of the region selection combo boxes.
+     *
+     * @note This has no effect in mobile mode which does not show a map.
+     */
     property real comboHorizontalPadding: 0
 //END properties
 
@@ -367,7 +381,7 @@ Item {
             Layout.rightMargin: root.comboHorizontalPadding
             spacing: Kirigami.Units.largeSpacing
             QQC2.Label {
-                text: i18ndc("kcm_clock", "@label:listbox In the context of time zone selection", "Region:")
+                text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
                 textFormat: Text.PlainText
             }
             QQC2.ComboBox {
@@ -375,11 +389,11 @@ Item {
                 Layout.fillWidth: true
                 model: [chooseText, ...root.regionsModel]
 
-                property string chooseText: i18ndc("kcm_clock", "Placeholder for empty time zone combobox selector", "Choose…")
+                property string chooseText: i18ndc("plasmashellprivateplugin", "Placeholder for empty time zone combobox selector", "Choose…")
 
                 displayText: currentText
 
-                Accessible.name: i18nd("kcm_clock", "Timezone region selector")
+                Accessible.name: i18nd("plasmashellprivateplugin", "Timezone region selector")
 
                 Connections {
                     target: root
@@ -399,7 +413,7 @@ Item {
                 }
             }
             QQC2.Label {
-                text: i18ndc("kcm_clock", "@label:listbox In the context of time zone selection", "Time zone:")
+                text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
                 visible: locationComboBox.visible
                 textFormat: Text.PlainText
             }
@@ -410,7 +424,7 @@ Item {
                 visible: regionComboBox.currentText !== regionComboBox.chooseText
                 displayText: currentText
 
-                Accessible.name: i18nd("kcm_clock", "Timezone location selector")
+                Accessible.name: i18nd("plasmashellprivateplugin", "Timezone location selector")
 
                 Connections {
                     target: root
@@ -421,7 +435,9 @@ Item {
                     }
                 }
 
-                onActivated: root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText)
+                onActivated: {
+                    root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText)
+                }
             }
         }
     }
