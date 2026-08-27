@@ -58,18 +58,21 @@ Item {
     /**
      * @brief Whether a frame should be shown around the map.
      *
-     * When a frame is active the map corners are rounded, there is a boarder around
-     * the map and a shadow. When not framed the corners are square and there is an
-     * underline.
+     * When true, the map is given rounded corners, a border line, and a shadow.
+     * This is intended for use as a floating UI element.
      *
-     * @note This has no effect in mobile mode which does not show a map.
+     * When false, the map corners are square and there is an underline separating
+     * the map from the time zone selector combobox. This is intended for use
+     * where the component hugs the bounds of its parent view.
+     *
+     * @note This has no effect in mobile mode, which does not show a map.
      */
     property bool framed: true
 
     /**
      * @brief The horizontal padding of the region selection combo boxes.
      *
-     * @note This has no effect in mobile mode which does not show a map.
+     * @note This has no effect in mobile mode, which does not show a map.
      */
     property real comboHorizontalPadding: 0
 //END properties
@@ -384,6 +387,7 @@ Item {
                 text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
                 textFormat: Text.PlainText
             }
+
             QQC2.ComboBox {
                 id: regionComboBox
                 Layout.fillWidth: true
@@ -415,13 +419,14 @@ Item {
                         locationComboBox.popup.visible = true
                     }
                 }
-
             }
+
             QQC2.Label {
                 text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
                 visible: locationComboBox.visible
                 textFormat: Text.PlainText
             }
+
             QQC2.ComboBox {
                 id: locationComboBox
                 Layout.fillWidth: true
