@@ -967,8 +967,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     case SkipTaskbar:
         return window->windowState.testFlag(PlasmaWindow::state::state_skiptaskbar) || d->transients.contains(window);
     case SkipPager:
-        // FIXME Implement.
-        break;
+        return false;
     case AppPid:
         return window->pid;
     case StackingOrder:
