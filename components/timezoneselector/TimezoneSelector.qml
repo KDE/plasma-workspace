@@ -134,7 +134,12 @@ Item {
             onActivated: {
                 if (mobileRegionComboBox.currentText === chooseText) return;
                 if (mobileRegionComboBox.currentText !== root.split(root.selectedTimeZone)[0]) {
-                    mobileLocationComboBox.model = root.areasByRegion[mobileRegionComboBox.currentText]
+                    let locations = root.areasByRegion[mobileRegionComboBox.currentText]
+                    if (locations.length > 0) {
+                        const technicalRegion = root.technical(mobileRegionComboBox.currentText)
+                        const technicalLocation = root.technical(locations[0])
+                        root.selectedTimeZone = technicalRegion + '/' + technicalLocation
+                    }
                 }
             }
         }
@@ -350,7 +355,11 @@ Item {
                         if (regionComboBox.currentText !== root.split(root.selectedTimeZone)[0]) {
                             let locations = root.areasByRegion[regionComboBox.currentText]
                             locationComboBox.forceActiveFocus();
-                            locationComboBox.model = locations
+                            if (locations.length > 0) {
+                                const technicalRegion = root.technical(regionComboBox.currentText)
+                                const technicalLocation = root.technical(locations[0])
+                                root.selectedTimeZone = technicalRegion + '/' + technicalLocation
+                            }
                             locationComboBox.popup.visible = true
                         }
                     }
