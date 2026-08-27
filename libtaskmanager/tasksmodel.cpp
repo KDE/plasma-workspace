@@ -124,11 +124,26 @@ TasksModel::Private::Private(TasksModel *q)
     ++instanceCount;
 }
 
+class NullListModel : public QAbstractListModel
+{
+public:
+    int rowCount(const QModelIndex &parent = {}) const override
+    {
+        return parent.isValid() ? 0 : 1;
+    }
+
+    QVariant data(const QModelIndex &, int = Qt::DisplayRole) const override
+    {
+        return {};
+    }
+};
+
 TasksModel::Private::~Private()
 {
     --instanceCount;
 
     if (!instanceCount) {
+        concatProxyModel->addSourceModel(new NullListModel);
         concatProxyModel->removeSourceModel(windowTasksModel);
         concatProxyModel->removeSourceModel(startupTasksModel);
         delete std::exchange(windowTasksModel, nullptr);
