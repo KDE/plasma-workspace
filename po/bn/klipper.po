@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2010-06-01 11:22-0700\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -96,13 +96,13 @@ msgid ""
 "history."
 msgstr ""
 
-#: configdialog.cpp:264
+#: configdialog.cpp:252
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "প্রক্রিয়া পপ-আপ-এর জন্য টাইম-আউট:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,7 +113,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:286
+#: configdialog.cpp:274
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -123,18 +123,18 @@ msgid_plural "%v seconds"
 msgstr[0] " সেকণ্ড"
 msgstr[1] " সেকণ্ড"
 
-#: configdialog.cpp:287
+#: configdialog.cpp:275
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:296
+#: configdialog.cpp:284
 #, fuzzy, kde-format
 msgid "Options:"
 msgstr "প্রক্রিয়া (&প)"
 
-#: configdialog.cpp:321
+#: configdialog.cpp:309
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -143,35 +143,35 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "বর্ণনা"
 
-#: configdialog.cpp:336
+#: configdialog.cpp:324
 #, kde-format
 msgid "Add Action..."
 msgstr "প্রক্রিয়া যোগ করো..."
 
-#: configdialog.cpp:340
+#: configdialog.cpp:328
 #, kde-format
 msgid "Edit Action..."
 msgstr "প্রক্রিয়া সম্পাদনা করো"
 
-#: configdialog.cpp:345
+#: configdialog.cpp:333
 #, kde-format
 msgid "Delete Action"
 msgstr "প্রক্রিয়া মুছে ফেলো"
 
-#: configdialog.cpp:352
+#: configdialog.cpp:340
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -179,7 +179,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:547
+#: configdialog.cpp:535
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -187,53 +187,53 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:548
+#: configdialog.cpp:536
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "প্রক্রিয়া মুছে ফেলো"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "সাধারণ"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, fuzzy, kde-format
 #| msgid "General Config"
 msgid "General Configuration"
 msgstr "সাধারণ কনফিগ"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, fuzzy, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "প্রক্রিয়া (&প)"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, fuzzy, kde-format
 msgid "Action Menu"
 msgstr "প্রক্রিয়া (&প)"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, fuzzy, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "প্রক্রিয়া (&প)"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, fuzzy, kde-format
 msgid "Actions Configuration"
 msgstr "প্রক্রিয়া (&প)"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "শর্টকাট"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, fuzzy, kde-format
 #| msgid "Shortcuts Config"
 msgid "Shortcuts Configuration"

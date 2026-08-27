@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:47+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2026-06-04 05:30+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: main.cpp:60 plasmawindowedcorona.cpp:104
+#: main.cpp:60 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Plasma Windowed"
@@ -28,7 +28,7 @@ msgstr "Plasma Windowed"
 msgid "Enable QML Javascript debugger"
 msgstr "Omogoči razhroščevalnik QML Javascript"
 
-#: main.cpp:65 plasmawindowedcorona.cpp:106
+#: main.cpp:65 plasmawindowedcorona.cpp:108
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -42,12 +42,12 @@ msgstr ""
 msgid "Force loading the given shell plugin"
 msgstr "Prisili nalaganje danega vtičnika za shell"
 
-#: main.cpp:71 plasmawindowedcorona.cpp:107
+#: main.cpp:71 plasmawindowedcorona.cpp:109
 #, kde-format
 msgid "The applet to open."
 msgstr "Programček za odpiranje."
 
-#: main.cpp:72 plasmawindowedcorona.cpp:108
+#: main.cpp:72 plasmawindowedcorona.cpp:110
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "Argumenti za predajo plazmoidu."

@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
-"PO-Revision-Date: 2025-08-30 09:51+0200\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"PO-Revision-Date: 2026-08-26 07:34+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.9\n"
 
 #: configdialog.cpp:85
 #, kde-format
@@ -112,12 +112,12 @@ msgid ""
 msgstr ""
 "Ali so ne-besedilni izbori (na primer slike) shranjeni v zgodovini odložišča."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:252
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Prikaži pojavno okno dejavnosti:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -132,7 +132,7 @@ msgstr ""
 "je samodejni meni tukaj izklopljen ali ni prikazan zaradi izključenega okna, "
 "ga lahko prikažemo z uporabo bližnjice <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:286
+#: configdialog.cpp:274
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -142,18 +142,18 @@ msgstr[1] "%v sekund"
 msgstr[2] "%v sekundi"
 msgstr[3] "%v sekunde"
 
-#: configdialog.cpp:287
+#: configdialog.cpp:275
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Brez"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:284
 #, kde-format
 msgid "Options:"
 msgstr "Možnosti:"
 
-#: configdialog.cpp:321
+#: configdialog.cpp:309
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -165,34 +165,34 @@ msgstr ""
 "vmesnik <interface>ukazov</interface> v Klipperjevem pojavnem oknu in jih "
 "lahko izvedemo."
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Upari vzorec in dejanja"
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Opis"
 
-#: configdialog.cpp:336
+#: configdialog.cpp:324
 #, kde-format
 msgid "Add Action..."
 msgstr "Dodaj dejanje..."
 
-#: configdialog.cpp:340
+#: configdialog.cpp:328
 #, kde-format
 msgid "Edit Action..."
 msgstr "Uredi dejanje..."
 
-#: configdialog.cpp:345
+#: configdialog.cpp:333
 #, kde-format
 msgid "Delete Action"
 msgstr "Izbriši dejanje"
 
-#: configdialog.cpp:352
+#: configdialog.cpp:340
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -202,7 +202,7 @@ msgstr ""
 "Ta dejanja so prikazana v pojavnem meniju, ki jih je mogoče konfigurirati na "
 "strani <interface>Meni dejanj</interface>."
 
-#: configdialog.cpp:547
+#: configdialog.cpp:535
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -211,51 +211,51 @@ msgid ""
 msgstr ""
 "Naj zbrišem izbrano dejavnost <resource>%1</resource><nl/> in vse ukaze?"
 
-#: configdialog.cpp:548
+#: configdialog.cpp:536
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Potrdite dejanje brisanja"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Splošno"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgid "General Configuration"
 msgstr "Splošne nastavitve"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu dejanj"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu dejanj"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Konfiguracija dejanj"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Nastavitev dejanj"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Bližnjice"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Nastavitev bližnjic"
@@ -335,12 +335,14 @@ msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in the history."
 msgstr ""
+"Odložišče trenutno vsebuje občutljive podatke, ki ne bodo shranjeni v "
+"zgodovini."
 
 #: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Počisti tajne podatke"
 
 #: declarative/qml/ClipboardMenu.qml:467
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2026-01-11 01:40+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -89,12 +89,12 @@ msgid ""
 "history."
 msgstr ""
 
-#: configdialog.cpp:264
+#: configdialog.cpp:252
 #, kde-format
 msgid "Show action popup menu:"
 msgstr ""
 
-#: configdialog.cpp:274
+#: configdialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -105,7 +105,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:286
+#: configdialog.cpp:274
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -113,18 +113,18 @@ msgid_plural "%v seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: configdialog.cpp:287
+#: configdialog.cpp:275
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:296
+#: configdialog.cpp:284
 #, kde-format
 msgid "Options:"
 msgstr ""
 
-#: configdialog.cpp:321
+#: configdialog.cpp:309
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -133,34 +133,34 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr ""
 
-#: configdialog.cpp:336
+#: configdialog.cpp:324
 #, kde-format
 msgid "Add Action..."
 msgstr "Cuir Gníomh Leis..."
 
-#: configdialog.cpp:340
+#: configdialog.cpp:328
 #, kde-format
 msgid "Edit Action..."
 msgstr "Cuir Gníomh in Eagar..."
 
-#: configdialog.cpp:345
+#: configdialog.cpp:333
 #, kde-format
 msgid "Delete Action"
 msgstr "Scrios Gníomh"
 
-#: configdialog.cpp:352
+#: configdialog.cpp:340
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -168,7 +168,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:547
+#: configdialog.cpp:535
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -176,51 +176,51 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:548
+#: configdialog.cpp:536
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr ""
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Ginearálta"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgid "General Configuration"
 msgstr "Cumraíocht Ghinearálta"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr ""
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgid "Action Menu"
 msgstr ""
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr ""
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Cumraíocht Gníomhartha"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Aicearraí"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Cumraíocht Aicearraí"

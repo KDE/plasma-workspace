@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2025-09-07 18:03+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -92,12 +92,12 @@ msgid ""
 msgstr ""
 "உரை இல்லாத தேர்வுகள் (எ.கா. படங்கள்) பிடிப்புப்பலகை வரலாற்றில் சேமிக்கப்பட வேண்டுமா."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:252
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "செயல்களைக் கொண்ட மேல்தோன்றும் பட்டியை காட்டு:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -108,7 +108,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:286
+#: configdialog.cpp:274
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -116,18 +116,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v நொடி"
 msgstr[1] "%v நொடி"
 
-#: configdialog.cpp:287
+#: configdialog.cpp:275
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:284
 #, kde-format
 msgid "Options:"
 msgstr "விருப்பங்கள்:"
 
-#: configdialog.cpp:321
+#: configdialog.cpp:309
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -139,34 +139,34 @@ msgstr ""
 "அதற்கான <interface>கட்டளைகள்</interface> கிளிப்பரின் மேல்தோன்றும் பட்டியில் இயக்க‍க்கூடிய "
 "வித‍த்தில் காட்டப்படும்."
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "பாங்கும் கட்டளைகளும்"
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "விவரணம்"
 
-#: configdialog.cpp:336
+#: configdialog.cpp:324
 #, kde-format
 msgid "Add Action..."
 msgstr "செயல்முறையை சேர்..."
 
-#: configdialog.cpp:340
+#: configdialog.cpp:328
 #, kde-format
 msgid "Edit Action..."
 msgstr "செயல்முறையை திருத்து..."
 
-#: configdialog.cpp:345
+#: configdialog.cpp:333
 #, kde-format
 msgid "Delete Action"
 msgstr "செயல்முறையை நீக்கு"
 
-#: configdialog.cpp:352
+#: configdialog.cpp:340
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -176,7 +176,7 @@ msgstr ""
 "<interface>செயல்முறைப்பட்டி</interface> பக்கத்தில் அமைக்கக்கூடிய மேல்தோன்றும் பட்டியில் "
 "இச்செயல்கள் காட்டப்படும்."
 
-#: configdialog.cpp:547
+#: configdialog.cpp:535
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -186,51 +186,51 @@ msgstr ""
 "<resource>%1</resource><nl/> என்ற தேர்ந்தெடுக்கப்பட்டுள்ள செயல்முறையையும் அதற்கான "
 "கட்டளைகளையும் நீக்க வேண்டுமா?"
 
-#: configdialog.cpp:548
+#: configdialog.cpp:536
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "செயல்முறையை நீக்குவதை உறுதி செய்தல்"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgid "General Configuration"
 msgstr "பொது அமைப்புகள்"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "செயல்முறைப்பட்டி"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgid "Action Menu"
 msgstr "செயல்முறைப்பட்டி"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "செயல்முறைகளுக்கான அமைப்புகள்"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgid "Actions Configuration"
 msgstr "செயல்முறைகளுக்கான அமைப்புகள்"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "சுருக்குவழிகள்"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "சுருக்குவழிகளுக்கான அமைப்பு"

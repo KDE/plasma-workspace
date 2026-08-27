@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2026-06-18 21:41+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -104,12 +104,12 @@ msgstr ""
 "A nem szöveges kijelölés (például képek) mentésre kerüljön-e a vágólap "
 "előzményeibe."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:252
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Műveletmenü megjelenítése:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 "nem jelenik meg egy kizárt ablaknél, a(z) <shortcut>%1</shortcut> "
 "billentyűparancs használatával  jeleníthető meg."
 
-#: configdialog.cpp:286
+#: configdialog.cpp:274
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -133,18 +133,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v másodperc"
 msgstr[1] "%v másodperc"
 
-#: configdialog.cpp:287
+#: configdialog.cpp:275
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nincs"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:284
 #, kde-format
 msgid "Options:"
 msgstr "Opciók:"
 
-#: configdialog.cpp:321
+#: configdialog.cpp:309
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -156,34 +156,34 @@ msgstr ""
 "tartalmára, a <interface>parancsai</interface> megjelennek a Klipper felugró "
 "menüjében, és végrehajthatóak."
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Mintaillesztés és parancsok"
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Leírás"
 
-#: configdialog.cpp:336
+#: configdialog.cpp:324
 #, kde-format
 msgid "Add Action..."
 msgstr "Művelet hozzáadása…"
 
-#: configdialog.cpp:340
+#: configdialog.cpp:328
 #, kde-format
 msgid "Edit Action..."
 msgstr "Művelet szerkesztése…"
 
-#: configdialog.cpp:345
+#: configdialog.cpp:333
 #, kde-format
 msgid "Delete Action"
 msgstr "Művelet törlése"
 
-#: configdialog.cpp:352
+#: configdialog.cpp:340
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -193,7 +193,7 @@ msgstr ""
 "Ezek a műveletek jelennek meg a felugró menüben, amely a "
 "<interface>Műveletmenü</interface> oldalon állítható be."
 
-#: configdialog.cpp:547
+#: configdialog.cpp:535
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -203,51 +203,51 @@ msgstr ""
 "Törli a kiválasztott <resource>%1</resource> műveletet, és az összes, ahhoz "
 "tartozó parancsot?"
 
-#: configdialog.cpp:548
+#: configdialog.cpp:536
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Művelettörlés megerősítése"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Általános"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgid "General Configuration"
 msgstr "Általános beállítások"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Műveletmenü"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgid "Action Menu"
 msgstr "Műveletmenü"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Műveletek beállítása"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgid "Actions Configuration"
 msgstr "A műveletek beállítása"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Billentyűparancsok"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "A billentyűparancsok beállítása"

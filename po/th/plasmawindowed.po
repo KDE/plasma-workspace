@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-04 00:47+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2025-03-04 14:50+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: main.cpp:60 plasmawindowedcorona.cpp:104
+#: main.cpp:60 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "หน้าต่าง Plasma"
@@ -26,7 +26,7 @@ msgstr "หน้าต่าง Plasma"
 msgid "Enable QML Javascript debugger"
 msgstr "เปิดใช้งานดีบักเกอร์ QML Javascript"
 
-#: main.cpp:65 plasmawindowedcorona.cpp:106
+#: main.cpp:65 plasmawindowedcorona.cpp:108
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -38,12 +38,12 @@ msgstr "ทําให้ plasmoid มีชีวิตอยู่ในพ�
 msgid "Force loading the given shell plugin"
 msgstr "บังคับโหลดปลั๊กอิน shell ที่กำหนด"
 
-#: main.cpp:71 plasmawindowedcorona.cpp:107
+#: main.cpp:71 plasmawindowedcorona.cpp:109
 #, kde-format
 msgid "The applet to open."
 msgstr "แอปเพล็ตที่จะเปิด"
 
-#: main.cpp:72 plasmawindowedcorona.cpp:108
+#: main.cpp:72 plasmawindowedcorona.cpp:110
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "อาร์กิวเมนต์ที่จะส่งต่อไปยัง plasmoid"

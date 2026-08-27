@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
 "PO-Revision-Date: 2009-04-07 22:47+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -96,13 +96,13 @@ msgid ""
 "history."
 msgstr ""
 
-#: configdialog.cpp:264
+#: configdialog.cpp:252
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "ક્રિયા પોપઅપ્સ માટે સમયસમાપ્તિ:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,7 +113,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:286
+#: configdialog.cpp:274
 #, fuzzy, kde-format
 #| msgid " sec"
 msgctxt "Unit of time"
@@ -122,20 +122,20 @@ msgid_plural "%v seconds"
 msgstr[0] " સેકન્ડ"
 msgstr[1] " સેકન્ડ"
 
-#: configdialog.cpp:287
+#: configdialog.cpp:275
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:296
+#: configdialog.cpp:284
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "ક્રિયાઓ"
 
-#: configdialog.cpp:321
+#: configdialog.cpp:309
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,37 +144,37 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "વર્ણન"
 
-#: configdialog.cpp:336
+#: configdialog.cpp:324
 #, fuzzy, kde-format
 #| msgid "Add Action"
 msgid "Add Action..."
 msgstr "ક્રિયા ઉમેરો"
 
-#: configdialog.cpp:340
+#: configdialog.cpp:328
 #, fuzzy, kde-format
 #| msgid "Edit Action"
 msgid "Edit Action..."
 msgstr "ક્રિયા ફેરફાર કરો"
 
-#: configdialog.cpp:345
+#: configdialog.cpp:333
 #, kde-format
 msgid "Delete Action"
 msgstr "ક્રિયા દૂર કરો"
 
-#: configdialog.cpp:352
+#: configdialog.cpp:340
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -182,7 +182,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:547
+#: configdialog.cpp:535
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -190,25 +190,25 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:548
+#: configdialog.cpp:536
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "ક્રિયા દૂર કરો"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "સામાન્ય"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, fuzzy, kde-format
 #| msgid "General Config"
 msgid "General Configuration"
 msgstr "સામાન્ય રૂપરેખાંકન"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -216,33 +216,33 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "ક્રિયાઓ"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "ક્રિયાઓ"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "ક્રિયાઓનું રૂપરેખાંકન"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgid "Actions Configuration"
 msgstr "ક્રિયાઓનું રૂપરેખાંકન"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "ટૂંકાણો"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, fuzzy, kde-format
 #| msgid "Shortcuts Config"
 msgid "Shortcuts Configuration"

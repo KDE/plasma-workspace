@@ -1,23 +1,23 @@
 # Spanish translations for klipper.po package.
-# Copyright (C) 2000-2025 This file is copyright:
+# Copyright (C) 2000-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
-# SPDX-FileCopyrightText: 2003, 2005, 2007, 2008, 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2003, 2005, 2007-2009 Jaime Robles <jaime@kde.org>
 # SPDX-FileCopyrightText: 2003 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
 # SPDX-FileCopyrightText: 2004 Pablo de Vicente <p.devicente@wanadoo.es>
 # SPDX-FileCopyrightText: 2005 Santiago Fernandez Sancho <santi@kde-es.org>
 # SPDX-FileCopyrightText: 2006 Pablo de Vicente <pablo.devicente@gmail.com>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
-# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2009-2010, 2012, 2014, 2017, 2019-2026 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
 # SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
-"PO-Revision-Date: 2025-08-30 14:45+0100\n"
+"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"PO-Revision-Date: 2026-08-26 23:45+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:85
@@ -114,12 +114,12 @@ msgstr ""
 "Si las selecciones que no son de texto (como las imágenes) se guardan en el "
 "historial del portapapeles."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:252
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Mostrar menú emergente de acciones:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -135,7 +135,7 @@ msgstr ""
 "aquí, o si no se muestra para una ventana excluida, se puede mostrar usando "
 "el atajo de teclado <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:286
+#: configdialog.cpp:274
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -143,18 +143,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v segundo"
 msgstr[1] "%v segundos"
 
-#: configdialog.cpp:287
+#: configdialog.cpp:275
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Ninguno"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:284
 #, kde-format
 msgid "Options:"
 msgstr "Opciones:"
 
-#: configdialog.cpp:321
+#: configdialog.cpp:309
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -166,34 +166,34 @@ msgstr ""
 "contenido del portapapeles, sus <interface>órdenes</interface> aparecen en "
 "el menú emergente de Klipper y se pueden ejecutar."
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Patrón de coincidencia y órdenes"
 
-#: configdialog.cpp:330
+#: configdialog.cpp:318
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descripción"
 
-#: configdialog.cpp:336
+#: configdialog.cpp:324
 #, kde-format
 msgid "Add Action..."
 msgstr "Añadir una acción…"
 
-#: configdialog.cpp:340
+#: configdialog.cpp:328
 #, kde-format
 msgid "Edit Action..."
 msgstr "Editar acción…"
 
-#: configdialog.cpp:345
+#: configdialog.cpp:333
 #, kde-format
 msgid "Delete Action"
 msgstr "Eliminar acción"
 
-#: configdialog.cpp:352
+#: configdialog.cpp:340
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -203,7 +203,7 @@ msgstr ""
 "Estas acciones aparecen en el menú emergente y se pueden configurar en la "
 "página <interface>Menú de acciones</interface>."
 
-#: configdialog.cpp:547
+#: configdialog.cpp:535
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -213,51 +213,51 @@ msgstr ""
 "¿Borrar la acción seleccionada <resource>%1</resource><nl/>y todas sus "
 "órdenes?"
 
-#: configdialog.cpp:548
+#: configdialog.cpp:536
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Confirmar la acción de borrado"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "General"
 
-#: configdialog.cpp:601
+#: configdialog.cpp:589
 #, kde-format
 msgid "General Configuration"
 msgstr "Configuración general"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menú de acciones"
 
-#: configdialog.cpp:602
+#: configdialog.cpp:590
 #, kde-format
 msgid "Action Menu"
 msgstr "Menú de acciones"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configuración de acciones"
 
-#: configdialog.cpp:603
+#: configdialog.cpp:591
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Configuración de acciones"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Atajos de teclado"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:598
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Configuración de los atajos de teclado"
@@ -337,12 +337,14 @@ msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in the history."
 msgstr ""
+"El portapapeles contiene actualmente un dato confidencial que no se "
+"almacenará en el historial."
 
 #: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Borrar datos confidenciales"
 
 #: declarative/qml/ClipboardMenu.qml:467
 #, kde-format
@@ -910,90 +912,3 @@ msgstr "Ventana emergente del portapapeles"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
-
-#~ msgid "The clipboard history contains starred items. Clear them too?"
-#~ msgstr ""
-#~ "El historial del portapapeles contiene elementos marcados como favoritos. "
-#~ "¿Se deben borrar también?"
-
-#~ msgid "Clear Everything"
-#~ msgstr "Borrar todo"
-
-#~ msgid "Keep Starred Items"
-#~ msgstr "Conservar elementos marcados como favoritos"
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Usar editor gráfico de expresiones regulares"
-
-#~ msgid "Data Matrix"
-#~ msgstr "Matriz de datos"
-
-#~ msgctxt "Aztec barcode"
-#~ msgid "Aztec"
-#~ msgstr "Aztec"
-
-#~ msgid "Code 39"
-#~ msgstr "Code 39"
-
-#~ msgid "Code 93"
-#~ msgstr "Code 93"
-
-#~ msgid "Code 128"
-#~ msgstr "Code 128"
-
-#~ msgid "Change the QR code type"
-#~ msgstr "Cambiar el tipo de código QR"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra,Jaime Robles,Pablo de Vicente,Miguel Revilla Rodríguez"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "ecuadra@eloihr.net,jaime@kde.org,pvicentea@wanadoo.es,yo@miguelrevilla.com"
-
-#~ msgid "Mobile Barcode"
-#~ msgstr "Código de barras para móvil"
-
-#~ msgid "Exclude Windows..."
-#~ msgstr "Excluir ventanas…"
-
-#~ msgid "Exclude Windows"
-#~ msgstr "Excluir ventanas"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The action popup will not be shown automatically for these windows, even "
-#~ "if it is enabled. This is because, for example, a web browser may "
-#~ "highlight a URL in the address bar while typing, so the menu would show "
-#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
-#~ "when using a particular application, then add it to this list. <link>How "
-#~ "to find the name to enter</link>."
-#~ msgstr ""
-#~ "El menú emergente de acciones no se mostrará automáticamente para estas "
-#~ "ventanas, incluso si está activado. Esto se debe a que, por ejemplo, un "
-#~ "navegador web puede resaltar una URL en la barra de direcciones mientras "
-#~ "se escribe, por lo que el menú se mostraría cada vez que se pulse una "
-#~ "tecla.<nl/><nl/>Si el menú de acciones aparece de forma imprevista al "
-#~ "usar una determinada aplicación, añádala a esta lista. <link>Cómo "
-#~ "encontrar el nombre a introducir</link>."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "The name that needs to be entered here is the WM_CLASS name of the window "
-#~ "to be excluded. To find the WM_CLASS name for a window, in another "
-#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
-#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
-#~ "exclude. The first name that it displays after the equal sign is the one "
-#~ "that you need to enter."
-#~ msgstr ""
-#~ "El nombre que se debe introducir aquí es el nombre WM_CLASS de la ventana "
-#~ "a excluir. Para encontrar el nombre WM_CLASS de una ventana, introduzca "
-#~ "en una ventana de terminal la orden:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
-#~ "grep WM_CLASS</icode><nl/><nl/> y haga clic sobre la ventana que quiera "
-#~ "excluir. El primer nombre que se muestra tras el signo de igual es el que "
-#~ "debe introducir."
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "No hay acciones para WM_CLASS"
