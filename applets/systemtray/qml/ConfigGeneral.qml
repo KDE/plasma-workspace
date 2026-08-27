@@ -241,15 +241,19 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 onActivated: index => {
-                    if (currentIndex === 0) {
-                        iconsPage.cfg_scaleIconsToFit = true;
-                        iconsPage.cfg_iconSize = 1; // iconSize is unused when scaling is enabled, but we reset it to the default value to avoid confusion.
-                    } else {
-                        iconsPage.cfg_scaleIconsToFit = false;
-                        switch (model[currentIndex]["size"]) {
-                            case "small": iconsPage.cfg_iconSize = 0; break;
-                            case "smallMedium": iconsPage.cfg_iconSize = 1; break;
-                        }
+                    switch (model[currentIndex]["size"]) {
+                        case "scale":
+                            iconsPage.cfg_scaleIconsToFit = true;
+                            iconsPage.cfg_iconSize = 1; // Reset to default when scaling is enabled
+                            break;
+                        case "smallMedium":
+                            iconsPage.cfg_scaleIconsToFit = false;
+                            iconsPage.cfg_iconSize = 1;
+                            break;
+                        case "small":
+                            iconsPage.cfg_scaleIconsToFit = false;
+                            iconsPage.cfg_iconSize = 0; 
+                            break;
                     }
                 }
             }
