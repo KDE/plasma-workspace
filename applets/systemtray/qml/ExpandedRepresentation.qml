@@ -135,11 +135,13 @@ Item {
             PlasmaComponents.ToolButton {
                 id: actionsButton
                 visible: visibleActions > 0
-                enabled: visibleActions > 1 || (singleAction && singleAction.enabled)
-                checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.Menu.Closed : singleAction && singleAction.checked
+                enabled: showAsMenu || (singleAction && singleAction.enabled)
+                checked: showAsMenu ? configMenu.status !== PlasmaExtras.Menu.Closed : singleAction && singleAction.checked
+
                 property QtObject applet: systemTrayState.activeApplet || root
                 property int visibleActions: actions.length
                 property PlasmaCore.Action singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
+                property bool showAsMenu: visibleActions > 1 || (singleAction !== null && singleAction.alwaysShowAsMenu === true)
 
                 readonly property var actions: {
                     if (!applet) {
@@ -166,14 +168,13 @@ Item {
                 }
 
                 icon.name: "application-menu"
-                checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
-                contentItem.opacity: visibleActions > 1
+                checkable: showAsMenu || (singleAction && singleAction.checkable)
+                contentItem.opacity: showAsMenu
 
                 display: PlasmaComponents.AbstractButton.IconOnly
-                text: actionsButton.singleAction ? actionsButton.singleAction.text : i18n("More actions")
+                text: (actionsButton.singleAction && !showAsMenu) ? actionsButton.singleAction.text: i18n("More actions")
 
-                Accessible.role: actionsButton.singleAction ? Accessible.Button : Accessible.ButtonMenu
-
+                Accessible.role: (singleAction && !showAsMenu) ? Accessible.Button : Accessible.ButtonMenu
                 KeyNavigation.down: backButton.KeyNavigation.down
                 KeyNavigation.right: configureButton.visible ? configureButton : configureButton.KeyNavigation.right
 
@@ -184,11 +185,11 @@ Item {
                     active: actionsButton.hovered
                     implicitWidth: Kirigami.Units.iconSizes.smallMedium
                     implicitHeight: implicitWidth
-                    source: actionsButton.singleAction !== null ? actionsButton.singleAction.icon.name : ""
-                    visible: actionsButton.singleAction
+                    source: (actionsButton.singleAction && !actionsButton.showAsMenu) ? actionsButton.singleAction.icon.name : ""
+                    visible: actionsButton.singleAction && !actionsButton.showAsMenu
                 }
                 onToggled: {
-                    if (visibleActions > 1) {
+                    if (showAsMenu) {
                         if (checked) {
                             configMenu.openRelative();
                         } else {
@@ -197,7 +198,7 @@ Item {
                     }
                 }
                 onClicked: {
-                    if (singleAction) {
+                    if (singleAction && !showAsMenu) {
                         singleAction.trigger();
                     }
                 }
