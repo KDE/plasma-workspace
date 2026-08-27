@@ -207,6 +207,7 @@ void SystemTray::initSettingsAndRegistry()
         m_plasmoidRegistry = new PlasmoidRegistry(m_settings, this);
         connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidEnabled, this, &SystemTray::startApplet);
         connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidStopped, this, &SystemTray::stopApplet);
+        connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidDisabled, this, &SystemTray::stopApplet);
     }
 }
 
