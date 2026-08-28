@@ -78,20 +78,26 @@ Item {
             name: "on"
             PropertyChanges {
                 mainStack.opacity: 1
-                footer.opacity: 1
                 wallpaperFader.factor: 1
                 clock.shadow.opacity: 0
                 clock.opacity: 1
+            }
+            PropertyChanges {
+                target: footer
+                opacity: 1
             }
         },
         State {
             name: "off"
             PropertyChanges {
                 mainStack.opacity: 0
-                footer.opacity: 0
                 wallpaperFader.factor: 0
                 clock.shadow.opacity: wallpaperFader.alwaysShowClock ? 1 : 0
                 clock.opacity: wallpaperFader.alwaysShowClock ? 1 : 0
+            }
+            PropertyChanges {
+                target: footer
+                opacity: 0
             }
         }
     ]
