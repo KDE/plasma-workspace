@@ -21,6 +21,7 @@
 #include <QSqlQuery>
 #include <QStandardPaths>
 
+#include <KConfigGroup>
 #include <KIO/DeleteJob>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -117,7 +118,6 @@ std::shared_ptr<HistoryModel> HistoryModel::self()
 HistoryModel::HistoryModel()
     : QAbstractListModel(nullptr)
     , m_clip(SystemClipboard::self())
-    , m_displayImages(true)
 {
     if (!QSqlDatabase::isDriverAvailable(u"QSQLITE"_s)) {
         qCCritical(KLIPPER_LOG) << "SQLITE driver isn't available";
@@ -769,13 +769,11 @@ bool HistoryModel::saveClipboardHistory()
 void HistoryModel::loadSettings()
 {
     setMaxSize(KlipperSettings::maxClipItems());
-    m_displayImages = !KlipperSettings::ignoreImages();
+    m_bSaveImages = KlipperSettings::saveImages();
     m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
-    // 0 is the id of "Ignore selection" radiobutton
-    m_bIgnoreSelection = KlipperSettings::ignoreSelection();
+    m_bSaveSelection = KlipperSettings::saveSelection();
     m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bSynchronize = KlipperSettings::syncClipboards();
-    m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
 
     if (m_bNoNullClipboard) {
         connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard, Qt::UniqueConnection);
@@ -878,14 +876,10 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     // XXX: I want a better handling of selection/clipboard in general.
     // XXX: Order sensitive code. Must die.
     const bool selectionMode = mode == QClipboard::Selection;
-    if (selectionMode && m_bIgnoreSelection) {
+    if (selectionMode && !m_bSaveSelection) {
         if (m_bSynchronize) {
             m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
         }
-        return;
-    }
-
-    if (selectionMode && m_bSelectionTextOnly && !data->hasText()) {
         return;
     }
 
@@ -895,7 +889,7 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     }
     setHasPassword(false);
 
-    if (!m_displayImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
+    if (!m_bSaveImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
     }
 

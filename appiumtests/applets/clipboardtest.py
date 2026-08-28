@@ -414,7 +414,7 @@ class ClipboardTest(unittest.TestCase):
         # @see https://bugs.kde.org/show_bug.cgi?id=487843
         # @see https://bugs.kde.org/show_bug.cgi?id=466414
         # Enable "Text selection - Always save in history" to test the two bugs
-        self.update_config(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["false", "true"])
+        self.update_config(["General"] * 2, ["SaveSelection", "SyncClipboards"], ["true", "true"])
 
         content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes("", "utf-8")))
         # Clip data from Firefox have additional mime types, which cause the crash
@@ -427,11 +427,11 @@ class ClipboardTest(unittest.TestCase):
         # self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), new_text) Broken in CI
         app.driver.find_element(AppiumBy.NAME, new_text)  # Still alive
 
-        # When `IgnoreImages` is set to false, the clipboard should save images.
+        # When `SaveImages` is set to true, the clipboard should save images.
         try:
             from PySide6.QtCore import QObject
             # Enable "Only when explicitly copied" to test the two bugs
-            self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
+            self.update_config(["General"] * 3, ["SaveImages", "SaveSelection", "SyncClipboards"], ["true", "false", "false"])
 
             app.klipper_proxy.clearClipboardHistory()
             self.assertEqual(0, len(app.klipper_proxy.getClipboardHistoryMenu()))

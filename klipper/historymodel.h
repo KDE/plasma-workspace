@@ -146,12 +146,11 @@ private:
     QString m_dbFolder;
     QSqlDatabase m_db;
     qsizetype m_maxSize = 0;
-    bool m_displayImages = false;
+    bool m_bSaveImages = false;
     bool m_bNoNullClipboard = true;
-    bool m_bIgnoreSelection = true;
+    bool m_bSaveSelection = false;
     bool m_bKeepContents = true;
     bool m_bSynchronize = false;
-    bool m_bSelectionTextOnly = true;
     bool m_hasPassword = false;
 
     friend class DeclarativeHistoryModel;

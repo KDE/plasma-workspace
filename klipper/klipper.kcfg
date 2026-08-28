@@ -26,22 +26,17 @@
     <entry name="SyncClipboards" type="Bool">
       <label>Keep the selection and clipboard the same</label>
       <default>false</default>
-      <whatsthis>Content selected with the cursor is automatically copied to the clipboard so that it can be pasted with either a Paste action or a middle-click.&lt;br/&gt;&lt;a href="1"&gt;More about the selection and clipboard&lt;/a&gt;.</whatsthis>
+      <whatsthis>Content selected with the pointer is automatically copied to the clipboard so that it can be pasted with either a &lt;i&gt;Paste&lt;/i&gt; action or a middle-click.&lt;br/&gt;&lt;a href="1"&gt;More about the selection and clipboard&lt;/a&gt;.</whatsthis>
     </entry>
-    <entry name="IgnoreSelection" type="Bool">
-      <label>Ignore the selection</label>
-      <default>true</default>
-      <whatsthis>Content selected with the cursor but not explicitly copied to the clipboard is not automatically stored in the clipboard history, and can only be pasted using a middle-click.</whatsthis>
+    <entry name="SaveSelection" type="Bool">
+      <label>Save the selection</label>
+      <default>false</default>
+      <whatsthis>Content selected with the pointer but not explicitly copied to the clipboard is automatically stored in the clipboard history.</whatsthis>
     </entry>
-    <entry name="SelectionTextOnly" type="Bool">
-      <label>Text selection only</label>
-      <default>true</default>
-      <whatsthis>Only store text selections in the clipboard history, not images or any other type of data.</whatsthis>
-    </entry>
-    <entry name="IgnoreImages" type="Bool">
-      <label>Always ignore images</label>
-      <default>true</default>
-      <whatsthis>Do not store images in the clipboard history, even if explicitly copied.</whatsthis>
+    <entry name="SaveImages" type="Bool">
+      <label>Save images</label>
+      <default>false</default>
+      <whatsthis>Store images in the clipboard history.</whatsthis>
     </entry>
     <entry name="URLGrabberEnabled" type="Bool">
         <label>Immediately on selection</label>
