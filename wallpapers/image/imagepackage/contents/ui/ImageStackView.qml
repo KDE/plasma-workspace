@@ -80,6 +80,7 @@ QQC2.StackView {
 
         if (mediaProxy.providerType == Wallpaper.Provider.Unknown) {
             console.error("The backend got an unknown wallpaper provider type. The wallpaper will now fall back to the default. Please check your wallpaper configuration!");
+            wallpaperInterface.loading = false;
             mediaProxy.useSingleImageDefaults();
             return;
         }
@@ -106,6 +107,7 @@ QQC2.StackView {
 
         if (!pendingImage) {
             console.warn(baseImage.errorString());
+            wallpaperInterface.loading = false;
             return;
         }
 

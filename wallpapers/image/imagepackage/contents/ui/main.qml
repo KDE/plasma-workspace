@@ -53,6 +53,11 @@ WallpaperItem {
         root.loading = true; // delays ksplash until the wallpaper has been loaded
     }
 
+    Rectangle {
+        anchors.fill: parent
+        color: root.configuration.Color
+    }
+
     ImageStackView {
         id: imageView
         anchors.fill: parent
