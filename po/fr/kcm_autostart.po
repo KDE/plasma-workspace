@@ -261,7 +261,7 @@ msgstr "En exécution"
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr "Non en exécution"
+msgstr "Arrêté ou non démarré"
 
 #: unit.cpp:28
 #, kde-format

@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2026-04-24 08:22+0300\n"
+"POT-Creation-Date: 2026-08-28 00:48+0000\n"
+"PO-Revision-Date: 2026-08-27 18:15+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -156,13 +156,13 @@ msgstr "Налаштувати…"
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Віртуальна клавіатура"
 
 #: loginlockscreen/Footer.qml:74
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Змінити розкладку"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -416,44 +416,44 @@ msgid ""
 msgstr "Поточний вибраний часовий пояс не можна показати на цій карті"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:335
+#: timezoneselector/TimezoneSelector.qml:340
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Вибрати…"
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:327
+#: timezoneselector/TimezoneSelector.qml:332
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Регіон:"
 
-#: timezoneselector/TimezoneSelector.qml:146
-#: timezoneselector/TimezoneSelector.qml:360
+#: timezoneselector/TimezoneSelector.qml:151
+#: timezoneselector/TimezoneSelector.qml:369
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Часовий пояс:"
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Збільшити"
 
-#: timezoneselector/TimezoneSelector.qml:298
+#: timezoneselector/TimezoneSelector.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Зменшити"
 
-#: timezoneselector/TimezoneSelector.qml:339
+#: timezoneselector/TimezoneSelector.qml:344
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Засіб вибору регіону часового поясу"
 
-#: timezoneselector/TimezoneSelector.qml:371
+#: timezoneselector/TimezoneSelector.qml:380
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Засіб вибору місця часового поясу"

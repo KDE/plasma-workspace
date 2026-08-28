@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:48+0000\n"
 "PO-Revision-Date: 2026-08-09 09:38+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -414,44 +414,44 @@ msgstr ""
 "Unean hautatutako ordu-eremua ez dago mapa honetan azaltzeko erabilgarri"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:335
+#: timezoneselector/TimezoneSelector.qml:340
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Hautatu..."
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:327
+#: timezoneselector/TimezoneSelector.qml:332
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Eskualdea:"
 
-#: timezoneselector/TimezoneSelector.qml:146
-#: timezoneselector/TimezoneSelector.qml:360
+#: timezoneselector/TimezoneSelector.qml:151
+#: timezoneselector/TimezoneSelector.qml:369
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Ordu-eremua:"
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Zooma gerturatu"
 
-#: timezoneselector/TimezoneSelector.qml:298
+#: timezoneselector/TimezoneSelector.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Zooma urrundu"
 
-#: timezoneselector/TimezoneSelector.qml:339
+#: timezoneselector/TimezoneSelector.qml:344
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Ordu-eremu eskualde hautatzailea"
 
-#: timezoneselector/TimezoneSelector.qml:371
+#: timezoneselector/TimezoneSelector.qml:380
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Ordu-eremu kokaleku hautatzailea"

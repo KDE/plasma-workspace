@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:48+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -407,44 +407,44 @@ msgid ""
 msgstr "当前选中的时区无法在此地图上进行可视化"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:335
+#: timezoneselector/TimezoneSelector.qml:340
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "选择…"
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:327
+#: timezoneselector/TimezoneSelector.qml:332
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "地域："
 
-#: timezoneselector/TimezoneSelector.qml:146
-#: timezoneselector/TimezoneSelector.qml:360
+#: timezoneselector/TimezoneSelector.qml:151
+#: timezoneselector/TimezoneSelector.qml:369
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "时区："
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "放大"
 
-#: timezoneselector/TimezoneSelector.qml:298
+#: timezoneselector/TimezoneSelector.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "缩小"
 
-#: timezoneselector/TimezoneSelector.qml:339
+#: timezoneselector/TimezoneSelector.qml:344
 #, kde-format
 msgid "Timezone region selector"
 msgstr "时区地域选择器"
 
-#: timezoneselector/TimezoneSelector.qml:371
+#: timezoneselector/TimezoneSelector.qml:380
 #, kde-format
 msgid "Timezone location selector"
 msgstr "时区位置选择器"

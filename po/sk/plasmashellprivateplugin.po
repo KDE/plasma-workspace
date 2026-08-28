@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-08-28 00:48+0000\n"
 "PO-Revision-Date: 2023-11-11 14:56+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -411,44 +411,44 @@ msgstr ""
 "Aktuálne vybrané časové pásmo nie je k dispozícii na zobrazenie na tejto mape"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:335
+#: timezoneselector/TimezoneSelector.qml:340
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Vybrať..."
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:327
+#: timezoneselector/TimezoneSelector.qml:332
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Región:"
 
-#: timezoneselector/TimezoneSelector.qml:146
-#: timezoneselector/TimezoneSelector.qml:360
+#: timezoneselector/TimezoneSelector.qml:151
+#: timezoneselector/TimezoneSelector.qml:369
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Časové pásmo:"
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Priblížiť"
 
-#: timezoneselector/TimezoneSelector.qml:298
+#: timezoneselector/TimezoneSelector.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Oddialiť"
 
-#: timezoneselector/TimezoneSelector.qml:339
+#: timezoneselector/TimezoneSelector.qml:344
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Výber časového pásma"
 
-#: timezoneselector/TimezoneSelector.qml:371
+#: timezoneselector/TimezoneSelector.qml:380
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Výber časového pásma"
