@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-09-20 10:17+0200\n"
+"PO-Revision-Date: 2026-08-22 10:11+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -237,7 +237,7 @@ msgstr "En exécution"
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr "Non en exécution"
+msgstr "Arrêté ou non démarré"
 
 #: unit.cpp:28
 #, kde-format
