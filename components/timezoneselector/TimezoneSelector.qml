@@ -248,6 +248,13 @@ Item {
             onCopyrightLinkActivated: (link) => { Qt.openUrlExternally(link); }
         }
 
+        // HACK: When the map is resized from small to large the first time
+        // the map item sized are not updated. This fixes it.
+        onWidthChanged: {
+            map.pan(1, 1);
+            map.pan(-1, -1);
+        }
+
         property variant referenceSurface: QtLocation.ReferenceSurface.Map
 
         MapItemView {
