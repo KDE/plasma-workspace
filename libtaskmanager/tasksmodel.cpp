@@ -28,6 +28,7 @@
 #include <algorithm>
 #include <numeric>
 #include <optional>
+#include <utility>
 
 namespace TaskManager
 {
@@ -127,13 +128,6 @@ TasksModel::Private::Private(TasksModel *q)
 TasksModel::Private::~Private()
 {
     --instanceCount;
-
-    if (!instanceCount) {
-        concatProxyModel->removeSourceModel(windowTasksModel);
-        concatProxyModel->removeSourceModel(startupTasksModel);
-        delete std::exchange(windowTasksModel, nullptr);
-        delete std::exchange(startupTasksModel, nullptr);
-    }
 }
 
 void TasksModel::Private::initModels()
@@ -1035,7 +1029,19 @@ TasksModel::TasksModel(QObject *parent)
     });
 }
 
-TasksModel::~TasksModel() = default;
+TasksModel::~TasksModel()
+{
+    // Private::~Private() decrements instanceCount after this destructor body,
+    // so one means this is the last TasksModel instance.
+    if (Private::instanceCount == 1) {
+        // removeSourceModel() emits signals that access d. libc++ clears a unique_ptr
+        // before invoking its deleter, so cleanup must happen before d begins destruction.
+        d->concatProxyModel->removeSourceModel(Private::windowTasksModel);
+        d->concatProxyModel->removeSourceModel(Private::startupTasksModel);
+        delete std::exchange(Private::windowTasksModel, nullptr);
+        delete std::exchange(Private::startupTasksModel, nullptr);
+    }
+}
 
 QHash<int, QByteArray> TasksModel::roleNames() const
 {

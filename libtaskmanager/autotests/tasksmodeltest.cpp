@@ -4,12 +4,18 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
+#include <QConcatenateTablesProxyModel>
+#include <QPointer>
 #include <QQmlApplicationEngine>
 #include <QSignalSpy>
 #include <QTest>
 
+#include <memory>
+
 #include "abstracttasksmodel.h" // For enums
+#include "startuptasksmodel.h"
 #include "tasksmodel.h"
+#include "windowtasksmodel.h"
 
 using namespace Qt::StringLiterals;
 using namespace TaskManager;
@@ -42,6 +48,12 @@ private Q_SLOTS:
      * @see https://bugs.kde.org/436667
      */
     void test_filterOutInvalidPreferredLaunchers();
+
+    /**
+     * Shared source models outlive earlier instances, are deleted with the last one,
+     * and are recreated for the next instance.
+     */
+    void test_sharedModelLifetime();
 };
 
 void TasksModelTest::initTestCase()
@@ -192,6 +204,76 @@ void TasksModelTest::test_filterOutInvalidPreferredLaunchers()
         launcherUrl.toString(),
     });
     QCOMPARE(model.launcherList().size(), 1);
+}
+
+void TasksModelTest::test_sharedModelLifetime()
+{
+    // Declared first so it outlives every TasksModel below. The last instance
+    // must be destroyed while a window keeps the shared model populated.
+    QQmlApplicationEngine engine;
+    const QString windowTitle = QStringLiteral("__testwindow__sharedmodellifetime__");
+    const auto containsWindow = [&windowTitle](const TasksModel &model) {
+        for (int row = 0; row < model.rowCount(); ++row) {
+            if (model.index(row, 0).data(Qt::DisplayRole).toString() == windowTitle) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    const QUrl launcherUrl = QUrl::fromLocalFile(QFINDTESTDATA("data/applications/GammaRay.desktop"));
+    auto firstModel = std::make_unique<TasksModel>();
+    firstModel->setGroupMode(TasksModel::GroupDisabled);
+    firstModel->setLauncherList(QStringList{launcherUrl.toString()});
+    QCOMPARE(firstModel->launcherCount(), 1);
+
+    QVariantMap windowProperties;
+    windowProperties.insert(QStringLiteral("title"), windowTitle);
+    QVariantMap initialProperties;
+    initialProperties.insert(QStringLiteral("windowInitialProperties"), QVariantList{windowProperties});
+    engine.setInitialProperties(initialProperties);
+    engine.load(QFINDTESTDATA("data/windows/ManyWindows.qml"));
+    QTRY_VERIFY(containsWindow(*firstModel));
+
+    auto *firstConcatenateModel = firstModel->findChild<QConcatenateTablesProxyModel *>();
+    QVERIFY(firstConcatenateModel);
+    QCOMPARE(firstConcatenateModel->sourceModels().size(), 3);
+    QVERIFY(qobject_cast<WindowTasksModel *>(firstConcatenateModel->sourceModels().at(0)));
+    QVERIFY(qobject_cast<StartupTasksModel *>(firstConcatenateModel->sourceModels().at(1)));
+    QPointer<QAbstractItemModel> windowTasksModel = firstConcatenateModel->sourceModels().at(0);
+    QPointer<QAbstractItemModel> startupTasksModel = firstConcatenateModel->sourceModels().at(1);
+
+    {
+        TasksModel survivingModel;
+        survivingModel.setGroupMode(TasksModel::GroupDisabled);
+        survivingModel.setLauncherList(QStringList{launcherUrl.toString()});
+        QCOMPARE(survivingModel.launcherCount(), 1);
+
+        auto *survivingConcatenateModel = survivingModel.findChild<QConcatenateTablesProxyModel *>();
+        QVERIFY(survivingConcatenateModel);
+        QCOMPARE(survivingConcatenateModel->sourceModels().size(), 3);
+        QCOMPARE(survivingConcatenateModel->sourceModels().at(0), windowTasksModel.data());
+        QCOMPARE(survivingConcatenateModel->sourceModels().at(1), startupTasksModel.data());
+        QVERIFY(containsWindow(survivingModel));
+
+        firstModel.reset();
+        QVERIFY(windowTasksModel);
+        QVERIFY(startupTasksModel);
+        QCOMPARE(survivingModel.launcherCount(), 1);
+        QVERIFY(containsWindow(survivingModel));
+    }
+
+    QVERIFY(windowTasksModel.isNull());
+    QVERIFY(startupTasksModel.isNull());
+
+    TasksModel recreatedModel;
+    recreatedModel.setGroupMode(TasksModel::GroupDisabled);
+    auto *recreatedConcatenateModel = recreatedModel.findChild<QConcatenateTablesProxyModel *>();
+    QVERIFY(recreatedConcatenateModel);
+    QCOMPARE(recreatedConcatenateModel->sourceModels().size(), 2);
+    QVERIFY(qobject_cast<WindowTasksModel *>(recreatedConcatenateModel->sourceModels().at(0)));
+    QVERIFY(qobject_cast<StartupTasksModel *>(recreatedConcatenateModel->sourceModels().at(1)));
+    QTRY_VERIFY(containsWindow(recreatedModel));
 }
 
 QTEST_MAIN(TasksModelTest)
