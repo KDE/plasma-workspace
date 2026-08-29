@@ -139,7 +139,7 @@ Item {
                 xRange.automatic: false
 
                 yRange.from: 0
-                yRange.to: Math.max(1, root.maxSpeed * 1.1)
+                yRange.to: Math.max(1, root.maxSpeed * 1.05)
                 yRange.automatic: false
 
                 lineWidth: 1
