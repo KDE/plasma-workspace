@@ -71,8 +71,8 @@ Item {
         id: metricsLabel
         visible: false
         font: Kirigami.Theme.smallFont
-        // Measure 888.8 KiB/s
-        text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", 910131)
+        // Widest label the Y axis can realistically show, used to reserve space for the axis labels
+        text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(1000 * 1024 * 1024))
         textFormat: Text.PlainText
     }
 
