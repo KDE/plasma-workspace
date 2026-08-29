@@ -30,6 +30,8 @@ Item {
     property int previousSpeed: 0
     property int previousProcessed: 0
 
+    property real maxSpeed: 0
+
     readonly property real xRange: 100
 
     readonly property real resolution: modelInterface.jobDetails.totalBytes / xRange
@@ -49,6 +51,7 @@ Item {
                     for (let i = 0; i < processedChange; ++i) {
                         newSpeed += speedChange / processedChange
                         dataSource.append({data: newSpeed})
+                        root.maxSpeed = Math.max(root.maxSpeed, newSpeed)
                     }
 
                     root.previousProcessed = processed
@@ -132,8 +135,12 @@ Item {
                 }
 
                 xRange.from: 0
-                xRange.to: root.xRange
+                xRange.to: Math.max(1, dataSource.count - 1)
                 xRange.automatic: false
+
+                yRange.from: 0
+                yRange.to: Math.max(1, root.maxSpeed * 1.1)
+                yRange.automatic: false
 
                 lineWidth: 1
                 interpolate: true
