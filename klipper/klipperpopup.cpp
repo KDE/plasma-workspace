@@ -39,8 +39,10 @@ KlipperPopup::KlipperPopup()
 
     QQmlComponent component(m_engine.get(), u"org.kde.plasma.private.clipboard", u"KlipperPopup");
 
-    auto item = qobject_cast<QQuickItem *>(component.create());
+    // Initialize in steps, so QML does not complain
+    auto item = qobject_cast<QQuickItem *>(component.beginCreate(m_engine->rootContext()));
     setMainItem(item);
+    component.completeCreate();
 
     connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::resizePopup);
 
