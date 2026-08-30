@@ -109,7 +109,8 @@ void migrateSettings()
         || general.hasKey("IgnoreImages") //
         || general.hasKey("SelectionTextOnly") //
         || general.hasKey("ActionsInfoMessageShown") //
-        || hasPlasmashellShortcuts;
+        || general.hasKey("Synchronize") //
+        || hasPlasmashellShortcuts; //
     if (!needsMigration) {
         return;
     }
@@ -134,6 +135,9 @@ void migrateSettings()
     }
     if (general.hasKey("ActionsInfoMessageShown")) {
         general.deleteEntry("ActionsInfoMessageShown");
+    }
+    if (general.hasKey("Synchronize")) {
+        general.deleteEntry("Synchronize");
     }
     KlipperSettings::self()->save();
 
