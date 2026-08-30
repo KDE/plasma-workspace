@@ -147,9 +147,9 @@ change the clipboard contents in the dialog which appears, before
 clicking the <guibutton>OK</guibutton> button to run the appropriate
 action.</para>
 
-<para>Pressing <keycombo
-action="simul">&Ctrl;&Alt;<keycap>R</keycap></keycombo> shows the pop-up
-menu to repeat the last action which &klipper; performed.</para>
+<para>If you define a shortcut for <guilabel>Manually Invoke Action
+on Current Clipboard</guilabel> pressing this shortcut will show
+the appropriate pop-up menu.</para>
 
 </sect1>
 
