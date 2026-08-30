@@ -977,7 +977,6 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
 void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
 {
     Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
-    bool changed = true; // ### FIXME (only relevant under polling, might be better to simply remove polling and rely on XFixes)
 
     // this must be below the "bNoNullClipboard" handling code!
     // XXX: I want a better handling of selection/clipboard in general.
@@ -1000,7 +999,7 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         return;
     }
 
-    if (changed && insert(data)) [[likely]] {
+    if (insert(data)) [[likely]] {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize) { // applyClipChanges can return nullptr
             m_clip->setMimeData(data,
