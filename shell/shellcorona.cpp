@@ -2228,6 +2228,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(uint screen, const
     }
     (*viewIt)->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
+    newContainment->setScreen(oldContainment->screen());
 
     oldContainment->destroy();
 
