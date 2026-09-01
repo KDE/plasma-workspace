@@ -301,7 +301,11 @@ void Klipper::slotConfigure()
     }
 
     auto *dlg = new ConfigDialog(nullptr, KlipperSettings::self(), this, m_collection);
-    QMetaObject::invokeMethod(dlg, "setHelp", Qt::DirectConnection, Q_ARG(QString, QString::fromLatin1("preferences")));
+    QMetaObject::invokeMethod(dlg,
+                              "setHelp",
+                              Qt::DirectConnection,
+                              Q_ARG(QString, QString::fromLatin1("preferences")),
+                              Q_ARG(QString, QString::fromLatin1("org.kde.klipper")));
     // This is necessary to ensure that the dialog is recreated
     // and therefore the controls are initialised from the current
     // Klipper settings every time that it is shown.
