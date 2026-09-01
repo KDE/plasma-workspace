@@ -101,7 +101,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
             // As a second metric, we use the velocity of the cursor to disable the filter
             if (deltaTime != 0 && he.timestamp() != 0) {
-                const double velocity = std::pow(deltaPosition.x(), 2) + std::pow(deltaPosition.y(), 2) / deltaTime;
+                const double velocity = (std::pow(deltaPosition.x(), 2) + std::pow(deltaPosition.y(), 2)) / deltaTime;
                 if (velocity < VELOCITY_THRESHOLD) {
                     resendHoverEvents(position);
                     return true;
