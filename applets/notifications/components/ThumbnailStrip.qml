@@ -85,9 +85,11 @@ Item {
 
         KQCAddons.QImageItem {
             id: previewImage
+            readonly property real scaleFactor: Math.min((parent.width - 2 * Kirigami.Units.smallSpacing) / nativeWidth,
+                                                         (parent.height - 2 * Kirigami.Units.smallSpacing) / nativeHeight)
             anchors.centerIn: parent
-            width: nativeHeight > 0 ? Math.round(height * (nativeWidth / nativeHeight)) : 0
-            height: parent.height - 2 * Kirigami.Units.smallSpacing
+            width: nativeWidth > 0 ? Math.round(nativeWidth * scaleFactor) : 0
+            height: nativeHeight > 0 ? Math.round(nativeHeight * scaleFactor) : 0
             image: thumbnailer.image
             smooth: true
         }
