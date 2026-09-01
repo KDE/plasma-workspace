@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-09-01 00:48+0000\n"
 "PO-Revision-Date: 2024-10-25 23:35-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -22,12 +22,131 @@ msgstr ""
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 ਠੀਕ GTK ਥੀਮ ਅਕਾਇਵ ਨਹੀਂ ਹੈ।"
 
-#: kcmstyle.cpp:145 kcmstyle.cpp:152
+#: kcmstyle.cpp:117
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: Cannot install a style from a remote location."
+msgstr ""
+
+#: kcmstyle.cpp:123
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style file could not be read."
+msgstr ""
+
+#: kcmstyle.cpp:128
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style file does not contain any data."
+msgstr ""
+
+#: kcmstyle.cpp:134
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style file could not be unpacked."
+msgstr ""
+
+#: kcmstyle.cpp:144
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style could not be found."
+msgstr ""
+
+#: kcmstyle.cpp:148
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The selected file is not a valid Union style."
+msgstr ""
+
+#: kcmstyle.cpp:151
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The selected style is not supported."
+msgstr ""
+
+#: kcmstyle.cpp:165
+#, kde-format
+msgctxt "@info:status"
+msgid "Installing “%1” failed: The style is already installed."
+msgstr ""
+
+#: kcmstyle.cpp:170
+#, kde-format
+msgctxt "@info:status"
+msgid "Installing “%1” failed: Permission was denied."
+msgstr ""
+
+#: kcmstyle.cpp:174
+#, kde-format
+msgctxt "@info:status"
+msgid "Installing “%1” failed: %2"
+msgstr ""
+
+#: kcmstyle.cpp:179
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully installed “%1”."
+msgstr ""
+
+#: kcmstyle.cpp:192
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstall failed: The style with ID “%1” could not be found."
+msgstr ""
+
+#: kcmstyle.cpp:202
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: Permission was denied."
+msgstr ""
+
+#: kcmstyle.cpp:204
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: The style is not installed."
+msgstr ""
+
+#: kcmstyle.cpp:206
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: The style is in use."
+msgstr ""
+
+#: kcmstyle.cpp:208
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: %2"
+msgstr ""
+
+#: kcmstyle.cpp:223
+#, kde-format
+msgctxt "@info:status"
+msgid "Could not uninstall styles:\n"
+msgstr ""
+
+#: kcmstyle.cpp:226
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid_plural ""
+"Successfully uninstalled %1 styles but could not uninstall others:\n"
+msgstr[0] ""
+msgstr[1] ""
+
+#: kcmstyle.cpp:237
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled “%2”."
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] ""
+msgstr[1] ""
+
+#: kcmstyle.cpp:300 kcmstyle.cpp:307
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "ਇਸ ਸਟਾਇਲ ਲਈ ਸੰਰਚਨਾ ਡਾਈਲਾਗ ਲੋਡ ਕਰਨ ਦੌਰਾਨ ਇੱਕ ਗਲਤੀ ਆਈ ਹੈ।"
 
-#: kcmstyle.cpp:258
+#: kcmstyle.cpp:414
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "ਚੁਣੇ ਸਟਾਈਲ '%1' ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
@@ -43,39 +162,47 @@ msgstr "ਸੰਰਚਨਾ %1"
 msgid "Tab 1"
 msgstr "ਟੈਬ 1"
 
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
 #: stylepreview.ui:65
-#, kde-format
-msgid "Push Button"
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:85
+#, fuzzy, kde-format
+#| msgid "Push Button"
+msgid "Button"
 msgstr "ਪੁਸ਼ ਬਟਨ"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: stylepreview.ui:86
+#: stylepreview.ui:99
 #, kde-format
 msgid "Combo box"
 msgstr "ਕੰਬੋ ਬਕਸਾ"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: stylepreview.ui:96
+#: stylepreview.ui:109
 #, kde-format
 msgid "Checkbox"
 msgstr "ਚੋਣ ਬਕਸਾ"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
-#: stylepreview.ui:106 stylepreview.ui:116
+#: stylepreview.ui:119 stylepreview.ui:129
 #, kde-format
 msgid "Radio button"
 msgstr "ਰੇਡੀਓ ਬਟਨ"
 
-#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
-#: stylepreview.ui:128
-#, no-c-format, kde-format
-msgid "%p%"
-msgstr "%p%"
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
+#: stylepreview.ui:138
+#, fuzzy, kde-format
+#| msgid "Text only"
+msgid "Text Field"
+msgstr "ਸਿਰਫ਼ ਲਿਖਤ"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: stylepreview.ui:136
+#: stylepreview.ui:146
 #, kde-format
 msgid "Tab 2"
 msgstr "ਟੈਬ 2"
@@ -86,26 +213,32 @@ msgstr "ਟੈਬ 2"
 msgid "Application style"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ"
 
-#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#. i18n: ectx: label, entry (unionStyle), group (KDE)
 #: stylesettings.kcfg:13
+#, kde-format
+msgid "Union Style ID"
+msgstr ""
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:17
 #, kde-format
 msgid "Show icons on buttons"
 msgstr "ਬਟਨ ਉੱਤੇ ਆਈਕਾਨ ਵੇਖੋ"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
-#: stylesettings.kcfg:17
+#: stylesettings.kcfg:21
 #, kde-format
 msgid "Show icons in menus"
 msgstr "ਮੇਨੂ ਵਿੱਚ ਆਈਕਾਨ ਵੇਖੋ"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
-#: stylesettings.kcfg:23
+#: stylesettings.kcfg:27
 #, kde-format
 msgid "Main toolbar label"
 msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
-#: stylesettings.kcfg:27
+#: stylesettings.kcfg:31
 #, kde-format
 msgid "Secondary toolbar label"
 msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ"
@@ -199,20 +332,133 @@ msgstr "GTK ਥੀਮ ਅਕਾਇਵ ਚੁਣੋ"
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK ਥੀਮ ਅਕਾਇਵ (*.tar.xz *.tar.gz *.tar.bz2)"
 
-#: ui/main.qml:55
+#: ui/main.qml:85
+#, fuzzy, kde-format
+#| msgid "Install from File…"
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
+
+#: ui/main.qml:90
 #, kde-format
 msgid "Configure Icons and Toolbars…"
 msgstr "ਆਈਕਾਨਾਂ ਅਤੇ ਟੂਲਬਾਰ ਦੀ ਸੰਰਚਨਾ…"
 
-#: ui/main.qml:73
+#: ui/main.qml:108
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
 msgstr "…GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
 
-#: ui/main.qml:106
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This style is using the Union style engine which is still under development. "
+"Some things may look or behave incorrectly when using this style."
+msgstr ""
+
+#: ui/main.qml:174
 #, kde-format
 msgid "Configure Style…"
 msgstr "…ਸਟਾਈਲ ਦੀ ਸੰਰਚਨਾ"
+
+#: ui/main.qml:182
+#, kde-format
+msgctxt "@action:button"
+msgid "Uninstall…"
+msgstr ""
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Cannot uninstall system-installed styles."
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Can only uninstall Union styles."
+msgstr ""
+
+#: ui/main.qml:199
+#, kde-format
+msgid "Do not uninstall this style."
+msgstr ""
+
+#: ui/main.qml:245
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Choose Union Style to Install"
+msgstr ""
+
+#: ui/main.qml:246
+#, kde-format
+msgctxt "@action:button"
+msgid "Install"
+msgstr ""
+
+#: ui/UnionThumbnailItem.qml:25
+#, fuzzy, kde-format
+#| msgid "Tab 1"
+msgctxt "@title:tab"
+msgid "Tab 1"
+msgstr "ਟੈਬ 1"
+
+#: ui/UnionThumbnailItem.qml:29
+#, fuzzy, kde-format
+#| msgid "Tab 2"
+msgctxt "@title:tab"
+msgid "Tab 2"
+msgstr "ਟੈਬ 2"
+
+#: ui/UnionThumbnailItem.qml:50
+#, fuzzy, kde-format
+#| msgid "Checkbox"
+msgctxt "@option:check"
+msgid "Checkbox"
+msgstr "ਚੋਣ ਬਕਸਾ"
+
+#: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgctxt "@option:radio"
+msgid "Radio Button"
+msgstr "ਰੇਡੀਓ ਬਟਨ"
+
+#: ui/UnionThumbnailItem.qml:84
+#, fuzzy, kde-format
+#| msgid "Combo box"
+msgctxt "@item:inlistbox"
+msgid "Combo Box"
+msgstr "ਕੰਬੋ ਬਕਸਾ"
+
+#: ui/UnionThumbnailItem.qml:85
+#, fuzzy, kde-format
+#| msgid "Combo box"
+msgctxt "@item:inlistbox"
+msgid "Combo Box Item"
+msgstr "ਕੰਬੋ ਬਕਸਾ"
+
+#: ui/UnionThumbnailItem.qml:94
+#, fuzzy, kde-format
+#| msgid "Push Button"
+msgctxt "@action:button"
+msgid "Button"
+msgstr "ਪੁਸ਼ ਬਟਨ"
+
+#: ui/UnionThumbnailItem.qml:107
+#, fuzzy, kde-format
+#| msgid "Text only"
+msgctxt "@label:textbox"
+msgid "Text Field"
+msgstr "ਸਿਰਫ਼ ਲਿਖਤ"
+
+#: ui/UnionThumbnailItem.qml:122
+#, fuzzy, kde-format
+#| msgid "%p%"
+msgctxt "@item:inrange Progress bar value"
+msgid "%1%"
+msgstr "%p%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "…ਨਵੇਂ GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਲਵੋ"
