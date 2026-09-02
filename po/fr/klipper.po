@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 02:40+0000\n"
+"POT-Creation-Date: 2026-09-02 02:43+0000\n"
 "PO-Revision-Date: 2025-12-11 09:41+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -677,22 +677,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Afficher les éléments du presse-papier à la position de la souris"
 
-#: klipper.cpp:404 klipper.cpp:413
+#: klipper.cpp:408 klipper.cpp:417
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historique du presse-papier"
 
-#: klipper.cpp:430
+#: klipper.cpp:434
 #, kde-format
 msgid "up"
 msgstr "haut"
 
-#: klipper.cpp:437
+#: klipper.cpp:441
 #, kde-format
 msgid "current"
 msgstr "actuel"
 
-#: klipper.cpp:444
+#: klipper.cpp:448
 #, kde-format
 msgid "down"
 msgstr "bas"

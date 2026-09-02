@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 02:40+0000\n"
+"POT-Creation-Date: 2026-09-02 02:43+0000\n"
 "PO-Revision-Date: 2025-08-30 19:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -649,22 +649,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "اعرض عناصر الحافظة عند موضع الفأرة"
 
-#: klipper.cpp:404 klipper.cpp:413
+#: klipper.cpp:408 klipper.cpp:417
 #, kde-format
 msgid "Clipboard history"
 msgstr "تاريخ الحافظة: "
 
-#: klipper.cpp:430
+#: klipper.cpp:434
 #, kde-format
 msgid "up"
 msgstr "أعلى"
 
-#: klipper.cpp:437
+#: klipper.cpp:441
 #, kde-format
 msgid "current"
 msgstr "الحالي"
 
-#: klipper.cpp:444
+#: klipper.cpp:448
 #, kde-format
 msgid "down"
 msgstr "أسفل"

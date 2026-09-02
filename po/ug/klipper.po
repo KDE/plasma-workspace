@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 02:40+0000\n"
+"POT-Creation-Date: 2026-09-02 02:43+0000\n"
 "PO-Revision-Date: 2026-02-09 18:14-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -648,22 +648,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "چاشقىنەك ئورنىدا چاپلاش تاختىسى تۈرىنى كۆرسىتىدۇ"
 
-#: klipper.cpp:404 klipper.cpp:413
+#: klipper.cpp:408 klipper.cpp:417
 #, kde-format
 msgid "Clipboard history"
 msgstr "چاپلاش تاختىسى تارىخى"
 
-#: klipper.cpp:430
+#: klipper.cpp:434
 #, kde-format
 msgid "up"
 msgstr "ئۈستىگە"
 
-#: klipper.cpp:437
+#: klipper.cpp:441
 #, kde-format
 msgid "current"
 msgstr "نۆۋەتتىكى"
 
-#: klipper.cpp:444
+#: klipper.cpp:448
 #, kde-format
 msgid "down"
 msgstr "ئاستى"
