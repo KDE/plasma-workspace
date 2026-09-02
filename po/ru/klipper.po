@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-09-02 00:46+0000\n"
 "PO-Revision-Date: 2025-11-13 15:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -688,22 +688,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показать записи журнала буфера обмена на позиции указателя мыши"
 
-#: klipper.cpp:390 klipper.cpp:399
+#: klipper.cpp:394 klipper.cpp:403
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера обмена"
 
-#: klipper.cpp:416
+#: klipper.cpp:420
 #, kde-format
 msgid "up"
 msgstr "более новое:"
 
-#: klipper.cpp:423
+#: klipper.cpp:427
 #, kde-format
 msgid "current"
 msgstr "выбрано:"
 
-#: klipper.cpp:430
+#: klipper.cpp:434
 #, kde-format
 msgid "down"
 msgstr "более старое:"

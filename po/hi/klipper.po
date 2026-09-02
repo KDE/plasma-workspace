@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-09-02 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -677,22 +677,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "माउस संकेतक स्थान पर क्लिपर खोलें"
 
-#: klipper.cpp:390 klipper.cpp:399
+#: klipper.cpp:394 klipper.cpp:403
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:416
+#: klipper.cpp:420
 #, kde-format
 msgid "up"
 msgstr "ऊपर"
 
-#: klipper.cpp:423
+#: klipper.cpp:427
 #, kde-format
 msgid "current"
 msgstr "वर्तमान"
 
-#: klipper.cpp:430
+#: klipper.cpp:434
 #, kde-format
 msgid "down"
 msgstr "नीचे"

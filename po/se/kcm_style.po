@@ -175,7 +175,7 @@ msgstr ""
 #: stylepreview.ui:85
 #, kde-format
 msgid "Button"
-msgstr ""
+msgstr "Boallu"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:99

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-09-02 00:46+0000\n"
 "PO-Revision-Date: 2026-07-02 08:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -393,12 +393,12 @@ msgstr "ניהול שולחנות עבודה ולוחות…"
 msgid "Move keyboard focus between panels"
 msgstr "העברת מיקוד המקלדת בין לוחות"
 
-#: shellcorona.cpp:2274
+#: shellcorona.cpp:2275
 #, kde-format
 msgid "Add Panel"
 msgstr "הוספת לוח"
 
-#: shellcorona.cpp:2361
+#: shellcorona.cpp:2362
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

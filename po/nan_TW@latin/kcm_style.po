@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-08-14 22:58+0900\n"
+"PO-Revision-Date: 2026-09-02 04:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -20,25 +20,27 @@ msgstr ""
 #: gtkpage.cpp:57
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 m̄-sī iú-hāu ê GTK tsú-tê hong-tsûn."
 
 #: kcmstyle.cpp:117
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
 msgstr ""
+"An-tsong sit-pāi: Bô-huat-tōo an-tsong tī-leh uán-tuan uī-tì tíng-kuân ê "
+"hong-keh"
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "An-tsong sit-pāi: Hong-keh tóng-àn bô-huat-tōo tho̍k-tshú."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "An-tsong sit-pāi: Hong-keh tóng-àn lāi-té bô jīm-hô tsu-liāu."
 
 #: kcmstyle.cpp:134
 #, kde-format
@@ -50,43 +52,43 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "An-tsong sit-pāi: Hong-keh tshuē-bô."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "An-tsong sit-pāi: Suán-ti̍k ê tóng-àn m̄-sī iú-hāu ê Union hong-keh."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "An-tsong sit-pāi: Suán-ti̍k ê hong-keh bô tsi-uān."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "An-tsong “%1” sit-pāi--ah: I í-king an-tsong--ah."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "An-tsong “%1” sit-pāi--ah: Tsûn-tshú hōo kī-tsua̍t--ah."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "An-tsong “%1” sit-pāi--ah: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "Sîng-kong an-tsong “%1”."
 
 #: kcmstyle.cpp:192
 #, kde-format
@@ -215,7 +217,7 @@ msgstr "Ìng-iōng-tîng-sik hong-keh"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Union Hong-keh ID"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -358,13 +360,13 @@ msgstr ""
 #: ui/main.qml:174
 #, kde-format
 msgid "Configure Style…"
-msgstr ""
+msgstr "Siat-tīng Hong-keh…"
 
 #: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "Kái-tû-an-tsong…"
 
 #: ui/main.qml:184
 #, kde-format
@@ -376,7 +378,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Tsí ē-sái kái-tû an-tsong Union hong-keh."
 
 #: ui/main.qml:199
 #, kde-format
@@ -393,18 +395,16 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "An-tsong"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "Hun-ia̍h 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "Hun-ia̍h 2"
@@ -434,22 +434,19 @@ msgid "Combo Box Item"
 msgstr ""
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "On buttons"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
-msgstr "Tī tshi̍h-liú tíng-kuân"
+msgstr "Tshi̍h-liú"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "Kan-na bûn-jī"
+msgstr "Bûn-jī Lân-uī"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr "%1%"

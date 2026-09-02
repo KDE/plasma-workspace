@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-08-18 04:10+0900\n"
+"PO-Revision-Date: 2026-09-02 04:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -61,7 +61,7 @@ msgstr "Pian-tsi̍p Ìng-iōng-tîng-sik…"
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr ""
+msgstr "Kái-tû-an-tsong á-sī Kuán-lí Hù-ka Guân-kiānn…"
 
 #: appentry.cpp:399
 #, kde-format
@@ -191,6 +191,8 @@ msgstr "Ún-tsông %1"
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
+"Tse bô ing-kai tshut-hiān! Khai-huat-tsiá ing-kai ài iōng "
+"KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:578
 #, kde-format
@@ -220,7 +222,7 @@ msgstr "Tiānn-tiānn Iōng-ê Ìng-iōng-tîng-sik"
 #: rootmodel.cpp:611
 #, kde-format
 msgid "Power / Session"
-msgstr ""
+msgstr "Tiān-guân / Kang-tsok-kai-tuānn"
 
 #: runnermodel.cpp:303
 #, kde-format
@@ -296,12 +298,12 @@ msgstr "Iōng pa̍t-ê iōng-tsiá khai-sí tông-sî tsip-hîng ê kang-tsok-ka
 #: systementry.cpp:259
 #, kde-format
 msgid "Suspend to RAM"
-msgstr ""
+msgstr "Tsiām-thîng khì kì-ik-thé"
 
 #: systementry.cpp:262
 #, kde-format
 msgid "Suspend to disk"
-msgstr ""
+msgstr "Tsiām-thîng khì tsû-tia̍p"
 
 #: systementry.cpp:265
 #, kde-format

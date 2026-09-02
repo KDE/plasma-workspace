@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:48+0000\n"
-"PO-Revision-Date: 2026-08-14 22:58+0900\n"
+"PO-Revision-Date: 2026-09-02 03:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -31,20 +31,20 @@ msgstr "mail@kisaragi-hiu.com"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "Iánn-siōng Tóng-àn (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr ""
+msgstr "Tsuân-i̍k guā-kuan kap hong-keh"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "Tsuân-i̍k Guā-kuan kap Hong-keh thò-kiānn, tāi-thè"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
@@ -69,7 +69,7 @@ msgstr ""
 #: tool/lnftool.cpp:32
 #, kde-format
 msgid "Global Theme Tool"
-msgstr ""
+msgstr "Tsuân-i̍k Tsú-tê Kang-khū"
 
 #: tool/lnftool.cpp:34
 #, kde-format
@@ -81,7 +81,7 @@ msgstr ""
 #: tool/lnftool.cpp:36
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
-msgstr ""
+msgstr "Copyright 2017, Marco Martin"
 
 #: tool/lnftool.cpp:37
 #, kde-format
@@ -96,7 +96,7 @@ msgstr "Uî-hōo-tsiá"
 #: tool/lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
-msgstr ""
+msgstr "Kā ē-sái iōng ê tsuân-i̍k tsú-tê guā-kuà-tîng-sik lia̍t--tshut-lâi"
 
 #: tool/lnftool.cpp:49
 #, kde-format
@@ -105,21 +105,25 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
+"Thò-iōng tsi̍t-ê tsuân-i̍k tsú-tê thò-kiānn. Ē-sái tsí-tīng í-king an-tsong ê "
+"thò-kiānn ê miâ á-sī uân-tsíng lōo-kìng. Tsit-ê kang-khū ē khak-tīng i tsin-"
+"tsiànn sī tsi̍t-ê tsuân-i̍k tsú-tê thò-kiānn, jiân-āu tshì-khuànn-māi kā i thò-"
+"iōng"
 
 #: tool/lnftool.cpp:51
 #, kde-format
 msgid "packagename"
-msgstr ""
+msgstr "packagename"
 
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Hōo --apply mài thîng-iōng tsū-tōng bôo-sik"
 
 #: tool/lnftool.cpp:53
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
-msgstr ""
+msgstr "Tîng-siat Plasma Toh-bīn pòo-kio̍k"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -131,7 +135,7 @@ msgstr "Íng-uán Thâi-tiāu"
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Lí kám tsin-tsiànn ài kā tsit-ê tsú-tê íng-uán thâi-tiāu?"
 
 #: ui/ConfirmDeletionDialog.qml:21
 #, kde-format
@@ -157,25 +161,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Siat-tīng Ji̍t/Iā Sûn-khuân…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Kng-ê"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Àm-ê"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Tán guā-kú bô tshau-tsok tsiah-koh tshiat-uānn:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
@@ -194,25 +198,25 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr ""
+msgstr "Suán Kng-ê Tsuân-i̍k Tsú-tê"
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr ""
+msgstr "Suán Àm-ê Tsuân-i̍k Tsú-tê"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
-msgstr ""
+msgstr "Ī-lám Tsú-tê"
 
 #: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
-msgstr ""
+msgstr "Î-tû tsú-tê"
 
 #: ui/LookAndFeelSelector.qml:59 ui/StaticLookAndFeel.qml:77
 #, kde-format
@@ -294,7 +298,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "Tû-tsûn Tsit-má ê Tsú-tê…"
 
 #: ui/main.qml:45
 #, kde-format
@@ -305,12 +309,12 @@ msgstr "Tshú-tit Sin-ê…"
 #: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
-msgstr ""
+msgstr "Pòo-kio̍k siat-tīng:"
 
 #: ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
-msgstr ""
+msgstr "Toh-bīn pòo-kio̍k"
 
 #: ui/MoreOptions.qml:32
 #, kde-format
@@ -327,7 +331,7 @@ msgstr ""
 #: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
-msgstr ""
+msgstr "Guā-kuan siat-tīng:"
 
 #: ui/MoreOptions.qml:69
 #, kde-format
@@ -342,12 +346,12 @@ msgstr "Ìng-iōng-tîng-sik Hong-keh"
 #: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
-msgstr ""
+msgstr "Sī-thang Tsong-sik Hong-keh"
 
 #: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
-msgstr ""
+msgstr "Sī-thang Tsong-sik Tuā-sè"
 
 #: ui/MoreOptions.qml:73
 #, kde-format
@@ -372,12 +376,12 @@ msgstr "Jī-hîng"
 #: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
-msgstr ""
+msgstr "Kang-tsok Tshiat-uānn-khì"
 
 #: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
+msgstr "Khé-tōng Uē-bīn"
 
 #: ui/SimpleOptions.qml:19
 #, kde-format
@@ -387,24 +391,24 @@ msgstr ""
 #: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
-msgstr ""
+msgstr "Guā-kuan siat-tīng"
 
 #: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr ""
+msgstr "• Guā-kuan siat-tīng"
 
 #: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
-msgstr ""
+msgstr "Toh-bīn kap sī-thang pòo-kio̍k"
 
 #: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr ""
+msgstr "• Toh-bīn kap sī-thang pòo-kio̍k"
 
 #: ui/SimpleOptions.qml:71
 #, kde-format
@@ -417,7 +421,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
-msgstr ""
+msgstr "Pau-kuat Toh-bīn pòo-kio̍k"
 
 #: ui/StaticLookAndFeel.qml:112
 #, kde-format
@@ -425,14 +429,14 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr ""
+msgstr "Kám ài thò-iōng %1?"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Choose what to apply…"
-msgstr ""
+msgstr "Suán ài thò-iōng siánn…"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
+msgstr "Hián-sī khah-tsió suán-hāng…"
