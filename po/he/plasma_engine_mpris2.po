@@ -4,31 +4,32 @@
 # Diego Iastrubni <elcuco@kde.org>, 2013.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_mpris2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2017-05-16 06:56-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-09-01 20:44+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: multiplexedservice.cpp:72
 #, kde-format
 msgctxt "Name for global shortcuts category"
 msgid "Media Controller"
-msgstr "פקדי מדיה"
+msgstr "פקד מדיה"
 
 #: multiplexedservice.cpp:74
 #, kde-format
 msgid "Play/Pause media playback"
-msgstr "הפעל או הפסק"
+msgstr "הפעלת/השהיית ניגון מדיה"
 
 #: multiplexedservice.cpp:92
 #, kde-format
@@ -43,49 +44,47 @@ msgstr "הקודם"
 #: multiplexedservice.cpp:110
 #, kde-format
 msgid "Stop media playback"
-msgstr "עצור"
+msgstr "עצירת נגינת המדיה"
 
 #: multiplexedservice.cpp:119
-#, fuzzy, kde-format
-#| msgid "Play/Pause media playback"
+#, kde-format
 msgid "Pause media playback"
-msgstr "הפעל או הפסק"
+msgstr "השהיית נגינת המדיה"
 
 #: multiplexedservice.cpp:128
-#, fuzzy, kde-format
-#| msgid "Play/Pause media playback"
+#, kde-format
 msgid "Play media playback"
-msgstr "הפעל או הפסק"
+msgstr "הפעלת ניגון מדיה"
 
 #: multiplexedservice.cpp:137
 #, kde-format
 msgid "Media volume up"
-msgstr ""
+msgstr "הגברת עוצמת שמע של מדיה"
 
 #: multiplexedservice.cpp:146
 #, kde-format
 msgid "Media volume down"
-msgstr ""
+msgstr "הנמכת עוצמת שמע של מדיה"
 
 #: playeractionjob.cpp:169
 #, kde-format
 msgid "The media player '%1' cannot perform the action '%2'."
-msgstr "נגן המדיה \"%1\" לא יכול לבצע את הפעולה \"%2\"."
+msgstr "נגן המדיה ‚%1’ לא יכול לבצע את הפעולה ‚%2’."
 
 #: playeractionjob.cpp:171
 #, kde-format
 msgid "Attempting to perform the action '%1' failed with the message '%2'."
-msgstr "ביצוע הפעולה \"%1\" נכשלה עם ההודעה \"%2\"."
+msgstr "ביצוע הפעולה ‚%1’ נכשל עם ההודעה ‚%2’."
 
 #: playeractionjob.cpp:173
 #, kde-format
 msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
-msgstr "הארגומנט \"%1\" עבור הפעולה \"%2\" חסר או מהטיפוס הלא נכון."
+msgstr "הארגומנט ‚%1’ עבור הפעולה ‚%2’ חסר או מהטיפוס הלא נכון."
 
 #: playeractionjob.cpp:175
 #, kde-format
 msgid "The operation '%1' is unknown."
-msgstr "הפעולה \"%1\" לא ידועה."
+msgstr "הפעולה ‚%1’ לא ידועה."
 
 #: playeractionjob.cpp:177
 #, kde-format
