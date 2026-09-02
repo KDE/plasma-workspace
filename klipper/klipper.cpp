@@ -79,6 +79,7 @@ Klipper::Klipper(QObject *parent)
     m_myURLGrabber = new URLGrabber(this);
     connect(m_myURLGrabber, &URLGrabber::sigPopup, this, &Klipper::showPopupMenu);
     connect(m_historyModel.get(), &HistoryModel::actionInvoked, m_myURLGrabber, &URLGrabber::invokeAction);
+    m_historyModel->setURLGrabber(m_myURLGrabber);
 
     /*
      * Load configuration settings

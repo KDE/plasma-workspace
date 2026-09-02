@@ -56,6 +56,23 @@ void URLGrabber::invokeAction(HistoryItemConstPtr item)
     actionMenu(item, false);
 }
 
+bool URLGrabber::hasMatchingActions(HistoryItemConstPtr item) const
+{
+    const QString text = actionText(item);
+
+    const QMimeType mimetype = urlMimeType(text);
+    if (mimetype.isValid() && !KApplicationTrader::queryByMimeType(mimetype.name()).isEmpty()) {
+        return true;
+    }
+
+    for (const ClipAction *action : m_myActions) {
+        if (action->match(text).hasMatch()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 QString URLGrabber::actionText(const HistoryItemConstPtr &item) const
 {
     QString text(item->text());

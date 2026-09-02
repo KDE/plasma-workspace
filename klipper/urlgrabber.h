@@ -43,6 +43,11 @@ public:
     void checkNewData(std::shared_ptr<const HistoryItem> item);
     void invokeAction(std::shared_ptr<const HistoryItem> item);
 
+    /**
+     * Whether invokeAction() would show a menu for @p item.
+     */
+    bool hasMatchingActions(std::shared_ptr<const HistoryItem> item) const;
+
     ActionList actionList() const
     {
         return m_myActions;

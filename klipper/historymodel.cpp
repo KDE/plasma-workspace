@@ -32,6 +32,7 @@
 #include "klippersettings.h"
 #include "systemclipboard.h"
 #include "updateclipboardjob.h"
+#include "urlgrabber.h"
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -397,6 +398,8 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         // TODO: Consider adding QHash<QString, bool> cache for starred status to avoid
         // frequent database queries if performance becomes an issue with large histories
         return isItemStarred(item->uuid());
+    case HasActionRole:
+        return m_urlGrabber && m_urlGrabber->hasMatchingActions(item);
     }
     return {};
 }
@@ -864,6 +867,7 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     hash.insert(UuidRole, QByteArrayLiteral("uuid"));
     hash.insert(TypeIntRole, QByteArrayLiteral("type"));
     hash.insert(StarredRole, QByteArrayLiteral("starred"));
+    hash.insert(HasActionRole, QByteArrayLiteral("hasAction"));
     return hash;
 }
 
@@ -945,6 +949,11 @@ void HistoryModel::setHasPassword(bool hasPassword)
 void HistoryModel::clearSecret()
 {
     m_clip->clear();
+}
+
+void HistoryModel::setURLGrabber(URLGrabber *grabber)
+{
+    m_urlGrabber = grabber;
 }
 
 #include "moc_historymodel.cpp"

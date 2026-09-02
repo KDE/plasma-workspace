@@ -34,7 +34,8 @@ GridLayout {
         {
             role: DelegateToolButtons.ButtonRole.InvokeAction,
             icon: "system-run",
-            text: i18nd("klipper", "Invoke action")
+            text: i18nd("klipper", "Invoke action"),
+            visible: menuItem.model?.hasAction ?? false
         },
         {
             role: DelegateToolButtons.ButtonRole.ShowQRCode,
