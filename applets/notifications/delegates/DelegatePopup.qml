@@ -138,7 +138,7 @@ BaseDelegate {
         implicitHeight: scroll.implicitHeight
         visible: delegateRoot.hasBodyText
         onClicked: {
-            if (delegateRoot.modelInterface.hasDefaultAction) {
+            if (delegateRoot.modelInterface.hasDefaultAction && !delegateRoot.hoveredLink) {
                 delegateRoot.modelInterface.defaultActionInvoked();
             }
         }
