@@ -20,6 +20,8 @@ class QTimer;
 
 class KConfig;
 class QMenu;
+class QMimeType;
+class QRegularExpressionMatch;
 class QAction;
 
 class ClipAction;
@@ -73,6 +75,15 @@ private:
     void execute(const ClipAction *action, int commandIdx) const;
     void actionMenu(std::shared_ptr<const HistoryItem> item, bool automatically_invoked);
     void matchingMimeActions(const QString &clipData);
+    /**
+     * The mimetype of @p clipData, if it is a usable URL. Only absolute URLs, and
+     * only existing files for file URLs, are matched.
+     */
+    QMimeType urlMimeType(const QString &clipData) const;
+    /**
+     * The item's text as the actions see it, honouring StripWhiteSpace.
+     */
+    QString actionText(const std::shared_ptr<const HistoryItem> &item) const;
 
     ActionList m_myActions;
     ActionList m_myMatches;
@@ -141,6 +152,11 @@ public:
     {
         m_regexPattern = pattern;
     }
+
+    /**
+     * Matches @p text against this action's regular expression.
+     */
+    QRegularExpressionMatch match(const QString &text) const;
 
     QStringList actionCapturedTexts() const
     {
