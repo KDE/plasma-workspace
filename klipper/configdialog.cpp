@@ -67,7 +67,7 @@ using namespace Qt::StringLiterals;
 }
 
 //////////////////////////
-//  GeneralWidget	//
+//  GeneralWidget       //
 //////////////////////////
 
 GeneralWidget::GeneralWidget(QWidget *parent)
@@ -102,16 +102,20 @@ GeneralWidget::GeneralWidget(QWidget *parent)
     connect(hint, &QLabel::linkActivated, this, [hint]() {
         QToolTip::showText(QCursor::pos(),
                            xi18nc("@info:tooltip",
-                                  "When text or an area of the screen is highlighted with the mouse or keyboard, \
-this is the <emphasis>selection</emphasis>. It can be pasted using the middle mouse button.\
-<nl/>\
-<nl/>\
-If the selection is explicitly copied using a <interface>Copy</interface> or <interface>Cut</interface> action, \
-it is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a <interface>Paste</interface> action. \
-<nl/>\
-<nl/>\
-When turned on, this option keeps the selection and the clipboard the same, so that any selection is immediately available to paste by any means. \
-If it is turned off, the selection may still be saved in the clipboard history (subject to the option below), but it can only be pasted using the middle mouse button."),
+                                  "When text or an area of the screen is highlighted with the mouse or keyboard, "
+                                  "this is the <emphasis>selection</emphasis>. "
+                                  "It can be pasted using the middle mouse button."
+                                  "<nl/>"
+                                  "<nl/>"
+                                  "If the selection is explicitly copied using a <interface>Copy</interface> "
+                                  "or <interface>Cut</interface> action, it is saved to the <emphasis>clipboard</emphasis>. "
+                                  "It can be pasted using a <interface>Paste</interface> action."
+                                  "<nl/>"
+                                  "<nl/>"
+                                  "When turned on, this option keeps the selection and the clipboard the same, "
+                                  " so that any selection is immediately available to paste by any means. "
+                                  "If it is turned off, the selection may still be saved in the clipboard history "
+                                  "(subject to the option below), but it can only be pasted using the middle mouse button."),
                            hint);
     });
 
@@ -121,33 +125,38 @@ If it is turned off, the selection may still be saved in the clipboard history (
     m_saveSelectionCb->setObjectName(QLatin1String("kcfg_SaveSelection"));
     layout->addRow(i18n("Include in history:"), m_saveSelectionCb);
 
-    QLabel *selectionHint = ConfigDialog::createHintLabel(i18n("Text copied explicitly is always saved unless it is marked as a password."), this);
+    QLabel *selectionHint = ConfigDialog::createHintLabel(i18n("Text copied explicitly is always saved "
+                                                               "unless it is marked as a password."),
+                                                          this);
     layout->addRow(QString(), selectionHint);
 
     m_saveImagesCb = new QCheckBox(i18n("Image data copied explicitly"), this);
     m_saveImagesCb->setObjectName(QLatin1String("kcfg_SaveImages"));
     layout->addRow(QString(), m_saveImagesCb);
 
-    QLabel *imageHint = ConfigDialog::createHintLabel(i18n("For example, layers and selections copied in image editors like Krita or GIMP."
+    QLabel *imageHint = ConfigDialog::createHintLabel(i18n("For example, layers and selections copied in "
+                                                           "image editors like Krita or GIMP."
                                                            "<br/><a href=\"1\">More about images in the clipboard.</a>"),
                                                       this);
     layout->addRow(QString(), imageHint);
 
     connect(imageHint, &QLabel::linkActivated, this, [imageHint]() {
-        QToolTip::showText(
-            QCursor::pos(),
-            xi18nc(
-                "@info:tooltip",
-                "Clipboard will always allow copying image files as filenames and will show their thumbnails. This setting covers cases where images are stored directly as data. Some applications support both cases, but some only accept images as data.\
-<nl/>\
-<nl/>\
-Also note that the Spectacle screenshot tool will ignore this setting when configured to save screenshots to the clipboard. Any application that sends both text and image will also ignore it."),
-            imageHint);
+        QToolTip::showText(QCursor::pos(),
+                           xi18nc("@info:tooltip",
+                                  "Clipboard will always allow copying image files as filenames and will show their thumbnails. "
+                                  " This setting covers cases where images are stored directly as data. "
+                                  " Some applications support both cases, but some only accept images as data."
+                                  "<nl/>"
+                                  "<nl/>"
+                                  "Also note that the Spectacle screenshot tool will ignore this setting "
+                                  "when configured to save screenshots to the clipboard. "
+                                  "Any application that sends both text and image will also ignore it."),
+                           imageHint);
     });
 }
 
 //////////////////////////
-//  PopupWidget		//
+//  PopupWidget         //
 //////////////////////////
 
 PopupWidget::PopupWidget(QWidget *parent)
@@ -169,10 +178,10 @@ PopupWidget::PopupWidget(QWidget *parent)
 
     const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "When text that matches an action pattern is selected or is chosen from \
-the clipboard history, automatically show the popup menu with applicable actions. \
-If the automatic menu is turned off here, or it is not shown for an excluded window, \
-then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
+                                                        "When text that matches an action pattern is selected or is chosen from "
+                                                        "the clipboard history, automatically show the popup menu with applicable actions. "
+                                                        "If the automatic menu is turned off here, or it is not shown for an excluded window, "
+                                                        "then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
                                                         ConfigDialog::manualShortcutString()),
                                                  this);
     layout->addRow(QString(), hint);
@@ -205,7 +214,7 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
 }
 
 //////////////////////////
-//  ActionsWidget	//
+//  ActionsWidget       //
 //////////////////////////
 
 ActionsWidget::ActionsWidget(QWidget *parent)
@@ -215,9 +224,9 @@ ActionsWidget::ActionsWidget(QWidget *parent)
 
     // General information label
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "When a <interface>match pattern</interface> \
-matches the clipboard contents, its <interface>commands</interface> \
-appear in the Klipper popup menu and can be executed."),
+                                                        "When a <interface>match pattern</interface> "
+                                                        "matches the clipboard contents, its <interface>commands</interface> "
+                                                        "appear in the Klipper popup menu and can be executed."),
                                                  this);
     layout->addWidget(hint, 0, 0, 1, -1);
 
@@ -246,8 +255,8 @@ appear in the Klipper popup menu and can be executed."),
     // Where to configure the action options
     if (KlipperSettings::actionsInfoMessageShown()) {
         auto *msg = new KMessageWidget(xi18nc("@info",
-                                              "These actions appear in the popup menu \
-which can be configured on the <interface>Action Menu</interface> page."),
+                                              "These actions appear in the popup menu "
+                                              "which can be configured on the <interface>Action Menu</interface> page."),
                                        this);
         msg->setMessageType(KMessageWidget::Information);
         msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
@@ -485,7 +494,7 @@ void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int /*col*/)
 }
 
 //////////////////////////
-//  ConfigDialog	//
+//  ConfigDialog        //
 //////////////////////////
 
 ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *klipper, KActionCollection *collection)
