@@ -51,7 +51,6 @@ private:
     QCheckBox *m_enablePopupCb;
     QCheckBox *m_historyPopupCb;
     QCheckBox *m_stripWhitespaceCb;
-    QCheckBox *m_mimeActionsCb;
 
     QSpinBox *m_actionTimeoutSb;
 };
@@ -84,6 +83,7 @@ private:
     void updateActionListView();
 
 private:
+    QCheckBox *m_mimeActionsCb;
     ActionsTreeWidget *m_actionsTree;
     QPushButton *m_addActionButton;
     QPushButton *m_editActionButton;

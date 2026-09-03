@@ -96,28 +96,27 @@ the search field.
 <title>Actions</title>
 
 <para>&klipper; can perform actions on the contents of the clipboard,
-based on whether they match a particular regular expression. For
-example, any clipboard contents starting with <quote>http://</quote> can
-be passed to Firefox or &konqueror; as &URL;s to open. In addition, if the
-contents matches a path, similar actions can be performed according to the file's
-type. &eg;, if the path to a <acronym>PDF</acronym> file is copied to the clipboard, the file can be
-viewed in &okular;.</para>
+based on whether they match a particular regular expression. There is a built-in action
+that acts on web addresses and files. It allows you to pass a web address that starts with
+<quote>http://</quote> or <quote>https://</quote> to a web browser, or a file, for example a
+<acronym>PDF</acronym>, to a compatible application like &okular;.</para>
 
-<para>To use this feature, just select a &URL; or path. <!-- starting with slash ?-->
-If there is a matching regular expression in &klipper;'s
-list, a menu will appear showing you the programs for your selection.
-Use the mouse or cursor keys to select a program, and &klipper; will run
-this program, opening the address pointed to by the
-selection.</para>
+<para>
+You can write your own actions in the <guilabel>Actions Configuration</guilabel>
+page of the <link linkend="preferences">settings dialog</link>,
+where you can also disable the built-in action with
+<guilabel>Offer applications for copied links and files</guilabel>.
+</para>
 
-<para>You can change the time that the menu remains for in the settings dialog,
-with the option <guilabel>Show action popup menu</guilabel> under the
-<guilabel>General</guilabel> page. You can separately disable the  file path
-part using the option <guilabel>Include MIME actions</guilabel> under the
-<guilabel>Action Menu</guilabel> page.</para>
-
-<para>Actions can be disabled completely by pressing
-the shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>X</keycap></keycombo>.</para>
+<para>You can always access the matching action menu
+with a button next to the item in your history. You can also choose
+to have an action menu pop up any time
+a match is placed on the clipboard by using the
+<guilabel>Automatic Action Popup Menu</guilabel> shortcut that you can set up
+on the <guilabel>Shortcuts</guilabel> page, or by checking
+<guilabel>Immediately on selection</guilabel> under <guilabel>Show action popup
+menu</guilabel> on the <guilabel>Action Menu</guilabel> page. There, with the option <guilabel>Automatic action menu time</guilabel>, you can also change how long it takes the automatic
+menu to close on its own if you do not act up on it.</para>
 
 <para>Clipboard contents which match a regular expression can also be
 edited before performing an action on them. Select <guimenuitem>Edit
@@ -218,14 +217,7 @@ Screenshots saved by &spectacle; will also be saved when configured so there.
 <variablelist>
 
 <varlistentry>
-<term><guilabel>Show action popup menu</guilabel></term>
-<listitem><para>Set the time that a popup menu will remain for if you do
-nothing with it.</para></listitem>
-</varlistentry>
-
-<varlistentry>
-<term><guilabel>Replay actions on an item selected from
-history</guilabel></term>
+<term><guilabel>For an item chosen from history</guilabel></term>
 <listitem><para>If this is switched on, selecting an item from the history
 causes &klipper; to display the actions pop-up on that item, if
 appropriate.</para>
@@ -233,19 +225,15 @@ appropriate.</para>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Remove white space when executing actions</guilabel></term>
-<listitem><para>If selected, any white space (spaces, tabs, &etc;) at the
-beginning and end of the clipboard contents will be removed before passing the
-clipboard contents to an application. This is useful, for example, if the
-clipboard contains a &URL; with spaces which, if opened by a web browser, would
-cause an error.</para>
-</listitem>
+<term><guilabel>Automatic action menu time</guilabel></term>
+<listitem><para>Set how long it takes the automatic menu to close on its own if you do not act up on it.</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Include MIME actions</guilabel></term>
-<listitem><para>If selected, include applications that can accept its
-&MIME; type of a file name or URL selected in the popup menu.</para>
+<term><guilabel> Trim whitespace</guilabel></term>
+<listitem><para>If selected, any white space (spaces, tabs, &etc;) at the
+beginning and end of the clipboard contents will be removed before passing the
+clipboard contents to an application. The text saved in history is not affected.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -255,6 +243,14 @@ cause an error.</para>
 <title>Actions Configuration</title>
 
 <variablelist>
+<varlistentry>
+<term><guilabel>Offer applications for copied links and files</guilabel></term>
+<listitem><para>If selected, the popup menu offers applications that can
+open a copied file, or a copied link starting with <quote>http://</quote>
+or <quote>https://</quote>, even when no action of your own matches.</para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term>Editing Expressions/Actions</term>
 <listitem><para>On the <guilabel>Actions</guilabel> page, double-click

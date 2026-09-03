@@ -203,13 +203,6 @@ PopupWidget::PopupWidget(QWidget *parent)
     layout->addRow(i18n("Options:"), m_stripWhitespaceCb);
     layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
-    // MIME actions
-    item = KlipperSettings::self()->enableMagicMimeActionsItem();
-    m_mimeActionsCb = new QCheckBox(item->label(), this);
-    m_mimeActionsCb->setObjectName(QLatin1String("kcfg_EnableMagicMimeActions"));
-    layout->addRow(QString(), m_mimeActionsCb);
-    layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
-
     layout->addRow(QString(), new QLabel(this));
 }
 
@@ -222,35 +215,34 @@ ActionsWidget::ActionsWidget(QWidget *parent)
 {
     auto *layout = new QGridLayout(this);
 
-    // General information label
-    QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "When a <interface>match pattern</interface> "
-                                                        "matches the clipboard contents, its <interface>commands</interface> "
-                                                        "appear in the Klipper popup menu and can be executed."),
-                                                 this);
-    layout->addWidget(hint, 0, 0, 1, -1);
+    // MIME actions - handlers for URLs and files that Klipper provides by itself
+    const KConfigSkeletonItem *item = KlipperSettings::self()->enableMagicMimeActionsItem();
+    m_mimeActionsCb = new QCheckBox(item->label(), this);
+    m_mimeActionsCb->setObjectName(QLatin1String("kcfg_EnableMagicMimeActions"));
+    layout->addWidget(m_mimeActionsCb, 0, 0, 1, -1);
+    layout->addWidget(ConfigDialog::createHintLabel(item, this), 1, 0, 1, -1);
 
     // Scrolling list
     m_actionsTree = new ActionsTreeWidget(this);
     m_actionsTree->setColumnCount(2);
     m_actionsTree->setHeaderLabels({i18nc("@title:column", "Match pattern and commands"), i18nc("@title:column", "Description")});
 
-    layout->addWidget(m_actionsTree, 1, 0, 1, -1);
-    layout->setRowStretch(1, 1);
+    layout->addWidget(m_actionsTree, 2, 0, 1, -1);
+    layout->setRowStretch(2, 1);
 
     // Action buttons
     m_addActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Action..."), this);
     connect(m_addActionButton, &QPushButton::clicked, this, &ActionsWidget::onAddAction);
-    layout->addWidget(m_addActionButton, 2, 0);
+    layout->addWidget(m_addActionButton, 3, 0);
 
     m_editActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Action..."), this);
     connect(m_editActionButton, &QPushButton::clicked, this, &ActionsWidget::onEditAction);
-    layout->addWidget(m_editActionButton, 2, 1);
+    layout->addWidget(m_editActionButton, 3, 1);
     layout->setColumnStretch(2, 1);
 
     m_deleteActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Delete Action"), this);
     connect(m_deleteActionButton, &QPushButton::clicked, this, &ActionsWidget::onDeleteAction);
-    layout->addWidget(m_deleteActionButton, 2, 3);
+    layout->addWidget(m_deleteActionButton, 3, 3);
 
     // Where to configure the action options
     if (KlipperSettings::actionsInfoMessageShown()) {
@@ -266,11 +258,11 @@ ActionsWidget::ActionsWidget(QWidget *parent)
         connect(msg, &KMessageWidget::hideAnimationFinished, this, []() {
             KlipperSettings::setActionsInfoMessageShown(false);
         });
-        layout->addWidget(msg, 3, 0, 1, -1);
+        layout->addWidget(msg, 4, 0, 1, -1);
     }
 
     // Add some vertical space between our buttons and the dialogue buttons
-    layout->setRowMinimumHeight(4, 16);
+    layout->setRowMinimumHeight(5, 16);
 
     KConfigGroup oldConfig = KSharedConfig::openConfig()->group(u"ActionsWidget"_s);
     KConfigGroup state = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"ActionsWidget"_s);

@@ -68,9 +68,9 @@
 
   <group name="Actions">
     <entry name="StripWhiteSpace" type="Bool">
-      <label>Trim whitespace from selection</label>
+      <label>Trim whitespace</label>
       <default>true</default>
-      <whatsthis>Remove any whitespace from the start and end of selected text, before performing an action. For example, this ensures that a URL pasted in a browser is interpreted as expected. The text saved on the clipboard is not affected.</whatsthis>
+      <whatsthis>Remove any whitespace from the start and end of the text passed to an action. The text saved in history is not affected.</whatsthis>
     </entry>
     <entry name="ReplayActionInHistory" type="Bool">
       <label>For an item chosen from history</label>
@@ -78,9 +78,9 @@
       <tooltip>Show the popup menu of applicable actions if an entry is chosen from the clipboard history.</tooltip>
     </entry>
     <entry name="EnableMagicMimeActions" type="Bool">
-      <label>Include MIME actions</label>
+      <label>Offer applications for copied links and files</label>
       <default>true</default>
-      <whatsthis>If a file name or URL is selected, include applications that can accept its MIME type in the popup menu.</whatsthis>
+      <whatsthis>For a link starting with &lt;i&gt;http://&lt;/i&gt; or &lt;i&gt;https://&lt;/i&gt; or for files, applications that can open them will be offered alongside your matching actions, if any.</whatsthis>
     </entry>
   </group>
 
