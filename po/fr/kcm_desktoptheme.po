@@ -137,12 +137,12 @@ msgstr "Thèmes sombres"
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
-msgstr "Compatible avec les thèmes de couleurs"
+msgstr "Compatible avec les modèles de couleurs"
 
 #: ui/main.qml:114
 #, kde-format
 msgid "Install from File…"
-msgstr "Installer depuis un fichier..."
+msgstr "Installer depuis un fichier…"
 
 #: ui/main.qml:119
 #, kde-format
@@ -152,12 +152,12 @@ msgstr "Obtenir des nouveautés…"
 #: ui/main.qml:132
 #, kde-format
 msgid "Follows color scheme"
-msgstr "Respecte le schéma de couleurs"
+msgstr "Respecte le modèle de couleurs"
 
 #: ui/main.qml:150
 #, kde-format
 msgid "Edit Theme…"
-msgstr "Modifier un thème..."
+msgstr "Modifier un thème…"
 
 #: ui/main.qml:158
 #, kde-format

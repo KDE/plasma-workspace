@@ -62,7 +62,7 @@ msgstr "Impossible de télécharger le modèle de couleurs : %1"
 #: colors.cpp:284
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr "Ceci n'est pas un fichier de modèle de couleurs"
+msgstr "Ceci n'est pas un fichier de modèle de couleurs."
 
 #: colors.cpp:303
 #, kde-format
@@ -101,15 +101,15 @@ msgid ""
 "generated color or default color"
 msgstr ""
 "La dernière couleur personnalisée d'accentuation utilisée avant que "
-"l'utilisateur ne bascule vers la couleur générée par le fond d'écran ou à la "
-"couleur par défaut."
+"l'utilisateur ne bascule vers la couleur générée à partir du fond d'écran ou "
+"vers la couleur par défaut"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
-"Définit si une couleur accentuée provenant du fond d'écran doit être "
+"Définit si la couleur d’accentuation provenant du fond d'écran doit être "
 "appliquée ou non"
 
 #: editor/kcolorschemeeditor.cpp:23
@@ -720,7 +720,7 @@ msgstr ""
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
 msgstr ""
-"Ce thème est en lecture seule. Veuillez enregistrer les modifications sous "
+"Ce modèle est en lecture seule. Veuillez enregistrer les modifications sous "
 "un autre nom."
 
 #: editor/scmeditordialog.cpp:178
@@ -926,7 +926,7 @@ msgid ""
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
 "Des valeurs de contraste inférieures à 15 % peuvent produire des effets "
-"visuellement gênants avec certaines applications et certains thèmes de "
+"visuellement gênants avec certaines applications et certains modèles de "
 "couleurs. Considérez-vous comme prévenu !"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
@@ -1189,9 +1189,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
-"Cet outil vous permet de définir le thème de couleurs pour votre session "
-"courante de Plasma, sans le faire par inadvertance vers un thème, soit "
-"indisponible, soit déjà utilisé."
+"Cet outil vous permet de définir le modèle de couleurs pour votre session "
+"courante de Plasma, en vous assurant de ne pas choisir par inadvertance un "
+"modèle indisponible ou déjà utilisé."
 
 #: plasma-apply-colorscheme.cpp:45
 #, kde-format
@@ -1199,9 +1199,9 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
-"Le nom du thème de couleurs que vous souhaitez définir pour la session "
-"courante de Plasma (La fourniture d'un emplacement n'utilisera que la "
-"dernière partie de l'emplacement)."
+"Le nom du modèle de couleurs que vous souhaitez définir pour la session "
+"courante de Plasma (Si vous fournissez un chemin complet, seul le dernier "
+"morceau du chemin sera utilisé)"
 
 #: plasma-apply-colorscheme.cpp:48
 #, kde-format
@@ -1209,8 +1209,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
-"Afficher tous les thèmes de couleurs disponibles sur le système (y compris "
-"le thème courant)."
+"Afficher tous les modèles de couleurs disponibles sur le système (en "
+"indiquant lequel est le modèle courant)."
 
 #: plasma-apply-colorscheme.cpp:53
 #, kde-format
@@ -1220,9 +1220,9 @@ msgid ""
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
 "Le nom de la couleur d'accentuation que vous souhaitez définir. Les noms de "
-"couleur « SVG » (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) et "
-"les codes hexadécimaux de couleurs sont pris en charge. Référencez le code "
-"hexadécimal s'il existe une possibilité d'expansion de l'enveloppe."
+"couleur « SVG » (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) etles "
+"codes couleur hexadécimaux sont pris en charge. Mettez le code hexadécimal "
+"entre guillemets s'il existe une possibilité d'expansion par le shell."
 
 #: plasma-apply-colorscheme.cpp:80
 #, kde-format
@@ -1237,8 +1237,8 @@ msgstr ""
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
-"Application avec succès du thème de couleurs %1 pour votre session courante "
-"de Plasma."
+"Le modèle de couleurs %1 a été appliqué avec succès pour votre session "
+"courante de Plasma."
 
 #: plasma-apply-colorscheme.cpp:115
 #, kde-format
@@ -1246,7 +1246,7 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
-"Impossible de trouver le thème « %1 ». Le thème devrait avoir l'une des "
+"Impossible de trouver le thème « %1 ». Le thème doit faire partie des "
 "options suivantes : %2"
 
 #: plasma-apply-colorscheme.cpp:123
@@ -1255,7 +1255,7 @@ msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr ""
-"Vous avez prévu de transmettre un nom vide de thème de couleurs, ce qui "
+"Vous avez réussi à fournir un nom vide pour le modèle de couleurs, ce qui "
 "n'est pas un comportement pris en charge."
 
 #: plasma-apply-colorscheme.cpp:127
@@ -1264,8 +1264,8 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
-"Le fichier que vous avez tenté d'utiliser pour la définition de votre thème "
-"%1, pourrait ne pas être considéré comme un schéma de couleurs."
+"Le fichier que vous avez tenté d'utiliser pour la définition de votre "
+"modèle, %1, n'a pas pu être reconnu comme un modèle de couleurs."
 
 #: plasma-apply-colorscheme.cpp:151
 #, kde-format
@@ -1280,30 +1280,30 @@ msgstr "Couleur d'accentuation non valable"
 #: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr "Vous possédez les thèmes suivants de couleurs sur votre système :"
+msgstr "Vous disposez des modèles de couleurs suivants sur votre système :"
 
 #: plasma-apply-colorscheme.cpp:163
 #, kde-format
 msgid " * %1 (current color scheme)"
-msgstr " * %1 (Thème courant de couleurs)"
+msgstr " * %1 (Modèle de couleurs courant)"
 
 #: ui/AccentColorUI.qml:27
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
-msgstr "Accentuer une couleur à partir du thème de couleurs"
+msgstr "Couleur d'accentuation du modèle de couleurs"
 
 #: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
-msgstr "Accentuer une couleur à partir du fond d'écran"
+msgstr "Couleur d'accentuation à partir du fond d'écran"
 
 #: ui/AccentColorUI.qml:29
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
-msgstr "Couleur personnalisée d'accentuation"
+msgstr "Couleur d'accentuation personnalisée"
 
 #: ui/main.qml:94
 #, kde-format
@@ -1317,24 +1317,24 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
-msgstr "Tous les thèmes"
+msgstr "Tous les modèles"
 
 #: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
-msgstr "Thèmes clairs"
+msgstr "Modèles clairs"
 
 #: ui/main.qml:129
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
-msgstr "Thèmes sombres"
+msgstr "Modèles sombres"
 
 #: ui/main.qml:140
 #, kde-format
 msgid "Install from File…"
-msgstr "Installer à partir d'un fichier..."
+msgstr "Installer à partir d'un fichier…"
 
 #: ui/main.qml:145
 #, kde-format
@@ -1386,31 +1386,31 @@ msgstr "Texte désactivé"
 #: ui/main.qml:305
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "Modifier le thème de couleurs..."
+msgstr "Modifier le modèle de couleurs…"
 
 #: ui/main.qml:312
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "Supprimer le thème de couleurs"
+msgstr "Supprimer le modèle de couleurs"
 
 #: ui/main.qml:314
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Impossible de supprimer le thème actif de couleurs."
+msgstr "Impossible de supprimer le modèle de couleurs actif"
 
 #: ui/main.qml:316
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
-"Impossible de supprimer les thèmes de couleurs installés dans le système"
+"Impossible de supprimer les modèles de couleurs installés par le système"
 
 #: ui/main.qml:324
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr "Ne pas supprimer ce thème de couleurs"
+msgstr "Ne pas supprimer ce modèle de couleurs"
 
 #: ui/main.qml:368
 #, kde-format
