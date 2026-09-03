@@ -16,15 +16,15 @@ import org.kde.kirigami as Kirigami
 PlasmoidItem {
     id: root
 
+    readonly property string title: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "On-Screen Keyboard")
+
     Plasmoid.onActivated: {
-        if (!Keyboards.KWinVirtualKeyboard.available) {
-            settingsAction.trigger()
-        } else if (unsupportedState.when) {
-            Keyboards.KWinVirtualKeyboard.forceActivate()
-        } else if (Keyboards.KWinVirtualKeyboard.visible) {
-            Keyboards.KWinVirtualKeyboard.active = false
+        if (state === "unsupported") {
+            // When the current client doesn't support input methods, we can force
+            // the display of the on-screen keyboard so it emulates a hardware keyboard instead.
+            Keyboards.KWinVirtualKeyboard.forceActivate();
         } else {
-            Keyboards.KWinVirtualKeyboard.mode = (Keyboards.KWinVirtualKeyboard.mode + 1) % 3
+            settingsAction.trigger();
         }
     }
     preferredRepresentation: fullRepresentation
@@ -65,9 +65,52 @@ PlasmoidItem {
         }
     }
 
+    PlasmaCore.ActionGroup {
+        id: oskGroup
+    }
+
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18nc("@action:tray context menu", "Disabled")
+            icon.name: "edit-none-symbolic"
+            enabled: Keyboards.KWinVirtualKeyboard.available
+            actionGroup: oskGroup
+            checkable: true
+            checked: Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.Never
+            onTriggered: {
+                Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.Never
+            }
+        },
+        PlasmaCore.Action {
+            text: i18nc("@action:tray context menu", "Touch and Tablet")
+            icon.name: "input-touchscreen-symbolic"
+            enabled: Keyboards.KWinVirtualKeyboard.available
+            actionGroup: oskGroup
+            checkable: true
+            checked: Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.NonMouseInput
+            onTriggered: {
+                Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.NonMouseInput
+            }
+        },
+        PlasmaCore.Action {
+            text: i18nc("@action:tray context menu", "Touch, Tablet, Mouse, and Touchpad")
+            icon.name: "input-mouse-symbolic"
+            enabled: Keyboards.KWinVirtualKeyboard.available
+            actionGroup: oskGroup
+            checkable: true
+            checked: Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput
+            onTriggered: {
+                Keyboards.KWinVirtualKeyboard.mode = Keyboards.KWinVirtualKeyboard.AnyInput
+            }
+        },
+        PlasmaCore.Action {
+            isSeparator: true
+        },
+    ]
+
     PlasmaCore.Action {
         id: settingsAction
-        text: i18ndc("plasma_applet_org.kde.plasma.manageinputmethod", "Opens the system settings module", "Configure Virtual Keyboards...")
+        text: i18ndc("plasma_applet_org.kde.plasma.manageinputmethod", "Opens the system settings module", "Configure On-Screen Keyboards…")
         icon.name: "settings-configure"
         onTriggered: KCMLauncher.openSystemSettings("kcm_virtualkeyboard")
     }
@@ -84,16 +127,17 @@ PlasmoidItem {
             PropertyChanges {
                 root.Plasmoid.icon: "input-keyboard-virtual-off-symbolic"
                 root.Plasmoid.status: root.inEmbeddedContainment ? PlasmaCore.Types.HiddenStatus : PlasmaCore.Types.PassiveStatus
-                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: unavailable")
+                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "On-Screen Keyboard: unavailable")
             }
         },
         State {
             name: "disabled"
-            when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.Never
+            when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.Never && !Keyboards.KWinVirtualKeyboard.visible
             PropertyChanges {
                 root.Plasmoid.icon: "input-keyboard-virtual-off-symbolic"
-                root.Plasmoid.status: PlasmaCore.Types.ActiveStatus
-                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: disabled")
+                root.Plasmoid.status: PlasmaCore.Types.PassiveStatus
+                root.toolTipMainText: root.title
+                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Configured not to show automatically")
             }
         },
         State {
@@ -101,40 +145,43 @@ PlasmoidItem {
             name: "unsupported"
             when: Keyboards.KWinVirtualKeyboard.available && !Keyboards.KWinVirtualKeyboard.activeClientSupportsTextInput
             // When the current client doesn't support input methods, we can force
-            // the display of the virtual keyboard so it emulates a hardware keyboard instead
+            // the display of the on-screen keyboard so it emulates a hardware keyboard instead
             PropertyChanges {
-                root.Plasmoid.icon: "arrow-up-symbolic"
-                root.Plasmoid.status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
-                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Show Virtual Keyboard")
+                root.Plasmoid.icon: "input-keyboard-virtual-show-symbolic"
+                root.Plasmoid.status: Kirigami.Settings.hasTransientTouchInput ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+                root.toolTipMainText: root.title
+                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "No supported text input field is currently active; show in hardware keyboard emulation mode")
             }
         },
         State {
             name: "visible"
             when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.visible
             PropertyChanges {
-                root.Plasmoid.icon: "arrow-down-symbolic"
+                root.Plasmoid.icon: "input-keyboard-virtual-on-symbolic"
                 // Because the keyboard can become visible with a touch input when
                 // while not explicitly in Tablet Mode
-                root.Plasmoid.status: Kirigami.Settings.hasTransientTouchInput ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
-                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: visible")
+                root.Plasmoid.status: PlasmaCore.Types.PassiveStatus
+                root.toolTipMainText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "On-Screen Keyboard is visible")
             }
         },
         State {
             name: "touchOnly"
             when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.NonMouseInput && !Keyboards.KWinVirtualKeyboard.visible
             PropertyChanges {
-                root.Plasmoid.icon: "input-keyboard-virtual-on-symbolic"
-                root.Plasmoid.status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
-                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: Show on non-mouse input")
+                root.Plasmoid.icon: "input-keyboard-virtual-off-symbolic"
+                root.Plasmoid.status: Kirigami.Settings.hasTransientTouchInput ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+                root.toolTipMainText: root.title
+                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Shows automatically when tapping an input field")
             }
         },
         State {
             name: "alwaysOn"
             when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.mode === Keyboards.KWinVirtualKeyboard.AnyInput && !Keyboards.KWinVirtualKeyboard.visible
             PropertyChanges {
-                root.Plasmoid.icon: "input-keyboard-virtual-on-symbolic"
+                root.Plasmoid.icon: "input-keyboard-virtual-off-symbolic"
                 root.Plasmoid.status: PlasmaCore.Types.ActiveStatus
-                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Virtual Keyboard: Show with all input devices")
+                root.toolTipMainText: root.title
+                root.toolTipSubText: i18nd("plasma_applet_org.kde.plasma.manageinputmethod", "Shows automatically when clicking an input field")
             }
         }
     ]
