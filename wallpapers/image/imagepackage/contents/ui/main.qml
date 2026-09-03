@@ -56,7 +56,7 @@ WallpaperItem {
     Rectangle {
         anchors.fill: parent
         color: root.configuration.Color
-        visible: imageView.empty
+        visible: imageView.empty && !root.loading
     }
 
     ImageStackView {
