@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-10-30 09:22+0100\n"
+"PO-Revision-Date: 2026-03-07 20:15+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -62,7 +62,7 @@ msgstr "Impossible de télécharger le modèle de couleurs : %1"
 #: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr "Ceci n'est pas un fichier de modèle de couleurs"
+msgstr "Ceci n'est pas un fichier de modèle de couleurs."
 
 #: colors.cpp:285
 #, kde-format
@@ -101,15 +101,15 @@ msgid ""
 "generated color or default color"
 msgstr ""
 "La dernière couleur personnalisée d'accentuation utilisée avant que "
-"l'utilisateur ne bascule vers la couleur générée par le fond d'écran ou à la "
-"couleur par défaut."
+"l'utilisateur ne bascule vers la couleur générée à partir du fond d'écran ou "
+"vers la couleur par défaut"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
-"Définit si une couleur accentuée provenant du fond d'écran doit être "
+"Définit si la couleur d’accentuation provenant du fond d'écran doit être "
 "appliquée ou non"
 
 #: editor/kcolorschemeeditor.cpp:25
@@ -1210,7 +1210,7 @@ msgstr "Utiliser une couleur d'accentuation :"
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "From current color scheme"
-msgstr "A partir du thème courant de couleurs"
+msgstr "A partir du modèle courant de couleurs"
 
 #: package/contents/ui/main.qml:157
 #, kde-format
@@ -1273,7 +1273,7 @@ msgstr "Texte désactivé"
 #: package/contents/ui/main.qml:469
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "Modifier le thème de couleurs..."
+msgstr "Modifier le modèle de couleurs…"
 
 #: package/contents/ui/main.qml:475
 #, kde-format
@@ -1288,12 +1288,12 @@ msgstr "Restaurer le modèle de couleurs"
 #: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
-msgstr "Installer à partir d'un fichier..."
+msgstr "Installer à partir d'un fichier…"
 
 #: package/contents/ui/main.qml:531
 #, kde-format
 msgid "Get New Color Schemes…"
-msgstr "Obtenir de nouveaux thèmes de couleurs..."
+msgstr "Obtenir de nouveaux modèles de couleurs…"
 
 #: package/contents/ui/main.qml:549
 #, kde-format
@@ -1312,9 +1312,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
-"Cet outil vous permet de définir le thème de couleurs pour votre session "
-"courante de Plasma, sans le faire par inadvertance vers un thème, soit "
-"indisponible, soit déjà utilisé."
+"Cet outil vous permet de définir le modèle de couleurs pour votre session "
+"courante de Plasma, en vous assurant de ne pas choisir par inadvertance un "
+"modèle indisponible ou déjà utilisé."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1322,9 +1322,9 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
-"Le nom du thème de couleurs que vous souhaitez définir pour la session "
-"courante de Plasma (La fourniture d'un emplacement n'utilisera que la "
-"dernière partie de l'emplacement)."
+"Le nom du modèle de couleurs que vous souhaitez définir pour la session "
+"courante de Plasma (Si vous fournissez un chemin complet, seul le dernier "
+"morceau du chemin sera utilisé)"
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
@@ -1332,8 +1332,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
-"Afficher tous les thèmes de couleurs disponibles sur le système (y compris "
-"le thème courant)."
+"Afficher tous les modèles de couleurs disponibles sur le système (en "
+"indiquant lequel est le modèle courant)."
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1343,9 +1343,9 @@ msgid ""
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
 "Le nom de la couleur d'accentuation que vous souhaitez définir. Les noms de "
-"couleur « SVG » (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) et "
-"les codes hexadécimaux de couleurs sont pris en charge. Référencez le code "
-"hexadécimal s'il existe une possibilité d'expansion de l'enveloppe."
+"couleur « SVG » (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) etles "
+"codes couleur hexadécimaux sont pris en charge. Mettez le code hexadécimal "
+"entre guillemets s'il existe une possibilité d'expansion par le shell."
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1360,8 +1360,8 @@ msgstr ""
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
-"Application avec succès du thème de couleurs %1 pour votre session courante "
-"de Plasma."
+"Le modèle de couleurs %1 a été appliqué avec succès pour votre session "
+"courante de Plasma."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
@@ -1369,7 +1369,7 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
-"Impossible de trouver le thème « %1 ». Le thème devrait avoir l'une des "
+"Impossible de trouver le thème « %1 ». Le thème doit faire partie des "
 "options suivantes : %2"
 
 #: plasma-apply-colorscheme.cpp:120
@@ -1378,7 +1378,7 @@ msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr ""
-"Vous avez prévu de transmettre un nom vide de thème de couleurs, ce qui "
+"Vous avez réussi à fournir un nom vide pour le modèle de couleurs, ce qui "
 "n'est pas un comportement pris en charge."
 
 #: plasma-apply-colorscheme.cpp:124
@@ -1387,8 +1387,8 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
-"Le fichier que vous avez tenté d'utiliser pour la définition de votre thème "
-"%1, pourrait ne pas être considéré comme un schéma de couleurs."
+"Le fichier que vous avez tenté d'utiliser pour la définition de votre "
+"modèle, %1, n'a pas pu être reconnu comme un modèle de couleurs."
 
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
@@ -1403,12 +1403,12 @@ msgstr "Couleur d'accentuation non valable"
 #: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr "Vous possédez les thèmes suivants de couleurs sur votre système :"
+msgstr "Vous disposez des modèles de couleurs suivants sur votre système :"
 
 #: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
-msgstr " * %1 (Thème courant de couleurs)"
+msgstr " * %1 (Modèle de couleurs courant)"
 
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr ""
