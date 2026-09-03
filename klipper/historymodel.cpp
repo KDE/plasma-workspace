@@ -719,6 +719,19 @@ HistoryItemConstPtr HistoryModel::first() const
     return m_items[0];
 }
 
+static QString textFromMimeData(const QMimeData *mimeData)
+{
+    if (!mimeData->hasUrls()) {
+        return mimeData->text();
+    }
+
+    QStringList urlText;
+    for (const QList<QUrl> urls = mimeData->urls(); const QUrl &url : urls) {
+        urlText.append(url.toString(QUrl::FullyEncoded));
+    }
+    return urlText.join(u' ');
+}
+
 bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
 {
     if (m_maxSize == 0) {
@@ -740,17 +753,7 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
         return false;
     }
 
-    QString text;
-    if (mimeData->hasUrls()) {
-        QStringList urlText;
-        for (const QList<QUrl> urls = mimeData->urls(); const QUrl &url : urls) {
-            urlText.append(url.toString(QUrl::FullyEncoded));
-        }
-        text = urlText.join(u' ');
-    } else {
-        text = mimeData->text();
-    }
-
+    const QString text = textFromMimeData(mimeData);
     auto item = std::make_shared<HistoryItem>(uuid, formats, text);
     auto updateJob = UpdateDatabaseJob::updateClipboard(this, &m_db, m_dbFolder, uuid, text, mimeData, timestamp);
     if (item->type() == HistoryItemType::Image) {
