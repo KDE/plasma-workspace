@@ -167,11 +167,9 @@
 > per a executar l'acció apropiada.</para>
 
 <para
->Si premeu <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->R</keycap
-></keycombo
-> es mostrarà el menú emergent permetent-vos repetir l'última acció realitzada pel &klipper;.</para>
+>Si definiu una drecera per a <guilabel
+>Invoca manualment una acció al porta-retalls actual</guilabel
+> prement aquesta drecera es mostrarà el menú emergent apropiat.</para>
 
 </sect1>
 

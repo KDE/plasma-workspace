@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
+"POT-Creation-Date: 2026-09-03 00:45+0000\n"
 "PO-Revision-Date: 2026-04-26 20:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -148,9 +148,9 @@ msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "항목 %1개"
 
-#: components/JobDetails.qml:158 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:99 components/SpeedChart.qml:196
-#: components/SpeedChart.qml:209
+#: components/JobDetails.qml:158 components/SpeedChart.qml:75
+#: components/SpeedChart.qml:102 components/SpeedChart.qml:203
+#: components/SpeedChart.qml:216
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -180,7 +180,7 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "취소"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:152
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
 #, kde-format
 msgid "More Options…"
 msgstr "옵션 더 보기…"
@@ -207,17 +207,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "보내기"
 
-#: components/SpeedChart.qml:147
+#: components/SpeedChart.qml:154
 #, kde-format
 msgid "Speed"
 msgstr "속도"
 
-#: components/SpeedChart.qml:204
+#: components/SpeedChart.qml:211
 #, kde-format
 msgid "Average Speed"
 msgstr "평균 속도"
 
-#: components/SpeedChart.qml:264
+#: components/SpeedChart.qml:271
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

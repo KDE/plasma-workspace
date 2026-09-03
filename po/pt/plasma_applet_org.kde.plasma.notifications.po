@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-26 00:51+0000\n"
+"POT-Creation-Date: 2026-09-03 00:45+0000\n"
 "PO-Revision-Date: 2026-02-10 21:57+0000\n"
 "Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
 "Language-Team: pt\n"
@@ -164,9 +164,9 @@ msgid_plural "%1 items"
 msgstr[0] "%1 item"
 msgstr[1] "%1 itens"
 
-#: components/JobDetails.qml:158 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:99 components/SpeedChart.qml:196
-#: components/SpeedChart.qml:209
+#: components/JobDetails.qml:158 components/SpeedChart.qml:75
+#: components/SpeedChart.qml:102 components/SpeedChart.qml:203
+#: components/SpeedChart.qml:216
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -196,7 +196,7 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:152
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
 #, kde-format
 msgid "More Options…"
 msgstr "Mais opções…"
@@ -223,17 +223,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Enviar"
 
-#: components/SpeedChart.qml:147
+#: components/SpeedChart.qml:154
 #, kde-format
 msgid "Speed"
 msgstr "Velocidade"
 
-#: components/SpeedChart.qml:204
+#: components/SpeedChart.qml:211
 #, kde-format
 msgid "Average Speed"
 msgstr "Velocidade média"
 
-#: components/SpeedChart.qml:264
+#: components/SpeedChart.qml:271
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

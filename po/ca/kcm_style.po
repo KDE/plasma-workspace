@@ -3,8 +3,8 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 1998, 1999, 2000, 2001, 2002, 2004, 2006 Sebastià Pla i Sanz <sps@sastia.com>
-# SPDX-FileCopyrightText: 2003, 2013, 2015, 2016, 2017 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 1998-2002, 2004, 2006 Sebastià Pla i Sanz <sps@sastia.com>
+# SPDX-FileCopyrightText: 2003, 2013, 2015-2017 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2004, 2007-2010, 2012-2013, 2015, 2017, 2019-2021, 2023-2024, 2026 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2005 Albert Astals Cid <aacid@kde.org>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-09-01 10:34+0200\n"
+"PO-Revision-Date: 2026-09-02 08:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -139,30 +139,30 @@ msgstr "No s'han pogut desinstal·lar els estils:\n"
 #: kcmstyle.cpp:226
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+#| msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
 #| msgid_plural ""
-#| "Successfully uninstalled %2 styles but could not uninstall others:\n"
+#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
-"«%2» s'ha desinstal·lat correctament, però no s'han pogut desinstal·lar "
+"«%1» s'ha desinstal·lat correctament, però no s'han pogut desinstal·lar "
 "altres:\n"
 msgstr[1] ""
-"S'han desinstal·lat correctament %2 estils, però no s'han pogut "
+"S'han desinstal·lat correctament %1 estils, però no s'han pogut "
 "desinstal·lar altres:\n"
 
 #: kcmstyle.cpp:237
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %2 styles."
+#| msgid "Successfully uninstalled “%1”."
+#| msgid_plural "Successfully uninstalled %1 styles."
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%2”."
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "«%2» s'ha desinstal·lat correctament."
-msgstr[1] "S'han desinstal·lat correctament %2 estils."
+msgstr[0] "«%1» s'ha desinstal·lat correctament."
+msgstr[1] "S'han desinstal·lat correctament %1 estils."
 
 #: kcmstyle.cpp:300 kcmstyle.cpp:307
 #, kde-format
@@ -474,6 +474,3 @@ msgstr "Camp de text"
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
 msgstr "%1%"
-
-#~ msgid "Get New GNOME/GTK Application Styles…"
-#~ msgstr "Obtén estils nous de les aplicacions GNOME/GTK…"

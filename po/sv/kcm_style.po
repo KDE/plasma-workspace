@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-09-01 22:10+0200\n"
+"PO-Revision-Date: 2026-09-02 18:33+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -33,49 +33,50 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "Installation misslyckades: Stilfilen kunde inte läsas."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "Installation misslyckades: Stilfilen innehåller inte någon data."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "Installation misslyckades: Stilfilen kunde inte packas upp."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "Installation misslyckades: Stilen kunde inte hittas."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
 msgstr ""
+"Installation misslyckades: Den valda filen är inte en giltig Union-stil."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "Installation misslyckades: Den valda stilen stöds inte."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "Misslyckades installera \"%1\": Stilen är redan installerad."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Misslyckades installera \"%1\": Rättigheter nekades."
 
 #: kcmstyle.cpp:174
 #, kde-format
@@ -93,46 +94,54 @@ msgstr "Installerade “%1” med lyckat resultat."
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "Avinstallation misslyckades: Stilen med id \"%1\" kunde inte hittas."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Misslyckades avinstallera \"%1\": Rättigheter nekades."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "Misslyckades avinstallera \"%1\": Stilen är  inte installerad."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "Misslyckades avinstallera \"%1\": Stilen används."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "Misslyckades avinstallera \"%1\": %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "Kunde inte avinstallera stilar:\n"
 
 #: kcmstyle.cpp:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+#| msgid_plural ""
+#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"Avinstallerade “%2” med lyckat resultat, men kunde inte avinstallera "
+"övriga:\n"
 msgstr[1] ""
+"Avinstallerade %1 stilar med lyckat resultat, men kunde inte avinstallera "
+"övriga:\n"
 
 #: kcmstyle.cpp:237
 #, fuzzy, kde-format
@@ -221,7 +230,7 @@ msgstr "Programstil"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Union-stil id"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -358,6 +367,8 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Stilen använder Union stilgränssnittet som fortfarande är under utveckling. "
+"Vissa saker kan se ut eller bete sig felaktigt när stilen används."
 
 #: ui/main.qml:174
 #, kde-format
@@ -374,13 +385,13 @@ msgstr "Avinstallera…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "Kan inte avinstallera systeminstallerade stilar."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Kan bara avinstallera Union-stilar."
 
 #: ui/main.qml:199
 #, kde-format
@@ -391,7 +402,7 @@ msgstr "Avinstallera inte stilen."
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "Välj Union-stil att installera"
 
 #: ui/main.qml:246
 #, kde-format

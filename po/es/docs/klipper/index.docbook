@@ -225,11 +225,9 @@
 > para ejecutar la acción apropiada.</para>
 
 <para
->Si pulsa <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->R</keycap
-></keycombo
-> se mostrará el menú emergente permitiéndole repetir la última acción realizada por &klipper;.</para>
+>Si define un atajo de teclado para <guilabel
+>Invocar manualmente una acción en el portapapeles actual</guilabel
+>, al pulsar dicho atajo de teclado se mostrará el menú emergente correspondiente.</para>
 
 </sect1>
 

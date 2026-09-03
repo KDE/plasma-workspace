@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-06-30 09:08+0300\n"
+"PO-Revision-Date: 2026-09-01 21:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Poedit 3.9\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -38,124 +38,131 @@ msgstr "%1 אינו ארכיון ערכת נושא תקין של GTK."
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr ""
+msgstr "ההתקנה נכשלה: לא ניתן להתקין סגנון ממקום מרוחק."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "ההתקנה נכשלה: לא ניתן לקרוא את קובץ הסגנון."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "ההתקנה נכשלה: קובץ הסגנון לא מכיל נתונים כלל."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "ההתקנה נכשלה: לא ניתן לחלץ את קובץ הסגנון."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "ההתקנה נכשלה: לא ניתן למצוא את הסגנון."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "ההתקנה נכשלה: הקובץ הנבחר הוא לא סגנון איחוד תקף."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "ההתקנה נכשלה: הסגנון הנבחר לא נתמך."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "ההתקנה של „%1” נכשלה: הסגנון כבר מותקן."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "ההתקנה של „%1” נכשלה: ההרשאה נדחתה."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "התקנת „%1” נכשלה: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "„%1” הותקן בהצלחה."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "ההסרה נכשלה: לא ניתן למצוא את הסגנון עם המזהה „%1”."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "הסרת „%1” נכשלה: ההרשאה נדחתה."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "הסרת „%1” נכשלה: הסגנון לא מותקן."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "הסרת „%1” נכשלה: הסגנון בשימוש."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "הסרת „%1” נכשלה: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "לא ניתן להסיר סגנונות:\n"
 
 #: kcmstyle.cpp:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+#| msgid_plural ""
+#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "ההסרה של „%2” הצליחה אבל לא ניתן להסיר את השאר:\n"
+msgstr[1] "הסרת שני סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
+msgstr[2] "הסרת %1 סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
+msgstr[3] "הסרת %1 סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
 
 #: kcmstyle.cpp:237
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully uninstalled “%2”."
+#| msgid_plural "Successfully uninstalled %1 styles."
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%2”."
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "„%2” הוסר בהצלחה."
+msgstr[1] "שני סגנונות הוסרו בהצלחה."
+msgstr[2] "%1 סגנונות הוסרו בהצלחה."
+msgstr[3] "%1 סגנונות הוסרו בהצלחה."
 
 #: kcmstyle.cpp:300 kcmstyle.cpp:307
 #, kde-format
@@ -186,10 +193,9 @@ msgstr "%p%"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgid "Button"
-msgstr "כפתור לחיצה"
+msgstr "כפתור"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:99
@@ -212,10 +218,9 @@ msgstr "כפתור בחירה"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
-msgstr "טקסט בלבד"
+msgstr "שדה טקסט"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -233,7 +238,7 @@ msgstr "סגנון יישומים"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "מזהה סגנון איחוד"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -348,9 +353,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "ארכיון ערכת נושא של GTK‏ (‎*.tar.xz‏ ‎*.tar.gz‏ ‎*.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "התקנה מקובץ…"
@@ -372,6 +375,8 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"הסגנון הזה משתמש במנוע הסגנונות „איחוד” שעדיין נמצא בתהליכי פיתוח. חלק "
+"מהדברים עלולים להיראות או להתנהג שלא כראוי עם הסגנון הזה."
 
 #: ui/main.qml:174
 #, kde-format
@@ -382,99 +387,90 @@ msgstr "הגדרת סגנון…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "הסרה…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "לא ניתן להסיר סגנונות שהותקנו עם המערכת."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "אפשר להסיר רק סגנונות איחוד."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "לא להסיר את הסגנון הזה."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "נא לבחור סגנון איחוד להתקנה"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "התקנה"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "לשונית 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "לשונית 2"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "תיבת סימון"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "כפתור בחירה"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
 msgstr "תיבה משולבת"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "תיבה משולבת"
+msgstr "פריט תיבה משולבת"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
-msgstr "כפתור לחיצה"
+msgstr "כפתור"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "טקסט בלבד"
+msgstr "שדה טקסט"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr "%1%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "הורדת סגנונות יישום חדשים ל־GNOME/GTK…"
