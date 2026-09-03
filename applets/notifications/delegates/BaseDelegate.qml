@@ -28,6 +28,7 @@ GridLayout {
     readonly property bool menuOpen: Boolean(body?.menuOpen)
                                      || Boolean(footer?.menuOpen)
     readonly property bool dragging: Boolean(icon?.dragging) || Boolean(footer?.dragging)
+    readonly property string hoveredLink: body?.hoveredLink ?? ""
     // Cannot do text !== "" because RichText adds some HTML tags even when empty
     readonly property bool hasBodyText: modelInterface.body.length > 0
 
