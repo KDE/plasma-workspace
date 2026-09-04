@@ -42,19 +42,19 @@ KCMUtils.ScrollViewKCM {
     readonly property var comboBoxModel: {
         const autoElement = {
             "value": "auto",
-            "text": i18nc("@item:inlistbox Show this System Tray item when relevant", "Show when relevant") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Show this System Tray item when relevant", "Show when relevant")
         };
         const shownElement = {
             "value": "shown",
-            "text": i18nc("@item:inlistbox Always show this System Tray item", "Always show") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Always show this System Tray item", "Always show")
         };
         const hiddenElement = {
             "value": "hidden",
-            "text": i18nc("@item:inlistbox Show this System Tray item only in the expanded popup", "Show only in popup") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Show this System Tray item only in the expanded popup", "Show only in popup")
         };
         const disabledElement = {
             "value": "disabled",
-            "text": i18nc("@item:inlistbox Never show this System Tray item; disable it", "Never show (disabled)") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Never show this System Tray item; disable it", "Never show (disabled)")
         };
 
         return cfg_showAllItems ? [autoElement, disabledElement] : [autoElement, shownElement, hiddenElement, disabledElement];
@@ -125,16 +125,16 @@ KCMUtils.ScrollViewKCM {
     function categoryName(category) {
         switch (category) {
         case "ApplicationStatus":
-            return i18n("Application Status"); // qmllint disable unqualified
+            return i18n("Application Status");
         case "Communications":
-            return i18n("Communications"); // qmllint disable unqualified
+            return i18n("Communications");
         case "SystemServices":
-            return i18n("System Services"); // qmllint disable unqualified
+            return i18n("System Services");
         case "Hardware":
-            return i18n("Hardware Control"); // qmllint disable unqualified
+            return i18n("Hardware Control");
         case "UnknownCategory":
         default:
-            return i18n("Miscellaneous"); // qmllint disable unqualified
+            return i18n("Miscellaneous");
         }
     }
 
@@ -171,10 +171,10 @@ KCMUtils.ScrollViewKCM {
 
             Layout.fillWidth: true
             type: Kirigami.MessageType.Warning
-            text: xi18nc("@info:usagetip", "Look for a setting in <application>%1</application> to disable its tray icon before doing it here. Some apps’ tray icons were not designed to be disabled, and using this setting may cause them to behave unexpectedly.<nl/><nl/>Use this setting at your own risk, and do not report issues to KDE or the app’s author.", appName) // qmllint disable unqualified
+            text: xi18nc("@info:usagetip", "Look for a setting in <application>%1</application> to disable its tray icon before doing it here. Some apps’ tray icons were not designed to be disabled, and using this setting may cause them to behave unexpectedly.<nl/><nl/>Use this setting at your own risk, and do not report issues to KDE or the app’s author.", appName)
             actions: [
                 Kirigami.Action {
-                    text: i18nc("@action:button", "I understand the risks") // qmllint disable unqualified
+                    text: i18nc("@action:button", "I understand the risks")
                     onTriggered: disablingSniMessage.visible = false
                 }
             ]
@@ -186,7 +186,7 @@ KCMUtils.ScrollViewKCM {
             visible: iconsPage.changedVisibility.get("org.kde.plasma.clipboard") === "disabled"
             Layout.fillWidth: true
             type: Kirigami.MessageType.Warning
-            text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Only do this if you’ve manually added a standalone Clipboard widget somewhere else, or are using a 3rd-party clipboard manager. Also, instead consider configuring the clipboard to not save history, or to only remember one item at a time.") // qmllint disable unqualified
+            text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Only do this if you’ve manually added a standalone Clipboard widget somewhere else, or are using a 3rd-party clipboard manager. Also, instead consider configuring the clipboard to not save history, or to only remember one item at a time.")
         }
 
         Kirigami.InlineMessage {
@@ -195,7 +195,7 @@ KCMUtils.ScrollViewKCM {
             visible: iconsPage.changedVisibility.get("org.kde.plasma.notifications") === "disabled"
             Layout.fillWidth: true
             type: Kirigami.MessageType.Warning
-            text: xi18nc("@info:usagetip", "Disabling the Notifications widget is not recommended, as notifications sent by apps will no longer be shown.<nl/><nl/>Only do this if you’ve manually added a standalone Notifications widget somewhere else, or are intentionally using a 3rd-party notification manager to handle notifications.") // qmllint disable unqualified
+            text: xi18nc("@info:usagetip", "Disabling the Notifications widget is not recommended, as notifications sent by apps will no longer be shown.<nl/><nl/>Only do this if you’ve manually added a standalone Notifications widget somewhere else, or are intentionally using a 3rd-party notification manager to handle notifications.")
         }
 
         Kirigami.FormLayout {
@@ -333,7 +333,7 @@ KCMUtils.ScrollViewKCM {
             actions: [
                 Kirigami.Action {
                     id: showAllCheckBox
-                    text: i18nc("@option:check, This is referring to system tray entries", "Always show all") // qmllint disable unqualified
+                    text: i18nc("@option:check, This is referring to system tray entries", "Always show all")
                     onToggled: iconsPage.cfg_showAllItems = checked
                     checked: iconsPage.cfg_showAllItems
                     displayComponent: QQC2.CheckBox {
