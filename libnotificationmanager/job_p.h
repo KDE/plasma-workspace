@@ -10,6 +10,7 @@
 #include <QDBusObjectPath>
 #include <QDBusVariant>
 #include <QDateTime>
+#include <QElapsedTimer>
 #include <QObject>
 #include <QString>
 #include <QTimer>
@@ -55,6 +56,7 @@ public:
     void setProcessedAmount(quint64 amount, const QString &unit);
     void setPercent(uint percent);
     void setSpeed(quint64 bytesPerSecond);
+    void recordProgressSample();
     void setElapsedTime(qint64 elapsedTime);
     void setInfoMessage(const QString &infoMessage);
     bool setDescriptionField(uint number, const QString &name, const QString &value);
@@ -146,6 +148,17 @@ private:
     bool m_transient = false;
 
     QUrl m_destUrl;
+
+    /**
+     * How far the job had got, and when, from the start of the job. Speed and progress are both
+     * worked out from these when asked for, so a job that never reports a speed still has one.
+     */
+    struct ProgressSample {
+        qint64 elapsedMilliseconds;
+        qulonglong processedBytes;
+    };
+    QList<ProgressSample> m_progressSamples;
+    QElapsedTimer m_progressTimer;
 
     qulonglong m_speed = 0;
     qint64 m_elapsedTime = 0;

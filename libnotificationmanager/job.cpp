@@ -8,6 +8,7 @@
 #include "job_p.h"
 
 #include <QDebug>
+#include <QVariant>
 
 using namespace NotificationManager;
 
@@ -205,6 +206,70 @@ QUrl Job::effectiveDestUrl() const
 qulonglong Job::speed() const
 {
     return d->m_speed;
+}
+
+QVariantList Job::speedHistory() const
+{
+    // A reading lands at the point its bytes reach, not at the moment it arrived, so a total
+    // revised partway through, as KIO does once it knows what it is copying, only moves the same
+    // readings elsewhere.
+    constexpr int pointCount = 100;
+
+    if (d->m_totalBytes == 0 || d->m_progressSamples.count() < 2) {
+        return {};
+    }
+
+    const qreal bytesPerPoint = qreal(d->m_totalBytes) / pointCount;
+
+    QVariantList history;
+    history.reserve(pointCount);
+
+    // A job can pass the total it gave, since KIO raises it only once it notices. Deciding in
+    // floating point also keeps a tiny total from asking for a point past the end of an int.
+    const auto pointFor = [bytesPerPoint](qulonglong processedBytes) {
+        const qreal position = processedBytes / bytesPerPoint;
+        return position >= pointCount ? pointCount : qRound(position);
+    };
+
+    // A stretch runs from the last reading drawn, not from the previous one: a job reports far
+    // more often than there are points, and one interval's lull would paint a whole hundredth.
+    auto drawnFrom = d->m_progressSamples.constFirst();
+
+    for (int i = 1; i < d->m_progressSamples.count(); ++i) {
+        const auto &current = d->m_progressSamples.at(i);
+
+        const qint64 milliseconds = current.elapsedMilliseconds - drawnFrom.elapsedMilliseconds;
+        // Signed: a job may report fewer bytes than before, which unsigned would read as ~2^64 B/s.
+        const qlonglong bytes = qlonglong(current.processedBytes) - qlonglong(drawnFrom.processedBytes);
+        if (bytes < 0) {
+            // It went backwards, so there is nothing to draw from where it was. Carry on from here.
+            drawnFrom = current;
+            continue;
+        }
+
+        const int point = pointFor(current.processedBytes);
+        if (milliseconds <= 0 || point - history.count() <= 0) {
+            continue;
+        }
+
+        const qreal speed = qreal(bytes) * 1000 / milliseconds;
+
+        // The stretch before the first reading went unwatched, and drawing it as a climb out of
+        // nothing shows an acceleration that never happened, so it is drawn level at what the job
+        // managed over it. m_elapsedTime is the job's own account: the readings are timed from when
+        // this process first heard of it, which can be long after it began.
+        if (history.isEmpty()) {
+            const qint64 elapsed = d->m_elapsedTime;
+            const qreal averageUntilThen = elapsed > 0 ? qreal(drawnFrom.processedBytes) * 1000 / elapsed : speed;
+            // Never past this reading's point, or the fill below gets a negative count.
+            history.insert(history.end(), qMin(pointFor(drawnFrom.processedBytes), point), averageUntilThen);
+        }
+
+        history.insert(history.end(), point - history.count(), speed);
+        drawnFrom = current;
+    }
+
+    return history;
 }
 
 qulonglong Job::processedBytes() const
