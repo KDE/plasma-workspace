@@ -33,7 +33,6 @@
 
 URLGrabber::URLGrabber(QObject *parent)
     : QObject(parent)
-    , m_myCurrentAction(nullptr)
     , m_myPopupKillTimer(new QTimer(this))
     , m_myPopupKillTimeout(8)
     , m_stripWhiteSpace(true)
@@ -54,7 +53,6 @@ URLGrabber::~URLGrabber()
 //
 void URLGrabber::invokeAction(HistoryItemConstPtr item)
 {
-    m_myClipItem = item;
     actionMenu(item, false);
 }
 

@@ -77,7 +77,6 @@ private:
     ActionList m_myActions;
     ActionList m_myMatches;
     std::shared_ptr<const HistoryItem> m_myClipItem;
-    ClipAction *m_myCurrentAction;
 
     // holds mappings of menu action IDs to action commands (action+cmd index in it)
     QHash<QString, QPair<ClipAction *, int>> m_myCommandMapper;
