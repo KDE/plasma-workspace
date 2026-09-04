@@ -23,21 +23,26 @@ KPackage::Package DefaultWallpaper::defaultWallpaperPackage()
     const QString image = lnfDefaultsConfig.readEntry("Image", "");
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
+    const auto locateByWallpaperName = [](const QString &name) {
+        return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/%1").arg(name), QStandardPaths::LocateDirectory);
+    };
+
     if (!image.isEmpty()) {
-        package.setPath(
-            QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/%1").arg(image), QStandardPaths::LocateDirectory));
+        package.setPath(locateByWallpaperName(image));
     }
 
     if (!package.isValid()) {
         // Try to get a default from the plasma theme
         Plasma::Theme theme;
-        const QString path = theme.defaultWallpaperTheme();
-        package.setPath(path);
+        const QString defaultWallpaper = theme.defaultWallpaperTheme();
+        if (!defaultWallpaper.isEmpty()) {
+            package.setPath(locateByWallpaperName(defaultWallpaper));
+        }
     }
 
     if (!package.isValid()) {
         // Use Next
-        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/Next"), QStandardPaths::LocateDirectory));
+        package.setPath(locateByWallpaperName(QStringLiteral("Next")));
     }
 
     return package;
