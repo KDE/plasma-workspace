@@ -122,8 +122,9 @@ menu to close on its own if you do not act up on it.</para>
 edited before performing an action on them. Select <guimenuitem>Edit
 contents...</guimenuitem> at the right of the clipboard entry, and you can
 change the clipboard contents in the dialog which appears, before
-clicking the <guibutton>OK</guibutton> button to run the appropriate
-action.</para>
+clicking the <guibutton>OK</guibutton> button. The actions pop-up is then
+shown automatically for the edited contents if <guilabel>When an item is chosen
+from history</guilabel> is checked.</para>
 
 <para>If you define a shortcut for <guilabel>Manually Invoke Action
 on Current Clipboard</guilabel> pressing this shortcut will show

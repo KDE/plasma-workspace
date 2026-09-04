@@ -361,12 +361,17 @@ void Klipper::slotHistoryChanged(bool isTop)
         return;
     }
 
-    offerActions(m_historyModel->first(), m_clip->isLocked(QClipboard::Selection));
+    const bool newFromSelection = m_clip->isLocked(QClipboard::Selection);
+    const bool newFromClipboard = m_clip->isLocked(QClipboard::Clipboard);
 
-    if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
+    // Only pop-up action menu for new entries here
+    if (newFromSelection || newFromClipboard) {
+        offerActions(m_historyModel->first(), newFromSelection);
         return;
     }
+
     if (m_bReplayActionInHistory && m_bURLGrabber) {
+        // Only pop-up actions for old entries when allowed by the user
         slotRepeatAction();
     }
 }
