@@ -114,8 +114,9 @@ to have an action menu pop up any time
 a match is placed on the clipboard by using the
 <guilabel>Automatic Action Popup Menu</guilabel> shortcut that you can set up
 on the <guilabel>Shortcuts</guilabel> page, or by checking
-<guilabel>Immediately on selection</guilabel> under <guilabel>Show action popup
-menu</guilabel> on the <guilabel>Action Menu</guilabel> page. There, with the option <guilabel>Automatic action menu time</guilabel>, you can also change how long it takes the automatic
+<guilabel>When text or a file is copied</guilabel> under <guilabel>Show action popup
+menu</guilabel> on the <guilabel>Action Menu</guilabel> page. 
+There, with the option <guilabel>Automatic action menu time</guilabel>, you can also change how long it takes the automatic
 menu to close on its own if you do not act up on it.</para>
 
 <para>Clipboard contents which match a regular expression can also be
@@ -235,7 +236,7 @@ even when selections are not saved in the clipboard history.</para>
 
 <varlistentry>
 <term><guilabel>Show action popup menu: When an item is chosen from history</guilabel></term>
-<listitem><para>If checked, selecting an item from the history
+<listitem><para>If checked, selecting an item from the history, editing an item in history or cycling to it with a keyboard shortcut
 causes &klipper; to display the actions pop-up on that item, if
 appropriate.</para>
 </listitem>

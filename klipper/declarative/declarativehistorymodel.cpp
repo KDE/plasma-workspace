@@ -7,6 +7,7 @@
 #include "declarativehistorymodel.h"
 #include "historyitem.h"
 #include "historymodel.h"
+#include "klipper.h"
 
 DeclarativeHistoryModel::DeclarativeHistoryModel(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -69,13 +70,14 @@ void DeclarativeHistoryModel::setStarredOnly(bool value)
 void DeclarativeHistoryModel::moveToTop(const QString &uuid)
 {
     m_model->moveToTop(uuid);
+    Klipper::self()->slotRepeatAction(/*fromHistory=*/true);
 }
 
 void DeclarativeHistoryModel::setText(const QString &uuid, const QString &text)
 {
     const qsizetype row = m_model->indexOf(uuid);
-    if (row >= 0) {
-        m_model->setData(m_model->index(row), text, Qt::DisplayRole);
+    if (row >= 0 && m_model->setData(m_model->index(row), text, Qt::DisplayRole)) {
+        Klipper::self()->slotRepeatAction(/*fromHistory=*/true);
     }
 }
 

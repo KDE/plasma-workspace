@@ -83,10 +83,10 @@ Q_SIGNALS:
 public Q_SLOTS:
     void slotPopupMenu();
     void setURLGrabberEnabled(bool);
+    void slotRepeatAction(bool fromHistory = false);
 
 protected Q_SLOTS:
     void showPopupMenu(QMenu *);
-    void slotRepeatAction();
 
 private Q_SLOTS:
     void slotHistoryChanged(bool isTop = false);
@@ -116,7 +116,6 @@ private:
     QAction *m_showOnMousePos;
 
     bool m_bURLGrabber : 1;
-    bool m_bReplayActionInHistory : 1;
 
     URLGrabber *m_myURLGrabber;
     QString m_lastURLGrabberText;

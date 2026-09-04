@@ -101,7 +101,9 @@ Klipper::Klipper(QObject *parent)
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
     m_repeatAction->setIcon(QIcon::fromTheme(QStringLiteral("open-menu-symbolic")));
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence());
-    connect(m_repeatAction, &QAction::triggered, this, &Klipper::slotRepeatAction);
+    connect(m_repeatAction, &QAction::triggered, this, [this] {
+        slotRepeatAction();
+    });
 
     // add an edit-possibility
     m_editAction = m_collection->addAction(QStringLiteral("edit_clipboard"));
@@ -222,8 +224,6 @@ void Klipper::slotStartShowTimer()
 
 void Klipper::loadSettings()
 {
-    m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
-
     m_bURLGrabber = KlipperSettings::uRLGrabberEnabled();
     // this will cause it to loadSettings too
     setURLGrabberEnabled(m_bURLGrabber);
@@ -316,8 +316,11 @@ void Klipper::slotPopupMenu()
     }
 }
 
-void Klipper::slotRepeatAction()
+void Klipper::slotRepeatAction(bool fromHistory)
 {
+    if (fromHistory && !KlipperSettings::replayActionInHistory()) {
+        return;
+    }
     auto top = std::static_pointer_cast<const HistoryItem>(m_historyModel->first());
     if (top) {
         m_myURLGrabber->invokeAction(top);
@@ -367,12 +370,6 @@ void Klipper::slotHistoryChanged(bool isTop)
     // Only pop-up action menu for new entries here
     if (newFromSelection || newFromClipboard) {
         offerActions(m_historyModel->first(), newFromSelection);
-        return;
-    }
-
-    if (m_bReplayActionInHistory && m_bURLGrabber) {
-        // Only pop-up actions for old entries when allowed by the user
-        slotRepeatAction();
     }
 }
 
@@ -396,6 +393,7 @@ void Klipper::slotCycleNext()
     // do cycle and show popup only if we have something in clipboard
     if (m_historyModel->first()) {
         m_historyCycler->cycleNext();
+        slotRepeatAction(/*fromHistory=*/true);
         Q_EMIT passivePopup(i18n("Clipboard history"), cycleText());
     }
 }
@@ -405,6 +403,7 @@ void Klipper::slotCyclePrev()
     // do cycle and show popup only if we have something in clipboard
     if (m_historyModel->first()) {
         m_historyCycler->cyclePrev();
+        slotRepeatAction(/*fromHistory=*/true);
         Q_EMIT passivePopup(i18n("Clipboard history"), cycleText());
     }
 }
