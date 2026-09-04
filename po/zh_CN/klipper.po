@@ -308,13 +308,13 @@ msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in the history."
-msgstr ""
+msgstr "剪贴板当前包含一条敏感数据，该数据不会被保存到历史记录中。"
 
 #: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "清除敏感数据"
 
 #: declarative/qml/ClipboardMenu.qml:467
 #, kde-format

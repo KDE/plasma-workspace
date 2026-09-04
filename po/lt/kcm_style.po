@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-06-29 15:42+0300\n"
+"PO-Revision-Date: 2026-09-03 12:40+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -30,103 +30,103 @@ msgstr "%1 nėra teisingas GTK apipavidalinimo archyvas."
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr ""
+msgstr "Nepavyko įdiegti: Nepavyksta įdiegti stilių iš nuotolinės vietos."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "Nepavyko įdiegti: Nepavyko perskaityti stiliaus failo."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "Nepavyko įdiegti: Stiliaus faile nėra jokių duomenų."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "Nepavyko įdiegti: Nepavyko išpakuoti stiliaus failo."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "Nepavyko įdiegti: Nepavyko rasti stiliaus."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "Nepavyko įdiegti: Pasirinktas failas nėra tinkamas Union stilius."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "Nepavyko įdiegti: Pasirinktas stilius nėra palaikomas."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "Nepavyko įdiegti „%1“: Stilius jau įdiegtas."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Nepavyko įdiegti „%1“: Leidimas buvo atmestas."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "Nepavyko įdiegti „%1“: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "„%1“ sėkmingai įdiegtas."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "Nepavyko pašalinti: Nepavyko rasti stiliaus, kurio ID yra „%1“."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Nepavyko pašalinti „%1“: Leidimas buvo atmestas."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "Nepavyko pašalinti „%1“: Stilius nėra įdiegtas."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "Nepavyko pašalinti „%1“: Stilius yra naudojamas."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "Nepavyko pašalinti „%1“: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "Nepavyko pašalinti stilius:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
@@ -178,10 +178,9 @@ msgstr "%p%"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgid "Button"
-msgstr "Paspaudimo mygtukas"
+msgstr "Mygtukas"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:99
@@ -204,10 +203,9 @@ msgstr "Akutė"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
-msgstr "Tik tekstas"
+msgstr "Teksto laukas"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -225,7 +223,7 @@ msgstr "Programų stilius"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Union stiliaus ID"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -340,9 +338,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK apipavidalinimo archyvas (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Įdiegti iš failo…"
@@ -364,6 +360,9 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Šis stilius naudoja Union stiliaus modulį, kuris yra vis dar plėtojamas. Kai "
+"kurie dalykai, naudodami šį stilių, gali būti neteisingai atvaizduojami arba "
+"neteisingai veikti."
 
 #: ui/main.qml:174
 #, kde-format
@@ -374,99 +373,90 @@ msgstr "Konfigūruoti stilių…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "Pašalinti…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "Negalima pašalinti sistemos įdiegtus stilius."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Galite pašalinti tik Union stilius."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "Nepašalinti šio stiliaus."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "Pasirinkite, kurį Union stilių įdiegti"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "Įdiegti"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "Kortelė 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "Kortelė 2"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "Žymimasis langelis"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "Akutė"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
 msgstr "Jungtinis langelis"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "Jungtinis langelis"
+msgstr "Jungtinio langelio elementas"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
-msgstr "Paspaudimo mygtukas"
+msgstr "Mygtukas"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "Tik tekstas"
+msgstr "Teksto laukas"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr "%1%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "Gauti naujus GNOME/GTK programų stilius…"
