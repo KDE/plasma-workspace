@@ -11,6 +11,7 @@
 
 #include <chrono>
 #include <optional>
+#include <vector>
 
 /**
  * This is the abstract base class for all cursor themes stored in a
