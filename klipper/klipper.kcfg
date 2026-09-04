@@ -35,8 +35,13 @@
       <whatsthis>Store images in the clipboard history.</whatsthis>
     </entry>
     <entry name="URLGrabberEnabled" type="Bool">
-        <label>Immediately on selection</label>
-	<tooltip>Show the popup menu of applicable actions as soon as a selection is made.</tooltip>
+        <label>When text or a file is copied</label>
+	<tooltip>Show the popup menu as soon as text or file is copied.</tooltip>
+        <default>false</default>
+    </entry>
+    <entry name="ActionOnSelection" type="Bool">
+        <label>When text is selected</label>
+	<tooltip>Show the popup menu as soon as text is selected, without waiting for it to be copied.</tooltip>
         <default>false</default>
     </entry>
     <entry name="TimeoutForActionPopups" type="Int">
@@ -66,7 +71,7 @@
       <whatsthis>Remove any whitespace from the start and end of the text passed to an action. The text saved in history is not affected.</whatsthis>
     </entry>
     <entry name="ReplayActionInHistory" type="Bool">
-      <label>For an item chosen from history</label>
+      <label>When an item is chosen from history</label>
       <default>false</default>
       <tooltip>Show the popup menu of applicable actions if an entry is chosen from the clipboard history.</tooltip>
     </entry>

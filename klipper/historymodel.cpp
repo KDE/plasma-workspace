@@ -87,8 +87,9 @@ struct TransactionGuard {
     bool committed = true;
 };
 
-// Temporary function added in Plasma 6.8 and 6.9 in the second half of 2026,
+// Temporary function added in Plasma 6.8 and 6.9 in the second half of 2026
 // TODO: Drop when we hit 7.0 or in 2032
+// Only has effect once when users upgrade and then does nothing
 void migrateSettings()
 {
     KConfigGroup general = KlipperSettings::self()->sharedConfig()->group(u"General"_s);
@@ -117,13 +118,8 @@ void migrateSettings()
 
     if (general.hasKey("IgnoreSelection")) {
         KlipperSettings::setSaveSelection(!general.readEntry("IgnoreSelection", true));
-        // Will be useful in Plasma 6.9, when this MR gets merged: https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/7016
-        // That MR will delete this comment
-        // This was added in 6.8, which deleted IgnoreSelection, so only there can this safely run only once
-        // If it was not merged in 6.8, existing behaviour would break with the MR 7016
-        if (KlipperSettings::saveSelection() && KlipperSettings::uRLGrabberEnabled()) {
-            general.writeEntry("ActionOnSelection", true);
-        }
+        // Actions used to run on a selection only when selection was saved in the history
+        KlipperSettings::setActionOnSelection(KlipperSettings::saveSelection() && KlipperSettings::uRLGrabberEnabled());
         general.deleteEntry("IgnoreSelection");
     }
     if (general.hasKey("IgnoreImages")) {
@@ -919,6 +915,7 @@ void HistoryModel::loadSettings()
     m_bSaveSelection = KlipperSettings::saveSelection();
     m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bSynchronize = KlipperSettings::syncClipboards();
+    m_bActionOnSelection = KlipperSettings::actionOnSelection();
 
     if (m_bNoNullClipboard) {
         connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard, Qt::UniqueConnection);
@@ -1043,6 +1040,9 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
             m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
             // Both buffers were updated with something that is not password, so clear the flag.
             clearHasPassword();
+        }
+        if (m_bActionOnSelection) {
+            Q_EMIT selectionForAction(std::make_shared<HistoryItem>(computeUuid(data), data->formats(), textFromMimeData(data)));
         }
         return;
     }

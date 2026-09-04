@@ -54,6 +54,7 @@ private:
     KMessageWidget *m_noActionsMessage;
     QWidget *m_form;
     QCheckBox *m_enablePopupCb;
+    QCheckBox *m_actionOnSelectionCb;
     QCheckBox *m_historyPopupCb;
     QCheckBox *m_stripWhitespaceCb;
 

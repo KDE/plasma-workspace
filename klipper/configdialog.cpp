@@ -191,6 +191,14 @@ PopupWidget::PopupWidget(QWidget *parent)
     m_enablePopupCb->setObjectName(QLatin1String("kcfg_URLGrabberEnabled"));
     layout->addRow(i18n("Show action popup menu:"), m_enablePopupCb);
 
+    // Also for a selection that is not copied
+    item = KlipperSettings::self()->actionOnSelectionItem();
+    m_actionOnSelectionCb = new QCheckBox(item->label(), this);
+    m_actionOnSelectionCb->setObjectName(QLatin1String("kcfg_ActionOnSelection"));
+    m_actionOnSelectionCb->setEnabled(m_enablePopupCb->isChecked());
+    connect(m_enablePopupCb, &QCheckBox::toggled, m_actionOnSelectionCb, &QWidget::setEnabled);
+    layout->addRow(QString(), m_actionOnSelectionCb);
+
     // Replay from history popup
     item = KlipperSettings::self()->replayActionInHistoryItem();
     m_historyPopupCb = new QCheckBox(item->label(), this);
@@ -198,13 +206,18 @@ PopupWidget::PopupWidget(QWidget *parent)
     layout->addRow(QString(), m_historyPopupCb);
 
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "When text that matches an action pattern is selected or is chosen from "
+                                                        "When text that matches an action pattern is copied, selected or chosen from "
                                                         "the clipboard history, automatically show the popup menu with applicable actions. "
-                                                        "If the automatic menu is turned off here, or it is not shown for an excluded window, "
-                                                        "then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
+                                                        "For files, this only applies when they are copied or chosen from history."
+                                                        "<nl/>"
+                                                        "<nl/>"
+                                                        "The menu can also be reached by using the <shortcut>%1</shortcut> key shortcut or "
+                                                        "with a button for each matching entry in the history.",
                                                         ConfigDialog::manualShortcutString()),
                                                  this);
     layout->addRow(QString(), hint);
+
+    layout->addRow(QString(), new QLabel(this));
 
     // Action popup time
     item = KlipperSettings::self()->timeoutForActionPopupsItem();

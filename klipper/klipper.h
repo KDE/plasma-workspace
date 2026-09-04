@@ -96,6 +96,8 @@ private Q_SLOTS:
     void loadSettings();
 
 private:
+    void offerActions(const std::shared_ptr<const HistoryItem> &item, bool fromSelection);
+
     std::shared_ptr<SystemClipboard> m_clip;
     HistoryCycler *m_historyCycler = nullptr;
 
@@ -117,8 +119,7 @@ private:
     bool m_bReplayActionInHistory : 1;
 
     URLGrabber *m_myURLGrabber;
-    QString m_lastURLGrabberTextSelection;
-    QString m_lastURLGrabberTextClipboard;
+    QString m_lastURLGrabberText;
 
     QString cycleText() const;
     KActionCollection *m_collection;

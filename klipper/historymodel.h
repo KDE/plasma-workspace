@@ -122,6 +122,8 @@ Q_SIGNALS:
 
     void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
 
+    void selectionForAction(const std::shared_ptr<const HistoryItem> &item);
+
     void hasPasswordChanged();
 
 private Q_SLOTS:
@@ -173,6 +175,7 @@ private:
     bool m_bSaveSelection = false;
     bool m_bKeepContents = true;
     bool m_bSynchronize = false;
+    bool m_bActionOnSelection = true;
     bool m_clipboardHasPassword = false;
     bool m_selectionHasPassword = false;
 

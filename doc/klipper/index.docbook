@@ -217,8 +217,24 @@ Screenshots saved by &spectacle; will also be saved when configured so there.
 <variablelist>
 
 <varlistentry>
-<term><guilabel>For an item chosen from history</guilabel></term>
-<listitem><para>If this is switched on, selecting an item from the history
+<term><guilabel>Show action popup menu: When text or a file is copied</guilabel></term>
+<listitem><para>If checked, the popup menu appears as soon as
+matching text or file is copied. If the option below is checked,
+the only effect of this option is to make the menu appear when copying files.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Show action popup menu: When text is selected</guilabel></term>
+<listitem><para>If checked, the popup menu appears as soon as
+matching text is selected, without waiting for it to be copied. This works
+even when selections are not saved in the clipboard history.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term><guilabel>Show action popup menu: When an item is chosen from history</guilabel></term>
+<listitem><para>If checked, selecting an item from the history
 causes &klipper; to display the actions pop-up on that item, if
 appropriate.</para>
 </listitem>

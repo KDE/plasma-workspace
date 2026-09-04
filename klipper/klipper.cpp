@@ -58,8 +58,7 @@ Klipper::Klipper(QObject *parent)
     m_historyModel = HistoryModel::self();
     // Prevent action menu popping up on start
     if (const auto top = m_historyModel->first()) {
-        m_lastURLGrabberTextSelection = top->text();
-        m_lastURLGrabberTextClipboard = top->text();
+        m_lastURLGrabberText = top->text();
     }
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
@@ -80,9 +79,12 @@ Klipper::Klipper(QObject *parent)
      * Create URL grabber
      */
     m_myURLGrabber = new URLGrabber(this);
+    m_historyModel->setURLGrabber(m_myURLGrabber);
     connect(m_myURLGrabber, &URLGrabber::sigPopup, this, &Klipper::showPopupMenu);
     connect(m_historyModel.get(), &HistoryModel::actionInvoked, m_myURLGrabber, &URLGrabber::invokeAction);
-    m_historyModel->setURLGrabber(m_myURLGrabber);
+    connect(m_historyModel.get(), &HistoryModel::selectionForAction, this, [this](const HistoryItemConstPtr &item) {
+        offerActions(item, true);
+    });
 
     /*
      * Load configuration settings
@@ -326,8 +328,7 @@ void Klipper::setURLGrabberEnabled(bool enable)
 {
     if (enable != m_bURLGrabber) {
         m_bURLGrabber = enable;
-        m_lastURLGrabberTextSelection.clear();
-        m_lastURLGrabberTextClipboard.clear();
+        m_lastURLGrabberText.clear();
         KlipperSettings::setURLGrabberEnabled(enable);
     }
 
@@ -337,22 +338,30 @@ void Klipper::setURLGrabberEnabled(bool enable)
     m_myURLGrabber->loadSettings();
 }
 
+void Klipper::offerActions(const HistoryItemConstPtr &item, bool fromSelection)
+{
+    if (fromSelection && !KlipperSettings::actionOnSelection()) {
+        return;
+    }
+
+    if (m_bURLGrabber && item && item->allTypes().testFlag(HistoryItemType::Text) && !item->text().isEmpty()) {
+        // Do not offer the menu for the same action twice (ie. you select and copy, or press ctrl+C twice)
+        if (item->text() != m_lastURLGrabberText) {
+            m_lastURLGrabberText = item->text();
+            m_myURLGrabber->checkNewData(item);
+        }
+    } else {
+        m_lastURLGrabberText.clear();
+    }
+}
+
 void Klipper::slotHistoryChanged(bool isTop)
 {
     if (!isTop) {
         return;
     }
 
-    QString &lastURLGrabberText = m_clip->isLocked(QClipboard::Selection) ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
-    if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->allTypes().testFlag(HistoryItemType::Text)) {
-        // Do not offer the menu for the same action twice (ie. you select and copy, or press ctrl+C twice)
-        if (item->text() != lastURLGrabberText) {
-            lastURLGrabberText = item->text();
-            m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
-        }
-    } else {
-        lastURLGrabberText.clear();
-    }
+    offerActions(m_historyModel->first(), m_clip->isLocked(QClipboard::Selection));
 
     if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
         return;
