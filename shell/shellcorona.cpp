@@ -1904,9 +1904,16 @@ QVariantMap ShellCorona::wallpaper(uint screenNum)
     if (!wallpaperGraphicsObject) {
         return parameters;
     }
-    auto config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
+       auto config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
+    if (!config) {
+        return parameters;
+    }
+
     for (const auto items = config->keys(); const QString &itemName : items) {
-        parameters.insert(itemName, config->value(itemName));
+        const QVariant value = config->value(itemName);
+        if (value.isValid() && !value.isNull()) {
+            parameters.insert(itemName, value);
+        }
     }
 
     return parameters;
