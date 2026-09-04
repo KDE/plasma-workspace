@@ -29,6 +29,10 @@ JobPrivate::JobPrivate(uint id, QObject *parent)
     m_showTimer.setSingleShot(true);
     connect(&m_showTimer, &QTimer::timeout, this, &JobPrivate::requestShow);
 
+    // Readings are timed from here, so that the first one says how long the job took to get as far
+    // as it had when anyone first heard about it.
+    m_progressTimer.start();
+
     m_objectPath.setPath(QStringLiteral("/org/kde/notificationmanager/jobs/JobView_%1").arg(id));
 
     // TODO also v1? it's identical to V2 except it doesn't have setError method so supporting it should be easy
@@ -339,7 +343,11 @@ void JobPrivate::setSuspended(bool suspended)
 void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
 {
     if (unit == QLatin1String("bytes")) {
-        updateField(amount, m_totalBytes, &Job::totalBytesChanged);
+        if (updateField(amount, m_totalBytes, &Job::totalBytesChanged)) {
+            // The readings are spread across the width of the job, so a different width places
+            // them differently, even though no new reading has come in.
+            Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
+        }
     } else if (unit == QLatin1String("files")) {
         updateField(amount, m_totalFiles, &Job::totalFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
@@ -353,7 +361,9 @@ void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
 void JobPrivate::setProcessedAmount(quint64 amount, const QString &unit)
 {
     if (unit == QLatin1String("bytes")) {
-        updateField(amount, m_processedBytes, &Job::processedBytesChanged);
+        if (updateField(amount, m_processedBytes, &Job::processedBytesChanged)) {
+            recordProgressSample();
+        }
     } else if (unit == QLatin1String("files")) {
         updateField(amount, m_processedFiles, &Job::processedFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
@@ -377,6 +387,21 @@ void JobPrivate::setSpeed(quint64 bytesPerSecond)
 {
     updateField(bytesPerSecond, m_speed, &Job::speedChanged);
     updateHasDetails();
+}
+
+void JobPrivate::recordProgressSample()
+{
+    // More readings than this tell the chart nothing it can draw, it has a hundred points to fill,
+    // so once there are too many every second one goes and the rest keep coming.
+    constexpr int maximumSamples = 512;
+    if (m_progressSamples.count() >= maximumSamples) {
+        for (int i = m_progressSamples.count() - 2; i > 0; i -= 2) {
+            m_progressSamples.removeAt(i);
+        }
+    }
+
+    m_progressSamples.append({m_progressTimer.elapsed(), m_processedBytes});
+    Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
 }
 
 void JobPrivate::setElapsedTime(qint64 elapsedTime)
@@ -491,12 +516,17 @@ void JobPrivate::update(const QVariantMap &properties)
     }
 
     updateFieldFromProperties(properties, QStringLiteral("processedFiles"), m_processedFiles, &Job::processedFilesChanged);
-    updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
+    // A job that reports itself this way, which is what KIO's own tracker does, has to have its
+    // readings noted here too, or it never gets a chart at all. The chart is told once the whole
+    // update has been applied: bytes and total arrive together, and a chart asked about itself
+    // in between sees a total of nothing to draw against and is torn down and built again.
+    const bool recordReading = updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedDirectories"), m_processedDirectories, &Job::processedDirectoriesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedItems"), m_processedItems, &Job::processedItemsChanged);
 
     updateFieldFromProperties(properties, QStringLiteral("totalFiles"), m_totalFiles, &Job::totalFilesChanged);
-    updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);
+    // As in setTotalAmount: a different width places the same readings differently.
+    const bool widthChanged = updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalDirectories"), m_totalDirectories, &Job::totalDirectoriesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalItems"), m_totalItems, &Job::totalItemsChanged);
 
@@ -508,6 +538,12 @@ void JobPrivate::update(const QVariantMap &properties)
     it = properties.find(QStringLiteral("suspended"));
     if (it != end) {
         setSuspended(it->toBool());
+    }
+
+    if (recordReading) {
+        recordProgressSample();
+    } else if (widthChanged) {
+        Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
     }
 
     updateHasDetails();

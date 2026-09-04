@@ -24,41 +24,58 @@ Item {
     property ModelInterface modelInterface
     property bool expanded
 
-    property int speed
-    property int averageSpeed
+    readonly property int speed: modelInterface.jobDetails ? modelInterface.jobDetails.speed : 0
+    readonly property int averageSpeed: modelInterface.jobDetails && modelInterface.jobDetails.elapsedTime > 0
+        ? modelInterface.jobDetails.processedBytes / modelInterface.jobDetails.elapsedTime * 1000
+        : 0
 
-    property int previousSpeed: 0
-    property int previousProcessed: 0
+    // The job keeps the readings itself, from the moment it starts, so there is a chart to show
+    // even the first time anyone looks at it.
+    readonly property var speedHistory: modelInterface.jobDetails ? modelInterface.jobDetails.speedHistory : []
 
-    property real maxSpeed: 0
+    readonly property real maxSpeed: speedHistory.length > 0 ? Math.max(...speedHistory) : 0
 
-    readonly property real xRange: 100
-
-    readonly property real resolution: modelInterface.jobDetails.totalBytes / xRange
-
-    ListModel {
-        id: dataSource
-
-        function appendSpeed(processedBytes, speed) {
-            let speedChange = speed - root.previousSpeed
-
-            if (root.resolution > 0) {
-                let processed = Math.round(processedBytes / root.resolution)
-                let processedChange = processed - root.previousProcessed
-
-                if (processedChange > 0) {
-                    let newSpeed = root.previousSpeed
-                    for (let i = 0; i < processedChange; ++i) {
-                        newSpeed += speedChange / processedChange
-                        dataSource.append({data: newSpeed})
-                        root.maxSpeed = Math.max(root.maxSpeed, newSpeed)
-                    }
-
-                    root.previousProcessed = processed
-                    root.previousSpeed = speed
-                }
+    // The top of the scale, rounded up to a one, a two or a five. A copy reports whatever it
+    // managed between one reading and the next, which wanders, and an axis that follows the highest
+    // of those exactly redraws the whole line a little higher or lower every time a new one arrives.
+    readonly property real scaleTop: {
+        const peak = root.maxSpeed * 1.05;
+        if (!(peak > 0)) {
+            return 1;
+        }
+        // In steps of a kibibyte rather than of a thousand, so that the labels beside them come out
+        // as the round numbers KCoreAddons.Format.formatByteSize is going to write.
+        const unit = Math.pow(1024, Math.floor(Math.log(peak) / Math.log(1024)));
+        for (const step of [1, 2, 5, 10, 20, 50, 100, 200, 500]) {
+            if (peak <= step * unit) {
+                return step * unit;
             }
         }
+        return 1024 * unit;
+    }
+
+    // How much of the width the readings reach across, taken from the readings themselves rather
+    // than worked out again from the bytes: the two round differently, and the line would swim
+    // about under the edge that is meant to be following it.
+    readonly property real reached: chartValues.length > 1
+        ? (speedHistory.length - 1) / (chartValues.length - 1)
+        : 0
+
+    // The chart is asked for a point per hundredth of the job whatever it has reached, since its
+    // shape decides how finely it is drawn: it anti-aliases against its own diagonal, so a chart
+    // which grows narrow when there is little to show draws that little badly. The readings past
+    // where the job has got repeat the last of them and are covered up rather than drawn.
+    readonly property var chartValues: {
+        const history = root.speedHistory;
+        if (history.length === 0) {
+            return history;
+        }
+        const values = history.slice();
+        const last = values[values.length - 1];
+        while (values.length < 100) {
+            values.push(last);
+        }
+        return values;
     }
 
     Layout.minimumHeight: chartContainer.active ? Kirigami.Units.gridUnit * 10 :
@@ -79,7 +96,7 @@ Item {
     Loader {
         id: chartContainer
 
-        active: dataSource.count >= 2 && root.expanded
+        active: root.speedHistory.length >= 2 && root.expanded
         visible: active
 
         anchors.fill: parent
@@ -90,8 +107,8 @@ Item {
 
                 anchors {
                     left: parent.left
-                    top: chart.top
-                    bottom: chart.bottom
+                    top: plotArea.top
+                    bottom: plotArea.bottom
                 }
 
                 width: metricsLabel.implicitWidth
@@ -111,18 +128,8 @@ Item {
                 }
             }
 
-            ChartsControls.GridLines {
-                anchors.fill: chart
-                direction: ChartsControls.GridLines.Vertical
-                minor.visible: false
-                major.count: 3
-                major.lineWidth: 1
-                // Same calculation as Kirigami Separator
-                major.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.4)
-            }
-
-            Charts.LineChart {
-                id: chart
+            Item {
+                id: plotArea
 
                 anchors {
                     left: axisLabels.right
@@ -133,36 +140,73 @@ Item {
                     bottom: legend.top
                     bottomMargin: Math.round(metricsLabel.implicitHeight / 2) + Kirigami.Units.smallSpacing
                 }
+            }
 
-                xRange.from: 0
-                xRange.to: Math.max(1, dataSource.count - 1)
-                xRange.automatic: false
+            ChartsControls.GridLines {
+                anchors.fill: plotArea
+                direction: ChartsControls.GridLines.Vertical
+                minor.visible: false
+                major.count: 3
+                major.lineWidth: 1
+                // Same calculation as Kirigami Separator
+                major.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.4)
+            }
 
-                yRange.from: 0
-                yRange.to: Math.max(1, root.maxSpeed * 1.05)
-                yRange.automatic: false
+            Item {
+                id: reached
 
-                lineWidth: 1
-                interpolate: true
-
-                valueSources: Charts.ModelSource {
-                    model: dataSource
-                    roleName: "data"
+                anchors {
+                    left: plotArea.left
+                    top: plotArea.top
+                    bottom: plotArea.bottom
                 }
+                width: plotArea.width * root.reached
+                clip: true
 
-                nameSource: Charts.SingleValueSource {
-                    value: i18nd("plasma_applet_org.kde.plasma.notifications", "Speed")
+                Charts.LineChart {
+                    id: chart
+
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        bottom: parent.bottom
+                    }
+                    width: plotArea.width
+
+                    xRange.from: 0
+                    // A source which has run out answers zero, and the chart asks it for a point per
+                    // hundredth of the width whatever it holds, so it is given a full hundred. The
+                    // range is the count, not the last index: the chart draws that many points and
+                    // spaces them by a width divided by one less, so a range short by one both drops
+                    // the last reading and spreads the rest wider than the window expects them.
+                    xRange.to: Math.max(2, root.chartValues.length)
+                    xRange.automatic: false
+
+                    yRange.from: 0
+                    yRange.to: root.scaleTop
+                    yRange.automatic: false
+
+                    lineWidth: 1
+                    interpolate: true
+
+                    valueSources: Charts.ArraySource {
+                        array: root.chartValues
+                    }
+
+                    nameSource: Charts.SingleValueSource {
+                        value: i18nd("plasma_applet_org.kde.plasma.notifications", "Speed")
+                    }
+
+                    colorSource: Charts.SingleValueSource {
+                        value: Kirigami.Theme.highlightColor
+                    }
+
+                    fillColorSource: Charts.SingleValueSource {
+                        value: Qt.lighter(Kirigami.Theme.highlightColor, 1.5)
+                    }
+
+                    Accessible.role: Accessible.Chart
                 }
-
-                colorSource: Charts.SingleValueSource {
-                    value: Kirigami.Theme.highlightColor
-                }
-
-                fillColorSource: Charts.SingleValueSource {
-                    value: Qt.lighter(Kirigami.Theme.highlightColor, 1.5)
-                }
-
-                Accessible.role: Accessible.Chart
             }
 
             ChartsControls.Legend {
@@ -218,23 +262,6 @@ Item {
                     }
                 }
             }
-        }
-    }
-
-    Component.onCompleted: () => {
-        if (modelInterface.jobDetails.processedBytes > 0) {
-            dataSource.appendSpeed(modelInterface.jobDetails.processedBytes, modelInterface.jobDetails.speed)
-        }
-    }
-
-    Connections {
-        target: root.modelInterface.jobDetails
-
-        function onProcessedBytesChanged() {
-            dataSource.appendSpeed(root.modelInterface.jobDetails.processedBytes, root.modelInterface.jobDetails.speed)
-
-            root.speed = root.modelInterface.jobDetails.speed
-            root.averageSpeed = root.modelInterface.jobDetails.processedBytes / root.modelInterface.jobDetails.elapsedTime * 1000;
         }
     }
 
