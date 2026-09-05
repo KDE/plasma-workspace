@@ -2,20 +2,21 @@
 # SPDX-FileCopyrightText: 2018, 2022-2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2026 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-16 00:47+0000\n"
-"PO-Revision-Date: 2025-12-04 20:39+0100\n"
-"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
+"PO-Revision-Date: 2026-08-29 14:07+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: qml/main.qml:30
 #, kde-format
@@ -31,7 +32,7 @@ msgstr "Zwischenablage ist leer"
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
-msgstr ""
+msgstr "Die Zwischenablage enthält derzeit sensible Daten"
 
 #: qml/main.qml:75
 #, kde-format

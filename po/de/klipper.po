@@ -6,22 +6,22 @@
 # SPDX-FileCopyrightText: 2009-2010, 2014, 2022-2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024-2025 Flori G <Renner03@protonmail.com>
-# SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-02 00:46+0000\n"
-"PO-Revision-Date: 2026-04-02 14:51+0200\n"
-"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
+"PO-Revision-Date: 2026-08-29 14:06+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: configdialog.cpp:85
 #, kde-format
@@ -332,12 +332,14 @@ msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in the history."
 msgstr ""
+"Die Zwischenablage enthält derzeit sensible Daten, die nicht im Verlauf "
+"gespeichert werden."
 
 #: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Geheime Daten leeren"
 
 #: declarative/qml/ClipboardMenu.qml:467
 #, kde-format

@@ -183,11 +183,9 @@
 > düğmesine basmadan önce açılan iletişim kutusunda pano içeriğini uygun eylemle değiştirebilirsiniz.</para>
 
 <para
-><keycombo action="simul"
->&Ctrl;&Alt;<keycap
->R</keycap
-></keycombo
-> kısayoluna basmak, &klipper;’ın gerçekleştirdiği son eylemi yinelemek için açılır menüyü gösterir.</para>
+><guilabel
+>Geçerli Panoda Elle İşlem Yap</guilabel
+> için bir kısayol tanımlarsanız bu kısayolu kullanmak, ilgili açılır menüyü gösterir.</para>
 
 </sect1>
 
