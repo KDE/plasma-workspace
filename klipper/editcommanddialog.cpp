@@ -70,10 +70,10 @@ EditCommandDialog::EditCommandDialog(const ClipCommand &command, QWidget *parent
     // are exactly equivalent to "%s", the complete clipboard contents,
     // so there is no point mentioning them here.
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "A <placeholder>&#37;s</placeholder> in the command will be replaced by the \
-complete clipboard contents. <placeholder>&#37;0</placeholder> through \
-<placeholder>&#37;9</placeholder> will be replaced by the corresponding \
-captured texts from the match pattern."),
+                                                        "A <b>&#37;s</b> in the command will be replaced by the "
+                                                        "complete clipboard contents. <b>&#37;0</b> through "
+                                                        "<b>&#37;9</b> will be replaced by the corresponding "
+                                                        "captured texts from the match pattern."),
                                                  optionsWidget);
     optionsLayout->addRow(QString(), hint);
 
