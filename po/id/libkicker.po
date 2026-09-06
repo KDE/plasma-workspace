@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-06 00:47+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -44,7 +44,7 @@ msgstr "Semat ke Pengelola Tugas"
 msgid "Add to Panel (Widget)"
 msgstr "Tambahkan ke Panel (Widget)"
 
-#: actionlist.cpp:316 rootmodel.cpp:587
+#: actionlist.cpp:316 rootmodel.cpp:590
 #, kde-format
 msgid "Recent Files"
 msgstr "File-file Baru-baru Ini"
@@ -65,18 +65,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Uninstal atau Kelola Pernak-pernik..."
 
-#: appentry.cpp:399
+#: appentry.cpp:410
 #, kde-format
 msgid "Hide Application"
 msgstr "Sembunyikan Aplikasi"
 
-#: appentry.cpp:461
+#: appentry.cpp:472
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:463
+#: appentry.cpp:474
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "Komputer"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:538 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:537 rootmodel.cpp:574 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favorit"
@@ -191,39 +191,39 @@ msgstr "Semua Aplikasi"
 msgid "Hide %1"
 msgstr "Sembunyikan %1"
 
-#: rootmodel.cpp:565
+#: rootmodel.cpp:568
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Ini seharusnya tidak terlihat! Gunakanlah KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 #| msgid "Recent Files"
 msgid "Recent Places"
 msgstr "File-file Baru-baru Ini"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 #| msgid "Often Used Files"
 msgid "Often Used Places"
 msgstr "File-file Yang Sering Digunakan"
 
-#: rootmodel.cpp:587
+#: rootmodel.cpp:590
 #, kde-format
 msgid "Often Used Files"
 msgstr "File-file Yang Sering Digunakan"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplikasi Baru-baru ini"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplikasi Sering Digunakan"
 
-#: rootmodel.cpp:611
+#: rootmodel.cpp:614
 #, kde-format
 msgid "Power / Session"
 msgstr "Daya / Sesi"

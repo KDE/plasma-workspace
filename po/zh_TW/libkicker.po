@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-06 00:47+0000\n"
 "PO-Revision-Date: 2026-05-12 03:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -45,7 +45,7 @@ msgstr "釘選到工作管理員"
 msgid "Add to Panel (Widget)"
 msgstr "新增到面板（元件）"
 
-#: actionlist.cpp:316 rootmodel.cpp:587
+#: actionlist.cpp:316 rootmodel.cpp:590
 #, kde-format
 msgid "Recent Files"
 msgstr "最近使用的檔案"
@@ -66,18 +66,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "解除安裝或管理外掛程式…"
 
-#: appentry.cpp:399
+#: appentry.cpp:410
 #, kde-format
 msgid "Hide Application"
 msgstr "隱藏應用程式"
 
-#: appentry.cpp:461
+#: appentry.cpp:472
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:463
+#: appentry.cpp:474
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -115,7 +115,7 @@ msgid "Computer"
 msgstr "電腦"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:538 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:537 rootmodel.cpp:574 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "我的最愛"
@@ -190,37 +190,37 @@ msgstr "所有應用程式"
 msgid "Hide %1"
 msgstr "隱藏 %1"
 
-#: rootmodel.cpp:565
+#: rootmodel.cpp:568
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "這不應該是可見的！請使用 KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, kde-format
 msgid "Recent Places"
 msgstr "最近的位置"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, kde-format
 msgid "Often Used Places"
 msgstr "經常使用的位置"
 
-#: rootmodel.cpp:587
+#: rootmodel.cpp:590
 #, kde-format
 msgid "Often Used Files"
 msgstr "經常使用的檔案"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Recent Applications"
 msgstr "最近使用的應用程式"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Often Used Applications"
 msgstr "經常使用的應用程式"
 
-#: rootmodel.cpp:611
+#: rootmodel.cpp:614
 #, kde-format
 msgid "Power / Session"
 msgstr "電源 / 工作階段"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-06 00:47+0000\n"
 "PO-Revision-Date: 2025-01-12 17:10+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "Kiinnitä tehtävienhallintaan"
 msgid "Add to Panel (Widget)"
 msgstr "Lisää paneeliin (sovelmaksi)"
 
-#: actionlist.cpp:316 rootmodel.cpp:587
+#: actionlist.cpp:316 rootmodel.cpp:590
 #, kde-format
 msgid "Recent Files"
 msgstr "Viimeisimmät tiedostot"
@@ -64,18 +64,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Poista tai hallitse lisäosia…"
 
-#: appentry.cpp:399
+#: appentry.cpp:410
 #, kde-format
 msgid "Hide Application"
 msgstr "Piilota sovellus"
 
-#: appentry.cpp:461
+#: appentry.cpp:472
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:463
+#: appentry.cpp:474
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr "Tietokone"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:538 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:537 rootmodel.cpp:574 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Suosikit"
@@ -191,39 +191,39 @@ msgstr "Kaikki sovellukset"
 msgid "Hide %1"
 msgstr "Piilota %1"
 
-#: rootmodel.cpp:565
+#: rootmodel.cpp:568
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Tämän ei tulisi näkyä! Käytä: KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 #| msgid "Recent Files"
 msgid "Recent Places"
 msgstr "Viimeisimmät tiedostot"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 #| msgid "Often Used Files"
 msgid "Often Used Places"
 msgstr "Usein käytetyt tiedostot"
 
-#: rootmodel.cpp:587
+#: rootmodel.cpp:590
 #, kde-format
 msgid "Often Used Files"
 msgstr "Usein käytetyt tiedostot"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Recent Applications"
 msgstr "Viimeisimmät sovellukset"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Usein käytetyt sovellukset"
 
-#: rootmodel.cpp:611
+#: rootmodel.cpp:614
 #, kde-format
 msgid "Power / Session"
 msgstr "Virta / istunto"

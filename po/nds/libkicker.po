@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-06 00:47+0000\n"
 "PO-Revision-Date: 2014-08-21 16:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Add to Panel (Widget)"
 msgstr "Na't Paneel tofögen"
 
-#: actionlist.cpp:316 rootmodel.cpp:587
+#: actionlist.cpp:316 rootmodel.cpp:590
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
@@ -64,12 +64,12 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: appentry.cpp:399
+#: appentry.cpp:410
 #, fuzzy, kde-format
 msgid "Hide Application"
 msgstr "Programm vergeten"
 
-#: appentry.cpp:461
+#: appentry.cpp:472
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -77,7 +77,7 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:463
+#: appentry.cpp:474
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -115,7 +115,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:538 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:537 rootmodel.cpp:574 simplefavoritesmodel.cpp:33
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "Na de Leestekens tofögen"
@@ -190,38 +190,38 @@ msgstr "All Programm vergeten"
 msgid "Hide %1"
 msgstr ""
 
-#: rootmodel.cpp:565
+#: rootmodel.cpp:568
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Places"
 msgstr "Tolest bruukt Dokmenten"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 msgid "Often Used Places"
 msgstr "Tolest bruukt Dokmenten"
 
-#: rootmodel.cpp:587
+#: rootmodel.cpp:590
 #, fuzzy, kde-format
 msgid "Often Used Files"
 msgstr "Tolest bruukt Dokmenten"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Recent Applications"
 msgstr "Tolest bruukt Programmen"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, fuzzy, kde-format
 msgid "Often Used Applications"
 msgstr "Tolest bruukt Programmen"
 
-#: rootmodel.cpp:611
+#: rootmodel.cpp:614
 #, kde-format
 msgid "Power / Session"
 msgstr "Stroom un Törn"

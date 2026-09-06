@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-12 00:49+0000\n"
+"POT-Creation-Date: 2026-09-06 00:47+0000\n"
 "PO-Revision-Date: 2021-06-08 19:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Fixar no Gestor de Tarefas"
 msgid "Add to Panel (Widget)"
 msgstr "Adicionar ao Painel (Elemento)"
 
-#: actionlist.cpp:316 rootmodel.cpp:587
+#: actionlist.cpp:316 rootmodel.cpp:590
 #, kde-format
 msgid "Recent Files"
 msgstr "Ficheiros Recentes"
@@ -59,12 +59,12 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Desinstalar ou Gerir as Extensões…"
 
-#: appentry.cpp:399
+#: appentry.cpp:410
 #, kde-format
 msgid "Hide Application"
 msgstr "Esconder a Aplicação"
 
-#: appentry.cpp:461
+#: appentry.cpp:472
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -72,7 +72,7 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:463
+#: appentry.cpp:474
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -110,7 +110,7 @@ msgid "Computer"
 msgstr "Computador"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:538 rootmodel.cpp:571 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:537 rootmodel.cpp:574 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritos"
@@ -187,39 +187,39 @@ msgstr "Todas as Aplicações"
 msgid "Hide %1"
 msgstr "Esconder o %1"
 
-#: rootmodel.cpp:565
+#: rootmodel.cpp:568
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Isto não deveria estar visível! Use o KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 #| msgid "Recent Files"
 msgid "Recent Places"
 msgstr "Ficheiros Recentes"
 
-#: rootmodel.cpp:578
+#: rootmodel.cpp:581
 #, fuzzy, kde-format
 #| msgid "Often Used Files"
 msgid "Often Used Places"
 msgstr "Ficheiros Usados Frequentemente"
 
-#: rootmodel.cpp:587
+#: rootmodel.cpp:590
 #, kde-format
 msgid "Often Used Files"
 msgstr "Ficheiros Usados Frequentemente"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplicações Recentes"
 
-#: rootmodel.cpp:596
+#: rootmodel.cpp:599
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplicações Frequentes"
 
-#: rootmodel.cpp:611
+#: rootmodel.cpp:614
 #, kde-format
 msgid "Power / Session"
 msgstr "Energia / Sessão"
