@@ -12,6 +12,7 @@ target_sources(kcm_lookandfeel PRIVATE
 )
 target_link_libraries(kcm_lookandfeel PRIVATE
     Qt6::DBus
+    Qt6::Qml
     KF6::ConfigGui
     KF6::I18n
     KF6::KCMUtils
