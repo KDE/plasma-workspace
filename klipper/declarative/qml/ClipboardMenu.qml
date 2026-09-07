@@ -69,7 +69,7 @@ PlasmaComponents3.ScrollView {
 
     onExpandedChanged: {
         if (expanded) {
-            menuListView.forceActiveFocus();
+            menuListView.forceActiveFocus(Qt.OtherFocusReason);
         }
     }
 
@@ -88,7 +88,7 @@ PlasmaComponents3.ScrollView {
                     filter.text = "";
                     filter.text += event.text;
                 }
-                filter.forceActiveFocus();
+                filter.forceActiveFocus(Qt.ShortcutFocusReason);
                 event.accepted = true;
             }
         }
@@ -103,7 +103,7 @@ PlasmaComponents3.ScrollView {
         }
         case Qt.Key_F: {
             if (event.modifiers & Qt.ControlModifier) {
-                filter.forceActiveFocus();
+                filter.forceActiveFocus(Qt.ShortcutFocusReason);
                 filter.selectAll();
                 event.accepted = true;
             } else {
@@ -121,7 +121,7 @@ PlasmaComponents3.ScrollView {
             // filter.text += event.text will break if the key is backspace
             if (!filter.activeFocus) {
                 // Forward backspace to filter when not focused
-                filter.forceActiveFocus();
+                filter.forceActiveFocus(Qt.ShortcutFocusReason);
                 filter.text = filter.text.slice(0, -1);
                 event.accepted = true;
             } else {
@@ -158,7 +158,7 @@ PlasmaComponents3.ScrollView {
                 menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
                 if (menuListView.currentItem) {
-                    menuListView.currentItem.forceActiveFocus()
+                    menuListView.currentItem.forceActiveFocus(Qt.BacktabFocusReason)
                 }
                 event.accepted = true;
             }
@@ -174,7 +174,7 @@ PlasmaComponents3.ScrollView {
                 menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
                 if (menuListView.currentItem) {
-                    menuListView.currentItem.forceActiveFocus()
+                    menuListView.currentItem.forceActiveFocus(Qt.TabFocusReason)
                 }
                 event.accepted = true;
             }
@@ -257,9 +257,9 @@ PlasmaComponents3.ScrollView {
                     KeyNavigation.right: clearHistoryButton.visible ? clearHistoryButton : (tabBar.visible ? tabBar : null)
                     Keys.onDownPressed: event => {
                         if (tabBar.visible) {
-                            tabBar.forceActiveFocus();
+                            tabBar.forceActiveFocus(Qt.TabFocusReason);
                         } else {
-                            menuListView.forceActiveFocus();
+                            menuListView.forceActiveFocus(Qt.TabFocusReason);
                         }
                         event.accepted = true;
                     }
@@ -303,11 +303,11 @@ PlasmaComponents3.ScrollView {
                 // TabBar focus handling
                 activeFocusOnTab: true
                 Keys.onUpPressed: event => {
-                    filter.forceActiveFocus();
+                    filter.forceActiveFocus(Qt.BacktabFocusReason);
                     event.accepted = true;
                 }
                 Keys.onDownPressed: event => {
-                    menuListView.forceActiveFocus();
+                    menuListView.forceActiveFocus(Qt.TabFocusReason);
                     event.accepted = true;
                 }
                 Keys.onLeftPressed: event => {
@@ -430,9 +430,9 @@ PlasmaComponents3.ScrollView {
             } else {
                 // At top of list, or list is empty. Focus TabBar or filter depending on visibility.
                 if (tabBar.visible) {
-                    tabBar.forceActiveFocus();
+                    tabBar.forceActiveFocus(Qt.BacktabFocusReason);
                 } else {
-                    filter.forceActiveFocus();
+                    filter.forceActiveFocus(Qt.BacktabFocusReason);
                 }
                 event.accepted = true;
             }
