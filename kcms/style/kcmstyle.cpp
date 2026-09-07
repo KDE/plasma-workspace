@@ -427,7 +427,6 @@ void KCMStyle::save()
 
     if (m_effectsDirty) {
         // This notifies listeners about:
-        //  - GraphicEffectsLevel' config entry, (e.g. to set QPlatformTheme::ThemeHint::UiEffects)
         //  - ShowIconsOnPushButtons config entry, (e.g. to set QPlatformTheme::DialogButtonBoxButtonsHaveIcons)
         notifyKcmChange(GlobalChangeType::SettingsChanged, GlobalSettingsCategory::SETTINGS_STYLE);
 
