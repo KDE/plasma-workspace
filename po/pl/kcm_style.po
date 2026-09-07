@@ -1,5 +1,5 @@
 # translation of kcmstyle.po to
-# Version: $Revision: 1745239 $
+# Version: $Revision: 1745777 $
 # translation of kcmstyle.po to Polish
 # translation of kcmstyle.po to
 # SPDX-FileCopyrightText: 2011-2012, 2014-2015, 2017, 2019-2021, 2023-2024, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-07-12 09:12+0200\n"
+"PO-Revision-Date: 2026-09-06 10:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -32,103 +32,103 @@ msgstr "%1 nie jest prawidłowym archiwum wyglądu GTK."
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr ""
+msgstr "Nie udało się wgrać: Nie można wgrać wyglądu ze zdalnego miejsca."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "Nie udało się wgrać: Nie można odczytać pliku wyglądu."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "Nie udało się wgrać. Plik wyglądu nie zawiera żadnych danych."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "Nie udało się wgrać: Nie można wypakować pliku wyglądu."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "Nie udało się wgrać: Nie można znaleźć wyglądu."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "Nie udało się wgrać: Wybrany plik nie jest prawidłowym wyglądem unii."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "Nie udało się wgrać: Wybrany wygląd jest nieobsługiwany."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "Nie udało się wgrać “%1”: Wygląd jest już wgrany."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Nie udało się wgrać “%1”: Odmówiono uprawnienia."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "Nie udało się wgrać “%1”: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "Pomyślnie wgrano “%1”."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "Nie udało się wgrać: Nie można znaleźć wyglądu o ID “%1”."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Nie udało się usunąć “%1”: Odmówiono uprawnienia."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "Nie udało się usunąć “%1”: Wygląd nie jest wgrany."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "Nie udało się usunąć “%1”: Wygląd jest w użyciu."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "Nie udało się usunąć “%1”: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "Nie udało się usunąć wyglądów:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
@@ -136,18 +136,18 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pomyślnie usunięto “%1”, lecz nie można usunąć innych:\n"
+msgstr[1] "Pomyślnie usunięto %1 wyglądy, lecz nie można usunąć innych:\n"
+msgstr[2] "Pomyślnie usunięto %1 wyglądów, lecz nie można usunąć innych:\n"
 
 #: kcmstyle.cpp:237
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%2”."
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pomyślnie usunięto “%1”."
+msgstr[1] "Pomyślnie usunięto %1 wyglądy."
+msgstr[2] "Pomyślnie usunięto %1 wyglądów."
 
 #: kcmstyle.cpp:300 kcmstyle.cpp:307
 #, kde-format
@@ -178,8 +178,7 @@ msgstr "%p%"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgid "Button"
 msgstr "Przycisk"
 
@@ -204,10 +203,9 @@ msgstr "Pole wyboru"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
-msgstr "Tylko tekst"
+msgstr "Pole tekstowe"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -225,7 +223,7 @@ msgstr "Wygląd aplikacji"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "ID wyglądu unii"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -340,9 +338,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Archiwum wyglądu GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Wgraj z pliku…"
@@ -355,7 +351,7 @@ msgstr "Ustawienia ikon i pasków narzędzi…"
 #: ui/main.qml:108
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Ustawienia wyglądu aplikacji GNOME/GTK..."
+msgstr "Ustawienia wyglądu aplikacji GNOME/GTK…"
 
 #: ui/main.qml:170
 #, kde-format
@@ -364,6 +360,9 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Ten wygląd używa silnika wyglądów unii, który nadal jest w trakcie rozwoju. "
+"Niektóre rzeczy mogą wyglądać lub zachowywać się niepoprawnie w trakcie "
+"używania."
 
 #: ui/main.qml:174
 #, kde-format
@@ -374,99 +373,90 @@ msgstr "Ustawienia wyglądu…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "Usuń…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "Nie można usunąć wyglądów wgranych dla wszystkich użytkowników."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Nie można usunąć wyglądów unii."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "Nie usuwaj tego wyglądu."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "Wybierz wygląd unii do wgrania"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "Wgraj"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "Karta 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "Karta 2"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "Pole zaznaczane"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "Pole wyboru"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
 msgstr "Pole rozwijane"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
 msgstr "Pole rozwijane"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
 msgstr "Przycisk"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "Tylko tekst"
+msgstr "Pole tekstowe"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr "%1%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "Pobierz nowe wyglądy aplikacji GNOME/GTK..."

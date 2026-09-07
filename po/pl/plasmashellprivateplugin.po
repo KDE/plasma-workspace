@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2026-07-18 16:31+0200\n"
+"PO-Revision-Date: 2026-09-06 09:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -154,13 +154,13 @@ msgstr "Ustawienia…"
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Klawiatura ekranowa"
 
 #: loginlockscreen/Footer.qml:74
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Przełącz układ"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

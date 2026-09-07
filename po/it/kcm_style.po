@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-09-03 20:24+0200\n"
+"PO-Revision-Date: 2026-09-06 10:59+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -224,7 +224,7 @@ msgstr "Stile delle applicazioni"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "ID stile Union"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -361,6 +361,9 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Questo stile utilizza il motore Union, che è ancora in fase di sviluppo. Se "
+"utilizzi questo stile, alcuni elementi potrebbero apparire o comportarsi in "
+"modo anomalo."
 
 #: ui/main.qml:174
 #, kde-format
@@ -433,11 +436,10 @@ msgid "Combo Box"
 msgstr "Casella combinata"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "Casella combinata"
+msgstr "Elemento casella combinata"
 
 #: ui/UnionThumbnailItem.qml:94
 #, kde-format

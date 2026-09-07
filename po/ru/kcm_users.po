@@ -1,7 +1,7 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2020-2026 Alexander Yavorsky <kekcuha@gmail.com>
 # Alexander Potashev <aspotashev@gmail.com>, 2020.
 # Дронова Ю <juliette.tux@gmail.com>, 2020.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-16 20:11+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-09-06 15:41+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -163,6 +163,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"Допускаются только строчные буквы, цифры, дефисы и символы подчёркивания. "
+"Недопустимые символы удалены."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -171,6 +173,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"Имена пользователей должны быть в нижнем регистре. Символы верхнего регистра "
+"преобразованы в строчные."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format
