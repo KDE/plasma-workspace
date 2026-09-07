@@ -20,5 +20,6 @@ target_link_libraries(kcm_nightlight PRIVATE
     KF6::I18n
     KF6::KCMUtils
     Qt::DBus
+    Qt::Qml
     KNightTime
 )
