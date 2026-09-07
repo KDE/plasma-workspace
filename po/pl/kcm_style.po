@@ -1,5 +1,5 @@
 # translation of kcmstyle.po to
-# Version: $Revision: 1741196 $
+# Version: $Revision: 1745777 $
 # translation of kcmstyle.po to Polish
 # translation of kcmstyle.po to
 # SPDX-FileCopyrightText: 2011-2012, 2014-2015, 2017, 2019-2021, 2023-2024, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-07-12 09:12+0200\n"
+"PO-Revision-Date: 2026-09-06 09:49+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: gtkpage.cpp:58
 #, kde-format
@@ -190,7 +190,7 @@ msgstr "Wgraj z pliku..."
 #: ui/GtkStylePage.qml:92
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Pobierz nowe wyglądy aplikacji GNOME/GTK..."
+msgstr "Pobierz nowe wyglądy aplikacji GNOME/GTK…"
 
 #: ui/GtkStylePage.qml:108
 #, kde-format
@@ -210,7 +210,7 @@ msgstr "Ustawienia ikon i pasków narzędzi…"
 #: ui/main.qml:73
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Ustawienia wyglądu aplikacji GNOME/GTK..."
+msgstr "Ustawienia wyglądu aplikacji GNOME/GTK…"
 
 #: ui/main.qml:106
 #, kde-format
