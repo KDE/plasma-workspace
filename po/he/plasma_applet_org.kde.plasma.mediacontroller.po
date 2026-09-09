@@ -3,31 +3,32 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2017-05-22 05:26-0400\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-09-08 09:12+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:190
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "אין כותרת"
 
 #: package/contents/ui/AlbumArtStackView.qml:190
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgid "No media playing"
-msgstr "לא מנוגנת מדיה"
+msgstr "לא מתנגנת מדיה"
 
 #: package/contents/ui/ExpandedRepresentation.qml:413
 #: package/contents/ui/ExpandedRepresentation.qml:534
@@ -39,7 +40,7 @@ msgstr "-%1"
 #: package/contents/ui/ExpandedRepresentation.qml:563
 #, kde-format
 msgid "Shuffle"
-msgstr ""
+msgstr "ערבוב"
 
 #: package/contents/ui/ExpandedRepresentation.qml:589
 #: package/contents/ui/main.qml:94
@@ -53,14 +54,14 @@ msgstr "הרצועה הקודמת"
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr "השהה"
+msgstr "השהיה"
 
 #: package/contents/ui/ExpandedRepresentation.qml:611
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr "נגן"
+msgstr "ניגון"
 
 #: package/contents/ui/ExpandedRepresentation.qml:629
 #: package/contents/ui/main.qml:110
@@ -70,28 +71,26 @@ msgid "Next Track"
 msgstr "הרצועה הבאה"
 
 #: package/contents/ui/ExpandedRepresentation.qml:652
-#, fuzzy, kde-format
-#| msgctxt "Play next track"
-#| msgid "Next Track"
+#, kde-format
 msgid "Repeat Track"
-msgstr "הרצועה הבאה"
+msgstr "חזרה על הרצועה"
 
 #: package/contents/ui/ExpandedRepresentation.qml:652
 #, kde-format
 msgid "Repeat"
-msgstr ""
+msgstr "חזרה"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
-msgstr "פתח"
+msgstr "פתיחה"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr "עצור"
+msgstr "עצירה"
 
 #: package/contents/ui/main.qml:125
 #, kde-format
@@ -102,18 +101,19 @@ msgstr "יציאה"
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Choose player automatically"
-msgstr "בחר נגן אוטומטית"
+msgstr "בחירת נגן אוטומטית"
 
 #: package/contents/ui/main.qml:292
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "על ידי %1 (מושהה)"
+msgstr ""
+"על ידי %1 (%2)\n"
+"לחיצה אמצעית להשהיה\n"
+"גלילה משנה את עוצמת השמע"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
@@ -123,28 +123,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"לחיצה אמצעית לשהיה\n"
+"גלילה משנה את עוצמת השמע"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "על ידי %1 (מושהה)"
+msgstr ""
+"על ידי %1 (מושהה, %2)\n"
+"לחיצה אמצעית לניגון\n"
+"גלילה משנה את עוצמת השמע"
 
 #: package/contents/ui/main.qml:303
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "על ידי %1 (מושהה)"
+msgstr ""
+"מושהה (%1)\n"
+"לחיצה אמצעית לנגינה\n"
+"גלילה משנה את עוצמת השמע"
 
 #~ msgid "General"
 #~ msgstr "כללי"

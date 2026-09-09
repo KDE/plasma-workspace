@@ -6,110 +6,101 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2013.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2017-05-16 06:57-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-09-08 09:15+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:23
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "התנתק"
+msgstr "התנתק;התנתקות;הינתקות;ניתוק"
 
 #: sessionrunner.cpp:26
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
-msgstr "יוצא מסביבת העבודה הנוכחית "
+msgstr "יציאה מהמערכת, סגירתת הפעלת שולחן העבודה הנוכחית"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down"
-msgstr "כיבוי"
+msgstr "כיבוי;כבה;כבי;לכבות"
 
 #: sessionrunner.cpp:36
 #, kde-format
 msgid "Turns off the computer"
-msgstr "מכבה את המחשב"
+msgstr "כיבוי המחשב"
 
 #: sessionrunner.cpp:43
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "הפעלה מחדש"
+msgstr "הפעלה מחדש;הפעל מחדש;ריבוט;ריסטארט;ריסטרט"
 
 #: sessionrunner.cpp:46
 #, kde-format
 msgid "Reboots the computer"
-msgstr "מפעיל מחדש את המחשב"
+msgstr "הפעלת המחשב מחדש"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "נעילת המסך"
+msgstr "נעילה;נעילת המסך;נעילת ההפעלה;נעל מסך"
 
 #: sessionrunner.cpp:56
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
-msgstr "נועל את ההפעלה הנוכחית ומפעיל את שומר המסך"
+msgstr "נעילת ההפעלה הנוכחית והפעלת שומר המסך"
 
 #: sessionrunner.cpp:63
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "הפעלה חדשה"
+msgstr "שמירה;שמירת הפעלה;שמירת סשן"
 
 #: sessionrunner.cpp:66
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "שמירת ההפעלה הנוכחית למטרות שחזור"
 
 #: sessionrunner.cpp:73
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "החלפת משתמש"
+msgstr "החלפת משתמש;מעבר משתמש;החלפה של משתמש"
 
 #: sessionrunner.cpp:76
 #, kde-format
 msgid "Starts a new session as a different user"
-msgstr "מתחיל הפעלה חדשה בתור משתמש אחר"
+msgstr "התחלת הפעלה חדשה בתור משתמש אחר"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "הפעלות"
@@ -117,15 +108,13 @@ msgstr "הפעלות"
 #: sessionrunner.cpp:84
 #, kde-format
 msgid "Lists all sessions"
-msgstr "הצג את כל ההפעלות"
+msgstr "הצגת כל ההפעלות"
 
 #: sessionrunner.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr "החלף"
+msgstr "החלפה"
 
 #: sessionrunner.cpp:89
 #, kde-format
@@ -133,27 +122,23 @@ msgid ""
 "Switches to the active session for the user :q:, or lists all active "
 "sessions if :q: is not provided"
 msgstr ""
-"מחליף אל ההפעלה הפעילה עבור משתמש :q:, או מציר את כל ההפעלות הפעילות אם :q: "
-"לא סופק"
+"החלפה להפעלה הפעילה עבור משתמש :q:, או הצגת את כל ההפעלות הפעילות אם :q: לא "
+"סופק"
 
 #: sessionrunner.cpp:111
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "יציאה"
 
 #: sessionrunner.cpp:121
-#, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "כיבוי"
 
 #: sessionrunner.cpp:131
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "הפעלה מחדש"
@@ -162,17 +147,15 @@ msgstr "הפעלה מחדש"
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "נעילה"
 
 #: sessionrunner.cpp:151
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "הפעלה חדשה"
+msgstr "שמירת הפעלה"
 
 #: sessionrunner.cpp:194
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgid "Switch User"
 msgstr "החלפת משתמש"
 
@@ -185,12 +168,15 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>פעולה זו תכניס אותך להפעלת שולחן עבודה חדשה.</p><p>מסך כניסה יופיע "
+"וההפעלה הנוכחית תוסתר.</p><p>אפשר לעבור בין הפעלות שולחן עבודה בעזרת:</"
+"p><ul><li>Ctrl+Alt+F{מספר ההפעלה}</li><li>חיפוש פלזמה (להקליד ‚%1’)</"
+"li><li>יישומונים של פלזמה (כגון משגר היישומים)</li></ul>"
 
 #: sessionrunner.cpp:287
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "הפעלה חדשה"
+msgstr "הפעלת שולחן עבודה חדשה"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"
