@@ -46,7 +46,10 @@ Item {
             PlasmaComponents3.ToolButton {
                 icon.name: "go-previous-view"
                 text: i18nd("klipper", "Return to Clipboard")
-                onClicked: barcodeView.stack.popCurrentItem()
+                onClicked: {
+                    barcodeView.stack.popCurrentItem()
+                    barcodeView.stack.forceActiveFocus(Qt.OtherFocusReason)
+                }
                 visible: barcodeView.showHeader
             }
 

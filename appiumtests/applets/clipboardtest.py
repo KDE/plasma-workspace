@@ -230,7 +230,7 @@ class ClipboardTest(unittest.TestCase):
         self.assertFalse(button_item.is_displayed())
 
         # In edit mode, the text area should be focused by default.
-        ActionChains(app.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
+        ActionChains(app.driver).send_keys(Keys.DOWN).send_keys(Keys.UP).perform()
         app.driver.find_element(AppiumBy.NAME, "Edit contents").click()
         app.driver.find_element(AppiumBy.NAME, "Text edit area")
         time.sleep(1)
