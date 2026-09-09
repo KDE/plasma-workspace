@@ -73,7 +73,7 @@ void SchemeEditorOptions::on_contrastPercentageSpinBox_valueChanged(double value
 {
     // Convert the old value to something between 1 to 10
     KConfigGroup group(m_config, u"KDE"_s);
-    group.writeEntry("Contrast", qRound(value / 10.0));
+    group.writeEntry("contrast", qRound(value / 10.0));
 
     // We need to make sure we always write a double
     group.writeEntry("frameContrast", qreal(value / 100.0));
