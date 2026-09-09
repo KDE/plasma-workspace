@@ -35,7 +35,7 @@ msgstr "Impossible de créer un fichier temporaire."
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
-msgstr "Impossible de télécharger l’archive du thème de sons : %1"
+msgstr "Impossible de télécharger l'archive du thème de sons : %1"
 
 #: kcm_soundtheme.cpp:271
 #, kde-format
