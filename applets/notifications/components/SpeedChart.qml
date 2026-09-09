@@ -94,7 +94,8 @@ Item {
                     bottom: chart.bottom
                 }
 
-                width: metricsLabel.implicitWidth
+                width: Math.max(metricsLabel.implicitWidth, axisLabels.implicitWidth)
+                alignment: Qt.AlignLeft | Qt.AlignVCenter
                 constrainToBounds: false
                 direction: ChartsControls.AxisLabels.VerticalBottomTop
 
