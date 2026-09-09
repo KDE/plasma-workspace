@@ -45,7 +45,7 @@ BaseDelegate {
     Components.Body {
         id: bodyLabel
         Layout.fillWidth: true
-        Layout.row: summary.visible ? 2 : 1
+        Layout.row: 2
         Layout.column: 0
         visible: delegateRoot.hasBodyText
         modelInterface: delegateRoot.modelInterface
