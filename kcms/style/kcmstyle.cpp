@@ -222,19 +222,25 @@ void KCMStyle::uninstallUnionStyles(const QStringList &styleIds)
         if (uninstalled.empty()) {
             message = i18nc("@info:status", "Could not uninstall styles:\n");
         } else {
-            message = i18ncp("@info:status",
-                             "Successfully uninstalled “%2” but could not uninstall others:\n",
-                             "Successfully uninstalled %1 styles but could not uninstall others:\n",
-                             uninstalled.size(),
-                             uninstalled.first());
+            if (uninstalled.size() == 1) {
+                message = i18nc("@info:status", "Successfully uninstalled “%1” but could not uninstall others:\n", uninstalled.first());
+            } else {
+                message = i18ncp("@info:status",
+                                 "Successfully uninstalled %1 style but could not uninstall others:\n",
+                                 "Successfully uninstalled %1 styles but could not uninstall others:\n",
+                                 uninstalled.size());
+            }
         }
         for (const auto &error : errors) {
             message.append(u"- %1\n"_s.arg(error));
         }
         showErrorMessage(message);
     } else {
-        showInfoMessage(
-            i18ncp("@info:status", "Successfully uninstalled “%2”.", "Successfully uninstalled %1 styles.", uninstalled.size(), uninstalled.first()));
+        if (uninstalled.size() == 1) {
+            showInfoMessage(i18nc("@info:status", "Successfully uninstalled “%1”.", uninstalled.first()));
+        } else {
+            showInfoMessage(i18ncp("@info:status", "Successfully uninstalled %1 style", "Successfully uninstalled %1 styles.", uninstalled.size()));
+        }
     }
 }
 
