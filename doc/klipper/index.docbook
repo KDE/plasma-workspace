@@ -11,27 +11,10 @@
 <bookinfo>
 <title>The &klipper; Handbook </title>
 
-<authorgroup>
-<author>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
-
-<othercredit role="developer">
-&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;
-<!-- <contrib>Developer</contrib> -->
-</othercredit>
-
-<!-- TRANS:ROLES_OF_TRANSLATORS -->
-
-</authorgroup>
-
-<copyright>
-<year>2000-2003</year>
-<holder>&Philip.Rodrigues;</holder>
-</copyright>
-
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2022-05-05</date>
-<releaseinfo>Plasma 5.25</releaseinfo>
+<date>2026-09-09</date>
+<releaseinfo>Plasma 6.8</releaseinfo>
 
 <abstract>
 <para>&klipper; is the &plasma; clipboard cut &amp; paste utility.</para>
@@ -44,14 +27,12 @@
 <keyword>clipboard</keyword>
 </keywordset>
 </bookinfo>
-<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
 <title>Introduction</title>
 <para>&klipper; is the &plasma; clipboard utility. It stores clipboard
 history, and allows you to link clipboard contents to application
 actions. Please report any problems or feature requests to <ulink
-url="http://bugs.kde.org">KDEs bugzilla</ulink>.</para>
-
+url="http://bugs.kde.org">KDE’s Bugtracking System</ulink>.</para>
 </chapter>
 
 <chapter id="using-klipper">
@@ -59,9 +40,9 @@ url="http://bugs.kde.org">KDEs bugzilla</ulink>.</para>
 
 <sect1 id="basic-usage">
 <title>Basic Usage</title>
-<para>You can use &klipper; in the systemtray either as &plasma; widget or classic application.
+<para>You can use &klipper; in the system tray either as a &plasma; widget or classic application.
 Both share the same functionality but have a different &GUI; and show the last item of the history
-when hovering the &klipper; icon in the systemtray:
+when hovering the &klipper; icon in the system tray:
 </para>
 
 <screenshot>
@@ -76,10 +57,8 @@ when hovering the &klipper; icon in the systemtray:
 </mediaobject>
 </screenshot>
 
-<para>The &klipper; widget is hidden if the clipboard is empty.</para>
-
 <para>To display the clipboard history, click on the &klipper; icon in
-the systemtray.</para>
+the system tray.</para>
 
 <sect2 id="klipper-widget">
 <title>&klipper; Widget</title>
@@ -95,14 +74,14 @@ the systemtray.</para>
 </mediaobject>
 </screenshot>
 
+<!-- TODO: Document starred functionality -->
 <para>Hover an entry with the mouse pointer and four icons appear which enable you to
 invoke an action, show the barcode, edit the content or remove the entry from the history.
 Use &spectacle; to capture the barcodes and save them.
 </para>
 
-<para>You can search through the clipboard history by opening it
-(click on &klipper;) and typing your query. The results are updated as
-you type. To clear the clipboard history click on the icon at the right of
+<para>You can search through the clipboard history by typing your query into the search field.
+The results are updated as you type. To clear the clipboard history, click on the icon at the right of
 the search field.
 </para>
 
@@ -160,10 +139,10 @@ the appropriate pop-up menu.</para>
 <title>General</title>
 <para>
 &klipper; can be used to set the behavior of the clipboard and selection in
-&plasma;.
+&plasma;. To adjust their behaviour, see <xref linkend="general-page"/>.
 </para>
 
-<note><para>The &X-Window; uses two separate clipboard buffers: the
+<note><para>There are two separate clipboard buffers: the
 <quote>selection</quote> and the <quote>clipboard</quote>. Text is
 placed in the selection buffer by simply selecting it, and can be
 pasted with the middle mouse button. To place text in
@@ -174,38 +153,8 @@ clipboard buffer is pasted using <keycombo>&Ctrl;<keycap>V</keycap>
 </keycombo> or by selecting <guimenuitem>Paste</guimenuitem>
 in a context menu.</para>
 </note>
-
 </sect2>
-
-<sect2 id="changing-clipboard-modes">
-<title>Changing Clipboard/Selection Behavior</title>
-<para>
-In order to change clipboard/selection behavior, select
-<guimenuitem>Configure Clipboard...</guimenuitem> from the &klipper; context menu,
-and in the dialog box that appears, select the
-<guilabel>General</guilabel> page. Unchecking <guilabel>Selection and Clipboard</guilabel> makes the clipboard and selection function as completely
-separate buffers as described above. With this option set, the option
-<guilabel>Ignore</guilabel> will prevent &klipper; from
-including the contents of the selection in its clipboard history and from
-performing actions on the contents of the selection. Selecting
-<guilabel>Selection and Clipboard</guilabel>
-causes the clipboard and selection buffers to always be the same, meaning that
-text in the selection can be pasted with either the
-<mousebutton>middle</mousebutton> mouse button or the key combination <keycombo>&Ctrl;<keycap>V</keycap>
-</keycombo>, and similarly for text in the clipboard buffer.
-</para>
-
- <!-- The
-<guilabel>Synchronize contents of the clipboard and the
-selection</guilabel> check box determines the clipboard mode. If the box is
-selected, the clipboard functions in the &UNIX; mode; if not, the
-&Windows;/&Mac; mode is used. -->
-
-</sect2>
-
-
 </sect1>
-
 </chapter>
 
 <chapter id="preferences">
@@ -213,54 +162,48 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 
 <sect1 id="general-page">
 <title>General Options</title>
+<note><para>
+Options bellow distinguish between <emphasis>selection</emphasis>
+and <emphasis>clipboard</emphasis>. To understand the difference,
+see <xref linkend="clipboard-modes"/>.
+</para></note>
+
 
 <variablelist>
 
-<varlistentry><term><guilabel>Selection and Clipboard</guilabel></term>
-<listitem><para>When text or an area of the screen is highlighted with the mouse or
-keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using
-the middle mouse button.</para><para>If the selection is explicitly copied
-using a <guimenuitem>Copy</guimenuitem> or <guimenuitem>Cut</guimenuitem> action, it
-is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a
-<guimenuitem>Paste</guimenuitem> action.</para><para>When turned on this option
-keeps the selection and the clipboard the same, so that any selection is
+<varlistentry><term><guilabel>Clipboard history: Save history across desktop sessions</guilabel></term>
+<listitem><para>Toggles whether clipboard history is preserved when
+you log off or  shut down the computer.</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>History size</guilabel></term>
+<listitem><para>Sets the number of items that are stored
+in the clipboard history. The value can be between 1 and 2048.</para></listitem>
+</varlistentry>
+
+<varlistentry><term><guilabel>Selection and Clipboard: Keep the selection and clipboard the same</guilabel></term>
+<listitem><para>When checked, this option
+keeps the selection and the clipboard the same, so that any selection or clipboard is
 immediately available to paste by any means. If it is turned off, the
 selection may still be saved in the clipboard history (subject to the
-options below), but it can only be pasted using the middle mouse button.</para></listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Clipboard history</guilabel></term>
-<listitem><para>Toggles clipboard history.</para></listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Number of entries</guilabel></term>
-<listitem><para>Sets the number of items that are stored
-in the clipboard history.</para></listitem>
+options below), but it can only be pasted using the middle mouse button.
+</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Text selection</guilabel></term>
-<listitem><para>When an area of the screen is selected with mouse or keyboard, this is
-called the <quote>selection</quote>. This option determines whether text selections are
-saved in the clipboard history. It is possible to choose between <guilabel>Always save
-in history</guilabel> and <guilabel>Only when explicitly copied</guilabel>. The
-<guilabel>Always save in history</guilabel> option is not available if
-selection/clipboard synchronisation is turned off &dash; in this
-case the selection is never automatically saved in the clipboard history.
-See <xref linkend="clipboard-modes"/>.
+<term><guilabel>Include in history: Text selected with the pointer or keyboard</guilabel></term>
+<listitem><para>When checked, selection is saved into history. Clipboard is always saved.
 </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Non-text selection</guilabel></term>
-<listitem><para>This option determines whether non-text selections (such as images) are
-saved in the clipboard history. It is possible to choose between <guilabel>Always save
-in history</guilabel>, <guilabel>Only when explicitly copied</guilabel>, and
-<guilabel>Never save in history</guilabel>. The <guilabel>Always save in
-history</guilabel> option is not available if selection/clipboard synchronisation
-is turned off &dash; in this case the selection is never automatically saved in the
-clipboard history. See <xref linkend="clipboard-modes"/>.
+<term><guilabel>Include in history: Image data copied explicitly</guilabel></term>
+<listitem><para>When checked, images copied as data — layers and
+selections copied in an image editor, for example — are saved in the clipboard
+history. Image files copied from a file manager are always saved. In the history,
+they appear as images, but those are only previews, underneath they are just filenames.
+Screenshots saved by &spectacle; will also be saved when configured so there.
 </para>
 </listitem>
 </varlistentry>
@@ -406,9 +349,7 @@ Program copyright 1998 &Andrew.Stanley-Jones; <email>asj@cban.com</email>
 <para>
 Program copyright 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
 <para>
-Currently maintained by Esben Mose Hansen. See <ulink
-url="http://mosehansen.dk/about">http://mosehansen.dk/about</ulink>
-for contact details.
+Currently maintained by KDE &plasma; developers.
 </para>
 
 <para>
@@ -420,7 +361,6 @@ Documentation copyright 2000-2003, 2005 &Philip.Rodrigues;
 &underGPL;
 
 </chapter>
-
 
 &documentation.index;
 
