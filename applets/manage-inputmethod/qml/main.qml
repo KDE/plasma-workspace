@@ -153,7 +153,7 @@ PlasmoidItem {
                 root.Plasmoid.icon: "input-keyboard-virtual-show-symbolic"
                 root.Plasmoid.status: Keyboards.KWinVirtualKeyboard.willShowOnActive ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
                 root.toolTipMainText: root.title
-                root.toolTipSubText: i18ndc("plasma_applet_org.kde.plasma.manageinputmethod", "@info:tooltip Hardware emulation mode means it acts like a regular dumb keyboard (no input-method features like preedit/word suggestions/etc)", "No supported text text field is currently active\nClick or tap to show in hardware keyboard emulation mode.")
+                root.toolTipSubText: i18ndc("plasma_applet_org.kde.plasma.manageinputmethod", "@info:tooltip Hardware emulation mode means it acts like a regular dumb keyboard (no input-method features like preedit/word suggestions/etc)", "No supported text field is currently active\nClick or tap to show in hardware keyboard emulation mode.")
             }
         },
         State {
