@@ -212,7 +212,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 endif()
 
 find_package(Qt6WaylandClient COMPONENTS Private)
-find_package(PlasmaWaylandProtocols 1.21.0 REQUIRED)
+find_package(PlasmaWaylandProtocols 1.22.0 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
 
 if(FONTCONFIG_FOUND)
