@@ -138,7 +138,7 @@ the appropriate pop-up menu.</para>
 <title>General</title>
 <para>
 &klipper; can be used to set the behavior of the clipboard and selection in
-&plasma;. To adjust their behaviour, see <xref linkend="general-page"/>.
+&plasma;. To adjust their behavior, see <xref linkend="general-page"/>.
 </para>
 
 <note><para>There are two separate clipboard buffers: the
@@ -162,7 +162,7 @@ in a context menu.</para>
 <sect1 id="general-page">
 <title>General Options</title>
 <note><para>
-Options bellow distinguish between <emphasis>selection</emphasis>
+Options below distinguish between <emphasis>selection</emphasis>
 and <emphasis>clipboard</emphasis>. To understand the difference,
 see <xref linkend="clipboard-modes"/>.
 </para></note>
