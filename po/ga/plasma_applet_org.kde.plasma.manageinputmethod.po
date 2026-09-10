@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-14 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -18,38 +18,81 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: qml/main.qml:70
+#: qml/main.qml:20
+#, kde-format
+msgid "On-Screen Keyboard"
+msgstr ""
+
+#: qml/main.qml:77
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Disabled"
+msgstr ""
+
+#: qml/main.qml:88
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch and Tablet"
+msgstr ""
+
+#: qml/main.qml:99
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch, Tablet, Mouse, and Touchpad"
+msgstr ""
+
+#: qml/main.qml:116
 #, kde-format
 msgctxt "Opens the system settings module"
-msgid "Configure Virtual Keyboards..."
+msgid "Configure On-Screen Keyboards…"
 msgstr ""
 
-#: qml/main.qml:87
+#: qml/main.qml:133
 #, kde-format
-msgid "Virtual Keyboard: unavailable"
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard: unavailable\n"
+"Click or tap to configure on-screen keyboard settings"
 msgstr ""
 
-#: qml/main.qml:96
+#: qml/main.qml:143
 #, kde-format
-msgid "Virtual Keyboard: disabled"
+msgctxt "@info:tooltip"
+msgid ""
+"Configured not to show automatically\n"
+"Click or tap to configure on-screen keyboard settings"
 msgstr ""
 
-#: qml/main.qml:108
+#: qml/main.qml:156
 #, kde-format
-msgid "Show Virtual Keyboard"
+msgctxt ""
+"@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+"keyboard (no input-method features like preedit/word suggestions/etc)"
+msgid ""
+"No supported text text field is currently active\n"
+"Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
 
-#: qml/main.qml:119
+#: qml/main.qml:167
 #, kde-format
-msgid "Virtual Keyboard: visible"
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard is visible\n"
+"Click or tap to hide the on-screen keyboard."
 msgstr ""
 
-#: qml/main.qml:128
+#: qml/main.qml:177
 #, kde-format
-msgid "Virtual Keyboard: Show on non-mouse input"
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when tapping a text field\n"
+"Tap to configure on-screen keyboard settings"
 msgstr ""
 
-#: qml/main.qml:137
+#: qml/main.qml:187
 #, kde-format
-msgid "Virtual Keyboard: Show with all input devices"
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when interacting with a text field\n"
+"Click or tap to configure on-screen keyboard settings"
 msgstr ""

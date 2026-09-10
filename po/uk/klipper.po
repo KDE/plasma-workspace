@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2026-08-26 08:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:83
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Журнал буфера даних:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:89
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -38,13 +38,26 @@ msgstr[1] "%v записи"
 msgstr[2] "%v записів"
 msgstr[3] "%v запис"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:98
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Вибір і буфер даних:"
 
-#: configdialog.cpp:107
-#, kde-kuit-format
+#: configdialog.cpp:105
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "When text or an area of the screen is highlighted with the mouse or "
+#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
+#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
+#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
+#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
+#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
+#| "on this option keeps the selection and the clipboard the same, so that "
+#| "any selection is immediately available to paste by any means. If it is "
+#| "turned off, the selection may still be saved in the clipboard history "
+#| "(subject to the options below), but it can only be pasted using the "
+#| "middle mouse button."
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -52,11 +65,11 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
 "Підсвічування тексту або області на екрані за допомогою миші або клавіатури "
 "називається <emphasis>позначенням або вибором</emphasis>. Позначене можна "
@@ -71,53 +84,54 @@ msgstr ""
 "визначається пунктами нижче), але вставити його можна буде лише за допомогою "
 "клацання середньою кнопкою миші."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:124
 #, kde-format
-msgid "Always save in history"
+msgid "Text selected with the pointer or keyboard"
+msgstr ""
+
+#: configdialog.cpp:126
+#, fuzzy, kde-format
+#| msgid "Always save in history"
+msgid "Include in history:"
 msgstr "Завжди зберігати до журналу"
 
-#: configdialog.cpp:140
-#, kde-format
-msgid "Text selection:"
-msgstr "Вибір тексту:"
-
-#: configdialog.cpp:142 configdialog.cpp:180
-#, kde-format
-msgid "Only when explicitly copied"
-msgstr "Лише при явному копіюванні"
-
-#: configdialog.cpp:147
-#, kde-format
-msgid "Whether text selections are saved in the clipboard history."
-msgstr ""
-"Визначає, чи слід зберігати позначені фрагменти тексту до журналу буфера "
-"обміну даними."
-
-#: configdialog.cpp:178
-#, kde-format
-msgid "Non-text selection:"
-msgstr "Нетекстовий вибір:"
-
-#: configdialog.cpp:185
-#, kde-format
-msgid "Never save in history"
-msgstr "Ніколи не зберігати до журналу"
-
-#: configdialog.cpp:190
+#: configdialog.cpp:128
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
+"Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
-"Визначає, чи зберігатимуться у журналі буфера обміну даними нетекстові "
-"позначені елементи (зокрема зображення)."
 
-#: configdialog.cpp:252
+#: configdialog.cpp:133
+#, kde-format
+msgid "Image data copied explicitly"
+msgstr ""
+
+#: configdialog.cpp:137
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+
+#: configdialog.cpp:146
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+
+#: configdialog.cpp:171
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Показ контекстного меню дій:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:181
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -133,7 +147,7 @@ msgstr ""
 "або меню не буде показано для виключеного вікна, відкрити меню можна буде за "
 "допомогою клавіатурного скорочення <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:274
+#: configdialog.cpp:193
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -143,57 +157,45 @@ msgstr[1] "%v секунди"
 msgstr[2] "%v секунд"
 msgstr[3] "%v секунда"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:194
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Немає"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:203
 #, kde-format
 msgid "Options:"
 msgstr "Параметри:"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-"Коли <interface>взірець відповідності</interface> збігається із вмістом "
-"буфера обміну даними, його <interface>команди</interface> з'являться у "
-"контекстному меню Klipper, і їх можна буде виконати."
-
-#: configdialog.cpp:318
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Взірець відповідності і команди"
 
-#: configdialog.cpp:318
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Опис"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:234
 #, kde-format
 msgid "Add Action..."
 msgstr "Додати дію..."
 
-#: configdialog.cpp:328
+#: configdialog.cpp:238
 #, kde-format
 msgid "Edit Action..."
 msgstr "Змінити дію..."
 
-#: configdialog.cpp:333
+#: configdialog.cpp:243
 #, kde-format
 msgid "Delete Action"
 msgstr "Вилучити дію"
 
-#: configdialog.cpp:340
+#: configdialog.cpp:250
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -203,7 +205,7 @@ msgstr ""
 "Ці пункти дій з'являться у контекстному меню, яке можна налаштувати за "
 "допомогою сторінки <interface>Меню дій</interface>."
 
-#: configdialog.cpp:535
+#: configdialog.cpp:445
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -211,51 +213,51 @@ msgid ""
 "commands?"
 msgstr "Вилучити позначену дію <resource>%1</resource><nl/>і усі її команди?"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:446
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Підтвердження вилучення дії"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:499
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Загальне"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:499
 #, kde-format
 msgid "General Configuration"
 msgstr "Загальне налаштування"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:500
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Меню дій"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:500
 #, kde-format
 msgid "Action Menu"
 msgstr "Меню дій"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:501
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Налаштування дій"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:501
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Налаштування дій"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:508
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Скорочення"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:508
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Налаштування скорочень"
@@ -265,69 +267,69 @@ msgstr "Налаштування скорочень"
 msgid "Return to Clipboard"
 msgstr "Повернути до буфера обміну"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Копіювати"
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Зображення QR-коду було скопійовано до буфера обміну даними"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Скопіювати зображення QR-коду до буфера обміну даними"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr "QR-код"
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:165
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "Недостатньо місця для показу QR-коду. Спробуйте змінити розміри цього аплету."
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:165
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не вдалося створити QR-код"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Згорнути"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Розгорнути"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:288
 #, kde-format
 msgid "Clear History"
 msgstr "Спорожнити журнал"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:343
 #, kde-format
 msgid "All History"
 msgstr "Увесь журнал"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "Starred Only"
 msgstr "Лише з зірками"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -337,18 +339,18 @@ msgstr ""
 "У буфері обміну зберігаються конфіденційні дані, які не буде збережено у "
 "журналі дій."
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Вилучити закриті дані"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:478
 #, kde-format
 msgid "No matches"
 msgstr "Немає відповідників"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:478
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Кишеня порожня"
@@ -553,13 +555,18 @@ msgid "Command:"
 msgstr "Команда:"
 
 #: editcommanddialog.cpp:73
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
+#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
+#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
+#| "corresponding captured texts from the match pattern."
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
 "<placeholder>&#37;s</placeholder> у команді буде замінено на повний вміст "
 "буфера обміну даними. Записи від <placeholder>&#37;0</placeholder> до "
@@ -743,125 +750,121 @@ msgstr "Підтримувати синхронізацію позначення
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Content selected with the cursor is automatically copied to the clipboard "
+#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
+#| "><a href=\"1\">More about the selection and clipboard</a>."
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 "Дані, які позначено за допомогою курсора, автоматично копіюються до буфера "
 "обміну, тому їх можна вставляти і за допомогою пункту «Вставити», і за "
 "допомогою клацання середньою кнопкою миші.<br/><a href=\"1\">Докладніше про "
 "позначення і буфер обміну</a>."
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, kde-format
-msgid "Ignore the selection"
+#, fuzzy, kde-format
+#| msgid "Ignore the selection"
+msgid "Save the selection"
 msgstr "Ігнорувати вибір"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Content selected with the cursor but not explicitly copied to the "
+#| "clipboard is not automatically stored in the clipboard history, and can "
+#| "only be pasted using a middle-click."
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
 "Дані, які позначено за допомогою курсора, але не скопійовано явними чином до "
 "буфера обміну, не зберігаються автоматично у журналі буфера обміну. Вставити "
 "їх можна лише за допомогою клацання середньою кнопкою миші."
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
-msgid "Text selection only"
-msgstr "Лише позначений фрагмент"
+msgid "Save images"
+msgstr ""
 
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
+#, fuzzy, kde-format
+#| msgid "Whether text selections are saved in the clipboard history."
+msgid "Store images in the clipboard history."
 msgstr ""
-"Зберігати у журналі буфера обміну даними лише позначення тексту, а не "
-"зображень або даних інших типів."
-
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr "Завжди ігнорувати зображення"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
-"Не зберігати зображення у журналі буфера обміну даними, навіть при явному "
-"копіюванні."
+"Визначає, чи слід зберігати позначені фрагменти тексту до журналу буфера "
+"обміну даними."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:42
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Одразу після позначення"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:43
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "Показувати контекстне меню відповідних дій щойно буде щось позначено."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:47
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Проміжок часу показу меню автоматичних дій:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:51
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr ""
 "Показувати контекстне меню автоматичних дій протягом вказаного проміжку часу."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:54
 #, kde-format
 msgid "History size:"
 msgstr "Розмір журналу:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:58
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
 "У журналі буфера обміну зберігатиметься не більше вказаної кількості записів."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
+#: klipper.kcfg:61
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Запис-шаблон для позначення змін у віджеті дерева дій"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
-#, kde-format
-msgid "Trim whitespace from selection"
+#: klipper.kcfg:71
+#, fuzzy, kde-format
+#| msgid "Trim whitespace from selection"
+msgid "Trim whitespace"
 msgstr "Обрізати пробіли з країв позначеного"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
-#, kde-format
+#: klipper.kcfg:73
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remove any whitespace from the start and end of selected text, before "
+#| "performing an action. For example, this ensures that a URL pasted in a "
+#| "browser is interpreted as expected. The text saved on the clipboard is "
+#| "not affected."
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
 msgstr ""
 "Вилучати пробіли на початку і у кінці позначеного тексту, перш ніж "
 "виконувати якусь дію. Наприклад, таким чином можна забезпечити належну "
@@ -869,13 +872,13 @@ msgstr ""
 "текст, який буде збережено до буфера обміну даними, лишатиметься незмінним."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:76
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Для вибраного запису з журналу"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -885,30 +888,87 @@ msgstr ""
 "даних вибрано запис."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:81
 #, kde-format
-msgid "Include MIME actions"
-msgstr "Включити дії, засновані на типі MIME"
+msgid "Offer applications for copied links and files"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:83
 #, kde-format
 msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
 msgstr ""
-"Якщо позначено назву або адресу файла, включити дані щодо програм, які "
-"можуть обробляти відповідний тип MIME до записів у контекстному меню."
 
 #: klipperpopup.cpp:38
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Контекстна панель буфера даних"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасувати"
+
+#~ msgid "Text selection:"
+#~ msgstr "Вибір тексту:"
+
+#~ msgid "Only when explicitly copied"
+#~ msgstr "Лише при явному копіюванні"
+
+#~ msgid "Non-text selection:"
+#~ msgstr "Нетекстовий вибір:"
+
+#~ msgid "Never save in history"
+#~ msgstr "Ніколи не зберігати до журналу"
+
+#~ msgid ""
+#~ "Whether non-text selections (such as images) are saved in the clipboard "
+#~ "history."
+#~ msgstr ""
+#~ "Визначає, чи зберігатимуться у журналі буфера обміну даними нетекстові "
+#~ "позначені елементи (зокрема зображення)."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When a <interface>match pattern</interface> matches the clipboard "
+#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
+#~ "menu and can be executed."
+#~ msgstr ""
+#~ "Коли <interface>взірець відповідності</interface> збігається із вмістом "
+#~ "буфера обміну даними, його <interface>команди</interface> з'являться у "
+#~ "контекстному меню Klipper, і їх можна буде виконати."
+
+#~ msgid "Text selection only"
+#~ msgstr "Лише позначений фрагмент"
+
+#~ msgid ""
+#~ "Only store text selections in the clipboard history, not images or any "
+#~ "other type of data."
+#~ msgstr ""
+#~ "Зберігати у журналі буфера обміну даними лише позначення тексту, а не "
+#~ "зображень або даних інших типів."
+
+#~ msgid "Always ignore images"
+#~ msgstr "Завжди ігнорувати зображення"
+
+#~ msgid ""
+#~ "Do not store images in the clipboard history, even if explicitly copied."
+#~ msgstr ""
+#~ "Не зберігати зображення у журналі буфера обміну даними, навіть при явному "
+#~ "копіюванні."
+
+#~ msgid "Include MIME actions"
+#~ msgstr "Включити дії, засновані на типі MIME"
+
+#~ msgid ""
+#~ "If a file name or URL is selected, include applications that can accept "
+#~ "its MIME type in the popup menu."
+#~ msgstr ""
+#~ "Якщо позначено назву або адресу файла, включити дані щодо програм, які "
+#~ "можуть обробляти відповідний тип MIME до записів у контекстному меню."
 
 #~ msgid "The clipboard history contains starred items. Clear them too?"
 #~ msgstr "У журналі буфера обміну містяться записи із зірками. Вилучити і їх?"

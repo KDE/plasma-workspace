@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-14 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2026-05-14 11:34+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -17,43 +17,106 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 26.04.1\n"
 
-#: qml/main.qml:70
+#: qml/main.qml:20
 #, kde-format
+msgid "On-Screen Keyboard"
+msgstr ""
+
+#: qml/main.qml:77
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Disabled"
+msgstr ""
+
+#: qml/main.qml:88
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch and Tablet"
+msgstr ""
+
+#: qml/main.qml:99
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch, Tablet, Mouse, and Touchpad"
+msgstr ""
+
+#: qml/main.qml:116
+#, fuzzy, kde-format
+#| msgctxt "Opens the system settings module"
+#| msgid "Configure Virtual Keyboards..."
 msgctxt "Opens the system settings module"
-msgid "Configure Virtual Keyboards..."
+msgid "Configure On-Screen Keyboards…"
 msgstr "Configura le tastiere virtuali..."
 
-#: qml/main.qml:87
+#: qml/main.qml:133
 #, kde-format
-msgid "Virtual Keyboard: unavailable"
-msgstr "Tastiera virtuale: non disponibile"
-
-#: qml/main.qml:96
-#, kde-format
-msgid "Virtual Keyboard: disabled"
-msgstr "Tastiera virtuale: disabilitata"
-
-#: qml/main.qml:108
-#, kde-format
-msgid "Show Virtual Keyboard"
-msgstr "Mostra la tastiera virtuale"
-
-#: qml/main.qml:119
-#, kde-format
-msgid "Virtual Keyboard: visible"
-msgstr "Tastiera virtuale: visibile"
-
-#: qml/main.qml:128
-#, kde-format
-msgid "Virtual Keyboard: Show on non-mouse input"
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard: unavailable\n"
+"Click or tap to configure on-screen keyboard settings"
 msgstr ""
-"Tastiera virtuale: mostrala quando si utilizza un dispositivo diverso dal "
-"mouse."
 
-#: qml/main.qml:137
+#: qml/main.qml:143
 #, kde-format
-msgid "Virtual Keyboard: Show with all input devices"
-msgstr "Tastiera virtuale: mostrala con tutti i dispositivi di immissione"
+msgctxt "@info:tooltip"
+msgid ""
+"Configured not to show automatically\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+
+#: qml/main.qml:156
+#, kde-format
+msgctxt ""
+"@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+"keyboard (no input-method features like preedit/word suggestions/etc)"
+msgid ""
+"No supported text text field is currently active\n"
+"Click or tap to show in hardware keyboard emulation mode."
+msgstr ""
+
+#: qml/main.qml:167
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard is visible\n"
+"Click or tap to hide the on-screen keyboard."
+msgstr ""
+
+#: qml/main.qml:177
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when tapping a text field\n"
+"Tap to configure on-screen keyboard settings"
+msgstr ""
+
+#: qml/main.qml:187
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when interacting with a text field\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+
+#~ msgid "Virtual Keyboard: unavailable"
+#~ msgstr "Tastiera virtuale: non disponibile"
+
+#~ msgid "Virtual Keyboard: disabled"
+#~ msgstr "Tastiera virtuale: disabilitata"
+
+#~ msgid "Show Virtual Keyboard"
+#~ msgstr "Mostra la tastiera virtuale"
+
+#~ msgid "Virtual Keyboard: visible"
+#~ msgstr "Tastiera virtuale: visibile"
+
+#~ msgid "Virtual Keyboard: Show on non-mouse input"
+#~ msgstr ""
+#~ "Tastiera virtuale: mostrala quando si utilizza un dispositivo diverso dal "
+#~ "mouse."
+
+#~ msgid "Virtual Keyboard: Show with all input devices"
+#~ msgstr "Tastiera virtuale: mostrala con tutti i dispositivi di immissione"
 
 #~ msgid "Virtual Keyboard: enabled"
 #~ msgstr "Tastiera virtuale: abilitata"

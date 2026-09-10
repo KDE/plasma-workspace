@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:83
 #, kde-format
 msgid "Clipboard history:"
 msgstr "क्लिपबोर्ड इतिहासः :"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:89
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -32,13 +32,26 @@ msgid_plural "%v entries"
 msgstr[0] "%v प्रविष्टिः"
 msgstr[1] "%v प्रविष्टयः"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:98
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "चयनं तथा क्लिप्बोर्डः :"
 
-#: configdialog.cpp:107
-#, kde-kuit-format
+#: configdialog.cpp:105
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:tooltip"
+#| msgid ""
+#| "When text or an area of the screen is highlighted with the mouse or "
+#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
+#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
+#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
+#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
+#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
+#| "on this option keeps the selection and the clipboard the same, so that "
+#| "any selection is immediately available to paste by any means. If it is "
+#| "turned off, the selection may still be saved in the clipboard history "
+#| "(subject to the options below), but it can only be pasted using the "
+#| "middle mouse button."
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -46,11 +59,11 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
 "यदा मूषकेन कीबोर्डेन वा पाठः अथवा पटलस्य क्षेत्रं प्रकाशितं भवति तदा एतत् <emphasis>चयनं</"
 "emphasis> भवति । मध्यमूषकस्य बटनस्य उपयोगेन चिनोतुं शक्यते ।<nl/><nl/>यदि चयनं स्पष्टतया "
@@ -62,49 +75,54 @@ msgstr ""
 "इतिहासस्य मध्ये रक्षितं भवितुम् अर्हति (अधः विकल्पानाम् अधीनम्), परन्तु केवलं मध्यमूषकस्य "
 "बटनस्य उपयोगेन एव चिनोतुं शक्यते ।"
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:124
 #, kde-format
-msgid "Always save in history"
+msgid "Text selected with the pointer or keyboard"
+msgstr ""
+
+#: configdialog.cpp:126
+#, fuzzy, kde-format
+#| msgid "Always save in history"
+msgid "Include in history:"
 msgstr "इतिहासे सर्वदा रक्षन्तु"
 
-#: configdialog.cpp:140
-#, kde-format
-msgid "Text selection:"
-msgstr "पाठचयनम् :"
-
-#: configdialog.cpp:142 configdialog.cpp:180
-#, kde-format
-msgid "Only when explicitly copied"
-msgstr "केवलं यदा स्पष्टतया प्रतिलिपितः भवति"
-
-#: configdialog.cpp:147
-#, kde-format
-msgid "Whether text selections are saved in the clipboard history."
-msgstr "पाठचयनं क्लिप्बोर्ड-इतिहासस्य मध्ये रक्षितम् अस्ति वा ।"
-
-#: configdialog.cpp:178
-#, kde-format
-msgid "Non-text selection:"
-msgstr "अपाठचयनम् :"
-
-#: configdialog.cpp:185
-#, kde-format
-msgid "Never save in history"
-msgstr "इतिहासे कदापि न रक्षन्तु"
-
-#: configdialog.cpp:190
+#: configdialog.cpp:128
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
-msgstr "अपाठचयनं (चित्रम् इत्यादयः) क्लिप्बोर्ड-इतिहासस्य मध्ये रक्षिताः सन्ति वा ।"
+"Text copied explicitly is always saved unless it is marked as a password."
+msgstr ""
 
-#: configdialog.cpp:252
+#: configdialog.cpp:133
+#, kde-format
+msgid "Image data copied explicitly"
+msgstr ""
+
+#: configdialog.cpp:137
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+
+#: configdialog.cpp:146
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+
+#: configdialog.cpp:171
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "क्रिया-पॉपअप-मेनू दर्शयतु:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:181
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -119,7 +137,7 @@ msgstr ""
 "भवति, अथवा बहिष्कृतविण्डो कृते न दर्शितं, तर्हि <shortcut>%1</shortcut> कीलशॉर्टकट् "
 "इत्यस्य उपयोगेन दर्शयितुं शक्यते ।"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:193
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -127,57 +145,45 @@ msgid_plural "%v seconds"
 msgstr[0] "%v द्वितीयः"
 msgstr[1] "%v सेकण्ड्"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:194
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "न कश्चित्"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:203
 #, kde-format
 msgid "Options:"
 msgstr "विकल्पाः :"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-"यदा <interface>match pattern</interface> क्लिप्बोर्ड् सामग्रीभिः सह मेलनं करोति तदा "
-"तस्य <interface>आदेशाः</interface> Klipper popup मेन्यू मध्ये दृश्यन्ते, तेषां कार्यान्वयनं "
-"कर्तुं शक्यते ।"
-
-#: configdialog.cpp:318
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "प्रतिमानं आदेशानां च मेलनं कुर्वन्तु"
 
-#: configdialog.cpp:318
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "वर्णनम्‌"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:234
 #, kde-format
 msgid "Add Action..."
 msgstr "Add Action..."
 
-#: configdialog.cpp:328
+#: configdialog.cpp:238
 #, kde-format
 msgid "Edit Action..."
 msgstr "सम्पादयतु क्रिया..."
 
-#: configdialog.cpp:333
+#: configdialog.cpp:243
 #, kde-format
 msgid "Delete Action"
 msgstr "Delete Action इति"
 
-#: configdialog.cpp:340
+#: configdialog.cpp:250
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -187,7 +193,7 @@ msgstr ""
 "एतानि क्रियाणि पॉपअप मेन्यू मध्ये दृश्यन्ते ये <interface>Action Menu</interface> पृष्ठे "
 "विन्यस्तुं शक्यन्ते ।"
 
-#: configdialog.cpp:535
+#: configdialog.cpp:445
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -195,51 +201,51 @@ msgid ""
 "commands?"
 msgstr "चयनितं कार्यं <resource>%1</resource><nl/>तस्य सर्वाणि आदेशानि च विलोपयन्तु?"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:446
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "विलोपनक्रियायाः पुष्टिं कुर्वन्तु"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:499
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "सामान्य"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:499
 #, kde-format
 msgid "General Configuration"
 msgstr "सामान्यविन्यासः"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:500
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "क्रिया मेनू"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:500
 #, kde-format
 msgid "Action Menu"
 msgstr "क्रिया मेनू"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:501
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "क्रियाः विन्यासः"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:501
 #, kde-format
 msgid "Actions Configuration"
 msgstr "क्रियाः विन्यासः"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:508
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:508
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "शॉर्टकट् विन्यासः"
@@ -249,71 +255,71 @@ msgstr "शॉर्टकट् विन्यासः"
 msgid "Return to Clipboard"
 msgstr "Clipboard प्रति प्रत्यागच्छन्तु"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, fuzzy, kde-format
 #| msgid "Append to clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "क्लिप्बोर्ड् मध्ये योजयन्तु"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr "QR कोड"
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:165
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "QR-सङ्केतं प्रदर्शयितुं पर्याप्तं स्थानं नास्ति । अस्य एप्लेट् इत्यस्य आकारं परिवर्तयितुं प्रयतस्व ।"
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:165
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR कोडस्य निर्माणं विफलम् अभवत्"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "संश्यान"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "आतन्"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:288
 #, kde-format
 msgid "Clear History"
 msgstr "इतिहासं स्पष्टं कुरुत"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:343
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgid "All History"
 msgstr "इतिहासं स्पष्टं कुरुत"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -321,18 +327,18 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:478
 #, kde-format
 msgid "No matches"
 msgstr "न मेलनं"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:478
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिप्बोर्ड् रिक्तम् अस्ति"
@@ -537,13 +543,18 @@ msgid "Command:"
 msgstr "आदेश:"
 
 #: editcommanddialog.cpp:73
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
+#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
+#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
+#| "corresponding captured texts from the match pattern."
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
 "आदेशे एकं <placeholder>&#37;s</placeholder> पूर्णतया क्लिप्बोर्डसामग्रीभिः प्रतिस्थापितं "
 "भविष्यति । <placeholder>&#37;0</placeholder> तः <placeholder>&#37;9</"
@@ -723,131 +734,128 @@ msgstr "चयनं क्लिप्बोर्डं च समानं �
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Content selected with the cursor is automatically copied to the clipboard "
+#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
+#| "><a href=\"1\">More about the selection and clipboard</a>."
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 "कर्सरेन सह चयनिता सामग्री स्वयमेव क्लिप्बोर्ड् प्रति प्रतिलिपिता भवति येन Paste क्रियायाः "
 "अथवा मध्य-क्लिक् इत्यनेन सह चिनोतुं शक्यते ।<br/> <a href=\"1\">चयनस्य क्लिपबोर्डस्य च "
 "विषये अधिकं</a> ."
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, kde-format
-msgid "Ignore the selection"
+#, fuzzy, kde-format
+#| msgid "Ignore the selection"
+msgid "Save the selection"
 msgstr "चयनस्य अवहेलनां कुर्वन्तु"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Content selected with the cursor but not explicitly copied to the "
+#| "clipboard is not automatically stored in the clipboard history, and can "
+#| "only be pasted using a middle-click."
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
 "कर्सरेन सह चयनिता परन्तु स्पष्टतया क्लिप्बोर्ड् प्रति न प्रतिलिपिता सामग्री स्वयमेव "
 "क्लिप्बोर्ड् इतिहासे न संगृहीता, तथा च केवलं मध्य-क्लिक् इत्यस्य उपयोगेन चिनोतुं शक्यते"
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
-msgid "Text selection only"
-msgstr "केवलं पाठचयनम्"
-
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
+msgid "Save images"
 msgstr ""
-"केवलं क्लिप्बोर्ड-इतिहासस्य मध्ये पाठचयनं संग्रहयन्तु, न तु चित्राणि अन्यप्रकारस्य दत्तांशस्य वा ।"
 
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr "चित्राणि सर्वदा अवहेलयन्तु"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr "स्पष्टतया प्रतिलिपितः अपि चित्राणि क्लिप्बोर्ड-इतिहासस्य मध्ये न संग्रहयन्तु ।"
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
+#: klipper.kcfg:39
+#, fuzzy, kde-format
+#| msgid "Whether text selections are saved in the clipboard history."
+msgid "Store images in the clipboard history."
+msgstr "पाठचयनं क्लिप्बोर्ड-इतिहासस्य मध्ये रक्षितम् अस्ति वा ।"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:42
 #, kde-format
 msgid "Immediately on selection"
 msgstr "चयनसमये तत्क्षणमेव"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:43
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "चयनं कृत्वा एव प्रयोज्यक्रियाणां पॉपअप मेन्यू दर्शयन्तु ।"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:47
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "स्वचालितं क्रिया मेनू समयः :"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:51
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "अस्य समयस्य कृते स्वचालितक्रिया-पॉपअप-मेनू प्रदर्शयन्तु ।"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:54
 #, kde-format
 msgid "History size:"
 msgstr "इतिहासस्य आकारः :"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:58
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "क्लिप्बोर्ड-इतिहासः एतावता वस्तूनि यावत् संग्रहयिष्यति ।"
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
+#: klipper.kcfg:61
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "क्रियायाः वृक्षविजेट् मध्ये परिवर्तनं सूचयितुं डमी प्रविष्टिः"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
-#, kde-format
-msgid "Trim whitespace from selection"
+#: klipper.kcfg:71
+#, fuzzy, kde-format
+#| msgid "Trim whitespace from selection"
+msgid "Trim whitespace"
 msgstr "चयनात् श्वेतस्थानं छटां कुर्वन्तु"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
-#, kde-format
+#: klipper.kcfg:73
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remove any whitespace from the start and end of selected text, before "
+#| "performing an action. For example, this ensures that a URL pasted in a "
+#| "browser is interpreted as expected. The text saved on the clipboard is "
+#| "not affected."
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
 msgstr ""
 "चयनितपाठस्य आरम्भात् अन्ते च यत्किमपि श्वेतस्थानं निष्कासयन्तु, क्रियां कर्तुं पूर्वं । यथा, एतेन "
 "ब्राउजर् मध्ये चिनोति URL अपेक्षितरूपेण व्याख्यायते इति सुनिश्चितं भवति । क्लिप्बोर्ड् मध्ये "
 "रक्षितः पाठः प्रभावितः न भवति ।"
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:76
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "इतिहासात् चयनितस्य द्रव्यस्य कृते"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:78
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -857,30 +865,83 @@ msgstr ""
 "।"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:81
 #, kde-format
-msgid "Include MIME actions"
-msgstr "MIME क्रियाः समाविष्टाः कुर्वन्तु"
+msgid "Offer applications for copied links and files"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:83
 #, kde-format
 msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
 msgstr ""
-"यदि सञ्चिकानाम अथवा URL चयनितम् अस्ति तर्हि पॉपअप मेन्यू मध्ये तस्य MIME प्रकारं "
-"स्वीकुर्वितुं शक्नुवन्ति अनुप्रयोगाः समाविष्टाः कुर्वन्तु ।"
 
 #: klipperpopup.cpp:38
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड पॉपअप"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "&निरसयतु"
+
+#~ msgid "Text selection:"
+#~ msgstr "पाठचयनम् :"
+
+#~ msgid "Only when explicitly copied"
+#~ msgstr "केवलं यदा स्पष्टतया प्रतिलिपितः भवति"
+
+#~ msgid "Non-text selection:"
+#~ msgstr "अपाठचयनम् :"
+
+#~ msgid "Never save in history"
+#~ msgstr "इतिहासे कदापि न रक्षन्तु"
+
+#~ msgid ""
+#~ "Whether non-text selections (such as images) are saved in the clipboard "
+#~ "history."
+#~ msgstr "अपाठचयनं (चित्रम् इत्यादयः) क्लिप्बोर्ड-इतिहासस्य मध्ये रक्षिताः सन्ति वा ।"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When a <interface>match pattern</interface> matches the clipboard "
+#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
+#~ "menu and can be executed."
+#~ msgstr ""
+#~ "यदा <interface>match pattern</interface> क्लिप्बोर्ड् सामग्रीभिः सह मेलनं करोति "
+#~ "तदा तस्य <interface>आदेशाः</interface> Klipper popup मेन्यू मध्ये दृश्यन्ते, तेषां "
+#~ "कार्यान्वयनं कर्तुं शक्यते ।"
+
+#~ msgid "Text selection only"
+#~ msgstr "केवलं पाठचयनम्"
+
+#~ msgid ""
+#~ "Only store text selections in the clipboard history, not images or any "
+#~ "other type of data."
+#~ msgstr ""
+#~ "केवलं क्लिप्बोर्ड-इतिहासस्य मध्ये पाठचयनं संग्रहयन्तु, न तु चित्राणि अन्यप्रकारस्य दत्तांशस्य "
+#~ "वा ।"
+
+#~ msgid "Always ignore images"
+#~ msgstr "चित्राणि सर्वदा अवहेलयन्तु"
+
+#~ msgid ""
+#~ "Do not store images in the clipboard history, even if explicitly copied."
+#~ msgstr "स्पष्टतया प्रतिलिपितः अपि चित्राणि क्लिप्बोर्ड-इतिहासस्य मध्ये न संग्रहयन्तु ।"
+
+#~ msgid "Include MIME actions"
+#~ msgstr "MIME क्रियाः समाविष्टाः कुर्वन्तु"
+
+#~ msgid ""
+#~ "If a file name or URL is selected, include applications that can accept "
+#~ "its MIME type in the popup menu."
+#~ msgstr ""
+#~ "यदि सञ्चिकानाम अथवा URL चयनितम् अस्ति तर्हि पॉपअप मेन्यू मध्ये तस्य MIME प्रकारं "
+#~ "स्वीकुर्वितुं शक्नुवन्ति अनुप्रयोगाः समाविष्टाः कुर्वन्तु ।"
 
 #, fuzzy
 #~| msgid "The clipboard history will store up to this many items."

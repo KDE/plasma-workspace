@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2026-09-01 21:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -143,7 +143,17 @@ msgstr "לא ניתן להסיר סגנונות:\n"
 #| msgid_plural ""
 #| "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr "ההסרה של „%2” הצליחה אבל לא ניתן להסיר את השאר:\n"
+
+#: kcmstyle.cpp:229
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+#| msgid_plural ""
+#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] "ההסרה של „%2” הצליחה אבל לא ניתן להסיר את השאר:\n"
@@ -151,25 +161,34 @@ msgstr[1] "הסרת שני סגנונות הצליחה אבל לא ניתן לה
 msgstr[2] "הסרת %1 סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
 msgstr[3] "הסרת %1 סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
 
-#: kcmstyle.cpp:237
+#: kcmstyle.cpp:240
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Successfully uninstalled “%2”."
 #| msgid_plural "Successfully uninstalled %1 styles."
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
+msgid "Successfully uninstalled “%1”."
+msgstr "„%2” הוסר בהצלחה."
+
+#: kcmstyle.cpp:242
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully uninstalled “%2”."
+#| msgid_plural "Successfully uninstalled %1 styles."
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
 msgstr[0] "„%2” הוסר בהצלחה."
 msgstr[1] "שני סגנונות הוסרו בהצלחה."
 msgstr[2] "%1 סגנונות הוסרו בהצלחה."
 msgstr[3] "%1 סגנונות הוסרו בהצלחה."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "ארעה שגיאה בטעינת חלונית התצורה לסגנון זה."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "החלת הסגנון ‚%1’ נכשלה."

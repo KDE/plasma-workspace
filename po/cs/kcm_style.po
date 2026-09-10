@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2026-09-02 02:46+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -130,30 +130,48 @@ msgid "Could not uninstall styles:\n"
 msgstr "Nepodařilo se odinstalovat styly:\n"
 
 #: kcmstyle.cpp:226
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully installed “%1”."
+msgctxt "@info:status"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr "\"%1\" byl úspěšně nainstalován."
+
+#: kcmstyle.cpp:229
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: kcmstyle.cpp:237
-#, kde-format
+#: kcmstyle.cpp:240
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully installed “%1”."
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
-msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgid "Successfully uninstalled “%1”."
+msgstr "\"%1\" byl úspěšně nainstalován."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:242
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully installed “%1”."
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] "\"%1\" byl úspěšně nainstalován."
+msgstr[1] "\"%1\" byl úspěšně nainstalován."
+msgstr[2] "\"%1\" byl úspěšně nainstalován."
+
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "Nastala chyba při načítání konfiguračního dialogu tohoto stylu."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Chyba při aplikování zvoleného stylu '%1'."

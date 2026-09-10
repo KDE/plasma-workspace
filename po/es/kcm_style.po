@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2026-09-04 01:04+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -143,7 +143,15 @@ msgstr "No se han podido desinstalar los estilos:\n"
 #: kcmstyle.cpp:226
 #, fuzzy, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr ""
+"Se ha desinstalado «%2» correctamente, pero no se han podido desinstalar "
+"otros estilos:\n"
+
+#: kcmstyle.cpp:229
+#, fuzzy, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
@@ -153,22 +161,28 @@ msgstr[1] ""
 "Se han desinstalado %1 estilos correctamente, pero no se han podido "
 "desinstalar otros:\n"
 
-#: kcmstyle.cpp:237
+#: kcmstyle.cpp:240
 #, fuzzy, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
+msgid "Successfully uninstalled “%1”."
+msgstr "Se ha desinstalado «%2» correctamente."
+
+#: kcmstyle.cpp:242
+#, fuzzy, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
 msgstr[0] "Se ha desinstalado «%2» correctamente."
 msgstr[1] "Se han desinstalado %1 estilos correctamente."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
 "Se ha producido un error al cargar el diálogo de configuración de este "
 "estilo."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "No se ha podido aplicar el estilo seleccionado «%1»."

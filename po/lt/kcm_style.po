@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2026-09-03 12:40+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -129,9 +129,17 @@ msgid "Could not uninstall styles:\n"
 msgstr "Nepavyko pašalinti stilius:\n"
 
 #: kcmstyle.cpp:226
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully installed “%1”."
+msgctxt "@info:status"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr "„%1“ sėkmingai įdiegtas."
+
+#: kcmstyle.cpp:229
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
@@ -139,22 +147,32 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: kcmstyle.cpp:237
-#, kde-format
+#: kcmstyle.cpp:240
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully installed “%1”."
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
-msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgid "Successfully uninstalled “%1”."
+msgstr "„%1“ sėkmingai įdiegtas."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:242
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully installed “%1”."
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] "„%1“ sėkmingai įdiegtas."
+msgstr[1] "„%1“ sėkmingai įdiegtas."
+msgstr[2] "„%1“ sėkmingai įdiegtas."
+msgstr[3] "„%1“ sėkmingai įdiegtas."
+
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "Bandant įkelti konfigūravimo dialogą šiam stiliui, įvyko klaida."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Nepavyko taikyti pasirinktą stilių \"%1\"."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2026-09-04 09:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -143,7 +143,19 @@ msgstr "No s'han pogut desinstal·lar els estils:\n"
 #| msgid_plural ""
 #| "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr ""
+"«%1» s'ha desinstal·lat correctament, però no s'han pogut desinstal·lar "
+"altres:\n"
+
+#: kcmstyle.cpp:229
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+#| msgid_plural ""
+#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
@@ -153,25 +165,34 @@ msgstr[1] ""
 "S'han desinstal·lat correctament %1 estils, però no s'han pogut "
 "desinstal·lar altres:\n"
 
-#: kcmstyle.cpp:237
+#: kcmstyle.cpp:240
 #, fuzzy, kde-format
 #| msgctxt "@info:status"
 #| msgid "Successfully uninstalled “%1”."
 #| msgid_plural "Successfully uninstalled %1 styles."
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
+msgid "Successfully uninstalled “%1”."
+msgstr "«%1» s'ha desinstal·lat correctament."
+
+#: kcmstyle.cpp:242
+#, fuzzy, kde-format
+#| msgctxt "@info:status"
+#| msgid "Successfully uninstalled “%1”."
+#| msgid_plural "Successfully uninstalled %1 styles."
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
 msgstr[0] "«%1» s'ha desinstal·lat correctament."
 msgstr[1] "S'han desinstal·lat correctament %1 estils."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
 "S'ha produït un error mentre es carregava el diàleg de configuració per a "
 "este estil."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Ha fallat mentre s'aplicava l'estil «%1» seleccionat."

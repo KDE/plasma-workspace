@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2002-10-26 12:49SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "X-Generator: KBabel 1.0beta2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:83
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history:"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -36,13 +36,13 @@ msgid_plural "%v entries"
 msgstr[0] "ingeno"
 msgstr[1] "ingeno"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:98
 #, fuzzy, kde-format
 #| msgid "Pre&vent empty clipboard"
 msgid "Selection and Clipboard:"
 msgstr "&ibhodi eqhotyoshwayo engenanto"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -51,62 +51,62 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:136 configdialog.cpp:174
-#, fuzzy, kde-format
-#| msgid "&Replay actions on an item selected from history"
-msgid "Always save in history"
-msgstr "&Dlala kwakhona iintshukumo kumba okhethiweyo osuka kwimbali"
-
-#: configdialog.cpp:140
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
-msgid "Text selection:"
-msgstr "&Sukunanza ukhetho"
-
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:124
 #, kde-format
-msgid "Only when explicitly copied"
+msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:147
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Whether text selections are saved in the clipboard history."
-msgstr "&Cacisa Ibhodi eqhotyoshwayo Yembali"
-
-#: configdialog.cpp:178
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
-msgid "Non-text selection:"
-msgstr "&Sukunanza ukhetho"
-
-#: configdialog.cpp:185
+#: configdialog.cpp:126
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
-msgid "Never save in history"
+msgid "Include in history:"
 msgstr "&Dlala kwakhona iintshukumo kumba okhethiweyo osuka kwimbali"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:128
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
+"Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:252
+#: configdialog.cpp:133
+#, kde-format
+msgid "Image data copied explicitly"
+msgstr ""
+
+#: configdialog.cpp:137
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+
+#: configdialog.cpp:146
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+
+#: configdialog.cpp:171
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Show action popup menu:"
 msgstr "I&xesha lokuphuma kwentshukumo ye popups:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:181
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -117,7 +117,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:274
+#: configdialog.cpp:193
 #, fuzzy, kde-format
 #| msgid " sec"
 msgctxt "Unit of time"
@@ -126,59 +126,50 @@ msgid_plural "%v seconds"
 msgstr[0] " sec"
 msgstr[1] " sec"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:194
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:284
+#: configdialog.cpp:203
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Options:"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-
-#: configdialog.cpp:318
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:318
+#: configdialog.cpp:228
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Inkcazelo"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:234
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Add Action..."
 msgstr "&Yongeza Intshukumo"
 
-#: configdialog.cpp:328
+#: configdialog.cpp:238
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Edit Action..."
 msgstr "&Yongeza Intshukumo"
 
-#: configdialog.cpp:333
+#: configdialog.cpp:243
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Delete Action"
 msgstr "&Cima Intshukumo"
 
-#: configdialog.cpp:340
+#: configdialog.cpp:250
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -186,7 +177,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:535
+#: configdialog.cpp:445
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -194,58 +185,58 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:536
+#: configdialog.cpp:446
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Confirm Delete Action"
 msgstr "&Cima Intshukumo"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:499
 #, fuzzy, kde-format
 #| msgid "&General"
 msgctxt "General Config"
 msgid "General"
 msgstr "&Ngokubanzi"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:499
 #, fuzzy, kde-format
 #| msgid "&General"
 msgid "General Configuration"
 msgstr "&Ngokubanzi"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:500
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:500
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Action Menu"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:501
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:501
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Actions Configuration"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:508
 #, fuzzy, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "&Iindlela ezimfutshane"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:508
 #, fuzzy, kde-format
 msgid "Shortcuts Configuration"
 msgstr "&Iindlela ezimfutshane"
@@ -256,71 +247,71 @@ msgstr "&Iindlela ezimfutshane"
 msgid "Return to Clipboard"
 msgstr "Ibhodi eqhotyoshwayo"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, fuzzy, kde-format
 #| msgid "Clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Ibhodi eqhotyoshwayo"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:165
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:165
 #, kde-format
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:288
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clear History"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:343
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "All History"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -328,18 +319,18 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:478
 #, kde-format
 msgid "No matches"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:478
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -548,10 +539,9 @@ msgstr "Yongeza Umyalelo"
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
 
 #: editcommanddialog.cpp:83
@@ -742,127 +732,109 @@ msgstr "&ibhodi eqhotyoshwayo engenanto"
 #: klipper.kcfg:29
 #, kde-format
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
-msgid "Ignore the selection"
+msgid "Save the selection"
 msgstr "&Sukunanza ukhetho"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
 #, kde-format
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
-#, fuzzy, kde-format
-#| msgid "&Ignore selection"
-msgid "Text selection only"
-msgstr "&Sukunanza ukhetho"
+#, kde-format
+msgid "Save images"
+msgstr ""
 
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
-msgstr ""
-
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr ""
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Store images in the clipboard history."
+msgstr "&Cacisa Ibhodi eqhotyoshwayo Yembali"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:42
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Immediately on selection"
 msgstr "&Sukunanza ukhetho"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:43
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:47
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Automatic action menu time:"
 msgstr "I&xesha lokuphuma kwentshukumo ye popups:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:51
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Display the automatic action popup menu for this time."
 msgstr "I&xesha lokuphuma kwentshukumo ye popups:"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:54
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "History size:"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:58
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
+#: klipper.kcfg:61
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:71
 #, kde-format
-msgid "Trim whitespace from selection"
+msgid "Trim whitespace"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:73
 #, kde-format
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:76
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "&Dlala kwakhona iintshukumo kumba okhethiweyo osuka kwimbali"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:78
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid ""
@@ -871,18 +843,18 @@ msgid ""
 msgstr "&Cacisa Ibhodi eqhotyoshwayo Yembali"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
-#, fuzzy, kde-format
-#| msgid "Enable/Disable Clipboard Actions"
-msgid "Include MIME actions"
-msgstr "Yenza/khubaza Iintshukumo Zebhodi eqhotyoshwayo"
+#: klipper.kcfg:81
+#, kde-format
+msgid "Offer applications for copied links and files"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:83
 #, kde-format
 msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
 msgstr ""
 
 #: klipperpopup.cpp:38
@@ -891,10 +863,35 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Ignore selection"
+#~ msgid "Text selection:"
+#~ msgstr "&Sukunanza ukhetho"
+
+#, fuzzy
+#~| msgid "&Ignore selection"
+#~ msgid "Non-text selection:"
+#~ msgstr "&Sukunanza ukhetho"
+
+#, fuzzy
+#~| msgid "&Replay actions on an item selected from history"
+#~ msgid "Never save in history"
+#~ msgstr "&Dlala kwakhona iintshukumo kumba okhethiweyo osuka kwimbali"
+
+#, fuzzy
+#~| msgid "&Ignore selection"
+#~ msgid "Text selection only"
+#~ msgstr "&Sukunanza ukhetho"
+
+#, fuzzy
+#~| msgid "Enable/Disable Clipboard Actions"
+#~ msgid "Include MIME actions"
+#~ msgstr "Yenza/khubaza Iintshukumo Zebhodi eqhotyoshwayo"
 
 #, fuzzy
 #~| msgid "Save clipboard contents on e&xit"
