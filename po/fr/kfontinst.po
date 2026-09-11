@@ -1652,7 +1652,7 @@ msgstr "Impossible de lire la police."
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Preview String"
-msgstr "Chaîne d'aperçu"
+msgstr "Chaine d'aperçu"
 
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
