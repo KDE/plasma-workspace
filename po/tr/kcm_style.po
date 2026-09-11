@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-03 21:55+0300\n"
+"PO-Revision-Date: 2026-09-10 19:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -128,12 +128,10 @@ msgid "Could not uninstall styles:\n"
 msgstr "Biçemler kaldırılamadı:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr "“%1”, başarıyla kuruldu."
+msgstr "“%1”, başarıyla kaldırıldı; ancak diğerleri kaldırılamadı:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -141,26 +139,22 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 biçem başarıyla kaldırıldı; ancak diğerleri kaldırılamadı:\n"
+msgstr[1] "%1 biçem başarıyla kaldırıldı; ancak diğerleri kaldırılamadı:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "“%1”, başarıyla kuruldu."
+msgstr "“%1”, başarıyla kaldırıldı."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "“%1”, başarıyla kuruldu."
-msgstr[1] "“%1”, başarıyla kuruldu."
+msgstr[0] "%1 biçem başarıyla kaldırıldı."
+msgstr[1] "%1 biçem başarıyla kaldırıldı."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format

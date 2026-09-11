@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-02 08:41+0300\n"
+"PO-Revision-Date: 2026-09-10 09:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -132,37 +132,37 @@ msgid "Could not uninstall styles:\n"
 msgstr "Не вдалося вилучити стилі:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr "Успішно вилучено %1 стиль (%2), але не вдалося вилучити інші:\n"
+msgstr "Успішно вилучено «%1», але не вдалося вилучити інші:\n"
 
 #: kcmstyle.cpp:229
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] "Успішно вилучено %1 стиль (%2), але не вдалося вилучити інші:\n"
-msgstr[1] "Успішно вилучено %1 стилі (%2), але не вдалося вилучити інші:\n"
-msgstr[2] "Успішно вилучено %1 стилів (%2), але не вдалося вилучити інші:\n"
-msgstr[3] "Успішно вилучено %1 стиль (%2), але не вдалося вилучити інші:\n"
+msgstr[0] "Успішно вилучено %1 стиль, але не вдалося вилучити інші:\n"
+msgstr[1] "Успішно вилучено %1 стилі, але не вдалося вилучити інші:\n"
+msgstr[2] "Успішно вилучено %1 стилів, але не вдалося вилучити інші:\n"
+msgstr[3] "Успішно вилучено %1 стиль, але не вдалося вилучити інші:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "Успішно вилучено %1 стиль."
+msgstr "Успішно вилучено «%1»."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
 msgstr[0] "Успішно вилучено %1 стиль."
 msgstr[1] "Успішно вилучено %1 стилі."
 msgstr[2] "Успішно вилучено %1 стилів."
-msgstr[3] "Успішно вилучено «%2». %1"
+msgstr[3] "Успішно вилучено %1 стиль."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format

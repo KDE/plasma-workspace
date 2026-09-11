@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-02 11:01+0200\n"
+"PO-Revision-Date: 2026-09-10 12:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -134,10 +134,12 @@ msgid "Could not uninstall styles:\n"
 msgstr "Kon de installatie van stijlen niet ongedaan maken:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr "Installatie van %1 met succes ongedaan gemaakt"
+msgstr ""
+"Installatie van “%1” met succes ongedaan gemaakt maar anderen zijn niet "
+"gelukt:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -146,21 +148,25 @@ msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"Installatie van %1 stijl met succes ongedaan gemaakt maar anderen zijn niet "
+"gelukt:\n"
 msgstr[1] ""
+"Installatie van %1 stijlen met succes ongedaan gemaakt maar anderen zijn "
+"niet gelukt:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "Installatie van %1 met succes ongedaan gemaakt"
+msgstr "Installatie van “%1” met succes ongedaan gemaakt."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Installatie van %1 met succes ongedaan gemaakt"
-msgstr[1] ""
+msgstr[0] "Installatie van %1 stijl met succes ongedaan gemaakt."
+msgstr[1] "Installatie van %1 stijlen met succes ongedaan gemaakt."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format

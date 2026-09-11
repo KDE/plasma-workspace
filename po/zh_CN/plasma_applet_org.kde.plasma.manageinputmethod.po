@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-11 00:48+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -42,12 +42,10 @@ msgid "Touch, Tablet, Mouse, and Touchpad"
 msgstr ""
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "配置虚拟键盘..."
+msgstr ""
 
 #: qml/main.qml:133
 #, kde-format
@@ -71,7 +69,7 @@ msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"
 msgid ""
-"No supported text text field is currently active\n"
+"No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
 
@@ -98,21 +96,3 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
-
-#~ msgid "Virtual Keyboard: unavailable"
-#~ msgstr "虚拟键盘：不可用"
-
-#~ msgid "Virtual Keyboard: disabled"
-#~ msgstr "虚拟键盘：已启用"
-
-#~ msgid "Show Virtual Keyboard"
-#~ msgstr "显示虚拟键盘"
-
-#~ msgid "Virtual Keyboard: visible"
-#~ msgstr "虚拟键盘：可见"
-
-#~ msgid "Virtual Keyboard: Show on non-mouse input"
-#~ msgstr "虚拟键盘：在非鼠标输入时显示"
-
-#~ msgid "Virtual Keyboard: Show with all input devices"
-#~ msgstr "虚拟键盘：使用所有输入设备时显示"

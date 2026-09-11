@@ -13,31 +13,13 @@
 <title
 >Het handboek van &klipper; </title>
 
-<authorgroup>
-<author
->&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
-
-<othercredit role="developer"
->&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
-
-&Tom.Albers;&Sander.Koning; 
-
-</authorgroup>
-
-<copyright>
-<year
->2000-2003</year>
-<holder
->&Philip.Rodrigues;</holder>
-</copyright>
-
 <legalnotice
 >&FDLNotice;</legalnotice>
 
 <date
->2022-05-05</date>
+>2026-09-09</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 6.8</releaseinfo>
 
 <abstract>
 <para
@@ -55,15 +37,13 @@
 >klembord</keyword>
 </keywordset>
 </bookinfo>
-<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
 <title
 >Inleiding</title>
 <para
 >&klipper; is de &plasma; klembordtoepassing. Het bewaart de geschiedenis van het klembord en geeft de mogelijkheid om de klembordinhoud te koppelen aan acties. Fouten of verzoeken kunt u rapporteren aan <ulink url="http://bugs.kde.org"
->KDE's bugzilla</ulink
+>Bug-volgsysteem van KDE</ulink
 >.</para>
-
 </chapter>
 
 <chapter id="using-klipper">
@@ -91,9 +71,6 @@
 </screenshot>
 
 <para
->Het &klipper;-widget is verborgen als het klembord leeg is.</para>
-
-<para
 >Om de geschiedenis in het klembord te tonen, klik op het &klipper;-pictogram in het systeemvak.</para>
 
 <sect2 id="klipper-widget">
@@ -113,11 +90,12 @@
 </mediaobject>
 </screenshot>
 
+<!-- TODO: Document starred functionality -->
 <para
 >Zweef boven een item met de muisaanwijzer en er verschijnen vier pictogrammen die u in staat stellen om een actie te starten, de barcode te tonen, de inhoud te bewerken of het item uit de geschiedenis te verwijderen. Gebruik &spectacle; om de barcodes op te nemen en ze te slaan. </para>
 
 <para
->U kunt door de klembordgeschiedenis zoeken door deze te openen (klik op &klipper;) en uw verzoek te typen. De resultaten worden bijgewerkt terwijl u typt. Om de klembordgeschiedenis te wissen drukt op het pictogram rechts van het zoekveld. </para>
+>U kunt door de klembordgeschiedenis zoeken door opzoekvraag in het zoekveld te typen. De resultaten worden bijgewerkt terwijl u typt. Om de klembordgeschiedenis te wissen drukt op het pictogram rechts van het zoekveld. </para>
 
 <para
 >De actie <guilabel
@@ -134,32 +112,37 @@
 >Acties</title>
 
 <para
->&klipper; kan bepaalde acties uitvoeren op de inhoud van het klembord. Dit gebeurt als de inhoud voldoet aan een opgegeven reguliere expressie. U kunt er bijvoorbeeld voor zorgen dat zodra er gegevens in het klembord geplaatst worden die beginnen met <quote
+>&klipper; kan acties uitvoeren op de inhoud van het klembord, afhankelijk van de vraag of deze overeenkomt met een bepaalde reguliere expressie. Er is een ingebouwde actie die werkt met webadressen en bestanden. Hiermee kunt u een webadres dat begint met <quote
 >http://</quote
->, dit doorgegeven wordt aan Firefox of &konqueror; zodat deze de &URL; kan openen. Als de inhoud, bovendien, overeenkomt met een pad, dan kunnen soortgelijke acties uitgevoerd worden in overeenstemming met het type bestand. Als bijvoorbeeld het pad naar een <acronym
+> of <quote
+>https://</quote
+> doorgeven aan een webbrowser of een bestand — bijvoorbeeld een <acronym
 >PDF</acronym
->-bestand is gekopieerd naar het klembord, dan kan het bestand bekeken worden in &okular;</para>
+> — aan een compatibele toepassing zoals &okular;.</para>
 
 <para
->Om deze functie te gebruiken, selecteert u een &URL; of bestandsnaam. Als er een reguliere expressie in &klipper; voldoet, dan zal er een menu openen met de programma's voor uw selectie. Gebruik uw muis of pijltjestoetsen om de gewenste handeling te selecteren. &klipper; zal de gevraagde toepassing openen met het adres dat in de selectie staat.</para>
+>U kunt uw eigen acties definiëren op de pagina <guilabel
+>Actieconfiguratie</guilabel
+> van het <link linkend="preferences"
+>instellingendialoogvenster</link
+>; hier kunt u ook de ingebouwde actie uitschakelen via de optie <guilabel
+>Toepassingen voorstellen voor gekopieerde koppelingen en bestanden</guilabel
+>. </para>
 
 <para
->De tijd dat het menu zal verschijnen, kunt u wijzigen in de instellingendialoog met de optie <guilabel
->actie-pop-up-menu</guilabel
-> in de pagina <guilabel
->Algemeen</guilabel
->. U kunt separaat het bestandspaddeel met de optie <guilabel
->MIME-acties meenemen</guilabel
-> onder de pagina <guilabel
->Menu Acties</guilabel
->.</para>
-
-<para
->Acties kunnen volledig uitgeschakeld worden door de sneltoets <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->X</keycap
-></keycombo
-> te gebruiken.</para>
+>U kunt het bijbehorende actiemenu altijd openen via een knop naast het item in uw geschiedenis. U kunt er ook voor kiezen om het actiemenu automatisch te laten verschijnen zodra er iets op het klembord wordt geplaatst. Dit doet u door gebruik te maken van de sneltoets voor het <guilabel
+>Automatische pop-upactiemenu</guilabel
+> (in te stellen op de pagina <guilabel
+>Sneltoetsen</guilabel
+>) of door de optie <guilabel
+>Direct bij selectie</guilabel
+> aan te vinken onder <guilabel
+>Pop-upactiemenu tonen</guilabel
+> op de pagina <guilabel
+>Actiemenu</guilabel
+>. Op diezelfde pagina kunt u via de optie <guilabel
+>Tijd voor automatisch actiemenu</guilabel
+> ook instellen hoe lang het duurt voordat het automatische menu vanzelf sluit als u er geen actie op onderneemt.</para>
 
 <para
 >Klembordinhoud die voldoet aan een reguliere expressie, kunnen ook worden bewerkt voordat een actie wordt uitgevoerd. Selecteer <guimenuitem
@@ -169,11 +152,9 @@
 > heeft geklikt om de gewenste actie uit te voeren.</para>
 
 <para
->Door te klikken op <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->R</keycap
-></keycombo
-> wordt het venster getoond waarmee u de laatste actie van &klipper; kunt herhalen.</para>
+>Als u een sneltoets instelt voor <guilabel
+>Actie handmatig uitvoeren op huidig ​​klembord</guilabel
+>, wordt bij het indrukken van deze sneltoets het bijbehorende pop-upmenu getoond.</para>
 
 </sect1>
 
@@ -185,11 +166,11 @@
 <title
 >Algemeen</title>
 <para
->&klipper; kan gebruikt worden om het gedrag van het klembord in combinatie met selecties binnen &plasma; in te stellen. </para>
+>&klipper; can be used to set the behavior of the clipboard and selection in &plasma;. To adjust their behavior, see <xref linkend="general-page"/>. </para>
 
 <note
 ><para
->&X-Window; gebruikt twee verschillende klembordbuffers. De <quote
+>Er zijn twee verschillende klembordbuffers. De <quote
 >selectie</quote
 > en het <quote
 >klembord</quote
@@ -209,44 +190,8 @@
 >Plakken</guimenuitem
 >.</para>
 </note>
-
 </sect2>
-
-<sect2 id="changing-clipboard-modes">
-<title
->Het gedrag van klembord &amp; selectie wijzigen</title>
-<para
->Om het gedrag van selectie en klembord te veranderen kiest u voor <guimenuitem
->Klembord configureren...</guimenuitem
-> uit het contextmenu van &klipper; dat verschijnt door op het pictogram in het paneel te klikken. Kijk vervolgens naar de pagina <guilabel
->Algemeen</guilabel
->. U kunt hier <guilabel
->Selectie en klembord</guilabel
-> uitschakelen. Het maakt dat de functie klembord en selectie als volledig gescheiden buffers werken zoals boven beschreven. Bij inschakelen zal de optie <guilabel
->Negeren</guilabel
-> voorkomen dat &klipper; de geselecteerde tekst in de klembordgeschiedenis opneemt. Selecteren van <guilabel
->Selectie en klembord</guilabel
-> zorgt er voor dat de twee buffers altijd aan elkaar gelijk zullen zijn, wat betekent dat geselecteerde tekst geplakt kan worden met zowel de <mousebutton
->middelste</mousebutton
-> muisknop alsook met de toetscombinatie <keycombo
->&Ctrl;<keycap
->V</keycap
-></keycombo
-> en evenzo voor tekst in de klembordbuffer. </para>
-
- <!-- The
-<guilabel
->Synchronize contents of the clipboard and the
-selection</guilabel
-> check box determines the clipboard mode. If the box is
-selected, the clipboard functions in the &UNIX; mode; if not, the
-&Windows;/&Mac; mode is used. -->
-
-</sect2>
-
-
 </sect1>
-
 </chapter>
 
 <chapter id="preferences">
@@ -256,91 +201,70 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <sect1 id="general-page">
 <title
 >Algemene opties</title>
+<note
+><para
+>Options below distinguish between <emphasis
+>selection</emphasis
+> and <emphasis
+>clipboard</emphasis
+>. To understand the difference, see <xref linkend="clipboard-modes"/>. </para
+></note>
+
 
 <variablelist>
 
 <varlistentry
 ><term
 ><guilabel
->Selectie en klembord</guilabel
+>Klembordgeschiedenis: Geschiedenis opslaan tussen bureaubladsessies</guilabel
 ></term>
 <listitem
 ><para
->Wanneer tekst of een gebied op het scherm is geaccentueerd met muis of toetsenbord, dan is dat de <emphasis
->selectie</emphasis
->. Het kan worden geplakt met de middelste muisknop</para
-><para
->Als de selectie expliciet is gekopieerd met een actie <guimenuitem
->Kopiëren</guimenuitem
-> of <guimenuitem
->Knippen</guimenuitem
->, dan wordt het opgeslagen in het <emphasis
->klembord</emphasis
->. Het kan geplakt worden met een actie <guimenuitem
->Plakken</guimenuitem
->.</para
-><para
->Wanneer deze optie is aangezet dan worden de selectie- en de klembordbuffer hetzelfde gehouden, zodat elke selectie onmiddellijk beschikbaar is om op elke manier te worden geplakt. Als het is uitgezet kan de selectie nog steeds worden opgeslagen in de klembordgeschiedenis (onderworpen aan de onderstaande opties), maar deze kan alleen geplakt worden met de middelste muisknop.</para
+>Schakelt in of uit of de klembordgeschiedenis behouden blijft wanneer u zich afmeldt of de computer afsluit.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Klembordgeschiedenis</guilabel
+>Geschiedenisgrootte</guilabel
 ></term>
 <listitem
 ><para
->Schakelt klembordgeschiedenis om.</para
+>Hiermee stelt u het aantal ingangen in die beschikbaar zijn in het klembordgeschiedenis. De waarde kan tussen 1 en 2048 liggen.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Aantal items</guilabel
+>Selectie en klembord: behoud de selectie en het klembord</guilabel
 ></term>
 <listitem
 ><para
->Hiermee stelt u het aantal ingangen in die beschikbaar zijn in het klembordgeschiedenis.</para
+>Wanneer deze optie is geactiveerd dan worden de selectie- en de klembordbuffer hetzelfde gehouden, zodat elke selectie of klembord onmiddellijk beschikbaar is om op elke manier te worden geplakt. Als het is uitgezet kan de selectie nog steeds worden opgeslagen in de klembordgeschiedenis (onderworpen aan de onderstaande opties), maar deze kan alleen geplakt worden met de middelste muisknop. </para
 ></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Tekstselectie</guilabel
+>Opnemen in geschiedenis: tekst die met de aanwijzer of het toetsenbord is geselecteerd</guilabel
 ></term>
 <listitem
 ><para
->Wanneer een gebied van het scherm is geselecteerd met muis of toetsenbord, dan wordt dat de <quote
->selectie</quote
-> genoemd. Deze optie bepaalt of tekstselecties opgeslagen worden in de klembordgeschiedenis. Het is mogelijk om te kiezen tussen <guilabel
->Altijd opslaan in geschiedenis</guilabel
-> en <guilabel
->Alleen wanneer expliciet gekopieerd</guilabel
->. De optie <guilabel
->Altijd opslaan in geschiedenis</guilabel
-> is niet beschikbaar als synchronisatie van selectie/klembord is uitgeschakeld &dash; in dat geval wordt de selectie nooit automatisch opgeslagen in de klembordgeschiedenis. Zie <xref linkend="clipboard-modes"/>. </para>
+>Indien geactiveerd, wordt de selectie in de geschiedenis opgeslagen. Het klembord wordt altijd opgeslagen. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Niet-tekstselectie</guilabel
+>Opnemen in geschiedenis: Afbeeldingsgegevens expliciet gekopieerd</guilabel
 ></term>
 <listitem
 ><para
->Deze optie bepaalt of niet-tekstselecties (zoals afbeeldingen) opgeslagen worden in de klembordgeschiedenis. Het is mogelijk te kiezen tussen <guilabel
->Altijd in geschiedenis opslaan</guilabel
->, <guilabel
->Alleen wanneer expliciet gekopieerd</guilabel
-> en <guilabel
->Nooit opslaan in geschiedenis</guilabel
->. De optie <guilabel
->Altijd in geschiedenis opslaan</guilabel
-> is niet beschikbaar als synchronisatie van selectie/klembord is uitgezet &dash; in dat geval wordt de selectie nooit automatisch opgeslagen in de klembordgeschiedenis. Zie <xref linkend="clipboard-modes"/>. </para>
+>Indien geactiveerd, worden afbeeldingen die als gegevens zijn gekopieerd — bijvoorbeeld lagen en selecties die in een beeldbewerkingsprogramma zijn gekopieerd — opgeslagen in de klembordgeschiedenis. Afbeeldingsbestanden die vanuit een bestandsbeheerder worden gekopieerd, worden altijd opgeslagen. In de geschiedenis verschijnen ze als afbeeldingen, maar dit zijn slechts voorbeelden; in werkelijkheid gaat het om bestandsnamen. Ook schermafbeeldingen die door &spectacle; worden gemaakt, worden opgeslagen als dit daar zo is ingesteld. </para>
 </listitem>
 </varlistentry>
 
@@ -357,18 +281,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Actie-pop-up-menu tonen</guilabel
-></term>
-<listitem
-><para
->Stelt de tijd in die het actievenster in beeld blijft als u er niets mee wilt doen.</para
-></listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Acties nogmaals uitvoeren op een item geselecteerd uit te geschiedenis</guilabel
+>Voor een item gekozen uit de geschiedenis</guilabel
 ></term>
 <listitem
 ><para
@@ -379,22 +292,22 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Witruimte verwijderen bij het uitvoeren van acties</guilabel
+>Automatisch actie-menu-tijd</guilabel
 ></term>
 <listitem
 ><para
->Indien geactiveerd zullen witruimtes (veroorzaakt door bijvoorbeeld spaties en tabs) aan het begin en het einde van de klembordinhoud verwijderd worden voordat de inhoud doorgegeven wordt aan een actie. Dit is handig als de inhoud bijvoorbeeld een internetadres bevat met spaties. Een browser zal in dat geval een foutmelding geven.</para>
-</listitem>
+>Stel in hoe lang het duurt voordat het automatische menu vanzelf sluit als u er geen actie op onderneemt.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->MIME-acties meenemen</guilabel
+>Witruimte trimmen</guilabel
 ></term>
 <listitem
 ><para
->Indien geselecteerd, neem toepassingen mee in het pop-up-menu, die zijn &MIME;-type van een bestandsnaam of URL kan accepteren.</para>
+>Indien geactiveerd zullen witruimtes (veroorzaakt door bijvoorbeeld spaties en tabs) aan het begin en het einde van de klembordinhoud verwijderd worden voordat de inhoud doorgegeven wordt aan een actie. De in de geschiedenis opgeslagen tekst is blijft hetzelfde.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -405,6 +318,21 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Acties instellen</title>
 
 <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Bied toepassingen aan voor gekopieerde koppelingen en bestanden</guilabel
+></term>
+<listitem
+><para
+>Bij selectie biedt het pop-upmenu toepassingen aan die een gekopieerd bestand kunnen openen of een gekopieerde koppeling die begint met <quote
+>http://</quote
+> of <quote
+>https://</quote
+>, zelfs als er geen bijbehorende actie van uw kant is.</para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term
 >Actielijst</term>
@@ -557,15 +485,12 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >Programma copyright 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
 <para
->Momenteel onderhouden door Esben Mose Hansen. Zie <ulink url="http://mosehansen.dk/about"
->http://mosehansen.dk/about</ulink
-> voor contactgegevens. </para>
+>Momenteel onderhouden door KDE- en Plasma-ontwikkelaars. </para>
 
 <para
 >Documentatie copyright 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
 
 &meld.fouten;&vertaling.tom;&vertaling.sander; &underFDL; &underGPL; </chapter>
-
 
 &documentation.index;
 

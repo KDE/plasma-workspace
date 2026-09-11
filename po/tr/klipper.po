@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-26 12:55+0300\n"
+"PO-Revision-Date: 2026-09-10 19:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -44,20 +44,7 @@ msgid "Selection and Clipboard:"
 msgstr "Seçim ve Pano"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -84,24 +71,23 @@ msgstr ""
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "İşaretçi veya klavye ile metin seçili"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Her zaman geçmişe kaydet"
+msgstr "Geçmişte içer:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
-msgstr ""
+msgstr "Parola dışındaki açıkça kopyalanan metinler her zaman kaydedilir."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Açıkça kopyalanan görsel verisi"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -109,6 +95,9 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Örneğin, Krita veya GIMP gibi görsel düzenleyicilerinden kopyalanan "
+"katmanlar veya seçimler.<br/>Panodaki görseller hakkında daha fazla bilgi "
+"almak için <a href=\"1\">buraya tıklayın</a>."
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -122,6 +111,14 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Pano, her zaman görsel dosyalarını dosya adı olarak kopyalamaya olanak tanır "
+"ve onların küçük görsellerini gösterecektir. Bu ayar, görsellerin doğrudan "
+"veri olarak depolandığı durumları kapsar. Bazı uygulamalar her iki senaryoyu "
+"da destekler; ancak yalnızca bazıları görseli veri olarak kabul eder.<nl/"
+"><nl/>Ayrıca, Spectacle ekran görüntüsü aracı ekran görüntülerini panoya "
+"kaydedecek şekilde yapılandırılmışsa bu ayarı her zaman yok sayacağını "
+"unutmayın. Hem metin hem de görsel gönderen uygulamalar da bu ayarı yok "
+"sayar."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -548,23 +545,16 @@ msgid "Command:"
 msgstr "Komut:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"Komuttaki yer tutucu <placeholder>&#37;s</placeholder>, tüm pano içeriği ile "
-"değiştirilecektir. <placeholder>&#37;0</placeholder>–<placeholder>&#37;9</"
-"placeholder> arası komutlarsa eşleşme dizgisindeki karşılık gelen yakalanmış "
-"metinle değiştirilir."
+"Komuttaki bir <b>&#37;s</b>, tam pano içeriğiyle değiştirilecektir. "
+"<b>&#37;0</b> ve <b>&#37;9</b> arası ise eşleşme dizgisindeki ilgili "
+"metinlerle değiştirilir."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -741,53 +731,43 @@ msgstr "Seçimi ve panoyu aynı tut"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"İmleçle seçilen içerik kendiliğinden panoya kopyalanır, böylece bir Yapıştır "
-"eylemi veya orta tık ile yapıştırılabilir.<br/><a href=\"1\">Seçim ve pano "
-"hakkında daha fazla bilgi</a>."
+"İşaretçi ile seçilen içerik kendiliğinden panoya kopyalanır, böylece bir "
+"<i>Yapıştır</i> eylemi veya orta tık ile yapıştırılabilir.<br/>Seçim ve pano "
+"hakkında daha fazla bilgi almak için <a href=\"1\">buraya tıklayın</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Seçimi yok say"
+msgstr "Seçimi kaydet"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"İmleçle seçilen içerik panoya açıkça kopyalanmaz, pano geçmişinde depolanmaz "
-"ve yalnızca orta tık ile yapıştırılabilir."
+"İşaretçiyle seçilen; ancak açıkça panoya kopyalanmayan içerik kendiliğinden "
+"pano geçmişinde depolanır."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Görselleri kaydet"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Metin seçimlerinin pano geçmişinde kaydedilip kaydedilmeyeceği."
+msgstr "Görselleri pano geçmişinde depolayın."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -838,27 +818,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Seçimden boşlukları kırp"
+msgstr "Boşlukları kırp"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Bir eylem gerçekleştirmeden önce pano metninin başından ve sonundan "
-"boşlukları kaldır. Örneğin, bu bir tarayıcıya kopyalanan URL’nin "
-"beklenildiği gibi davranmasını garanti eder. Panoya kopyalanan metin bundan "
-"etkilenmez."
+"Bir eyleme geçirilen metnin başındaki ve sonundaki boşlukları kaldırın. "
+"Geçmişte kaydedilen metin bundan etkilenmez."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -874,13 +846,13 @@ msgid ""
 "clipboard history."
 msgstr ""
 "Pano geçmişinden bir öge seçildiğinde uygulanabilir eylemlerin olduğu açılır "
-"menüyü göster."
+"menüyü gösterin."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Kopyalanan bağlantılar ve dosyalar için uygulamalar öner"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -890,6 +862,8 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Varsa <i>http://</i> veya <i>https://</i> ile başlayan bir bağlantıyı veya "
+"dosyaları açabilecek uygulamalar, eylemlerinizin yanı sıra önerilecektir."
 
 #: klipperpopup.cpp:38
 #, kde-format

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-04 01:04+0200\n"
+"PO-Revision-Date: 2026-09-10 12:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -141,38 +141,38 @@ msgid "Could not uninstall styles:\n"
 msgstr "No se han podido desinstalar los estilos:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
 msgstr ""
-"Se ha desinstalado «%2» correctamente, pero no se han podido desinstalar "
+"Se ha desinstalado «%1» correctamente, pero no se han podido desinstalar "
 "otros estilos:\n"
 
 #: kcmstyle.cpp:229
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
-"Se ha desinstalado «%2» correctamente, pero no se han podido desinstalar "
-"otros estilos:\n"
+"Se ha desinstalado %1 estilo correctamente, pero no se han podido "
+"desinstalar otros:\n"
 msgstr[1] ""
 "Se han desinstalado %1 estilos correctamente, pero no se han podido "
 "desinstalar otros:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "Se ha desinstalado «%2» correctamente."
+msgstr "Se ha desinstalado «%1» correctamente."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Se ha desinstalado «%2» correctamente."
+msgstr[0] "Se ha desinstalado %1 estilo correctamente."
 msgstr[1] "Se han desinstalado %1 estilos correctamente."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313

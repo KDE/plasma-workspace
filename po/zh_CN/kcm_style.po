@@ -26,103 +26,103 @@ msgstr "%1 不是有效的 GTK 应用程序外观样式包。"
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr ""
+msgstr "安装失败：无法从远程位置安装样式。"
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "安装失败：无法读取样式文件。"
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "安装失败：样式文件不包含任何数据。"
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "安装失败：无法解包样式文件。"
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "安装失败：找不到样式。"
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "安装失败：选中的文件不是有效的 Union 和合风格。"
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "安装失败：不支持所选样式。"
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "安装“%1”失败：样式已经安装。"
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "安装“%1”失败：权限被拒绝。"
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "安装“%1”失败：%2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "已成功安装“%1”。"
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "卸载失败：找不到 ID 为“%1”的样式。"
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "卸载“%1”失败：权限被拒绝。"
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "卸载“%1”失败：样式没有安装。"
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "卸载“%1”失败：该样式正在使用。"
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "卸载“%1”失败：%2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "无法卸载样式：\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
@@ -182,7 +182,7 @@ msgstr "%p%"
 #: stylepreview.ui:85
 #, kde-format
 msgid "Button"
-msgstr ""
+msgstr "按钮"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:99
@@ -207,7 +207,7 @@ msgstr "单选按钮"
 #: stylepreview.ui:138
 #, kde-format
 msgid "Text Field"
-msgstr ""
+msgstr "文本框"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -225,7 +225,7 @@ msgstr "应用程序外观样式"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Union 和合样式 ID"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -343,7 +343,7 @@ msgstr "GTK 应用程序外观样式包 (*.tar.xz *.tar.gz *.tar.bz2)"
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr ""
+msgstr "安装样式主题文件…"
 
 #: ui/main.qml:90
 #, kde-format
@@ -362,6 +362,7 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"此样式使用仍在开发中的 Union 和合样式引擎。某些视觉效果和行为可能存在错误。"
 
 #: ui/main.qml:174
 #, kde-format
@@ -372,87 +373,87 @@ msgstr "配置风格…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "卸载…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "无法卸载系统安装的样式。"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "只能卸载 Union 和合样式。"
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "不要卸载此样式。"
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "选择要安装的 Union 和合样式"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "安装"
 
 #: ui/UnionThumbnailItem.qml:25
 #, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
-msgstr ""
+msgstr "标签页 1"
 
 #: ui/UnionThumbnailItem.qml:29
 #, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
-msgstr ""
+msgstr "标签页 2"
 
 #: ui/UnionThumbnailItem.qml:50
 #, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
-msgstr ""
+msgstr "复选框"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
 #, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
-msgstr ""
+msgstr "单选按钮"
 
 #: ui/UnionThumbnailItem.qml:84
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
-msgstr ""
+msgstr "组合框"
 
 #: ui/UnionThumbnailItem.qml:85
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr ""
+msgstr "组合框项目"
 
 #: ui/UnionThumbnailItem.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Button"
-msgstr ""
+msgstr "按钮"
 
 #: ui/UnionThumbnailItem.qml:107
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr ""
+msgstr "文本框"
 
 #: ui/UnionThumbnailItem.qml:122
 #, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"

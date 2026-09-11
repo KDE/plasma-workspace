@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-07-07 22:00+0200\n"
+"POT-Creation-Date: 2026-09-11 00:48+0000\n"
+"PO-Revision-Date: 2026-09-10 20:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,38 +15,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Skärmtangentbord"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Inaktiverat"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Pekskärm och ritplatta"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Pekskärm, ritplatta, mus och pekplatta"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Anpassa virtuella skrivbord..."
+msgstr "Anpassa skärmtangentbord…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -55,6 +53,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Skärmtangentbord: inte tillgängligt\n"
+"Klicka eller tryck för att anpassa skärmtangentbordets inställningar"
 
 #: qml/main.qml:143
 #, kde-format
@@ -63,16 +63,26 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Anpassat att inte visas automatiskt\n"
+"Klicka eller tryck för att anpassa skärmtangentbordets inställningar"
 
 #: qml/main.qml:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+#| "keyboard (no input-method features like preedit/word suggestions/etc)"
+#| msgid ""
+#| "No supported text text field is currently active\n"
+#| "Click or tap to show in hardware keyboard emulation mode."
 msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"
 msgid ""
-"No supported text text field is currently active\n"
+"No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Inget textfält som stöds är för närvarande aktivt\n"
+"Klicka eller tryck för att visa i emuleringsläge för maskinvarutangentbord."
 
 #: qml/main.qml:167
 #, kde-format
@@ -81,6 +91,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Skärmtangentbordet är synligt Klicka eller tryck för att dölja "
+"skärmtangentbordet."
 
 #: qml/main.qml:177
 #, kde-format
@@ -89,6 +101,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Visas automatiskt vid tryck på ett textfält\n"
+"Tryck för att anpassa skärmtangentbordets inställningar"
 
 #: qml/main.qml:187
 #, kde-format
@@ -97,6 +111,8 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Visas automatiskt vid interaktion med ett textfält\n"
+"Tryck för att anpassa skärmtangentbordets inställningar"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Virtuellt tangentbord tillgängligt"

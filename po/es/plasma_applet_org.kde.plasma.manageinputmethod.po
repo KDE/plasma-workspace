@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.manageinputmethod\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-05-15 00:15+0100\n"
+"POT-Creation-Date: 2026-09-11 00:48+0000\n"
+"PO-Revision-Date: 2026-09-11 01:27+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,38 +17,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Teclado en pantalla"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Pantalla táctil y tableta"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Pantalla táctil, tableta, ratón y panel táctil"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Configurar los teclados virtuales…"
+msgstr "Configurar los teclados en pantalla…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -72,7 +70,7 @@ msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"
 msgid ""
-"No supported text text field is currently active\n"
+"No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
 
@@ -99,21 +97,3 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
-
-#~ msgid "Virtual Keyboard: unavailable"
-#~ msgstr "Teclado virtual: no disponible"
-
-#~ msgid "Virtual Keyboard: disabled"
-#~ msgstr "Teclado virtual: desactivado"
-
-#~ msgid "Show Virtual Keyboard"
-#~ msgstr "Mostrar teclado virtual"
-
-#~ msgid "Virtual Keyboard: visible"
-#~ msgstr "Teclado virtual: visible"
-
-#~ msgid "Virtual Keyboard: Show on non-mouse input"
-#~ msgstr "Teclado virtual: mostrar cuando no haya entrada del ratón"
-
-#~ msgid "Virtual Keyboard: Show with all input devices"
-#~ msgstr "Teclado virtual: mostrar con todos los dispositivos de entrada"

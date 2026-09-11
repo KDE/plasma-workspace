@@ -35,20 +35,7 @@ msgid "Selection and Clipboard:"
 msgstr "选中内容和剪贴板："
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -62,14 +49,6 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the option "
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
-"当您使用鼠标或者键盘将屏幕的某个部分的内容高亮显示时，它们将成为<emphasis>选"
-"中内容</emphasis>。您可以使用鼠标中键粘贴选中的内容。<nl/><nl/>如果您通过软件"
-"界面对选中内容进行了<interface>复制</interface>或者<interface>剪切</"
-"interface>操作，它们将被保存到<emphasis>剪贴板</emphasis>中。剪贴板中的内容可"
-"以通过<interface>粘贴</interface>操作进行粘贴。<nl/><nl/>启用此选项后，选中内"
-"容将自动被复制到剪贴板，任意选中内容均可立即通过任意方式进行粘贴。禁用此选项"
-"后，选中内容可能还会被保存到剪贴板的历史记录中 (通过下面的选项控制)，但只能通"
-"过鼠标中键进行粘贴。"
 
 #: configdialog.cpp:124
 #, kde-format
@@ -77,10 +56,9 @@ msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "总是保存到剪贴板"
+msgstr ""
 
 #: configdialog.cpp:128
 #, kde-format
@@ -528,22 +506,13 @@ msgid "Command:"
 msgstr "命令："
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"命令中的 <placeholder>&#37;s</placeholder> 将被替换为对应的完整剪贴板内容。 "
-"<placeholder>&#37;0</placeholder> 到 <placeholder>&#37;9</placeholder> 将被替"
-"换为按照匹配模式捕获的文本。"
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -716,39 +685,26 @@ msgstr "选中内容自动复制到剪贴板"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"通过光标选中的内容将被自动复制到剪贴板，以便在之后通过粘贴操作或者鼠标中键进"
-"行粘贴。<br/><a href=\"1\">查看关于选中内容和剪贴板内容的更多信息</a>。"
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "忽略选中内容"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"使用光标选中，但没有明确复制到剪贴板的内容不会自动保存到剪贴板历史记录中，而"
-"且只能通过点击鼠标中键进行粘贴。"
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
@@ -758,10 +714,9 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "是否将选中的文本内容保存到剪贴板的历史记录。"
+msgstr ""
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -808,25 +763,17 @@ msgstr "在操作的树形部件中用于表示改动的空条目"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "去除选中文本的空格"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"在进行操作之前移除位于选中文本内容开头和结尾的空格。例如这样做可以确保粘贴的 "
-"URL 能被浏览器正确解析。保存在剪贴板中的文本不受影响。"
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -866,54 +813,3 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgid "Text selection:"
-#~ msgstr "选中的文本内容："
-
-#~ msgid "Only when explicitly copied"
-#~ msgstr "仅在明确复制时保存到剪贴板"
-
-#~ msgid "Non-text selection:"
-#~ msgstr "选中的非文本内容："
-
-#~ msgid "Never save in history"
-#~ msgstr "不保存到剪贴板"
-
-#~ msgid ""
-#~ "Whether non-text selections (such as images) are saved in the clipboard "
-#~ "history."
-#~ msgstr "是否将选中的非文本内容 (如图像) 保存到剪贴板的历史记录。"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "When a <interface>match pattern</interface> matches the clipboard "
-#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
-#~ "menu and can be executed."
-#~ msgstr ""
-#~ "当<interface>匹配模式</interface>与剪贴板内容匹配时，可以执行它显示在 "
-#~ "Klipper 弹出菜单中的<interface>命令</interface>。"
-
-#~ msgid "Text selection only"
-#~ msgstr "仅接受纯文本选中内容"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "仅保存选中的文本内容到剪贴板历史记录，不保存图像或者其他类型的数据。"
-
-#~ msgid "Always ignore images"
-#~ msgstr "总是忽略图像"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr "不要保存图像到剪贴板历史记录，即使图像已被明确复制。"
-
-#~ msgid "Include MIME actions"
-#~ msgstr "包含 MIME 操作"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "如果选择的是文件名或 URL，在弹出菜单中包含能够接受该 MIME 类型的应用程序。"

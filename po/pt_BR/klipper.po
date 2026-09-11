@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-26 06:51-0300\n"
+"PO-Revision-Date: 2026-09-10 08:04-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -47,20 +47,7 @@ msgid "Selection and Clipboard:"
 msgstr "Seleção e área de transferência:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -83,30 +70,31 @@ msgstr ""
 "esta opção mantém a seleção e a área de transferência sincronizadas, assim, "
 "qualquer seleção fica imediatamente disponível para ser colada por qualquer "
 "meio. Se desativada, a seleção ainda pode ser salva no histórico da área de "
-"transferência (sujeito às opções abaixo), no entanto, só pode ser colada com "
-"o botão do meio do mouse."
+"transferência (sujeito à opção abaixo), no entanto, só pode ser colada com o "
+"botão do meio do mouse."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Texto selecionado com o ponteiro ou o teclado"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Salvar sempre no histórico"
+msgstr "Incluir no histórico:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"O texto copiado explicitamente é sempre salvo, a menos que esteja marcado "
+"como senha."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Dados de imagem copiados explicitamente"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -114,6 +102,9 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Por exemplo, camadas e seleções copiadas em editores de imagem como o Krita "
+"ou o GIMP.<br/><a href=\"1\">Mais informações sobre imagens na área de "
+"transferência.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -127,6 +118,14 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"A área de transferência sempre permitirá copiar arquivos de imagem como "
+"nomes de arquivo e exibirá suas miniaturas. Essa configuração abrange casos "
+"em que as imagens são armazenadas diretamente como dados. Alguns aplicativos "
+"suportam ambos os casos, mas outros aceitam imagens apenas como dados.<nl/"
+"><nl/>Observe também que a ferramenta de captura de tela Spectacle ignorará "
+"essa configuração quando estiver configurada para salvar as capturas na área "
+"de transferência. Qualquer aplicativo que envie tanto texto quanto imagem "
+"também a ignorará."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -511,7 +510,7 @@ msgid ""
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
 "Os comandos para esta correspondência serão incluídos no menu de ação "
-"automática, se estiver habilitado na página <interface>Menu de Ações</"
+"automática, se estiver habilitado na página <interface>Menu de ações</"
 "interface>. Se esta opção estiver desativada, os comandos para esta "
 "correspondência não serão incluídos no menu de contexto automático, mas "
 "serão incluídos se o pop-up for ativado manualmente com o atalho de tecla "
@@ -559,23 +558,16 @@ msgid "Command:"
 msgstr "Comando:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"Um <placeholder>&#37;s</placeholder> no comando será substituído pelo "
-"conteúdo completo da área de transferência. <placeholder>&#37;0</"
-"placeholder> até <placeholder>&#37;9</placeholder> será substituído pelo "
-"texto correspondente capturado do padrão de correspondência."
+"Um <b>&#37;s</b> no comando será substituído pelo conteúdo completo da área "
+"de transferência. De <b>&#37;0</b> a <b>&#37;9</b> serão substituídos pelos "
+"textos capturados correspondentes do padrão de correspondência."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -756,55 +748,45 @@ msgstr "Manter a seleção e área de transferência sincronizadas"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"O conteúdo selecionado com o cursor é automaticamente copiado para a área de "
-"transferência, podendo ser colado tanto com uma ação de colar como com o "
-"clique do meio.<br/><a href=\"1\">Mais sobre seleção e área de "
+"O conteúdo selecionado com o ponteiro é automaticamente copiado para a área "
+"de transferência, podendo ser colado tanto com uma ação de <i>Colar</i> como "
+"com o clique do meio.<br/><a href=\"1\">Mais sobre seleção e área de "
 "transferência</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ignorar a seleção"
+msgstr "Salvar a seleção"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"O conteúdo selecionado com o cursor que não foi copiado explicitamente para "
-"a área de transferência não é armazenado automaticamente no histórico, e só "
-"pode ser colado com o clique do meio."
+"O conteúdo selecionado com o ponteiro, mas não copiado explicitamente para a "
+"área de transferência, é armazenado automaticamente no histórico da área de "
+"transferência."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Salvar imagens"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Se seleções de texto são salvas no histórico da área de transferência."
+msgstr "Armazena imagens no histórico da área de transferência."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -854,27 +836,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Remover espaços em branco da seleção"
+msgstr "Remover espaços em branco"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Remove qualquer espaço em branco do começo e fim do texto selecionado antes "
-"de executar uma ação. Por exemplo, isto garante que uma URL colada em um "
-"navegador é interpretada como esperado. O texto salvo na área de "
-"transferência não é afetado."
+"Remove quaisquer espaços em branco do início e do fim do texto passado para "
+"uma ação. O texto salvo no histórico não é afetado."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -896,7 +870,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Oferecer opções para links e arquivos copiados"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -906,6 +880,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Para um link iniciado por <i>http://</i> ou <i>https://</i>, ou para "
+"arquivos, os aplicativos capazes de abri-los serão oferecidos juntamente com "
+"as ações correspondentes, se houver."
 
 #: klipperpopup.cpp:38
 #, kde-format

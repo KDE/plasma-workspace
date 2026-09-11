@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-01 07:22-0300\n"
+"PO-Revision-Date: 2026-09-10 07:44-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -142,50 +142,37 @@ msgid "Could not uninstall styles:\n"
 msgstr "Não foi possível desinstalar os estilos:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-#| msgid_plural ""
-#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
 msgstr ""
 "“%1” desinstalado com sucesso, mas não foi possível desinstalar os outros:\n"
 
 #: kcmstyle.cpp:229
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-#| msgid_plural ""
-#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
-"“%1” desinstalado com sucesso, mas não foi possível desinstalar os outros:\n"
+"%1 estilo desinstalado com sucesso, mas não foi possível desinstalar os "
+"outros:\n"
 msgstr[1] ""
-"%1 estilos foram desinstalados com sucesso, mas não foi possível desinstalar "
+"%1 estilos desinstalados com sucesso, mas não foi possível desinstalar "
 "outros:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
 msgstr "“%1” desinstalado com sucesso."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "“%1” desinstalado com sucesso."
+msgstr[0] "%1 estilo desinstalado com sucesso."
 msgstr[1] "%1 estilos desinstalados com sucesso."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313

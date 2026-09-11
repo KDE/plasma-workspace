@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-26 23:45+0100\n"
+"PO-Revision-Date: 2026-09-11 01:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:83
@@ -47,20 +47,7 @@ msgid "Selection and Clipboard:"
 msgstr "Selección y portapapeles:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -83,20 +70,18 @@ msgstr ""
 "interface>.<nl/><nl/>Si esta opción está marcada, la selección y el "
 "portapapeles son idénticos, por lo que cualquier selección estará disponible "
 "de forma inmediata para pegar usando cualquier método. Si no está marcada, "
-"la selección se podrá guardar en el historial del portapapeles (según las "
-"opciones inferiores), pero solo se podrá pegar usando el botón central del "
-"ratón."
+"la selección se podrá guardar en el historial del portapapeles (según la "
+"opción inferior), pero solo se podrá pegar usando el botón central del ratón."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Texto seleccionado con el puntero o con el teclado"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Guardar siempre en el historial"
+msgstr "Incluir en el historial"
 
 #: configdialog.cpp:128
 #, kde-format
@@ -914,61 +899,3 @@ msgstr "Ventana emergente del portapapeles"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
-
-#~ msgid "Text selection:"
-#~ msgstr "Selección de texto:"
-
-#~ msgid "Only when explicitly copied"
-#~ msgstr "Solo cuando se copie explícitamente"
-
-#~ msgid "Non-text selection:"
-#~ msgstr "Selección que no es de texto:"
-
-#~ msgid "Never save in history"
-#~ msgstr "No guardar nunca en el historial"
-
-#~ msgid ""
-#~ "Whether non-text selections (such as images) are saved in the clipboard "
-#~ "history."
-#~ msgstr ""
-#~ "Si las selecciones que no son de texto (como las imágenes) se guardan en "
-#~ "el historial del portapapeles."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "When a <interface>match pattern</interface> matches the clipboard "
-#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
-#~ "menu and can be executed."
-#~ msgstr ""
-#~ "Cuando un <interface>patrón de coincidencia</interface> coincide con el "
-#~ "contenido del portapapeles, sus <interface>órdenes</interface> aparecen "
-#~ "en el menú emergente de Klipper y se pueden ejecutar."
-
-#~ msgid "Text selection only"
-#~ msgstr "Solo selección de texto"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "Guardar solo selecciones de texto en el historial del portapapeles, no "
-#~ "imágenes ni cualquier otro tipo de datos."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Ignorar imágenes siempre"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "No guardar imágenes en el historial del portapapeles, incluso cuando se "
-#~ "copian explícitamente."
-
-#~ msgid "Include MIME actions"
-#~ msgstr "Incluir acciones MIME"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "Si se selecciona un nombre de archivo o una URL, incluir las aplicaciones "
-#~ "que pueden aceptar su tipo MIME en el menú emergente."

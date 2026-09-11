@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-05-14 10:42+0200\n"
+"POT-Creation-Date: 2026-09-11 00:48+0000\n"
+"PO-Revision-Date: 2026-09-10 13:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -22,33 +22,31 @@ msgstr ""
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Teclat en pantalla"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivat"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Tàctil i tauleta"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Tàctil, tauleta, ratolí i ratolí tàctil"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Configura els teclats virtuals…"
+msgstr "Configura els teclats en pantalla…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -57,6 +55,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Teclat en pantalla: no disponible\n"
+"Cliqueu o toqueu per a configurar els paràmetres del teclat en pantalla"
 
 #: qml/main.qml:143
 #, kde-format
@@ -65,16 +65,27 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Configurat per a no mostrar automàticament\n"
+"Cliqueu o toqueu per a configurar els paràmetres del teclat en pantalla"
 
 #: qml/main.qml:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+#| "keyboard (no input-method features like preedit/word suggestions/etc)"
+#| msgid ""
+#| "No supported text text field is currently active\n"
+#| "Click or tap to show in hardware keyboard emulation mode."
 msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"
 msgid ""
-"No supported text text field is currently active\n"
+"No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Actualment no hi ha cap camp de text actiu admés\n"
+"Cliqueu o toqueu per a mostrar-ho en el mode d'emulació de teclat de "
+"maquinari."
 
 #: qml/main.qml:167
 #, kde-format
@@ -83,6 +94,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"El teclat en pantalla és visible\n"
+"Cliqueu o toqueu per a ocultar el teclat en pantalla."
 
 #: qml/main.qml:177
 #, kde-format
@@ -91,6 +104,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Mostra automàticament en tocar un camp de text\n"
+"Toqueu per a configurar els paràmetres del teclat en pantalla"
 
 #: qml/main.qml:187
 #, kde-format
@@ -99,21 +114,5 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
-
-#~ msgid "Virtual Keyboard: unavailable"
-#~ msgstr "Teclat virtual: no disponible"
-
-#~ msgid "Virtual Keyboard: disabled"
-#~ msgstr "Teclat virtual: desactivat"
-
-#~ msgid "Show Virtual Keyboard"
-#~ msgstr "Mostra el teclat virtual"
-
-#~ msgid "Virtual Keyboard: visible"
-#~ msgstr "Teclat virtual: visible"
-
-#~ msgid "Virtual Keyboard: Show on non-mouse input"
-#~ msgstr "Teclat virtual: mostra en l'entrada que no siga de ratolí"
-
-#~ msgid "Virtual Keyboard: Show with all input devices"
-#~ msgstr "Teclat virtual: mostra en tots els dispositius d'entrada"
+"Mostra automàticament en interactuar amb un camp de text\n"
+"Cliqueu o toqueu per a configurar els paràmetres del teclat en pantalla"
