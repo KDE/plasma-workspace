@@ -25,6 +25,7 @@
 #include <QMessageBox>
 #include <QProcess>
 #include <QQmlDebuggingEnabler>
+#include <QQmlEngine>
 #include <QQuickWindow>
 #include <QSurfaceFormat>
 
@@ -34,7 +35,10 @@
 #include <KLocalizedString>
 #include <KSignalHandler>
 
+#include <PlasmaQuick/PlasmaQuick>
+
 #include <csignal>
+#include <memory>
 
 #if __has_include(<malloc.h>)
 #include <malloc.h>
@@ -197,6 +201,15 @@ int main(int argc, char *argv[])
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(replace ? KDBusService::Replace : 0));
+
+    // plasmashell shares a single process-wide QML engine (PlasmaQuick::globalEngine()).
+    // At application shutdown the last std::shared_ptr to that engine can be released
+    // after the event loop has already stopped (for example from a QML window such as
+    // a tooltip that is only destroyed during teardown). Qt's threaded pixmap reader
+    // then blocks forever joining its worker thread in its destructor, and plasmashell
+    // never exits. Deliberately keep a reference for the lifetime of the process so the
+    // engine is never destroyed; the OS reclaims the memory when the process terminates.
+    [[maybe_unused]] auto *qmlEngineKeepAlive = new std::shared_ptr<QQmlEngine>(PlasmaQuick::globalEngine());
 
     corona.init();
     SoftwareRendererNotifier::notifyIfRelevant();

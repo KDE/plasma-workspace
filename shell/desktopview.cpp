@@ -84,7 +84,16 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 #endif
 }
 
-DesktopView::~DesktopView() = default;
+DesktopView::~DesktopView()
+{
+    // The config view is parentless and would otherwise only be destroyed
+    // through the deleteLater() in the QObject::destroyed connection below,
+    // which is never processed anymore when the application is quitting and
+    // the event loop is gone: the leaked QQuickWindow would then hang the
+    // process at exit. Delete it synchronously instead, while the applet it
+    // configures is still alive.
+    delete m_configView.data();
+}
 
 void DesktopView::showEvent(QShowEvent *e)
 {

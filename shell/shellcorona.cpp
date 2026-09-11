@@ -20,8 +20,11 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMenu>
+#include <QQmlComponent>
 #include <QQmlContext>
+#include <QQmlEngine>
 #include <QQuickItemGrabResult>
+#include <QQuickWindow>
 #include <QScreen>
 #include <QUrl>
 #include <QVariant>
@@ -295,6 +298,16 @@ void ShellCorona::init()
 ShellCorona::~ShellCorona()
 {
     m_closingDown = true;
+    // The alternatives dialog must be deleted while its applet and the QML
+    // objects it references are still alive, and while the engine it was
+    // created on is still valid. deleteLater() would never be processed now
+    // that the event loop is gone, and the leaked QQuickWindow would leave
+    // the application hanging at shutdown.
+    deleteAlternativesDialog();
+    // Same for the containment configuration window: it is a QObject child
+    // of this corona, so it would only be destroyed after the containments
+    // it operates on are already gone.
+    delete m_shellContainmentConfig.data();
     destroyDesktopsAndPanels();
 
     while (!containments().isEmpty()) {
@@ -302,6 +315,11 @@ ShellCorona::~ShellCorona()
         // Deleting a containment in turn also kills any panel views
         delete containments().constFirst();
     }
+
+    // Drop our reference to the global QML engine last, after everything
+    // that was created on it (applet items, the alternatives dialog, ...) is
+    // certainly gone.
+    m_alternativesEngine.reset();
 }
 
 KPackage::Package ShellCorona::lookAndFeelPackage()
@@ -911,14 +929,48 @@ void ShellCorona::screenInvariants() const
 }
 #endif
 
+void ShellCorona::deleteAlternativesDialog()
+{
+    auto *dialog = m_alternativesDialog.data();
+    if (!dialog) {
+        return;
+    }
+    m_alternativesDialog = nullptr;
+
+    // Put the panel back to normal while the containment is certainly still alive
+    if (m_showingAlternatives && m_showingAlternatives->containment()) {
+        m_showingAlternatives->containment()->setStatus(Plasma::Types::ActiveStatus);
+    }
+    m_showingAlternatives = nullptr;
+
+    // Don't let the cleanup handlers run in response to the events the window
+    // may emit while being destroyed: we are done with it (the connections
+    // with the dialog as receiver are disconnected automatically as well).
+    delete dialog;
+}
+
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
-    if (m_showingAlternatives != nullptr && m_showingAlternatives == applet)
+    if (m_alternativesDialog && m_alternativesDialog->isVisible() && m_showingAlternatives == applet) {
+        // Already showing alternatives for this applet, just bring the dialog back up
+        m_alternativesDialog->raise();
+        m_alternativesDialog->requestActivate();
         return;
+    }
     const QUrl alternativesQML = kPackage().fileUrl("appletalternativesui");
     if (alternativesQML.isEmpty()) {
         return;
     }
+
+    Plasma::Containment *containment = applet->containment();
+    if (!containment) {
+        return;
+    }
+
+    // Only ever one dialog at a time: if one is still around (open for
+    // another applet, or not yet deleted after having been closed),
+    // get rid of it before creating the new one.
+    deleteAlternativesDialog();
 
     // When a context menu is opened, the panel status is set to
     // RequiresAttentionStatus to make sure it does not hide. When
@@ -926,42 +978,51 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     // and the panel hides. To avoid that, we set the status back to
     // RequiresAttentionStatus to keep it open as long as there is
     // an alternatives dialog.
-    applet->containment()->setStatus(Plasma::Types::RequiresAttentionStatus);
+    containment->setStatus(Plasma::Types::RequiresAttentionStatus);
 
-    QQmlComponent component(PlasmaQuick::globalEngine().get(), alternativesQML);
+    // Hold a reference to the engine: the dialog is created on it, but nothing
+    // else guarantees the shared engine outlives the dialog (e.g. when quitting,
+    // every other owner may be destroyed first).
+    m_alternativesEngine = PlasmaQuick::globalEngine();
+    QQmlComponent component(m_alternativesEngine.get(), alternativesQML);
 
     auto *helper = new AlternativesHelper(applet);
-    auto obj = component.createWithInitialProperties({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
-
-    auto dialog = qobject_cast<QQuickWindow *>(obj);
+    auto *obj = component.createWithInitialProperties({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
+    auto *dialog = qobject_cast<QQuickWindow *>(obj);
     if (!dialog) {
         qCWarning(PLASMASHELL) << "Alternatives UI does not inherit from Dialog";
         delete obj;
         delete helper;
         return;
     }
+    helper->setParent(dialog);
+
+    m_alternativesDialog = dialog;
     m_showingAlternatives = applet;
-    connect(applet, &Plasma::Applet::destroyedChanged, obj, [obj, helper, this](bool destroyed) {
-        if (!destroyed) {
+
+    const QPointer<Plasma::Containment> containmentGuard = containment;
+    const auto cleanup = [this, dialog, containmentGuard]() {
+        // The dialog is no longer the current one, e.g. it has already been
+        // deleted and replaced by a new one: nothing left to do.
+        if (m_alternativesDialog != dialog) {
             return;
         }
-        if (m_showingAlternatives) {
-            m_showingAlternatives->containment()->setStatus(Plasma::Types::ActiveStatus);
-            m_showingAlternatives = nullptr;
+        m_alternativesDialog = nullptr;
+        m_showingAlternatives = nullptr;
+        if (containmentGuard) {
+            containmentGuard->setStatus(Plasma::Types::ActiveStatus);
         }
-        obj->deleteLater();
-        helper->deleteLater();
+        dialog->deleteLater();
+    };
+    connect(applet, &Plasma::Applet::destroyedChanged, dialog, [cleanup](bool destroyed) {
+        if (destroyed) {
+            cleanup();
+        }
     });
-    connect(dialog, &QQuickWindow::visibleChanged, obj, [obj, helper, this](bool visible) {
-        if (visible) {
-            return;
+    connect(dialog, &QQuickWindow::visibleChanged, dialog, [cleanup](bool visible) {
+        if (!visible) {
+            cleanup();
         }
-        if (m_showingAlternatives) {
-            m_showingAlternatives->containment()->setStatus(Plasma::Types::ActiveStatus);
-            m_showingAlternatives = nullptr;
-        }
-        obj->deleteLater();
-        helper->deleteLater();
     });
 }
 
@@ -970,6 +1031,11 @@ void ShellCorona::unload()
     if (m_shell.isEmpty() || immutable()) {
         return;
     }
+
+    // Same as in the destructor: the dialog must not outlive the applets and
+    // views it depends on (nor the QML engine it was created on)
+    deleteAlternativesDialog();
+    delete m_shellContainmentConfig.data();
 
     destroyDesktopsAndPanels();
     m_activityContainmentPlugins.clear();

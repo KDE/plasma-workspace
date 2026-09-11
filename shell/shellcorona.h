@@ -24,6 +24,8 @@
 class DesktopView;
 class PanelView;
 class QMenu;
+class QQmlEngine;
+class QQuickWindow;
 class QScreen;
 class ScreenPool;
 class StrutManager;
@@ -282,6 +284,7 @@ private Q_SLOTS:
 private:
     void sanitizeScreenLayout(const QString &configFileName);
     void destroyDesktopsAndPanels();
+    void deleteAlternativesDialog();
     void updateStruts();
     DesktopView *desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
@@ -328,7 +331,9 @@ private:
     bool m_closingDown : 1;
     bool m_screenReorderInProgress = false;
     QString m_testModeLayout;
-    Plasma::Applet *m_showingAlternatives = nullptr;
+    QPointer<Plasma::Applet> m_showingAlternatives;
+    QPointer<QQuickWindow> m_alternativesDialog;
+    std::shared_ptr<QQmlEngine> m_alternativesEngine;
 
     StrutManager *m_strutManager;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;

@@ -129,6 +129,18 @@ PanelView::~PanelView()
     if (containment()) {
         m_corona->requestApplicationConfigSync();
     }
+    // The applet config view is parentless and is normally only destroyed
+    // through a deleteLater() (on hide or when its applet goes away). When
+    // quitting, that deferred delete is posted after the event loop has
+    // stopped and never runs: the leaked QQuickWindow would then hang the
+    // process at exit. Delete it synchronously instead, while the applet it
+    // configures is still alive.
+    delete m_appletConfigView.data();
+    // The panel config view is parentless as well and is normally only
+    // destroyed through a deleteLater() connected to our own destruction.
+    // Delete it synchronously instead, before the containment and the QML
+    // items it operates on are gone.
+    delete m_panelConfigView.data();
 }
 
 bool PanelView::defaultFloating() const
