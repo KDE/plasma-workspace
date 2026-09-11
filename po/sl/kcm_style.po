@@ -2,7 +2,7 @@
 # translation of kcmstyle.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001,2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_style.po 1746075 2026-09-10 01:32:43Z scripty $
+# $Id: kcm_style.po 1746159 2026-09-11 03:23:36Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-01 07:23+0200\n"
+"PO-Revision-Date: 2026-09-10 07:23+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -136,12 +136,10 @@ msgid "Could not uninstall styles:\n"
 msgstr "Ni bilo mogoče odnamestiti slogov:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr "Uspešno nameščen “%1”."
+msgstr "Uspešno odnameščen “%1”, a ni uspel odnamestiti drugih:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -149,30 +147,26 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Uspešno odnameščenih %1 slogov, a ni uspel odnamestiti drugih:\r\n"
+msgstr[1] "Uspešno odnameščen %1 slog, a ni uspel odnamestiti drugih:\r\n"
+msgstr[2] "Uspešno odnameščena %1 sloga, a ni uspel odnamestiti drugih:\r\n"
+msgstr[3] "Uspešno odnameščeni %1 slogi, a ni uspel odnamestiti drugih:\r\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "Uspešno nameščen “%1”."
+msgstr "Uspešno odnameščen “%1”."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Uspešno nameščen “%1”."
-msgstr[1] "Uspešno nameščen “%1”."
-msgstr[2] "Uspešno nameščen “%1”."
-msgstr[3] "Uspešno nameščen “%1”."
+msgstr[0] "Uspešno odnameščeno %1 slogov."
+msgstr[1] "Uspešno odnameščen %1 slog."
+msgstr[2] "Uspešno odnameščena %1 sloga."
+msgstr[3] "Uspešno odnameščei %1 slogi."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-05-14 07:44+0200\n"
+"POT-Creation-Date: 2026-09-11 02:51+0000\n"
+"PO-Revision-Date: 2026-09-10 07:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,33 +21,31 @@ msgstr ""
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Zaslonska tipkovnica"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Onemogočeno"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Dotik in tablica"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Dotik, tablica, miška in drsna ploščica"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Nastavi virtualne tipkovnice..."
+msgstr "Konfiguriraj zaslonske tipkovnice..."
 
 #: qml/main.qml:133
 #, kde-format
@@ -56,6 +54,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Zaslonska tipkovnica: ni na voljo\n"
+"Kliknite ali dotaknite za konfiguriranje nastavitev zaslonskih tipkovnic"
 
 #: qml/main.qml:143
 #, kde-format
@@ -64,16 +64,26 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Konfigurirano, da se ne prikaže samodejno\n"
+"Kliknite ali dotaknite za konfiguracijo nastavitev zaslonske tipkovnice"
 
 #: qml/main.qml:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+#| "keyboard (no input-method features like preedit/word suggestions/etc)"
+#| msgid ""
+#| "No supported text text field is currently active\n"
+#| "Click or tap to show in hardware keyboard emulation mode."
 msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"
 msgid ""
-"No supported text text field is currently active\n"
+"No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Trenutno ni aktivno nobeno podprto besedilno polje.\n"
+"Kliknite ali dotaknite za prikaz v načinu emulacije strojne tipkovnice."
 
 #: qml/main.qml:167
 #, kde-format
@@ -82,6 +92,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Zaslonska tipkovnica je vidna\n"
+"Kliknite ali dotaknite, da skrijete zaslonsko tipkovnico."
 
 #: qml/main.qml:177
 #, kde-format
@@ -90,6 +102,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Se prikaže samodejno ob dotiku besedilnega polja\n"
+"Dotaknite za konfiguracijo nastavitev zaslonske tipkovnice"
 
 #: qml/main.qml:187
 #, kde-format
@@ -98,6 +112,8 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Se prikaže Samodejno pri interakciji z besedilnim poljem\n"
+"Kliknite ali dotaknite za konfiguracijo nastavitev zaslonske tipkovnice"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Virtualna tipkovnica: ni na voljo"

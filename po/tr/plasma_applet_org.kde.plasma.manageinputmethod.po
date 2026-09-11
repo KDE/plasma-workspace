@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-05-14 13:15+0300\n"
+"POT-Creation-Date: 2026-09-11 02:51+0000\n"
+"PO-Revision-Date: 2026-09-10 19:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,38 +16,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Ekran Üzeri Klavye"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Devre Dışı"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Dokunmatik ve Tablet"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Dokunmatik, Tablet, Fare ve Dokunmatik Yüzey"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Sanal Klavyeleri Yapılandır…"
+msgstr "Ekran Üzeri Klavyeleri Yapılandır…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -56,6 +54,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Ekran Üzeri Klavye kullanılabilir değil\n"
+"Ekran Üzeri Klavye ayarlarını yapılandırmak için tıklayın veya dokunun"
 
 #: qml/main.qml:143
 #, kde-format
@@ -64,16 +64,26 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Kendiliğinden gösterilmemek üzere yapılandırılmış\n"
+"Ekran Üzeri Klavye ayarlarını yapılandırmak için tıklayın veya dokunun"
 
 #: qml/main.qml:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+#| "keyboard (no input-method features like preedit/word suggestions/etc)"
+#| msgid ""
+#| "No supported text text field is currently active\n"
+#| "Click or tap to show in hardware keyboard emulation mode."
 msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"
 msgid ""
-"No supported text text field is currently active\n"
+"No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Desteklenen bir metin alanı şu anda etkin değil\n"
+"Donanım klavyesi öykünme kipinde göstermek için tıklayın veya dokunun"
 
 #: qml/main.qml:167
 #, kde-format
@@ -82,6 +92,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Ekran Üzeri Klavye şu anda görünür durumda\n"
+"Ekran Üzeri Klavye’yi gizlemek için tıklayın veya dokunun"
 
 #: qml/main.qml:177
 #, kde-format
@@ -90,6 +102,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Bir metin alanına dokunulduğunda kendiliğinden gösterilir\n"
+"Ekran Üzeri Klavye ayarlarını yapılandırmak için dokunun"
 
 #: qml/main.qml:187
 #, kde-format
@@ -98,6 +112,8 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Bir metin alanıyla etkileşime girildiğinde kendiliğinden gösterilir\n"
+"Ekran Üzeri Klavye ayarlarını yapılandırmak için tıklayın veya dokunun"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Sanal klavye: Kullanılamıyor"

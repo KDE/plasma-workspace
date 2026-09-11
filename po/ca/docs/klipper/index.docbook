@@ -13,31 +13,13 @@
 <title
 >El manual del &klipper; </title>
 
-<authorgroup>
-<author
->&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
-
-<othercredit role="developer"
->&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
-
-&traductor.Antoni.Bella; 
-
-</authorgroup>
-
-<copyright>
-<year
->2000-2003</year>
-<holder
->&Philip.Rodrigues;</holder>
-</copyright>
-
 <legalnotice
 >&FDLNotice;</legalnotice>
 
 <date
->5 de maig de 2022</date>
+>9 de setembre de 2026</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 6.8</releaseinfo>
 
 <abstract>
 <para
@@ -55,15 +37,13 @@
 >porta-retalls</keyword>
 </keywordset>
 </bookinfo>
-<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
 <title
 >Introducció</title>
 <para
 >El &klipper; és la utilitat de porta-retalls del &plasma;. Emmagatzema l'historial del porta-retalls, i us permet enllaçar el contingut amb les accions de les aplicacions. Si us plau, informeu a sobre de qualsevol problema o petició d'alguna característica al <ulink url="http://bugs.kde.org"
->bugzilla del KDE</ulink
+>Sistema de seguiment d'errors de KDE</ulink
 >.</para>
-
 </chapter>
 
 <chapter id="using-klipper">
@@ -74,7 +54,7 @@
 <title
 >Ús bàsic</title>
 <para
->Podeu utilitzar el &klipper; a la safata del sistema, sigui com giny del &plasma; o una aplicació clàssica. Tots dos comparteixen la mateixa funcionalitat, però tenen una &IGU; diferent i es mostra l'últim element de l'historial quan es passa el punter del ratolí sobre la icona del &klipper; a la safata del sistema: </para>
+>Podeu utilitzar el &klipper; a la safata del sistema, sigui com un giny del &plasma; o una aplicació clàssica. Tots dos comparteixen la mateixa funcionalitat, però tenen una &IGU; diferent i es mostra l'últim element de l'historial quan es passa el punter del ratolí sobre la icona del &klipper; a la safata del sistema: </para>
 
 <screenshot>
 <screeninfo
@@ -89,9 +69,6 @@
 </textobject>
 </mediaobject>
 </screenshot>
-
-<para
->El giny del &klipper; restarà ocult si el porta-retalls està buit.</para>
 
 <para
 >Per a visualitzar l'historial del porta-retalls, feu clic a la icona del &klipper; a la safata del sistema.</para>
@@ -113,11 +90,12 @@
 </mediaobject>
 </screenshot>
 
+<!-- TODO: Document starred functionality -->
 <para
 >Passeu per sobre d'una entrada amb el punter del ratolí i apareixeran quatre icones que us permetran invocar una acció, mostrar el codi de barres, editar el contingut o eliminar l'entrada de l'historial. Utilitzeu l'&spectacle; per a capturar els codis de barres i desar-los. </para>
 
 <para
->Per a cercar a través de l'historial del porta-retalls obriu-lo (fent clic sobre el &klipper;) i escriviu la vostra consulta. Els resultats s'actualitzaran mentre escriviu. Per a esborrar l'historial del porta-retalls, feu clic en la icona a la dreta del camp de cerca. </para>
+>Per a cercar a través de l'historial del porta-retalls escriviu la consulta en el camp de cerca. Els resultats s'actualitzaran mentre escriviu. Per a esborrar l'historial del porta-retalls, feu clic en la icona a la dreta del camp de cerca. </para>
 
 <para
 >L'acció <guilabel
@@ -134,30 +112,33 @@
 >Accions</title>
 
 <para
->El &klipper; pot realitzar accions sobre el contingut del porta-retalls, basant-se en una expressió regular en particular. Per exemple, qualsevol contingut del porta-retalls que comenci amb «http://» es podrà passar al Firefox o al &konqueror; com un &URL; a obrir. A més, si el contingut coincideix amb un camí, es poden realitzar accions similars segons el tipus de fitxer. Per exemple, si es copia al porta-retalls el camí a un fitxer <acronym
+>El &klipper; pot realitzar accions sobre el contingut del porta-retalls, basant-se en una expressió regular en particular. Hi ha una acció integrada que actua sobre adreces web i fitxers. Permet passar una adreça web que que comenci per «http://» o «https://» a un navegador web, o un fitxer, per exemple, un <acronym
 >PDF</acronym
->, aquest es podrà veure a l'&okular;.</para>
+> a una aplicació compatible com l'&okular;.</para>
 
 <para
->Per a usar aquesta característica, simplement copieu un &URL; o camí. Si hi ha una expressió regular en la llista del &klipper;, apareixerà un menú mostrant-vos els programes adients perquè trieu. Empreu el ratolí o el teclat per a seleccionar un programa, i el &klipper; l'executarà, obrint l'adreça cap on apunta la selecció.</para>
+>Podeu escriure les vostres pròpies accions a la pàgina <guilabel
+>Configuració d'accions</guilabel
+> del <link linkend="preferences"
+>diàleg de configuració</link
+>, on també podeu desactivar l'acció integrada amb <guilabel
+>Ofereix aplicacions per a enllaços i fitxers copiats</guilabel
+>. </para>
 
 <para
->Podeu canviar el temps durant el qual el menú romandrà obert en el diàleg de configuració, amb l'opció <guilabel
+>Sempre podeu accedir al menú d'accions coincidents amb un botó al costat de l'element de l'historial. També podeu triar tenir un menú d'acció emergent en qualsevol moment que es col·loqui una coincidència al porta-retalls utilitzant la drecera <guilabel
+>Menú emergent d'acció automàtica</guilabel
+> que podeu configurar a la pàgina <guilabel
+>Dreceres</guilabel
+>, o marcant <guilabel
+>Immediatament a la selecció</guilabel
+> a <guilabel
 >Mostra el menú emergent d'acció</guilabel
 > a la pàgina <guilabel
->General</guilabel
->. Podeu desactivar per separat la part del camí al fitxer utilitzant l'opció <guilabel
->Inclou les accions MIME</guilabel
-> a la pàgina <guilabel
->Menú d'accions</guilabel
->.</para>
-
-<para
->Les accions es poden inhabilitar completament prement la drecera <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->X</keycap
-></keycombo
->.</para>
+>Menú d'acció</guilabel
+>. Allà, amb l'opció <guilabel
+>Temps del menú d'acció automàtica</guilabel
+>, també podeu canviar el temps que triga el menú automàtic a tancar per si mateix si no hi actueu.</para>
 
 <para
 >El contingut del porta-retalls que coincideixi amb una expressió regular també es pot editar abans de realitzar una operació a sobre seu. Seleccioneu <guimenuitem
@@ -181,11 +162,11 @@
 <title
 >General</title>
 <para
->El &klipper; es pot emprar per a establir el comportament del porta-retalls i selecció al &plasma;. </para>
+>&klipper; can be used to set the behavior of the clipboard and selection in &plasma;. To adjust their behavior, see <xref linkend="general-page"/>. </para>
 
 <note
 ><para
->El &X-Window; usa dues memòries intermèdies per separat de l'historial del porta-retalls: La «selecció» i el «porta-retalls». El text se situa a la memòria intermèdia de selecció simplement quan aquest és seleccionat i es pot enganxar amb el &BMR;. Per a situar el text a la memòria intermèdia del porta-retalls, seleccioneu-lo i premeu <keycombo
+>Hi ha dues memòries intermèdies per separat de l'historial del porta-retalls: la «selecció» i el «porta-retalls». El text se situa a la memòria intermèdia de selecció simplement quan aquest és seleccionat i es pot enganxar amb el &BMR;. Per a situar el text a la memòria intermèdia del porta-retalls, seleccioneu-lo i premeu <keycombo
 >&Ctrl;<keycap
 >X</keycap
 > </keycombo
@@ -201,42 +182,8 @@
 >Enganxa</guimenuitem
 > al menú contextual.</para>
 </note>
-
 </sect2>
-
-<sect2 id="changing-clipboard-modes">
-<title
->Canviar el comportament de la selecció i del porta-retalls</title>
-<para
->Per a canviar el comportament del porta-retalls i la selecció, seleccioneu <guimenuitem
->Configura el porta-retalls...</guimenuitem
-> des del menú contextual del &klipper; i en el diàleg que aparegui seleccioneu la pàgina <guilabel
->General</guilabel
->. Desmarcant <guilabel
->Selecció i porta-retalls</guilabel
-> fareu que el porta-retalls i la selecció funcionin amb memòries intermèdies completament separades, tal com s'ha descrit més amunt. Amb aquesta opció establerta, l'opció <guilabel
->Ignora</guilabel
-> evitarà que el &klipper; inclogui el contingut de la selecció al seu historial del porta-retalls i de portar a terme accions amb el contingut de la selecció. En seleccionar <guilabel
->Selecció i porta-retalls</guilabel
-> farà que la memòria intermèdia del porta-retalls i de la selecció sempre siguin la mateixa, de manera el text de la selecció es pot enganxar tant amb el &BMR; com amb la combinació de tecles <keycombo
->&Ctrl;<keycap
->V</keycap
-></keycombo
->, i de manera similar amb el text de la memòria intermèdia del porta-retalls. </para>
-
- <!-- The
-<guilabel
->Synchronize contents of the clipboard and the
-selection</guilabel
-> check box determines the clipboard mode. If the box is
-selected, the clipboard functions in the &UNIX; mode; if not, the
-&Windows;/&Mac; mode is used. -->
-
-</sect2>
-
-
 </sect1>
-
 </chapter>
 
 <chapter id="preferences">
@@ -246,89 +193,70 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <sect1 id="general-page">
 <title
 >Opcions generals</title>
+<note
+><para
+>Options below distinguish between <emphasis
+>selection</emphasis
+> and <emphasis
+>clipboard</emphasis
+>. To understand the difference, see <xref linkend="clipboard-modes"/>. </para
+></note>
+
 
 <variablelist>
 
 <varlistentry
 ><term
 ><guilabel
->Selecció i porta-retalls</guilabel
+>Historial del porta-retalls: Desa l'historial entre les sessions d'escriptori</guilabel
 ></term>
 <listitem
 ><para
->Quan s'ha ressaltat text o una àrea de la pantalla amb el ratolí o el teclat, això s'anomena <emphasis
->selecció</emphasis
->. Es pot enganxar fent servir el &BMR;.</para
-><para
->Si la selecció es copia explícitament usant una acció <guimenuitem
->Còpia</guimenuitem
-> o <guimenuitem
->Retalla</guimenuitem
->, es desa al <emphasis
->porta-retalls</emphasis
->. Es pot enganxar fent servir una acció <guimenuitem
->Enganxa</guimenuitem
->.</para
-><para
->Quan està activada, aquesta opció manté iguals la selecció i el porta-retalls, de manera que qualsevol selecció està immediatament disponible per a enganxar de qualsevol manera. Si està desactivada, la selecció encara es pot desar en l'historial del porta-retalls (subjecte a les opcions següents), però només es pot enganxar utilitzant el &BMR;.</para
+>Commuta si es conserva l'historial del porta-retalls quan tanqueu la sessió o apagueu l'ordinador.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Historial del porta-retalls</guilabel
+>Mida de l'historial</guilabel
 ></term>
 <listitem
 ><para
->Commuta l'historial del porta-retalls.</para
+>Estableix el nombre d'elements que estan emmagatzemats en l'historial del porta-retalls. El valor pot estar entre 1 i 2048.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Nombre d'entrades</guilabel
+>Selecció i porta-retalls: manté igual la selecció i el porta-retalls</guilabel
 ></term>
 <listitem
 ><para
->Estableix el nombre d'elements que estan emmagatzemats en l'historial del porta-retalls.</para
+>Quan està activada, aquesta opció manté iguals la selecció i el porta-retalls, de manera que qualsevol selecció del porta-retalls està disponible immediatament per a enganxar de qualsevol manera. Si està desactivada, la selecció encara es pot desar en l'historial del porta-retalls (subjecte a les opcions següents), però només es pot enganxar utilitzant el &BMR;. </para
 ></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Selecció de text</guilabel
+>Inclou a l'historial: text seleccionat amb el punter o el teclat</guilabel
 ></term>
 <listitem
 ><para
->Quan se selecciona una àrea de la pantalla amb el ratolí o el teclat, això s'anomena la «selecció». Aquesta opció determina si les seleccions de text es desen en l'historial del porta-retalls. És possible triar entre <guilabel
->Desa sempre en l'historial</guilabel
-> i <guilabel
->Només quan es copiï explícitament</guilabel
->. L'opció <guilabel
->Desa sempre en l'historial</guilabel
-> no està disponible si la sincronització de la selecció/porta-retalls està desactivada: en aquest cas la selecció mai es desarà automàticament en l'historial del porta-retalls. Vegeu <xref linkend="clipboard-modes"/>. </para>
+>Quan està marcada, la selecció es desarà a l'historial. El porta-retalls sempre es desa. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Selecció de no text</guilabel
+>Inclou a l'historial: les dades d'imatges copiades explícitament</guilabel
 ></term>
 <listitem
 ><para
->Aquesta opció determina si les seleccions de no text (com ara les imatges) es desen en l'historial del porta-retalls. És possible triar entre <guilabel
->Desa sempre en l'historial</guilabel
->, <guilabel
->Només quan es copiï explícitament</guilabel
->, i <guilabel
->No desis mai en l'historial</guilabel
->. L'opció <guilabel
->Desa sempre en l'historial</guilabel
-> no està disponible si la sincronització de la selecció/porta-retalls està desactivada: en aquest cas la selecció mai es desa automàticament en l'historial del porta-retalls. Vegeu <xref linkend="clipboard-modes"/>. </para>
+>Quan està marcada, les imatges copiades com a dades (capes i seleccions copiades en un editor d'imatges, per exemple) es desaran a l'historial del porta-retalls. Els fitxers d'imatges copiats des d'un gestor de fitxers sempre es desen. A l'historial, apareixen com a imatges, però aquestes només són previsualitzacions, a sota només són noms de fitxer. Les captures de pantalla desades per l'&spectacle; també es desaran quan es configuri allí. </para>
 </listitem>
 </varlistentry>
 
@@ -345,18 +273,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Mostra el menú emergent d'acció</guilabel
-></term>
-<listitem
-><para
->Estableix el temps que romandrà obert un menú emergent si no feu res amb ell.</para
-></listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Repeteix les accions en un element seleccionat de l'historial</guilabel
+>Per a un element triat de l'historial</guilabel
 ></term>
 <listitem
 ><para
@@ -367,22 +284,22 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Elimina els espais en blanc en executar accions</guilabel
+>Temps del menú emergent d'acció automàtica</guilabel
 ></term>
 <listitem
 ><para
->Si se selecciona, qualsevol espai en blanc (espais, tabulacions, &etc;) al començament o final del porta-retalls seran eliminats després de passar el contingut des del porta-retalls a una aplicació. Això seria d'utilitat, per exemple, si el porta-retalls conté un &URL; amb espais, si l'obre un navegador web, causaria un error.</para>
-</listitem>
+>Estableix quant temps triga el menú automàtic a tancar-se per si mateix si no hi actueu.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Inclou les accions MIME</guilabel
+>Elimina els espais en blanc</guilabel
 ></term>
 <listitem
 ><para
->Si se selecciona, inclou les aplicacions que puguin acceptar el seu tipus &MIME; d'un nom de fitxer o un URL seleccionat en el menú emergent.</para>
+>Si se selecciona, qualsevol espai en blanc (espais, tabulacions, &etc;) al començament o final del contingut del porta-retalls s'eliminaran després de passar el contingut des del porta-retalls a una aplicació. El text desat en el porta-retalls no està afectat.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -393,6 +310,17 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Configuració de les accions</title>
 
 <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ofereix aplicacions per a enllaços i fitxers copiats</guilabel
+></term>
+<listitem
+><para
+>Si està seleccionat, el menú emergent ofereix aplicacions que poden obrir un fitxer copiat o un enllaç copiat que comença per «http://» o «https://», fins i tot quan no coincideixi cap acció de les vostres.</para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term
 >Editar les expressions i accions</term>
@@ -543,9 +471,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >Copyright del programa 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
 <para
->Actualment és mantingut per l'Esben Mose Hansen. Per als detalls de contacte, vegeu <ulink url="http://mosehansen.dk/about"
->http://mosehansen.dk/about</ulink
->. </para>
+>Mantingut actualment pels desenvolupadors del &plasma; de KDE. </para>
 
 <para
 >Copyright de la documentació 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
@@ -553,7 +479,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >Traductor/Revisor de la documentació: &credits.Antoni.Bella;</para
 > &underFDL; &underGPL; </chapter>
-
 
 &documentation.index;
 

@@ -2,13 +2,13 @@
 # Copyright (C) 2014-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014-2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-02-17 14:02+0100\n"
+"PO-Revision-Date: 2026-09-11 01:27+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: contents/splash/Splash.qml:79
 #, kde-format
@@ -25,113 +25,4 @@ msgctxt ""
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma 30th Anniversary Edition by KDE"
-msgstr ""
-
-#~ msgctxt ""
-#~ "This is the first text the user sees while starting in the splash screen, "
-#~ "should be translated as something short, is a form that can be seen on a "
-#~ "product. Plasma is the project name so shouldn't be translated."
-#~ msgid "Plasma made by KDE"
-#~ msgstr "Plasma, creado por KDE"
-
-#~ msgid "Installing software updates and restarting in 1 second"
-#~ msgid_plural "Installing software updates and restarting in %1 seconds"
-#~ msgstr[0] ""
-#~ "Instalando actualizaciones del software y reiniciando en 1 segundo"
-#~ msgstr[1] ""
-#~ "Instalando actualizaciones del software y reiniciando en %1 segundos"
-
-#~ msgid "Restarting in 1 second"
-#~ msgid_plural "Restarting in %1 seconds"
-#~ msgstr[0] "Reinicio en 1 segundo"
-#~ msgstr[1] "Reinicio en %1 segundos"
-
-#~ msgid "Logging out in 1 second"
-#~ msgid_plural "Logging out in %1 seconds"
-#~ msgstr[0] "Cierre de sesión en 1 segundo"
-#~ msgstr[1] "Cierre de sesión en %1 segundos"
-
-#~ msgid "Installing software updates and shutting down in 1 second"
-#~ msgid_plural "Installing software updates and shutting down in %1 seconds"
-#~ msgstr[0] "Instalando actualizaciones del software y apagando en 1 segundo"
-#~ msgstr[1] ""
-#~ "Instalando actualizaciones del software y apagando en %1 segundos"
-
-#~ msgid "Shutting down in 1 second"
-#~ msgid_plural "Shutting down in %1 seconds"
-#~ msgstr[0] "Apagado en 1 segundo"
-#~ msgstr[1] "Apagado en %1 segundos"
-
-#~ msgid ""
-#~ "One other user is currently logged in. If the computer is shut down or "
-#~ "restarted, that user may lose work."
-#~ msgid_plural ""
-#~ "%1 other users are currently logged in. If the computer is shut down or "
-#~ "restarted, those users may lose work."
-#~ msgstr[0] ""
-#~ "Otro usuario ha iniciado sesión. Si apaga el equipo o lo reinicia, dicho "
-#~ "usuario puede perder su trabajo."
-#~ msgstr[1] ""
-#~ "%1 usuarios han iniciado sesión. Si apaga el equipo o lo reinicia, dichos "
-#~ "usuarios pueden perder su trabajo."
-
-#~ msgid "When restarted, the computer will enter UEFI firmware settings."
-#~ msgstr ""
-#~ "Cuando reinicie el equipo, entrará en los ajustes del firmware UEFI."
-
-#~ msgid "When restarted, the computer will enter the firmware setup screen."
-#~ msgstr ""
-#~ "Cuando reinicie el equipo, entrará en la pantalla de configuración del "
-#~ "firmware."
-
-#~ msgid "When restarted, the computer will enter the boot loader menu."
-#~ msgstr ""
-#~ "Cuando reinicie el equipo, entrará en la pantalla del menú del cargador "
-#~ "de arranque."
-
-#~ msgctxt "%1 is a boot loader entry"
-#~ msgid "When restarted, the computer will switch to %1."
-#~ msgstr "Cuando reinicie el equipo, cambiará a %1."
-
-#~ msgctxt "Suspend to RAM"
-#~ msgid "Slee&p"
-#~ msgstr "Re&poso"
-
-#~ msgctxt "Suspend to RAM"
-#~ msgid "Slee&p Now"
-#~ msgstr "En re&poso ahora"
-
-#~ msgid "&Hibernate"
-#~ msgstr "&Hibernar"
-
-#~ msgid "&Hibernate Now"
-#~ msgstr "&Hibernar ahora"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates and Restart"
-#~ msgstr "Instalar actualizaciones y reiniciar"
-
-#~ msgid "&Restart"
-#~ msgstr "&Reiniciar"
-
-#~ msgid "&Restart Now"
-#~ msgstr "&Reiniciar ahora"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates and Shut Down"
-#~ msgstr "Instalar actualizaciones y apagar"
-
-#~ msgid "&Shut Down"
-#~ msgstr "&Apagar"
-
-#~ msgid "&Shut Down Now"
-#~ msgstr "&Apagar ahora"
-
-#~ msgid "&Log Out"
-#~ msgstr "Cerrar &sesión"
-
-#~ msgid "&Log Out Now"
-#~ msgstr "Cerrar &sesión ahora"
-
-#~ msgid "&Cancel"
-#~ msgstr "&Cancelar"
+msgstr "Plasma edición 30.º aniversario, por KDE"

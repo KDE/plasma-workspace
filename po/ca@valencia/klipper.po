@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-26 09:01+0200\n"
+"PO-Revision-Date: 2026-09-10 14:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -43,20 +43,7 @@ msgid "Selection and Clipboard:"
 msgstr "Selecció i porta-retalls:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -79,30 +66,31 @@ msgstr ""
 "marca, esta opció manté iguals la selecció i el porta-retalls de manera que "
 "qualsevol selecció està immediatament disponible per a apegar de totes les "
 "maneres. Si no està marcada, la selecció encara es pot guardar en "
-"l'historial del porta-retalls (subjecte a les opcions de davall), però només "
-"es pot apegar utilitzant el botó central del ratolí."
+"l'historial del porta-retalls (subjecte a l'opció de davall), però només es "
+"pot apegar utilitzant el botó central del ratolí."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Text seleccionat amb el punter o teclat"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Guarda sempre en l'historial"
+msgstr "Inclou a l'historial:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"El text copiat explícitament sempre es guarda a menys que estiga marcat com "
+"a contrasenya."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Dades d'imatges copiades explícitament"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -110,6 +98,8 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Per exemple, capes i seleccions copiades en editors d'imatges com Krita o "
+"GIMP.<br/><a href=\"1\">Més sobre les imatges al porta-retalls.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -123,6 +113,14 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"El porta-retalls sempre permetrà copiar els fitxers d'imatge com a noms de "
+"fitxer i mostrarà les seues miniatures.  Este paràmetre cobrix els casos en "
+"què les imatges s'emmagatzemen directament com a dades.  Algunes aplicacions "
+"admeten tots dos casos, però altres només accepten imatges com a dades.<nl/"
+"><nl/>També cal tindre en compte que l'eina de captura de pantalla Spectacle "
+"ignorarà este paràmetre quan estiga configurat per a guardar les captures de "
+"pantalla en el porta-retalls. Qualsevol aplicació que envie tant text com "
+"imatge també l'ignorarà."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -554,22 +552,15 @@ msgid "Command:"
 msgstr "Ordre:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"Un <placeholder>&#37;s</placeholder> en l'ordre serà substituït pel "
-"contingut complet del porta-retalls. Els <placeholder>&#37;0</placeholder> "
-"fins a <placeholder>&#37;9</placeholder> seran substituïts pels textos "
+"Un <b>&#37;s</b> a l'ordre se substituirà pel contingut complet del porta-"
+"retalls. Els <b>&#37;0</b> fins a <b>&#37;9</b> se substituiran pels textos "
 "capturats corresponents del patró de coincidència."
 
 #: editcommanddialog.cpp:83
@@ -748,60 +739,51 @@ msgstr "Manté iguals la selecció i el porta-retalls"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"El contingut seleccionat amb el cursor es copia automàticament a dins del "
-"porta-retalls, de manera que es pot apegar amb una acció Apega o amb un clic "
-"del mig.<br/><a href=\"1\">Més quant a la selecció i el porta-retalls</a>."
+"El contingut seleccionat amb el punter es copia automàticament a dins del "
+"porta-retalls, de manera que es pot apegar amb una acció <i>Apega</i> o amb "
+"un clic del mig.<br/><a href=\"1\">Més quant a la selecció i el porta-"
+"retalls</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ignora la selecció"
+msgstr "Guarda la selecció"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"El contingut seleccionat amb el cursor però no copiat explícitament a dins "
-"del porta-retalls no s'emmagatzema automàticament en l'historial del porta-"
-"retalls, i només es pot apegar utilitzant un clic del mig."
+"El contingut seleccionat amb el punter però no copiat explícitament a dins "
+"del porta-retalls s'emmagatzema automàticament en l'historial del porta-"
+"retalls."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Guarda les imatges"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Si les seleccions de text es guarden en l'historial del porta-retalls."
+msgstr "Emmagatzema les imatges en l'historial del porta-retalls."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
 #, kde-format
 msgid "Immediately on selection"
-msgstr "Immediatament en la selecció"
+msgstr "Immediatament a la selecció"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:43
@@ -816,7 +798,7 @@ msgstr ""
 #: klipper.kcfg:47
 #, kde-format
 msgid "Automatic action menu time:"
-msgstr "Temps del menú emergent d'acció automàtica:"
+msgstr "Temps del menú d'acció automàtica:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:51
@@ -844,27 +826,19 @@ msgstr "Entrada fictícia per a indicar canvis en un giny d'arbre d'accions"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Elimina els espais en blanc de la selecció"
+msgstr "Elimina els espais en blanc"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Elimina qualsevol espai en blanc inicial i final del text seleccionat abans "
-"de realitzar una acció. Per exemple, açò assegura que un URL apegat en un "
-"navegador s'interpreta com s'esperava. El text guardat a dins del porta-"
-"retalls no està afectat."
+"Elimina qualsevol espai en blanc des de l'inici i el final del text passat a "
+"una acció. El text guardat a dins del porta-retalls no està afectat."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -886,7 +860,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Oferix aplicacions per a enllaços i fitxers copiats"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -896,6 +870,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Per a un enllaç que comence per <i>http://</i> o <i>https://</i> o per a "
+"fitxers, les aplicacions que poden obrir-los s'oferiran juntament amb les "
+"vostres accions coincidents, si n'hi ha."
 
 #: klipperpopup.cpp:38
 #, kde-format
@@ -906,61 +883,3 @@ msgstr "Menú emergent del porta-retalls"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgid "Text selection:"
-#~ msgstr "Seleccioneu el text:"
-
-#~ msgid "Only when explicitly copied"
-#~ msgstr "Només quan es copie explícitament"
-
-#~ msgid "Non-text selection:"
-#~ msgstr "Selecció de no text:"
-
-#~ msgid "Never save in history"
-#~ msgstr "No guardes mai en l'historial"
-
-#~ msgid ""
-#~ "Whether non-text selections (such as images) are saved in the clipboard "
-#~ "history."
-#~ msgstr ""
-#~ "Si les seleccions de no text (p. ex., imatges) es guarden en l'historial "
-#~ "del porta-retalls."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "When a <interface>match pattern</interface> matches the clipboard "
-#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
-#~ "menu and can be executed."
-#~ msgstr ""
-#~ "Quan un <interface>patró de coincidència</interface> coincidix amb el "
-#~ "contingut del porta-retalls, les seues <interface>ordres</interface> "
-#~ "apareixen en el menú emergent de Klipper i es poden executar."
-
-#~ msgid "Text selection only"
-#~ msgstr "Tria només el text"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "Emmagatzema només les seleccions de text en l'historial del porta-"
-#~ "retalls, no les imatges ni cap altre tipus de dades."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Ignora sempre les imatges"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "No emmagatzema imatges en l'historial del porta-retalls, encara que es "
-#~ "copien explícitament."
-
-#~ msgid "Include MIME actions"
-#~ msgstr "Inclou les accions MIME"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "Si es tria un nom de fitxer o URL, s'inclouen les aplicacions que poden "
-#~ "gestionar el seu tipus MIME en el menú emergent."
