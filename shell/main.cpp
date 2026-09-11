@@ -35,10 +35,10 @@
 #include <KLocalizedString>
 #include <KSignalHandler>
 
-#include <PlasmaQuick/PlasmaQuick>
+// #include <PlasmaQuick/PlasmaQuick>
 
 #include <csignal>
-#include <memory>
+// #include <memory>
 
 #if __has_include(<malloc.h>)
 #include <malloc.h>
@@ -209,7 +209,7 @@ int main(int argc, char *argv[])
     // then blocks forever joining its worker thread in its destructor, and plasmashell
     // never exits. Deliberately keep a reference for the lifetime of the process so the
     // engine is never destroyed; the OS reclaims the memory when the process terminates.
-    [[maybe_unused]] auto *qmlEngineKeepAlive = new std::shared_ptr<QQmlEngine>(PlasmaQuick::globalEngine());
+    // [[maybe_unused]] auto *qmlEngineKeepAlive = new std::shared_ptr<QQmlEngine>(PlasmaQuick::globalEngine());
 
     corona.init();
     SoftwareRendererNotifier::notifyIfRelevant();

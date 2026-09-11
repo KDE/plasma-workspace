@@ -315,11 +315,6 @@ ShellCorona::~ShellCorona()
         // Deleting a containment in turn also kills any panel views
         delete containments().constFirst();
     }
-
-    // Drop our reference to the global QML engine last, after everything
-    // that was created on it (applet items, the alternatives dialog, ...) is
-    // certainly gone.
-    m_alternativesEngine.reset();
 }
 
 KPackage::Package ShellCorona::lookAndFeelPackage()
@@ -951,19 +946,11 @@ void ShellCorona::deleteAlternativesDialog()
 
 void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 {
-    if (m_alternativesDialog && m_alternativesDialog->isVisible() && m_showingAlternatives == applet) {
-        // Already showing alternatives for this applet, just bring the dialog back up
-        m_alternativesDialog->raise();
-        m_alternativesDialog->requestActivate();
+    if (m_showingAlternatives != nullptr && m_showingAlternatives == applet) {
         return;
     }
     const QUrl alternativesQML = kPackage().fileUrl("appletalternativesui");
     if (alternativesQML.isEmpty()) {
-        return;
-    }
-
-    Plasma::Containment *containment = applet->containment();
-    if (!containment) {
         return;
     }
 
@@ -978,7 +965,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     // and the panel hides. To avoid that, we set the status back to
     // RequiresAttentionStatus to keep it open as long as there is
     // an alternatives dialog.
-    containment->setStatus(Plasma::Types::RequiresAttentionStatus);
+    applet->containment()->setStatus(Plasma::Types::RequiresAttentionStatus);
 
     // Hold a reference to the engine: the dialog is created on it, but nothing
     // else guarantees the shared engine outlives the dialog (e.g. when quitting,
@@ -987,8 +974,9 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     QQmlComponent component(m_alternativesEngine.get(), alternativesQML);
 
     auto *helper = new AlternativesHelper(applet);
-    auto *obj = component.createWithInitialProperties({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
-    auto *dialog = qobject_cast<QQuickWindow *>(obj);
+    auto obj = component.createWithInitialProperties({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
+
+    auto dialog = qobject_cast<QQuickWindow *>(obj);
     if (!dialog) {
         qCWarning(PLASMASHELL) << "Alternatives UI does not inherit from Dialog";
         delete obj;
@@ -1000,7 +988,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     m_alternativesDialog = dialog;
     m_showingAlternatives = applet;
 
-    const QPointer<Plasma::Containment> containmentGuard = containment;
+    const QPointer<Plasma::Containment> containmentGuard = applet->containment();
     const auto cleanup = [this, dialog, containmentGuard]() {
         // The dialog is no longer the current one, e.g. it has already been
         // deleted and replaced by a new one: nothing left to do.
