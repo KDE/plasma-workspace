@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 02:51+0000\n"
-"PO-Revision-Date: 2026-09-10 13:07+0300\n"
+"PO-Revision-Date: 2026-09-11 19:15+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -68,13 +68,7 @@ msgstr ""
 "Клацніть або натисніть для коригування параметрів екранної клавіатури"
 
 #: qml/main.qml:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
-#| "keyboard (no input-method features like preedit/word suggestions/etc)"
-#| msgid ""
-#| "No supported text text field is currently active\n"
-#| "Click or tap to show in hardware keyboard emulation mode."
+#, kde-format
 msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"

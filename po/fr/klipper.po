@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-27 19:12+0200\n"
+"PO-Revision-Date: 2026-09-11 19:38+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -52,20 +52,7 @@ msgid "Selection and Clipboard:"
 msgstr "Sélection et presse-papier :"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -79,41 +66,42 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the option "
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
-"Lorsque du texte ou une zone de l'écran est en surbrillance avec la souris "
-"ou le clavier, il s'agit de la <emphasis>sélection</emphasis>. Elle peut "
-"être collée à l'aide du bouton central de la souris. <nl/><nl/>Si la "
+"Lorsque du texte ou une zone de l'écran est mis en surbrillance avec la "
+"souris ou le clavier, il s'agit de la <emphasis>sélection</emphasis>. Elle "
+"peut être collée à l'aide du bouton central de la souris. <nl/><nl/>Si la "
 "sélection est explicitement copiée à l'aide d'une action <interface>Copier</"
 "interface> ou <interface>Couper</interface>, elle est enregistrée dans le "
 "<emphasis>presse-papier</emphasis>. Elle peut être collée à l'aide d'une "
 "action <interface>Coller</interface>. <nl/><nl/>Lorsqu'elle est activée, "
 "cette option maintient identique la sélection et le presse-papier, de sorte "
-"que toute sélection est immédiatement disponible pour coller par n'importe "
-"quel moyen. Si elle est désactivée, la sélection peut toujours être "
-"enregistrée dans l'historique du presse-papier (sous réserve des options ci-"
-"dessous), mais elle ne peut être collée qu'à l'aide du bouton central de la "
-"souris."
+"que toute sélection est immédiatement disponible pour faire un coller par "
+"n'importe quel moyen. Si elle est désactivée, la sélection peut toujours "
+"être enregistrée dans l'historique du presse-papier (Sous réserve de "
+"l'options ci-dessous). Cependant, elle ne peut être collée qu'à l'aide du "
+"bouton central de la souris."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Texte sélectionné avec le pointeur ou le clavier"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Toujours enregistrer dans l'historique"
+msgstr "Inclure dans l'historique :"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Le texte copié explicitement est toujours enregistré, sauf s'il est étiqueté "
+"comme mot de passe."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Données d'image copiées explicitement"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -121,6 +109,9 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Par exemple, les calques et les sélections copiés dans des éditeurs d'images "
+"comme Krita ou GIMP.<br/><a href=\"1\">Pour ne savoir plus sur les images "
+"dans le presse-papier.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -134,6 +125,14 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Le presse-papier permettra toujours de copier des fichiers d'image et en "
+"affichant leurs vignettes.  Ce paramètre couvre les cas où les images sont "
+"enregistrées directement sous forme de données.  Certaines applications "
+"prennent en charge les deux cas, mais d'autres n'acceptent que les images "
+"comme données.<nl/><nl/>Veuillez également noter que l'outil de capture "
+"d'écran, Spectacle, ignorera ce paramètre lorsque configuré pour enregistrer "
+"les captures d'écran dans le presse-papier. Toute application fournissant à "
+"la fois du texte et de l'image l’ignorera également."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -567,23 +566,16 @@ msgid "Command:"
 msgstr "Commande :"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"Un caractère <placeholder>&#37; s</placeholder> dans la commande sera "
-"remplacé par le contenu complet du presse-papier. Les caractères "
-"<placeholder>&#37; 0</placeholder> à <placeholder>&#37; 9</placeholder> "
-"seront remplacés par les textes capturés correspondants à partir du schéma "
+"Un caractère <b>&#37; s</b> dans la commande sera remplacé par le contenu "
+"complet du presse-papier. Les caractères <b>&#37; 0</b> à <b>&#37; 9</b> "
+"seront remplacés par les textes capturés correspondants à partir du profil "
 "de correspondance."
 
 #: editcommanddialog.cpp:83
@@ -766,57 +758,45 @@ msgstr "Conserver de la façon similaire la sélection et le presse-papier"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Le contenu sélectionné avec le curseur est automatiquement copié dans le "
-"presse-papier afin qu'il puisse être collé, soit avec une action « Coller » "
-"ou un clic central de souris. <br/><a href=\"1\">En savoir plus sur la "
+"Le contenu sélectionné avec le pointeur est automatiquement copié dans le "
+"presse-papier afin qu'il puisse être collé, soit avec une action <i>Coller</"
+"i>ou un clic central de souris. <br/><a href=\"1\">En savoir plus sur la "
 "sélection et le presse-papier</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ignorer la sélection"
+msgstr "Enregistrer la sélection"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Le contenu sélectionné avec le curseur mais pas explicitement copié dans le "
+"Le contenu sélectionné avec le pointeur mais non explicitement copié dans le "
 "presse-papier n'est pas automatiquement enregistré dans l'historique du "
-"presse-papier. Il ne pourra coller qu'en utilisant un clic central."
+"presse-papier."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Enregistrer les images"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr ""
-"Enregistrement ou non des sélections de texte dans l'historique du presse-"
-"papier."
+msgstr "Enregistrer des images dans l'historique du presse-papier."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -869,27 +849,20 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Supprimer les espaces lors de la sélection"
+msgstr "Réduire les espaces"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Supprimez les espaces blancs au début et à la fin du texte sélectionné avant "
-"d'effectuer une action. Par exemple, ceci garantit que l'URL collée dans un "
-"navigateur est interprétée comme prévu. Le texte enregistré dans le presse-"
-"papier n'est pas affecté."
+"Supprimez les espaces  au début et à la fin du texte sélectionné avant "
+"d'effectuer une action. Le texte enregistré dans le presse-papier n'est pas "
+"affecté."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -911,7 +884,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Proposer aux applications des copies de liens et de fichiers"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -921,6 +894,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Pour un lien commençant par <i>http://</i> ou <i>https://</i> ou pour des "
+"fichiers, des applications pouvant les ouvrir seront proposées aux côtés de "
+"vos actions correspondantes, le cas échéant."
 
 #: klipperpopup.cpp:38
 #, kde-format

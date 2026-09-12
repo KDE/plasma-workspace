@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 02:51+0000\n"
-"PO-Revision-Date: 2026-09-10 07:31+0200\n"
+"PO-Revision-Date: 2026-09-11 17:42+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -68,13 +68,7 @@ msgstr ""
 "Kliknite ali dotaknite za konfiguracijo nastavitev zaslonske tipkovnice"
 
 #: qml/main.qml:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
-#| "keyboard (no input-method features like preedit/word suggestions/etc)"
-#| msgid ""
-#| "No supported text text field is currently active\n"
-#| "Click or tap to show in hardware keyboard emulation mode."
+#, kde-format
 msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"
@@ -83,7 +77,7 @@ msgid ""
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
 "Trenutno ni aktivno nobeno podprto besedilno polje.\n"
-"Kliknite ali dotaknite za prikaz v načinu emulacije strojne tipkovnice."
+"Kliknite ali dotaknite za prikaz strojne tipkovnice v načinu emulacije."
 
 #: qml/main.qml:167
 #, kde-format

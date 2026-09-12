@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-01 19:01+0400\n"
+"PO-Revision-Date: 2026-09-11 10:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -134,13 +134,10 @@ msgid "Could not uninstall styles:\n"
 msgstr "تعذر إلغاء تثبيت الأنماط:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr "نجح في إلغاء تثبيت ”%1“."
+msgstr "نجح في إلغاء تثبيت ”%1“ ولكن تعذر إلغاء تثبيت الأخرى:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -148,31 +145,25 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "نجح في إلغاء تثبيت ”%1“ ولكن تعذر إلغاء تثبيت الأخرى:\n"
+msgstr[1] "نجح في إلغاء تثبيت نمط واحد ولكن تعذر إلغاء تثبيت الأخرى:\n"
+msgstr[2] "نجح في إلغاء تثبيت نمطين ولكن تعذر إلغاء تثبيت الأخرى:\n"
+msgstr[3] "نجح في إلغاء تثبيت %1 أنماط ولكن تعذر إلغاء تثبيت الأخرى:\n"
+msgstr[4] "نجح في إلغاء تثبيت %1 نمطًا ولكن تعذر إلغاء تثبيت الأخرى:\n"
+msgstr[5] "نجح في إلغاء تثبيت %1 نمط ولكن تعذر إلغاء تثبيت الأخرى:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
 msgstr "نجح في إلغاء تثبيت ”%1“."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "نجح في إلغاء تثبيت ”%1“."
+msgstr[0] "نجح في إلغاء تثبيت %1."
 msgstr[1] "نجح في إلغاء تثبيت نمط واحد."
 msgstr[2] "نجح في إلغاء تثبيت نمطين."
 msgstr[3] "نجح في إلغاء تثبيت %1 أنماط."

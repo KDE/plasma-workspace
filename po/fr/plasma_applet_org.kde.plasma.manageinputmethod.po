@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 02:51+0000\n"
-"PO-Revision-Date: 2026-05-15 10:24+0200\n"
+"PO-Revision-Date: 2026-09-11 19:45+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -12,35 +12,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Clavier virtuel"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Désactivé"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Périphérique tactile et tablette"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Périphérique tactile, tablette, souris et pavé tactile"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
 msgstr "Configurer les claviers virtuels…"
@@ -52,6 +50,9 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Clavier virtuel : indisponible.\n"
+"Veuillez cliquer ou tapoter pour modifier la configuration du clavier "
+"virtuel."
 
 #: qml/main.qml:143
 #, kde-format
@@ -60,6 +61,9 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Configuré pour un affichage non automatique.\n"
+"Veuillez cliquer ou tapoter pour modifier la configuration du clavier "
+"virtuel."
 
 #: qml/main.qml:156
 #, kde-format
@@ -78,6 +82,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Le clavier virtuel est visible.\n"
+"Veuillez cliquer ou tapoter pour masquer le clavier virtuel."
 
 #: qml/main.qml:177
 #, kde-format
@@ -86,6 +92,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"S'affiche automatiquement lors d'un tapotage dans un champ de texte.\n"
+"Veuillez tapoter pour modifier la configuration du clavier virtuel."
 
 #: qml/main.qml:187
 #, kde-format
@@ -94,6 +102,9 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"S'affiche automatiquement lors d'une interaction avec un champ de texte.\n"
+"Veuillez cliquer ou tapoter pour modifier la configuration du clavier "
+"virtuel."
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Clavier virtuel : indisponible"
