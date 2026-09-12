@@ -162,7 +162,7 @@
 <title
 >General</title>
 <para
->&klipper; can be used to set the behavior of the clipboard and selection in &plasma;. To adjust their behavior, see <xref linkend="general-page"/>. </para>
+>El &klipper; es pot emprar per a establir el comportament del porta-retalls i selecció al &plasma;. Per ajustar els seu comportament, vegeu <xref linkend="general-page"/>. </para>
 
 <note
 ><para
@@ -195,11 +195,11 @@
 >Opcions generals</title>
 <note
 ><para
->Options below distinguish between <emphasis
->selection</emphasis
-> and <emphasis
->clipboard</emphasis
->. To understand the difference, see <xref linkend="clipboard-modes"/>. </para
+>Les opcions a sota distingeixen entre <emphasis
+>selecció</emphasis
+> i <emphasis
+>porta-retalls</emphasis
+>. Per entendre la diferència, vegeu <xref linkend="clipboard-modes"/>. </para
 ></note>
 
 

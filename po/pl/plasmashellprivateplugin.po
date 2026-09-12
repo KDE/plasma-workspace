@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:48+0000\n"
+"POT-Creation-Date: 2026-09-12 00:47+0000\n"
 "PO-Revision-Date: 2026-09-06 09:51+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -150,13 +150,19 @@ msgstr "Pozostaw otwartym"
 msgid "Configure…"
 msgstr "Ustawienia…"
 
-#: loginlockscreen/Footer.qml:49
+#: loginlockscreen/Footer.qml:50
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Klawiatura ekranowa"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr ""
 
-#: loginlockscreen/Footer.qml:74
+#: loginlockscreen/Footer.qml:51
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr ""
+
+#: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -454,6 +460,10 @@ msgstr "Wybór regionu strefy czasowej"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Wybór miejsca strefy czasowej"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Klawiatura ekranowa"
 
 #~ msgid "Screen saver timeout"
 #~ msgstr "Czas oczekiwania do wygaszacza ekranu"

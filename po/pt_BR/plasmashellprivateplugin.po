@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:48+0000\n"
+"POT-Creation-Date: 2026-09-12 00:47+0000\n"
 "PO-Revision-Date: 2026-08-27 07:04-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -153,13 +153,19 @@ msgstr "Manter aberto"
 msgid "Configure…"
 msgstr "Configurar…"
 
-#: loginlockscreen/Footer.qml:49
+#: loginlockscreen/Footer.qml:50
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Teclado virtual"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr ""
 
-#: loginlockscreen/Footer.qml:74
+#: loginlockscreen/Footer.qml:51
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr ""
+
+#: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -458,6 +464,10 @@ msgstr "Seletor de região de fuso horário"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Seletor de localização de fuso horário"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Teclado virtual"
 
 #~ msgid "Screen saver timeout"
 #~ msgstr "Tempo de espera do protetor de tela"

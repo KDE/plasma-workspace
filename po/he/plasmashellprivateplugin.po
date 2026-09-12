@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:48+0000\n"
+"POT-Creation-Date: 2026-09-12 00:47+0000\n"
 "PO-Revision-Date: 2026-08-27 07:44+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -152,13 +152,19 @@ msgstr "להשאיר פתוח"
 msgid "Configure…"
 msgstr "הגדרה…"
 
-#: loginlockscreen/Footer.qml:49
+#: loginlockscreen/Footer.qml:50
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "מקלדת וירטואלית"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr ""
 
-#: loginlockscreen/Footer.qml:74
+#: loginlockscreen/Footer.qml:51
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr ""
+
+#: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -453,6 +459,10 @@ msgstr "בורר אזורי זמן"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "בורר מקום אזור זמן"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "מקלדת וירטואלית"
 
 #~ msgid "Screen saver timeout"
 #~ msgstr "זמן מוקצב לשומר מסך"

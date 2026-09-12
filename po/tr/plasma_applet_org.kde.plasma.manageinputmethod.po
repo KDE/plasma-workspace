@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:48+0000\n"
-"PO-Revision-Date: 2026-09-10 19:00+0300\n"
+"PO-Revision-Date: 2026-09-11 18:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -68,13 +68,7 @@ msgstr ""
 "Ekran Üzeri Klavye ayarlarını yapılandırmak için tıklayın veya dokunun"
 
 #: qml/main.qml:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
-#| "keyboard (no input-method features like preedit/word suggestions/etc)"
-#| msgid ""
-#| "No supported text text field is currently active\n"
-#| "Click or tap to show in hardware keyboard emulation mode."
+#, kde-format
 msgctxt ""
 "@info:tooltip Hardware emulation mode means it acts like a regular dumb "
 "keyboard (no input-method features like preedit/word suggestions/etc)"

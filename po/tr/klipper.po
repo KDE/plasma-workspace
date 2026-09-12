@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-10 19:13+0300\n"
+"PO-Revision-Date: 2026-09-11 19:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -71,7 +71,7 @@ msgstr ""
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr "İşaretçi veya klavye ile metin seçili"
+msgstr "İşaretçi veya klavye ile metin seçilen metin"
 
 #: configdialog.cpp:126
 #, kde-format
@@ -696,7 +696,7 @@ msgstr "Klipper sürümü"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr "Geçmişi masaüstü oturumları arasında kaydet"
+msgstr "Geçmişi, masaüstü oturumları arasında kaydet"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -773,7 +773,7 @@ msgstr "Görselleri pano geçmişinde depolayın."
 #: klipper.kcfg:42
 #, kde-format
 msgid "Immediately on selection"
-msgstr "Seçimde anında"
+msgstr "Seçimden hemen sonra"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:43
@@ -788,13 +788,13 @@ msgstr ""
 #: klipper.kcfg:47
 #, kde-format
 msgid "Automatic action menu time:"
-msgstr "Otomatik eylem menüsi zamanı:"
+msgstr "Otomatik eylem menüsü süresi:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:51
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "Otomatik eylem açılır menüsünü bu kez göster."
+msgstr "Otomatik eylem açılır menüsünü bu kez gösterin."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:54

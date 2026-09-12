@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-11 01:32+0100\n"
+"PO-Revision-Date: 2026-09-12 01:08+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -88,11 +88,13 @@ msgstr "Incluir en el historial"
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"El texto copiado explícitamente se guarda siempre a menos que se marque como "
+"contraseña."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Datos de imagen copiados explícitamente"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -100,6 +102,8 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Por ejemplo, las capas y las selecciones copiadas en editores de imagen como "
+"Krita o GIMP.<br/><a href=\"1\">Más sobre imágenes en el portapapeles.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -113,6 +117,14 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"El portapapeles siempre permitirá copiar archivos de imagen como nombres de "
+"archivos y mostrará sus miniaturas. Este ajuste cubre los casos en los que "
+"las imágenes se guardan directamente como datos. Algunas aplicaciones "
+"permiten ambos casos, aunque otras solo aceptan imágenes como datos.<nl/><nl/"
+">Tenga también en cuenta que la herramienta de captura de pantalla Spectacle "
+"ignorará este ajuste cuando se configure para guardar capturas de pantalla "
+"en el portapapeles. Cualquier aplicación que envíe tanto texto como imágenes "
+"también lo ignorará."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -545,23 +557,16 @@ msgid "Command:"
 msgstr "Orden:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"Un <placeholder>&#37;s</placeholder> en la orden se sustituirá con el "
-"contenido completo del portapapeles. Los valores de <placeholder>&#37;0</"
-"placeholder> a <placeholder>&#37;9</placeholder> se sustituirán con sus "
-"respectivos textos capturados del patrón de coincidencia."
+"Un <b>&#37;s</b> en la orden se sustituirá con el contenido completo del "
+"portapapeles. Los valores de <b>&#37;0</b> a <b>&#37;9</b> se sustituirán "
+"con sus respectivos textos capturados del patrón de coincidencia."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -740,55 +745,44 @@ msgstr "Hacer que la selección y el portapapeles sean idénticos"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"El contenido seleccionado con el cursor se copia automáticamente en el "
-"portapapeles para que se pueda pegar con una acción «Pegar» o con un clic "
-"central.<br/><a href=\"1\">Más sobre la selección y el portapapeles</a>."
+"El contenido seleccionado con el puntero se copia automáticamente en el "
+"portapapeles para que se pueda pegar con una acción <i>Pegar</i> o con un "
+"clic central.<br/><a href=\"1\">Más sobre la selección y el portapapeles</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ignorar la selección"
+msgstr "Guardar la selección"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"El contenido seleccionado con el cursor, pero no copiado explícitamente en "
+"El contenido seleccionado con el puntero, pero no copiado explícitamente en "
 "el portapapeles, no se guarda de forma automática en el historial del "
-"portapapeles, y solo se puede pegar usando un clic central."
+"portapapeles."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Guardar imágenes"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr ""
-"Si las selecciones de texto se guardan en el historial del portapapeles."
+msgstr "Guardar las imágenes en el historial del portapapeles."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -837,27 +831,19 @@ msgstr "Entrada ficticia para indicar cambios en el árbol de una acción"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Recortar los espacios en blanco iniciales y finales de la selección"
+msgstr "Recortar los espacios en blanco iniciales y finales"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Eliminar todos los espacios en blanco iniciales y finales del texto "
-"seleccionado antes de realizar una acción. Por ejemplo, esto se asegura de "
-"que la URL pegada en un navegador se interprete como es de esperar. El texto "
-"guardado en el portapapeles no se ve afectado."
+"Eliminar todos los espacios en blanco iniciales y finales del texto pasado a "
+"una acción. El texto guardado en el historial no se ve afectado."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -879,7 +865,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Ofrecer aplicaciones para los enlaces y archivos copiados"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -889,6 +875,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Para enlaces que empiecen por <i>http://</i> o <i>https://</i>, o para "
+"archivos, las aplicaciones que pueden abrirlos se ofrecerán junto a las "
+"acciones coincidentes, si hay alguna."
 
 #: klipperpopup.cpp:38
 #, kde-format
