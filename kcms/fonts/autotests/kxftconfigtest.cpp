@@ -3,7 +3,6 @@
 
 #include <QDebug>
 #include <QTest>
-#include <private/qtx11extras_p.h>
 
 #include <kxftconfig.h>
 

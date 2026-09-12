@@ -20,7 +20,6 @@
 #include <X11/Xlib.h>
 #include <X11/extensions/Xrender.h>
 #include <math.h>
-#include <private/qtx11extras_p.h>
 // #define KFI_FC_DEBUG
 
 #define KFI_PREVIEW_GROUP "KFontInst Preview Settings"
