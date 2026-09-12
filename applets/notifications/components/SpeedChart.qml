@@ -24,6 +24,10 @@ Item {
     property ModelInterface modelInterface
     property bool expanded
 
+    // Whether the chart is the thing showing the speed, so that the reading is not written out a
+    // second time beside it.
+    readonly property bool chartVisible: chartContainer.visible
+
     readonly property int speed: modelInterface.jobDetails ? modelInterface.jobDetails.speed : 0
     readonly property int averageSpeed: modelInterface.jobDetails && modelInterface.jobDetails.elapsedTime > 0
         ? modelInterface.jobDetails.processedBytes / modelInterface.jobDetails.elapsedTime * 1000

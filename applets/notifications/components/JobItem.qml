@@ -104,6 +104,7 @@ ColumnLayout {
         visible: active
         sourceComponent: JobDetails {
             modelInterface: jobItem.modelInterface
+            chartVisible: speedChart.chartVisible
         }
     }
 
