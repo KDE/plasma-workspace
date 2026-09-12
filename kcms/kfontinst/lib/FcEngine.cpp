@@ -36,11 +36,7 @@ static Display *xDisplay()
 {
     static Display *s_display = nullptr;
     if (!s_display) {
-        if (QX11Info::isPlatformX11()) {
-            s_display = QX11Info::display();
-        } else {
-            s_display = XOpenDisplay(NULL); // TODO close it again
-        }
+        s_display = XOpenDisplay(NULL); // TODO close it again
     }
     return s_display;
 }
