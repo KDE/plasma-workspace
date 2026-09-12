@@ -43,6 +43,7 @@ public:
     QDBusObjectPath objectPath() const;
     QUrl descriptionUrl() const;
     QString text() const;
+    Job::TextAmount textAmount() const;
 
     void delayedShow(std::chrono::milliseconds delay, ShowConditions showConditions);
     void kill();

@@ -65,6 +65,11 @@ QString Job::text() const
     return d->text();
 }
 
+Job::TextAmount Job::textAmount() const
+{
+    return d->textAmount();
+}
+
 QString Job::desktopEntry() const
 {
     return d->m_desktopEntry;

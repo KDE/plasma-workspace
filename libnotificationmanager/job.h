@@ -44,6 +44,13 @@ class NOTIFICATIONMANAGER_EXPORT Job : public QObject
      * "SomeFile.txt to Downloads".
      */
     Q_PROPERTY(QString text READ text NOTIFY textChanged)
+    /**
+     * The amount that text() spells out, if any.
+     *
+     * A view that shows the text and the amounts of the job together can leave this one out of the
+     * amounts rather than print the same numbers twice.
+     */
+    Q_PROPERTY(TextAmount textAmount READ textAmount NOTIFY textChanged)
 
     /**
      * The desktop entry of the application owning the job, e.g. "org.kde.dolphin".
@@ -135,6 +142,16 @@ class NOTIFICATIONMANAGER_EXPORT Job : public QObject
     Q_PROPERTY(QUrl effectiveDestUrl READ effectiveDestUrl NOTIFY effectiveDestUrlChanged)
 
 public:
+    /**
+     * The amount, of the amounts a job reports, that text() writes out.
+     */
+    enum TextAmount {
+        TextAmountNone, ///< The text carries none of them, so every amount is the view's to show.
+        TextAmountFiles, ///< The text counts files, as in "42 of 1337 files".
+        TextAmountItems, ///< The text counts items, as in "42 of 1337 items".
+    };
+    Q_ENUM(TextAmount)
+
     explicit Job(uint id, QObject *parent = nullptr);
     ~Job() override;
 
@@ -147,6 +164,7 @@ public:
 
     QString summary() const;
     QString text() const;
+    TextAmount textAmount() const;
 
     QString desktopEntry() const;
     // TODO remove and let only constructor do it?
