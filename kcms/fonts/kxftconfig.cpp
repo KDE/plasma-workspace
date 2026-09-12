@@ -33,12 +33,12 @@ using namespace Qt::StringLiterals;
 
 static int point2Pixel(double point)
 {
-    return (int)(((point * QX11Info::appDpiY()) / 72.0) + 0.5);
+    return (int)(((point * 96) / 72.0) + 0.5);
 }
 
 static int pixel2Point(double pixel)
 {
-    return (int)(((pixel * 72.0) / (double)QX11Info::appDpiY()) + 0.5);
+    return (int)(((pixel * 72.0) / (double)96) + 0.5);
 }
 
 static bool equal(double d1, double d2)
