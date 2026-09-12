@@ -147,12 +147,6 @@ set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed 
                        TYPE REQUIRED
                       )
 
-find_package(Freetype)
-set_package_properties(Freetype PROPERTIES DESCRIPTION "Software library to render fonts"
-                       URL "https://freetype.org"
-                       TYPE OPTIONAL
-                      )
-
 find_package(Fontconfig)
 set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configuration library"
                        URL "https://www.freedesktop.org/wiki/Software/fontconfig"
@@ -195,6 +189,16 @@ if(WITH_X11)
 
     find_package(XCB MODULE REQUIRED COMPONENTS AUX XCB CURSOR RANDR IMAGE XFIXES)
     set_package_properties(XCB PROPERTIES TYPE REQUIRED)
+
+    # kfontinst
+    find_package(Freetype)
+    set_package_properties(Freetype PROPERTIES DESCRIPTION "Software library to render fonts"
+        URL "https://freetype.org"
+        TYPE OPTIONAL)
+
+    if(FREETYPE_FOUND)
+        find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
+    endif()
 else()
     set(HAVE_X11 0)
 endif()
@@ -210,11 +214,6 @@ endif()
 find_package(Qt6WaylandClient COMPONENTS Private)
 find_package(PlasmaWaylandProtocols 1.23.0 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
-
-if(FONTCONFIG_FOUND)
-  # kfontinst
-  find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
-endif()
 
 find_package(AppStreamQt 1.0) # 1.0 will be the first release to support Qt6
 set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Access metadata for listing available software"
@@ -424,7 +423,7 @@ add_subdirectory(statusnotifierwatcher)
 add_subdirectory(startkde)
 add_subdirectory(themes)
 
-if(FONTCONFIG_FOUND AND WITH_X11)
+if(FONTCONFIG_FOUND AND FREETYPE_FOUND AND WITH_X11)
     add_subdirectory(kfontinst)
 endif()
 
