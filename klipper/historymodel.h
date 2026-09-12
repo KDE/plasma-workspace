@@ -26,6 +26,8 @@ class KLIPPER_EXPORT HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool clipboardHasPassword READ clipboardHasPassword NOTIFY hasPasswordChanged)
+    Q_PROPERTY(bool selectionHasPassword READ selectionHasPassword NOTIFY hasPasswordChanged)
     Q_PROPERTY(bool hasPassword READ hasPassword NOTIFY hasPasswordChanged)
 
 public:
@@ -63,6 +65,8 @@ public:
      */
     void clear();
     void clearHistory();
+
+    void clearHasPassword();
 
     /**
      * Move the history in position pos to top
@@ -102,9 +106,11 @@ public:
 
     int pendingJobs() const;
 
+    [[nodiscard]] bool clipboardHasPassword() const;
+    [[nodiscard]] bool selectionHasPassword() const;
     [[nodiscard]] bool hasPassword() const;
 
-    Q_INVOKABLE void clearSecret();
+    Q_INVOKABLE void clearPasswords();
 
     void setURLGrabber(URLGrabber *grabber);
 
@@ -142,7 +148,7 @@ private:
      */
     bool isItemStarred(const QString &uuid) const;
 
-    void setHasPassword(bool hasPassword);
+    void setHasPassword(QClipboard::Mode mode, bool hasPassword);
 
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
@@ -157,7 +163,8 @@ private:
     bool m_bSaveSelection = false;
     bool m_bKeepContents = true;
     bool m_bSynchronize = false;
-    bool m_hasPassword = false;
+    bool m_clipboardHasPassword = false;
+    bool m_selectionHasPassword = false;
 
     friend class DeclarativeHistoryModel;
     friend class HistoryModelTest;

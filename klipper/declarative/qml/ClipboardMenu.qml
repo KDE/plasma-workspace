@@ -380,7 +380,7 @@ PlasmaComponents3.ScrollView {
                     Kirigami.Action {
                         text: i18nc("@action:button", "Clear Secret Data")
                         icon.name: "list-remove"
-                        onTriggered: clipboardMenu.model.sourceModel.clearSecret()
+                        onTriggered: clipboardMenu.model.sourceModel.clearPasswords()
                     }
                 ]
             }

@@ -378,6 +378,12 @@ void HistoryModel::clearHistory()
     dialog->open();
 }
 
+void HistoryModel::clearHasPassword()
+{
+    setHasPassword(QClipboard::Clipboard, false);
+    setHasPassword(QClipboard::Selection, false);
+}
+
 qsizetype HistoryModel::maxSize() const
 {
     return m_maxSize;
@@ -929,7 +935,7 @@ void HistoryModel::moveToTop(qsizetype row)
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
-    setHasPassword(false);
+    clearHasPassword();
 }
 
 void HistoryModel::saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid)
@@ -990,10 +996,10 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     }
 
     if (data->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayView("secret")) {
-        setHasPassword(true);
+        setHasPassword(mode, true);
         return;
     }
-    setHasPassword(false);
+    clearHasPassword();
 
     if (!m_bSaveImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
@@ -1019,7 +1025,7 @@ void HistoryModel::slotReceivedEmptyClipboard(QClipboard::Mode mode)
                             mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
                             SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
     }
-    setHasPassword(false);
+    clearHasPassword();
 }
 
 bool HistoryModel::isItemStarred(const QString &uuid) const
@@ -1033,22 +1039,33 @@ bool HistoryModel::isItemStarred(const QString &uuid) const
     return false;
 }
 
-bool HistoryModel::hasPassword() const
+bool HistoryModel::clipboardHasPassword() const
 {
-    return m_hasPassword;
+    return m_clipboardHasPassword;
 }
 
-void HistoryModel::setHasPassword(bool hasPassword)
+bool HistoryModel::selectionHasPassword() const
 {
-    if (m_hasPassword == hasPassword) {
+    return m_selectionHasPassword;
+}
+
+void HistoryModel::setHasPassword(QClipboard::Mode mode, bool hasPassword)
+{
+    bool &buffer = mode == QClipboard::Selection ? m_selectionHasPassword : m_clipboardHasPassword;
+    if (buffer == hasPassword) {
         return;
     }
 
-    m_hasPassword = hasPassword;
+    buffer = hasPassword;
     Q_EMIT hasPasswordChanged();
 }
 
-void HistoryModel::clearSecret()
+bool HistoryModel::hasPassword() const
+{
+    return m_clipboardHasPassword || m_selectionHasPassword;
+}
+
+void HistoryModel::clearPasswords()
 {
     m_clip->clear();
 }
