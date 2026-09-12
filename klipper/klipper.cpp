@@ -189,13 +189,16 @@ void Klipper::setClipboardContents(const QString &s)
     auto data = std::make_unique<QMimeData>();
     data->setText(s);
     m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+    // Without this, klipper gets confused whether it holds passwords
+    // because the write above is under lock and does not emit changed signal
     m_clip->checkClipData(QClipboard::Clipboard, data.get());
+    m_clip->checkClipData(QClipboard::Selection, data.get());
 }
 
 // DBUS - don't call from Klipper itself
 void Klipper::clearClipboardContents()
 {
-    m_clip->clear();
+    m_historyModel->clearBuffers();
 }
 
 // DBUS - don't call from Klipper itself

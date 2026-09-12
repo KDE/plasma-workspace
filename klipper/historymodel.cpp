@@ -286,7 +286,7 @@ void HistoryModel::clear()
         m_starredCount = 0;
         endResetModel();
     }
-    m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+    clearBuffers();
 }
 
 void HistoryModel::clearNonStarredHistory()
@@ -336,6 +336,9 @@ void HistoryModel::clearNonStarredHistory()
         --m_pendingJobs;
     });
 
+    // Clear system clipboard in case it contains passwords, BUG 516403.
+    clearPasswords();
+
     // Remove items from the model that were deleted
     // We need to work backwards to maintain correct indices
     beginResetModel();
@@ -347,8 +350,6 @@ void HistoryModel::clearNonStarredHistory()
     endResetModel();
 
     QSqlQuery(u"VACUUM"_s, m_db).exec();
-    // Clear system clipboard in case it contains secrets, BUG 516403
-    m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
 }
 
 void HistoryModel::clearHistory()
@@ -382,6 +383,19 @@ void HistoryModel::clearHasPassword()
 {
     setHasPassword(QClipboard::Clipboard, false);
     setHasPassword(QClipboard::Selection, false);
+}
+
+void HistoryModel::clearPasswords()
+{
+    m_clip->clear(
+        SystemClipboard::SelectionMode((m_clipboardHasPassword ? SystemClipboard::Clipboard : 0) | (m_selectionHasPassword ? SystemClipboard::Selection : 0)));
+    clearHasPassword();
+}
+
+void HistoryModel::clearBuffers()
+{
+    m_clip->clear();
+    clearHasPassword();
 }
 
 qsizetype HistoryModel::maxSize() const
@@ -927,7 +941,7 @@ void HistoryModel::moveToTop(qsizetype row)
     }
     if (row == 0) {
         // The item is already at the top, but it still may be not be set as the actual clipboard
-        // contents, normally this happens if the item is only in the X11 mouse selection but
+        // contents, normally this happens if the item is only in the mouse primary selection but
         // not in the Ctrl+V clipboard, or if the current contents are not saved in the history.
         Q_EMIT changed(true);
         return;
@@ -935,7 +949,8 @@ void HistoryModel::moveToTop(qsizetype row)
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
-    clearHasPassword();
+    setHasPassword(QClipboard::Clipboard, false);
+    setHasPassword(QClipboard::Selection, false);
 }
 
 void HistoryModel::saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid)
@@ -987,19 +1002,30 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     // this must be below the "bNoNullClipboard" handling code!
     // XXX: I want a better handling of selection/clipboard in general.
     // XXX: Order sensitive code. Must die.
+    const bool isPassword = data->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayView("secret");
     const bool selectionMode = mode == QClipboard::Selection;
-    if (selectionMode && !m_bSaveSelection) {
+    if (isPassword) {
+        // A password stays out of the history, but keeping the buffers the same is still the user's choice.
+        setHasPassword(mode, true);
         if (m_bSynchronize) {
-            m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
+            m_clip->setMimeData(data,
+                                selectionMode ? SystemClipboard::Clipboard : SystemClipboard::Selection,
+                                SystemClipboard::ClipboardUpdateReason::SyncSelection);
+            setHasPassword(selectionMode ? QClipboard::Clipboard : QClipboard::Selection, true);
         }
         return;
     }
+    setHasPassword(mode, false);
 
-    if (data->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayView("secret")) {
-        setHasPassword(mode, true);
+    if (selectionMode && !m_bSaveSelection) {
+        // Even when selection is not saved, we are configured to sync it
+        if (m_bSynchronize) {
+            m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
+            // Both buffers were updated with something that is not password, so clear the flag.
+            clearHasPassword();
+        }
         return;
     }
-    clearHasPassword();
 
     if (!m_bSaveImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
@@ -1011,6 +1037,8 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
             m_clip->setMimeData(data,
                                 mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection,
                                 SystemClipboard::ClipboardUpdateReason::SyncSelection);
+            // Both buffers were updated with something that is not password, so clear the flag.
+            clearHasPassword();
         }
     }
 }
@@ -1025,7 +1053,7 @@ void HistoryModel::slotReceivedEmptyClipboard(QClipboard::Mode mode)
                             mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
                             SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
     }
-    clearHasPassword();
+    setHasPassword(mode, false);
 }
 
 bool HistoryModel::isItemStarred(const QString &uuid) const
@@ -1051,23 +1079,13 @@ bool HistoryModel::selectionHasPassword() const
 
 void HistoryModel::setHasPassword(QClipboard::Mode mode, bool hasPassword)
 {
-    bool &buffer = mode == QClipboard::Selection ? m_selectionHasPassword : m_clipboardHasPassword;
-    if (buffer == hasPassword) {
+    bool &flag = mode == QClipboard::Selection ? m_selectionHasPassword : m_clipboardHasPassword;
+    if (flag == hasPassword) {
         return;
     }
 
-    buffer = hasPassword;
+    flag = hasPassword;
     Q_EMIT hasPasswordChanged();
-}
-
-bool HistoryModel::hasPassword() const
-{
-    return m_clipboardHasPassword || m_selectionHasPassword;
-}
-
-void HistoryModel::clearPasswords()
-{
-    m_clip->clear();
 }
 
 void HistoryModel::setURLGrabber(URLGrabber *grabber)
