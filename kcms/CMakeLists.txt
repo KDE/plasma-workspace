@@ -10,7 +10,7 @@ add_subdirectory(lookandfeel)
 add_subdirectory(colors)
 add_subdirectory(cursortheme)
 
-if(WITH_X11 AND FONTCONFIG_FOUND)
+if(WITH_X11 AND FONTCONFIG_FOUND AND FREETYPE_FOUND)
     add_subdirectory( kfontinst )
     add_subdirectory( fonts )
 endif()
