@@ -211,6 +211,10 @@ Item {
                 }
 
                 RowLayout {
+                    // A job that reports no elapsed time has no average to show, and every
+                    // application that leaves the field out would read 0 B/s beside a live speed.
+                    visible: root.averageSpeed > 0
+
                     PlasmaComponents3.Label {
                         font: Kirigami.Theme.smallFont
                         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Average Speed")
