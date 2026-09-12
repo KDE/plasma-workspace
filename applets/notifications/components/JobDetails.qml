@@ -12,6 +12,7 @@ import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 
 import org.kde.coreaddons as KCoreAddons
+import org.kde.notificationmanager as NotificationManager
 
 
 GridLayout {
@@ -19,6 +20,19 @@ GridLayout {
 
     property ModelInterface modelInterface
     property bool chartVisible
+
+    // The text of the notification counts one of the amounts below, so showing that one here again
+    // is the same pair of numbers twice.
+    readonly property string amountInText: {
+        switch (modelInterface.jobDetails ? modelInterface.jobDetails.textAmount : NotificationManager.Job.TextAmountNone) {
+        case NotificationManager.Job.TextAmountFiles:
+            return "Files";
+        case NotificationManager.Job.TextAmountItems:
+            return "Items";
+        default:
+            return "";
+        }
+    }
 
     columns: 2
     rowSpacing: Math.round(Kirigami.Units.smallSpacing / 2)
@@ -148,7 +162,7 @@ GridLayout {
             }
             font: Kirigami.Theme.smallFont
             textFormat: Text.PlainText
-            visible: text !== ""
+            visible: text !== "" && modelData !== detailsGrid.amountInText
         }
     }
 
