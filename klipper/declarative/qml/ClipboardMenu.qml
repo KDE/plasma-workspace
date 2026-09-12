@@ -369,8 +369,19 @@ PlasmaComponents3.ScrollView {
                 }
             }
             Kirigami.InlineMessage {
-                text: i18nc("@info", "The clipboard currently holds a sensitive piece of data that will not be stored in the history.")
-                visible: clipboardMenu.model.sourceModel.hasPassword
+                readonly property bool clipboardHasPassword: clipboardMenu.model.sourceModel.clipboardHasPassword
+                readonly property bool selectionHasPassword: clipboardMenu.model.sourceModel.selectionHasPassword
+
+                text: if (clipboardHasPassword && selectionHasPassword) {
+                    i18nc("@info", "The clipboard and the selection currently hold a sensitive piece of data that will not be stored in history.")
+                } else if (clipboardHasPassword) {
+                    i18nc("@info", "The clipboard currently holds a sensitive piece of data that will not be stored in history.")
+                } else if (selectionHasPassword) {
+                    i18nc("@info", "The selection currently holds a sensitive piece of data that will not be stored in history.")
+                } else {
+                    ""
+                }
+                visible: clipboardHasPassword || selectionHasPassword
                 icon.name: "preferences-security-symbolic"
                 Layout.fillWidth: true
                 Layout.bottomMargin: Kirigami.Units.smallSpacing
