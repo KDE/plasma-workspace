@@ -192,15 +192,11 @@ if(WITH_X11)
     check_X11_lib(Xtst)
 
     set(HAVE_X11 1)
-    set(HAVE_XCURSOR 1)
-    set(HAVE_XFIXES 1)
 
     find_package(XCB MODULE REQUIRED COMPONENTS AUX XCB CURSOR RANDR IMAGE)
     set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 else()
     set(HAVE_X11 0)
-    set(HAVE_XCURSOR 0)
-    set(HAVE_XFIXES 0)
 endif()
 
 # FreeBSD systems might have libxcrypt but their shadow equivalent doesn't use it
