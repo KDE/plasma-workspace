@@ -21,7 +21,6 @@
 #include <QFile>
 #include <QFileInfo>
 #include <QStandardPaths>
-#include <private/qtx11extras_p.h>
 
 #include <KLocalizedString>
 #include <algorithm>
