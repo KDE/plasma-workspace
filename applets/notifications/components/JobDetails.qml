@@ -18,6 +18,7 @@ GridLayout {
     id: detailsGrid
 
     property ModelInterface modelInterface
+    property bool chartVisible
 
     columns: 2
     rowSpacing: Math.round(Kirigami.Units.smallSpacing / 2)
@@ -159,6 +160,6 @@ GridLayout {
             KCoreAddons.Format.formatByteSize(detailsGrid.modelInterface.jobDetails.speed)) : ""
         font: Kirigami.Theme.smallFont
         textFormat: Text.PlainText
-        visible: text !== "" && !(detailsGrid.modelInterface.percentage > 0 && detailsGrid.modelInterface.jobDetails.elapsedTime > 0) // SpeedChart should be visible then
+        visible: text !== "" && !detailsGrid.chartVisible
     }
 }
