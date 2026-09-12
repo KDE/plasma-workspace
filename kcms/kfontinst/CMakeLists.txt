@@ -1,26 +1,24 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kfontinst\")
 
-if (HAVE_X11)
-    check_include_files(locale.h HAVE_LOCALE_H)
-    configure_file(config-fontinst.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-fontinst.h)
-    include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_BINARY_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib
-        ${CMAKE_CURRENT_BINARY_DIR}/lib
-        ${CMAKE_CURRENT_SOURCE_DIR}/dbus
-        ${CMAKE_CURRENT_BINARY_DIR}/dbus
-        ${CMAKE_CURRENT_SOURCE_DIR}/viewpart
-        ${CMAKE_CURRENT_SOURCE_DIR}/kcmfontinst
-        ${CMAKE_CURRENT_BINARY_DIR}/kcmfontinst)
+check_include_files(locale.h HAVE_LOCALE_H)
+configure_file(config-fontinst.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-fontinst.h)
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    ${CMAKE_CURRENT_BINARY_DIR}/lib
+    ${CMAKE_CURRENT_SOURCE_DIR}/dbus
+    ${CMAKE_CURRENT_BINARY_DIR}/dbus
+    ${CMAKE_CURRENT_SOURCE_DIR}/viewpart
+    ${CMAKE_CURRENT_SOURCE_DIR}/kcmfontinst
+    ${CMAKE_CURRENT_BINARY_DIR}/kcmfontinst)
 
-    add_subdirectory(lib)
-    add_subdirectory(dbus)
-    add_subdirectory(kcmfontinst)
-    add_subdirectory(apps)
-    add_subdirectory(kio)
-    add_subdirectory(thumbnail)
-    add_subdirectory(viewpart)
+add_subdirectory(lib)
+add_subdirectory(dbus)
+add_subdirectory(kcmfontinst)
+add_subdirectory(apps)
+add_subdirectory(kio)
+add_subdirectory(thumbnail)
+add_subdirectory(viewpart)
 
-    ecm_install_icons(ICONS sc-apps-preferences-desktop-font-installer.svgz DESTINATION ${KDE_INSTALL_ICONDIR})
-endif ()
+ecm_install_icons(ICONS sc-apps-preferences-desktop-font-installer.svgz DESTINATION ${KDE_INSTALL_ICONDIR})
