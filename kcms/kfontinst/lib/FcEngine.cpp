@@ -610,7 +610,7 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
 
 inline int point2Pixel(int point)
 {
-    return (point * QX11Info::appDpiX() + 36) / 72;
+    return (point * 96 + 36) / 72;
 }
 
 static bool hasStr(XftFont *font, QString &str)
