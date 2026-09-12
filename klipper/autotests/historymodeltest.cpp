@@ -60,8 +60,12 @@ private Q_SLOTS:
     void testType();
     void testKeepClipboardContents();
     void testPasswordIsTrackedPerBuffer();
+    void testPickingAnEntryForgetsBothPasswords_data();
+    void testPickingAnEntryForgetsBothPasswords();
     void testNewSelectionForgetsOnlyThatBuffer_data();
     void testNewSelectionForgetsOnlyThatBuffer();
+    void testKnownItemForgetsOnlyThatBuffer_data();
+    void testKnownItemForgetsOnlyThatBuffer();
     void testRemovingAnItemKeepsThePassword();
 };
 
@@ -305,8 +309,8 @@ void HistoryModelTest::testKeepClipboardContents()
     qDebug() << "Stage 4";
     dataDir.refresh();
     QVERIFY(dataDir.exists());
-    QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper").removeRecursively();
 }
+
 void HistoryModelTest::testPasswordIsTrackedPerBuffer()
 // Test that password being cleared or added to one buffer does not mark it for the other buffer.
 // Also test clearing history clears password from both buffers.
@@ -347,6 +351,45 @@ void HistoryModelTest::testPasswordIsTrackedPerBuffer()
     QTRY_COMPARE(history->pendingJobs(), 0);
 }
 
+void HistoryModelTest::testPickingAnEntryForgetsBothPasswords_data()
+{
+    QTest::addColumn<QString>("picked");
+
+    QTest::newRow("top") << QStringLiteral("bar");
+    QTest::newRow("not top") << QStringLiteral("foo");
+}
+
+void HistoryModelTest::testPickingAnEntryForgetsBothPasswords()
+// When user picks an entry from history, both buffers are overwritten, so they must not hold passwords.
+// Runs twice as per function above, top entry goes through a different path than non-top entry.
+{
+    QFETCH(QString, picked);
+
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
+    history->clear();
+    history->setMaxSize(10);
+
+    KSystemClipboard::instance()->setMimeData(plain(QStringLiteral("foo")), QClipboard::Clipboard);
+    QTRY_COMPARE(history->rowCount(), 1);
+    KSystemClipboard::instance()->setMimeData(plain(QStringLiteral("bar")), QClipboard::Clipboard);
+    QTRY_COMPARE(history->rowCount(), 2);
+
+    KSystemClipboard::instance()->setMimeData(password(QStringLiteral("mySuperSecretPassword!")), QClipboard::Clipboard);
+    KSystemClipboard::instance()->setMimeData(password(QStringLiteral("mySuperSecretPassword!")), QClipboard::Selection);
+    QTRY_VERIFY(history->clipboardHasPassword());
+    QTRY_VERIFY(history->selectionHasPassword());
+
+    QTRY_COMPARE(history->pendingJobs(), 0);
+    history->moveToTop(uuidOf(picked));
+    QTRY_VERIFY(SystemClipboard::self()->findChildren<KJob *>().isEmpty());
+
+    QCOMPARE(history->data(history->index(0, 0)).toString(), picked);
+    QVERIFY(!history->clipboardHasPassword());
+    QVERIFY(!history->selectionHasPassword());
+    QVERIFY(!holdsPasswordText(QClipboard::Clipboard, QStringLiteral("mySuperSecretPassword!")));
+    QVERIFY(!holdsPasswordText(QClipboard::Selection, QStringLiteral("mySuperSecretPassword!")));
+}
+
 void HistoryModelTest::testNewSelectionForgetsOnlyThatBuffer_data()
 {
     QTest::addColumn<bool>("saveSelection");
@@ -384,6 +427,47 @@ void HistoryModelTest::testNewSelectionForgetsOnlyThatBuffer()
     QCOMPARE(history->rowCount(), saveSelection ? 1 : 0);
 }
 
+void HistoryModelTest::testKnownItemForgetsOnlyThatBuffer_data()
+{
+    QTest::addColumn<bool>("intoSelection");
+
+    QTest::newRow("copied") << false;
+    QTest::newRow("selected") << true;
+}
+
+void HistoryModelTest::testKnownItemForgetsOnlyThatBuffer()
+// Password is typically copied to both buffers (Firefox does it),
+// but they can diverge later: for example when you copy a file, selection is untouched.
+// This tests a scenario when something already in history is put into one buffer again.
+// When that happens, only that buffer stops having the password, the other one keeps it.
+{
+    QFETCH(bool, intoSelection);
+
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
+    history->clear();
+    history->setMaxSize(10);
+    // The selection only reaches the deduplication when it is saved
+    writeSetting(QStringLiteral("SaveSelection"), true);
+
+    KSystemClipboard::instance()->setMimeData(plain(QStringLiteral("foo")), QClipboard::Clipboard);
+    QTRY_COMPARE(history->rowCount(), 1);
+    KSystemClipboard::instance()->setMimeData(plain(QStringLiteral("bar")), QClipboard::Clipboard);
+    QTRY_COMPARE(history->rowCount(), 2);
+
+    KSystemClipboard::instance()->setMimeData(password(QStringLiteral("mySuperSecretPassword!")), QClipboard::Clipboard);
+    KSystemClipboard::instance()->setMimeData(password(QStringLiteral("mySuperSecretPassword!")), QClipboard::Selection);
+    QTRY_VERIFY(history->clipboardHasPassword());
+    QTRY_VERIFY(history->selectionHasPassword());
+
+    KSystemClipboard::instance()->setMimeData(plain(QStringLiteral("foo")), intoSelection ? QClipboard::Selection : QClipboard::Clipboard);
+    QTRY_COMPARE(history->data(history->index(0, 0)).toString(), QStringLiteral("foo"));
+    QCOMPARE(history->rowCount(), 2);
+    QCOMPARE(history->clipboardHasPassword(), intoSelection);
+    QCOMPARE(history->selectionHasPassword(), !intoSelection);
+    QCOMPARE(holdsPasswordText(QClipboard::Clipboard, QStringLiteral("mySuperSecretPassword!")), intoSelection);
+    QCOMPARE(holdsPasswordText(QClipboard::Selection, QStringLiteral("mySuperSecretPassword!")), !intoSelection);
+}
+
 void HistoryModelTest::testRemovingAnItemKeepsThePassword()
 // Removing an entry from history when we have password in the buffers
 // should not delete the password from the buffers
@@ -410,7 +494,9 @@ void HistoryModelTest::testRemovingAnItemKeepsThePassword()
     QVERIFY(holdsPasswordText(QClipboard::Selection, QStringLiteral("mySuperSecretPassword!")));
 
     QTRY_COMPARE(history->pendingJobs(), 0);
-}
 
+    // Must run at the end of last test to clean up after ourselves
+    QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper").removeRecursively();
+}
 QTEST_MAIN(HistoryModelTest)
 #include "historymodeltest.moc"

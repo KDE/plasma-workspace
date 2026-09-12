@@ -254,7 +254,7 @@ HistoryModel::HistoryModel()
             if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
                 return;
             }
-            // A password is not in the history, so only the buffers without one have anything to restore.
+            // Only restore buffers that did not contain passwords.
             m_clip->setMimeData(m_items[0], buffersWithoutPassword);
         }
     });
@@ -941,6 +941,7 @@ void HistoryModel::moveToTop(const QString &uuid)
     if (existingItemIndex < 0) {
         return;
     }
+    clearHasPassword();
     moveToTop(existingItemIndex);
 }
 
@@ -965,8 +966,6 @@ void HistoryModel::moveToTop(qsizetype row)
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
-    setHasPassword(QClipboard::Clipboard, false);
-    setHasPassword(QClipboard::Selection, false);
 }
 
 void HistoryModel::saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid)
@@ -987,6 +986,7 @@ void HistoryModel::moveTopToBack()
     if (m_items.size() < 2) {
         return;
     }
+    clearHasPassword();
     beginMoveRows(QModelIndex(), 0, 0, QModelIndex(), m_items.size());
     auto item = m_items.takeFirst();
     m_items.append(item);
@@ -995,6 +995,7 @@ void HistoryModel::moveTopToBack()
 
 void HistoryModel::moveBackToTop()
 {
+    clearHasPassword();
     moveToTop(m_items.size() - 1);
 }
 
