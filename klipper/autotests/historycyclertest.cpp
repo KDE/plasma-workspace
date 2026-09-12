@@ -7,6 +7,7 @@
 #include "../historycycler.h"
 #include "../historyitem.h"
 #include "../historymodel.h"
+#include "testhelpers.h"
 // Qt
 #include <QObject>
 #include <QSignalSpy>
@@ -38,9 +39,9 @@ void HistoryCyclerTest::testCycle()
     const QString fooText = QStringLiteral("foo");
     const QString barText = QStringLiteral("bar");
     const QString fooBarText = QStringLiteral("foobar");
-    const QString fooUuid = QString::fromLatin1(QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1).toHex());
-    const QString barUuid = QString::fromLatin1(QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1).toHex());
-    const QString foobarUuid = QString::fromLatin1(QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1).toHex());
+    const QString fooUuid = uuidOf(fooText);
+    const QString barUuid = uuidOf(barText);
+    const QString foobarUuid = uuidOf(fooBarText);
 
     QSignalSpy changedSpy(model.get(), &HistoryModel::changed);
     model->insert(fooText);

@@ -7,6 +7,7 @@
 #include "../historymodel.h"
 #include "../historyitem.h"
 #include "systemclipboard.h"
+#include "testhelpers.h"
 
 #include <QAbstractItemModelTester>
 #include <QMimeData>
@@ -87,9 +88,9 @@ void HistoryModelTest::testInsertRemove()
     const QString fooText = QStringLiteral("foo");
     const QString barText = QStringLiteral("bar");
     const QString fooBarText = QStringLiteral("foobar");
-    const QString fooUuid = QString::fromLatin1(QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1).toHex());
-    const QString barUuid = QString::fromLatin1(QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1).toHex());
-    const QString foobarUuid = QString::fromLatin1(QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1).toHex());
+    const QString fooUuid = uuidOf(fooText);
+    const QString barUuid = uuidOf(barText);
+    const QString foobarUuid = uuidOf(fooBarText);
 
     // let's insert a few items
     history->insert(fooText);
@@ -142,7 +143,7 @@ void HistoryModelTest::testClear()
     QVERIFY(history->insert(QStringLiteral("foo")));
     QVERIFY(history->insert(QStringLiteral("bar")));
     QVERIFY(history->insert(QStringLiteral("foobar")));
-    history->moveToTop(QString::fromLatin1(QCryptographicHash::hash(QByteArrayLiteral("bar"), QCryptographicHash::Sha1).toHex()));
+    history->moveToTop(uuidOf(QStringLiteral("bar")));
     QCOMPARE(history->rowCount(), 3);
 
     // and clear
@@ -164,7 +165,7 @@ void HistoryModelTest::testIndexOf()
     history->insert(QStringLiteral("foo"));
     QVERIFY(history->indexOf(QStringLiteral("whatever")) < 0);
     QVERIFY(history->indexOf(QString()) < 0);
-    const QString fooUuid = QString::fromLatin1(QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1).toHex());
+    const QString fooUuid = uuidOf(QStringLiteral("foo"));
     QVERIFY(history->indexOf(fooUuid) >= 0);
     QCOMPARE(history->index(history->indexOf(fooUuid)).data(HistoryModel::UuidRole).toString(), fooUuid);
 
