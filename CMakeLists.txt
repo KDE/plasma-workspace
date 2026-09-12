@@ -424,7 +424,7 @@ add_subdirectory(statusnotifierwatcher)
 add_subdirectory(startkde)
 add_subdirectory(themes)
 
-if(FONTCONFIG_FOUND)
+if(FONTCONFIG_FOUND AND WITH_X11)
     add_subdirectory(kfontinst)
 endif()
 

@@ -1,26 +1,24 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kfontinst\")
 
-if (HAVE_X11)
-    check_include_files(locale.h HAVE_LOCALE_H)
-    configure_file(config-fontinst.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-fontinst.h)
-    include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}
-        ${CMAKE_CURRENT_BINARY_DIR}
-        ${CMAKE_CURRENT_SOURCE_DIR}/lib
-        ${CMAKE_CURRENT_BINARY_DIR}/lib
-        ${CMAKE_CURRENT_SOURCE_DIR}/dbus
-        ${CMAKE_CURRENT_BINARY_DIR}/dbus
-        ${CMAKE_CURRENT_SOURCE_DIR}/viewpart
-        ${CMAKE_CURRENT_SOURCE_DIR}/manager
-        ${CMAKE_CURRENT_BINARY_DIR}/manager)
+check_include_files(locale.h HAVE_LOCALE_H)
+configure_file(config-fontinst.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-fontinst.h)
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib
+    ${CMAKE_CURRENT_BINARY_DIR}/lib
+    ${CMAKE_CURRENT_SOURCE_DIR}/dbus
+    ${CMAKE_CURRENT_BINARY_DIR}/dbus
+    ${CMAKE_CURRENT_SOURCE_DIR}/viewpart
+    ${CMAKE_CURRENT_SOURCE_DIR}/manager
+    ${CMAKE_CURRENT_BINARY_DIR}/manager)
 
-    add_subdirectory(lib)
-    add_subdirectory(dbus)
-    add_subdirectory(manager)
-    add_subdirectory(apps)
-    add_subdirectory(kio)
-    add_subdirectory(thumbnail)
-    add_subdirectory(viewpart)
+add_subdirectory(lib)
+add_subdirectory(dbus)
+add_subdirectory(manager)
+add_subdirectory(apps)
+add_subdirectory(kio)
+add_subdirectory(thumbnail)
+add_subdirectory(viewpart)
 
-    ecm_install_icons(ICONS sc-apps-preferences-desktop-font-installer.svg DESTINATION ${KDE_INSTALL_ICONDIR})
-endif ()
+ecm_install_icons(ICONS sc-apps-preferences-desktop-font-installer.svg DESTINATION ${KDE_INSTALL_ICONDIR})
