@@ -23,15 +23,29 @@ PlasmoidItem {
     id: main
 
     readonly property bool isClipboardEmpty: historyModel.sourceCount === 0
+    readonly property bool clipboardHasPassword: historyModel.sourceModel.clipboardHasPassword
+    readonly property bool selectionHasPassword: historyModel.sourceModel.selectionHasPassword
+    readonly property bool hasNothingToShow: isClipboardEmpty && !clipboardHasPassword && !selectionHasPassword
 
     switchWidth: Kirigami.Units.gridUnit * 12
     switchHeight: Kirigami.Units.gridUnit * 12
-    Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
+    // Stays active while expanded, so the handler below can still collapse it
+    Plasmoid.status: if (!hasNothingToShow || main.expanded) {
+        PlasmaCore.Types.ActiveStatus
+    } else if (main.inEmbeddedContainment) {
+        PlasmaCore.Types.HiddenStatus
+    } else {
+        PlasmaCore.Types.PassiveStatus
+    }
     toolTipMainText: i18n("Clipboard Contents")
-    toolTipSubText: if (isClipboardEmpty) {
+    toolTipSubText: if (hasNothingToShow) {
         i18n("Clipboard is empty")
-    } else if (historyModel.sourceModel.hasPassword) {
+    } else if (clipboardHasPassword && selectionHasPassword) {
+        i18nc("@info", "The clipboard and the selection currently hold sensitive data")
+    } else if (clipboardHasPassword) {
         i18nc("@info", "The clipboard currently holds sensitive data")
+    } else if (selectionHasPassword) {
+        i18nc("@info", "The selection currently holds sensitive data")
     } else {
         historyModel.currentText
     }
@@ -57,17 +71,11 @@ PlasmoidItem {
 
     property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
 
-    onIsClipboardEmptyChanged: {
-        if (isClipboardEmpty) {
-            if (!main.inEmbeddedContainment)
-                return;
-            // We need to hide the applet before changing its status to passive
-            // because only the active applet can hide itself
-            if (main.hideOnWindowDeactivate)
-                main.expanded = false;
-            Plasmoid.status = PlasmaCore.Types.HiddenStatus;
-        } else {
-            Plasmoid.status = PlasmaCore.Types.ActiveStatus
+    // We need to hide the applet before changing its status to passive
+    // because only the active applet can hide itself
+    onHasNothingToShowChanged: {
+        if (hasNothingToShow && main.inEmbeddedContainment && main.hideOnWindowDeactivate) {
+            main.expanded = false;
         }
     }
 
