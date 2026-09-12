@@ -153,6 +153,13 @@ private:
 
     void setHasPassword(QClipboard::Mode mode, bool hasPassword);
 
+    enum class Holding {
+        APassword,
+        NoPassword,
+    };
+    /** The system buffers that are either holding a password, or that have no password. */
+    [[nodiscard]] SystemClipboard::SelectionMode buffersHolding(Holding holding) const;
+
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
     QPointer<URLGrabber> m_urlGrabber;

@@ -230,8 +230,17 @@ HistoryModel::HistoryModel()
     });
 
     connect(this, &HistoryModel::changed, this, [this](bool isTop) {
+        const SystemClipboard::SelectionMode buffersWithoutPassword = buffersHolding(Holding::NoPassword);
+        // Nothing to restore into: both buffers hold a password, which is never in the history.
+        if (buffersWithoutPassword == 0) {
+            return;
+        }
+
         if (m_items.empty()) {
-            m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+            // The history is empty (user might have deleted the last history entry manually).
+            // Empty the buffers too, except the ones holding a password.
+            // Clearing the history explicitly does wipe passwords, in clear().
+            m_clip->clear(buffersWithoutPassword);
             return;
         }
         if (!isTop) {
@@ -245,7 +254,8 @@ HistoryModel::HistoryModel()
             if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
                 return;
             }
-            m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
+            // A password is not in the history, so only the buffers without one have anything to restore.
+            m_clip->setMimeData(m_items[0], buffersWithoutPassword);
         }
     });
 
@@ -385,10 +395,16 @@ void HistoryModel::clearHasPassword()
     setHasPassword(QClipboard::Selection, false);
 }
 
+SystemClipboard::SelectionMode HistoryModel::buffersHolding(Holding holding) const
+{
+    const bool password = holding == Holding::APassword;
+    return SystemClipboard::SelectionMode((m_clipboardHasPassword == password ? SystemClipboard::Clipboard : 0)
+                                          | (m_selectionHasPassword == password ? SystemClipboard::Selection : 0));
+}
+
 void HistoryModel::clearPasswords()
 {
-    m_clip->clear(
-        SystemClipboard::SelectionMode((m_clipboardHasPassword ? SystemClipboard::Clipboard : 0) | (m_selectionHasPassword ? SystemClipboard::Selection : 0)));
+    m_clip->clear(buffersHolding(Holding::APassword));
     clearHasPassword();
 }
 

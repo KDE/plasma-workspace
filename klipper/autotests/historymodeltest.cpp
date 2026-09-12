@@ -62,6 +62,7 @@ private Q_SLOTS:
     void testPasswordIsTrackedPerBuffer();
     void testNewSelectionForgetsOnlyThatBuffer_data();
     void testNewSelectionForgetsOnlyThatBuffer();
+    void testRemovingAnItemKeepsThePassword();
 };
 
 void HistoryModelTest::writeSetting(const QString &key, bool value)
@@ -381,6 +382,34 @@ void HistoryModelTest::testNewSelectionForgetsOnlyThatBuffer()
 
     // Tests whether selection was saved into history when configured so
     QCOMPARE(history->rowCount(), saveSelection ? 1 : 0);
+}
+
+void HistoryModelTest::testRemovingAnItemKeepsThePassword()
+// Removing an entry from history when we have password in the buffers
+// should not delete the password from the buffers
+{
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
+    history->clear();
+    history->setMaxSize(10);
+
+    KSystemClipboard::instance()->setMimeData(plain(QStringLiteral("foo")), QClipboard::Clipboard);
+    QTRY_COMPARE(history->rowCount(), 1);
+    KSystemClipboard::instance()->setMimeData(plain(QStringLiteral("bar")), QClipboard::Clipboard);
+    QTRY_COMPARE(history->rowCount(), 2);
+
+    KSystemClipboard::instance()->setMimeData(password(QStringLiteral("mySuperSecretPassword!")), QClipboard::Clipboard);
+    KSystemClipboard::instance()->setMimeData(password(QStringLiteral("mySuperSecretPassword!")), QClipboard::Selection);
+    QTRY_VERIFY(history->clipboardHasPassword());
+    QTRY_VERIFY(history->selectionHasPassword());
+
+    QVERIFY(history->remove(uuidOf(QStringLiteral("bar"))));
+    QTRY_COMPARE(history->rowCount(), 1);
+    QVERIFY(history->clipboardHasPassword());
+    QVERIFY(history->selectionHasPassword());
+    QVERIFY(holdsPasswordText(QClipboard::Clipboard, QStringLiteral("mySuperSecretPassword!")));
+    QVERIFY(holdsPasswordText(QClipboard::Selection, QStringLiteral("mySuperSecretPassword!")));
+
+    QTRY_COMPARE(history->pendingJobs(), 0);
 }
 
 QTEST_MAIN(HistoryModelTest)
