@@ -99,25 +99,3 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
-
-#~ msgid "Virtual Keyboard: unavailable"
-#~ msgstr "Virtuelt tastatur: utilgjengelig"
-
-#~ msgid "Virtual Keyboard: disabled"
-#~ msgstr "Virtuelt tastatur: slått av"
-
-#~ msgid "Show Virtual Keyboard"
-#~ msgstr "Vis virtuelt tastatur"
-
-#~ msgid "Virtual Keyboard: visible"
-#~ msgstr "Virtuelt tastatur: synlig"
-
-#, fuzzy
-#~| msgid "Virtual Keyboard: visible"
-#~ msgid "Virtual Keyboard: Show on non-mouse input"
-#~ msgstr "Virtuelt tastatur: synlig"
-
-#, fuzzy
-#~| msgid "Virtual Keyboard: disabled"
-#~ msgid "Virtual Keyboard: Show with all input devices"
-#~ msgstr "Virtuelt tastatur: slått av"

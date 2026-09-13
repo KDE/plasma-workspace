@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-31 18:30+0200\n"
+"PO-Revision-Date: 2026-09-12 08:37+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -38,20 +38,7 @@ msgid "Selection and Clipboard:"
 msgstr "Markering och klippbord:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -74,30 +61,31 @@ msgstr ""
 "alternativet är aktiverat, hålls markeringen och klippbordet likadana, så "
 "att alla markeringar omedelbart är tillgängliga för att klistra in på vilket "
 "sätt som helst. Om det är inaktiverat, kan markeringen ändå sparas i "
-"klippbordshistoriken (i enlighet med alternativen nedan), men den kan bara "
-"klistras in med musens mittenknapp."
+"klippbordshistoriken (i enlighet med alternativet nedan), men den kan bara "
+"klistras in med musens mittenknapp.."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Text markerad med pekaren och tangentbordet"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Spara alltid i historiken"
+msgstr "Inkludera i historik:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Text som kopieras explicit sparas alltid om den inte är markerad som ett "
+"lösenord.."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Bilddata kopierades explicit"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -105,6 +93,8 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Till exempel lager och markeringar som kopierats i bildeditorer som Krita "
+"eller GIMP.<br/><a href=\"1\">Mer om bilder på klippbordet.</a>>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -118,6 +108,13 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Klippbordet tillåter alltid kopiering av bildfiler som filnamn och visar "
+"deras miniatyrbilder. Inställningen täcker fall där bilder lagras direkt som "
+"data. Vissa program stöder båda fallen, men andra accepterar bara bilder som "
+"data.<nl/><nl/>Observera också att skärmlagringsverktyget Spectacle "
+"ignorerar inställningen när det är inställt för att spara skärmbilder på "
+"klippbordet. Alla program som skickar både text och bild ignorerar den "
+"också.."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -549,23 +546,16 @@ msgid "Command:"
 msgstr "Kommando:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"Tecknen <placeholder>&#37;s</placeholder> i kommandot ersätts med "
-"klippbordets fullständiga innehåll. Tecknen <placeholder>&#37;0</"
-"placeholder> till <placeholder>&#37;9</placeholder> ersätts med motsvarande "
-"lagrade texter från matchningsmönstret."
+"Ett <b>&#37;s</b> i kommandot ersätts med klippbordets fullständiga "
+"innehåll. Tecknen <b>&#37;0</b> till <b>&#37;9</b> ersätts med motsvarande "
+"lagrade texter från matchningsmönstret.."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -741,54 +731,43 @@ msgstr "Behåll markeringen och klippbordet likadana"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Innehåll som markeras med markören kopieras automatiskt till klippbordet så "
-"att det antingen kan klistras in med en inklistringsåtgärd eller ett "
-"mittenklick.<br/><a href=\"1\">Mer om markeringen och klippbordet</a>."
+"Innehåll som markeras med pekaren kopieras automatiskt till klippbordet så "
+"att det antingen kan klistras in med åtgärden <i>Klistra in</i> eller ett "
+"mittenklick.<br/><a href=\"1\">Mer om markeringen och klippbordet</a>.>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ignorera markeringen"
+msgstr "Spara markeringen"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Innehåll som markeras med markören men inte explicit kopieras till "
-"klippbordet lagras inte automatiskt i klippbordshistoriken, och kan bara "
-"klistras in med ett mittenklick."
+"Innehåll som markeras med pekaren men inte explicit kopieras till "
+"klippbordet lagras automatiskt i klippbordshistoriken."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Spara bilder"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Om textmarkeringar sparas i klippbordshistoriken."
+msgstr "Spara bilder i klippbordshistoriken."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -837,27 +816,19 @@ msgstr "Markörpost för att ange ändringar i en åtgärds grafiska trädkompon
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Ta bort blanktecken från markering"
+msgstr "Trimma blanktecken"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Ta bort eventuella blanktecken från början och slutet av klippbordets text "
-"innan en åtgärd utförs. Det säkerställer exempelvis att en webbadress som "
-"klistras in i en webbläsare tolkas som förväntat. Texten som sparas på "
-"klippbordet påverkas inte."
+"Ta bort eventuella blanktecken från början och slutet av texten som skickas "
+"till en åtgärd. Texten som sparas i historiken påverkas inte."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -879,7 +850,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Erbjud program för kopierade länkar och filer"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -889,6 +860,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"För en länk som börjar med <i>http://</i> eller <i>https://</i> eller för "
+"filer erbjuds program som kan öppna dem tillsammans med matchande åtgärder, "
+"om det finns några.."
 
 #: klipperpopup.cpp:38
 #, kde-format

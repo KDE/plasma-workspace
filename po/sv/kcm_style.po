@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-08 16:48+0200\n"
+"PO-Revision-Date: 2026-09-12 08:35+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -127,52 +127,38 @@ msgid "Could not uninstall styles:\n"
 msgstr "Kunde inte avinstallera stilar:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-#| msgid_plural ""
-#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
 msgstr ""
-"Avinstallerade “%2” med lyckat resultat, men kunde inte avinstallera "
+"Avinstallerade “%1” med lyckat resultat, men kunde inte avinstallera "
 "övriga:\n"
 
 #: kcmstyle.cpp:229
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-#| msgid_plural ""
-#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
-"Avinstallerade “%2” med lyckat resultat, men kunde inte avinstallera "
+"Avinstallerade %1 stil med lyckat resultat, men kunde inte avinstallera "
 "övriga:\n"
 msgstr[1] ""
 "Avinstallerade %1 stilar med lyckat resultat, men kunde inte avinstallera "
 "övriga:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "Avinstallerade “%2” med lyckat resultat."
+msgstr "Avinstallerade “%1” med lyckat resultat."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Avinstallerade “%2” med lyckat resultat."
+msgstr[0] "Avinstallerade %1 stil med lyckat resultat"
 msgstr[1] "Avinstallerade %1 stilar med lyckat resultat."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
