@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-12 00:47+0000\n"
-"PO-Revision-Date: 2026-08-27 20:04+0300\n"
+"PO-Revision-Date: 2026-09-12 19:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -152,13 +152,13 @@ msgstr "Yapılandır…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Ekran Üzeri Klavyeyi Gizle"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Ekran Üzeri Klavyeyi Göster"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format

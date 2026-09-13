@@ -13,45 +13,13 @@
 <title
 >&klipper; El Kitabı </title>
 
-<authorgroup>
-<author
->&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
-
-<othercredit role="developer"
->&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
-
-<othercredit role="translator"
-><firstname
->Emir</firstname
-><surname
->SARI</surname
-><affiliation
-><address
-><email
->emir_sari@icloud.com</email
-></address
-></affiliation
-><contrib
->Çeviri</contrib
-></othercredit
-> 
-
-</authorgroup>
-
-<copyright>
-<year
->2000-2003</year>
-<holder
->&Philip.Rodrigues;</holder>
-</copyright>
-
 <legalnotice
 >&FDLNotice;</legalnotice>
 
 <date
->2022‒05‒05</date>
+>2026‒09‒09</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 6.8</releaseinfo>
 
 <abstract>
 <para
@@ -69,15 +37,13 @@
 >pano</keyword>
 </keywordset>
 </bookinfo>
-<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
 <title
 >Giriş</title>
 <para
 >&klipper;, &plasma; pano izlencesidir. Pano geçmişini depolar ve pano içeriğini uygulama eylemlerine bağlamanıza izin verir. Herhangi bir sorunu veya özellik isteğini lütfen <ulink url="http://bugs.kde.org"
->KDE hata izleyicisine</ulink
+>KDE hata izleme sisteminde</ulink
 > bildirin.</para>
-
 </chapter>
 
 <chapter id="using-klipper">
@@ -105,9 +71,6 @@
 </screenshot>
 
 <para
->Pano boşsa &klipper; araç takımı gizlidir.</para>
-
-<para
 >Pano geçmişini görüntülemek için sistem tepsisindeki &klipper; simgesine tıklayın.</para>
 
 <sect2 id="klipper-widget">
@@ -127,11 +90,12 @@
 </mediaobject>
 </screenshot>
 
+<!-- TODO: Document starred functionality -->
 <para
 >Fare işaretçisi ile bir girişin üzerine gelin ve bir eylemi başlatmanıza, kare kod göstermenize, içeriği düzenlemenize veya girdiyi geçmişten kaldırmanıza olanak tanıyan dört simge görünür. Kare kodları yakalamak ve kaydetmek için &spectacle; kullanın. </para>
 
 <para
->Pano geçmişini açıp (&klipper;’a tıklayın) ve sorgunuzu yazarak arama yapabilirsiniz. Siz yazdıkça sonuçlar güncellenir. Pano geçmişini temizlemek için arama alanının sağındaki simgeye tıklayın. </para>
+>Arama alanına sorgunuzu yazarak pano geçmişinde arama yapabilirsiniz. Siz yazdıkça sonuçlar güncellenir. Pano geçmişini temizlemek için arama alanının sağındaki simgeye tıklayın. </para>
 
 <para
 >Bağlam menüsündeki <guilabel
@@ -148,32 +112,35 @@
 >Eylemler</title>
 
 <para
->&klipper;, pano içeriği üzerinde belirli düzenli ifadeyle eşleşip eşleşmediğine göre çeşitli eylemler gerçekleştirebilir. Örneğin, <quote
+>&klipper;, belirli bir düzenli ifade ile eşleşip eşleşmediğine göre panonun içeriğinde arama yapabilir. Web adreslerinde veya dosyalar üzerinde işlem yapan yerleşik bir eylem de bulunur. <quote
 >http://</quote
-> ile başlayan herhangi bir pano içeriği Firefox’a veya &konqueror;’a açılacak &URL;’ler olarak aktarılabilir. Ek olarak, içerik bir yolla eşleşiyorsa dosyanın türüne bağlı olarak benzer eylemler gerçekeştirilebilir; &eg;, eğer bir <acronym
+> veya <quote
+>https://</quote
+> ile başlayan bir web adresini veya bir dosyayı; örneğin, bir <acronym
 >PDF</acronym
-> dosyasına giden bir yol panoya kopyalanırsa dosya &okular;’da görüntülenebilir.</para>
+> dosyasını; örneğin, &okular; gibi uyumlu bir uygulamaya aktarmanıza olanak tanır.</para>
 
 <para
->Bu özelliği kullanmak için bir &URL; veya yol seçin. &klipper;’ın listesinde eşleşen bir düzenli ifade varsa seçiminiz için programları gösteren bir menü görüntülenir. Bir program seçmek için fare veya imleç düğmelerini kullanın ve &klipper; seçimin işaret ettiği adresi açarak bu programı çalıştırır.</para>
+><link linkend="preferences"
+>Ayarlar iletişim kutusunun</link
+> <guilabel
+>Actions Configuration</guilabel
+> sayfasından kendi eylemlerinizi yazabilirsiniz. Burada ayrıca, <guilabel
+>Kopyalanan bağlantılar ve dosyalar için uygulamalar öner</guilabel
+> ile yerleşik eylemleri devre dışı bırakabilirsiniz. </para>
 
 <para
->Ayarlar iletişim kutusunda <guilabel
->Genel</guilabel
-> sayfası altındaki <guilabel
+>Geçmişinizdeki her ögenin yanında bulunan bir düğmeyle eşleşen eylem menüsüne her zaman erişebilirsiniz. Ayrıca, <guilabel
+>Kısayollar</guilabel
+> sayfasında ayarlayabileceğiniz <guilabel
+>Otomatik Eylem Açılır Menüsü</guilabel
+> kısayolunu kullanarak veya Eylem Menüsü sayfasındaki <guilabel
 >Eylem açılır menüsünü göster</guilabel
-> seçeneği ile menünün kalacağı süreyi değiştirebilirsiniz. <guilabel
->Eylem Menüsü</guilabel
-> sayfası altındaki <guilabel
->MIME eylemlerini içer</guilabel
-> seçeneğini kullanarak dosya yolu bölümünü ayrı olarak devre dışı bırakabilirsiniz.</para>
-
-<para
->Eylemler, <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->X</keycap
-></keycombo
-> kısayoluyla tümüyle devre dışı bırakılabilir.</para>
+> seçeneğinin altında bulunan <guilabel
+>Seçimden hemen sonra</guilabel
+> seçeneğini işaretleyerek, panoya bir eşleşme yerleştirildiği anda bir eylem menüsünün açılmasını sağlayabilirsiniz. Orada, <guilabel
+>Otomatik eylem menüsü süresi</guilabel
+> seçeneği ile, otomatik menünün üzerinde işlem yapmadığınız takdirde kapanmasının ne kadar süreceğini de değiştirebilirsiniz.</para>
 
 <para
 >Düzenli bir ifadeyle eşleşen pano içeriği de üzerilerinde bir işlem yapılmadan önce düzenlenebilir. Pano girişinin sağındaki <guimenuitem
@@ -197,11 +164,11 @@
 <title
 >Genel</title>
 <para
->&klipper;, &plasma;’daki pano ve seçim davranışlarını ayarlamak için kullanılabilir. </para>
+>&klipper;, &plasma;’daki pano ve seçim davranışlarını ayarlamak için kullanılabilir. Davranışlarını ayarlamak için <xref linkend="general-page"/> sayfasına bakın. </para>
 
 <note
 ><para
->&X-Window;, iki ayrı pano arabelleği kullanır: <quote
+>İki ayrı pano arabelleği bulunur: <quote
 >Seçim</quote
 > ve <quote
 >pano</quote
@@ -221,44 +188,8 @@
 >Yapıştır</guimenuitem
 > komutuyla yapıştırılabilir.</para>
 </note>
-
 </sect2>
-
-<sect2 id="changing-clipboard-modes">
-<title
->Pano/Seçim Davranışını Değiştirmek</title>
-<para
->Pano/seçim davranışını değiştirmek için &klipper; bağlam menüsünden <guimenuitem
->Panoyu Yapılandır…</guimenuitem
->’ı seçin ve açılan iletişim kutusundan <guilabel
->Genel</guilabel
-> sayfasına geçin. <guilabel
->Seçim ve Pano</guilabel
-> seçeneğinin içeriğini kaldırmak pano ve seçim işlevlerini yukarıda anlatıldığı üzere tümüyle ayrı arabelleklerde tutar. Bu seçenek ayarlandığında, <guilabel
->Yok Say</guilabel
-> eylemi, &klipper;’ın seçim içeriğini onun pano geçmişine almasına ve seçimin üzerinde eylemler gerçekleştirmesine engel olur. <guilabel
->Seçim ve Pano</guilabel
-> seçeneğini işaretlemek pano ve seçim arabelleklerinin her zaman aynı olmasına neden olur ve seçilen metnin hem <mousebutton
->orta</mousebutton
-> fare düğmesi hem de <keycombo
->&Ctrl;<keycap
->V</keycap
-> </keycombo
-> düğme kombinasyonuyla ve pano arabelleğindeki metnin de aynı biçimde yapıştırılabilmesine izin verir. </para>
-
- <!-- The
-<guilabel
->Synchronize contents of the clipboard and the
-selection</guilabel
-> check box determines the clipboard mode. If the box is
-selected, the clipboard functions in the &UNIX; mode; if not, the
-&Windows;/&Mac; mode is used. -->
-
-</sect2>
-
-
 </sect1>
-
 </chapter>
 
 <chapter id="preferences">
@@ -268,91 +199,70 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <sect1 id="general-page">
 <title
 >Genel Seçenekler</title>
+<note
+><para
+>Aşağıdaki eylemler <emphasis
+>seçim</emphasis
+> ve <emphasis
+>pano</emphasis
+> arasında fark gösterirler. Farkı anlamak için <xref linkend="clipboard-modes"/> bölümüne bakın. </para
+></note>
+
 
 <variablelist>
 
 <varlistentry
 ><term
 ><guilabel
->Seçim ve Pano</guilabel
+>Pano geçmişi: Geçmişi, masaüstü oturumları arasında kaydet</guilabel
 ></term>
 <listitem
 ><para
->Metin veya ekranın bir alanı fare veya klavye ile vurgulandığında, bu <emphasis
->seçim</emphasis
->’dir. Orta fare düğmesi kullanılarak yapıştırılabilir.</para
-><para
->Seçim, <guimenuitem
->Kopyala</guimenuitem
-> veya <guimenuitem
->Yapıştır</guimenuitem
-> eylemleriyle açıkça kopyalanmışsa <emphasis
->panoya</emphasis
-> kopyalanır. Bir<guimenuitem
->Yapıştır</guimenuitem
-> eylemi kullanılarak yapıştırılabilir.</para
-><para
->Bu seçenek etkinleştirildiğinde, seçim ve pano aynı kalır, böylece herhangi bir seçim herhangi bir yolla hemen yapıştırılabilir. Kapatılırsa seçim yine de pano geçmişine kaydedilebilir (aşağıdaki seçeneklere tabidir); ancak yalnızca farenin orta düğmesi kullanılarak yapıştırılabilir.</para
+>Oturumunuzu veya bilgisayarınızı kapattığınızda pano geçmişinin korunup korunmayacağını belirler.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Pano geçmişi</guilabel
+>Geçmiş boyutu</guilabel
 ></term>
 <listitem
 ><para
->Pano geçmişini açar/kapatır.</para
+>Pano geçmişinde tutulan ögelerin sayısını ayarlar. Bu değer, 1 ile 2048 arasında olabilir.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Girdi sayısı</guilabel
+>Seçim ve pano: Seçimi ve panoyu aynı tut</guilabel
 ></term>
 <listitem
 ><para
->Pano geçmişinde tutulan ögelerin sayısını ayarlar.</para
+>Bu seçenek işaretlendiğinde, seçim ve pano aynı kalır, böylece herhangi bir seçim ve pano içeriği herhangi bir yolla hemen yapıştırılabilir. Kapatılırsa seçim yine de pano geçmişine kaydedilebilir (aşağıdaki seçeneklere tabidir); ancak yalnızca farenin orta düğmesi kullanılarak yapıştırılabilir. </para
 ></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Metin seçimi</guilabel
+>Geçmişte içer: İşaretçi veya klavye ile metin seçilen metin</guilabel
 ></term>
 <listitem
 ><para
->Ekranın bir bölümü fare veya klavyeyle seçildiğinde, buna <quote
->seçim</quote
-> denir. Bu seçenek, metin seçimlerinin panoya kaydedilip kaydedilmeyeceğini belirler. <guilabel
->Her zaman geçmişe kaydet</guilabel
-> ve <guilabel
->Yalnızca açıkça kopyalandığında</guilabel
-> arasında seçim yapılabilir. <guilabel
->Her zaman geçmişe kaydet</guilabel
-> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman kendiliğinden kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
+>İşaretlendiğinde, seçim geçmişe kaydedilir. Pano ise her zaman kaydedilir. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Metin olmayan seçim</guilabel
+>Geçmişte içer: Açıkça kopyalanan görsel verisi</guilabel
 ></term>
 <listitem
 ><para
->Bu seçenek, metin olmayan seçimlerin (örn. görseller) pano geçmişine kaydedilip kaydedlimeyeceğini belirler. <guilabel
->Her zamang geçmişe kaydet</guilabel
->, <guilabel
->Yalnızca açıkça kopyalandığında</guilabel
-> ve <guilabel
->Asla geçmişe kaydetme</guilabel
-> arasından seçim yapılabilir. <guilabel
->Her zaman geçmişe kaydet</guilabel
-> seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman kendiliğinden kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
+>İşaretlendiğinde, örneğin bir görsel düzenleyicisinde kopyalanan katmanlar ve seçimler gibi veri olarak kopyalanan görseller pano geçmişine kaydedilir. Bir dosya yöneticisinden kopyalanan görsel dosyaları her zaman kaydedilir. Geçmişte bunlar görsel olarak görünür; ancak bunlar yalnızca önizlemedir; altlarında yalnızca dosya adları bulunur. &spectacle; tarafından kaydedilen ekran görüntüleri de orada bu şekilde ayarlandığında kaydedilecektir. </para>
 </listitem>
 </varlistentry>
 
@@ -369,18 +279,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Eylem açılır menüsünü göster</guilabel
-></term>
-<listitem
-><para
->Hiçbir şey yapmazsanız açılır menünün kalacağı süreyi ayarlayın.</para
-></listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Geçmişten seçilen bir ögedeki eylemleri yinele</guilabel
+>Geçmişten seçilen bir öge için</guilabel
 ></term>
 <listitem
 ><para
@@ -391,22 +290,22 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Seçimden boşlukları kırp</guilabel
+>Otomatik eylem menüsü süresi</guilabel
 ></term>
 <listitem
 ><para
->Seçilirse pano içeriği bir uygulamaya aktarılmadan önce pano içeriğinin başındaki ve sonundaki boşluklar (boşluklar, sekmeler &etc;.) kaldırılır. Bu; örneğin, pano bir web tarayıcısı tarafından açıldığında hataya neden olacak boşluklar içeren bir &URL; içeriyorsa kullanışlıdır.</para>
-</listitem>
+>Otomatik menü üzerinde herhangi bir işlem yapmadığınız takdirde kapanmasının ne kadar süreceğini ayarlayın.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->MIME eylemlerini içer</guilabel
+>Boşlukları kırp</guilabel
 ></term>
 <listitem
 ><para
->Seçilirse açılır menüde seçili bir dosya adı veya URL’nin &MIME; türünü kabul edebilen uygulamaları içerin.</para>
+>Seçilirse pano içeriği bir uygulamaya aktarılmadan önce pano içeriğinin başındaki ve sonundaki boşluklar (boşluklar, sekmeler &etc;.) kaldırılır. Geçmişteki kayıtlı metin bundan etkilenmez.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -417,6 +316,21 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Eylemler Yapılandırması</title>
 
 <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Kopyalanan bağlantılar ve dosyalar için uygulamalar öner</guilabel
+></term>
+<listitem
+><para
+>Seçilirse açılır menü, kendi yaptığınız hiçbir eylem eşleşmese bile kopyalanan bir dosyayı veya <quote
+>http://</quote
+> ya da <quote
+>https://</quote
+> ile başlayan kopyalanan bir bağlantıyı açabilecek uygulamalar sunar.</para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term
 >İfadeleri/Eylemleri Düzenlemek</term>
@@ -569,9 +483,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >Program telif hakkı 1998–2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
 <para
->Geçerli bakımcı: Esben Mose Hansen. İletişim bilgileri için <ulink url="http://mosehansen.dk/about"
->http://mosehansen.dk/about</ulink
-> sayfasına bakın. </para>
+>Şu anda KDE &plasma; geliştiricileri tarafından bakımı yapılmaktadır. </para>
 
 <para
 >Belgelendirme telif hakkı 2000–2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
@@ -581,7 +493,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >emir_sari@icloud.com</email
 ></para
 > &underFDL; &underGPL; </chapter>
-
 
 &documentation.index;
 

@@ -13,87 +13,13 @@
 <title
 >Manual de &klipper; </title>
 
-<authorgroup>
-<author
->&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
-
-<othercredit role="developer"
->&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
-
-<othercredit role="translator"
-> <firstname
->Rocío</firstname
-> <surname
->Gallego</surname
-> <affiliation
-><address
-><email
->traducciones@rociogallego.com</email
-></address
-></affiliation
-> <contrib
->Traducción</contrib
-> </othercredit
-> <othercredit role="translator"
-> <firstname
->Pablo</firstname
-> <surname
->de Vicente</surname
-> <affiliation
-><address
-><email
->pvicentea@nexo.es</email
-></address
-></affiliation
-> <contrib
->Traductor</contrib
-> </othercredit
-> <othercredit role="translator"
-> <firstname
->Marcos</firstname
-> <surname
->Fouces Lago</surname
-> <affiliation
-><address
-><email
->mfouces@yahoo.es</email
-></address
-></affiliation
-> <contrib
->Traductor</contrib
-> </othercredit
-> <othercredit role="translator"
-><firstname
->Santiago</firstname
-><surname
->Fernández Sancho</surname
-><affiliation
-><address
-><email
->santi@kde-es.org</email
-></address
-></affiliation
-><contrib
->Traductor</contrib
-></othercredit
-> 
-
-</authorgroup>
-
-<copyright>
-<year
->2000-2003</year>
-<holder
->&Philip.Rodrigues;</holder>
-</copyright>
-
 <legalnotice
 >&FDLNotice;</legalnotice>
 
 <date
->2022-05-05</date>
+>2026-09-09</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 6.8</releaseinfo>
 
 <abstract>
 <para
@@ -111,15 +37,13 @@
 >portapapeles</keyword>
 </keywordset>
 </bookinfo>
-<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
 <title
 >Introducción</title>
 <para
->&klipper; es la utilidad del portapapeles de &plasma;. Guarda el historial del portapapeles y permite enlazar su contenido a acciones de las aplicaciones. Si desea informar de cualquier problema o solicitar alguna funcionalidad, envíe un mensaje al <ulink url="http://bugs.kde.org"
->bugzilla de KDE</ulink
+>&klipper; es la utilidad del portapapeles de &plasma;. Guarda el historial del portapapeles y permite enlazar su contenido a acciones de las aplicaciones. Si desea informar de algún problema o solicitar alguna funcionalidad, envíe un mensaje al <ulink url="http://bugs.kde.org"
+>Sistema de seguimiento de fallos de KDE</ulink
 >.</para>
-
 </chapter>
 
 <chapter id="using-klipper">
@@ -149,9 +73,6 @@
 </screenshot>
 
 <para
->El widget de &klipper; está oculto si el portapapeles está vacío.</para>
-
-<para
 >Para mostrar el historial del portapapeles, pulse el icono de &klipper; que hay en la bandeja del sistema.</para>
 
 <sect2 id="klipper-widget">
@@ -171,11 +92,12 @@
 </mediaobject>
 </screenshot>
 
+<!-- TODO: Document starred functionality -->
 <para
 >Sitúe el puntero del ratón sobre una entrada para que aparezcan cuatro iconos que le permiten invocar una acción, mostrar un código de barras, editar el contenido o eliminar la entrada del historial. Use &spectacle; para capturar los códigos de barras y guardarlos. </para>
 
 <para
->Puede buscar en el historial del portapapeles abriéndolo (pulse sobre &klipper;) y escribiendo la consulta. Los resultados se actualizarán según vaya escribiendo. Para borrar el historial del portapapeles, pulse el icono que hay a la derecha del campo de búsqueda. </para>
+>Puede buscar en el historial del portapapeles escribiendo la consulta en el campo de búsqueda. Los resultados se actualizarán a medida que vaya escribiendo. Para borrar el historial del portapapeles, pulse el icono que hay a la derecha del campo de búsqueda. </para>
 
 <para
 >La acción <guilabel
@@ -192,30 +114,33 @@
 >Acciones</title>
 
 <para
->&klipper; puede realizar operaciones sobre el contenido del portapapeles, de acuerdo con una expresión regular determinada. Por ejemplo, cualquier contenido del portapapeles que comience con «http://» se puede pasar a Firefox o a &konqueror; para ser abierta como una &URL;. Además, si el contenido corresponde a una ruta, se pueden realizar acciones similares según el tipo de archivo. Por ejemplo, si se copia la ruta de un archivo <quote
->PDF</quote
-> en el portapapeles, el archivo se puede ver en &okular;.</para>
+>&klipper; puede realizar operaciones sobre el contenido del portapapeles, de acuerdo con una expresión regular determinada. Existe una acción integrada que actúa sobre direcciones web y archivos. Permite pasar una dirección web que empiece por «http://» o «https://» a un navegador web, o un archivo (por ejemplo, un <acronym
+>PDF</acronym
+>) a una aplicación compatible, como &okular;.</para>
 
 <para
->Para utilizar esta funcionalidad, basta con que seleccione una &URL; o una ruta en el portapapeles. Si cumple alguna expresión regular de la lista de &klipper;, aparecerá un menú mostrándole los programas de los que dispone para que elija uno. Utilice el ratón o las teclas de cursor para seleccionar el programa que desee y &klipper; lo ejecutará, abriendo la dirección a la que apunta el contenido del portapapeles.</para>
+>Puede escribir sus propias acciones en la página <guilabel
+>Configuración de acciones</guilabel
+> del <link linkend="preferences"
+>diálogo de preferencias</link
+>, donde también puede desactivar la acción integrada con <guilabel
+>Ofrecer aplicaciones para los enlaces y archivos copiados</guilabel
+>. </para>
 
 <para
->Puede cambiar el tiempo durante el cual permanece abierto el menú en el diálogo de preferencias, con la opción <guilabel
->Mostrar menú emergente de acciones</guilabel
-> de la página <guilabel
->General</guilabel
->. Puede desactivar de manera independiente la parte de la ruta de archivos mediante la opción <guilabel
->Incluir acciones MIME</guilabel
+>Siempre puede acceder al menú de coincidencia de acciones mediante un botón cercano al elemento del historial. También puede escoger que se muestre un menú de acciones emergente cada vez que se produzca una coincidencia en el portapapeles usando el atajo de teclado <guilabel
+>Menú de acciones emergente automático</guilabel
+>, que puede configurar en la página <guilabel
+>Atajos de teclado</guilabel
+>, o marcando <guilabel
+>Inmediatamente al seleccionar</guilabel
+> bajo <guilabel
+>Mostrar un menú de acciones emergente</guilabel
 > en la página <guilabel
 >Menú de acciones</guilabel
->.</para>
-
-<para
->Se pueden desactivar acciones completamente usando el atajo de teclado <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->X</keycap
-></keycombo
->.</para>
+>. Allí, con la opción <guilabel
+>Tiempo del menú de acciones automático</guilabel
+>, también puede cambiar el tiempo que tarda en cerrarse por sí solo el menú automático si no interactúa con él.</para>
 
 <para
 >El contenido del portapapeles que se ajuste a una expresión regular también se puede editar antes de realizar una acción sobre él. Seleccione <guimenuitem
@@ -239,11 +164,11 @@
 <title
 >General</title>
 <para
->&klipper; se puede usar para cambiar el comportamiento del portapapeles y de la selección en &plasma;. </para>
+>&klipper; se puede usar para cambiar el comportamiento del portapapeles y de la selección en &plasma;. Para ajustar su comportamiento, consulte <xref linkend="general-page"/>. </para>
 
 <note
 ><para
->&X-Window; utiliza dos memorias temporales separadas como portapapeles: la «selección» y el «portapapeles». El texto se colocará en la memoria temporal de selección simplemente con seleccionarlo y se podrá pegar usando el botón central del ratón. Para colocar el texto en la memoria temporal del portapapeles, selecciónelo y pulse <keycombo
+>Existen dos memorias temporales separadas para el portapapeles: la «selección» y el «portapapeles». El texto se colocará en la memoria temporal de selección simplemente con seleccionarlo y se podrá pegar usando el botón central del ratón. Para colocar el texto en la memoria temporal del portapapeles, selecciónelo y pulse <keycombo
 >&Ctrl;<keycap
 >X</keycap
 > </keycombo
@@ -259,44 +184,8 @@
 >Pegar</guimenuitem
 > en un menú de contexto.</para>
 </note>
-
 </sect2>
-
-<sect2 id="changing-clipboard-modes">
-<title
->Cambiar el comportamiento del portapapeles/selección</title>
-<para
->Para cambiar el comportamiento del portapapeles o de la selección, seleccione <guimenuitem
->Configurar el portapapeles…</guimenuitem
-> en el menú de contexto de &klipper; y en el diálogo que aparezca, seleccione la página <guilabel
->General</guilabel
->. Si quita la marca de la opción <guilabel
->Selección y portapapeles</guilabel
->, hará que el portapapeles y la selección funcionen en memorias intermedias completamente separadas, tal y como se ha descrito anteriormente. Si marca esta opción, la opción <guilabel
->Ignorar</guilabel
-> evitará que &klipper; incluya el contenido del portapapeles en su historial y que se realicen operaciones sobre el contenido de la selección. Si selecciona <guilabel
->Selección y portapapeles</guilabel
->, las memorias intermedias del portapapeles y de la selección serán siempre iguales, lo que significa que el texto seleccionado se podrá pegar con el botón <mousebutton
->central</mousebutton
-> del ratón o con la combinación de teclas <keycombo
->&Ctrl;<keycap
->V</keycap
-></keycombo
->, y lo mismo se puede aplicar a la memoria intermedia del portapapeles. </para>
-
- <!-- The
-<guilabel
->Synchronize contents of the clipboard and the
-selection</guilabel
-> check box determines the clipboard mode. If the box is
-selected, the clipboard functions in the &UNIX; mode; if not, the
-&Windows;/&Mac; mode is used. -->
-
-</sect2>
-
-
 </sect1>
-
 </chapter>
 
 <chapter id="preferences">
@@ -306,89 +195,70 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <sect1 id="general-page">
 <title
 >Opciones generales</title>
+<note
+><para
+>Las opciones inferiores distinguen entre <emphasis
+>selección</emphasis
+> y <emphasis
+>portapapeles</emphasis
+>. Para entender la diferencia, consulte <xref linkend="clipboard-modes"/>. </para
+></note>
+
 
 <variablelist>
 
 <varlistentry
 ><term
 ><guilabel
->Selección y portapapeles</guilabel
+>Historial del portapapeles: Guardar el historial entre sesiones de escritorio</guilabel
 ></term>
 <listitem
 ><para
->Cuando se resalta con el ratón o con el teclado un texto o un área de la pantalla, esta es la <emphasis
->selección</emphasis
->. Se puede pegar con el botón central del ratón.</para
-><para
->Si la selección se copia explícitamente usando una acción <guimenuitem
->Copiar</guimenuitem
-> o <guimenuitem
->Cortar</guimenuitem
->, se guarda en el <emphasis
->portapapeles</emphasis
->. Se puede pegar usando una acción <guimenuitem
->Pegar</guimenuitem
->.</para
-><para
->Cuando está activada, esta opción mantiene la selección y el portapapeles iguales, de modo que cualquier selección esté inmediatamente disponible para pegarla con cualquier método. Si está desactivada, la selección aún se puede guardar en el historial del portapapeles (acción sujeta a las opciones siguientes), pero solo se puede pegar con el botón central del ratón.</para
+>Controla si se debe conservar el historial del portapapeles al salir de la sesión o al apagar el equipo.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Historial del portapapeles</guilabel
+>Tamaño del historial</guilabel
 ></term>
 <listitem
 ><para
->Conmuta el historial del portapapeles.</para
+>Fija el número de elementos que se guardan en el historial del portapapeles. Su valor puede estar entre 1 y 2048.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Número de entradas</guilabel
+>Selección y portapapeles: Hacer que la selección y el portapapeles sean idénticos</guilabel
 ></term>
 <listitem
 ><para
->Fija el número de los elementos que están almacenados en el historial del portapapeles.</para
+>Cuando se marca, esta opción mantiene la selección y el portapapeles iguales, de modo que cualquier selección o contenido del portapapeles esté inmediatamente disponible para pegar con cualquier método. Si está desactivada, la selección aún se puede guardar en el historial del portapapeles (acción sujeta a las opciones siguientes), pero solo se puede pegar con el botón central del ratón. </para
 ></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Selección de texto</guilabel
+>Incluir en el historial: Texto seleccionado con el puntero o con el teclado</guilabel
 ></term>
 <listitem
 ><para
->Cuando se selecciona un área de la pantalla con el ratón o con el teclado, esta se convierte en la «selección». Esta opción determina si las selecciones de texto se guardan en el historial del portapapeles. Se puede escoger entre <guilabel
->Guardar siempre en el historial</guilabel
-> y <guilabel
->Solo cuando se copie explícitamente</guilabel
->. La opción <guilabel
->Guardar siempre en el historial</guilabel
-> no está disponible si está desactivada la sincronización entre selección y portapapeles (en este caso, la selección nunca se guarda automáticamente en el historial del portapapeles). Consulte <xref linkend="clipboard-modes"/>. </para>
+>Cuando se marca, la selección se guarda en el historial. El portapapeles se guarda siempre. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Selección que no es de texto</guilabel
+>Incluir en el historial: Datos de imagen copiados explícitamente</guilabel
 ></term>
 <listitem
 ><para
->Esta opción determina si las selecciones que no son de texto (como las imágenes) se guardan en el historial del portapapeles. Se puede escoger entre <guilabel
->Guardar siempre en el historial</guilabel
->, <guilabel
->Solo cuando se copie explícitamente</guilabel
-> y <guilabel
->No guardar nunca en el historial</guilabel
->. La opción <guilabel
->Guardar siempre en el historial</guilabel
-> no está disponible si está desactivada la sincronización entre selección y portapapeles (en este caso, la selección no se guarda nunca automáticamente en el historial del portapapeles). Consulte <xref linkend="clipboard-modes"/>. </para>
+>Cuando se marca, las imágenes copiadas como datos (capas y selecciones copiadas en un editor de imagen, por ejemplo) se guardan el el historial del portapapeles. Los archivos de imagen copiados de un gestor de archivos se guardan siempre. En el historial aparecen como imágenes, aunque solo son vistas previas, ya que solo son nombres de archivos. Las capturas de pantalla guardadas por &spectacle; también se guardarán siempre cuando estén configuradas de este modo en dicho programa. </para>
 </listitem>
 </varlistentry>
 
@@ -405,18 +275,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Mostrar menú emergente de acciones</guilabel
-></term>
-<listitem
-><para
->Fija el tiempo que un menú emergente permanecerá si no se hace nada con él.</para
-></listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Reemplazar las operaciones en un elemento seleccionado del historial</guilabel
+>Para un elemento seleccionado del historial</guilabel
 ></term>
 <listitem
 ><para
@@ -427,22 +286,22 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Elimina los espacios en blanco al ejecutar acciones</guilabel
+>Tiempo para el menú emergente de acciones automático</guilabel
 ></term>
 <listitem
 ><para
->Si está seleccionado se eliminarán todos los espacios en blanco (espacios, tabuladores, &etc;) que se encuentren al principio y al final del contenido del portapapeles antes de ser pasado a una aplicación. Esto es práctico, por ejemplo, si el portapapeles contiene una &URL; con espacios en blanco, lo que puede provocar un error al intentar abrirla en un navegador.</para>
-</listitem>
+>Define cuánto tiempo tardará en cerrarse por sí mismo el menú automático cuando no se interactúa con él.</para
+></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Incluir acciones MIME</guilabel
+>Recortar los espacios en blanco iniciales y finales</guilabel
 ></term>
 <listitem
 ><para
->Si se selecciona, incluye aplicaciones que pueden aceptar el tipo &MIME; de un nombre de archivo o URL seleccionado en el menú emergente.</para>
+>Si está seleccionado se eliminarán todos los espacios en blanco (espacios, tabuladores, etc.) que se encuentren al principio y al final del contenido del portapapeles antes de pasarlo a una aplicación. El texto guardado en el historial no se ve afectado.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -453,6 +312,17 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Configuración de acciones</title>
 
 <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ofrecer aplicaciones para los enlaces y archivos copiados</guilabel
+></term>
+<listitem
+><para
+>Si se selecciona, el menú emergente ofrece aplicaciones que pueden abrir un archivo copiado o un enlace copiado que empiece por «http://» o por «https://», incluso cuando coincide con ninguna de sus acciones.</para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term
 >Editando expresiones/operaciones</term>
@@ -603,9 +473,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >Copyright del programa. 1998-2000. &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;.</para>
 <para
->El encargado actual es Esben Mose Hansen. En <ulink url="http://mosehansen.dk/about"
->http://mosehansen.dk/about</ulink
-> tiene información de contacto. </para>
+>Mantenido actualmente por los desarrolladores de KDE &plasma;. </para>
 
 <para
 >Copyright de la documentación. 2000-2003, 2005. &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
@@ -621,7 +489,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >santi@kde-es.org</email
 >.</para
 > &underFDL; &underGPL; </chapter>
-
 
 &documentation.index;
 

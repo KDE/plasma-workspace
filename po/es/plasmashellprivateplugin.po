@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-12 00:47+0000\n"
-"PO-Revision-Date: 2026-08-27 12:36+0100\n"
+"PO-Revision-Date: 2026-09-13 00:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -153,13 +153,13 @@ msgstr "Configurar…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Ocultar teclado en pantalla"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Mostrar teclado en pantalla"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
@@ -460,7 +460,3 @@ msgstr "Selector de región de zona horaria"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selector de ubicación de zona horaria"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Teclado virtual"
