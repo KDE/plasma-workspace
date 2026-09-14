@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-09 14:12+0200\n"
+"PO-Revision-Date: 2026-09-13 16:42+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: configdialog.cpp:83
 #, kde-format
@@ -38,20 +38,7 @@ msgid "Selection and Clipboard:"
 msgstr "Селекция и клипборд:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -75,29 +62,29 @@ msgstr ""
 "се обработват еднакво, така че всяка селекция е незабавно достъпна за "
 "поставяне по всякакъв начин. Ако опцията е изключена, селекцията може да "
 "бъде поставена само с помощта на средния бутон на мишката, но все още може "
-"да бъде запазена в историята на клипборда (обект на опциите по-долу)."
+"да бъде запазена в историята на клипборда (обект на опцията по-долу)."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Текст, избран с показалеца или клавиатурата"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Винаги да се запазва в историята"
+msgstr "Включване в историята:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Копираният текст винаги се запазва, освен ако не е маркиран като парола."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Изрично копирани изображения"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -105,6 +92,9 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Например слоеве и селекции, копирани в редактори на изображения като Krita "
+"или GIMP.<br/><a href=\"1\">Повече информация за изображенията в клипборда.</"
+"a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -118,6 +108,14 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Клипбордът винаги ще позволява копирането на изображения като имена на "
+"файлове и ще показва техните миниатюри. Тази настройка обхваща случаите, в "
+"които изображенията се съхраняват директно като данни. Някои приложения "
+"поддържат и двата случая, но някои приемат изображения само като данни.<nl/"
+"><nl/>Обърнете внимание също, че инструментът за екранни снимки Spectacle ще "
+"игнорира тази настройка, когато е конфигуриран за записване на екранни "
+"снимки в клипборда. Всяко приложение, което изпраща едновременно текст и "
+"изображение, също ще я игнорира."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -549,23 +547,16 @@ msgid "Command:"
 msgstr "Команда:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-" <placeholder>&#37;s</placeholder> в командата ще бъде заменен с цялото "
-"съдържание на клипборда. <placeholder>&#37;0</placeholder> до "
-"<placeholder>&#37;9</placeholder> ще бъде заменен със съответния уловен "
-"текст от шаблона за съвпадение."
+"Символът <b>&#37;s</b> в командата ще бъде заменен с цялото съдържание на "
+"клипборда. Символите от <b>&#37;0</b> до <b>&#37;9</b> ще бъдат заменени със "
+"съответните уловени текстове от шаблона за съвпадение."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -744,55 +735,43 @@ msgstr "Еднакви селекция и клипборд"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Съдържанието, избрано с курсора, автоматично се копира в клипборда, така че "
-"да може да бъде поставено или със стандартното действие за поставяне или със "
-"средния бутон на мишката.<br/><a href=\"1\"> Повече за селекцията и "
-"клипборда</a>."
+"Съдържанието, избрано с курсора, се копира автоматично в клипборда, така че "
+"да може да бъде поставено чрез действие <i>Поставяне</i> или среден клик.<br/"
+"><a href=\"1\">Още за селектирането и клипборда</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Игнориране на селекцията"
+msgstr "Запазване на селекцията"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Съдържанието, избрано с курсора, но не е изрично копирано в клипборда, не се "
-"съхранява автоматично в историята на клипборда и може да бъде поставено само "
-"със средния бутон на мишката."
+"Съдържанието, избрано с курсора, но не и изрично копирано в клипборда, се "
+"записва автоматично в историята на клипборда."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Запазване на изображения"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Дали да се съхраняват текстовите селекции в историята на клипборда."
+msgstr "Съхранение на изображения в историята на клипборда."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -841,27 +820,19 @@ msgstr "Празен запис за показване на промени в �
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Премахване на празните полета от селекцията"
+msgstr "Премахване на празните пространства"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Отстранява празните полета в началото и края на селектирания текст, преди да "
-"се изпълни действие. Например, това гарантира, че URL адрес, поставен в "
-"браузъра, ще се тълкува според очакваното.<br/><br/>Запазеният текст в "
-"клипборда не се променя."
+"Премахване на интервали в началото и края на текста, подаден към действие. "
+"Текстът, запазен в историята, не се променя."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -883,7 +854,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Предлагане на приложения за копирани връзки и файлове"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -893,6 +864,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"За връзка, започваща с <i>http://</i> или <i>https://</i>, или за файлове, "
+"които приложенията могат да отворят, ще бъдат предложени заедно с "
+"съответните ваши действия, ако има такива."
 
 #: klipperpopup.cpp:38
 #, kde-format
@@ -903,61 +877,3 @@ msgstr "Изчакащ прозорец на клипборд"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgid "Text selection:"
-#~ msgstr "Селекция на текст:"
-
-#~ msgid "Only when explicitly copied"
-#~ msgstr "Само когато изрично е копиран"
-
-#~ msgid "Non-text selection:"
-#~ msgstr "Не-текстова селекция:"
-
-#~ msgid "Never save in history"
-#~ msgstr "Никога да не се запазва в историята"
-
-#~ msgid ""
-#~ "Whether non-text selections (such as images) are saved in the clipboard "
-#~ "history."
-#~ msgstr ""
-#~ "Дали да се запазват не-текстови селекции (като изображения) в историята "
-#~ "на клипборда."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "When a <interface>match pattern</interface> matches the clipboard "
-#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
-#~ "menu and can be executed."
-#~ msgstr ""
-#~ "Когато <interface>шаблон за съвпадение</interface> съвпадне със "
-#~ "съдържанието на клипборда, неговите <interface>команди</interface> се "
-#~ "появяват в изскачащото меню на Klipper и могат да да бъдат изпълнени."
-
-#~ msgid "Text selection only"
-#~ msgstr "Само избран текст"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "В клипборда се съхраняват само текстови селекции, а не изображения или "
-#~ "друг тип данни."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Игнориране на изображенията винаги"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "Изображенията не се съхраняват в историята на клипборда, дори и при "
-#~ "копиране."
-
-#~ msgid "Include MIME actions"
-#~ msgstr "Показване на MIME-базирани действия"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "При селектирано име на файл или URL адрес, в изскачащото меню от действия "
-#~ "се включват приложения, които могат да обработват неговия MIME тип."

@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-26 08:39+0300\n"
+"PO-Revision-Date: 2026-09-13 11:52+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: configdialog.cpp:83
 #, kde-format
@@ -51,20 +51,7 @@ msgid "Selection and Clipboard:"
 msgstr "בחירה ולוח גזירים:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -85,30 +72,29 @@ msgstr ""
 "לאחר מכן אפשר להדביק אותה בעזרת פעולת <interface>הדבקה</interface>.‏ <nl/><nl/"
 ">כאשר האפשרות הזאת פעילה היא שומרת על הבחירה ועל לוח הגזירים זהים, כך שכל "
 "בחירה מיידית זמינה להדבקה בכל אופן שהוא. אם היא כבויה, הבחירה עשויה להישמר "
-"בהיסטוריית לוח הגזירים (בכפוף לאפשרויות שלהלן), אך ניתן יהיה להדביק אותה רק "
+"בהיסטוריית לוח הגזירים (בכפוף לאפשרות שלהלן), אך ניתן יהיה להדביק אותה רק "
 "באמצעות לחצן העכבר האמצעי."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "טקסט שנבחר עם הסמן או המקלדת"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "תמיד לשמור בהיסטוריה"
+msgstr "לכלול בהיסטוריה:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
-msgstr ""
+msgstr "טקסט שהועתק מפורשות תמיד יישמר אלא אם כן סומן כסיסמה."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "נתוני התמונה הועתקו מפורשות"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -116,6 +102,8 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"למשל, שכבות ובחירות שהועתקו בעורכי תמונות כמו Krita או GIMP.<br/><a href="
+"\"1\">מידע נוסף על תמונות בלוח הגזירים.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -129,6 +117,11 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"לוח הגזירים תמיד יאפשר העתקת קובצי תמונות בתור שמות קבצים ויציג את התמונות "
+"הממוזערות שלהם. ההגדרה הזאת מכסה מקרים שבהם תמונות מאוחסות כנתונים ישירות. "
+"חלק מהיישומים תומכים במקרים כאלה, אבל חלק מקבלי תמונת כנתונים בלבד.<nl/><nl/"
+">חשוב גם לשים לב שכלי צילום המסך Spectacle יתעלם מההגדרה הזאת כשהיא מוגדרת "
+"כדי לשמור צילומי מסך ללוח הגזירים. כל יישום ששולחן טקסט ותמונה גם יתעלם ממנה."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -552,22 +545,16 @@ msgid "Command:"
 msgstr "פקודה:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"<placeholder>&#37;s</placeholder> בפקודה יוחלף בתוכן המלא מלוח הגזירים. "
-"<placeholder>&#37;0</placeholder> עד <placeholder>&#37;9</placeholder> יוחלף "
-"בטקסטים שנלכדו עם תבנית הלכידה."
+"<b>&#37;s</b> בפקודה יוחלף בתוכן המלא מלוח הגזירים. <placeholder>&#37;0</"
+"placeholder> עד <placeholder>&#37;9</placeholder> יוחלפו בטקסטים המתאימים "
+"שנלכדו עם תבנית הלכידה."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -741,53 +728,43 @@ msgstr "לשמור על הבחירה וה"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"התוכן שנבחר עם סמן העכבר מועתק אוטומטית ללוח הגזירים כדי שאפשר יהיה להדביק "
-"אותו או בפעולת הדברה או בלחיצה אמצעית בעכבר.<br/><a href=\"1\">מידע נוסף על "
-"בחירה ולוח הגזירים</a>."
+"התוכן שנבחר עם הסמן מועתק אוטומטית ללוח הגזירים כדי שאפשר יהיה להדביק אותו "
+"או בפעולת <i>הדבקה</i> או בלחיצה אמצעית בעכבר.<br/><a href=\"1\">מידע נוסף "
+"על בחירה ולוח הגזירים</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "התעלמות מהבחירה"
+msgstr "שמירת הבחירה"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
 "התוכן שנבחר עם הסמן אך לא הועתק במפורש ללוח הגזירים לא מאוחסן אוטומטית "
-"בהיסטוריית לוח הגזירים ואפשר להדביק אותו רק בלחיצה אמצעית בעכבר."
+"בהיסטוריית לוח הגזירים."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "שמירת תמונות"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "האם בחירות טקסט נשמרות בהיסטוריית לוח הגזירים."
+msgstr "אחסון תמונות בהיסטוריית לוח הגזירים."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -834,26 +811,19 @@ msgstr "כניסת דמה לציון שינויים ביישומון העץ של
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "קיצוץ רווחים מהבחירה"
+msgstr "קיצוץ רווחים"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"להסיר רווחים עודפים מההתחלה ומהסוף של הטקסט הנבחר בטרם ביצוע פעולה כלשהי. "
-"למשל, כך ניתן לוודא שכתובת שמודבקת בדפדפן מפוענחת כראוי. הטקסט שנשמר בלוח "
-"הגזירים לא יושפע מזה."
+"להסיר רווחים מהתחלת או סוף הטקסט שהועבר לפעולה. הטקסט שנשמר בהיסטוריה לא "
+"יושפע."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -875,7 +845,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "הצעת יישומים לקישורים וקבצים שהועתקו"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -885,6 +855,8 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"לקישור שמתחיל ב־<i>http://‎</i> או ב־<i>https://‎</i> או לקבצים, יישומים "
+"שיכולים לפתוח אותם יוצעו לצד הפעולות התואמות שלך, אם יש כאלה."
 
 #: klipperpopup.cpp:38
 #, kde-format

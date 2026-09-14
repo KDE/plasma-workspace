@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 02:51+0000\n"
-"PO-Revision-Date: 2026-05-28 13:52+0200\n"
+"PO-Revision-Date: 2026-09-13 18:10+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,38 +15,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Екранна клавиатура"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Деактивирана"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Сензорен екран и таблет"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Сензорен екран, таблет, мишка и тъчпад"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Конфигуриране на виртуални клавиатури..."
+msgstr "Конфигуриране на екранни клавиатури..."
 
 #: qml/main.qml:133
 #, kde-format
@@ -55,6 +53,9 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Екранна клавиатура: недостъпна\n"
+"Кликнете или докоснете за конфигуриране на настройките на екранната "
+"клавиатура"
 
 #: qml/main.qml:143
 #, kde-format
@@ -63,6 +64,9 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Конфигурирано е да не се показва автоматично\n"
+"Кликнете или докоснете за конфигуриране на настройките на екрана за "
+"клавиатура"
 
 #: qml/main.qml:156
 #, kde-format
@@ -73,6 +77,9 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"В момента няма активно поддържано текстово поле\n"
+"Кликнете или докоснете за да се покаже в режим на емулация на хардуерна "
+"клавиатура"
 
 #: qml/main.qml:167
 #, kde-format
@@ -81,6 +88,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Екранната клавиатура се показва\n"
+"Кликнете или докоснете за скриване на екранната клавиатура"
 
 #: qml/main.qml:177
 #, kde-format
@@ -89,6 +98,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Автоматично показване при докосване на текстово поле\n"
+"Докоснете за конфигуриране на настройките на екрана на клавиатурата"
 
 #: qml/main.qml:187
 #, kde-format
@@ -97,21 +108,6 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
-
-#~ msgid "Virtual Keyboard: unavailable"
-#~ msgstr "Виртуална клавиатура: не е налична"
-
-#~ msgid "Virtual Keyboard: disabled"
-#~ msgstr "Виртуална клавиатура: деактивирана"
-
-#~ msgid "Show Virtual Keyboard"
-#~ msgstr "Виртуална клавиатура"
-
-#~ msgid "Virtual Keyboard: visible"
-#~ msgstr "Виртуална клавиатура: видима"
-
-#~ msgid "Virtual Keyboard: Show on non-mouse input"
-#~ msgstr "Виртуална клавиатура: Показване при въвеждане без мишка"
-
-#~ msgid "Virtual Keyboard: Show with all input devices"
-#~ msgstr "Виртуална клавиатура: показване с всички устройства за въвеждане"
+"Показва се автоматично при взаимодействие с текстово поле\n"
+"Кликнете или докоснете за конфигуриране на настройките на екранната "
+"клавиатура"

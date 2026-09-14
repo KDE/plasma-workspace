@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-01 21:29+0300\n"
+"PO-Revision-Date: 2026-09-13 11:35+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -147,17 +147,13 @@ msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
 msgstr "ההסרה של „%2” הצליחה אבל לא ניתן להסיר את השאר:\n"
 
 #: kcmstyle.cpp:229
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-#| msgid_plural ""
-#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] "ההסרה של „%2” הצליחה אבל לא ניתן להסיר את השאר:\n"
-msgstr[1] "הסרת שני סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
+msgstr[0] "הסרת אחד הסגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
+msgstr[1] "הסרת שניים מהסגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
 msgstr[2] "הסרת %1 סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
 msgstr[3] "הסרת %1 סגנונות הצליחה אבל לא ניתן להסיר את השאר:\n"
 
@@ -171,14 +167,11 @@ msgid "Successfully uninstalled “%1”."
 msgstr "„%2” הוסר בהצלחה."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "„%2” הוסר בהצלחה."
+msgstr[0] "סגנון הוסר בהצלחה"
 msgstr[1] "שני סגנונות הוסרו בהצלחה."
 msgstr[2] "%1 סגנונות הוסרו בהצלחה."
 msgstr[3] "%1 סגנונות הוסרו בהצלחה."

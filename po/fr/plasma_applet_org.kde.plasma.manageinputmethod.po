@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 02:51+0000\n"
-"PO-Revision-Date: 2026-09-11 19:45+0200\n"
+"PO-Revision-Date: 2026-09-12 09:50+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -74,6 +74,9 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Aucun champ de texte pris en charge n’est actuellement actif.\n"
+"Veuillez cliquer ou tapoter pour un affichage en mode d'émulation de clavier "
+"matériel. "
 
 #: qml/main.qml:167
 #, kde-format
