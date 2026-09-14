@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:48+0000\n"
-"PO-Revision-Date: 2026-05-14 11:34+0200\n"
+"PO-Revision-Date: 2026-09-11 10:24+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,38 +15,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Tastiera su schermo"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Disabilitato"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Tocco e tavoletta grafica"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Tocco, tavoletta grafica, mouse e touchpad"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Configura le tastiere virtuali..."
+msgstr "Configura le tastiere su schermo…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -55,6 +53,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Tastiera su schermo: non disponibile\n"
+"Fai clic o tocca per configurare le impostazioni della tastiera su schermo"
 
 #: qml/main.qml:143
 #, kde-format
@@ -63,6 +63,8 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Configurato per non essere visualizzato automaticamenteFai clic o tocca per "
+"configurare le impostazioni della tastiera su schermo"
 
 #: qml/main.qml:156
 #, kde-format
@@ -73,6 +75,8 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Al momento non è attivo alcun campo di testo supportato.Fai clic o tocca per "
+"visualizzare in modalità di emulazione della tastiera hardware."
 
 #: qml/main.qml:167
 #, kde-format
@@ -81,6 +85,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"La tastiera su schermo è visibile\n"
+"Fai clic o tocca per nascondere la tastiera su schermo."
 
 #: qml/main.qml:177
 #, kde-format
@@ -89,6 +95,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Appare automaticamente quando si tocca un campo di testo\n"
+"Tocca per configurare le impostazioni della tastiera su schermo"
 
 #: qml/main.qml:187
 #, kde-format
@@ -97,6 +105,8 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Appare automaticamente quando si tocca un campo di testo\n"
+"Tocca per configurare le impostazioni della tastiera su schermo"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Tastiera virtuale: non disponibile"

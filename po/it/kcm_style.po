@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-06 10:59+0200\n"
+"PO-Revision-Date: 2026-09-11 09:05+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -132,12 +132,12 @@ msgid "Could not uninstall styles:\n"
 msgstr "Impossibile disinstallare gli stili:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr "Installazione di «%1» riuscita."
+msgstr ""
+"«%1» disinstallato con successo, ma non è possibile disinstallare gli "
+"altri:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -146,25 +146,25 @@ msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"Disinstallato con successo %1 stile, ma non è possibile disinstallare gli "
+"altri:\n"
 msgstr[1] ""
+"Disinstallati con successo %1 stili, ma non è possibile disinstallare gli "
+"altri:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "Installazione di «%1» riuscita."
+msgstr "«%1» disinstallato con successo."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Installazione di «%1» riuscita."
-msgstr[1] "Installazione di «%1» riuscita."
+msgstr[0] "Disinstallato con successo %1 stile"
+msgstr[1] "Disinstallati con successo %1 stili."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format

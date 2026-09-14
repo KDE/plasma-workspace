@@ -7,47 +7,45 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:48+0000\n"
-"PO-Revision-Date: 2026-05-14 08:54+0300\n"
+"PO-Revision-Date: 2026-09-13 11:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "מקלדת על המסך"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "מושבתת"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "מגע ולוח מגע"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "מגע, לוח מגע, עכבר ומשטח מגע"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "הגדרות מקלדות וירטואליות…"
+msgstr "הגדרות מקלדות על המסך…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -56,6 +54,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"מקלדת על המסך: לא זמינה\n"
+"יש ללחוץ או לגעת כדי להגדיר את תצורת המקלדת על המסך"
 
 #: qml/main.qml:143
 #, kde-format
@@ -64,6 +64,8 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"מוגדרת לא להופיע אוטומטית\n"
+"יש ללחוץ או לגעת כדי להגדיר את תצורת המקלדת על המסך"
 
 #: qml/main.qml:156
 #, kde-format
@@ -74,6 +76,8 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"אין שדה טקסט נתמך פעיל כרגע\n"
+"יש ללחוץ או לגעת כדי להציג במצב הדמיית מקלדת חומרה"
 
 #: qml/main.qml:167
 #, kde-format
@@ -82,6 +86,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"מקלדת על המסך גלויה\n"
+"יש ללחוץ או לגעת כדי להסתיר את המקלדת על המסך."
 
 #: qml/main.qml:177
 #, kde-format
@@ -90,6 +96,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"מופיעה אוטומטית בעת נגיעה בשדה טקסט\n"
+"יש ללחוץ או לגעת כדי להגדיר את תצורת המקלדת על המסך"
 
 #: qml/main.qml:187
 #, kde-format
@@ -98,6 +106,8 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"מופיעה אוטומטית בעת תפעול שדה טקסט\n"
+"יש ללחוץ או לגעת כדי להגדיר את תצורת המקלדת על המסך"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "מקלדת וירטואלית: לא זמינה"
