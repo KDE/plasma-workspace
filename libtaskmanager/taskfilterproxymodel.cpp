@@ -6,6 +6,7 @@
 
 #include "taskfilterproxymodel.h"
 #include "abstracttasksmodel.h"
+#include "tasktools.h"
 #include "virtualdesktopinfo.h"
 
 #include "launchertasksmodel_p.h"
@@ -42,6 +43,7 @@ public:
     bool filterSkipPager = false;
 
     bool demandingAttentionSkipsFilters = true;
+    bool hideActivatedLaunchers = true;
 };
 
 TaskFilterProxyModel::Private::Private(TaskFilterProxyModel *)
@@ -58,9 +60,34 @@ TaskFilterProxyModel::~TaskFilterProxyModel() = default;
 
 void TaskFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
+    if (QAbstractItemModel *oldSourceModel = QSortFilterProxyModel::sourceModel()) {
+        disconnect(oldSourceModel, nullptr, this, nullptr);
+    }
+
     d->sourceTasksModel = dynamic_cast<AbstractTasksModelIface *>(sourceModel);
 
     QSortFilterProxyModel::setSourceModel(sourceModel);
+
+    if (!sourceModel) {
+        return;
+    }
+
+    connect(sourceModel, &QAbstractItemModel::rowsInserted, this, [this](const QModelIndex &parent) {
+        if (!parent.isValid() && d->hideActivatedLaunchers) {
+            invalidateFilter();
+        }
+    });
+    connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this](const QModelIndex &parent) {
+        if (!parent.isValid() && d->hideActivatedLaunchers) {
+            invalidateFilter();
+        }
+    });
+    connect(sourceModel, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &, const QModelIndex &, const QList<int> &roles) {
+        if (d->hideActivatedLaunchers
+            && (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon))) {
+            invalidateFilter();
+        }
+    });
 }
 
 QVariant TaskFilterProxyModel::virtualDesktop() const
@@ -340,6 +367,23 @@ void TaskFilterProxyModel::setDemandingAttentionSkipsFilters(bool skip)
     }
 }
 
+bool TaskFilterProxyModel::hideActivatedLaunchers() const
+{
+    return d->hideActivatedLaunchers;
+}
+
+void TaskFilterProxyModel::setHideActivatedLaunchers(bool hide)
+{
+    if (d->hideActivatedLaunchers == hide) {
+        return;
+    }
+
+    d->hideActivatedLaunchers = hide;
+    invalidateFilter();
+
+    Q_EMIT hideActivatedLaunchersChanged();
+}
+
 QModelIndex TaskFilterProxyModel::mapIfaceToSource(const QModelIndex &index) const
 {
     return mapToSource(index);
@@ -482,6 +526,20 @@ bool TaskFilterProxyModel::acceptsRow(int sourceRow) const
 
         if (isHidden) {
             return false;
+        }
+    }
+
+    if (d->hideActivatedLaunchers && sourceIdx.data(AbstractTasksModel::IsLauncher).toBool()) {
+        for (int row = 0; row < sourceModel()->rowCount(); ++row) {
+            const QModelIndex taskIndex = sourceModel()->index(row, 0);
+
+            if ((!taskIndex.data(AbstractTasksModel::IsWindow).toBool() && !taskIndex.data(AbstractTasksModel::IsStartup).toBool()) || !acceptsRow(row)) {
+                continue;
+            }
+
+            if (appsMatch(sourceIdx, taskIndex)) {
+                return false;
+            }
         }
     }
 
