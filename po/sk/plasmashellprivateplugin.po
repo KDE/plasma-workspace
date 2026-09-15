@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-12 00:47+0000\n"
-"PO-Revision-Date: 2023-11-11 14:56+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -152,19 +152,19 @@ msgstr "Nastaviť..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Skryť klávesnicu na obrazovke"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Zobraziť klávesnicu na obrazovke"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Prepnúť rozloženie"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-27 13:23+0300\n"
+"PO-Revision-Date: 2026-09-14 18:36+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -43,20 +43,7 @@ msgid "Selection and Clipboard:"
 msgstr "Žymėjimas ir iškarpinė:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -74,9 +61,9 @@ msgstr ""
 "tai yra vadinama <emphasis>žymėjimu</emphasis>. Žymėjimas gali būti įdėtas "
 "naudojant vidurinįjį pelės mygtuką.<nl/><nl/>Jeigu žymėjimas yra aiškiai "
 "nukopijuojamas naudojant veiksmą <interface>Kopijuoti</interface> ar "
-"<interface>Iškirpti</interface>, tuomet jis yra įrašomas į "
+"<interface>Iškirpti</interface>, tada jis yra įrašomas į "
 "<emphasis>iškarpinę</emphasis>. Jis gali būti įdėtas naudojant veiksmą "
-"<interface>Įdėti</interface>. <nl/><nl/>Kai įjungta, ši parinktis padaro "
+"<interface>Įdėti</interface>.<nl/><nl/>Kai įjungta, ši parinktis padaro "
 "žymėjimą ir iškarpinę vienodais, tokiu būdu bet koks žymėjimas yra "
 "nedelsiant prieinamas įdėti bet kokiais būdais. Jei ši parinktis išjungta, "
 "žymėjimas vis tiek gali būti įrašytas į iškarpinės istoriją (priklausomai "
@@ -86,24 +73,25 @@ msgstr ""
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Tekstas, pažymėtas naudojant pelės rodyklę ar klaviatūrą"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Visada įrašyti į istoriją"
+msgstr "Įtraukti į istoriją:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Aiškiai nukopijuotas tekstas yra visada įrašomas, nebent jis pažymėtas kaip "
+"slaptažodis."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Aiškiai nukopijuoti paveikslo duomenys"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -111,6 +99,9 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Pavyzdžiui, sluoksniai ir žymėjimai nukopijuoti tokiuose paveikslų "
+"redaktoriuose kaip Krita ar GIMP.<br/><a href=\"1\">More about images in the "
+"clipboard.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -124,6 +115,14 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Iškarpinė visada leis kopijuoti paveikslo failus kaip failo pavadinimą ir "
+"rodys jų miniatiūras.  Ši nuostata galioja tais atvejais, kai paveikslai yra "
+"saugomi tiesiogiai kaip duomenys.  Kai kurios programos palaiko abu atvejus, "
+"bet kai kurios priima paveikslus tik kaip duomenis.<nl/><nl/>Taip pat "
+"turėkite omenyje, kad ekrano kopijų įrankis Spectacle nepaisys šios "
+"nuostatos, kai sukonfigūruotas taip, kad įrašinėtų ekrano kopijas į "
+"iškarpinę. Bet kuri programa, kuri siunčia ir tekstą, ir paveikslą, taip pat "
+"nepaisys šios nuostatos."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -556,22 +555,16 @@ msgid "Command:"
 msgstr "Komanda:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"<placeholder>&#37;s</placeholder> komandoje bus pakeista visu iškarpinės "
-"turiniu. Nuo <placeholder>&#37;0</placeholder> iki <placeholder>&#37;9</"
-"placeholder> bus pakeista atitinkamais iš atitikimo šablono gautais tekstais."
+"<b>&#37;s</b> komandoje bus pakeista visu iškarpinės turiniu. Nuo <b>&#37;0</"
+"b> iki <b>&#37;9</b> bus pakeista atitinkamais iš atitikimo šablono gautais "
+"tekstais."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -750,54 +743,43 @@ msgstr "Išlaikyti žymėjimą ir iškarpinės turinį vienodus"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Pelės žymekliu pažymėtas turinys bus automatiškai nukopijuotas į iškarpinę, "
-"kad galėtų būti įdėtas naudojant Įdėjimo veiksmą arba vidurinįjį pelės "
-"mygtuką.<br/><a href=\"1\">Daugiau apie žymėjimą ir turinį</a>."
+"Pelės rodykle pažymėtas turinys bus automatiškai nukopijuotas į iškarpinę, "
+"kad galėtų būti įdėtas naudojant <i>Įdėjimo</i> veiksmą arba vidurinįjį "
+"pelės mygtuką.<br/><a href=\"1\">Daugiau apie žymėjimą ir turinį</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Nepaisyti žymėjimo"
+msgstr "Įrašyti žymėjimą"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Turinys, kuris nebuvo aiškiai nukopijuotas į iškarpinę, o buvo tik pažymėtas "
-"žymekliu, nėra automatiškai laikomas iškarpinės istorijoje ir gali būti "
-"įdėtas tik naudojant vidurinįjį pelės mygtuką."
+"Turinys, kuris buvo pažymėtas pelės rodykle, bet nebuvo aiškiai nukopijuotas "
+"į iškarpinę, yra automatiškai saugomas iškarpinės istorijoje."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Įrašyti paveikslus"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Ar teksto žymėjimai bus įrašomi į iškarpinės istoriją."
+msgstr "Saugoti paveikslus iškarpinės istorijoje."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -846,27 +828,19 @@ msgstr "Fiktyvus įrašas, nurodantis pakeitimus veiksmo medžio valdiklyje"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Panaikinti tarpus iš žymėjimo"
+msgstr "Panaikinti tarpus"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Prieš atliekant veiksmą, šalinti bet kokius tarpus iš pažymėto teksto "
-"pradžios ir pabaigos. Pavyzdžiui, tai užtikrina, kad į naršyklę įdėtas URL "
-"adresas būtų tinkamai interpretuotas. Iškarpinėje įrašytas tekstas nėra "
-"paveikiamas."
+"Prieš perduodant tekstą veiksmui, šalinti bet kokius tarpus iš pažymėto "
+"teksto pradžios ir pabaigos. Iškarpinėje įrašytas tekstas nėra paveikiamas."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -888,7 +862,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Siūlyti nukopijuotoms nuorodoms ir failams skirtas programas"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -898,6 +872,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Nuorodoms, kurios prasideda <i>http://</i> ar <i>https://</i>, arba failams, "
+"kartu su atitinkamais veiksmais bus siūlomos programos, galinčios juos "
+"atverti (jei tokios yra)."
 
 #: klipperpopup.cpp:38
 #, kde-format

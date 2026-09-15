@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.manageinputmethod\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:48+0000\n"
-"PO-Revision-Date: 2023-01-22 17:03+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -19,33 +19,31 @@ msgstr ""
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Klávesnica na obrazovke"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Zakázané"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Dotyk a tablet"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Dotyk, tablet, myš a touchpad"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Nastaviť virtuálne klávesnice..."
+msgstr "Nastaviť klávesnice na obrazovke…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -54,6 +52,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Klávesnica na obrazovke: nedostupná\n"
+"Kliknutím alebo ťuknutím nastavíte klávesnicu na obrazovke"
 
 #: qml/main.qml:143
 #, kde-format
@@ -62,6 +62,8 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Nastavené tak, aby sa nezobrazovala automaticky\n"
+"Kliknutím alebo ťuknutím nastavíte klávesnicu na obrazovke"
 
 #: qml/main.qml:156
 #, kde-format
@@ -72,6 +74,9 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Momentálne nie je aktívne žiadne podporované textové pole\n"
+"Kliknutím alebo ťuknutím ju zobrazíte v režime emulácie hardvérovej "
+"klávesnice."
 
 #: qml/main.qml:167
 #, kde-format
@@ -80,6 +85,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Klávesnica na obrazovke je viditeľná\n"
+"Kliknutím alebo ťuknutím klávesnicu na obrazovke skryjete."
 
 #: qml/main.qml:177
 #, kde-format
@@ -88,6 +95,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Zobrazí sa automaticky po ťuknutí na textové pole\n"
+"Ťuknutím nastavíte klávesnicu na obrazovke"
 
 #: qml/main.qml:187
 #, kde-format
@@ -96,6 +105,8 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Zobrazí sa automaticky pri práci s textovým poľom\n"
+"Kliknutím alebo ťuknutím nastavíte klávesnicu na obrazovke"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Virtuálna klávesnica: nedostupná"

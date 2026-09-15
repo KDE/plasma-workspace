@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-12 00:47+0000\n"
-"PO-Revision-Date: 2026-08-29 11:30+0400\n"
+"PO-Revision-Date: 2026-09-14 21:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -157,13 +157,13 @@ msgstr "اضبط…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "أخفِ لوحة مفاتيح على الشاشة"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "اعرض لوحة المفاتيح على الشّاشة"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
