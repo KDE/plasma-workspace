@@ -165,6 +165,24 @@ void JobPrivate::updateHasDetails()
     }
 }
 
+Job::AmountType JobPrivate::amountType() const
+{
+    if (!m_errorText.isEmpty() || !m_infoMessage.isEmpty()) {
+        // Those are the text, and neither carries an amount.
+        return Job::AmountTypeNone;
+    }
+
+    if (m_totalFiles > 1) {
+        return Job::AmountTypeFiles;
+    }
+
+    if (m_totalItems > 1) {
+        return Job::AmountTypeItems;
+    }
+
+    return Job::AmountTypeNone;
+}
+
 QString JobPrivate::text() const
 {
     if (!m_errorText.isEmpty()) {
@@ -184,7 +202,9 @@ QString JobPrivate::text() const
         destUrlString = linkify(destUrl, prettyDestUrl);
     }
 
-    if (m_totalFiles > 1) {
+    const Job::AmountType amount = amountType();
+
+    if (amount == Job::AmountTypeFiles) {
         if (!destUrlString.isEmpty()) {
             if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
                 return i18ncp("Copying n of m files to locaton", "%2 of %1 file to %3", "%2 of %1 files to %3", m_totalFiles, m_processedFiles, destUrlString);
@@ -201,7 +221,7 @@ QString JobPrivate::text() const
         }
 
         return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles > 0 ? m_processedFiles : m_totalFiles);
-    } else if (m_totalItems > 1) {
+    } else if (amount == Job::AmountTypeItems) {
         // TODO support destUrl text as well (once someone actually uses that)
 
         if (m_processedItems > 0 && m_processedItems <= m_totalItems) {
