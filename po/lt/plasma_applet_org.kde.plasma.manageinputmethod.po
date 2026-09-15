@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 02:51+0000\n"
-"PO-Revision-Date: 2026-05-17 00:43+0300\n"
+"PO-Revision-Date: 2026-09-14 18:46+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,38 +17,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Ekraninė klaviatūra"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Išjungta"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Prilietimai ir planšetė"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Prilietimai, planšetė, pelė ir jutiklinis kilimėlis"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr "Konfigūruoti virtualias klaviatūras..."
+msgstr "Konfigūruoti ekranines klaviatūras…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -57,6 +55,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Ekraninė klaviatūra: neprieinama\n"
+"Spustelėkite ar bakstelėkite norėdami konfigūruoti jos nuostatas"
 
 #: qml/main.qml:143
 #, kde-format
@@ -65,6 +65,9 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Sukonfigūruota, kad nebūtų automatiškai rodoma\n"
+"Spustelėkite ar bakstelėkite norėdami konfigūruoti ekraninės klaviatūros "
+"nuostatas"
 
 #: qml/main.qml:156
 #, kde-format
@@ -75,6 +78,9 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Šiuo metu nėra aktyvus joks palaikomas įvesties laukas\n"
+"Spustelėkite ar bakstelėkite norėdami rodyti fizinės klaviatūros emuliavimo "
+"veiksenoje."
 
 #: qml/main.qml:167
 #, kde-format
@@ -83,6 +89,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Ekraninė klaviatūra yra matoma\n"
+"Spustelėkite ar bakstelėkite norėdami ją paslėpti."
 
 #: qml/main.qml:177
 #, kde-format
@@ -91,6 +99,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Rodoma automatiškai, kai bakstelėjama ant įvesties lauko\n"
+"Bakstelėkite norėdami konfigūruoti ekraninės klaviatūros nuostatas"
 
 #: qml/main.qml:187
 #, kde-format
@@ -99,6 +109,9 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Rodoma automatiškai, kai sąveikaujama su įvesties lauku\n"
+"Spustelėkite ar bakstelėkite norėdami konfigūruoti ekraninės klaviatūros "
+"nuostatas"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Virtuali klaviatūra: neprieinama"

@@ -159,8 +159,8 @@ msgstr "Успешно деинсталиране на „%1“"
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Успешно деинсталиране на„%1 стил"
-msgstr[1] "Успешно деинсталиране на %1 стила"
+msgstr[0] "Успешно деинсталиране на „%1“ стил"
+msgstr[1] "Успешно деинсталиране на „%1“ стила"
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format

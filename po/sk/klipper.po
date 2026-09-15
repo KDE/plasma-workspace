@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2023-08-06 11:28+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -43,20 +43,7 @@ msgid "Selection and Clipboard:"
 msgstr "Výber a schránka:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -75,33 +62,33 @@ msgstr ""
 "<nl/><nl/>Ak sa výber explicitne skopíruje pomocou akcie "
 "<interface>Kopírovať</interface> alebo <interface>Vystrihnúť</interface>, "
 "uloží sa do <emphasis>schránky</emphasis>. Možno ho vložiť pomocou akcie "
-"<interface>Vložiť</interface>. <nl/><nl/>Pri zapnutí tejto možnosti zostáva "
+"<interface>Vložiť</interface>.<nl/><nl/>Pri zapnutí tejto možnosti zostáva "
 "výber a schránka rovnaké, takže akýkoľvek výber je okamžite k dispozícii na "
 "vloženie akýmkoľvek spôsobom. Ak je vypnutá, výber môže byť stále uložený v "
-"histórii schránky (podľa nižšie uvedených možností), ale môže byť vložený "
-"len pomocou stredného tlačidla myši."
+"histórii schránky (podľa možnosti nižšie), ale vložiť sa dá len pomocou "
+"stredného tlačidla myši."
 
 #: configdialog.cpp:124
 #, kde-format
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Text vybraný ukazovateľom alebo klávesnicou"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgid "Include in history:"
-msgstr "Vždy ukladať v histórií"
+msgstr "Zahrnúť do histórie:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Explicitne skopírovaný text sa vždy uloží, pokiaľ nie je označený ako heslo."
 
 #: configdialog.cpp:133
 #, kde-format
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Explicitne skopírované obrazové dáta"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -109,6 +96,8 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Napríklad vrstvy a výbery skopírované v editoroch obrázkov ako Krita alebo "
+"GIMP.<br/><a href=\"1\">Viac o obrázkoch v schránke.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -122,6 +111,13 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Schránka vždy umožní kopírovať obrázkové súbory ako názvy súborov a zobrazí "
+"ich náhľady. Toto nastavenie sa týka prípadov, keď sú obrázky uložené priamo "
+"ako dáta. Niektoré aplikácie podporujú oba prípady, no niektoré prijímajú "
+"obrázky len ako dáta.<nl/><nl/>Všimnite si tiež, že nástroj na snímky "
+"obrazovky Spectacle toto nastavenie ignoruje, ak je nastavený na ukladanie "
+"snímok do schránky. Ignoruje ho aj každá aplikácia, ktorá posiela text aj "
+"obrázok."
 
 #: configdialog.cpp:171
 #, kde-format
@@ -333,12 +329,13 @@ msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in the history."
 msgstr ""
+"Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
 #: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Vymazať tajné dáta"
 
 #: declarative/qml/ClipboardMenu.qml:478
 #, kde-format
@@ -549,22 +546,16 @@ msgid "Command:"
 msgstr "Príkaz:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"<placeholder>&#37;s</placeholder> v príkaze bude nahradený kompletným "
-"obsahom schránky. <placeholder>&#37;0</placeholder> až <placeholder>&#37;9</"
-"placeholder> budú nahradené príslušnými zachyteným textom zo vzoru zhody."
+"<b>&#37;s</b> v príkaze bude nahradené kompletným obsahom schránky. "
+"<b>&#37;0</b> až <b>&#37;9</b> budú nahradené príslušnými zachytenými "
+"textami zo vzoru zhody."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -739,54 +730,43 @@ msgstr "Výber a schránka zostávajú rovnaké"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Obsah vybraný kurzorom sa automaticky skopíruje do schránky, aby ho bolo "
-"možné vložiť pomocou akcie Vložiť alebo kliknutím stredným tlačidlom myši."
+"Obsah vybraný ukazovateľom sa automaticky skopíruje do schránky, aby ho bolo "
+"možné vložiť akciou <i>Vložiť</i> alebo kliknutím stredným tlačidlom myši."
 "<br/><a href=\"1\">Viac o výbere a schránke</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ignorovať výber"
+msgstr "Uložiť výber"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Obsah vybraný kurzorom, ale nie explicitne skopírovaný do schránky, sa "
-"automaticky neukladá do histórie schránky a možno ho vložiť len pomocou "
-"stredného tlačidla myši."
+"Obsah vybraný ukazovateľom, ale explicitne neskopírovaný do schránky, sa "
+"automaticky ukladá do histórie schránky."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Ukladať obrázky"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Či sa textové výbery ukladajú do histórie schránky."
+msgstr "Ukladať obrázky do histórie schránky."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -834,27 +814,19 @@ msgstr "Fiktívna položka pre označenie zmien v prvku strome akcií"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Orezanie bielych znakov z výberu"
+msgstr "Orezať biele znaky"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Odstránenie bielych znakov zo začiatku a konci vybraného textu pred "
-"vykonaním akcie. Tým sa napríklad zabezpečí, že adresa URL vložená do "
-"prehliadača sa interpretuje podľa očakávania. Text uložený v schránke nie je "
-"ovplyvnený."
+"Odstráni všetky biele znaky zo začiatku a konca textu odovzdaného akcii. "
+"Text uložený v histórii to neovplyvní."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -876,7 +848,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Ponúkať aplikácie pre skopírované odkazy a súbory"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -886,6 +858,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Pri odkaze začínajúcom na <i>http://</i> alebo <i>https://</i> a pri "
+"súboroch sa popri vašich zodpovedajúcich akciách ponúknu aj aplikácie, ktoré "
+"ich vedia otvoriť."
 
 #: klipperpopup.cpp:38
 #, kde-format

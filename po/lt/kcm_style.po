@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-03 12:40+0300\n"
+"PO-Revision-Date: 2026-09-14 16:34+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -129,12 +129,10 @@ msgid "Could not uninstall styles:\n"
 msgstr "Nepavyko pašalinti stilius:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr "„%1“ sėkmingai įdiegtas."
+msgstr "„%1“ sėkmingai pašalintas, bet napavyko pašalinti kitų:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -142,30 +140,26 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 stilius sėkmingai pašalintas, bet nepavyko pašalinti kitų:\n"
+msgstr[1] "%1 stiliai sėkmingai pašalinti, bet nepavyko pašalinti kitų:\n"
+msgstr[2] "%1 stilių sėkmingai pašalinta, bet nepavyko pašalinti kitų:\n"
+msgstr[3] "%1 stilius sėkmingai pašalintas, bet nepavyko pašalinti kitų:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr "„%1“ sėkmingai įdiegtas."
+msgstr "„%1“ sėkmingai pašalintas."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully installed “%1”."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "„%1“ sėkmingai įdiegtas."
-msgstr[1] "„%1“ sėkmingai įdiegtas."
-msgstr[2] "„%1“ sėkmingai įdiegtas."
-msgstr[3] "„%1“ sėkmingai įdiegtas."
+msgstr[0] "%1 stilius sėkmingai pašalintas"
+msgstr[1] "%1 stiliai sėkmingai pašalinti."
+msgstr[2] "%1 stilių sėkmingai pašalinta."
+msgstr[3] "%1 stilius sėkmingai pašalintas."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format

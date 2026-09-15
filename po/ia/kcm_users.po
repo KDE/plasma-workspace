@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2026-04-30 17:19+0200\n"
+"PO-Revision-Date: 2026-09-14 12:29+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -160,6 +160,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"Solmente litteras minuscule, digitos, lineettas e tractos de sublineamento  "
+"es permittite. Characteres invalide esseva removite."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -168,6 +170,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"Nomines de usator eìdebe esser minuscule. Characteres majuscule essera "
+"convertite a minuscule."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format
