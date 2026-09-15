@@ -619,8 +619,8 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
         source,
         &StatusNotifierItemSource::contextMenuReady,
         this,
-        [this, statusNotifierIcon, pos](QMenu *menu) {
-            if (menu && !menu->isEmpty()) {
+        [this, statusNotifierIcon = QPointer<QQuickItem>{statusNotifierIcon}](QMenu *menu) {
+            if (statusNotifierIcon && menu && !menu->isEmpty()) {
                 KAcceleratorManager::manage(menu);
 
                 if (KWindowSystem::isPlatformWayland()) {
