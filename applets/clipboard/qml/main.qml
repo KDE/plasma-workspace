@@ -24,8 +24,8 @@ PlasmoidItem {
 
     readonly property bool isClipboardEmpty: historyModel.sourceCount === 0
 
-    switchWidth: Kirigami.Units.gridUnit * 5
-    switchHeight: Kirigami.Units.gridUnit * 5
+    switchWidth: Kirigami.Units.gridUnit * 12
+    switchHeight: Kirigami.Units.gridUnit * 12
     Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
     toolTipMainText: i18n("Clipboard Contents")
     toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : historyModel.currentText
