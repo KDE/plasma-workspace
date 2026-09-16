@@ -543,11 +543,11 @@ bool HistoryModel::remove(const QString &uuid)
     // Show confirmation dialog for starred items
     if (isStarred) {
         int result = KMessageBox::warningContinueCancel(nullptr,
-                                                       i18n("This item is starred. Do you really want to remove it from history?"),
-                                                       i18n("Remove Starred Item"),
-                                                       KStandardGuiItem::del(),
-                                                       KStandardGuiItem::cancel(),
-                                                       QStringLiteral("klipperRemoveStarredItemAskAgain"));
+                                                        i18n("This item is starred. Do you really want to remove it from history?"),
+                                                        i18n("Remove Starred Item"),
+                                                        KStandardGuiItem::del(),
+                                                        KStandardGuiItem::cancel(),
+                                                        QStringLiteral("klipperRemoveStarredItemAskAgain"));
         if (result != KMessageBox::Continue) {
             return false; // User cancelled deletion
         }
