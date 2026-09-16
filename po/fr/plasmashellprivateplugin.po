@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-15 02:48+0000\n"
-"PO-Revision-Date: 2026-08-28 11:54+0200\n"
+"PO-Revision-Date: 2026-09-13 08:56+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -158,13 +158,13 @@ msgstr "Configurer..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Masquer le clavier virtuel"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Afficher le clavier virtuel"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format

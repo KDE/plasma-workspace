@@ -155,13 +155,13 @@ msgstr "Nastavit…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Skrýt klávesnici na obrazovce"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Zobrazit klávesnici na obrazovce"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
