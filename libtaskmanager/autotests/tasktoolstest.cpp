@@ -37,6 +37,8 @@ private Q_SLOTS:
     void testServiceFromCmdLine_data();
     void testServiceForUrl();
     void testServiceForUrl_data();
+    void testAppDataForUrl_data();
+    void testAppDataForUrl();
 
 private:
     void createIcon();
@@ -247,6 +249,30 @@ void TaskToolsTest::testServiceForUrl()
     const auto service = serviceForUrl(QUrl(url));
     QCOMPARE(service->desktopEntryName(), expectedDesktopName);
     QCOMPARE(service->storageId(), expectedStorageId);
+}
+
+void TaskToolsTest::testAppDataForUrl_data()
+{
+    QTest::addColumn<QUrl>("url");
+    QTest::addColumn<QString>("name");
+    QTest::addColumn<QIcon>("icon");
+
+    QTest::addRow("does_not_exist") << QUrl(u"applications:does.not.exist.desktop"_s) << u"does.not.exist.desktop"_s << QIcon::fromTheme(u"edit-delete"_s);
+    QTest::addRow("dolphin") << QUrl(u"applications:org.kde.dolphin.desktop"_s) << u"Dolphin"_s << QIcon::fromTheme(u"system-file-manager"_s);
+}
+
+void TaskToolsTest::testAppDataForUrl()
+{
+    QFETCH(QUrl, url);
+    QFETCH(QString, name);
+    QFETCH(QIcon, icon);
+
+    auto appData = appDataFromUrl(url, icon);
+
+    QVERIFY(appData.service);
+    QCOMPARE(appData.service->name(), name);
+    QCOMPARE(appData.icon, icon);
+    QCOMPARE(appData.url, url);
 }
 
 QTEST_MAIN(TaskToolsTest)

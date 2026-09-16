@@ -105,7 +105,12 @@ AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIc
 AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 {
     const auto service = serviceForUrl(url);
-    return appDataFromService(service, fallbackIcon);
+
+    if (service) {
+        return appDataFromService(service, fallbackIcon);
+    }
+
+    return AppData{.icon = fallbackIcon, .url = url, .service = KService::Ptr(new KService(url.fileName(), QString(), fallbackIcon.name()))};
 }
 
 KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
