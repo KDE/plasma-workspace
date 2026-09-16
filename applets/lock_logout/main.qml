@@ -11,7 +11,7 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import "data.js" as Data
-import org.kde.plasma.private.sessions
+import org.kde.kworkspace as KWorkspace
 import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
@@ -66,7 +66,7 @@ PlasmoidItem {
             }
         }
 
-        SessionManagement {
+        KWorkspace.SessionManagement {
             id: session
         }
 

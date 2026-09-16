@@ -11,7 +11,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.private.sessions
+import org.kde.kworkspace as KWorkspace
 import org.kde.kcmutils as KCM
 import "data.js" as Data
 
@@ -38,7 +38,7 @@ KCM.ScrollViewKCM {
                                           Number(cfg_show_suspendToDisk) +
                                           Number(cfg_show_suspendToRam))
 
-    SessionManagement {
+    KWorkspace.SessionManagement {
         id: session
     }
 
