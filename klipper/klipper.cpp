@@ -121,13 +121,13 @@ Klipper::Klipper(QObject *parent)
 
     // Cycle through history
     m_cycleNextAction = m_collection->addAction(QStringLiteral("cycleNextAction"));
-    m_cycleNextAction->setText(i18nc("@action:inmenu", "Next History Item"));
-    m_cycleNextAction->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
+    m_cycleNextAction->setText(i18nc("@action:inmenu", "Rotate History Down"));
+    m_cycleNextAction->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
     KGlobalAccel::setGlobalShortcut(m_cycleNextAction, QKeySequence());
     connect(m_cycleNextAction, &QAction::triggered, this, &Klipper::slotCycleNext);
     m_cyclePrevAction = m_collection->addAction(QStringLiteral("cyclePrevAction"));
-    m_cyclePrevAction->setText(i18nc("@action:inmenu", "Previous History Item"));
-    m_cyclePrevAction->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
+    m_cyclePrevAction->setText(i18nc("@action:inmenu", "Rotate History Up"));
+    m_cyclePrevAction->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     KGlobalAccel::setGlobalShortcut(m_cyclePrevAction, QKeySequence());
     connect(m_cyclePrevAction, &QAction::triggered, this, &Klipper::slotCyclePrev);
 
@@ -405,24 +405,23 @@ QString Klipper::cycleText() const
 
     QFontMetrics font_metrics(QWidget().fontMetrics());
     QString result(QStringLiteral("<table>"));
-
     if (itemPrev) {
         result += QLatin1String("<tr><td>");
-        result += i18n("up");
+        result += i18n("Newer: ");
         result += QLatin1String("</td><td>");
         result += font_metrics.elidedText(itemPrev->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
         result += QLatin1String("</td></tr>");
     }
 
     result += QLatin1String("<tr><td>");
-    result += i18n("current");
+    result += i18n("Current: ");
     result += QLatin1String("</td><td><b>");
     result += font_metrics.elidedText(item->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
     result += QLatin1String("</b></td></tr>");
 
     if (itemNext) {
         result += QLatin1String("<tr><td>");
-        result += i18n("down");
+        result += i18n("Older: ");
         result += QLatin1String("</td><td>");
         result += font_metrics.elidedText(itemNext->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
         result += QLatin1String("</td></tr>");
