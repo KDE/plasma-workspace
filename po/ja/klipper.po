@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-16 00:48+0000\n"
 "PO-Revision-Date: 2026-03-31 19:23+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -356,27 +356,27 @@ msgstr "クリップボードは空です"
 msgid "Invoke action"
 msgstr "アクションを実行"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, kde-format
 msgid "Show QR code"
 msgstr "QR コードを表示"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, kde-format
 msgid "Edit contents"
 msgstr "内容を編集"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Remove from history"
 msgstr "履歴から削除"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Remove Star"
 msgstr "スターを外す"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Star"
 msgstr "スター"
@@ -603,28 +603,28 @@ msgstr "コマンドのアイコンをデフォルトにリセット"
 msgid "Icon:"
 msgstr "アイコン:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:282
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "本当にクリップボードの全履歴を消去しますか？"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "クリップボードの履歴を消去"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:364
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:546
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "この項目はスターがついています。本当に履歴から削除しますか？"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:547
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "スターつき項目削除"
@@ -635,64 +635,64 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "自動アクションポップアップの切り替え"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "クリップボードの履歴を消去(&L)"
 
-#: klipper.cpp:95
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "現在のクリップボードに対するアクションを手動で呼び出す"
 
-#: klipper.cpp:103
+#: klipper.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "内容を編集(&E)…"
 
-#: klipper.cpp:111
+#: klipper.cpp:112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "バーコードを表示(&S)…"
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "履歴をひとつ進める"
 
-#: klipper.cpp:125
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "履歴をひとつ戻す"
 
-#: klipper.cpp:132
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "クリップボード履歴をマウスカーソルの位置に表示"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:395 klipper.cpp:404
 #, kde-format
 msgid "Clipboard history"
 msgstr "クリップボードの履歴"
 
-#: klipper.cpp:420
+#: klipper.cpp:421
 #, kde-format
 msgid "up"
 msgstr "上"
 
-#: klipper.cpp:427
+#: klipper.cpp:428
 #, kde-format
 msgid "current"
 msgstr "現在"
 
-#: klipper.cpp:434
+#: klipper.cpp:435
 #, kde-format
 msgid "down"
 msgstr "下"
@@ -886,7 +886,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "クリップボードのポップアップ"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:221
 #, kde-format
 msgid "&Cancel"
 msgstr "キャンセル(&C)"

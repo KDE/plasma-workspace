@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-16 00:48+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -362,31 +362,31 @@ msgstr "क्लिपबोर्ड खाली है"
 msgid "Invoke action"
 msgstr "<नई क्रिया>"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgid "Show QR code"
 msgstr "बारकोड दिखाएँ… (&S)"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Edit contents"
 msgstr "विषय-वस्तु का संपादन करें"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"
 msgstr "इतिहास से चुने गए आइटम पर क्रियाएँ दोबारा चलाएं"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove Star"
 msgstr "इतिहास से चुने गए आइटम पर क्रियाएँ दोबारा चलाएं"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, fuzzy, kde-format
 #| msgid "Start"
 msgid "Star"
@@ -600,31 +600,31 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:281
+#: historymodel.cpp:282
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "वास्तव में संपूर्ण क्लिपबोर्ड इतिहास हटाएं ?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास साफ करें (&l)"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:364
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3बीपीपी"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:546
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:544
+#: historymodel.cpp:547
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -636,71 +636,71 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "स्वचालित कार्रवाई पॉपअप समय :"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास साफ करें (&l)"
 
-#: klipper.cpp:95
+#: klipper.cpp:96
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "मौज़ूदा क्लिपबोर्ड पर क्रिया हाथों से इन्वोक करें"
 
-#: klipper.cpp:103
+#: klipper.cpp:104
 #, fuzzy, kde-format
 #| msgid "&Edit Contents…"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "विषय-वस्तु का संपादन करें… (&E)"
 
-#: klipper.cpp:111
+#: klipper.cpp:112
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "बारकोड दिखाएँ… (&S)"
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "अगली इतिहास वस्तु"
 
-#: klipper.cpp:125
+#: klipper.cpp:126
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "पिछली इतिहास वस्तु"
 
-#: klipper.cpp:132
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "माउस संकेतक स्थान पर क्लिपर खोलें"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:395 klipper.cpp:404
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:420
+#: klipper.cpp:421
 #, kde-format
 msgid "up"
 msgstr "ऊपर"
 
-#: klipper.cpp:427
+#: klipper.cpp:428
 #, kde-format
 msgid "current"
 msgstr "वर्तमान"
 
-#: klipper.cpp:434
+#: klipper.cpp:435
 #, kde-format
 msgid "down"
 msgstr "नीचे"
@@ -907,7 +907,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:221
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द करें (&C)"

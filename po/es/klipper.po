@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-16 00:48+0000\n"
 "PO-Revision-Date: 2026-09-12 01:08+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -361,27 +361,27 @@ msgstr "El portapapeles está vacío"
 msgid "Invoke action"
 msgstr "Invocar acción"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, kde-format
 msgid "Show QR code"
 msgstr "Mostrar código QR"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, kde-format
 msgid "Edit contents"
 msgstr "Editar el contenido"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Remove from history"
 msgstr "Eliminar del historial"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Remove Star"
 msgstr "No marcar como favorito"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Star"
 msgstr "Marcar como favorito"
@@ -603,30 +603,30 @@ msgstr "Reiniciar el icono al predeterminado para la orden"
 msgid "Icon:"
 msgstr "Icono:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:282
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "¿Realmente desea limpiar y borrar todo el historial del portapapeles?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpiar el historial del portapapeles"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:364
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:546
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Este elemento está marcado como favorito. ¿Realmente quiere eliminarlo del "
 "historial?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:547
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Eliminar elemento marcado como favorito"
@@ -637,64 +637,64 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menú emergente de acciones automático"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Borrar historial del portapapeles"
 
-#: klipper.cpp:95
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar manualmente la acción en el portapapeles actual"
 
-#: klipper.cpp:103
+#: klipper.cpp:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Editar el contenido…"
 
-#: klipper.cpp:111
+#: klipper.cpp:112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mostrar código de &barras…"
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Siguiente elemento del historial"
 
-#: klipper.cpp:125
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Anterior elemento del historial"
 
-#: klipper.cpp:132
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostrar elementos del portapapeles en la posición del ratón"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:395 klipper.cpp:404
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del portapapeles"
 
-#: klipper.cpp:420
+#: klipper.cpp:421
 #, kde-format
 msgid "up"
 msgstr "arriba"
 
-#: klipper.cpp:427
+#: klipper.cpp:428
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:434
+#: klipper.cpp:435
 #, kde-format
 msgid "down"
 msgstr "abajo"
@@ -884,7 +884,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Ventana emergente del portapapeles"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:221
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"

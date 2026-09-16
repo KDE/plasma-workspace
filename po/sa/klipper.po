@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-16 00:48+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -348,28 +348,28 @@ msgstr "क्लिप्बोर्ड् रिक्तम् अस्त�
 msgid "Invoke action"
 msgstr "कर्म आह्वयन्तु"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, kde-format
 msgid "Show QR code"
 msgstr "QR कोड दर्शयतु"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, kde-format
 msgid "Edit contents"
 msgstr "सामग्रीं सम्पादयन्तु"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Remove from history"
 msgstr "इतिहासात् निष्कासयतु"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, fuzzy, kde-format
 #| msgid "Remove from history"
 msgid "Remove Star"
 msgstr "इतिहासात् निष्कासयतु"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Star"
 msgstr ""
@@ -595,28 +595,28 @@ msgstr "आदेशस्य कृते चिह्नं पूर्वन
 msgid "Icon:"
 msgstr "चिह्नम् :"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:282
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "किं भवान् वास्तवमेव सम्पूर्णं क्लिप्बोर्ड-इतिहासं स्वच्छं विलोपयितुम् इच्छति?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहासं स्वच्छं कुर्वन्तु"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:364
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:546
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:544
+#: historymodel.cpp:547
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -627,65 +627,65 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "स्वचालित क्रिया पॉपअप मेनू"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "C&lear क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:95
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "वर्तमान क्लिप्बोर्ड् मध्ये मैन्युअल् रूपेण क्रियाम् आह्वयन्तु"
 
-#: klipper.cpp:103
+#: klipper.cpp:104
 #, fuzzy, kde-format
 #| msgid "Edit contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "सामग्रीं सम्पादयन्तु"
 
-#: klipper.cpp:111
+#: klipper.cpp:112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&बारकोडं दर्शयतु..."
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "अग्रिमः इतिहासः मदः"
 
-#: klipper.cpp:125
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "पूर्व इतिहास मद"
 
-#: klipper.cpp:132
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:395 klipper.cpp:404
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:420
+#: klipper.cpp:421
 #, kde-format
 msgid "up"
 msgstr "उपरि"
 
-#: klipper.cpp:427
+#: klipper.cpp:428
 #, kde-format
 msgid "current"
 msgstr "वर्त्तमानः"
 
-#: klipper.cpp:434
+#: klipper.cpp:435
 #, kde-format
 msgid "down"
 msgstr "अधः"
@@ -884,7 +884,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड पॉपअप"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:221
 #, kde-format
 msgid "&Cancel"
 msgstr "&निरसयतु"

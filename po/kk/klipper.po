@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-16 00:48+0000\n"
 "PO-Revision-Date: 2013-01-06 03:54+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -341,31 +341,31 @@ msgstr "Алмасу буфері бос"
 msgid "Invoke action"
 msgstr "<жаңа әрекет>"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "&Штрихкодын көрсету..."
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Edit contents"
 msgstr "Мазмұнын өңдеу"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"
 msgstr "Журнал тізімінде таңдалған үшін әрекеттер қайталынсын"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove Star"
 msgstr "Журнал тізімінде таңдалған үшін әрекеттер қайталынсын"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, fuzzy, kde-format
 #| msgid "Start"
 msgid "Star"
@@ -579,30 +579,30 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:281
+#: historymodel.cpp:282
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Алмасу буферінің журналы толығымен өшірілсін бе?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Алмасу буферінің журналын т&азалау"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:364
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:543
+#: historymodel.cpp:546
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:544
+#: historymodel.cpp:547
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -614,71 +614,71 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Әрекет қалқымалы мәзірдің күту уақыты:"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Алмасу буферінің журналын т&азалау"
 
-#: klipper.cpp:95
+#: klipper.cpp:96
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Қолданыстағы алмасу буфер әрекетін қолмен таңдау"
 
-#: klipper.cpp:103
+#: klipper.cpp:104
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Мазмұнын өңдеу"
 
-#: klipper.cpp:111
+#: klipper.cpp:112
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Штрихкодын көрсету..."
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Журналдағы келесі жазуы"
 
-#: klipper.cpp:125
+#: klipper.cpp:126
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Журналдағы алдыңғы жазуы"
 
-#: klipper.cpp:132
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Klipper тышқан меңзеген орында ашылсын"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:395 klipper.cpp:404
 #, kde-format
 msgid "Clipboard history"
 msgstr "Алмасу буферінің журналы"
 
-#: klipper.cpp:420
+#: klipper.cpp:421
 #, kde-format
 msgid "up"
 msgstr "жоғары"
 
-#: klipper.cpp:427
+#: klipper.cpp:428
 #, kde-format
 msgid "current"
 msgstr "назардағы"
 
-#: klipper.cpp:434
+#: klipper.cpp:435
 #, kde-format
 msgid "down"
 msgstr "төмен"
@@ -862,7 +862,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Алмасу буферінің журналы"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:221
 #, kde-format
 msgid "&Cancel"
 msgstr "Қ&айту"
