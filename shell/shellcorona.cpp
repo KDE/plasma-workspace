@@ -113,6 +113,7 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_strutManager(new StrutManager(this))
     , m_shellContainmentConfig(nullptr)
 {
+    connect(this, &Plasma::Corona::containmentUiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
     setupWaylandIntegration();
 
     qDBusRegisterMetaType<QColor>();
@@ -1504,7 +1505,6 @@ void ShellCorona::addOutput(QScreen *screen)
     Q_ASSERT(screen == view->screen());
 
     checkAllDesktopsUiReady();
-    connect(containment, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
 
     if (!m_screenReorderInProgress) {
         Q_EMIT availableScreenRectChanged(insertPosition);
@@ -2085,10 +2085,9 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
     for (auto it = m_desktopViewForScreen.constBegin(); it != m_desktopViewForScreen.constEnd(); ++it) {
         const int screen = it.key();
         Plasma::Containment *c = createContainmentForActivity(newActivity, screen);
-        connect(c, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady, Qt::UniqueConnection);
 
-        if (!c->isUiReady() && m_screensWithUiReady.remove(screen)) {
-            Q_EMIT screenUiReadyChanged(screen, false);
+        if (!c->isUiReady()) {
+            m_screensWithUiReady.remove(screen);
         }
 
         QAction *removeAction = c->internalAction(QStringLiteral("remove"));
@@ -2233,6 +2232,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(uint screen, const
     if (removeAction) {
         removeAction->deleteLater();
     }
+    m_screensWithUiReady.remove(screen);
     (*viewIt)->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
     newContainment->setScreen(oldContainment->screen());
