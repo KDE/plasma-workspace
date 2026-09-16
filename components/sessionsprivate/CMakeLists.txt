@@ -1,6 +1,5 @@
 set(sessionsprivateplugin_SRCS
     sessionsmodel.cpp sessionsmodel.h
-    types.h
 )
 
 qt_add_dbus_interface(sessionsprivateplugin_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)
@@ -11,7 +10,8 @@ ecm_add_qml_module(sessionsprivateplugin
     URI "org.kde.plasma.private.sessions"
     VERSION 2.0
     GENERATE_PLUGIN_SOURCE
-    DEPENDENCIES QtCore
+    DEPENDENCIES QtCore org.kde.kworkspace
+    QML_FILES SessionManagement.qml
 )
 
 target_sources(sessionsprivateplugin PRIVATE ${sessionsprivateplugin_SRCS})
