@@ -121,16 +121,16 @@ GeneralWidget::GeneralWidget(QWidget *parent)
 
     layout->addRow(QString(), new QLabel(this));
 
-    m_saveSelectionCb = new QCheckBox(i18n("Text selected with the pointer or keyboard"), this);
+    m_saveSelectionCb = new QCheckBox(i18nc("@option:check Part of the setting 'Include in history:'", "Text selected with the pointer or keyboard"), this);
     m_saveSelectionCb->setObjectName(QLatin1String("kcfg_SaveSelection"));
-    layout->addRow(i18n("Include in history:"), m_saveSelectionCb);
+    layout->addRow(i18nc("Followed e.g. by 'Text selected with the pointer or keyboard'", "Include in history:"), m_saveSelectionCb);
 
     QLabel *selectionHint = ConfigDialog::createHintLabel(i18n("Text copied explicitly is always saved "
                                                                "unless it is marked as a password."),
                                                           this);
     layout->addRow(QString(), selectionHint);
 
-    m_saveImagesCb = new QCheckBox(i18n("Image data copied explicitly"), this);
+    m_saveImagesCb = new QCheckBox(i18nc("@option:check Part of the setting 'Include in history:'", "Image data copied explicitly"), this);
     m_saveImagesCb->setObjectName(QLatin1String("kcfg_SaveImages"));
     layout->addRow(QString(), m_saveImagesCb);
 
