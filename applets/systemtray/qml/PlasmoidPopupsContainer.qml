@@ -31,6 +31,57 @@ QQC2.StackView {
     property bool mergeFooters: appletHasFooter && activeApplet.fullRepresentationItem.footer.visible
     property int footerHeight: mergeFooters ? activeApplet.fullRepresentationItem.footer.height : 0
 
+    function _detectAndConfigureHeaderAndFooter() {
+        // FIXME: this is fairly meh. We explicitly set a visibility here, breaking bindings, and doing this from the
+        //        outside, imperatively, is impossible to discover from the other side, making it hard to debug.
+        //        What should happen is that the PlasmoidHeading adapts to its surrounding, not the surrounding forcing
+        //        things on the PlasmoidHeading.
+
+        let findFirstChildOfType = function(root, type, depth = 0) {
+            if (depth > 5) { // Arbitrary depth limit to avoid spending hours on not finding anything
+                return null
+            }
+
+            if (root instanceof type) {
+                return root
+            }
+
+            // Look at all children before recursing. This optimizes for the common case of finding the Heading near the top of the hierarchy.
+            for (const child of root.children) {
+                if (child instanceof type) {
+                    return child
+                }
+            }
+
+            for (const child of root.children) {
+                const result = findFirstChildOfType(child, type, depth + 1)
+                if (result) {
+                    return result
+                }
+            }
+
+            return null
+        }
+
+        // The PlasmoidHeadings may be inside a Layout so we need to check recursively. Making this even more awkward!
+
+        const headerHeading = findFirstChildOfType(activeApplet.fullRepresentationItem.header, PlasmaExtras.PlasmoidHeading)
+        if (headerHeading) {
+            // Detection
+            mainStack.appletHasHeading = true
+            // Configuration
+            headerHeading.background.visible = false
+        }
+
+        const footerHeading = findFirstChildOfType(activeApplet.fullRepresentationItem.footer, PlasmaExtras.PlasmoidHeading)
+        if (footerHeading) {
+            // Detection
+            mainStack.appletHasFooter = true
+            // Configuration
+            footerHeading.background.visible = false
+        }
+    }
+
     onActiveAppletChanged: {
         mainStack.appletHasHeading = false
         mainStack.appletHasFooter = false
@@ -44,17 +95,7 @@ QQC2.StackView {
             activeApplet.fullRepresentationItem.anchors.centerIn = undefined;
             activeApplet.fullRepresentationItem.anchors.fill = undefined;
 
-            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page ||
-                activeApplet.fullRepresentationItem instanceof PlasmaExtras.Representation) {
-                if (activeApplet.fullRepresentationItem.header && activeApplet.fullRepresentationItem.header instanceof PlasmaExtras.PlasmoidHeading) {
-                    mainStack.appletHasHeading = true
-                    activeApplet.fullRepresentationItem.header.background.visible = false
-                }
-                if (activeApplet.fullRepresentationItem.footer && activeApplet.fullRepresentationItem.footer instanceof PlasmaExtras.PlasmoidHeading) {
-                    mainStack.appletHasFooter = true
-                    activeApplet.fullRepresentationItem.footer.background.visible = false
-                }
-            }
+            _detectAndConfigureHeaderAndFooter()
 
             let unFlipped = systemTrayState.oldVisualIndex < systemTrayState.newVisualIndex;
             if (Application.layoutDirection !== Qt.LeftToRight) {
