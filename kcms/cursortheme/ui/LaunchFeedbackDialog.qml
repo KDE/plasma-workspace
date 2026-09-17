@@ -37,9 +37,10 @@ Kirigami.Dialog {
             QQC2.ButtonGroup {
                 id: busyCursorGroup
                 onCheckedButtonChanged: {
-                    kcm.launchFeedbackSettings.busyCursor = busyCursorStatic.checked || busyCursorBlinking.checked || busyCursorBouncing.checked;
+                    kcm.launchFeedbackSettings.busyCursor = busyCursorStatic.checked || busyCursorBlinking.checked || busyCursorBouncing.checked || busyCursorChangeShape.checked;
                     kcm.launchFeedbackSettings.blinking = busyCursorBlinking.checked;
                     kcm.launchFeedbackSettings.bouncing = busyCursorBouncing.checked;
+                    kcm.launchFeedbackSettings.changeShape = busyCursorChangeShape.checked;
                 }
             }
 
@@ -48,7 +49,7 @@ Kirigami.Dialog {
 
                 Kirigami.FormData.label: i18nc("@label", "Pointer feedback:")
                 text: i18nc("@option:radio No pointer feedback when launching apps", "None")
-                checked: !kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing
+                checked: !kcm.launchFeedbackSettings.busyCursor && !kcm.launchFeedbackSettings.blinking && !kcm.launchFeedbackSettings.bouncing && !kcm.launchFeedbackSettings.changeShape
                 enabled: !formLayout.cursorImmutable
                 QQC2.ButtonGroup.group: busyCursorGroup
             }
@@ -57,7 +58,7 @@ Kirigami.Dialog {
                 id: busyCursorStatic
 
                 text: i18nc("@option:radio", "Static")
-                checked: kcm.launchFeedbackSettings.busyCursor && !busyCursorBlinking.checked && !busyCursorBouncing.checked
+                checked: kcm.launchFeedbackSettings.busyCursor && !busyCursorBlinking.checked && !busyCursorBouncing.checked && !busyCursorChangeShape.checked
                 enabled: !formLayout.cursorImmutable
                 QQC2.ButtonGroup.group: busyCursorGroup
             }
@@ -82,6 +83,21 @@ Kirigami.Dialog {
                 KCM.SettingStateBinding {
                     configObject: kcm.launchFeedbackSettings
                     settingName: "bouncing"
+                    extraEnabledConditions: !formLayout.cursorImmutable
+                }
+            }
+
+            QQC2.RadioButton {
+                id: busyCursorChangeShape
+
+                text: i18nc("@option:radio", "Show busy cursor")
+                checked: kcm.launchFeedbackSettings.changeShape
+                enabled: !formLayout.cursorImmutable
+                QQC2.ButtonGroup.group: busyCursorGroup
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.launchFeedbackSettings
+                    settingName: "changeShape"
                     extraEnabledConditions: !formLayout.cursorImmutable
                 }
             }
