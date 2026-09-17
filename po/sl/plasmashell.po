@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-09 00:52+0000\n"
+"POT-Creation-Date: 2026-09-17 02:43+0000\n"
 "PO-Revision-Date: 2026-07-02 06:59+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -354,43 +354,43 @@ msgstr "Vgrajeni zaslon"
 msgid "Disconnected Screen %1"
 msgstr "Odklopljen zaslon %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Pokaži namizje"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Skrij namizje"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktiviraj zaganjalnik aplikacij"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Prikaži preklopnika dejavnosti"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Preklopi na predhodno dejavnost"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Preklopi na naslednjo dejavnost"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:248
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Upravljanje namizij in pultov…"
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:270
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Prenašaj osredotočenost tipkovnice med pulti"

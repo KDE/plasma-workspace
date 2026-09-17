@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-09 00:52+0000\n"
+"POT-Creation-Date: 2026-09-17 02:43+0000\n"
 "PO-Revision-Date: 2026-09-06 15:18+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -366,43 +366,43 @@ msgstr "Встроенный экран"
 msgid "Disconnected Screen %1"
 msgstr "Отключённый экран %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показать рабочий стол"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скрыть рабочий стол"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:192
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Вызвать меню запуска приложений"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показать переключатель комнат"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Переключиться в предыдущую комнату"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Переключиться в следующую комнату"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:248
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Управление рабочими столами и панелями…"
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:270
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Перемещение фокуса ввода с клавиатуры между панелями"
