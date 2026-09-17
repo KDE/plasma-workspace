@@ -15,6 +15,9 @@ SPDX-License-Identifier: LGPL-2.0-only
     <entry name="bouncing" key="Bouncing" type="Bool">
       <default>true</default>
     </entry>
+    <entry name="changeShape" key="ChangeShape" type="Bool">
+      <default>false</default>
+    </entry>
     <entry name="cursorTimeout" key="Timeout" type="Int">
       <label>Timeout in seconds</label>
       <default>5</default>
