@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:48+0000\n"
+"POT-Creation-Date: 2026-09-17 00:46+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -60,12 +60,14 @@ msgstr ""
 
 #: configdialog.cpp:124
 #, kde-format
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
 #: configdialog.cpp:126
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "ചരിത്രത്തില്‍ നിന്നും തെരഞ്ഞെടുത്ത പ്രവൃത്തി ആവര്‍ത്തിക്കുക"
 
@@ -77,6 +79,7 @@ msgstr ""
 
 #: configdialog.cpp:133
 #, kde-format
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 

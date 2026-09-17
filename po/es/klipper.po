@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-16 00:48+0000\n"
+"POT-Creation-Date: 2026-09-17 00:46+0000\n"
 "PO-Revision-Date: 2026-09-12 01:08+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -74,12 +74,16 @@ msgstr ""
 "opción inferior), pero solo se podrá pegar usando el botón central del ratón."
 
 #: configdialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text selected with the pointer or keyboard"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Texto seleccionado con el puntero o con el teclado"
 
 #: configdialog.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Include in history:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Incluir en el historial"
 
@@ -92,7 +96,9 @@ msgstr ""
 "contraseña."
 
 #: configdialog.cpp:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Image data copied explicitly"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Datos de imagen copiados explícitamente"
 
