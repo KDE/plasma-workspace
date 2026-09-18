@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
+"POT-Creation-Date: 2026-09-18 00:47+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -841,8 +841,10 @@ msgstr "Kích thước lịch sử:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, kde-format
-msgid "The clipboard history will store up to this many items."
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid ""
+"The clipboard history will store up to this many items. Maximum is 2048."
 msgstr "Lịch sử bảng nháp sẽ lưu nhiều nhất là từng này mục."
 
 #. i18n: ectx: label, entry (ActionList), group (General)

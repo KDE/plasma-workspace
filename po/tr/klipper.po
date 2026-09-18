@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-17 00:46+0000\n"
-"PO-Revision-Date: 2026-09-11 19:15+0300\n"
+"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"PO-Revision-Date: 2026-09-17 20:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -69,15 +69,13 @@ msgstr ""
 "farenin orta düğmesi ile yapıştırılabilir."
 
 #: configdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "İşaretçi veya klavye ile metin seçilen metin"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Geçmişte içer:"
@@ -89,8 +87,7 @@ msgid ""
 msgstr "Parola dışındaki açıkça kopyalanan metinler her zaman kaydedilir."
 
 #: configdialog.cpp:133
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Açıkça kopyalanan görsel verisi"
@@ -810,8 +807,10 @@ msgstr "Geçmiş boyutu:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, kde-format
-msgid "The clipboard history will store up to this many items."
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid ""
+"The clipboard history will store up to this many items. Maximum is 2048."
 msgstr "Pano geçmişi bu sayıda ögeye kadar depolayacaktır."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
