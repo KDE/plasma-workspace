@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2026-09-17 15:06+0200\n"
+"PO-Revision-Date: 2026-09-18 10:27+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -822,11 +822,12 @@ msgstr "Geschiedenisgrootte:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "De geschiedenis van het klembord zal dit aantal items opslaan."
+msgstr ""
+"De geschiedenis van het klembord zal dit aantal items opslaan. Maximum is "
+"2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61

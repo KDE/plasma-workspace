@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2026-09-17 12:02+0200\n"
+"PO-Revision-Date: 2026-09-18 10:52+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -805,11 +805,12 @@ msgstr "Velikost historie:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "Historie schránky uloží až tolik položek."
+msgstr ""
+"Historie schránky bude uchovávat až tento počet položek. Maximální počet je "
+"2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61

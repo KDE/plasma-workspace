@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2026-09-17 20:08+0300\n"
+"PO-Revision-Date: 2026-09-18 19:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -807,11 +807,11 @@ msgstr "Geçmiş boyutu:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "Pano geçmişi bu sayıda ögeye kadar depolayacaktır."
+msgstr ""
+"Pano geçmişi bu sayıda ögeye kadar depolayacaktır. En büyük değer 2048’dir."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61
