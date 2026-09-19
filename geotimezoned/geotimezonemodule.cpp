@@ -132,6 +132,14 @@ void KdedGeoTimeZonePlugin::checkTimeZone()
     refresh();
 }
 
+void KdedGeoTimeZonePlugin::rememberLastConnection()
+{
+    if (const auto connection = NetworkManager::primaryConnection()) {
+        m_state.setLastConnectionUuid(connection->uuid());
+        m_state.save();
+    }
+}
+
 void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
 {
     org::freedesktop::timedate1 timedateInterface{s_timedateService, s_timedatePath, QDBusConnection::systemBus()};
@@ -145,6 +153,7 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
     // Not caching the current time zone as a member since it could have changed elsewhere (e.g. in the KCM).
     if (currentTimeZoneId == geoTimeZoneId) {
         qCDebug(GEOTIMEZONED_DEBUG) << "Time zone" << geoTimeZoneId << "is the same as the current time zone";
+        rememberLastConnection();
         return;
     }
 
@@ -165,10 +174,7 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
             return;
         }
 
-        if (const auto connection = NetworkManager::primaryConnection()) {
-            m_state.setLastConnectionUuid(connection->uuid());
-            m_state.save();
-        }
+        rememberLastConnection();
 
         QTimeZone timeZone(geoTimeZoneId);
 
