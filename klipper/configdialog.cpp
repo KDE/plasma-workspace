@@ -89,6 +89,12 @@ GeneralWidget::GeneralWidget(QWidget *parent)
     KLocalization::setupSpinBoxFormatString(m_historySizeSb, ki18ncp("Number of entries", "%v entry", "%v entries"));
     layout->addRow(item->label(), m_historySizeSb);
 
+    item = KlipperSettings::self()->autoPasteItem();
+    m_autoPasteLabel = new QLabel(i18n("After choosing from history:"), this);
+    m_autoPasteCb = new QCheckBox(item->label(), this);
+    m_autoPasteCb->setObjectName(QLatin1String("kcfg_AutoPaste"));
+    layout->addRow(m_autoPasteLabel, m_autoPasteCb);
+
     layout->addRow(QString(), new QLabel(this));
 
     // Synchronise selection and clipboard
@@ -153,6 +159,17 @@ GeneralWidget::GeneralWidget(QWidget *parent)
                                   "Any application that sends both text and image will also ignore it."),
                            imageHint);
     });
+}
+
+void GeneralWidget::updateAutoPasteOptionState(const Klipper *klipper)
+{
+    if (!m_autoPasteLabel || !m_autoPasteCb) {
+        return;
+    }
+    const bool canRun = klipper && klipper->isAutoPasteOptionVisible();
+    m_autoPasteLabel->setVisible(canRun);
+    m_autoPasteCb->setVisible(canRun);
+    m_autoPasteCb->setToolTip(QString());
 }
 
 //////////////////////////
@@ -509,6 +526,12 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
 
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_shortcutsWidget, &KShortcutsEditor::keyChange, this, &ConfigDialog::settingsChangedSlot);
+    m_generalPage->updateAutoPasteOptionState(m_klipper);
+    if (m_klipper) {
+        connect(m_klipper, &Klipper::autoPasteSupportChanged, this, [this](bool) {
+            m_generalPage->updateAutoPasteOptionState(m_klipper);
+        });
+    }
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void)winId();
@@ -557,6 +580,7 @@ void ConfigDialog::updateWidgets()
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
     }
+    m_generalPage->updateAutoPasteOptionState(m_klipper);
 }
 
 void ConfigDialog::updateWidgetsDefault()

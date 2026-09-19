@@ -78,8 +78,6 @@ PlasmaExtras.Representation {
             showsClearHistoryButton: true
             keyboardActivated: true
             barcodeType: "QRCode"
-
-            onItemSelected: dialogItem.requestHidePopup()
         }
     }
 }

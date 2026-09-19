@@ -796,6 +796,12 @@ int HistoryModel::pendingJobs() const
     return m_pendingJobs;
 }
 
+void HistoryModel::moveToTopFromClipboardMenu(const QString &uuid)
+{
+    moveToTop(uuid);
+    Q_EMIT historyMenuEntryActivated();
+}
+
 void HistoryModel::moveToTop(const QString &uuid)
 {
     const int existingItemIndex = indexOf(uuid);

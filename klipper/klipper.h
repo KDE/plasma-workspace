@@ -8,6 +8,7 @@
 #pragma once
 
 #include "config-klipper.h"
+#include <config-X11.h>
 
 #include <QClipboard>
 #include <QDBusContext>
@@ -29,8 +30,14 @@ class QMimeData;
 class HistoryItem;
 class HistoryModel;
 class KNotification;
+class QWindow;
 class SystemClipboard;
 
+namespace KWayland::Client
+{
+class FakeInput;
+class Registry;
+}
 class KLIPPER_EXPORT Klipper : public QObject, public QDBusContext
 {
     Q_OBJECT
@@ -69,6 +76,13 @@ public:
 
     KlipperPopup *popup();
 
+    bool isAutoPasteSupported() const;
+    bool isAutoPasteInjectReady() const;
+    bool isAutoPasteOptionVisible() const
+    {
+        return isAutoPasteSupported() && isAutoPasteInjectReady();
+    }
+
 public Q_SLOTS:
     void saveSession();
     void slotConfigure();
@@ -79,6 +93,7 @@ Q_SIGNALS:
     void passivePopup(const QString &caption, const QString &text);
     void editFinished(std::shared_ptr<const HistoryItem> item, int result);
     Q_SCRIPTABLE void clipboardHistoryUpdated();
+    void autoPasteSupportChanged(bool available);
 
 public Q_SLOTS:
     void slotPopupMenu();
@@ -90,13 +105,24 @@ protected Q_SLOTS:
 
 private Q_SLOTS:
     void slotHistoryChanged(bool isTop = false);
+    void slotHistoryMenuEntryActivated();
+    void simulatePaste();
 
     void slotStartShowTimer();
 
     void loadSettings();
 
+private Q_SLOTS:
+    void clearClipboardPopupAutoPastePending();
+    void onFocusWindowChangedForAutoPaste(QWindow *focus);
+
 private:
     static void updateTimestamp();
+#if HAVE_X11
+    void simulatePasteX11();
+#endif
+    void setupWaylandFakeInputIntegration();
+    void tryBindFakeInput(KWayland::Client::Registry *registry);
 
     std::shared_ptr<SystemClipboard> m_clip;
     HistoryCycler *m_historyCycler = nullptr;
@@ -117,6 +143,9 @@ private:
 
     bool m_bURLGrabber : 1;
     bool m_bReplayActionInHistory : 1;
+    bool m_bAutoPaste : 1;
+    bool m_autoPasteInjectionAvailable : 1;
+    bool m_pendingAutoPasteAfterHistorySelection : 1;
 
     URLGrabber *m_myURLGrabber;
     QString m_lastURLGrabberTextSelection;
@@ -125,4 +154,6 @@ private:
     QString cycleText() const;
     KActionCollection *m_collection;
     QPointer<KNotification> m_notification;
+    /** Parented to Klipper via Registry::createFakeInput; QPointer clears if the compositor destroys it. */
+    QPointer<KWayland::Client::FakeInput> m_fakeInput;
 };

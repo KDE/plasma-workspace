@@ -29,6 +29,9 @@ public Q_SLOTS:
     void hide();
     void resizePopup();
 
+Q_SIGNALS:
+    void clipboardPopupOpening();
+
 protected:
     void showEvent(QShowEvent *event) override;
 

@@ -39,6 +39,7 @@ public:
     void setStarredOnly(bool value);
 
     Q_INVOKABLE void moveToTop(const QString &uuid);
+    Q_INVOKABLE void moveToTopFromClipboardMenu(const QString &uuid);
 
     Q_INVOKABLE void remove(const QString &uuid);
     Q_INVOKABLE void clearHistory();

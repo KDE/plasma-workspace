@@ -71,6 +71,11 @@ void DeclarativeHistoryModel::moveToTop(const QString &uuid)
     m_model->moveToTop(uuid);
 }
 
+void DeclarativeHistoryModel::moveToTopFromClipboardMenu(const QString &uuid)
+{
+    m_model->moveToTopFromClipboardMenu(uuid);
+}
+
 void DeclarativeHistoryModel::remove(const QString &uuid)
 {
     m_model->remove(uuid);

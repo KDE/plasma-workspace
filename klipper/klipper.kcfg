@@ -64,6 +64,11 @@
     <entry name="ActionsInfoMessageShown" type="Bool">
         <default>true</default>
     </entry>
+    <entry name="AutoPaste" type="Bool">
+      <label>Automatically paste after choosing an entry</label>
+      <default>false</default>
+      <tooltip>After you select an item from the clipboard history popup, simulate the Paste shortcut in the active window.</tooltip>
+    </entry>
   </group>
 
   <group name="Actions">

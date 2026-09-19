@@ -107,6 +107,7 @@ public:
     Q_INVOKABLE void clearSecret();
 
     void setURLGrabber(URLGrabber *grabber);
+    void moveToTopFromClipboardMenu(const QString &uuid);
 
 Q_SIGNALS:
     void changed(bool isTop = false);
@@ -114,6 +115,7 @@ Q_SIGNALS:
     void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
 
     void hasPasswordChanged();
+    void historyMenuEntryActivated();
 
 private Q_SLOTS:
     /**

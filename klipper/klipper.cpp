@@ -10,16 +10,28 @@
 
 #include "klipper.h"
 
+#include "autopastehelpers.h"
 #include "klipper_debug.h"
 #include <QDBusConnection>
+#include <QGuiApplication>
+#include <QKeySequence>
 #include <QMenu>
 #include <QMimeData>
+#include <QTimer>
+#include <QWindow>
+#if HAVE_X11
+#include <QtGui/qguiapplication_platform.h>
+#endif
 
 #include <KActionCollection>
 #include <KGlobalAccel>
 #include <KLocalizedString>
 #include <KNotification>
 #include <KToggleAction>
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/fakeinput.h>
+#include <KWayland/Client/registry.h>
+#include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 
 #include <PlasmaQuick/PlasmaShellWaylandIntegration>
@@ -55,6 +67,9 @@ Klipper::Klipper(QObject *parent)
     : QObject(parent)
     , m_clip(SystemClipboard::self())
     , m_historyCycler(new HistoryCycler(this))
+    , m_bAutoPaste(false)
+    , m_autoPasteInjectionAvailable(false)
+    , m_pendingAutoPasteAfterHistorySelection(false)
 {
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/klipper"),
@@ -62,8 +77,10 @@ Klipper::Klipper(QObject *parent)
                                                  QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
     m_historyModel = HistoryModel::self();
+    connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &Klipper::onFocusWindowChangedForAutoPaste);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
+    connect(m_historyModel.get(), &HistoryModel::historyMenuEntryActivated, this, &Klipper::slotHistoryMenuEntryActivated);
 
     // we need that collection, otherwise KToggleAction is not happy :}
     m_collection = new KActionCollection(this);
@@ -80,6 +97,13 @@ Klipper::Klipper(QObject *parent)
     connect(m_myURLGrabber, &URLGrabber::sigPopup, this, &Klipper::showPopupMenu);
     connect(m_historyModel.get(), &HistoryModel::actionInvoked, m_myURLGrabber, &URLGrabber::invokeAction);
     m_historyModel->setURLGrabber(m_myURLGrabber);
+
+#if HAVE_X11
+    m_autoPasteInjectionAvailable = KlipperAutoPaste::x11AutoPasteInjectionAvailable();
+    if (m_autoPasteInjectionAvailable) {
+        Q_EMIT autoPasteSupportChanged(true);
+    }
+#endif
 
     /*
      * Load configuration settings
@@ -146,6 +170,101 @@ Klipper::Klipper(QObject *parent)
             m_notification->setHint(QStringLiteral("desktop-entry"), QStringLiteral("org.kde.klipper"));
         }
     });
+    if (KWindowSystem::isPlatformWayland()) {
+        QTimer::singleShot(0, this, &Klipper::setupWaylandFakeInputIntegration);
+    }
+}
+
+void Klipper::setupWaylandFakeInputIntegration()
+{
+    if (!KWindowSystem::isPlatformWayland()) {
+        return;
+    }
+    auto *connection = KWayland::Client::ConnectionThread::fromApplication(this);
+    if (!connection) {
+        qCWarning(KLIPPER_LOG) << "KWayland ConnectionThread::fromApplication returned null";
+        return;
+    }
+    auto *registry = new KWayland::Client::Registry(this);
+    connect(registry, &KWayland::Client::Registry::fakeInputAnnounced, this, [this, registry](quint32, quint32) {
+        tryBindFakeInput(registry);
+    });
+    connect(registry, &KWayland::Client::Registry::interfaceAnnounced, this, [this, registry](const QByteArray &interface, quint32, quint32) {
+        if (interface == QByteArrayLiteral("org_kde_kwin_fake_input")) {
+            tryBindFakeInput(registry);
+        }
+    });
+    connect(registry, &KWayland::Client::Registry::interfacesAnnounced, this, [this, registry]() {
+        tryBindFakeInput(registry);
+    });
+    connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, registry, [registry] {
+        delete registry;
+    });
+    registry->create(connection);
+    registry->setup();
+    for (int i = 0; i < 3; ++i) {
+        connection->roundtrip();
+        tryBindFakeInput(registry);
+        if (m_fakeInput) {
+            break;
+        }
+    }
+    if (!m_fakeInput) {
+        qCWarning(KLIPPER_LOG) << "FakeInput not bound after initial roundtrips; retrying";
+        const auto retry = [this, connection, registry]() {
+            if (m_fakeInput) {
+                return;
+            }
+            connection->roundtrip();
+            tryBindFakeInput(registry);
+        };
+        QTimer::singleShot(100, this, retry);
+        QTimer::singleShot(500, this, retry);
+        QTimer::singleShot(2000, this, retry);
+    }
+}
+
+void Klipper::tryBindFakeInput(KWayland::Client::Registry *registry)
+{
+#if !(defined(__linux__) || defined(__FreeBSD__))
+    Q_UNUSED(registry);
+    return;
+#else
+    if (m_fakeInput) {
+        return;
+    }
+    if (!registry->hasInterface(KWayland::Client::Registry::Interface::FakeInput)) {
+        return;
+    }
+    const auto iface = registry->interface(KWayland::Client::Registry::Interface::FakeInput);
+    if (iface.name == 0 && iface.version == 0) {
+        qCWarning(KLIPPER_LOG) << "Wayland FakeInput interface has invalid name/version";
+        return;
+    }
+    m_fakeInput = registry->createFakeInput(iface.name, iface.version, this);
+    if (!m_fakeInput) {
+        qCWarning(KLIPPER_LOG) << "FakeInput createFakeInput returned null";
+        return;
+    }
+    if (!m_fakeInput->isValid()) {
+        qCWarning(KLIPPER_LOG) << "FakeInput not valid yet; retrying after event loop";
+        QTimer::singleShot(0, this, [this]() {
+            if (!m_fakeInput || !m_fakeInput->isValid()) {
+                qCWarning(KLIPPER_LOG) << "FakeInput still invalid; auto-paste unavailable";
+                return;
+            }
+            m_fakeInput->authenticate(QLatin1String("Klipper"),
+                                      i18n("Automatically paste after choosing an entry from the clipboard history."));
+            m_autoPasteInjectionAvailable = true;
+            Q_EMIT autoPasteSupportChanged(true);
+        });
+        return;
+    }
+    m_fakeInput->authenticate(QLatin1String("Klipper"),
+                              i18n("Automatically paste after choosing an entry from the clipboard history."));
+    m_autoPasteInjectionAvailable = true;
+    Q_EMIT autoPasteSupportChanged(true);
+#endif
 }
 
 Klipper::~Klipper()
@@ -218,6 +337,7 @@ void Klipper::slotStartShowTimer()
 void Klipper::loadSettings()
 {
     m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
+    m_bAutoPaste = KlipperSettings::autoPaste();
 
     m_bURLGrabber = KlipperSettings::uRLGrabberEnabled();
     // this will cause it to loadSettings too
@@ -239,6 +359,7 @@ KlipperPopup *Klipper::popup()
 {
     if (!m_popup) {
         m_popup = std::make_unique<KlipperPopup>();
+        connect(m_popup.get(), &KlipperPopup::clipboardPopupOpening, this, &Klipper::clearClipboardPopupAutoPastePending);
     }
 
     return m_popup.get();
@@ -362,6 +483,105 @@ void Klipper::slotHistoryChanged(bool isTop)
         slotRepeatAction();
     }
 }
+
+bool Klipper::isAutoPasteSupported() const
+{
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        return m_autoPasteInjectionAvailable;
+    }
+#endif
+#if defined(__linux__) || defined(__FreeBSD__)
+    if (KWindowSystem::isPlatformWayland()) {
+        return m_fakeInput && m_fakeInput->isValid();
+    }
+#endif
+    return false;
+}
+
+bool Klipper::isAutoPasteInjectReady() const
+{
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        return m_autoPasteInjectionAvailable;
+    }
+#endif
+#if defined(__linux__) || defined(__FreeBSD__)
+    if (KWindowSystem::isPlatformWayland()) {
+        return m_fakeInput && m_fakeInput->isValid() && m_autoPasteInjectionAvailable;
+    }
+#endif
+    return false;
+}
+
+void Klipper::slotHistoryMenuEntryActivated()
+{
+    if (!m_bAutoPaste) {
+        return;
+    }
+    if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
+        return;
+    }
+    m_pendingAutoPasteAfterHistorySelection = true;
+}
+
+void Klipper::clearClipboardPopupAutoPastePending()
+{
+    m_pendingAutoPasteAfterHistorySelection = false;
+}
+
+void Klipper::onFocusWindowChangedForAutoPaste(QWindow *focus)
+{
+    if (!m_pendingAutoPasteAfterHistorySelection || !m_bAutoPaste) {
+        return;
+    }
+    // Wait until focus leaves the clipboard popup (still visible: selection not finished hiding).
+    if (m_popup && focus == m_popup.get() && m_popup->isVisible()) {
+        return;
+    }
+    m_pendingAutoPasteAfterHistorySelection = false;
+    QTimer::singleShot(0, this, [this]() {
+        if (!m_bAutoPaste) {
+            return;
+        }
+        if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
+            return;
+        }
+        simulatePaste();
+    });
+}
+
+void Klipper::simulatePaste()
+{
+    if (!isAutoPasteInjectReady()) {
+        return;
+    }
+#if HAVE_X11
+    if (KWindowSystem::isPlatformX11()) {
+        simulatePasteX11();
+        return;
+    }
+#endif
+#if defined(__linux__) || defined(__FreeBSD__)
+    if (m_fakeInput && m_fakeInput->isValid()) {
+        KlipperAutoPaste::injectPasteShortcutWaylandFakeInput(m_fakeInput, KlipperAutoPaste::pasteChordFromStandard());
+        return;
+    }
+    qCWarning(KLIPPER_LOG) << "Auto-paste: KWin FakeInput is unavailable";
+#endif
+}
+
+#if HAVE_X11
+void Klipper::simulatePasteX11()
+{
+    auto *x11 = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    if (!x11) {
+        qCWarning(KLIPPER_LOG) << "Auto-paste: no X11 application interface";
+        return;
+    }
+    KlipperAutoPaste::injectPasteShortcutX11(static_cast<void *>(x11->display()));
+}
+#endif
 
 QStringList Klipper::getClipboardHistoryMenu()
 {

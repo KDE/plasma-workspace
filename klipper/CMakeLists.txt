@@ -3,6 +3,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"klipper\")
 
 set(libklipper_common_SRCS
     klipper.cpp
+    autopastehelpers.cpp autopastehelpers.h
     urlgrabber.cpp urlgrabber.h
     configdialog.cpp configdialog.h
     historycycler.cpp historycycler.h
@@ -52,6 +53,7 @@ target_link_libraries(klipper
     KF6::WidgetsAddons
     KF6::WindowSystem
     KF6::XmlGui
+    Plasma::KWaylandClient
     Plasma::PlasmaQuick
     Wayland::Client
     LayerShellQt::Interface
@@ -59,7 +61,7 @@ target_link_libraries(klipper
 )
 
 if (HAVE_X11)
-    target_link_libraries(klipper XCB::XCB XCB::AUX)
+    target_link_libraries(klipper XCB::XCB XCB::AUX X11::Xtst X11::X11)
 endif()
 
 set_target_properties(klipper PROPERTIES

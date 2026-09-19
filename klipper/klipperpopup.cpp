@@ -58,6 +58,7 @@ KlipperPopup::~KlipperPopup()
 
 void KlipperPopup::show()
 {
+    Q_EMIT clipboardPopupOpening();
     hide();
     positionOnScreen();
     QMetaObject::invokeMethod(mainItem(), "updateContentSize", Q_ARG(QSizeF, screen()->availableSize().toSizeF()));

@@ -8,8 +8,11 @@
 #include "../historyitem.h"
 #include "systemclipboard.h"
 
+#include <QAbstractItemModel>
 #include <QAbstractItemModelTester>
+#include <QCryptographicHash>
 #include <QMimeData>
+#include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
 
@@ -28,6 +31,9 @@ private Q_SLOTS:
     void testIndexOf();
     void testType_data();
     void testType();
+    void testMoveToTopWhenAlreadyTopEmitsChangedIsTopWithoutReorder();
+    void testMoveToTopFromClipboardMenuEmitsActivated();
+    void testMoveToTopAloneDoesNotEmitHistoryMenuEntryActivated();
     void testKeepClipboardContents();
 };
 
@@ -205,6 +211,58 @@ void HistoryModelTest::testType()
     QTRY_COMPARE(history->pendingJobs(), 0);
 }
 
+void HistoryModelTest::testMoveToTopWhenAlreadyTopEmitsChangedIsTopWithoutReorder()
+{
+    SystemClipboard::self()->clear();
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
+    std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
+    history->setMaxSize(10);
+    history->clear();
+    QTRY_COMPARE(history->pendingJobs(), 0);
+
+    history->insert(QStringLiteral("foo"));
+    const QString barText = QStringLiteral("bar");
+    history->insert(barText);
+    const QString barUuid = QString::fromLatin1(QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1).toHex());
+    QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
+
+    QSignalSpy spyRowsMoved(history.get(), &QAbstractItemModel::rowsMoved);
+    QSignalSpy spyChanged(history.get(), &HistoryModel::changed);
+
+    history->moveToTop(barUuid);
+
+    QCOMPARE(spyRowsMoved.count(), 0);
+    QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
+    QCOMPARE(spyChanged.count(), 1);
+    QCOMPARE(spyChanged.at(0).at(0).toBool(), true);
+}
+
+void HistoryModelTest::testMoveToTopFromClipboardMenuEmitsActivated()
+{
+    SystemClipboard::self()->clear();
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
+    QVERIFY(history->insert(QStringLiteral("foo")));
+    const QString fooUuid =
+        QString::fromLatin1(QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1).toHex());
+    QSignalSpy spy(history.get(), &HistoryModel::historyMenuEntryActivated);
+    history->moveToTopFromClipboardMenu(fooUuid);
+    QCOMPARE(spy.count(), 1);
+}
+
+void HistoryModelTest::testMoveToTopAloneDoesNotEmitHistoryMenuEntryActivated()
+{
+    SystemClipboard::self()->clear();
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
+    QVERIFY(history->insert(QStringLiteral("foo")));
+    history->insert(QStringLiteral("bar"));
+    // Order is [bar, foo]; moving foo to top reorders without menu-only signal (e.g. EditPage path).
+    const QString fooUuid =
+        QString::fromLatin1(QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1).toHex());
+    QSignalSpy spy(history.get(), &HistoryModel::historyMenuEntryActivated);
+    history->moveToTop(fooUuid);
+    QCOMPARE(spy.count(), 0);
+}
+
 void HistoryModelTest::testKeepClipboardContents()
 {
     auto setKeepClipboardContents = [](bool value) {
@@ -217,6 +275,12 @@ void HistoryModelTest::testKeepClipboardContents()
         history->settings()->read();
         history->loadSettings();
     };
+
+    {
+        std::shared_ptr<HistoryModel> history = HistoryModel::self();
+        history->clear();
+        QTRY_COMPARE(history->pendingJobs(), 0);
+    }
 
     {
         std::shared_ptr<HistoryModel> history = HistoryModel::self();

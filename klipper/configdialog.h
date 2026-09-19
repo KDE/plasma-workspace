@@ -29,8 +29,12 @@ public:
     explicit GeneralWidget(QWidget *parent);
     ~GeneralWidget() override = default;
 
+    void updateAutoPasteOptionState(const Klipper *klipper);
+
 private:
     QCheckBox *m_enableHistoryCb;
+    QLabel *m_autoPasteLabel = nullptr;
+    QCheckBox *m_autoPasteCb = nullptr;
     QCheckBox *m_syncClipboardsCb;
 
     QCheckBox *m_saveSelectionCb;

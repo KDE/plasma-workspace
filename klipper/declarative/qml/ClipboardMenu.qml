@@ -50,7 +50,10 @@ PlasmaComponents3.ScrollView {
 
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-    onItemSelected: uuid => model.moveToTop(uuid);
+    onItemSelected: uuid => {
+        model.moveToTopFromClipboardMenu(uuid);
+        dialogItem.requestHidePopup();
+    }
     onRemove: uuid => model.remove(uuid)
     onEdit: modelData => {
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("EditPage.qml"), {
