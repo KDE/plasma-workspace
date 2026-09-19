@@ -180,16 +180,15 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
         const QTime newTime = QTime::currentTime();
         const QString displayTime = QLocale().toString(newTime, QLocale().timeFormat(QLocale::ShortFormat));
 
-        // Show OSD that clock or time zone got changed, depending on whether the time differs.
-        QString timeZoneOsdText;
+        // Show OSD that the time zone changed only when the time actually differs.
         if (newTime.hour() == oldTime.hour() && newTime.minute() == oldTime.minute()) {
-            timeZoneOsdText = i18nc("OSD, keep short", "Time zone changed to %1", timeZoneName);
-        } else {
-            timeZoneOsdText = i18nc("System clock was changed due to time zone change OSD, keep short: new time (time zone)",
-                                    "Clock changed to %1 (%2)",
-                                    displayTime,
-                                    timeZoneName);
+            return;
         }
+
+        const QString timeZoneOsdText = i18nc("System clock was changed due to time zone change OSD, keep short: new time (time zone)",
+                                              "Clock changed to %1 (%2)",
+                                              displayTime,
+                                              timeZoneName);
 
         QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.plasmashell"_s, u"/org/kde/osdService"_s, u"org.kde.osdService"_s, u"showText"_s);
         msg.setArguments({u"clock"_s, timeZoneOsdText});
