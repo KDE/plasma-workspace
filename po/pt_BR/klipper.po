@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-19 02:42+0000\n"
 "PO-Revision-Date: 2026-09-10 08:04-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -74,12 +74,16 @@ msgstr ""
 "botão do meio do mouse."
 
 #: configdialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text selected with the pointer or keyboard"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Texto selecionado com o ponteiro ou o teclado"
 
 #: configdialog.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Include in history:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Incluir no histórico:"
 
@@ -92,7 +96,9 @@ msgstr ""
 "como senha."
 
 #: configdialog.cpp:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Image data copied explicitly"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Dados de imagem copiados explicitamente"
 

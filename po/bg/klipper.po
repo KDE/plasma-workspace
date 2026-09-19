@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-19 02:42+0000\n"
 "PO-Revision-Date: 2026-09-13 16:42+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -65,12 +65,16 @@ msgstr ""
 "да бъде запазена в историята на клипборда (обект на опцията по-долу)."
 
 #: configdialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text selected with the pointer or keyboard"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Текст, избран с показалеца или клавиатурата"
 
 #: configdialog.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Include in history:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Включване в историята:"
 
@@ -82,7 +86,9 @@ msgstr ""
 "Копираният текст винаги се запазва, освен ако не е маркиран като парола."
 
 #: configdialog.cpp:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Image data copied explicitly"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Изрично копирани изображения"
 

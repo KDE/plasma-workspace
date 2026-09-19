@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-09-19 02:42+0000\n"
 "PO-Revision-Date: 2026-09-14 18:48+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -65,12 +65,16 @@ msgstr ""
 "pote esser collate usante le button central de mus."
 
 #: configdialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text selected with the pointer or keyboard"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Texto seligite con lepunctator o le claviero"
 
 #: configdialog.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Include in history:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Include in chronologia"
 
@@ -83,7 +87,9 @@ msgstr ""
 "marcate como un contrasigno."
 
 #: configdialog.cpp:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Image data copied explicitly"
+msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Datos de imagine copiate explicitemente"
 
