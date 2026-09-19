@@ -34,6 +34,7 @@ private:
     void scheduleCheckTimeZone();
     void checkTimeZone();
     void setGeoTimeZone(const QByteArray &geoTimeZoneId);
+    void rememberLastConnection();
 
     QNetworkAccessManager m_nam;
     QElapsedTimer m_graceTimer;
