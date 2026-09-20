@@ -36,7 +36,3 @@ msgstr "Oppdatering er framleis i gang."
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "Fekk ikkje tidssone eller ei ugyldig tidssone."
-
-#~ msgctxt "OSD, keep short"
-#~ msgid "Time zone changed to %1"
-#~ msgstr "Tidssona er endra til %1"
