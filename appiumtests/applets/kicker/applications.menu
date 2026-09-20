@@ -26,7 +26,7 @@
 
 	<Menu>
 		<Name>Applications</Name>
-		<Directory>kf5-unknown.directory</Directory>
+		<Directory>plasma-unknown.directory</Directory>
 		<OnlyUnallocated/>
 		<Include>
 			<Not>
@@ -59,10 +59,10 @@
 	</Menu>
 	<Menu>
 		<Name>Development</Name>
-		<Directory>kf5-development.directory</Directory>
+		<Directory>plasma-development.directory</Directory>
 		<Menu>
 			<Name>Translation</Name>
-			<Directory>kf5-development-translation.directory</Directory>
+			<Directory>plasma-development-translation.directory</Directory>
 			<Include>
 				<And>
 					<Category>Development</Category>
@@ -72,7 +72,7 @@
 		</Menu>
 		<Menu>
 			<Name>Web Development</Name>
-			<Directory>kf5-development-webdevelopment.directory</Directory>
+			<Directory>plasma-development-webdevelopment.directory</Directory>
 			<Include>
 				<And>
 					<Category>Development</Category>
@@ -90,7 +90,7 @@
         </Menu>
 	<Menu>
 		<Name>Science</Name>
-		<Directory>kf5-science.directory</Directory>
+		<Directory>plasma-science.directory</Directory>
 		<Include>
 			<And><!-- Include /any/ Science app which is not an Education app -->
 				<Or>
@@ -109,10 +109,10 @@
 	</Menu>
 	<Menu>
 		<Name>Education</Name>
-		<Directory>kf5-education.directory</Directory>
+		<Directory>plasma-education.directory</Directory>
 		<Menu>
 			<Name>Languages</Name>
-			<Directory>kf5-edu-languages.directory</Directory>
+			<Directory>plasma-edu-languages.directory</Directory>
 			<Include>
 				<And>
 					<Category>Education</Category>
@@ -122,7 +122,7 @@
 		</Menu>
 		<Menu>
 			<Name>Mathematics</Name>
-			<Directory>kf5-edu-mathematics.directory</Directory>
+			<Directory>plasma-edu-mathematics.directory</Directory>
 			<Include>
 				<And>
 					<Category>Education</Category>
@@ -132,7 +132,7 @@
 		</Menu>
 		<Menu>
 			<Name>Miscellaneous</Name>
-			<Directory>kf5-edu-miscellaneous.directory</Directory>
+			<Directory>plasma-edu-miscellaneous.directory</Directory>
 			<Include>
 				<And>
 					<Category>Education</Category>
@@ -147,7 +147,7 @@
 		</Menu>
 		<Menu>
 			<Name>Science</Name>
-			<Directory>kf5-edu-science.directory</Directory>
+			<Directory>plasma-edu-science.directory</Directory>
 			<Include>
 				<And>
 					<Category>Education</Category>
@@ -157,7 +157,7 @@
 		</Menu>
 		<Menu>
 			<Name>Tools</Name>
-			<Directory>kf5-edu-tools.directory</Directory>
+			<Directory>plasma-edu-tools.directory</Directory>
 			<Include>
 				<And>
 					<Category>Education</Category>
@@ -168,10 +168,10 @@
 	</Menu>
 	<Menu>
 		<Name>Games</Name>
-		<Directory>kf5-games.directory</Directory>
+		<Directory>plasma-games.directory</Directory>
 		<Menu>
 			<Name>Arcade</Name>
-			<Directory>kf5-games-arcade.directory</Directory>
+			<Directory>plasma-games-arcade.directory</Directory>
 			<Include>
 				<And>
 					<Category>Game</Category>
@@ -181,7 +181,7 @@
 		</Menu>
 		<Menu>
 			<Name>Board</Name>
-			<Directory>kf5-games-board.directory</Directory>
+			<Directory>plasma-games-board.directory</Directory>
 			<Include>
 				<And>
 					<Category>Game</Category>
@@ -191,7 +191,7 @@
 		</Menu>
 		<Menu>
 			<Name>Card</Name>
-			<Directory>kf5-games-card.directory</Directory>
+			<Directory>plasma-games-card.directory</Directory>
 			<Include>
 				<And>
 					<Category>Game</Category>
@@ -201,7 +201,7 @@
 		</Menu>
 		<Menu>
 			<Name>Kidsgames</Name>
-			<Directory>kf5-games-kids.directory</Directory>
+			<Directory>plasma-games-kids.directory</Directory>
 			<Include>
 				<And>
 					<Category>Game</Category>
@@ -211,7 +211,7 @@
 		</Menu>
 		<Menu>
 			<Name>TacticStrategy</Name>
-			<Directory>kf5-games-strategy.directory</Directory>
+			<Directory>plasma-games-strategy.directory</Directory>
 			<Include>
 				<And>
 					<Category>Game</Category>
@@ -221,7 +221,7 @@
 		</Menu>
 		<Menu>
 			<Name>Logic</Name>
-			<Directory>kf5-games-logic.directory</Directory>
+			<Directory>plasma-games-logic.directory</Directory>
 			<Include>
 				<And>
 					<Category>Game</Category>
@@ -245,7 +245,7 @@
 	</Menu>
 	<Menu>
 		<Name>Graphics</Name>
-		<Directory>kf5-graphics.directory</Directory>
+		<Directory>plasma-graphics.directory</Directory>
 		<Include>
 			<And>
 				<Category>Graphics</Category>
@@ -254,7 +254,7 @@
 		</Include>
 		<Menu>
 			<Name>More</Name>
-			<Directory>kf5-more.directory</Directory>
+			<Directory>plasma-more.directory</Directory>
 			<Include>
 				<And>
 					<Category>Graphics</Category>
@@ -265,7 +265,7 @@
 	</Menu>
 	<Menu>
 		<Name>Internet</Name>
-		<Directory>kf5-internet.directory</Directory>
+		<Directory>plasma-internet.directory</Directory>
 		<Include>
 			<And>
 				<Category>Network</Category>
@@ -274,11 +274,11 @@
 		</Include>
 		<Menu>
 			<Name>Terminal</Name>
-			<Directory>kf5-internet-terminal.directory</Directory>
+			<Directory>plasma-internet-terminal.directory</Directory>
 		</Menu>
 		<Menu>
 			<Name>More</Name>
-			<Directory>kf5-more.directory</Directory>
+			<Directory>plasma-more.directory</Directory>
 			<Include>
 				<And>
 					<Category>Network</Category>
@@ -289,7 +289,7 @@
 	</Menu>
 	<Menu>
 		<Name>Multimedia</Name>
-		<Directory>kf5-multimedia.directory</Directory>
+		<Directory>plasma-multimedia.directory</Directory>
 		<Include>
 			<And>
 				<Category>AudioVideo</Category>
@@ -298,7 +298,7 @@
 		</Include>
 		<Menu>
 			<Name>More</Name>
-			<Directory>kf5-more.directory</Directory>
+			<Directory>plasma-more.directory</Directory>
 			<Include>
 				<And>
 					<Category>AudioVideo</Category>
@@ -309,7 +309,7 @@
 	</Menu>
 	<Menu>
 		<Name>Office</Name>
-		<Directory>kf5-office.directory</Directory>
+		<Directory>plasma-office.directory</Directory>
 		<Layout>
 			<Merge type="menus"/>
 			<Filename>kde-koshell.desktop</Filename>
@@ -330,7 +330,7 @@
 		</Include>
 		<Menu>
 			<Name>More</Name>
-			<Directory>kf5-more.directory</Directory>
+			<Directory>plasma-more.directory</Directory>
 			<Include>
 				<And>
 					<Category>Office</Category>
@@ -341,14 +341,14 @@
 	</Menu>
 	<Menu>
 		<Name>Settingsmenu</Name>
-		<Directory>kf5-settingsmenu.directory</Directory>
+		<Directory>plasma-settingsmenu.directory</Directory>
 		<Include>
 			<Category>Settings</Category>
 		</Include>
 	</Menu>
 	<Menu>
 		<Name>System</Name>
-		<Directory>kf5-system.directory</Directory>
+		<Directory>plasma-system.directory</Directory>
 		<Include>
 			<And>
 				<Category>System</Category>
@@ -357,7 +357,7 @@
 		</Include>
 		<Menu>
 			<Name>More</Name>
-			<Directory>kf5-more.directory</Directory>
+			<Directory>plasma-more.directory</Directory>
 			<Include>
 				<And>
 					<Category>System</Category>
@@ -367,16 +367,16 @@
 		</Menu>
 		<Menu>
 			<Name>ScreenSavers</Name>
-			<Directory>kf5-system-screensavers.directory</Directory>
+			<Directory>plasma-system-screensavers.directory</Directory>
 		</Menu>
 		<Menu>
 			<Name>Terminal</Name>
-			<Directory>kf5-system-terminal.directory</Directory>
+			<Directory>plasma-system-terminal.directory</Directory>
 		</Menu>
 	</Menu>
 	<Menu>
 		<Name>Utilities</Name>
-		<Directory>kf5-utilities.directory</Directory>
+		<Directory>plasma-utilities.directory</Directory>
 		<Include>
 			<And>
 				<Category>Utility</Category>
@@ -391,11 +391,11 @@
 		</Include>
 		<Menu>
 			<Name>XUtilities</Name>
-			<Directory>kf5-utilities-xutils.directory</Directory>
+			<Directory>plasma-utilities-xutils.directory</Directory>
 		</Menu>
 		<Menu>
 			<Name>More</Name>
-			<Directory>kf5-more.directory</Directory>
+			<Directory>plasma-more.directory</Directory>
 			<Include>
 				<And>
 					<Category>Utility</Category>
