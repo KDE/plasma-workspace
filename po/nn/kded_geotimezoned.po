@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-09-20 00:47+0000\n"
 "PO-Revision-Date: 2026-07-05 16:19+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -19,13 +19,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: geotimezonemodule.cpp:186
-#, kde-format
-msgctxt "OSD, keep short"
-msgid "Time zone changed to %1"
-msgstr "Tidssona er endra til %1"
-
-#: geotimezonemodule.cpp:189
+#: geotimezonemodule.cpp:195
 #, kde-format
 msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
@@ -33,12 +27,16 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "Klokka er endra til %1 (%2)"
 
-#: geotimezonemodule.cpp:205
+#: geotimezonemodule.cpp:210
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "Oppdatering er framleis i gang."
 
-#: geotimezonemodule.cpp:268
+#: geotimezonemodule.cpp:273
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "Fekk ikkje tidssone eller ei ugyldig tidssone."
+
+#~ msgctxt "OSD, keep short"
+#~ msgid "Time zone changed to %1"
+#~ msgstr "Tidssona er endra til %1"

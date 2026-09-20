@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:48+0000\n"
-"PO-Revision-Date: 2026-06-18 19:04+0200\n"
+"PO-Revision-Date: 2026-09-19 22:07+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,35 +16,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Экранная клавиатура"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Отключено"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Сенсорный экран и планшет"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Сенсорный экран, планшет, мышь и сенсорная панель"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
 msgstr "Настроить экранные клавиатуры…"
@@ -56,6 +54,9 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Экранная клавиатура: недоступна\n"
+"\n"
+"Нажмите или коснитесь, чтобы настроить параметры экранной клавиатуры"
 
 #: qml/main.qml:143
 #, kde-format
@@ -64,6 +65,9 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Настроено не отображать автоматически\n"
+"\n"
+"Нажмите или коснитесь, чтобы настроить параметры экранной клавиатуры"
 
 #: qml/main.qml:156
 #, kde-format
@@ -74,6 +78,10 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"В данный момент нет активного поддерживаемого текстового поля\n"
+"\n"
+"Нажмите или коснитесь для отображения в режиме эмуляции аппаратной "
+"клавиатуры."
 
 #: qml/main.qml:167
 #, kde-format
@@ -82,6 +90,9 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Экранная клавиатура отображается\n"
+"\n"
+"Нажмите или коснитесь, чтобы скрыть экранную клавиатуру."
 
 #: qml/main.qml:177
 #, kde-format
@@ -90,6 +101,9 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Показывается автоматически при касании текстового поля\n"
+"\n"
+"Коснитесь для настройки параметров экранной клавиатуры"
 
 #: qml/main.qml:187
 #, kde-format
@@ -98,6 +112,9 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Отображается автоматически при взаимодействии с текстовым полем\n"
+"\n"
+"Нажмите или коснитесь, чтобы настроить параметры экранной клавиатуры"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Экранная клавиатура недоступна"

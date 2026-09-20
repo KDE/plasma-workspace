@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2026-09-17 12:15+0300\n"
+"PO-Revision-Date: 2026-09-18 09:59+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -818,12 +818,12 @@ msgstr "Розмір журналу:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
 msgstr ""
-"У журналі буфера обміну зберігатиметься не більше вказаної кількості записів."
+"У журналі буфера обміну зберігатиметься не більше вказаної кількості "
+"записів. Максимальна кількість записів дорівнює 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61

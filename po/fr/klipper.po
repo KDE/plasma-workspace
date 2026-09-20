@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2026-09-18 08:58+0200\n"
+"PO-Revision-Date: 2026-09-18 16:51+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -836,13 +836,12 @@ msgstr "Taille de l'historique :"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
 msgstr ""
-"L'historique du presse-papiers pourra enregistrer au maximum ce nombre "
-"d'éléments."
+"L'historique du presse-papier pourra enregistrer au maximum ce nombre "
+"d'éléments. Ce maximum est fixé à 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61
