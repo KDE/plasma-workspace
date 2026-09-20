@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 02:42+0000\n"
-"PO-Revision-Date: 2026-09-12 01:08+0100\n"
+"PO-Revision-Date: 2026-09-19 11:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: configdialog.cpp:83
@@ -74,18 +74,16 @@ msgstr ""
 "opción inferior), pero solo se podrá pegar usando el botón central del ratón."
 
 #: configdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Texto seleccionado con el puntero o con el teclado"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
-msgstr "Incluir en el historial"
+msgstr "Incluir en el historial:"
 
 #: configdialog.cpp:128
 #, kde-format
@@ -96,8 +94,7 @@ msgstr ""
 "contraseña."
 
 #: configdialog.cpp:133
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Datos de imagen copiados explícitamente"
