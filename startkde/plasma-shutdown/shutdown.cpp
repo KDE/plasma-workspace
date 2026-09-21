@@ -24,24 +24,24 @@ Shutdown::Shutdown(QObject *parent)
 
 void Shutdown::logout()
 {
-    startLogout(KWorkSpace::ShutdownTypeLogout);
+    startLogout(ShutdownTypeLogout);
 }
 
 void Shutdown::logoutAndShutdown()
 {
-    startLogout(KWorkSpace::ShutdownTypeHalt);
+    startLogout(ShutdownTypeHalt);
 }
 
 void Shutdown::logoutAndReboot()
 {
-    startLogout(KWorkSpace::ShutdownTypeReboot);
+    startLogout(ShutdownTypeReboot);
 }
 
-void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
+void Shutdown::startLogout(ShutdownType shutdownType)
 {
     // Ignore a second concurrent request instead of racing a duplicate flow
     // against the first one (BUG: 525911).
-    if (m_shutdownType != KWorkSpace::ShutdownTypeNone) {
+    if (m_shutdownType != ShutdownTypeNone) {
         qCWarning(PLASMA_SESSION) << "Logout already in progress, ignoring duplicate request";
         return;
     }
@@ -125,7 +125,7 @@ void Shutdown::ksmServerComplete()
 
 void Shutdown::logoutCancelled()
 {
-    m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    m_shutdownType = ShutdownTypeNone;
     qApp->quit();
 }
 
@@ -175,9 +175,9 @@ void Shutdown::logoutComplete()
         reply.waitForFinished();
     }
 
-    if (m_shutdownType == KWorkSpace::ShutdownTypeHalt) {
+    if (m_shutdownType == ShutdownTypeHalt) {
         SessionBackend::self()->shutdown();
-    } else if (m_shutdownType == KWorkSpace::ShutdownTypeReboot) {
+    } else if (m_shutdownType == ShutdownTypeReboot) {
         SessionBackend::self()->reboot();
     } else { // logout
         qApp->quit();
