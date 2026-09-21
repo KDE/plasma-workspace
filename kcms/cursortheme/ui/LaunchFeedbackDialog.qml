@@ -90,7 +90,7 @@ Kirigami.Dialog {
             QQC2.RadioButton {
                 id: busyCursorChangeShape
 
-                text: i18nc("@option:radio", "Busy")
+                text: i18nc("@option:radio a spinning bust indicator graphic from the pointer theme", "Busy spinner")
                 checked: kcm.launchFeedbackSettings.changeShape
                 enabled: !formLayout.cursorImmutable
                 QQC2.ButtonGroup.group: busyCursorGroup
