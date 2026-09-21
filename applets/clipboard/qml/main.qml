@@ -38,19 +38,21 @@ PlasmoidItem {
     toolTipTextFormat: Text.PlainText
     Plasmoid.icon: "klipper-symbolic"
 
+    readonly property Private.ClipboardMenu clipboardMenu: main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu
+
     function action_configure() {
         klipper.configure();
     }
 
     function action_clearHistory() {
-        (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
+        main.clipboardMenu.clearHistory()
     }
 
     // BUG 520144
     // QTBUG-146886
     readonly property var backAction: Kirigami.Action {
-        enabled: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.T.StackView.view.depth === 2
-        onTriggered: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu).closeBarcode()
+        enabled: main.clipboardMenu?.T.StackView.view.depth === 2
+        onTriggered: main.clipboardMenu.closeBarcode()
     }
 
     property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
@@ -74,13 +76,13 @@ PlasmoidItem {
             id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            visible: !main.isClipboardEmpty && !(main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.editing && !copyClipboardAction.visible
-            onTriggered: (main.fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
+            visible: !main.isClipboardEmpty && !main.clipboardMenu?.editing && !copyClipboardAction.visible
+            onTriggered: main.clipboardMenu.clearHistory()
         },
         PlasmaCore.Action {
             id: copyClipboardAction
 
-            readonly property var page: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.T.StackView.view.currentItem
+            readonly property var page: main.clipboardMenu?.T.StackView.view.currentItem
 
             icon.name: page?.copyAction?.icon.name ?? ""
             text: page?.copyAction?.tooltip ?? ""
@@ -130,10 +132,10 @@ PlasmoidItem {
             target: main
             function onExpandedChanged(expanded) {
                 if (expanded) {
-                    ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = -1;
-                    ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
+                    (menu.view as ListView).currentIndex = -1;
+                    (menu.view as ListView).positionViewAtBeginning();
                 } else {
-                    clipboardMenu.clearFilter();
+                    menu.clearFilter();
                 }
             }
         }
@@ -142,7 +144,7 @@ PlasmoidItem {
             id: stack
             anchors.fill: parent
             initialItem: Private.ClipboardMenu {
-                id: clipboardMenu
+                id: menu
                 expanded: main.expanded
                 dialogItem: dialogItem
                 model: historyModel
