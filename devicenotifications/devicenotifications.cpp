@@ -264,7 +264,7 @@ void Udev::onSocketActivated()
 }
 
 OutputDeviceRegistry::OutputDeviceRegistry()
-    : QWaylandClientExtensionTemplate<OutputDeviceRegistry>(21)
+    : QWaylandClientExtensionTemplate<OutputDeviceRegistry>(26)
 {
     initialize();
 
@@ -347,7 +347,11 @@ OutputDeviceMode::OutputDeviceMode(::kde_output_device_mode_v2 *mode)
 
 OutputDeviceMode::~OutputDeviceMode()
 {
-    kde_output_device_mode_v2_destroy(object());
+    if (version() >= KDE_OUTPUT_DEVICE_MODE_V2_RELEASE_SINCE_VERSION) {
+        release();
+    } else {
+        kde_output_device_mode_v2_destroy(object());
+    }
 }
 
 void OutputDeviceMode::kde_output_device_mode_v2_removed()
