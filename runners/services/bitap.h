@@ -17,6 +17,8 @@ namespace Bitap
 Q_DECLARE_LOGGING_CATEGORY(BITAP)
 Q_LOGGING_CATEGORY(BITAP, "org.kde.plasma.runner.services.bitap", QtWarningMsg)
 
+constexpr auto MaxLength = 63;
+
 struct Match {
     qsizetype size;
     qsizetype distance;
@@ -48,14 +50,13 @@ inline std::optional<Match> bitap(const QStringView &name, const QStringView &pa
     }
 
     // Being a bitset we could have any number of bits, but practically we probably don't need more than 64, most bitaps I've seen even use 32.
-    constexpr auto maxMaskBits = 64;
-    using Mask = std::bitset<maxMaskBits>;
+    // +1 because one bit is used for the result (I think)
+    using Mask = std::bitset<MaxLength + 1>;
     using PatternMask = std::array<Mask, std::numeric_limits<char16_t>::max()>;
 
     // The way bitap works is that each bit of the Mask represents a character position. Because of this we cannot match
     // more characters than we have bits for.
-    // -1 because one bit is used for the result (I think)
-    if (pattern.size() >= qsizetype(Mask().size()) - 1) {
+    if (pattern.size() > MaxLength) {
         qCWarning(BITAP) << "Pattern is too long for bitap algorithm, max length is" << Mask().size() - 1;
         return std::nullopt;
     }
