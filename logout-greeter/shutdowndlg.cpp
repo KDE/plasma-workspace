@@ -64,7 +64,7 @@ static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFir
 static const QString s_login1RebootToBootLoaderMenu = QStringLiteral("RebootToBootLoaderMenu");
 static const QString s_login1RebootToBootLoaderEntry = QStringLiteral("RebootToBootLoaderEntry");
 
-KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen)
+KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, ShutdownType sdtype, bool windowed, QScreen *screen)
     : QQuickView(engine, nullptr)
     , m_result(false)
     , m_windowed(windowed)
@@ -91,11 +91,10 @@ KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdty
     context->setContextProperty(QStringLiteral("sdtype"), sdtype);
 
     auto *mapShutdownType = new QQmlPropertyMap(this);
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeDefault"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeDefault));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeNone"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeNone));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeReboot"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeReboot));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeHalt"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeHalt));
-    mapShutdownType->insert(QStringLiteral("ShutdownTypeLogout"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeLogout));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeDefault"), QVariant::fromValue<int>(ShutdownTypeDefault));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeNone"), QVariant::fromValue<int>(ShutdownTypeNone));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeReboot"), QVariant::fromValue<int>(ShutdownTypeReboot));
+    mapShutdownType->insert(QStringLiteral("ShutdownTypeHalt"), QVariant::fromValue<int>(ShutdownTypeHalt));
     context->setContextProperty(QStringLiteral("ShutdownType"), mapShutdownType);
 
     auto *mapSpdMethods = new QQmlPropertyMap(this);

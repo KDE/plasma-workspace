@@ -14,10 +14,28 @@
 
 #include <QQuickView>
 
-#include <kworkspace.h>
 #include <sessionmanagement.h>
 
 #include <KPackage/Package>
+
+enum ShutdownType {
+    /**
+     * Select previous action or the default if it's the first time.
+     */
+    ShutdownTypeDefault = -1,
+    /**
+     * Only log out.
+     */
+    ShutdownTypeNone = 0,
+    /**
+     * Log out and reboot the machine.
+     */
+    ShutdownTypeReboot = 1,
+    /**
+     * Log out and halt the machine.
+     */
+    ShutdownTypeHalt = 2,
+};
 
 // The confirmation dialog
 class KSMShutdownDlg : public QQuickView
@@ -25,7 +43,7 @@ class KSMShutdownDlg : public QQuickView
     Q_OBJECT
 
 public:
-    KSMShutdownDlg(QQmlEngine *engine, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen);
+    KSMShutdownDlg(QQmlEngine *engine, ShutdownType sdtype, bool windowed, QScreen *screen);
 
     void init(const KPackage::Package &package);
     bool result() const;

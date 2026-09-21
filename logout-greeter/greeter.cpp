@@ -146,7 +146,7 @@ void Greeter::promptLogout()
         qCWarning(LOGOUT_GREETER) << "promptLogout was called but we were already showing the logout screen; doing nothing";
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    m_shutdownType = ShutdownTypeNone;
     init();
 }
 
@@ -156,7 +156,7 @@ void Greeter::promptShutDown()
         qCWarning(LOGOUT_GREETER) << "promptShutDown was called but we were already showing the logout screen; doing nothing";
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeHalt;
+    m_shutdownType = ShutdownTypeHalt;
     init();
 }
 
@@ -166,7 +166,7 @@ void Greeter::promptReboot()
         qCWarning(LOGOUT_GREETER) << "promptReboot was called but we were already showing the logout screen; doing nothing";
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeReboot;
+    m_shutdownType = ShutdownTypeReboot;
     init();
 }
 
@@ -176,7 +176,7 @@ void Greeter::promptAll()
         qCWarning(LOGOUT_GREETER) << "promptAll was called but we were already showing the logout screen; doing nothing";
         return;
     }
-    m_shutdownType = KWorkSpace::ShutdownTypeDefault;
+    m_shutdownType = ShutdownTypeDefault;
     init();
 }
 
