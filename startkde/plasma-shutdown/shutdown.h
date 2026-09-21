@@ -9,7 +9,13 @@
 #pragma once
 
 #include <QObject>
-#include <kworkspace.h>
+
+enum ShutdownType {
+    ShutdownTypeNone = 0,
+    ShutdownTypeReboot = 1,
+    ShutdownTypeHalt = 2,
+    ShutdownTypeLogout = 3,
+};
 
 class Shutdown : public QObject
 {
@@ -26,9 +32,9 @@ private Q_SLOTS:
     void ksmServerComplete();
 
 private:
-    void startLogout(KWorkSpace::ShutdownType shutdownType);
+    void startLogout(ShutdownType shutdownType);
     void runShutdownScripts();
     bool usingSystemdManagedSession();
     // ShutdownTypeNone means idle, see startLogout().
-    KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    ShutdownType m_shutdownType = ShutdownTypeNone;
 };
