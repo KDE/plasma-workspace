@@ -25,6 +25,7 @@
 #include <KIO/DeleteJob>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KMessageDialog>
 
 #include "config-klipper.h"
 #include "historyitem.h"
@@ -277,18 +278,26 @@ void HistoryModel::clearHistory()
     // No starred items, show normal confirmation
     // TODO: Consider adding a "Reset 'Don't ask again' dialogs" button in Klipper settings
     // to help users recover from accidentally dismissed confirmations
-    int clearHist = KMessageBox::warningContinueCancel(nullptr,
-                                                       i18n("Do you really want to clear and delete the entire clipboard history?"),
-                                                       i18n("Clear Clipboard History"),
-                                                       KStandardGuiItem::del(),
-                                                       KStandardGuiItem::cancel(),
-                                                       QStringLiteral("klipperClearHistoryAskAgain"),
-                                                       KMessageBox::Dangerous);
-    if (clearHist != KMessageBox::Continue) {
-        return; // User cancelled
+    if (!KMessageBox::shouldBeShownContinue(QStringLiteral("klipperClearHistoryAskAgain"))) {
+        clearNonStarredHistory();
+        return;
     }
 
-    clearNonStarredHistory();
+    auto *dialog = new KMessageDialog(KMessageDialog::WarningContinueCancel, i18n("Do you really want to clear and delete the entire clipboard history?"));
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setCaption(i18n("Clear Clipboard History"));
+    dialog->setButtons(KStandardGuiItem::del(), KGuiItem(), KStandardGuiItem::cancel());
+    dialog->setDontAskAgainText(i18nc("@option:check", "Do not ask again"));
+    connect(dialog, &QDialog::finished, this, [this, dialog](int result) {
+        if (result != KMessageDialog::PrimaryAction) {
+            return; // User cancelled
+        }
+        if (dialog->isDontAskAgainChecked()) {
+            KMessageBox::saveDontShowAgainContinue(QStringLiteral("klipperClearHistoryAskAgain"));
+        }
+        clearNonStarredHistory();
+    });
+    dialog->open();
 }
 
 qsizetype HistoryModel::maxSize() const
@@ -529,28 +538,39 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
 
 bool HistoryModel::remove(const QString &uuid)
 {
-    const int index = indexOf(uuid);
-    if (index < 0) {
+    if (indexOf(uuid) < 0) {
         return false;
     }
 
     // Check if the item is starred before removing
     bool isStarred = isItemStarred(uuid);
 
-    // Show confirmation dialog for starred items
-    if (isStarred) {
-        int result = KMessageBox::warningContinueCancel(nullptr,
-                                                       i18n("This item is starred. Do you really want to remove it from history?"),
-                                                       i18n("Remove Starred Item"),
-                                                       KStandardGuiItem::del(),
-                                                       KStandardGuiItem::cancel(),
-                                                       QStringLiteral("klipperRemoveStarredItemAskAgain"));
-        if (result != KMessageBox::Continue) {
-            return false; // User cancelled deletion
-        }
+    // Non-starred items are removed without confirmation
+    if (!isStarred) {
+        return removeRow(indexOf(uuid), QModelIndex());
     }
 
-    return removeRow(index, QModelIndex());
+    auto *dialog = new KMessageDialog(KMessageDialog::WarningContinueCancel, i18n("This item is starred. Do you really want to remove it from history?"));
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+    dialog->setCaption(i18n("Remove Starred Item"));
+    dialog->setButtons(KStandardGuiItem::del(), KGuiItem(), KStandardGuiItem::cancel());
+    dialog->setDontAskAgainText(i18nc("@option:check", "Do not ask again"));
+    connect(dialog, &QDialog::finished, this, [this, uuid, dialog](int result) {
+        if (result != KMessageDialog::PrimaryAction) {
+            return; // User cancelled deletion
+        }
+        if (dialog->isDontAskAgainChecked()) {
+            KMessageBox::saveDontShowAgainContinue(QStringLiteral("klipperRemoveStarredItemAskAgain"));
+        }
+        // The model may have changed while the dialog was open, re-look up the index
+        const int index = indexOf(uuid);
+        if (index < 0) {
+            return;
+        }
+        removeRow(index, QModelIndex());
+    });
+    dialog->open();
+    return true;
 }
 
 int HistoryModel::indexOf(const QString &uuid) const
