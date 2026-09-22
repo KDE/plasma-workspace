@@ -130,6 +130,8 @@ public:
     OutputDeviceRegistry();
     ~OutputDeviceRegistry() override;
 
+    int count() const;
+
 Q_SIGNALS:
     void outputAdded(OutputDevice *output);
     void outputRemoved(OutputDevice *output);
