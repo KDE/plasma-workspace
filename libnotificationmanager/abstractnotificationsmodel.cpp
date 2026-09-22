@@ -104,14 +104,22 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
         const int cleanupCount = s_notificationsLimit / 2;
         qCDebug(NOTIFICATIONMANAGER) << "Reached the notification limit of" << s_notificationsLimit << ", discarding the oldest" << cleanupCount
                                      << "notifications";
+        QList<uint> discardedIds;
+        discardedIds.reserve(cleanupCount);
         q->beginRemoveRows(QModelIndex(), 0, cleanupCount - 1);
         for (int i = 0; i < cleanupCount; ++i) {
-            Notification::Private::s_imageCache.remove(notifications.constFirst().id());
-            q->stopTimeout(notifications.constFirst().id());
+            const uint id = notifications.constFirst().id();
+            Notification::Private::s_imageCache.remove(id);
+            q->stopTimeout(id);
             notifications.removeAt(0);
-            // TODO close gracefully?
+            discardedIds.append(id);
         }
         q->endRemoveRows();
+        // Tell the applications, otherwise their next update re-creates the notification and it pops up again.
+        // The rows are already gone, so onNotificationRemoved() ignores these.
+        for (const uint id : discardedIds) {
+            Server::self().closeNotification(id, Server::CloseReason::Expired);
+        }
     }
 
     setupNotificationTimeout(notification);

@@ -29,6 +29,8 @@ private Q_SLOTS:
     void parse();
 
     void compressNotificationRemoval();
+    void discardedNotificationsAreClosed();
+
 private:
     QTemporaryDir m_tempDir ;
 };
@@ -165,6 +167,35 @@ void NotificationTest::compressNotificationRemoval()
     QCOMPARE(rowsRemovedSpy.at(0).at(1), 0); // from
     QCOMPARE(rowsRemovedSpy.at(0).at(2), 0); // to
     QCOMPARE(model->rowCount(), 0);
+}
+
+void NotificationTest::discardedNotificationsAreClosed()
+{
+    // When the history is full, the oldest half is discarded. The applications must be told,
+    // otherwise their next update re-creates the notification and it pops up again.
+    const uint limit = 1000;
+
+    auto model = NotificationsModel::createNotificationsModel();
+    QSignalSpy removedSpy(&Server::self(), &Server::notificationRemoved);
+    QVERIFY(removedSpy.isValid());
+
+    for (uint i = 1; i <= limit; ++i) {
+        model->onNotificationAdded(Notification{i});
+    }
+    QCOMPARE(model->rowCount(), int(limit));
+    QCOMPARE(removedSpy.count(), 0);
+
+    model->onNotificationAdded(Notification{limit + 1});
+
+    QCOMPARE(model->rowCount(), int(limit / 2 + 1));
+    QCOMPARE(removedSpy.count(), int(limit / 2));
+    for (int i = 0; i < removedSpy.count(); ++i) {
+        QCOMPARE(removedSpy.at(i).at(0).toUInt(), uint(i + 1));
+        QCOMPARE(removedSpy.at(i).at(1).value<Server::CloseReason>(), Server::CloseReason::Expired);
+    }
+    // The newest ones are still there
+    QCOMPARE(model->rowOfNotification(limit + 1), int(limit / 2));
+    QCOMPARE(model->rowOfNotification(limit / 2), -1);
 }
 
 } // namespace NotificationManager
