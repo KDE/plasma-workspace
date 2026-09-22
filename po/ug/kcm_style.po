@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-06-01 18:18-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -177,7 +177,7 @@ msgstr "1-بەتكۈچ‎‏"
 #: stylepreview.ui:65
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr "%p%"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
@@ -465,11 +465,10 @@ msgid "Text Field"
 msgstr "تېكىستلا"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr ""
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "يېڭى GNOME/GTK پىروگرامما ئۇسلۇبىغا ئېرىش…"

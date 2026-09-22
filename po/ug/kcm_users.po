@@ -1,14 +1,14 @@
 # Uyghur translation for kcm_users.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 18:18-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,17 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
 msgid "No fingerprint device found."
-msgstr ""
+msgstr "بارماق ئىزى ئۈسكۈنىسى تېپىلمىدى."
 
 #: src/fingerprintmodel.cpp:301
 #, kde-format
 msgid "Retry scanning your finger."
-msgstr ""
+msgstr "بارماق ئىزىڭىزنى قايتا تارايدۇ."
 
 #: src/fingerprintmodel.cpp:303
 #, kde-format
@@ -41,12 +40,12 @@ msgstr ""
 #: src/fingerprintmodel.cpp:307
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
-msgstr ""
+msgstr "بارمىقىڭىزنى ئوقۇغۇچتىن ئاجرىتىپ ئاندىن قايتا سىناڭ."
 
 #: src/fingerprintmodel.cpp:315
 #, kde-format
 msgid "Fingerprint enrollment has failed."
-msgstr ""
+msgstr "بارماق ئىزىنى تىزىملىتالمىدى."
 
 #: src/fingerprintmodel.cpp:318
 #, kde-format
@@ -54,21 +53,23 @@ msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr ""
+"بۇ ئۈسكۈنىدە بوشلۇق يوق، باشقا بارماق ئىزىنى ئۆچۈرۈپ ئاندىن داۋاملاشتۇرۇش "
+"كېرەك."
 
 #: src/fingerprintmodel.cpp:321
 #, kde-format
 msgid "The device was disconnected."
-msgstr ""
+msgstr "ئۈسكۈنە ئۈزۈلدى."
 
 #: src/fingerprintmodel.cpp:326
 #, kde-format
 msgid "An unknown error has occurred."
-msgstr ""
+msgstr "نامەلۇم خاتالىق كۆرۈلدى."
 
 #: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
 #, kde-format
 msgid "Change Password"
-msgstr ""
+msgstr "ئىم ئۆزگەرت"
 
 #: src/ui/ChangePassword.qml:35
 #, kde-format
@@ -88,12 +89,12 @@ msgstr "ئىم جەزملە"
 #: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:114
 #, kde-format
 msgid "Passwords must match"
-msgstr ""
+msgstr "ئىم چوقۇم ماس كېلىشى كېرەك"
 
 #: src/ui/ChangeWalletPassword.qml:18
 #, kde-format
 msgid "Change Wallet Password?"
-msgstr ""
+msgstr "ھەميان ئىمنى ئۆزگەرتەمدۇ؟"
 
 #: src/ui/ChangeWalletPassword.qml:29
 #, kde-format
@@ -102,11 +103,13 @@ msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
+"سىز ھازىر تىزىمغا كىرىش ئىمنى ئۆزگەرتتىڭىز، ئىككىسىنىڭ ماسلىشىشىنى ساقلاپ "
+"قېلىش ئۈچۈن، كۆڭۈلدىكى KWallet ھەمياننىڭ ئىمنىمۇ ئۆزگەرتىشنى ئويلىشىڭ."
 
 #: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
 msgid "What is KWallet?"
-msgstr ""
+msgstr "KWallet ھەميان دېگەن نېمە؟"
 
 #: src/ui/ChangeWalletPassword.qml:45
 #, kde-format
@@ -121,12 +124,12 @@ msgstr ""
 #: src/ui/ChangeWalletPassword.qml:60
 #, kde-format
 msgid "Change Wallet Password"
-msgstr ""
+msgstr "ھەميان ئىمنى ئۆزگەرت"
 
 #: src/ui/ChangeWalletPassword.qml:69
 #, kde-format
 msgid "Leave Unchanged"
-msgstr ""
+msgstr "ئۆزگەرتمەي ئايرىل"
 
 #: src/ui/CreateUser.qml:15
 #, kde-format
@@ -172,7 +175,7 @@ msgstr "باشقۇرغۇچى"
 #: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgid "Account type:"
-msgstr ""
+msgstr "ھېساب تۈرى:"
 
 #: src/ui/CreateUser.qml:102
 #, kde-format
@@ -182,7 +185,7 @@ msgstr "ئىم:"
 #: src/ui/CreateUser.qml:107
 #, kde-format
 msgid "Confirm password:"
-msgstr ""
+msgstr "ئىم جەزملە:"
 
 #: src/ui/CreateUser.qml:129
 #, kde-format
@@ -200,134 +203,134 @@ msgstr "ۋاز كەچ"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "رەسىم رايونى تاللىنىدۇ"
 
 #: src/ui/EnrolledConfirmation.qml:20
 #, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
-msgstr ""
+msgstr "بارماق تىزىملىتىلدى"
 
 #: src/ui/EnrollFeedback.qml:28
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ بىگىز بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:30
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ ئوتتۇرا بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:32
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ نامسىز بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:34
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ چىمچىلاق بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:36
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ باش بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:38
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول بىگىز بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:40
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول ئوتتۇرا بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:42
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول نامسىز بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:44
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول چىمچىلاق بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:46
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول باش بارمىقىڭىزنى تەكرار بېسىڭ."
 
 #: src/ui/EnrollFeedback.qml:50
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ بىگىز بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:52
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ ئوتتۇرا بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:54
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ نامسىز بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:56
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ چىمچىلاق بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:58
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە ئوڭ باش بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:60
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول بىگىز بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:62
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول ئوتتۇرا بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:64
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول نامسىز بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:66
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول چىمچىلاق بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/EnrollFeedback.qml:68
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
+msgstr "بارماق ئىزى سەزگۈچتە سول باش بارمىقىڭىزنى تەكرار سىيرىڭ."
 
 #: src/ui/FingerprintDialog.qml:28
 #, kde-format
 msgid "Configure Fingerprints"
-msgstr ""
+msgstr "بارماق ئىزى سەپلە"
 
 #: src/ui/FingerprintDialog.qml:39
 #, kde-format
@@ -342,17 +345,17 @@ msgstr "تامام"
 #: src/ui/FingerprintList.qml:47
 #, kde-format
 msgid "Re-enroll finger"
-msgstr ""
+msgstr "بارماقنى قايتا تىزىملات"
 
 #: src/ui/FingerprintList.qml:59
 #, kde-format
 msgid "Delete fingerprint"
-msgstr ""
+msgstr "بارماق ئىزىنى ئۆچۈر"
 
 #: src/ui/FingerprintList.qml:75
 #, kde-format
 msgid "No fingerprints added"
-msgstr ""
+msgstr "ھېچقانداق بارماق ئىزى قوشۇلمىدى"
 
 #: src/ui/main.qml:20
 #, kde-format
@@ -369,126 +372,126 @@ msgstr "يېڭىدىن قوش…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr ""
+msgstr "يېڭى ئىشلەتكۈچى قوش…"
 
 #: src/ui/main.qml:137
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "ئىشلەتكۈچى سەپلىمە ھۆججىتىنى تەھرىرلەشتە بوشلۇق بېسىلىدۇ"
 
 #: src/ui/PickFinger.qml:28
 #, kde-format
 msgid "Pick a finger to enroll"
-msgstr ""
+msgstr "تىزىملىتىدىغان بارماق تاللىنىدۇ"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
-msgstr ""
+msgstr "سىما ئۆزگەرت"
 
 #: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
-msgstr ""
+msgstr "ھېچنېمە ئەمەس"
 
 #: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
-msgstr ""
+msgstr "جەسۇر قىزىل لەيلەك"
 
 #: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
-msgstr ""
+msgstr "ئەجدىھا مېۋىسى"
 
 #: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
-msgstr ""
+msgstr "تاتلىق بەرەڭگە"
 
 #: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
-msgstr ""
+msgstr "ئەتراپتىكى كەھرىۋا"
 
 #: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
-msgstr ""
+msgstr "چاقنىغان قۇياش نۇرى"
 
 #: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
-msgstr ""
+msgstr "سارغۇچ يېشىل لىمون"
 
 #: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
-msgstr ""
+msgstr "جەزبىدار يېشىل"
 
 #: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
-msgstr ""
+msgstr "ئىللىق يايلاق"
 
 #: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
-msgstr ""
+msgstr "توق كۆك"
 
 #: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
-msgstr ""
+msgstr "پىلازما كۆك"
 
 #: src/ui/PicturesSheet.qml:39
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
-msgstr ""
+msgstr "ئىللىق بىنەپشە"
 
 #: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
-msgstr ""
+msgstr "سوغۇق بىنەپشە"
 
 #: src/ui/PicturesSheet.qml:41
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
-msgstr ""
+msgstr "ياغاچ كۆمۈرى قارا"
 
 #: src/ui/PicturesSheet.qml:42
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr ""
+msgstr "ئاق قەغەز"
 
 #: src/ui/PicturesSheet.qml:43
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
-msgstr ""
+msgstr "خىش قوڭۇر"
 
 #: src/ui/PicturesSheet.qml:44
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
-msgstr ""
+msgstr "قېنىق قەھۋە رەڭ"
 
 #: src/ui/PicturesSheet.qml:63
 #, kde-format
@@ -506,13 +509,13 @@ msgstr "قىسقارتىلمىسى"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr ""
+msgstr "ھۆججەت تاللا……"
 
 #: src/ui/PicturesSheet.qml:140
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr ""
+msgstr "رەسىم تاللىنىدۇ"
 
 #: src/ui/PicturesSheet.qml:144
 #, kde-format
@@ -525,30 +528,32 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"سۈرەت ھۆججەت (بارلىق ئاساسىي ھۆججەت تۈرى) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
+"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "ئورۇن بەلگە سىنبەلگىسى"
 
 #: src/ui/PicturesSheet.qml:290
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "ئىشلەتكۈچى سىماسى ئورۇن بەلگىسى"
 
 #: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "ھۆججەتنى ئۆچۈرمەي تىزىمغا كىرگەن ئىشلەتكۈچىنى ئۆچۈرەمدۇ؟"
 
 #: src/ui/UserDetailsPage.qml:115
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr ""
+msgstr "تىزىمغا كىرگەن ئىشلەتكۈچىنى ئۆچۈرەمدۇ؟"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -576,7 +581,7 @@ msgstr "%1 ئۆچۈر"
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Change avatar"
-msgstr ""
+msgstr "سىما ئۆزگەرت"
 
 #: src/ui/UserDetailsPage.qml:185
 #, kde-format
@@ -585,6 +590,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"تىزىمغا كىرگەندە ئۆزىنىڭ ئىشلەتكۈچى ئاتىنى ئۆزگەرتەلمەيدۇ؛ بۇ ھېسابنىڭ "
+"ئىشلەتكۈچى ئاتىنى ئۆزگەرتىشتە تىزىمدىن چىقىپ ئاندىن باشقا ئىشلەتكۈچى "
+"سۈپىتىدە تىزىمغا كىرىش كېرەك."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -593,6 +601,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"تىزىمغا كىرگەن ھېسابنىڭ ئىشلەتكۈچى ئاتىنى ئۆزگەرتەلمەيدۇ؛ ئالدى بىلەن بۇ "
+"ئىشلەتكۈچىنىڭ تىزىمدىن چىقىشىنى كۈتۈش كېرەك."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -610,17 +620,17 @@ msgstr "ئېلخەت ئادرېسى:"
 #: src/ui/UserDetailsPage.qml:254
 #, kde-format
 msgid "Delete files"
-msgstr ""
+msgstr "ھۆججەت ئۆچۈر"
 
 #: src/ui/UserDetailsPage.qml:261
 #, kde-format
 msgid "Keep files"
-msgstr ""
+msgstr "ھۆججەتنى ساقلاپ قال"
 
 #: src/ui/UserDetailsPage.qml:268
 #, kde-format
 msgid "Delete User…"
-msgstr ""
+msgstr "ئىشلەتكۈچى ئۆچۈر…"
 
 #: src/ui/UserDetailsPage.qml:274
 #, kde-format
@@ -633,7 +643,7 @@ msgstr ""
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr ""
+msgstr "بارماق ئىزى كىملىك دەلىللەش سەپلە…"
 
 #: src/ui/UserDetailsPage.qml:318
 #, kde-kuit-format
@@ -644,42 +654,46 @@ msgid ""
 "programs that request them.<nl/><nl/>Logging into the system with your "
 "fingerprint is not yet supported."
 msgstr ""
+"ئېكران قۇلۇپىنى ئېچىشتا ئىم ئورنىغا بارماق ئىزى ئىشلىتىشكە بولىدۇ، "
+"پىروگرامما  ۋە بۇيرۇق قۇرى پىروگراممىسى باشقۇرغۇچى ئىجازىتىنى ئىلتىماس "
+"قىلغاندا كىملىك دەلىللەيدۇ.<nl/><nl/>نۆۋەتتە بارماق ئىزى بىلەن سىستېمىغا "
+"تىزىمغا كىرىشنى تېخى قوللىمايدۇ."
 
 #: src/user.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "سۈرەتنى قىرقىيالمىدى: %1"
 
 #: src/user.cpp:337
 #, kde-format
 msgid "Could not get permission to save user %1"
-msgstr ""
+msgstr "ئىشلەتكۈچى %1 نى ساقلاشتا ئىجازەتكە ئېرىشەلمىدى"
 
 #: src/user.cpp:342
 #, kde-format
 msgid "There was an error while saving changes"
-msgstr ""
+msgstr "ئۆزگەرتىشنى ساقلاۋاتقاندا خاتالىق كۆرۈلگەن"
 
 #: src/user.cpp:474
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
-msgstr ""
+msgstr "سۈرەت چوڭلۇقىنى ئۆزگەرتەلمىدى: ۋاقىتلىق ھۆججەتنى ئاچالمىدى"
 
 #: src/user.cpp:482
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
-msgstr ""
+msgstr "سۈرەت چوڭلۇقىنى ئۆزگەرتەلمىدى: ۋاقىتلىق ھۆججەتكە يازالمىدى"
 
 #: src/usermodel.cpp:170
 #, kde-format
 msgid "Your Account"
-msgstr ""
+msgstr "ھېسابىڭىز"
 
 #: src/usermodel.cpp:170
 #, kde-format
 msgid "Other Accounts"
-msgstr ""
+msgstr "باشقا ھېساب"
 
 #~ msgid "Cancel"
 #~ msgstr "ۋاز كەچ"

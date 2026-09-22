@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:17-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,13 +22,13 @@ msgstr ""
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current pointer theme"
-msgstr ""
+msgstr "نۆۋەتتىكى نىشانلىغۇچ ئۆرنەكنىڭ ئاتى"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current pointer size"
-msgstr ""
+msgstr "نۆۋەتتىكى نىشانلىغۇچ چوڭلۇقى"
 
 #: kcmcursortheme.cpp:375
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "«icons» قىسقۇچىنى قۇرالمىدى."
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
-msgstr "سىنبەلگە  ئۆرنەك قىسقۇچىدا %1 ئاتلىق ئۆرنەك مەۋجۇت. ئالماشتۇرامسىز؟"
+msgstr ""
 
 #: kcmcursortheme.cpp:440
 #, kde-format
@@ -88,6 +88,9 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"بۇ قورال نۆۋەتتىكى Plasma جەريانچاقنىڭ چاشقىنەك نىشانلىغۇچ ئۆرنىكىنى "
+"تەڭشىشىگە يول قويىدۇ، ئۇنى ئىشلەتكىلى بولمايدىغان لايىھە قىلىپ تەڭشەش ياكى  "
+"ئىشلىتىلىۋاتقان لايىھە قىلىپ تەڭشەشتىن ساقلىنىدۇ."
 
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
@@ -95,6 +98,8 @@ msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
 msgstr ""
+"نۆۋەتتىكى Plasma جەريانچاق (تولۇق يول يەتكۈزۈلسە يولنىڭ پەقەت ئاخىرقى "
+"بۆلىكىلا ئىشلىتىلىدۇ) قا تەڭشىمەكچى بولغان نىشانلىغۇچ ئۆرنەك ئىسمى"
 
 #: plasma-apply-cursortheme.cpp:43
 #, kde-format
@@ -117,6 +122,8 @@ msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr ""
+"ئىلتىماس قىلىنغان ئۆرنەك «%1‎‏» ئاللىبۇرۇن نۆۋەتتىكى  Plasma جەريانچاقنىڭ "
+"ئۆرنىكىگە تەڭشەلگەن."
 
 #: plasma-apply-cursortheme.cpp:77
 #, kde-format
@@ -124,6 +131,8 @@ msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr ""
+"چاشقىنەك نىشانلىغۇچ ئۆرنىكى %1 نى مۇۋەپپەقىيەتلىك ھالدا نۆۋەتتىكى Plasma "
+"جەريانچاققا قوللاندى"
 
 #: plasma-apply-cursortheme.cpp:79
 #, kde-format
@@ -131,6 +140,8 @@ msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
 msgstr ""
+"يېڭىدىن قوللانغان چاشقىنەك نىشانلىغۇچ ئۆرنەكنىڭ توغرا كۆرۈنۈشى ئۈچۈن Plasma "
+"جەريانچاقنى قايتا قوزغىتىشىڭىز كېرەك."
 
 #: plasma-apply-cursortheme.cpp:89
 #, kde-format
@@ -142,7 +153,7 @@ msgstr ""
 #: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
-msgstr ""
+msgstr "سىستېمىڭىزدا تۆۋەندىكى چاشقىنەك نىشانلىغۇچ ئۆرنىكى بار:"
 
 #: plasma-apply-cursortheme.cpp:102
 #, kde-format
@@ -153,24 +164,24 @@ msgstr "(بۇ Plasma جەريانچاقنىڭ نۆۋەتتىكى ئۆرنىكى)
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
-msgstr ""
+msgstr "نىشانلىغۇچ ئۆرنەكنى چىقىرىۋەت"
 
 #: ui/Delegate.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
-msgstr ""
+msgstr "ئاكتىپ نىشانلىغۇچ ئۆرنىكىنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
-msgstr ""
+msgstr "سىستېما ئورناتقاننىشانلىغۇچ ئۆرنىكىنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this pointer theme"
-msgstr ""
+msgstr "بۇ نىشانلىغۇچ ئۆرنىكىنى ئۆچۈرمە"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -188,7 +199,7 @@ msgstr "پىروگرامما قوزغالغاندا قويىدىغان جانل�
 #, kde-format
 msgctxt "@label"
 msgid "Pointer feedback:"
-msgstr ""
+msgstr "نىشانلىغۇچ قايتۇرما ئىنكاسى:"
 
 #: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
@@ -267,7 +278,7 @@ msgstr "ئۆرنەك ئاچ"
 #: ui/main.qml:190
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "نىشانلىغۇچ ئۆرنەك ھۆججىتى (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:56
 #, kde-format

@@ -1,14 +1,14 @@
 # Uyghur translation for plasmashellprivateplugin.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 18:27-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -67,18 +67,18 @@ msgstr "باشقا"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
+msgstr[0] "%1 پائالىيەت"
 
 #: calendar/qml/DayDelegate.qml:98
 #, kde-format
 msgid "No events"
-msgstr ""
+msgstr "پائالىيەت يوق"
 
 #: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:145
 #, kde-format
@@ -98,17 +98,17 @@ msgstr "يىل"
 #: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "ئالدىنقى ئاي"
 
 #: calendar/qml/MonthViewHeader.qml:208
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "ئالدىنقى يىل"
 
 #: calendar/qml/MonthViewHeader.qml:210
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "ئالدىنقى ئون يىل"
 
 #: calendar/qml/MonthViewHeader.qml:229
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "بۈگۈن"
 #: calendar/qml/MonthViewHeader.qml:230
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "يىلنامەنى بۈگۈنگە ئەسلىگە قايتۇر"
 
 #: calendar/qml/MonthViewHeader.qml:243
 #, kde-format
@@ -134,7 +134,7 @@ msgstr "كېيىنكى يىل"
 #: calendar/qml/MonthViewHeader.qml:247
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "كېيىنكى ئون يىل"
 
 #: calendar/qml/MonthViewHeader.qml:306
 #, kde-format
@@ -169,13 +169,14 @@ msgstr ""
 #: sessionsprivate/kscreenlockersettings.kcfg:10
 #, kde-format
 msgid "Screen lock enabled"
-msgstr ""
+msgstr "ئېكران قۇلۇپى قوزغىتىلدى"
 
 #. i18n: ectx: whatsthis, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:11
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
 msgstr ""
+"بەلگىلىك ۋاقىتتىن كېيىن ئېكراننى قۇلۇپلاش ياكى قۇلۇپلىماسلىقنى تەڭشەيدۇ."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -225,7 +226,7 @@ msgstr "قولايلىق"
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "پىروگرامما قوزغاتقۇچ"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
@@ -240,7 +241,7 @@ msgstr "چېسلا ۋە ۋاقىت"
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "ئىجادىيەت قورالى"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
@@ -250,7 +251,7 @@ msgstr "مائارىپ"
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "مۇھىت ۋە ھاۋا رايى"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
@@ -265,7 +266,7 @@ msgstr "ھۆججەت سىستېمىسى"
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr ""
+msgstr "ئويۇن ۋە تاماشا"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
@@ -280,7 +281,7 @@ msgstr "تىل"
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "خەرىتە"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
@@ -295,17 +296,17 @@ msgstr "كۆپ ۋاسىتە"
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "توردىكى مۇلازىمەت"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr ""
+msgstr "شەخسىي ئۇچۇر"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "ئىشلەپچىقىرىش"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
@@ -320,7 +321,7 @@ msgstr "قورال"
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "كۆزنەك ۋە ۋەزىپە"
 
 #: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
@@ -349,7 +350,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr ""
+msgstr "ئىشلەتكۈچى ئورناتقان"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -367,34 +368,34 @@ msgstr "كاتېگورىيە:"
 #: shellprivate/widgetexplorer.cpp:236
 #, kde-format
 msgid "Download New Plasma Widgets"
-msgstr ""
+msgstr "يېڭى Plasma ئەپچە چۈشۈر"
 
 #: shellprivate/widgetexplorer.cpp:245
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr ""
+msgstr "يەرلىك ھۆججەتتىن ئەپچە ئورنات…"
 
 #: shellprivate/widgetexplorer.cpp:484
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr ""
+msgstr "يېڭى ئەپچىگە ئېرىش"
 
 #: shellprivate/widgetexplorer.cpp:503
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr ""
+msgstr "Plasma ئەپچە ھۆججىتى تاللىنىدۇ"
 
 #: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr ""
+msgstr "%1 بوغچىنى ئورنىتالمىدى: %2."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format
 msgid "Installation Failure"
-msgstr ""
+msgstr "ئورنىتالمىدى"
 
 #: timezoneselector/TimezoneSelector.qml:107
 #, kde-format
@@ -403,6 +404,8 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"مەزكۇر خەرىتىدە نۆۋەتتە تاللانغان ۋاقىت رايونىنى كۆرۈنۈشلەشتۈرۈشنى "
+"ئىشلەتكىلى بولمايدۇ"
 
 #: timezoneselector/TimezoneSelector.qml:122
 #: timezoneselector/TimezoneSelector.qml:347
@@ -416,7 +419,7 @@ msgstr "تاللا…"
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "رايون:"
 
 #: timezoneselector/TimezoneSelector.qml:151
 #: timezoneselector/TimezoneSelector.qml:376
@@ -440,9 +443,15 @@ msgstr "كىچىكلەت"
 #: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "ۋاقىت رايونى جاي تاللىغۇچ"
 
 #: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "ۋاقىت رايونى ئورۇن تاللىغۇچ"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "ئېكران قوغدىغۇچ مۆھلىتى"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "ئېكران قۇلۇپلاشتىن ئىلگىرى كۈتىدىغان ۋاقىتنى تەڭشەيدۇ."

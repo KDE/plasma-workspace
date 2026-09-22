@@ -1,14 +1,14 @@
 # Uyghur translation for kded_devicenotifications.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-29 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 18:19-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: devicenotifications.cpp:449
 #, kde-format
@@ -38,36 +37,36 @@ msgstr "كۆرسەتكۈچ چىقىرىۋېتىلدى"
 #: devicenotifications.cpp:471
 #, kde-format
 msgid "A display has been disconnected."
-msgstr ""
+msgstr "بىر كۆرسەتكۈچ ئۈزۈلگەن."
 
 #: devicenotifications.cpp:517
 #, kde-format
 msgid "%1 has been connected."
-msgstr ""
+msgstr "%1 باغلاندى."
 
 #: devicenotifications.cpp:517
 #, kde-format
 msgid "A USB device has been connected."
-msgstr ""
+msgstr "USB ئۈسكۈنە باغلاندى."
 
 #: devicenotifications.cpp:522
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
-msgstr ""
+msgstr "USB ئۈسكۈنىسى بايقالدى"
 
 #: devicenotifications.cpp:560
 #, kde-format
 msgid "%1 has been disconnected."
-msgstr ""
+msgstr "%1 ئۈزۈلگەن."
 
 #: devicenotifications.cpp:560
 #, kde-format
 msgid "A USB device has been disconnected."
-msgstr ""
+msgstr "USB ئۈسكۈنە ئۈزۈلگەن.."
 
 #: devicenotifications.cpp:565
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr ""
+msgstr "USB ئۈسكۈنە چىقىرىۋېتىلدى"

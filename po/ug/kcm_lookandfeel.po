@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:48+0000\n"
-"PO-Revision-Date: 2026-06-01 18:17-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -32,32 +32,36 @@ msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "سۈرەت ھۆججىتى (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr ""
+msgstr "ئومۇمىيەت كۆرۈنۈش ۋە تۇيغۇ"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "ئومۇمىيەت كۆرۈنۈش ۋە تۇيغۇ بوغچىسى، زاپاس"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"بىر كۈندىكى ۋاقىتقا ئاساسەن قاراڭغۇ ۋە يورۇق ئومۇمىيەت ئۆرنەك ئارىسىدا "
+"ئالماشتۇرىدۇ"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"كومپيۇتېر بىكار تۇرغاندا قاراڭغۇ ۋە يورۇق ئومۇمىيەت ئۆرنەك ئارىسىدا "
+"ئالماشتۇرىدۇ"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -66,11 +70,13 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"كومپيۇتېر قانچىلىك ۋاقىت بىكار تۇرغاندا قاراڭغۇ ۋە يورۇق ئومۇمىيەت ئۆرنەك "
+"ئارىسىدا ئالماشتۇرىدۇ، بىرلىكى سېكۇنت"
 
 #: tool/lnftool.cpp:32
 #, kde-format
 msgid "Global Theme Tool"
-msgstr ""
+msgstr "ئومۇمىيەت ئۆرنەك قورالى"
 
 #: tool/lnftool.cpp:34
 #, kde-format
@@ -78,16 +84,18 @@ msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
 msgstr ""
+"كۆرۈنۈش ۋە تۇيغۇ ئۆزگەرتىدىغان ئومۇمىيەت ئۆرنەك بوغچىسىنى قوللىنىدىغان "
+"بۇيرۇق قۇرى قورالى."
 
 #: tool/lnftool.cpp:36
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
-msgstr ""
+msgstr "نەشر ھوقۇقىغا ئىگە 2017، Marco Martin"
 
 #: tool/lnftool.cpp:37
 #, kde-format
 msgid "Marco Martin"
-msgstr "Marco Martin"
+msgstr ""
 
 #: tool/lnftool.cpp:37
 #, kde-format
@@ -97,7 +105,7 @@ msgstr "ئاسرىغۇچى"
 #: tool/lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
-msgstr ""
+msgstr "ئىشلىتىلىشچان ئومۇمىيەت ئۆرنەك بوغچىسىنى تىزىپ كۆرسىتىدۇ"
 
 #: tool/lnftool.cpp:49
 #, kde-format
@@ -110,17 +118,17 @@ msgstr ""
 #: tool/lnftool.cpp:51
 #, kde-format
 msgid "packagename"
-msgstr ""
+msgstr "بوغچا ئاتى"
 
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "ئالدىنى ئېلىش --apply  ئاپتوماتىك ھالەتنى چەكلەيدۇ"
 
 #: tool/lnftool.cpp:53
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
-msgstr ""
+msgstr "Plasma ئۈستەلئۈستى جايلاشتۇرۇشنى ئەسلىگە قايتۇرىدۇ"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -132,7 +140,7 @@ msgstr "مەڭگۈلۈك ئۆچۈر"
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "بۇ ئۆرنەكنى راستتىنلا مەڭگۈلۈك ئۆچۈرەمسىز؟"
 
 #: ui/ConfirmDeletionDialog.qml:21
 #, kde-format
@@ -153,12 +161,14 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"تاللانغان يورۇق ئومۇمىيەت ئۆرنەك كۈندۈزدە ئىشلىتىلىدۇ، قاراڭغۇ ئۆرنەك كېچىدە "
+"ئىشلىتىلىدۇ."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "كېچە/كۈندۈز دەۋرىيلىكى سەپلىمىسى…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
@@ -170,13 +180,13 @@ msgstr "ئاق"
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "قاراڭغۇ"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "ئالماشتۇرۇشتىن ئىلگىرى كۈتىدىغان بىكار ۋاقتى:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
@@ -189,25 +199,25 @@ msgstr[0] "%1 سېكۇنت"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "كومپيۇتېرنى ئىشلىتىۋاتقاندا ئامالنىڭ بارىچە ئۈزۈۋېتىشنى ئازايتىدۇ."
 
 #: ui/LookAndFeelSelector.qml:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr ""
+msgstr "يورۇق ئومۇمىيەت ئۆرنەكنى تاللا"
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr ""
+msgstr "قاراڭغۇ ئومۇمىيەت ئۆرنەكنى تاللا"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
-msgstr ""
+msgstr "ئۆرنەكنى ئالدىن كۆزەت"
 
 #: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, kde-format
@@ -219,19 +229,19 @@ msgstr "ئۆرنەكنى چىقىرىۋەت"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "ئاكتىپ ئۆرنەكنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/LookAndFeelSelector.qml:61 ui/StaticLookAndFeel.qml:79
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "سىستېما ئورناتقان ئۆرنەكنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/LookAndFeelSnapshot.qml:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "نۆۋەتتىكى ئۆرنەكنى ساقلا"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -240,18 +250,20 @@ msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
 msgstr ""
+"Plasma نىڭ نۆۋەتتىكى قىياپەت ۋە ئۆرنەك تەڭشىكى يېڭى ئومۇمىيەت ئۆرنەككە "
+"ساقلىنىدۇ."
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "ئالدىن كۆزىتىش سۈرىتى قوش…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "ئېكران كەسمىسى تۇت…"
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
@@ -263,7 +275,7 @@ msgstr "ئاتى:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "ئات كىرگۈزۈلىدۇ…"
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -277,25 +289,25 @@ msgstr "جەزملە"
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "بۇ ئاتتا بىر ئومۇمىيەت ئۆرنەك ياكى كىملىك مەۋجۇت."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "ئالدىن كۆزىتىش سۈرىتى تاللىنىدۇ"
 
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "كېچىدە قاراڭغۇ ھالەتكە ئالماشتۇرىدۇ"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "نۆۋەتتىكى ئۆرنەكنى ساقلا…"
 
 #: ui/main.qml:45
 #, kde-format
@@ -306,17 +318,17 @@ msgstr "يېڭىسىغا ئېرىش…"
 #: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
-msgstr ""
+msgstr "جايلاشتۇرۇش تەڭشىكى:"
 
 #: ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
-msgstr ""
+msgstr "ئۈستەلئۈستى جايلاشتۇرۇش"
 
 #: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "ماۋزۇ بالداق توپچە جايلاشتۇرۇش"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
 #, kde-format
@@ -324,11 +336,13 @@ msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
+"ئۈستەلئۈستى جايلاشتۇرۇش قوللىنىلسا نۆۋەتتىكى ئۈستەلئۈستى، كۆزنەكچە، قونداق "
+"ۋە ئەپچە تەڭشىكى ئۆچۈرۈلۈپ ئورنىغا ئۆرنەكتە بەلگىلەنگىنى ئالماشتۇرۇلىدۇ."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
-msgstr ""
+msgstr "قىياپەت تەڭشەك:"
 
 #: ui/MoreOptions.qml:69
 #, kde-format
@@ -343,12 +357,12 @@ msgstr "پىروگرامما ئۇسلۇبى"
 #: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
-msgstr ""
+msgstr "كۆزنەك بېزەك ئۇسلۇبى"
 
 #: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
-msgstr ""
+msgstr "كۆزنەك بېزەك چوڭلۇقى"
 
 #: ui/MoreOptions.qml:73
 #, kde-format
@@ -373,7 +387,7 @@ msgstr "خەت نۇسخا"
 #: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
-msgstr ""
+msgstr "ۋەزىپە ئالماشتۇرغۇچ"
 
 #: ui/MoreOptions.qml:78
 #, kde-format
@@ -383,29 +397,29 @@ msgstr "قوزغىتىش ئېكرانى"
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr ""
+msgstr "بۇ ئومۇمىيەت ئۆرنەك تۆۋەندىكىلەرنى قوللىنىدۇ:"
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
-msgstr ""
+msgstr "قىياپەت تەڭشەك"
 
 #: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr ""
+msgstr "• قىياپەت تەڭشەك"
 
 #: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
-msgstr ""
+msgstr "ئۈستەلئۈستى ۋە كۆزنەك جايلاشتۇرۇش"
 
 #: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr ""
+msgstr "• ئۈستەلئۈستى ۋە كۆزنەك جايلاشتۇرۇش"
 
 #: ui/SimpleOptions.qml:71
 #, kde-format
@@ -418,7 +432,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
-msgstr ""
+msgstr "ئۈستەلئۈستى جايلاشتۇرۇش ئىچىدە"
 
 #: ui/StaticLookAndFeel.qml:112
 #, kde-format
@@ -426,14 +440,14 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr ""
+msgstr "%1 نى قوللىنامدۇ؟"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Choose what to apply…"
-msgstr ""
+msgstr "نېمىنى قوللىنىشنى تاللا…"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
+msgstr "ئازراق تاللانما كۆرسەت…"

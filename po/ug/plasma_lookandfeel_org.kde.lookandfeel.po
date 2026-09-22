@@ -1,14 +1,14 @@
 # Uyghur translation for plasma_lookandfeel_org.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 18:25-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -27,15 +27,79 @@ msgctxt ""
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma ئۈستەلئۈستى مۇھىتى"
 
+#~ msgid "Installing software updates and restarting in 1 second"
+#~ msgid_plural "Installing software updates and restarting in %1 seconds"
+#~ msgstr[0] ""
+#~ "يۇمشاق دېتال يېڭىلانمىسىنى ئورنىتىۋاتىدۇ ۋە ‏‎%1‎‏ سېكۇنتتا قايتا قوزغىلىدۇ"
+
+#~ msgid "Restarting in 1 second"
+#~ msgid_plural "Restarting in %1 seconds"
+#~ msgstr[0] "%1 سېكۇنتتا قايتا قوزغىلىدۇ"
+
+#~ msgid "Logging out in 1 second"
+#~ msgid_plural "Logging out in %1 seconds"
+#~ msgstr[0] "يەنە %1 سېكۇنتتا تىزىمدىن چىقىدۇ"
+
+#~ msgid "Installing software updates and shutting down in 1 second"
+#~ msgid_plural "Installing software updates and shutting down in %1 seconds"
+#~ msgstr[0] "يۇمشاق دېتال يېڭىلانمىسىنى ئورنىتىۋاتىدۇ ۋە ‏‎%1‎‏ سېكۇنتتا تاقايدۇ"
+
+#~ msgid "Shutting down in 1 second"
+#~ msgid_plural "Shutting down in %1 seconds"
+#~ msgstr[0] "%1‎‏ سېكۇنتتا تاقىلىدۇ"
+
+#~ msgid "When restarted, the computer will enter UEFI firmware settings."
+#~ msgstr "قايتا قوزغالغاندا، كومپيۇتېر UEFI مۇقىم دېتال تەڭشىكىگە كىرىدۇ."
+
+#~ msgid "When restarted, the computer will enter the firmware setup screen."
+#~ msgstr "قايتا قوزغالغاندا، كومپيۇتېر مۇقىم دېتال تەڭشەك ئېكرانىغا كىرىدۇ."
+
+#~ msgid "When restarted, the computer will enter the boot loader menu."
+#~ msgstr "قايتا قوزغالغاندا، كومپيۇتېر قوزغىتىش يۈكلىگۈچ تىزىملىكىگە كىرىدۇ."
+
+#~ msgctxt "%1 is a boot loader entry"
+#~ msgid "When restarted, the computer will switch to %1."
+#~ msgstr "قايتا قوزغالغاندا، كومپيۇتېر %1 غا ئالمىشىدۇ."
+
 #~ msgctxt "Suspend to RAM"
 #~ msgid "Slee&p"
 #~ msgstr "ئۇخلات(&P)"
 
+#~ msgctxt "Suspend to RAM"
+#~ msgid "Slee&p Now"
+#~ msgstr "ھازىرلا ئۇخلات(&P)"
+
 #~ msgid "&Hibernate"
 #~ msgstr "ئۈچەك(&H)"
 
+#~ msgid "&Hibernate Now"
+#~ msgstr "ھازىرلا ئۈچەككە كىر(&H)"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates and Restart"
+#~ msgstr "يېڭىلانمىنى ئورنىتىپ قايتا قوزغات"
+
 #~ msgid "&Restart"
 #~ msgstr "قايتا قوزغات(&R)"
+
+#~ msgid "&Restart Now"
+#~ msgstr "ھازىرلا قايتا قوزغات(&R)"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates and Shut Down"
+#~ msgstr "يېڭىلانمىنى ئورنىتىپ ئاندىن تاقا"
+
+#~ msgid "&Shut Down"
+#~ msgstr "تاقا(&S)"
+
+#~ msgid "&Shut Down Now"
+#~ msgstr "ھازىرلا تاقا(&S)"
+
+#~ msgid "&Log Out"
+#~ msgstr "تىزىمدىن چىق(&L)"
+
+#~ msgid "&Log Out Now"
+#~ msgstr "ھازىرلا تىزىمدىن چىق(&L)"
 
 #~ msgid "&Cancel"
 #~ msgstr "ۋاز كەچ(&C)"

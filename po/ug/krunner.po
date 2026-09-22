@@ -1,14 +1,14 @@
 # Uyghur translation for krunner.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-10 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:22-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,22 +30,22 @@ msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 #: main.cpp:58 view.cpp:45
 #, kde-format
 msgid "KRunner"
-msgstr "KRunner"
+msgstr ""
 
 #: main.cpp:58
 #, kde-format
 msgid "Run Command interface"
-msgstr ""
+msgstr "بۇيرۇق ئارايۈزىنى ئىجرا قىل"
 
 #: main.cpp:64
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
-msgstr ""
+msgstr "چاپلاش تاختىسىدىكى مەزمۇننى KRunner سۈرۈشتۈرۈش سۈپىتىدە ئىشلىتىدۇ"
 
 #: main.cpp:65
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr ""
+msgstr "KRunner نى ئارقا سۇپىدا ئىجرا قىلىپ، ئۇنى كۆرسەتمەيدۇ."
 
 #: main.cpp:66
 #, kde-format
@@ -56,39 +55,39 @@ msgstr "مەۋجۇت ئۈلگىنى ئالماشتۇر"
 #: main.cpp:67
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "بېرىلگەن قىستۇرمىنىڭ نەتىجىسىنىلا كۆرسەت"
 
 #: main.cpp:68
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "بار قىستۇرمىنى تىزىپ كۆرسەت"
 
 #: main.cpp:75
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
-msgstr ""
+msgstr "ئىجرا قىلىدىغان سۈرۈشتۈرۈش، پەقەت «-c» تەمىنلەنمىگەندىلا ئىشلىتىلىدۇ"
 
 #: main.cpp:84
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "ئىشلەتكىلى بولىدىغان KRunner قىستۇرمىسى، قىستۇرما كىملىكى"
 
 #: qml/RunCommand.qml:109 qml/RunCommand.qml:110 qml/RunCommand.qml:112
 #, kde-format
 msgid "Show Usage Help"
-msgstr ""
+msgstr "ئىشلىتىش ياردىمىنى كۆرسەت"
 
 #: qml/RunCommand.qml:125
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "پەقەت %1 نىڭ نەتىجىسىنىلا كۆرسىتىدۇ"
 
 #: qml/RunCommand.qml:139
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "«%1» ئىزدە…"
 
 #: qml/RunCommand.qml:140
 #, kde-format
@@ -104,12 +103,12 @@ msgstr "سەپلە"
 #: qml/RunCommand.qml:297
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr ""
+msgstr "KRunner قىلمىشىنى سەپلەيدۇ"
 
 #: qml/RunCommand.qml:300
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "KRunner نى سەپلە…"
 
 #: qml/RunCommand.qml:308
 #, kde-format
@@ -119,7 +118,7 @@ msgstr "مۇقىم"
 #: qml/RunCommand.qml:309
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "ئىزدەشنى مىخلا"
 
 #: qml/RunCommand.qml:311
 #, kde-format
@@ -129,7 +128,7 @@ msgstr "ئوچۇق تۇت"
 #: qml/RunCommand.qml:373 qml/RunCommand.qml:379
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "يېقىنقى سۈرۈشتۈرۈش"
 
 #: qml/RunCommand.qml:377
 #, kde-format

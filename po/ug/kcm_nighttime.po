@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-15 00:48+0000\n"
-"PO-Revision-Date: 2026-06-01 18:18-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -32,39 +32,39 @@ msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
 "[based on]'"
 msgid "Determine sunrise and sunset times:"
-msgstr ""
+msgstr "كۈن چىقىش ۋە كۈن پېتىش ۋاقتىنى جەزملەش ئۇسۇلى:"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr ""
+msgstr "ئۈسكۈنە ئورنى ئاساسىدا"
 
 #: ui/main.qml:69
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
-msgstr ""
+msgstr "ئىختىيارىي ۋاقىت ئىشلىتىدۇ"
 
 #: ui/main.qml:84
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise:"
-msgstr ""
+msgstr "كۈن چىقىش:"
 
 #: ui/main.qml:101
 #, kde-format
 msgctxt "@label"
 msgid "Sunset:"
-msgstr ""
+msgstr "كۈن پېتىش:"
 
 #: ui/main.qml:117
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Transition duration:"
-msgstr ""
+msgstr "ئۆتۈشمە مۇددىتى:"
 
 #: ui/main.qml:122
 #, kde-format
@@ -82,6 +82,12 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"پىروگرامما <application>GeoClue2</application> مۇلازىمىتى ئارقىلىق قەرەللىك "
+"ھالدا ئۈسكۈنىنىڭ ئورۇن ئۇچۇرىنى يېڭىلايدۇ. GeoClue2 كۆچمە ئالاقە مۇنارى ۋە "
+"يەر شارى ئورۇن بەلگىلەش سىستېمىسى GPS ئارقىلىق ئۈچ بۇلۇڭلۇق ئۆلچەش ئۇسۇلى "
+"ئارقىلىق ئۈسكۈنە ئورنىنى بەلگىلەيدۇ (ئەگەر ئىشلەتكىلى بولسا)، ئۇنداق بولمىسا "
+"ئۈسكۈنىنىڭ IP ئادرېسىنى <link url='https://geoip.com/privacy/'>GeoIP</link> "
+"غا يوللاپ ئورۇن ئۇچۇرىغا ئېرىشىدۇ."
 
 #: ui/main.qml:141
 #, kde-kuit-format
@@ -97,13 +103,13 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "ئورۇننى ئۆزلۈكىدىن بايقا"
 
 #: ui/main.qml:167
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr ""
+msgstr "قولدا كىرگۈزۈلگەن ئورۇننى ئىشلىتىدۇ:"
 
 #: ui/main.qml:179
 #, kde-format
@@ -121,25 +127,25 @@ msgstr "مېرىدىئان(ئۇزۇنلۇق):"
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr ""
+msgstr "كۈن چىقىش %1 دە باشلىنىپ %2 دا ئاخىرلىشىدۇ"
 
 #: ui/SunPath.qml:57
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise"
-msgstr ""
+msgstr "كۈن چىقىش"
 
 #: ui/SunPath.qml:77
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
-msgstr ""
+msgstr "كۈن پېتىش %1 دە باشلىنىپ %2 دا ئاخىرلىشىدۇ"
 
 #: ui/SunPath.qml:82
 #, kde-format
 msgctxt "@label"
 msgid "Sunset"
-msgstr ""
+msgstr "كۈن پېتىش"
 
 #: ui/SunPath.qml:107
 #, kde-format
@@ -169,21 +175,21 @@ msgstr ""
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ":"
+msgstr ""
 
 #: ui/WorldMap.qml:76
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "خەرىتىدىن ئورنىڭىزنى چېكىپ تاللاڭ."
 
 #: ui/WorldMap.qml:77
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "خەرىتىدىن ئورنىڭىزنى چېكىپ تاللاڭ."
 
 #: ui/WorldMap.qml:190
 #, kde-format
@@ -204,3 +210,7 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link> ئۆزگەرتكەن <link url='https://commons."
+"wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>دۇنيا "
+"ئورۇن خەرىتىسى</link>"

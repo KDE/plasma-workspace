@@ -1,14 +1,14 @@
 # Uyghur translation for plasma_interactiveconsole.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2026-06-01 18:25-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: interactiveconsole.cpp:65
 #, kde-format
@@ -27,13 +26,13 @@ msgstr "ئىجرا قىل(&E)"
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
-msgstr "Plasma"
+msgstr ""
 
 #: interactiveconsole.cpp:67
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
-msgstr "KWin"
+msgstr ""
 
 #: interactiveconsole.cpp:68
 #, kde-format
@@ -58,7 +57,7 @@ msgstr "يۈكلە"
 #: interactiveconsole.cpp:106
 #, kde-format
 msgid "Use"
-msgstr ""
+msgstr "ئىشلەت"
 
 #: interactiveconsole.cpp:171
 #, kde-format
@@ -68,24 +67,24 @@ msgstr "چىقار"
 #: interactiveconsole.cpp:285
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
-msgstr ""
+msgstr "قوليازما ھۆججەت <b>%1</b> نى يۈكلىيەلمىدى"
 
 #: interactiveconsole.cpp:334
 #, kde-format
 msgid "Open Script File"
-msgstr ""
+msgstr "قوليازما ھۆججەت ئاچ"
 
 #: interactiveconsole.cpp:449
 #, kde-format
 msgid "Save Script File"
-msgstr ""
+msgstr "قوليازما ھۆججىتىنى ساقلا"
 
 #: interactiveconsole.cpp:538
 #, kde-format
 msgid "Executing script at %1"
-msgstr ""
+msgstr "قوليازمىنى %1 دا ئىجرا قىلىۋاتىدۇ"
 
 #: interactiveconsole.cpp:590
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
-msgstr ""
+msgstr "ئىجرا قىلىش ۋاقتى: %1ms"

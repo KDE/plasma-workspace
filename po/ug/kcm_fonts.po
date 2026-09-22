@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:17-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,12 +69,12 @@ msgstr "يوق"
 #: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
-msgstr "RGB"
+msgstr ""
 
 #: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
-msgstr "BGR"
+msgstr ""
 
 #: kxftconfig.cpp:462
 #, kde-format
@@ -122,7 +122,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr "%1 %2pt"
+msgstr ""
 
 #: ui/main.qml:39
 #, kde-format
@@ -143,8 +143,6 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
-"بەك چوڭ خەت نۇسخىسى غەلىتە كۆرسىتىش نەتىجىسىنى پەيدا قىلىشى مۇمكىن. بەك چوڭ "
-"خەت نۇسخىسى ئىشلىتىشنىڭ ئورنىغا ئومۇمىيەت ئېكران نىسبىتىنى تەڭشەشنى ئويلىشىڭ."
 
 #: ui/main.qml:77
 #, kde-kuit-format
@@ -154,10 +152,6 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
-"«كۆرسىتىش» خەت نۇسخىسى<link url='https://wikipedia.org/wiki/"
-"Display_typeface'>كومپيۇتېر ئېكرانىدا كۆرسىتىشكە لايىھەلەنمىگەن</link>، "
-"غەلىتە كۆرسىتىش نەتىجىسى پەيدا قىلىشى مۇمكىن. باشقا خەت نۇسخىسى ئىشلىتىشنى "
-"ئويلىشىڭ."
 
 #: ui/main.qml:95
 #, kde-format
@@ -166,8 +160,6 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
-"Plasma چوڭلۇقى 4pt دىن كىچىك خەت نۇسخىسىنى ئىشلىتىشكە لايىھەلەنمىگەن. خەت "
-"نۇسخىسىنىڭ چوڭلۇقى 4pt گە ئەسلىگە قايتۇرۇلىدۇ."
 
 #: ui/main.qml:111
 #, kde-format
@@ -176,9 +168,6 @@ msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"بەك كىچىك خەت نۇسخىسى غەلىتە كۆرسىتىش نەتىجىسىنى پەيدا قىلىشى مۇمكىن. بەك "
-"كىچىك خەت نۇسخىسى ئىشلىتىشنىڭ ئورنىغا ئومۇمىيەت ئېكران نىسبىتىنى تەڭشەشنى "
-"ئويلىشىڭ."
 
 #: ui/main.qml:137
 #, kde-format
@@ -265,10 +254,6 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
-"ئېكراندىكى پىكسېل ئادەتتە شادىغا توغرىلىنىدۇ. شۇڭلاشقا بۇ شادىغا ماس "
-"كەلمەيدىغان خەت نۇسخىسىنىڭ شەكلى <emphasis>سىلىقلاش</emphasis> تېخنىكىسىنى "
-"ئىشلەتمىگۈچە ئوڭغۇل دوڭغۇل ۋە خاتا كۆرۈنىدۇ. ئادەتتە تاللانمىدا مەسىلە "
-"كۆرۈلمىسىلا بۇ تاللانمىنى قوزغىتىشنى خالايسىز."
 
 #: ui/main.qml:248
 #, kde-format
@@ -278,7 +263,7 @@ msgstr "سىلىقلاش دائىرىسىنىڭ سىرتىدا"
 #: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
-msgstr "%1 pt"
+msgstr ""
 
 #: ui/main.qml:282
 #, kde-format
@@ -304,14 +289,6 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
-"<para>TFT ياكى LCD ئېكراننىڭ ھەر بىر پىكسېلى 3 تىن 4 كىچە تېخىمۇ كىچىك يەككە "
-"رەڭلىك يورۇق نۇقتىدىن تەركىب تاپىدۇ، ئۇلار <emphasis>تارماق پىكسېل</"
-"emphasis> دەپ ئاتىلىدۇ. خەت نۇسخىسىنىڭ كۆرۈنۈش سۈپىتىنى ياخشىلاش ئۈچۈن ھەر "
-"بىر پىكسېلنىڭ يورۇقلۇقىنى ئايرىم تىزگىنلىگىلى بولىدۇ.</para> <para>بۇ تۈرنى "
-"ئېكراننىڭ فىزىكىلىق قۇرۇلمىسى بىلەن بىردەك تەڭشەڭ. كۆپ ساندىكى كۆرسىتىش "
-"ئېكرانىنىڭ تارماق پىكسېلى <emphasis>RGB</emphasis> تەرتىپىدە تىزىلىدۇ، يەنە "
-"بەزى ئاز ساندىكىلىرى <emphasis>BGR</emphasis> تەرتىپتە تىزىلىدۇ. بۇ ئىقتىدار "
-"بەزى ئۆزگىچە تەرتىپنى قوللىمايدۇ.</para>بۇ ئىقتىدار CRT ئېكراننى قوللىمايدۇ."
 
 #: ui/main.qml:357
 #, kde-format
@@ -328,11 +305,6 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
-"بۇ ئىقتىدار خەت نۇسخىسىنىڭ ئىچىگە سىڭدۈرۈلگەن مىكرو تەڭشەك ئۇچۇرىغا ئاساسەن "
-"خەت نۇسخىسىنىڭ غولىنى ئېكراندىكى پىكسېل شادىسىغا توغرىلايدۇ. مىكرو تەڭشەش "
-"دەرىجىسى قانچە كۈچلۈك بولسا خەت نۇسخىسىنىڭ قىرى شۇنچە ئېنىق بولىدۇ ئەمما "
-"شەكلىنىڭ توغرىلىقى تۆۋەنلەيدۇ، كىچىك خەت نۇسخىسى بىلەن چوڭ خەت نۇسخىسىنىڭ "
-"شەكلىدە قارىماققا پەرق باردەك تۇيۇلىدۇ."
 
 #~ msgid "Force font DPI on X11"
 #~ msgstr "X11 دا خەت نۇسخىسىنىڭ DPI نى مەجبۇرلايدۇ"
@@ -353,25 +325,6 @@ msgstr ""
 
 #~ msgid "Force font DPI:"
 #~ msgstr "خەت نۇسخىسىنىڭ DPI غا مەجبۇرلايدۇ:"
-
-#~ msgctxt "@info:tooltip Force fonts DPI"
-#~ msgid ""
-#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
-#~ "physical sizes when printed. Changing this option from its default value "
-#~ "will conflict with many apps; some icons and images may not scale as "
-#~ "expected.</para><para>To increase text size, change the size of the fonts "
-#~ "above. To scale everything, use the scaling slider on the "
-#~ "<interface>Display & Monitor</interface> page.</para>"
-#~ msgstr ""
-#~ "<para>بۇ جايغا ئېكرانىڭىزنىڭ DPI قىممىتىنى تولدۇرۇڭ، ئۇ ئېكراندا "
-#~ "كۆرسىتىلگەن خەت نۇسخىسى بىلەن بېسىپ چىقىرىلغان خەت نۇسخىسىنىڭ فىزىكىلىق "
-#~ "چوڭ كىچىكلىكىنىڭ بىردەكلىكىنى ساقلايدۇ. بۇ قىممەتنى كۆڭۈلدىكى قىممەتتىن "
-#~ "باشقىسىغا ئۆزگەرتكەندە نۇرغۇن پىروگرامما بىلەن توقۇنۇشۇپ قالىدۇ؛ بەزى "
-#~ "سىنبەلگە ۋە سۈرەتنىڭ چوڭلۇقى ئۈمىد قىلغاندىكىدەك  تەڭشەلمەسلىكى مۇمكىن.</"
-#~ "para><para>ئەگەر پەقەت خەت نۇسخىسىنىڭ چوڭلۇقىنى زورايتماقچى بولغاندا، خەت "
-#~ "نۇسخىسىنىڭ چوڭلۇقىنى ئۆزگەرتىڭ. ئەگەر بارلىق مەزمۇننىڭ چوڭلۇقىنى "
-#~ "تەڭشىمەكچى بولسىڭىز، <interface>كۆرسىتىش ۋە كۆرسەتكۈچ</interface> "
-#~ "بېتىدىكى سىيرىلما نىسبىتىنى ئىشلىتىڭ.</para>"
 
 #~| msgid "Force fonts DPI:"
 #~ msgid "Force font DPI Wayland"

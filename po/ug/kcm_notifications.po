@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-06 00:45+0000\n"
-"PO-Revision-Date: 2026-06-01 18:18-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -279,7 +279,7 @@ msgstr "پىروگرامما"
 #: ui/SourcesPage.qml:109
 #, kde-format
 msgid "System Services"
-msgstr ""
+msgstr "سىستېما مۇلازىمىتى"
 
 #: ui/SourcesPage.qml:157
 #, kde-format

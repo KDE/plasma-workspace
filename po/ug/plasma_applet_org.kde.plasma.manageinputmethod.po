@@ -1,14 +1,14 @@
 # Uyghur translation for plasma_applet_org.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:48+0000\n"
-"PO-Revision-Date: 2026-06-01 18:24-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: qml/main.qml:20
 #, kde-format
@@ -101,3 +100,18 @@ msgstr ""
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "مەۋھۇم ھەرپتاختا: ئىشلەتكىلى بولمايدۇ"
+
+#~ msgid "Virtual Keyboard: disabled"
+#~ msgstr "مەۋھۇم ھەرپتاختا: چەكلەنگەن"
+
+#~ msgid "Show Virtual Keyboard"
+#~ msgstr "مەۋھۇم ھەرپتاختىنى كۆرسەت"
+
+#~ msgid "Virtual Keyboard: visible"
+#~ msgstr "مەۋھۇم ھەرپتاختا: كۆرۈنۈشچان"
+
+#~ msgid "Virtual Keyboard: Show on non-mouse input"
+#~ msgstr "مەۋھۇم ھەرپتاختا: چاشقىنەك كىرگۈزۈشى بايقالمىسا كۆرسەت"
+
+#~ msgid "Virtual Keyboard: Show with all input devices"
+#~ msgstr "مەۋھۇم ھەرپتاختا: بارلىق كىرگۈزۈش ئۈسكۈنىسى بىلەن بىللە كۆرسەت"

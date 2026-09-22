@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:21-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -162,7 +162,7 @@ msgstr "تەكرارلانغان خەت نۇسخىلىرى"
 #: kcmfontinst/DuplicatesDialog.cpp:79
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "تەكرار خەت نۇسخىسىنى تاراۋاتىدۇ. سەل كۈتۈڭ…"
+msgstr "Scanning for duplicate fonts. سەل كۈتۈڭ…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:98
 #, kde-format
@@ -243,7 +243,7 @@ msgstr "ئۆچۈرۈش بەلگىسى قوي"
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "%1 خەت نۇسخىسىنىڭ ھەممىسىنى خەت نۇسخا كۆرگۈچتە ئاچامدۇ؟"
+msgstr[0] "خەت نۇسخا كۆرگۈچتە %1 خەت نۇسخىسىنىڭ ھەممىسىنى ئاچامدۇ؟"
 
 #: kcmfontinst/FontFilter.cpp:106
 #, kde-format
@@ -327,11 +327,6 @@ msgid ""
 "the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
-"<p>بۇ تىزىمدا سىز ئورناتقان خەت نۇسخىلىرىنى كۆرسىتىدۇ. ئۇلار خەت نۇسخا "
-"ئائىلىسى بويىچە گۇرۇپپىلىنىدۇ، ئوتتۇرا تىرناقتىكى سان  مەزكۇر خەت نۇسخا "
-"ئائىلىسىدە ئىشلەتكىلى بولىدىغان ئۇسلۇب سانىنى ئىپادىلەيدۇ. مەسىلەن:</"
-"p><ul><li>Times [4]<ul><li>ئادەتتىكى</li><li>توم</li><li>توم يانتۇ</"
-"li><li>يانتۇ</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, kde-format
@@ -341,7 +336,7 @@ msgstr "… يەنە %1"
 #: kcmfontinst/FontList.cpp:1001
 #, kde-format
 msgid "%1 [%2]"
-msgstr "%1 [%2]"
+msgstr ""
 
 #: kcmfontinst/FontList.cpp:1300
 #, kde-format
@@ -435,14 +430,6 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3>خەت نۇسخا گۇرۇپپىلىرى</h3><p>بۇ تىزىم سىستېمىڭىزدا ئىشلەتكىلى بولىدىغان "
-"خەت نۇسخا گۇرۇپپىسىنى كۆرسىتىدۇ. خەت نۇسخا گۇرۇپپىسىدىن ئىككى ئاساسلىق تۈرى "
-"بار:<ul><li><b>ئۆلچەملىك</b> گۇرۇپپا خەت نۇسخا باشقۇرغۇچ ئىشلىتىدىغان "
-"ئالاھىدە گۇرۇپپا.<ul>%1</ul></li><li><b>ئۆزلەشتۈرگەن</b> گۇرۇپپىنى "
-"ئىشلەتكۈچى قۇرغان. بىر خەت نۇسخا ئائىلىسىنى خالىغان بىر گۇرۇپپىغا قوشۇشتا "
-"پەقەت خەت نۇسخا تىزىمىدىن بىر تۈرنى قوشماقچى بولغان گۇرۇپپىغا سۆرىسەكلا "
-"بولىدۇ. گۇرۇپپىدىن خەت نۇسخا ئائىلىسىنى چىقىرىۋېتىشتە ئۇنى «ھەممە خەت نۇسخا "
-"گۇرۇپپا» غا سۆرىسەكلا بولىدۇ.</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -577,7 +564,7 @@ msgstr "چەكلەۋاتىدۇ"
 #: kcmfontinst/JobRunner.cpp:372
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "خەت نۇسخىسى سەپلىمىسىنى يېڭىلاۋاتىدۇ. سەل كۈتۈڭ…"
+msgstr "Updating font configuration. سەل كۈتۈڭ…"
 
 #: kcmfontinst/JobRunner.cpp:444
 #, kde-format
@@ -587,7 +574,7 @@ msgstr "ئارقا ئۇچنى باشلىغىلى بولمىدى."
 #: kcmfontinst/JobRunner.cpp:453
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
-msgstr "ئارقا ئۇچ ئۆلدى، بىراق قايتا قوزغالدى. قايتا سىناڭ."
+msgstr ""
 
 #: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
 #, kde-format
@@ -602,7 +589,7 @@ msgstr "<i>%1</i> نى چۈشۈرەلمىدى"
 #: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr "سىستېما ئارقا ئۇچى ئۆلدى. قايتا سىناڭ.<br><i>%1</i>"
+msgstr ""
 
 #: kcmfontinst/JobRunner.cpp:696
 #, kde-format
@@ -750,8 +737,6 @@ msgid ""
 "There are no printable fonts.\n"
 "You can only print non-bitmap and enabled fonts."
 msgstr ""
-"باسقىلى بولىدىغان خەت نۇسخىسى يوق.\n"
-"پەقەت چېكىتلىك بولمىغان ھەم قوزغىتىلغان خەت نۇسخىسىنىلا باسالايسىز."
 
 #: kcmfontinst/KCmFontInst.cpp:582
 #, kde-format
@@ -1074,27 +1059,27 @@ msgstr "شارقىراتما"
 #: kcmfontinst/PrintDialog.cpp:42
 #, kde-format
 msgid "12pt"
-msgstr "12pt"
+msgstr ""
 
 #: kcmfontinst/PrintDialog.cpp:43
 #, kde-format
 msgid "18pt"
-msgstr "18pt"
+msgstr ""
 
 #: kcmfontinst/PrintDialog.cpp:44
 #, kde-format
 msgid "24pt"
-msgstr "24pt"
+msgstr ""
 
 #: kcmfontinst/PrintDialog.cpp:45
 #, kde-format
 msgid "36pt"
-msgstr "36pt"
+msgstr ""
 
 #: kcmfontinst/PrintDialog.cpp:46
 #, kde-format
 msgid "48pt"
-msgstr "48pt"
+msgstr ""
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1107,8 +1092,6 @@ msgid ""
 "You cannot install a fonts package directly.\n"
 "Please extract %1, and install the components individually."
 msgstr ""
-"سىز خەت نۇسخا بوغچىسىنى بىۋاسىتە ئورنىتالمايسىز.\n"
-"%1 نى يېشىپ ئىچىدىكى ئايرىم بۆلەكنى ئورنىتىڭ."
 
 #: kio/KioFonts.cpp:434
 #, kde-format
@@ -1209,7 +1192,7 @@ msgstr "ھەرپ تاپالمىدى."
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr "The quick brown fox jumps over the lazy dog"
+msgstr ""
 
 #: lib/FcEngine.cpp:1102
 #, kde-format
@@ -1227,7 +1210,7 @@ msgstr "ئا ئە ب پ ت ج چ خ د ر ز ژ س ش ف ق ك گ ڭ ل م ن ھ
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
-msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+msgstr ""
 
 #: lib/FcEngine.cpp:1510
 #, kde-format
@@ -1526,17 +1509,17 @@ msgstr "كاتېگورىيە"
 #: viewpart/CharTip.cpp:154
 #, kde-format
 msgid "UCS-4"
-msgstr "UCS-4"
+msgstr ""
 
 #: viewpart/CharTip.cpp:158
 #, kde-format
 msgid "UTF-16"
-msgstr "UTF-16"
+msgstr ""
 
 #: viewpart/CharTip.cpp:169
 #, kde-format
 msgid "UTF-8"
-msgstr "UTF-8"
+msgstr ""
 
 #: viewpart/CharTip.cpp:186
 #, kde-format
@@ -2270,7 +2253,7 @@ msgstr "باسپاچە"
 
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
-msgstr "Yi"
+msgstr ""
 
 #~ msgid "(C) Craig Drummond, 2000 - 2009"
 #~ msgstr "(C) Craig Drummond, 2000 - 2009"

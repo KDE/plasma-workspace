@@ -1,14 +1,14 @@
 # Uyghur translation for libnotificationmanager.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-26 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 18:23-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -22,21 +22,21 @@ msgstr ""
 #, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr ""
+msgstr "%2 دىن %1"
 
 #: job_p.cpp:190
 #, kde-format
 msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
 msgid_plural "%2 of %1 files to %3"
-msgstr[0] ""
+msgstr[0] "%2 / %1 ھۆججەتنى %3 غا"
 
 #: job_p.cpp:193 job_p.cpp:223 job_p.cpp:239
 #, kde-format
 msgctxt "Copying n files to location"
 msgid "%1 file to %2"
 msgid_plural "%1 files to %2"
-msgstr[0] ""
+msgstr[0] "%1 ھۆججەتنى %2 غا"
 
 #: job_p.cpp:200
 #, kde-format
@@ -77,41 +77,41 @@ msgstr "%1 دىن %2"
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
-msgstr[0] ""
+msgstr[0] "%1 ھۆججەتنى %2 غا"
 
 #: job_p.cpp:241
 #, kde-format
 msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
-msgstr ""
+msgstr "%1 غا"
 
 #: jobsmodel.cpp:105
 #, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr ""
+msgstr "%2 دىن %1"
 
 #: jobsmodel_p.cpp:487
 #, kde-format
 msgid "Application closed unexpectedly."
-msgstr ""
+msgstr "پىروگرامما تاسادىپىي يېپىلدى."
 
 #: notifications.cpp:985
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] ""
+msgstr[0] "ئوقۇلمىغان ئۇقتۇرۇش"
 
 #: notifications.cpp:987
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] ""
+msgstr[0] "دەخلى قىلماڭ ھالىتى ئاكتىپ ۋاقىتتا %1 ئۇقتۇرۇش تاپشۇرۇۋالدى."
 
 #: notifications.cpp:995
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr ""
+msgstr "ئۇقتۇرۇشنى كۆرسەت"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:18-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,59 +16,58 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
 msgid "Inherit Language"
-msgstr ""
+msgstr "ۋارىسلىق قىلغان تىل"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "خەلقئارا ئېلېكتىرون تېخنىكا كومىتېتى (IEC)"
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "بىرلەشمە ئېلېكتىرون ئۈسكۈنىلىرى قۇرۇلۇشى كېڭىشى (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "مېتىر سىستېمىسى (SI)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "ئىككىلىك -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "ئىككىلىك - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "ئونلۇق - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
-msgstr ""
+msgstr "ئەنگلىيە ئۆلچىمى"
 
 #: exampleutility.cpp:33
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
-msgstr ""
+msgstr "ئامېرىكا ئۆلچىمى"
 
 #: exampleutility.cpp:35
 #, kde-format
@@ -80,7 +79,7 @@ msgstr "بىرلىك"
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
-msgstr ""
+msgstr "خەت-چەك"
 
 #: exampleutility.cpp:78
 #, kde-format
@@ -98,31 +97,31 @@ msgstr ""
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Acme شىركىتى"
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "تەرەققىيات بۆلۈمى"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "تەرەققىيات بىناسى"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr ""
+msgstr "ئاساسىي كوچا"
 
 #: exampleutility.cpp:98
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr ""
+msgstr "1-ئۆي"
 
 #: exampleutility.cpp:100
 #, kde-format
@@ -134,19 +133,19 @@ msgstr " "
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr ""
+msgstr "2-ھوجرا"
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr ""
+msgstr "3-قەۋەت"
 
 #: exampleutility.cpp:104
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "شەھەر مەركىزى"
 
 #: exampleutility.cpp:105
 #, kde-format
@@ -170,49 +169,49 @@ msgstr "ھالەت"
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "تەگئات"
 
 #: exampleutility.cpp:121
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "تەگئات (چوڭ ھەرپ)"
 
 #: exampleutility.cpp:122
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "ئات"
 
 #: exampleutility.cpp:123
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "بىرىنچى ھەرپ"
 
 #: exampleutility.cpp:124
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "ئات"
 
 #: exampleutility.cpp:125
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "باشقا ئات"
 
 #: exampleutility.cpp:126
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "قوشۇمچە ئات"
 
 #: exampleutility.cpp:127
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr "A"
+msgstr "قوشۇمچە ئاتنىڭ بىرىنچى ھەرپى"
 
 #: exampleutility.cpp:128
 #, kde-format
@@ -224,7 +223,7 @@ msgstr "كەسىپ"
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
-msgstr ""
+msgstr "دوكتور"
 
 #: exampleutility.cpp:130
 #, kde-format
@@ -256,7 +255,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "بۇ ئورۇننىڭ مىسالىنى تاپقىلى بولمىدى"
 
 #: glibclocaleconstructor.cpp:165
 #, kde-kuit-format
@@ -271,7 +270,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: languagelistmodel.cpp:103
 #, kde-format
@@ -279,19 +278,19 @@ msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
 "português and Brazilian português"
 msgid "%1 (Brazil)"
-msgstr ""
+msgstr "%1 (بىرازىلىيە)"
 
 #: localegeneratorubuntu.cpp:46
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
-msgstr ""
+msgstr "ئىجراچان پىروگرامما «check-language-support» نىڭ ئورنىنى تاپالمىدى"
 
 #: localegeneratorubuntu.cpp:56
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr ""
+msgstr "check-language-support نى ئىجرا قىلالمىدى، چىقىرىش: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -303,27 +302,27 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr ""
+msgstr "تىل بوغچىسىنى ئورنىتالمىدى (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
 msgid "Another process is already running, please retry later"
-msgstr ""
+msgstr "باشقا جەريان ئىجرا قىلىنىۋاتىدۇ، كېيىن قايتا سىناڭ"
 
 #: localegenhelper/localegenhelper.cpp:65
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr ""
+msgstr "يەرلىك سەپلىمە ھۆججەتنى كىملىك دەلىللىمەي تەھرىرلىگىلى بولمايدۇ"
 
 #: localegenhelper/localegenhelper.cpp:115
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
-msgstr ""
+msgstr "«/etc/locale.gen» ھۆججەتنى ئاچقىلى بولمايدۇ"
 
 #: localegenhelper/localegenhelper.cpp:148
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
-msgstr ""
+msgstr "ئىجراچان پىروگرامما «locale-gen» نىڭ ئورنىنى تاپالمىدى"
 
 #: localegenhelper/localegenhelper.cpp:161
 #, kde-format
@@ -333,7 +332,7 @@ msgstr "يوچۇن"
 #: localelistmodel.cpp:24
 #, kde-format
 msgid "Default for System"
-msgstr ""
+msgstr "سىستېما كۆڭۈلدىكى"
 
 #: localelistmodel.cpp:24 localelistmodel.cpp:146 ui/main.qml:388
 #, kde-format
@@ -346,21 +345,21 @@ msgctxt ""
 "the first is language name, the second is the country name, like 'English "
 "(America)'"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: localelistmodel.cpp:229
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
-msgstr ""
+msgstr "سىستېما كۆڭۈلدىكى C"
 
 #: localelistmodel.cpp:232
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
-msgstr ""
+msgstr "%1 نىڭ كۆڭۈلدىكى"
 
 #: optionsmodel.cpp:46
 #, kde-format
@@ -390,13 +389,13 @@ msgstr "پۇل"
 #, kde-format
 msgctxt "@info:title"
 msgid "Measurements"
-msgstr ""
+msgstr "ئۆلچەم"
 
 #: optionsmodel.cpp:51
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
-msgstr ""
+msgstr "قەغەز چوڭلۇقى"
 
 #: optionsmodel.cpp:53
 #, kde-format
@@ -408,7 +407,7 @@ msgstr "ئادرېس"
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "ئات ئۇسلۇبى"
 
 #: optionsmodel.cpp:55
 #, kde-format
@@ -420,7 +419,7 @@ msgstr "تېلېفون نومۇرى"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "سانلىق مەلۇمات ۋە ساقلىغۇچ چوڭلۇقى"
 
 #: optionsmodel.cpp:279
 #, kde-format
@@ -444,14 +443,14 @@ msgstr ""
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
-msgstr ""
+msgstr "سىستېما كۆڭۈلدىكى"
 
 #: optionsmodel.cpp:359
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
-msgstr ""
+msgstr " (%1 نىڭ ئۆلچەملىك پىچىمى)"
 
 #: ui/AdvancedLanguageSelectPage.qml:24
 #, kde-format
@@ -470,30 +469,30 @@ msgstr ""
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr ""
+msgstr "قوللىمايدىغان تىل «%1»"
 
 #: ui/AdvancedLanguageSelectPage.qml:59
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr ""
+msgstr "پىروگراممىدا كۆرمەكچى بولغان تىلنىڭ تەرتىپى بويىچە تىل قوشۇڭ."
 
 #: ui/AdvancedLanguageSelectPage.qml:101
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
-msgstr ""
+msgstr "تىل ئۆزگەرت"
 
 #: ui/AdvancedLanguageSelectPage.qml:105
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
-msgstr ""
+msgstr "تىل ئۆزگەرت"
 
 #: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
-msgstr ""
+msgstr "چوققىغا يۆتكە"
 
 #: ui/AdvancedLanguageSelectPage.qml:123
 #, kde-format
@@ -505,19 +504,19 @@ msgstr "چىقىرىۋەت"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
-msgstr ""
+msgstr "ھېچقانداق تىل سەپلەنمىگەن"
 
 #: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
-msgstr ""
+msgstr "تىل قوش"
 
 #: ui/AdvancedLanguageSelectPage.qml:236
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "بۇ سىستېمىدا «%1» يوق"
 
 #: ui/AdvancedLanguageSelectPage.qml:237
 #, kde-kuit-format
@@ -526,6 +525,8 @@ msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"<link url='%1'>KDE يۇمشاق دېتالىنى تىلىڭىزغا تەرجىمە قىلىش</link> قا قانداق "
+"ياردەملىشىشنى ئۆگىنىڭ."
 
 #: ui/AdvancedLanguageSelectPage.qml:246
 #, kde-format
@@ -537,12 +538,12 @@ msgstr "تېخىمۇ كۆپ قوش…"
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr ""
+msgstr "ئۆزگەرتىش كېيىنكى قېتىم تىزىمغا كىرگەندە كۈچكە ئىگە بولىدۇ."
 
 #: ui/main.qml:40
 #, kde-format
 msgid "Restart now"
-msgstr ""
+msgstr "ھازىر قايتا قوزغات"
 
 #: ui/main.qml:55
 #, kde-format
@@ -551,6 +552,7 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
+"يەرلىك ۋە تىل قوللاش ھۆججىتىنى ھاسىللاۋاتىدۇ؛ كومپيۇتېرنىڭ توكىنى ئۈزمەڭ."
 
 #: ui/main.qml:65
 #, kde-format
@@ -580,7 +582,7 @@ msgstr "ئۆزگەرت…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "سانلىق مەلۇمات ۋە ساقلىغۇچ چوڭلۇقى"
 
 #: ui/main.qml:282
 #, kde-format
@@ -600,12 +602,12 @@ msgstr "پۇل"
 #: ui/main.qml:288
 #, kde-format
 msgid "Measurements"
-msgstr ""
+msgstr "ئۆلچەم"
 
 #: ui/main.qml:290
 #, kde-format
 msgid "Paper Size"
-msgstr ""
+msgstr "قەغەز چوڭلۇقى"
 
 #: ui/main.qml:292
 #, kde-format
@@ -629,10 +631,10 @@ msgstr "تېلېفون نومۇرى"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "بۇ سىستېمىدا «%1» نىڭ تەڭشىكى يوق"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "يېقىن ئەتراپتىكى رايوننى ئىزدەڭ."

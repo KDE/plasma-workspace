@@ -1,14 +1,14 @@
 # Uyghur translation for plasmawindowed.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 18:27-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: main.cpp:60 plasmawindowedcorona.cpp:106
 #, kde-format
@@ -26,7 +25,7 @@ msgstr "Plasma كۆزنەك"
 #: main.cpp:62
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr ""
+msgstr "QML Javascript سازلىغۇچنى قوزغات"
 
 #: main.cpp:65 plasmawindowedcorona.cpp:108
 #, kde-format
@@ -34,6 +33,8 @@ msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr ""
+"گەرچە كۆزنەك يېپىلغان تەقدىردىمۇ پىلازما ئەپچىنىڭ ئۇقتۇرۇش رايونىدا مەۋجۇت "
+"بولۇپ تۇرۇشىنى ساقلاپ قالىدۇ."
 
 #: main.cpp:67
 #, kde-format
@@ -43,12 +44,12 @@ msgstr "بېرىلگەن shell قىستۇرمىنى مەجبۇرىي يۈكلە�
 #: main.cpp:71 plasmawindowedcorona.cpp:109
 #, kde-format
 msgid "The applet to open."
-msgstr ""
+msgstr "ئاچىدىغان ئەپچە."
 
 #: main.cpp:72 plasmawindowedcorona.cpp:110
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr ""
+msgstr "پىلازما ئەپچىگە يەتكۈزىدىغان ئەركىن ئۆزگەرگۈچى."
 
 #: main.cpp:73
 #, kde-format

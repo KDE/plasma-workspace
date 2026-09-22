@@ -1,14 +1,14 @@
 # Uyghur translation for plasma_applet_org.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-20 00:44+0000\n"
-"PO-Revision-Date: 2026-06-01 18:24-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: AlbumArtStackView.qml:211
 #, kde-format
@@ -37,7 +36,7 @@ msgstr ""
 #: ExpandedRepresentation.qml:591
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "ياڭرىتىش نىسبىتى %1"
 
 #: ExpandedRepresentation.qml:594
 #, kde-format
@@ -49,13 +48,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "ياڭرىتىش نىسبىتى"
 
 #: ExpandedRepresentation.qml:644
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (ئادەتتىكى)"
 
 #: ExpandedRepresentation.qml:683
 #, kde-format
@@ -101,7 +100,7 @@ msgstr "قايتىلا"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr ""
+msgstr "ياڭراتقۇچنى ئۆزلۈكىدىن تاللا"
 
 #: main.qml:60
 #, kde-format
@@ -111,6 +110,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"سەنئەتكار %1 (%2)\n"
+"ئوتتۇرا چېكىشتە ۋاقىتلىق توختايدۇ\n"
+"چاشقىنەك غالتىكىدە ئاۋاز كۈچلۈكلۈكى تەڭشىلىدۇ"
 
 #: main.qml:61
 #, kde-format
@@ -120,6 +122,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"ئوتتۇرا چېكىشتە ۋاقىتلىق توختايدۇ\n"
+"چاشقىنەك غالتىكىدە ئاۋاز كۈچلۈكلۈكى تەڭشىلىدۇ"
 
 #: main.qml:63
 #, kde-format
@@ -129,6 +134,9 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"سەنئەتكار %1 (ۋاقىتلىق توختىتىلدى، %2)\n"
+"ئوتتۇرا چېكىشتە ياڭرىتىدۇ\n"
+"چاشقىنەك غالتىكىدە ئاۋاز كۈچلۈكلۈكى تەڭشىلىدۇ"
 
 #: main.qml:64
 #, kde-format
@@ -138,6 +146,9 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"ۋاقىتلىق توختىتىلدى (%1)\n"
+"ئوتتۇرا چېكىشتە ياڭرىتىدۇ\n"
+"چاشقىنەك غالتىكىدە ئاۋاز كۈچلۈكلۈكى تەڭشىلىدۇ"
 
 #: main.qml:107
 #, kde-format

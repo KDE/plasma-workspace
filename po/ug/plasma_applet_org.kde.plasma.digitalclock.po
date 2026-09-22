@@ -1,14 +1,14 @@
 # Uyghur translation for plasma_applet_org.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2026-06-01 18:23-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -33,22 +33,22 @@ msgstr "قوش…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "يېڭى پائالىيەت قوش"
 
 #: CalendarView.qml:384
 #, kde-format
 msgid "No events for today"
-msgstr ""
+msgstr "بۈگۈن يېڭى پائالىيەت يوق"
 
 #: CalendarView.qml:385
 #, kde-format
 msgid "No events for this day"
-msgstr ""
+msgstr "بۇ كۈندە يېڭى پائالىيەت يوق"
 
 #: CalendarView.qml:424 config.qml:30
 #, kde-format
 msgid "Time Zones"
-msgstr ""
+msgstr "ۋاقىت رايونى"
 
 #: CalendarView.qml:435
 #, kde-format
@@ -58,7 +58,7 @@ msgstr "ئالماشتۇر…"
 #: CalendarView.qml:438 CalendarView.qml:439
 #, kde-format
 msgid "Switch to another time zone"
-msgstr ""
+msgstr "باشقا بىر ۋاقىت رايونىغا ئالماشتۇر"
 
 #: config.qml:20
 #, kde-format
@@ -73,32 +73,32 @@ msgstr "يىلنامە"
 #: configAppearance.qml:58
 #, kde-format
 msgid "Information:"
-msgstr ""
+msgstr "ئۇچۇر:"
 
 #: configAppearance.qml:63
 #, kde-format
 msgid "Show date"
-msgstr ""
+msgstr "چېسلا كۆرسەت"
 
 #: configAppearance.qml:72
 #, kde-format
 msgid "Adaptive location"
-msgstr ""
+msgstr "ماسلىشىشچان ئورۇن"
 
 #: configAppearance.qml:73
 #, kde-format
 msgid "Always beside time"
-msgstr ""
+msgstr "ھەمىشە ۋاقىتنىڭ يېنىدا"
 
 #: configAppearance.qml:74
 #, kde-format
 msgid "Always below time"
-msgstr ""
+msgstr "ھەمىشە ۋاقىتنىڭ ئاستىدا"
 
 #: configAppearance.qml:87
 #, kde-format
 msgid "Show seconds:"
-msgstr ""
+msgstr "سېكۇنتنى كۆرسەت:"
 
 #: configAppearance.qml:89
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "ھەرگىز"
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "ئەسكەرتىشتىلا"
 
 #: configAppearance.qml:91 configAppearance.qml:112
 #, kde-format
@@ -120,17 +120,17 @@ msgstr "ھەمىشە"
 #: configAppearance.qml:101
 #, kde-format
 msgid "Show time zone:"
-msgstr ""
+msgstr "ۋاقىت رايونىنى كۆرسەت:"
 
 #: configAppearance.qml:107
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr ""
+msgstr "يەرلىك ۋاقىت رايونىدىن پەرقلىق بولغاندىلا"
 
 #: configAppearance.qml:121
 #, kde-format
 msgid "Display time zone as:"
-msgstr ""
+msgstr "ۋاقىت رايونىنى كۆرسىتىش ئۇسۇلى:"
 
 #: configAppearance.qml:131
 #, kde-format
@@ -145,43 +145,43 @@ msgstr "شەھەر"
 #: configAppearance.qml:133
 #, kde-format
 msgid "Offset from UTC time"
-msgstr ""
+msgstr "خەلقئارا ئۆلچەملىك ۋاقىت يەنى UTC بىلەن ۋاقىت پەرقى"
 
 #: configAppearance.qml:141
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr ""
+msgstr "ۋاقىت رايونى ئالماشتۇر…"
 
 #: configAppearance.qml:153
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
-msgstr ""
+msgstr "ۋاقىت كۆرسىتىش:"
 
 #: configAppearance.qml:160
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
-msgstr ""
+msgstr "12 سائەت"
 
 #: configAppearance.qml:161
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
-msgstr ""
+msgstr "نۆۋەتتىكى رايوننىڭ كۆڭۈلدىكى قىممىتىنى ئىشلەت"
 
 #: configAppearance.qml:162
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
-msgstr ""
+msgstr "24 سائەت"
 
 #: configAppearance.qml:171
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
-msgstr ""
+msgstr "رايونلۇق تەڭشەكنى ئۆزگەرت…"
 
 #: configAppearance.qml:182
 #, kde-format
@@ -195,19 +195,19 @@ msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
 msgid "Long date"
-msgstr ""
+msgstr "ئۇزۇن چېسلا"
 
 #: configAppearance.qml:199
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
-msgstr ""
+msgstr "قىسقا چېسلا"
 
 #: configAppearance.qml:206
 #, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
-msgstr ""
+msgstr "ISO چېسلا"
 
 #: configAppearance.qml:213
 #, kde-format
@@ -221,6 +221,8 @@ msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
+"\">ۋاقىت پىچىم قوللانمىسى</a>"
 
 #: configAppearance.qml:279
 #, kde-format
@@ -240,6 +242,7 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"تېكىست سىستېما خەت نۇسخىسىدا كۆرسىتىلىدۇ ۋە ئىشلىتىلىشچان بوشلۇقنى تولدۇرىدۇ."
 
 #: configAppearance.qml:302
 #, kde-format
@@ -251,7 +254,7 @@ msgstr "قولدا"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "ئۇسلۇب تاللا…"
 
 #: configAppearance.qml:329
 #, kde-format
@@ -264,12 +267,14 @@ msgstr ""
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
+"ئەسكەرتىش: ئەگەر كۆزنەكچە ئېگىزلىكى يېتەرلىك بولمىسا، چوڭلۇقى قىسىلىشى "
+"مۇمكىن."
 
 #: configAppearance.qml:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "خەت نۇسخا تاللىنىدۇ"
 
 #: configCalendar.qml:50
 #, kde-format
@@ -287,19 +292,19 @@ msgstr "ھەپتە نومۇرىنى كۆرسەت"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
-msgstr ""
+msgstr "ھەپتىنىڭ بىرىنچى كۈنى:"
 
 #: configCalendar.qml:64
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
-msgstr ""
+msgstr "نۆۋەتتىكى رايوننىڭ كۆڭۈلدىكى قىممىتىنى ئىشلەت"
 
 #: configCalendar.qml:82
 #, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr ""
+msgstr "ئىشلىتىلىشچان قوشۇلما"
 
 #: configTimeZones.qml:70
 #, kde-format
@@ -309,17 +314,17 @@ msgstr "ۋاز كەچ"
 #: configTimeZones.qml:77
 #, kde-format
 msgid "Add Selected Time Zone"
-msgstr ""
+msgstr "تاللانغان ۋاقىت رايونىنى قوش"
 
 #: configTimeZones.qml:94
 #, kde-format
 msgid "Add Time Zone…"
-msgstr ""
+msgstr "ۋاقىت رايونى قوش…"
 
 #: configTimeZones.qml:153
 #, kde-format
 msgid "Clock is currently using this time zone"
-msgstr ""
+msgstr "سائەت نۆۋەتتىكى ۋاقىت رايونىنى ئىشلىتىۋاتىدۇ"
 
 #: configTimeZones.qml:155
 #, kde-format
@@ -328,27 +333,27 @@ msgctxt ""
 "local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "بۇ يەرلىك ۋاقىت رايونىدىكى شەھەر بولسا يوشۇرىدۇ"
 
 #: configTimeZones.qml:185
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr ""
+msgstr "سىستېما دائىرىسىدىكى ۋاقىت رايونىنى ئالماشتۇر…"
 
 #: configTimeZones.qml:197
 #, kde-format
 msgid "Remove this time zone"
-msgstr ""
+msgstr "بۇ ۋاقىت رايونىنى چىقىرىۋەت"
 
 #: configTimeZones.qml:209
 #, kde-format
 msgid "Systemwide Time Zone"
-msgstr ""
+msgstr "سىستېما دائىرىسىدىكى ۋاقىت رايونى"
 
 #: configTimeZones.qml:209
 #, kde-format
 msgid "Additional Time Zones"
-msgstr ""
+msgstr "قوشۇمچە ۋاقىت رايونى"
 
 #: configTimeZones.qml:222
 #, kde-format
@@ -356,6 +361,8 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
+"كۆپ ۋاقىت رايونى قوشۇپ ئۇلارنىڭ ھەممىسى ياكى بىرىنى ئەپچە قاڭقىش كۆزنىكىدە "
+"كۆرسىتىشتە سائەتنىڭ ئۆزىدە كۆرسىتىشتە ئىشلىتىدىغان ۋاقىت رايونى"
 
 #: configTimeZones.qml:235
 #, kde-format
@@ -369,6 +376,8 @@ msgstr ""
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
+"نىشانلىغۇچ سائەت ئەپچە ئۈستىدىن سىيرىلغاندا  كۆرسىتىدىغان ۋاقىت رايونىنى "
+"ئالماشتۇرىدۇ"
 
 #: configTimeZones.qml:254
 #, kde-format
@@ -380,33 +389,33 @@ msgstr ""
 #: configTimeZones.qml:264
 #, kde-format
 msgid "Choose Time Zone"
-msgstr ""
+msgstr "ۋاقىت رايونى تاللىنىدۇ"
 
 #: main.qml:83
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
+msgstr[0] " • %1 سائەت كېيىن"
 
 #: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 كېيىن"
 
 #: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
+msgstr[0] " • %1 سائەت ئىلگىرى"
 
 #: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 ئىلگىرى"
 
 #: main.qml:195
 #, kde-format
@@ -419,23 +428,25 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"ۋاقىت رايونى تەڭشەلمىگەن؛ بۇ جاينى چېكىپ چېسلا ۋە ۋاقىت تەڭشىكىنى ئېچىپ "
+"ۋاقىت رايونى تەڭشىگىلى بولىدۇ"
 
 #: plugin/clipboardmenu.cpp:111
 #, kde-format
 msgid "Other Calendars"
-msgstr ""
+msgstr "باشقا يىلنامە"
 
 #: plugin/clipboardmenu.cpp:119
 #, kde-format
 msgctxt "unix timestamp (seconds since 1.1.1970)"
 msgid "%1 (UNIX Time)"
-msgstr ""
+msgstr "%1 (UNIX ۋاقتى)"
 
 #: plugin/clipboardmenu.cpp:122
 #, kde-format
 msgctxt "for astronomers (days and decimals since ~7000 years ago)"
 msgid "%1 (Julian Date)"
-msgstr ""
+msgstr "%1 (جۇلىئان يىلى)"
 
 #: plugin/timezonemodel.cpp:151
 #, kde-format
@@ -446,20 +457,20 @@ msgstr "يەرلىك"
 #: plugin/timezonemodel.cpp:153
 #, kde-format
 msgid "System's local time zone"
-msgstr ""
+msgstr "سىستېمىنىڭ يەرلىك ۋاقىت رايونى"
 
 #: Tooltip.qml:37
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr ""
+msgstr "بۈگۈن %1"
 
 #: Tooltip.qml:75
 #, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr ""
+msgstr "ۋاقىت رايونى تەڭشەلمىگەن"
 
 #: Tooltip.qml:96
 #, kde-format
@@ -467,15 +478,17 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"سائەت سىنبەلگىسىنى چېكىپ چېسلا ۋە ۋاقىت تەڭشىكىنى ئېچىپ ۋاقىت رايونى "
+"تەڭشىگىلى بولىدۇ."
 
 #: Tooltip.qml:151
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr "%1:"
+msgstr ""
 
 #: Tooltip.qml:178
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
+msgstr "ئوتتۇرا چېكىلسە %1 نى ئاچىدۇ"

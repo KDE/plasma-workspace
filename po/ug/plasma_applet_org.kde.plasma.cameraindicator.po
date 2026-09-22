@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-02 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:23-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
-msgstr ""
+msgstr "%1 ئىشلىتىلىۋاتىدۇ"
 
 #: qml/FullRepresentation.qml:78
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "خاتالىق"
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
-msgstr ""
+msgstr "قۇرۇۋاتىدۇ"
 
 #: qml/FullRepresentation.qml:89
 #, kde-format
@@ -70,17 +70,17 @@ msgstr "يوچۇن"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
-msgstr ""
+msgstr "كامېرا كۆرسەتكۈچنى ئىشلەتكىلى بولمايدۇ"
 
 #: qml/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
-msgstr[0] ""
+msgstr[0] "%1 كامېرا ئىشلىتىلىۋاتىدۇ"
 
 #: qml/main.qml:29
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"
-msgstr ""
+msgstr "كامېرا ئىشلىتىلمەيۋاتىدۇ"

@@ -1,14 +1,14 @@
 # Uyghur translation for plasma_applet_org.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2026-06-01 18:24-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -16,13 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.9\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "%1‎‏ دىن چېكىن"
 
 #: qml/config.qml:13
 #, kde-format
@@ -33,7 +32,7 @@ msgstr "ئادەتتىكى"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr ""
+msgstr "مۇناسىۋەتلىك بولغاندا كۆرسەت"
 
 #: qml/ConfigGeneral.qml:49
 #, kde-format
@@ -45,18 +44,18 @@ msgstr "ھەمىشە كۆرسەت"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "قاڭقىش كۆزنىكىدىلا كۆرسەت"
 
 #: qml/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "ھەرگىز كۆرسەتمە (چەكلەنگەن)"
 
 #: qml/ConfigGeneral.qml:128
 #, kde-format
 msgid "Application Status"
-msgstr ""
+msgstr "پىروگرامما ھالىتى"
 
 #: qml/ConfigGeneral.qml:130
 #, kde-format
@@ -66,12 +65,12 @@ msgstr "ئالاقە"
 #: qml/ConfigGeneral.qml:132
 #, kde-format
 msgid "System Services"
-msgstr ""
+msgstr "سىستېما مۇلازىمىتى"
 
 #: qml/ConfigGeneral.qml:134
 #, kde-format
 msgid "Hardware Control"
-msgstr ""
+msgstr "قاتتىق دېتال تىزگىنى"
 
 #: qml/ConfigGeneral.qml:137
 #, kde-format
@@ -93,7 +92,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "خەتەرنى چۈشىنىمەن"
 
 #: qml/ConfigGeneral.qml:189
 #, kde-kuit-format
@@ -116,6 +115,10 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"ئۇقتۇرۇش ئەپچىنى چەكلەش تەۋسىيە قىلىنمايدۇ، پىروگرامما يوللىغان ئۇقتۇرۇش "
+"ئەمدى كۆرۈنمەيدۇ.<nl/><nl/>ئەگەر ئۇقتۇرۇش ئەپچىنى باشقا جايدا قولدا ئايرىم "
+"قوشقان ياكى ئۈچىنچى تەرەپ ئۇقتۇرۇش باشقۇرغۇچنى مەقسەتلىك ئىشلەتكەن بولسىڭىز "
+"ئاندىن بۇ مەشغۇلاتنى ئىجرا قىلىڭ."
 
 #: qml/ConfigGeneral.qml:210
 #, kde-format
@@ -178,40 +181,40 @@ msgstr "يونۇلۇش:"
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "ئاستىدىن ئۈستىگە"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "ئۈستىدىن ئاستىغا"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "سولدىن ئوڭغا"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "ئوڭدىن سولغا"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "تەگكۈزۈش ھالىتىدە ئۆزلۈكىدىن چوڭ قىلىپ تەڭشەيدۇ"
 
 #: qml/ConfigGeneral.qml:332
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr ""
+msgstr "تۈر"
 
 #: qml/ConfigGeneral.qml:336
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr ""
+msgstr "ھەممىنى ھەمىشە كۆرسەت"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
@@ -222,7 +225,7 @@ msgstr "كەينىگە"
 #: qml/ExpandedRepresentation.qml:76
 #, kde-format
 msgid "Status and Notifications"
-msgstr ""
+msgstr "ھالەت ۋە ئۇقتۇرۇش"
 
 #: qml/ExpandedRepresentation.qml:175
 #, kde-format
@@ -237,26 +240,26 @@ msgstr "ئوچۇق تۇت"
 #: qml/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
-msgstr ""
+msgstr "سىستېما قونداقنىڭ قاڭقىش كۆزنىكىدە ھەممە تۈرنى كۆرسىتىدۇ"
 
 #: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
-msgstr ""
+msgstr "قاڭقىش كۆزنەكنى ياپ"
 
 #: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
-msgstr ""
+msgstr "يوشۇرۇن سىنبەلگىنى كۆرسەت"
 
 #: qml/HiddenItemsView.qml:37
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "%2 رەتتە %1 تۈرنىڭ شادىسىنى كۆرسەت"
 
 #: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
+msgstr "AILlmyjgGJPئۇيغۇرڭې"
