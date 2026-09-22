@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2026-09-15 18:41+0900\n"
+"PO-Revision-Date: 2026-09-22 00:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -70,15 +70,13 @@ msgstr ""
 "史紀錄裡（根據下方選項），但它只能被使用滑鼠中鍵貼上。"
 
 #: configdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "用游標或鍵盤選取的文字"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "包含在歷史紀錄："
@@ -90,8 +88,7 @@ msgid ""
 msgstr "明確複製的文字總是會儲存，除非它被標記為祕密。"
 
 #: configdialog.cpp:133
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "直接作為資料所複製的影像"
@@ -790,11 +787,10 @@ msgstr "歷史紀錄大小："
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "剪貼簿歷史紀錄最多儲存的項目數量。"
+msgstr "剪貼簿歷史紀錄最多會儲存這麼多項目。這個設定值的上限是 2048。"
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61
