@@ -305,12 +305,7 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: contents/splash/Splash.qml:79
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is the first text the user sees while starting in the splash screen, "
-#| "should be translated as something short, is a form that can be seen on a "
-#| "product. Plasma is the project name so shouldn't be translated."
-#| msgid "Plasma made by KDE"
+#, kde-format
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "
 "should be translated as something short, is a form that can be seen on a "
