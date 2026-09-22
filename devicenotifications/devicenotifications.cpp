@@ -282,6 +282,11 @@ OutputDeviceRegistry::~OutputDeviceRegistry()
     }
 }
 
+int OutputDeviceRegistry::count() const
+{
+    return m_outputDevices.size();
+}
+
 void OutputDeviceRegistry::kde_output_device_registry_v2_finished()
 {
     delete this;
@@ -416,6 +421,7 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
     auto syncDone = [](void *data, struct wl_callback *wl_callback, uint32_t callback_data) {
         Q_UNUSED(callback_data);
         auto *self = static_cast<KdedDeviceNotifications *>(data);
+        self->m_lastOutputCount = self->m_outputRegistry->count();
         self->m_initialOutputsReceived = true;
         wl_callback_destroy(wl_callback);
     };
@@ -434,7 +440,16 @@ void KdedDeviceNotifications::dismissUsbDeviceAdded()
 
 void KdedDeviceNotifications::notifyOutputAdded()
 {
+    const bool hadOutputs = m_lastOutputCount > 0;
+    m_lastOutputCount = m_outputRegistry->count();
+
     if (m_deviceAddedTimer.isActive()) {
+        return;
+    }
+
+    m_deviceAddedTimer.start();
+
+    if (!hadOutputs) {
         return;
     }
 
@@ -449,13 +464,29 @@ void KdedDeviceNotifications::notifyOutputAdded()
     m_displayAddedNotification->setTitle(i18nc("@title:notifications", "Display Detected"));
     m_displayAddedNotification->setText(i18n("A display has been connected."));
     m_displayAddedNotification->sendEvent();
-
-    m_deviceAddedTimer.start();
 }
 
 void KdedDeviceNotifications::notifyOutputRemoved()
 {
+    m_lastOutputCount = m_outputRegistry->count();
+    const bool hasOutputs = m_lastOutputCount > 0;
+
+    if (!hasOutputs) {
+        // Close existing notification in case of multi-screen,
+        // e.g. goes from 2 to 1, notifies, then goes from 1 to 0.
+        if (m_displayRemovedNotification) {
+            m_displayRemovedNotification->close();
+            m_displayRemovedNotification = nullptr;
+        }
+    }
+
     if (m_deviceRemovedTimer.isActive()) {
+        return;
+    }
+
+    m_deviceRemovedTimer.start();
+
+    if (!hasOutputs) {
         return;
     }
 
@@ -470,8 +501,6 @@ void KdedDeviceNotifications::notifyOutputRemoved()
     m_displayRemovedNotification->setTitle(i18nc("@title:notifications", "Display Removed"));
     m_displayRemovedNotification->setText(i18n("A display has been disconnected."));
     m_displayRemovedNotification->sendEvent();
-
-    m_deviceRemovedTimer.start();
 }
 
 void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)

@@ -126,6 +126,8 @@ public:
     OutputDeviceRegistry();
     ~OutputDeviceRegistry() override;
 
+    int count() const;
+
 Q_SIGNALS:
     void outputAdded(OutputDevice *output);
     void outputRemoved(OutputDevice *output);
@@ -164,6 +166,7 @@ private:
     OutputDeviceRegistry *m_outputRegistry = nullptr;
     QList<QString> m_recentlyRemovedOutputs;
     bool m_initialOutputsReceived = false;
+    int m_lastOutputCount = 0;
 
     QTimer m_deviceAddedTimer;
     QTimer m_deviceRemovedTimer;
