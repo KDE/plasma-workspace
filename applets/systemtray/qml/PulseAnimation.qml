@@ -20,17 +20,19 @@ SequentialAnimation {
 
     loops: Animation.Infinite
     alwaysRunToEnd: true
-
-    ScaleAnimator {
+    // Avoiding an animator due to https://qt-project.atlassian.net/browse/QTBUG-150367
+    NumberAnimation {
         target: pulseAnimation.targetItem
+        property: "scale"
         from: 1
         to: 1.2
         duration: pulseAnimation.duration * 0.15
         easing.type: Easing.InQuad
     }
 
-    ScaleAnimator {
+    NumberAnimation {
         target: pulseAnimation.targetItem
+        property: "scale"
         from: 1.2
         to: 1
         duration: pulseAnimation.duration * 0.15

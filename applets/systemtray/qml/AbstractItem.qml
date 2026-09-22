@@ -116,7 +116,7 @@ PlasmaCore.ToolTipArea {
             Accessible.onPressAction: abstractItem.activated(Plasmoid.popupPosition(iconContainer, iconContainer.width/2, iconContainer.height/2));
 
             Behavior on scale {
-                ScaleAnimator {
+                NumberAnimation {
                     duration: Kirigami.Units.longDuration
                     easing.type: (abstractItem.effectivePressed || mouseArea.containsPress) ? Easing.OutCubic : Easing.InCubic
                 }
