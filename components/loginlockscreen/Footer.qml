@@ -47,8 +47,8 @@ RowLayout {
         id: onScreenKeyboardButton
 
         text: Keyboards.KWinVirtualKeyboard.visible
-            ? i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Hide On-Screen Keyboard")
-            : i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Show On-Screen Keyboard")
+            ? i18ndc("plasmashellprivateplugin", "@action:button", "Hide On-Screen Keyboard")
+            : i18ndc("plasmashellprivateplugin", "@action:button", "Show On-Screen Keyboard")
         icon.name: Keyboards.KWinVirtualKeyboard.visible ? "input-keyboard-virtual-hide" : "input-keyboard-virtual-show"
 
         onClicked: {
@@ -73,7 +73,7 @@ RowLayout {
     PlasmaComponents.ToolButton {
         id: keyboardButton
 
-        Accessible.description: i18ndc("plasma_shell_org.kde.plasma.desktop", "Button to change keyboard layout", "Switch layout")
+        Accessible.description: i18ndc("plasmashellprivateplugin", "Button to change keyboard layout", "Switch layout")
         icon.name: "input-keyboard"
 
         WorkspaceComponents.KeyboardLayoutSwitcher {
