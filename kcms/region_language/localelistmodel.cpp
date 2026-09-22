@@ -127,7 +127,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
     case DisplayName: {
         // 0 is unset option, 1 is locale C
         if (dataIndex == 1) {
-            return data.countryCode;
+            return i18nc("@item:intable", "International English");
         }
         const QString clabel = !data.nativeCountryName.isEmpty() ? data.nativeCountryName : data.englishCountryName;
         QString languageName;
