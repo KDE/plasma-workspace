@@ -143,7 +143,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
     }
     case LocaleName: {
         QString cvalue = data.countryCode;
-        if (!cvalue.contains(QLatin1Char('.')) && cvalue != QLatin1Char('C') && cvalue != i18n("Default")) {
+        if (!cvalue.contains(QLatin1Char('.')) && cvalue != i18n("Default")) {
             // explicitly add the encoding,
             // otherwise Qt doesn't accept dead keys and garbles the output as well
             cvalue.append(QLatin1String(".UTF-8"));
