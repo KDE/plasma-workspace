@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 14:46+0000\n"
+"POT-Creation-Date: 2026-09-22 19:12+0000\n"
 "PO-Revision-Date: 2025-01-12 15:14+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -17,12 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.0\n"
 
-#: geotimezonemodule.cpp:192
-#, kde-format
-msgctxt "OSD, keep short"
-msgid "Time zone changed to %1"
-msgstr "O fuso horario cambiou a «%1»."
-
 # skip-rule: trasno-change, trasno-check3_reverse
 #: geotimezonemodule.cpp:195
 #, kde-format
@@ -32,12 +26,16 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "O reloxo pasou a marcar as %1 (%2)."
 
-#: geotimezonemodule.cpp:211
+#: geotimezonemodule.cpp:210
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "A actualización xa está en marcha."
 
-#: geotimezonemodule.cpp:274
+#: geotimezonemodule.cpp:273
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "Ou non se recibiu un fuso horario ou o recibido non é válido."
+
+#~ msgctxt "OSD, keep short"
+#~ msgid "Time zone changed to %1"
+#~ msgstr "O fuso horario cambiou a «%1»."

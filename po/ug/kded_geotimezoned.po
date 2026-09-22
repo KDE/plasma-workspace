@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 14:46+0000\n"
+"POT-Creation-Date: 2026-09-22 19:12+0000\n"
 "PO-Revision-Date: 2026-06-01 18:19-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,6 @@ msgstr ""
 "X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: geotimezonemodule.cpp:192
-#, kde-format
-msgctxt "OSD, keep short"
-msgid "Time zone changed to %1"
-msgstr "ۋاقىت رايونى %1 غا ئۆزگەرتىلدى"
-
 #: geotimezonemodule.cpp:195
 #, kde-format
 msgctxt ""
@@ -32,12 +26,16 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "سائەت %1 (%2)‎‏ غا ئۆزگەرتىلدى"
 
-#: geotimezonemodule.cpp:211
+#: geotimezonemodule.cpp:210
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "يېڭىلاش ئېلىپ بېرىلىۋاتىدۇ."
 
-#: geotimezonemodule.cpp:274
+#: geotimezonemodule.cpp:273
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "تاپشۇرۇۋالمىدى ياكى ئىناۋەتسىز ۋاقىت رايونى تاپشۇرۇۋالدى."
+
+#~ msgctxt "OSD, keep short"
+#~ msgid "Time zone changed to %1"
+#~ msgstr "ۋاقىت رايونى %1 غا ئۆزگەرتىلدى"

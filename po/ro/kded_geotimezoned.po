@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-20 14:46+0000\n"
+"POT-Creation-Date: 2026-09-22 19:12+0000\n"
 "PO-Revision-Date: 2026-01-29 01:43+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,12 +18,6 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: geotimezonemodule.cpp:192
-#, kde-format
-msgctxt "OSD, keep short"
-msgid "Time zone changed to %1"
-msgstr "Fus orar schimbat la %1"
-
 #: geotimezonemodule.cpp:195
 #, kde-format
 msgctxt ""
@@ -32,12 +26,16 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "Ceas schimbat la %1 (%2)"
 
-#: geotimezonemodule.cpp:211
+#: geotimezonemodule.cpp:210
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "Împrospătarea e deja în desfășurare."
 
-#: geotimezonemodule.cpp:274
+#: geotimezonemodule.cpp:273
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "Fusul orar primit a fost gol sau nevalid."
+
+#~ msgctxt "OSD, keep short"
+#~ msgid "Time zone changed to %1"
+#~ msgstr "Fus orar schimbat la %1"
