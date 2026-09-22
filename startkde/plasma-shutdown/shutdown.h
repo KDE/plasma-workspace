@@ -30,4 +30,12 @@ private:
     void runShutdownScripts();
     bool usingSystemdManagedSession();
     KWorkSpace::ShutdownType m_shutdownType;
+    // KDE bug 525911: guard against a second concurrent logout/reboot/shutdown
+    // request racing the first one. Without this, a duplicate D-Bus call
+    // (e.g. from Discover firing logoutAndReboot() twice) starts a second
+    // startLogout() flow that collides with KWin's own single-flight guard
+    // in SessionManager::closeWaylandWindows(), and the resulting error
+    // kills this whole process via logoutCancelled() -> qApp->quit(),
+    // abandoning the first, legitimate request too.
+    bool m_shutdownInProgress = false;
 };

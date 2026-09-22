@@ -39,6 +39,14 @@ void Shutdown::logoutAndReboot()
 
 void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
 {
+    // KDE bug 525911: ignore a second concurrent logout/reboot/shutdown
+    // request instead of racing a duplicate flow against the first one.
+    if (m_shutdownInProgress) {
+        qCWarning(PLASMA_SESSION) << "Logout already in progress, ignoring duplicate request";
+        return;
+    }
+    m_shutdownInProgress = true;
+
     m_shutdownType = shutdownType;
 
     OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
