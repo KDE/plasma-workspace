@@ -29,5 +29,6 @@ private:
     void startLogout(KWorkSpace::ShutdownType shutdownType);
     void runShutdownScripts();
     bool usingSystemdManagedSession();
-    KWorkSpace::ShutdownType m_shutdownType;
+    // ShutdownTypeNone means idle, see startLogout().
+    KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeNone;
 };

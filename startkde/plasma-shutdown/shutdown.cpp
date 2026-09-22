@@ -24,7 +24,7 @@ Shutdown::Shutdown(QObject *parent)
 
 void Shutdown::logout()
 {
-    startLogout(KWorkSpace::ShutdownTypeNone);
+    startLogout(KWorkSpace::ShutdownTypeLogout);
 }
 
 void Shutdown::logoutAndShutdown()
@@ -39,6 +39,13 @@ void Shutdown::logoutAndReboot()
 
 void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
 {
+    // Ignore a second concurrent request instead of racing a duplicate flow
+    // against the first one (BUG: 525911).
+    if (m_shutdownType != KWorkSpace::ShutdownTypeNone) {
+        qCWarning(PLASMA_SESSION) << "Logout already in progress, ignoring duplicate request";
+        return;
+    }
+
     m_shutdownType = shutdownType;
 
     OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
