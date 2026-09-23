@@ -34,7 +34,3 @@ msgstr "Обновяването вече е в процес."
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "Липсващи или невалидни данни за часова зона"
-
-#~ msgctxt "OSD, keep short"
-#~ msgid "Time zone changed to %1"
-#~ msgstr "Часовата зона е променена на %1"

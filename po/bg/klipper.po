@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2026-09-10 15:33+0200\n"
+"PO-Revision-Date: 2026-09-22 23:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: configdialog.cpp:83
 #, kde-format
@@ -65,15 +65,13 @@ msgstr ""
 "да бъде запазена в историята на клипборда (обект на опцията по-долу)."
 
 #: configdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Текст, избран с показалеца или клавиатурата"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Включване в историята:"
@@ -86,8 +84,7 @@ msgstr ""
 "Копираният текст винаги се запазва, освен ако не е маркиран като парола."
 
 #: configdialog.cpp:133
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Изрично копирани изображения"
@@ -814,11 +811,11 @@ msgstr "Размер на историята:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "Историята на клипборда ще съхранява елементи до посочения брой."
+msgstr ""
+"Историята на клипборда ще съхранява до този брой елементи. Максимумът е 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61
