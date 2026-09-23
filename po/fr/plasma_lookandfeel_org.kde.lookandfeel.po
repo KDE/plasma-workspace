@@ -301,7 +301,7 @@ msgctxt ""
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
-msgstr "Plasma développé par KDE"
+msgstr "Plasma, par KDE"
 
 #~ msgid "100%"
 #~ msgstr "100 %"
