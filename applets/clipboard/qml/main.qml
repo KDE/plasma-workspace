@@ -76,7 +76,8 @@ PlasmoidItem {
             id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            visible: !main.isClipboardEmpty && !main.clipboardMenu?.editing && !copyClipboardAction.visible
+            priority: copyClipboardAction.visible || main.clipboardMenu?.editing ? PlasmaCore.Action.LowPriority : PlasmaCore.Action.NormalPriority
+            visible: !main.isClipboardEmpty
             onTriggered: main.clipboardMenu.clearHistory()
         },
         PlasmaCore.Action {
