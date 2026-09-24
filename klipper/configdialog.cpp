@@ -520,7 +520,6 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     KWindowConfig::restoreWindowSize(windowHandle(), windowStateGroup);
     resize(windowHandle()->size());
     connect(collection, &QObject::destroyed, this, &ConfigDialog::close);
-    setMinimumHeight(550);
 }
 
 void ConfigDialog::updateSettings()
