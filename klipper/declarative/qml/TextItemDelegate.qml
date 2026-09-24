@@ -25,7 +25,10 @@ ClipboardItemDelegate {
                 return "";
             }
             let highlightFontTag = "<font color='" + Kirigami.Theme.highlightColor + "'>%1</font>"
-            let text = menuItem.model.display.slice(0, 100)
+
+            // do not split a surrogate pair at the 100th position BUG: 508224
+            const end = menuItem.model.display.codePointAt(99) > 0xFFFF ? 99 : 100
+            let text = menuItem.model.display.slice(0, end)
 
             // first escape any HTML characters to prevent privacy issues
             text = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
