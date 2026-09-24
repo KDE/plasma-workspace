@@ -74,6 +74,7 @@ public:
 
     // Setters of the various theme pieces
     void setWidgetStyle(const QString &style);
+    void setGtkTheme(const QString &gtkTheme);
     void setColors(const QString &scheme, const QString &colorFile);
     void setIcons(const QString &theme);
     void setPlasmaTheme(const QString &theme);
@@ -99,6 +100,7 @@ Q_SIGNALS:
     void iconsChanged();
     void colorsChanged();
     void styleChanged(const QString &newStyle);
+    void gtkThemeChanged(const QString &newTheme);
     void cursorsChanged(const QString &newStyle);
     void fontsChanged();
 
