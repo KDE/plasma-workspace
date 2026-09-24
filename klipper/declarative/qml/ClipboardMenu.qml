@@ -311,6 +311,7 @@ PlasmaComponents3.ScrollView {
                 }
                 Keys.onDownPressed: event => {
                     menuListView.forceActiveFocus(Qt.TabFocusReason);
+                    menuListView.currentIndex = 0
                     clipboardMenu.keyboardActivated = true
                     event.accepted = true;
                 }
