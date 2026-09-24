@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-19 02:42+0000\n"
-"PO-Revision-Date: 2026-09-11 16:36+0400\n"
+"PO-Revision-Date: 2026-09-23 17:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -71,15 +71,13 @@ msgstr ""
 "الحافظة (وفقًا للخيار أدناه)، ولكن لا يمكن لصقه إلا باستخدام زر الفأرة الأوسط."
 
 #: configdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "النص المحدد بالمؤشر أو لوحة المفاتيح"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "أدرج في المحفوظات:"
@@ -91,8 +89,7 @@ msgid ""
 msgstr "النص المنسوخ صراحةً يُحفظ دائمًا ما لم يُعلَّم كلمة سر."
 
 #: configdialog.cpp:133
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "بيانات الصورة المنسوخة صراحةً"
