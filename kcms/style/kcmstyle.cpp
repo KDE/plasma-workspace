@@ -83,9 +83,12 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data)
         m_effectsDirty = true;
     });
 
-    m_gtkPage = new GtkPage(this);
+    m_gtkPage = new GtkPage(this, styleSettings()->gtkTheme());
     connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this]() {
         settingsChanged();
+    });
+    connect(styleSettings(), &StyleSettings::gtkThemeChanged, this, [this] {
+        m_gtkPage->setDefaultGtkTheme(styleSettings()->gtkTheme());
     });
 }
 

@@ -14,9 +14,10 @@
 
 #include "gtkpage.h"
 
-GtkPage::GtkPage(QObject *parent)
+GtkPage::GtkPage(QObject *parent, const QString &defaultGtkTheme)
     : QObject(parent)
-    , m_gtkThemesModel(new GtkThemesModel(this))
+    , m_gtkThemesModel(new GtkThemesModel(this, defaultGtkTheme))
+    , m_defaultGtkTheme(defaultGtkTheme)
     , m_gtkConfigInterface(QStringLiteral("org.kde.GtkConfig"), QStringLiteral("/GtkConfig"), QDBusConnection::sessionBus())
 {
     connect(m_gtkThemesModel, &GtkThemesModel::themeRemoved, this, &GtkPage::onThemeRemoved);
@@ -45,6 +46,11 @@ void GtkPage::onThemeRemoved()
     load();
     defaults();
     save();
+}
+
+void GtkPage::setDefaultGtkTheme(const QString &defaultGtkTheme)
+{
+    m_defaultGtkTheme = defaultGtkTheme;
 }
 
 void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
@@ -91,7 +97,7 @@ void GtkPage::save()
 
 void GtkPage::defaults()
 {
-    m_gtkThemesModel->setSelectedTheme(QStringLiteral("Breeze"));
+    m_gtkThemesModel->setSelectedTheme(m_defaultGtkTheme);
 }
 
 void GtkPage::load()
@@ -102,7 +108,7 @@ void GtkPage::load()
 
 bool GtkPage::isDefaults() const
 {
-    return m_gtkThemesModel->selectedTheme() == QLatin1String("Breeze");
+    return m_gtkThemesModel->selectedTheme() == m_defaultGtkTheme;
 }
 
 bool GtkPage::isSaveNeeded()

@@ -13,9 +13,9 @@
 
 #include "gtkthemesmodel.h"
 
-GtkThemesModel::GtkThemesModel(QObject *parent)
+GtkThemesModel::GtkThemesModel(QObject *parent, const QString &defaultGtkTheme)
     : QAbstractListModel(parent)
-    , m_selectedTheme(QStringLiteral("Breeze"))
+    , m_selectedTheme(defaultGtkTheme)
     , m_themes()
 {
 }

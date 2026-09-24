@@ -20,7 +20,7 @@ class GtkPage : public QObject
     Q_PROPERTY(GtkThemesModel *gtkThemesModel MEMBER m_gtkThemesModel NOTIFY gtkThemesModelChanged)
 
 public:
-    explicit GtkPage(QObject *parent = nullptr);
+    explicit GtkPage(QObject *parent = nullptr, const QString &defaultGtkTheme = QStringLiteral("Breeze"));
     ~GtkPage() override;
 
     Q_INVOKABLE void load();
@@ -28,6 +28,7 @@ public:
     void defaults();
     bool isDefaults() const;
     bool isSaveNeeded();
+    void setDefaultGtkTheme(const QString &defaultGtkTheme);
 
 public Q_SLOTS:
     bool gtkPreviewAvailable();
@@ -47,6 +48,8 @@ Q_SIGNALS:
 
 private:
     GtkThemesModel *m_gtkThemesModel;
+
+    QString m_defaultGtkTheme;
 
     OrgKdeGtkConfigInterface m_gtkConfigInterface;
 };

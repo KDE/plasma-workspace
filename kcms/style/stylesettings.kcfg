@@ -13,6 +13,10 @@
       <label>Union Style ID</label>
       <default>breeze</default>
     </entry>
+    <entry name="gtkTheme" type="String">
+      <label>GTK theme</label>
+      <default>Breeze</default>
+    </entry>
     <entry name="iconsOnButtons" key="ShowIconsOnPushButtons" type="Bool">
       <label>Show icons on buttons</label>
       <default>true</default>
