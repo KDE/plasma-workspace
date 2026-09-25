@@ -5,10 +5,16 @@
 
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
+#include <KPluginFactory>
+
 #include "fdoselectionmanager.h"
 
 #include "debug.h"
+#include "snidbus.h"
+#include "sniproxy.h"
+#include "xcbutils.h"
 
+#include <QDBusMetaType>
 #include <QTimer>
 
 #include <KSelectionOwner>
@@ -19,18 +25,31 @@
 #include <xcb/xcb_event.h>
 
 #include "../c_ptr.h"
-#include "sniproxy.h"
-#include "xcbutils.h"
 
 #define SYSTEM_TRAY_REQUEST_DOCK 0
 #define SYSTEM_TRAY_BEGIN_MESSAGE 1
 #define SYSTEM_TRAY_CANCEL_MESSAGE 2
 
-FdoSelectionManager::FdoSelectionManager()
-    : QObject()
-    , m_x11Interface(qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
-    , m_selectionOwner(new KSelectionOwner(Xcb::atoms->selectionAtom, -1, this))
+namespace Xcb
 {
+Xcb::Atoms *atoms;
+Xcb::TrayVisual *trayVisual;
+}
+
+K_PLUGIN_CLASS_WITH_JSON(FdoSelectionManager, "xembedsniproxy.json")
+
+FdoSelectionManager::FdoSelectionManager(QObject *parent, const QList<QVariant> &)
+    : KDEDModule(parent)
+    , m_x11Interface(qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
+{
+    qDBusRegisterMetaType<KDbusImageStruct>();
+    qDBusRegisterMetaType<KDbusImageVector>();
+    qDBusRegisterMetaType<KDbusToolTipStruct>();
+
+    Xcb::atoms = new Xcb::Atoms();
+    Xcb::trayVisual = new Xcb::TrayVisual();
+    m_selectionOwner = new KSelectionOwner(Xcb::atoms->selectionAtom, -1, this);
+
     qCDebug(SNIPROXY) << "starting";
 
     // we may end up calling QCoreApplication::quit() in this method, at which point we need the event loop running
@@ -41,6 +60,8 @@ FdoSelectionManager::~FdoSelectionManager()
 {
     qCDebug(SNIPROXY) << "closing";
     m_selectionOwner->release();
+    delete Xcb::atoms;
+    delete Xcb::trayVisual;
 }
 
 void FdoSelectionManager::init()
@@ -199,3 +220,5 @@ void FdoSelectionManager::setSystemTrayVisual()
     xcb_connection_t *c = m_x11Interface->connection();
     xcb_change_property(c, XCB_PROP_MODE_REPLACE, m_selectionOwner->ownerWindow(), Xcb::atoms->visualAtom, XCB_ATOM_VISUALID, 32, 1, &Xcb::trayVisual->visualId);
 }
+
+#include "fdoselectionmanager.moc"
