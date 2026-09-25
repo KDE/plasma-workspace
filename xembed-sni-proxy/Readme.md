@@ -24,7 +24,7 @@ There are a few extra hacks in the real code to deal with some toolkits being aw
     make
     sudo make install
 
-After building, run `xembedsniproxy`.
+After installing, KDED loads the proxy automatically.
 
 [1] http://standards.freedesktop.org/systemtray-spec/systemtray-spec-latest.html
 [2] http://www.freedesktop.org/wiki/Specifications/StatusNotifierItem/
