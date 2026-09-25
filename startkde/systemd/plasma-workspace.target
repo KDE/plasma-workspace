@@ -4,7 +4,6 @@ Requires=plasma-core.target
 Requires=graphical-session.target
 Wants=plasma-restoresession.service
 Wants=plasma-xembedsniproxy.service
-Wants=plasma-gmenudbusmenuproxy.service
 Wants=plasma-powerdevil.service
 Wants=plasma-polkit-agent.service
 Wants=kde-baloo.service

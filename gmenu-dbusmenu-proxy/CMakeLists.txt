@@ -11,7 +11,6 @@ find_package(XCB
 )
 
 set(GMENU_DBUSMENU_PROXY_SRCS
-    main.cpp
     menuproxy.cpp menuproxy.h
     window.cpp
     menu.cpp
@@ -44,7 +43,7 @@ ecm_qt_declare_logging_category(GMENU_DBUSMENU_PROXY_SRCS HEADER debug.h
                                                EXPORT PLASMAWORKSPACE
                                            )
 
-add_executable(gmenudbusmenuproxy ${GMENU_DBUSMENU_PROXY_SRCS})
+kcoreaddons_add_plugin(gmenudbusmenuproxy SOURCES ${GMENU_DBUSMENU_PROXY_SRCS} INSTALL_NAMESPACE "kf6/kded-x11")
 
 set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 
@@ -59,8 +58,3 @@ target_link_libraries(gmenudbusmenuproxy
     XCB::XCB
 )
 target_link_libraries(gmenudbusmenuproxy Qt::GuiPrivate)
-
-install(TARGETS gmenudbusmenuproxy ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES gmenudbusmenuproxy.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
-
-ecm_install_configured_files(INPUT plasma-gmenudbusmenuproxy.service.in @ONLY DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
