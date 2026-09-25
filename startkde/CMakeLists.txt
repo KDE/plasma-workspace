@@ -35,6 +35,7 @@ kconfig_target_kcfg_file(startplasma-wayland
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
 add_subdirectory(plasma-setup-xwayland)
+add_subdirectory(kded-x11)
 add_subdirectory(session-shortcuts)
 add_subdirectory(session-restore)
 

@@ -117,5 +117,7 @@ int main(int argc, char **argv)
     xcb_disconnect(connection);
 #endif
 
+    QProcess::startDetached(QStringLiteral("plasma-kded6-x11"));
+
     return 0;
 }
