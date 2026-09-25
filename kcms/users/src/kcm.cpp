@@ -66,6 +66,8 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
             m_avatarFiles << it.next();
         }
     }
+
+    new QObject;
 }
 
 bool KCMUser::createUser(const QString &name, const QString &realName, const QString &password, bool isAdmin)

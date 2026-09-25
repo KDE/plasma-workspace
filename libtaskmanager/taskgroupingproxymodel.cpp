@@ -65,7 +65,7 @@ TaskGroupingProxyModel::Private::Private(TaskGroupingProxyModel *q)
 
 TaskGroupingProxyModel::Private::~Private()
 {
-    qDeleteAll(rowMap);
+    // qDeleteAll(rowMap);
 }
 
 bool TaskGroupingProxyModel::Private::isGroup(int row)
