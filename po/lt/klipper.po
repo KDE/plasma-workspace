@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-09-25 00:48+0000\n"
 "PO-Revision-Date: 2026-09-21 20:45+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -322,17 +322,17 @@ msgstr "Išskleisti"
 msgid "Clear History"
 msgstr "Išvalyti istoriją"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "All History"
 msgstr "Visa istorija"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "Starred Only"
 msgstr "Tik žvaigždute pažymėti elementai"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -342,18 +342,18 @@ msgstr ""
 "Šiuo metu iškarpinėje yra slaptų duomenų dalis, kuri nebus saugoma "
 "istorijoje."
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Išvalyti slaptus duomenis"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "No matches"
 msgstr "Nėra atitikmenų"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"
@@ -604,30 +604,36 @@ msgstr "Atstatyti komandai skirtą piktogramą į numatytąją"
 msgid "Icon:"
 msgstr "Piktograma:"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:287
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ar tikrai norite išvalyti ir ištrinti visą iškarpinės istoriją?"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:289
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Išvalyti iškarpinės istoriją"
 
-#: historymodel.cpp:364
+#: historymodel.cpp:291 historymodel.cpp:566
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:373
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:546
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Šis elementas pažymėtas žvaigždute. Ar tikrai norite pašalinti jį iš "
 "istorijos?"
 
-#: historymodel.cpp:547
+#: historymodel.cpp:564
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Šalinti žvaigždute pažymėtą elementą"

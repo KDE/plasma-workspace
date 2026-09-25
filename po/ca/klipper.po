@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-09-25 00:48+0000\n"
 "PO-Revision-Date: 2026-09-18 11:13+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -319,17 +319,17 @@ msgstr "Expandeix"
 msgid "Clear History"
 msgstr "Neteja l'historial"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "All History"
 msgstr "Tot l'historial"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "Starred Only"
 msgstr "Només amb estrella"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -339,18 +339,18 @@ msgstr ""
 "El porta-retalls actualment conté una peça confidencial de dades que no "
 "s'emmagatzemarà a l'historial."
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Neteja les dades de secrets"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "No matches"
 msgstr "Sense coincidències"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El porta-retalls està buit"
@@ -601,29 +601,35 @@ msgstr "Reinicia la icona al valor predeterminat per a l'ordre"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:287
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Realment voleu netejar i suprimir tot l'historial del porta-retalls?"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:289
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Neteja l'historial del porta-retalls"
 
-#: historymodel.cpp:364
+#: historymodel.cpp:291 historymodel.cpp:566
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:373
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:546
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Aquest element està amb estrella. Realment el voleu eliminar de l'historial?"
 
-#: historymodel.cpp:547
+#: historymodel.cpp:564
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Elimina l'element amb estrella"

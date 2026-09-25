@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-09-25 00:48+0000\n"
 "PO-Revision-Date: 2026-09-18 15:13+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -323,17 +323,17 @@ msgstr "Expandir"
 msgid "Clear History"
 msgstr "Borrar el historial"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "All History"
 msgstr "Todo el historial"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "Starred Only"
 msgstr "Solo favoritos"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -343,18 +343,18 @@ msgstr ""
 "El portapapeles contiene actualmente un dato confidencial que no se "
 "almacenará en el historial."
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Borrar datos confidenciales"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "No matches"
 msgstr "Sin coincidencias"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El portapapeles está vacío"
@@ -606,30 +606,36 @@ msgstr "Reiniciar el icono al predeterminado para la orden"
 msgid "Icon:"
 msgstr "Icono:"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:287
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "¿Realmente desea limpiar y borrar todo el historial del portapapeles?"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:289
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpiar el historial del portapapeles"
 
-#: historymodel.cpp:364
+#: historymodel.cpp:291 historymodel.cpp:566
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:373
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:546
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Este elemento está marcado como favorito. ¿Realmente quiere eliminarlo del "
 "historial?"
 
-#: historymodel.cpp:547
+#: historymodel.cpp:564
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Eliminar elemento marcado como favorito"

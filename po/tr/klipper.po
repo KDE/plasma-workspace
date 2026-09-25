@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-09-25 00:48+0000\n"
 "PO-Revision-Date: 2026-09-18 19:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -317,17 +317,17 @@ msgstr "Genişlet"
 msgid "Clear History"
 msgstr "Geçmişi Temizle"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "All History"
 msgstr "Tüm Geçmiş"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "Starred Only"
 msgstr "Yalnızca yıldızlılar"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -335,18 +335,18 @@ msgid ""
 "stored in the history."
 msgstr "Panoda şu anda geçmişe kaydedilmeyecek hassas bir veri bulunmaktadır."
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Gizli Veriyi Temizle"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "No matches"
 msgstr "Eşleşme yok"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Pano boş"
@@ -594,29 +594,35 @@ msgstr "Komutun simgesini öntanımlıya sıfırla"
 msgid "Icon:"
 msgstr "Simge:"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:287
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Tüm pano geçmişini temizleyip silmeyi gerçekten istiyor musunuz?"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:289
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Pano Geçmişini Temizle"
 
-#: historymodel.cpp:364
+#: historymodel.cpp:291 historymodel.cpp:566
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:373
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 × %2"
 
-#: historymodel.cpp:546
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Bu ögeye yıldız konulmuş. Geçmişten kaldırmayı gerçekten istiyor musunuz?"
 
-#: historymodel.cpp:547
+#: historymodel.cpp:564
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Yıldızlı Ögeyi Kaldır"

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2024 X əyyam
-# SPDX-FileCopyrightText: 2024, 2025 Kheyyam Godjayev <xxmn77@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-14 00:19+0400\n"
+"PO-Revision-Date: 2026-09-24 23:24+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -158,6 +158,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"yalnız kiçik hərflərə, rəqəmlərə, tirelərə və alt tirelərə icazə verilir. "
+"Dəstəklənməyən işarələr ləğv ediləcəkdir."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -166,6 +168,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"istifadəçi adı kiçik hərflərlə olmalıdır. Böyük hərflərə kiçik hərflərə "
+"çevriləcək."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format

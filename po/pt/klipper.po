@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-09-25 00:48+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -322,18 +322,18 @@ msgstr ""
 msgid "Clear History"
 msgstr "Histórico da área de transferência"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:344
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Histórico da área de transferência"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -341,18 +341,18 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "No matches"
 msgstr "Sem correspondências"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
@@ -617,29 +617,35 @@ msgstr "Repor o ícone predefinido para o comando"
 msgid "Icon:"
 msgstr "Ícone:"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:287
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Deseja mesmo limpar e remover o histórico da área de transferência?"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:289
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpar o Histórico da Área de Transferência"
 
-#: historymodel.cpp:364
+#: historymodel.cpp:291 historymodel.cpp:566
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:373
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:546
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:547
+#: historymodel.cpp:564
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

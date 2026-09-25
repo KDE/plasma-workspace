@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-09-25 00:48+0000\n"
 "PO-Revision-Date: 2026-09-22 23:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -314,17 +314,17 @@ msgstr "Разширяване"
 msgid "Clear History"
 msgstr "Изчистване на историята"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:344
 #, kde-format
 msgid "All History"
 msgstr "Цялата история"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "Starred Only"
 msgstr "Само със звезда"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -334,18 +334,18 @@ msgstr ""
 "Тъй като в клипборда се съдържат чувствителни данни, те няма да бъдат "
 "запазени в историята."
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Изчистване на секретни данни"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "No matches"
 msgstr "Няма съвпадения"
 
-#: declarative/qml/ClipboardMenu.qml:478
+#: declarative/qml/ClipboardMenu.qml:479
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буферът е празен"
@@ -596,30 +596,36 @@ msgstr "Възстановяване на иконата по подразбир
 msgid "Icon:"
 msgstr "Икона:"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:287
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Наистина ли да се изчисти цялата история на буфера?"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:289
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "&Изчистване историята на клипборда"
 
-#: historymodel.cpp:364
+#: historymodel.cpp:291 historymodel.cpp:566
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:373
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:546
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Този елемент е маркиран със звезда. Наистина ли искате да го премахнете от "
 "историята?"
 
-#: historymodel.cpp:547
+#: historymodel.cpp:564
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Премахване на елемент, означен със звезда"

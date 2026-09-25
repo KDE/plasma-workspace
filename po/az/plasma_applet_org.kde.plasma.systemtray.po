@@ -2,27 +2,27 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2025 X əyyam
-# SPDX-FileCopyrightText: 2025 Khayyam <xxmn77@gmail.com>
+# SPDX-FileCopyrightText: 2025-2026 Khayyam <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2025-05-19 15:53+0400\n"
-"Last-Translator: linux <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2026-09-24 23:10+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "Çıxış %1"
 
 #: qml/config.qml:13
 #, kde-format
@@ -30,15 +30,13 @@ msgid "General"
 msgstr "Əsas"
 
 #: qml/ConfigGeneral.qml:45
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Lazım olduğunda göstərilir"
+msgstr "Lazım olduğunda göstərilsin"
 
 #: qml/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Həmişə göstərmək"
@@ -47,13 +45,13 @@ msgstr "Həmişə göstərmək"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Yalnız ani pəncərədə göstərmək"
 
 #: qml/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Heç vaxt göstərməmək (söndürülüb)"
 
 #: qml/ConfigGeneral.qml:128
 #, kde-format
@@ -103,13 +101,7 @@ msgid "I understand the risks"
 msgstr "Mən bu təhlükəni başa düşürəm"
 
 #: qml/ConfigGeneral.qml:189
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -119,10 +111,13 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Mübadilə yaddaşının söndürülməsi tövsiyyə olunmur, belə ki, məzmunu "
-"kopyalanan tətbiq bağlandıqdan sonra kopyalanan məlumatlar itiriləcək. <nl/"
-"><nl/>Bunun əvəzinə mübadilə yaddaşını tarixçəni söndürmək və ya hər "
-"dəfəsində yalnız bir elementi saxlamaq kimi ayarlaya bilərsiniz."
+"Mübadilə yaddaşını söndürmək tövsiyə edilmir, çünki bu, məzmunu kopyalanmış "
+"proqram bağlandıqda kopyalanmış məlumatların itirilməsinə səbəb olacaq.<nl/"
+"><nl/>Yalnız başqa yerdə əl ilə müstəqil bir mübadilə yaddaşı vidjeti əlavə "
+"etmisinizsə və ya 3-cü tərəf mübadilə yaddaşı menecerindən istifadə "
+"edirsinizsə, bunu edin. Bundan əlavə, mübadilə yaddaşını tarixçəni "
+"saxlamamaq və ya hər dəfə yalnız bir elementi yadda saxlamaq üçün "
+"tənizmləməyi düşünün."
 
 #: qml/ConfigGeneral.qml:198
 #, kde-kuit-format
@@ -133,25 +128,26 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Bildirişlər vidjetinin söndürülməsi tövsiyə edilmir, çünki tətbiqlər "
+"tərəfindən göndərilən bildirişlər göstərilməyəcək.<nl/><nl/>Yalnız bunu "
+"başqa yerdə əl ilə müstəqil Bildirişlər vidjetini əlavə etmisinizsə və ya "
+"bildirişləri idarə etmək üçün əlavə üçüncü tərəf bildiriş menecerindən "
+"istifadə edirsinizsə edin."
 
 #: qml/ConfigGeneral.qml:210
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr "Panel hündürlüyü ölçüsündə"
+msgstr "Panelin hündürlüyünə uyğunlaşdırmaq"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr "Panel eni ölçündə"
+msgstr "Panelin eninə uyğunlaşdırmaq"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -159,8 +155,7 @@ msgid "Panel icon size:"
 msgstr "Panel nişanlarının ölçüsü:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Kiçik"
@@ -169,7 +164,7 @@ msgstr "Kiçik"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Boşluq:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
@@ -190,33 +185,32 @@ msgid "Large"
 msgstr "Böyük"
 
 #: qml/ConfigGeneral.qml:269
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Daha çox fəaliyyətlər"
+msgstr "İstiqamət:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "Aşağıdan yuxarı"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "Yuxarıdan aşağı"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "Soldan sağa"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "Sağdan sola"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
@@ -225,18 +219,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Planşet rejimində avtomatik \"Böyük\" ölçü təyin edilsin"
 
 #: qml/ConfigGeneral.qml:332
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr "Girişlər"
+msgstr "Elementlər"
 
 #: qml/ConfigGeneral.qml:336
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Həmişə göstərmək"
+msgstr "Hamısını həmişə göstərmək"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
