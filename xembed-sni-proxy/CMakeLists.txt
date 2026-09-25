@@ -24,7 +24,6 @@ set(XCB_LIBS
 )
 
 set(XEMBED_SNI_PROXY_SOURCES
-    main.cpp
     fdoselectionmanager.cpp fdoselectionmanager.h
     snidbus.cpp snidbus.h
     sniproxy.cpp
@@ -45,7 +44,7 @@ ecm_qt_declare_logging_category(XEMBED_SNI_PROXY_SOURCES HEADER debug.h
                                                EXPORT PLASMAWORKSPACE
                                            )
 
-add_executable(xembedsniproxy ${XEMBED_SNI_PROXY_SOURCES})
+kcoreaddons_add_plugin(xembedsniproxy SOURCES ${XEMBED_SNI_PROXY_SOURCES} INSTALL_NAMESPACE "kf6/kded-x11")
 
 
 
@@ -58,12 +57,6 @@ target_link_libraries(xembedsniproxy
     KF6::DBusAddons
     KF6::WindowSystem
     KF6::CoreAddons
-    KF6::Crash
     ${XCB_LIBS}
     X11::Xtst
 )
-
-install(TARGETS xembedsniproxy ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
-install(FILES xembedsniproxy.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
-
-ecm_install_configured_files(INPUT plasma-xembedsniproxy.service.in @ONLY DESTINATION  ${KDE_INSTALL_SYSTEMDUSERUNITDIR})

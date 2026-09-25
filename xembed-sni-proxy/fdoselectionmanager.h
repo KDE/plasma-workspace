@@ -10,19 +10,20 @@
 #include <QAbstractNativeEventFilter>
 #include <QGuiApplication>
 #include <QHash>
-#include <QObject>
+
+#include <KDEDModule>
 
 #include <xcb/xcb.h>
 
 class KSelectionOwner;
 class SNIProxy;
 
-class FdoSelectionManager : public QObject, public QAbstractNativeEventFilter
+class FdoSelectionManager : public KDEDModule, public QAbstractNativeEventFilter
 {
     Q_OBJECT
 
 public:
-    FdoSelectionManager();
+    FdoSelectionManager(QObject *parent, const QList<QVariant> &args);
     ~FdoSelectionManager() override;
 
 protected:

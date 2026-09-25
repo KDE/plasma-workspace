@@ -1,0 +1,6 @@
+{
+    "KPlugin": {
+        "Description": "Handles legacy XEmbed system tray icons",
+        "Name": "XEmbed SNI Proxy"
+    },
+}
