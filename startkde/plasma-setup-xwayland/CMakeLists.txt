@@ -8,6 +8,8 @@ ecm_mark_nongui_executable(plasma-setup-xwayland)
 
 target_include_directories(plasma-setup-xwayland PRIVATE ${CMAKE_BINARY_DIR})
 
+target_compile_definitions(plasma-setup-xwayland PRIVATE PLASMA_KDED_X11_PATH="${KDE_INSTALL_FULL_LIBEXECDIR}/plasma-kded6-x11")
+
 target_link_libraries(plasma-setup-xwayland
     Qt::Core
     KF6::ConfigCore

@@ -117,5 +117,7 @@ int main(int argc, char **argv)
     xcb_disconnect(connection);
 #endif
 
+    QProcess::startDetached(QStringLiteral(PLASMA_KDED_X11_PATH));
+
     return 0;
 }
