@@ -1,0 +1,6 @@
+{
+    "KPlugin": {
+        "Description": "Proxies GTK D-Bus menus to a Plasma-readable format",
+        "Name": "GMenu D-Bus Menu Proxy"
+    },
+}
