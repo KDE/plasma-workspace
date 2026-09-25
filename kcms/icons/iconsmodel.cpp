@@ -14,6 +14,7 @@
 
 #include <QCollator>
 #include <QFileIconProvider>
+#include <QFileInfo>
 
 #include <KIconTheme>
 #include <algorithm>
