@@ -21,6 +21,7 @@
 
 #include <KConfigGroup>
 #include <KDirWatch>
+#include <KPluginFactory>
 #include <KSharedConfig>
 #include <KWindowInfo>
 #include <KWindowSystem>
@@ -55,8 +56,10 @@ static const QByteArray s_kdeNetWmAppMenuObjectPath = QByteArrayLiteral("_KDE_NE
 static const QString s_gtkModules = QStringLiteral("gtk-modules");
 static const QString s_appMenuGtkModule = QStringLiteral("appmenu-gtk-module");
 
-MenuProxy::MenuProxy()
-    : QObject()
+K_PLUGIN_CLASS_WITH_JSON(MenuProxy, "gmenudbusmenuproxy.json")
+
+MenuProxy::MenuProxy(QObject *parent, const QList<QVariant> &)
+    : KDEDModule(parent)
     , m_xConnection(QX11Info::connection())
     , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_gtk2RcWatch(new KDirWatch(this))
@@ -392,4 +395,5 @@ xcb_atom_t MenuProxy::getAtom(const QByteArray &name)
     return atom;
 }
 
+#include "menuproxy.moc"
 #include "moc_menuproxy.cpp"

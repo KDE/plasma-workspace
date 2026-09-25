@@ -8,8 +8,9 @@
 
 #include <QByteArray>
 #include <QHash>
-#include <QObject>
 #include <QWindow> // for WId
+
+#include <KDEDModule>
 
 #include <xcb/xcb_atom.h>
 
@@ -20,12 +21,12 @@ class KDirWatch;
 
 class Window;
 
-class MenuProxy : public QObject
+class MenuProxy : public KDEDModule
 {
     Q_OBJECT
 
 public:
-    MenuProxy();
+    MenuProxy(QObject *parent, const QList<QVariant> &args);
     ~MenuProxy() override;
 
 private Q_SLOTS:
