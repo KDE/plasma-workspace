@@ -34,6 +34,7 @@ Name[sl]=Plasma
 Name[sv]=Plasma
 Name[ta]=பிளாஸ்மா
 Name[tr]=Plasma
+Name[ug]=Plasma
 Name[uk]=Плазма
 Name[zh_CN]=Plasma
 Name[zh_TW]=Plasma

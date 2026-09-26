@@ -57,6 +57,7 @@ Name[sv]=Kör program
 Name[ta]=கேரன்னர்
 Name[th]=KRunner
 Name[tr]=K Çalıştır
+Name[ug]=KRunner
 Name[uk]=KRunner
 Name[vi]=KRunner
 Name[zh_CN]=KRunner
