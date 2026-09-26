@@ -1,10 +1,10 @@
 # translation of kcmstyle.po to Italian
 #
-# SPDX-FileCopyrightText: 2017-2021, 2023-2024, 2026 Paolo Zamponi <feus73@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2005, 2007.
 # Andrea RIZZI <arizzi@pi.infn.it>, 2004.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2010, 2012.
+# SPDX-FileCopyrightText: 2017-2021, 2023-2024, 2026 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"

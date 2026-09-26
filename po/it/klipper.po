@@ -1,8 +1,8 @@
 # translation of klipper.po to Italian
-# SPDX-FileCopyrightText: 2009, 2022-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006, 2009, 2010, 2011, 2012, 2018, 2020.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
+# SPDX-FileCopyrightText: 2009, 2022-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # SPDX-FileCopyrightText: 2022, 2024 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: configdialog.cpp:80
 #, kde-format

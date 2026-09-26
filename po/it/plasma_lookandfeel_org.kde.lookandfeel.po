@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014-2015, 2017-2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-01-09 17:38+0100\n"
+"PO-Revision-Date: 2026-09-11 07:45+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -261,15 +261,15 @@ msgstr[1] "Riavvio tra %1 secondi"
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] "Spegnimento in 1 secondo"
-msgstr[1] "Spegnimento in %1 secondi"
+msgstr[0] "Spegnimento tra 1 secondo"
+msgstr[1] "Spegnimento tra %1 secondi"
 
 #: contents/logout/Logout.qml:228
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] "Chiusura della sessione in 1 secondo"
-msgstr[1] "Chiusura della sessione in %1 secondi"
+msgstr[0] "Chiusura della sessione tra 1 secondo"
+msgstr[1] "Chiusura della sessione tra %1 secondi"
 
 #: contents/logout/Logout.qml:239
 #, kde-format
