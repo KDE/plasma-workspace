@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 02:44+0000\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -272,13 +272,13 @@ msgstr "Golver"
 msgid "QR Code"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr ""
@@ -582,30 +582,36 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:281
+#: historymodel.cpp:286
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Gou&llonderiñ istorig ar golver"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:288
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Gou&llonderiñ istorig ar golver"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:290 historymodel.cpp:557
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:372
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:543
+#: historymodel.cpp:553
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:544
+#: historymodel.cpp:555
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

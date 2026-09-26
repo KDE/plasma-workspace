@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 02:44+0000\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
 "PO-Revision-Date: 2025-10-16 12:38-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -255,13 +255,13 @@ msgstr "QR ਕੋਡ ਚਿੱਤਰ ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵ�
 msgid "QR Code"
 msgstr "QR ਕੋਡ"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "QR ਕੋਡ ਦਿਖਾਉਣ ਲਈ ਲੋੜੀਦੀ ਖਾਲੀ ਥਾਂ ਨਹੀਂ ਹੈ। ਇਸ ਐਪਲਿਟ ਦਾ ਆਕਾਰ ਬਦਲਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR ਕੋਡ ਬਣਾਉਣਾ ਫੇਲ੍ਹ ਹੈ"
@@ -547,28 +547,34 @@ msgstr ""
 msgid "Icon:"
 msgstr "ਆਈਕਾਨ:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:286
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ਕੀ ਤੁਸੀਂ ਪੂਰੇ ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਉਣਾ ਅਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:288
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:290 historymodel.cpp:557
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:372
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:553
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "ਇਹ ਚੀਜ਼ ਤਾਰਾ ਲਗਾਈ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਅਤੀਤ ਵਿੱਚੋਂ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:555
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "ਤਾਰਾ ਲੱਗੀ ਚੀਜ਼ ਨੂੰ ਹਟਾਓ"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 02:44+0000\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
 "PO-Revision-Date: 2026-09-22 00:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -277,13 +277,13 @@ msgstr "複製 QR 碼影像到剪貼簿"
 msgid "QR Code"
 msgstr "QR 碼"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "沒有足夠空間來顯示 QR 碼。請嘗試調整此小程式的大小。"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "建立 QR 碼失敗"
@@ -583,28 +583,34 @@ msgstr "為命令重設圖示為預設值"
 msgid "Icon:"
 msgstr "圖示："
 
-#: historymodel.cpp:281
+#: historymodel.cpp:286
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "您確定要清空並刪除整個剪貼簿歷史紀錄嗎？"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:288
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "清空剪貼簿歷史紀錄"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:290 historymodel.cpp:557
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:372
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:553
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "此項目已固定。您確定要將它從歷史紀錄中移除嗎？"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:555
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "移除已固定的項目"

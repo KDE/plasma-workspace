@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 02:51+0000\n"
-"PO-Revision-Date: 2026-06-28 11:40+0200\n"
+"PO-Revision-Date: 2026-09-25 18:25+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -153,19 +153,19 @@ msgstr "Set opp …"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Gøym skjermtastatur"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Vis skjermtastatur"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Byt utforming"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10

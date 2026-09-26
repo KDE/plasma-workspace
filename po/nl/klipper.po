@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 02:44+0000\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
 "PO-Revision-Date: 2026-09-19 11:56+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -297,7 +297,7 @@ msgstr "QR-code afbeelding kopiëren naar het klembord"
 msgid "QR Code"
 msgstr "QR-code"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -305,7 +305,7 @@ msgstr ""
 "Er is niet genoeg ruimte om de QR-code te tonen. Probeer dit applet een "
 "andere grootte te geven."
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Aanmaken van QR-code is mislukt"
@@ -609,28 +609,34 @@ msgstr "Het pictogram resetten naar de standaard voor het commando"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:286
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:288
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Klembordgeschiedenis wissen"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:290 historymodel.cpp:557
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:372
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:553
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Dit item heeft een ster. Wilt u deze uit de geschiedenis verwijderen?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:555
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Item met ster verwijderen"

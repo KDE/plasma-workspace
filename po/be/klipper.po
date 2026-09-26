@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 02:44+0000\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -294,7 +294,7 @@ msgstr "Дадаць у буфер абмену"
 msgid "QR Code"
 msgstr "QR-код"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -302,7 +302,7 @@ msgstr ""
 "Недастаткова месца для паказу QR-кода. Паспрабуйце змяніць памер гэтага "
 "аплета."
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не ўдалося стварыць QR-код"
@@ -612,29 +612,35 @@ msgstr "Скінуць значок каманды да прадвызначан
 msgid "Icon:"
 msgstr "Значок:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:286
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Сапраўды хочаце ачысціць усю гісторыю буфера абмену?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:288
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Ачысціць гісторыю буфера абмену"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:290 historymodel.cpp:557
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:372
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3 бітаў/піксель"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:553
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:544
+#: historymodel.cpp:555
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

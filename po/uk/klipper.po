@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 02:44+0000\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
 "PO-Revision-Date: 2026-09-19 14:30+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -292,14 +292,14 @@ msgstr "Скопіювати зображення QR-коду до буфера 
 msgid "QR Code"
 msgstr "QR-код"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "Недостатньо місця для показу QR-коду. Спробуйте змінити розміри цього аплету."
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не вдалося створити QR-код"
@@ -603,30 +603,36 @@ msgstr "Скинути піктограму до типової для кома�
 msgid "Icon:"
 msgstr "Піктограма:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:286
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Ви справді хочете спорожнити і вилучити увесь журнал буфера обміну даними?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:288
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Спорожнити журнал буфера обміну даними"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:290 historymodel.cpp:557
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:372
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1⨯%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:553
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Цей запис позначено зірочкою. Ви справді хочете вилучити його з журналу?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:555
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Вилучити запис із зірочкою"
