@@ -181,7 +181,7 @@ void Portal::AddNotification(const QString &appId, const QString &portalNotifica
 
     notification.d->processPortalProperties(props);
 
-    const bool showAsNew = props.value(u"display-hints"_s).toStringList().contains(u"show-as-new"_s);
+    const bool showAsNew = props.value(u"display-hint"_s).toStringList().contains(u"show-as-new"_s);
 
     if (wasReplaced) {
         notification.resetUpdated();
