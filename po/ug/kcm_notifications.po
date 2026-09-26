@@ -1,14 +1,14 @@
 # Uyghur translation for kcm_notifications.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-06 00:45+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:29-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -26,56 +26,56 @@ msgstr "دەخلى قىلماڭ ھالىتىنى ئالماشتۇر"
 #: sourcesmodel.cpp:404
 #, kde-format
 msgid "Other Applications"
-msgstr ""
+msgstr "باشقا پىروگرامما"
 
 #: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
-msgstr ""
+msgstr "قاڭقىش كۆزنىكىنى كۆرسەت"
 
 #: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
-msgstr ""
+msgstr "دەخلى قىلماڭ ھالىتىدە كۆرسەت"
 
 #: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
 #, kde-format
 msgid "Show in history"
-msgstr ""
+msgstr "تارىخ خاتىرىسىدە كۆرسەت"
 
 #: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
-msgstr ""
+msgstr "ئۇقتۇرۇش ئىزنەكنى كۆرسەت"
 
 #: ui/ApplicationConfiguration.qml:180
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr ""
+msgstr "پائالىيەت سەپلە"
 
 #: ui/ApplicationConfiguration.qml:188
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr ""
+msgstr "بۇ پىروگرامما ھەر بىر پائالىيەت ئاساسىدا ئۇقتۇرۇش سەپلەشنى قوللىمايدۇ"
 
 #: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "قاڭقىش كۆزنىكىدە ئۇچۇر كۆرسەت"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "ئاۋاز ياڭرات"
 
 #: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "ئاۋازنى ئالدىن ئاڭلات"
 
 #: ui/ApplicationConfiguration.qml:328
 #, kde-format
@@ -86,19 +86,19 @@ msgstr "ئەسلىگە قايتۇر"
 #: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "ئاۋاز ھۆججەت تاللىنىدۇ"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "سىستېما سەپلە…"
 
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr ""
+msgstr "پىروگرامما سەپلە…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -107,41 +107,43 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
+"ئۇقتۇرۇش كۆرسىتىشكە زۆرۈر بولغان «ئۇقتۇرۇش» ئەپچىنى تاپالمىدى. ئەپچىنى "
+"سىستېما قونداق ياكى ئايرىم ئەپچە سۈپىتىدە قوزغاتقانلىقىڭىزنى جەزملەڭ."
 
 #: ui/main.qml:107
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
-msgstr ""
+msgstr "نۆۋەتتە ئۇقتۇرۇشنى Plasma ئەمەس بەلكى «%1 %2» تەمىنلىگەن."
 
 #: ui/main.qml:111
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
-msgstr ""
+msgstr "نۆۋەتتە ئۇقتۇرۇشنى Plasma تەمىنلىمىگەن."
 
 #: ui/main.qml:126
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr ""
+msgstr "دەخلى قىلماڭ ھالىتى"
 
 #: ui/main.qml:131
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "ئۆزلۈكىدىن قوزغات:"
 
 #: ui/main.qml:132
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr ""
+msgstr "ئېكران تەتۈر ھالەتتە"
 
 #: ui/main.qml:144
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr ""
+msgstr "ئېكران ھەمبەھىرلەنگەندە"
 
 #: ui/main.qml:158
 #, kde-format
@@ -149,45 +151,45 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "پۈتۈن ئېكران ئەپ فوكۇسلانغاندا"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "تېزلەتمىدە قولدا ئالماشتۇرىدۇ:"
 
 #: ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "كۆرسىتىش شەرتى"
 
 #: ui/main.qml:182
 #, kde-format
 msgid "Critical notifications:"
-msgstr ""
+msgstr "جىددىي ئۇقتۇرۇش:"
 
 #: ui/main.qml:183
 #, kde-format
 msgid "Show in Do Not Disturb mode"
-msgstr ""
+msgstr "دەخلى قىلماڭ ھالىتىدە كۆرسەت"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Low priority notifications:"
-msgstr ""
+msgstr "تۆۋەن ئالدىنلىقتىكى ئۇقتۇرۇش:"
 
 #: ui/main.qml:196
 #, kde-format
 msgid "Show popup"
-msgstr ""
+msgstr "قاڭقىش كۆزنىكىنى كۆرسەت"
 
 #: ui/main.qml:225
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr ""
+msgstr "قاڭقىش كۆزنىكى"
 
 #: ui/main.qml:231
 #, kde-format
@@ -199,7 +201,7 @@ msgstr "ئورنى:"
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr ""
+msgstr "ئۇقتۇرۇش سىنبەلگىسىنىڭ ئەتراپىدا"
 
 #: ui/main.qml:269
 #, kde-format
@@ -217,52 +219,52 @@ msgstr[0] "%1 سېكۇنت"
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
-msgstr ""
+msgstr "مۆھلەتتىن كېيىن يوشۇر:"
 
 #: ui/main.qml:306
 #, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr ""
+msgstr "مۆھلەت كۆرسەتكۈچنى كۆرسەت"
 
 #: ui/main.qml:318
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "قوشۇمچە قايتۇرما ئىنكاس"
 
 #: ui/main.qml:324
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
-msgstr ""
+msgstr "ئۇقتۇرۇشتا كۆرسەت"
 
 #: ui/main.qml:325
 #, kde-format
 msgid "Application progress:"
-msgstr ""
+msgstr "پىروگرامما ئىلگىرىلىشى:"
 
 #: ui/main.qml:339
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
-msgstr ""
+msgstr "جەريان ئىجرا قىلىنىۋاتقاندا قاڭقىش كۆزنىكىنى ئوچۇق ھالىتىدە تۇتىدۇ"
 
 #: ui/main.qml:352
 #, kde-format
 msgid "Notification badges:"
-msgstr ""
+msgstr "ئۇقتۇرۇش ئىزناك:"
 
 #: ui/main.qml:353
 #, kde-format
 msgid "Show in task manager"
-msgstr ""
+msgstr "ۋەزىپە باشقۇرغۇچتا كۆرسەت"
 
 #: ui/PopupPositionDialog.qml:15
 #, kde-format
 msgid "Popup Position"
-msgstr ""
+msgstr "قاڭقىش ئورنى"
 
 #: ui/SourcesPage.qml:20
 #, kde-format
@@ -284,11 +286,11 @@ msgstr "سىستېما مۇلازىمىتى"
 #: ui/SourcesPage.qml:157
 #, kde-format
 msgid "No application or event matches your search term"
-msgstr ""
+msgstr "ئىزدىگىنىڭىزگە ھېچقانداق پىروگرامما ياكى ھادىسە ماس كەلمىدى"
 
 #: ui/SourcesPage.qml:181
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
-msgstr ""
+msgstr "تىزىمدىن پىروگرامما تاللاپ ئۇقتۇرۇش تەڭشىكى ۋە قىلمىشى سەپلىنىدۇ"

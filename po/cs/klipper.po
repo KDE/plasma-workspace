@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:48+0000\n"
+"POT-Creation-Date: 2026-09-26 00:47+0000\n"
 "PO-Revision-Date: 2026-09-18 10:52+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -286,14 +286,14 @@ msgstr "Zkopírovat obrázek QR kódu do schránky"
 msgid "QR Code"
 msgstr "Kód QR"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "Pro zobrazení QR kódu není k dispozici dostatek místa. Zkuste applet zvětšit."
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Vytvoření QR kódu selhalo"
@@ -609,7 +609,7 @@ msgstr "Vyčistit historii schránky"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Znovu se nedotazovat"
 
 #: historymodel.cpp:373
 #, kde-format

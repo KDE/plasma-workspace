@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-20 00:44+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:36-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: AlbumArtStackView.qml:211
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "ھېچقانداق ۋاسىتە ياڭرىمايۋاتىدۇ"
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
-msgstr ""
+msgstr "-%1"
 
 #: ExpandedRepresentation.qml:591
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "ياڭرىتىش نىسبىتى %1"
 #, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr ""
+msgstr "%1x"
 
 #: ExpandedRepresentation.qml:598
 #, kde-format

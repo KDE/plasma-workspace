@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:35-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -187,7 +187,7 @@ msgstr "رايونلۇق تەڭشەكنى ئۆزگەرت…"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
-msgstr "چېسلا فورماتى:"
+msgstr "چېسلا پىچىمى:"
 
 #: configAppearance.qml:192
 #, kde-format
@@ -260,7 +260,7 @@ msgstr "ئۇسلۇب تاللا…"
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1pt %2"
 
 #: configAppearance.qml:336
 #, kde-format
@@ -371,6 +371,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"كۆرسەتمە: سىز تۇرۇشلۇق ۋاقىت رايونىنى تىزىمغا قوشۇپ، ساياھەت قىلغاندا ئۇنى "
+"كۆرۈشكە قولايلىق يارىتىدۇ. ئۆيىڭىزدە تۇرغاندا ئىككى قېتىم كۆرسەتمەيدۇ."
 
 #: configTimeZones.qml:245
 #, kde-format
@@ -385,6 +387,9 @@ msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
+"بۇ ئىقتىدار پەقەت نۆۋەتتە كۆرسىتىدىغان ۋاقىت رايونىنى ئالماشتۇرىدۇ، "
+"سىستېمىنىڭ ئومۇمىيەت ۋاقىت رايونىنى ئۆزگەرتمەيدۇ. ئەگەر سىز ساياھەت "
+"قىلغاندا، ئۇنىڭ ئورنىغا سىستېما ئومۇمىيەت ۋاقىت رايونىغا ئالماشتۇرىدۇ."
 
 #: configTimeZones.qml:264
 #, kde-format
@@ -485,7 +490,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: Tooltip.qml:178
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:30-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -27,109 +27,111 @@ msgstr "%1 ئىناۋەتلىك GTK ئۆرنەك ئارخىپى ئەمەس."
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr ""
+msgstr "ئورنىتالمىدى: يىراقتىكى ئورۇندىن ئۇسلۇبنى ئورنىتالمايدۇ."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "ئورنىتالمىدى: ئۇسلۇب ھۆججىتىنى ئوقۇيالمىدى."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
 msgstr ""
+"ئورنىتالمىدى: ئۇسلۇب ھۆججىتى ھېچقانداق سانلىق مەلۇماتنى ئۆز ئىچىگە ئالمىغان."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "ئورنىتالمىدى: ئۇسلۇب ھۆججىتىنىڭ بوغچىسىنى يېشەلمىدى."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "ئورنىتالمىدى: ئۇسلۇبنى تاپالمىدى."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
 msgstr ""
+"ئورنىتالمىدى: تاللانغان ئۇسلۇب ھۆججىتى ئىناۋەتلىك بىرلەشمە ئۇسلۇبى ئەمەس."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "ئورنىتالمىدى: تاللانغان ئۇسلۇبنى قوللىمايدۇ."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "«%1» نى ئورنىتالمىدى: ئۇسلۇب ئورنىتىلغان."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "«%1» نى ئورنىتالمىدى: ئىجازەت رەت قىلىنغان."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "«%1» نى ئورنىتالمىدى: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "«%1» مۇۋەپپەقىيەتلىك ئورنىتىلدى."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "سۆكەلمىدى: ئۇسلۇب كىملىكى «%1» نى تاپالمىدى."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "«%1» نى سۆكەلمىدى: ئىجازەت رەت قىلىنغان."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "«%1» نى سۆكەلمىدى: ئۇسلۇب ئورنىتىلمىغان."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "«%1» نى سۆكەلمىدى: ئۇسلۇب ئىشلىتىلىۋاتىدۇ."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "«%1» نى سۆكەلمىدى: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "ئۇسلۇبنى سۆكەلمىدى:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr ""
+msgstr "«%1» نى مۇۋەپپەقىيەتلىك سۆكتى ئەمما باشقىلارنى سۆكەلمىدى:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -137,20 +139,20 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
+msgstr[0] "«%1» ئۇسلۇبنى مۇۋەپپەقىيەتلىك سۆكتى ئەمما باشقىلارنى سۆكەلمىدى:\n"
 
 #: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr ""
+msgstr "«%1» نى مۇۋەپپەقىيەتلىك سۆكتى."
 
 #: kcmstyle.cpp:242
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
+msgstr[0] "«%1» ئۇسلۇبنى مۇۋەپپەقىيەتلىك سۆكتى"
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
@@ -177,12 +179,11 @@ msgstr "1-بەتكۈچ‎‏"
 #: stylepreview.ui:65
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgid "Button"
 msgstr "توپچە"
 
@@ -207,10 +208,9 @@ msgstr "يەككە تاللاش توپچە"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
-msgstr "تېكىستلا"
+msgstr "تېكىست بۆلىكى"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -228,7 +228,7 @@ msgstr "پىروگرامما ئۇسلۇبى"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "بىرلەشمە ئۇسلۇب كىملىكى"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -311,8 +311,7 @@ msgid "GNOME/GTK Application Style"
 msgstr "GNOME/GTK پىروگرامما ئۇسلۇبى"
 
 #: ui/GtkStylePage.qml:38
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
 msgstr "ھۆججەتتىن ئورنات…"
@@ -321,7 +320,7 @@ msgstr "ھۆججەتتىن ئورنات…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr ""
+msgstr "يېڭىسىغا ئېرىش…"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format
@@ -344,8 +343,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK ئۆرنەك ئارخىپى (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "ھۆججەتتىن ئورنات…"
@@ -367,108 +365,103 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"بۇ ئۇسلۇب تېخىچە ئىجادىيەت باسقۇچىدىكى بىرلەشمە ئۇسلۇب موتورىنى "
+"ئىشلىتىۋاتىدۇ. بۇ ئۇسلۇبنى ئىشلەتكەندە بەزى ئىش قارىماققا ياكى قىلمىشى خاتا "
+"بولۇشى مۇمكىن."
 
 #: ui/main.qml:174
 #, kde-format
 msgid "Configure Style…"
-msgstr "ئۇسلۇب سەپلەيدۇ…"
+msgstr "ئۇسلۇب سەپلە…"
 
 #: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "سۆك…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "سىستېما ئورناتقان ئۇسلۇبنى سۆكەلمەيدۇ."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "بىرلەشمە ئۇسلۇبىنىلا سۆكەلەيدۇ."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "بۇ ئۇسلۇبنى سۆكمە."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "ئورنىتىدىغان بىرلەشمە ئۇسلۇب تاللىنىدۇ"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "ئورنات"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "1-بەتكۈچ‎‏"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "2-بەتكۈچ"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "كۆپ تاللاش"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "يەككە تاللاش توپچە"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
 msgstr "بىرىكمە رامكا"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "بىرىكمە رامكا"
+msgstr "بىرىكمە رامكا تۈرى"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
 msgstr "توپچە"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "تېكىستلا"
+msgstr "تېكىست بۆلىكى"
 
 #: ui/UnionThumbnailItem.qml:122
 #, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "يېڭى GNOME/GTK پىروگرامما ئۇسلۇبىغا ئېرىش…"

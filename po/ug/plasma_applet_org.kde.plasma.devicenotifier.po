@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-24 00:46+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:35-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -196,7 +196,7 @@ msgstr "چىقىرىۋېتىۋاتىدۇ…"
 #: qml/DeviceItem.qml:113
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr ""
+msgstr "تېخى تارتىۋەتمەڭ! ھۆججەت يەنىلا يەتكۈزۈلۈۋاتىدۇ…"
 
 #: qml/FullRepresentation.qml:47 qml/main.qml:127
 #, kde-format

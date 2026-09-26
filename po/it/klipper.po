@@ -1,15 +1,15 @@
 # translation of klipper.po to Italian
-# SPDX-FileCopyrightText: 2009, 2022-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006, 2009, 2010, 2011, 2012, 2018, 2020.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
+# SPDX-FileCopyrightText: 2009, 2022-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # SPDX-FileCopyrightText: 2022, 2024 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:48+0000\n"
-"PO-Revision-Date: 2026-09-10 17:24+0200\n"
+"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"PO-Revision-Date: 2026-09-18 09:29+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -66,15 +66,13 @@ msgstr ""
 "ma potrà essere incollata solo utilizzando il pulsante centrale del mouse."
 
 #: configdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Testo selezionato con il puntatore o la tastiera"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Includi nella cronologia:"
@@ -88,8 +86,7 @@ msgstr ""
 "marcato come password."
 
 #: configdialog.cpp:133
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Dati dell'immagine copiati esplicitamente"
@@ -288,7 +285,7 @@ msgstr "Copia l'immagine del codice QR negli appunti"
 msgid "QR Code"
 msgstr "Codice QR"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -296,7 +293,7 @@ msgstr ""
 "Spazio insufficiente per visualizzare il codice QR. Prova a ridimensionare "
 "questa applet."
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Creazione del codice QR non riuscita"
@@ -823,11 +820,12 @@ msgstr "Dimensione della cronologia:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:58
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "La cronologia degli appunti conserverà questo numero di articoli."
+msgstr ""
+"La cronologia degli appunti memorizzerà fino a questo numero di elementi. Il "
+"massimo è 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:61

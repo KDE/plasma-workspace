@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:34-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -73,13 +73,13 @@ msgstr "ئەپنى يوشۇر"
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: appentry.cpp:474
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:220
 #: recentusagemodel.cpp:158 recentusagemodel.cpp:229
@@ -191,7 +191,7 @@ msgstr "%1 نى يوشۇر"
 #: rootmodel.cpp:568
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr ""
+msgstr "بۇنى كۆرۈنمەسلىكى كېرەك! KICKER_FAVORITES_MODEL نى ئىشلىتىڭ"
 
 #: rootmodel.cpp:581
 #, kde-format

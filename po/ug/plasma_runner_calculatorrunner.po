@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:38-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -29,6 +29,8 @@ msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
 "symbols such as +, -, /, *, ! and ^."
 msgstr ""
+":q: رەقەم ۋە ماتېماتىكىلىق ئەمەل بەلگىلىرى (+، -، /، *، ! ۋە ^) دىن تەركىب "
+"تاپقان بولسا، :q: نىڭ قىممىتىنى ھېسابلايدۇ."
 
 #: calculatorrunner.cpp:36
 #, kde-format

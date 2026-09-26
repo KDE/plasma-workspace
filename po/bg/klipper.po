@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-25 00:48+0000\n"
+"POT-Creation-Date: 2026-09-26 00:47+0000\n"
 "PO-Revision-Date: 2026-09-22 23:02+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -284,7 +284,7 @@ msgstr "Копиране на изображението с QR код в кли�
 msgid "QR Code"
 msgstr "QR Code"
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -292,7 +292,7 @@ msgstr ""
 "Няма достатъчно място за показване на QR кода. Опитайте да промените размера "
 "на този аплет."
 
-#: declarative/qml/BarcodePage.qml:165
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Създаването на QR код е неуспешно"

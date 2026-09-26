@@ -1,14 +1,14 @@
 # Uyghur translation for kcm_nighttime.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-15 00:48+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:29-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -25,6 +25,9 @@ msgid ""
 "Time-based features such as Night Light and dynamic wallpapers can be "
 "synchronized with the day-night cycle. Choose your preferred cycle here."
 msgstr ""
+"كېچە چىرىغى ۋە ھەرىكەتچان تام قەغەزگە ئوخشاش ۋاقىت ئاساسىدىكى ئىقتىدارلار "
+"كېچە-كۈندۈز دەۋرىيلىكى بىلەن قەدەمداشلاشنى قوللايدۇ. بۇ جايدا سىز "
+"ياقتۇرىدىغان دەۋرىيلىكنى تاللاڭ."
 
 #: ui/main.qml:63
 #, kde-format
@@ -98,6 +101,11 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"<application>%1</application> مۇلازىمىتى ئارقىلىق قەرەللىك ھالدا ئۈسكۈنىنىڭ "
+"ئورۇن ئۇچۇرىنى يېڭىلايدۇ. <link url='https://bugs.kde.org'>https://bugs.kde."
+"org</link> تور بېكىتىدە پىروگرامما كەمتۈكلۈك دوكلاتى يوللاپ، KDE "
+"ئىجادىيەتچىلىرىنىڭ مەزكۇر مۇلازىمەتنىڭ قانداق ئىشلەيدىغانلىقى ھەققىدە "
+"تەپسىلىي چۈشەندۈرۈش يېزىشىنى سوراڭ."
 
 #: ui/main.qml:144
 #, kde-format
@@ -121,7 +129,7 @@ msgstr "كەڭلىك:"
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
-msgstr "مېرىدىئان(ئۇزۇنلۇق):"
+msgstr "ئۇزۇنلۇق:"
 
 #: ui/SunPath.qml:52
 #, kde-format
@@ -154,6 +162,8 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "day. Choose custom times instead."
 msgstr ""
+"قۇتۇپ كۈندۈزى سەۋەبىدىن ئورنىڭىزنىڭ كۈن چىقىش ۋە كۈن پېتىش ۋاقتىنى "
+"جەزملىگىلى بولمايدۇ. ئىختىيارىي ۋاقىت تاللاڭ."
 
 #: ui/SunPath.qml:109
 #, kde-format
@@ -162,6 +172,8 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "night. Choose custom times instead."
 msgstr ""
+"قۇتۇپ كېچىسى سەۋەبىدىن ئورنىڭىزنىڭ كۈن چىقىش ۋە كۈن پېتىش ۋاقتىنى جەزملىگىلى "
+"بولمايدۇ. ئىختىيارىي ۋاقىت تاللاڭ."
 
 #: ui/SunPath.qml:111
 #, kde-format
@@ -170,12 +182,14 @@ msgid ""
 "Sunrise and sunset times cannot be reliably determined at your location. "
 "Choose custom times instead."
 msgstr ""
+"ئورنىڭىزدا كۈن چىقىش ۋە كۈن پېتىش ۋاقتىنى جەزملىگىلى بولمايدۇ. ئىختىيارىي "
+"ۋاقىت تاللاڭ."
 
 #: ui/TimeField.qml:31
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/WorldMap.qml:76
 #, kde-format
@@ -194,12 +208,12 @@ msgstr "خەرىتىدىن ئورنىڭىزنى چېكىپ تاللاڭ."
 #: ui/WorldMap.qml:190
 #, kde-format
 msgid "Zoom in"
-msgstr "چوڭايت"
+msgstr "يېقىنلات"
 
 #: ui/WorldMap.qml:207
 #, kde-format
 msgid "Zoom out"
-msgstr "كىچىكلەت"
+msgstr "يىراقلات"
 
 #: ui/WorldMap.qml:236
 #, kde-kuit-format

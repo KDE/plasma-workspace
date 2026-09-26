@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:40-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -78,7 +78,7 @@ msgstr "پائالىيەت يوق"
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:145
 #, kde-format
@@ -151,19 +151,19 @@ msgstr "سەپلە…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "ئېكران ھەرپتاختىنى يوشۇر"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "ئېكران ھەرپتاختىنى كۆرسەت"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "جايلاشتۇرۇش ئالماشتۇر"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -195,6 +195,8 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"بۇ ئەپچە يوچۇن كونا نەشرىدىكى Plasma غا يېزىلغان، ئۇ Plasma %1 بىلەن "
+"ماسلاشمايدۇ. ئەپچە يازغۇچىسى بىلەن ئالاقىلىشىپ يېڭى نەشرىگە ئېرىشىڭ."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
@@ -202,6 +204,8 @@ msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"بۇ ئەپچە Plasma %1 غا يېزىلغان، ئۇ Plasma %2 بىلەن ماسلاشمايدۇ. ئەپچە "
+"يازغۇچىسى بىلەن ئالاقىلىشىپ يېڭى نەشرىگە ئېرىشىڭ."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
@@ -209,6 +213,8 @@ msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"بۇ ئەپچە Plasma %1 غا يېزىلغان، ئۇ Plasma %2‎‏ بىلەن ماسلاشمايدۇ. بۇ ئەپچىنى "
+"ئىشلىتىش ئۈچۈن Plasma نى يېڭىلاڭ."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
@@ -217,6 +223,8 @@ msgid ""
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
+"بۇ ئەپچە Plasma %1 غا يېزىلغان، سىستېمىغا ئورنىتىلغان كونا Plasma بىلەن "
+"ماسلاشمايدۇ. بۇ ئەپچىنى ئىشلىتىش ئۈچۈن Plasma نى يېڭىلاڭ."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
@@ -363,7 +371,7 @@ msgstr "يېقىندا ئورنىتىلغان"
 #: shellprivate/widgetexplorer.cpp:166
 #, kde-format
 msgid "Categories:"
-msgstr "كاتېگورىيە:"
+msgstr "تۈرلىنىشى:"
 
 #: shellprivate/widgetexplorer.cpp:236
 #, kde-format
@@ -432,13 +440,13 @@ msgstr "ۋاقىت رايونى:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr "چوڭايت"
+msgstr "يېقىنلات"
 
 #: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr "كىچىكلەت"
+msgstr "يىراقلات"
 
 #: timezoneselector/TimezoneSelector.qml:351
 #, kde-format

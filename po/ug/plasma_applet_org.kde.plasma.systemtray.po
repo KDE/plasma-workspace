@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:37-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -88,6 +88,13 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"ئالدى بىلەن <application>%1</application> دىكى تەڭشەكتىن قونداق سىنبەلگىسىنى "
+"چەكلەشنى ئىزدەيدۇ، ئەگەر تەمىنلەنمىگەن بولسا ئاندىن بۇ جايدا چەكلەيدۇ. بەزى "
+"پىروگرامما سىستېما قونداقتىكى سىنبەلگىنى چەكلىگىلى بولىدىغانلىقىنى "
+"ئويلاشمىغان، ئەگەر ئۇلار تەمىنلىمىگەن ئەھۋالدا بۇ تەڭشەكتە چەكلەنسە "
+"پىروگراممىدا ئويلاشمىغان قىلمىش پەيدا بولۇشى مۇمكىن.<nl/><nl/>بۇ تەڭشەكنى "
+"ئىشلەتكەندىكى خەتەرنى ئۆزىڭىز ئۈستىڭىزگە ئالىسىز، مەسىلىنى KDE ياكى "
+"پىروگرامما يازغۇچىغا مەلۇم قىلماڭ."
 
 #: qml/ConfigGeneral.qml:177
 #, kde-format
@@ -106,6 +113,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"چاپلاش تاختىسىنى چەكلەش تەۋسىيە قىلىنمايدۇ، مەزمۇن كۆچۈرگەن پىروگرامما "
+"تاقالسا كۆچۈرگەن سانلىق مەلۇماتنىڭ يوقاپ كېتىشىنى كەلتۈرۈپ چىقىرىدۇ.<nl/><nl/"
+">ئەگەر سىز چاپلاش تاختىسى ئەپچىنى باشقا جايدا قولدا قوشقان ياكى ئۈچىنچى "
+"تەرەپ چاپلاش تاختىسى باشقۇرغۇچنى ئىشلەتكەن بولسىڭىز ئاندىن بۇ مەشغۇلاتنى "
+"ئىجرا قىلىڭ. ئۇنىڭدىن باشقا، چاپلاش تاختىسىنىڭ تارىخىنى ساقلىماسلىق ياكى بىر "
+"ۋاقىتتا بىرلا تۈرنى ئەستە تۇرۇشنى سەپلەشنى ئويلىشىڭ."
 
 #: qml/ConfigGeneral.qml:198
 #, kde-kuit-format
@@ -177,7 +190,7 @@ msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "يونۇلۇش:"
+msgstr "يۆنىلىش:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format

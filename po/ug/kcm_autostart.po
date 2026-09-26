@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 00:47+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:26-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -76,7 +76,7 @@ msgstr "ئاخىرقى قوزغىتىلغان ۋاقتى:"
 #: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "خاتىرە يۈكلىيەلمىدى. يېڭىلاشنى سىناڭ."
 
 #: ui/entry.qml:118
 #, kde-format
@@ -157,30 +157,32 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
+"%1 تېخى ئۆزلۈكىدىن قوزغالمىدى. تەپسىلىي ئۇچۇرىنى سىستېما قايتا قوزغالغاندىن "
+"كېيىن ئاندىن ئىشلەتكىلى بولىدۇ."
 
 #: ui/main.qml:133
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
-msgstr ""
+msgstr "%1 نىڭ ئۆزلۈكىدىن قوزغىلىشىنى چەكلە"
 
 #: ui/main.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
-msgstr ""
+msgstr "%1 نىڭ ئۆزلۈكىدىن قوزغىلىشىنى قوزغات"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
-msgstr ""
+msgstr "ئۆزلۈكىدىن قوزغىلىشنى چەكلە"
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
-msgstr ""
+msgstr "ئۆزلۈكىدىن قوزغىلىشنى قوزغات"
 
 #: ui/main.qml:159
 #, kde-format

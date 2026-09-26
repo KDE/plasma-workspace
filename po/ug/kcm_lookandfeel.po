@@ -1,14 +1,14 @@
 # Uyghur translation for kcm_lookandfeel.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:48+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:27-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -95,7 +95,7 @@ msgstr "نەشر ھوقۇقىغا ئىگە 2017، Marco Martin"
 #: tool/lnftool.cpp:37
 #, kde-format
 msgid "Marco Martin"
-msgstr ""
+msgstr "Marco Martin"
 
 #: tool/lnftool.cpp:37
 #, kde-format
@@ -114,6 +114,10 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
+"ئومۇمىيەت ئۆرنەك بوغچىسىنى قوللىنىدۇ. ئۇ ئۆرنەك ئاتى، ئورنىتىلغان ئۆرنەك "
+"بوغچىنىڭ تولۇق يولى بولسىمۇ بولىدۇ. بۇ قورال ئالدى بىلەن بەلگىلەنگەن "
+"ئومۇمىيەت ئۆرنەك بوغچىسىنىڭ ئىناۋەتلىك ئىكەنلىكىنى تەكشۈرۈپ ئاندىن ئۇنى "
+"قوللىنىشنى سىنايدۇ"
 
 #: tool/lnftool.cpp:51
 #, kde-format
@@ -174,7 +178,7 @@ msgstr "كېچە/كۈندۈز دەۋرىيلىكى سەپلىمىسى…"
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr "ئاق"
+msgstr "يورۇق"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
@@ -427,6 +431,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+"بۇ ئومۇمىيەت ئۆرنەك ھېچقانداق ئىشلىتىلىشچان تەڭشەك تەمىنلىمىگەن. مەزكۇر "
+"ئومۇمىيەت ئۆرنەكنى ئاسرىغۇچى بىلەن ئالاقىلىشىڭ چۈنكى ئۇ بۇزۇلغان بولۇشى "
+"مۇمكىن."
 
 #: ui/StaticLookAndFeel.qml:53
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:26-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -99,7 +99,7 @@ msgstr "رەڭ لايىھەسى قۇرۇپ ۋە تەھرىرلەيدىغان ق�
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "قۇرۇش قورالى"
 #: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
-msgstr ""
+msgstr "Jeremy Whiting"
 
 #: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "KCM كودى (بۇ يەردە قايتا ئىشلىتىلگەن)"
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
-msgstr ""
+msgstr "Matthew Woehlke"
 
 #: editor/kcolorschemeeditor.cpp:33
 #, kde-format
@@ -235,7 +235,7 @@ msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغا�
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "a"
-msgstr ""
+msgstr "a"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
 #: editor/preview.ui:173
@@ -251,7 +251,7 @@ msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغا�
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "i"
-msgstr ""
+msgstr "i"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
 #: editor/preview.ui:183
@@ -267,7 +267,7 @@ msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغا�
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "!"
-msgstr ""
+msgstr "!"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
 #: editor/preview.ui:193
@@ -283,7 +283,7 @@ msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغا�
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "="
-msgstr ""
+msgstr "="
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
 #: editor/preview.ui:203
@@ -299,7 +299,7 @@ msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغا�
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
 #: editor/preview.ui:247
@@ -529,13 +529,13 @@ msgstr "يېڭى قۇر"
 #: editor/scmeditorcolors.ui:248
 #, kde-format
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:253
 #, kde-format
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:258
@@ -657,7 +657,7 @@ msgstr "چەكلەنگەن"
 #: editor/scmeditordialog.cpp:96
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
-msgstr ""
+msgstr "ساقلىمىغان ئۆزگەرتىشىڭىز بار. راستتىنلا چېكىنەمسىز؟"
 
 #: editor/scmeditordialog.cpp:97
 #, kde-format
@@ -680,12 +680,14 @@ msgid ""
 "A color scheme with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
+"شۇنداق ئاتتىكى رەڭ لايىھەسى مەۋجۇت.\n"
+"قاپلىۋېتەمسىز؟"
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "بۇ لايىھەنى ئوقۇشقىلا بولىدۇ. ئۆزگەرتىشنى باشقا ئىسىم بىلەن ساقلاڭ."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -889,12 +891,14 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"بەزى پىروگرامما ۋە رەڭ لايىھەسىدە سېلىشتۇرما قىممىتى 15% تىن تۆۋەن بولغاندا "
+"كۆرۈنۈشتە غەلىتە ئۈنۈمنى پەيدا قىلىدۇ.ئاگاھلاندۇرۇلدۇم دەپ قاراڭ!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:138
@@ -1179,6 +1183,9 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"تەڭشىمەكچى بولغان روشەن رەڭنىڭ ئىسمى. SVG رەڭ ئىسمى (https://www.w3.org/TR/"
+"SVG11/types.html#ColorKeywords) ۋە ئون ئالتىلىك رەڭ كودىنى قوللايدۇ. ئەگەر "
+"shell كېڭەيتىلمىسى ئىشلىتىش مۇمكىن بولسا ئون ئالتىلىك رەڭ كودى نەقىل ئېلىنىدۇ"
 
 #: plasma-apply-colorscheme.cpp:79
 #, kde-format
@@ -1202,6 +1209,7 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"«%1» ئۆرنەكنى تاپالمىدى. ئۆرنەك تۆۋەندىكى تاللانمىدىن بىرى بولۇشى كېرەك: %2"
 
 #: plasma-apply-colorscheme.cpp:122
 #, kde-format
@@ -1259,7 +1267,7 @@ msgstr "ئىختىيارى روشەن رەڭ"
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
+msgstr "«%1» رەڭ لايىھەسى ئورنىتىلمىغان. ئورنىغا كۆڭۈلدىكى ئۆرنەك تاللىنىدۇ."
 
 #: ui/main.qml:126
 #, kde-format

@@ -1,22 +1,22 @@
 # Uyghur translation for kcm_regionandlang.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-09-24 20:29-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.9\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -74,7 +74,7 @@ msgstr "ئامېرىكا ئۆلچىمى"
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Metric"
-msgstr "بىرلىك"
+msgstr "مېتىر بىرلىكى"
 
 #: exampleutility.cpp:76
 #, kde-format
@@ -86,13 +86,13 @@ msgstr "خەت-چەك"
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
-msgstr ""
+msgstr "A4"
 
 #: exampleutility.cpp:93
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
-msgstr ""
+msgstr "c/o"
 
 #: exampleutility.cpp:94
 #, kde-format
@@ -152,7 +152,7 @@ msgstr "شەھەر مەركىزى"
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "123456"
 
 #: exampleutility.cpp:106
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "شەھەر"
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr "ھالەت"
+msgstr "ئىشتات"
 
 #: exampleutility.cpp:120
 #, kde-format
@@ -266,12 +266,15 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"<command>localectl</command> قورالىنى ئىشلىتىپ سىستېمىنىڭ ئىشلەتكىلى "
+"بولىدىغان ئورۇن ئۇچۇرىنى تاپالمىدى. <link>https://bugs.kde.org</link> غا "
+"مەزكۇر ھادىسە ھەققىدە كەمتۈك مەلۇم قىلىڭ"
 
 #: languagelistmodel.cpp:97
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: languagelistmodel.cpp:103
 #, kde-format
@@ -297,7 +300,7 @@ msgstr "check-language-support نى ئىجرا قىلالمىدى، چىقىرى
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr ""
+msgstr "يوقالغان بوغچىنىڭ ھەممىسىنىڭ مەسىلىسىنى تولۇق ھەل قىلالمىدى! %1"
 
 #: localegeneratorubuntu.cpp:96
 #, kde-format
@@ -346,7 +349,7 @@ msgctxt ""
 "the first is language name, the second is the country name, like 'English "
 "(America)'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: localelistmodel.cpp:229
 #, kde-format
@@ -372,7 +375,7 @@ msgstr "تىل"
 #, kde-format
 msgctxt "@info:title"
 msgid "Numbers"
-msgstr "سانلار"
+msgstr "سان"
 
 #: optionsmodel.cpp:48
 #, kde-format
@@ -426,19 +429,19 @@ msgstr "سانلىق مەلۇمات ۋە ساقلىغۇچ چوڭلۇقى"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -465,6 +468,9 @@ msgid ""
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
+"باشقا تىلنى ئىنگلىز تىلىنىڭ ئاستىغا قويغاندا بەزى پىروگراممىدا مەسىلە "
+"كۆرۈلۈشى مۇمكىن. ئەگەر سىستېمىنى ئىنگلىزچە كۆرۈنۈشتە ئىشلەتمەكچى بولسىڭىز "
+"باشقا تىلنىڭ ھەممىسىنى چىقىرىۋېتىڭ."
 
 #: ui/AdvancedLanguageSelectPage.qml:46
 #, kde-format
@@ -564,6 +570,10 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
+"يەرلىك ۋە تىل قوللاش ھۆججىتى ھاسىللانغان ئەمما تىل ئېھتىياجلىق خەت نۇسخىسىنى "
+"ئۆزلۈكىدىن ئورناتمايدۇ. ئەگەر تاللىغان تىلىڭىز ئالاھىدە خەت نۇسخىسىدا "
+"ئادەتتىكىدەك كۆرۈنىدىغان بولسا، خەت نۇسخىسىنىڭ ئاتىنى جەزملەپ ۋە ئۇلارنى "
+"ئۆزىڭىز ئورنىتىشىڭىز كېرەك."
 
 #: ui/main.qml:81
 #, kde-format
@@ -572,6 +582,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
+"لازىملىق يەرلىك سەپلىمە ۋە تىل قوللاش ھۆججىتى ئورنىتىلدى. ھازىر كومپيۇتېرنى "
+"بىخەتەر ھالدا توكتىن ئۈزۈڭ."
 
 #: ui/main.qml:179
 #, kde-format
@@ -588,7 +600,7 @@ msgstr "سانلىق مەلۇمات ۋە ساقلىغۇچ چوڭلۇقى"
 #: ui/main.qml:282
 #, kde-format
 msgid "Numbers"
-msgstr "سانلار"
+msgstr "سان"
 
 #: ui/main.qml:284
 #, kde-format
