@@ -88,7 +88,7 @@ PlasmoidItem {
             text: page?.copyAction?.tooltip ?? ""
             onTriggered: page.copyAction.triggered()
             enabled: page?.copyAction?.enabled ?? ""
-            visible: Plasmoid.containment.pluginName === "org.kde.plasma.systemtray" && page instanceof Private.BarcodePage
+            visible: page instanceof Private.BarcodePage && !page.showHeader
         }
     ]
 
