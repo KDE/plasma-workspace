@@ -85,6 +85,29 @@ struct TransactionGuard {
     bool committed = true;
 };
 
+// Temporary function added in Plasma 6.8 in September 2026,
+// TODO: Drop when we hit 7.0 or in 2032
+void migrateSettings()
+{
+    KConfigGroup general = KlipperSettings::self()->sharedConfig()->group(u"General"_s);
+    if (!general.hasKey("IgnoreSelection") && !general.hasKey("IgnoreImages") && !general.hasKey("SelectionTextOnly")) {
+        return;
+    }
+
+    if (general.hasKey("IgnoreSelection")) {
+        KlipperSettings::setSaveSelection(!general.readEntry("IgnoreSelection", true));
+        general.deleteEntry("IgnoreSelection");
+    }
+    if (general.hasKey("IgnoreImages")) {
+        KlipperSettings::setSaveImages(!general.readEntry("IgnoreImages", true));
+        general.deleteEntry("IgnoreImages");
+    }
+    if (general.hasKey("SelectionTextOnly")) {
+        general.deleteEntry("SelectionTextOnly");
+    }
+    KlipperSettings::self()->save();
+}
+
 QString computeUuid(const QMimeData *data)
 {
     QCryptographicHash hash(QCryptographicHash::Sha1);
@@ -126,6 +149,7 @@ HistoryModel::HistoryModel()
         return;
     }
 
+    migrateSettings();
     loadSettings();
     if (!loadHistory()) [[unlikely]] {
         return;
