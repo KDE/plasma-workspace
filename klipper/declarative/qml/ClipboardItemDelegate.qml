@@ -225,6 +225,12 @@ PlasmaComponents.ItemDelegate {
         ]
     }
 
+    // Swallow clicks between the tool buttons
+    MouseArea {
+        anchors.fill: toolButtonsLoader
+        enabled: toolButtonsLoader.active
+    }
+
     Loader {
         id: toolButtonsLoader
 
