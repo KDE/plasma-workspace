@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-26 00:47+0000\n"
+"POT-Creation-Date: 2026-09-27 00:47+0000\n"
 "PO-Revision-Date: 2026-08-21 15:33+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: abstractnotificationsmodel.cpp:370
+#: abstractnotificationsmodel.cpp:378
 #, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
