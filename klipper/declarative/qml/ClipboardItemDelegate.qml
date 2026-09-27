@@ -170,6 +170,7 @@ PlasmaComponents.ItemDelegate {
         anchors.right: parent.right
         anchors.rightMargin: expandButtonLoader.implicitWidth + expandButtonLoader.anchors.rightMargin
         anchors.verticalCenter: parent.verticalCenter
+        anchors.topMargin: expandButtonLoader.anchors.topMargin
         width: menuItem.ListView.view.clipboardMenu.starMetricsImplicitWidth
         height: menuItem.ListView.view.clipboardMenu.starMetricsImplicitHeight
         visible: (menuItem.model?.starred ?? false) && !toolButtonsLoader.active
@@ -246,6 +247,19 @@ PlasmaComponents.ItemDelegate {
         // It's not recommended to change anchors via conditional bindings, use AnchorChanges instead.
         // See https://doc.qt.io/qt-5/qtquick-positioning-anchors.html#changing-anchors
         states: [
+            State {
+                when: menuItem.isTall && !menuItem.shouldUseOverflowButton
+                AnchorChanges {
+                    target: toolButtonsLoader
+                    anchors.top: toolButtonsLoader.parent.top
+                    anchors.verticalCenter: undefined
+                }
+                AnchorChanges {
+                    target: starSlot
+                    anchors.top: starSlot.parent.top
+                    anchors.verticalCenter: undefined
+                }
+            },
             State {
                 when: menuItem.shouldUseOverflowButton
                 AnchorChanges {

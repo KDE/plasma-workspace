@@ -51,7 +51,12 @@ PlasmaComponents3.ScrollView {
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
     onItemSelected: uuid => model.moveToTop(uuid);
-    onRemove: uuid => model.remove(uuid)
+    onRemove: uuid => {
+        model.remove(uuid);
+        // Prevents a race when after deleting an item, the hover would not reregister
+        // and the delete button would not reappear and could not be clicked until the pointer moved again
+        menuListView.forceLayout();
+    }
     onEdit: modelData => {
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("EditPage.qml"), {
             dialogItem: clipboardMenu.dialogItem,
