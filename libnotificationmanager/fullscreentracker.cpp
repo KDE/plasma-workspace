@@ -10,15 +10,15 @@
 using namespace NotificationManager;
 
 FullscreenTracker::FullscreenTracker(QObject *parent)
-    : TaskManager::TasksModel(parent)
+    : QObject(parent)
 {
-    setFilterMinimized(true);
-    setFilterHidden(true);
+    m_tasks.setFilterMinimized(true);
+    m_tasks.setFilterHidden(true);
 
     checkFullscreenFocused();
 
-    connect(this, &TaskManager::TasksModel::activeTaskChanged, this, &FullscreenTracker::checkFullscreenFocused);
-    connect(this, &TaskManager::TasksModel::dataChanged, this, &FullscreenTracker::checkFullscreenFocused);
+    connect(&m_tasks, &TaskManager::TasksModel::activeTaskChanged, this, &FullscreenTracker::checkFullscreenFocused);
+    connect(&m_tasks, &TaskManager::TasksModel::dataChanged, this, &FullscreenTracker::checkFullscreenFocused);
 }
 
 FullscreenTracker::~FullscreenTracker() = default;
@@ -49,7 +49,7 @@ void FullscreenTracker::setFullscreenFocused(bool focused)
 
 void FullscreenTracker::checkFullscreenFocused()
 {
-    QModelIndex activeTaskIndex = activeTask();
+    QModelIndex activeTaskIndex = m_tasks.activeTask();
     if (!activeTaskIndex.isValid()) {
         setFullscreenFocused(false);
         return;

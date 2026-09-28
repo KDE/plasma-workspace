@@ -19,7 +19,7 @@ namespace NotificationManager
  * It is used to determine whether to automatically enable Do Not Disturb mode when a fullscreen window is focused.
  *
  **/
-class FullscreenTracker : public TaskManager::TasksModel
+class FullscreenTracker : public QObject
 {
     Q_OBJECT
 
@@ -40,6 +40,7 @@ private:
 
     void checkFullscreenFocused();
     bool m_fullscreenFocused = false;
+    TaskManager::TasksModel m_tasks;
 };
 
 }
