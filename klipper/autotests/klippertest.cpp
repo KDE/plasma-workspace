@@ -89,6 +89,7 @@ void KlipperTest::testBug465225()
         clipboard->setMimeData(data, QClipboard::Clipboard);
         QCoreApplication::processEvents();
         QTRY_COMPARE(model->rowCount(), 2);
+        QCoreApplication::processEvents();
 
         data = new QMimeData;
         data->setImageData(
@@ -106,6 +107,7 @@ void KlipperTest::testBug465225()
         QCOMPARE(model->rowCount(), 2);
         QCOMPARE(model->first()->type(), HistoryItemType::Image);
     }
+    QCoreApplication::processEvents();
 }
 
 /**
