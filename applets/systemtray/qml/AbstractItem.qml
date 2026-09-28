@@ -106,7 +106,17 @@ PlasmaCore.ToolTipArea {
 
         FocusScope {
             id: iconContainer
-            scale: (abstractItem.effectivePressed || mouseArea.containsPress) ? 0.8 : 1
+
+            readonly property bool pressed: abstractItem.effectivePressed || mouseArea.containsPress
+
+            onPressedChanged: {
+                if (pressed) {
+                    growAnimation.stop();
+                    shrinkAnimation.start();
+                } else if (!shrinkAnimation.running) {
+                    growAnimation.start();
+                }
+            }
 
             activeFocusOnTab: !abstractItem.inHiddenLayout
             focus: true // Required in HiddenItemsView so keyboard events can be forwarded to this item
@@ -115,11 +125,27 @@ PlasmaCore.ToolTipArea {
             Accessible.role: Accessible.Button
             Accessible.onPressAction: abstractItem.activated(Plasmoid.popupPosition(iconContainer, iconContainer.width/2, iconContainer.height/2));
 
-            Behavior on scale {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: (abstractItem.effectivePressed || mouseArea.containsPress) ? Easing.OutCubic : Easing.InCubic
+            NumberAnimation {
+                id: shrinkAnimation
+                target: iconContainer
+                property: "scale"
+                to: 0.9
+                duration: Kirigami.Units.veryShortDuration
+                easing.type: Easing.OutQuart
+                onFinished: {
+                    if (!iconContainer.pressed) {
+                        growAnimation.start();
+                    }
                 }
+            }
+
+            NumberAnimation {
+                id: growAnimation
+                target: iconContainer
+                property: "scale"
+                to: 1
+                duration: Kirigami.Units.longDuration - shrinkAnimation.duration
+                easing.type: Easing.OutCubic
             }
 
             Keys.onPressed: event => {
