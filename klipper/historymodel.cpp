@@ -90,7 +90,11 @@ struct TransactionGuard {
 void migrateSettings()
 {
     KConfigGroup general = KlipperSettings::self()->sharedConfig()->group(u"General"_s);
-    if (!general.hasKey("IgnoreSelection") && !general.hasKey("IgnoreImages") && !general.hasKey("SelectionTextOnly")) {
+    const bool needsMigration = general.hasKey("IgnoreSelection") //
+        || general.hasKey("IgnoreImages") //
+        || general.hasKey("SelectionTextOnly") //
+        || general.hasKey("ActionsInfoMessageShown");
+    if (!needsMigration) {
         return;
     }
 
@@ -104,6 +108,9 @@ void migrateSettings()
     }
     if (general.hasKey("SelectionTextOnly")) {
         general.deleteEntry("SelectionTextOnly");
+    }
+    if (general.hasKey("ActionsInfoMessageShown")) {
+        general.deleteEntry("ActionsInfoMessageShown");
     }
     KlipperSettings::self()->save();
 }

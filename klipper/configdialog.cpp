@@ -26,7 +26,6 @@
 #include <kconfigskeleton.h>
 #include <kglobalaccel.h>
 #include <kmessagebox.h>
-#include <kmessagewidget.h>
 #include <kwindowconfig.h>
 
 #include "klipper_debug.h"
@@ -243,23 +242,6 @@ ActionsWidget::ActionsWidget(QWidget *parent)
     m_deleteActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Delete Action"), this);
     connect(m_deleteActionButton, &QPushButton::clicked, this, &ActionsWidget::onDeleteAction);
     layout->addWidget(m_deleteActionButton, 3, 3);
-
-    // Where to configure the action options
-    if (KlipperSettings::actionsInfoMessageShown()) {
-        auto *msg = new KMessageWidget(xi18nc("@info",
-                                              "These actions appear in the popup menu "
-                                              "which can be configured on the <interface>Action Menu</interface> page."),
-                                       this);
-        msg->setMessageType(KMessageWidget::Information);
-        msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
-        msg->setWordWrap(true);
-        msg->setCloseButtonVisible(true);
-
-        connect(msg, &KMessageWidget::hideAnimationFinished, this, []() {
-            KlipperSettings::setActionsInfoMessageShown(false);
-        });
-        layout->addWidget(msg, 4, 0, 1, -1);
-    }
 
     // Add some vertical space between our buttons and the dialogue buttons
     layout->setRowMinimumHeight(5, 16);
