@@ -49,6 +49,8 @@ Dependencies:
     'frameworks/kstatusnotifieritem': 'Frameworks/6.24'
     'frameworks/kuserfeedback': 'Frameworks/6.24'
     'frameworks/kcolorscheme': 'Frameworks/6.24'
+    'frameworks/breeze': 'Frameworks/6.24'
+    'frameworks/networkmanager-qt': 'Frameworks/6.24'
     'plasma/kwayland': '@same'
     'plasma/libplasma': '@same'
     'plasma/layer-shell-qt': '@same'
