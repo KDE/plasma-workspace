@@ -609,7 +609,7 @@ msgstr "Vyčistit historii schránky"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Znovu se nedotazovat"
 
 #: historymodel.cpp:372
 #, kde-format

@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 03:01+0000\n"
-"PO-Revision-Date: 2026-09-19 08:05-0300\n"
+"PO-Revision-Date: 2026-09-26 06:05-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -623,7 +623,7 @@ msgstr "Limpar histórico da área de transferência"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Não perguntar novamente"
 
 #: historymodel.cpp:372
 #, kde-format

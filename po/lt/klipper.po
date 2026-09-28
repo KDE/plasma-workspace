@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 03:01+0000\n"
-"PO-Revision-Date: 2026-09-21 20:45+0300\n"
+"PO-Revision-Date: 2026-09-27 20:36+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -618,7 +618,7 @@ msgstr "Išvalyti iškarpinės istoriją"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Daugiau nebeklausti"
 
 #: historymodel.cpp:372
 #, kde-format

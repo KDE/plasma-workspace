@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-26 03:01+0000\n"
-"PO-Revision-Date: 2026-09-19 11:33+0100\n"
+"PO-Revision-Date: 2026-09-26 15:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -620,7 +620,7 @@ msgstr "Limpiar el historial del portapapeles"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "No volver a preguntar"
 
 #: historymodel.cpp:372
 #, kde-format
