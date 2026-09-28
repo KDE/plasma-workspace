@@ -156,7 +156,7 @@ PlasmaComponents3.ScrollView {
             break;
         }
         case Qt.Key_PageUp: {
-            if (event.modifiers & Qt.ControlModifier) {
+            if (event.modifiers & Qt.ControlModifier && tabBar.visible) {
                 // Ctrl+PgUp: Previous tab
                 tabBar.setCurrentIndex(Math.max(0, tabBar.currentIndex - 1));
                 event.accepted = true;
@@ -172,7 +172,7 @@ PlasmaComponents3.ScrollView {
             break;
         }
         case Qt.Key_PageDown: {
-            if (event.modifiers & Qt.ControlModifier) {
+            if (event.modifiers & Qt.ControlModifier && tabBar.visible) {
                 // Ctrl+PgDn: Next tab
                 tabBar.setCurrentIndex(Math.min(tabBar.count - 1, tabBar.currentIndex + 1));
                 event.accepted = true;
@@ -189,13 +189,11 @@ PlasmaComponents3.ScrollView {
         }
         case Qt.Key_1:
         case Qt.Key_2: {
-            if (event.modifiers & Qt.AltModifier) {
+            if (event.modifiers & Qt.AltModifier && tabBar.visible) {
                 // Alt+1/Alt+2: Switch to specific tab
                 const tabIndex = event.key - Qt.Key_1;
-                if (tabIndex < tabBar.count) {
-                    tabBar.setCurrentIndex(tabIndex);
-                    event.accepted = true;
-                }
+                tabBar.setCurrentIndex(tabIndex);
+                event.accepted = true;
             } else {
                 forwardToFilter();
             }
