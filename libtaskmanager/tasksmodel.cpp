@@ -56,10 +56,8 @@ public:
     SortMode sortMode = SortAlpha;
     bool separateLaunchers = true;
     bool launchInPlace = false;
-    bool hideActivatedLaunchers = true;
     bool launchersEverSet = false;
     bool launcherSortingDirty = false;
-    bool launcherCheckNeeded = false;
     QList<int> sortedPreFilterRows;
     QList<int> sortRowInsertQueue;
     bool sortRowInsertQueueStale = false;
@@ -272,6 +270,7 @@ void TasksModel::Private::initModels()
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMinimizedChanged, q, &TasksModel::filterNotMinimizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterNotMaximizedChanged, q, &TasksModel::filterNotMaximizedChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterHiddenChanged, q, &TasksModel::filterHiddenChanged);
+    QObject::connect(filterProxyModel, &TaskFilterProxyModel::hideActivatedLaunchersChanged, q, &TasksModel::hideActivatedLaunchersChanged);
 
     groupingProxyModel = new TaskGroupingProxyModel(q);
     groupingProxyModel->setSourceModel(filterProxyModel);
@@ -309,52 +308,7 @@ void TasksModel::Private::initModels()
         }
     });
 
-    QObject::connect(groupingProxyModel, &QAbstractItemModel::rowsAboutToBeRemoved, q, [this](const QModelIndex &parent, int first, int last) {
-        // We can ignore group members.
-        if (parent.isValid()) {
-            return;
-        }
-
-        for (int i = first; i <= last; ++i) {
-            const QModelIndex &sourceIndex = groupingProxyModel->index(i, 0);
-
-            // When a window or startup task is removed, we have to trigger a re-filter of
-            // our launchers to (possibly) pop them back in.
-            // NOTE: An older revision of this code compared the window and startup tasks
-            // to the launchers to figure out which launchers should be re-filtered. This
-            // was fine until we discovered that certain applications (e.g. Google Chrome)
-            // change their window metadata specifically during tear-down, sometimes
-            // breaking TaskTools::appsMatch (it's a race) and causing the associated
-            // launcher to remain hidden. Therefore we now consider any top-level window or
-            // startup task removal a trigger to re-filter all launchers. We don't do this
-            // in response to the window metadata changes (even though it would be strictly
-            // more correct, as then-ending identity match-up was what caused the launcher
-            // to be hidden) because we don't want the launcher and window/startup task to
-            // briefly co-exist in the model.
-            if (!launcherCheckNeeded && launcherTasksModel
-                && (sourceIndex.data(AbstractTasksModel::IsWindow).toBool() || sourceIndex.data(AbstractTasksModel::IsStartup).toBool())) {
-                launcherCheckNeeded = true;
-            }
-        }
-    });
-
-    QObject::connect(filterProxyModel, &QAbstractItemModel::rowsRemoved, q, [this](const QModelIndex &parent, int first, int last) {
-        Q_UNUSED(parent)
-        Q_UNUSED(first)
-        Q_UNUSED(last)
-
-        if (launcherCheckNeeded) {
-            for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
-                const QModelIndex &idx = filterProxyModel->index(i, 0);
-
-                if (idx.data(AbstractTasksModel::IsLauncher).toBool()) {
-                    Q_EMIT filterProxyModel->dataChanged(idx, idx);
-                }
-            }
-
-            launcherCheckNeeded = false;
-        }
-
+    QObject::connect(filterProxyModel, &QAbstractItemModel::rowsRemoved, q, [this]() {
         // One of the removed tasks might have been demanding attention, but
         // we can't check the state after the window has been closed already,
         // so we always have to do a full update.
@@ -379,27 +333,6 @@ void TasksModel::Private::initModels()
                              updateAnyTaskDemandsAttention();
                          }
 
-                         if (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId)) {
-                             for (int i = topLeft.row(); i <= bottomRight.row(); ++i) {
-                                 const QModelIndex &sourceIndex = groupingProxyModel->index(i, 0);
-
-                                 // When a window task changes identity to one we have a launcher for, cause
-                                 // the launcher to be re-filtered.
-                                 if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()) {
-                                     for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
-                                         const QModelIndex &filterIndex = filterProxyModel->index(i, 0);
-
-                                         if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-                                             continue;
-                                         }
-
-                                         if (appsMatch(sourceIndex, filterIndex)) {
-                                             Q_EMIT filterProxyModel->dataChanged(filterIndex, filterIndex);
-                                         }
-                                     }
-                                 }
-                             }
-                         }
                      });
 
     // Update anyTaskDemandsAttention on source model resets.
@@ -1340,19 +1273,15 @@ TasksModel::GroupMode TasksModel::groupMode() const
 
 bool TasksModel::hideActivatedLaunchers() const
 {
-    return d->hideActivatedLaunchers;
+    return d->filterProxyModel->hideActivatedLaunchers();
 }
 
 void TasksModel::setHideActivatedLaunchers(bool hideActivatedLaunchers)
 {
-    if (d->hideActivatedLaunchers != hideActivatedLaunchers) {
-        d->hideActivatedLaunchers = hideActivatedLaunchers;
-
+    if (d->filterProxyModel->hideActivatedLaunchers() != hideActivatedLaunchers) {
         d->updateManualSortMap();
-        invalidateFilter();
+        d->filterProxyModel->setHideActivatedLaunchers(hideActivatedLaunchers);
         d->forceResort();
-
-        Q_EMIT hideActivatedLaunchersChanged();
     }
 }
 
@@ -2069,22 +1998,6 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
 
             if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
                 || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
-                return false;
-            }
-        }
-    }
-
-    // Filter launcher tasks we already have a startup or window task for (that
-    // got through filtering).
-    if (d->hideActivatedLaunchers && sourceIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
-        for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
-            const QModelIndex &filteredIndex = d->filterProxyModel->index(i, 0);
-
-            if (!filteredIndex.data(AbstractTasksModel::IsWindow).toBool() && !filteredIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                continue;
-            }
-
-            if (appsMatch(sourceIndex, filteredIndex)) {
                 return false;
             }
         }
