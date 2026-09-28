@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:47+0000\n"
-"PO-Revision-Date: 2026-09-18 16:51+0200\n"
+"POT-Creation-Date: 2026-09-28 00:47+0000\n"
+"PO-Revision-Date: 2026-09-26 08:40+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Text-Markup: kde4\n"
 
 #: configdialog.cpp:83
@@ -314,34 +314,34 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "La création du code « QR » a échoué."
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Réduire"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Développer"
 
-#: declarative/qml/ClipboardMenu.qml:288
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "Clear History"
 msgstr "Effacer l'historique"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "All History"
 msgstr "Tout l'historique"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgid "Starred Only"
 msgstr "Marqué d'une étoile uniquement"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -351,18 +351,18 @@ msgstr ""
 "Le presse-papier contient actuellement une donnée sensible qui ne sera pas "
 "enregistrée dans l'historique."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:368
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Effacer les données secrètes"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:484
 #, kde-format
 msgid "No matches"
 msgstr "Aucune correspondance"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:484
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Le presse-papier est vide"
@@ -633,7 +633,7 @@ msgstr "Effacer l'historique du presse-papier"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Ne plus poser la question"
 
 #: historymodel.cpp:373
 #, kde-format

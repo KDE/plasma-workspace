@@ -1,22 +1,22 @@
 # Translation of kcm_autostart to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# SPDX-FileCopyrightText: 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2008, 2010, 2013, 2015, 2017, 2020-2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 00:47+0000\n"
-"PO-Revision-Date: 2025-10-09 01:48+0200\n"
-"Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"PO-Revision-Date: 2026-09-24 13:52+0200\n"
+"Last-Translator: Shinjo Park <peremen@gmail.com>\n"
+"Language-Team: Korean\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: autostartmodel.cpp:378
 #, kde-format
@@ -160,27 +160,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
-msgstr ""
+msgstr "%1의 자동 시작 비활성화"
 
 #: ui/main.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
-msgstr ""
+msgstr "%1의 자동 시작 활성화"
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Autostart"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
-msgstr "자동 시작"
+msgstr "자동 시작 비활성화"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid "Autostart"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
-msgstr "자동 시작"
+msgstr "자동 시작 활성화"
 
 #: ui/main.qml:159
 #, kde-format

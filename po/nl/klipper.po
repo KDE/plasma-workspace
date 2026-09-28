@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"POT-Creation-Date: 2026-09-28 00:47+0000\n"
 "PO-Revision-Date: 2026-09-25 11:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -310,34 +310,34 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Aanmaken van QR-code is mislukt"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Invouwen"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Uitvouwen"
 
-#: declarative/qml/ClipboardMenu.qml:288
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "All History"
 msgstr "Gehele geschiedenis"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgid "Starred Only"
 msgstr "Alleen met ster"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -347,18 +347,18 @@ msgstr ""
 "Het klembord bevat op dit moment een gevoelig stukje gegevens die niet in de "
 "geschiedenis zal worden opgeslagen."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:368
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Geheime gegevens wissen"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:484
 #, kde-format
 msgid "No matches"
 msgstr "geen overeenkomsten"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:484
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"

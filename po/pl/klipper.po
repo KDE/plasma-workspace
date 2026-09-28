@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1747900 $
+# Version: $Revision: 1748411 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 00:47+0000\n"
+"POT-Creation-Date: 2026-09-28 00:47+0000\n"
 "PO-Revision-Date: 2026-09-06 09:50+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -305,34 +305,34 @@ msgstr "Za mało miejsca, aby wyświetlić kod QR. Spróbuj powiększyć ten apl
 msgid "Creating QR code failed"
 msgstr "Nie udało się utworzyć kodu QR"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Zwiń"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozwiń"
 
-#: declarative/qml/ClipboardMenu.qml:288
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "Clear History"
 msgstr "Wyczyść historię"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:349
 #, kde-format
 msgid "All History"
 msgstr "Całą historię"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:354
 #, kde-format
 msgid "Starred Only"
 msgstr "Tylko z gwiazdkami"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -342,18 +342,18 @@ msgstr ""
 "Schowek obecnie przechowuje dane poufne, które nie zostaną zapamiętane w "
 "historii."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:368
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Wyczyść dane poufne"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:484
 #, kde-format
 msgid "No matches"
 msgstr "Brak pasujących wyrażeń"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:484
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schowek jest pusty"
