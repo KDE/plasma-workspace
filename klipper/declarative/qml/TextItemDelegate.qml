@@ -19,6 +19,8 @@ ClipboardItemDelegate {
         id: mainLabel
         maximumLineCount: 3
         verticalAlignment: Text.AlignVCenter
+        // Undo Label's AlignLeft to follow the direction of the text, not of the UI
+        horizontalAlignment: undefined
 
         text: {
             if (!menuItem.model?.display) {

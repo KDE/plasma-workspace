@@ -43,6 +43,13 @@ PlasmaComponents.ItemDelegate {
     // it's a bug
     readonly property bool isTall: height > Math.round(Kirigami.Units.gridUnit * 2.5)
     readonly property bool shouldUseOverflowButton: Kirigami.Settings.tabletMode || Kirigami.Settings.hasTransientTouchInput
+    // When RTL and LTR scripts mix, text in the opposite direction to the UI starts at the tool buttons
+    readonly property bool textStartsAtButtons: {
+        const toolButtonsSide = LayoutMirroring.enabled ? Text.AlignLeft : Text.AlignRight
+        return toolButtonsLoader.active
+            && !shouldUseOverflowButton
+            && (mainItem as Text)?.effectiveHorizontalAlignment === toolButtonsSide
+    }
 
     signal itemSelected()
     signal remove()
@@ -130,7 +137,7 @@ PlasmaComponents.ItemDelegate {
         anchors.fill: label
         cached: true
         maskSource: labelMaskSource
-        visible: !!source && toolButtonsLoader.active
+        visible: !!source && toolButtonsLoader.active && !menuItem.textStartsAtButtons
 
         TapHandler {
             enabled: !(toolButtonsLoader.item as DelegateToolButtons)?.hovered // https://bugreports.qt.io/browse/QTBUG-108821
@@ -148,8 +155,19 @@ PlasmaComponents.ItemDelegate {
             left: parent.left
             leftMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - menuItem.listMargins.left
             right: parent.right
-            rightMargin: expandButtonLoader.implicitWidth + expandButtonLoader.anchors.rightMargin
-                          + ((menuItem.model?.starred ?? false) ? starSlot.width + Kirigami.Units.smallSpacing : 0)
+            rightMargin: {
+                let margin = expandButtonLoader.implicitWidth + expandButtonLoader.anchors.rightMargin
+                let neighbour = null
+                if (menuItem.textStartsAtButtons) {
+                    neighbour = toolButtonsLoader
+                } else if (menuItem.model?.starred ?? false) {
+                    neighbour = starSlot
+                }
+                if (neighbour) {
+                    margin += neighbour.width + Kirigami.Units.smallSpacing
+                }
+                return margin
+            }
             verticalCenter: parent.verticalCenter
         }
         states: [
