@@ -62,6 +62,11 @@ Klipper::Klipper(QObject *parent)
                                                  QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
     m_historyModel = HistoryModel::self();
+    // Prevent action menu popping up on start
+    if (const auto top = m_historyModel->first()) {
+        m_lastURLGrabberTextSelection = top->text();
+        m_lastURLGrabberTextClipboard = top->text();
+    }
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
 
@@ -342,14 +347,10 @@ void Klipper::slotHistoryChanged(bool isTop)
 
     QString &lastURLGrabberText = m_clip->isLocked(QClipboard::Selection) ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
     if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->allTypes().testFlag(HistoryItemType::Text)) {
-        m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(m_historyModel->first()));
-
-        // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
-        // text all the time (e.g. because XFixes is not available and the application
-        // has broken TIMESTAMP target). Using most recent history item may not always
-        // work.
+        // Do not offer the menu for the same action twice (ie. you select and copy, or press ctrl+C twice)
         if (item->text() != lastURLGrabberText) {
             lastURLGrabberText = item->text();
+            m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
         }
     } else {
         lastURLGrabberText.clear();
