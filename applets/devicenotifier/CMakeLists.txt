@@ -3,9 +3,12 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.devicenotifier\")
 
+set_source_files_properties(qml/DeviceNotifierGlobals.qml PROPERTIES QT_QML_SINGLETON_TYPE ON)
+
 plasma_add_applet(org.kde.plasma.devicenotifier
         QML_SOURCES
         qml/DeviceItem.qml
+        qml/DeviceNotifierGlobals.qml
         qml/FullRepresentation.qml
         qml/main.qml
         CPP_SOURCES
