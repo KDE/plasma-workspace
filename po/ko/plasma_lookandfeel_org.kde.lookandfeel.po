@@ -16,15 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: contents/splash/Splash.qml:79
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is the first text the user sees while starting in the splash screen, "
-#| "should be translated as something short, is a form that can be seen on a "
-#| "product. Plasma is the project name so shouldn't be translated."
-#| msgid "Plasma made by KDE"
+#, kde-format
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "
 "should be translated as something short, is a form that can be seen on a "

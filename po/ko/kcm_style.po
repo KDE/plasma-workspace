@@ -1,14 +1,14 @@
 # Translation of kcmstyle to Korean.
 # Copyright (C) 2001, 2007-2008 Free Software Foundation, Inc.
 # Yu-Chan, Park <super@susekorea.net>, 2001.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2024-11-28 23:37+0100\n"
+"PO-Revision-Date: 2026-09-28 23:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -27,109 +27,109 @@ msgstr "%1 파일은 올바른 GTK 테마 압축 파일이 아닙니다."
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr ""
+msgstr "설치 실패: 원격지에 있는 스타일 파일을 설치할 수 없습니다."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "설치 실패: 스타일 파일을 읽을 수 없습니다."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "설치 실패: 스타일 파일에 포함된 데이터가 없습니다."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "설치 실패: 스타일 파일의 압축을 해제할 수 없습니다."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "설치 실패: 스타일을 찾을 수 없습니다."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "설치 실패: 선택한 파일이 올바른 Union 스타일이 아닙니다."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "설치 실패: 선택한 스타일은 지원하지 않습니다."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "“%1” 설치 실패: 스타일이 이미 설치되어 있습니다."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "“%1” 설치 실패: 권한이 거부되었습니다."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "“%1” 설치 실패: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "“%1”을(를) 성공적으로 설치했습니다."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "삭제 실패: ID가 “%1”인 스타일을 찾을 수 없습니다."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "“%1” 삭제 실패: 권한이 거부되었습니다."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "“%1” 삭제 실패: 스타일이 설치되지 않았습니다."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "“%1” 삭제 실패: 스타일이 사용 중입니다."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "“%1” 삭제 실패: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "스타일을 삭제할 수 없음:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr ""
+msgstr "“%1”을(를) 삭제했지만 다른 것을 삭제할 수 없었습니다:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -137,20 +137,20 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
+msgstr[0] "스타일 %1개를 삭제했지만 다른 것을 삭제할 수 없었습니다:\n"
 
 #: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr ""
+msgstr "“%1”을(를) 성공적으로 삭제했습니다."
 
 #: kcmstyle.cpp:242
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
+msgstr[0] "스타일 %1개를 삭제했습니다."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
@@ -206,10 +206,9 @@ msgstr "라디오 단추"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
-msgstr "텍스트만"
+msgstr "텍스트 필드"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -227,7 +226,7 @@ msgstr "앱 스타일"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Union 스타일 ID"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -310,8 +309,7 @@ msgid "GNOME/GTK Application Style"
 msgstr "그놈/GTK 앱 스타일"
 
 #: ui/GtkStylePage.qml:38
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
 msgstr "파일에서 설치…"
@@ -320,7 +318,7 @@ msgstr "파일에서 설치…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr ""
+msgstr "새 항목 가져오기…"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format
@@ -343,8 +341,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK 테마 압축 파일 (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "파일에서 설치…"
@@ -366,6 +363,9 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"이 스타일은 Union 스타일 엔진을 사용하며, 현재 개발이 계속해서 진행 중입니"
+"다. 이 스타일을 사용하면 일부 항목이 올바르지 않게 표시되거나 작동할 수 있습"
+"니다."
 
 #: ui/main.qml:174
 #, kde-format
@@ -376,99 +376,90 @@ msgstr "스타일 설정…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "삭제…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "시스템에서 설치한 스타일을 삭제할 수 없0늡디ㅏ."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Union 스타일만 삭제할 수 있습니다."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "이 스타일을 삭제하지 마십시오."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "설치할 Union 스타일 선택"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "설치"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "탭 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "탭 2"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "체크 상자"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "라디오 단추"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
 msgstr "콤보 상자"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "콤보 상자"
+msgstr "콤보 상자 항목"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
-msgstr "누름 단추"
+msgstr "단추"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "텍스트만"
+msgstr "텍스트 필드"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr "%1%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "새 그놈/GTK 앱 스타일 가져오기…"
