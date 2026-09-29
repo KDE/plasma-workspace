@@ -100,6 +100,13 @@ void migrateSettings()
 
     if (general.hasKey("IgnoreSelection")) {
         KlipperSettings::setSaveSelection(!general.readEntry("IgnoreSelection", true));
+        // Will be useful in Plasma 6.9, when this MR gets merged: https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/7016
+        // That MR will delete this comment
+        // This was added in 6.8, which deleted IgnoreSelection, so only there can this safely run only once
+        // If it was not merged in 6.8, existing behaviour would break with the MR 7016
+        if (KlipperSettings::saveSelection() && KlipperSettings::uRLGrabberEnabled()) {
+            general.writeEntry("ActionOnSelection", true);
+        }
         general.deleteEntry("IgnoreSelection");
     }
     if (general.hasKey("IgnoreImages")) {
