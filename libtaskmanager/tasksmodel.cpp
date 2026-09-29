@@ -1601,6 +1601,14 @@ void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const 
     d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index), geometry, delegate);
 }
 
+void TasksModel::requestSendToOutput(const QModelIndex &index, QScreen *output)
+{
+    if (!index.isValid() || index.model() != this || !index.data(AbstractTasksModel::IsWindow).toBool()) {
+        return;
+    }
+    d->abstractTasksSourceModel->requestSendToOutput(mapToSource(index), output);
+}
+
 void TasksModel::requestToggleGrouping(const QModelIndex &index)
 {
     if (index.isValid() && index.model() == this) {

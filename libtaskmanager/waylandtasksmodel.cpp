@@ -22,6 +22,7 @@
 #include <QMimeData>
 #include <QQuickItem>
 #include <QQuickWindow>
+#include <QScreen> // Despite what Qt docs say, QWaylandScreen is not in <QWaylandScreen>.
 #include <QSet>
 #include <QTimer>
 #include <QUrl>
@@ -1303,6 +1304,25 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
     auto &window = d->windows.at(index.row());
 
     window->set_minimized_geometry(waylandWindow->surface(), rect.x(), rect.y(), rect.width(), rect.height());
+}
+
+void WaylandTasksModel::requestSendToOutput(const QModelIndex &index, QScreen *output)
+{
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
+        return;
+    }
+
+    if (!output) {
+        return;
+    }
+
+    auto waylandOutput = output->nativeInterface<QNativeInterface::QWaylandScreen>();
+
+    if (!waylandOutput || !waylandOutput->output()) {
+        return;
+    }
+
+    d->windows.at(index.row())->send_to_output(waylandOutput->output());
 }
 
 QUuid WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
