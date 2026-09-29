@@ -114,7 +114,7 @@ ColumnLayout {
         // We want the actions to be right-aligned but Row also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
-        visible: jobItem.modelInterface.jobDetails.effectiveDestUrl.toString() !== "" && !fileInfo.error
+        visible: (jobItem.modelInterface.jobDetails?.effectiveDestUrl.toString() ?? "") !== "" && !fileInfo.error
 
         PlasmaComponents3.Button {
             id: otherFileActionsButton
@@ -141,7 +141,7 @@ ColumnLayout {
 
             Notifications.FileMenu {
                 id: otherFileActionsMenu
-                url: jobItem.modelInterface.jobDetails.effectiveDestUrl
+                url: jobItem.modelInterface.jobDetails?.effectiveDestUrl ?? ""
                 onActionTriggered: action => jobItem.modelInterface.fileActionInvoked(action)
             }
         }

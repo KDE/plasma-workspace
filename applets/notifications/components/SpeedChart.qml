@@ -278,8 +278,8 @@ Item {
             indeterminate: visible && Window.window && Window.window.visible && root.modelInterface.percentage < 1
                            && root.modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
                            // is this too annoying?
-                           && (root.modelInterface.jobDetails.processedBytes === 0 || root.modelInterface.jobDetails.totalBytes === 0)
-                           && root.modelInterface.jobDetails.processedFiles === 0
+                           && (root.modelInterface.jobDetails?.processedBytes === 0 || root.modelInterface.jobDetails?.totalBytes === 0)
+                           && root.modelInterface.jobDetails?.processedFiles === 0
                            //&& modelInterface.jobDetails.processedDirectories === 0
         }
 

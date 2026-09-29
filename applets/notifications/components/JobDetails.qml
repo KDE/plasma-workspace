@@ -33,7 +33,7 @@ GridLayout {
             Layout.column: 0
             Layout.row: index
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
-            text: detailsGrid.modelInterface.jobDetails["descriptionLabel" + modelData] && modelInterface.jobDetails["descriptionValue" + modelData]
+            text: detailsGrid.modelInterface.jobDetails?.["descriptionLabel" + modelData] && modelInterface.jobDetails["descriptionValue" + modelData]
                 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", modelInterface.jobDetails["descriptionLabel" + modelData]) : ""
             font: Kirigami.Theme.smallFont
             textFormat: Text.PlainText
@@ -69,7 +69,7 @@ GridLayout {
             Component.onCompleted: bindText()
             function bindText() {
                 text = Qt.binding(function() {
-                    return detailsGrid.modelInterface.jobDetails["descriptionValue" + modelData] || "";
+                    return detailsGrid.modelInterface.jobDetails?.["descriptionValue" + modelData] || "";
                 });
             }
 
@@ -102,8 +102,8 @@ GridLayout {
             Layout.row: 2 + index
             Layout.fillWidth: true
             text: {
-                let processed = detailsGrid.modelInterface.jobDetails["processed" + modelData];
-                let total = detailsGrid.modelInterface.jobDetails["total" + modelData];
+                let processed = detailsGrid.modelInterface.jobDetails?.["processed" + modelData];
+                let total = detailsGrid.modelInterface.jobDetails?.["total" + modelData];
 
                 if (processed > 0 || total > 1) {
                     // Format numbers to not display as exponential
@@ -155,7 +155,7 @@ GridLayout {
         Layout.column: 1
         Layout.row: 2 + 4
         Layout.fillWidth: true
-        text: detailsGrid.modelInterface.jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
+        text: detailsGrid.modelInterface.jobDetails?.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
             KCoreAddons.Format.formatByteSize(detailsGrid.modelInterface.jobDetails.speed)) : ""
         font: Kirigami.Theme.smallFont
         textFormat: Text.PlainText
