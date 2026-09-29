@@ -112,7 +112,7 @@
 >Accions</title>
 
 <para
->El &klipper; pot realitzar accions sobre el contingut del porta-retalls, basant-se en una expressió regular en particular. Hi ha una acció integrada que actua sobre adreces web i fitxers. Permet passar una adreça web que que comenci per «http://» o «https://» a un navegador web, o un fitxer, per exemple, un <acronym
+>El &klipper; pot realitzar accions sobre el contingut del porta-retalls, basant-se en una expressió regular en particular. Hi ha una acció integrada que actua sobre adreces web i fitxers. Permet passar una adreça web que comenci per «http://» o «https://» a un navegador web, o un fitxer, per exemple, un <acronym
 >PDF</acronym
 > a una aplicació compatible com l'&okular;.</para>
 
@@ -162,7 +162,7 @@
 <title
 >General</title>
 <para
->El &klipper; es pot emprar per a establir el comportament del porta-retalls i selecció al &plasma;. Per ajustar els seu comportament, vegeu <xref linkend="general-page"/>. </para>
+>El &klipper; es pot emprar per a establir el comportament del porta-retalls i selecció al &plasma;. Per ajustar el seu comportament, vegeu <xref linkend="general-page"/>. </para>
 
 <note
 ><para
