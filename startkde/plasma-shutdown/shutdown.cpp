@@ -6,6 +6,7 @@
 #include <QDir>
 #include <QProcess>
 #include <QStandardPaths>
+#include <QTimer>
 
 #include "debug.h"
 #include "ksmserver_interface.h"
@@ -17,6 +18,14 @@
 Shutdown::Shutdown(QObject *parent)
     : QObject(parent)
 {
+    // handle the obscure case where we are started but the caller doesn't call any of the shutdown methods
+    QTimer::singleShot(100, this, [this]() {
+        if (m_shutdownType == ShutdownTypeNone) {
+            qCWarning(PLASMA_SESSION) << "No shutdown type specified, quitting";
+            qApp->quit();
+            return;
+        }
+    });
     new ShutdownAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Shutdown"), QStringLiteral("org.kde.Shutdown"), this);
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Shutdown"));
