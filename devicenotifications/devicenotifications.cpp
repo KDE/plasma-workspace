@@ -19,6 +19,7 @@
 K_PLUGIN_CLASS_WITH_JSON(KdedDeviceNotifications, "devicenotifications.json")
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 // TODO Can we put this in KStringHandler?
 static QString decodePropertyValue(QByteArrayView encoded)
@@ -324,6 +325,11 @@ void OutputDevice::kde_output_device_v2_uuid(const QString &uuid)
     m_uuid = uuid;
 }
 
+void OutputDevice::kde_output_device_v2_name(const QString &name)
+{
+    m_name = name;
+}
+
 void OutputDevice::kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode)
 {
     new OutputDeviceMode(mode);
@@ -338,6 +344,11 @@ void OutputDevice::kde_output_device_v2_done()
 void OutputDevice::kde_output_device_v2_removed()
 {
     Q_EMIT removed();
+}
+
+bool OutputDevice::isInternal() const
+{
+    return m_name.startsWith("eDP-"_L1) || m_name.startsWith("LVDS-"_L1) || m_name.startsWith("DSI-"_L1);
 }
 
 OutputDeviceMode::OutputDeviceMode(::kde_output_device_mode_v2 *mode)
@@ -390,6 +401,9 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
 
     connect(m_outputRegistry, &OutputDeviceRegistry::outputAdded, this, [this](OutputDevice *outputDevice) {
         if (m_initialOutputsReceived) {
+            if (outputDevice->isInternal()) {
+                return;
+            }
             const QString uuid = outputDevice->uuid();
             // If we recently just removed this output, it wasn't actually physically disconnected
             if (!m_recentlyRemovedOutputs.removeOne(uuid)) {
@@ -400,6 +414,9 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
 
     connect(m_outputRegistry, &OutputDeviceRegistry::outputRemoved, this, [this](OutputDevice *outputDevice) {
         const QString uuid = outputDevice->uuid();
+        if (outputDevice->isInternal()) {
+            return;
+        }
         m_recentlyRemovedOutputs.append(uuid);
         // 2000ms matches the DPMS workaround time in KWin
         QTimer::singleShot(2000ms, this, [this, uuid]() {
