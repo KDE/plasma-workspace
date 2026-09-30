@@ -100,6 +100,7 @@ ColumnLayout {
     RowLayout {
         Layout.alignment: Qt.AlignTop
         PlasmaComponents3.ToolButton {
+            id: usageHelpButton
             visible: root.runnerWindow.helpEnabled
             checkable: true
             checked: root.query.startsWith("?")
@@ -108,6 +109,7 @@ ColumnLayout {
             icon.name: "question"
             Accessible.name: i18n("Show Usage Help")
             Accessible.description: i18n("Show Usage Help")
+            KeyNavigation.down: queryField.activeListView
             PlasmaComponents3.ToolTip {
                 text: i18n("Show Usage Help")
             }
@@ -143,6 +145,8 @@ ColumnLayout {
 
             KeyNavigation.up: activeListView
             KeyNavigation.down: activeListView
+            KeyNavigation.left: usageHelpButton
+            KeyNavigation.right: configureButton
 
             QQC2.Label {
                 id: fadedTextCompletion
@@ -301,6 +305,7 @@ ColumnLayout {
             }
         }
         PlasmaComponents3.ToolButton {
+            id: configureButton
             icon.name: "configure"
             onClicked: {
                 root.runnerWindow.visible = false
@@ -309,17 +314,21 @@ ColumnLayout {
             Accessible.name: i18n("Configure")
             Accessible.description: i18n("Configure KRunner Behavior")
             visible: KAuthorized.authorizeControlModule("kcm_krunnersettings")
+            KeyNavigation.right: pinButton
+            KeyNavigation.down: queryField.activeListView
             PlasmaComponents3.ToolTip {
                 text: i18n("Configure KRunner…")
             }
         }
         PlasmaComponents3.ToolButton {
+            id: pinButton
             checkable: true
             checked: root.runnerWindow.pinned
             onToggled: root.runnerWindow.pinned = checked
             icon.name: "window-pin"
             Accessible.name: i18n("Pin")
             Accessible.description: i18n("Pin Search")
+            KeyNavigation.down: queryField.activeListView
             PlasmaComponents3.ToolTip {
                 text: i18n("Keep Open")
             }
@@ -345,6 +354,8 @@ ColumnLayout {
             Keys.onEscapePressed: {
                 root.runnerWindow.visible = false
             }
+            KeyNavigation.up: queryField
+            KeyNavigation.down: queryField
 
             onActivated: {
                 if (!root.runnerWindow.pinned) {
