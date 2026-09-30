@@ -342,6 +342,16 @@ void TransientImage::forceRefresh()
     refresh();
 }
 
+TransientImageOptions TransientImage::requestedOptions() const
+{
+    return TransientImageOptions{
+        .source = source(),
+        .size = size(),
+        .devicePixelRatio = window()->effectiveDevicePixelRatio(),
+        .fillMode = fillMode(),
+    };
+}
+
 void TransientImage::load()
 {
     if (size().isEmpty() || !m_exposed) {
@@ -350,20 +360,13 @@ void TransientImage::load()
         return;
     }
 
-    const TransientImageOptions options{
-        .source = source(),
-        .size = size(),
-        .devicePixelRatio = window()->effectiveDevicePixelRatio(),
-        .fillMode = fillMode(),
-    };
-
+    // Let the pending load finish, it will be restarted with the latest options if they have changed.
+    // Restarting the load on every change can result in lots of concurrent loads, e.g. during screen rotation.
     if (m_reader) {
-        if (m_reader->options() == options) {
-            return;
-        }
-        m_reader.reset();
+        return;
     }
 
+    const TransientImageOptions options = requestedOptions();
     if (m_options == options) {
         setStatus(Status::Ready);
         return;
@@ -371,8 +374,14 @@ void TransientImage::load()
 
     m_reader = std::make_unique<TransientImageReader>(options);
     connect(m_reader.get(), &TransientImageReader::finished, this, [this](const QImage &image) {
-        apply(image, m_reader->options());
+        const TransientImageOptions options = m_reader->options();
         m_reader.reset();
+
+        if (options == requestedOptions()) {
+            apply(image, options);
+        } else {
+            load();
+        }
     });
 
     setStatus(Status::Loading);
