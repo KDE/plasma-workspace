@@ -93,18 +93,22 @@ public:
         return m_uuid;
     }
 
+    bool isInternal() const;
+
 Q_SIGNALS:
     void done();
     void removed();
 
 protected:
     void kde_output_device_v2_uuid(const QString &uuid) override;
+    void kde_output_device_v2_name(const QString &name) override;
     void kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode) override;
     void kde_output_device_v2_done() override;
     void kde_output_device_v2_removed() override;
 
 private:
     QString m_uuid;
+    QString m_name;
     bool m_isInitialized = false;
 };
 
