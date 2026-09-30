@@ -8,13 +8,14 @@
 # SPDX-FileCopyrightText: 2024-2025 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025-2026 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2026 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-09-16 21:49+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2026-09-23 19:47+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -459,7 +460,7 @@ msgstr ""
 "Ein <placeholder>&#37;s</placeholder> im Befehl wird durch den kompletten "
 "Inhalt der Zwischenablage ersetzt. <placeholder>&#37;0</placeholder> bis "
 "<placeholder>&#37;9</placeholder> werden durch den entsprechenden erfassten "
-"Text aus dem Musterabgleich ersetzt."
+"Text aus dem Suchmuster ersetzt."
 
 #: editcommanddialog.cpp:81
 #, kde-format
@@ -710,7 +711,7 @@ msgid ""
 "using a middle-click."
 msgstr ""
 "Mit dem Mauszeiger ausgewählter, aber nicht explizit in die Zwischenablage "
-"kopierter Inhalt, wird nicht automatisch im Verlauf der Zwischenablage "
+"kopierter Inhalt wird nicht automatisch im Verlauf der Zwischenablage "
 "gespeichert und kann nur mit einem Mittelklick eingefügt werden."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
