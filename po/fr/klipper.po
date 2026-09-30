@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-09-26 08:40+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -326,22 +326,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Développer"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:292
 #, kde-format
 msgid "Clear History"
 msgstr "Effacer l'historique"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "All History"
 msgstr "Tout l'historique"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgid "Starred Only"
 msgstr "Marqué d'une étoile uniquement"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -351,18 +351,18 @@ msgstr ""
 "Le presse-papier contient actuellement une donnée sensible qui ne sera pas "
 "enregistrée dans l'historique."
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Effacer les données secrètes"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "No matches"
 msgstr "Aucune correspondance"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Le presse-papier est vide"
@@ -617,106 +617,106 @@ msgstr "Réinitialiser l'icône pour la commande par défaut"
 msgid "Icon:"
 msgstr "Icône :"
 
-#: historymodel.cpp:287
+#: historymodel.cpp:311
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Voulez-vous vraiment effacer et supprimer tout l'historique du presse-"
 "papier ?"
 
-#: historymodel.cpp:289
+#: historymodel.cpp:313
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Effacer l'historique du presse-papier"
 
-#: historymodel.cpp:291 historymodel.cpp:566
+#: historymodel.cpp:315 historymodel.cpp:590
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Ne plus poser la question"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:397
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 x %2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:586
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Cet article est marqué d'une étoile. Voulez-vous vraiment le supprimer de "
 "l'historique ?"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:588
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Supprimer les éléments marqués d'une étoile"
 
-#: klipper.cpp:73
+#: klipper.cpp:78
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu contextuel automatique d'action :"
 
-#: klipper.cpp:91
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Effacer &l'historique du presse-papier"
 
-#: klipper.cpp:96
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Démarrer manuellement une action concernant le presse-papier actuel"
 
-#: klipper.cpp:104
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Modifi&er les contenus..."
 
-#: klipper.cpp:112
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "A&fficher le code barre..."
 
-#: klipper.cpp:121
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Élément suivant de l'historique"
 
-#: klipper.cpp:126
+#: klipper.cpp:131
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Élément précédent de l'historique"
 
-#: klipper.cpp:133
+#: klipper.cpp:138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Afficher les éléments du presse-papier à la position de la souris"
 
-#: klipper.cpp:395 klipper.cpp:404
+#: klipper.cpp:396 klipper.cpp:405
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historique du presse-papier"
 
-#: klipper.cpp:421
+#: klipper.cpp:422
 #, kde-format
 msgid "up"
 msgstr "haut"
 
-#: klipper.cpp:428
+#: klipper.cpp:429
 #, kde-format
 msgid "current"
 msgstr "actuel"
 
-#: klipper.cpp:435
+#: klipper.cpp:436
 #, kde-format
 msgid "down"
 msgstr "bas"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2023-05-29 08:12+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -34,12 +34,12 @@ msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr ""
 
-#: qml/main.qml:75
+#: qml/main.qml:77
 #, kde-format
 msgid "Clear History"
 msgstr "Borrar o historial"
 
-#: qml/main.qml:95
+#: qml/main.qml:98
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar o portapapeis…"

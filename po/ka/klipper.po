@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-09-25 05:50+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -307,22 +307,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "ამოკეცვა"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:292
 #, kde-format
 msgid "Clear History"
 msgstr "ისტორიის გასუფთავება"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "All History"
 msgstr "სრული ისტორია"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgid "Starred Only"
 msgstr "მხოლოდ ვარსკვლავიანები"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -332,18 +332,18 @@ msgstr ""
 "ბუფერი ამჟამად შეიცავს მგრძნობიარე მონაცემებს, რომლის შენახვაც ისტორიაში არ "
 "მოხდება."
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "საიდუმლო მონაცემების გასუფთავება"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "No matches"
 msgstr "დამთხვევა არ არსებობს"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
@@ -593,102 +593,102 @@ msgstr "ბრძანების ნაგულისხმევ ხატ�
 msgid "Icon:"
 msgstr "ხატულა:"
 
-#: historymodel.cpp:287
+#: historymodel.cpp:311
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "მართლა გნებავთ ბუფერის ისტორიის სრულად გასუფთავება და წაშლა?"
 
-#: historymodel.cpp:289
+#: historymodel.cpp:313
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ბუფერის ისტორიის გასუფთავება"
 
-#: historymodel.cpp:291 historymodel.cpp:566
+#: historymodel.cpp:315 historymodel.cpp:590
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "აღარ მკითხო"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:397
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:586
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "ამ ელემენტს ვარსკვლავი აქვთ. მართლა გნებავთ მისი წაშლა ისტორიიდან?"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:588
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "ვარსკვლავიანი ელემენტის წაშლა"
 
-#: klipper.cpp:73
+#: klipper.cpp:78
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ავტომატური ქმედების მხტუნარა მენიუ"
 
-#: klipper.cpp:91
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&ბუფერის ისტორიის გასუფთავება"
 
-#: klipper.cpp:96
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "მიმდინარე ბუფერზე ქმედების ხელით გაშვება"
 
-#: klipper.cpp:104
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "შემცველობის &ჩასწორება…"
 
-#: klipper.cpp:112
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&ბარკოდის ჩვენება…"
 
-#: klipper.cpp:121
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ისტორიის შემდეგი ჩანაწერი"
 
-#: klipper.cpp:126
+#: klipper.cpp:131
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ისტორიის წინა ჩანაწერი"
 
-#: klipper.cpp:133
+#: klipper.cpp:138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "თაგუნას მდგომარეობაზე მყოფი ბუფერის ელემენტების ჩვენება"
 
-#: klipper.cpp:395 klipper.cpp:404
+#: klipper.cpp:396 klipper.cpp:405
 #, kde-format
 msgid "Clipboard history"
 msgstr "ბაფერის ისტორია"
 
-#: klipper.cpp:421
+#: klipper.cpp:422
 #, kde-format
 msgid "up"
 msgstr "მაღლა"
 
-#: klipper.cpp:428
+#: klipper.cpp:429
 #, kde-format
 msgid "current"
 msgstr "მიმდინარე"
 
-#: klipper.cpp:435
+#: klipper.cpp:436
 #, kde-format
 msgid "down"
 msgstr "დაბლა"

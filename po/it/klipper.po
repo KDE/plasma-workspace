@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
-"PO-Revision-Date: 2026-09-18 09:29+0200\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
+"PO-Revision-Date: 2026-09-29 12:51+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -310,22 +310,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Espandi"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:292
 #, kde-format
 msgid "Clear History"
 msgstr "Cancella cronologia"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "All History"
 msgstr "Tutta la cronologia"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgid "Starred Only"
 msgstr "Solo contrassegnati con la stella"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -335,18 +335,18 @@ msgstr ""
 "Gli appunti contengono attualmente dati sensibili che non saranno "
 "memorizzati nella cronologia."
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Cancella dati segreti"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "No matches"
 msgstr "Nessuna corrispondenza"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Gli appunti sono vuoti"
@@ -596,105 +596,105 @@ msgstr "Ripristina l'icona predefinita per il comando"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: historymodel.cpp:287
+#: historymodel.cpp:311
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Vuoi davvero cancellare ed eliminare l'intera cronologia degli appunti?"
 
-#: historymodel.cpp:289
+#: historymodel.cpp:313
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"
 
-#: historymodel.cpp:291 historymodel.cpp:566
+#: historymodel.cpp:315 historymodel.cpp:590
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Non chiedere più"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:397
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:586
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Questo elemento è contrassegnato con una stella. Vuoi davvero rimuoverlo "
 "dalla cronologia?"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:588
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Rimuovi elemento contrassegnato con una stella"
 
-#: klipper.cpp:73
+#: klipper.cpp:78
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu a comparsa delle azioni automatiche"
 
-#: klipper.cpp:91
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Ripulisci la cronologia degli appunti"
 
-#: klipper.cpp:96
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente le azioni sugli appunti correnti"
 
-#: klipper.cpp:104
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Modifica i cont&enuti…"
 
-#: klipper.cpp:112
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra il codice a barre…"
 
-#: klipper.cpp:121
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Elemento successivo nella cronologia"
 
-#: klipper.cpp:126
+#: klipper.cpp:131
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Elemento precedente nella cronologia"
 
-#: klipper.cpp:133
+#: klipper.cpp:138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra gli elementi degli appunti alla posizione del mouse"
 
-#: klipper.cpp:395 klipper.cpp:404
+#: klipper.cpp:396 klipper.cpp:405
 #, kde-format
 msgid "Clipboard history"
 msgstr "Cronologia degli appunti"
 
-#: klipper.cpp:421
+#: klipper.cpp:422
 #, kde-format
 msgid "up"
 msgstr "su"
 
-#: klipper.cpp:428
+#: klipper.cpp:429
 #, kde-format
 msgid "current"
 msgstr "corrente"
 
-#: klipper.cpp:435
+#: klipper.cpp:436
 #, kde-format
 msgid "down"
 msgstr "giù"

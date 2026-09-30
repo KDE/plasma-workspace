@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2009-12-16 23:31+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -299,24 +299,24 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:292
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Historëja tacnika"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:348
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Historëja tacnika"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -324,19 +324,19 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<felënk dopasowań>"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Tacnik je pùsti"
@@ -584,111 +584,111 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:287
+#: historymodel.cpp:311
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Pò prôwdze wëczëszczëc historëjã tacnika?"
 
-#: historymodel.cpp:289
+#: historymodel.cpp:313
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "&Wëczëszczë historëjã tacnika"
 
-#: historymodel.cpp:291 historymodel.cpp:566
+#: historymodel.cpp:315 historymodel.cpp:590
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:373
+#: historymodel.cpp:397
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:562
+#: historymodel.cpp:586
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:564
+#: historymodel.cpp:588
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:73
+#: klipper.cpp:78
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Czas wëskrzëniwaniô menu dzejaniów:"
 
-#: klipper.cpp:91
+#: klipper.cpp:96
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Wëczëszczë historëjã tacnika"
 
-#: klipper.cpp:96
+#: klipper.cpp:101
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Rãczno wëwòłôj dzejanié na zamkłoscë tacnika"
 
-#: klipper.cpp:104
+#: klipper.cpp:109
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Editëjë zamkłoscë"
 
-#: klipper.cpp:112
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:121
+#: klipper.cpp:126
 #, fuzzy, kde-format
 #| msgid "Next history item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nôslédny element historëji"
 
-#: klipper.cpp:126
+#: klipper.cpp:131
 #, fuzzy, kde-format
 #| msgid "Previous history item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "wczasniészi element historëji"
 
-#: klipper.cpp:133
+#: klipper.cpp:138
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Menu w placu kùrsora mëszë"
 
-#: klipper.cpp:395 klipper.cpp:404
+#: klipper.cpp:396 klipper.cpp:405
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historëja tacnika"
 
-#: klipper.cpp:421
+#: klipper.cpp:422
 #, kde-format
 msgid "up"
 msgstr "w górã"
 
-#: klipper.cpp:428
+#: klipper.cpp:429
 #, kde-format
 msgid "current"
 msgstr "aktualné"
 
-#: klipper.cpp:435
+#: klipper.cpp:436
 #, kde-format
 msgid "down"
 msgstr "w dół"

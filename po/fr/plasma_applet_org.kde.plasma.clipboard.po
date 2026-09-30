@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-06-17 07:41+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -38,12 +38,12 @@ msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "Le presse-papier contient actuellement des données sensibles."
 
-#: qml/main.qml:75
+#: qml/main.qml:77
 #, kde-format
 msgid "Clear History"
 msgstr "Effacer l'historique"
 
-#: qml/main.qml:95
+#: qml/main.qml:98
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurer le presse-papier..."

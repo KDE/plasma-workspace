@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-06-16 06:13-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -38,12 +38,12 @@ msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "A área de transferência contém atualmente dados confidenciais"
 
-#: qml/main.qml:75
+#: qml/main.qml:77
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar histórico"
 
-#: qml/main.qml:95
+#: qml/main.qml:98
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a área de transferência…"

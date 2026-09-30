@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-09-28 23:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -33,12 +33,12 @@ msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "클립보드에서 현재 민감한 데이터를 저장하는 중"
 
-#: qml/main.qml:75
+#: qml/main.qml:77
 #, kde-format
 msgid "Clear History"
 msgstr "과거 기록 비우기"
 
-#: qml/main.qml:95
+#: qml/main.qml:98
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "클립보드 설정…"

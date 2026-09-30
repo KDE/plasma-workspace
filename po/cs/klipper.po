@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-09-18 10:52+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -310,22 +310,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozvinout"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:292
 #, kde-format
 msgid "Clear History"
 msgstr "Vyprázdnit historii"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "All History"
 msgstr "Celá historie"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgid "Starred Only"
 msgstr "Pouze s hvězdičkou"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -334,18 +334,18 @@ msgid ""
 msgstr ""
 "Schránka momentálně obsahuje citlivá data, která nebudou uložena do historie."
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Vymazat tajná data"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "No matches"
 msgstr "Žádné shody"
 
-#: declarative/qml/ClipboardMenu.qml:484
+#: declarative/qml/ClipboardMenu.qml:487
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdná"
@@ -595,103 +595,103 @@ msgstr "Obnovit ikonu pro příkaz na výchozí hodnotu"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:287
+#: historymodel.cpp:311
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Opravdu chcete vymazat a odstranit celou historii schránky?"
 
-#: historymodel.cpp:289
+#: historymodel.cpp:313
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Vyčistit historii schránky"
 
-#: historymodel.cpp:291 historymodel.cpp:566
+#: historymodel.cpp:315 historymodel.cpp:590
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Znovu se nedotazovat"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:397
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:586
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Tato položka je s hvězdičkou. Opravdu si přejete odstranit ji z historie?"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:588
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Odstranit položku s hvězdičkou"
 
-#: klipper.cpp:73
+#: klipper.cpp:78
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatická nabídka automatické činnosti"
 
-#: klipper.cpp:91
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "V&yčistit historii schránky"
 
-#: klipper.cpp:96
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ručně vyvolat činnost nad současným obsahem schránky"
 
-#: klipper.cpp:104
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Upravit obsah…"
 
-#: klipper.cpp:112
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Zobrazit čárový &kód..."
 
-#: klipper.cpp:121
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Následující položka v historii"
 
-#: klipper.cpp:126
+#: klipper.cpp:131
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Předchozí položka v historii"
 
-#: klipper.cpp:133
+#: klipper.cpp:138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Zobrazit položky ve schránce na pozici myši"
 
-#: klipper.cpp:395 klipper.cpp:404
+#: klipper.cpp:396 klipper.cpp:405
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historie schránky"
 
-#: klipper.cpp:421
+#: klipper.cpp:422
 #, kde-format
 msgid "up"
 msgstr "nahoru"
 
-#: klipper.cpp:428
+#: klipper.cpp:429
 #, kde-format
 msgid "current"
 msgstr "současný"
 
-#: klipper.cpp:435
+#: klipper.cpp:436
 #, kde-format
 msgid "down"
 msgstr "dolů"

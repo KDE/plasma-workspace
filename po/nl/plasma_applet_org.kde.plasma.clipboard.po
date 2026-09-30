@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2026-06-16 11:21+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -33,12 +33,12 @@ msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "Het klembord bevat op dit moment gevoelige gegevens"
 
-#: qml/main.qml:75
+#: qml/main.qml:77
 #, kde-format
 msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
-#: qml/main.qml:95
+#: qml/main.qml:98
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Klembord configureren…"

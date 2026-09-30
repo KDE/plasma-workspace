@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-09-30 00:48+0000\n"
 "PO-Revision-Date: 2015-02-21 13:02+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -34,13 +34,13 @@ msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr ""
 
-#: qml/main.qml:75
+#: qml/main.qml:77
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
 msgstr "Očisti istorijat"
 
-#: qml/main.qml:95
+#: qml/main.qml:98
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"
