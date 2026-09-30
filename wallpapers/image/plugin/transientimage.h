@@ -154,6 +154,7 @@ protected:
 private:
     void refresh();
     void forceRefresh();
+    TransientImageOptions requestedOptions() const;
     void load();
     void clear();
     void apply(const QImage &image, const TransientImageOptions &options);
