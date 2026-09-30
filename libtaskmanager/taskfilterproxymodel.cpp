@@ -83,8 +83,9 @@ void TaskFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
         }
     });
     connect(sourceModel, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &, const QModelIndex &, const QList<int> &roles) {
-        if (d->hideActivatedLaunchers
-            && (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon))) {
+        if ((d->hideActivatedLaunchers
+             && (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)))
+            || (d->filterByCurrentVirtualDesktop && (roles.isEmpty() || roles.contains(AbstractTasksModel::ScreenGeometry)))) {
             invalidateFilter();
         }
     });
@@ -118,7 +119,7 @@ void TaskFilterProxyModel::setScreenGeometry(const QRect &geometry)
     if (d->screenGeometry != geometry) {
         d->screenGeometry = geometry;
 
-        if (d->filterByScreen) {
+        if (d->filterByScreen || d->filterByCurrentVirtualDesktop) {
             invalidateFilter();
         }
 
