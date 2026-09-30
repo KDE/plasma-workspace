@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 03:01+0000\n"
+"POT-Creation-Date: 2026-09-30 02:45+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -313,22 +313,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozbaliť"
 
-#: declarative/qml/ClipboardMenu.qml:288
+#: declarative/qml/ClipboardMenu.qml:287
 #, kde-format
 msgid "Clear History"
 msgstr "História farieb"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:343
 #, kde-format
 msgid "All History"
 msgstr "Všetka história"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "Starred Only"
 msgstr "Iba s hviezdičkou"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -337,18 +337,18 @@ msgid ""
 msgstr ""
 "Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Vymazať tajné dáta"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:482
 #, kde-format
 msgid "No matches"
 msgstr "Žiadne zhody"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:482
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdna"
@@ -598,35 +598,35 @@ msgstr "Obnovenie predvolenej ikony pre príkaz"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:310
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Naozaj chcete vyčistiť a odstrániť celú históriu schránky?"
 
-#: historymodel.cpp:288
+#: historymodel.cpp:312
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Vyčistiť históriu schránky"
 
-#: historymodel.cpp:290 historymodel.cpp:557
+#: historymodel.cpp:314 historymodel.cpp:581
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:372
+#: historymodel.cpp:396
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:553
+#: historymodel.cpp:577
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Táto položka je označená hviezdičkou. Naozaj ju chcete odstrániť z histórie?"
 
-#: historymodel.cpp:555
+#: historymodel.cpp:579
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Odstrániť označený prvok"

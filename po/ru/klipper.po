@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-26 03:01+0000\n"
+"POT-Creation-Date: 2026-09-30 02:45+0000\n"
 "PO-Revision-Date: 2026-09-26 09:30+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -331,22 +331,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Развернуть"
 
-#: declarative/qml/ClipboardMenu.qml:288
+#: declarative/qml/ClipboardMenu.qml:287
 #, kde-format
 msgid "Clear History"
 msgstr "Очистить журнал"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:343
 #, kde-format
 msgid "All History"
 msgstr "Весь журнал"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:348
 #, kde-format
 msgid "Starred Only"
 msgstr "Только избранное"
 
-#: declarative/qml/ClipboardMenu.qml:354
+#: declarative/qml/ClipboardMenu.qml:353
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -356,18 +356,18 @@ msgstr ""
 "В буфере обмена сейчас находятся конфиденциальные данные, которые не будут "
 "сохранены в журнале."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Очистить секретные данные"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:482
 #, kde-format
 msgid "No matches"
 msgstr "Совпадений не найдено"
 
-#: declarative/qml/ClipboardMenu.qml:479
+#: declarative/qml/ClipboardMenu.qml:482
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
@@ -618,34 +618,34 @@ msgstr "Вернуть стандартный значок команды"
 msgid "Icon:"
 msgstr "Значок:"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:310
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Очистить и удалить весь журнал буфера обмена?"
 
-#: historymodel.cpp:288
+#: historymodel.cpp:312
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Очистить журнал буфера обмена"
 
-#: historymodel.cpp:290 historymodel.cpp:557
+#: historymodel.cpp:314 historymodel.cpp:581
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Не задавать больше этот вопрос"
 
-#: historymodel.cpp:372
+#: historymodel.cpp:396
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:553
+#: historymodel.cpp:577
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Эта запись добавлена в избранное. Удалить её из журнала?"
 
-#: historymodel.cpp:555
+#: historymodel.cpp:579
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Удалить запись"
