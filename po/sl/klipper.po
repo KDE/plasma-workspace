@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-30 02:45+0000\n"
+"POT-Creation-Date: 2026-10-01 02:45+0000\n"
 "PO-Revision-Date: 2026-09-26 08:39+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -317,22 +317,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Razširi"
 
-#: declarative/qml/ClipboardMenu.qml:287
+#: declarative/qml/ClipboardMenu.qml:285
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:341
 #, kde-format
 msgid "All History"
 msgstr "Vso zgodovino"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:346
 #, kde-format
 msgid "Starred Only"
 msgstr "Samo označeno z zvezdicami"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -342,18 +342,18 @@ msgstr ""
 "Odložišče trenutno vsebuje občutljive podatke, ki ne bodo shranjeni v "
 "zgodovini."
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:360
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Počisti tajne podatke"
 
-#: declarative/qml/ClipboardMenu.qml:482
+#: declarative/qml/ClipboardMenu.qml:480
 #, kde-format
 msgid "No matches"
 msgstr "Ni ujemanj"
 
-#: declarative/qml/ClipboardMenu.qml:482
+#: declarative/qml/ClipboardMenu.qml:480
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"

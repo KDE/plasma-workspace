@@ -1,12 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.notifications.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2012, 2013, 2014, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2017-12-31 22:42+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-09-30 12:00+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -22,25 +23,22 @@ msgstr ""
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
-msgstr ""
+msgstr "Одговори"
 
 #: components/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy Link"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
-msgstr "Копирај везу"
+msgstr "Копирај адресу везе"
 
 #: components/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Копирај"
 
 #: components/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Изабери све"
@@ -49,164 +47,137 @@ msgstr "Изабери све"
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "управо сада"
 
 #: components/HeadingButtons.qml:86
-#, fuzzy, kde-format
-#| msgctxt "minutes ago, keep short"
-#| msgid "%1 min ago"
-#| msgid_plural "%1 min ago"
+#, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
-msgstr[0] "пре %1 мин."
-msgstr[1] "пре %1 мин."
-msgstr[2] "пре %1 мин."
-msgstr[3] "пре %1 мин."
+msgstr[0] "прије %1 мин"
+msgstr[1] "прије %1 мин"
+msgstr[2] "прије %1 мин"
+msgstr[3] "прије %1 мин"
 
 #: components/HeadingButtons.qml:121
-#, fuzzy, kde-format
-#| msgctxt "Speed and estimated time to completion"
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] "%1 (још %2)"
-msgstr[1] "%1 (још %2)"
-msgstr[2] "%1 (још %2)"
-msgstr[3] "%1 (још %2)"
+msgstr[0] "још %1 с"
+msgstr[1] "још %1 с"
+msgstr[2] "још %1 с"
+msgstr[3] "још %1 с"
 
 #: components/HeadingButtons.qml:125
-#, fuzzy, kde-format
-#| msgctxt "Speed and estimated time to completion"
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
-msgstr[0] "%1 (још %2)"
-msgstr[1] "%1 (још %2)"
-msgstr[2] "%1 (још %2)"
-msgstr[3] "%1 (још %2)"
+msgstr[0] "још %1 мин"
+msgstr[1] "још %1 мин"
+msgstr[2] "још %1 мин"
+msgstr[3] "још %1 мин"
 
 #: components/HeadingButtons.qml:130
-#, fuzzy, kde-format
-#| msgctxt "Speed and estimated time to completion"
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
-msgstr[0] "%1 (још %2)"
-msgstr[1] "%1 (још %2)"
-msgstr[2] "%1 (још %2)"
-msgstr[3] "%1 (још %2)"
+msgstr[0] "још %1 ч"
+msgstr[1] "још %1 ч"
+msgstr[2] "још %1 ч"
+msgstr[3] "још %1 ч"
 
 #: components/HeadingButtons.qml:150
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Подеси"
 
 #: components/HeadingButtons.qml:167
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
-msgstr ""
+msgstr "Обнови"
 
 #: components/HeadingButtons.qml:168
 #, kde-format
 msgid "Minimize"
-msgstr ""
+msgstr "Минимизуј"
 
 #: components/HeadingButtons.qml:191
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Затвори"
 
 #: components/JobDetails.qml:37
-#, fuzzy, kde-format
-#| msgctxt "placeholder is row description, such as Source or Destination"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
 #: components/JobDetails.qml:118
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "How much many bytes (or whether unit in the locale has been copied over "
-#| "total"
-#| msgid "%1 of %2"
+#, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
-msgstr "%1 од %2"
+msgstr "%2 од %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "Either just 1 file or m of n files are being processed"
-#| msgid "1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 од %1 фајла"
-msgstr[1] "%2 од %1 фајла"
-msgstr[2] "%2 од %1 фајлова"
-msgstr[3] "%1 фајл"
+msgstr[0] "%3 од %2 фајла"
+msgstr[1] "%3 од %2 фајла"
+msgstr[2] "%3 од %2 фајлова"
+msgstr[3] "%3 од %2 фајла"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "Either just 1 file or m of n files are being processed"
-#| msgid "1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 од %1 фајла"
-msgstr[1] "%2 од %1 фајла"
-msgstr[2] "%2 од %1 фајлова"
-msgstr[3] "%1 фајл"
+msgstr[0] "%3 од %2 фасцикле"
+msgstr[1] "%3 од %2 фасцикле"
+msgstr[2] "%3 од %2 фасцикли"
+msgstr[3] "%3 од %2 фасцикле"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "Either just 1 file or m of n files are being processed"
-#| msgid "1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 од %1 фајла"
-msgstr[1] "%2 од %1 фајла"
-msgstr[2] "%2 од %1 фајлова"
-msgstr[3] "%1 фајл"
+msgstr[0] "%3 од %2 ставке"
+msgstr[1] "%3 од %2 ставке"
+msgstr[2] "%3 од %2 ставки"
+msgstr[3] "%3 од %2 ставке"
 
 #: components/JobDetails.qml:137
-#, fuzzy, kde-format
-#| msgctxt "Either just 1 file or m of n files are being processed"
-#| msgid "1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] "%2 од %1 фајла"
-msgstr[1] "%2 од %1 фајла"
-msgstr[2] "%2 од %1 фајлова"
+msgstr[0] "%1 фајл"
+msgstr[1] "%1 фајла"
+msgstr[2] "%1 фајлова"
 msgstr[3] "%1 фајл"
 
 #: components/JobDetails.qml:139
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 фасцикла"
+msgstr[1] "%1 фасцикле"
+msgstr[2] "%1 фасцикли"
+msgstr[3] "%1 фасцикла"
 
 #: components/JobDetails.qml:141
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 ставка"
+msgstr[1] "%1 ставке"
+msgstr[2] "%1 ставки"
+msgstr[3] "%1 ставка"
 
 #: components/JobDetails.qml:158 components/SpeedChart.qml:75
 #: components/SpeedChart.qml:103 components/SpeedChart.qml:204
@@ -214,98 +185,86 @@ msgstr[3] ""
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr ""
+msgstr "%1/s"
 
 #: components/JobItem.qml:57
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "Сакриј детаље"
+msgstr "Детаљи"
 
 #: components/JobItem.qml:78
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
-msgstr ""
+msgstr "Настави"
 
 #: components/JobItem.qml:79
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is job name, eg. 'Copying'"
-#| msgid "%1 (Paused)"
+#, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
-msgstr "%1 (паузирано)"
+msgstr "Паузирај"
 
 #: components/JobItem.qml:93
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
-msgstr ""
+msgstr "Одустани"
 
 #: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
-#, fuzzy, kde-format
-#| msgid "More Options..."
+#, kde-format
 msgid "More Options…"
-msgstr "Више опција..."
+msgstr "Више опција…"
 
 #: components/JobItem.qml:153
-#, fuzzy, kde-format
-#| msgid "Open..."
+#, kde-format
 msgid "Open"
-msgstr "Отвори..."
+msgstr "Отвори"
 
 #: components/JobItem.qml:160 filemenu.cpp:117
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Отвори обухватајућу фасциклу"
 
 #: components/NotificationReplyField.qml:39
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
-msgstr ""
+msgstr "Унесите одговор…"
 
 #: components/NotificationReplyField.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Пошаљи"
 
 #: components/SpeedChart.qml:155
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Брзина"
 
 #: components/SpeedChart.qml:212
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Просјечна брзина"
 
 #: components/SpeedChart.qml:272
-#, fuzzy, kde-format
-#| msgctxt "placeholder is row description, such as Source or Destination"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1:"
+msgstr "%1%"
 
 #: components/Summary.qml:36
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is job name, eg. 'Copying'"
-#| msgid "%1 (Paused)"
+#, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (паузирано)"
 
 #: components/Summary.qml:41
-#, fuzzy, kde-format
-#| msgctxt "the job, which can be anything, failed to complete"
-#| msgid "%1: Failed"
+#, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
-msgstr "%1: пропало"
+msgstr "%1 (пропало)"
 
 #: components/Summary.qml:43
 #, kde-format
@@ -313,12 +272,10 @@ msgid "Job Failed"
 msgstr "Посао пропао"
 
 #: components/Summary.qml:47
-#, fuzzy, kde-format
-#| msgctxt "the job, which can be anything, has finished"
-#| msgid "%1: Finished"
+#, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
-msgstr "%1: завршено"
+msgstr "%1 (завршено)"
 
 #: components/Summary.qml:49
 #, kde-format
@@ -328,166 +285,160 @@ msgstr "Посао завршен"
 #: fileinfo.cpp:186
 #, kde-format
 msgid "Open with %1"
-msgstr ""
+msgstr "Отвори помоћу %1|/|Отвори $[инс-п %1]"
 
 #: fileinfo.cpp:190
 #, kde-format
 msgid "Open with…"
-msgstr ""
+msgstr "Отвори помоћу…"
 
 #: filemenu.cpp:131
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgid "&Copy"
-msgstr "Копирај"
+msgstr "&Копирај"
 
 #: filemenu.cpp:140
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
-msgstr ""
+msgstr "Копирај локацију"
 
 #: filemenu.cpp:198
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "Својства"
 
 #: FullRepresentation.qml:81
 #, kde-format
 msgid "Do not disturb"
-msgstr ""
+msgstr "Не узнемиравај"
 
 #: FullRepresentation.qml:131
 #, kde-format
 msgid "For 1 hour"
-msgstr ""
+msgstr "На 1 сат"
 
 #: FullRepresentation.qml:136
 #, kde-format
 msgid "For 4 hours"
-msgstr ""
+msgstr "На 4 сата"
 
 #: FullRepresentation.qml:145
 #, kde-format
 msgid "Until this evening"
-msgstr ""
+msgstr "До вечерас"
 
 #: FullRepresentation.qml:155
 #, kde-format
 msgid "Until tomorrow morning"
-msgstr ""
+msgstr "До сутра ујутру"
 
 #: FullRepresentation.qml:167
 #, kde-format
 msgid "Until Monday"
-msgstr ""
+msgstr "До понедјељка"
 
 #: FullRepresentation.qml:174
 #, kde-format
 msgid "Until manually disabled"
-msgstr ""
+msgstr "Док се ручно не искључи"
 
 #: FullRepresentation.qml:226
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "Аутоматски престаје: %1"
 
 #: FullRepresentation.qml:238
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
-msgstr ""
+msgstr "Док ради %1 (%2)"
 
 #: FullRepresentation.qml:240
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
-msgstr ""
+msgstr "Док ради %1"
 
 #: FullRepresentation.qml:246
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
-msgstr ""
+msgstr "Екрани су пресликани"
 
 #: FullRepresentation.qml:250
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Фокусиран је програм преко цијелог екрана"
 
 #: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Прикажи"
 
 #: FullRepresentation.qml:597
 #, kde-format
 msgid "Close Group"
-msgstr ""
+msgstr "Затвори групу"
 
 #: FullRepresentation.qml:619
 #, kde-format
 msgid "Show Fewer"
-msgstr ""
+msgstr "Прикажи мање"
 
 #: FullRepresentation.qml:621
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
-msgstr ""
+msgstr "Прикажи још %1"
 
 #: FullRepresentation.qml:650 main.qml:108
-#, fuzzy, kde-format
-#| msgid "No new notifications."
+#, kde-format
 msgid "No unread notifications"
-msgstr "Нема нових обавјештења."
+msgstr "Нема непрочитаних обавјештења"
 
 #: FullRepresentation.qml:665 main.qml:77
 #, kde-format
 msgid "Notification service not available"
-msgstr ""
+msgstr "Сервис обавјештења није доступан"
 
 #: FullRepresentation.qml:667
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
-msgstr ""
+msgstr "Обавјештења тренутно пружа „%1 %2“"
 
 #: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr ""
+msgstr "Укључи/искључи „Не узнемиравај“"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Очисти обавјештења"
+msgstr "Очисти историјат обавјештења"
 
 #: globalshortcuts.cpp:52
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
-msgstr "Очисти обавјештења"
+msgstr "Обавјештења искључена"
 
 #: globalshortcuts.cpp:53
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
-msgstr "Очисти обавјештења"
+msgstr "Обавјештења укључена"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Очисти обавјештења"
+msgstr "Историјат обавјештења очишћен"
 
 #: main.qml:61
 #, kde-format
@@ -502,73 +453,56 @@ msgstr[3] "%1 посао у погону"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%)"
 
 #: main.qml:70
-#, fuzzy, kde-format
-#| msgid "%1 running job"
-#| msgid_plural "%1 running jobs"
+#, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 посао у погону"
-msgstr[1] "%1 посла у погону"
-msgstr[2] "%1 послова у погону"
-msgstr[3] "%1 посао у погону"
+msgstr[0] "%1 посао у погону (%2%)"
+msgstr[1] "%1 посла у погону (%2%)"
+msgstr[2] "%1 послова у погону (%2%)"
+msgstr[3] "%1 посао у погону (%2%)"
 
 #: main.qml:83
-#, fuzzy, kde-format
-#| msgid "%1 notification"
-#| msgid_plural "%1 notifications"
+#, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
-msgstr[0] "%1 обавјештење"
-msgstr[1] "%1 обавјештења"
-msgstr[2] "%1 обавјештења"
-msgstr[3] "%1 обавјештење"
+msgstr[0] "%1 непрочитано обавјештење"
+msgstr[1] "%1 непрочитана обавјештења"
+msgstr[2] "%1 непрочитаних обавјештења"
+msgstr[3] "%1 непрочитано обавјештење"
 
 #: main.qml:88
-#, fuzzy, kde-format
-#| msgid "%1 notification"
-#| msgid_plural "%1 notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 обавјештење"
-msgstr[1] "%1 обавјештења"
-msgstr[2] "%1 обавјештења"
-msgstr[3] "%1 обавјештење"
+msgstr[0] "%1 активно обавјештење"
+msgstr[1] "%1 активна обавјештења"
+msgstr[2] "%1 активних обавјештења"
+msgstr[3] "%1 активно обавјештење"
 
 #: main.qml:101
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr ""
+msgstr "Режим „Не узнемиравај“ до %1; средњи клик га одмах искључује"
 
 #: main.qml:104
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Режим „Не узнемиравај“ је укључен; средњи клик га искључује"
 
 #: main.qml:110
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Средњи клик укључује режим „Не узнемиравај“"
 
 #: main.qml:245
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgid "Clear All Notifications"
-msgstr "Очисти обавјештења"
+msgstr "Очисти сва обавјештења"
 
 #: main.qml:264
-#, fuzzy, kde-format
-#| msgid "&Configure Event Notifications and Actions..."
+#, kde-format
 msgid "&Configure Event Notifications and Actions…"
-msgstr "&Подеси обавјештења и радње догађаја..."
-
-#~ msgctxt "A button tooltip; expands the item to show details"
-#~ msgid "Show Details"
-#~ msgstr "Прикажи детаље"
-
-#, fuzzy
-#~| msgid "History"
-#~ msgid "Clear History"
-#~ msgstr "Историјат"
+msgstr "&Подеси обавјештења и радње догађаја…"

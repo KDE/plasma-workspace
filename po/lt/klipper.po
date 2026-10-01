@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-30 02:45+0000\n"
+"POT-Creation-Date: 2026-10-01 02:45+0000\n"
 "PO-Revision-Date: 2026-09-27 20:36+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -317,22 +317,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Išskleisti"
 
-#: declarative/qml/ClipboardMenu.qml:287
+#: declarative/qml/ClipboardMenu.qml:285
 #, kde-format
 msgid "Clear History"
 msgstr "Išvalyti istoriją"
 
-#: declarative/qml/ClipboardMenu.qml:343
+#: declarative/qml/ClipboardMenu.qml:341
 #, kde-format
 msgid "All History"
 msgstr "Visa istorija"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:346
 #, kde-format
 msgid "Starred Only"
 msgstr "Tik žvaigždute pažymėti elementai"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -342,18 +342,18 @@ msgstr ""
 "Šiuo metu iškarpinėje yra slaptų duomenų dalis, kuri nebus saugoma "
 "istorijoje."
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:360
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Išvalyti slaptus duomenis"
 
-#: declarative/qml/ClipboardMenu.qml:482
+#: declarative/qml/ClipboardMenu.qml:480
 #, kde-format
 msgid "No matches"
 msgstr "Nėra atitikmenų"
 
-#: declarative/qml/ClipboardMenu.qml:482
+#: declarative/qml/ClipboardMenu.qml:480
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"
