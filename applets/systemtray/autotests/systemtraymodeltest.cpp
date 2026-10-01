@@ -69,7 +69,7 @@ void SystemTrayModelTest::testPlasmoidModel()
     PlasmoidModel *model = new PlasmoidModel(settings, plasmoidRegistry);
 
     // expect: passes consistency tests
-    new QAbstractItemModelTester(model, QAbstractItemModelTester::FailureReportingMode::Fatal);
+    QAbstractItemModelTester modelTester(model, QAbstractItemModelTester::FailureReportingMode::Fatal);
 
     // and expect: correct model size
     QCOMPARE(model->rowCount(), 2);
@@ -126,6 +126,8 @@ void SystemTrayModelTest::testPlasmoidModel()
     QVERIFY(!model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).isValid());
 
     delete model;
+    delete plasmoidRegistry;
+    delete settings;
 }
 
 QTEST_MAIN(SystemTrayModelTest)
