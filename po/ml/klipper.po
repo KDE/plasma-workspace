@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-30 00:48+0000\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:82
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard history:"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:88
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -36,13 +36,13 @@ msgid_plural "%v entries"
 msgstr[0] " എന്‍ട്രി"
 msgstr[1] " എന്‍ട്രികള്‍"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:97
 #, fuzzy, kde-format
 #| msgid "Selection and Clipboard"
 msgid "Selection and Clipboard:"
 msgstr "ഓര്‍മ്മച്ചെപ്പും തെരഞ്ഞെടുക്കലും"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:104
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -58,39 +58,39 @@ msgid ""
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:124
+#: configdialog.cpp:123
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:126
+#: configdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "ചരിത്രത്തില്‍ നിന്നും തെരഞ്ഞെടുത്ത പ്രവൃത്തി ആവര്‍ത്തിക്കുക"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:133
+#: configdialog.cpp:132
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:137
+#: configdialog.cpp:136
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:146
+#: configdialog.cpp:145
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -103,13 +103,13 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:171
+#: configdialog.cpp:170
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "പൊങ്ങിവരുന്ന ജാലകങ്ങള്‍ക്കുള്ള സമയക്രമം:"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:180
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -120,7 +120,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:193
+#: configdialog.cpp:192
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -130,56 +130,48 @@ msgid_plural "%v seconds"
 msgstr[0] " സെക്കന്റ്"
 msgstr[1] " സെക്കന്റുകള്‍"
 
-#: configdialog.cpp:194
+#: configdialog.cpp:193
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:203
+#: configdialog.cpp:202
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "പ്രവൃത്തികള്‍"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:228
+#: configdialog.cpp:227
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "വിവരണം"
 
-#: configdialog.cpp:234
+#: configdialog.cpp:233
 #, kde-format
 msgid "Add Action..."
 msgstr "പ്രവൃത്തി ചേര്‍ക്കുക..."
 
-#: configdialog.cpp:238
+#: configdialog.cpp:237
 #, kde-format
 msgid "Edit Action..."
 msgstr "പ്രവൃത്തി ക്രമീകരിക്കുക..."
 
-#: configdialog.cpp:243
+#: configdialog.cpp:242
 #, kde-format
 msgid "Delete Action"
 msgstr "പ്രവൃത്തി കളയുക"
 
-#: configdialog.cpp:250
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-
-#: configdialog.cpp:445
+#: configdialog.cpp:427
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -187,24 +179,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:446
+#: configdialog.cpp:428
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "പ്രവൃത്തി കളയുക"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "പൊതുവായത്"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:481
 #, kde-format
 msgid "General Configuration"
 msgstr "പൊതുവായ സജ്ജീകരണങ്ങള്‍"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -212,32 +204,32 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "പ്രവൃത്തികള്‍"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:482
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "പ്രവൃത്തികള്‍"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:483
 #, fuzzy, kde-format
 #| msgid "Actions Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "പ്രവൃത്തികളുടെ സജ്ജീകരണം"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:483
 #, kde-format
 msgid "Actions Configuration"
 msgstr "പ്രവൃത്തികളുടെ സജ്ജീകരണം"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:490
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "കുറുക്ക്‌വഴികള്‍"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:490
 #, fuzzy, kde-format
 msgid "Shortcuts Configuration"
 msgstr "കുറുക്ക്‌വഴികളുടെ സജ്ജീകരണങ്ങള്‍"
@@ -295,24 +287,24 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:292
+#: declarative/qml/ClipboardMenu.qml:290
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:346
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:356
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -320,19 +312,19 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:365
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:487
+#: declarative/qml/ClipboardMenu.qml:485
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<ചേര്‍ച്ചയില്ല>"
 
-#: declarative/qml/ClipboardMenu.qml:487
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ശൂന്യമാണു്"
@@ -581,37 +573,37 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:311
+#: historymodel.cpp:318
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം തീര്‍ച്ച്യായും കളയുക?"
 
-#: historymodel.cpp:313
+#: historymodel.cpp:320
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക"
 
-#: historymodel.cpp:315 historymodel.cpp:590
+#: historymodel.cpp:322 historymodel.cpp:597
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:397
+#: historymodel.cpp:404
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:586
+#: historymodel.cpp:593
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:588
+#: historymodel.cpp:595
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -820,14 +812,14 @@ msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:71
+#: klipper.kcfg:68
 #, fuzzy, kde-format
 #| msgid "Strip whitespace when executing an action"
 msgid "Trim whitespace"
 msgstr "പ്രവൃത്തി ചെയ്യുമ്പോള്‍ വൈറ്റ് സ്പേസ് കളയുക"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:73
+#: klipper.kcfg:70
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
@@ -835,14 +827,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:73
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "ചരിത്രത്തില്‍ നിന്നും തെരഞ്ഞെടുത്ത ഒരു ഇനത്തില്‍ പ്രവൃത്തികള്‍ ചെയ്യുക"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:75
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid ""
@@ -851,13 +843,13 @@ msgid ""
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം തീര്‍ച്ച്യായും കളയുക?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:78
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:80
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 18:17+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -100,19 +100,19 @@ msgstr "ஒதுக்கு"
 msgid "Close"
 msgstr "மூடு"
 
-#: components/JobDetails.qml:37
+#: components/JobDetails.qml:52
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:118
+#: components/JobDetails.qml:133
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 / %1"
 
-#: components/JobDetails.qml:122
+#: components/JobDetails.qml:137
 #, fuzzy, kde-format
 #| msgctxt "How many files have been copied"
 #| msgid "%2 of %1 file"
@@ -123,7 +123,7 @@ msgid_plural "%3 of %2 files"
 msgstr[0] "%1 கோப்பில் %2"
 msgstr[1] "%1 கோப்புகளில் %2"
 
-#: components/JobDetails.qml:125
+#: components/JobDetails.qml:140
 #, fuzzy, kde-format
 #| msgctxt "How many dirs have been copied"
 #| msgid "%2 of %1 folder"
@@ -134,7 +134,7 @@ msgid_plural "%3 of %2 folders"
 msgstr[0] "%1 அடைவில் %2"
 msgstr[1] "%1 அடைவுகளில் %2"
 
-#: components/JobDetails.qml:128
+#: components/JobDetails.qml:143
 #, fuzzy, kde-format
 #| msgctxt "How many items (that includes files and dirs) have been copied"
 #| msgid "%2 of %1 item"
@@ -145,30 +145,30 @@ msgid_plural "%3 of %2 items"
 msgstr[0] "%1 உருப்படியில் %2"
 msgstr[1] "%1 உருப்படிகளில் %2"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:152
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 கோப்பு"
 msgstr[1] "%1 கோப்புகள்"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:154
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 அடைவு"
 msgstr[1] "%1 அடைவுகள்"
 
-#: components/JobDetails.qml:141
+#: components/JobDetails.qml:156
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 உருப்படி"
 msgstr[1] "%1 உருப்படிகள்"
 
-#: components/JobDetails.qml:158 components/SpeedChart.qml:87
-#: components/SpeedChart.qml:115 components/SpeedChart.qml:241
-#: components/SpeedChart.qml:254
+#: components/JobDetails.qml:173 components/SpeedChart.qml:91
+#: components/SpeedChart.qml:119 components/SpeedChart.qml:245
+#: components/SpeedChart.qml:262
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -198,17 +198,17 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
+#: components/JobItem.qml:126 components/ThumbnailStrip.qml:154
 #, kde-format
 msgid "More Options…"
 msgstr "மேலும் விருப்பங்கள்…"
 
-#: components/JobItem.qml:153
+#: components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "திற"
 
-#: components/JobItem.qml:160 filemenu.cpp:117
+#: components/JobItem.qml:161 filemenu.cpp:117
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
@@ -225,17 +225,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "அனுப்பு"
 
-#: components/SpeedChart.qml:191
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Speed"
 msgstr "வேகம்"
 
-#: components/SpeedChart.qml:249
+#: components/SpeedChart.qml:257
 #, kde-format
 msgid "Average Speed"
 msgstr "சராசரி வேகம்"
 
-#: components/SpeedChart.qml:292
+#: components/SpeedChart.qml:300
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

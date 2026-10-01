@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-30 00:48+0000\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -16,12 +16,12 @@ msgstr ""
 "X-POFile-SpellExtra: Pfeiffer Andrew Luňák Luboš Hansen Carsten Esben\n"
 "X-POFile-SpellExtra: Wikipédia Gräßlin bpp\n"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Histórico da área de transferência:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "Number of entries"
 #| msgid " entry"
@@ -32,12 +32,12 @@ msgid_plural "%v entries"
 msgstr[0] " elemento"
 msgstr[1] " elementos"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Selecção e Área de Transferência:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:104
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -78,39 +78,39 @@ msgstr ""
 "(sujeita às opções abaixo), mas só poderá ser colada com o botão do meio do "
 "rato."
 
-#: configdialog.cpp:124
+#: configdialog.cpp:123
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:126
+#: configdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Always save in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Gravar sempre no histórico"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:133
+#: configdialog.cpp:132
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:137
+#: configdialog.cpp:136
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:146
+#: configdialog.cpp:145
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -123,12 +123,12 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:171
+#: configdialog.cpp:170
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Mostrar o menu de contexto das acções:"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:180
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -145,7 +145,7 @@ msgstr ""
 "excluída, então poderá ser apresentado com a combinação de teclas <shortcut>"
 "%1</shortcut>."
 
-#: configdialog.cpp:193
+#: configdialog.cpp:192
 #, fuzzy, kde-format
 #| msgctxt "Unit of time"
 #| msgid " second"
@@ -156,55 +156,45 @@ msgid_plural "%v seconds"
 msgstr[0] " segundo"
 msgstr[1] " segundos"
 
-#: configdialog.cpp:194
+#: configdialog.cpp:193
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nenhum"
 
-#: configdialog.cpp:203
+#: configdialog.cpp:202
 #, kde-format
 msgid "Options:"
 msgstr "Opções:"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Padrão de correspondência e comandos"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descrição"
 
-#: configdialog.cpp:234
+#: configdialog.cpp:233
 #, kde-format
 msgid "Add Action..."
 msgstr "Adicionar uma Acção..."
 
-#: configdialog.cpp:238
+#: configdialog.cpp:237
 #, kde-format
 msgid "Edit Action..."
 msgstr "Editar a Acção..."
 
-#: configdialog.cpp:243
+#: configdialog.cpp:242
 #, kde-format
 msgid "Delete Action"
 msgstr "Apagar a Acção"
 
-#: configdialog.cpp:250
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-"Estas acções que aparecem no menu de contexto poderão ser configuradas na "
-"página do <interface>Menu das Acções</interface>."
-
-#: configdialog.cpp:445
+#: configdialog.cpp:427
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -214,51 +204,51 @@ msgstr ""
 "Deseja apagar a acção seleccionada <resource>%1</resource><nl/>e todos os "
 "seus comandos?"
 
-#: configdialog.cpp:446
+#: configdialog.cpp:428
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Confirmar a Acção de Remoção"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Geral"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:481
 #, kde-format
 msgid "General Configuration"
 msgstr "Configuração Geral"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu de Acções"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:482
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu de Acções"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:483
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configuração das Acções"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:483
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Configuração das Acções"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:490
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Atalhos"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:490
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Configuração dos Atalhos"
@@ -316,24 +306,24 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:292
+#: declarative/qml/ClipboardMenu.qml:290
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Histórico da área de transferência"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:346
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Histórico da área de transferência"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:356
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -341,18 +331,18 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:365
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:487
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "No matches"
 msgstr "Sem correspondências"
 
-#: declarative/qml/ClipboardMenu.qml:487
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
@@ -617,35 +607,35 @@ msgstr "Repor o ícone predefinido para o comando"
 msgid "Icon:"
 msgstr "Ícone:"
 
-#: historymodel.cpp:311
+#: historymodel.cpp:318
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Deseja mesmo limpar e remover o histórico da área de transferência?"
 
-#: historymodel.cpp:313
+#: historymodel.cpp:320
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpar o Histórico da Área de Transferência"
 
-#: historymodel.cpp:315 historymodel.cpp:590
+#: historymodel.cpp:322 historymodel.cpp:597
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:397
+#: historymodel.cpp:404
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:586
+#: historymodel.cpp:593
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:588
+#: historymodel.cpp:595
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -868,14 +858,14 @@ msgstr ""
 "Item de testes para indicar as alterações num elemento da árvore de acções"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:71
+#: klipper.kcfg:68
 #, fuzzy, kde-format
 #| msgid "Trim whitespace from selection"
 msgid "Trim whitespace"
 msgstr "Remover os espaços em branco da selecção"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:73
+#: klipper.kcfg:70
 #, fuzzy, kde-format
 #| msgid ""
 #| "Remove any whitespace from the start and end of selected text, before "
@@ -892,13 +882,13 @@ msgstr ""
 "área de transferência não é afectado."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:73
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Para um item seleccionado no histórico"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:75
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -908,13 +898,13 @@ msgstr ""
 "histórico da área de transferência."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:78
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:80
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "
@@ -932,6 +922,14 @@ msgstr "Histórico da área de transferência"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "These actions appear in the popup menu which can be configured on the "
+#~ "<interface>Action Menu</interface> page."
+#~ msgstr ""
+#~ "Estas acções que aparecem no menu de contexto poderão ser configuradas na "
+#~ "página do <interface>Menu das Acções</interface>."
 
 #~ msgid "Text selection:"
 #~ msgstr "Selecção do texto:"

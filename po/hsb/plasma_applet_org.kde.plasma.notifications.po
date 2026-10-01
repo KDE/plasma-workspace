@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
 "PO-Revision-Date: 2021-11-22 18:59+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -111,19 +111,19 @@ msgstr "Minimalizować"
 msgid "Close"
 msgstr "Začinić"
 
-#: components/JobDetails.qml:37
+#: components/JobDetails.qml:52
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr ""
 
-#: components/JobDetails.qml:118
+#: components/JobDetails.qml:133
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr ""
 
-#: components/JobDetails.qml:122
+#: components/JobDetails.qml:137
 #, fuzzy, kde-format
 #| msgctxt "How many files have been copied"
 #| msgid "%2 of %1 file"
@@ -136,7 +136,7 @@ msgstr[1] "%2 z %1 datajow"
 msgstr[2] "%2 z %1 datajow"
 msgstr[3] "%2 z %1 datajow"
 
-#: components/JobDetails.qml:125
+#: components/JobDetails.qml:140
 #, fuzzy, kde-format
 #| msgctxt "How many dirs have been copied"
 #| msgid "%2 of %1 folder"
@@ -149,7 +149,7 @@ msgstr[1] "%2 z %1 zapiskow"
 msgstr[2] "%2 z %1 zapiskow"
 msgstr[3] "%2 z %1 zapiskow"
 
-#: components/JobDetails.qml:128
+#: components/JobDetails.qml:143
 #, fuzzy, kde-format
 #| msgctxt "How many items (that includes files and dirs) have been copied"
 #| msgid "%2 of %1 item"
@@ -162,7 +162,7 @@ msgstr[1] "%2 z %1 elementow"
 msgstr[2] "%2 z %1 elementow"
 msgstr[3] "%2 z %1 elementow"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:152
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -171,7 +171,7 @@ msgstr[1] "%1 dataji"
 msgstr[2] "%1 dataje"
 msgstr[3] "%1 datajow"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:154
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -180,7 +180,7 @@ msgstr[1] "%1 zapiskaj"
 msgstr[2] "%1 zapiski"
 msgstr[3] "%1 zapiskow"
 
-#: components/JobDetails.qml:141
+#: components/JobDetails.qml:156
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -189,9 +189,9 @@ msgstr[1] "%1 elementaj"
 msgstr[2] "%1 elementy"
 msgstr[3] "%1 elementow"
 
-#: components/JobDetails.qml:158 components/SpeedChart.qml:87
-#: components/SpeedChart.qml:115 components/SpeedChart.qml:241
-#: components/SpeedChart.qml:254
+#: components/JobDetails.qml:173 components/SpeedChart.qml:91
+#: components/SpeedChart.qml:119 components/SpeedChart.qml:245
+#: components/SpeedChart.qml:262
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -223,17 +223,17 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Přetorhnyć"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
+#: components/JobItem.qml:126 components/ThumbnailStrip.qml:154
 #, kde-format
 msgid "More Options…"
 msgstr "Wjace opcijow..."
 
-#: components/JobItem.qml:153
+#: components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "Wočinić"
 
-#: components/JobItem.qml:160 filemenu.cpp:117
+#: components/JobItem.qml:161 filemenu.cpp:117
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Zapisk  z tutym elementom wočinić"
@@ -250,17 +250,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Pósłać"
 
-#: components/SpeedChart.qml:191
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:249
+#: components/SpeedChart.qml:257
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:292
+#: components/SpeedChart.qml:300
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

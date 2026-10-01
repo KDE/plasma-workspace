@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-30 00:48+0000\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
 "PO-Revision-Date: 2026-01-19 16:56+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -23,12 +23,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Starpliktuves vēsture:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:88
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -37,12 +37,12 @@ msgstr[0] "%v ieraksts"
 msgstr[1] "%v ieraksti"
 msgstr[2] "%v ierakstu"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Atlasīšana un starpliktuve:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:104
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -81,39 +81,39 @@ msgstr ""
 "ir izslēgta, atlase joprojām var tikt saglabāta starpliktuves vēsturē (ņemot "
 "vērā apstiprinātās opcijas), bet to ielīmēt var tikai ar peles vidējo pogu."
 
-#: configdialog.cpp:124
+#: configdialog.cpp:123
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:126
+#: configdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Always save in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Vienmēr saglabāt vēsturē"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:133
+#: configdialog.cpp:132
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:137
+#: configdialog.cpp:136
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:146
+#: configdialog.cpp:145
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -126,12 +126,12 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:171
+#: configdialog.cpp:170
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Parādīt uznirstošo darbību izvēlni:"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:180
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -146,7 +146,7 @@ msgstr ""
 "automātiskā izvēlne te ir izslēgta vai netiek parādīta attiecīgajā logā, to "
 "iespējams atvērt, izmantojot tastatūras saīsni <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:193
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -155,55 +155,45 @@ msgstr[0] "%v sekunde"
 msgstr[1] "%v sekundes"
 msgstr[2] "%v sekunžu"
 
-#: configdialog.cpp:194
+#: configdialog.cpp:193
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nav"
 
-#: configdialog.cpp:203
+#: configdialog.cpp:202
 #, kde-format
 msgid "Options:"
 msgstr "Iespējas:"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Atbilsmes paraugs un komandas"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Apraksts"
 
-#: configdialog.cpp:234
+#: configdialog.cpp:233
 #, kde-format
 msgid "Add Action..."
 msgstr "Pievienot darbību..."
 
-#: configdialog.cpp:238
+#: configdialog.cpp:237
 #, kde-format
 msgid "Edit Action..."
 msgstr "Rediģēt darbību..."
 
-#: configdialog.cpp:243
+#: configdialog.cpp:242
 #, kde-format
 msgid "Delete Action"
 msgstr "Dzēst darbību"
 
-#: configdialog.cpp:250
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-"Šīs darbības parādās uznirstošajā izvēlnē, kas var tikt konfigurēta "
-"<interface>Darbību izvēļņu</interface> lapā."
-
-#: configdialog.cpp:445
+#: configdialog.cpp:427
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -212,51 +202,51 @@ msgid ""
 msgstr ""
 "Vai dzēst atlasīto darbību <resource>%1</resource><nl/>un visas tās komandas?"
 
-#: configdialog.cpp:446
+#: configdialog.cpp:428
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Apstiprināt dzēšanas darbību"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Pamata"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:481
 #, kde-format
 msgid "General Configuration"
 msgstr "Pamata konfigurācija"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Darbību izvēlne"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:482
 #, kde-format
 msgid "Action Menu"
 msgstr "Darbību izvēlne"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:483
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Darbību konfigurācija"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:483
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Darbību konfigurācija"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:490
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Saīsnes"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:490
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Saīsņu konfigurācija"
@@ -312,22 +302,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Izvērst"
 
-#: declarative/qml/ClipboardMenu.qml:292
+#: declarative/qml/ClipboardMenu.qml:290
 #, kde-format
 msgid "Clear History"
 msgstr "Notīrīt vēsturi"
 
-#: declarative/qml/ClipboardMenu.qml:348
+#: declarative/qml/ClipboardMenu.qml:346
 #, kde-format
 msgid "All History"
 msgstr "Visa vēsture"
 
-#: declarative/qml/ClipboardMenu.qml:353
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgid "Starred Only"
 msgstr "Tikai ar zvaigznīti"
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:356
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -335,18 +325,18 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:365
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:487
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "No matches"
 msgstr "Nav atbilsmju"
 
-#: declarative/qml/ClipboardMenu.qml:487
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Starpliktuve ir tukša"
@@ -602,36 +592,36 @@ msgstr "Atiestatīt ikonu uz komandas noklusēto"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:311
+#: historymodel.cpp:318
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vai tiešām vēlaties notīrīt un dzēst visu starpliktuves vēsturi?"
 
-#: historymodel.cpp:313
+#: historymodel.cpp:320
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "&Tīrīt starpliktuves vēsturi"
 
-#: historymodel.cpp:315 historymodel.cpp:590
+#: historymodel.cpp:322 historymodel.cpp:597
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:397
+#: historymodel.cpp:404
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:586
+#: historymodel.cpp:593
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Šis vienums ir atzīmēts ar zvaigznīti. Vai tiešām vēlaties to dzēst no "
 "vēstures?"
 
-#: historymodel.cpp:588
+#: historymodel.cpp:595
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Noņemt atzīmēto vienumu"
@@ -844,14 +834,14 @@ msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Testa ieraksts, lai parādītu izmaiņas darbību koka logdaļā"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:71
+#: klipper.kcfg:68
 #, fuzzy, kde-format
 #| msgid "Trim whitespace from selection"
 msgid "Trim whitespace"
 msgstr "No atlases izdzēst liekās atstarpes"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:73
+#: klipper.kcfg:70
 #, fuzzy, kde-format
 #| msgid ""
 #| "Remove any whitespace from the start and end of selected text, before "
@@ -867,13 +857,13 @@ msgstr ""
 "pareizi saprastas. Starpliktuvē saglabātais teksts netiek ietekmēts."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:73
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Attiecībā uz vienumu, kas ņemts no vēstures"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:75
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -883,13 +873,13 @@ msgstr ""
 "vēstures tiek izvēlēts ieraksts."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:78
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:80
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "
@@ -906,6 +896,14 @@ msgstr "Starpliktuves uznirstošais lodziņš"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atcelt"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "These actions appear in the popup menu which can be configured on the "
+#~ "<interface>Action Menu</interface> page."
+#~ msgstr ""
+#~ "Šīs darbības parādās uznirstošajā izvēlnē, kas var tikt konfigurēta "
+#~ "<interface>Darbību izvēļņu</interface> lapā."
 
 #~ msgid "Text selection:"
 #~ msgstr "Teksta atlase:"

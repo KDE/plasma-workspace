@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
 "PO-Revision-Date: 2026-03-31 09:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -112,19 +112,19 @@ msgstr "מזעור"
 msgid "Close"
 msgstr "סגירה"
 
-#: components/JobDetails.qml:37
+#: components/JobDetails.qml:52
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:118
+#: components/JobDetails.qml:133
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 מתוך %2"
 
-#: components/JobDetails.qml:122
+#: components/JobDetails.qml:137
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
@@ -134,7 +134,7 @@ msgstr[1] "%3 מתוך שני (%2) קבצים"
 msgstr[2] "%3 מתוך %2 קבצים"
 msgstr[3] "%3 מתוך %2 קבצים"
 
-#: components/JobDetails.qml:125
+#: components/JobDetails.qml:140
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
@@ -144,7 +144,7 @@ msgstr[1] "%3 מתוך שתי (%2) תיקיות"
 msgstr[2] "%3 מתוך %2 תיקיות"
 msgstr[3] "%3 מתוך %2 תיקיות"
 
-#: components/JobDetails.qml:128
+#: components/JobDetails.qml:143
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
@@ -154,7 +154,7 @@ msgstr[1] "%3 מתוך שני (%2) פריטים"
 msgstr[2] "%3 מתוך %2 פריטים"
 msgstr[3] "%3 מתוך %2 פריטים"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:152
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -163,7 +163,7 @@ msgstr[1] "שני קבצים"
 msgstr[2] "%1 קבצים"
 msgstr[3] "%1 קבצים"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:154
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -172,7 +172,7 @@ msgstr[1] "שתי תיקיות"
 msgstr[2] "%1 תיקיות"
 msgstr[3] "%1 תיקיות"
 
-#: components/JobDetails.qml:141
+#: components/JobDetails.qml:156
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -181,9 +181,9 @@ msgstr[1] "שני פריטים"
 msgstr[2] "%1 פריטים"
 msgstr[3] "%1 פריטים"
 
-#: components/JobDetails.qml:158 components/SpeedChart.qml:87
-#: components/SpeedChart.qml:115 components/SpeedChart.qml:241
-#: components/SpeedChart.qml:254
+#: components/JobDetails.qml:173 components/SpeedChart.qml:91
+#: components/SpeedChart.qml:119 components/SpeedChart.qml:245
+#: components/SpeedChart.qml:262
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -213,17 +213,17 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
+#: components/JobItem.qml:126 components/ThumbnailStrip.qml:154
 #, kde-format
 msgid "More Options…"
 msgstr "אפשרויות נוספות…"
 
-#: components/JobItem.qml:153
+#: components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "פתיחה"
 
-#: components/JobItem.qml:160 filemenu.cpp:117
+#: components/JobItem.qml:161 filemenu.cpp:117
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
@@ -240,17 +240,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "שליחה"
 
-#: components/SpeedChart.qml:191
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Speed"
 msgstr "מהירות"
 
-#: components/SpeedChart.qml:249
+#: components/SpeedChart.qml:257
 #, kde-format
 msgid "Average Speed"
 msgstr "מהירות ממוצעת"
 
-#: components/SpeedChart.qml:292
+#: components/SpeedChart.qml:300
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

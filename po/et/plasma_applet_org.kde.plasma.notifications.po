@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-29 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
 "PO-Revision-Date: 2020-10-08 10:18+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -106,19 +106,19 @@ msgstr "Minimeeri"
 msgid "Close"
 msgstr "Sulge"
 
-#: components/JobDetails.qml:37
+#: components/JobDetails.qml:52
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:118
+#: components/JobDetails.qml:133
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 / %1"
 
-#: components/JobDetails.qml:122
+#: components/JobDetails.qml:137
 #, fuzzy, kde-format
 #| msgctxt "How many files have been copied"
 #| msgid "%2 of %1 file"
@@ -129,7 +129,7 @@ msgid_plural "%3 of %2 files"
 msgstr[0] "%2 fail %1-st"
 msgstr[1] "%2 faili %1-st"
 
-#: components/JobDetails.qml:125
+#: components/JobDetails.qml:140
 #, fuzzy, kde-format
 #| msgctxt "How many dirs have been copied"
 #| msgid "%2 of %1 folder"
@@ -140,7 +140,7 @@ msgid_plural "%3 of %2 folders"
 msgstr[0] "%2 kataloog %1-st"
 msgstr[1] "%2 kataloogi %1-st"
 
-#: components/JobDetails.qml:128
+#: components/JobDetails.qml:143
 #, fuzzy, kde-format
 #| msgctxt "How many items (that includes files and dirs) have been copied"
 #| msgid "%2 of %1 item"
@@ -151,30 +151,30 @@ msgid_plural "%3 of %2 items"
 msgstr[0] "%2 element %1-st"
 msgstr[1] "%2 elementi %1-st"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:152
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 fail"
 msgstr[1] "%1 faili"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:154
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 kataloog"
 msgstr[1] "%1 kataloogi"
 
-#: components/JobDetails.qml:141
+#: components/JobDetails.qml:156
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 element"
 msgstr[1] "%1 elementi"
 
-#: components/JobDetails.qml:158 components/SpeedChart.qml:87
-#: components/SpeedChart.qml:115 components/SpeedChart.qml:241
-#: components/SpeedChart.qml:254
+#: components/JobDetails.qml:173 components/SpeedChart.qml:91
+#: components/SpeedChart.qml:119 components/SpeedChart.qml:245
+#: components/SpeedChart.qml:262
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -206,18 +206,18 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Loobu"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
+#: components/JobItem.qml:126 components/ThumbnailStrip.qml:154
 #, fuzzy, kde-format
 #| msgid "More Options..."
 msgid "More Options…"
 msgstr "Rohkem valikuid ..."
 
-#: components/JobItem.qml:153
+#: components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "Ava"
 
-#: components/JobItem.qml:160 filemenu.cpp:117
+#: components/JobItem.qml:161 filemenu.cpp:117
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ava sisaldav kataloog"
@@ -236,17 +236,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Saada"
 
-#: components/SpeedChart.qml:191
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:249
+#: components/SpeedChart.qml:257
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:292
+#: components/SpeedChart.qml:300
 #, fuzzy, kde-format
 #| msgctxt "Row description, e.g. Source"
 #| msgid "%1:"
