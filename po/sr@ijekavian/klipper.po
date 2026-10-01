@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 02:45+0000\n"
+"POT-Creation-Date: 2026-10-01 20:16+0000\n"
 "PO-Revision-Date: 2026-09-30 12:00+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -299,34 +299,34 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Прављење КуР кода није успјело"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Сажми"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Прошири"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:290
 #, kde-format
 msgid "Clear History"
 msgstr "Очисти историјат"
 
-#: declarative/qml/ClipboardMenu.qml:341
+#: declarative/qml/ClipboardMenu.qml:346
 #, kde-format
 msgid "All History"
 msgstr "Цио историјат"
 
-#: declarative/qml/ClipboardMenu.qml:346
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgid "Starred Only"
 msgstr "Само са звјездицом"
 
-#: declarative/qml/ClipboardMenu.qml:351
+#: declarative/qml/ClipboardMenu.qml:356
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -336,18 +336,18 @@ msgstr ""
 "Клипборд тренутно садржи осјетљив податак који неће бити сачуван у "
 "историјату."
 
-#: declarative/qml/ClipboardMenu.qml:360
+#: declarative/qml/ClipboardMenu.qml:365
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Очисти тајне податке"
 
-#: declarative/qml/ClipboardMenu.qml:480
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "No matches"
 msgstr "Нема поклапања"
 
-#: declarative/qml/ClipboardMenu.qml:480
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Клипборд је празан"

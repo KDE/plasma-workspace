@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 02:45+0000\n"
+"POT-Creation-Date: 2026-10-01 20:16+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -301,34 +301,34 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Vytvorenie QR kódu zlyhalo"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Zbaliť"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozbaliť"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:290
 #, kde-format
 msgid "Clear History"
 msgstr "História farieb"
 
-#: declarative/qml/ClipboardMenu.qml:341
+#: declarative/qml/ClipboardMenu.qml:346
 #, kde-format
 msgid "All History"
 msgstr "Všetka história"
 
-#: declarative/qml/ClipboardMenu.qml:346
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgid "Starred Only"
 msgstr "Iba s hviezdičkou"
 
-#: declarative/qml/ClipboardMenu.qml:351
+#: declarative/qml/ClipboardMenu.qml:356
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -337,18 +337,18 @@ msgid ""
 msgstr ""
 "Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
-#: declarative/qml/ClipboardMenu.qml:360
+#: declarative/qml/ClipboardMenu.qml:365
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Vymazať tajné dáta"
 
-#: declarative/qml/ClipboardMenu.qml:480
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "No matches"
 msgstr "Žiadne zhody"
 
-#: declarative/qml/ClipboardMenu.qml:480
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdna"

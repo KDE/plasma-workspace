@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 02:45+0000\n"
+"POT-Creation-Date: 2026-10-01 20:16+0000\n"
 "PO-Revision-Date: 2026-09-26 09:30+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -319,34 +319,34 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Не удалось создать QR-код"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Свернуть"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Развернуть"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:290
 #, kde-format
 msgid "Clear History"
 msgstr "Очистить журнал"
 
-#: declarative/qml/ClipboardMenu.qml:341
+#: declarative/qml/ClipboardMenu.qml:346
 #, kde-format
 msgid "All History"
 msgstr "Весь журнал"
 
-#: declarative/qml/ClipboardMenu.qml:346
+#: declarative/qml/ClipboardMenu.qml:351
 #, kde-format
 msgid "Starred Only"
 msgstr "Только избранное"
 
-#: declarative/qml/ClipboardMenu.qml:351
+#: declarative/qml/ClipboardMenu.qml:356
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -356,18 +356,18 @@ msgstr ""
 "В буфере обмена сейчас находятся конфиденциальные данные, которые не будут "
 "сохранены в журнале."
 
-#: declarative/qml/ClipboardMenu.qml:360
+#: declarative/qml/ClipboardMenu.qml:365
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Очистить секретные данные"
 
-#: declarative/qml/ClipboardMenu.qml:480
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "No matches"
 msgstr "Совпадений не найдено"
 
-#: declarative/qml/ClipboardMenu.qml:480
+#: declarative/qml/ClipboardMenu.qml:485
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"

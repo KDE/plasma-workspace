@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 02:45+0000\n"
+"POT-Creation-Date: 2026-10-01 20:16+0000\n"
 "PO-Revision-Date: 2025-09-17 13:06+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.3\n"
 
-#: devicenotifications.cpp:466
+#: devicenotifications.cpp:485
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Skjár fannst"
 
-#: devicenotifications.cpp:467
+#: devicenotifications.cpp:486
 #, kde-format
 msgid "A display has been connected."
 msgstr "Skjár var settur í samband."
 
-#: devicenotifications.cpp:487
+#: devicenotifications.cpp:522
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Skjár fjarlægður"
 
-#: devicenotifications.cpp:488
+#: devicenotifications.cpp:523
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Skjár var tekinn úr sambandi."
 
-#: devicenotifications.cpp:534
+#: devicenotifications.cpp:567
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 var sett í samband."
 
-#: devicenotifications.cpp:534
+#: devicenotifications.cpp:567
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "USB-tæki var sett í samband."
 
-#: devicenotifications.cpp:539
+#: devicenotifications.cpp:572
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-tæki fannst"
 
-#: devicenotifications.cpp:577
+#: devicenotifications.cpp:610
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 var aftengt."
 
-#: devicenotifications.cpp:577
+#: devicenotifications.cpp:610
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB-tæki var aftengt."
 
-#: devicenotifications.cpp:582
+#: devicenotifications.cpp:615
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

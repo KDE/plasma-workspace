@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 02:45+0000\n"
+"POT-Creation-Date: 2026-10-01 20:16+0000\n"
 "PO-Revision-Date: 2025-07-08 06:45+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.6\n"
 
-#: devicenotifications.cpp:466
+#: devicenotifications.cpp:485
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Zaznan zaslon"
 
-#: devicenotifications.cpp:467
+#: devicenotifications.cpp:486
 #, kde-format
 msgid "A display has been connected."
 msgstr "Zaslon je bil priklopljen."
 
-#: devicenotifications.cpp:487
+#: devicenotifications.cpp:522
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Zaslon odstranjen"
 
-#: devicenotifications.cpp:488
+#: devicenotifications.cpp:523
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Zaslon je bil odklopljen."
 
-#: devicenotifications.cpp:534
+#: devicenotifications.cpp:567
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 je bil(a) priklopljen(a)."
 
-#: devicenotifications.cpp:534
+#: devicenotifications.cpp:567
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Naprava USB je bila priklopljena."
 
-#: devicenotifications.cpp:539
+#: devicenotifications.cpp:572
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Zaznana naprava USB"
 
-#: devicenotifications.cpp:577
+#: devicenotifications.cpp:610
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 je bil(a) odklopljen(a)."
 
-#: devicenotifications.cpp:577
+#: devicenotifications.cpp:610
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Naprava USB je bila odklopljena."
 
-#: devicenotifications.cpp:582
+#: devicenotifications.cpp:615
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
