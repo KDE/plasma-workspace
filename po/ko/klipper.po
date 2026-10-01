@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-09-28 23:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -602,70 +602,70 @@ msgstr "이 항목에 별표가 표시되어 있습니다. 과거 기록에서 �
 msgid "Remove Starred Item"
 msgstr "별표 표시된 항목 삭제"
 
-#: klipper.cpp:78
+#: klipper.cpp:72
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "자동 동작 팝업 메뉴"
 
-#: klipper.cpp:96
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "클립보드 기록 비우기(&L)"
 
-#: klipper.cpp:101
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "현재 클립보드 내용으로 수동으로 동작 호출"
 
-#: klipper.cpp:109
+#: klipper.cpp:103
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "내용 편집(&E)…"
 
-#: klipper.cpp:117
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "바코드 표시(&S)…"
 
-#: klipper.cpp:126
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "다음 과거 기록 항목"
 
-#: klipper.cpp:131
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "이전 과거 기록 항목"
 
-#: klipper.cpp:138
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "마우스 커서 위치에 클립보드 항목 표시"
 
-#: klipper.cpp:396 klipper.cpp:405
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "클립보드 과거 기록"
 
-#: klipper.cpp:422
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "위"
 
-#: klipper.cpp:429
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "현재"
 
-#: klipper.cpp:436
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "아래"
@@ -841,12 +841,12 @@ msgstr ""
 "<i>http://</i>나 <i>https://</i>로 시작하는 링크 또는 파일인 경우, 일치하는 "
 "동작과 함께 해당 링크나 파일을 열 수 있는 앱이 표시됩니다."
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "클립보드 팝업"
 
-#: urlgrabber.cpp:221
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "취소(&C)"

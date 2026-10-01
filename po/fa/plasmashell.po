@@ -2,144 +2,134 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2023 Alosra <Aleomoeini@gmail.com>
+# SPDX-FileCopyrightText: 2026 Sohrab Behdani <behdanisohrab@proton.me>
 # Alosra <aleomoeini@gmail.com>, 2023.
+# Sohrab Behdani <behdanisohrab@proton.me>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2023-10-19 20:34+0300\n"
-"Last-Translator: Alosra <aleomoeini@gmail.com>\n"
-"Language-Team: fa\n"
+"PO-Revision-Date: 2026-10-01 10:45+0330\n"
+"Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "سهراب بهدانی"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "behdanisohrab@proton.me"
 
 #: currentcontainmentactionsmodel.cpp:201
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
-msgstr "تنظیم افزونه عملکرد های موشواره"
+msgstr "پیکربندی افزونهٔ کنش‌های موشی"
 
 #: desktopview.cpp:206
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Dev"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ %1 در حال توسعه"
+msgstr "کی‌دی‌ای پلاسما 6.0 در حال توسعه"
 
 #: desktopview.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ بتای %1"
+msgstr "کی‌دی‌ای پلاسما 6.0 آلفا"
 
 #: desktopview.cpp:212
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1 Beta"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ بتای %1"
+msgstr "کی‌دی‌ای پلاسما 6.0 بتا ۱"
 
 #: desktopview.cpp:215
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
-#| msgid "KDE Plasma %1 Beta %2"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ بتای %1 ویرایش %2"
+msgstr "کی‌دی‌ای پلاسما 6.0 بتا ۲"
 
 #: desktopview.cpp:218
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ %1"
+msgstr "کی‌دی‌ای پلاسما 6.0 RC1"
 
 #: desktopview.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@label %1 is the Plasma version"
-#| msgid "KDE Plasma %1"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ %1"
+msgstr "کی‌دی‌ای پلاسما 6.0 RC2"
 
 #: desktopview.cpp:247
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ %1 در حال توسعه"
+msgstr "کی‌دی‌ای پلاسما %1 در حال توسعه"
 
 #: desktopview.cpp:251
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ بتای %1"
+msgstr "کی‌دی‌ای پلاسما %1 بتا"
 
 #: desktopview.cpp:254
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ بتای %1 ویرایش %2"
+msgstr "کی‌دی‌ای پلاسما %1 بتا %2"
 
 #: desktopview.cpp:258
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "کی‌دی‌ای پلاسما نسخهٔ %1"
+msgstr "کی‌دی‌ای پلاسما %1"
 
 #: desktopview.cpp:264
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr "برای گزارش اشکال ها bugs.kde.org را ببینید"
+msgstr "برای گزارش اشکال‌ها bugs.kde.org را ببینید"
 
 #: desktopview.cpp:272
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "رونوشت از نسخهٔ پلاسما"
 
 #: desktopview.cpp:278
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "گزارش اشکال…"
 
 #: desktopview.cpp:288
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "نهفتن بنر پیش‌نمایش"
 
 #: desktopview.cpp:290
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "نهفتن تا راه‌اندازی دوباره"
 
 #: desktopview.cpp:297
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "نهفتن همیشگی…"
 
 #: desktopview.cpp:303
 #, kde-kuit-format
@@ -150,22 +140,25 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"آیا مطمئنید که می‌خواهید بنر پیش‌نمایش را برای همیشه نهفته کنید؟<nl/><nl/>این "
+"عمل فقط با حذف خطی که با <icode>ShowDesktopPreviewBanner</icode> در پروندهٔ "
+"پیکربندی <filename>kdeglobals</filename> آغاز می‌شود، قابل بازگردانی است."
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "بنر پیش‌نمایش پنهان شود؟"
 
 #: desktopview.cpp:520 desktopview.cpp:536
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "ورود به حالت ویرایش"
 
 #: desktopview.cpp:534
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "خروج از حالت ویرایش"
 
 #: main.cpp:126
 #, kde-format
@@ -175,32 +168,32 @@ msgstr "پوستهٔ پلاسما"
 #: main.cpp:139
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr "اشکال‌زدای QML Javascript را فعال کنید"
+msgstr "فعال‌سازی اشکال‌زدای جاوااسکریپت QML"
 
 #: main.cpp:142
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr "«پوستهٔ پلاسما» را بعد از فروپاشی، خودکارانه دوباره به راه نیانداز"
+msgstr "عدم راه‌اندازی دوبارهٔ خودکار پوستهٔ پلاسما پس از فروپاشی"
 
 #: main.cpp:145
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr "بارگیری افزونهٔ پوستهٔ داده شده را به زور انجام بده"
+msgstr "اجبار به بارگیری افزونهٔ پوستهٔ داده‌شده"
 
 #: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "جایگزینی یک مورد موجود"
+msgstr "جایگزینی یک نمونهٔ موجود"
 
 #: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "فهرست کردن گزینه‌های موجود برای بازخورد کاربر"
 
 #: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr ""
+msgstr "آغاز پلاسما شکست خورد"
 
 #: main.cpp:209
 #, kde-format
@@ -209,78 +202,81 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
+"پلاسما نمی‌تواند آغاز به کار کند زیرا نتوانست به‌درستی از OpenGL 2 یا پشتیبان "
+"نرم‌افزاری استفاده کند\n"
+"لطفاً بررسی کنید که راه‌اندازهای گرافیک شما به‌درستی تنظیم شده باشند."
 
 #: osd.cpp:70
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2٪"
 
 #: osd.cpp:98
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
-msgstr ""
+msgstr "صدا بی‌صدا"
 
 #: osd.cpp:121
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr ""
+msgstr "میکروفون بی‌صدا"
 
 #: osd.cpp:137
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr ""
+msgstr "%1 بی‌صدا"
 
 #: osd.cpp:159
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr ""
+msgstr "صفحه‌لمسی روشن"
 
 #: osd.cpp:161
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr ""
+msgstr "صفحه‌لمسی خاموش"
 
 #: osd.cpp:168
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
-msgstr ""
+msgstr "وای‌فای روشن"
 
 #: osd.cpp:170
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
-msgstr ""
+msgstr "وای‌فای خاموش"
 
 #: osd.cpp:177
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
-msgstr ""
+msgstr "بلوتوث روشن"
 
 #: osd.cpp:179
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
-msgstr ""
+msgstr "بلوتوث خاموش"
 
 #: osd.cpp:186
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr ""
+msgstr "اینترنت همراه روشن"
 
 #: osd.cpp:188
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr ""
+msgstr "اینترنت همراه خاموش"
 
 #: osd.cpp:196
 #, kde-format
@@ -288,7 +284,7 @@ msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
 "short"
 msgid "On-Screen Keyboard Activated"
-msgstr ""
+msgstr "صفحه‌کلید مجازی فعال شد"
 
 #: osd.cpp:199
 #, kde-format
@@ -296,146 +292,146 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr ""
+msgstr "صفحه‌کلید مجازی غیرفعال شد"
 
 #: osd.cpp:206
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "خواب و قفل صفحه مسدود شد"
 
 #: osd.cpp:208
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "خواب و قفل صفحه رفع انسداد شد"
 
 #: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "حالت صرفه‌جویی در مصرف برق"
 
 #: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "حالت توان متوازن"
 
 #: osd.cpp:224
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "حالت عملکرد بالا"
 
 #: panelview.cpp:1066
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "نهفتن پیکربندی تابلو"
 
 #: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "نمایش پیکربندی تابلو"
 
 #: qml/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1٪"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "صفحهٔ داخلی"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "صفحهٔ قطع‌شدهٔ %1"
 
 #: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
-msgstr ""
+msgstr "نمایش میزکار"
 
 #: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
-msgstr ""
+msgstr "نهفتن میزکار"
 
 #: shellcorona.cpp:192
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "فعال‌سازی راه‌انداز برنامه‌ها"
 
 #: shellcorona.cpp:200
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr ""
+msgstr "نمایش تغییردهندهٔ فعالیت‌ها"
 
 #: shellcorona.cpp:209
 #, kde-format
 msgid "Switch to Previous Activity"
-msgstr ""
+msgstr "تغییر به فعالیت پیشین"
 
 #: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
-msgstr ""
+msgstr "تغییر به فعالیت بعدی"
 
 #: shellcorona.cpp:248
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "مدیریت میزکارها و تابلوها…"
 
 #: shellcorona.cpp:270
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "جابه‌جایی تمرکز صفحه‌کلید بین تابلوها"
 
 #: shellcorona.cpp:2282
 #, kde-format
 msgid "Add Panel"
-msgstr ""
+msgstr "افزودن تابلو"
 
 #: shellcorona.cpp:2369
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr ""
+msgstr "%1 خالی"
 
 #: softwarerendernotifier.cpp:34
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "رندرکنندهٔ نرم‌افزاری در حال استفاده است"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "رندرکنندهٔ نرم‌افزاری در حال استفاده است"
 
 #: softwarerendernotifier.cpp:36
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "ممکن است کیفیت رندر کاهش یابد"
 
 #: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
-msgstr ""
+msgstr "دیگر هرگز نشان نده"
 
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr ""
+msgstr "تعداد تابلوها"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr ""
+msgstr "شمارش تابلوها"

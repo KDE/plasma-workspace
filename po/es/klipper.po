@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-09-25 10:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -630,70 +630,70 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr "Eliminar elemento marcado como favorito"
 
-#: klipper.cpp:78
+#: klipper.cpp:72
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menú emergente de acciones automático"
 
-#: klipper.cpp:96
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Borrar historial del portapapeles"
 
-#: klipper.cpp:101
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar manualmente la acción en el portapapeles actual"
 
-#: klipper.cpp:109
+#: klipper.cpp:103
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Editar el contenido…"
 
-#: klipper.cpp:117
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mostrar código de &barras…"
 
-#: klipper.cpp:126
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Siguiente elemento del historial"
 
-#: klipper.cpp:131
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Anterior elemento del historial"
 
-#: klipper.cpp:138
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostrar elementos del portapapeles en la posición del ratón"
 
-#: klipper.cpp:396 klipper.cpp:405
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del portapapeles"
 
-#: klipper.cpp:422
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "arriba"
 
-#: klipper.cpp:429
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:436
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "abajo"
@@ -881,12 +881,12 @@ msgstr ""
 "archivos, las aplicaciones que pueden abrirlos se ofrecerán junto a las "
 "acciones coincidentes, si hay alguna."
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Ventana emergente del portapapeles"
 
-#: urlgrabber.cpp:221
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"

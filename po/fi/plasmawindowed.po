@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2023-10-07 10:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,7 @@ msgstr "Sovelmalle välitettävät parametrit."
 msgid "Internal, for testing"
 msgstr ""
 
-#: plasmawindowedview.cpp:121
+#: plasmawindowedview.cpp:127
 #, kde-format
 msgid "Close %1"
 msgstr "Sulje %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-06-19 19:29+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -55,7 +55,7 @@ msgstr "Аргументы, передаваемые в виджет."
 msgid "Internal, for testing"
 msgstr "Внутренний, для тестирования"
 
-#: plasmawindowedview.cpp:121
+#: plasmawindowedview.cpp:127
 #, kde-format
 msgid "Close %1"
 msgstr "Закрыть %1"

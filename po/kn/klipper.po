@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -620,77 +620,77 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:78
+#: klipper.cpp:72
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ಕ್ರಿಯಾಪುಟಿಕೆಗಳ ಕಾಲಾವಧಿ ತೀರಿಕೆ:"
 
-#: klipper.cpp:96
+#: klipper.cpp:90
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ತೆರ(&ವ)ವುಮಾಡು"
 
-#: klipper.cpp:101
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ಹಾಲಿ ನಕಲು ಫಲಕದ ಮೇಲೆ ಕ್ರಿಯೆಯನ್ನು ಸ್ವಹಸ್ತದಿಂದ ಚಲಾಯಿಸು"
 
-#: klipper.cpp:109
+#: klipper.cpp:103
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "ಒಳ ವಿಷಯಗಳನ್ನು (&ಸ)ಸಂಸ್ಕರಿಸು"
 
-#: klipper.cpp:117
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:126
+#: klipper.cpp:120
 #, fuzzy, kde-format
 #| msgid "Next history item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ಚರಿತ್ರೆಯ ಮುಂದಿನ ಅಂಶ"
 
-#: klipper.cpp:131
+#: klipper.cpp:125
 #, fuzzy, kde-format
 #| msgid "Previous history item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ಚರಿತ್ರೆಯ ಹಿಂದಿನ ಅಂಶ"
 
-#: klipper.cpp:138
+#: klipper.cpp:132
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "ಮೌಸ್ ಸೂಚಕನ ಸ್ಥಾನದಲ್ಲಿ ಪುಟಿಕೆ ಮೂಡಿಸು"
 
-#: klipper.cpp:396 klipper.cpp:405
+#: klipper.cpp:378 klipper.cpp:387
 #, kde-format
 msgid "Clipboard history"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
 
-#: klipper.cpp:422
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr "ಮೇಲಕ್ಕೆ"
 
-#: klipper.cpp:429
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr "ಪ್ರಸ್ತುತ"
 
-#: klipper.cpp:436
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr "ಕೆಳಕ್ಕೆ"
@@ -868,13 +868,13 @@ msgid ""
 "actions, if any."
 msgstr ""
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard Popup"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
 
-#: urlgrabber.cpp:221
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "ರದ್ದುಮಾಡು(&C)"

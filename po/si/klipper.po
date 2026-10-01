@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2009-12-16 21:43+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -607,78 +607,78 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:78
+#: klipper.cpp:72
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ක්‍රියා පොප්-අප් සඳහා කල් ඉකුත්වීම:"
 
-#: klipper.cpp:96
+#: klipper.cpp:90
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ක්ලිප් පුවරු ඉතිහාස පිරිසිදු කරන්න (&l)"
 
-#: klipper.cpp:101
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "වත්මන් ක්ලික් පුවරුව මත ක්‍රියාවක් ශ්‍රමිකව අවදි කරන්න"
 
-#: klipper.cpp:109
+#: klipper.cpp:103
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "අන්තර්ගතය සකසන්න"
 
-#: klipper.cpp:117
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:126
+#: klipper.cpp:120
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමාණය"
 
-#: klipper.cpp:131
+#: klipper.cpp:125
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමාණය"
 
-#: klipper.cpp:138
+#: klipper.cpp:132
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "මවුස ස්ථානයේ පොප්-අප්"
 
-#: klipper.cpp:396 klipper.cpp:405
+#: klipper.cpp:378 klipper.cpp:387
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clipboard history"
 msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමාණය"
 
-#: klipper.cpp:422
+#: klipper.cpp:404
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:429
+#: klipper.cpp:411
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:436
+#: klipper.cpp:418
 #, kde-format
 msgid "down"
 msgstr ""
@@ -856,13 +856,13 @@ msgid ""
 "actions, if any."
 msgstr ""
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clipboard Popup"
 msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමාණය"
 
-#: urlgrabber.cpp:221
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "අවලංගු කරන්න (&C)"

@@ -1,127 +1,116 @@
-# translation of kcmcomponentchooser.po to Persian
+# translation of kcm_componentchooser.po to Persian
 # Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
 # Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
 # MaryamSadat Razavi <razavi@itland.ir>, 2006.
 # Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
 # Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011.
+# Sohrab Behdani <behdanisohrab@proton.me>, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmcomponentchooser\n"
+"Project-Id-Version: kcm_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2011-12-28 00:41+0330\n"
-"Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
-"Language-Team: Farsi (Persian) <>\n"
+"PO-Revision-Date: 2026-10-01 11:10+0330\n"
+"Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "دیگر…"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "برگزیدن کارخواه رایانامه ارجح:"
+msgstr "انتخاب مدیر بایگانی پیش‌گزیده"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr ""
+msgstr "انتخاب مرورگر پیش‌گزیده"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "برگزیدن کاربرد پایانه ارجح:"
+msgstr "انتخاب برنامهٔ تقویم پیش‌گزیده"
 
 #: components/componentchooseremail.cpp:20
-#, fuzzy, kde-format
-#| msgid "Use a different &email client:"
+#, kde-format
 msgid "Select default e-mail client"
-msgstr "استفاده از کارخواه &رایانامه متفاوت:‌"
+msgstr "انتخاب کارخواه رایانامهٔ پیش‌گزیده"
 
 #: components/componentchooserfilemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default file manager"
-msgstr "برگزیدن کارخواه رایانامه ارجح:"
+msgstr "انتخاب مدیر پروندهٔ پیش‌گزیده"
 
 #: components/componentchoosergeo.cpp:13
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default map"
-msgstr "برگزیدن کارخواه رایانامه ارجح:"
+msgstr "انتخاب نقشهٔ پیش‌گزیده"
 
 #: components/componentchooserimageviewer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default image viewer"
-msgstr "برگزیدن کارخواه رایانامه ارجح:"
+msgstr "انتخاب نمایشگر تصویر پیش‌گزیده"
 
 #: components/componentchoosermusicplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default music player"
-msgstr "برگزیدن کارخواه رایانامه ارجح:"
+msgstr "انتخاب پخش‌کنندهٔ موسیقی پیش‌گزیده"
 
 #: components/componentchooserpdfviewer.cpp:11
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default PDF viewer"
-msgstr "برگزیدن کارخواه رایانامه ارجح:"
+msgstr "انتخاب نمایشگر PDF پیش‌گزیده"
 
 #: components/componentchoosertel.cpp:17
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default dialer application"
-msgstr "برگزیدن کاربرد پایانه ارجح:"
+msgstr "انتخاب برنامهٔ شماره‌گیر پیش‌گزیده"
 
 #: components/componentchooserterminal.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default terminal emulator"
-msgstr "برگزیدن کاربرد پایانه ارجح:"
+msgstr "انتخاب شبیه‌ساز پایانهٔ پیش‌گزیده"
 
 #: components/componentchoosertexteditor.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default text editor"
-msgstr "برگزیدن کاربرد پایانه ارجح:"
+msgstr "انتخاب ویرایشگر متن پیش‌گزیده"
 
 #: components/componentchooservideoplayer.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default video player"
-msgstr "برگزیدن کارخواه رایانامه ارجح:"
+msgstr "انتخاب پخش‌کنندهٔ ویدیو پیش‌گزیده"
 
 #: ui/ComponentOverlay.qml:54
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "جزئیات"
 
 #: ui/ComponentOverlay.qml:84
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "این برنامه می‌تواند این انواع پرونده را نیز باز کند:"
 
 #: ui/ComponentOverlay.qml:98
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (در حال حاضر در %2 باز می‌شود)"
 
 #: ui/ComponentOverlay.qml:111
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "باز کردن همه در %1"
 
 #: ui/ComponentOverlay.qml:130
 #, kde-format
@@ -129,18 +118,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"این برنامه پشتیبانی از این نوع پرونده‌ها را اعلام نکرده است، اما ممکن است در "
+"هر صورت بتواند آن‌ها را باز کند:"
 
 #: ui/ComponentOverlay.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "اجبار به باز شدن همه در %1"
 
 #: ui/ComponentOverlay.qml:159
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "پیکربندی"
+msgstr "پیکربندی دستی…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -148,111 +138,112 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"به‌نظر می‌رسد «%1» از این نوع‌های میم (mimetypes) مرتبط با این نوع برنامه "
+"پشتیبانی نمی‌کند: %2"
 
 #: ui/main.qml:34
 #, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr ""
+msgstr "ممکن است این برنامه نتواند همهٔ انواع پرونده را باز کند."
 
 #: ui/main.qml:36
 #, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr ""
+msgstr "مشاهدهٔ جزئیات"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "اینترنت"
 
 #: ui/main.qml:69
 #, kde-format
 msgid "Web browser:"
-msgstr ""
+msgstr "مرورگر وب:"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Email client:"
-msgstr ""
+msgstr "کارخواه رایانامه:"
 
 #: ui/main.qml:97
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "تقویم:"
 
 #: ui/main.qml:111
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "شماره‌های تلفن:"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "چندرسانه‌ای"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "نمایشگر تصویر:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "پخش‌کنندهٔ موسیقی:"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "پخش‌کنندهٔ ویدیو:"
 
 #: ui/main.qml:173
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "سندها"
 
 #: ui/main.qml:179
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "ویرایشگر متن:"
 
 #: ui/main.qml:194
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "نمایشگر PDF:"
 
 #: ui/main.qml:208
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "ابزارها"
 
 #: ui/main.qml:214
 #, kde-format
 msgid "File manager:"
-msgstr ""
+msgstr "مدیر پرونده:"
 
 #: ui/main.qml:228
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Terminal emulator:"
-msgstr "برگزیدن کاربرد پایانه ارجح:"
+msgstr "شبیه‌ساز پایانه:"
 
 #: ui/main.qml:242
 #, kde-format
 msgid "Archive manager:"
-msgstr ""
+msgstr "مدیر بایگانی:"
 
 #: ui/main.qml:256
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
-msgstr ""
+msgstr "نقشه:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -338,15 +329,11 @@ msgstr ""
 #~ msgid "in an application based on the contents of the URL"
 #~ msgstr "در یک کاربرد بر اساس محتوای نشانی وب"
 
-#, fuzzy
-#~| msgid "in the following browser:"
 #~ msgid "in the following application:"
-#~ msgstr "در مرورگر زیر:"
+#~ msgstr "در کاربرد زیر:"
 
-#, fuzzy
-#~| msgid "in the following browser:"
 #~ msgid "with the following command:"
-#~ msgstr "در مرورگر زیر:"
+#~ msgstr "با فرمان زیر:"
 
 #~ msgid "..."
 #~ msgstr "..."
@@ -354,24 +341,16 @@ msgstr ""
 #~ msgid "Select preferred Web browser application:"
 #~ msgstr "برگزیدن کاربرد مرورگر وب ارجح:"
 
-#, fuzzy
-#~| msgid "Kmail is the standard Mail program for the KDE desktop."
 #~ msgid "Kmail is the standard Mail program for the Plasma desktop."
-#~ msgstr "Kmail برنامه استاندارد نامه برای رومیزی KDE می‌باشد."
+#~ msgstr "Kmail برنامهٔ استاندارد رایانامه برای میزکار پلاسما است."
 
 #~ msgid "&Use KMail as preferred email client"
-#~ msgstr "&استفاده از KMail به عنوان کارخواه رایانامه ارجح‌"
+#~ msgstr "&استفاده از KMail به‌عنوان کارخواه رایانامهٔ ارجح‌"
 
 #~ msgid "Select this option if you want to use any other mail program."
 #~ msgstr ""
 #~ "اگر می‌خواهید از هر برنامه نامه دیگری استفاده کنید، این گزینه را برگزینید."
 
-#, fuzzy
-#~| msgid ""
-#~| "<ul> <li>%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: "
-#~| "Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: "
-#~| "Template body text</li> <li>%A: Attachment </li> <li>%u: Full mailto: "
-#~| "URL </li></ul>"
 #~ msgid ""
 #~ "Optional placeholders: <ul> <li>%t: Recipient's address</li> <li>%s: "
 #~ "Subject</li> <li>%c: Carbon Copy (CC)</li> <li>%b: Blind Carbon Copy "
@@ -382,15 +361,6 @@ msgstr ""
 #~ "li><li>%b: رونوشت محرمانه )ر.ن.م(</li> <li>%B: متن بدنه قالب</li> <li>%A: "
 #~ "پیوست </li> <li>%u: رایانامه کامل به: نشانی وب </li></ul>"
 
-#, fuzzy
-#~| msgid ""
-#~| "Press this button to select your favorite email client. Please note that "
-#~| "the file you select has to have the executable attribute set in order to "
-#~| "be accepted.<br> You can also use several placeholders which will be "
-#~| "replaced with the actual values when the email client is called:<ul> <li>"
-#~| "%t: Recipient's address</li> <li>%s: Subject</li> <li>%c: Carbon Copy "
-#~| "(CC)</li> <li>%b: Blind Carbon Copy (BCC)</li> <li>%B: Template body "
-#~| "text</li> <li>%A: Attachment </li> </ul>"
 #~ msgid ""
 #~ "Press this button to select your favorite email client. Please note that "
 #~ "the file you select has to have the executable attribute set in order to "
@@ -427,13 +397,6 @@ msgstr ""
 #~ msgid "Use a different &terminal program:"
 #~ msgstr "استفاده از برنامه &پایانه متفاوت:‌"
 
-#, fuzzy
-#~| msgid ""
-#~| "Press this button to select your favorite terminal client. Please note "
-#~| "that the file you select has to have the executable attribute set in "
-#~| "order to be accepted.<br> Also note that some programs that utilize "
-#~| "Terminal Emulator will not work if you add command line arguments "
-#~| "(Example: konsole -ls)."
 #~ msgid ""
 #~ "Press this button to select your favorite terminal client. Please note "
 #~ "that the file you select has to have the executable attribute set in "
@@ -454,13 +417,10 @@ msgstr ""
 #~ msgid_plural "%1 seconds remaining:"
 #~ msgstr[0] "%1 ثانیه باقی‌مانده:"
 
-#, fuzzy
-#~| msgid ""
-#~| "The new window manager will be used when KDE is started the next time."
 #~ msgid ""
 #~ "The new window manager will be used when Plasma is started the next time."
 #~ msgstr ""
-#~ "مدیر پنجره جدید دفعه بعدی که کی‌دی‌ای آغاز شد مورد استفاده قرار میگیرد."
+#~ "مدیر پنجره جدید دفعه بعدی که پلاسما آغاز شد مورد استفاده قرار می‌گیرد."
 
 #~ msgid "Window Manager Change"
 #~ msgstr "تغییر مدیر پنجره‌ها"
@@ -471,7 +431,7 @@ msgstr ""
 #~ "running applications adjust for this change."
 #~ msgstr ""
 #~ "مدیر پنجره جدیدی درحال اجراست.\n"
-#~ "توصیه میشود که نشست کی‌دی‌ای را بازآغازی کنید تا مطمئن شوید همه برنامه‌ها "
+#~ "توصیه می‌شود که نشست کی‌دی‌ای را بازآغازی کنید تا مطمئن شوید همه برنامه‌ها "
 #~ "برای این تغییر هماهنگ شده‌اند."
 
 #~ msgid "Window Manager Replaced"
@@ -491,10 +451,8 @@ msgstr ""
 #~ msgid "&Revert to Previous"
 #~ msgstr "برگشت به قبلی"
 
-#, fuzzy
-#~| msgid "Use a different &window manager:"
 #~ msgid "&Use the default KDE window manager (KWin)"
-#~ msgstr "استفاده از مدیر پنجره‌ی متفاوت:‌"
+#~ msgstr "&استفاده از مدیر پنجرهٔ پیش‌گزیدهٔ کی‌دی‌ای (KWin)"
 
 #~ msgid "Use a different &window manager:"
 #~ msgstr "استفاده از مدیر پنجره‌ی متفاوت:‌"

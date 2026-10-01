@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmawindowed\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-08-29 14:10+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "Die an das Miniprogramm zu übergebenden Argumente."
 msgid "Internal, for testing"
 msgstr "Intern, zu Testzwecken"
 
-#: plasmawindowedview.cpp:121
+#: plasmawindowedview.cpp:127
 #, kde-format
 msgid "Close %1"
 msgstr "%1 schließen"
