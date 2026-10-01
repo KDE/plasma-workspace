@@ -124,6 +124,7 @@ void LocationsRunnerTest::testMimeData()
     QMimeData *data = manager->mimeDataForMatch(matches.first());
     QVERIFY(data);
     QCOMPARE(data->urls(), QList<QUrl>{QUrl::fromLocalFile(QDir::homePath())});
+    delete data;
 }
 
 QTEST_MAIN(LocationsRunnerTest)
