@@ -10,7 +10,6 @@
 #include <QDBusError>
 #include <QHash>
 #include <QObject>
-#include <QPointer>
 #include <QRegularExpression>
 
 class KPluginMetaData;
@@ -24,7 +23,7 @@ class DBusServiceObserver : public QObject
 {
     Q_OBJECT
 public:
-    explicit DBusServiceObserver(const QPointer<SystemTraySettings> &settings, QObject *parent = nullptr);
+    explicit DBusServiceObserver(SystemTraySettings *settings, QObject *parent = nullptr);
 
     void registerPlugin(const KPluginMetaData &pluginMetaData);
     void unregisterPlugin(const QString &pluginId);
@@ -47,7 +46,7 @@ private:
     void serviceRegistered(const QString &service);
     void serviceUnregistered(const QString &service);
 
-    QPointer<SystemTraySettings> m_settings;
+    SystemTraySettings *m_settings = nullptr;
 
     QDBusServiceWatcher *m_sessionServiceWatcher;
     QDBusServiceWatcher *m_systemServiceWatcher;

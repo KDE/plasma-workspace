@@ -7,7 +7,6 @@
 #pragma once
 
 #include <QObject>
-#include <QPointer>
 #include <QStringList>
 
 class KConfigLoader;
@@ -48,7 +47,7 @@ private:
     void writeConfigValue(const QString &key, const QVariant &value);
     void notifyAboutChangedEnabledPlugins(const QStringList &enabledPluginsOld, const QStringList &enabledPluginsNew);
 
-    QPointer<KConfigLoader> config;
+    KConfigLoader *config = nullptr;
 
     bool updatingConfigValue = false;
     QStringList m_extraItems;

@@ -16,7 +16,7 @@
 
 #include <QDBusConnection>
 
-PlasmoidRegistry::PlasmoidRegistry(QPointer<SystemTraySettings> settings, QObject *parent)
+PlasmoidRegistry::PlasmoidRegistry(SystemTraySettings *settings, QObject *parent)
     : QObject(parent)
     , m_settings(settings)
     , m_dbusObserver(new DBusServiceObserver(settings, this))

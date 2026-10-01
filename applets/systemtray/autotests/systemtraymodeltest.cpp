@@ -5,7 +5,6 @@
 */
 
 #include <QAbstractItemModelTester>
-#include <QPointer>
 #include <QTest>
 
 #include <Plasma/Applet>
@@ -42,7 +41,7 @@ void SystemTrayModelTest::init()
 class MockedPlasmoidRegistry : public PlasmoidRegistry
 {
 public:
-    MockedPlasmoidRegistry(QPointer<SystemTraySettings> settings)
+    MockedPlasmoidRegistry(SystemTraySettings *settings)
         : PlasmoidRegistry(settings)
     {
     }
