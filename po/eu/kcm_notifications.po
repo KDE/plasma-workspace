@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-06 00:45+0000\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
 "PO-Revision-Date: 2026-02-11 17:44+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -65,29 +65,53 @@ msgstr ""
 "Aplikazio honek ez du onartzen gertaera bakoitzeko jakinarazpenak "
 "konfiguratzea"
 
-#: ui/ApplicationConfiguration.qml:282
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:306
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Erakutsi mezu bat leiho-gainerakor batean"
 
-#: ui/ApplicationConfiguration.qml:291
+#: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgid "Play a sound"
 msgstr "Jo soinu bat"
 
-#: ui/ApplicationConfiguration.qml:302
+#: ui/ApplicationConfiguration.qml:326
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "Aurrez entzun soinua"
 
-#: ui/ApplicationConfiguration.qml:328
+#: ui/ApplicationConfiguration.qml:352
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "Berrezarri"
 
-#: ui/ApplicationConfiguration.qml:340
+#: ui/ApplicationConfiguration.qml:364
 #, kde-format
 msgid "Choose sound file"
 msgstr "Hautatu soinu-fitxategia"

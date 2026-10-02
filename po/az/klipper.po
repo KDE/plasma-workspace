@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:43+0000\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
 "PO-Revision-Date: 2025-04-01 15:05+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -286,13 +286,13 @@ msgstr "QR kodu göstərmək üçün yer kifayət etmir. Əlavəinin ölçüsün
 msgid "Creating QR code failed"
 msgstr "QR kod yaratmaq mümkün olmadı"
 
-#: declarative/qml/ClipboardItemDelegate.qml:204
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Yəğmaq"
 
-#: declarative/qml/ClipboardItemDelegate.qml:204
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"

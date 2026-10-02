@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-06 00:45+0000\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
 "PO-Revision-Date: 2026-09-24 20:29-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -61,29 +61,53 @@ msgid ""
 "basis"
 msgstr "بۇ پىروگرامما ھەر بىر پائالىيەت ئاساسىدا ئۇقتۇرۇش سەپلەشنى قوللىمايدۇ"
 
-#: ui/ApplicationConfiguration.qml:282
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:306
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "قاڭقىش كۆزنىكىدە ئۇچۇر كۆرسەت"
 
-#: ui/ApplicationConfiguration.qml:291
+#: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgid "Play a sound"
 msgstr "ئاۋاز ياڭرات"
 
-#: ui/ApplicationConfiguration.qml:302
+#: ui/ApplicationConfiguration.qml:326
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "ئاۋازنى ئالدىن ئاڭلات"
 
-#: ui/ApplicationConfiguration.qml:328
+#: ui/ApplicationConfiguration.qml:352
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "ئەسلىگە قايتۇر"
 
-#: ui/ApplicationConfiguration.qml:340
+#: ui/ApplicationConfiguration.qml:364
 #, kde-format
 msgid "Choose sound file"
 msgstr "ئاۋاز ھۆججەت تاللىنىدۇ"

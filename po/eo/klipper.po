@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:43+0000\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -287,13 +287,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Kreo de QR-kodo malsukcesis"
 
-#: declarative/qml/ClipboardItemDelegate.qml:204
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Maletendi"
 
-#: declarative/qml/ClipboardItemDelegate.qml:204
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
