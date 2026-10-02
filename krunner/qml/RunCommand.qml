@@ -288,7 +288,12 @@ ColumnLayout {
                 source: "expand"
                 visible: queryField.length === 0 && root.runnerManager.historyEnabled
                 enabled: root.runnerManager.history.length > 0
-
+                rotation: root.showHistory ? 180 : 0
+                Behavior on rotation {
+                    RotationAnimation {
+                        duration: Kirigami.Units.shortDuration
+                    }
+                }
                 MouseArea {
                     anchors.fill: parent
                     onPressed: {
