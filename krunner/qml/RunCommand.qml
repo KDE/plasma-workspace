@@ -99,6 +99,9 @@ ColumnLayout {
     
     RowLayout {
         Layout.alignment: Qt.AlignTop
+
+        Keys.onEscapePressed: root.runnerWindow.visible = false
+
         PlasmaComponents3.ToolButton {
             id: usageHelpButton
             visible: root.runnerWindow.helpEnabled
@@ -273,10 +276,6 @@ ColumnLayout {
             }
             Keys.onEnterPressed: event => closeOrRun(event)
             Keys.onReturnPressed: event => closeOrRun(event)
-
-            Keys.onEscapePressed: {
-                root.runnerWindow.visible = false
-            }
 
             Kirigami.Icon {
                 anchors {
