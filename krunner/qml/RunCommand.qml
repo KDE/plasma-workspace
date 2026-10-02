@@ -257,13 +257,12 @@ ColumnLayout {
                 !event.accepted && results.navigationKeyHandler(event)
             }
             Keys.onTabPressed: event => {
-                if (root.runnerWindow.historyBehavior === RunnerWindow.CompletionSuggestion) {
-                    if (fadedTextCompletion.text && queryField.text !== fadedTextCompletion.text) {
-                        queryField.text = fadedTextCompletion.text
-                        fadedTextCompletion.text = ""
-                    } else {
-                        event.accepted = false
-                    }
+                if (root.runnerWindow.historyBehavior === RunnerWindow.CompletionSuggestion
+                    && fadedTextCompletion.text && queryField.text !== fadedTextCompletion.text) {
+                    queryField.text = fadedTextCompletion.text
+                    fadedTextCompletion.text = ""
+                } else {
+                    event.accepted = false
                 }
             }
             function closeOrRun(event) {
