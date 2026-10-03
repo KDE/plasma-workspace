@@ -4,10 +4,11 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# SPDX-FileCopyrightText: 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2010, 2011, 2024 Lasse Liehu <lliehu@kolumbus.fi>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2016.
 # SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
+# SPDX-FileCopyrightText: 2026 Lasse Liehu-Inui <lasse.liehu@iki.fi>
 #
 # KDE Finnish translation sprint participants:
 # Author: Lliehu
@@ -18,13 +19,13 @@ msgstr ""
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
 "PO-Revision-Date: 2024-02-14 00:47+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language-Team: Finnish <kde-l10n-fi@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: package/contents/ui/DeviceItem.qml:185
 #, kde-format

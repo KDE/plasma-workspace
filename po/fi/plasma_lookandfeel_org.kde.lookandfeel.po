@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-05-25 10:10+0300\n"
+"PO-Revision-Date: 2026-02-24 21:32+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -228,7 +228,13 @@ msgid "Next track"
 msgstr "Seuraava kappale"
 
 #: contents/logout/Logout.qml:139
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "One other user is currently logged in. If the computer is shut down or "
+#| "restarted, that user may lose work."
+#| msgid_plural ""
+#| "%1 other users are currently logged in. If the computer is shut down or "
+#| "restarted, those users may lose work."
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
 "restarted, that user may lose work."
@@ -243,7 +249,8 @@ msgstr[1] ""
 "käynnistetään uudelleen, he voivat menettää työnsä."
 
 #: contents/logout/Logout.qml:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Uudelleenkäynnistettäessä tietokone siirtyy laiteohjelmiston asetusnäyttöön."
@@ -254,21 +261,27 @@ msgid "Log Out"
 msgstr "Kirjaudu ulos"
 
 #: contents/logout/Logout.qml:224
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restarting in 1 second"
+#| msgid_plural "Restarting in %1 seconds"
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Käynnistetään uudelleen sekunnin kuluttua"
 msgstr[1] "Käynnistetään uudelleen %1 sekunnissa"
 
 #: contents/logout/Logout.qml:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Shutting down in 1 second"
+#| msgid_plural "Shutting down in %1 seconds"
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Sammutus 1 sekunnin kuluttua"
 msgstr[1] "Sammutus %1 sekunnin kuluttua"
 
 #: contents/logout/Logout.qml:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Logging out in 1 second"
+#| msgid_plural "Logging out in %1 seconds"
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Uloskirjautuminen 1 sekunnin kuluttua"
