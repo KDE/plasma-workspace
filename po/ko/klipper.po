@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"POT-Creation-Date: 2026-10-03 00:47+0000\n"
 "PO-Revision-Date: 2026-09-28 23:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -570,34 +570,34 @@ msgstr "명령 아이콘을 기본값으로 초기화"
 msgid "Icon:"
 msgstr "아이콘:"
 
-#: historymodel.cpp:318
+#: historymodel.cpp:325
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "전체 클립보드 기록을 삭제하시겠습니까?"
 
-#: historymodel.cpp:320
+#: historymodel.cpp:327
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "클립보드 기록 비우기"
 
-#: historymodel.cpp:322 historymodel.cpp:597
+#: historymodel.cpp:329 historymodel.cpp:604
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "다시 묻지 않기"
 
-#: historymodel.cpp:404
+#: historymodel.cpp:411
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:593
+#: historymodel.cpp:600
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "이 항목에 별표가 표시되어 있습니다. 과거 기록에서 삭제하시겠습니까?"
 
-#: historymodel.cpp:595
+#: historymodel.cpp:602
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "별표 표시된 항목 삭제"

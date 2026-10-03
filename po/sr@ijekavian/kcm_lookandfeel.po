@@ -1,12 +1,13 @@
 # Translation of kcm_lookandfeel.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:48+0000\n"
-"PO-Revision-Date: 2017-12-24 21:47+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -21,43 +22,44 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Часлав Илић"
+msgstr "Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: filedialognamefilters.cpp:28
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "фајлови слика (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr ""
+msgstr "Глобални изглед и осјећај"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "Пакет глобалног изгледа и осјећаја, алтернативни"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Пребацуј између тамне и свијетле глобалне теме у зависности од доба дана"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "Пребацуј између тамне и свијетле глобалне теме када рачунар мирује"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -66,19 +68,22 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Колико дуго рачунар треба да мирује да би се пребацило између тамне и "
+"свијетле глобалне теме, у секундама"
 
 #: tool/lnftool.cpp:32
 #, kde-format
 msgid "Global Theme Tool"
-msgstr ""
+msgstr "Алатка за глобалне теме"
 
 #: tool/lnftool.cpp:34
-#, fuzzy, kde-format
-#| msgid "Command line tool to apply look and feel packages."
+#, kde-format
 msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
-msgstr "Алатка командне линије за примену пакета изгледа и осећаја."
+msgstr ""
+"Алатка командне линије за примјену пакета глобалних тема ради промјене "
+"изгледа и осјећаја."
 
 #: tool/lnftool.cpp:36
 #, kde-format
@@ -96,10 +101,9 @@ msgid "Maintainer"
 msgstr "Одржавалац"
 
 #: tool/lnftool.cpp:46
-#, fuzzy, kde-format
-#| msgid "List available Look and feel packages"
+#, kde-format
 msgid "List available global theme packages"
-msgstr "Наброји доступне пакете изгледа и осећаја"
+msgstr "Наброји доступне пакете глобалних тема"
 
 #: tool/lnftool.cpp:49
 #, kde-format
@@ -108,6 +112,9 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
+"Примијени пакет глобалне теме. Ово може бити име пакета или пуна путања до "
+"инсталираног пакета, када ће ова алатка провјерити да ли је то пакет "
+"глобалне теме и затим покушати да га примијени"
 
 #: tool/lnftool.cpp:51
 #, kde-format
@@ -117,7 +124,7 @@ msgstr "име‑пакета"
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Спријечи да --apply искључи аутоматски режим"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -128,25 +135,25 @@ msgstr "Ресетуј распоред плазма површи"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Трајно брисање"
 
 #: ui/ConfirmDeletionDialog.qml:17
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Желите ли заиста да трајно обришете ову тему?"
 
 #: ui/ConfirmDeletionDialog.qml:21
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Трајно обриши"
 
 #: ui/ConfirmDeletionDialog.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Одустани"
 
 #: ui/DayNightLookAndFeel.qml:46
 #, kde-format
@@ -154,91 +161,89 @@ msgctxt "@info"
 msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
-msgstr ""
+msgstr "Изабрана свијетла глобална тема користиће се током дана, а тамна ноћу."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Подеси смјену дана и ноћи…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Свијетла"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Тамна"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Сачекај мировање прије пребацивања:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунде"
+msgstr[2] "%1 секунди"
+msgstr[3] "%1 секунда"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Смањује ометање док активно користите рачунар."
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Get New Looks..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "Добави нове изгледе..."
+msgstr "Избор свијетле глобалне теме"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Get New Looks..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "Добави нове изгледе..."
+msgstr "Избор тамне глобалне теме"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
-msgstr ""
+msgstr "Прегледај тему"
 
 #: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
-msgstr ""
+msgstr "Уклони тему"
 
 #: ui/LookAndFeelSelector.qml:59 ui/StaticLookAndFeel.qml:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "Не могу да обришем активну тему"
 
 #: ui/LookAndFeelSelector.qml:61 ui/StaticLookAndFeel.qml:79
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "Не могу да обришем системски инсталиране теме"
 
 #: ui/LookAndFeelSnapshot.qml:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "Уписивање текуће теме"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -247,30 +252,31 @@ msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
 msgstr ""
+"Текући изглед и поставке теме Плазме биће сачувани у новој глобалној теми."
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "Додај слику за преглед…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "Сними екран…"
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
 msgctxt "@label:textbox Name of new global theme that will be created"
 msgid "Name:"
-msgstr ""
+msgstr "Име:"
 
 #: ui/LookAndFeelSnapshot.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "Унесите име…"
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -278,53 +284,52 @@ msgctxt ""
 "@action:button Confirm creating new global theme from the user's current "
 "appearance settings"
 msgid "Confirm"
-msgstr ""
+msgstr "Потврди"
 
 #: ui/LookAndFeelSnapshot.qml:113
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "Глобална тема са овим именом или идентификатором већ постоји."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "Избор слике за преглед"
 
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Ноћу пријеђи у тамни режим"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "Сачувај текућу тему…"
 
 #: ui/main.qml:45
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
-msgstr ""
+msgstr "Добави нове…"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
-msgstr ""
+msgstr "Поставке распореда:"
 
 #: ui/MoreOptions.qml:27
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgid "Desktop layout"
-msgstr "Ресетуј распоред плазма површи"
+msgstr "Распоред површи"
 
 #: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "Распоред дугмади на насловној траци"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
 #, kde-format
@@ -332,88 +337,90 @@ msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
+"Примјеном распореда површи брише се текући скуп површи, панела, докова и "
+"виџета, а замјењује се оним што тема задаје."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
-msgstr ""
+msgstr "Поставке изгледа:"
 
 #: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Боје"
 
 #: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
-msgstr ""
+msgstr "Стил програма"
 
 #: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
-msgstr ""
+msgstr "Стил декорације прозора"
 
 #: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
-msgstr ""
+msgstr "Величина декорације прозора"
 
 #: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
-msgstr ""
+msgstr "Иконице"
 
 #: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
-msgstr ""
+msgstr "Стил Плазме"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "Показивачи"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
-msgstr ""
+msgstr "Фонтови"
 
 #: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
-msgstr ""
+msgstr "Пребацивање задатака"
 
 #: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
+msgstr "Уводни екран"
 
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr ""
+msgstr "Ова глобална тема примијениће сљедеће:"
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
-msgstr ""
+msgstr "Поставке изгледа"
 
 #: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr ""
+msgstr "• Поставке изгледа"
 
 #: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
-msgstr ""
+msgstr "Распоред површи и прозора"
 
 #: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr ""
+msgstr "• Распоред површи и прозора"
 
 #: ui/SimpleOptions.qml:71
 #, kde-format
@@ -421,13 +428,14 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+"Ова глобална тема не пружа ниједну поставку која може да се примијени. "
+"Обратите се одржаваоцу ове глобалне теме, јер је можда покварена."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
-msgstr "Ресетуј распоред плазма површи"
+msgstr "Садржи распоред површи"
 
 #: ui/StaticLookAndFeel.qml:112
 #, kde-format
@@ -435,56 +443,14 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr ""
+msgstr "Примијенити %1?"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Choose what to apply…"
-msgstr ""
+msgstr "Изабери шта да се примијени…"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
-
-# rewrite-msgid: /cursor/pointer/
-#, fuzzy
-#~| msgid "You have to restart KDE for cursor changes to take effect."
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "Поново покрените КДЕ да би измене показивача ступиле на снагу."
-
-# rewrite-msgid: /Cursor/Pointer/
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Измењене поставке показивача"
-
-#, fuzzy
-#~| msgid ""
-#~| "This module lets you configure the look of the whole workspace with some "
-#~| "ready to go presets."
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr ""
-#~ "Овај модул вам омогућава подешавање изгледа целог радног простора, уз "
-#~ "неколико спремних претподешавања."
-
-#, fuzzy
-#~| msgid "Apply a look and feel package"
-#~ msgid "Apply a global theme package"
-#~ msgstr "Примени пакет изгледа и осећаја"
-
-#, fuzzy
-#~| msgid ""
-#~| "Warning: your Plasma Desktop layout will be lost and reset to the "
-#~| "default layout provided by the selected theme."
-#~ msgid ""
-#~ "Your desktop layout will be lost and reset to the default layout provided "
-#~ "by the selected theme."
-#~ msgstr ""
-#~ "Упозорење: ваш распоред плазма површи биће изгубљен и ресетован на "
-#~ "подразумевани распоред изабране теме."
-
-# >> @option:check
-#, fuzzy
-#~| msgid "Use Desktop Layout from theme"
-#~ msgid "Use desktop layout from theme"
-#~ msgstr "Распоред површи према теми"
+msgstr "Прикажи мање опција…"

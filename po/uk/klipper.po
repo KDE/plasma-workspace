@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"POT-Creation-Date: 2026-10-03 00:47+0000\n"
 "PO-Revision-Date: 2026-09-25 13:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -593,36 +593,36 @@ msgstr "Скинути піктограму до типової для кома�
 msgid "Icon:"
 msgstr "Піктограма:"
 
-#: historymodel.cpp:318
+#: historymodel.cpp:325
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Ви справді хочете спорожнити і вилучити увесь журнал буфера обміну даними?"
 
-#: historymodel.cpp:320
+#: historymodel.cpp:327
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Спорожнити журнал буфера обміну даними"
 
-#: historymodel.cpp:322 historymodel.cpp:597
+#: historymodel.cpp:329 historymodel.cpp:604
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Більше не питати"
 
-#: historymodel.cpp:404
+#: historymodel.cpp:411
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1⨯%2"
 
-#: historymodel.cpp:593
+#: historymodel.cpp:600
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Цей запис позначено зірочкою. Ви справді хочете вилучити його з журналу?"
 
-#: historymodel.cpp:595
+#: historymodel.cpp:602
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Вилучити запис із зірочкою"

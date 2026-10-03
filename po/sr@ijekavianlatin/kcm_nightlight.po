@@ -1,12 +1,13 @@
 # Translation of kcm_nightcolor.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-15 00:48+0000\n"
-"PO-Revision-Date: 2017-12-17 18:00+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 16:27+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +25,7 @@ msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr ""
+"Temperatura boje počinje prelaz ka noćnoj u %1 i potpuno se promijeni do %2"
 
 #: ui/DayNightView.qml:157
 #, kde-format
@@ -31,133 +33,70 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr ""
+"Temperatura boje počinje prelaz ka dnevnoj u %1 i potpuno se promijeni do %2"
 
 #: ui/main.qml:39
 #, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
+msgstr "Filter plave svjetlosti čini boje na ekranu toplijim."
 
 #: ui/main.qml:50
 #, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
-msgstr ""
+msgstr "Noćno svjetlo:"
 
 #: ui/main.qml:61
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr ""
+msgstr "uvijek isključeno"
 
 #: ui/main.qml:62
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
-msgstr ""
+msgstr "uvijek uključeno"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "pri izlasku i zalasku sunca"
 
 #: ui/main.qml:80
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Podesi…"
 
 #: ui/main.qml:131 ui/main.qml:182 ui/main.qml:248
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
-msgstr ""
+msgstr "%1 K"
 
 #: ui/main.qml:138
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature: "
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
-msgstr "Temperatura noćne boje: "
+msgstr "Temperatura dnevnog svjetla:"
 
 #: ui/main.qml:189 ui/main.qml:255
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "hladno (bez filtera)"
 
 #: ui/main.qml:196 ui/main.qml:262
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
-msgstr ""
+msgstr "toplo"
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature: "
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr "Temperatura noćne boje: "
-
-#, fuzzy
-#~| msgid "Latitude"
-#~ msgctxt "@label: textbox"
-#~ msgid "Latitude:"
-#~ msgstr "Geografska širina"
-
-#, fuzzy
-#~| msgid "Longitude"
-#~ msgctxt "@label: textbox"
-#~ msgid "Longitude:"
-#~ msgstr "Geografska dužina"
-
-#, fuzzy
-#~| msgid "Detect location"
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "Otkrij lokaciju"
-
-#, fuzzy
-#~| msgid "Transition duration"
-#~ msgid "Transition duration:"
-#~ msgstr "Trajanje prelaza"
-
-# well-spelled: мин, макс
-#, fuzzy
-#~| msgid "(In minutes - min. 1, max. 600)"
-#~ msgid "Input minutes - min. 1, max. 600"
-#~ msgstr "(u minutima, min. 1, maks. 600)"
-
-#~ msgid "Error: Transition time overlaps."
-#~ msgstr "Greška: vreme prelaza se preklapa."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Časlav Ilić"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgid "Night Color"
-#~ msgstr "Noćna boja"
-
-#~ msgid "Roman Gilg"
-#~ msgstr "Roman Gilg"
-
-#~ msgid "Activate Night Color"
-#~ msgstr "Aktiviraj noćnu boju"
-
-#~ msgid " K"
-#~ msgstr " K"
-
-#, fuzzy
-#~| msgid "Error: Morning not before evening."
-#~ msgid "Error: Morning is before evening."
-#~ msgstr "Greška: jutro nije pre večeri."
-
-#, fuzzy
-#~| msgid "Night Color Temperature: "
-#~ msgid "Night Color begins at %1"
-#~ msgstr "Temperatura noćne boje: "
+msgstr "Temperatura noćnog svjetla:"

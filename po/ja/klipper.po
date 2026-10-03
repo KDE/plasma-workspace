@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"POT-Creation-Date: 2026-10-03 00:47+0000\n"
 "PO-Revision-Date: 2026-03-31 19:23+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -596,34 +596,34 @@ msgstr "コマンドのアイコンをデフォルトにリセット"
 msgid "Icon:"
 msgstr "アイコン:"
 
-#: historymodel.cpp:318
+#: historymodel.cpp:325
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "本当にクリップボードの全履歴を消去しますか？"
 
-#: historymodel.cpp:320
+#: historymodel.cpp:327
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "クリップボードの履歴を消去"
 
-#: historymodel.cpp:322 historymodel.cpp:597
+#: historymodel.cpp:329 historymodel.cpp:604
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:404
+#: historymodel.cpp:411
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:593
+#: historymodel.cpp:600
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "この項目はスターがついています。本当に履歴から削除しますか？"
 
-#: historymodel.cpp:595
+#: historymodel.cpp:602
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "スターつき項目削除"

@@ -1,13 +1,14 @@
 # Translation of freespacenotifier.po into Serbian.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2010, 2011.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2014-05-24 13:02+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -22,21 +23,17 @@ msgstr ""
 #: freespacenotifier.cpp:121
 #, kde-format
 msgid "Open in Filelight"
-msgstr ""
+msgstr "Отвори у Фајлајту"
 
 #: freespacenotifier.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "Opens a file manager like dolphin"
-#| msgid "Open File Manager..."
+#, kde-format
 msgid "Open in File Manager"
-msgstr "Отвори менаџер фајлова..."
+msgstr "Отвори у менаџеру фајлова"
 
 #: freespacenotifier.cpp:134
-#, fuzzy, kde-format
-#| msgctxt "Allows the user to configure the warning notification being shown"
-#| msgid "Configure Warning..."
+#, kde-format
 msgid "Configure Warning…"
-msgstr "Подеси упозорење..."
+msgstr "Подеси упозорење…"
 
 #. i18n: ectx: label, entry (minimumSpace), group (General)
 #: freespacenotifier.kcfg:9
@@ -46,10 +43,9 @@ msgstr "Најмање слободног простора прије упозо
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
-msgstr "Најмање слободног простора прије упозоравања корисника."
+msgstr "Најмањи проценат слободног простора прије упозоравања корисника."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -77,16 +73,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "Упозори када слободан простор спадне испод:"
+msgstr "И када слободан простор спадне испод:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -95,48 +90,33 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"Систем ће вас обавијестити ако слободан простор спадне испод задатог броја "
+"MiB и задатог процента расположивог простора."
 
 #: module.cpp:121
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Warns the user that the system is running low on space on his home "
-#| "folder, indicating the percentage and absolute MiB size remaining"
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)"
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
 msgstr ""
-"Понестаје вам простора у домаћој фасцикли, има још само %1 %1 MiB (%2%)."
+"Партицији %1 понестаје простора на диску; преостало је још %2 MiB (%3%)."
 
 #: module.cpp:123
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Warns the user that the system is running low on space on his home "
-#| "folder, indicating the percentage and absolute MiB size remaining"
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)"
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"Понестаје вам простора у домаћој фасцикли, има још само %1 %1 MiB (%2%)."
+"Корјеној партицији понестаје простора на диску; преостало је још %1 MiB "
+"(%2%)."
 
 #: module.cpp:125
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Warns the user that the system is running low on space on his home "
-#| "folder, indicating the percentage and absolute MiB size remaining"
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)"
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"Понестаје вам простора у домаћој фасцикли, има још само %1 %1 MiB (%2%)."
+"Домаћој фасцикли понестаје простора на диску; преостало је још %1 MiB (%2%)."
 
 #: module.cpp:150
 #, kde-format

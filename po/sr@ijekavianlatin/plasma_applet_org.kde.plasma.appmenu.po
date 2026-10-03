@@ -1,12 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.appmenu.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:46+0000\n"
-"PO-Revision-Date: 2017-09-29 16:44+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +23,12 @@ msgstr ""
 #: appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Traži"
 
 #: appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Traži…"
 
 #: qml/config.qml:13
 #, kde-format
@@ -47,10 +48,10 @@ msgstr "Prikaži potpuni meni programa"
 #: qml/configGeneral.qml:32
 #, kde-format
 msgid "Show menus for apps on different screens"
-msgstr ""
+msgstr "Prikaži menije programa na drugim ekranima"
 
 #: qml/MenuDelegate.qml:62
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"
-msgstr ""
+msgstr "Otvori meni"

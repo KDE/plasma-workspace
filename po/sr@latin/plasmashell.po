@@ -1,12 +1,13 @@
 # Translation of plasmashell.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-18 00:47+0000\n"
-"PO-Revision-Date: 2016-12-18 21:56+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -21,12 +22,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Časlav Ilić"
+msgstr "Časlav Ilić,Nemanja Hiršl"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "caslav.ilic@gmx.net"
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 # >> @title:window
 #: currentcontainmentactionsmodel.cpp:201
@@ -35,109 +36,100 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Podešavanje priključka za radnje mišem"
 
 #: desktopview.cpp:206
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 razvojna"
 
 #: desktopview.cpp:209
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 alfa"
 
 #: desktopview.cpp:212
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 beta 1"
 
 #: desktopview.cpp:215
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 beta 2"
 
 #: desktopview.cpp:218
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:221
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:247
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "Plasma"
+msgstr "KDE Plasma %1 razvojna"
 
 #: desktopview.cpp:251
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Plasma"
+msgstr "KDE Plasma %1 beta"
 
 #: desktopview.cpp:254
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 beta %2"
 
 #: desktopview.cpp:258
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Plasma"
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:264
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Posetite bugs.kde.org da biste prijavili probleme"
 
 #: desktopview.cpp:272
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Kopiraj izdanje Plasme"
 
 #: desktopview.cpp:278
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Prijavi grešku…"
 
 #: desktopview.cpp:288
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Sakrij barjak probnog izdanja"
 
 #: desktopview.cpp:290
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Sakrij do ponovnog pokretanja"
 
 #: desktopview.cpp:297
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Trajno sakrij…"
 
 #: desktopview.cpp:303
 #, kde-kuit-format
@@ -148,22 +140,26 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Želite li zaista da trajno sakrijete barjak probnog izdanja?<nl/><nl/>Ova "
+"radnja može da se opozove samo uklanjanjem reda koji počinje sa "
+"<icode>ShowDesktopPreviewBanner</icode> u postavnom fajlu "
+"<filename>kdeglobals</filename>."
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Sakriti barjak probnog izdanja?"
 
 #: desktopview.cpp:520 desktopview.cpp:536
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Uđi u režim uređivanja"
 
 #: desktopview.cpp:534
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Izađi iz režima uređivanja"
 
 #: main.cpp:126
 #, kde-format
@@ -189,12 +185,12 @@ msgstr "Nametni učitavanje datog priključka školjke"
 #: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "Zameni postojeći primerak"
 
 #: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "Nabroji dostupne opcije povratnih informacija korisnika"
 
 #: main.cpp:208
 #, kde-format
@@ -202,23 +198,21 @@ msgid "Plasma Failed To Start"
 msgstr "Plasma ne može da se pokrene"
 
 #: main.cpp:209
-#, fuzzy, kde-format
-#| msgid ""
-#| "Plasma is unable to start as it could not correctly use OpenGL 2.\n"
-#| " Please check that your graphic drivers are set up correctly."
+#, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"Plasma ne može da se pokrene zbog nepotpune podrške za OpenGL 2.\n"
-" Proverite da li je grafički drajver pravilno podešen."
+"Plasma ne može da se pokrene jer ne može ispravno da koristi ni OpenGL 2 ni "
+"softversku zamenu.\n"
+"Proverite da li je grafički drajver pravilno podešen."
 
 #: osd.cpp:70
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:98
 #, kde-format
@@ -308,59 +302,59 @@ msgstr "Tastatura na ekranu deaktivirana"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Spavanje i zaključavanje ekrana blokirani"
 
 #: osd.cpp:208
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Spavanje i zaključavanje ekrana odblokirani"
 
 #: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Režim štednje energije"
 
 #: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Uravnotežen režim napajanja"
 
 #: osd.cpp:224
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Režim performansi"
 
 #: panelview.cpp:1066
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Sakrij postavu panela"
 
 #: panelview.cpp:1068
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Prikaži postavu panela"
 
 #: qml/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "Ugrađeni ekran"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Nepovezan ekran %1"
 
 #: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
@@ -375,35 +369,33 @@ msgstr "Sakrij površ"
 #: shellcorona.cpp:192
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Aktiviraj pokretač programa"
 
 #: shellcorona.cpp:200
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr ""
+msgstr "Prikaži menjač aktivnosti"
 
 #: shellcorona.cpp:209
-#, fuzzy, kde-format
-#| msgid "Stop Current Activity"
+#, kde-format
 msgid "Switch to Previous Activity"
-msgstr "Zaustavi tekuću aktivnost"
+msgstr "Prebaci na prethodnu aktivnost"
 
 #: shellcorona.cpp:217
-#, fuzzy, kde-format
-#| msgid "Stop Current Activity"
+#, kde-format
 msgid "Switch to Next Activity"
-msgstr "Zaustavi tekuću aktivnost"
+msgstr "Prebaci na narednu aktivnost"
 
 #: shellcorona.cpp:248
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "Upravljaj površima i panelima…"
 
 #: shellcorona.cpp:270
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "Pomeri fokus tastature između panela"
 
 #: shellcorona.cpp:2282
 #, kde-format
@@ -411,8 +403,7 @@ msgid "Add Panel"
 msgstr "Dodaj panel"
 
 #: shellcorona.cpp:2369
-#, fuzzy, kde-format
-#| msgid "Empty %1"
+#, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr ""
@@ -421,61 +412,31 @@ msgstr ""
 #: softwarerendernotifier.cpp:34
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "Koristi se softverski renderer"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "Koristi se softverski renderer"
 
 #: softwarerendernotifier.cpp:36
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "Renderovanje može biti lošije"
 
 #: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
-msgstr ""
+msgstr "Ne prikazuj više"
 
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr ""
+msgstr "Broj panela"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr ""
-
-#~ msgid "Activate Task Manager Entry %1"
-#~ msgstr "Aktiviraj unos menadžera zadataka %1"
-
-#~ msgid "Stop Current Activity"
-#~ msgstr "Zaustavi tekuću aktivnost"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "Aktiviraj probni režim, sa zadatim JavaScript fajlom rasporeda za "
-#~ "nameštanje probnog okruženja"
-
-#~ msgid "file"
-#~ msgstr "fajl"
-
-# literal-segment: plasmashell
-# literal-segment: shell-plugin
-#~ msgid ""
-#~ "Load plasmashell as a standalone application, needs the shell-plugin "
-#~ "option to be specified"
-#~ msgstr ""
-#~ "Učitaj plasma-shell kao samostalni program (traži i opciju shell-plugin)"
-
-#~ msgid "Activities..."
-#~ msgstr "Aktivnosti..."
-
-#~ msgid "Unable to load script file: %1"
-#~ msgstr "Ne mogu da učitam skriptni fajl: %1"
+msgstr "Broji panele"

@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010, 2012, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2017-12-17 18:00+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -24,115 +25,115 @@ msgstr ""
 #: gtkpage.cpp:57
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 nije ispravna arhiva GTK teme."
 
 #: kcmstyle.cpp:117
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr ""
+msgstr "Instaliranje propalo: ne mogu da instaliram stil sa udaljene lokacije."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "Instaliranje propalo: ne mogu da pročitam fajl stila."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "Instaliranje propalo: fajl stila ne sadrži nikakve podatke."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "Instaliranje propalo: ne mogu da raspakujem fajl stila."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "Instaliranje propalo: ne mogu da nađem stil."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "Instaliranje propalo: izabrani fajl nije ispravan stil Union."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "Instaliranje propalo: izabrani stil nije podržan."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "Instaliranje „%1“ propalo: stil je već instaliran."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Instaliranje „%1“ propalo: dozvola odbijena."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "Instaliranje „%1“ propalo: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "Uspešno instaliran „%1“."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "Deinstaliranje propalo: ne mogu da nađem stil sa ID‑om „%1“."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Deinstaliranje „%1“ propalo: dozvola odbijena."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "Deinstaliranje „%1“ propalo: stil nije instaliran."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "Deinstaliranje „%1“ propalo: stil je u upotrebi."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "Deinstaliranje „%1“ propalo: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "Ne mogu da deinstaliram stilove:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr ""
+msgstr "Uspešno deinstaliran „%1“, ali ne mogu da deinstaliram ostale:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -140,26 +141,29 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
+msgstr[0] "Uspešno deinstaliran %1 stil, ali ne mogu da deinstaliram ostale:\n"
 msgstr[1] ""
+"Uspešno deinstalirana %1 stila, ali ne mogu da deinstaliram ostale:\n"
 msgstr[2] ""
+"Uspešno deinstalirano %1 stilova, ali ne mogu da deinstaliram ostale:\n"
 msgstr[3] ""
+"Uspešno deinstaliran jedan stil, ali ne mogu da deinstaliram ostale:\n"
 
 #: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr ""
+msgstr "Uspešno deinstaliran „%1“."
 
 #: kcmstyle.cpp:242
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Uspešno deinstaliran %1 stil."
+msgstr[1] "Uspešno deinstalirana %1 stila."
+msgstr[2] "Uspešno deinstalirano %1 stilova."
+msgstr[3] "Uspešno deinstaliran jedan stil"
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
@@ -169,7 +173,7 @@ msgstr "Greška pri učitavanju dijaloga za podešavanje ovog stila."
 #: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr ""
+msgstr "Ne mogu da primenim izabrani stil „%1“."
 
 # >> @title:window %1 style name
 #: styleconfdialog.cpp:21
@@ -187,21 +191,19 @@ msgstr "Jezičak 1"
 #: stylepreview.ui:65
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "Button"
 msgstr "Dugme"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:99
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgid "Combo box"
-msgstr "Spisak"
+msgstr "spisak"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
 #: stylepreview.ui:109
@@ -219,10 +221,9 @@ msgstr "Radio dugme"
 # @item:inlistbox Text position
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text Field"
-msgstr "samo tekst"
+msgstr "Tekstualno polje"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -232,164 +233,146 @@ msgstr "Jezičak 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Application style"
-msgstr "&Programi"
+msgstr "Stil programa"
 
 #. i18n: ectx: label, entry (unionStyle), group (KDE)
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "ID stila Union"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons in menus:"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "&Ikonice u menijima:"
+msgstr "Prikaži ikonice na dugmadima"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Show icons in menus:"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "&Ikonice u menijima:"
+msgstr "Prikaži ikonice u menijima"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Main &toolbar text location:"
+#, kde-format
 msgid "Main toolbar label"
-msgstr "&Lokacija teksta glavne trake:"
+msgstr "Etiketa glavne trake"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:31
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text &location:"
+#, kde-format
 msgid "Secondary toolbar label"
-msgstr "Lokacija &teksta drugih traka:"
+msgstr "Etiketa drugih traka"
 
 #: ui/EffectSettingsPopup.qml:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr ""
+msgstr "Podešavanje ikonica i traka alatki"
 
 #: ui/EffectSettingsPopup.qml:36
-#, fuzzy, kde-format
-#| msgid "Show icons in menus:"
+#, kde-format
 msgid "Show icons:"
-msgstr "&Ikonice u menijima:"
+msgstr "Prikaži ikonice:"
 
 #: ui/EffectSettingsPopup.qml:37
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgid "On buttons"
-msgstr "Radio dugme"
+msgstr "Na dugmadima"
 
 #: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
-msgstr ""
+msgstr "U menijima"
 
 #: ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Main &toolbar text location:"
+#, kde-format
 msgid "Main toolbar label:"
-msgstr "&Lokacija teksta glavne trake:"
+msgstr "Etiketa glavne trake:"
 
 #: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "nikakva"
 
 # @item:inlistbox Text position
 #: ui/EffectSettingsPopup.qml:63
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text only"
 msgstr "samo tekst"
 
 # @item:inlistbox Text position
 #: ui/EffectSettingsPopup.qml:64
-#, fuzzy, kde-format
-#| msgid "Text Beside Icons"
+#, kde-format
 msgid "Beside icons"
-msgstr "tekst pored ikonica"
+msgstr "pored ikonica"
 
 # @item:inlistbox Text position
 #: ui/EffectSettingsPopup.qml:65
-#, fuzzy, kde-format
-#| msgid "Text Below Icons"
+#, kde-format
 msgid "Below icon"
-msgstr "tekst ispod ikonica"
+msgstr "ispod ikonice"
 
 #: ui/EffectSettingsPopup.qml:80
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text &location:"
+#, kde-format
 msgid "Secondary toolbar label:"
-msgstr "Lokacija &teksta drugih traka:"
+msgstr "Etiketa drugih traka:"
 
 #: ui/GtkStylePage.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "&Programi"
+msgstr "Stil programa za Gnome/GTK"
 
 #: ui/GtkStylePage.qml:38
 #, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
-msgstr ""
+msgstr "Instaliraj iz fajla…"
 
 #: ui/GtkStylePage.qml:43
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr ""
+msgstr "Dobavi nove…"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format
 msgid "GTK theme:"
-msgstr ""
+msgstr "GTK tema:"
 
 #: ui/GtkStylePage.qml:85
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "Pregled"
+msgstr "Pregled…"
 
 #: ui/GtkStylePage.qml:104
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr ""
+msgstr "Izbor arhive GTK teme"
 
 #: ui/GtkStylePage.qml:106
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "arhiva GTK teme (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
 #, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
-msgstr ""
+msgstr "Instaliraj iz fajla…"
 
 #: ui/main.qml:90
 #, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr ""
+msgstr "Podesi ikonice i trake alatki…"
 
 #: ui/main.qml:108
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "&Programi"
+msgstr "Podesi stil programa za Gnome/GTK…"
 
 #: ui/main.qml:170
 #, kde-format
@@ -398,150 +381,100 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Ovaj stil koristi motor stilova Union, koji je još u razvoju. Neke stvari "
+"mogu izgledati ili se ponašati pogrešno sa ovim stilom."
 
-# >> @title:window %1 style name
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Configure %1"
+#, kde-format
 msgid "Configure Style…"
-msgstr "Podesi %1|/|Podesi $[aku %1]"
+msgstr "Podesi stil…"
 
 #: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "Deinstaliraj…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "Ne mogu da deinstaliram sistemski instalirane stilove."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Mogu da deinstaliram samo stilove Union."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "Ne deinstaliraj ovaj stil."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "Izbor stila Union za instaliranje"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "Instaliraj"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "Jezičak 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "Jezičak 2"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "Kućica"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "Radio dugme"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
-msgstr "Spisak"
+msgstr "spisak"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "Spisak"
+msgstr "stavka spiska"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
 msgstr "Dugme"
 
 # @item:inlistbox Text position
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "samo tekst"
+msgstr "Tekstualno polje"
 
 #: ui/UnionThumbnailItem.qml:122
 #, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr ""
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "Get New GNOME/GTK Application Styles…"
-#~ msgstr "&Programi"
-
-#, fuzzy
-#~| msgid ""
-#~| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#~| "user interface elements, such as the widget style and effects."
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "<h1>Stil</h1><p>U ovom modulu možete menjati vizuelni izgled elemenata "
-#~ "korisničkog sučelja, kao što su stil vidžeta i efekti.</p>"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Časlav Ilić"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#, fuzzy
-#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
-#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
-#~ msgstr "© 2002, Karol Sved, Danijel Molkentin"
-
-#~ msgid "Karol Szwed"
-#~ msgstr "Karol Sved"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Danijel Molkentin"
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "GNOME/GTK3 Application Styles"
-#~ msgstr "&Programi"
+msgstr "%1%"

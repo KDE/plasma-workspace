@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"POT-Creation-Date: 2026-10-03 00:47+0000\n"
 "PO-Revision-Date: 2026-09-25 19:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -584,35 +584,35 @@ msgstr "Komutun simgesini öntanımlıya sıfırla"
 msgid "Icon:"
 msgstr "Simge:"
 
-#: historymodel.cpp:318
+#: historymodel.cpp:325
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Tüm pano geçmişini temizleyip silmeyi gerçekten istiyor musunuz?"
 
-#: historymodel.cpp:320
+#: historymodel.cpp:327
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Pano Geçmişini Temizle"
 
-#: historymodel.cpp:322 historymodel.cpp:597
+#: historymodel.cpp:329 historymodel.cpp:604
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Bir daha sorma"
 
-#: historymodel.cpp:404
+#: historymodel.cpp:411
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 × %2"
 
-#: historymodel.cpp:593
+#: historymodel.cpp:600
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Bu ögeye yıldız konulmuş. Geçmişten kaldırmayı gerçekten istiyor musunuz?"
 
-#: historymodel.cpp:595
+#: historymodel.cpp:602
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Yıldızlı Ögeyi Kaldır"

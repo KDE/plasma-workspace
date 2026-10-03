@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"POT-Creation-Date: 2026-10-03 00:47+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -586,36 +586,36 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:318
+#: historymodel.cpp:325
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ಸಂಪೂರ್ಣ ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ಖಚಿತವಾಗಿಯೂ ಅಳಿಸಿಹಾಕಲು ಬಯಸುತ್ತೀರಾ?"
 
-#: historymodel.cpp:320
+#: historymodel.cpp:327
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ತೆರ(&ವ)ವುಮಾಡು"
 
-#: historymodel.cpp:322 historymodel.cpp:597
+#: historymodel.cpp:329 historymodel.cpp:604
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:404
+#: historymodel.cpp:411
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:593
+#: historymodel.cpp:600
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:595
+#: historymodel.cpp:602
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

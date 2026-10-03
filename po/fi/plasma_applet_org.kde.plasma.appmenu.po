@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2017.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-14 00:46+0000\n"
-"PO-Revision-Date: 2022-08-08 12:25+0300\n"
+"PO-Revision-Date: 2026-08-24 19:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: appmenumodel.cpp:85
 #, kde-format
@@ -45,7 +46,7 @@ msgstr "Näytä koko sovellusvalikko"
 #: qml/configGeneral.qml:32
 #, kde-format
 msgid "Show menus for apps on different screens"
-msgstr ""
+msgstr "Näytä sovellusten valikot eri näytöillä"
 
 #: qml/MenuDelegate.qml:62
 #, kde-format

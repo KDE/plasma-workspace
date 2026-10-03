@@ -1,12 +1,13 @@
 # Translation of plasma_runner_baloosearchrunner.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_baloosearchrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2016-03-05 21:49+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -21,17 +22,17 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Časlav Ilić,Nemanja Hiršl"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: baloosearchrunner.cpp:42
 #, kde-format
 msgid "File Search"
-msgstr ""
+msgstr "Pretraga fajlova"
 
 #: baloosearchrunner.cpp:69
 #, kde-format
@@ -40,63 +41,58 @@ msgstr "Otvori obuhvatajuću fasciklu"
 
 # >> @item
 #: baloosearchrunner.cpp:93
-#, fuzzy, kde-format
-#| msgid "Audio"
+#, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
 "of the word"
 msgid "Audio"
-msgstr "audio"
+msgstr "Audio"
 
 # >> @item
 #: baloosearchrunner.cpp:95
-#, fuzzy, kde-format
-#| msgid "Image"
+#, kde-format
 msgid "Images"
-msgstr "slika"
+msgstr "Slike"
 
 # >> @item
 #: baloosearchrunner.cpp:96
-#, fuzzy, kde-format
-#| msgid "Video"
+#, kde-format
 msgid "Videos"
-msgstr "video"
+msgstr "Video"
 
 #: baloosearchrunner.cpp:97
 #, kde-format
 msgid "Spreadsheets"
-msgstr ""
+msgstr "Tablice"
 
 #: baloosearchrunner.cpp:98
 #, kde-format
 msgid "Presentations"
-msgstr ""
+msgstr "Prezentacije"
 
 # >> @item
 #: baloosearchrunner.cpp:99
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "fascikla"
+msgstr "Fascikle"
 
 # >> @item
 #: baloosearchrunner.cpp:100
-#, fuzzy, kde-format
-#| msgid "Document"
+#, kde-format
 msgid "Documents"
-msgstr "dokument"
+msgstr "Dokumenti"
 
 #: baloosearchrunner.cpp:101
 #, kde-format
 msgid "Archives"
-msgstr ""
+msgstr "Arhive"
 
 #: baloosearchrunner.cpp:102
 #, kde-format
 msgid "Texts"
-msgstr ""
+msgstr "Tekstovi"
 
 #: baloosearchrunner.cpp:103
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "Fajlovi"

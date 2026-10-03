@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2016, 2017.
-# SPDX-FileCopyrightText: 2016, 2017, 2019, 2020, 2021, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2019, 2020, 2021, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:47+0000\n"
-"PO-Revision-Date: 2025-01-12 17:10+0200\n"
+"PO-Revision-Date: 2026-08-24 19:29+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -124,8 +124,7 @@ msgid "Recently Used"
 msgstr "Viimeisimmät"
 
 #: recentusagemodel.cpp:160
-#, fuzzy, kde-format
-#| msgid "Places"
+#, kde-format
 msgid "Places"
 msgstr "Sijainnit"
 
@@ -150,10 +149,9 @@ msgid "Open Containing Folder"
 msgstr "Avaa yläkansio"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "Unohda tiedosto"
+msgstr "Unohda kansio"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -171,10 +169,9 @@ msgid "Forget All Applications"
 msgstr "Unohda kaikki sovellukset"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "Unohda kaikki tiedostot"
+msgstr "Unohda kaikki kansiot"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -197,16 +194,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Tämän ei tulisi näkyä! Käytä: KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:581
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "Viimeisimmät tiedostot"
+msgstr "Viimeisimmät sijainnit"
 
 #: rootmodel.cpp:581
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "Usein käytetyt tiedostot"
+msgstr "Usein käytetyt sijainnit"
 
 #: rootmodel.cpp:590
 #, kde-format

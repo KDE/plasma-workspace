@@ -1,12 +1,13 @@
 # Translation of plasma_applet_clock.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2009, 2013.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-03 00:49+0000\n"
-"PO-Revision-Date: 2013-10-05 17:02+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +33,7 @@ msgstr "Sekundara"
 #: qml/configGeneral.qml:20
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Opšte:"
 
 # >> @option:check
 #: qml/configGeneral.qml:24
@@ -44,4 +45,4 @@ msgstr "Vremenska zona"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"
-msgstr ""
+msgstr "Trenutno vrijeme je %1; trenutni datum je %2"

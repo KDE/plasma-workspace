@@ -1,0 +1,714 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"PO-Revision-Date: 2026-10-02 16:27+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "Није нађен уређај за отиске прстију."
+
+#: src/fingerprintmodel.cpp:301
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "Поново скенирајте прст."
+
+#: src/fingerprintmodel.cpp:303
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "Прекратко превлачење. Покушајте поново."
+
+#: src/fingerprintmodel.cpp:305
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "Прст није центриран на читачу. Покушајте поново."
+
+#: src/fingerprintmodel.cpp:307
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "Склоните прст са читача и покушајте поново."
+
+#: src/fingerprintmodel.cpp:315
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "Упис отиска прста није успео."
+
+#: src/fingerprintmodel.cpp:318
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr ""
+"На овом уређају више нема простора, обришите друге отиске прстију да бисте "
+"наставили."
+
+#: src/fingerprintmodel.cpp:321
+#, kde-format
+msgid "The device was disconnected."
+msgstr "Уређај је откачен."
+
+#: src/fingerprintmodel.cpp:326
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "Дошло је до непознате грешке."
+
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#, kde-format
+msgid "Change Password"
+msgstr "Промени лозинку"
+
+#: src/ui/ChangePassword.qml:35
+#, kde-format
+msgid "Set Password"
+msgstr "Постави лозинку"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Лозинка"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Потврдите лозинку"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:114
+#, kde-format
+msgid "Passwords must match"
+msgstr "Лозинке се морају поклапати"
+
+#: src/ui/ChangeWalletPassword.qml:18
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Променити лозинку новчаника?"
+
+#: src/ui/ChangeWalletPassword.qml:29
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, consider changing the "
+"password on your default KWallet to match it."
+msgstr ""
+"Пошто сте променили лозинку за пријављивање, размислите да на исту промените "
+"и лозинку свог подразумеваног К‑новчаника."
+
+#: src/ui/ChangeWalletPassword.qml:35
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Шта је К‑новчаник?"
+
+#: src/ui/ChangeWalletPassword.qml:45
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"К‑новчаник је менаџер лозинки који складишти ваше лозинке за бежичне мреже и "
+"друге шифроване ресурсе. Закључан је сопственом лозинком, која се разликује "
+"од лозинке за пријављивање. Ако се две лозинке поклапају, може се аутоматски "
+"откључати при пријављивању, тако да не морате сами да уносите лозинку "
+"К‑новчаника."
+
+#: src/ui/ChangeWalletPassword.qml:60
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Промени лозинку новчаника"
+
+#: src/ui/ChangeWalletPassword.qml:69
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Остави непромењено"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Стварање корисника"
+
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#, kde-format
+msgid "Name:"
+msgstr "Име:"
+
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#, kde-format
+msgid "Username:"
+msgstr "Корисничко име:"
+
+#: src/ui/CreateUser.qml:82
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
+"characters were removed."
+msgstr ""
+"Дозвољена су само мала слова, цифре, цртице и подвлаке. Лоши знакови су "
+"уклоњени."
+
+#: src/ui/CreateUser.qml:84
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"Usernames must be lowercase. Uppercase characters were converted to "
+"lowercase."
+msgstr ""
+"Корисничка имена морају бити малим словима. Велика слова су претворена у "
+"мала."
+
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#, kde-format
+msgid "Standard"
+msgstr "стандардни"
+
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#, kde-format
+msgid "Administrator"
+msgstr "администраторски"
+
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#, kde-format
+msgid "Account type:"
+msgstr "Тип налога:"
+
+#: src/ui/CreateUser.qml:102
+#, kde-format
+msgid "Password:"
+msgstr "Лозинка:"
+
+#: src/ui/CreateUser.qml:107
+#, kde-format
+msgid "Confirm password:"
+msgstr "Потврдите лозинку:"
+
+#: src/ui/CreateUser.qml:129
+#, kde-format
+msgctxt "@action:button Create a new user"
+msgid "Create"
+msgstr "Направи"
+
+#: src/ui/CreateUser.qml:152
+#, kde-format
+msgctxt "@action:button Cancel creating new user"
+msgid "Cancel"
+msgstr "Одустани"
+
+#: src/ui/CropSheet.qml:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Picture Area"
+msgstr "Избор области слике"
+
+#: src/ui/EnrolledConfirmation.qml:20
+#, kde-format
+msgctxt "@info:status"
+msgid "Finger enrolled"
+msgstr "Прст уписан"
+
+#: src/ui/EnrollFeedback.qml:28
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "Више пута прислоните десни кажипрст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:30
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "Више пута прислоните десни средњи прст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:32
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "Више пута прислоните десни домали прст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:34
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "Више пута прислоните десни мали прст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:36
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "Више пута прислоните десни палац на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:38
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "Више пута прислоните леви кажипрст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:40
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "Више пута прислоните леви средњи прст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:42
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "Више пута прислоните леви домали прст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:44
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "Више пута прислоните леви мали прст на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:46
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "Више пута прислоните леви палац на сензор отиска прста."
+
+#: src/ui/EnrollFeedback.qml:50
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "Више пута превуците десни кажипрст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:52
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "Више пута превуците десни средњи прст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:54
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "Више пута превуците десни домали прст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:56
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "Више пута превуците десни мали прст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:58
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "Више пута превуците десни палац преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:60
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "Више пута превуците леви кажипрст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:62
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "Више пута превуците леви средњи прст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:64
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "Више пута превуците леви домали прст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:66
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Више пута превуците леви мали прст преко сензора отиска прста."
+
+#: src/ui/EnrollFeedback.qml:68
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "Више пута превуците леви палац преко сензора отиска прста."
+
+#: src/ui/FingerprintDialog.qml:28
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Подешавање отисака прстију"
+
+#: src/ui/FingerprintDialog.qml:39
+#, kde-format
+msgid "Add"
+msgstr "Додај"
+
+#: src/ui/FingerprintDialog.qml:52
+#, kde-format
+msgid "Done"
+msgstr "Готово"
+
+#: src/ui/FingerprintList.qml:47
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Поново упиши прст"
+
+#: src/ui/FingerprintList.qml:59
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "Обриши отисак прста"
+
+#: src/ui/FingerprintList.qml:75
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Нема додатих отисака прстију"
+
+#: src/ui/main.qml:20
+#, kde-format
+msgid "Users"
+msgstr "Корисници"
+
+#: src/ui/main.qml:31
+#, kde-format
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New…"
+msgstr "Додај новог…"
+
+#: src/ui/main.qml:32
+#, kde-format
+msgctxt "@action:button"
+msgid "Add New User…"
+msgstr "Додај новог корисника…"
+
+#: src/ui/main.qml:137
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr "Притисните размак да бисте уредили кориснички профил"
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Изаберите прст за упис"
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Промена аватара"
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "ништа"
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "живахни фламинго"
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "змајев плод"
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "слатки кромпир"
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "благи ћилибар"
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "блистави сунчев зрак"
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "лимун-лимета"
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "зелена чаролија"
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "мирна ливада"
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "млака плавозелена"
+
+#: src/ui/PicturesSheet.qml:38
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "плава Плазме"
+
+#: src/ui/PicturesSheet.qml:39
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "пон љубичаста"
+
+#: src/ui/PicturesSheet.qml:40
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "бахо љубичаста"
+
+#: src/ui/PicturesSheet.qml:41
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "спаљени угаљ"
+
+#: src/ui/PicturesSheet.qml:42
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "савршени папир"
+
+#: src/ui/PicturesSheet.qml:43
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "кафена смеђа"
+
+#: src/ui/PicturesSheet.qml:44
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "богато тврдо дрво"
+
+#: src/ui/PicturesSheet.qml:63
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Иди назад"
+
+#: src/ui/PicturesSheet.qml:81
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr "Иницијали"
+
+#: src/ui/PicturesSheet.qml:135
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Изабери фајл…"
+
+#: src/ui/PicturesSheet.qml:140
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Избор слике"
+
+#: src/ui/PicturesSheet.qml:144
+#, kde-format
+msgctxt ""
+"@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
+"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *."
+"avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *."
+"tiff, *.wbmp, *.webp, *.xbm, *.xpm"
+msgid ""
+"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
+"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+msgstr ""
+"фајлови слика (сви главни типови) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
+"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+
+#: src/ui/PicturesSheet.qml:201
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr "Заменска иконица"
+
+#: src/ui/PicturesSheet.qml:290
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr "Заменска иконица аватара корисника"
+
+#: src/ui/UserDetailsPage.qml:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User Without Deleting Files?"
+msgstr "Обрисати пријављеног корисника без брисања фајлова?"
+
+#: src/ui/UserDetailsPage.qml:115
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User?"
+msgstr "Обрисати пријављеног корисника?"
+
+#: src/ui/UserDetailsPage.qml:117
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in, so their files cannot be deleted. Delete just the "
+"account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
+"may experience strange behaviors until they log out."
+msgstr ""
+"Корисник %1 је тренутно пријављен, па његови фајлови не могу да се обришу. "
+"Обрисати само налог?<nl/><nl/>Тада се корисник %1 више неће моћи пријавити, "
+"а до одјављивања систем може чудно да се понаша."
+
+#: src/ui/UserDetailsPage.qml:118
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in. Deleting the account will make them unable to log "
+"in again, and they may experience strange behaviors until they log out."
+msgstr ""
+"Корисник %1 је тренутно пријављен. Брисањем налога више неће моћи да се "
+"пријави, а до одјављивања систем може чудно да се понаша."
+
+#: src/ui/UserDetailsPage.qml:125
+#, kde-format
+msgctxt "@action: button"
+msgid "Delete %1"
+msgstr "Обриши корисника %1"
+
+#: src/ui/UserDetailsPage.qml:144
+#, kde-format
+msgid "Change avatar"
+msgstr "Промени аватар"
+
+#: src/ui/UserDetailsPage.qml:185
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot change your own username while logged in; log out and then log in as "
+"another user to change this account’s username."
+msgstr ""
+"Не могу да променим ваше корисничко име док сте пријављени; одјавите се и "
+"пријавите као други корисник да бисте променили корисничко име овог налога."
+
+#: src/ui/UserDetailsPage.qml:186
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot change the username of a logged-in user; wait until this user logs "
+"out first."
+msgstr ""
+"Не могу да променим корисничко име пријављеног корисника; сачекајте да се "
+"тај корисник прво одјави."
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+"Не могу да променим тип налога у „стандардни“ ако на систему не постоји бар "
+"још један администраторски налог. Без њега би аутентификација постала "
+"немогућа или би захтевала небезбедну употребу корене лозинке."
+
+#: src/ui/UserDetailsPage.qml:222
+#, kde-format
+msgid "Email address:"
+msgstr "Адреса е‑поште:"
+
+#: src/ui/UserDetailsPage.qml:254
+#, kde-format
+msgid "Delete files"
+msgstr "Обриши фајлове"
+
+#: src/ui/UserDetailsPage.qml:261
+#, kde-format
+msgid "Keep files"
+msgstr "Задржи фајлове"
+
+#: src/ui/UserDetailsPage.qml:268
+#, kde-format
+msgid "Delete User…"
+msgstr "Обриши корисника…"
+
+#: src/ui/UserDetailsPage.qml:274
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot delete yourself! Log out and then log in as another user to delete "
+"this user account."
+msgstr ""
+"Не могу да обришем налог са којим сте пријављени! Одјавите се и пријавите "
+"као други корисник да бисте обрисали овај кориснички налог."
+
+#: src/ui/UserDetailsPage.qml:286
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Подеси аутентификацију отиском прста…"
+
+#: src/ui/UserDetailsPage.qml:318
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Отисци прстију могу да се користе уместо лозинке при откључавању екрана и "
+"давању администраторских дозвола програмима, укључујући и оне из командне "
+"линије, који их траже.<nl/><nl/>Пријављивање на систем отиском прста још "
+"није подржано."
+
+#: src/user.cpp:141
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr "Не могу да опсечем слику: %1"
+
+#: src/user.cpp:337
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "Не могу да добијем дозволу да сачувам корисника %1"
+
+#: src/user.cpp:342
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "Дошло је до грешке при уписивању измена"
+
+#: src/user.cpp:474
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr "Не могу да променим величину слике: не могу да отворим привремени фајл"
+
+#: src/user.cpp:482
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr "Не могу да променим величину слике: не могу да пишем у привремени фајл"
+
+#: src/usermodel.cpp:170
+#, kde-format
+msgid "Your Account"
+msgstr "Ваш налог"
+
+#: src/usermodel.cpp:170
+#, kde-format
+msgid "Other Accounts"
+msgstr "Остали налози"

@@ -1,12 +1,13 @@
 # Translation of plasma_containmentactions_contextmenu.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2014.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2014-06-29 22:54+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -22,12 +23,12 @@ msgstr ""
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
-msgstr ""
+msgstr "Prikaži K‑izvođač"
 
 #: menu.cpp:112
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "Otvori terminal"
 
 #: menu.cpp:116
 #, kde-format
@@ -36,18 +37,16 @@ msgid "Lock Screen"
 msgstr "Zaključaj ekran"
 
 #: menu.cpp:125
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "Zaključaj ekran"
+msgstr "Prikaži odjavni ekran"
 
 #: menu.cpp:130
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
-msgstr ""
+msgstr "Podešavanje ekrana"
 
 # >> @title:window
 #: menu.cpp:278
@@ -73,10 +72,3 @@ msgstr "radnje s tapetom"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[razdvajač]"
-
-#, fuzzy
-#~| msgctxt "plasma_containmentactions_contextmenu"
-#~| msgid "Leave..."
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Leave…"
-#~ msgstr "Napusti..."

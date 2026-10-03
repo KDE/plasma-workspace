@@ -2,13 +2,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2015, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-20 00:46+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -23,12 +24,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Топлица Танасковић,Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: logout.cpp:260
 #, kde-format
@@ -39,7 +40,7 @@ msgstr "„%1“ прекину одјављивање"
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "Сесија се напушта"
 
 #: main.cpp:69 main.cpp:77
 #, kde-format
@@ -52,23 +53,16 @@ msgid "No read access to '%1'."
 msgstr "Нема приступа за читање над „%1“."
 
 #: main.cpp:84
-#, fuzzy, kde-format
-#| msgid ""
-#| "The following installation problem was detected\n"
-#| "while trying to start KDE:"
+#, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
-"Откривени су наредни проблеми са инсталацијом\n"
-"при покретању КДЕ‑а:"
+"Откривен је следећи проблем са инсталацијом\n"
+"при покретању Плазме:"
 
 #: main.cpp:87
-#, fuzzy, kde-format
-#| msgid ""
-#| "\n"
-#| "\n"
-#| "KDE is unable to start.\n"
+#, kde-format
 msgid ""
 "\n"
 "\n"
@@ -76,18 +70,15 @@ msgid ""
 msgstr ""
 "\n"
 "\n"
-"КДЕ не може да се покрене.\n"
+"Плазма не може да се покрене.\n"
 
 #: main.cpp:111
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
+#, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"Поуздан КДЕ‑ов менаџер сесија који комуницира стандардним\n"
+"Поуздан менаџер сесија Плазме који комуницира стандардним\n"
 "Иксовим протоколом за управљање сесијама (ИксСМП)."
 
 #: main.cpp:115
@@ -104,7 +95,7 @@ msgstr "Такође дозволи удаљене везе"
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[непознато]"
 
 #: server.cpp:787
 #, kde-kuit-format
@@ -114,6 +105,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Не могу да управљам неким програмима јер су системски ресурси за управљање "
+"сесијама исцрпљени. Ево три највећа потрошача ресурса сесије:\n"
+"%1"
 
 #: server.cpp:1042
 #, kde-kuit-format
@@ -123,62 +117,6 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "Starts the session in locked mode"
-#~ msgstr "Покреће сесију у закључаном режиму"
-
-#~ msgid ""
-#~ "Starts without lock screen support. Only needed if other component "
-#~ "provides the lock screen."
-#~ msgstr ""
-#~ "Покреће се без подршке за закључавање екрана. Потребно само ако нека "
-#~ "друга компонента опслужује закључавање."
-
-# literal-segment: HOME
-#~ msgid "$HOME not set!"
-#~ msgstr "$HOME није постављена!"
-
-#~ msgid "$HOME directory (%1) does not exist."
-#~ msgstr "Фасцикла $HOME (%1) не постоји."
-
-# literal-segment: HOME
-#~ msgid "No read access to $HOME directory (%1)."
-#~ msgstr "Нема приступа за читање над фасциклом $HOME (%1)."
-
-# literal-segment: HOME
-#~ msgid "$HOME directory (%1) is out of disk space."
-#~ msgstr "Нема простора на диску под фасциклом $HOME (%1)."
-
-# literal-segment: HOME
-#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-#~ msgstr "Уписивање у фасциклу $HOME (%2) пропало уз грешку „%1“."
-
-#~ msgid "Temp directory (%1) is out of disk space."
-#~ msgstr "Нема простора на диску под привременом фасциклом (%1)."
-
-#~ msgid ""
-#~ "Writing to the temp directory (%2) failed with\n"
-#~ "    the error '%1'"
-#~ msgstr "Уписивање у привремену фасциклу (%2) пропало уз грешку „%1“."
-
-#~ msgid "Plasma Workspace installation problem!"
-#~ msgstr "Проблем са инсталацијом плазма радног простора"
-
-#~ msgid "Log Out"
-#~ msgstr "Одјави ме"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Одјави ме без потврде"
-
-#, fuzzy
-#~| msgid "Halt Without Confirmation"
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Угаси без потврде"
-
-# rewrite-msgid: /Reboot/Reset/
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Ресетуј без потврде"
-
-# literal-segment: HOME
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "Нема приступа за писање над фасциклом $HOME (%1)."
+"Не могу да обновим <application>%1</application> јер је програм покварен и "
+"исцрпео је системске ресурсе за обнављање сесије. Пријавите ово његовим "
+"програмерима."
