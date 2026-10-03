@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004, 2005.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2006, 2007, 2008, 2010, 2011, 2012, 2014, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-14 00:46+0000\n"
-"PO-Revision-Date: 2017-10-30 23:08+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -23,55 +24,45 @@ msgstr ""
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General font"
-msgstr "Opšti"
+msgstr "Opšti font"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:17
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width font"
-msgstr "Fiksne širine"
+msgstr "Font fiksne širine"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:25
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small font"
-msgstr "Mali"
+msgstr "Mali font"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Tool bar font"
-msgstr "Traka alatki"
+msgstr "Font trake alatki"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "Font menija"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:51
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title font"
-msgstr "Naslov prozora"
+msgstr "Font naslova prozora"
 
 #: kxftconfig.cpp:454
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr ""
+msgstr "podrazumevano po proizvođaču"
 
 #: kxftconfig.cpp:456
 #, kde-format
@@ -103,7 +94,7 @@ msgstr "uspravno BGR"
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr ""
+msgstr "podrazumevano po proizvođaču"
 
 #: kxftconfig.cpp:494
 #, kde-format
@@ -135,7 +126,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2 pt"
 
 #: ui/main.qml:39
 #, kde-format
@@ -143,12 +134,12 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "Display"
 
 #: ui/main.qml:44
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Podesi globalnu razmeru…"
 
 #: ui/main.qml:59
 #, kde-format
@@ -156,6 +147,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"Vrlo veliki fontovi mogu izgledati čudno. Umesto vrlo velike veličine fonta, "
+"razmislite o podešavanju globalne razmere ekrana."
 
 #: ui/main.qml:77
 #, kde-kuit-format
@@ -165,6 +158,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"Fontovi „Display“ <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>nisu namenjeni za upotrebu na ekranima računara</link> i "
+"mogu izgledati čudno. Razmislite o nekom drugom fontu."
 
 #: ui/main.qml:95
 #, kde-format
@@ -173,6 +169,8 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma nije pravljena za upotrebu sa fontovima manjim od 4 pt. Veličina je "
+"resetovana na 4 pt."
 
 #: ui/main.qml:111
 #, kde-format
@@ -181,97 +179,83 @@ msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
+"Vrlo mali fontovi mogu izgledati čudno. Umesto vrlo male veličine fonta, "
+"razmislite o podešavanju globalne razmere ekrana."
 
 #: ui/main.qml:137
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "Podesi &sve fontove..."
+msgstr "Podesi &sve fontove…"
 
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Opšti"
+msgstr "Opšti:"
 
 #: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
-msgstr ""
+msgstr "Izaberi opšti font"
 
 #: ui/main.qml:162
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width:"
-msgstr "Fiksne širine"
+msgstr "Fiksne širine:"
 
 #: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
-msgstr ""
+msgstr "Izaberi font fiksne širine"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small:"
-msgstr "Mali"
+msgstr "Mali:"
 
 #: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
-msgstr ""
+msgstr "Izaberi mali font"
 
 #: ui/main.qml:186
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Toolbar:"
-msgstr "Traka alatki"
+msgstr "Traka alatki:"
 
 #: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
-msgstr ""
+msgstr "Izaberi font trake alatki"
 
 #: ui/main.qml:198
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Menu"
+#, kde-format
 msgid "Menu:"
-msgstr "Meni"
+msgstr "Meni:"
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
-msgstr ""
+msgstr "Izaberi font menija"
 
 #: ui/main.qml:209
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title:"
-msgstr "Naslov prozora"
+msgstr "Naslov prozora:"
 
 #: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
-msgstr ""
+msgstr "Izaberi font naslova prozora"
 
 #: ui/main.qml:225
-#, fuzzy, kde-format
-#| msgid "Use a&nti-aliasing:"
+#, kde-format
 msgid "Anti-Aliasing:"
-msgstr "&Omekšavanje:"
+msgstr "Omekšavanje:"
 
 #: ui/main.qml:230
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "Enabled"
+#, kde-format
 msgid "Enable"
-msgstr "uključeno"
+msgstr "Uključi"
 
 #: ui/main.qml:234
 #, kde-kuit-format
@@ -283,29 +267,31 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Pikseli na ekranima obično su poravnati u mrežu. Zato će oblici fontova koji "
+"se ne poklapaju sa mrežom izgledati uglasto i nepravilno, osim ako se efekat "
+"ne ublaži tehnikama <emphasis>omekšavanja</emphasis>. Ovu opciju obično "
+"treba držati uključenom, osim ako ne stvara probleme."
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr ""
+msgstr "Izuzmi opseg od omekšavanja"
 
 #: ui/main.qml:267 ui/main.qml:291
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 pt"
 
 #: ui/main.qml:282
-#, fuzzy, kde-format
-#| msgid " to "
+#, kde-format
 msgid "to"
-msgstr " do "
+msgstr "do"
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgid "Sub-pixel rendering type:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "Tip potpikselskog renderovanja:"
+msgstr "Potpikselsko renderovanje:"
 
 #: ui/main.qml:352
 #, kde-kuit-format
@@ -320,13 +306,20 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>Na TFT i LCD ekranima svaki piksel se zapravo sastoji od tri ili "
+"četiri manja jednobojna svetla. Ovi <emphasis>potpikseli</emphasis> mogu se "
+"menjati nezavisno, radi još boljeg kvaliteta prikazanih fontova.</para> "
+"<para>Kvalitet renderovanja se poboljšava samo ako izbor odgovara načinu na "
+"koji su poravnati potpikseli vašeg ekrana. Većina ekrana ima linearni "
+"redosled potpiksela <emphasis>RGB</emphasis>, neki imaju <emphasis>BGR</"
+"emphasis>, a neki egzotični rasporedi nisu podržani ovom mogućnošću.</"
+"para>Ovo ne radi sa CRT monitorima."
 
 #: ui/main.qml:357
-#, fuzzy, kde-format
-#| msgid "Hinting style:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "Stil navođenja:"
+msgstr "Navođenje:"
 
 #: ui/main.qml:394
 #, kde-kuit-format
@@ -337,29 +330,7 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Nametni tpi fontova:"
-
-#, fuzzy
-#~| msgid ""
-#~| "<p>Some changes such as anti-aliasing or DPI will only affect newly "
-#~| "started applications.</p>"
-#~ msgid ""
-#~ "Some changes such as anti-aliasing or DPI will only affect newly started "
-#~ "applications."
-#~ msgstr ""
-#~ "<qt><p>Izmene nekih postavki, poput omekšavanja ili tpi, imaće uticaja "
-#~ "samo na novopokrenute programe.</p></qt>"
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI:"
-#~ msgstr "Nametni tpi fontova:"
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Nametni tpi fontova:"
+"Navođenje je tehnika u kojoj se nagoveštaji ugnežđeni u font koriste za "
+"poboljšanje kvaliteta renderovanja, naročito pri malim veličinama. Jače "
+"navođenje obično daje oštrije ivice, ali će mala slova manje ličiti na svoj "
+"oblik pri velikim veličinama."

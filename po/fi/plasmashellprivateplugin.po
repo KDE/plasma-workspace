@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015.
-# SPDX-FileCopyrightText: 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 # Larso, 2014.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 02:51+0000\n"
-"PO-Revision-Date: 2025-11-30 15:49+0200\n"
+"PO-Revision-Date: 2026-08-24 19:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -190,11 +190,7 @@ msgid "Filters"
 msgstr "Suodattimet"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for an unknown older version of Plasma and is not "
-#| "compatible with Plasma %1. Please contact the widget's author for an "
-#| "updated version."
+#, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
@@ -205,41 +201,33 @@ msgstr ""
 "pyydä päivitetty versio."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please contact the widget's author for an updated version."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
-"Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
+"Sovelma on kirjoitettu Plasma-versioon %1 eikä ole yhteensopiva Plasma-"
 "version %2 kanssa. Ota yhteyttä sovelman tekijään ja pyydä päivitetty versio."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
-#| "%2. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
-"Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
+"Sovelma on kirjoitettu Plasma-versioon %1 eikä ole yhteensopiva Plasma-"
 "version %2 kanssa. Päivitä Plasma, jotta sovelmaa voisi käyttää."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "This Widget was written for Plasma %1 and is not compatible with the "
-#| "latest version of Plasma. Please update Plasma in order to use the widget."
+#, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
-"version  kanssa. Päivitä Plasma, jotta sovelmaa voisi käyttää."
+"Tämä sovelma on kirjoitettu Plasma-versioon %1 eikä ole yhteensopiva "
+"järjestelmään asennetun vanhemman Plasman kanssa. Päivitä Plasma, jotta "
+"sovelmaa voisi käyttää."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"

@@ -1,13 +1,14 @@
 # Translation of plasma_applet_org.kde.image.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-21 00:46+0000\n"
-"PO-Revision-Date: 2017-12-15 12:38+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -22,104 +23,97 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Часлав Илић,Далибор Ђурић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "caslav.ilic@gmx.net,daliborddjuric@gmail.com,nemhirsl@gmail.com"
 
+# >> @title:window
 #: imagepackage/contents/ui/AddFileDialog.qml:56
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Отвори тапетну слику"
+msgstr "Отварање слике"
 
 # rewrite-msgid: /slides//
 #: imagepackage/contents/ui/AddFileDialog.qml:68
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Фасцикла из које се повлаче тапети."
 
 #: imagepackage/contents/ui/config.qml:156
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Постављање:"
 
 # >> @item:inlistbox Positioning
 #: imagepackage/contents/ui/config.qml:159
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "скалирано и опсјечено"
 
 # >> @item:inlistbox Positioning
 #: imagepackage/contents/ui/config.qml:163
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "скалирано"
 
 # >> @item:inlistbox Positioning
 #: imagepackage/contents/ui/config.qml:167
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "скалирано, очувана пропорција"
 
 # >> @item:inlistbox Positioning
 #: imagepackage/contents/ui/config.qml:171
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "центрирано"
 
 #: imagepackage/contents/ui/config.qml:199
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Добави нове тапете..."
+msgstr "Смјена динамичких тапета:"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgstr "према томе да ли је стил Плазме свијетао или таман "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "према смјени дана и ноћи"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "увијек свијетла варијанта"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "увијек тамна варијанта"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Подеси…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format
@@ -150,61 +144,57 @@ msgstr "Отвори тапетну слику"
 
 # >> @item:intext
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:88
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "фајлови слика"
+msgstr "Слике"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:92
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Додај…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:93
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Отвори тапетну слику"
+msgstr "Додај тапетну слику…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:99
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Добави нове тапете..."
+msgstr "Добави нове…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:100
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Сљедећа тапетна слика"
+msgstr "Добави нове тапетне слике…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Изабери све"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Изабери све слајдове"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "Поништи избор"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Поништи избор свих слајдова"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
@@ -217,8 +207,7 @@ msgid "Restore wallpaper"
 msgstr "Врати тапет"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:44
-#, fuzzy, kde-format
-#| msgid "Remove wallpaper"
+#, kde-format
 msgid "Remove Wallpaper"
 msgstr "Уклони тапет"
 
@@ -226,7 +215,7 @@ msgstr "Уклони тапет"
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
-msgstr ""
+msgstr "Овом алатком можете поставити слику као тапет за сесију Плазме."
 
 #: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
@@ -234,11 +223,13 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"Фајл слике или инсталирани KPackage пакет тапета који желите да поставите "
+"као тапет за своју сесију Плазме"
 
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
-msgstr ""
+msgstr "Задаје режим попуњавања (нпр. stretch, preserveAspectCrop итд.)"
 
 #: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
@@ -247,27 +238,29 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"У имену фајла овог тапета налази се залутали полунаводник (') — обратите се "
+"аутору тапета да то исправи или сами преименујте фајл: %1"
 
 #: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Задат је лош режим попуњавања: %1"
 
 #: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "Грешка при покушају постављања тапета Плазме:\n"
 
 #: plasma-apply-wallpaperimage.cpp:116
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
-msgstr ""
+msgstr "Тапет за све површи успјешно постављен на KPackage пакет %1"
 
 #: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr ""
+msgstr "Тапет за све површи успјешно постављен на слику %1"
 
 #: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
@@ -275,6 +268,7 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"Фајл задат за тапет не постоји или не може да се препозна као тапет: %1"
 
 #: plugin/imagebackend.cpp:42
 #, kde-format
@@ -284,45 +278,44 @@ msgstr "Сљедећа тапетна слика"
 # >> @item:intext
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:384
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "фајлови слика"
+msgstr "медијски фајлови"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Order:"
-msgstr ""
+msgstr "Редослијед:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Random"
-msgstr ""
+msgstr "насумично"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "A to Z"
-msgstr ""
+msgstr "од А до Ш"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Z to A"
-msgstr ""
+msgstr "од Ш до А"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:72
 #, kde-format
 msgid "Date modified (newest first)"
-msgstr ""
+msgstr "по датуму измјене (прво најновије)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:76
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr ""
+msgstr "по датуму измјене (прво најстарије)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:101
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "Групиши по фасциклама"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:113
 #, kde-format
@@ -333,30 +326,28 @@ msgstr "Мијењај сваких:"
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 сат"
+msgstr[1] "%1 сата"
+msgstr[2] "%1 сати"
+msgstr[3] "%1 сат"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:143
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "минута"
-msgstr[1] "минута"
-msgstr[2] "минута"
-msgstr[3] "минута"
+msgstr[0] "%1 минут"
+msgstr[1] "%1 минута"
+msgstr[2] "%1 минута"
+msgstr[3] "%1 минут"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:163
-#, fuzzy, kde-format
-#| msgid "Seconds"
+#, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] "секунди"
-msgstr[1] "секунди"
-msgstr[2] "секунди"
-msgstr[3] "секунди"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунде"
+msgstr[2] "%1 секунди"
+msgstr[3] "%1 секунда"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:175
 #, kde-kuit-format
@@ -366,106 +357,73 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"Ако сва времена поставите на 0, аутоматска смјена тапета се искључује. "
+"Тапете и даље можете мијењати ручно, преко ставке <interface>Сљедећа тапетна "
+"слика</interface> у контекстном менију површи."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgid "Folders"
-msgstr "Додај фасциклу..."
+msgstr "Фасцикле"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Додај…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:212
-#, fuzzy, kde-format
-#| msgid "Add Folder..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr "Додај фасциклу..."
+msgstr "Додај фасциклу…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
-#, fuzzy, kde-format
-#| msgid "Remove wallpaper"
+#, kde-format
 msgid "Remove Folder"
-msgstr "Уклони тапет"
+msgstr "Уклони фасциклу"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:261
-#, fuzzy, kde-format
-#| msgid "Open Containing Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Отвори обухватајућу фасциклу"
+msgstr "Отвори фасциклу…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:276
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr ""
+msgstr "Нема подешених локација тапета"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Добави нове тапете..."
+msgstr "Постави као тапет"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Површ"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Закључани екран"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Оба"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:95
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr ""
+msgstr "Грешка при покушају постављања тапета Плазме:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:108
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr ""
-
-# >> @item:inlistbox Positioning
-#, fuzzy
-#~| msgid "Tiled"
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Tiled"
-#~ msgstr "поплочано"
-
-# >> @title:window
-#, fuzzy
-#~| msgid "Open Image"
-#~ msgctxt "@title:window"
-#~ msgid "Open Media"
-#~ msgstr "Отварање слике"
-
-#, fuzzy
-#~| msgid "Add Image..."
-#~ msgid "Add Image…"
-#~ msgstr "Додај слику..."
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Препоручени фајл тапета"
-
-#~ msgid "Add Custom Wallpaper"
-#~ msgstr "Додај посебан тапет"
-
-#~ msgid "Remove wallpaper"
-#~ msgstr "Уклони тапет"
-
-#~ msgid "%1 by %2"
-#~ msgstr "%1 — %2|/|%1 — $[ном %2]"
+msgstr "Грешка при покушају отварања поставног фајла kscreenlockerrc."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 20:16+0000\n"
+"POT-Creation-Date: 2026-10-03 02:58+0000\n"
 "PO-Revision-Date: 2026-09-25 18:28+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -588,35 +588,35 @@ msgstr "Tilbakestill ikonet til til standard for kommandoen"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:310
+#: historymodel.cpp:317
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Er du sikker på at du vil tømma og sletta heile utklippshistorikken?"
 
-#: historymodel.cpp:312
+#: historymodel.cpp:319
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Tøm utklippshistorikken"
 
-#: historymodel.cpp:314 historymodel.cpp:581
+#: historymodel.cpp:321 historymodel.cpp:588
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:396
+#: historymodel.cpp:403
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 × %2"
 
-#: historymodel.cpp:577
+#: historymodel.cpp:584
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Elementet er stjernemerkt. Er du sikker på at du vil sletta det frå loggen?"
 
-#: historymodel.cpp:579
+#: historymodel.cpp:586
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Fjern stjernemerkt element"

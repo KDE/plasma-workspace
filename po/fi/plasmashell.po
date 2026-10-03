@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2022, 2024 Lasse Liehu <lasse.liehu@gmail.com>
-# SPDX-FileCopyrightText: 2018, 2020, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2018, 2020, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 # Larso, 2014.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 02:51+0000\n"
-"PO-Revision-Date: 2025-10-15 19:27+0300\n"
+"PO-Revision-Date: 2026-08-24 19:23+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -346,7 +346,7 @@ msgstr "%1 %"
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "Sisäänrakennettu näyttö"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format

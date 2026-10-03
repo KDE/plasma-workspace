@@ -1,12 +1,13 @@
 # Translation of plasmashellprivateplugin.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 02:51+0000\n"
-"PO-Revision-Date: 2016-11-23 19:27+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -21,152 +22,152 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Часлав Илић,Немања Хиршл"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:45
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Батерија %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:47
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Батерија"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "Празници"
 
 #: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
-msgstr ""
+msgstr "Догађаји"
 
 #: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr ""
+msgstr "Обавезе"
 
 #: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
-msgstr ""
+msgstr "Друго"
 
 #: calendar/qml/DayDelegate.qml:97
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 догађај"
+msgstr[1] "%1 догађаја"
+msgstr[2] "%1 догађаја"
+msgstr[3] "један догађај"
 
 #: calendar/qml/DayDelegate.qml:98
 #, kde-format
 msgid "No events"
-msgstr ""
+msgstr "Нема догађаја"
 
 #: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:145
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Дани"
 
 #: calendar/qml/MonthViewHeader.qml:153
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Мјесеци"
 
 #: calendar/qml/MonthViewHeader.qml:162
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Године"
 
 #: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Претходни мјесец"
 
 #: calendar/qml/MonthViewHeader.qml:208
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Претходна година"
 
 #: calendar/qml/MonthViewHeader.qml:210
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Претходна деценија"
 
 #: calendar/qml/MonthViewHeader.qml:229
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Данас"
 
 #: calendar/qml/MonthViewHeader.qml:230
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Ресетуј календар на данас"
 
 #: calendar/qml/MonthViewHeader.qml:243
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Наредни мјесец"
 
 #: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Наредна година"
 
 #: calendar/qml/MonthViewHeader.qml:247
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Наредна деценија"
 
 #: calendar/qml/MonthViewHeader.qml:306
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
-msgstr ""
+msgstr "Држи отворено"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:287
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Подеси…"
 
 #: loginlockscreen/Footer.qml:50
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Сакриј тастатуру на екрану"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Прикажи тастатуру на екрану"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Пребаци распоред"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -178,7 +179,7 @@ msgstr "Закључавање екрана активно"
 #: sessionsprivate/kscreenlockersettings.kcfg:11
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Поставља да ли ће се екран закључати после одређеног времена."
+msgstr "Поставља да ли ће се екран закључати послије одређеног времена."
 
 #: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
@@ -197,6 +198,8 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Овај виџет је написан за непознато старије издање Плазме и није сагласан са "
+"Плазмом %1. Затражите ажурирано издање од аутора виџета."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
@@ -204,6 +207,8 @@ msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Овај виџет је написан за Плазму %1 и није сагласан са Плазмом %2. Затражите "
+"ажурирано издање од аутора виџета."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
@@ -211,6 +216,8 @@ msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Овај виџет је написан за Плазму %1 и није сагласан са Плазмом %2. Ажурирајте "
+"Плазму да бисте користили виџет."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
@@ -219,121 +226,124 @@ msgid ""
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
+"Овај виџет је написан за Плазму %1 и није сагласан са старијим издањем "
+"Плазме инсталираним на овом систему. Ажурирајте Плазму да бисте користили "
+"виџет."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Приступачност"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Покретачи програма"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Астрономија"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Датум и вријеме"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Развојне алатке"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Образовање"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Природа и вријеме"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Примјери"
 
 #: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Фајл систем"
 
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr ""
+msgstr "Забава и игре"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Графика"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Језик"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Картографија"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Разно"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Мултимедија"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Сервиси на вези"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr ""
+msgstr "Лични подаци"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Продуктивност"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Подаци о систему"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Алатке"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Прозори и задаци"
 
 #: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Клипборд"
 
 #: shellprivate/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Задаци"
 
 #: shellprivate/widgetexplorer.cpp:148
 #, kde-format
@@ -346,14 +356,13 @@ msgid "Running"
 msgstr "У погону"
 
 #: shellprivate/widgetexplorer.cpp:158
-#, fuzzy, kde-format
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Могуће деинсталирати"
+msgstr "Кориснички инсталирани"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -361,7 +370,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Недавно инсталирани"
 
 #: shellprivate/widgetexplorer.cpp:166
 #, kde-format
@@ -375,17 +384,15 @@ msgid "Download New Plasma Widgets"
 msgstr "Преузимање нових плазма виџета"
 
 #: shellprivate/widgetexplorer.cpp:245
-#, fuzzy, kde-format
-#| msgid "Install Widget From Local File..."
+#, kde-format
 msgid "Install Widget From Local File…"
-msgstr "Инсталирај виџете из локалног фајла..."
+msgstr "Инсталирај виџет из локалног фајла…"
 
 #: shellprivate/widgetexplorer.cpp:484
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Сви виџети"
+msgstr "Добављање нових виџета"
 
 # >> @title:window
 #: shellprivate/widgetexplorer.cpp:503
@@ -394,16 +401,15 @@ msgid "Select Plasmoid File"
 msgstr "Избор фајла плазмоида"
 
 #: shellprivate/widgetexplorer.cpp:519
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Инсталирање пакета %1 није успело."
+msgstr "Не могу да инсталирам пакет %1: %2."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format
 msgid "Installation Failure"
-msgstr "Неуспех инсталирања"
+msgstr "Неуспјех инсталирања"
 
 #: timezoneselector/TimezoneSelector.qml:107
 #, kde-format
@@ -411,100 +417,47 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "Тренутно изабрана временска зона не може да се прикаже на овој мапи"
 
 #: timezoneselector/TimezoneSelector.qml:122
 #: timezoneselector/TimezoneSelector.qml:347
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Изабери…"
 
 #: timezoneselector/TimezoneSelector.qml:124
 #: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Регија:"
 
 #: timezoneselector/TimezoneSelector.qml:151
 #: timezoneselector/TimezoneSelector.qml:376
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Временска зона:"
 
 #: timezoneselector/TimezoneSelector.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Увеличај"
 
 #: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Умањи"
 
 #: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Бирач регије временске зоне"
 
 #: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Прековреме чувара екрана"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Поставља после колико минута се екран закључава."
-
-#~ msgid "&Execute"
-#~ msgstr "&Изврши"
-
-#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
-#~ msgid "Plasma"
-#~ msgstr "Плазма"
-
-#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
-#~ msgid "KWin"
-#~ msgstr "К‑вин"
-
-#~ msgid "Templates"
-#~ msgstr "Шаблони"
-
-#~ msgid "Desktop Shell Scripting Console"
-#~ msgstr "Конзола за скриптовање шкољке површи"
-
-#~ msgid "Editor"
-#~ msgstr "Уређивач"
-
-#~ msgid "Load"
-#~ msgstr "Учитај"
-
-#~ msgid "Use"
-#~ msgstr "Употреби"
-
-#~ msgid "Output"
-#~ msgstr "Излаз"
-
-#~ msgid "Unable to load script file <b>%1</b>"
-#~ msgstr "Не могу да учитам фајл скрипте <b>%1</b>."
-
-# >> @title:window
-#~ msgid "Open Script File"
-#~ msgstr "Отварање фајла скрипте"
-
-# >> @title:window
-#~ msgid "Save Script File"
-#~ msgstr "Уписивање фајла скрипте"
-
-# >> %1 is datetime.
-#~ msgid "Executing script at %1"
-#~ msgstr "Извршавам скрипту у %1"
-
-#~ msgid "Runtime: %1ms"
-#~ msgstr "Време извршавања: %1 ms"
+msgstr "Бирач локације временске зоне"

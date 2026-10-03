@@ -1,11 +1,12 @@
 # Translation of plasma_applet_org.kde.plasma.mediacontroller.po into Serbian.
-# Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2016, 2017.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2016, 2017, 2018.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-20 00:44+0000\n"
-"PO-Revision-Date: 2017-05-07 21:01+0200\n"
+"PO-Revision-Date: 2018-05-22 01:12+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -21,7 +22,7 @@ msgstr ""
 #: AlbumArtStackView.qml:211
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Bez naslova"
 
 #: AlbumArtStackView.qml:211 main.qml:57
 #, kde-format
@@ -37,33 +38,31 @@ msgstr "-%1"
 #: ExpandedRepresentation.qml:591
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Brzina puštanja %1"
 
 #: ExpandedRepresentation.qml:594
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1×"
 
 #: ExpandedRepresentation.qml:598
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Brzina puštanja"
 
 #: ExpandedRepresentation.qml:644
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (normalna)"
 
 #: ExpandedRepresentation.qml:683
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
-msgstr ""
+msgstr "Promiješaj"
 
 #: ExpandedRepresentation.qml:707 main.qml:114
 #, kde-format
@@ -87,23 +86,20 @@ msgstr "Pusti"
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr "Sledeća numera"
+msgstr "Sljedeća numera"
 
 #: ExpandedRepresentation.qml:770
-#, fuzzy, kde-format
-#| msgctxt "Play next track"
-#| msgid "Next Track"
+#, kde-format
 msgid "Repeat Track"
-msgstr "Sledeća numera"
+msgstr "Ponavljaj numeru"
 
 #: ExpandedRepresentation.qml:770
 #, kde-format
 msgid "Repeat"
-msgstr ""
+msgstr "Ponavljaj"
 
 #: ExpandedRepresentation.qml:841
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
 msgstr "Automatski izaberi plejer"
@@ -116,6 +112,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"— %1 (%2)\n"
+"Srednji klik pauzira\n"
+"Klizanje podešava jačinu"
 
 #: main.qml:61
 #, kde-format
@@ -125,6 +124,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Srednji klik pauzira\n"
+"Klizanje podešava jačinu"
 
 #: main.qml:63
 #, kde-format
@@ -134,6 +136,9 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"— %1 (pauzirano, %2)\n"
+"Srednji klik nastavlja puštanje\n"
+"Klizanje podešava jačinu"
 
 #: main.qml:64
 #, kde-format
@@ -143,6 +148,9 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"Pauzirano (%1)\n"
+"Srednji klik nastavlja puštanje\n"
+"Klizanje podešava jačinu"
 
 #: main.qml:107
 #, kde-format
@@ -161,23 +169,3 @@ msgstr "Zaustavi"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Napusti"
-
-#, fuzzy
-#~| msgctxt "Artist of the song"
-#~| msgid "by %1 (paused)"
-#~ msgctxt "by Artist (player name)"
-#~ msgid "by %1 (%2)"
-#~ msgstr "— %1 (pauzirano)"
-
-#, fuzzy
-#~| msgctxt "Artist of the song"
-#~| msgid "by %1 (paused)"
-#~ msgctxt "by Artist (paused, player name)"
-#~ msgid "by %1 (paused, %2)"
-#~ msgstr "— %1 (pauzirano)"
-
-#, fuzzy
-#~| msgid "Paused"
-#~ msgctxt "Paused (player name)"
-#~ msgid "Paused (%1)"
-#~ msgstr "Pauzirano"

@@ -4,10 +4,11 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# SPDX-FileCopyrightText: 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2009, 2012, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2010, 2011, 2024 Lasse Liehu <lliehu@kolumbus.fi>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2016.
 # SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
+# SPDX-FileCopyrightText: 2026 Lasse Liehu-Inui <lasse.liehu@iki.fi>
 #
 # KDE Finnish translation sprint participants:
 # Author: Lliehu
@@ -16,15 +17,15 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-24 00:46+0000\n"
-"PO-Revision-Date: 2025-08-14 18:37+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-02 23:02+0300\n"
+"Last-Translator: Lasse Liehu-Inui <lasse.liehu@iki.fi>\n"
+"Language-Team: Finnish <kde-l10n-fi@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: actions/checkaction.cpp:71
 #, kde-format
@@ -134,7 +135,7 @@ msgstr "Yksi tai useampia laitteen tiedostoista on auki jossain ohjelmassa."
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "Yksi tai useampia laitteen tiedostoista on auki sovelluksessa ”2%”."
+msgstr[0] "Yksi tai useampia laitteen tiedostoista on auki sovelluksessa ”%2”."
 msgstr[1] ""
 "Yksi tai useampia laitteen tiedostoista on auki seuraavissa sovelluksissa: "
 "%2."
@@ -167,11 +168,7 @@ msgid "Could not repair this device: %1"
 msgstr "Tätä laitetta ei voitu korjata: %1"
 
 #: qml/DeviceItem.qml:98
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Checking…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
 "filesystem errors'"
@@ -179,11 +176,7 @@ msgid "Checking…"
 msgstr "Tarkistetaan…"
 
 #: qml/DeviceItem.qml:100
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Repairing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
 "errors and is being repaired'"

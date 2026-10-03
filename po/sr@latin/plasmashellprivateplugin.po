@@ -1,12 +1,13 @@
 # Translation of plasmashellprivateplugin.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 02:51+0000\n"
-"PO-Revision-Date: 2016-11-23 19:27+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -21,152 +22,152 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Časlav Ilić,Nemanja Hiršl"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "caslav.ilic@gmx.net,nemhirsl@gmail.com"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:45
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Baterija %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:47
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Baterija"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "Praznici"
 
 #: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
-msgstr ""
+msgstr "Događaji"
 
 #: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr ""
+msgstr "Obaveze"
 
 #: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
-msgstr ""
+msgstr "Drugo"
 
 #: calendar/qml/DayDelegate.qml:97
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 događaj"
+msgstr[1] "%1 događaja"
+msgstr[2] "%1 događaja"
+msgstr[3] "jedan događaj"
 
 #: calendar/qml/DayDelegate.qml:98
 #, kde-format
 msgid "No events"
-msgstr ""
+msgstr "Nema događaja"
 
 #: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:145
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Dani"
 
 #: calendar/qml/MonthViewHeader.qml:153
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Meseci"
 
 #: calendar/qml/MonthViewHeader.qml:162
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Godine"
 
 #: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Prethodni mesec"
 
 #: calendar/qml/MonthViewHeader.qml:208
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Prethodna godina"
 
 #: calendar/qml/MonthViewHeader.qml:210
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Prethodna decenija"
 
 #: calendar/qml/MonthViewHeader.qml:229
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Danas"
 
 #: calendar/qml/MonthViewHeader.qml:230
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Resetuj kalendar na danas"
 
 #: calendar/qml/MonthViewHeader.qml:243
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Naredni mesec"
 
 #: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Naredna godina"
 
 #: calendar/qml/MonthViewHeader.qml:247
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Naredna decenija"
 
 #: calendar/qml/MonthViewHeader.qml:306
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
-msgstr ""
+msgstr "Drži otvoreno"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:287
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Podesi…"
 
 #: loginlockscreen/Footer.qml:50
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "Sakrij tastaturu na ekranu"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "Prikaži tastaturu na ekranu"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Prebaci raspored"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -197,6 +198,8 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Ovaj vidžet je napisan za nepoznato starije izdanje Plasme i nije saglasan "
+"sa Plasmom %1. Zatražite ažurirano izdanje od autora vidžeta."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
@@ -204,6 +207,8 @@ msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Ovaj vidžet je napisan za Plasmu %1 i nije saglasan sa Plasmom %2. Zatražite "
+"ažurirano izdanje od autora vidžeta."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
@@ -211,6 +216,8 @@ msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Ovaj vidžet je napisan za Plasmu %1 i nije saglasan sa Plasmom %2. "
+"Ažurirajte Plasmu da biste koristili vidžet."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
@@ -219,121 +226,124 @@ msgid ""
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
+"Ovaj vidžet je napisan za Plasmu %1 i nije saglasan sa starijim izdanjem "
+"Plasme instaliranim na ovom sistemu. Ažurirajte Plasmu da biste koristili "
+"vidžet."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Pristupačnost"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Pokretači programa"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomija"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Datum i vreme"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Razvojne alatke"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Obrazovanje"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Priroda i vreme"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Primeri"
 
 #: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Fajl sistem"
 
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr ""
+msgstr "Zabava i igre"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafika"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Jezik"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Kartografija"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Razno"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedija"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Servisi na vezi"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr ""
+msgstr "Lični podaci"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produktivnost"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Podaci o sistemu"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Alatke"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Prozori i zadaci"
 
 #: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Klipbord"
 
 #: shellprivate/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Zadaci"
 
 #: shellprivate/widgetexplorer.cpp:148
 #, kde-format
@@ -346,14 +356,13 @@ msgid "Running"
 msgstr "U pogonu"
 
 #: shellprivate/widgetexplorer.cpp:158
-#, fuzzy, kde-format
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Moguće deinstalirati"
+msgstr "Korisnički instalirani"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -361,7 +370,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Nedavno instalirani"
 
 #: shellprivate/widgetexplorer.cpp:166
 #, kde-format
@@ -375,17 +384,15 @@ msgid "Download New Plasma Widgets"
 msgstr "Preuzimanje novih plasma vidžeta"
 
 #: shellprivate/widgetexplorer.cpp:245
-#, fuzzy, kde-format
-#| msgid "Install Widget From Local File..."
+#, kde-format
 msgid "Install Widget From Local File…"
-msgstr "Instaliraj vidžete iz lokalnog fajla..."
+msgstr "Instaliraj vidžet iz lokalnog fajla…"
 
 #: shellprivate/widgetexplorer.cpp:484
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Svi vidžeti"
+msgstr "Dobavljanje novih vidžeta"
 
 # >> @title:window
 #: shellprivate/widgetexplorer.cpp:503
@@ -394,11 +401,10 @@ msgid "Select Plasmoid File"
 msgstr "Izbor fajla plazmoida"
 
 #: shellprivate/widgetexplorer.cpp:519
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Instaliranje paketa %1 nije uspelo."
+msgstr "Ne mogu da instaliram paket %1: %2."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format
@@ -411,100 +417,47 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "Trenutno izabrana vremenska zona ne može da se prikaže na ovoj mapi"
 
 #: timezoneselector/TimezoneSelector.qml:122
 #: timezoneselector/TimezoneSelector.qml:347
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Izaberi…"
 
 #: timezoneselector/TimezoneSelector.qml:124
 #: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Regija:"
 
 #: timezoneselector/TimezoneSelector.qml:151
 #: timezoneselector/TimezoneSelector.qml:376
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Vremenska zona:"
 
 #: timezoneselector/TimezoneSelector.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Uveličaj"
 
 #: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Umanji"
 
 #: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Birač regije vremenske zone"
 
 #: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Prekovreme čuvara ekrana"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Postavlja posle koliko minuta se ekran zaključava."
-
-#~ msgid "&Execute"
-#~ msgstr "&Izvrši"
-
-#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
-
-#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
-#~ msgid "KWin"
-#~ msgstr "KWin"
-
-#~ msgid "Templates"
-#~ msgstr "Šabloni"
-
-#~ msgid "Desktop Shell Scripting Console"
-#~ msgstr "Konzola za skriptovanje školjke površi"
-
-#~ msgid "Editor"
-#~ msgstr "Uređivač"
-
-#~ msgid "Load"
-#~ msgstr "Učitaj"
-
-#~ msgid "Use"
-#~ msgstr "Upotrebi"
-
-#~ msgid "Output"
-#~ msgstr "Izlaz"
-
-#~ msgid "Unable to load script file <b>%1</b>"
-#~ msgstr "Ne mogu da učitam fajl skripte <b>%1</b>."
-
-# >> @title:window
-#~ msgid "Open Script File"
-#~ msgstr "Otvaranje fajla skripte"
-
-# >> @title:window
-#~ msgid "Save Script File"
-#~ msgstr "Upisivanje fajla skripte"
-
-# >> %1 is datetime.
-#~ msgid "Executing script at %1"
-#~ msgstr "Izvršavam skriptu u %1"
-
-#~ msgid "Runtime: %1ms"
-#~ msgstr "Vreme izvršavanja: %1 ms"
+msgstr "Birač lokacije vremenske zone"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 20:16+0000\n"
+"POT-Creation-Date: 2026-10-03 02:58+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -612,35 +612,35 @@ msgstr "Скінуць значок каманды да прадвызначан
 msgid "Icon:"
 msgstr "Значок:"
 
-#: historymodel.cpp:310
+#: historymodel.cpp:317
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Сапраўды хочаце ачысціць усю гісторыю буфера абмену?"
 
-#: historymodel.cpp:312
+#: historymodel.cpp:319
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Ачысціць гісторыю буфера абмену"
 
-#: historymodel.cpp:314 historymodel.cpp:581
+#: historymodel.cpp:321 historymodel.cpp:588
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:396
+#: historymodel.cpp:403
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3 бітаў/піксель"
 
-#: historymodel.cpp:577
+#: historymodel.cpp:584
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:579
+#: historymodel.cpp:586
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

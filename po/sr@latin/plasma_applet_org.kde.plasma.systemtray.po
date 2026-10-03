@@ -1,5 +1,6 @@
 # Translation of plasma_applet_org.kde.plasma.private.systemtray.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2013, 2014, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
@@ -22,7 +23,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "Napusti %1"
 
 #: qml/config.qml:13
 #, kde-format
@@ -33,56 +34,55 @@ msgstr "Opšte"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr ""
+msgstr "prikaži po potrebi"
 
 #: qml/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Always show all entries"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Uvek prikaži sve stavke"
+msgstr "uvek prikaži"
 
 #: qml/ConfigGeneral.qml:53
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "prikaži samo u iskakaču"
 
 #: qml/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "nikad ne prikazuj (isključeno)"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:128
 #, kde-format
 msgid "Application Status"
-msgstr "stanje programa"
+msgstr "Stanje programa"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:130
 #, kde-format
 msgid "Communications"
-msgstr "komunikacija"
+msgstr "Komunikacija"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:132
 #, kde-format
 msgid "System Services"
-msgstr "sistemski servisi"
+msgstr "Sistemski servisi"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:134
 #, kde-format
 msgid "Hardware Control"
-msgstr "upravljanje hardverom"
+msgstr "Upravljanje hardverom"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:137
 #, kde-format
 msgid "Miscellaneous"
-msgstr "razno"
+msgstr "Razno"
 
 #: qml/ConfigGeneral.qml:174
 #, kde-kuit-format
@@ -94,12 +94,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Pre nego što to uradite ovde, potražite u programu <application>%1</"
+"application> postavku za isključivanje njegove kasetne ikonice. Kasetne "
+"ikonice nekih programa nisu predviđene za isključivanje, pa ova postavka "
+"može da izazove njihovo neočekivano ponašanje.<nl/><nl/>Ovu postavku "
+"koristite na sopstvenu odgovornost i ne prijavljujte probleme ni KDE‑u ni "
+"autoru programa."
 
 #: qml/ConfigGeneral.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Razumem rizike"
 
 #: qml/ConfigGeneral.qml:189
 #, kde-kuit-format
@@ -112,6 +118,11 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"Ne preporučuje se isključivanje klipborda, jer će se kopirani podaci "
+"izgubiti kada se zatvori program iz koga su kopirani.<nl/><nl/>Uradite ovo "
+"samo ako ste ručno dodali samostalan vidžet klipborda negde drugde ili ako "
+"koristite menadžer klipborda treće strane. Razmislite i da umesto toga "
+"podesite klipbord da ne čuva istorijat ili da pamti samo jednu stavku."
 
 #: qml/ConfigGeneral.qml:198
 #, kde-kuit-format
@@ -122,18 +133,22 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Ne preporučuje se isključivanje vidžeta obaveštenja, jer se obaveštenja koja "
+"šalju programi više neće prikazivati.<nl/><nl/>Uradite ovo samo ako ste "
+"ručno dodali samostalan vidžet obaveštenja negde drugde ili ako namerno "
+"koristite menadžer obaveštenja treće strane."
 
 #: qml/ConfigGeneral.qml:210
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "prema visini panela"
 
 #: qml/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "prema širini panela"
 
 #: qml/ConfigGeneral.qml:213
 #, kde-format
@@ -141,37 +156,37 @@ msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "Veličina ikonica na panelu:"
 
 #: qml/ConfigGeneral.qml:217
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
-msgstr ""
+msgstr "mala"
 
 #: qml/ConfigGeneral.qml:237
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Razmak:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "mali"
 
 #: qml/ConfigGeneral.qml:245
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "normalan"
 
 #: qml/ConfigGeneral.qml:249
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "veliki"
 
 #: qml/ConfigGeneral.qml:269
 #, kde-format
@@ -179,74 +194,71 @@ msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr ""
+msgstr "Smer:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "odozdo nagore"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "odozgo nadole"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "sleva udesno"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "zdesna ulevo"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Automatski se postavlja na „veliki“ u režimu na dodir"
 
 #: qml/ConfigGeneral.qml:332
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr "Stavke"
+msgstr "stavke"
 
 #: qml/ConfigGeneral.qml:336
-#, fuzzy, kde-format
-#| msgid "Always show all entries"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Uvek prikaži sve stavke"
+msgstr "Uvek prikaži sve"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Idi nazad"
 
 #: qml/ExpandedRepresentation.qml:76
-#, fuzzy, kde-format
-#| msgid "Status & Notifications"
+#, kde-format
 msgid "Status and Notifications"
 msgstr "Stanje i obaveštenja"
 
 #: qml/ExpandedRepresentation.qml:175
 #, kde-format
 msgid "More actions"
-msgstr ""
+msgstr "Više radnji"
 
 #: qml/ExpandedRepresentation.qml:260
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Drži otvoreno"
 
 #: qml/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
-msgstr ""
+msgstr "Prikaži sve stavke sistemske kasete u iskakaču"
 
 #: qml/ExpanderArrow.qml:39
 #, kde-format
@@ -262,26 +274,10 @@ msgstr "Prikaži skrivene ikonice"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Mreža, stavki: %1, kolona: %2"
 
 #: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Stavka"
-
-#~ msgid "Visibility"
-#~ msgstr "Vidljivost"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Prečica sa tastature"
-
-#~ msgid "Always show all entries"
-#~ msgstr "Uvek prikaži sve stavke"
-
-#~ msgid " (Automatic load)"
-#~ msgstr " (automatsko učitavanje)"
+msgstr "ĐĆŠbđfujrDCDŽ"

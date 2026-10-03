@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 20:16+0000\n"
+"POT-Creation-Date: 2026-10-03 02:58+0000\n"
 "PO-Revision-Date: 2026-09-27 20:36+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -604,36 +604,36 @@ msgstr "Atstatyti komandai skirtą piktogramą į numatytąją"
 msgid "Icon:"
 msgstr "Piktograma:"
 
-#: historymodel.cpp:310
+#: historymodel.cpp:317
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ar tikrai norite išvalyti ir ištrinti visą iškarpinės istoriją?"
 
-#: historymodel.cpp:312
+#: historymodel.cpp:319
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Išvalyti iškarpinės istoriją"
 
-#: historymodel.cpp:314 historymodel.cpp:581
+#: historymodel.cpp:321 historymodel.cpp:588
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Daugiau nebeklausti"
 
-#: historymodel.cpp:396
+#: historymodel.cpp:403
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:577
+#: historymodel.cpp:584
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Šis elementas pažymėtas žvaigždute. Ar tikrai norite pašalinti jį iš "
 "istorijos?"
 
-#: historymodel.cpp:579
+#: historymodel.cpp:586
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Šalinti žvaigždute pažymėtą elementą"

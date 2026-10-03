@@ -1,13 +1,14 @@
 # Translation of kcm_desktoptheme.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-27 00:47+0000\n"
-"PO-Revision-Date: 2017-10-30 23:08+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -22,20 +23,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "Добави нове теме..."
+msgstr "Име текућег стила Плазме"
 
 #: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Не могу да направим привремени фајл."
 
 #: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
-msgstr ""
+msgstr "Не могу да преузмем тему: %1"
 
 #: kcm.cpp:147
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "Инсталирање теме пропало."
 #: kcm.cpp:250
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
+msgstr "Уклањање теме пропало: %1"
 
 #: plasma-apply-desktoptheme.cpp:33
 #, kde-format
@@ -59,6 +59,8 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"Ова алатка вам омогућава да поставите тему текуће сесије Плазме, без "
+"случајног постављања теме која није доступна или која је већ постављена."
 
 #: plasma-apply-desktoptheme.cpp:37
 #, kde-format
@@ -66,113 +68,106 @@ msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Име теме коју желите да поставите за текућу сесију Плазме (ако задате пуну "
+"путању, биће употребљен само њен последњи део)"
 
 #: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "Прикажи све теме доступне на систему (и која је текућа тема)"
 
 #: plasma-apply-desktoptheme.cpp:55
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
-msgstr ""
+msgstr "Тражена тема „%1“ је већ постављена као тема текуће сесије Плазме."
 
 #: plasma-apply-desktoptheme.cpp:76
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "Тема текуће сесије Плазме постављена је на %1"
 
 #: plasma-apply-desktoptheme.cpp:78
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
-msgstr ""
+msgstr "Не могу да нађем тему „%1“. Тема треба да буде једна од следећих: %2"
 
 #: plasma-apply-desktoptheme.cpp:86
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
-msgstr ""
+msgstr "На систему имате следеће плазма теме:"
 
-# >> @title:window
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Open Theme"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
-msgstr "Отварање теме"
+msgstr "све теме"
 
-# >> @title:window
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Open Theme"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
-msgstr "Отварање теме"
+msgstr "светле теме"
 
 #: ui/main.qml:103
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
-msgstr ""
+msgstr "тамне теме"
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
-msgstr ""
+msgstr "сагласне са шемом боја"
 
 #: ui/main.qml:114
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Инсталирај из фајла..."
+msgstr "Инсталирај из фајла…"
 
 #: ui/main.qml:119
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Добави нове…"
 
 #: ui/main.qml:132
 #, kde-format
 msgid "Follows color scheme"
-msgstr ""
+msgstr "Прати шему боја"
 
-# >> @title:window
 #: ui/main.qml:150
-#, fuzzy, kde-format
-#| msgid "Open Theme"
+#, kde-format
 msgid "Edit Theme…"
-msgstr "Отварање теме"
+msgstr "Уреди тему…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "Добави нове теме..."
+msgstr "Уклони стил Плазме"
 
 #: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "This module lets you configure the desktop theme."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "У овом модулу можете да подесите тему површи."
+msgstr "Не могу да обришем активни стил Плазме"
 
 #: ui/main.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "Не могу да обришем системски инсталиране стилове Плазме"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Не бриши овај стил Плазме"
 
 # >> @title:window
 #: ui/main.qml:189
@@ -184,22 +179,3 @@ msgstr "Отварање теме"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "фајлови тема (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "Уклони тему"
-
-#, fuzzy
-#~| msgid "Remove Theme"
-#~ msgid "Restore Theme"
-#~ msgstr "Уклони тему"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Часлав Илић"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgid "David Rosca"
-#~ msgstr "Давид Росца"

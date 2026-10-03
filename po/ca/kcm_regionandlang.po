@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 20:16+0000\n"
-"PO-Revision-Date: 2026-04-07 08:36+0200\n"
+"PO-Revision-Date: 2026-10-02 07:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -353,7 +353,7 @@ msgstr "Predeterminat"
 #, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO C estàndard"
 
 #: localelistmodel.cpp:142
 #, kde-format

@@ -1,0 +1,147 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-03-26 00:47+0000\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: abstractnotificationsmodel.cpp:370
+#, kde-format
+msgctxt "@info %1 notification body %2 application name"
+msgid "%1 from %2"
+msgstr "%1, од програма %2"
+
+#: job_p.cpp:190
+#, kde-format
+msgctxt "Copying n of m files to locaton"
+msgid "%2 of %1 file to %3"
+msgid_plural "%2 of %1 files to %3"
+msgstr[0] "%2 од %1 фајла у %3"
+msgstr[1] "%2 од %1 фајла у %3"
+msgstr[2] "%2 од %1 фајлова у %3"
+msgstr[3] "%2 од %1 фајла у %3"
+
+#: job_p.cpp:193 job_p.cpp:223 job_p.cpp:239
+#, kde-format
+msgctxt "Copying n files to location"
+msgid "%1 file to %2"
+msgid_plural "%1 files to %2"
+msgstr[0] "%1 фајл у %2"
+msgstr[1] "%1 фајла у %2"
+msgstr[2] "%1 фајлова у %2"
+msgstr[3] "%1 фајл у %2"
+
+#: job_p.cpp:200
+#, kde-format
+msgctxt "Copying n of m files"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 од %1 фајла"
+msgstr[1] "%2 од %1 фајла"
+msgstr[2] "%2 од %1 фајлова"
+msgstr[3] "%2 од %1 фајла"
+
+#: job_p.cpp:203 job_p.cpp:233 job_p.cpp:243
+#, kde-format
+msgctxt "Copying n files"
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 фајл"
+msgstr[1] "%1 фајла"
+msgstr[2] "%1 фајлова"
+msgstr[3] "%1 фајл"
+
+#: job_p.cpp:208
+#, kde-format
+msgctxt "Copying n of m items"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 од %1 ставке"
+msgstr[1] "%2 од %1 ставке"
+msgstr[2] "%2 од %1 ставки"
+msgstr[3] "%2 од %1 ставке"
+
+#: job_p.cpp:211 job_p.cpp:231
+#, kde-format
+msgctxt "Copying n items"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 ставка"
+msgstr[1] "%1 ставке"
+msgstr[2] "%1 ставки"
+msgstr[3] "%1 ставка"
+
+#: job_p.cpp:218
+#, kde-format
+msgctxt "Copying file to location"
+msgid "%1 to %2"
+msgstr "%1 у %2"
+
+#: job_p.cpp:221
+#, kde-format
+msgctxt "Copying n items to location"
+msgid "%1 file to %2"
+msgid_plural "%1 items to %2"
+msgstr[0] "%1 ставка у %2"
+msgstr[1] "%1 ставке у %2"
+msgstr[2] "%1 ставки у %2"
+msgstr[3] "%1 ставка у %2"
+
+#: job_p.cpp:241
+#, kde-format
+msgctxt "Copying unknown amount of files to location"
+msgid "to %1"
+msgstr "у %1"
+
+#: jobsmodel.cpp:105
+#, kde-format
+msgctxt "@info %1 notification body %2 job name"
+msgid "%1 from %2"
+msgstr "%1, од програма %2"
+
+#: jobsmodel_p.cpp:487
+#, kde-format
+msgid "Application closed unexpectedly."
+msgstr "Програм се неочекивано затворио."
+
+#: notifications.cpp:985
+#, kde-format
+msgctxt "@title"
+msgid "Unread Notification"
+msgid_plural "Unread Notifications"
+msgstr[0] "Непрочитана обавештења"
+msgstr[1] "Непрочитана обавештења"
+msgstr[2] "Непрочитана обавештења"
+msgstr[3] "Непрочитано обавештење"
+
+#: notifications.cpp:987
+#, kde-format
+msgctxt "@info"
+msgid "%1 notification was received while Do Not Disturb was active."
+msgid_plural "%1 notifications were received while Do Not Disturb was active."
+msgstr[0] ""
+"%1 обавештење је примљено док је био укључен режим „Не узнемиравај“."
+msgstr[1] ""
+"%1 обавештења су примљена док је био укључен режим „Не узнемиравај“."
+msgstr[2] ""
+"%1 обавештења је примљено док је био укључен режим „Не узнемиравај“."
+msgstr[3] ""
+"Једно обавештење је примљено док је био укључен режим „Не узнемиравај“."
+
+#: notifications.cpp:995
+#, kde-format
+msgctxt "@action:button Show the notifications popup"
+msgid "Show Notifications"
+msgstr "Прикажи обавештења"

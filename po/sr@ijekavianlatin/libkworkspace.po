@@ -1,13 +1,14 @@
 # Translation of libkworkspace.po to Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2009.
 # Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2009-12-28 21:23+0100\n"
-"Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
 "MIME-Version: 1.0\n"
@@ -21,18 +22,14 @@ msgstr ""
 
 # >> @item:intext
 #: kdisplaymanager.cpp:767
-#, fuzzy, kde-format
-#| msgctxt "user: ..."
-#| msgid "%1: TTY login"
+#, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: TTY prijava"
 
 # >> @item:intext
 #: kdisplaymanager.cpp:772
-#, fuzzy, kde-format
-#| msgctxt "... location (TTY or X display)"
-#| msgid "Unused"
+#, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "neupotrijebljeno"
@@ -45,9 +42,7 @@ msgstr "X prijava na udaljeni domaćin"
 
 # >> @item:intext
 #: kdisplaymanager.cpp:773
-#, fuzzy, kde-format
-#| msgctxt "... host"
-#| msgid "X login on %1"
+#, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "X prijava na %1"
