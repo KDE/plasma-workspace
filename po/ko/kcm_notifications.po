@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-02 00:47+0000\n"
-"PO-Revision-Date: 2026-02-03 23:22+0100\n"
+"PO-Revision-Date: 2026-10-03 23:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -64,25 +64,25 @@ msgstr "이 앱은 이벤트별 알림 설정을 지원하지 않습니다"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "이 알림을 팝업으로 표시함"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "이 알림을 팝업으로 표시하지 않음"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "이 알림에서 소리를 재생함"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "이 알림에서 소리를 재생하지 않음"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format
