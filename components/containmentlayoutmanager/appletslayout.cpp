@@ -45,8 +45,9 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
         }
         // We can't save the layout during boot-up, for performance reasons and to avoid race conditions as much as possible, so if we
         // need to save and still starting up, don't actually save now, but we will when Corona::startupCompleted is emitted
+        // or if something explicitly saves and at least the affected containment is ready.
 
-        if (!m_configKey.isEmpty() && m_containment && m_containment->corona()->isStartupCompleted()) {
+        if (!m_configKey.isEmpty() && m_containment && m_containment->isUiReady()) {
             const QString serializedConfig = m_layoutManager->serializeLayout();
             m_containment->config().writeEntry(m_configKey, serializedConfig);
             m_containment->config().writeEntry(m_fallbackConfigKey, serializedConfig);
@@ -499,8 +500,8 @@ void AppletsLayout::geometryChange(const QRectF &newGeometry, const QRectF &oldG
         return;
     }
 
-    // Don't care for anything happening before startup completion
-    if (!m_containment || !m_containment->corona() || !m_containment->corona()->isStartupCompleted()) {
+    // Don't care for anything happening before the containment is ready
+    if (!m_containment || !m_containment->corona() || !m_containment->isUiReady()) {
         QQuickItem::geometryChange(newGeometry, oldGeometry);
         return;
     }
@@ -561,7 +562,7 @@ void AppletsLayout::componentComplete()
 
     if (m_containment && m_containment->corona()) {
         // We inhibit save during startup, so actually save now that startup is completed
-        connect(m_containment->corona(), &Plasma::Corona::startupCompleted, this, [this]() {
+        connect(m_containment, &Plasma::Containment::uiReadyChanged, this, [this]() {
             save();
         });
         // When the screen geometry changes, we need to know the geometry just before it did, so we can apply out heuristic of keeping the distance with borders
