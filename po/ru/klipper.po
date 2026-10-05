@@ -20,8 +20,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-03 02:58+0000\n"
-"PO-Revision-Date: 2026-09-26 09:30+0200\n"
+"POT-Creation-Date: 2026-10-05 03:16+0000\n"
+"PO-Revision-Date: 2026-10-04 08:54+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -579,9 +579,9 @@ msgid ""
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"<b>&#37;s</b> в команде заменяется всем содержимым  буфера обмена. "
-"<b>&#37;0</b> по <b>&#37;9</b> заменяется соответствующими захваченными "
-"фрагментами текста из  шаблона соответствия."
+"<b>&#37;s</b> в команде заменяется всем содержимым буфера обмена. Коды с "
+"<b>&#37;0</b> по <b>&#37;9</b> заменяются соответствующими захваченными "
+"фрагментами текста из шаблона соответствия."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -638,7 +638,7 @@ msgstr "Не задавать больше этот вопрос"
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2"
+msgstr "%1×%2"
 
 #: historymodel.cpp:584
 #, kde-format
@@ -651,69 +651,71 @@ msgid "Remove Starred Item"
 msgstr "Удалить запись"
 
 #: klipper.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Toggle automatic action"
+#| msgid "Automatic Action Popup Menu"
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
+msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Всплывающее меню автоматических действий"
 
-#: klipper.cpp:90
+#: klipper.cpp:92
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Очистить журнал буфера обмена"
 
-#: klipper.cpp:95
+#: klipper.cpp:97
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ручной выбор действия с буфером обмена"
 
-#: klipper.cpp:103
+#: klipper.cpp:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Редактирование буфера обмена…"
 
-#: klipper.cpp:111
+#: klipper.cpp:113
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Показать штрихкод…"
 
-#: klipper.cpp:120
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Следующая запись журнала"
 
-#: klipper.cpp:125
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Предыдущая запись журнала"
 
-#: klipper.cpp:132
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показать записи журнала буфера обмена на позиции указателя мыши"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:396 klipper.cpp:405
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера обмена"
 
-#: klipper.cpp:420
+#: klipper.cpp:422
 #, kde-format
 msgid "up"
 msgstr "более новое:"
 
-#: klipper.cpp:427
+#: klipper.cpp:429
 #, kde-format
 msgid "current"
 msgstr "выбрано:"
 
-#: klipper.cpp:434
+#: klipper.cpp:436
 #, kde-format
 msgid "down"
 msgstr "более старое:"
@@ -826,7 +828,7 @@ msgstr "Время показа меню автоматических дейст
 #: klipper.kcfg:51
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "Отображать меню автоматических действий в течение указанного времени."
+msgstr "Показывать меню автоматических действий в течение указанного времени."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:54

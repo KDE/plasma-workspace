@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014-2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-02-21 09:06+0100\n"
+"PO-Revision-Date: 2026-10-04 14:55+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,21 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: contents/splash/Splash.qml:79
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is the first text the user sees while starting in the splash screen, "
-#| "should be translated as something short, is a form that can be seen on a "
-#| "product. Plasma is the project name so shouldn't be translated."
-#| msgid "Plasma 25th Anniversary Edition by KDE"
+#, kde-format
 msgctxt ""
 "This is the first text the user sees while starting in the splash screen, "
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma 30th Anniversary Edition by KDE"
-msgstr "Wydanie Plazmy przez KDE na jego 25-tą rocznicę"
+msgstr "Plazma od KDE - wydanie na 30-tą rocznicę"
 
 #~ msgctxt ""
 #~ "This is the first text the user sees while starting in the splash screen, "

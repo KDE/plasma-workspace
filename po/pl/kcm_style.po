@@ -1,5 +1,5 @@
 # translation of kcmstyle.po to
-# Version: $Revision: 1746075 $
+# Version: $Revision: 1749192 $
 # translation of kcmstyle.po to Polish
 # translation of kcmstyle.po to
 # SPDX-FileCopyrightText: 2011-2012, 2014-2015, 2017, 2019-2021, 2023-2024, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-06 10:46+0200\n"
+"PO-Revision-Date: 2026-10-04 14:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -131,47 +131,33 @@ msgid "Could not uninstall styles:\n"
 msgstr "Nie udało się usunąć wyglądów:\n"
 
 #: kcmstyle.cpp:226
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-#| msgid_plural ""
-#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
 msgstr "Pomyślnie usunięto “%1”, lecz nie można usunąć innych:\n"
 
 #: kcmstyle.cpp:229
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-#| msgid_plural ""
-#| "Successfully uninstalled %1 styles but could not uninstall others:\n"
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] "Pomyślnie usunięto “%1”, lecz nie można usunąć innych:\n"
+msgstr[0] "Pomyślnie usunięto %1 wygląd, lecz nie można usunąć innych:\n"
 msgstr[1] "Pomyślnie usunięto %1 wyglądy, lecz nie można usunąć innych:\n"
 msgstr[2] "Pomyślnie usunięto %1 wyglądów, lecz nie można usunąć innych:\n"
 
 #: kcmstyle.cpp:240
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
 msgstr "Pomyślnie usunięto “%1”."
 
 #: kcmstyle.cpp:242
-#, fuzzy, kde-format
-#| msgctxt "@info:status"
-#| msgid "Successfully uninstalled “%2”."
-#| msgid_plural "Successfully uninstalled %1 styles."
+#, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Pomyślnie usunięto “%1”."
+msgstr[0] "Pomyślnie usunięto %1 wygląd."
 msgstr[1] "Pomyślnie usunięto %1 wyglądy."
 msgstr[2] "Pomyślnie usunięto %1 wyglądów."
 
