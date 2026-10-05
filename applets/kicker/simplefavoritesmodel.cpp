@@ -319,7 +319,7 @@ AbstractEntry *SimpleFavoritesModel::favoriteFromId(const QString &id)
     const QUrl url(id);
     const QString &s = url.scheme();
 
-    if ((s.isEmpty() && id.contains(QLatin1String(".desktop"))) || s == QLatin1String("preferred")) {
+    if ((s.isEmpty() && id.contains(QLatin1String(".desktop"))) || s == QLatin1String("preferred") || s == QLatin1String("applications")) {
         return new AppEntry(this, id);
     } else if (url.isValid() && !url.scheme().isEmpty()) {
         return new FileEntry(this, url);
