@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-02 00:47+0000\n"
-"PO-Revision-Date: 2026-09-24 20:29-0400\n"
+"PO-Revision-Date: 2026-10-03 19:55-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -65,25 +65,25 @@ msgstr "بۇ پىروگرامما ھەر بىر پائالىيەت ئاساسى�
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "بۇ ئۇقتۇرۇش قاڭقىش كۆزنىكى سۈپىتىدە كۆرۈنىدۇ"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "بۇ ئۇقتۇرۇش قاڭقىش كۆزنىكى سۈپىتىدە كۆرۈنمەيدۇ"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "بۇ ئۇقتۇرۇش ئاۋاز ياڭرىتىدۇ"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "بۇ ئۇقتۇرۇش ئاۋاز ياڭراتمايدۇ"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format

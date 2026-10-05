@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-27 00:47+0000\n"
-"PO-Revision-Date: 2024-09-26 11:43+0300\n"
+"PO-Revision-Date: 2026-10-04 08:54+0200\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -452,13 +452,13 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3>Группы шрифтов</h3><p>Этот список шрифтов содержит все группы шрифтов в "
+"<h3>Группы шрифтов</h3><p>В этом списке показаны группы шрифтов, имеющиеся в "
 "системе. В списке указаны два типа групп шрифтов:<ul><li><b>Обычные</b> — "
 "специальные группы, используемые диспетчером шрифтов.<ul>%1</ul></"
-"li><li><b>Другие</b> — группы, созданные пользователем. Для того,  чтобы "
-"добавить гарнитуру шрифта в одну из групп, перетащите её из списка шрифтов "
-"на название группы. Для удаления гарнитуры из группы, перетащите гарнитуру в "
-"группу «Все шрифты».</li></ul></p>"
+"li><li><b>Другие</b> — группы, созданные пользователем. Чтобы добавить "
+"гарнитуру шрифта в одну из групп, перетащите её из списка шрифтов на "
+"название группы. Чтобы удалить гарнитуру из группы, перетащите её в группу "
+"«Все шрифты».</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -971,12 +971,12 @@ msgstr "Установка шрифтов…"
 #: kcmfontinst/KCmFontInst.cpp:1092
 #, kde-format
 msgid "You did not select anything to enable."
-msgstr "Вы не выбрали ничего для того, чтобы сделать шрифты активными."
+msgstr "Вы не выбрали ничего для включения."
 
 #: kcmfontinst/KCmFontInst.cpp:1092
 #, kde-format
 msgid "You did not select anything to disable."
-msgstr "Вы не выбрали ничего для того, чтобы сделать шрифты неактивными."
+msgstr "Вы не выбрали ничего для отключения."
 
 #: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
@@ -1138,8 +1138,8 @@ msgid ""
 "You cannot install a fonts package directly.\n"
 "Please extract %1, and install the components individually."
 msgstr ""
-"Вы не можете установить архив.\n"
-"Распакуйте %1 и установите шрифты как отдельные файлы."
+"Пакет шрифтов нельзя установить напрямую.\n"
+"Распакуйте %1 и установите шрифты по отдельности."
 
 #: kio/KioFonts.cpp:434
 #, kde-format
@@ -1424,7 +1424,7 @@ msgstr "Разные пользовательские"
 #: viewpart/CharTip.cpp:52
 #, kde-format
 msgid "Other, Surrogate"
-msgstr "Разные заменители"
+msgstr "Части суррогатных пар"
 
 #: viewpart/CharTip.cpp:54
 #, kde-format

@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcmkwincompositing\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-06-18 18:49+0200\n"
+"PO-Revision-Date: 2026-10-04 08:54+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -51,7 +51,7 @@ msgstr "Выберите приложение для работы с кален�
 #: components/componentchooseremail.cpp:20
 #, kde-format
 msgid "Select default e-mail client"
-msgstr "Выберите приложение для работы с эл. почтой, используемую по умолчанию"
+msgstr "Выберите почтовый клиент по умолчанию"
 
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format

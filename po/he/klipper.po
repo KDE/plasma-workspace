@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-03 00:47+0000\n"
+"POT-Creation-Date: 2026-10-05 00:49+0000\n"
 "PO-Revision-Date: 2026-09-27 09:16+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -617,69 +617,71 @@ msgid "Remove Starred Item"
 msgstr "הסרת פריט מסומן בכוכב"
 
 #: klipper.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Toggle automatic action"
+#| msgid "Automatic Action Popup Menu"
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
+msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "תפריט פעולות קופץ אוטומטי"
 
-#: klipper.cpp:90
+#: klipper.cpp:92
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&פינוי היסטוריית לוח הגזירים"
 
-#: klipper.cpp:95
+#: klipper.cpp:97
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "הפעלת פעולה ידנית על לוח הגזירים הנוכחי"
 
-#: klipper.cpp:103
+#: klipper.cpp:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&עריכת תוכן…"
 
-#: klipper.cpp:111
+#: klipper.cpp:113
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "ה&צגת ברקוד…"
 
-#: klipper.cpp:120
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "הפריט הבא בהיסטוריה"
 
-#: klipper.cpp:125
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "הפריט הקודם בהיסטוריה"
 
-#: klipper.cpp:132
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "הצגת פריטי לוח גזירים במקום של העכבר"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:380 klipper.cpp:389
 #, kde-format
 msgid "Clipboard history"
 msgstr "היסטוריית לוח הגזירים"
 
-#: klipper.cpp:404
+#: klipper.cpp:406
 #, kde-format
 msgid "up"
 msgstr "למעלה"
 
-#: klipper.cpp:411
+#: klipper.cpp:413
 #, kde-format
 msgid "current"
 msgstr "נוכחי"
 
-#: klipper.cpp:418
+#: klipper.cpp:420
 #, kde-format
 msgid "down"
 msgstr "למטה"

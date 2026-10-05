@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-03 00:47+0000\n"
+"POT-Creation-Date: 2026-10-05 00:49+0000\n"
 "PO-Revision-Date: 2025-10-31 23:16+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -628,69 +628,71 @@ msgid "Remove Starred Item"
 msgstr "Fjern stjernemarkeret element"
 
 #: klipper.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Toggle automatic action"
+#| msgid "Automatic Action Popup Menu"
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
+msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Automatisk handlings-pop-up-menu"
 
-#: klipper.cpp:90
+#: klipper.cpp:92
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "R&yd udklipsholderhistorik"
 
-#: klipper.cpp:95
+#: klipper.cpp:97
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Udfør handling på denne udklipsholder manuelt"
 
-#: klipper.cpp:103
+#: klipper.cpp:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "R&edigér indhold..."
 
-#: klipper.cpp:111
+#: klipper.cpp:113
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Vis stregkode..."
 
-#: klipper.cpp:120
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Næste historikelement"
 
-#: klipper.cpp:125
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Forrige historikelement"
 
-#: klipper.cpp:132
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Åbn udklipsholderelementer ved musseposition"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:380 klipper.cpp:389
 #, kde-format
 msgid "Clipboard history"
 msgstr "Udklipsholderhistorik"
 
-#: klipper.cpp:404
+#: klipper.cpp:406
 #, kde-format
 msgid "up"
 msgstr "op"
 
-#: klipper.cpp:411
+#: klipper.cpp:413
 #, kde-format
 msgid "current"
 msgstr "nuværende"
 
-#: klipper.cpp:418
+#: klipper.cpp:420
 #, kde-format
 msgid "down"
 msgstr "ned"

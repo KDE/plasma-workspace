@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:48+0000\n"
-"PO-Revision-Date: 2026-10-02 07:52+0200\n"
+"PO-Revision-Date: 2026-10-04 08:54+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -52,13 +52,13 @@ msgstr "Двоичная — кибибайты (КиБ), мебибайты (М
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Двоичная — килобайты (Кбайт), мегабайты (Мбайт), гигабайты (Гбайт)"
+msgstr "Двоичная — килобайты (КБ), мегабайты (МБ), гигабайты (ГБ)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Десятичная — килобайты (Кбайт), мегабайты (Мбайт), гигабайты (Гбайт)"
+msgstr "Десятичная — килобайты (кБ), мегабайты (МБ), гигабайты (ГБ)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -443,13 +443,13 @@ msgstr "КиБ, МиБ, ГиБ, %1"
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr "Кбайт, Мбайт, Гбайт, %1"
+msgstr "КБ, МБ, ГБ; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr "Кбайт, Мбайт, Гбайт, %1"
+msgstr "кБ, МБ, ГБ; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -576,9 +576,9 @@ msgid ""
 "they are and install them yourself."
 msgstr ""
 "Файлы локали и языковой поддержки созданы, но не удалось автоматически "
-"установить специальные шрифты для указанного языка. Если для надлежащего "
-"отображения информации на указанном языке требуются специальные шрифты, "
-"будет необходимо найти и установить их самостоятельно."
+"установить специальные шрифты для указанного языка. Если для правильного "
+"показа текста на указанном языке требуются специальные шрифты, будет "
+"необходимо найти и установить их самостоятельно."
 
 #: ui/main.qml:81
 #, kde-format

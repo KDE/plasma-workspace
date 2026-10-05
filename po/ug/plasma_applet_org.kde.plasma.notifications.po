@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:47+0000\n"
-"PO-Revision-Date: 2026-09-24 20:36-0400\n"
+"PO-Revision-Date: 2026-10-03 19:57-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -346,7 +346,7 @@ msgstr "پۈتۈن ئېكران ئەپ فوكۇسلاندى"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr "كۆرسەت"
+msgstr "كۆرۈنۈش"
 
 #: FullRepresentation.qml:597
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-03 00:47+0000\n"
+"POT-Creation-Date: 2026-10-05 00:49+0000\n"
 "PO-Revision-Date: 2026-09-21 11:47+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -624,69 +624,71 @@ msgid "Remove Starred Item"
 msgstr "Remove elementos con stelle"
 
 #: klipper.cpp:72
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Toggle automatic action"
+#| msgid "Automatic Action Popup Menu"
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
+msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Menu de Popup de Action Automatic"
 
-#: klipper.cpp:90
+#: klipper.cpp:92
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Netta historia de area de transferentia"
 
-#: klipper.cpp:95
+#: klipper.cpp:97
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente Action sur le currente area de transferentia"
 
-#: klipper.cpp:103
+#: klipper.cpp:105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Edita contentos…"
 
-#: klipper.cpp:111
+#: klipper.cpp:113
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mon&stra codice a barras ..."
 
-#: klipper.cpp:120
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Proxime elemento de chronologia"
 
-#: klipper.cpp:125
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Precedente elemento de chronologia"
 
-#: klipper.cpp:132
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Monstra elementos de aread de transferentia al position de mus"
 
-#: klipper.cpp:378 klipper.cpp:387
+#: klipper.cpp:380 klipper.cpp:389
 #, kde-format
 msgid "Clipboard history"
 msgstr "Chronologia de area de transferentia"
 
-#: klipper.cpp:404
+#: klipper.cpp:406
 #, kde-format
 msgid "up"
 msgstr "in alto"
 
-#: klipper.cpp:411
+#: klipper.cpp:413
 #, kde-format
 msgid "current"
 msgstr "currente"
 
-#: klipper.cpp:418
+#: klipper.cpp:420
 #, kde-format
 msgid "down"
 msgstr "a basso"

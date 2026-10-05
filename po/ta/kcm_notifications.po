@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021-2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-02 00:47+0000\n"
-"PO-Revision-Date: 2026-01-31 18:18+0530\n"
+"PO-Revision-Date: 2026-10-04 11:46+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -64,25 +64,25 @@ msgstr "தனிப்பட்ட நிகழ்வுகளுக்கா�
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "இவ்வறிவிப்பு மேல்தோன்றுவதாக காட்டப்படும்"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "இவ்வறிவிப்பு மேல்தோன்றுவதாக காட்டப்படாது"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "இவ்வறிவிப்பு ஒலியை இசைக்கும்"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "இவ்வறிவிப்பு ஒலியை இசைக்காது"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:48+0000\n"
-"PO-Revision-Date: 2026-09-24 20:29-0400\n"
+"PO-Revision-Date: 2026-10-03 19:55-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -164,7 +164,7 @@ msgstr "شەھەر"
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr "ئىشتات"
+msgstr "ھالەت"
 
 #: exampleutility.cpp:120
 #, kde-format
@@ -347,7 +347,7 @@ msgstr "كۆڭۈلدىكى"
 #, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO C ئۆلچىمى"
 
 #: localelistmodel.cpp:142
 #, kde-format
