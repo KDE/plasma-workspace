@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 03:16+0000\n"
-"PO-Revision-Date: 2026-09-26 08:39+0200\n"
+"PO-Revision-Date: 2026-10-05 07:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -636,12 +636,10 @@ msgid "Remove Starred Item"
 msgstr "Odstrani element z zvezdico"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Samodejno pojavno okno menuja dejanj"
+msgstr "Preklopi samodejno pojavljanje menija z dejanji"
 
 #: klipper.cpp:92
 #, kde-format

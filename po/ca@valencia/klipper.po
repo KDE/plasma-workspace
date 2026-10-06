@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 03:16+0000\n"
-"PO-Revision-Date: 2026-09-26 09:41+0200\n"
+"PO-Revision-Date: 2026-10-05 08:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -635,12 +635,10 @@ msgid "Remove Starred Item"
 msgstr "Elimina l'element amb estrela"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Menú emergent d'acció automàtica"
+msgstr "Canvia l'obertura automàtica del menú d'accions"
 
 #: klipper.cpp:92
 #, kde-format

@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 03:16+0000\n"
-"PO-Revision-Date: 2026-09-26 19:03+0200\n"
+"PO-Revision-Date: 2026-10-05 15:43+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -642,12 +642,10 @@ msgid "Remove Starred Item"
 msgstr "Item met ster verwijderen"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Automatisch actie-pop-up-menu"
+msgstr "Automatisch actie-pop-up-menu omschakelen"
 
 #: klipper.cpp:92
 #, kde-format

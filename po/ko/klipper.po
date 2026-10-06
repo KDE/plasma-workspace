@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 03:16+0000\n"
-"PO-Revision-Date: 2026-09-28 23:27+0200\n"
+"PO-Revision-Date: 2026-10-05 22:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -613,12 +613,10 @@ msgid "Remove Starred Item"
 msgstr "별표 표시된 항목 삭제"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "자동 동작 팝업 메뉴"
+msgstr "자동으로 동작 메뉴 팝업 여부 전환"
 
 #: klipper.cpp:92
 #, kde-format

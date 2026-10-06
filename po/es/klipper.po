@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 03:16+0000\n"
-"PO-Revision-Date: 2026-09-26 15:54+0100\n"
+"PO-Revision-Date: 2026-10-05 11:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -641,12 +641,10 @@ msgid "Remove Starred Item"
 msgstr "Eliminar elemento marcado como favorito"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Menú emergente de acciones automático"
+msgstr "Conmutar la aparición automática del menú de acciones"
 
 #: klipper.cpp:92
 #, kde-format
