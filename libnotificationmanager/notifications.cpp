@@ -214,7 +214,7 @@ void Notifications::Private::initProxyModels()
     }
 
     if (!filterModel) {
-        filterModel = new NotificationFilterProxyModel();
+        filterModel = new NotificationFilterProxyModel(q);
         connect(filterModel, &NotificationFilterProxyModel::urgenciesChanged, q, &Notifications::urgenciesChanged);
         connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
