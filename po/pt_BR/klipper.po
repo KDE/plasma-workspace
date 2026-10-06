@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 00:49+0000\n"
-"PO-Revision-Date: 2026-09-25 06:23-0300\n"
+"PO-Revision-Date: 2026-10-05 09:19-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -634,12 +634,10 @@ msgid "Remove Starred Item"
 msgstr "Remover item com estrela"
 
 #: klipper.cpp:72
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Menu de contexto de ação automática"
+msgstr "Alternar a exibição automática do menu de ações"
 
 #: klipper.cpp:92
 #, kde-format

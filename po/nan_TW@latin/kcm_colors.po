@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-08-14 22:58+0900\n"
+"PO-Revision-Date: 2026-10-05 20:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -35,39 +35,41 @@ msgstr "Bô-huat-tōo kiàn-li̍p tsiām-sî-tóng-àn."
 #: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr ""
+msgstr "Bô-huat-tōo hā-tsài phuè-sik hong-àn: %1"
 
 #: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr ""
+msgstr "Tsit ê tòng-àn m̄ sī phuè-sik hong-àn tòng-àn."
 
 #: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr ""
+msgstr "Kiàn-li̍p 'color-scheme' tsu-liāu-giap-á sit-pāi--ah."
 
 #: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
+"Khóo-pih phuè-sik hong-àn kàu 'color-scheme' tsu-liāu-giap-á ê sî-tsūn sit-"
+"pāi--ah."
 
 #: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
+msgstr "Phuè-sik hong-àn an-tsong hó-sè--ah."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr ""
+msgstr "Phuè-sik hong-àn ê miâ"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr ""
+msgstr "Kiông-tiāu-sik"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -76,12 +78,14 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"Iōng-tsiá tshiat-uānn kàu iōng puē-kíng sán-sing ê sik-tshái á-sī ū-siat sik-"
+"tshái tsìn-tsîng leh iōng ê tsū-tīng kiông-tiāu-sik"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Kám ài thò-iōng uì toh-bīn-puē-kíng thê-tshut ê kiông-tiāu-sik"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -91,37 +95,37 @@ msgstr "KColorSchemeEditor"
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr ""
+msgstr "Pian-tsi̍p á-sī kiàn-li̍p phuè-sik hong-àn ê kang-khū"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
-msgstr ""
+msgstr "Tsò kang-khū"
 
 #: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
-msgstr ""
+msgstr "Jeremy Whiting"
 
 #: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "KCM tîng-sik-bé (tī tsia tîng lī-iōng)"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
-msgstr ""
+msgstr "Matthew Woehlke"
 
 #: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr ""
+msgstr "Ài pian-tsi̍p á-sī iōng tsò ki-tshóo ê phuè-sik."
 
 #: editor/kcolorschemeeditor.cpp:35
 #, kde-format
@@ -153,7 +157,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Window text"
-msgstr ""
+msgstr "Sī-thang bûn-jī"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
 #: editor/preview.ui:39
@@ -181,7 +185,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Selected text"
-msgstr ""
+msgstr "Í-king suán-ti̍k ê bûn-jī"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
 #: editor/preview.ui:138
@@ -197,7 +201,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "link"
-msgstr ""
+msgstr "liân-kiat"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
 #: editor/preview.ui:153
@@ -213,7 +217,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "visited"
-msgstr ""
+msgstr "pài-hóng kuè ê"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
 #: editor/preview.ui:163
@@ -1224,25 +1228,25 @@ msgstr ""
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
+msgstr "Phuè-sik '%1' bô an-tsong. Ē kái suán-iōng ū-siat tsú-tê."
 
 #: ui/main.qml:126
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
-msgstr ""
+msgstr "Sóo-ū ê phuè-sik"
 
 #: ui/main.qml:127
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
-msgstr ""
+msgstr "Kng-ê phuè-sik"
 
 #: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
-msgstr ""
+msgstr "Àm-ê phuè-sik"
 
 #: ui/main.qml:139
 #, kde-format
@@ -1257,79 +1261,79 @@ msgstr "Tshú-tit Sin-ê…"
 #: ui/main.qml:191
 #, kde-format
 msgid "Window Title"
-msgstr ""
+msgstr "Sī-thang Piau-tê"
 
 #: ui/main.qml:214
 #, kde-format
 msgid "Window text"
-msgstr ""
+msgstr "Sī-thang bûn-jī"
 
 #: ui/main.qml:222
 #, kde-format
 msgid "Button"
-msgstr ""
+msgstr "Tshi̍h-liú"
 
 #: ui/main.qml:262
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
-msgstr ""
+msgstr "liân-kiat"
 
 #: ui/main.qml:264
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
-msgstr ""
+msgstr "pài-hóng kuè ê"
 
 #: ui/main.qml:272
 #, kde-format
 msgid "Normal text"
-msgstr ""
+msgstr "Phóo-thong ê bûn-jī"
 
 #: ui/main.qml:279
 #, kde-format
 msgid "Highlighted text"
-msgstr ""
+msgstr "Í-king tu̍t-hián ê bûn-jī"
 
 #: ui/main.qml:286
 #, kde-format
 msgid "Disabled text"
-msgstr ""
+msgstr "Thîng-iōng ê bûn-jī"
 
 #: ui/main.qml:304
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr ""
+msgstr "Pian-tsi̍p Phuè-sik Hong-àn…"
 
 #: ui/main.qml:311
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr ""
+msgstr "Î-tû phuè-sik hong-àn"
 
 #: ui/main.qml:313
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr ""
+msgstr "Bē-sái thâi-tiāu tsit-má leh iōng ê phuè-sik hong-àn"
 
 #: ui/main.qml:315
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Bē-sái thâi-tiāu hē-thóng an-tsong ê phuè-sik hong-àn"
 
 #: ui/main.qml:323
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Mài thâi-tiāu tsit ê phuè-sik hong-àn"
 
 #: ui/main.qml:367
 #, kde-format
 msgid "Open Color Scheme"
-msgstr ""
+msgstr "Phah-khui Phuè-sik Hong-àn"
 
 #: ui/main.qml:369
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr ""
+msgstr "Phuè-sik Hong-àn Tòng-àn (*.colors)"

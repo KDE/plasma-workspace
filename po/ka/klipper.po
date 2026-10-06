@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-05 00:49+0000\n"
-"PO-Revision-Date: 2026-09-25 05:50+0200\n"
+"PO-Revision-Date: 2026-10-05 06:24+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -616,12 +616,10 @@ msgid "Remove Starred Item"
 msgstr "ვარსკვლავიანი ელემენტის წაშლა"
 
 #: klipper.cpp:72
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "ავტომატური ქმედების მხტუნარა მენიუ"
+msgstr "ქმედებების მენიუს ავტომატური ამოხტომის გადართვა"
 
 #: klipper.cpp:92
 #, kde-format
