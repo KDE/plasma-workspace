@@ -70,6 +70,7 @@ Dependencies:
     'third-party/qcoro': '@latest'
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
+    'sdk/selenium-webdriver-at-spi': '@same'
 
  - 'on': ['Linux']
    'require':
@@ -81,7 +82,6 @@ RuntimeDependencies:
    'require':
     'network/kio-extras': 'release/25.12'
     'plasma/kactivitymanagerd': '@same'
-    'sdk/selenium-webdriver-at-spi': '@same'
  - 'on': ['Linux', 'FreeBSD']
    'require':
     'frameworks/qqc2-desktop-style': 'Frameworks/6.24'
