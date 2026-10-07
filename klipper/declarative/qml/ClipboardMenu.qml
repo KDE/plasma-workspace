@@ -40,6 +40,7 @@ PlasmaComponents3.ScrollView {
     readonly property bool editing: T.StackView.view.currentItem instanceof EditPage
 
     property alias view: menuListView
+    property alias hoverBlock: hoverBlock
     property bool showHeader: true
     // used to help determine whether the action buttons should show. visualFocus does not work,
     // as Qt sets OtherFocusReason even if the currentItem change was initiated by keyboard
@@ -58,6 +59,7 @@ PlasmaComponents3.ScrollView {
         menuListView.forceLayout();
     }
     onEdit: modelData => {
+        hoverBlock.reset();
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("EditPage.qml"), {
             dialogItem: clipboardMenu.dialogItem,
             historyModel: clipboardMenu.model,
@@ -65,6 +67,7 @@ PlasmaComponents3.ScrollView {
         });
     }
     onBarcode: text => {
+        hoverBlock.reset();
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("BarcodePage.qml"), {
             expanded: Qt.binding(() => clipboardMenu.expanded),
             stack: clipboardMenu.T.StackView.view,
@@ -73,9 +76,13 @@ PlasmaComponents3.ScrollView {
             showHeader: clipboardMenu.showHeader
         });
     }
-    onTriggerAction: uuid => model.invokeAction(uuid)
+    onTriggerAction: uuid => {
+        hoverBlock.reset();
+        model.invokeAction(uuid);
+    }
 
     onExpandedChanged: {
+        hoverBlock.reset();
         if (expanded) {
             menuListView.forceActiveFocus(Qt.OtherFocusReason);
         }
@@ -164,6 +171,7 @@ PlasmaComponents3.ScrollView {
                 // Regular PgUp: Navigate list
                 menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+                hoverBlock.reset();
                 if (menuListView.currentItem) {
                     menuListView.currentItem.forceActiveFocus(Qt.BacktabFocusReason)
                 }
@@ -180,6 +188,7 @@ PlasmaComponents3.ScrollView {
                 // Regular PgDn: Navigate list
                 menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+                hoverBlock.reset();
                 if (menuListView.currentItem) {
                     menuListView.currentItem.forceActiveFocus(Qt.TabFocusReason)
                 }
@@ -337,6 +346,7 @@ PlasmaComponents3.ScrollView {
                     clipboardMenu.model.starredOnly = (currentIndex === 1)
                     // Reset selection to first item when switching tabs
                     if (menuListView.count > 0) {
+                        hoverBlock.reset();
                         menuListView.currentIndex = 0;
                         menuListView.positionViewAtBeginning();
                     }
@@ -387,6 +397,7 @@ PlasmaComponents3.ScrollView {
             delegate: TextItemDelegate {
                 listMargins: listItemSvg.margins
                 keyboardActivated: clipboardMenu.keyboardActivated
+                hoverEnabled: !hoverBlock.enabled
                 onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
@@ -395,6 +406,7 @@ PlasmaComponents3.ScrollView {
             delegate: ImageItemDelegate  {
                 listMargins: listItemSvg.margins
                 keyboardActivated: clipboardMenu.keyboardActivated
+                hoverEnabled: !hoverBlock.enabled
                 onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
@@ -403,6 +415,7 @@ PlasmaComponents3.ScrollView {
             delegate: UrlItemDelegate {
                 listMargins: listItemSvg.margins
                 keyboardActivated: clipboardMenu.keyboardActivated
+                hoverEnabled: !hoverBlock.enabled
                 onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
@@ -426,6 +439,7 @@ PlasmaComponents3.ScrollView {
             onFilterRegularExpressionChanged: {
                 menuListView.currentIndex = 0;
                 menuListView.positionViewAtBeginning();
+                hoverBlock.reset();
             }
         }
 
@@ -438,11 +452,18 @@ PlasmaComponents3.ScrollView {
 
         delegate: chooser
 
+        HoverBlocker {
+            id: hoverBlock
+            anchors.fill: parent
+            z: 10
+        }
+
         Keys.onUpPressed: event => {
             if (menuListView.currentIndex > 0) {
                 menuListView.decrementCurrentIndex();
                 clipboardMenu.keyboardActivated = true
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
+                hoverBlock.reset();
                 event.accepted = true;
             } else {
                 // At top of list, or list is empty. Focus TabBar or filter depending on visibility.
@@ -460,6 +481,7 @@ PlasmaComponents3.ScrollView {
                 menuListView.incrementCurrentIndex();
                 clipboardMenu.keyboardActivated = true
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
+                hoverBlock.reset();
                 event.accepted = true;
             } else {
                 // At bottom of list, or list is empty.

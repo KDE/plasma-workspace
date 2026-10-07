@@ -84,6 +84,9 @@ GridLayout {
         switch (actionRole) {
         case DelegateToolButtons.ButtonRole.ToggleStar:
             if (menuItem.model) {
+                // Make sure highlight does not jump where pointer is when using a keyboard
+                menuItem.ListView.view.clipboardMenu.hoverBlock.reset();
+                menuItem.ListView.view.clipboardMenu.keyboardActivated = true;
                 menuItem.model.starred = !(menuItem.model?.starred ?? false);
             }
             break;

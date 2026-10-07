@@ -42,6 +42,7 @@ ecm_target_qml_sources(klipperplugin VERSION 0.1 SOURCES
     qml/BarcodePage.qml
     qml/DelegateToolButtons.qml
     qml/EditPage.qml
+    qml/HoverBlocker.qml
 )
 
 ecm_finalize_qml_module(klipperplugin)
