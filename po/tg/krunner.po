@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:46+0000\n"
+"POT-Creation-Date: 2026-10-07 02:54+0000\n"
 "PO-Revision-Date: 2019-09-19 19:17+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -73,64 +73,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr ""
 
-#: qml/RunCommand.qml:109 qml/RunCommand.qml:110 qml/RunCommand.qml:112
+#: qml/RunCommand.qml:113 qml/RunCommand.qml:114 qml/RunCommand.qml:117
 #, kde-format
 msgid "Show Usage Help"
 msgstr ""
 
-#: qml/RunCommand.qml:125
+#: qml/RunCommand.qml:130
 #, kde-format
 msgid "Showing only results from %1"
 msgstr ""
 
-#: qml/RunCommand.qml:139
+#: qml/RunCommand.qml:145
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr ""
 
-#: qml/RunCommand.qml:140
+#: qml/RunCommand.qml:146
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr ""
 
-#: qml/RunCommand.qml:296
+#: qml/RunCommand.qml:317
 #, kde-format
 msgid "Configure"
 msgstr ""
 
-#: qml/RunCommand.qml:297
+#: qml/RunCommand.qml:318
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr ""
 
-#: qml/RunCommand.qml:300
+#: qml/RunCommand.qml:323
 #, kde-format
 msgid "Configure KRunner…"
 msgstr ""
 
-#: qml/RunCommand.qml:308
+#: qml/RunCommand.qml:332
 #, kde-format
 msgid "Pin"
 msgstr ""
 
-#: qml/RunCommand.qml:309
+#: qml/RunCommand.qml:333
 #, kde-format
 msgid "Pin Search"
 msgstr ""
 
-#: qml/RunCommand.qml:311
+#: qml/RunCommand.qml:336
 #, kde-format
 msgid "Keep Open"
 msgstr ""
 
-#: qml/RunCommand.qml:373 qml/RunCommand.qml:379
+#: qml/RunCommand.qml:402 qml/RunCommand.qml:408
 #, kde-format
 msgid "Recent Queries"
 msgstr ""
 
-#: qml/RunCommand.qml:377
+#: qml/RunCommand.qml:406
 #, kde-format
 msgid "Remove"
 msgstr ""
