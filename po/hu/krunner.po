@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:51+0000\n"
+"POT-Creation-Date: 2026-10-07 00:51+0000\n"
 "PO-Revision-Date: 2024-01-02 09:56+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -96,42 +96,42 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Keresés…"
 
-#: qml/RunCommand.qml:313
+#: qml/RunCommand.qml:317
 #, kde-format
 msgid "Configure"
 msgstr "Beállítások"
 
-#: qml/RunCommand.qml:314
+#: qml/RunCommand.qml:318
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "A KRunner működésének beállítása"
 
-#: qml/RunCommand.qml:319
+#: qml/RunCommand.qml:323
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "A KRunner beállítása…"
 
-#: qml/RunCommand.qml:328
+#: qml/RunCommand.qml:332
 #, kde-format
 msgid "Pin"
 msgstr "Kitűzés"
 
-#: qml/RunCommand.qml:329
+#: qml/RunCommand.qml:333
 #, kde-format
 msgid "Pin Search"
 msgstr "Keresés kitűzése"
 
-#: qml/RunCommand.qml:332
+#: qml/RunCommand.qml:336
 #, kde-format
 msgid "Keep Open"
 msgstr "Tartsa nyitva"
 
-#: qml/RunCommand.qml:398 qml/RunCommand.qml:404
+#: qml/RunCommand.qml:402 qml/RunCommand.qml:408
 #, kde-format
 msgid "Recent Queries"
 msgstr "Legutóbbi lekérdezések"
 
-#: qml/RunCommand.qml:402
+#: qml/RunCommand.qml:406
 #, kde-format
 msgid "Remove"
 msgstr "Eltávolítás"

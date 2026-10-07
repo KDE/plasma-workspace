@@ -1,0 +1,278 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-08-21 00:47+0000\n"
+"PO-Revision-Date: 2026-10-07 08:58+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: autostartmodel.cpp:378
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "「%1」毋是絕對 URL。"
+
+#: autostartmodel.cpp:381
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "「%1」無存在。"
+
+#: autostartmodel.cpp:384
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "「%1」毋是檔案。"
+
+#: autostartmodel.cpp:387
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "「%1」無法度讀取。"
+
+#: ui/entry.qml:30
+#, kde-format
+msgctxt "@label Stop the Systemd unit for a running process"
+msgid "Stop"
+msgstr "停"
+
+#: ui/entry.qml:31
+#, kde-format
+msgctxt "@label Start the Systemd unit for a currently inactive process"
+msgid "Start"
+msgstr "開始"
+
+#: ui/entry.qml:71
+#, kde-format
+msgctxt ""
+"@label The name of a Systemd unit for an app or script that will autostart"
+msgid "Name:"
+msgstr "名："
+
+#: ui/entry.qml:77
+#, kde-format
+msgctxt ""
+"@label The current status (e.g. active or inactive) of a Systemd unit for an "
+"app or script that will autostart"
+msgid "Status:"
+msgstr "狀態："
+
+#: ui/entry.qml:83
+#, kde-format
+msgctxt ""
+"@label A date and time follows this text, making a sentence like 'Last "
+"activated on: August 7th 11 PM 2023'"
+msgid "Last activated on:"
+msgstr "頂改 activate 的時間："
+
+#: ui/entry.qml:114
+#, kde-format
+msgid "Unable to load logs. Try refreshing."
+msgstr "無法度載入紀錄。請試看覓重整理。"
+
+#: ui/entry.qml:118
+#, kde-format
+msgctxt "@action:button Refresh entry logs when it failed to load"
+msgid "Refresh"
+msgstr "重整理"
+
+#: ui/main.qml:35
+#, kde-format
+msgid "Make Executable"
+msgstr "標做會使執行"
+
+#: ui/main.qml:55
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr "檔案「%1」需要 ē-sái 執行才會佇登出 ê 時陣執行。"
+
+#: ui/main.qml:57
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr "檔案「%1」需要 ē-sái 執行才會佇登入 ê 時陣執行。"
+
+#: ui/main.qml:68
+#, kde-format
+msgctxt "@action:button menu button; add new application etc"
+msgid "Add New"
+msgstr "添新的"
+
+#: ui/main.qml:69
+#, kde-format
+msgctxt "@title:menu accessible menu button"
+msgid "Add new application or script"
+msgstr "添新的應用程式猶是指令稿"
+
+#: ui/main.qml:73
+#, kde-format
+msgctxt "@action:inmenu completes: add new application"
+msgid "Application…"
+msgstr "應用程式…"
+
+#: ui/main.qml:75
+#, kde-format
+msgctxt "@action:inmenu accessible"
+msgid "Add application"
+msgstr "添應用程式"
+
+#: ui/main.qml:79
+#, kde-format
+msgctxt "@action:inmenu completes: add new login script"
+msgid "Login Script…"
+msgstr "登入指令稿…"
+
+#: ui/main.qml:81
+#, kde-format
+msgctxt "@action:inmenu accessible"
+msgid "Add login script"
+msgstr "添登入指令稿"
+
+#: ui/main.qml:85
+#, kde-format
+msgctxt "@action:inmenu completes: add new logout script"
+msgid "Logout Script…"
+msgstr "登出指令稿…"
+
+#: ui/main.qml:87
+#, kde-format
+msgctxt "@action:inmenu accessible"
+msgid "Add logout script"
+msgstr "添登出指令稿"
+
+#: ui/main.qml:121
+#, kde-format
+msgid ""
+"%1 has not been autostarted yet. Details will be available after the system "
+"is restarted."
+msgstr "%1 猶未予自動啟動。詳細資訊佇系統重啟動了後才有法度知影。"
+
+#: ui/main.qml:133
+#, kde-format
+msgctxt "@action:button"
+msgid "Disable autostart for %1"
+msgstr ""
+
+#: ui/main.qml:134
+#, kde-format
+msgctxt "@action:button"
+msgid "Enable autostart for %1"
+msgstr ""
+
+#: ui/main.qml:137
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Disable autostart"
+msgstr ""
+
+#: ui/main.qml:138
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Enable autostart"
+msgstr ""
+
+#: ui/main.qml:159
+#, kde-format
+msgctxt ""
+"@label Entry hasn't been autostarted because system hasn't been restarted"
+msgid "Not autostarted yet"
+msgstr "猶未自動啟動"
+
+#: ui/main.qml:168
+#, kde-format
+msgctxt "@action:button"
+msgid "See properties"
+msgstr "顯示屬性"
+
+#: ui/main.qml:179
+#, kde-format
+msgctxt "@action:button"
+msgid "Remove entry"
+msgstr "移除項目"
+
+#: ui/main.qml:195
+#, kde-format
+msgid "Applications"
+msgstr "應用程式"
+
+#: ui/main.qml:198
+#, kde-format
+msgid "Login Scripts"
+msgstr "登入指令稿"
+
+#: ui/main.qml:201
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "啟動進前的指令稿"
+
+#: ui/main.qml:204
+#, kde-format
+msgid "Logout Scripts"
+msgstr "登出指令稿"
+
+#: ui/main.qml:213
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "無用者指定 ê 自動啟動項目"
+
+#: ui/main.qml:214
+#, kde-kuit-format
+msgctxt "@info 'some' refers to autostart items"
+msgid "Click the <interface>Add New</interface> button to add some"
+msgstr "揤<interface>添新的</interface>來添"
+
+#: ui/main.qml:229
+#, kde-format
+msgid "Choose Login Script"
+msgstr "選登入指令稿"
+
+#: ui/main.qml:249
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "選登出指令稿"
+
+#: unit.cpp:26
+#, kde-format
+msgctxt "@label Entry is running right now"
+msgid "Running"
+msgstr "Tī-leh 執行"
+
+#: unit.cpp:27
+#, kde-format
+msgctxt "@label Entry is not running right now (exited without error)"
+msgid "Not running"
+msgstr "無 leh 執行"
+
+#: unit.cpp:28
+#, kde-format
+msgctxt "@label Entry is being started"
+msgid "Starting"
+msgstr "Leh 啟動"
+
+#: unit.cpp:29
+#, kde-format
+msgctxt "@label Entry is being stopped"
+msgid "Stopping"
+msgstr "Leh 停止"
+
+#: unit.cpp:30
+#, kde-format
+msgctxt "@label Entry has failed (exited with an error)"
+msgid "Failed"
+msgstr "失敗矣"
+
+#: unit.cpp:81
+#, kde-format
+msgid "Error occurred when receiving reply of GetAll call %1"
+msgstr "Leh 收 GetAll 呼叫 %1 的時陣發生錯誤"
+
+#: unit.cpp:153
+#, kde-format
+msgid "Failed to open journal"
+msgstr "開 journal 的時陣失敗矣"

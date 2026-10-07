@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:51+0000\n"
+"POT-Creation-Date: 2026-10-07 00:51+0000\n"
 "PO-Revision-Date: 2024-02-25 18:47+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -95,42 +95,42 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Caută…"
 
-#: qml/RunCommand.qml:313
+#: qml/RunCommand.qml:317
 #, kde-format
 msgid "Configure"
 msgstr "Configurează"
 
-#: qml/RunCommand.qml:314
+#: qml/RunCommand.qml:318
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "Configurează comportamentul KRunner"
 
-#: qml/RunCommand.qml:319
+#: qml/RunCommand.qml:323
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "Configurează KRunner…"
 
-#: qml/RunCommand.qml:328
+#: qml/RunCommand.qml:332
 #, kde-format
 msgid "Pin"
 msgstr "Fixează"
 
-#: qml/RunCommand.qml:329
+#: qml/RunCommand.qml:333
 #, kde-format
 msgid "Pin Search"
 msgstr "Fixează căutarea"
 
-#: qml/RunCommand.qml:332
+#: qml/RunCommand.qml:336
 #, kde-format
 msgid "Keep Open"
 msgstr "Ține deschis"
 
-#: qml/RunCommand.qml:398 qml/RunCommand.qml:404
+#: qml/RunCommand.qml:402 qml/RunCommand.qml:408
 #, kde-format
 msgid "Recent Queries"
 msgstr "Interogări recente"
 
-#: qml/RunCommand.qml:402
+#: qml/RunCommand.qml:406
 #, kde-format
 msgid "Remove"
 msgstr "Elimină"
