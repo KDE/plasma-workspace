@@ -60,6 +60,7 @@ Dependencies:
     'plasma/plasma-nano': '@same'
     'plasma/plasma-activities': '@same'
     'plasma/plasma-activities-stats': '@same'
+    'plasma/plasma-pa': '@same'
     'plasma/knighttime': '@same'
     'plasma/kwin': '@same'
     'libraries/plasma-wayland-protocols': 'stable/1.20'
