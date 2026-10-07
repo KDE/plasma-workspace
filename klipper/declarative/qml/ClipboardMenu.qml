@@ -442,7 +442,7 @@ PlasmaComponents3.ScrollView {
             if (menuListView.currentIndex > 0) {
                 menuListView.decrementCurrentIndex();
                 clipboardMenu.keyboardActivated = true
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
                 event.accepted = true;
             } else {
                 // At top of list, or list is empty. Focus TabBar or filter depending on visibility.
@@ -459,7 +459,7 @@ PlasmaComponents3.ScrollView {
             if (menuListView.currentIndex < menuListView.count - 1) {
                 menuListView.incrementCurrentIndex();
                 clipboardMenu.keyboardActivated = true
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
                 event.accepted = true;
             } else {
                 // At bottom of list, or list is empty.
