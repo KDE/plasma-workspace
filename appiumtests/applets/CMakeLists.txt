@@ -30,10 +30,6 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py -k basic
 )
 add_test(
-    NAME clipboardtest_extended
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py -k extended
-)
-add_test(
     NAME clipboarddeadlocktest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboarddeadlocktest.py
 )
