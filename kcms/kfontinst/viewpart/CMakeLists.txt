@@ -1,15 +1,19 @@
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}/../lib
-    ${CMAKE_CURRENT_SOURCE_DIR}/
-    ${CMAKE_CURRENT_BINARY_DIR}
-     )
+add_library(kfontviewpart MODULE
+    ../viewpart/FontPreview.cpp
+    ../viewpart/PreviewSelectAction.cpp
+    ../viewpart/CharTip.cpp
+    ../dbus/FontinstIface.cpp
+    FontViewPart.cpp
+)
 
-set(kfontviewpart_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstdbusiface_SRCS} FontViewPart.cpp )
+target_link_libraries(kfontviewpart
+    KF6::Archive
+    KF6::Parts
+    KF6::XmlGui
+    KF6::WindowSystem
+    kfontinstui
+    kfontinst
+)
 
-add_library(kfontviewpart MODULE ${kfontviewpart_PART_SRCS})
-
-target_link_libraries(kfontviewpart KF6::Archive KF6::Parts KF6::XmlGui KF6::WindowSystem kfontinstui kfontinst )
-
-install(TARGETS kfontviewpart  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/parts )
-
-install( FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUIDIR}/kfontviewpart )
+install(TARGETS kfontviewpart  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/parts)
+install(FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUIDIR}/kfontviewpart)
