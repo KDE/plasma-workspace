@@ -399,7 +399,7 @@ PlasmaComponents3.ScrollView {
         Keys.onUpPressed: event => {
             if (menuListView.currentIndex > 0) {
                 menuListView.decrementCurrentIndex();
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
                 event.accepted = true;
             } else {
                 // At top of list, or list is empty. Focus TabBar or filter depending on visibility.
@@ -415,7 +415,7 @@ PlasmaComponents3.ScrollView {
         Keys.onDownPressed: event => {
             if (menuListView.currentIndex < menuListView.count - 1) {
                 menuListView.incrementCurrentIndex();
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
                 event.accepted = true;
             } else {
                 // At bottom of list, or list is empty.
