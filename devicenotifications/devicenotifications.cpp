@@ -335,6 +335,26 @@ void OutputDevice::kde_output_device_v2_name(const QString &name)
     m_name = name;
 }
 
+void OutputDevice::kde_output_device_v2_geometry(int32_t x,
+                                                 int32_t y,
+                                                 int32_t physical_width,
+                                                 int32_t physical_height,
+                                                 int32_t subpixel,
+                                                 const QString &make,
+                                                 const QString &model,
+                                                 int32_t transform)
+{
+    Q_UNUSED(x);
+    Q_UNUSED(y);
+    Q_UNUSED(physical_width);
+    Q_UNUSED(physical_height);
+    Q_UNUSED(subpixel);
+    Q_UNUSED(transform);
+
+    m_make = make;
+    m_model = model;
+}
+
 void OutputDevice::kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode)
 {
     new OutputDeviceMode(mode);
@@ -416,7 +436,7 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
             const QString uuid = outputDevice->uuid();
             // If we recently just removed this output, it wasn't actually physically disconnected
             if (!m_recentlyRemovedOutputs.removeOne(uuid)) {
-                notifyOutputAdded();
+                notifyOutputAdded(outputDevice->name(), outputDevice->make(), outputDevice->model());
             }
         }
     });
@@ -426,12 +446,15 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
         if (outputDevice->isInternal()) {
             return;
         }
+        const QString name = outputDevice->name();
+        const QString make = outputDevice->make();
+        const QString model = outputDevice->model();
         m_recentlyRemovedOutputs.append(uuid);
         // 2000ms matches the DPMS workaround time in KWin
-        QTimer::singleShot(2000ms, this, [this, uuid]() {
+        QTimer::singleShot(2000ms, this, [this, uuid, name, make, model]() {
             // Only notify if the output hasn't been added again in the mean time
             if (m_recentlyRemovedOutputs.removeOne(uuid)) {
-                notifyOutputRemoved();
+                notifyOutputRemoved(name, make, model);
             }
         });
     });
@@ -458,7 +481,7 @@ void KdedDeviceNotifications::dismissUsbDeviceAdded()
     }
 }
 
-void KdedDeviceNotifications::notifyOutputAdded()
+void KdedDeviceNotifications::notifyOutputAdded(const QString &name, const QString &make, const QString &model)
 {
     if (m_deviceAddedTimer.isActive()) {
         return;
@@ -479,11 +502,19 @@ void KdedDeviceNotifications::notifyOutputAdded()
     m_displayAddedNotification->setFlags(KNotification::DefaultEvent);
     m_displayAddedNotification->setIconName(QStringLiteral("video-display-add"));
     m_displayAddedNotification->setTitle(i18nc("@title:notifications", "Display Detected"));
-    m_displayAddedNotification->setText(i18n("A display has been connected."));
+    if (make.isEmpty() && model.isEmpty()) {
+        m_displayAddedNotification->setText(i18nc("Display connector (e.g. HDMI-1)", "%1 has been connected.", name.toHtmlEscaped()));
+    } else {
+        m_displayAddedNotification->setText(i18nc("Display manufacturer, model (connector name)",
+                                                  "%1 %2 (%3) has been connected.",
+                                                  make.toHtmlEscaped(),
+                                                  model.toHtmlEscaped(),
+                                                  name.toHtmlEscaped()));
+    }
     m_displayAddedNotification->sendEvent();
 }
 
-void KdedDeviceNotifications::notifyOutputRemoved()
+void KdedDeviceNotifications::notifyOutputRemoved(const QString &name, const QString &make, const QString &model)
 {
     if (m_outputRegistry->count() == 0) {
         if (m_displayRemovedNotification) {
@@ -511,7 +542,11 @@ void KdedDeviceNotifications::notifyOutputRemoved()
     m_displayRemovedNotification->setFlags(KNotification::DefaultEvent);
     m_displayRemovedNotification->setIconName(QStringLiteral("video-display-remove"));
     m_displayRemovedNotification->setTitle(i18nc("@title:notifications", "Display Removed"));
-    m_displayRemovedNotification->setText(i18n("A display has been disconnected."));
+    m_displayRemovedNotification->setText(i18nc("Display manufacturer, model (connector name)",
+                                                "%1 %2 (%3) has been disconnected.",
+                                                make.toHtmlEscaped(),
+                                                model.toHtmlEscaped(),
+                                                name.toHtmlEscaped()));
     m_displayRemovedNotification->sendEvent();
 }
 
