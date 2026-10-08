@@ -91,7 +91,6 @@ PlasmaComponents3.ScrollView {
     Keys.forwardTo: [clipboardMenu.T.StackView.view.currentItem]
     Keys.onPressed: event => {
         if (clipboardMenu.T.StackView.view.currentItem !== clipboardMenu) {
-            event.accepted = false;
             return;
         }
 
@@ -138,18 +137,13 @@ PlasmaComponents3.ScrollView {
                 filter.forceActiveFocus(Qt.ShortcutFocusReason);
                 filter.text = filter.text.slice(0, -1);
                 event.accepted = true;
-            } else {
-                // Filter is focused, let the SearchField handle it natively
-                event.accepted = false;
-            }
+            } // else filter is focused, let the SearchField handle it natively
             break;
         }
         case Qt.Key_Home: {
             if (menuListView.count > 0) {
                 menuListView.currentIndex = 0;
                 event.accepted = true;
-            } else {
-                event.accepted = false;
             }
             break;
         }
@@ -157,8 +151,6 @@ PlasmaComponents3.ScrollView {
             if (menuListView.count > 0) {
                 menuListView.currentIndex = menuListView.count - 1;
                 event.accepted = true;
-            } else {
-                event.accepted = false;
             }
             break;
         }
@@ -216,8 +208,6 @@ PlasmaComponents3.ScrollView {
             // Only forward printable characters to filter
             if (event.text.length > 0 && event.text.charCodeAt(0) >= 32) {
                 forwardToFilter();
-            } else {
-                event.accepted = false;
             }
             break;
         }
@@ -281,7 +271,6 @@ PlasmaComponents3.ScrollView {
                             clipboardMenu.keyboardActivated = true
                             menuListView.forceActiveFocus(Qt.TabFocusReason);
                         }
-                        event.accepted = true;
                     }
                     Keys.onEnterPressed: event => Keys.returnPressed(event)
                     Keys.onReturnPressed: event => {
@@ -322,27 +311,21 @@ PlasmaComponents3.ScrollView {
 
                 // TabBar focus handling
                 activeFocusOnTab: true
-                Keys.onUpPressed: event => {
-                    filter.forceActiveFocus(Qt.BacktabFocusReason);
-                    event.accepted = true;
-                }
+                Keys.onUpPressed: event => filter.forceActiveFocus(Qt.BacktabFocusReason);
                 Keys.onDownPressed: event => {
                     menuListView.forceActiveFocus(Qt.TabFocusReason);
                     menuListView.currentIndex = 0
                     clipboardMenu.keyboardActivated = true
-                    event.accepted = true;
                 }
                 Keys.onLeftPressed: event => {
                     if (tabBar.currentIndex > 0) {
                         tabBar.currentIndex--;
                     }
-                    event.accepted = true;
                 }
                 Keys.onRightPressed: event => {
                     if (tabBar.currentIndex < tabBar.count - 1) {
                         tabBar.currentIndex++;
                     }
-                    event.accepted = true;
                 }
                 Keys.onEnterPressed: event => Keys.returnPressed(event)
                 Keys.onReturnPressed: event => filter.Keys.returnPressed(event) // reuse the logic from search field
@@ -487,7 +470,6 @@ PlasmaComponents3.ScrollView {
                     menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
                 }
                 hoverBlock.reset();
-                event.accepted = true;
             } else {
                 // At top of list, or list is empty. Focus TabBar or filter depending on visibility.
                 if (tabBar.visible) {
@@ -495,7 +477,6 @@ PlasmaComponents3.ScrollView {
                 } else {
                     filter.forceActiveFocus(Qt.BacktabFocusReason);
                 }
-                event.accepted = true;
             }
         }
 
@@ -505,7 +486,6 @@ PlasmaComponents3.ScrollView {
                 clipboardMenu.keyboardActivated = true
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
                 hoverBlock.reset();
-                event.accepted = true;
             } else {
                 // At bottom of list, or list is empty.
                 // If list is not empty, stay here. If empty, let nav happen.

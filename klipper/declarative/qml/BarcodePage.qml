@@ -32,12 +32,7 @@ Item {
 
     required property bool showHeader
 
-    Keys.onPressed: event => {
-        if (event.key == Qt.Key_Escape) {
-            barcodeView.stack.popCurrentItem();
-            event.accepted = true;
-        }
-    }
+    Keys.onEscapePressed: barcodeView.stack.popCurrentItem()
 
     property PlasmaExtras.PlasmoidHeading header: PlasmaExtras.PlasmoidHeading {
         visible: barcodeView.showHeader

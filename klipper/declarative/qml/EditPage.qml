@@ -66,8 +66,6 @@ ColumnLayout {
                 if (textArea.canUndo && (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
                     editPage.saveAndExit();
                     event.accepted = true;
-                } else {
-                    event.accepted = false;
                 }
             }
         }
