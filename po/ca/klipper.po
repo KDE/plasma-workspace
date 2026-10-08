@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-05 00:49+0000\n"
+"POT-Creation-Date: 2026-10-08 00:48+0000\n"
 "PO-Revision-Date: 2026-10-05 08:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -304,22 +304,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Expandeix"
 
-#: declarative/qml/ClipboardMenu.qml:290
+#: declarative/qml/ClipboardMenu.qml:301
 #, kde-format
 msgid "Clear History"
 msgstr "Neteja l'historial"
 
-#: declarative/qml/ClipboardMenu.qml:346
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgid "All History"
 msgstr "Tot l'historial"
 
-#: declarative/qml/ClipboardMenu.qml:351
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgid "Starred Only"
 msgstr "Només amb estrella"
 
-#: declarative/qml/ClipboardMenu.qml:356
+#: declarative/qml/ClipboardMenu.qml:368
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -329,18 +329,18 @@ msgstr ""
 "El porta-retalls actualment conté una peça confidencial de dades que no "
 "s'emmagatzemarà a l'historial."
 
-#: declarative/qml/ClipboardMenu.qml:365
+#: declarative/qml/ClipboardMenu.qml:377
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Neteja les dades de secrets"
 
-#: declarative/qml/ClipboardMenu.qml:485
+#: declarative/qml/ClipboardMenu.qml:509
 #, kde-format
 msgid "No matches"
 msgstr "Sense coincidències"
 
-#: declarative/qml/ClipboardMenu.qml:485
+#: declarative/qml/ClipboardMenu.qml:509
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El porta-retalls està buit"

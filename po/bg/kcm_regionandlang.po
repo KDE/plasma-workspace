@@ -345,10 +345,10 @@ msgid "Default"
 msgstr "По подразбиране"
 
 #: localelistmodel.cpp:130
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO стандарт за C"
 
 #: localelistmodel.cpp:142
 #, kde-format

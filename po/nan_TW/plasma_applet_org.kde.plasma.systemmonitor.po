@@ -1,0 +1,50 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-10-07 21:11+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: package/contents/config/config.qml:9
+#, kde-format
+msgid "Appearance"
+msgstr "外觀"
+
+#: package/contents/config/config.qml:14
+#, kde-format
+msgid "%1 Details"
+msgstr "%1 詳細"
+
+#: package/contents/config/config.qml:20
+#, kde-format
+msgid "Sensors Details"
+msgstr "感應器詳細"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "System Monitor"
+msgstr "系統監視器"
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgctxt "Sensor name: value"
+msgid "%1: %2"
+msgstr "%1：%2"
+
+#: package/contents/ui/main.qml:91
+#, kde-format
+msgctxt "@action"
+msgid "Open System Monitor…"
+msgstr "開系統監視器…"
