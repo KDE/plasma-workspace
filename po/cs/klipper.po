@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-05 03:16+0000\n"
+"POT-Creation-Date: 2026-10-08 02:59+0000\n"
 "PO-Revision-Date: 2026-10-05 13:15+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -310,22 +310,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozvinout"
 
-#: declarative/qml/ClipboardMenu.qml:290
+#: declarative/qml/ClipboardMenu.qml:301
 #, kde-format
 msgid "Clear History"
 msgstr "Vyprázdnit historii"
 
-#: declarative/qml/ClipboardMenu.qml:346
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgid "All History"
 msgstr "Celá historie"
 
-#: declarative/qml/ClipboardMenu.qml:351
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgid "Starred Only"
 msgstr "Pouze s hvězdičkou"
 
-#: declarative/qml/ClipboardMenu.qml:356
+#: declarative/qml/ClipboardMenu.qml:368
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -334,18 +334,18 @@ msgid ""
 msgstr ""
 "Schránka momentálně obsahuje citlivá data, která nebudou uložena do historie."
 
-#: declarative/qml/ClipboardMenu.qml:365
+#: declarative/qml/ClipboardMenu.qml:377
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Vymazat tajná data"
 
-#: declarative/qml/ClipboardMenu.qml:485
+#: declarative/qml/ClipboardMenu.qml:509
 #, kde-format
 msgid "No matches"
 msgstr "Žádné shody"
 
-#: declarative/qml/ClipboardMenu.qml:485
+#: declarative/qml/ClipboardMenu.qml:509
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdná"

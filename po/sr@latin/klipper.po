@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-05 03:16+0000\n"
-"PO-Revision-Date: 2026-09-30 12:00+0200\n"
+"POT-Creation-Date: 2026-10-08 02:59+0000\n"
+"PO-Revision-Date: 2026-10-07 11:45+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -309,24 +309,24 @@ msgstr "Sažmi"
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr "Proširi"
+msgstr "Raširi"
 
-#: declarative/qml/ClipboardMenu.qml:290
+#: declarative/qml/ClipboardMenu.qml:301
 #, kde-format
 msgid "Clear History"
 msgstr "Očisti istorijat"
 
-#: declarative/qml/ClipboardMenu.qml:346
+#: declarative/qml/ClipboardMenu.qml:358
 #, kde-format
 msgid "All History"
 msgstr "Ceo istorijat"
 
-#: declarative/qml/ClipboardMenu.qml:351
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgid "Starred Only"
 msgstr "Samo sa zvezdicom"
 
-#: declarative/qml/ClipboardMenu.qml:356
+#: declarative/qml/ClipboardMenu.qml:368
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -336,18 +336,18 @@ msgstr ""
 "Klipbord trenutno sadrži osetljiv podatak koji neće biti sačuvan u "
 "istorijatu."
 
-#: declarative/qml/ClipboardMenu.qml:365
+#: declarative/qml/ClipboardMenu.qml:377
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Očisti tajne podatke"
 
-#: declarative/qml/ClipboardMenu.qml:485
+#: declarative/qml/ClipboardMenu.qml:509
 #, kde-format
 msgid "No matches"
 msgstr "Nema poklapanja"
 
-#: declarative/qml/ClipboardMenu.qml:485
+#: declarative/qml/ClipboardMenu.qml:509
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klipbord je prazan"
@@ -589,7 +589,7 @@ msgstr "smenjuje tekući klipbord"
 #: editcommanddialog.cpp:99
 #, kde-format
 msgid "Append to clipboard"
-msgstr "nadovezuje se na klipbord"
+msgstr "dodaje u klipbord"
 
 #: editcommanddialog.cpp:103
 #, kde-format
@@ -641,12 +641,10 @@ msgid "Remove Starred Item"
 msgstr "Uklanjanje stavke sa zvezdicom"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Automatski iskačući meni radnji"
+msgstr "Uključi/isključi automatsko iskakanje menija radnji"
 
 #: klipper.cpp:92
 #, kde-format
@@ -798,7 +796,7 @@ msgstr "Smešta slike u istorijat klipborda."
 #: klipper.kcfg:42
 #, kde-format
 msgid "Immediately on selection"
-msgstr "Odmah po izboru"
+msgstr "Odmah pri izboru"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:43
