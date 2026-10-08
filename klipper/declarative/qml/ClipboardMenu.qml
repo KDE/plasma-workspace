@@ -170,7 +170,11 @@ PlasmaComponents3.ScrollView {
             } else if (menuListView.count > 0) {
                 // Regular PgUp: Navigate list
                 menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+                if (menuListView.currentIndex === 0) {
+                    menuListView.positionViewAtBeginning();
+                } else {
+                    menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+                }
                 hoverBlock.reset();
                 if (menuListView.currentItem) {
                     menuListView.currentItem.forceActiveFocus(Qt.BacktabFocusReason)
@@ -445,12 +449,14 @@ PlasmaComponents3.ScrollView {
             }
         }
 
-        topMargin: Kirigami.Units.largeSpacing
+        //topMargin is implemented as a header to make positionViewAtBeginnning work properly
         bottomMargin: Kirigami.Units.largeSpacing
         leftMargin: Kirigami.Units.largeSpacing
         rightMargin: Kirigami.Units.largeSpacing
 
         reuseItems: true
+
+        header: Item { implicitHeight: Kirigami.Units.largeSpacing }
 
         delegate: chooser
 
@@ -464,7 +470,11 @@ PlasmaComponents3.ScrollView {
             if (menuListView.currentIndex > 0) {
                 menuListView.decrementCurrentIndex();
                 clipboardMenu.keyboardActivated = true
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
+                if (currentIndex === 0) {
+                    menuListView.positionViewAtBeginning();
+                } else {
+                    menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
+                }
                 hoverBlock.reset();
                 event.accepted = true;
             } else {
