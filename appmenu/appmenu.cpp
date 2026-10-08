@@ -32,6 +32,20 @@ K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory, "appmenu.json", registerPlugin<AppMen
 
 class ToplevelWindow : public QRasterWindow
 {
+public:
+    ToplevelWindow(QWindow *parent = nullptr)
+        : QRasterWindow(parent)
+    {
+        QSurfaceFormat format;
+        format.setRedBufferSize(8);
+        format.setGreenBufferSize(8);
+        format.setBlueBufferSize(8);
+        format.setAlphaBufferSize(8);
+        setFormat(format);
+    }
+    ~ToplevelWindow() = default;
+
+private:
     void paintEvent(QPaintEvent *) override
     {
         QPainter(this).fillRect(geometry(), Qt::transparent);
@@ -204,6 +218,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
             toplevelWindow->setFlag(Qt::FramelessWindowHint);
             toplevelWindow->QObject::setParent(menu);
             toplevelWindow->setGeometry(QRect(screenRect.topLeft(), QSize(1, 1)));
+
             auto integration = PlasmaShellWaylandIntegration::get(toplevelWindow);
             integration->setRole(QtWayland::org_kde_plasma_surface::role_tooltip);
             integration->setPosition({x - 1, y - 1});
