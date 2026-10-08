@@ -21,11 +21,15 @@ target_link_libraries(testKlipperUtils
 )
 add_test(NAME klipper-testUtils COMMAND testKlipperUtils)
 ecm_mark_as_test(testKlipperUtils)
-# Klipper test
-add_executable(klippertest klippertest.cpp)
-target_link_libraries(klippertest PRIVATE klipper Qt::Test KF6::Service KF6::ConfigCore)
 
-add_test(NAME klippertest COMMAND dbus-run-session kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:klippertest>)
+# nested KWin doesn't work on FreeBSD CI
+if (LINUX)
+    # Klipper test
+    add_executable(klippertest klippertest.cpp)
+    target_link_libraries(klippertest PRIVATE klipper Qt::Test KF6::Service KF6::ConfigCore)
+
+    add_test(NAME klippertest COMMAND dbus-run-session kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:klippertest>)
+endif()
 
 add_test(
     NAME klipper_v3migrationtest

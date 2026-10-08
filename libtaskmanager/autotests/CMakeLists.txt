@@ -14,8 +14,11 @@ ecm_add_tests(
     LINK_LIBRARIES taskmanager Qt::Test KF6::Service KF6::ConfigCore
 )
 
-add_executable(tasksmodeltest tasksmodeltest.cpp)
-target_link_libraries(tasksmodeltest PRIVATE taskmanager Qt::Test KF6::Service KF6::ConfigCore)
+# nested KWin doesn't work on FreeBSD CI
+if (LINUX)
+    add_executable(tasksmodeltest tasksmodeltest.cpp)
+    target_link_libraries(tasksmodeltest PRIVATE taskmanager Qt::Test KF6::Service KF6::ConfigCore)
 
-add_test(NAME tasksmodeltest COMMAND dbus-run-session kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:tasksmodeltest>)
-set_tests_properties(tasksmodeltest PROPERTIES ENVIRONMENT KWIN_WAYLAND_NO_PERMISSION_CHECKS=1)
+    add_test(NAME tasksmodeltest COMMAND dbus-run-session kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:tasksmodeltest>)
+    set_tests_properties(tasksmodeltest PROPERTIES ENVIRONMENT KWIN_WAYLAND_NO_PERMISSION_CHECKS=1)
+endif()
