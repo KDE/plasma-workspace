@@ -15,8 +15,13 @@
 
 #include <QApplication>
 #include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDBusMetaType>
+#include <QDBusPendingCallWatcher>
+#include <QDBusReply>
 #include <QDebug>
+#include <QFile>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMenu>
