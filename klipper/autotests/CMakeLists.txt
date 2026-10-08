@@ -4,14 +4,23 @@ include(ECMMarkAsTest)
 ecm_add_test(historycyclertest.cpp TEST_NAME klipper-testHistoryCycler
     LINK_LIBRARIES Qt::Test klipper)
 
-# Test History Model
-add_executable(testHistoryModel historymodeltest.cpp)
-target_link_libraries(testHistoryModel
-    Qt::Test
-    klipper
-)
-add_test(NAME klipper-testHistoryModel COMMAND testHistoryModel)
-ecm_mark_as_test(testHistoryModel)
+# nested KWin doesn't work on FreeBSD CI
+if (LINUX)
+    # Test History Model
+    add_executable(testHistoryModel historymodeltest.cpp)
+    target_link_libraries(testHistoryModel
+        Qt::Test
+        klipper
+    )
+    add_test(NAME klipper-testHistoryModel COMMAND dbus-run-session --config-file=${CMAKE_CURRENT_SOURCE_DIR}/isolated-session-bus.conf kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:testHistoryModel>)
+    ecm_mark_as_test(testHistoryModel)
+
+    # Klipper test
+    add_executable(klippertest klippertest.cpp)
+    target_link_libraries(klippertest PRIVATE klipper Qt::Test KF6::Service KF6::ConfigCore)
+
+    add_test(NAME klippertest COMMAND dbus-run-session --config-file=${CMAKE_CURRENT_SOURCE_DIR}/isolated-session-bus.conf kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:klippertest>)
+endif()
 
 # Test Utils
 add_executable(testKlipperUtils utilstest.cpp)
@@ -21,15 +30,6 @@ target_link_libraries(testKlipperUtils
 )
 add_test(NAME klipper-testUtils COMMAND testKlipperUtils)
 ecm_mark_as_test(testKlipperUtils)
-
-# nested KWin doesn't work on FreeBSD CI
-if (LINUX)
-    # Klipper test
-    add_executable(klippertest klippertest.cpp)
-    target_link_libraries(klippertest PRIVATE klipper Qt::Test KF6::Service KF6::ConfigCore)
-
-    add_test(NAME klippertest COMMAND dbus-run-session kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:klippertest>)
-endif()
 
 add_test(
     NAME klipper_v3migrationtest
