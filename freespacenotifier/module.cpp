@@ -125,6 +125,7 @@ void FreeSpaceNotifierModule::startTracking(const QString &udi)
         message = ki18n("Your Home folder is running out of disk space; %1 MiB of space remaining (%2%).");
     }
     auto *notifier = new FreeSpaceNotifier(udi, access->filePath(), message, this);
+    connect(notifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
     m_notifiers.insert(udi, notifier);
 }
 
