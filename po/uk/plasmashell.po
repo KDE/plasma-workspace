@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2026-07-02 11:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -353,53 +353,53 @@ msgstr "Вбудований екран"
 msgid "Disconnected Screen %1"
 msgstr "Від'єднаний екран %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:179 shellcorona.cpp:181
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показати стільницю"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:181
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Приховати стільницю"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:197
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Задіяти засіб запуску програм"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показати перемикач просторів дій"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Перемкнутися на попередній простір дій"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:222
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Перемкнутися на наступний простір дій"
 
-#: shellcorona.cpp:248
+#: shellcorona.cpp:253
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Керування стільницями і панелями…"
 
-#: shellcorona.cpp:270
+#: shellcorona.cpp:275
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Пересування фокуса клавіатури між панелями"
 
-#: shellcorona.cpp:2282
+#: shellcorona.cpp:2287
 #, kde-format
 msgid "Add Panel"
 msgstr "Додати панель"
 
-#: shellcorona.cpp:2369
+#: shellcorona.cpp:2374
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:48+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2009-04-07 22:47+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -287,24 +287,24 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:301
+#: declarative/qml/ClipboardMenu.qml:305
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clear History"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "All History"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -312,19 +312,19 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:377
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<કોઇ સરખું મળ્યું નહી>"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clipboard is empty"

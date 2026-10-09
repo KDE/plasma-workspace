@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:48+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2026-10-03 19:56-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -294,22 +294,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "ياي"
 
-#: declarative/qml/ClipboardMenu.qml:301
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "تارىخنى تازىلا"
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "بارلىق تارىخ خاتىرىسى"
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "يۇلتۇزلانغانلا"
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -319,18 +319,18 @@ msgstr ""
 "نۆۋەتتىكى چاپلاش تاختىسىدا تارىخ خاتىرىسىگە ساقلانمايدىغان سەزگۈر ئۇچۇر "
 "پارچىسى مەۋجۇت."
 
-#: declarative/qml/ClipboardMenu.qml:377
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "مەخپىي ئۇچۇرنى تازىلا"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "No matches"
 msgstr "ماس كەلگىنى يوق"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "چاپلاش تاختىسى بوش"

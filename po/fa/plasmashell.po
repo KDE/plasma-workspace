@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2026-10-01 10:45+0330\n"
 "Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -352,53 +352,53 @@ msgstr "صفحهٔ داخلی"
 msgid "Disconnected Screen %1"
 msgstr "صفحهٔ قطع‌شدهٔ %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:179 shellcorona.cpp:181
 #, kde-format
 msgid "Show Desktop"
 msgstr "نمایش میزکار"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:181
 #, kde-format
 msgid "Hide Desktop"
 msgstr "نهفتن میزکار"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:197
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "فعال‌سازی راه‌انداز برنامه‌ها"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "نمایش تغییردهندهٔ فعالیت‌ها"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "تغییر به فعالیت پیشین"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:222
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "تغییر به فعالیت بعدی"
 
-#: shellcorona.cpp:248
+#: shellcorona.cpp:253
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "مدیریت میزکارها و تابلوها…"
 
-#: shellcorona.cpp:270
+#: shellcorona.cpp:275
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "جابه‌جایی تمرکز صفحه‌کلید بین تابلوها"
 
-#: shellcorona.cpp:2282
+#: shellcorona.cpp:2287
 #, kde-format
 msgid "Add Panel"
 msgstr "افزودن تابلو"
 
-#: shellcorona.cpp:2369
+#: shellcorona.cpp:2374
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

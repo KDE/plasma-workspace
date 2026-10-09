@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:48+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2026-10-04 11:42+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -279,22 +279,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "விரி"
 
-#: declarative/qml/ClipboardMenu.qml:301
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "வரலாற்றை காலியாக்கு"
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "முழு வரலாறு"
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "நட்சத்திரமிட்டவை மட்டும்"
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -304,18 +304,18 @@ msgstr ""
 "பிடிப்புப்பலகையிலுள்ளது, கமுக்கமாக வைத்துக்கொள்ள வேண்டியதாக (எ.கா. கடவுச்சொல்லாக) "
 "உள்ளதால் வரலாற்றில் செமிக்கப்படாது."
 
-#: declarative/qml/ClipboardMenu.qml:377
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "கமுக்கத் தரவை அழி"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"

@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:48+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2025-09-11 17:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -306,22 +306,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Laajenna"
 
-#: declarative/qml/ClipboardMenu.qml:301
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "Tyhjennä historia"
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "Kaikki historia"
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "Vain tähdykälliset"
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -329,18 +329,18 @@ msgid ""
 "stored in the history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:377
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "No matches"
 msgstr "Ei osumia"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Leikepöytä on tyhjä"

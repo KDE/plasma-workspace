@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-18 00:47+0000\n"
+"POT-Creation-Date: 2026-10-09 00:49+0000\n"
 "PO-Revision-Date: 2026-09-24 23:20+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -351,53 +351,53 @@ msgstr "Daxili ekran"
 msgid "Disconnected Screen %1"
 msgstr "Ayrılmış ekran %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:179 shellcorona.cpp:181
 #, kde-format
 msgid "Show Desktop"
 msgstr "İş masasını Göstərmək"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:181
 #, kde-format
 msgid "Hide Desktop"
 msgstr "İş masasını Gizlətmək"
 
-#: shellcorona.cpp:192
+#: shellcorona.cpp:197
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Tətbiq başladıcını aktiv etmək"
 
-#: shellcorona.cpp:200
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Otaq dəyişdiricisi"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Əvvəlki İş otağına Keçid"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:222
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Növbəti İş otağına Keçid"
 
-#: shellcorona.cpp:248
+#: shellcorona.cpp:253
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "İş masalarının və Panellərin idarə edilməsi..."
 
-#: shellcorona.cpp:270
+#: shellcorona.cpp:275
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Klaviatura fokusunu panellər arasında dəyişmək"
 
-#: shellcorona.cpp:2282
+#: shellcorona.cpp:2287
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel əlavə edin"
 
-#: shellcorona.cpp:2369
+#: shellcorona.cpp:2374
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
