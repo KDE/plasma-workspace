@@ -9,18 +9,21 @@
 #include <QAction>
 #include <QCheckBox>
 #include <QDBusPendingReply>
+#include <QGuiApplication>
 #include <QVBoxLayout>
 
 #include <KAuthorized>
 #include <KGlobalAccel>
-#include <KIO/ApplicationLauncherJob>
+#include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
+#include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KTerminalLauncherJob>
 #include <PlasmaActivities/Consumer>
 #include <QDebug>
 #include <QIcon>
 #include <QQmlListProperty>
+#include <QScreen>
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
@@ -264,10 +267,29 @@ void ContextMenu::startLogout()
 
 void ContextMenu::configureDisplays()
 {
-    if (auto service = KService::serviceByDesktopName(QStringLiteral("kcm_kscreen"))) {
-        auto job = new KIO::ApplicationLauncherJob(service);
-        job->start();
+    // HACK Get name of current screen...
+    QString outputName;
+    const QRectF currentScreenGeometry = containment()->screenGeometry();
+    const auto screens = qGuiApp->screens();
+    for (auto *screen : screens) {
+        if (screen->geometry() == currentScreenGeometry) {
+            outputName = screen->name();
+            break;
+        }
     }
+
+    QStringList args;
+    args << QStringLiteral("kcm_kscreen");
+    if (!outputName.isEmpty()) {
+        args << QStringLiteral("--args");
+        // KShell::quoteArg?
+        args << QStringLiteral("--output=%1").arg(outputName);
+    }
+
+    auto job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings"), args);
+    job->setDesktopName(QStringLiteral("systemsettings"));
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
+    job->start();
 }
 
 QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)
