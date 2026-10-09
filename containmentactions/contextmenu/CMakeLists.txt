@@ -23,6 +23,7 @@ target_link_libraries(plasma_containmentactions_contextmenu
                       Qt::Qml
                       Plasma::Activities
                       KF6::I18n
+                      KF6::JobWidgets
                       KF6::GlobalAccel
                       Plasma::Plasma
                       KF6::KIOCore
