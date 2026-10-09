@@ -119,21 +119,21 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             auto filelight = filelightService();
             if (filelight) {
                 auto filelightAction = m_notification->addAction(i18n("Open in Filelight"));
-                connect(filelightAction, &KNotificationAction::activated, this, [this] {
-                    exploreDrive();
+                connect(filelightAction, &KNotificationAction::activated, this, [this, notification = m_notification] {
+                    exploreDrive(notification->xdgActivationToken());
                 });
             } else {
                 // Do we really want the user opening Root in a file manager?
                 auto fileManagerAction = m_notification->addAction(i18n("Open in File Manager"));
-                connect(fileManagerAction, &KNotificationAction::activated, this, [this] {
-                    exploreDrive();
+                connect(fileManagerAction, &KNotificationAction::activated, this, [this, notification = m_notification] {
+                    exploreDrive(notification->xdgActivationToken());
                 });
             }
 
             // TODO once we have "configure" action support in KNotification, wire it up instead of a button
             auto configureAction = m_notification->addAction(i18n("Configure Warning…"));
-            connect(configureAction, &KNotificationAction::activated, this, [this] {
-                Q_EMIT configureRequested();
+            connect(configureAction, &KNotificationAction::activated, this, [this, notification = m_notification] {
+                Q_EMIT configureRequested(notification->xdgActivationToken());
             });
 
             connect(m_notification, &KNotification::closed, this, &FreeSpaceNotifier::onNotificationClosed);
@@ -147,11 +147,12 @@ KService::Ptr FreeSpaceNotifier::filelightService() const
     return KService::serviceByDesktopName(QStringLiteral("org.kde.filelight"));
 }
 
-void FreeSpaceNotifier::exploreDrive()
+void FreeSpaceNotifier::exploreDrive(const QString &activationToken)
 {
     auto service = filelightService();
     if (!service) {
         auto *job = new KIO::OpenUrlJob({QUrl::fromLocalFile(m_path)});
+        job->setStartupId(activationToken.toUtf8());
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
         job->start();
         return;
@@ -159,6 +160,7 @@ void FreeSpaceNotifier::exploreDrive()
 
     auto *job = new KIO::ApplicationLauncherJob(service);
     job->setUrls({QUrl::fromLocalFile(m_path)});
+    job->setStartupId(activationToken.toUtf8());
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->start();
 }
