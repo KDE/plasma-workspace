@@ -105,6 +105,9 @@ KCM.ScrollViewKCM {
             text: model.name
             width: ListView.view.width
 
+            // Because there's content on both sides of the list item
+            Kirigami.Theme.useAlternateBackgroundColor: true
+
             onClicked: {
                 if (noUnit) {
                     return;
@@ -164,7 +167,7 @@ KCM.ScrollViewKCM {
                     color: model.systemdUnit.activeState === "failed" ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.disabledTextColor
                 }
 
-                ToolButton {
+                Button {
                     text: i18nc("@action:button", "See properties")
                     icon.name: "document-properties"
                     display: Button.IconOnly
@@ -175,7 +178,7 @@ KCM.ScrollViewKCM {
                     ToolTip.visible: (Kirigami.Settings.tabletMode ? pressed : hovered) || activeFocus
                 }
 
-                ToolButton {
+                Button {
                     text: i18nc("@action:button", "Remove entry")
                     icon.name: "edit-delete-remove"
                     display: Button.IconOnly

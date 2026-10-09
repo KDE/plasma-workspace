@@ -69,12 +69,17 @@ KCM.ScrollViewKCM {
 
             text: model.display
 
+            // Because there's content on both sides of the list item
+            Kirigami.Theme.useAlternateBackgroundColor: true
+
             QQC2.ToolTip.text: text
             QQC2.ToolTip.visible: languageLabel.truncated && (hovered || activeFocus)
             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-            // There's no click action, so disable the hover effect too
-            background: null
+            // There's no need for one of these list items to ever be selected
+            down: false
+            highlighted: false
+            hoverEnabled: false
 
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
@@ -119,7 +124,7 @@ KCM.ScrollViewKCM {
                 QQC2.Button {
                     visible: languageListView.count > 1
                     display: QQC2.AbstractButton.IconOnly
-                    icon.name: "edit-delete"
+                    icon.name: "edit-delete-remove"
                     QQC2.ToolTip.text: i18nc("@info:tooltip", "Remove")
                     QQC2.ToolTip.visible: hovered || activeFocus
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
