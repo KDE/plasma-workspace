@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 02:59+0000\n"
+"POT-Creation-Date: 2026-10-09 03:01+0000\n"
 "PO-Revision-Date: 2026-09-27 07:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -307,22 +307,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "ამოკეცვა"
 
-#: declarative/qml/ClipboardMenu.qml:301
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "ისტორიის გასუფთავება"
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "სრული ისტორია"
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "მხოლოდ ვარსკვლავიანები"
 
-#: declarative/qml/ClipboardMenu.qml:368
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -332,18 +332,18 @@ msgstr ""
 "ბუფერი ამჟამად შეიცავს მგრძნობიარე მონაცემებს, რომლის შენახვაც ისტორიაში არ "
 "მოხდება."
 
-#: declarative/qml/ClipboardMenu.qml:377
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "საიდუმლო მონაცემების გასუფთავება"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "No matches"
 msgstr "დამთხვევა არ არსებობს"
 
-#: declarative/qml/ClipboardMenu.qml:509
+#: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
