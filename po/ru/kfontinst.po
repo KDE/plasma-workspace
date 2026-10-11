@@ -595,13 +595,13 @@ msgstr "Обновление конфигурации шрифтов, подож
 #: kcmfontinst/JobRunner.cpp:444
 #, kde-format
 msgid "Unable to start backend."
-msgstr "Не удалось запустить движок."
+msgstr "Не удалось запустить модуль."
 
 #: kcmfontinst/JobRunner.cpp:453
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr ""
-"Движок завершил работу, но был перезапущен. Пожалуйста, повторите попытку."
+"Модуль завершил работу, но был перезапущен. Пожалуйста, повторите попытку."
 
 #: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
 #, kde-format
@@ -616,7 +616,7 @@ msgstr "Не удалось загрузить <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:695
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr "Движок завершил работу. Пожалуйста, повторите попытку.<br><i>%1</i>"
+msgstr "Модуль завершил работу. Пожалуйста, повторите попытку.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:697
 #, kde-format
@@ -1184,7 +1184,7 @@ msgstr "Не удалось запустить системную фоновую
 #: kio/KioFonts.cpp:707
 #, kde-format
 msgid "Backend died"
-msgstr "Движок завершил работу"
+msgstr "Модуль завершил работу"
 
 #: kio/KioFonts.cpp:709
 #, kde-format
