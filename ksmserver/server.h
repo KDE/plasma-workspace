@@ -182,8 +182,6 @@ private:
 
     QStringList excludeApps;
 
-    WindowMap legacyWindows;
-
     QDBusMessage m_restoreSessionCall;
 
     // subSession stuff
