@@ -1,7 +1,7 @@
 # Translation for kcm_style.po to Euskara/Basque (eu).
 # Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002, 2004, 2005, 2006, 2007.
@@ -15,14 +15,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-08-07 20:49+0200\n"
+"PO-Revision-Date: 2026-10-11 23:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: gtkpage.cpp:57
@@ -35,108 +35,116 @@ msgstr "%1 ez da GTK gai artxibo balioduna."
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
 msgstr ""
+"Instalazioak huts egin du: ezin da urruneko kokaleku bateko estilorik "
+"instalatu."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "alazioak huts egin du: ezin izan da estilo-fitxategia irakurri."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "Instalazioak huts egin du: estilo-fitxategiak ez du daturik."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
 msgstr ""
+"Instalazioak huts egin du: ezin izan da estilo-fitxategia deskonprimatu."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "Instalazioak huts egin du: estiloa ezin izan da aurkitu."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
 msgstr ""
+"Instalazioak huts egin du: hautatutako fitxategia ez da Union estilo "
+"balioduna."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "Instalazioak huts egin du: hautatutako estiloa ez da onartzen."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "«%1» instalatzean huts egin du: estiloa dagoeneko instalatuta dago."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "«%1» instalatzean huts egin du: baimena ukatu da."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "«%1» instalatzean huts egin du: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "«%1» behar bezala instalatu da."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
 msgstr ""
+"Desinstalazioak huts egin du: «%1» IDa duen estiloa ezin izan da aurkitu."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "«%1» desinstalatzeak huts egin du: baimena ukatu da."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "«%1» desinstalatzeak huts egin du: estiloa ez dago instalatuta."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "«%1» desinstalatzeak huts egin du: estiloa erabiltzen ari da."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "«%1» desinstalatzeak huts egin du: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "Ezin izan dira estiloak desinstalatu:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
 msgstr ""
+"«%1» behar bezala desinstalatu da, baina ezin izan dira besteak "
+"desinstalatu:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -145,21 +153,25 @@ msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"Estilo %1 behar bezala desinstalatu da, baina ezin izan dira besteak "
+"desinstalatu:\n"
 msgstr[1] ""
+"%1 estilo behar bezala desinstalatu dira, baina besteak ezin izan dira "
+"desinstalatu:\n"
 
 #: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr ""
+msgstr "«%1» behar bezala desinstalatu da."
 
 #: kcmstyle.cpp:242
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Estilo %1 behar bezala desinstalatu da"
+msgstr[1] "%1 estilo behar bezala desinstalatu dira."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
@@ -192,10 +204,9 @@ msgstr "%%p"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgid "Button"
-msgstr "Sakatzeko botoia"
+msgstr "Botoia"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:99
@@ -218,10 +229,9 @@ msgstr "Aukera-botoia"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
-msgstr "Testua soilik"
+msgstr "Testua-eremua"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -239,7 +249,7 @@ msgstr "Aplikazioaren estiloa"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Union estilo IDa"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -354,9 +364,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK gai artxiboa (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Fitxategitik instalatu…"
@@ -378,109 +386,103 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Estilo honek oraindik garapen fasean dagoen Union estilo-motorra erabiltzen "
+"du. Estilo hau erabiltzean, baliteke zenbait gauza itxura edo portaera "
+"desegokia izatea."
 
 #: ui/main.qml:174
 #, kde-format
 msgid "Configure Style…"
-msgstr "Konfiguratu estiloa…"
+msgstr "Estiloa konfiguratu…"
 
 #: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "Desinstalatu…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "Ezin dira sisteman instalatutako estiloak desinstalatu."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Union estiloak bakarrik desinstala daitezke."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "Estilo hau ez desinstalatu."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "Instalatu beharreko Union estiloa hautatu"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "Instalatu"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "1. fitxa"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "2. fitxa"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "Kontrol-laukia"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "Aukera-botoia"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
 msgstr "Lauki konbinatua"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "Lauki konbinatua"
+msgstr "Lauki konbinatuko elementua"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
-msgstr "Sakatzeko botoia"
+msgstr "Botoia"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "Testua soilik"
+msgstr "Testua-eremua"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%%p"
+msgstr "%%1"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "Lortu GNOME/GTK aplikazio-estilo berriak…"

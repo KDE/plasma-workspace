@@ -1,14 +1,14 @@
 # Translation for kcm_regionandlang.po to Euskara/Basque (eu).
 # Copyright (C) 2022-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2022, 2023, 2024, 2025, 2026.
 #
 # Egoera:
 # Proiektu osoaren berrikuspen integrala: 2026-08-05ean hasita, osatu gabe dago.
-# Itzulpen-fitxategi honen berrikuspen integrala: 2026-08-07
+# Itzulpen-fitxategi honen berrikuspen integrala: 2026-10-11
 # Terminologia, estiloa, ortotipografia, kohesioa eta koherentzia berrikusi dira.
 # Erreferentzia-gida: -
 # Ikus, halaber: KDE-eu-berrikuspen-integralen-erregistroa.md
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-30 00:48+0000\n"
-"PO-Revision-Date: 2026-08-07 00:32+0200\n"
+"PO-Revision-Date: 2026-10-11 23:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -359,7 +359,7 @@ msgstr "Lehenetsia"
 #, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO C estandarra"
 
 #: localelistmodel.cpp:142
 #, kde-format
