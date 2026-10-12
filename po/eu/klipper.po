@@ -1,7 +1,7 @@
 # Translation for klipper.po to Euskara/Basque (eu).
 # Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Koldo Navarro <koldo.np@euskalnet.net>
@@ -14,14 +14,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-09 03:01+0000\n"
-"PO-Revision-Date: 2026-01-03 10:34+0100\n"
+"PO-Revision-Date: 2026-10-12 00:04+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: configdialog.cpp:83
@@ -43,20 +43,7 @@ msgid "Selection and Clipboard:"
 msgstr "Hautapena eta arbela:"
 
 #: configdialog.cpp:105
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -85,26 +72,27 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Erakuslearekin edo teklatuarekin hautatutako testua"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
-msgstr "Gorde beti historian"
+msgstr "Historian sartu:"
 
 #: configdialog.cpp:128
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Esplizituki kopiatutako testua beti gordetzen da, pasahitz gisa markatuta "
+"egon ezean."
 
 #: configdialog.cpp:133
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Esplizituki kopiatutako irudi-datuak"
 
 #: configdialog.cpp:137
 #, kde-format
@@ -112,6 +100,9 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Adibidez, Krita edo GIMP gisako irudi-editoreetan kopiatutako geruzak eta "
+"hautapenak.<br/><a href=\"1\">Arbelean dauden irudiei buruzko informazio "
+"gehiago.</a>"
 
 #: configdialog.cpp:146
 #, kde-kuit-format
@@ -125,11 +116,19 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Arbelak beti baimenduko du irudi-fitxategiak fitxategi-izen gisa kopiatzea, "
+"eta haien koadro txikiak erakutsiko ditu. Ezarpen honek irudiak zuzenean "
+"datu gisa gordetzen diren kasuak hartzen ditu. Aplikazio batzuek bi kasuak "
+"onartzen dituzte, baina beste batzuek irudiak datu gisa baino ez dituzte "
+"onartzen.<nl/><nl/>Kontuan izan, halaber, Spectacle pantaila-argazkien "
+"tresnak ezarpen honi ezikusi egingo diola pantaila-argazkiak arbelean "
+"gordetzeko konfiguratuta dagoenean. Testua eta irudia biak bidaltzen dituen "
+"edozein aplikaziok ere ezarpen honi ezikusi egingo dio."
 
 #: configdialog.cpp:171
 #, kde-format
 msgid "Show action popup menu:"
-msgstr "Erakutsi ekintza menu gainerakorra:"
+msgstr "Ekintza menu gainerakorra erakutsi:"
 
 #: configdialog.cpp:181
 #, kde-kuit-format
@@ -337,12 +336,14 @@ msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in the history."
 msgstr ""
+"Arbelak une honetan babes berezia behar duten datuak ditu, eta ez dira "
+"historian gordeko."
 
 #: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Datu sekretuak garbitu"
 
 #: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
@@ -553,23 +554,16 @@ msgid "Command:"
 msgstr "Komandoa:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"Komando bateko <placeholder>&#37;s</placeholder> arbeleko eduki osoarekin "
-"ordeztuko da. <placeholder>&#37;0</placeholder> eta <placeholder>&#37;9</"
-"placeholder> artekoak bat-etortze ereduan atzemandako dagokion testuekin "
-"ordezkatuko dira."
+"Komandoko <b>&#37;s</b> arbeleko eduki osoarekin ordeztuko da. <b>&#37;0</b> "
+"eta <b>&#37;9</b> artekoak bat-etortze ereduan atzemandako dagozkien "
+"testuekin ordeztuko dira."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -620,7 +614,7 @@ msgstr "Garbitu arbeleko historia"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Berriz ez galdetu"
 
 #: historymodel.cpp:403
 #, kde-format
@@ -641,12 +635,10 @@ msgid "Remove Starred Item"
 msgstr "Kendu elementu izarduna"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Ekintza automatikoaren menu gainerakorra"
+msgstr "Ekintza-menuaren gaineratze automatikoa txandakatu"
 
 #: klipper.cpp:92
 #, kde-format
@@ -754,54 +746,43 @@ msgstr "Hautapena eta arbela berdin mantendu"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Kurtsorearekin hautatutako edukia automatikoki kopiatuko da arbelera, "
-"itsasteko ekintzarekin edo erdiko klik eginez itsatsi dadin.<br/><a href="
-"\"1\">Hautapena eta arbelari buruzko gehiago</a>."
+"Erakuslearekin hautatutako edukia automatikoki kopiatuko da arbelera, "
+"<i>Itsatsi</i> ekintzarekin edo erdiko klik eginez itsatsi ahal izateko.<br/"
+"><a href=\"1\">Hautapenari eta arbelari buruzko informazio gehiago</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ez ikusi egin hautapenari"
+msgstr "Hautapena gorde"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:34
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Kurtsorearekin hautatutako edukia, baina arbelera esplizituki kopiatu ez "
-"dena, ez da arbeleko historian automatikoki gordeko, eta erdiko klik "
-"erabiliz baino ezin da itsatsi."
+"Erakuslearekin hautatutako edukia, arbelera esplizituki kopiatu ez bada ere, "
+"automatikoki gordetzen da arbeleko historian."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Irudiak gorde"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Testu hautapenak arbelaren historian gordetzen diren edo ez."
+msgstr "Irudiak arbelaren historian gorde."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:42
@@ -850,26 +831,19 @@ msgstr "Ekintza baten zuhaitz-trepetako aldaketak adierazteko adibide-sarrera"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Moztu hautapeneko zuriuneak"
+msgstr "Zuriuneak kimatu"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:73
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Kendu hautatutako testuaren hasieran eta bukaeran egon litezkeen zuriuneak "
-"ekintza gauzatu baino lehen. Adibidez, horrekin ziurtatzen da arakatzaile "
-"batean itsatsitako URL bat behar bezala interpretatuko dela."
+"Kendu ekintza bati pasatutako testuaren hasierako eta amaierako zuriuneak. "
+"Historian gordetako testuari ez dio eragiten."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -891,7 +865,7 @@ msgstr ""
 #: klipper.kcfg:81
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Kopiatutako esteka eta fitxategietarako aplikazioak eskaini"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:83
@@ -901,6 +875,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"<i>http://</i> edo <i>https://</i> bidez hasten den esteka baterako, edo "
+"fitxategietarako, haiek ireki ditzaketen aplikazioak eskainiko dira bat "
+"datozen zure ekintzekin batera, halakorik badago."
 
 #: klipperpopup.cpp:38
 #, kde-format
