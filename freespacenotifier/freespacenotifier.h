@@ -26,14 +26,14 @@ public:
     ~FreeSpaceNotifier() override;
 
 Q_SIGNALS:
-    void configureRequested();
+    void configureRequested(const QString &activationToken);
 
 private:
     void checkFreeDiskSpace();
     void resetLastAvailable();
 
     KService::Ptr filelightService() const;
-    void exploreDrive();
+    void exploreDrive(const QString &activationToken);
     void onNotificationClosed();
 
     // Only run one check at a time

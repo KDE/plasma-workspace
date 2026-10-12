@@ -11,6 +11,7 @@
 #include <KConfigDialog>
 #include <KMountPoint>
 #include <KPluginFactory>
+#include <KWindowSystem>
 
 #include <Solid/Device>
 #include <Solid/DeviceNotifier>
@@ -136,7 +137,7 @@ void FreeSpaceNotifierModule::stopTracking(const QString &udi)
     }
 }
 
-void FreeSpaceNotifierModule::showConfiguration()
+void FreeSpaceNotifierModule::showConfiguration(const QString &activationToken)
 {
     if (KConfigDialog::showDialog(QStringLiteral("settings"))) {
         return;
@@ -161,6 +162,7 @@ void FreeSpaceNotifierModule::showConfiguration()
     });
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
+    KWindowSystem::setCurrentXdgActivationToken(activationToken);
     dialog->show();
 }
 

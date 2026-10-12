@@ -22,7 +22,7 @@ public:
     FreeSpaceNotifierModule(QObject *parent, const QList<QVariant> &);
 
 private:
-    void showConfiguration();
+    void showConfiguration(const QString &activationToken);
     void onNewSolidDevice(const QString &udi);
     void startTracking(const QString &udi);
     void stopTracking(const QString &udi);
