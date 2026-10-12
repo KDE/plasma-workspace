@@ -61,7 +61,7 @@ using namespace Qt::StringLiterals;
 
 /* static */ QString ConfigDialog::manualShortcutString()
 {
-    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
+    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QStringLiteral("org.kde.klipper"), QStringLiteral("repeat_action"));
     return (keys.value(0).toString(QKeySequence::NativeText));
 }
 
@@ -175,7 +175,6 @@ PopupWidget::PopupWidget(QWidget *parent)
     m_historyPopupCb->setObjectName(QLatin1String("kcfg_ReplayActionInHistory"));
     layout->addRow(QString(), m_historyPopupCb);
 
-    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
                                                         "When text that matches an action pattern is selected or is chosen from "
                                                         "the clipboard history, automatically show the popup menu with applicable actions. "

@@ -66,6 +66,8 @@ Klipper::Klipper(QObject *parent)
 
     // we need that collection, otherwise KToggleAction is not happy :}
     m_collection = new KActionCollection(this);
+    m_collection->setComponentName(QStringLiteral("org.kde.klipper"));
+    m_collection->setComponentDisplayName(i18nc("@title shortcut group", "Clipboard"));
 
     m_toggleURLGrabAction = new KToggleAction(this);
     m_collection->addAction(QStringLiteral("clipboard_action"), m_toggleURLGrabAction);

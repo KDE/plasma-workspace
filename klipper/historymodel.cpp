@@ -11,6 +11,7 @@
 #include <chrono>
 #include <zlib.h>
 
+#include <QAction>
 #include <QCryptographicHash>
 #include <QDir>
 #include <QFile>
@@ -22,6 +23,7 @@
 #include <QStandardPaths>
 
 #include <KConfigGroup>
+#include <KGlobalAccel>
 #include <KIO/DeleteJob>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -85,15 +87,29 @@ struct TransactionGuard {
     bool committed = true;
 };
 
-// Temporary function added in Plasma 6.8 in September 2026,
+// Temporary function added in Plasma 6.8 and 6.9 in the second half of 2026,
 // TODO: Drop when we hit 7.0 or in 2032
 void migrateSettings()
 {
     KConfigGroup general = KlipperSettings::self()->sharedConfig()->group(u"General"_s);
+    // Klipper's shortcuts used to be registered as part of plasmashell
+    KConfigGroup plasmashellShortcuts = KSharedConfig::openConfig(u"kglobalshortcutsrc"_s)->group(u"plasmashell"_s);
+    const QStringList shortcutNames{u"clipboard_action"_s,
+                                    u"clear-history"_s,
+                                    u"repeat_action"_s,
+                                    u"edit_clipboard"_s,
+                                    u"show-barcode"_s,
+                                    u"cycleNextAction"_s,
+                                    u"cyclePrevAction"_s,
+                                    u"show-on-mouse-pos"_s};
+    const bool hasPlasmashellShortcuts = std::ranges::any_of(shortcutNames, [&plasmashellShortcuts](const QString &name) {
+        return plasmashellShortcuts.hasKey(name);
+    });
     const bool needsMigration = general.hasKey("IgnoreSelection") //
         || general.hasKey("IgnoreImages") //
         || general.hasKey("SelectionTextOnly") //
-        || general.hasKey("ActionsInfoMessageShown");
+        || general.hasKey("ActionsInfoMessageShown") //
+        || hasPlasmashellShortcuts;
     if (!needsMigration) {
         return;
     }
@@ -120,6 +136,25 @@ void migrateSettings()
         general.deleteEntry("ActionsInfoMessageShown");
     }
     KlipperSettings::self()->save();
+
+    // Keyboard shortcuts
+    for (const QString &name : shortcutNames) {
+        if (!plasmashellShortcuts.hasKey(name)) {
+            continue;
+        }
+        const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(u"plasmashell"_s, name);
+
+        QAction oldAction;
+        oldAction.setObjectName(name);
+        oldAction.setProperty("componentName", u"plasmashell"_s);
+        KGlobalAccel::self()->setShortcut(&oldAction, {}, KGlobalAccel::NoAutoloading);
+        KGlobalAccel::self()->removeAllShortcuts(&oldAction);
+
+        QAction action;
+        action.setObjectName(name);
+        action.setProperty("componentName", u"org.kde.klipper"_s);
+        KGlobalAccel::self()->setShortcut(&action, keys, KGlobalAccel::NoAutoloading);
+    }
 }
 
 QString computeUuid(const QMimeData *data)
