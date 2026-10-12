@@ -17,6 +17,8 @@ using namespace Qt::StringLiterals;
 SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
+    setMinLetterCount(2);
+
     m_logoutKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to log out of the session", "logout;log out")
                            .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canLogout()) {
@@ -55,11 +57,18 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     }
 }
 
-static inline bool anyKeywordMatches(const QStringList &keywords, const QString &term)
+static qreal keywordMatchScore(const QStringList &keywords, const QString &term)
 {
-    return std::ranges::any_of(keywords, [&term](const QString &keyword) {
-        return term.compare(keyword, Qt::CaseInsensitive) == 0;
-    });
+    qreal score = 0;
+    for (const QString &keyword : keywords) {
+        if (term.compare(keyword, Qt::CaseInsensitive) == 0) {
+            return 1;
+        }
+        if (keyword.startsWith(term, Qt::CaseInsensitive)) {
+            score = std::max(score, qreal(term.size()) / keyword.size());
+        }
+    }
+    return score;
 }
 
 void SessionRunner::match(KRunner::RunnerContext &context)
@@ -67,53 +76,35 @@ void SessionRunner::match(KRunner::RunnerContext &context)
     const QString term = context.query();
     QList<KRunner::QueryMatch> matches;
 
-    KRunner::QueryMatch match(this);
-    match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
-    match.setRelevance(0.9);
-    if (anyKeywordMatches(m_logoutKeywords, term)) {
-        if (m_session.canLogout()) {
-            match.setText(i18nc("log out command", "Log Out"));
-            match.setIconName(QStringLiteral("system-log-out"));
-            match.setData(LogoutAction);
-            matches << match;
+    const auto matchAction = [&](const QStringList &keywords, bool available, const QString &text, const QString &iconName, int action) {
+        if (!available) {
+            return;
         }
-    } else if (anyKeywordMatches(m_shutdownKeywords, term)) {
-        if (m_session.canShutdown()) {
-            KRunner::QueryMatch match(this);
-            match.setText(i18nc("turn off computer command", "Shut Down"));
-            match.setIconName(QStringLiteral("system-shutdown"));
-            match.setData(ShutdownAction);
-            matches << match;
+        const qreal score = keywordMatchScore(keywords, term);
+        if (score <= 0) {
+            return;
         }
-    } else if (anyKeywordMatches(m_restartKeywords, term)) {
-        if (m_session.canReboot()) {
-            match.setText(i18nc("restart computer command", "Restart"));
-            match.setIconName(QStringLiteral("system-reboot"));
-            match.setData(RestartAction);
-            matches << match;
+        KRunner::QueryMatch match(this);
+        if (score >= 1) {
+            match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
+            match.setRelevance(0.9);
+        } else {
+            match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Low);
+            match.setRelevance(0.9 * score);
         }
-    } else if (anyKeywordMatches(m_lockKeywords, term)) {
-        if (m_session.canLock()) {
-            match.setText(i18nc("lock screen command", "Lock"));
-            match.setIconName(QStringLiteral("system-lock-screen"));
-            match.setData(LockAction);
-            matches << match;
-        }
-    } else if (anyKeywordMatches(m_saveKeywords, term)) {
-        if (m_session.canSaveSession()) {
-            match.setText(i18n("Save Session"));
-            match.setIconName(QStringLiteral("system-save-session"));
-            match.setData(SaveAction);
-            matches << match;
-        }
-    } else if (anyKeywordMatches(m_usersKeywords, term)) {
-        if (m_session.canSwitchUser()) {
-            match.setText(i18n("Switch User"));
-            match.setIconName(QStringLiteral("system-switch-user"));
-            match.setData(SwitchAction);
-            matches << match;
-        }
-    }
+        match.setText(text);
+        match.setIconName(iconName);
+        match.setData(action);
+        matches << match;
+    };
+
+    matchAction(m_logoutKeywords, m_session.canLogout(), i18nc("log out command", "Log Out"), u"system-log-out"_s, LogoutAction);
+    matchAction(m_shutdownKeywords, m_session.canShutdown(), i18nc("turn off computer command", "Shut Down"), u"system-shutdown"_s, ShutdownAction);
+    matchAction(m_restartKeywords, m_session.canReboot(), i18nc("restart computer command", "Restart"), u"system-reboot"_s, RestartAction);
+    matchAction(m_lockKeywords, m_session.canLock(), i18nc("lock screen command", "Lock"), u"system-lock-screen"_s, LockAction);
+    matchAction(m_saveKeywords, m_session.canSaveSession(), i18n("Save Session"), u"system-save-session"_s, SaveAction);
+    matchAction(m_usersKeywords, m_session.canSwitchUser(), i18n("Switch User"), u"system-switch-user"_s, SwitchAction);
+
     context.addMatches(matches);
 }
 
