@@ -609,8 +609,8 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &_ids)
     if (qEnvironmentVariableIsSet("KDECI_BUILD")) {
         prepend = QStringList{
             QLatin1String("org.kde.plasma.emojier.desktop"),
-            QLatin1String("linguist5.desktop"),
-            QLatin1String("org.qt.linguist6.desktop"),
+            QLatin1String("vim.desktop"),
+            QLatin1String("htop.desktop"),
         };
         ignoreDefaults = true;
         append.clear();
