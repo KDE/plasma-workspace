@@ -298,6 +298,7 @@ void MediaProxy::determineBackgroundType(KPackage::Package *package)
         } else if (type.startsWith(QLatin1String("image/"))) {
             m_backgroundType = BackgroundType::Type::Image;
         } else {
+            qCWarning(IMAGEWALLPAPER).nospace() << "Unknown or unsupported background type for" << filePath << "of" << type;
             m_backgroundType = BackgroundType::Type::Unknown;
         }
     }
