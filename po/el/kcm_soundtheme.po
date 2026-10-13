@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-07 00:45+0000\n"
-"PO-Revision-Date: 2024-08-20 11:24+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-10-12 18:03+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kcm_soundtheme.cpp:156
 #, kde-format
@@ -32,39 +33,39 @@ msgstr "Εφεδρικό θέμα ήχου από το freedesktop.org"
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου."
 
 #: kcm_soundtheme.cpp:260
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
-msgstr ""
+msgstr "Αδυναμία λήψης του αρχείου θέματος ήχου: %1"
 
 #: kcm_soundtheme.cpp:271
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr ""
+msgstr "Δεν ήταν δυνατό το άνοιγμα του αρχείου."
 
 #: kcm_soundtheme.cpp:276
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Το θέμα εγκαταστάθηκε με επιτυχία."
+msgstr[1] "Τα θέματα εγκαταστάθηκαν με επιτυχία."
 
 #: kcm_soundtheme.cpp:279
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
-msgstr ""
+msgstr "Το αρχείο δεν περιέχει έγκυρο θέμα ήχου."
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@action:button Install sound theme from file"
 msgid "Install from File…"
-msgstr ""
+msgstr "Εγκατάσταση από αρχείο…"
 
 #: ui/main.qml:42
 #, kde-format
@@ -117,9 +118,9 @@ msgstr "Αποτυχία προεπισκόπησης ήχου: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
-msgstr ""
+msgstr "Επιλογή θέματος ήχου"
 
 #: ui/main.qml:248
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
-msgstr ""
+msgstr "Αρχεία θεμάτων (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

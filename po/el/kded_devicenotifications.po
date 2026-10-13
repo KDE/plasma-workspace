@@ -27,7 +27,7 @@ msgstr "Ανιχνεύθηκε οθόνη"
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been connected."
-msgstr "Μια οθόνη έχει αποσυνδεθεί."
+msgstr "Συνδέθηκε μια οθόνη."
 
 #: devicenotifications.cpp:522
 #, kde-format
@@ -39,19 +39,19 @@ msgstr "Αφαιρέθηκε οθόνη"
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been disconnected."
-msgstr "Μια οθόνη έχει αποσυνδεθεί."
+msgstr "Αποσυνδέθηκε μια οθόνη."
 
 #: devicenotifications.cpp:567
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been connected."
-msgstr "%1 έχει αποσυνδεθεί."
+msgstr "Συνδέθηκε η συσκευή %1."
 
 #: devicenotifications.cpp:567
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been connected."
-msgstr "Μια συσκευή USB έχει αποσυνδεθεί."
+msgstr "Συνδέθηκε μια συσκευή USB."
 
 #: devicenotifications.cpp:572
 #, kde-format
@@ -63,13 +63,13 @@ msgstr "Ανιχνεύθηκε συσκευή USB"
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been disconnected."
-msgstr "%1 έχει αποσυνδεθεί."
+msgstr "Αποσυνδέθηκε η συσκευή %1."
 
 #: devicenotifications.cpp:610
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been disconnected."
-msgstr "Μια συσκευή USB έχει αποσυνδεθεί."
+msgstr "Αποσυνδέθηκε μια συσκευή USB."
 
 #: devicenotifications.cpp:615
 #, kde-format

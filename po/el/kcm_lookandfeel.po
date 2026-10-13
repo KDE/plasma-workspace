@@ -3,20 +3,21 @@
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
 # SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:48+0000\n"
-"PO-Revision-Date: 2024-09-19 16:49+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-10-12 13:57+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,7 +33,7 @@ msgstr "dimkard@gmail.com"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "Αρχεία εικόνων (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -53,12 +54,16 @@ msgstr "Καθολική εμφάνιση και αίσθηση"
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Εναλλαγή μεταξύ σκοτεινού και φωτεινού καθολικού θέματος ανάλογα με την ώρα "
+"της ημέρας"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"Εναλλαγή μεταξύ σκοτεινού και φωτεινού καθολικού θέματος όταν ο υπολογιστής "
+"είναι αδρανής"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -67,6 +72,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Χρόνος αδράνειας του υπολογιστή πριν από την εναλλαγή μεταξύ σκοτεινού και "
+"φωτεινού καθολικού θέματος, σε δευτερόλεπτα"
 
 #: tool/lnftool.cpp:32
 #, kde-format
@@ -123,6 +130,8 @@ msgstr "όνομαπακέτου"
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
 msgstr ""
+"Να μην επιτρέπεται στην επιλογή --apply να απενεργοποιεί την αυτόματη "
+"λειτουργία"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -160,44 +169,46 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"Το επιλεγμένο φωτεινό καθολικό θέμα θα χρησιμοποιείται την ημέρα και το "
+"σκοτεινό τη νύχτα."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Διαμόρφωση κύκλου ημέρας/νύχτας…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Φωτεινό"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Σκοτεινό"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Αναμονή έως ότου ο υπολογιστής αδρανήσει πριν από την εναλλαγή:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 δευτερόλεπτο"
+msgstr[1] "%1 δευτερόλεπτα"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Περιορίζει τις διακοπές όταν χρησιμοποιείτε ενεργά τον υπολογιστή."
 
 #: ui/LookAndFeelSelector.qml:24
 #, fuzzy, kde-format
@@ -214,8 +225,7 @@ msgid "Choose Dark Global Theme"
 msgstr "Λήψη νέων στιλ εμφάνισης..."
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "Προεπισκόπηση θέματος"
@@ -242,7 +252,7 @@ msgstr "Αδυναμία διαγραφής θεμάτων του συστήμα
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "Αποθήκευση τρέχοντος θέματος"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -251,30 +261,32 @@ msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
 msgstr ""
+"Οι τρέχουσες ρυθμίσεις εμφάνισης και θεμάτων του Plasma θα αποθηκευτούν σε "
+"ένα νέο καθολικό θέμα."
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "Προσθήκη εικόνας προεπισκόπησης…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "Λήψη στιγμιότυπου οθόνης…"
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
 msgctxt "@label:textbox Name of new global theme that will be created"
 msgid "Name:"
-msgstr ""
+msgstr "Όνομα:"
 
 #: ui/LookAndFeelSnapshot.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "Πληκτρολογήστε όνομα…"
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -282,35 +294,34 @@ msgctxt ""
 "@action:button Confirm creating new global theme from the user's current "
 "appearance settings"
 msgid "Confirm"
-msgstr ""
+msgstr "Επιβεβαίωση"
 
 #: ui/LookAndFeelSnapshot.qml:113
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "Υπάρχει ήδη καθολικό θέμα με αυτό το όνομα ή αναγνωριστικό."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "Επιλογή εικόνας προεπισκόπησης"
 
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Μετάβαση σε σκοτεινή λειτουργία τη νύχτα"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "Αποθήκευση τρέχοντος θέματος…"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "Λήψη νέων…"
@@ -378,7 +389,7 @@ msgstr "Στυλ Plasma"
 #: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Pointers"
-msgstr ""
+msgstr "Δείκτες"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
@@ -433,8 +444,7 @@ msgstr ""
 "είναι χαλασμένο."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "Περιέχει διάταξη επιφάνειας εργασίας"

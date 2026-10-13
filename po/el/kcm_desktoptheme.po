@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2009, 2010.
+# SPDX-FileCopyrightText: 2009, 2010, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Petros <pvidalis@gmail.com>, 2010.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # Antonis Geralis <capoiosct@gmail.com>, 2013.
@@ -13,15 +13,15 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-27 00:47+0000\n"
-"PO-Revision-Date: 2024-08-13 19:53+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-10-12 11:20+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -175,12 +175,13 @@ msgstr ""
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
 msgstr ""
+"Δεν είναι δυνατή η διαγραφή στιλ Plasma που έχουν εγκατασταθεί από το σύστημα"
 
 #: ui/main.qml:170
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Να μη διαγραφεί αυτό το στιλ Plasma"
 
 #: ui/main.qml:189
 #, kde-format

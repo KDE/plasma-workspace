@@ -3,20 +3,21 @@
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 # SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-15 00:48+0000\n"
-"PO-Revision-Date: 2024-09-21 13:07+0300\n"
-"Last-Translator: Δημήτρης Μηλιάτης <demetresmeliates+i18n@gmail.com>\n"
+"PO-Revision-Date: 2026-10-12 13:58+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -51,8 +52,7 @@ msgid "Switching times:"
 msgstr "Αλλαγή χρόνων:"
 
 #: ui/main.qml:61
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Πάντα ανενεργό"
@@ -68,19 +68,19 @@ msgstr "Πάντα ανενεργό"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "Ανατολή και δύση του ηλίου"
 
 #: ui/main.qml:80
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Διαμόρφωση…"
 
 #: ui/main.qml:131 ui/main.qml:182 ui/main.qml:248
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
-msgstr ""
+msgstr "%1 K"
 
 #: ui/main.qml:138
 #, fuzzy, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-10-13 03:22+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -93,7 +93,7 @@ msgstr ""
 "Систем ће вас обавестити ако слободан простор спадне испод задатог броја MiB "
 "и задатог процента расположивог простора."
 
-#: module.cpp:121
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -101,7 +101,7 @@ msgid ""
 msgstr ""
 "Партицији %1 понестаје простора на диску; преостало је још %2 MiB (%3%)."
 
-#: module.cpp:123
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -109,7 +109,7 @@ msgid ""
 msgstr ""
 "Кореној партицији понестаје простора на диску; преостало је још %1 MiB (%2%)."
 
-#: module.cpp:125
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -117,7 +117,7 @@ msgid ""
 msgstr ""
 "Домаћој фасцикли понестаје простора на диску; преостало је још %1 MiB (%2%)."
 
-#: module.cpp:150
+#: module.cpp:152
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

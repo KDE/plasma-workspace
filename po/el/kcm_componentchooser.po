@@ -7,7 +7,7 @@
 # Toussis Manolis <koppermind@yahoo.com>, 2005.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2005, 2008.
 # Spiros Georgaras <sng@hellug.gr>, 2007.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2009.
+# SPDX-FileCopyrightText: 2009, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Dimitris Kardarakos <dimkard@gmail.com>, 2016.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-08-12 10:58+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-10-12 09:46+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -181,7 +181,7 @@ msgstr "Πρόγραμμα ηλ. ταχυδρομείου:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Ημερολόγιο:"
 
 #: ui/main.qml:111
 #, kde-format
