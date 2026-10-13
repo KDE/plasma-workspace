@@ -3,7 +3,10 @@
 
 #pragma once
 
+#include <QStandardPaths>
 #include <QString>
+
+#include <KService>
 
 inline std::optional<char> narrow(int i)
 {
@@ -100,4 +103,26 @@ inline QStringView unitNameToServiceName(QStringView unitName)
     }
 
     return name;
+}
+
+inline KService::Ptr serviceForUnitName(const QString &unitName)
+{
+    auto serviceName = unitNameToServiceName(unitName);
+    if (serviceName.isEmpty()) {
+        return {};
+    }
+
+    if (auto service = KService::serviceByMenuId(serviceName.toString() + QLatin1String(".desktop")); service) {
+        return service;
+    }
+    if (unitName.endsWith(QLatin1String("@autostart.service"))) {
+        if (auto file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart/%1.desktop").arg(serviceName));
+            !file.isEmpty()) {
+            if (auto service = new KService(file); service->isValid()) {
+                return KService::Ptr(service);
+            }
+        }
+    }
+
+    return {};
 }

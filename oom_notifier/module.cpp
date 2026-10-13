@@ -14,7 +14,7 @@
 #include <KPluginFactory>
 #include <KService>
 
-#include "decode.h"
+#include "systemd_decode.h"
 
 using namespace Qt::StringLiterals;
 
@@ -95,27 +95,6 @@ public:
     }
 
 private:
-    static KService::Ptr serviceForUnitName(const QString &unitName)
-    {
-        auto serviceName = unitNameToServiceName(unitName);
-        if (serviceName.isEmpty()) {
-            return {};
-        }
-
-        if (auto service = KService::serviceByMenuId(serviceName.toString() + ".desktop"_L1); service) {
-            return service;
-        }
-        if (unitName.endsWith("@autostart.service"_L1)) {
-            if (auto file = QStandardPaths::locate(QStandardPaths::GenericConfigLocation, u"autostart/%1.desktop"_s.arg(serviceName)); !file.isEmpty()) {
-                if (auto service = new KService(file); service->isValid()) {
-                    return KService::Ptr(service);
-                }
-            }
-        }
-
-        return {};
-    }
-
     OrgFreedesktopDBusPropertiesInterface properties{u"org.freedesktop.systemd1"_s,
                                                      u""_s,
                                                      "org.freedesktop.DBus.Properties",

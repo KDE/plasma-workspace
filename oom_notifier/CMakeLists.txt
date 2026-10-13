@@ -4,6 +4,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"oom_notifier\")
 
 kcoreaddons_add_plugin(oom_notifier SOURCES module.cpp INSTALL_NAMESPACE "kf6/kded")
+target_include_directories(oom_notifier PRIVATE ${CMAKE_SOURCE_DIR}/components)
 target_link_libraries(oom_notifier
     KF6::DBusAddons
     KF6::I18n
