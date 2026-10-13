@@ -307,9 +307,16 @@ void SelectedLanguageModel::move(int from, int to)
         Q_EMIT hasImplicitLangChanged();
     }
 
-    beginResetModel();
+    int dest = 0;
+    if (to < from) {
+        dest = to;
+    } else {
+        dest = to + 1;
+    }
+
+    beginMoveRows(QModelIndex(), from, from, QModelIndex(), dest);
     m_selectedLanguages.move(from, to);
-    endResetModel();
+    endMoveRows();
     saveLanguages();
     Q_EMIT shouldWarnMultipleLangChanged();
     Q_EMIT exampleChanged();

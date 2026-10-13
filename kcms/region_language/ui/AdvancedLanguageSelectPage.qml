@@ -19,6 +19,7 @@ import kcmregionandlang
 
 KCM.ScrollViewKCM {
     property int replaceLangIndex: -1
+    property bool dragActive: false
     implicitHeight: languageListView.height
     id: languageSelectPage
     title: i18n("Language")
@@ -38,7 +39,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
             position: Kirigami.InlineMessage.Position.Header
-            visible: languageListModel.selectedLanguageModel.shouldWarnMultipleLang
+            visible: languageListModel.selectedLanguageModel.shouldWarnMultipleLang && !languageSelectPage.dragActive
         }
 
         Kirigami.InlineMessage {
@@ -63,67 +64,80 @@ KCM.ScrollViewKCM {
 
     Component {
         id: languagesListItemComponent
-        QQC2.ItemDelegate {
-            id: listItem
-            width: ListView.view.width
+        Item {
+            id: listItemRoot
+            width: languageListView.width - languageListView.leftMargin - languageListView.rightMargin
+            height: listItem.implicitHeight
 
-            text: model.display
+            required property int index
+            required property var model
 
-            QQC2.ToolTip.text: text
-            QQC2.ToolTip.visible: languageLabel.truncated && (hovered || activeFocus)
-            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+            QQC2.ItemDelegate {
+                id: listItem
+                anchors.fill: listItemRoot
 
-            // There's no click action, so disable the hover effect too
-            background: null
+                text: listItemRoot.model.display
 
-            contentItem: RowLayout {
-                spacing: Kirigami.Units.smallSpacing
+                QQC2.ToolTip.text: text
+                QQC2.ToolTip.visible: languageLabel.truncated && (hovered || activeFocus)
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-                Kirigami.ListItemDragHandle {
-                    listItem: listItem
-                    listView: languageListView
-                    visible: languageListView.count > 1
-                    onMoveRequested: (oldIndex, newIndex) => {
-                        languageListModel.selectedLanguageModel.move(oldIndex, newIndex);
+                // There's no click action, so disable the hover effect too
+                background: null
+
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    Kirigami.ListItemDragHandle {
+                        listItem: listItem
+                        listView: languageListView
+                        visible: languageListView.count > 1
+                        onMoveRequested: (oldIndex, newIndex) => {
+                            languageSelectPage.dragActive = true
+                            languageListModel.selectedLanguageModel.move(oldIndex, newIndex);
+                        }
+                        onDropped: (oldIndex, newIndex) => {
+                            languageSelectPage.dragActive = false
+                        }
                     }
-                }
 
-                QQC2.Label {
-                    id: languageLabel
-                    Layout.fillWidth: true
-                    text: listItem.text
-                    elide: Text.ElideRight
-                    textFormat: Text.PlainText
-                }
-
-                QQC2.Button {
-                    visible: languageListView.count <= 1
-                    text: i18nc("@info:tooltip", "Change Language")
-                    icon.name: "configure"
-                    onClicked: {
-                        replaceLangIndex = index;
-                        addLanguagesSheet.titleText = i18nc("@title:window", "Change Language");
-                        addLanguagesSheet.open();
+                    QQC2.Label {
+                        id: languageLabel
+                        Layout.fillWidth: true
+                        text: listItem.text
+                        elide: Text.ElideRight
+                        textFormat: Text.PlainText
                     }
-                }
-                QQC2.Button {
-                    enabled: index > 0
-                    visible: languageListView.count > 1
-                    display: QQC2.AbstractButton.IconOnly
-                    icon.name: "go-top"
-                    QQC2.ToolTip.text: i18nc("@info:tooltip", "Move to top")
-                    QQC2.ToolTip.visible: hovered || activeFocus
-                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    onClicked: languageListModel.selectedLanguageModel.move(index, 0)
-                }
-                QQC2.Button {
-                    visible: languageListView.count > 1
-                    display: QQC2.AbstractButton.IconOnly
-                    icon.name: "edit-delete"
-                    QQC2.ToolTip.text: i18nc("@info:tooltip", "Remove")
-                    QQC2.ToolTip.visible: hovered || activeFocus
-                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    onClicked: languageListModel.selectedLanguageModel.remove(index);
+
+                    QQC2.Button {
+                        visible: languageListView.count <= 1
+                        text: i18nc("@info:tooltip", "Change Language")
+                        icon.name: "configure"
+                        onClicked: {
+                            replaceLangIndex = listItemRoot.index;
+                            addLanguagesSheet.titleText = i18nc("@title:window", "Change Language");
+                            addLanguagesSheet.open();
+                        }
+                    }
+                    QQC2.Button {
+                        enabled: listItemRoot.index > 0
+                        visible: languageListView.count > 1
+                        display: QQC2.AbstractButton.IconOnly
+                        icon.name: "go-top"
+                        QQC2.ToolTip.text: i18nc("@info:tooltip", "Move to top")
+                        QQC2.ToolTip.visible: hovered || activeFocus
+                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        onClicked: languageListModel.selectedLanguageModel.move(listItemRoot.index, 0)
+                    }
+                    QQC2.Button {
+                        visible: languageListView.count > 1
+                        display: QQC2.AbstractButton.IconOnly
+                        icon.name: "edit-delete"
+                        QQC2.ToolTip.text: i18nc("@info:tooltip", "Remove")
+                        QQC2.ToolTip.visible: hovered || activeFocus
+                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        onClicked: languageListModel.selectedLanguageModel.remove(listItemRoot.index)
+                    }
                 }
             }
         }
