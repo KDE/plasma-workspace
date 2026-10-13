@@ -155,7 +155,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
         // up at the same .desktop file when fully resolved as url.
         if (menuId.isEmpty()) {
             KService::Ptr service = KService::serviceByMenuId(url.fileName());
-            if (KDesktopFile(service->entryPath()).fileName() == f.fileName()) {
+            if (service && KDesktopFile(service->entryPath()).fileName() == f.fileName()) {
                 menuId = getMenuId(service);
             }
         }
