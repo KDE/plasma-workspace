@@ -7,7 +7,7 @@
 # Toussis Manolis <koppermind@yahoo.com>, 2005.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2005, 2008.
 # Spiros Georgaras <sng@hellug.gr>, 2007.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2009.
+# SPDX-FileCopyrightText: 2009, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Dimitris Kardarakos <dimkard@gmail.com>, 2016.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-08-12 10:58+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-12 09:46+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -41,10 +41,9 @@ msgid "Select default browser"
 msgstr "Επιλογή προεπιλεγμένου προγράμματος περιήγησης"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Επιλογή προεπιλεγμένης εφαρμογής κλήσης"
+msgstr "Επιλογή προεπιλεγμένης εφαρμογής ημερολογίου"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -148,18 +147,17 @@ msgstr ""
 "σχετίζονται με αυτό το είδος εφαρμογής: %2"
 
 #: ui/main.qml:34
-#, fuzzy, kde-format
-#| msgid "This application can also open these file types:"
+#, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr "Αυτή η εφαρμογή μπορεί επίσης να ανοίξει αυτούς τους τύπους αρχείων:"
+msgstr ""
+"Αυτή η εφαρμογή ενδέχεται να μην μπορεί να ανοίξει όλους τους τύπους αρχείων."
 
 #: ui/main.qml:36
-#, fuzzy, kde-format
-#| msgid "Details"
+#, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr "Λεπτομέρειες"
+msgstr "Προβολή λεπτομερειών"
 
 #: ui/main.qml:63
 #, kde-format
@@ -181,7 +179,7 @@ msgstr "Πρόγραμμα ηλ. ταχυδρομείου:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Ημερολόγιο:"
 
 #: ui/main.qml:111
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
 "PO-Revision-Date: 2026-10-04 11:42+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Show action popup menu:"
 msgstr "செயல்களைக் கொண்ட மேல்தோன்றும் பட்டியை காட்டு:"
 
-#: configdialog.cpp:180
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -123,7 +123,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:192
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -131,45 +131,45 @@ msgid_plural "%v seconds"
 msgstr[0] "%v நொடி"
 msgstr[1] "%v நொடி"
 
-#: configdialog.cpp:193
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: configdialog.cpp:202
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "விருப்பங்கள்:"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "பாங்கும் கட்டளைகளும்"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "விவரணம்"
 
-#: configdialog.cpp:233
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "செயல்முறையை சேர்..."
 
-#: configdialog.cpp:237
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "செயல்முறையை திருத்து..."
 
-#: configdialog.cpp:242
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "செயல்முறையை நீக்கு"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -179,51 +179,51 @@ msgstr ""
 "<resource>%1</resource><nl/> என்ற தேர்ந்தெடுக்கப்பட்டுள்ள செயல்முறையையும் அதற்கான "
 "கட்டளைகளையும் நீக்க வேண்டுமா?"
 
-#: configdialog.cpp:428
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "செயல்முறையை நீக்குவதை உறுதி செய்தல்"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "பொது அமைப்புகள்"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "செயல்முறைப்பட்டி"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "செயல்முறைப்பட்டி"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "செயல்முறைகளுக்கான அமைப்புகள்"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "செயல்முறைகளுக்கான அமைப்புகள்"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "சுருக்குவழிகள்"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "சுருக்குவழிகளுக்கான அமைப்பு"
@@ -556,40 +556,47 @@ msgstr "கட்டளைக்கான இயல்பிருப்பு�
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: historymodel.cpp:325
+#: historymodel.cpp:360
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை முழுதாக அழிக்க வேண்டுமா?"
 
-#: historymodel.cpp:327
+#: historymodel.cpp:362
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை காலியாக்கு"
 
-#: historymodel.cpp:329 historymodel.cpp:604
+#: historymodel.cpp:364 historymodel.cpp:639
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "மறுபடியும் கேட்காதே"
 
-#: historymodel.cpp:411
+#: historymodel.cpp:446
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:600
+#: historymodel.cpp:635
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "இந்த உருப்படிக்கு நட்சத்திரமிட்டுள்ளீர். இதை உறுதியாக வரலாற்றிலிருந்து நீக்க வேண்டுமா?"
 
-#: historymodel.cpp:602
+#: historymodel.cpp:637
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "நட்சத்திரமிட்ட பதிவை நீக்கு"
 
-#: klipper.cpp:72
+#: klipper.cpp:70
+#, fuzzy, kde-format
+#| msgid "Clipboard Popup"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "மேல்தோன்றும் பிடிப்புப்பலகை சாளரம்"
+
+#: klipper.cpp:74
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu Toggle automatic action"
 #| msgid "Automatic Action Popup Menu"
@@ -597,64 +604,64 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "செயல்முறைகளுக்கான தானாக மேல்தோன்றும் பட்டி"
 
-#: klipper.cpp:92
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை &காலியாக்கு"
 
-#: klipper.cpp:97
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "தற்போதைய பிடிப்பின்மீது கைமுறையாக ஒரு செயலை இயக்கு"
 
-#: klipper.cpp:105
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&உள்ளடக்கத்தை திருத்து…"
 
-#: klipper.cpp:113
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&பட்டைக்குறியீட்டை காட்டு…"
 
-#: klipper.cpp:122
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "வரலாற்றிலுள்ள அடுத்த உருப்படி"
 
-#: klipper.cpp:127
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "வரலாற்றிலுள்ள முந்தைய உருப்படி"
 
-#: klipper.cpp:134
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "பிடிப்புப்பலகையை சுட்டிக்குறியின் இருப்பிடத்திலேயே காட்டு"
 
-#: klipper.cpp:380 klipper.cpp:389
+#: klipper.cpp:382 klipper.cpp:391
 #, kde-format
 msgid "Clipboard history"
 msgstr "பிடிப்புப்பலகை வரலாறு"
 
-#: klipper.cpp:406
+#: klipper.cpp:408
 #, kde-format
 msgid "up"
 msgstr "மேலே"
 
-#: klipper.cpp:413
+#: klipper.cpp:415
 #, kde-format
 msgid "current"
 msgstr "தற்போதையது"
 
-#: klipper.cpp:420
+#: klipper.cpp:422
 #, kde-format
 msgid "down"
 msgstr "கீழே"

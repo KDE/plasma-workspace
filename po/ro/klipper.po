@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
 "PO-Revision-Date: 2025-10-03 14:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Show action popup menu:"
 msgstr "Arată meniul contextual cu acțiuni:"
 
-#: configdialog.cpp:180
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -146,7 +146,7 @@ msgstr ""
 "arătat pentru o fereastră exclusă, atunci acesta poate fi arătat cu "
 "scurtătura de taste <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:192
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -155,45 +155,45 @@ msgstr[0] "%v secundă"
 msgstr[1] "%v secunde"
 msgstr[2] "%v de secunde"
 
-#: configdialog.cpp:193
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Niciuna"
 
-#: configdialog.cpp:202
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "Opțiuni:"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Model de potrivit și comenzi"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descriere"
 
-#: configdialog.cpp:233
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "Adaugă acțiune…"
 
-#: configdialog.cpp:237
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "Modifică acțiunea…"
 
-#: configdialog.cpp:242
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "Șterge acțiunea"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -203,51 +203,51 @@ msgstr ""
 "Ștergeți acțiunea aleasă <resource>%1</resource><nl/> și toate comenzile "
 "acesteia?"
 
-#: configdialog.cpp:428
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Confirmă ștergerea acțiunii"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Generale"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "Configurări generale"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Meniu cu acțiuni"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "Meniu cu acțiuni"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configurare acțiuni"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Configurare acțiuni"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Scurtături"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Configurare scurtături"
@@ -597,39 +597,46 @@ msgstr "Reinițializează pictograma la cea implicită pentru comandă"
 msgid "Icon:"
 msgstr "Pictogramă:"
 
-#: historymodel.cpp:325
+#: historymodel.cpp:360
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Sigur curățați și ștergeți întregul istoric al clipboard-ului?"
 
-#: historymodel.cpp:327
+#: historymodel.cpp:362
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Curăță istoricul clipboard-ului"
 
-#: historymodel.cpp:329 historymodel.cpp:604
+#: historymodel.cpp:364 historymodel.cpp:639
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:411
+#: historymodel.cpp:446
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:600
+#: historymodel.cpp:635
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Acest element are stea. Sigur doriți să-l eliminați din istoric?"
 
-#: historymodel.cpp:602
+#: historymodel.cpp:637
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Elimină element cu stea"
 
-#: klipper.cpp:72
+#: klipper.cpp:70
+#, fuzzy, kde-format
+#| msgid "Clipboard Popup"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "Meniu contextual pentru clipboard"
+
+#: klipper.cpp:74
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu Toggle automatic action"
 #| msgid "Automatic Action Popup Menu"
@@ -637,64 +644,64 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Meniu contextual cu acțiuni automate"
 
-#: klipper.cpp:92
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Curăță istoricu&l"
 
-#: klipper.cpp:97
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocă manual acțiunea pe clipboard-ul actual"
 
-#: klipper.cpp:105
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "R&edactează conținutul…"
 
-#: klipper.cpp:113
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Arată cod de &bare…"
 
-#: klipper.cpp:122
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Următorul element din istoric"
 
-#: klipper.cpp:127
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Precedentul element din istoric"
 
-#: klipper.cpp:134
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Arată elementele clipboard-ului la poziția mausului"
 
-#: klipper.cpp:380 klipper.cpp:389
+#: klipper.cpp:382 klipper.cpp:391
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istoric clipboard"
 
-#: klipper.cpp:406
+#: klipper.cpp:408
 #, kde-format
 msgid "up"
 msgstr "sus"
 
-#: klipper.cpp:413
+#: klipper.cpp:415
 #, kde-format
 msgid "current"
 msgstr "curent"
 
-#: klipper.cpp:420
+#: klipper.cpp:422
 #, kde-format
 msgid "down"
 msgstr "jos"

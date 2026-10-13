@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
 "PO-Revision-Date: 2026-10-05 07:41+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -145,7 +145,7 @@ msgstr ""
 msgid "Show action popup menu:"
 msgstr "Показ всплывающего меню действий:"
 
-#: configdialog.cpp:180
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -162,7 +162,7 @@ msgstr ""
 "окна, открыть это меню можно будет с помощью комбинации клавиш <shortcut>%1</"
 "shortcut>."
 
-#: configdialog.cpp:192
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -172,45 +172,45 @@ msgstr[1] "%v секунды"
 msgstr[2] "%v секунд"
 msgstr[3] "%v секунда"
 
-#: configdialog.cpp:193
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Нет"
 
-#: configdialog.cpp:202
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "Параметры:"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Шаблон соответствия и команды"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Описание"
 
-#: configdialog.cpp:233
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "Добавить действие..."
 
-#: configdialog.cpp:237
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "Изменить действие..."
 
-#: configdialog.cpp:242
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "Удалить действие"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -219,51 +219,51 @@ msgid ""
 msgstr ""
 "Удалить выбранное действие <resource>%1</resource><nl/>и все его команды?"
 
-#: configdialog.cpp:428
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Подтверждение удаления действия"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Главное"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "Основные параметры"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Меню действий"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "Меню действий"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Настройка действий"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Настройка действий"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Настройка комбинаций клавиш"
@@ -608,102 +608,109 @@ msgstr "Вернуть стандартный значок команды"
 msgid "Icon:"
 msgstr "Значок:"
 
-#: historymodel.cpp:325
+#: historymodel.cpp:360
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Очистить и удалить весь журнал буфера обмена?"
 
-#: historymodel.cpp:327
+#: historymodel.cpp:362
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Очистить журнал буфера обмена"
 
-#: historymodel.cpp:329 historymodel.cpp:604
+#: historymodel.cpp:364 historymodel.cpp:639
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Не задавать больше этот вопрос"
 
-#: historymodel.cpp:411
+#: historymodel.cpp:446
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:600
+#: historymodel.cpp:635
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Эта запись добавлена в избранное. Удалить её из журнала?"
 
-#: historymodel.cpp:602
+#: historymodel.cpp:637
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Удалить запись"
 
-#: klipper.cpp:72
+#: klipper.cpp:70
+#, fuzzy, kde-format
+#| msgid "Clipboard Popup"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "Всплывающее окно буфера обмена"
+
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Включить или отключить автоматический показ меню действий"
 
-#: klipper.cpp:92
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Очистить журнал буфера обмена"
 
-#: klipper.cpp:97
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ручной выбор действия с буфером обмена"
 
-#: klipper.cpp:105
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Редактирование буфера обмена…"
 
-#: klipper.cpp:113
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Показать штрихкод…"
 
-#: klipper.cpp:122
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Следующая запись журнала"
 
-#: klipper.cpp:127
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Предыдущая запись журнала"
 
-#: klipper.cpp:134
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показать записи журнала буфера обмена на позиции указателя мыши"
 
-#: klipper.cpp:380 klipper.cpp:389
+#: klipper.cpp:382 klipper.cpp:391
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера обмена"
 
-#: klipper.cpp:406
+#: klipper.cpp:408
 #, kde-format
 msgid "up"
 msgstr "более новое:"
 
-#: klipper.cpp:413
+#: klipper.cpp:415
 #, kde-format
 msgid "current"
 msgstr "выбрано:"
 
-#: klipper.cpp:420
+#: klipper.cpp:422
 #, kde-format
 msgid "down"
 msgstr "более старое:"

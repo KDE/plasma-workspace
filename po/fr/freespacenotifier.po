@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
 "PO-Revision-Date: 2026-01-03 17:57+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -98,7 +98,7 @@ msgstr ""
 "Le système vous avertira si l'espace libre passe en dessous du volume libre "
 "spécifié en MiB et du pourcentage spécifié d'espace disponible."
 
-#: module.cpp:121
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -107,7 +107,7 @@ msgstr ""
 "Votre partition %1 va bientôt être à cours d'espace disque disponible. Il "
 "vous reste %2 Mo (Soit %3 %)."
 
-#: module.cpp:123
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -116,7 +116,7 @@ msgstr ""
 "Votre partition système va bientôt être à cours d'espace disque disponible. "
 "Il vous reste %1 Mo (Soit %2 %)."
 
-#: module.cpp:125
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -125,7 +125,7 @@ msgstr ""
 "Votre dossier personnel va bientôt être à cours d'espace disque disponible. "
 "Il vous reste %1 Mo (Soit %2 %)."
 
-#: module.cpp:150
+#: module.cpp:152
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

@@ -7,7 +7,7 @@
 # Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2007.
 # Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2009.
+# SPDX-FileCopyrightText: 2009, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2024-08-13 21:09+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-12 13:53+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -82,30 +82,30 @@ msgid "Get New…"
 msgstr "Λήψη νέων…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Icon Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
 msgstr "Αφαίρεση θέματος εικονιδίων"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Name of the current icon theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr "Όνομα του τρέχοντος θέματος εικονιδίων"
+msgstr "Δεν είναι δυνατή η διαγραφή του ενεργού θέματος εικονιδίων"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed icon themes"
 msgstr ""
+"Δεν είναι δυνατή η διαγραφή θεμάτων εικονιδίων που έχουν εγκατασταθεί από το "
+"σύστημα"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "Να μη διαγραφεί αυτό το θέμα εικονιδίων"
 
 #: ui/main.qml:250
 #, kde-format

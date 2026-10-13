@@ -3,20 +3,21 @@
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 # SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-10 00:54+0000\n"
-"PO-Revision-Date: 2024-09-19 16:49+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-10-12 11:21+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -27,16 +28,7 @@ msgstr ""
 "διανομέα σας."
 
 #: ui/main.qml:44
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/><nl/>You can read about <link "
-#| "url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</"
-#| "link>"
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "You can help KDE improve Plasma by contributing information on how you use "
@@ -45,20 +37,18 @@ msgid ""
 "personal data, files you use, websites you visit, or information that could "
 "identify you.<nl/>"
 msgstr ""
-"Μπορείτε να βοηθήσετε το KDE να βελτιώσει το Plasma συνεισφέροντας "
-"πληροφορίες σχετικά με τον τρόπο που το χρησιμοποιείτε, ώστε να μπορούμε να "
-"επικεντρωθούμε σε πράγματα που έχουν σημασία για εσάς.<nl/><nl/>Η συνεισφορά "
-"αυτών των πληροφοριών είναι προαιρετική και εντελώς ανώνυμη. Δεν συλλέγουμε "
-"ποτέ τα προσωπικά σας δεδομένα, τα αρχεία που χρησιμοποιείτε, τους "
-"ιστοτόπους που επισκέπτεστε ή πληροφορίες που θα μπορούσαν να σας "
-"τακτοποιήσουν.<nl/><nl/>Μπορείτε να διαβάσετε για την <link url='https://kde."
-"org/privacypolicy-apps.php'>πολιτική απορρήτου μας εδώ.</link>"
+"Μπορείτε να βοηθήσετε το KDE να βελτιώσει το Plasma παρέχοντας πληροφορίες "
+"σχετικά με τον τρόπο που το χρησιμοποιείτε, ώστε να επικεντρωθούμε σε όσα "
+"έχουν σημασία για εσάς.<nl/> <nl/>Η παροχή αυτών των πληροφοριών είναι "
+"προαιρετική και πλήρως ανώνυμη. Δεν συλλέγουμε ποτέ προσωπικά σας δεδομένα, "
+"αρχεία που χρησιμοποιείτε, ιστοτόπους που επισκέπτεστε ή πληροφορίες που θα "
+"μπορούσαν να σας ταυτοποιήσουν.<nl/>"
 
 #: ui/main.qml:51
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
-msgstr ""
+msgstr "Διαβάστε περισσότερα για την πολιτική απορρήτου μας"
 
 #: ui/main.qml:64
 #, kde-format

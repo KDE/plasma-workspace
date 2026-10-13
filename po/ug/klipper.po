@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
 "PO-Revision-Date: 2026-10-03 19:56-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -122,7 +122,7 @@ msgstr ""
 msgid "Show action popup menu:"
 msgstr "قاڭقىش مەشغۇلات تىزىملىكىنى كۆرسىتىدۇ:"
 
-#: configdialog.cpp:180
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -138,52 +138,52 @@ msgstr ""
 "تۈپەيلىدىن كۆرۈنمىسە، بۇ مەشغۇلاتنى <shortcut>%1</shortcut> تېزلەتمە "
 "ئارقىلىق كۆرسەتكىلى بولىدۇ."
 
-#: configdialog.cpp:192
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] "%v سېكۇنت"
 
-#: configdialog.cpp:193
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "يوق"
 
-#: configdialog.cpp:202
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "تاللانما:"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "مەس كەلگەن ئەندىزە ۋە بۇيرۇق"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "چۈشەندۈرۈش"
 
-#: configdialog.cpp:233
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "مەشغۇلات قوش…"
 
-#: configdialog.cpp:237
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "تەھرىرلەش مەشغۇلاتى…"
 
-#: configdialog.cpp:242
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "ئۆچۈرۈش مەشغۇلاتى"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -193,51 +193,51 @@ msgstr ""
 "تاللانغان مەشغۇلات <resource>%1</resource><nl/> ۋە ئۇنىڭ ھەممە بۇيرۇقىنى "
 "ئۆچۈرەمدۇ؟"
 
-#: configdialog.cpp:428
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "ئۆچۈرۈش مەشغۇلاتىنى جەزملە"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "ئادەتتىكى"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "ئادەتتىكى سەپلىمە"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "مەشغۇلات تىزىملىكى"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "مەشغۇلات تىزىملىكى"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "مەشغۇلات سەپلىمىسى"
 
-#: configdialog.cpp:483
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "مەشغۇلات سەپلىمىسى"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "تېزلەتمە"
 
-#: configdialog.cpp:490
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "تېزلەتمە سەپلىمىسى"
@@ -581,40 +581,47 @@ msgstr "سىنبەلگە بۇيرۇقنىڭ كۆڭۈلدىكى قىممىتىگ�
 msgid "Icon:"
 msgstr "سىنبەلگە:"
 
-#: historymodel.cpp:325
+#: historymodel.cpp:360
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "پۈتكۈل چاپلاش تاختىسىنىڭ تارىخى خاتىرىسىنى راستتىنلا تازىلاپ ۋە ئۆچۈرەمسىز؟"
 
-#: historymodel.cpp:327
+#: historymodel.cpp:362
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "چاپلاش تاختىسى تارىخىنى تازىلا"
 
-#: historymodel.cpp:329 historymodel.cpp:604
+#: historymodel.cpp:364 historymodel.cpp:639
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "قايتا سورىما"
 
-#: historymodel.cpp:411
+#: historymodel.cpp:446
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:600
+#: historymodel.cpp:635
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "بۇ تۈر يۇلتۇزلانغان. ئۇنى راستتىنلا تارىخ خاتىرىسىدىن چىقىرىۋېتەمسىز؟"
 
-#: historymodel.cpp:602
+#: historymodel.cpp:637
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "يۇلتۇزلانغان تۈرنى چىقىرىۋەت"
 
-#: klipper.cpp:72
+#: klipper.cpp:70
+#, fuzzy, kde-format
+#| msgid "Clipboard Popup"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "چاپلاش تاختىسى قاڭقىش كۆزنىكى"
+
+#: klipper.cpp:74
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu Toggle automatic action"
 #| msgid "Automatic Action Popup Menu"
@@ -622,64 +629,64 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "ئۆزلۈكىدىن قاڭقىش مەشغۇلات تىزىملىكى"
 
-#: klipper.cpp:92
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "چاپلاش تاختىسى تارىخىنى تازىلا(&L)"
 
-#: klipper.cpp:97
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "نۆۋەتتىكى چاپلاش تاختىسىدا مەشغۇلاتنى قولدا ئىجرا قىلىدۇ"
 
-#: klipper.cpp:105
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "مەزمۇن تەھرىر(&E)…"
 
-#: klipper.cpp:113
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "سىزىقلىق كودىنى كۆرسەت(&S)"
 
-#: klipper.cpp:122
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "كېيىنكى تارىخ خاتىرىسى"
 
-#: klipper.cpp:127
+#: klipper.cpp:129
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ئالدىنقى تارىخ خاتىرىسى"
 
-#: klipper.cpp:134
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "چاشقىنەك ئورنىدا چاپلاش تاختىسى تۈرىنى كۆرسىتىدۇ"
 
-#: klipper.cpp:380 klipper.cpp:389
+#: klipper.cpp:382 klipper.cpp:391
 #, kde-format
 msgid "Clipboard history"
 msgstr "چاپلاش تاختىسى تارىخى"
 
-#: klipper.cpp:406
+#: klipper.cpp:408
 #, kde-format
 msgid "up"
 msgstr "ئۈستىگە"
 
-#: klipper.cpp:413
+#: klipper.cpp:415
 #, kde-format
 msgid "current"
 msgstr "نۆۋەتتىكى"
 
-#: klipper.cpp:420
+#: klipper.cpp:422
 #, kde-format
 msgid "down"
 msgstr "ئاستى"
