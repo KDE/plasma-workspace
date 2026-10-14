@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-30 00:48+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2026-08-01 17:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,28 +17,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "பிடிப்புப்பலகையின் உள்ளடக்கம்"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr "பிடிப்புப்பலகையிலுள்ளது ரகசியமானது"
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "பிடிப்புப்பலகையிலுள்ளது ரகசியமானது"
 
-#: qml/main.qml:77
+#: qml/main.qml:48
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr "பிடிப்புப்பலகையிலுள்ளது ரகசியமானது"
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "வரலாற்றை காலியாக்கு"
 
-#: qml/main.qml:98
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "பிடிப்புப்பலகையை அமை…"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-30 00:48+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2026-06-16 06:13-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -22,28 +22,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 26.04.2\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Conteúdo da área de transferência"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está vazia"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr "A área de transferência contém atualmente dados confidenciais"
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "A área de transferência contém atualmente dados confidenciais"
 
-#: qml/main.qml:77
+#: qml/main.qml:48
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr "A área de transferência contém atualmente dados confidenciais"
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar histórico"
 
-#: qml/main.qml:98
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a área de transferência…"

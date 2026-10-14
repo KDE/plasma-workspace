@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2026-10-04 11:42+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -294,28 +294,60 @@ msgstr "முழு வரலாறு"
 msgid "Starred Only"
 msgstr "நட்சத்திரமிட்டவை மட்டும்"
 
-#: declarative/qml/ClipboardMenu.qml:372
-#, kde-format
+#: declarative/qml/ClipboardMenu.qml:376
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
 msgctxt "@info"
 msgid ""
-"The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
 msgstr ""
 "பிடிப்புப்பலகையிலுள்ளது, கமுக்கமாக வைத்துக்கொள்ள வேண்டியதாக (எ.கா. கடவுச்சொல்லாக) "
 "உள்ளதால் வரலாற்றில் செமிக்கப்படாது."
 
-#: declarative/qml/ClipboardMenu.qml:381
+#: declarative/qml/ClipboardMenu.qml:378
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"பிடிப்புப்பலகையிலுள்ளது, கமுக்கமாக வைத்துக்கொள்ள வேண்டியதாக (எ.கா. கடவுச்சொல்லாக) "
+"உள்ளதால் வரலாற்றில் செமிக்கப்படாது."
+
+#: declarative/qml/ClipboardMenu.qml:380
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"பிடிப்புப்பலகையிலுள்ளது, கமுக்கமாக வைத்துக்கொள்ள வேண்டியதாக (எ.கா. கடவுச்சொல்லாக) "
+"உள்ளதால் வரலாற்றில் செமிக்கப்படாது."
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "கமுக்கத் தரவை அழி"
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
@@ -556,35 +588,35 @@ msgstr "கட்டளைக்கான இயல்பிருப்பு�
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: historymodel.cpp:360
+#: historymodel.cpp:375
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை முழுதாக அழிக்க வேண்டுமா?"
 
-#: historymodel.cpp:362
+#: historymodel.cpp:377
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை காலியாக்கு"
 
-#: historymodel.cpp:364 historymodel.cpp:639
+#: historymodel.cpp:379 historymodel.cpp:679
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "மறுபடியும் கேட்காதே"
 
-#: historymodel.cpp:446
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:635
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "இந்த உருப்படிக்கு நட்சத்திரமிட்டுள்ளீர். இதை உறுதியாக வரலாற்றிலிருந்து நீக்க வேண்டுமா?"
 
-#: historymodel.cpp:637
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "நட்சத்திரமிட்ட பதிவை நீக்கு"
@@ -646,22 +678,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "பிடிப்புப்பலகையை சுட்டிக்குறியின் இருப்பிடத்திலேயே காட்டு"
 
-#: klipper.cpp:382 klipper.cpp:391
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "பிடிப்புப்பலகை வரலாறு"
 
-#: klipper.cpp:408
+#: klipper.cpp:411
 #, kde-format
 msgid "up"
 msgstr "மேலே"
 
-#: klipper.cpp:415
+#: klipper.cpp:418
 #, kde-format
 msgid "current"
 msgstr "தற்போதையது"
 
-#: klipper.cpp:422
+#: klipper.cpp:425
 #, kde-format
 msgid "down"
 msgstr "கீழே"
@@ -703,13 +735,13 @@ msgid ""
 msgstr "பிடிப்புப்பலகை காலியாவதை தவிர்க்கும் (எ.கா. ஓர் செயலி மூடும்போது)."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "தேர்வையும் பிடிப்புப்பலகையையும் ஒத்திசைய செய்"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
@@ -721,13 +753,13 @@ msgstr ""
 "><a href=\"1\">பிடிப்புப்பலகையையும் தேர்வையும் பற்றிய மேம்பட்ட விவரங்கள்</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
-#: klipper.kcfg:32
+#: klipper.kcfg:28
 #, kde-format
 msgid "Save the selection"
 msgstr "தேர்வை சேமி"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
-#: klipper.kcfg:34
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
@@ -737,69 +769,69 @@ msgstr ""
 "பட்சத்திலும் பிடிப்புப்பலகையின் வரலாற்றில் சேமிக்கப்படும்."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
-#: klipper.kcfg:37
+#: klipper.kcfg:33
 #, kde-format
 msgid "Save images"
 msgstr "படங்களை சேமி"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
-#: klipper.kcfg:39
+#: klipper.kcfg:35
 #, kde-format
 msgid "Store images in the clipboard history."
 msgstr "பிடிப்புப்பலகை வரலாற்றில் படங்களை சேமி."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:42
+#: klipper.kcfg:38
 #, kde-format
 msgid "Immediately on selection"
 msgstr "தேர்ந்தெடுத்த உடனேயே"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:43
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "ஏதாவது தேர்ந்தெடுக்கப்பட்டவுடனேயே உரிய செயல்களின் பட்டியைக் காட்டு"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:43
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "தானியங்கி செயல்முறை பட்டிக்கான காலாவதி:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "தானியங்கி செயல்முறை பட்டியை இவ்வளவு நேரத்திற்கு காட்டு."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:54
+#: klipper.kcfg:50
 #, kde-format
 msgid "History size:"
 msgstr "வரலாற்றின் அளவு:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:58
+#: klipper.kcfg:54
 #, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
 msgstr "பிடிப்புப்பலகையின் வரலாறு இத்தனை உருப்படிகள் வரை கொண்டிருக்கும். அதிகபட்சம் 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:61
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:68
+#: klipper.kcfg:64
 #, kde-format
 msgid "Trim whitespace"
 msgstr "காலியிடத்தை நீக்கு"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
@@ -809,13 +841,13 @@ msgstr ""
 "காலியிடத்தை நீக்கு. பிடிப்புப்பலகையில் சேமிக்கப்படும் உரை பாதிக்கப்படாது."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:73
+#: klipper.kcfg:69
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "வரலாற்றிலிருந்து தேர்ந்தெடுக்கப்படும் உருப்படிக்கு"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:75
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -825,7 +857,7 @@ msgstr ""
 "செயல்களைக்கொண்ட மேல்தோன்றும் பட்டியை காட்டும்."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:74
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
@@ -833,7 +865,7 @@ msgstr ""
 "காட்டு"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "

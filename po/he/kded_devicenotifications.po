@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:43+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2025-07-08 11:45+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,59 +18,83 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
-#: devicenotifications.cpp:481
+#: devicenotifications.cpp:504
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "זוהה צג"
 
-#: devicenotifications.cpp:482
-#, kde-format
-msgid "A display has been connected."
-msgstr "צג חובר למערכת."
+#: devicenotifications.cpp:506
+#, fuzzy, kde-format
+#| msgid "%1 has been connected."
+msgctxt "Display connector (e.g. HDMI-1)"
+msgid "%1 has been connected."
+msgstr "%1 חובר."
 
-#: devicenotifications.cpp:513
+#: devicenotifications.cpp:509
+#, fuzzy, kde-format
+#| msgid "%1 has been connected."
+msgctxt "Display manufacturer, model (connector name)"
+msgid "%1 %2 (%3) has been connected."
+msgstr "%1 חובר."
+
+#: devicenotifications.cpp:544
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "צג הוסר"
 
-#: devicenotifications.cpp:514
-#, kde-format
-msgid "A display has been disconnected."
-msgstr "צג נותק מהמערכת."
+#: devicenotifications.cpp:546
+#, fuzzy, kde-format
+#| msgid "%1 has been disconnected."
+msgctxt "Display connector (e.g. HDMI-1)"
+msgid "%1 has been disconnected."
+msgstr "%1 נותק."
 
-#: devicenotifications.cpp:558
+#: devicenotifications.cpp:549
+#, fuzzy, kde-format
+#| msgid "%1 has been disconnected."
+msgctxt "Display manufacturer, model (connector name)"
+msgid "%1 %2 (%3) has been disconnected."
+msgstr "%1 נותק."
+
+#: devicenotifications.cpp:597
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 חובר."
 
-#: devicenotifications.cpp:558
+#: devicenotifications.cpp:597
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "התקן USB חובר."
 
-#: devicenotifications.cpp:563
+#: devicenotifications.cpp:602
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "זוהה התקן USB"
 
-#: devicenotifications.cpp:601
+#: devicenotifications.cpp:640
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 נותק."
 
-#: devicenotifications.cpp:601
+#: devicenotifications.cpp:640
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "התקן USB נותק."
 
-#: devicenotifications.cpp:606
+#: devicenotifications.cpp:645
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "התקן USB הוסר"
+
+#~ msgid "A display has been connected."
+#~ msgstr "צג חובר למערכת."
+
+#~ msgid "A display has been disconnected."
+#~ msgstr "צג נותק מהמערכת."
 
 #~ msgctxt "@title:notifications"
 #~ msgid "USB Device Went Away"

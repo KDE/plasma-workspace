@@ -4,26 +4,27 @@
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2017.
 # Dimitrios Glentadakis <dglent@free.fr>, 2014.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2024-08-24 11:46+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-13 22:01+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Quit %1"
-msgstr ""
+msgstr "Έξοδος από το %1"
 
 #: qml/config.qml:13
 #, kde-format
@@ -31,15 +32,13 @@ msgid "General"
 msgstr "Γενικά"
 
 #: qml/ConfigGeneral.qml:45
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Εμφάνιση όταν είναι σχετικό"
 
 #: qml/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Εμφανίζεται πάντα"
@@ -48,13 +47,13 @@ msgstr "Εμφανίζεται πάντα"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Εμφάνιση μόνο στο αναδυόμενο παράθυρο"
 
 #: qml/ConfigGeneral.qml:57
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Να μην εμφανίζεται ποτέ (απενεργοποιημένο)"
 
 #: qml/ConfigGeneral.qml:128
 #, kde-format
@@ -91,12 +90,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Αναζητήστε πρώτα μια ρύθμιση στην εφαρμογή <application>%1</application> για "
+"να απενεργοποιήσετε το εικονίδιό της στην περιοχή ειδοποιήσεων. Τα εικονίδια "
+"ορισμένων εφαρμογών δεν έχουν σχεδιαστεί ώστε να απενεργοποιούνται και αυτή "
+"η ρύθμιση ενδέχεται να προκαλέσει απρόβλεπτη συμπεριφορά.<nl/><nl/"
+">Χρησιμοποιήστε αυτή τη ρύθμιση με δική σας ευθύνη και μην αναφέρετε σχετικά "
+"προβλήματα στο KDE ή στον δημιουργό της εφαρμογής."
 
 #: qml/ConfigGeneral.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Κατανοώ τους κινδύνους"
 
 #: qml/ConfigGeneral.qml:189
 #, kde-kuit-format
@@ -109,6 +114,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"Δεν συνιστάται η απενεργοποίηση του προχείρου, επειδή τα δεδομένα που "
+"αντιγράφηκαν θα χάνονται όταν κλείνει η εφαρμογή προέλευσής τους.<nl/><nl/"
+">Κάντε το μόνο αν έχετε προσθέσει αλλού ένα ανεξάρτητο γραφικό συστατικό "
+"Προχείρου ή χρησιμοποιείτε διαχειριστή προχείρου τρίτου κατασκευαστή. "
+"Εναλλακτικά, μπορείτε να ρυθμίσετε το πρόχειρο ώστε να μην αποθηκεύει "
+"ιστορικό ή να θυμάται μόνο ένα στοιχείο κάθε φορά."
 
 #: qml/ConfigGeneral.qml:198
 #, kde-kuit-format
@@ -119,25 +130,26 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Δεν συνιστάται η απενεργοποίηση του γραφικού συστατικού Ειδοποιήσεων, επειδή "
+"οι ειδοποιήσεις που στέλνουν οι εφαρμογές δεν θα εμφανίζονται πλέον.<nl/><nl/"
+"> Κάντε το μόνο αν έχετε προσθέσει αλλού ένα ανεξάρτητο γραφικό συστατικό "
+"Ειδοποιήσεων ή χρησιμοποιείτε σκόπιμα έναν διαχειριστή ειδοποιήσεων τρίτου "
+"κατασκευαστή."
 
 #: qml/ConfigGeneral.qml:210
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr "Κλίμακα με το ύψος πίνακα"
+msgstr "Προσαρμογή στο ύψος του πίνακα"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr "Κλίμακα με το πλάτος πίνακα"
+msgstr "Προσαρμογή στο πλάτος του πίνακα"
 
 #: qml/ConfigGeneral.qml:213
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
 "or scale with the Panel's size"
@@ -145,8 +157,7 @@ msgid "Panel icon size:"
 msgstr "Μέγεθος εικονιδίου πίνακα:"
 
 #: qml/ConfigGeneral.qml:217
-#, fuzzy, kde-format
-#| msgid "Small"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Μικρό"
@@ -155,7 +166,7 @@ msgstr "Μικρό"
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
-msgstr ""
+msgstr "Αποστάσεις:"
 
 #: qml/ConfigGeneral.qml:241
 #, kde-format
@@ -176,33 +187,32 @@ msgid "Large"
 msgstr "Μεγάλο"
 
 #: qml/ConfigGeneral.qml:269
-#, fuzzy, kde-format
-#| msgid "More actions"
+#, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
 "the expander arrow"
 msgid "Direction:"
-msgstr "Περισσότερες ενέργειες"
+msgstr "Κατεύθυνση:"
 
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "Από κάτω προς τα πάνω"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "Από πάνω προς τα κάτω"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "Από αριστερά προς τα δεξιά"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "Από δεξιά προς τα αριστερά"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format
@@ -211,18 +221,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Αυτόματη ρύθμιση σε μεγάλο όταν βρίσκεται σε λειτουργία αφής"
 
 #: qml/ConfigGeneral.qml:332
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Καταχωρήσεις"
 
 #: qml/ConfigGeneral.qml:336
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Εμφανίζεται πάντα"
+msgstr "Να εμφανίζονται πάντα όλα"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
@@ -266,7 +274,7 @@ msgstr "Εμφάνιση κρυφών εικονιδίων"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Πλέγμα με %1 στοιχεία σε %2 στήλες"
 
 #: qml/HiddenItemsView.qml:41
 #, kde-format

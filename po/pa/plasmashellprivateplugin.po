@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2023, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2020, 2023-2024, 2026 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:47+0000\n"
-"PO-Revision-Date: 2024-10-01 21:17-0500\n"
+"PO-Revision-Date: 2026-10-12 20:07-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -25,7 +25,7 @@ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦-੨੦੨੩"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "alam.yellow@gmail.com"
+msgstr "aalam@punlinux.org"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:45
 #, kde-format
@@ -137,8 +137,7 @@ msgid "Next Decade"
 msgstr "ਅਗਲਾ ਦਹਾਕਾ"
 
 #: calendar/qml/MonthViewHeader.qml:306
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "ਖੁੱਲਾ ਰੱਖੋ"
@@ -152,19 +151,19 @@ msgstr "…ਸੰਰਚਨਾ"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "ਆਨ-ਸਕਰੀਨ ਕੀਬੋਰਡ ਨੂੰ ਲੁਕਾਓ"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "ਆਨ-ਸਕਰੀਨ ਕੀਬੋਰਡ ਨੂੰ ਵੇਖਾਓ"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "ਲੇਆਉਟ ਨੂੰ ਬਦਲੋ"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -299,12 +298,9 @@ msgid "Online Services"
 msgstr "ਆਨਲਾਈਨ ਸਰਵਿਸਾਂ"
 
 #: shellprivate/widgetexplorer.cpp:126
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "ਸਿਸਟਮ ਜਾਣਕਾਰੀ"
+msgstr "ਨਿੱਜੀ ਜਾਣਕਾਰੀ"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
@@ -347,18 +343,13 @@ msgid "Running"
 msgstr "ਚੱਲ ਰਹੇ"
 
 #: shellprivate/widgetexplorer.cpp:158
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "ਹਟਾਉਣਯੋਗ"
+msgstr "ਵਰਤੋਂਕਾਰ ਵਲੋਂ ਇੰਸਟਾਲ"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -418,43 +409,43 @@ msgstr ""
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "…ਚੁਣੋ"
 
 #: timezoneselector/TimezoneSelector.qml:124
 #: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "ਖੇਤਰ:"
 
 #: timezoneselector/TimezoneSelector.qml:151
 #: timezoneselector/TimezoneSelector.qml:376
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "ਸਮਾਂ ਖੇਤਰ:"
 
 #: timezoneselector/TimezoneSelector.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "ਜ਼ੂਮ ਇਨ"
 
 #: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "ਜ਼ੂਮ ਆਉਟ"
 
 #: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "ਸਮਾਂ ਖੇਤਰ ਚੋਣਕਾਰ"
 
 #: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "ਸਮਾਂ ਖੇਤਰ ਟਿਕਾਣਾ ਚੋਣਕਾਰ"
 
 #~ msgid "Screen saver timeout"
 #~ msgstr "ਸਕਰੀਨ ਸੇਵਰ ਟਾਈਮ-ਆਉਟ"

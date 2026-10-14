@@ -103,23 +103,24 @@ msgid "Application closed unexpectedly."
 msgstr "Η εφαρμογή έκλεισε απροσδόκητα."
 
 #: notifications.cpp:985
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Μη αναγνωσμένη ειδοποίηση"
+msgstr[1] "Μη αναγνωσμένες ειδοποιήσεις"
 
 #: notifications.cpp:987
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] ""
+msgstr[0] "%1 ειδοποίηση ελήφθη ενώ ήταν ενεργή η λειτουργία «Μην ενοχλείτε»."
 msgstr[1] ""
+"%1 ειδοποιήσεις ελήφθησαν ενώ ήταν ενεργή η λειτουργία «Μην ενοχλείτε»."
 
 #: notifications.cpp:995
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr ""
+msgstr "Εμφάνιση ειδοποιήσεων"

@@ -42,10 +42,10 @@ msgid "Logout canceled by '%1'"
 msgstr "Η αποσύνδεση ακυρώθηκε από το χρήστη '%1'"
 
 #: logout.cpp:354
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "Η συνεδρία τερματίζεται"
 
 #: main.cpp:69 main.cpp:77
 #, kde-format

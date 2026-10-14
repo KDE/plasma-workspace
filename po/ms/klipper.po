@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2011-01-13 21:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -310,26 +310,42 @@ msgstr "Saiz rekod papan k&lip:"
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:372
+#: declarative/qml/ClipboardMenu.qml:376
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:378
 #, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:381
+#: declarative/qml/ClipboardMenu.qml:380
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -576,36 +592,36 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:360
+#: historymodel.cpp:375
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Kosongkan Rekod Papan K&lip"
 
-#: historymodel.cpp:362
+#: historymodel.cpp:377
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Kosongkan Rekod Papan K&lip"
 
-#: historymodel.cpp:364 historymodel.cpp:639
+#: historymodel.cpp:379 historymodel.cpp:679
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:446
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:635
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:637
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -671,23 +687,23 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:382 klipper.cpp:391
+#: klipper.cpp:385 klipper.cpp:394
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "Saiz rekod papan k&lip:"
 
-#: klipper.cpp:408
+#: klipper.cpp:411
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:415
+#: klipper.cpp:418
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:422
+#: klipper.cpp:425
 #, kde-format
 msgid "down"
 msgstr ""
@@ -729,14 +745,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, fuzzy, kde-format
 #| msgid "Pre&vent empty clipboard"
 msgid "Keep the selection and clipboard the same"
 msgstr "&Halang pengosongan papan klip"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
@@ -745,14 +761,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
-#: klipper.kcfg:32
+#: klipper.kcfg:28
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Save the selection"
 msgstr "Aba&ikan pilihan"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
-#: klipper.kcfg:34
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
@@ -760,75 +776,75 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
-#: klipper.kcfg:37
+#: klipper.kcfg:33
 #, kde-format
 msgid "Save images"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
-#: klipper.kcfg:39
+#: klipper.kcfg:35
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Store images in the clipboard history."
 msgstr "Kosongkan Rekod Papan K&lip"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:42
+#: klipper.kcfg:38
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Immediately on selection"
 msgstr "Aba&ikan pilihan"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:43
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:43
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Automatic action menu time:"
 msgstr "Had masa tamat untuk aksi pop k&eluar"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Display the automatic action popup menu for this time."
 msgstr "Had masa tamat untuk aksi pop k&eluar"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:54
+#: klipper.kcfg:50
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "History size:"
 msgstr "Saiz rekod papan k&lip:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:58
+#: klipper.kcfg:54
 #, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:61
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:68
+#: klipper.kcfg:64
 #, fuzzy, kde-format
 #| msgid "Remove whitespace when executing actions"
 msgid "Trim whitespace"
 msgstr "Buang ruang kosong semasa melaksanakan aksi"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
@@ -836,14 +852,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:73
+#: klipper.kcfg:69
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "Main semula aksi pada item dipilih daripada &rekod"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:75
+#: klipper.kcfg:71
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid ""
@@ -852,13 +868,13 @@ msgid ""
 msgstr "Kosongkan Rekod Papan K&lip"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:74
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "

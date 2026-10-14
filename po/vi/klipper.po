@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -322,26 +322,42 @@ msgstr "Lịch sử bảng nháp"
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:372
+#: declarative/qml/ClipboardMenu.qml:376
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:378
 #, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:381
+#: declarative/qml/ClipboardMenu.qml:380
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr "Không mục nào khớp"
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Bảng nháp trống"
@@ -606,35 +622,35 @@ msgstr "Đặt lại biểu tượng về mặc định cho lệnh"
 msgid "Icon:"
 msgstr "Biểu tượng:"
 
-#: historymodel.cpp:360
+#: historymodel.cpp:375
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Bạn có thực sự muốn làm trống và xoá toàn bộ lịch sử bảng nháp?"
 
-#: historymodel.cpp:362
+#: historymodel.cpp:377
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Xoá lịch sử bảng nháp"
 
-#: historymodel.cpp:364 historymodel.cpp:639
+#: historymodel.cpp:379 historymodel.cpp:679
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:446
+#: historymodel.cpp:486
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:635
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:637
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -698,22 +714,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Hiện các mục tại vị trí con trỏ chuột"
 
-#: klipper.cpp:382 klipper.cpp:391
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "Lịch sử bảng nháp"
 
-#: klipper.cpp:408
+#: klipper.cpp:411
 #, kde-format
 msgid "up"
 msgstr "lên"
 
-#: klipper.cpp:415
+#: klipper.cpp:418
 #, kde-format
 msgid "current"
 msgstr "hiện tại"
 
-#: klipper.cpp:422
+#: klipper.cpp:425
 #, kde-format
 msgid "down"
 msgstr "xuống"
@@ -753,13 +769,13 @@ msgid ""
 msgstr "Không cho phép bảng nháp bị làm trống, ví dụ khi một ứng dụng thoát"
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "Giữ phần bôi đen và bảng nháp giống nhau"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, fuzzy, kde-format
 #| msgid ""
 #| "Content selected with the cursor is automatically copied to the clipboard "
@@ -775,14 +791,14 @@ msgstr ""
 "href=\"1\">Xem thêm về phần bôi đen và bảng nháp</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
-#: klipper.kcfg:32
+#: klipper.kcfg:28
 #, fuzzy, kde-format
 #| msgid "Ignore the selection"
 msgid "Save the selection"
 msgstr "Bỏ qua phần bôi đen"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
-#: klipper.kcfg:34
+#: klipper.kcfg:30
 #, fuzzy, kde-format
 #| msgid ""
 #| "Content selected with the cursor but not explicitly copied to the "
@@ -797,13 +813,13 @@ msgstr ""
 "bằng một cú bấm giữa."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
-#: klipper.kcfg:37
+#: klipper.kcfg:33
 #, kde-format
 msgid "Save images"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
-#: klipper.kcfg:39
+#: klipper.kcfg:35
 #, fuzzy, kde-format
 #| msgid "Whether text selections are saved in the clipboard history."
 msgid "Store images in the clipboard history."
@@ -811,13 +827,13 @@ msgstr ""
 "Các phần bôi đen văn bản có được lưu trong lịch sử bảng nháp hay không."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:42
+#: klipper.kcfg:38
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Ngay khi bôi đen"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:43
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -826,26 +842,26 @@ msgstr ""
 "đen."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:43
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Thời gian hiện trình đơn tự động cho hành động:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr ""
 "Trong khoảng thời gian này, hiển thị trình đơn tự động bật lên cho hành động."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:54
+#: klipper.kcfg:50
 #, kde-format
 msgid "History size:"
 msgstr "Kích thước lịch sử:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:58
+#: klipper.kcfg:54
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid ""
@@ -853,21 +869,21 @@ msgid ""
 msgstr "Lịch sử bảng nháp sẽ lưu nhiều nhất là từng này mục."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:61
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 "Mục nộm để biểu thị các thay đổi trong khiển tố dạng cây của một hành động"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:68
+#: klipper.kcfg:64
 #, fuzzy, kde-format
 #| msgid "Trim whitespace from selection"
 msgid "Trim whitespace"
 msgstr "Cắt bỏ khoảng trắng khỏi phần bôi đen"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, fuzzy, kde-format
 #| msgid ""
 #| "Remove any whitespace from the start and end of selected text, before "
@@ -884,13 +900,13 @@ msgstr ""
 "hưởng."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:73
+#: klipper.kcfg:69
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Với một mục được chọn trong lịch sử"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:75
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -900,13 +916,13 @@ msgstr ""
 "trong lịch sử bảng nháp."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:74
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "

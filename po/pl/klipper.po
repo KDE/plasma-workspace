@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1750185 $
+# Version: $Revision: 1750294 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2026-10-04 14:39+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -319,28 +319,60 @@ msgstr "Całą historię"
 msgid "Starred Only"
 msgstr "Tylko z gwiazdkami"
 
-#: declarative/qml/ClipboardMenu.qml:372
-#, kde-format
+#: declarative/qml/ClipboardMenu.qml:376
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
 msgctxt "@info"
 msgid ""
-"The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
 msgstr ""
 "Schowek obecnie przechowuje dane poufne, które nie zostaną zapamiętane w "
 "historii."
 
-#: declarative/qml/ClipboardMenu.qml:381
+#: declarative/qml/ClipboardMenu.qml:378
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"Schowek obecnie przechowuje dane poufne, które nie zostaną zapamiętane w "
+"historii."
+
+#: declarative/qml/ClipboardMenu.qml:380
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"Schowek obecnie przechowuje dane poufne, które nie zostaną zapamiętane w "
+"historii."
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Wyczyść dane poufne"
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr "Brak pasujących wyrażeń"
 
-#: declarative/qml/ClipboardMenu.qml:519
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schowek jest pusty"
@@ -590,34 +622,34 @@ msgstr "Wyzeruj ikonę do domyślnej dla polecenia"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:360
+#: historymodel.cpp:375
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Czy na pewno wyczyścić i usunąć całą historię schowka?"
 
-#: historymodel.cpp:362
+#: historymodel.cpp:377
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Wyczyść historię schowka"
 
-#: historymodel.cpp:364 historymodel.cpp:639
+#: historymodel.cpp:379 historymodel.cpp:679
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Nie pytaj ponownie"
 
-#: historymodel.cpp:446
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:635
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Ta rzecz zawiera gwiazdkę. Czy na pewno usunąć ją z historii?"
 
-#: historymodel.cpp:637
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Usuń rzecz z gwiazdką"
@@ -679,22 +711,22 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Pokaż rzeczy schowka pod wskaźnikiem myszy"
 
-#: klipper.cpp:382 klipper.cpp:391
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historia schowka"
 
-#: klipper.cpp:408
+#: klipper.cpp:411
 #, kde-format
 msgid "up"
 msgstr "w górę"
 
-#: klipper.cpp:415
+#: klipper.cpp:418
 #, kde-format
 msgid "current"
 msgstr "aktualna"
 
-#: klipper.cpp:422
+#: klipper.cpp:425
 #, kde-format
 msgid "down"
 msgstr "w dół"
@@ -737,13 +769,13 @@ msgstr ""
 "działanie."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "Spraw tak, aby zaznaczenie i schowek były tym samym"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
@@ -755,13 +787,13 @@ msgstr ""
 "przyciskiem.<br/><a href=\"1\">Więcej o zaznaczaniu i schowku</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
-#: klipper.kcfg:32
+#: klipper.kcfg:28
 #, kde-format
 msgid "Save the selection"
 msgstr "Zapisz zaznaczenie"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
-#: klipper.kcfg:34
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
@@ -771,25 +803,25 @@ msgstr ""
 "nie jest samoczynnie kopiowana w historii schowka."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
-#: klipper.kcfg:37
+#: klipper.kcfg:33
 #, kde-format
 msgid "Save images"
 msgstr "Zapisz obrazy"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
-#: klipper.kcfg:39
+#: klipper.kcfg:35
 #, kde-format
 msgid "Store images in the clipboard history."
 msgstr "Przechowuj obrazy w historii schowka."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:42
+#: klipper.kcfg:38
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Natychmiast po zaznaczeniu"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:43
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -797,44 +829,44 @@ msgstr ""
 "Pokaż menu wysuwne możliwych działań natychmiast po wykonaniu zaznaczenia."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:43
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Czas do pojawienia się menu działań:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:51
+#: klipper.kcfg:47
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Tym razem wyświetl menu wysuwne domyślnego działania."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:54
+#: klipper.kcfg:50
 #, kde-format
 msgid "History size:"
 msgstr "Rozmiar historii:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:58
+#: klipper.kcfg:54
 #, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
 msgstr "Historia schowka przechowa do tylu rzeczy. Granica to 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:61
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Dodatkowy wpis oznaczający zmiany w drzewie działań"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:68
+#: klipper.kcfg:64
 #, kde-format
 msgid "Trim whitespace"
 msgstr "Usuń białe znaki"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:70
+#: klipper.kcfg:66
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
@@ -844,13 +876,13 @@ msgstr ""
 "Nie wpływa to na tekst zapisany do historii."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:73
+#: klipper.kcfg:69
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Dla wpisu wybranego z historii"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:75
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -859,13 +891,13 @@ msgstr ""
 "Pokaż menu wysuwne możliwych działań po wybraniu wpisu z historii schowka."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:74
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr "Podsuwaj aplikacje dla skopiowanych odnośników i plików"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:80
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "
