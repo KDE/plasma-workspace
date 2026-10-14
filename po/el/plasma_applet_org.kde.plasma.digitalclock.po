@@ -3,20 +3,21 @@
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
 # Antonis Geralis <capoiosct@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2024-08-24 10:59+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2026-10-13 21:57+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: CalendarView.qml:135
 #, kde-format
@@ -269,6 +270,7 @@ msgstr "%1pt %2"
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
+"Σημείωση: το μέγεθος μπορεί να μειωθεί αν ο πίνακας δεν έχει αρκετό πάχος."
 
 #: configAppearance.qml:350
 #, kde-format
@@ -277,15 +279,13 @@ msgid "Choose a Font"
 msgstr "Επιλογή γραμματοσειράς"
 
 #: configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Γενικά:"
 
 #: configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Εμφάνιση αριθμών εβδομάδας"
@@ -303,8 +303,7 @@ msgid "Use region defaults"
 msgstr "Χρήση προεπιλογών περιοχής"
 
 #: configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
 msgstr "Διαθέσιμα πρόσθετα:"
@@ -380,6 +379,9 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Συμβουλή: Προσθέστε τη ζώνη ώρας του τόπου κατοικίας σας σε αυτή τη λίστα, "
+"ώστε να βλέπετε την ώρα εκεί ακόμη και όταν ταξιδεύετε. Όσο βρίσκεστε στον "
+"τόπο κατοικίας σας, δεν θα εμφανίζεται δύο φορές."
 
 #: configTimeZones.qml:245
 #, kde-format
@@ -408,28 +410,28 @@ msgstr "Ζώνες ώρας"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " • %1 ώρα αργότερα"
+msgstr[1] " • %1 ώρες αργότερα"
 
 #: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 αργότερα"
 
 #: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " • %1 ώρα νωρίτερα"
+msgstr[1] " • %1 ώρες νωρίτερα"
 
 #: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 νωρίτερα"
 
 #: main.qml:195
 #, kde-format
@@ -442,6 +444,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Δεν έχει οριστεί ζώνη ώρας. Κάντε κλικ εδώ για να ανοίξετε τις ρυθμίσεις "
+"Ημερομηνίας και ώρας και να ορίσετε μία."
 
 #: plugin/clipboardmenu.cpp:111
 #, kde-format
@@ -491,6 +495,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Κάντε κλικ στο εικονίδιο του ρολογιού για να ανοίξετε τις ρυθμίσεις "
+"Ημερομηνίας και ώρας και να ορίσετε ζώνη ώρας."
 
 #: Tooltip.qml:151
 #, kde-format
@@ -502,7 +508,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
+msgstr "Μεσαίο κλικ για άνοιγμα του %1"
 
 #~ msgid ""
 #~ "Tip: if you travel frequently, add your home time zone to this list. It "
