@@ -26,6 +26,7 @@ Name[lv]=Plasma
 Name[nan_TW@latin]=Plasma
 Name[nl]=Plasma
 Name[nn]=Plasma
+Name[pa]=ਪਲਾਜ਼ਮਾ
 Name[pl]=Plazma
 Name[pt_BR]=Plasma
 Name[ro]=Plasma
