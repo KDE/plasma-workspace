@@ -65,7 +65,8 @@ PlasmaComponents3.ScrollView {
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("EditPage.qml"), {
             dialogItem: clipboardMenu.dialogItem,
             historyModel: clipboardMenu.model,
-            modelData: modelData,
+            uuid: modelData.uuid,
+            text: modelData.display,
         });
     }
     onBarcode: text => {

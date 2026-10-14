@@ -571,6 +571,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
 
         item = std::make_shared<HistoryItem>(std::move(newUuid), std::move(mimetypes), std::move(text));
         Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
+        moveToTop(item->uuid());
         return true;
     }
     case StarredRole: {

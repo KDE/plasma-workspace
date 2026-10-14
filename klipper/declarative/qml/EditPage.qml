@@ -20,7 +20,7 @@ ColumnLayout {
 
     required property PlasmaExtras.Representation dialogItem
     required property Private.HistoryModel historyModel
-    required property var modelData
+    required property string uuid
     property alias text: textArea.text
 
     property Item header: null
@@ -28,8 +28,7 @@ ColumnLayout {
     Keys.onEscapePressed: T.StackView.view.popCurrentItem()
 
     function saveAndExit() {
-        modelData.display = text;
-        historyModel.moveToTop(modelData.uuid);
+        historyModel.setText(uuid, text);
         T.StackView.view.popCurrentItem();
         T.StackView.view.initialItem.view.currentIndex = 0;
     }
@@ -58,7 +57,6 @@ ColumnLayout {
             id: textArea
             wrapMode: TextEdit.Wrap
             textFormat: TextEdit.PlainText
-            text: editPage.modelData?.display ?? ""
 
             Accessible.name: i18ndc("klipper", "@info:whatsthis", "Text edit area")
             KeyNavigation.up: editPage.dialogItem.KeyNavigation.up

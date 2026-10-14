@@ -71,6 +71,14 @@ void DeclarativeHistoryModel::moveToTop(const QString &uuid)
     m_model->moveToTop(uuid);
 }
 
+void DeclarativeHistoryModel::setText(const QString &uuid, const QString &text)
+{
+    const qsizetype row = m_model->indexOf(uuid);
+    if (row >= 0) {
+        m_model->setData(m_model->index(row), text, Qt::DisplayRole);
+    }
+}
+
 void DeclarativeHistoryModel::remove(const QString &uuid)
 {
     m_model->remove(uuid);
