@@ -30,6 +30,7 @@ public:
 
 private:
     PortalNotificationsModel();
+    void closeAfterInvoke(uint notificationId, Notifications::InvokeBehavior behavior);
 };
 
 }

@@ -58,8 +58,6 @@ void PortalNotificationsModel::close(uint notificationId)
 
 void PortalNotificationsModel::invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior)
 {
-    Q_UNUSED(behavior);
-
     const int row = rowOfNotification(notificationId);
     if (row == -1) {
         return;
@@ -72,12 +70,11 @@ void PortalNotificationsModel::invokeDefaultAction(uint notificationId, Notifica
     }
 
     Portal::self().invokeAction(notificationId, notification.d->defaultActionId, notification.d->defaultActionTarget, {}, window());
+    closeAfterInvoke(notificationId, behavior);
 }
 
 void PortalNotificationsModel::invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior)
 {
-    Q_UNUSED(behavior);
-
     const int row = rowOfNotification(notificationId);
     if (row == -1) {
         return;
@@ -92,12 +89,11 @@ void PortalNotificationsModel::invokeAction(uint notificationId, const QString &
 
     const QVariant actionTarget = notification.d->actionTargets.at(actionIndex);
     Portal::self().invokeAction(notificationId, actionName, actionTarget, {}, window());
+    closeAfterInvoke(notificationId, behavior);
 }
 
 void PortalNotificationsModel::reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior)
 {
-    Q_UNUSED(behavior);
-
     const int row = rowOfNotification(notificationId);
     if (row == -1) {
         return;
@@ -112,6 +108,22 @@ void PortalNotificationsModel::reply(uint notificationId, const QString &text, N
     }
 
     Portal::self().invokeAction(notificationId, notification.d->replyActionId, {}, text, window());
+    closeAfterInvoke(notificationId, behavior);
+}
+
+void PortalNotificationsModel::closeAfterInvoke(uint notificationId, Notifications::InvokeBehavior behavior)
+{
+    if (!(behavior & Notifications::Close)) {
+        return;
+    }
+    if (rowOfNotification(notificationId) == -1) {
+        return;
+    }
+    // Mirror what PortalNotificationsModel::close() does: portal notifications
+    // have no CloseNotification DBus signal of their own, so the model owns the
+    // lifecycle and removes the notification itself.
+    Portal::self().removeNotification(notificationId);
+    onNotificationRemoved(notificationId, Server::CloseReason::DismissedByUser);
 }
 
 void PortalNotificationsModel::configure(uint notificationId)
