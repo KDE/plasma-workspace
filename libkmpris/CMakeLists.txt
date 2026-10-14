@@ -30,10 +30,12 @@ qt_add_dbus_interface(libkmpris_SRCS dbus/org.mpris.MediaPlayer2.xml mprisroot)
 add_library(kmpris SHARED ${libkmpris_SRCS})
 generate_export_header(kmpris)
 target_include_directories(kmpris PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
+target_include_directories(kmpris PRIVATE ${CMAKE_SOURCE_DIR}/components)
 target_link_libraries(kmpris
     PUBLIC
         Qt::Core
         Qt::Qml
+        KF6::Service
     PRIVATE
         Qt::DBus
         KF6::ConfigCore
