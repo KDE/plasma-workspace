@@ -30,6 +30,7 @@ KCMUtils.ScrollViewKCM {
     property bool unsavedChanges: !(changedVisibility.size === 0 && changedShortcuts.size === 0)
 
     property bool cfg_scaleIconsToFit
+    property int cfg_iconSize
     property int cfg_iconSpacing
     property bool cfg_reverseIconOrder
     property bool cfg_showAllItems
@@ -214,20 +215,46 @@ KCMUtils.ScrollViewKCM {
                 Layout.preferredWidth: formLayout.maxComboboxWidth
                 model: [
                     {
-                        "label": i18nc("@item:inlistbox Icon size", "Small"),
-                        "size": "small"
-                    },
-                    {
                         "label": scaleString,
                         "size": "scale"
+                    },
+                    {
+                        "label": i18nc("@item:inlistbox Icon size", "Small"),
+                        "size": "smallMedium"
+                    },
+                    {
+                        "label": i18nc("@item:inlistbox Icon size", "Tiny"),
+                        "size": "small"
                     }
                 ]
                 textRole: "label"
 
-                currentIndex: iconsPage.cfg_scaleIconsToFit ? 1 : 0
+                currentIndex: {
+                    if (iconsPage.cfg_scaleIconsToFit) {
+                        return 0;
+                    } else {
+                        switch (iconsPage.cfg_iconSize) {
+                            case 0: return 2; // Small
+                            case 1: return 1; // SmallMedium
+                        }
+                    }
+                }
 
                 onActivated: index => {
-                    iconsPage.cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
+                    switch (model[currentIndex]["size"]) {
+                        case "scale":
+                            iconsPage.cfg_scaleIconsToFit = true;
+                            iconsPage.cfg_iconSize = 1; // Reset to default when scaling is enabled
+                            break;
+                        case "smallMedium":
+                            iconsPage.cfg_scaleIconsToFit = false;
+                            iconsPage.cfg_iconSize = 1;
+                            break;
+                        case "small":
+                            iconsPage.cfg_scaleIconsToFit = false;
+                            iconsPage.cfg_iconSize = 0; 
+                            break;
+                    }
                 }
             }
 
