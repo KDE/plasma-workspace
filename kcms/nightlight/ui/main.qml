@@ -14,6 +14,7 @@ import org.kde.config as KConfig
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.private.kcms.nightlight as Private
+import org.kde.plasma.workspace.dbus as DBus
 
 KCM.SimpleKCM {
     id: root
@@ -22,6 +23,70 @@ KCM.SimpleKCM {
 
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
+
+    DBus.Properties {
+        id: dbusInterface
+        busType: DBus.BusType.Session
+        service: "org.kde.KWin.NightLight"
+        path: "/org/kde/KWin/NightLight"
+        iface: "org.kde.KWin.NightLight"
+
+        readonly property double activatedUntil: Number(properties.activatedUntil) * 1000
+        readonly property bool activatedManual: Boolean(properties.activatedManual)
+        readonly property double deactivatedUntil: Number(properties.deactivatedUntil) * 1000
+        readonly property bool deactivatedManual: Boolean(properties.deactivatedManual)
+
+        readonly property bool temporarilyActivated: activatedUntil || activatedManual
+        readonly property bool temporarilyDeactivated: deactivatedUntil || deactivatedManual
+
+        function activateUntil(dateTime: date): void {
+            const timestamp = dateTime ? dateTime.getTime() / 1000 : 0;
+
+            DBus.SessionBus.asyncCall({
+                service: "org.kde.KWin.NightLight",
+                path: "/org/kde/KWin/NightLight",
+                iface: "org.kde.KWin.NightLight",
+                member: "activateUntil",
+                arguments: [timestamp],
+                signature: "(t)",
+            });
+        }
+
+        function activateManual(on: bool): void {
+            DBus.SessionBus.asyncCall({
+                service: "org.kde.KWin.NightLight",
+                path: "/org/kde/KWin/NightLight",
+                iface: "org.kde.KWin.NightLight",
+                member: "activateManual",
+                arguments: [on],
+                signature: "(b)",
+            });
+        }
+
+        function deactivateUntil(dateTime: date): void {
+            const timestamp = dateTime ? dateTime.getTime() / 1000 : 0;
+
+            DBus.SessionBus.asyncCall({
+                service: "org.kde.KWin.NightLight",
+                path: "/org/kde/KWin/NightLight",
+                iface: "org.kde.KWin.NightLight",
+                member: "deactivateUntil",
+                arguments: [timestamp],
+                signature: "(t)",
+            });
+        }
+
+        function deactivateManual(off: bool): void {
+            DBus.SessionBus.asyncCall({
+                service: "org.kde.KWin.NightLight",
+                path: "/org/kde/KWin/NightLight",
+                iface: "org.kde.KWin.NightLight",
+                member: "deactivateManual",
+                arguments: [off],
+                signature: "(b)",
+            });
+        }
+    }
 
     Timer {
         id: previewTimer
@@ -40,6 +105,50 @@ KCM.SimpleKCM {
             textFormat: Text.PlainText
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
+        }
+
+        Kirigami.InlineMessage {
+            Layout.alignment: Qt.AlignCenter
+            Layout.preferredWidth: form.implicitWidth
+            type: Kirigami.MessageType.Information
+            visible: dbusInterface.temporarilyActivated || dbusInterface.temporarilyDeactivated
+            text: {
+                if (dbusInterface.activatedUntil) {
+                    return i18nc("@info Placeholder is for time", "Night Light is temporarily activated until %1.", new Date(dbusInterface.activatedUntil).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+                } else if (dbusInterface.activatedManual) {
+                    return i18nc("@info", "Night Light is temporarily activated until it is manually turned off.");
+                } else if (dbusInterface.deactivatedUntil) {
+                    return i18nc("@info Placeholder is for time", "Night Light is temporarily suspended until %1.", new Date(dbusInterface.deactivatedUntil).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+                } else if (dbusInterface.deactivatedManual) {
+                    return i18nc("@info", "Night Light is temporarily suspended until it is manually resumed.");
+                }
+
+                return "";
+            }
+            actions: [
+                Kirigami.Action {
+                    text: i18nc("@action:button turn off Night Light feature", "Turn Off")
+                    visible: dbusInterface.temporarilyActivated
+                    onTriggered: {
+                        if (dbusInterface.activatedManual) {
+                            dbusInterface.activateManual(false);
+                        } else if (dbusInterface.activatedUntil) {
+                            dbusInterface.activateUntil(null);
+                        }
+                    }
+                },
+                Kirigami.Action {
+                    text: i18nc("@action:button resume Light Light feature, which had been temporarily disabled", "Resume")
+                    visible: dbusInterface.temporarilyDeactivated
+                    onTriggered: {
+                        if (dbusInterface.deactivatedManual) {
+                            dbusInterface.deactivateManual(false);
+                        } else if (dbusInterface.deactivatedUntil) {
+                            dbusInterface.deactivateUntil(null);
+                        }
+                    }
+                },
+            ]
         }
 
         Kirigami.Form {
@@ -138,7 +247,7 @@ KCM.SimpleKCM {
                     title: i18nc("@label:slider", "Day light temperature:")
                     contentItem: GridLayout {
                         Kirigami.FormData.buddyFor: tempSliderDay
-                        enabled: kcm.nightLightSettings.active && kcm.nightLightSettings.mode !== Private.NightLightMode.Constant
+                        enabled: (kcm.nightLightSettings.active && kcm.nightLightSettings.mode !== Private.NightLightMode.Constant) || dbusInterface.temporarilyDeactivated
 
                         columns: 4
 
@@ -175,7 +284,7 @@ KCM.SimpleKCM {
                             KCM.SettingStateBinding {
                                 configObject: kcm.nightLightSettings
                                 settingName: "DayTemperature"
-                                extraEnabledConditions: kcm.nightLightSettings.active
+                                extraEnabledConditions: kcm.nightLightSettings.active || dbusInterface.temporarilyDeactivated
                             }
                         }
                         QQC2.Label {
@@ -204,7 +313,7 @@ KCM.SimpleKCM {
                     title: i18nc("@label:slider", "Night light temperature:")
                     contentItem: GridLayout {
                         Kirigami.FormData.buddyFor: tempSliderNight
-                        enabled: kcm.nightLightSettings.active
+                        enabled: kcm.nightLightSettings.active || dbusInterface.temporarilyActivated
 
                         columns: 4
 
@@ -241,7 +350,7 @@ KCM.SimpleKCM {
                             KCM.SettingStateBinding {
                                 configObject: kcm.nightLightSettings
                                 settingName: "NightTemperature"
-                                extraEnabledConditions: kcm.nightLightSettings.active
+                                extraEnabledConditions: kcm.nightLightSettings.active || dbusInterface.temporarilyActivated
                             }
                         }
                         QQC2.Label {
