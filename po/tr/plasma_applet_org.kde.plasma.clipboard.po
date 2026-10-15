@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-16 00:47+0000\n"
-"PO-Revision-Date: 2026-06-16 19:14+0300\n"
+"PO-Revision-Date: 2026-10-14 19:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #: qml/main.qml:30
 #, kde-format
@@ -26,13 +26,13 @@ msgstr "Pano İçeriği"
 #: qml/main.qml:32
 #, kde-format
 msgid "Clipboard is empty"
-msgstr "Pano boş"
+msgstr "Pano, boş"
 
 #: qml/main.qml:34
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
-msgstr "Pano şu anda hassas veri barındırıyor"
+msgstr "Pano, şu anda hassas veri barındırıyor"
 
 #: qml/main.qml:75
 #, kde-format
