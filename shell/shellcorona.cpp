@@ -488,6 +488,8 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
             panelJson.insert(u"minimumLength", (qreal)view->minimumLength() / gridUnit);
             panelJson.insert(u"offset", (qreal)view->offset() / gridUnit);
             panelJson.insert(u"alignment", alignment == Qt::AlignRight ? u"right"_s : alignment == Qt::AlignCenter ? u"center"_s : u"left"_s);
+            panelJson.insert(u"floating"_s, view->floating());
+            panelJson.insert(u"floatingApplets"_s, view->floatingApplets());
 
             switch (view->visibilityMode()) {
             case PanelView::AutoHide:
