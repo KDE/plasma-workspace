@@ -15,9 +15,15 @@ Wants=plasma-kaccess.service
 Wants=plasma-startupsound.service
 Wants=xdg-desktop-autostart.target
 BindsTo=graphical-session.target
+
+# .target units automatically add After= for Wants=. In some cases we actually do not want there to be a dependency order.
+# Explicitly setting a Before= disables the automatic After= that would normally be added.
+# This in particular avoids dependency loops.
 Before=graphical-session.target
 Before=xdg-desktop-autostart.target
 Before=plasma-startupsound.service
 Before=plasma-restoresession.service
+Before=kde-baloo.service
+
 RefuseManualStart=yes
 StopWhenUnneeded=true
