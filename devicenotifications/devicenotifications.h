@@ -94,6 +94,7 @@ public:
     }
 
     bool isInternal() const;
+    bool isVirtual() const;
 
 Q_SIGNALS:
     void done();

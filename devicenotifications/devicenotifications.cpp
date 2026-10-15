@@ -356,6 +356,11 @@ bool OutputDevice::isInternal() const
     return m_name.startsWith("eDP-"_L1) || m_name.startsWith("LVDS-"_L1) || m_name.startsWith("DSI-"_L1);
 }
 
+bool OutputDevice::isVirtual() const
+{
+    return m_name.startsWith("Virtual-"_L1);
+}
+
 OutputDeviceMode::OutputDeviceMode(::kde_output_device_mode_v2 *mode)
     : QtWayland::kde_output_device_mode_v2(mode)
 {
@@ -410,7 +415,7 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
 
     connect(m_outputRegistry, &OutputDeviceRegistry::outputAdded, this, [this](OutputDevice *outputDevice) {
         if (m_initialOutputsReceived) {
-            if (outputDevice->isInternal()) {
+            if (outputDevice->isInternal() || outputDevice->isVirtual()) {
                 return;
             }
             const QString uuid = outputDevice->uuid();
@@ -423,7 +428,7 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
 
     connect(m_outputRegistry, &OutputDeviceRegistry::outputRemoved, this, [this](OutputDevice *outputDevice) {
         const QString uuid = outputDevice->uuid();
-        if (outputDevice->isInternal()) {
+        if (outputDevice->isInternal() || outputDevice->isVirtual()) {
             return;
         }
         m_recentlyRemovedOutputs.append(uuid);
