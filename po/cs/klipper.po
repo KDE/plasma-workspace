@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-10-13 12:04+0200\n"
+"PO-Revision-Date: 2026-10-15 00:07+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -316,24 +316,17 @@ msgid "Starred Only"
 msgstr "Pouze s hvězdičkou"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"Schránka momentálně obsahuje citlivá data, která nebudou uložena do historie."
+"Schránka a výběr momentálně obsahují citlivá data, která nebudou uložena do "
+"historie."
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -342,17 +335,14 @@ msgstr ""
 "Schránka momentálně obsahuje citlivá data, která nebudou uložena do historie."
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Schránka momentálně obsahuje citlivá data, která nebudou uložena do historie."
+"Výběr v současné době obsahuje citlivá data, která nebudou uložena do "
+"historie."
 
 #: declarative/qml/ClipboardMenu.qml:392
 #, kde-format

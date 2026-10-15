@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:48+0000\n"
+"POT-Creation-Date: 2026-10-15 00:48+0000\n"
 "PO-Revision-Date: 2019-09-19 19:28+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -28,57 +28,57 @@ msgstr ""
 msgid "General"
 msgstr "Умумӣ"
 
-#: qml/ConfigGeneral.qml:45
+#: qml/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:49
+#: qml/ConfigGeneral.qml:50
 #, fuzzy, kde-format
 #| msgid "Always show all entries"
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Ҳамеша намоиш додани ҳамаи вурудҳо"
 
-#: qml/ConfigGeneral.qml:53
+#: qml/ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:57
+#: qml/ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:129
 #, kde-format
 msgid "Application Status"
 msgstr "Вазъияти барнома"
 
-#: qml/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:131
 #, kde-format
 msgid "Communications"
 msgstr "Алоқаҳо"
 
-#: qml/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:133
 #, kde-format
 msgid "System Services"
 msgstr "Хизматҳои низомӣ"
 
-#: qml/ConfigGeneral.qml:134
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Hardware Control"
 msgstr "Идоракунии сахтафзор"
 
-#: qml/ConfigGeneral.qml:137
+#: qml/ConfigGeneral.qml:138
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Гуногун"
 
-#: qml/ConfigGeneral.qml:174
+#: qml/ConfigGeneral.qml:175
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -89,13 +89,13 @@ msgid ""
 "the app’s author."
 msgstr ""
 
-#: qml/ConfigGeneral.qml:177
+#: qml/ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:189
+#: qml/ConfigGeneral.qml:190
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -107,7 +107,7 @@ msgid ""
 "at a time."
 msgstr ""
 
-#: qml/ConfigGeneral.qml:198
+#: qml/ConfigGeneral.qml:199
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -117,19 +117,19 @@ msgid ""
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
 
-#: qml/ConfigGeneral.qml:210
+#: qml/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:213
+#: qml/ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
@@ -137,37 +137,43 @@ msgctxt ""
 msgid "Panel icon size:"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:217
+#: qml/ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:237
+#: qml/ConfigGeneral.qml:226
+#, kde-format
+msgctxt "@item:inlistbox Icon size"
+msgid "Tiny"
+msgstr ""
+
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:241
+#: qml/ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:245
+#: qml/ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:249
+#: qml/ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:269
+#: qml/ConfigGeneral.qml:296
 #, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
@@ -175,40 +181,40 @@ msgctxt ""
 msgid "Direction:"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:283
+#: qml/ConfigGeneral.qml:310
 #, kde-format
 msgid "Bottom-to-top"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:284
+#: qml/ConfigGeneral.qml:311
 #, kde-format
 msgid "Top-to-bottom"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
+#: qml/ConfigGeneral.qml:316 qml/ConfigGeneral.qml:323
 #, kde-format
 msgid "Left-to-right"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
+#: qml/ConfigGeneral.qml:317 qml/ConfigGeneral.qml:322
 #, kde-format
 msgid "Right-to-left"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:307
+#: qml/ConfigGeneral.qml:334
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:332
+#: qml/ConfigGeneral.qml:359
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Вурудҳо"
 
-#: qml/ConfigGeneral.qml:336
+#: qml/ConfigGeneral.qml:363
 #, fuzzy, kde-format
 #| msgid "Always show all entries"
 msgctxt "@option:check, This is referring to system tray entries"

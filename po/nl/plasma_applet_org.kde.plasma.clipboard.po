@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-06-16 11:21+0200\n"
+"PO-Revision-Date: 2026-10-14 12:11+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: qml/main.qml:40
 #, kde-format
@@ -28,12 +28,10 @@ msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "Het klembord bevat op dit moment gevoelige gegevens"
+msgstr "Het klembord en de selectie bevatten op dit moment gevoelige gegevens"
 
 #: qml/main.qml:46
 #, kde-format
@@ -42,12 +40,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "Het klembord bevat op dit moment gevoelige gegevens"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "Het klembord bevat op dit moment gevoelige gegevens"
+msgstr "De selectie bevat op dit moment gevoelige gegevens"
 
 #: qml/main.qml:85
 #, kde-format

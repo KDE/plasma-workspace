@@ -19,8 +19,8 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-06-19 19:29+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-10-14 12:00+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -44,12 +44,11 @@ msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "Буфер обмена в данный момент содержит конфиденциальные данные"
+msgstr ""
+"Буфер обмена и выделенный фрагмент сейчас содержат конфиденциальные данные"
 
 #: qml/main.qml:46
 #, kde-format
@@ -58,12 +57,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "Буфер обмена в данный момент содержит конфиденциальные данные"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "Буфер обмена в данный момент содержит конфиденциальные данные"
+msgstr "Выделенный фрагмент сейчас содержит конфиденциальные данные"
 
 #: qml/main.qml:85
 #, kde-format

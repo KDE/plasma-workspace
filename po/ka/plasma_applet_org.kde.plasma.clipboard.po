@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-06-16 07:21+0200\n"
+"PO-Revision-Date: 2026-10-14 07:12+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -29,12 +29,10 @@ msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "ბუფერი, ამჟამად, მგრძნობიარე მონაცემებს შეიცავს"
+msgstr "ბუფერი მონიშნული, ამჟამად, მგრძნობიარე მონაცემებს შეიცავს"
 
 #: qml/main.qml:46
 #, kde-format
@@ -43,12 +41,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "ბუფერი, ამჟამად, მგრძნობიარე მონაცემებს შეიცავს"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "ბუფერი, ამჟამად, მგრძნობიარე მონაცემებს შეიცავს"
+msgstr "მონიშნული, ამჟამად, მგრძნობიარე მონაცემებს შეიცავს"
 
 #: qml/main.qml:85
 #, kde-format

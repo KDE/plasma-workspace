@@ -1,21 +1,22 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # SPDX-FileCopyrightText: 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2025-10-17 12:06+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-10-15 00:05+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: devicenotifications.cpp:504
 #, kde-format
@@ -24,18 +25,16 @@ msgid "Display Detected"
 msgstr "Zjištěna obrazovka"
 
 #: devicenotifications.cpp:506
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "%1 bylo připojeno."
 
 #: devicenotifications.cpp:509
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "%1 bylo připojeno."
+msgstr "%1 %2 (%3) bylo připojeno."
 
 #: devicenotifications.cpp:544
 #, kde-format
@@ -44,18 +43,16 @@ msgid "Display Removed"
 msgstr "Obrazovka odpojena"
 
 #: devicenotifications.cpp:546
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "%1 bylo odpojeno."
 
 #: devicenotifications.cpp:549
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "%1 bylo odpojeno."
+msgstr "%1 %2 (%3) bylo odpojeno."
 
 #: devicenotifications.cpp:597
 #, kde-format

@@ -21,8 +21,8 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-10-13 23:10+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-10-14 12:00+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -337,25 +337,17 @@ msgid "Starred Only"
 msgstr "Только избранное"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"В буфере обмена сейчас находятся конфиденциальные данные, которые не будут "
-"сохранены в журнале."
+"Буфер обмена и выделенный фрагмент сейчас содержат конфиденциальные данные, "
+"которые не будут сохранены в журнале."
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -365,18 +357,14 @@ msgstr ""
 "сохранены в журнале."
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"В буфере обмена сейчас находятся конфиденциальные данные, которые не будут "
-"сохранены в журнале."
+"Выделенный фрагмент сейчас содержит конфиденциальные данные, которые не "
+"будут сохранены в журнале."
 
 #: declarative/qml/ClipboardMenu.qml:392
 #, kde-format

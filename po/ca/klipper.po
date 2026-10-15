@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-10-13 08:35+0200\n"
+"PO-Revision-Date: 2026-10-14 10:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -320,25 +320,17 @@ msgid "Starred Only"
 msgstr "Només amb estrella"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"El porta-retalls actualment conté una peça confidencial de dades que no "
-"s'emmagatzemarà a l'historial."
+"El porta-retalls i la selecció actualment contenen una peça confidencial de "
+"dades que no s'emmagatzemarà a l'historial."
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -348,17 +340,13 @@ msgstr ""
 "s'emmagatzemarà a l'historial."
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"El porta-retalls actualment conté una peça confidencial de dades que no "
+"La selecció actualment conté una peça confidencial de dades que no "
 "s'emmagatzemarà a l'historial."
 
 #: declarative/qml/ClipboardMenu.qml:392

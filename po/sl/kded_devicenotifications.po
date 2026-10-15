@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2025-07-08 06:45+0200\n"
+"PO-Revision-Date: 2026-10-14 07:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.9\n"
 
 #: devicenotifications.cpp:504
 #, kde-format
@@ -25,18 +25,16 @@ msgid "Display Detected"
 msgstr "Zaznan zaslon"
 
 #: devicenotifications.cpp:506
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "%1 je bil(a) priklopljen(a)."
 
 #: devicenotifications.cpp:509
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "%1 je bil(a) priklopljen(a)."
+msgstr "%1 %2 (%3) je bil(a) priklopljen(a)."
 
 #: devicenotifications.cpp:544
 #, kde-format
@@ -45,18 +43,16 @@ msgid "Display Removed"
 msgstr "Zaslon odstranjen"
 
 #: devicenotifications.cpp:546
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "%1 je bil(a) odklopljen(a)."
 
 #: devicenotifications.cpp:549
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "%1 je bil(a) odklopljen(a)."
+msgstr "%1 %2 (%3) je bil(a) odklopljen(a)."
 
 #: devicenotifications.cpp:597
 #, kde-format

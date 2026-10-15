@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-06-16 16:17+0200\n"
+"PO-Revision-Date: 2026-10-15 00:08+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: qml/main.qml:40
 #, kde-format
@@ -30,12 +30,10 @@ msgid "Clipboard is empty"
 msgstr "Schránka je prázdná"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "Schránka momentálně obsahuje citlivá data"
+msgstr "Schránka a výběr momentálně obsahují citlivá data"
 
 #: qml/main.qml:46
 #, kde-format
@@ -44,12 +42,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "Schránka momentálně obsahuje citlivá data"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "Schránka momentálně obsahuje citlivá data"
+msgstr "Výběr momentálně obsahuje citlivá data"
 
 #: qml/main.qml:85
 #, kde-format
