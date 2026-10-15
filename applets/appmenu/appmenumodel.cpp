@@ -12,6 +12,7 @@
 #include <QDBusServiceWatcher>
 #include <QGuiApplication>
 #include <QMenu>
+#include <QWindow>
 
 // Includes for the menu search.
 #include <KLocalizedString>
@@ -87,26 +88,28 @@ AppMenuModel::AppMenuModel(QObject *parent)
 
         m_searchMenu.reset(new QMenu);
         auto searchAction = new QWidgetAction(this);
-        auto searchBar = new QLineEdit;
-        searchBar->setClearButtonEnabled(true);
-        searchBar->setPlaceholderText(i18n("Search…"));
-        searchBar->setMinimumWidth(200);
-        searchBar->setContentsMargins(4, 4, 4, 4);
-        connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, searchBar, [searchBar]() {
-            searchBar->setText(QString());
+        m_searchBar = new QLineEdit;
+        m_searchBar->setClearButtonEnabled(true);
+        m_searchBar->setPlaceholderText(i18n("Search…"));
+        m_searchBar->setMinimumWidth(200);
+        m_searchBar->setContentsMargins(4, 4, 4, 4);
+        m_searchBar->installEventFilter(this);
+        connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, m_searchBar, [this]() {
+            m_searchBar->setText(QString());
         });
-        connect(searchBar, &QLineEdit::textChanged, this, [searchBar, this]() mutable {
-            insertSearchActionsIntoMenu(searchBar->text());
+        connect(m_searchBar, &QLineEdit::textChanged, this, [this]() mutable {
+            insertSearchActionsIntoMenu(m_searchBar->text());
         });
-        connect(searchBar, &QLineEdit::returnPressed, this, [this]() mutable {
+        connect(m_searchBar, &QLineEdit::returnPressed, this, [this]() mutable {
             if (!m_currentSearchActions.empty()) {
                 m_currentSearchActions.constFirst()->trigger();
             }
         });
-        connect(this, &AppMenuModel::modelNeedsUpdate, searchBar, [this, searchBar]() mutable {
-            insertSearchActionsIntoMenu(searchBar->text());
+        connect(this, &AppMenuModel::modelNeedsUpdate, m_searchBar, [this]() mutable {
+            insertSearchActionsIntoMenu(m_searchBar->text());
         });
-        searchAction->setDefaultWidget(searchBar);
+
+        searchAction->setDefaultWidget(m_searchBar);
         m_searchMenu->addAction(searchAction);
         m_searchMenu->addSeparator();
         m_searchAction->setMenu(m_searchMenu.get());
@@ -243,6 +246,15 @@ QList<QAction *> AppMenuModel::flatActionList()
         }
     }
     return ret;
+}
+
+bool AppMenuModel::eventFilter(QObject *watched, QEvent *event)
+{
+    if (watched == m_searchBar.get() && event->type() == QEvent::Show) {
+        m_searchBar->setFocus(Qt::PopupFocusReason);
+        m_searchBar->selectAll();
+    }
+    return QAbstractListModel::eventFilter(watched, event);
 }
 
 QVariant AppMenuModel::data(const QModelIndex &index, int role) const
