@@ -402,6 +402,8 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         panel->setAlignment(panelData.property(u"alignment"_s).toString());
         panel->setHiding(panelData.property(u"hiding"_s).toString());
         panel->setOpacity(panelData.property(u"opacity"_s).toString());
+        panel->setFloating(panelData.property(u"floating"_s).toBool());
+        panel->setFloatingApplets(panelData.property(u"floatingApplets"_s).toBool());
 
         // Loading the config for the panel
         loadSerializedConfigs(panel, panelData.property(u"config"_s));
