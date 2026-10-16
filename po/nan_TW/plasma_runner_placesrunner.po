@@ -1,0 +1,33 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-10-07 20:59+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: placesrunner.cpp:27 placesrunner.cpp:49
+#, kde-format
+msgid "places"
+msgstr "places"
+
+#: placesrunner.cpp:27
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "Kā 所有 ê 檔案管理器 ê 快速存取位置列出來"
+
+#: placesrunner.cpp:28
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr "揣符合 :q: ê 檔案管理器 ê 快速存取位置"

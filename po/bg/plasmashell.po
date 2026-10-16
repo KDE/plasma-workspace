@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-07-20 20:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -158,42 +158,42 @@ msgstr "Влизане в режим редактиране"
 msgid "Exit Edit Mode"
 msgstr "Излизане от режим на редактиране"
 
-#: main.cpp:108
+#: main.cpp:126
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Обвивка на Plasma"
 
-#: main.cpp:121
+#: main.cpp:139
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Активиране на QML Javascript откриване на грешки"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Без автоматично рестартиране на Plasma обвивка след срив"
 
-#: main.cpp:127
+#: main.cpp:145
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Принудително зареждане на дадената приставка на обвивката"
 
-#: main.cpp:131
+#: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Заменяне на съществуваща инстанция"
 
-#: main.cpp:134
+#: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Списък на наличните опции за обратна връзка от потребителите"
 
-#: main.cpp:190
+#: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma не успя да стартира"
 
-#: main.cpp:191
+#: main.cpp:209
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -350,53 +350,53 @@ msgstr "Вграден екран"
 msgid "Disconnected Screen %1"
 msgstr "Прекъснат екран %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показване на работния плот"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скриване на работния плот"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Активиране на Стартер на приложения"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показване на превключвател на дейности"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Превключване към предишна дейност"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Превключване към следваща дейност"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Настройки на работния плот и панелите…"
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:2275
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-09-20 00:47+0000\n"
 "PO-Revision-Date: 2026-03-13 14:14+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: geotimezonemodule.cpp:186
-#, kde-format
-msgctxt "OSD, keep short"
-msgid "Time zone changed to %1"
-msgstr "Časové pásmo změněno na %1"
-
-#: geotimezonemodule.cpp:189
+#: geotimezonemodule.cpp:195
 #, kde-format
 msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
@@ -31,13 +25,17 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "Hodiny změněny na %1 (%2)"
 
-#: geotimezonemodule.cpp:205
+#: geotimezonemodule.cpp:210
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "Aktualizace již probíhá."
 
-#: geotimezonemodule.cpp:268
+#: geotimezonemodule.cpp:273
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr ""
 "Nebylo přijato žádné časové pásmo nebo bylo přijato neplatné časové pásmo."
+
+#~ msgctxt "OSD, keep short"
+#~ msgid "Time zone changed to %1"
+#~ msgstr "Časové pásmo změněno na %1"

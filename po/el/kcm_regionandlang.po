@@ -3,40 +3,37 @@
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 # SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-09-19 16:50+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-10-12 17:54+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgid "Inherit Language"
 msgstr "Κληρονόμηση γλώσσας"
 
 #: binarydialectmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect IEC, with sigle in parentheses"
-#| msgid "International Electrotechnical Commission (IEC)"
+#, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
 msgstr "Διεθνής Ηλεκτροτεχνική Επιτροπή (IEC)"
 
 #: binarydialectmodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect JEDEC, with sigle in parentheses"
-#| msgid "Joint Electron Device Engineering Council (JEDEC)"
+#, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr "Κοινό Συμβούλιο Μηχανικών Ηλεκτρονικών Συσκευών (JEDEC)"
+msgstr "Κοινό Συμβούλιο Μηχανικής Ηλεκτρονικών Συσκευών (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
@@ -45,25 +42,22 @@ msgid "Metric system (SI)"
 msgstr "Μετρικό σύστημα (SI)"
 
 #: binarydialectmodel.cpp:75
-#, fuzzy, kde-format
-#| msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+#, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr "Δυαδικά - Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+msgstr "Δυαδικές μονάδες – Kibibyte (KiB), Mebibyte (MiB), Gibibyte (GiB)"
 
 #: binarydialectmodel.cpp:77
-#, fuzzy, kde-format
-#| msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Δυαδικά - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgstr "Δυαδικές μονάδες – Kilobyte (KB), Megabyte (MB), Gigabyte (GB)"
 
 #: binarydialectmodel.cpp:79
-#, fuzzy, kde-format
-#| msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Δεκαδικά - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgstr "Δεκαδικές μονάδες – Kilobyte (kB), Megabyte (MB), Gigabyte (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -298,12 +292,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Αδυανμία εντοπισμού εκτελέσιμου αρχείου `check-language-support`"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "αποτυχία ελέγχου-υποστήριξης-γλώσσας, έξοδος: %1"
+msgstr "Αποτυχία του check-language-support, έξοδος: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -312,12 +304,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Δεν κατάφεραν να επιλυθούν όλα τα πακέτα που λείπουν! %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Αποτυχία εγκατάστασης πακέτου %1"
+msgstr "Αποτυχία εγκατάστασης των πακέτων γλώσσας (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
@@ -355,6 +345,12 @@ msgstr "Προεπιλογή για το σύστημα"
 #, kde-format
 msgid "Default"
 msgstr "Προεπιλογή"
+
+#: localelistmodel.cpp:130
+#, kde-format
+msgctxt "@item:intable Friendly name for the C locale"
+msgid "ISO C Standard"
+msgstr "Πρότυπο ISO C"
 
 #: localelistmodel.cpp:142
 #, kde-format
@@ -469,12 +465,12 @@ msgctxt ""
 msgid " (Standard format for %1)"
 msgstr " (Τυπική μορφή για %1)"
 
-#: ui/AdvancedLanguageSelectPage.qml:24
+#: ui/AdvancedLanguageSelectPage.qml:25
 #, kde-format
 msgid "Language"
 msgstr "Γλώσσα"
 
-#: ui/AdvancedLanguageSelectPage.qml:37
+#: ui/AdvancedLanguageSelectPage.qml:38
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -485,70 +481,72 @@ msgstr ""
 "ανεπιθύμητη συμπεριφορά σε ορισμένες εφαρμογές. Αν θέλετε να χρησιμοποιείτε "
 "το σύστημά σας στα αγγλικά, αφαιρέστε όλες τις άλλες γλώσσες."
 
-#: ui/AdvancedLanguageSelectPage.qml:46
+#: ui/AdvancedLanguageSelectPage.qml:47
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "Η γλώσσα «%1» δεν υποστηρίζεται"
 
-#: ui/AdvancedLanguageSelectPage.qml:59
+#: ui/AdvancedLanguageSelectPage.qml:60
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr ""
 "Προσθέστε τις γλώσσες με τη σειρά που θέλετε να τις βλέπετε στις εφαρμογές "
 "σας."
 
-#: ui/AdvancedLanguageSelectPage.qml:101
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Αλλαγή γλώσσας"
 
-#: ui/AdvancedLanguageSelectPage.qml:105
+#: ui/AdvancedLanguageSelectPage.qml:118
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Αλλαγή γλώσσας"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Μετακίνηση στην κορυφή"
 
-#: ui/AdvancedLanguageSelectPage.qml:123
+#: ui/AdvancedLanguageSelectPage.qml:136
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Αφαίρεση"
 
-#: ui/AdvancedLanguageSelectPage.qml:138
+#: ui/AdvancedLanguageSelectPage.qml:152
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Δεν έχει ρυθμιστεί γλώσσα"
 
-#: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
+#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Προσθήκη γλωσσών"
 
-#: ui/AdvancedLanguageSelectPage.qml:236
+#: ui/AdvancedLanguageSelectPage.qml:250
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "Το σύστημα δεν περιλαμβάνει το «%1»"
 
-#: ui/AdvancedLanguageSelectPage.qml:237
+#: ui/AdvancedLanguageSelectPage.qml:251
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"Μάθετε πώς μπορείτε να βοηθήσετε στη <link url='%1'>μετάφραση του λογισμικού "
+"KDE στη γλώσσα σας</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:246
+#: ui/AdvancedLanguageSelectPage.qml:260
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
@@ -658,10 +656,10 @@ msgstr "Αριθμός τηλεφώνου"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "Το σύστημα δεν περιλαμβάνει ρυθμίσεις για το «%1»"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "Δοκιμάστε να αναζητήσετε μια κοντινή περιοχή."

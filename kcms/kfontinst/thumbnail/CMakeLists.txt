@@ -8,4 +8,10 @@ ecm_qt_declare_logging_category(fontthumbnail
     EXPORT PLASMAWORKSPACE
 )
 
-target_link_libraries(fontthumbnail KF6::Archive KF6::KIOCore KF6::KIOWidgets kfontinstui kfontinst )
+target_link_libraries(fontthumbnail
+    KF6::Archive
+    KF6::KIOCore
+    KF6::KIOWidgets
+    kfontinstui
+    kfontinst
+)

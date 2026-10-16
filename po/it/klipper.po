@@ -1,15 +1,15 @@
 # translation of klipper.po to Italian
-# SPDX-FileCopyrightText: 2009, 2022-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006, 2009, 2010, 2011, 2012, 2018, 2020.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
+# SPDX-FileCopyrightText: 2009, 2022-2026 Vincenzo Reale <smart2128vr@gmail.com>
 # SPDX-FileCopyrightText: 2022, 2024 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
-"PO-Revision-Date: 2026-08-27 17:47+0200\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-05 16:56+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,14 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.1\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Cronologia degli appunti:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:88
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -32,12 +32,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v voce"
 msgstr[1] "%v voci"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Selezione e appunti:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:104
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -46,72 +46,87 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
-"Si ha una <emphasis>selezione</emphasis> quando del testo o un'area dello "
-"schermo vengono evidenziati col mouse o con la tastiera. Questa può essere "
-"incollata utilizzando il pulsante centrale del mouse.\n"
-"<nl/><nl/>Se la selezione viene copiata esplicitamente utilizzando un'azione "
+"Quando del testo o un'area dello schermo vengono evidenziati con il mouse o "
+"la tastiera, si tratta della <emphasis>selezione</emphasis>. Questa può "
+"essere incollata utilizzando il pulsante centrale del mouse.<nl/><nl/>Se la "
+"selezione viene copiata esplicitamente tramite un'azione di "
 "<interface>Copia</interface> o <interface>Taglia</interface>, viene salvata "
-"negli <emphasis>Appunti</emphasis>. Può essere incollata utilizzando "
-"un'azione <interface>Incolla</interface>.<nl/><nl/> Se attivata, questa "
-"opzione mantiene la selezione e gli appunti allineati, in modo che qualsiasi "
-"selezione sia immediatamente disponibile per essere incollata in qualsiasi "
-"modo. Se è disattivata, la selezione può essere ancora salvata nella "
-"cronologia degli appunti (in base alle opzioni seguenti), ma può essere "
-"incollata solo utilizzando il pulsante centrale del mouse."
+"negli <emphasis>appunti</emphasis>. Può quindi essere incollata utilizzando "
+"un'azione di <interface>Incolla</interface>.<nl/><nl/>Se attivata, questa "
+"opzione mantiene sincronizzate la selezione e gli appunti, rendendo "
+"qualsiasi selezione immediatamente disponibile per essere incollata con "
+"qualsiasi metodo. Se disattivata, la selezione potrebbe comunque essere "
+"salvata nella cronologia degli appunti (a seconda dell'opzione sottostante), "
+"ma potrà essere incollata solo utilizzando il pulsante centrale del mouse."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:123
 #, kde-format
-msgid "Always save in history"
-msgstr "Salva sempre nella cronologia"
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Text selected with the pointer or keyboard"
+msgstr "Testo selezionato con il puntatore o la tastiera"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:125
 #, kde-format
-msgid "Text selection:"
-msgstr "Selezione del testo:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
+msgid "Include in history:"
+msgstr "Includi nella cronologia:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
-#, kde-format
-msgid "Only when explicitly copied"
-msgstr "Solo se esplicitamente copiato"
-
-#: configdialog.cpp:147
-#, kde-format
-msgid "Whether text selections are saved in the clipboard history."
-msgstr ""
-"Se le selezioni di testo devono essere salvate nella cronologia degli "
-"appunti."
-
-#: configdialog.cpp:178
-#, kde-format
-msgid "Non-text selection:"
-msgstr "Selezione non testuale:"
-
-#: configdialog.cpp:185
-#, kde-format
-msgid "Never save in history"
-msgstr "Non salvare mai nella cronologia"
-
-#: configdialog.cpp:190
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
+"Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
-"Se le selezioni non testuali (come le immagini) devono essere salvate nella "
-"cronologia degli appunti."
+"Il testo copiato esplicitamente viene sempre salvato, a meno che non sia "
+"marcato come password."
 
-#: configdialog.cpp:252
+#: configdialog.cpp:132
+#, kde-format
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Image data copied explicitly"
+msgstr "Dati dell'immagine copiati esplicitamente"
+
+#: configdialog.cpp:136
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+"Ad esempio, livelli e selezioni copiati in programmi di fotoritocco come "
+"Krita oGIMP.<br/><a href=\"1\">Altro sulle immagini negli appunti.</a>"
+
+#: configdialog.cpp:145
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+"Gli appunti consentiranno sempre di copiare i file di immagine come nomi di "
+"file e ne mostreranno le miniature. Questa impostazione riguarda i casi in "
+"cui le immagini sono memorizzate direttamente come dati. Alcune applicazioni "
+"supportano entrambi i casi, mentre altre accettano le immagini solo come "
+"dati.<nl/><nl/>Si noti inoltre che lo strumento per le schermate Spectacle "
+"ignorerà questa impostazione quando è configurato per salvare le schermate "
+"negli appunti. Anche qualsiasi applicazione che invii sia testo che immagini "
+"la ignorerà."
+
+#: configdialog.cpp:170
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Mostra il menu a comparsa delle azioni:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -127,7 +142,7 @@ msgstr ""
 "disattivato qui o non viene mostrato per una finestra esclusa, può essere "
 "mostrato utilizzando la scorciatoia <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:274
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -135,67 +150,45 @@ msgid_plural "%v seconds"
 msgstr[0] "%v secondo"
 msgstr[1] "%v secondi"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nessuno"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "Opzioni:"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-"Quando un <interface>modello di corrispondenza</interface> verifica il "
-"contenuto degli appunti, i suoi <interface>comandi</interface> sono "
-"visualizzati nel menu a comparsa di Klipper e possono essere eseguiti."
-
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Verifica modelli e comandi"
 
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Descrizione"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "Aggiungi azione..."
 
-#: configdialog.cpp:328
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "Modifica azione..."
 
-#: configdialog.cpp:333
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "Elimina azione"
 
-#: configdialog.cpp:340
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-"Queste azioni sono visualizzate nel menu a comparsa che può essere "
-"configurato nella pagina <interface>Menu delle azioni</interface>."
-
-#: configdialog.cpp:535
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -205,51 +198,51 @@ msgstr ""
 "Vuoi eliminare l'azione selezionata <resource>%1</resource><nl/> e tutti i "
 "suoi comandi?"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Conferma eliminazione azione"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Generale"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "Configurazione generale"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu delle azioni"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu delle azioni"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Configurazione delle azioni"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Configurazione delle azioni"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Scorciatoie"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Configurazione delle scorciatoie"
@@ -259,30 +252,30 @@ msgstr "Configurazione delle scorciatoie"
 msgid "Return to Clipboard"
 msgstr "Torna agli appunti"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Copia"
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Un'immagine del codice QR è stata copiata negli appunti"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Copia l'immagine del codice QR negli appunti"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr "Codice QR"
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -290,60 +283,92 @@ msgstr ""
 "Spazio insufficiente per visualizzare il codice QR. Prova a ridimensionare "
 "questa applet."
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Creazione del codice QR non riuscita"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Contrai"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Espandi"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "Cancella cronologia"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "Tutta la cronologia"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "Solo contrassegnati con la stella"
 
-#: declarative/qml/ClipboardMenu.qml:349
-#, kde-format
+#: declarative/qml/ClipboardMenu.qml:376
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
 msgctxt "@info"
 msgid ""
-"The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
 msgstr ""
 "Gli appunti contengono attualmente dati sensibili che non saranno "
 "memorizzati nella cronologia."
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:378
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"Gli appunti contengono attualmente dati sensibili che non saranno "
+"memorizzati nella cronologia."
+
+#: declarative/qml/ClipboardMenu.qml:380
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"Gli appunti contengono attualmente dati sensibili che non saranno "
+"memorizzati nella cronologia."
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Cancella dati segreti"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr "Nessuna corrispondenza"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Gli appunti sono vuoti"
@@ -353,27 +378,27 @@ msgstr "Gli appunti sono vuoti"
 msgid "Invoke action"
 msgstr "Invoca azione"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, kde-format
 msgid "Show QR code"
 msgstr "Mostra il codice QR"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, kde-format
 msgid "Edit contents"
 msgstr "Modifica i contenuti"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Remove from history"
 msgstr "Rimuovi dalla cronologia"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Remove Star"
 msgstr "Rimuovi la stella"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Star"
 msgstr "Stella"
@@ -550,15 +575,13 @@ msgstr "Comando:"
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
-"Un <placeholder>&#37;s</placeholder> nel comando sarà sostituito dal "
-"contenuto completo degli appunti. Da <placeholder>&#37;0</placeholder> a "
-"<placeholder>&#37;9</placeholder> saranno sostituiti dai corrispondenti "
-"testi catturati dal modello di corrispondenza."
+"Un <b>&#37;s</b> nel comando sarà sostituito dal contenuto completo degli "
+"appunti. Da <b>&#37;0</b> a <b>&#37;9</b> saranno sostituiti dai "
+"corrispondenti testi catturati dal modello di corrispondenza."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -595,102 +618,117 @@ msgstr "Ripristina l'icona predefinita per il comando"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:375
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Vuoi davvero cancellare ed eliminare l'intera cronologia degli appunti?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:377
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:379 historymodel.cpp:679
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr "Non chiedere più"
+
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Questo elemento è contrassegnato con una stella. Vuoi davvero rimuoverlo "
 "dalla cronologia?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Rimuovi elemento contrassegnato con una stella"
 
-#: klipper.cpp:73
+#: klipper.cpp:70
+#, fuzzy, kde-format
+#| msgid "Clipboard Popup"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "Finestra a comparsa degli appunti"
+
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
-msgstr "Menu a comparsa delle azioni automatiche"
+msgid "Toggle Automatic Popping Up of Action Menu"
+msgstr "Attiva/disattiva l'apertura automatica del menu delle azioni"
 
-#: klipper.cpp:90
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Ripulisci la cronologia degli appunti"
 
-#: klipper.cpp:95
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente le azioni sugli appunti correnti"
 
-#: klipper.cpp:103
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Modifica i cont&enuti…"
 
-#: klipper.cpp:111
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra il codice a barre…"
 
-#: klipper.cpp:120
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Elemento successivo nella cronologia"
+msgid "Rotate History Down"
+msgstr ""
 
-#: klipper.cpp:125
-#, kde-format
+#: klipper.cpp:129
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Elemento precedente nella cronologia"
+msgid "Rotate History Up"
+msgstr "Cancella cronologia"
 
-#: klipper.cpp:132
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra gli elementi degli appunti alla posizione del mouse"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "Cronologia degli appunti"
 
-#: klipper.cpp:420
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "su"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:427
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "corrente"
 
-#: klipper.cpp:434
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "giù"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -731,81 +769,61 @@ msgstr ""
 "un'applicazione viene chiusa."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "Mantieni allineati la selezione e gli appunti"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 "Il contenuto selezionato con il puntatore viene automaticamente copiato "
-"negli appunti in modo che possa essere incollato con un'azione Incolla o con "
-"un clic centrale del mouse.<br/><a href=\"1\">Altro sulla selezione e gli "
-"appunti</a>."
+"negli appunti in modo che possa essere incollato con un'azione <i>Incolla</"
+"i> o con un clic centrale del mouse.<br/><a href=\"1\">Altro sulla selezione "
+"e sugli appunti</a>."
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:32
+#. i18n: ectx: label, entry (SaveSelection), group (General)
+#: klipper.kcfg:28
 #, kde-format
-msgid "Ignore the selection"
-msgstr "Ignora la selezione"
+msgid "Save the selection"
+msgstr "Salva la selezione"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:34
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
 "Il contenuto selezionato con il puntatore, ma non copiato esplicitamente "
-"negli appunti non viene automaticamente memorizzato nella cronologia degli "
-"appunti e può essere incollato solo usando un clic centrale."
+"negli appunti, viene automaticamente memorizzato nella cronologia degli "
+"appunti."
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:37
+#. i18n: ectx: label, entry (SaveImages), group (General)
+#: klipper.kcfg:33
 #, kde-format
-msgid "Text selection only"
-msgstr "Solo selezione di testo"
+msgid "Save images"
+msgstr "Salva immagini"
 
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
+#: klipper.kcfg:35
 #, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
-msgstr ""
-"Memorizza solo le selezioni di testo nella cronologia degli appunti, non le "
-"immagini o qualsiasi altro tipo di dati."
-
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr "Ignora sempre le immagini"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
-"Non archiviare le immagini nella cronologia degli appunti, anche se copiate "
-"esplicitamente."
+msgid "Store images in the clipboard history."
+msgstr "Memorizza le immagini nella cronologia degli appunti."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:38
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Immediatamente alla selezione"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -814,63 +832,62 @@ msgstr ""
 "effettuata una selezione."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:43
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Tempo del menu delle azioni automatiche:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:47
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Visualizza il menu a comparsa automatico per questa volta."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:50
 #, kde-format
 msgid "History size:"
 msgstr "Dimensione della cronologia:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:54
 #, kde-format
-msgid "The clipboard history will store up to this many items."
-msgstr "La cronologia degli appunti conserverà questo numero di articoli."
+msgid ""
+"The clipboard history will store up to this many items. Maximum is 2048."
+msgstr ""
+"La cronologia degli appunti memorizzerà fino a questo numero di elementi. Il "
+"massimo è 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Voce fittizia per indicare modifiche in un albero di azioni"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:64
 #, kde-format
-msgid "Trim whitespace from selection"
-msgstr "Rimuovi gli spazi bianchi dalla selezione"
+msgid "Trim whitespace"
+msgstr "Rimuovi gli spazi bianchi"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:66
 #, kde-format
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
 msgstr ""
-"Rimuovi qualsiasi spazio bianco dall'inizio e dalla fine del testo "
-"selezionato, prima di eseguire un'azione. Ad esempio, ciò garantisce che un "
-"URL incollato in un browser sia interpretato come previsto. Il testo salvato "
-"sugli appunti non è interessato."
+"Rimuovi qualsiasi spazio bianco dall'inizio e dalla fine del testo passato a "
+"un'azione. Il testo salvato nella cronologia non è interessato."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:69
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Per un elemento scelto dalla cronologia"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -880,30 +897,112 @@ msgstr ""
 "dalla cronologia degli appunti."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:74
 #, kde-format
-msgid "Include MIME actions"
-msgstr "Includi le azioni MIME"
+msgid "Offer applications for copied links and files"
+msgstr "Proponi applicazioni per i collegamenti e per i file copiati"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
 msgstr ""
-"Se viene selezionato un nome file o un URL, includi applicazioni che possono "
-"accettare il suo tipo MIME nel menu a comparsa."
+"Per i collegamenti che iniziano con <i>http://</i> o <i>https://</i> oppure "
+"per i file,le applicazioni in grado di aprirli saranno proposte insieme alle "
+"azioni corrispondenti, se disponibili."
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Finestra a comparsa degli appunti"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "Ann&ulla"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Elemento successivo nella cronologia"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Elemento precedente nella cronologia"
+
+#~ msgid "up"
+#~ msgstr "su"
+
+#~ msgid "down"
+#~ msgstr "giù"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "These actions appear in the popup menu which can be configured on the "
+#~ "<interface>Action Menu</interface> page."
+#~ msgstr ""
+#~ "Queste azioni sono visualizzate nel menu a comparsa che può essere "
+#~ "configurato nella pagina <interface>Menu delle azioni</interface>."
+
+#~ msgid "Text selection:"
+#~ msgstr "Selezione del testo:"
+
+#~ msgid "Only when explicitly copied"
+#~ msgstr "Solo se esplicitamente copiato"
+
+#~ msgid "Non-text selection:"
+#~ msgstr "Selezione non testuale:"
+
+#~ msgid "Never save in history"
+#~ msgstr "Non salvare mai nella cronologia"
+
+#~ msgid ""
+#~ "Whether non-text selections (such as images) are saved in the clipboard "
+#~ "history."
+#~ msgstr ""
+#~ "Se le selezioni non testuali (come le immagini) devono essere salvate "
+#~ "nella cronologia degli appunti."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When a <interface>match pattern</interface> matches the clipboard "
+#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
+#~ "menu and can be executed."
+#~ msgstr ""
+#~ "Quando un <interface>modello di corrispondenza</interface> verifica il "
+#~ "contenuto degli appunti, i suoi <interface>comandi</interface> sono "
+#~ "visualizzati nel menu a comparsa di Klipper e possono essere eseguiti."
+
+#~ msgid "Text selection only"
+#~ msgstr "Solo selezione di testo"
+
+#~ msgid ""
+#~ "Only store text selections in the clipboard history, not images or any "
+#~ "other type of data."
+#~ msgstr ""
+#~ "Memorizza solo le selezioni di testo nella cronologia degli appunti, non "
+#~ "le immagini o qualsiasi altro tipo di dati."
+
+#~ msgid "Always ignore images"
+#~ msgstr "Ignora sempre le immagini"
+
+#~ msgid ""
+#~ "Do not store images in the clipboard history, even if explicitly copied."
+#~ msgstr ""
+#~ "Non archiviare le immagini nella cronologia degli appunti, anche se "
+#~ "copiate esplicitamente."
+
+#~ msgid "Include MIME actions"
+#~ msgstr "Includi le azioni MIME"
+
+#~ msgid ""
+#~ "If a file name or URL is selected, include applications that can accept "
+#~ "its MIME type in the popup menu."
+#~ msgstr ""
+#~ "Se viene selezionato un nome file o un URL, includi applicazioni che "
+#~ "possono accettare il suo tipo MIME nel menu a comparsa."
 
 #~ msgid "The clipboard history contains starred items. Clear them too?"
 #~ msgstr ""

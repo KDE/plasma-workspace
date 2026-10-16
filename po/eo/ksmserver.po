@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -91,13 +91,13 @@ msgstr "Restarigas la antaŭan uzantoseancon, se ekzistas"
 msgid "Also allow remote connections"
 msgstr "Permesi ankaŭ forajn konektojn"
 
-#: server.cpp:764
+#: server.cpp:757
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[nekonata]"
 
-#: server.cpp:787
+#: server.cpp:780
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -108,7 +108,7 @@ msgstr ""
 "Ne eblas administri iujn programojn ĉar la seancadministraj rimedoj de la "
 "sistemo estas elĉerpitaj. Jen la pintaj tri konsumantoj de seancorimedoj:%1"
 
-#: server.cpp:1042
+#: server.cpp:1035
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

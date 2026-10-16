@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2018, 2019, 2020, 2021, 2023, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
-"PO-Revision-Date: 2023-07-25 23:32+0200\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-09-28 23:27+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,30 +15,46 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "클립보드 내용"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "클립보드가 비었습니다"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr "클립보드에서 현재 민감한 데이터를 저장하는 중"
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
-msgstr ""
+msgstr "클립보드에서 현재 민감한 데이터를 저장하는 중"
 
-#: qml/main.qml:75
+#: qml/main.qml:48
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr "클립보드에서 현재 민감한 데이터를 저장하는 중"
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "과거 기록 비우기"
 
-#: qml/main.qml:95
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "클립보드 설정…"

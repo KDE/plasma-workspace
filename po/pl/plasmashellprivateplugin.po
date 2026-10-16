@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2026-09-06 09:51+0200\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"PO-Revision-Date: 2026-10-04 14:56+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -150,13 +150,19 @@ msgstr "Pozostaw otwartym"
 msgid "Configure…"
 msgstr "Ustawienia…"
 
-#: loginlockscreen/Footer.qml:49
+#: loginlockscreen/Footer.qml:50
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Klawiatura ekranowa"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr "Ukryj klawiaturę ekranową"
 
-#: loginlockscreen/Footer.qml:74
+#: loginlockscreen/Footer.qml:51
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr "Pokaż klawiaturę ekranową"
+
+#: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -382,24 +388,24 @@ msgstr "Pobieranie elementów interfejsu Plazmy"
 msgid "Install Widget From Local File…"
 msgstr "Wgraj element interfejsu z pliku lokalnego..."
 
-#: shellprivate/widgetexplorer.cpp:484
+#: shellprivate/widgetexplorer.cpp:500
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Pobierz nowe elementy interfejsu..."
 
-#: shellprivate/widgetexplorer.cpp:503
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Wybierz plik plazmoida"
 
-#: shellprivate/widgetexplorer.cpp:519
+#: shellprivate/widgetexplorer.cpp:535
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Wgrywanie pakietu %1 nie powiodło się: %2."
 
-#: shellprivate/widgetexplorer.cpp:520
+#: shellprivate/widgetexplorer.cpp:536
 #, kde-format
 msgid "Installation Failure"
 msgstr "Niepowodzenie wgrywania"
@@ -413,47 +419,51 @@ msgid ""
 msgstr "Obecnie wybranej strefy czasowej nie można zobrazować na tej mapie"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:340
+#: timezoneselector/TimezoneSelector.qml:347
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Wybierz…"
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:332
+#: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Region:"
 
 #: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:369
+#: timezoneselector/TimezoneSelector.qml:376
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Strefa czasowa:"
 
-#: timezoneselector/TimezoneSelector.qml:287
+#: timezoneselector/TimezoneSelector.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Powiększ"
 
-#: timezoneselector/TimezoneSelector.qml:303
+#: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Pomniejsz"
 
-#: timezoneselector/TimezoneSelector.qml:344
+#: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Wybór regionu strefy czasowej"
 
-#: timezoneselector/TimezoneSelector.qml:380
+#: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Wybór miejsca strefy czasowej"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Klawiatura ekranowa"
 
 #~ msgid "Screen saver timeout"
 #~ msgstr "Czas oczekiwania do wygaszacza ekranu"

@@ -313,6 +313,15 @@ public:
      * reject invalid objects.
      **/
     void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
+
+    /**
+     * Request sending the task at the given index to the specified output.
+     *
+     * @param index An index in this tasks model.
+     * @param screen The output to send it to.
+     * @since 6.9
+     */
+    void requestSendToOutput(const QModelIndex &index, QScreen *screen) override;
 };
 
 }

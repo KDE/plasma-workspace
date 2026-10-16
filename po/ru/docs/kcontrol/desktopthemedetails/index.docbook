@@ -68,7 +68,7 @@
 </articleinfo>
 
 <para
->&plasma; поставляется с несколькими оформлениями. Оформление &plasma; определяет то, как отображаются различные компоненты &plasma; (например, плазмоиды, панели, виджеты). </para>
+>&plasma; поставляется с несколькими оформлениями. Оформление &plasma; определяет то, как показываются различные компоненты &plasma; (например, плазмоиды, панели, виджеты). </para>
 
 <para>
   <screenshot>
@@ -105,7 +105,7 @@
 
 <para
 >Поле <guilabel
->Поиск..</guilabel
+>Поиск…</guilabel
 >, расположенное над списком оформлений, позволяет отфильтровать этот список. Кроме того, можно воспользоваться раскрывающимся меню рядом с этим полем, чтобы просмотреть только <guimenuitem
 >Светлые оформления</guimenuitem
 >, только <guimenuitem
@@ -140,7 +140,7 @@
   <varlistentry>
     <term
 ><guilabel
->Загрузить оформления рабочего стола...</guilabel
+>Загрузить оформления рабочего стола…</guilabel
 ></term>
     <listitem>
     <para
@@ -152,14 +152,14 @@
     <para>
     <screenshot>
     <screeninfo
->Загрузить оформления рабочего стола...</screeninfo>
+>Загрузить оформления рабочего стола…</screeninfo>
       <mediaobject>
         <imageobject>
           <imagedata fileref="get-new-theme.png" format="PNG"/>
         </imageobject>
         <textobject>
           <phrase
->Загрузить оформления рабочего стола...</phrase>
+>Загрузить оформления рабочего стола…</phrase>
         </textobject>
       </mediaobject>
     </screenshot>
@@ -169,7 +169,7 @@
   <varlistentry>
     <term
 ><guilabel
->Установить из файла...</guilabel
+>Установить из файла…</guilabel
 ></term>
     <listitem>
       <para

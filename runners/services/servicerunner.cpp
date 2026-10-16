@@ -98,7 +98,7 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
     ScoreCards cards;
     for (const auto &queryItem : queryList) {
         constexpr auto maxDistance = 1;
-        const auto bitap = Bitap::bitap(string, queryItem, maxDistance);
+        const auto bitap = Bitap::bitap(string, QStringView(queryItem).left(Bitap::MaxLength), maxDistance);
         if (!bitap) {
             // One of the query items didn't match. This means the entire query is not a match
             return ScoreCards{};

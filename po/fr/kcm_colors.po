@@ -109,7 +109,7 @@ msgstr ""
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
-"Définit si la couleur d’accentuation provenant du fond d'écran doit être "
+"Définit si la couleur d'accentuation provenant du fond d'écran doit être "
 "appliquée ou non"
 
 #: editor/kcolorschemeeditor.cpp:23

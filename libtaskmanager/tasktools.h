@@ -18,11 +18,9 @@
 namespace TaskManager
 {
 struct AppData {
-    QString id; // Application id (*.desktop sans extension).
-    QString name; // Application name.
-    QString genericName; // Generic application name.
     QIcon icon;
     QUrl url;
+    KService::Ptr service;
 };
 
 enum UrlComparisonMode {
@@ -47,24 +45,7 @@ enum UrlComparisonMode {
  */
 TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon = QIcon());
 
-/**
- * Takes several bits of window metadata as input and tries to find
- * the .desktop file for the application owning this window, or,
- * failing that, the path to its executable.
- *
- * The source for the metadata is generally the window's appId on
- * Wayland, or the window class part of the WM_CLASS window property
- * on X Windows.
- *
- * @param appId A string uniquely identifying the application owning
- * the window, ideally matching a .desktop file name.
- * @param pid The process id for the process owning the window.
- * @param xWindowsWMClassName The instance name part of X Windows'
- * WM_CLASS window property.
- * @returns A .desktop file or executable path for the application
- * owning the window.
- */
-TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId, quint32 pid = 0, const QString &xWindowsWMClassName = QString());
+TASKMANAGER_EXPORT AppData appDataFromService(const KService::Ptr &service, const QIcon &fallbackIcon = QIcon());
 
 /**
  * Returns a list of (usually application) KService instances for the
@@ -93,7 +74,7 @@ TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid);
  * WM_CLASS window property.
  * @returns A KService object matching the window
  */
-KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName);
+TASKMANAGER_EXPORT KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName);
 
 /**
 * Tries to map a given application to a desktop file
@@ -167,7 +148,14 @@ TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
  * @param appData An application data struct.
  * @param urls A list of URLs for the application to open.
  */
-TASKMANAGER_EXPORT void runApp(const AppData &appData, const QList<QUrl> &urls = QList<QUrl>());
+TASKMANAGER_EXPORT void runApp(const KService::Ptr &service, const QList<QUrl> &urls = QList<QUrl>());
 
-bool canLauchNewInstance(const AppData &appData);
+/**
+ * Attemps to create a service object for a given launcher url.
+ */
+TASKMANAGER_EXPORT KService::Ptr serviceForUrl(const QUrl &url);
+
+bool canLauchNewInstance(const KService::Ptr &service);
+
+TASKMANAGER_EXPORT QString appropriateCaption(const KService::Ptr &service);
 }

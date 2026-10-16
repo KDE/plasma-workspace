@@ -1,0 +1,42 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-08-13 00:52+0000\n"
+"PO-Revision-Date: 2026-10-07 06:46+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: ui/main.qml:27
+#, kde-format
+msgctxt "@title:window"
+msgid "Wallpaper"
+msgstr "Toh-bīn Puē-kíng"
+
+#: ui/main.qml:43
+#, kde-format
+msgctxt "@option:check Set the wallpaper for all screens"
+msgid "Set for all screens"
+msgstr "Uī sóo-ū ê îng-bōo siat-tīng"
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Wallpaper type:"
+msgstr "Puē-kíng luī:"
+
+#: ui/main.qml:113
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New Plugins…"
+msgstr "Tshú-tit Sin ê Guā-kuà-tîng-sik…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2026-06-04 11:59+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -57,7 +57,7 @@ msgstr "Argumenty, které se mají předat plasmoidu."
 msgid "Internal, for testing"
 msgstr "Interní, pro testování"
 
-#: plasmawindowedview.cpp:121
+#: plasmawindowedview.cpp:127
 #, kde-format
 msgid "Close %1"
 msgstr "Zavřít %1"

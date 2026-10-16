@@ -35,7 +35,7 @@ PlasmoidItem {
 
         onLastUdiChanged: {
             if (lastDeviceAdded) {
-                if (Plasmoid.configuration.popupOnNewDevice) {
+                if (Plasmoid.configuration.popupOnNewDevice && DeviceNotifierGlobals.tryAutoOpen(filterModel.lastUdi)) {
                     filterModel.dismissUsbDeviceAddedNotification();
                     devicenotifier.expanded = true;
                     (devicenotifier.fullRepresentationItem as FullRepresentation).spontaneousOpen = true;

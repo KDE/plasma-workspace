@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QQmlParserStatus>
+#include <QScreen>
 #include <QSortFilterProxyModel>
 
 #include <memory>
@@ -936,6 +937,15 @@ public:
      * reject invalid objects.
      **/
     Q_INVOKABLE void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
+
+    /**
+     * Request sending the task at the given index to the specified output.
+     *
+     * @param index An index in this tasks model.
+     * @param screen The output to send it to.
+     * @since 6.9
+     */
+    Q_INVOKABLE void requestSendToOutput(const QModelIndex &index, QScreen *output) override;
 
     /**
      * Request toggling whether the task at the given index, along with any

@@ -20,7 +20,6 @@
 #include <KLocalizedString>
 #include <KNotification>
 #include <KToggleAction>
-#include <KWindowSystem>
 
 #include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
@@ -32,12 +31,7 @@
 #include "klippersettings.h"
 #include "systemclipboard.h"
 
-#include <config-X11.h>
 #include <wayland-client-core.h>
-#if HAVE_X11
-#include <xcb/xcb.h>
-#include <xcb/xcb_aux.h>
-#endif
 
 std::shared_ptr<Klipper> Klipper::self()
 {
@@ -62,15 +56,24 @@ Klipper::Klipper(QObject *parent)
                                                  QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
     m_historyModel = HistoryModel::self();
+    // Prevent action menu popping up on start
+    if (const auto top = m_historyModel->first()) {
+        m_lastURLGrabberTextSelection = top->text();
+        m_lastURLGrabberTextClipboard = top->text();
+    }
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
 
     // we need that collection, otherwise KToggleAction is not happy :}
     m_collection = new KActionCollection(this);
+    m_collection->setComponentName(QStringLiteral("org.kde.klipper"));
+    m_collection->setComponentDisplayName(i18nc("@title shortcut group", "Clipboard"));
 
     m_toggleURLGrabAction = new KToggleAction(this);
     m_collection->addAction(QStringLiteral("clipboard_action"), m_toggleURLGrabAction);
-    m_toggleURLGrabAction->setText(i18nc("@action:inmenu Toggle automatic action", "Automatic Action Popup Menu"));
+    m_toggleURLGrabAction->setText(i18nc("@action:inmenu Toggle automatic action", "Toggle Automatic Popping Up of Action Menu"));
+    m_toggleURLGrabAction->setIcon(QIcon::fromTheme(QStringLiteral("show-menu")));
+    KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence());
     connect(m_toggleURLGrabAction, &QAction::toggled, this, &Klipper::setURLGrabberEnabled);
 
     /*
@@ -79,6 +82,7 @@ Klipper::Klipper(QObject *parent)
     m_myURLGrabber = new URLGrabber(this);
     connect(m_myURLGrabber, &URLGrabber::sigPopup, this, &Klipper::showPopupMenu);
     connect(m_historyModel.get(), &HistoryModel::actionInvoked, m_myURLGrabber, &URLGrabber::invokeAction);
+    m_historyModel->setURLGrabber(m_myURLGrabber);
 
     /*
      * Load configuration settings
@@ -117,13 +121,13 @@ Klipper::Klipper(QObject *parent)
 
     // Cycle through history
     m_cycleNextAction = m_collection->addAction(QStringLiteral("cycleNextAction"));
-    m_cycleNextAction->setText(i18nc("@action:inmenu", "Next History Item"));
-    m_cycleNextAction->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
+    m_cycleNextAction->setText(i18nc("@action:inmenu", "Rotate History Down"));
+    m_cycleNextAction->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
     KGlobalAccel::setGlobalShortcut(m_cycleNextAction, QKeySequence());
     connect(m_cycleNextAction, &QAction::triggered, this, &Klipper::slotCycleNext);
     m_cyclePrevAction = m_collection->addAction(QStringLiteral("cyclePrevAction"));
-    m_cyclePrevAction->setText(i18nc("@action:inmenu", "Previous History Item"));
-    m_cyclePrevAction->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
+    m_cyclePrevAction->setText(i18nc("@action:inmenu", "Rotate History Up"));
+    m_cyclePrevAction->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     KGlobalAccel::setGlobalShortcut(m_cyclePrevAction, QKeySequence());
     connect(m_cyclePrevAction, &QAction::triggered, this, &Klipper::slotCyclePrev);
 
@@ -182,24 +186,24 @@ void Klipper::setClipboardContents(const QString &s)
 {
     if (s.isEmpty())
         return;
-    updateTimestamp();
     auto data = std::make_unique<QMimeData>();
     data->setText(s);
     m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+    // Without this, klipper gets confused whether it holds passwords
+    // because the write above is under lock and does not emit changed signal
     m_clip->checkClipData(QClipboard::Clipboard, data.get());
+    m_clip->checkClipData(QClipboard::Selection, data.get());
 }
 
 // DBUS - don't call from Klipper itself
 void Klipper::clearClipboardContents()
 {
-    updateTimestamp();
-    m_clip->clear();
+    m_historyModel->clearBuffers();
 }
 
 // DBUS - don't call from Klipper itself
 void Klipper::clearClipboardHistory()
 {
-    updateTimestamp();
     m_historyModel->clear();
     saveSession();
 }
@@ -340,15 +344,11 @@ void Klipper::slotHistoryChanged(bool isTop)
     }
 
     QString &lastURLGrabberText = m_clip->isLocked(QClipboard::Selection) ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
-    if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->type() == HistoryItemType::Text) {
-        m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(m_historyModel->first()));
-
-        // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
-        // text all the time (e.g. because XFixes is not available and the application
-        // has broken TIMESTAMP target). Using most recent history item may not always
-        // work.
+    if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->allTypes().testFlag(HistoryItemType::Text)) {
+        // Do not offer the menu for the same action twice (ie. you select and copy, or press ctrl+C twice)
         if (item->text() != lastURLGrabberText) {
             lastURLGrabberText = item->text();
+            m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
         }
     } else {
         lastURLGrabberText.clear();
@@ -375,15 +375,6 @@ QStringList Klipper::getClipboardHistoryMenu()
 QString Klipper::getClipboardHistoryItem(int i)
 {
     return m_historyModel->index(i).data(Qt::DisplayRole).toString();
-}
-
-void Klipper::updateTimestamp()
-{
-#if HAVE_X11
-    if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
-        xcb_aux_sync(interface->connection());
-    }
-#endif
 }
 
 void Klipper::slotCycleNext()
@@ -414,24 +405,23 @@ QString Klipper::cycleText() const
 
     QFontMetrics font_metrics(QWidget().fontMetrics());
     QString result(QStringLiteral("<table>"));
-
     if (itemPrev) {
         result += QLatin1String("<tr><td>");
-        result += i18n("up");
+        result += i18n("Newer: ");
         result += QLatin1String("</td><td>");
         result += font_metrics.elidedText(itemPrev->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
         result += QLatin1String("</td></tr>");
     }
 
     result += QLatin1String("<tr><td>");
-    result += i18n("current");
+    result += i18n("Current: ");
     result += QLatin1String("</td><td><b>");
     result += font_metrics.elidedText(item->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
     result += QLatin1String("</b></td></tr>");
 
     if (itemNext) {
         result += QLatin1String("<tr><td>");
-        result += i18n("down");
+        result += i18n("Older: ");
         result += QLatin1String("</td><td>");
         result += font_metrics.elidedText(itemNext->text().simplified().toHtmlEscaped(), Qt::ElideMiddle, WIDTH_IN_PIXEL);
         result += QLatin1String("</td></tr>");

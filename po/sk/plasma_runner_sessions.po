@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
 "PO-Revision-Date: 2023-11-11 15:14+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: sessionrunner.cpp:20
+#: sessionrunner.cpp:22
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -27,12 +27,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "odhlásiť;odhlásiť sa"
 
-#: sessionrunner.cpp:23
+#: sessionrunner.cpp:25
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Odhlási a ukončí aktuálne sedenie pracovnej plochy"
 
-#: sessionrunner.cpp:27
+#: sessionrunner.cpp:29
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -40,12 +40,12 @@ msgctxt ""
 msgid "shutdown;shut down;power;poweroff;power off"
 msgstr "vypnutie;vypnúť;napájanie;vypnúť;vypnúť"
 
-#: sessionrunner.cpp:30
+#: sessionrunner.cpp:32
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Vypne počítač"
 
-#: sessionrunner.cpp:33
+#: sessionrunner.cpp:35
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -53,24 +53,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "reštartovať;reštartovať"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:38
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Reštartuje počítač"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:42
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "zamknúť;zamknúť obrazovku"
 
-#: sessionrunner.cpp:42
+#: sessionrunner.cpp:44
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Zamkne aktuálne sedenia a spustí šetrič obrazovky"
 
-#: sessionrunner.cpp:45
+#: sessionrunner.cpp:47
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -78,12 +78,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "uložiť;uložiť sedenie"
 
-#: sessionrunner.cpp:48
+#: sessionrunner.cpp:50
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Uloží aktuálne sedenie na obnovenie sedenia"
 
-#: sessionrunner.cpp:51
+#: sessionrunner.cpp:53
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -91,41 +91,41 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "prepnúť používateľa;nové sedenie"
 
-#: sessionrunner.cpp:54
+#: sessionrunner.cpp:56
 #, kde-format
 msgid "Switch to a session as a different user"
 msgstr "Spustiť nové sedenie ako iný používateľ"
 
-#: sessionrunner.cpp:75
+#: sessionrunner.cpp:101
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Odhlásiť sa"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:102
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Vypnut"
 
-#: sessionrunner.cpp:90
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Reštartovať"
 
-#: sessionrunner.cpp:97
+#: sessionrunner.cpp:104
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Zamknúť"
 
-#: sessionrunner.cpp:104
+#: sessionrunner.cpp:105
 #, kde-format
 msgid "Save Session"
 msgstr "Uložiť sedenie"
 
-#: sessionrunner.cpp:111
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Switch User"
 msgstr "Prepnúť používateľa"

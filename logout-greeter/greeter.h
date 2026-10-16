@@ -13,11 +13,9 @@
 #include <QObject>
 #include <QQmlEngine>
 
-#include <kworkspace.h>
+#include "shutdowndlg.h"
 
 #include <KPackage/Package>
-
-class KSMShutdownDlg;
 
 class QScreen;
 
@@ -45,7 +43,7 @@ private:
 
     bool m_running = false;
 
-    KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
+    ShutdownType m_shutdownType = ShutdownTypeHalt;
     QList<KSMShutdownDlg *> m_dialogs;
     bool m_windowed = false;
     const KPackage::Package m_package;

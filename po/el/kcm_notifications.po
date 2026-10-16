@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-06 00:45+0000\n"
-"PO-Revision-Date: 2024-08-14 11:36+0300\n"
-"Last-Translator: Dimitrys Meliates <demetresmeliates+i18n@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"PO-Revision-Date: 2026-10-12 17:48+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -60,29 +61,53 @@ msgid ""
 "basis"
 msgstr "Αυτή η εφαρμογή δεν υποστηρίζει τη διαμόρφωση ειδοποιήσεων ανά συμβάν."
 
-#: ui/ApplicationConfiguration.qml:282
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr "Αυτή η ειδοποίηση θα εμφανίζεται ως αναδυόμενο παράθυρο"
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr "Αυτή η ειδοποίηση δεν θα εμφανίζεται ως αναδυόμενο παράθυρο"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr "Αυτή η ειδοποίηση θα συνοδεύεται από ήχο"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr "Αυτή η ειδοποίηση δεν θα συνοδεύεται από ήχο"
+
+#: ui/ApplicationConfiguration.qml:306
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Εμφάνιση ενός μηνύματος σε αναδυόμενο παράθυρο"
 
-#: ui/ApplicationConfiguration.qml:291
+#: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgid "Play a sound"
 msgstr "Αναπαραγωγή ήχου"
 
-#: ui/ApplicationConfiguration.qml:302
+#: ui/ApplicationConfiguration.qml:326
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "Προεπισκόπηση ήχου"
 
-#: ui/ApplicationConfiguration.qml:328
+#: ui/ApplicationConfiguration.qml:352
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "Επαναφορά"
 
-#: ui/ApplicationConfiguration.qml:340
+#: ui/ApplicationConfiguration.qml:364
 #, kde-format
 msgid "Choose sound file"
 msgstr "Επιλογή αρχείου ήχου"
@@ -91,14 +116,13 @@ msgstr "Επιλογή αρχείου ήχου"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "Διαμόρφωση για το σύστημα…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Other Applications"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Άλλες εφαρμογές"
+msgstr "Διαμόρφωση για τις εφαρμογές…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -153,7 +177,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "Όταν μια εφαρμογή πλήρους οθόνης έχει την εστίαση"
 
 #: ui/main.qml:170
 #, kde-format
@@ -209,7 +233,7 @@ msgstr "Κοντά στο εικονίδιο ειδοποίησης"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Επιλογή…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -225,13 +249,11 @@ msgid "Hide after:"
 msgstr "Απόκρυψη μετά από:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Εμφάνιση στις ειδοποιήσεις"
+msgstr "Εμφάνιση ένδειξης χρόνου έως την απόκρυψη"
 
 #: ui/main.qml:318
 #, kde-format
@@ -273,12 +295,11 @@ msgid "Popup Position"
 msgstr "Θέση αναδυόμενου παραθύρου"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Ρυθμίσεις εφαρμογών"
+msgstr "Ειδοποιήσεις εφαρμογών"
 
 #: ui/SourcesPage.qml:108
 #, kde-format

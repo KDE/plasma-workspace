@@ -7,7 +7,6 @@
 
 #include "configdialog.h"
 
-#include <QButtonGroup>
 #include <QCheckBox>
 #include <QFontDatabase>
 #include <QFormLayout>
@@ -15,7 +14,6 @@
 #include <QHeaderView>
 #include <QLabel>
 #include <QPushButton>
-#include <QRadioButton>
 #include <QSpinBox>
 #include <QToolTip>
 #include <QVBoxLayout>
@@ -28,7 +26,6 @@
 #include <kconfigskeleton.h>
 #include <kglobalaccel.h>
 #include <kmessagebox.h>
-#include <kmessagewidget.h>
 #include <kwindowconfig.h>
 
 #include "klipper_debug.h"
@@ -64,12 +61,12 @@ using namespace Qt::StringLiterals;
 
 /* static */ QString ConfigDialog::manualShortcutString()
 {
-    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
+    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QStringLiteral("org.kde.klipper"), QStringLiteral("repeat_action"));
     return (keys.value(0).toString(QKeySequence::NativeText));
 }
 
 //////////////////////////
-//  GeneralWidget	//
+//  GeneralWidget       //
 //////////////////////////
 
 GeneralWidget::GeneralWidget(QWidget *parent)
@@ -104,140 +101,61 @@ GeneralWidget::GeneralWidget(QWidget *parent)
     connect(hint, &QLabel::linkActivated, this, [hint]() {
         QToolTip::showText(QCursor::pos(),
                            xi18nc("@info:tooltip",
-                                  "When text or an area of the screen is highlighted with the mouse or keyboard, \
-this is the <emphasis>selection</emphasis>. It can be pasted using the middle mouse button.\
-<nl/>\
-<nl/>\
-If the selection is explicitly copied using a <interface>Copy</interface> or <interface>Cut</interface> action, \
-it is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a <interface>Paste</interface> action. \
-<nl/>\
-<nl/>\
-When turned on this option keeps the selection and the clipboard the same, so that any selection is immediately available to paste by any means. \
-If it is turned off, the selection may still be saved in the clipboard history (subject to the options below), but it can only be pasted using the middle mouse button."),
+                                  "When text or an area of the screen is highlighted with the mouse or keyboard, "
+                                  "this is the <emphasis>selection</emphasis>. "
+                                  "It can be pasted using the middle mouse button."
+                                  "<nl/>"
+                                  "<nl/>"
+                                  "If the selection is explicitly copied using a <interface>Copy</interface> "
+                                  "or <interface>Cut</interface> action, it is saved to the <emphasis>clipboard</emphasis>. "
+                                  "It can be pasted using a <interface>Paste</interface> action."
+                                  "<nl/>"
+                                  "<nl/>"
+                                  "When turned on, this option keeps the selection and the clipboard the same, "
+                                  " so that any selection is immediately available to paste by any means. "
+                                  "If it is turned off, the selection may still be saved in the clipboard history "
+                                  "(subject to the option below), but it can only be pasted using the middle mouse button."),
                            hint);
     });
 
     layout->addRow(QString(), new QLabel(this));
 
-    // Radio button group: Storing text selections in history
-    //
-    // These two options correspond to the 'ignoreSelection' internal
-    // Klipper setting.
-    //
-    // The 'Always' option is not available if selection/clipboard synchronisation
-    // is turned off - in this case the selection is never automatically saved
-    // in the clipboard history.
+    m_saveSelectionCb = new QCheckBox(i18nc("@option:check Part of the setting 'Include in history:'", "Text selected with the pointer or keyboard"), this);
+    m_saveSelectionCb->setObjectName(QLatin1String("kcfg_SaveSelection"));
+    layout->addRow(i18nc("Followed e.g. by 'Text selected with the pointer or keyboard'", "Include in history:"), m_saveSelectionCb);
 
-    auto *buttonGroup = new QButtonGroup(this);
+    QLabel *selectionHint = ConfigDialog::createHintLabel(i18n("Text copied explicitly is always saved "
+                                                               "unless it is marked as a password."),
+                                                          this);
+    layout->addRow(QString(), selectionHint);
 
-    // This widget is not managed by KConfigDialogManager, but
-    // the other radio button is.  That is sufficient for the
-    // manager to handle widget changes, the Apply button etc.
-    m_alwaysTextRb = new QRadioButton(i18n("Always save in history"), this);
-    m_alwaysTextRb->setChecked(true); // may be updated from settings later
-    connect(m_alwaysTextRb, &QAbstractButton::toggled, this, &GeneralWidget::widgetChanged);
-    buttonGroup->addButton(m_alwaysTextRb);
-    layout->addRow(i18n("Text selection:"), m_alwaysTextRb);
+    m_saveImagesCb = new QCheckBox(i18nc("@option:check Part of the setting 'Include in history:'", "Image data copied explicitly"), this);
+    m_saveImagesCb->setObjectName(QLatin1String("kcfg_SaveImages"));
+    layout->addRow(QString(), m_saveImagesCb);
 
-    m_copiedTextRb = new QRadioButton(i18n("Only when explicitly copied"), this);
-    m_copiedTextRb->setObjectName(QLatin1String("kcfg_IgnoreSelection"));
-    buttonGroup->addButton(m_copiedTextRb);
-    layout->addRow(QString(), m_copiedTextRb);
+    QLabel *imageHint = ConfigDialog::createHintLabel(i18n("For example, layers and selections copied in "
+                                                           "image editors like Krita or GIMP."
+                                                           "<br/><a href=\"1\">More about images in the clipboard.</a>"),
+                                                      this);
+    layout->addRow(QString(), imageHint);
 
-    layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether text selections are saved in the clipboard history."), this));
-
-    // Radio button group: Storing non-text selections in history
-    //
-    // The truth table for the 4 possible combinations of internal Klipper
-    // settings (of which two are equivalent, making 3 user-visible options)
-    // controlling what is stored in the clipboard history is:
-    //
-    // selectionTextOnly  ignoreImages   Selected   Selected    Copied    Copied      Option
-    //                                     text    image/other   text   image/other
-    //
-    //        false          false          yes       yes         yes       yes         1
-    //        true           false          yes       no          yes       yes         2
-    //        false          true           yes       no          yes       no          3
-    //        true           true           yes       no          yes       no          3
-    //
-    // Option 1:  Always store images in history
-    //        2:  Only when explicitly copied
-    //        3:  Never store images in history
-    //
-    // The 'Always' option is not available if selection/clipboard synchronisation
-    // is turned off.
-
-    buttonGroup = new QButtonGroup(this);
-
-    // This widget is not managed by KConfigDialogManager,
-    // but the other two radio buttons are.
-    m_alwaysImageRb = new QRadioButton(i18n("Always save in history"), this);
-    m_alwaysImageRb->setChecked(true); // may be updated from settings later
-    connect(m_alwaysImageRb, &QAbstractButton::toggled, this, &GeneralWidget::widgetChanged);
-    buttonGroup->addButton(m_alwaysImageRb);
-    layout->addRow(i18n("Non-text selection:"), m_alwaysImageRb);
-
-    m_copiedImageRb = new QRadioButton(i18n("Only when explicitly copied"), this);
-    m_copiedImageRb->setObjectName(QLatin1String("kcfg_SelectionTextOnly"));
-    buttonGroup->addButton(m_copiedImageRb);
-    layout->addRow(QString(), m_copiedImageRb);
-
-    m_neverImageRb = new QRadioButton(i18n("Never save in history"), this);
-    m_neverImageRb->setObjectName(QLatin1String("kcfg_IgnoreImages"));
-    buttonGroup->addButton(m_neverImageRb);
-    layout->addRow(QString(), m_neverImageRb);
-
-    layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
-
-    m_havePrevAlwaysImageTextConfig = false;
-}
-
-void GeneralWidget::updateWidgets()
-{
-    // Initialise widgets which are not managed by KConfigDialogManager
-    // from the application settings.
-
-    // SelectionTextOnly takes precedence over IgnoreImages,
-    // see Klipper::checkClipData().  Give that radio button
-    // priority too.
-    if (KlipperSettings::selectionTextOnly()) {
-        KlipperSettings::setIgnoreImages(false);
-    }
-}
-
-void GeneralWidget::initWidgetStates()
-{
-    Q_ASSERT(!m_havePrevAlwaysImageTextConfig);
-    // During dialog setup, disable / change some widgets according to current settings to achieve the same
-    // internal consistency as settings changes made by the user after opening the dialog.
-    slotWidgetModified();
-    m_havePrevAlwaysImageTextConfig = false;
-}
-
-void GeneralWidget::slotWidgetModified()
-{
-    // A setting widget has been changed.  Update the state of
-    // any other widgets that depend on it.
-
-    if (m_syncClipboardsCb->isChecked()) {
-        m_alwaysImageRb->setEnabled(true);
-        m_alwaysTextRb->setEnabled(true);
-        m_copiedTextRb->setEnabled(true);
-
-        if (m_havePrevAlwaysImageTextConfig) {
-            m_alwaysTextRb->setChecked(m_prevAlwaysText);
-            m_alwaysImageRb->setChecked(m_prevAlwaysImage);
-            m_havePrevAlwaysImageTextConfig = false;
-        }
-    } else {
-        m_prevAlwaysText = m_alwaysTextRb->isChecked();
-        m_prevAlwaysImage = m_alwaysImageRb->isChecked();
-        m_havePrevAlwaysImageTextConfig = true;
-    }
+    connect(imageHint, &QLabel::linkActivated, this, [imageHint]() {
+        QToolTip::showText(QCursor::pos(),
+                           xi18nc("@info:tooltip",
+                                  "Clipboard will always allow copying image files as filenames and will show their thumbnails. "
+                                  " This setting covers cases where images are stored directly as data. "
+                                  " Some applications support both cases, but some only accept images as data."
+                                  "<nl/>"
+                                  "<nl/>"
+                                  "Also note that the Spectacle screenshot tool will ignore this setting "
+                                  "when configured to save screenshots to the clipboard. "
+                                  "Any application that sends both text and image will also ignore it."),
+                           imageHint);
+    });
 }
 
 //////////////////////////
-//  PopupWidget		//
+//  PopupWidget         //
 //////////////////////////
 
 PopupWidget::PopupWidget(QWidget *parent)
@@ -257,12 +175,11 @@ PopupWidget::PopupWidget(QWidget *parent)
     m_historyPopupCb->setObjectName(QLatin1String("kcfg_ReplayActionInHistory"));
     layout->addRow(QString(), m_historyPopupCb);
 
-    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "When text that matches an action pattern is selected or is chosen from \
-the clipboard history, automatically show the popup menu with applicable actions. \
-If the automatic menu is turned off here, or it is not shown for an excluded window, \
-then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
+                                                        "When text that matches an action pattern is selected or is chosen from "
+                                                        "the clipboard history, automatically show the popup menu with applicable actions. "
+                                                        "If the automatic menu is turned off here, or it is not shown for an excluded window, "
+                                                        "then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
                                                         ConfigDialog::manualShortcutString()),
                                                  this);
     layout->addRow(QString(), hint);
@@ -284,75 +201,49 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
     layout->addRow(i18n("Options:"), m_stripWhitespaceCb);
     layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
-    // MIME actions
-    item = KlipperSettings::self()->enableMagicMimeActionsItem();
-    m_mimeActionsCb = new QCheckBox(item->label(), this);
-    m_mimeActionsCb->setObjectName(QLatin1String("kcfg_EnableMagicMimeActions"));
-    layout->addRow(QString(), m_mimeActionsCb);
-    layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
-
     layout->addRow(QString(), new QLabel(this));
 }
 
 //////////////////////////
-//  ActionsWidget	//
+//  ActionsWidget       //
 //////////////////////////
 
 ActionsWidget::ActionsWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto *layout = new QGridLayout(this);
-    
 
-    // General information label
-    QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "When a <interface>match pattern</interface> \
-matches the clipboard contents, its <interface>commands</interface> \
-appear in the Klipper popup menu and can be executed."),
-                                                 this);
-    layout->addWidget(hint, 0, 0, 1, -1);
+    // MIME actions - handlers for URLs and files that Klipper provides by itself
+    const KConfigSkeletonItem *item = KlipperSettings::self()->enableMagicMimeActionsItem();
+    m_mimeActionsCb = new QCheckBox(item->label(), this);
+    m_mimeActionsCb->setObjectName(QLatin1String("kcfg_EnableMagicMimeActions"));
+    layout->addWidget(m_mimeActionsCb, 0, 0, 1, -1);
+    layout->addWidget(ConfigDialog::createHintLabel(item, this), 1, 0, 1, -1);
 
     // Scrolling list
     m_actionsTree = new ActionsTreeWidget(this);
     m_actionsTree->setColumnCount(2);
     m_actionsTree->setHeaderLabels({i18nc("@title:column", "Match pattern and commands"), i18nc("@title:column", "Description")});
 
-    layout->addWidget(m_actionsTree, 1, 0, 1, -1);
-    layout->setRowStretch(1, 1);
+    layout->addWidget(m_actionsTree, 2, 0, 1, -1);
+    layout->setRowStretch(2, 1);
 
     // Action buttons
     m_addActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Action..."), this);
     connect(m_addActionButton, &QPushButton::clicked, this, &ActionsWidget::onAddAction);
-    layout->addWidget(m_addActionButton, 2, 0);
+    layout->addWidget(m_addActionButton, 3, 0);
 
     m_editActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Action..."), this);
     connect(m_editActionButton, &QPushButton::clicked, this, &ActionsWidget::onEditAction);
-    layout->addWidget(m_editActionButton, 2, 1);
+    layout->addWidget(m_editActionButton, 3, 1);
     layout->setColumnStretch(2, 1);
 
     m_deleteActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Delete Action"), this);
     connect(m_deleteActionButton, &QPushButton::clicked, this, &ActionsWidget::onDeleteAction);
-    layout->addWidget(m_deleteActionButton, 2, 3);
-
-    // Where to configure the action options
-    if (KlipperSettings::actionsInfoMessageShown()) {
-        auto *msg = new KMessageWidget(xi18nc("@info",
-                                              "These actions appear in the popup menu \
-which can be configured on the <interface>Action Menu</interface> page."),
-                                       this);
-        msg->setMessageType(KMessageWidget::Information);
-        msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
-        msg->setWordWrap(true);
-        msg->setCloseButtonVisible(true);
-
-        connect(msg, &KMessageWidget::hideAnimationFinished, this, []() {
-            KlipperSettings::setActionsInfoMessageShown(false);
-        });
-        layout->addWidget(msg, 3, 0, 1, -1);
-    }
+    layout->addWidget(m_deleteActionButton, 3, 3);
 
     // Add some vertical space between our buttons and the dialogue buttons
-    layout->setRowMinimumHeight(4, 16);
+    layout->setRowMinimumHeight(5, 16);
 
     KConfigGroup oldConfig = KSharedConfig::openConfig()->group(u"ActionsWidget"_s);
     KConfigGroup state = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"ActionsWidget"_s);
@@ -576,7 +467,7 @@ void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int /*col*/)
 }
 
 //////////////////////////
-//  ConfigDialog	//
+//  ConfigDialog        //
 //////////////////////////
 
 ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *klipper, KActionCollection *collection)
@@ -594,15 +485,11 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     QVBoxLayout *shortcutsLayout = new QVBoxLayout(shortcutsPage);
     m_shortcutsWidget = new KShortcutsEditor(collection, shortcutsPage, KShortcutsEditor::GlobalAction);
     shortcutsLayout->addWidget(m_shortcutsWidget);
-    
+
     addPage(shortcutsPage, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
-    connect(m_generalPage, &GeneralWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_shortcutsWidget, &KShortcutsEditor::keyChange, this, &ConfigDialog::settingsChangedSlot);
-
-    connect(this, &KConfigDialog::widgetModified, m_generalPage, &GeneralWidget::slotWidgetModified);
-    m_generalPage->initWidgetStates();
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void)winId();
@@ -614,7 +501,6 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     KWindowConfig::restoreWindowSize(windowHandle(), windowStateGroup);
     resize(windowHandle()->size());
     connect(collection, &QObject::destroyed, this, &ConfigDialog::close);
-    setMinimumHeight(550);
 }
 
 void ConfigDialog::updateSettings()
@@ -651,8 +537,6 @@ void ConfigDialog::updateWidgets()
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
     }
-
-    m_generalPage->updateWidgets();
 }
 
 void ConfigDialog::updateWidgetsDefault()

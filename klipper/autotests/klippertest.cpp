@@ -72,7 +72,7 @@ void KlipperTest::testBug465225()
     // Prepare config
     auto klipperConfig = KSharedConfig::openConfig(fileName, KConfig::NoGlobals);
     KConfigGroup config(klipperConfig, QStringLiteral("General"));
-    config.writeEntry("IgnoreImages", false);
+    config.writeEntry("SaveImages", true);
     config.writeEntry("MaxClipItems", 30);
     QVERIFY(config.sync());
 
@@ -89,6 +89,7 @@ void KlipperTest::testBug465225()
         clipboard->setMimeData(data, QClipboard::Clipboard);
         QCoreApplication::processEvents();
         QTRY_COMPARE(model->rowCount(), 2);
+        QCoreApplication::processEvents();
 
         data = new QMimeData;
         data->setImageData(
@@ -106,6 +107,7 @@ void KlipperTest::testBug465225()
         QCOMPARE(model->rowCount(), 2);
         QCOMPARE(model->first()->type(), HistoryItemType::Image);
     }
+    QCoreApplication::processEvents();
 }
 
 /**

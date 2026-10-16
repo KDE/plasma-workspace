@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2024-09-17 06:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -39,129 +39,6 @@ msgid "Your emails"
 msgstr ""
 "j_h_liau@yahoo.com.tw, franklin@goodhorse.idv.tw, s8321414@gmail.com, "
 "brli@chakralinux.org, mail@kisaragi-hiu.com"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-"您希望安裝此字型為個人使用（只有您可以使用）還是系統字型（供所有使用者使"
-"用）？"
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "要安裝到何處"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "字型安裝程式"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "簡易字型安裝程式"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "(C) Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, kde-format
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr "讓視窗的對話框瞬變值由 windowHandle 來指定"
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "要安裝的 URL"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "列印"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "取消中…"
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "字型印表機"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "簡易字型印表機"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr "讓 X 應用程式對話框的瞬變值由 winid 指定"
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "要列印字型的大小"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-"要列印的字型，以「家族，風格」來指定，風格是一個如此組合的 24 位元十進位數"
-"字：<字重><寬度><傾斜>"
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "包含要列印的字型清單的檔案"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "移除包含要列印的字型清單的檔案"
-
-#: apps/Viewer.cpp:50
-#, kde-format
-msgid "Open an existing font file"
-msgstr "開啟現存字型檔案"
-
-#: apps/Viewer.cpp:51
-#, kde-format
-msgid "Print font preview"
-msgstr "列印字型預覽"
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "選取要檢視的字型"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "要開啟的網址"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "字型檢視器"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "簡易字型檢視器"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -205,6 +82,11 @@ msgstr "您確定您要刪除："
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "要取消掃描字型嗎？"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr "取消中…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -589,70 +471,70 @@ msgstr "後端介面已經掛點又重開了。請再試一次。"
 msgid "<h3>Error</h3>"
 msgstr "<h3>錯誤</h3>"
 
-#: kcmfontinst/JobRunner.cpp:692
+#: kcmfontinst/JobRunner.cpp:693
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "下載 <i>%1</i> 時失敗"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:695
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "系統後端介面已掛點。請再試一次。<br/><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr "<i>%1</i>是點陣字型，但是這些字型在您的系統上已被停用。"
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr "<i>%1</i> 包含字型 <b>%2</b>，而已經有此名稱的字型存在了。"
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> 不是字型。"
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "無法移除所有與 <i>%1</i> 相關的檔案"
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "啟動系統守護程式失敗。<br/><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:707 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> 已存在。"
 
-#: kcmfontinst/JobRunner.cpp:710
+#: kcmfontinst/JobRunner.cpp:711
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> 不存在。"
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:713
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "權限不足。<br/><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "不支援的動作。<br/><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "認證失敗。<br/><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "處理時發生未預期的錯誤：<i>%1</i>"
@@ -914,6 +796,20 @@ msgstr ""
 "\"right\">已停用：</td><td>%2</td></tr><tr><td align=\"right\">總計：</"
 "td><td>%3</td></tr></table>"
 
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"您希望安裝此字型為個人使用（只有您可以使用）還是系統字型（供所有使用者使"
+"用）？"
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "要安裝到何處"
+
 #: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
 msgid "Looking for any associated files…"
@@ -1170,54 +1066,54 @@ msgstr "無法移除所有與 %1 相關的檔案"
 msgid "Unknown"
 msgstr "未知"
 
-#: lib/FcEngine.cpp:894
+#: lib/FcEngine.cpp:889
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:897
+#: lib/FcEngine.cpp:892
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1059
+#: lib/FcEngine.cpp:1054
 #, kde-format
 msgid "No characters found."
 msgstr "找不到字元。"
 
-#: lib/FcEngine.cpp:1097
+#: lib/FcEngine.cpp:1092
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "The Quick Brown Fox 跳過那隻懶狗"
 
-#: lib/FcEngine.cpp:1102
+#: lib/FcEngine.cpp:1097
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1107
+#: lib/FcEngine.cpp:1102
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1112
+#: lib/FcEngine.cpp:1107
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1510
+#: lib/FcEngine.cpp:1505
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "錯誤：無法讀取字型名稱。"
 
-#: lib/FcEngine.cpp:1513
+#: lib/FcEngine.cpp:1508
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -2254,6 +2150,70 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "Font Installer"
+#~ msgstr "字型安裝程式"
+
+#~ msgid "Simple font installer"
+#~ msgstr "簡易字型安裝程式"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "(C) Craig Drummond, 2007"
+
+#~ msgid "Makes the dialog transient for a window specified by windowHandle"
+#~ msgstr "讓視窗的對話框瞬變值由 windowHandle 來指定"
+
+#~ msgid "URL to install"
+#~ msgstr "要安裝的 URL"
+
+#~ msgid "Print"
+#~ msgstr "列印"
+
+#~ msgid "Font Printer"
+#~ msgstr "字型印表機"
+
+#~ msgid "Simple font printer"
+#~ msgstr "簡易字型印表機"
+
+#~ msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgstr "讓 X 應用程式對話框的瞬變值由 winid 指定"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "要列印字型的大小"
+
+#~ msgid ""
+#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
+#~ "decimal number composed as: <weight><width><slant>"
+#~ msgstr ""
+#~ "要列印的字型，以「家族，風格」來指定，風格是一個如此組合的 24 位元十進位數"
+#~ "字：<字重><寬度><傾斜>"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "包含要列印的字型清單的檔案"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "移除包含要列印的字型清單的檔案"
+
+#~ msgid "Open an existing font file"
+#~ msgstr "開啟現存字型檔案"
+
+#~ msgid "Print font preview"
+#~ msgstr "列印字型預覽"
+
+#~ msgid "Select Font to View"
+#~ msgstr "選取要檢視的字型"
+
+#~ msgid "URL to open"
+#~ msgstr "要開啟的網址"
+
+#~ msgid "Font Viewer"
+#~ msgstr "字型檢視器"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "簡易字型檢視器"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "(C) Craig Drummond, 2004-2007"
 
 #~ msgid "Font Management"
 #~ msgstr "字型管理"

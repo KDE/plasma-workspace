@@ -22,6 +22,7 @@
 #include <QMimeData>
 #include <QQuickItem>
 #include <QQuickWindow>
+#include <QScreen> // Despite what Qt docs say, QWaylandScreen is not in <QWaylandScreen>.
 #include <QSet>
 #include <QTimer>
 #include <QUrl>
@@ -818,7 +819,8 @@ const AppData &WaylandTasksModel::Private::appData(PlasmaWindow *window)
         return *it;
     }
 
-    return *appDataCache.emplace(window, appDataFromUrl(windowUrlFromMetadata(window->appId, window->pid, window->resourceName)));
+    const auto service = serviceFromMetadata(window->appId, window->pid, window->resourceName);
+    return *appDataCache.emplace(window, appDataFromService(service));
 }
 
 QIcon WaylandTasksModel::Private::icon(PlasmaWindow *window)
@@ -897,15 +899,15 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     case Qt::DecorationRole:
         return d->icon(window);
     case AppId:
-        if (const QString &id = d->appData(window).id; id.isEmpty()) {
+        if (const QString &id = d->appData(window).service->desktopEntryName(); id.isEmpty()) {
             return window->appId;
         } else {
             return id;
         }
     case AppName:
-        return d->appData(window).name;
+        return d->appData(window).service->name();
     case GenericName:
-        return d->appData(window).genericName;
+        return appropriateCaption(d->appData(window).service);
     case LauncherUrl:
     case LauncherUrlWithoutIcon:
         return d->appData(window).url;
@@ -983,13 +985,9 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     case ApplicationMenuServiceName:
         return window->applicationMenuService;
     case CanLaunchNewInstance:
-        return canLauchNewInstance(d->appData(window));
+        return canLauchNewInstance(d->appData(window).service);
     case StorageId:
-        if (const auto service = KService::serviceByDesktopName(d->appData(window).id)) {
-            return service->storageId();
-        } else {
-            return QString();
-        }
+        return d->appData(window).service->storageId();
     }
 
     return AbstractTasksModel::data(index, role);
@@ -1036,7 +1034,11 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    runApp(d->appData(d->windows.at(index.row()).get()));
+    const auto service = d->appData(d->windows.at(index.row()).get()).service;
+
+    if (service) {
+        runApp(service);
+    }
 }
 
 void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
@@ -1045,7 +1047,11 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
         return;
     }
 
-    runApp(d->appData(d->windows.at(index.row()).get()), urls);
+    const auto service = d->appData(d->windows.at(index.row()).get()).service;
+
+    if (service) {
+        runApp(service, urls);
+    }
 }
 
 void WaylandTasksModel::requestClose(const QModelIndex &index)
@@ -1298,6 +1304,25 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
     auto &window = d->windows.at(index.row());
 
     window->set_minimized_geometry(waylandWindow->surface(), rect.x(), rect.y(), rect.width(), rect.height());
+}
+
+void WaylandTasksModel::requestSendToOutput(const QModelIndex &index, QScreen *output)
+{
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
+        return;
+    }
+
+    if (!output) {
+        return;
+    }
+
+    auto waylandOutput = output->nativeInterface<QNativeInterface::QWaylandScreen>();
+
+    if (!waylandOutput || !waylandOutput->output()) {
+        return;
+    }
+
+    d->windows.at(index.row())->send_to_output(waylandOutput->output());
 }
 
 QUuid WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)

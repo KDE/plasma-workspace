@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-02-25 18:55+0200\n"
+"PO-Revision-Date: 2026-08-24 19:36+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -704,7 +704,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "Teema on vain luettavissa. Tallenna muutokset toiselle nimelle."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format

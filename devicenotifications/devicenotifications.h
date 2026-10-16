@@ -93,18 +93,48 @@ public:
         return m_uuid;
     }
 
+    QString name() const
+    {
+        return m_name;
+    }
+
+    QString make() const
+    {
+        return m_make;
+    }
+
+    QString model() const
+    {
+        return m_model;
+    }
+
+    bool isInternal() const;
+    bool isVirtual() const;
+
 Q_SIGNALS:
     void done();
     void removed();
 
 protected:
     void kde_output_device_v2_uuid(const QString &uuid) override;
+    void kde_output_device_v2_name(const QString &name) override;
+    void kde_output_device_v2_geometry(int32_t x,
+                                       int32_t y,
+                                       int32_t physical_width,
+                                       int32_t physical_height,
+                                       int32_t subpixel,
+                                       const QString &make,
+                                       const QString &model,
+                                       int32_t transform) override;
     void kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode) override;
     void kde_output_device_v2_done() override;
     void kde_output_device_v2_removed() override;
 
 private:
     QString m_uuid;
+    QString m_name;
+    QString m_make;
+    QString m_model;
     bool m_isInitialized = false;
 };
 
@@ -125,6 +155,8 @@ class OutputDeviceRegistry : public QWaylandClientExtensionTemplate<OutputDevice
 public:
     OutputDeviceRegistry();
     ~OutputDeviceRegistry() override;
+
+    int count() const;
 
 Q_SIGNALS:
     void outputAdded(OutputDevice *output);
@@ -152,8 +184,8 @@ public:
     Q_SCRIPTABLE void dismissUsbDeviceAdded();
 
 private:
-    void notifyOutputAdded();
-    void notifyOutputRemoved();
+    void notifyOutputAdded(const QString &name, const QString &make, const QString &model);
+    void notifyOutputRemoved(const QString &name, const QString &make, const QString &model);
     void onDeviceAdded(const UdevDevice &device);
     void onDeviceRemoved(const UdevDevice &device);
 

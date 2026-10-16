@@ -511,7 +511,7 @@ QtObject {
             required property var image
             required property var iconName
             required property int percentage
-            required property string jobError
+            required property int jobError
             required property bool suspendable
             required property bool killable
             required property QtObject jobDetails
@@ -658,10 +658,6 @@ QtObject {
                     } else {
                         model.expired = true;
                     }
-                }
-                onForceActiveFocusRequested: {
-                    // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-                    globals.plasmoid.forceActivateWindow(popup);
                 }
 
                 onSuspendJobClicked: globals.popupNotificationsModel.suspendJob(globals.popupNotificationsModel.index(index, 0))

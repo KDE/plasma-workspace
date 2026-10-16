@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2025-11-30 15:49+0200\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-08-24 19:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -348,6 +348,12 @@ msgstr "Järjestelmän oletus"
 msgid "Default"
 msgstr "Oletus"
 
+#: localelistmodel.cpp:130
+#, kde-format
+msgctxt "@item:intable Friendly name for the C locale"
+msgid "ISO C Standard"
+msgstr ""
+
 #: localelistmodel.cpp:142
 #, kde-format
 msgctxt ""
@@ -461,12 +467,12 @@ msgctxt ""
 msgid " (Standard format for %1)"
 msgstr " (oletusmuotoilu alueelle %1)"
 
-#: ui/AdvancedLanguageSelectPage.qml:24
+#: ui/AdvancedLanguageSelectPage.qml:25
 #, kde-format
 msgid "Language"
 msgstr "Kieli"
 
-#: ui/AdvancedLanguageSelectPage.qml:37
+#: ui/AdvancedLanguageSelectPage.qml:38
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -477,68 +483,69 @@ msgstr ""
 "epätoivottua toimintaa. Jos haluat järjestelmän käyttävän englantia, poista "
 "muut kielet."
 
-#: ui/AdvancedLanguageSelectPage.qml:46
+#: ui/AdvancedLanguageSelectPage.qml:47
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "Kieltä ”%1” ei tueta"
 
-#: ui/AdvancedLanguageSelectPage.qml:59
+#: ui/AdvancedLanguageSelectPage.qml:60
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Lisää kielet järjestykseen, jossa haluat käyttää niitä sovelluksissa."
 
-#: ui/AdvancedLanguageSelectPage.qml:101
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Vaihda kieli"
 
-#: ui/AdvancedLanguageSelectPage.qml:105
+#: ui/AdvancedLanguageSelectPage.qml:118
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Vaihda kieli"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Siirrä ylimmäs"
 
-#: ui/AdvancedLanguageSelectPage.qml:123
+#: ui/AdvancedLanguageSelectPage.qml:136
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Poista"
 
-#: ui/AdvancedLanguageSelectPage.qml:138
+#: ui/AdvancedLanguageSelectPage.qml:152
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Kieltä ei ole asetettu"
 
-#: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
+#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Lisää kieliä"
 
-#: ui/AdvancedLanguageSelectPage.qml:236
+#: ui/AdvancedLanguageSelectPage.qml:250
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
-msgstr ""
+msgstr "Järjestelmästä puuttuu ”%1”"
 
-#: ui/AdvancedLanguageSelectPage.qml:237
+#: ui/AdvancedLanguageSelectPage.qml:251
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Learn how to help <link url='%1'>translate KDE software into your language</"
 "link>."
 msgstr ""
+"Lue miten auttaa <link url='%1'>kääntämään KDE-ohjelmia kielellesi</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:246
+#: ui/AdvancedLanguageSelectPage.qml:260
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
@@ -646,13 +653,13 @@ msgstr "Puhelinnumero"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include settings for “%1”"
-msgstr ""
+msgstr "Järjestelmässä ei ole asetuksia sijainnille ”%1”"
 
 #: ui/main.qml:432
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Try searching for a nearby region."
-msgstr ""
+msgstr "Kokeile etsiä läheistä aluetta."
 
 #~ msgid ""
 #~ "You can configure the formats used for time, dates, money and other "

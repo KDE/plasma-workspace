@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2023-05-26 19:45+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,28 +20,40 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Tonduja Enhavo"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Tondujo estas malplena"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr ""
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr ""
 
-#: qml/main.qml:75
+#: qml/main.qml:48
+#, kde-format
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr ""
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "Malplenigi Historion"
 
-#: qml/main.qml:95
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Agordi tondujon…"

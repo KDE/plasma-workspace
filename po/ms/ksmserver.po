@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2010-07-23 21:18+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -87,13 +87,13 @@ msgstr "Pulihkan semula sesi yang disimpan pengguna jika ada"
 msgid "Also allow remote connections"
 msgstr "Benarkan sambungan jauh juga"
 
-#: server.cpp:764
+#: server.cpp:757
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:787
+#: server.cpp:780
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -102,7 +102,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1042
+#: server.cpp:1035
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

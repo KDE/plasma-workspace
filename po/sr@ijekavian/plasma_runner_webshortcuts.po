@@ -1,12 +1,13 @@
 # Translation of krunner_webshortcutsrunner.po to Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2009.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-12 00:49+0000\n"
-"PO-Revision-Date: 2009-12-20 12:24+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -32,14 +33,14 @@ msgstr "Отвара „%1“ у веб прегледачу са упитом :
 #: webshortcutrunner.cpp:71
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "Тражи помоћу Дак дак го синтаксе са узвичником"
 
 #: webshortcutrunner.cpp:99
 #, kde-format
 msgid "Search in private window"
-msgstr ""
+msgstr "Тражи у приватном прозору"
 
 #: webshortcutrunner.cpp:99
 #, kde-format
 msgid "Search in incognito window"
-msgstr ""
+msgstr "Тражи у анонимном прозору"

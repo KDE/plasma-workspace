@@ -29,7 +29,7 @@
 
 using namespace Qt::StringLiterals;
 
-BaseModel::BaseModel(QPointer<SystemTraySettings> settings, QObject *parent)
+BaseModel::BaseModel(SystemTraySettings *settings, QObject *parent)
     : QAbstractListModel(parent)
     , m_settings(settings)
     , m_showAllItems(m_settings ? m_settings->isShowAllItems() : true)
@@ -78,7 +78,7 @@ Plasma::Types::ItemStatus BaseModel::calculateEffectiveStatus(bool canRender, Pl
 
     bool forcedShown = m_showAllItems || m_shownItems.contains(itemId);
     bool forcedHidden = m_hiddenItems.contains(itemId);
-    bool isDisabledSni = m_settings->isDisabledStatusNotifier(itemId);
+    bool isDisabledSni = m_settings && m_settings->isDisabledStatusNotifier(itemId);
 
     if (!forcedShown && (status == Plasma::Types::ItemStatus::HiddenStatus || isDisabledSni)) {
         return Plasma::Types::ItemStatus::HiddenStatus;
@@ -95,10 +95,12 @@ static QString plasmoidCategoryForMetadata(const KPluginMetaData &metadata)
     return metadata.value(u"X-Plasma-NotificationAreaCategory");
 }
 
-PlasmoidModel::PlasmoidModel(const QPointer<SystemTraySettings> &settings, const QPointer<PlasmoidRegistry> &plasmoidRegistry, QObject *parent)
+PlasmoidModel::PlasmoidModel(SystemTraySettings *settings, PlasmoidRegistry *plasmoidRegistry, QObject *parent)
     : BaseModel(settings, parent)
     , m_plasmoidRegistry(plasmoidRegistry)
 {
+    Q_ASSERT(m_plasmoidRegistry);
+
     connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginRegistered, this, &PlasmoidModel::appendRow);
     connect(m_plasmoidRegistry, &PlasmoidRegistry::pluginUnregistered, this, &PlasmoidModel::removeRow);
 
@@ -253,7 +255,7 @@ StatusNotifierModel::StatusNotifierModel(QObject *parent)
     init();
 }
 
-StatusNotifierModel::StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent)
+StatusNotifierModel::StatusNotifierModel(SystemTraySettings *settings, QObject *parent)
     : BaseModel(settings, parent)
 {
     init();
@@ -472,7 +474,7 @@ void StatusNotifierModel::init()
     }
 }
 
-BackgroundAppsModel::BackgroundAppsModel(QPointer<SystemTraySettings> settings, QObject *parent)
+BackgroundAppsModel::BackgroundAppsModel(SystemTraySettings *settings, QObject *parent)
     : BaseModel(settings, parent)
 {
     auto monitor = new OrgFreedesktopDBusPropertiesInterface("org.freedesktop.background.Monitor"_L1,

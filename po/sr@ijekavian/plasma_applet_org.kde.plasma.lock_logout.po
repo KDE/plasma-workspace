@@ -1,12 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.lock_logout.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010, 2011, 2012, 2014, 2015.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-03 00:49+0000\n"
-"PO-Revision-Date: 2015-07-12 20:23+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +27,7 @@ msgstr "Опште"
 #: ConfigGeneral.qml:120
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Недоступно"
 
 #: data.js:5
 #, kde-format
@@ -39,10 +40,9 @@ msgid "Lock the screen"
 msgstr "Закључај екран"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Пребаци корисника"
+msgstr "Пребаци корисника…"
 
 #: data.js:13
 #, kde-format
@@ -52,44 +52,41 @@ msgstr "Започните паралелну сесију као други к�
 #: data.js:19
 #, kde-format
 msgid "Shut down"
-msgstr ""
+msgstr "Угаси"
 
 #: data.js:20
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "Одјави ме, угаси или поново покрени рачунар"
+msgstr "Угаси рачунар"
 
 #: data.js:26
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Поново покрени"
 
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "Поново подигни рачунар"
 
 #: data.js:33
 #, kde-format
 msgid "Log out"
-msgstr ""
+msgstr "Одјави ме"
 
 #: data.js:34
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "Окончај сесију"
 
 #: data.js:40
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Закључај екран"
+msgstr "Прикажи одјавни екран"
 
 #: data.js:41
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
 msgstr "Одјави ме, угаси или поново покрени рачунар"
 
@@ -97,7 +94,7 @@ msgstr "Одјави ме, угаси или поново покрени рач�
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "На спавање"
 
 # well-spelled: сусп
 #: data.js:48
@@ -115,30 +112,3 @@ msgstr "У хибернацију"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "У хибернацију (сусп. на диск)"
-
-#, fuzzy
-#~| msgid "Lock the screen"
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "Закључај екран"
-
-#~ msgid "Switch User"
-#~ msgstr "Пребаци корисника"
-
-#~ msgid "Leave"
-#~ msgstr "Напусти"
-
-#~ msgid "Leave..."
-#~ msgstr "Напусти..."
-
-#~ msgid "Do you want to suspend to disk (hibernate)?"
-#~ msgstr "Желите ли да суспендујете на диск (хибернација)?"
-
-#~ msgid "Yes"
-#~ msgstr "Да"
-
-#~ msgid "No"
-#~ msgstr "Не"
-
-#~ msgid "Do you want to suspend to RAM (sleep)?"
-#~ msgstr "Желите ли да суспендујете у РАМ (спавање)?"

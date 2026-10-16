@@ -155,7 +155,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
         // up at the same .desktop file when fully resolved as url.
         if (menuId.isEmpty()) {
             KService::Ptr service = KService::serviceByMenuId(url.fileName());
-            if (KDesktopFile(service->entryPath()).fileName() == f.fileName()) {
+            if (service && KDesktopFile(service->entryPath()).fileName() == f.fileName()) {
                 menuId = getMenuId(service);
             }
         }
@@ -314,15 +314,15 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     const QUrl &url = d->launchersOrder.at(index.row());
     const AppData &data = d->appData(url);
     if (role == Qt::DisplayRole) {
-        return data.name;
+        return data.service->name();
     } else if (role == Qt::DecorationRole) {
         return data.icon;
     } else if (role == AppId) {
-        return data.id;
+        return data.service->desktopEntryName();
     } else if (role == AppName) {
-        return data.name;
+        return data.service->name();
     } else if (role == GenericName) {
-        return data.genericName;
+        return appropriateCaption(data.service);
     } else if (role == LauncherUrl) {
         // Take resolved URL from cache.
         return data.url;
@@ -348,11 +348,7 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == CanLaunchNewInstance) {
         return false;
     } else if (role == StorageId) {
-        const auto service = KService::serviceByDesktopName(data.id);
-        if (service) {
-            return service->storageId();
-        }
-        return QString();
+        return data.service->storageId();
     }
 
     return AbstractTasksModel::data(index, role);
@@ -582,7 +578,11 @@ void LauncherTasksModel::requestNewInstance(const QModelIndex &index)
         return;
     }
 
-    runApp(d->appData(d->launchersOrder.at(index.row())));
+    const auto service = serviceForUrl(d->launchersOrder.at(index.row()));
+
+    if (service) {
+        runApp(service);
+    }
 }
 
 void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)

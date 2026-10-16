@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-09-04 11:24+0200\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"PO-Revision-Date: 2026-09-11 11:17+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -152,28 +152,46 @@ msgstr "Impossible de désinstaller les styles : \n"
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr ""
+"La désinstallation de « %1 » a réussi mais la désinstallation d'autres "
+"styles est impossible : \n"
+
+#: kcmstyle.cpp:229
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"La désinstallation du style %1 a réussi mais la désinstallation d'autres "
+"styles est impossible : \n"
 msgstr[1] ""
+"La désinstallation du style %1 a réussi mais la désinstallation d'autres "
+"styles est impossible : \n"
 
-#: kcmstyle.cpp:237
+#: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
-msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
+msgid "Successfully uninstalled “%1”."
+msgstr "La désinstallation de « %1 » a réussi."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:242
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] "La désinstallation du style %1 a réussi."
+msgstr[1] "La désinstallation de %1 styles a réussi."
+
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
 "Une erreur s'est produite lors du chargement de la boite de dialogue de "
 "configuration de ce style."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Impossible d'appliquer le style sélectionné « %1 »."

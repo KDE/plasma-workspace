@@ -11,20 +11,23 @@
 #include <QBindable>
 #include <QClipboard>
 #include <QDateTime>
+#include <QPointer>
 #include <QSqlDatabase>
 
 #include "klipper_export.h"
+#include "systemclipboard.h"
 
 class KCoreConfigSkeleton;
 class HistoryItem;
-class SystemClipboard;
 class UpdateDatabaseJob;
+class URLGrabber;
 
 class KLIPPER_EXPORT HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(bool hasPassword READ hasPassword NOTIFY hasPasswordChanged)
+    Q_PROPERTY(bool clipboardHasPassword READ clipboardHasPassword NOTIFY hasPasswordChanged)
+    Q_PROPERTY(bool selectionHasPassword READ selectionHasPassword NOTIFY hasPasswordChanged)
 
 public:
     enum RoleType {
@@ -34,7 +37,8 @@ public:
         TypeIntRole,
         ImageUrlRole,
         ImageSizeRole,
-        StarredRole
+        StarredRole,
+        HasActionRole
     };
     Q_ENUM(RoleType)
 
@@ -60,6 +64,13 @@ public:
      */
     void clear();
     void clearHistory();
+
+    void clearHasPassword();
+
+    /**
+     * Empty both system buffers and their password state.
+     */
+    void clearBuffers();
 
     /**
      * Move the history in position pos to top
@@ -99,9 +110,12 @@ public:
 
     int pendingJobs() const;
 
-    [[nodiscard]] bool hasPassword() const;
+    [[nodiscard]] bool clipboardHasPassword() const;
+    [[nodiscard]] bool selectionHasPassword() const;
 
-    Q_INVOKABLE void clearSecret();
+    Q_INVOKABLE void clearPasswords();
+
+    void setURLGrabber(URLGrabber *grabber);
 
 Q_SIGNALS:
     void changed(bool isTop = false);
@@ -137,22 +151,30 @@ private:
      */
     bool isItemStarred(const QString &uuid) const;
 
-    void setHasPassword(bool hasPassword);
+    void setHasPassword(QClipboard::Mode mode, bool hasPassword);
+
+    enum class Holding {
+        APassword,
+        NoPassword,
+    };
+    /** The system buffers that are either holding a password, or that have no password. */
+    [[nodiscard]] SystemClipboard::SelectionMode buffersHolding(Holding holding) const;
 
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
+    QPointer<URLGrabber> m_urlGrabber;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(HistoryModel, int, m_starredCount, 0)
     int m_pendingJobs = 0;
     QString m_dbFolder;
     QSqlDatabase m_db;
     qsizetype m_maxSize = 0;
-    bool m_displayImages = false;
+    bool m_bSaveImages = false;
     bool m_bNoNullClipboard = true;
-    bool m_bIgnoreSelection = true;
+    bool m_bSaveSelection = false;
     bool m_bKeepContents = true;
     bool m_bSynchronize = false;
-    bool m_bSelectionTextOnly = true;
-    bool m_hasPassword = false;
+    bool m_clipboardHasPassword = false;
+    bool m_selectionHasPassword = false;
 
     friend class DeclarativeHistoryModel;
     friend class HistoryModelTest;

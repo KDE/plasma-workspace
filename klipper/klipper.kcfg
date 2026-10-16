@@ -19,29 +19,20 @@
       <default>true</default>
       <whatsthis>Do not allow the clipboard to be cleared, for example when an application exits.</whatsthis>
     </entry>
-    <entry name="Synchronize" type="Int">
-      <label comment="KDE::DoNotExtract">Backwards compatibility, don't touch.</label>
-      <default>3</default>
-    </entry>
     <entry name="SyncClipboards" type="Bool">
       <label>Keep the selection and clipboard the same</label>
       <default>false</default>
-      <whatsthis>Content selected with the cursor is automatically copied to the clipboard so that it can be pasted with either a Paste action or a middle-click.&lt;br/&gt;&lt;a href="1"&gt;More about the selection and clipboard&lt;/a&gt;.</whatsthis>
+      <whatsthis>Content selected with the pointer is automatically copied to the clipboard so that it can be pasted with either a &lt;i&gt;Paste&lt;/i&gt; action or a middle-click.&lt;br/&gt;&lt;a href="1"&gt;More about the selection and clipboard&lt;/a&gt;.</whatsthis>
     </entry>
-    <entry name="IgnoreSelection" type="Bool">
-      <label>Ignore the selection</label>
-      <default>true</default>
-      <whatsthis>Content selected with the cursor but not explicitly copied to the clipboard is not automatically stored in the clipboard history, and can only be pasted using a middle-click.</whatsthis>
+    <entry name="SaveSelection" type="Bool">
+      <label>Save the selection</label>
+      <default>false</default>
+      <whatsthis>Content selected with the pointer but not explicitly copied to the clipboard is automatically stored in the clipboard history.</whatsthis>
     </entry>
-    <entry name="SelectionTextOnly" type="Bool">
-      <label>Text selection only</label>
-      <default>true</default>
-      <whatsthis>Only store text selections in the clipboard history, not images or any other type of data.</whatsthis>
-    </entry>
-    <entry name="IgnoreImages" type="Bool">
-      <label>Always ignore images</label>
-      <default>true</default>
-      <whatsthis>Do not store images in the clipboard history, even if explicitly copied.</whatsthis>
+    <entry name="SaveImages" type="Bool">
+      <label>Save images</label>
+      <default>false</default>
+      <whatsthis>Store images in the clipboard history.</whatsthis>
     </entry>
     <entry name="URLGrabberEnabled" type="Bool">
         <label>Immediately on selection</label>
@@ -60,22 +51,19 @@
         <default>20</default>
         <min>1</min>
         <max>2048</max>
-	<tooltip>The clipboard history will store up to this many items.</tooltip>
+	<tooltip>The clipboard history will store up to this many items. Maximum is 2048.</tooltip>
     </entry>
     <entry key="ActionListChanged" name="ActionList" type="Int">
         <label>Dummy entry for indicating changes in an action's tree widget</label>
         <default>-1</default>
     </entry>
-    <entry name="ActionsInfoMessageShown" type="Bool">
-        <default>true</default>
-    </entry>
   </group>
 
   <group name="Actions">
     <entry name="StripWhiteSpace" type="Bool">
-      <label>Trim whitespace from selection</label>
+      <label>Trim whitespace</label>
       <default>true</default>
-      <whatsthis>Remove any whitespace from the start and end of selected text, before performing an action. For example, this ensures that a URL pasted in a browser is interpreted as expected. The text saved on the clipboard is not affected.</whatsthis>
+      <whatsthis>Remove any whitespace from the start and end of the text passed to an action. The text saved in history is not affected.</whatsthis>
     </entry>
     <entry name="ReplayActionInHistory" type="Bool">
       <label>For an item chosen from history</label>
@@ -83,9 +71,9 @@
       <tooltip>Show the popup menu of applicable actions if an entry is chosen from the clipboard history.</tooltip>
     </entry>
     <entry name="EnableMagicMimeActions" type="Bool">
-      <label>Include MIME actions</label>
+      <label>Offer applications for copied links and files</label>
       <default>true</default>
-      <whatsthis>If a file name or URL is selected, include applications that can accept its MIME type in the popup menu.</whatsthis>
+      <whatsthis>For a link starting with &lt;i&gt;http://&lt;/i&gt; or &lt;i&gt;https://&lt;/i&gt; or for files, applications that can open them will be offered alongside your matching actions, if any.</whatsthis>
     </entry>
   </group>
 

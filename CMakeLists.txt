@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(plasma-workspace)
-set(PROJECT_VERSION "6.7.80")
+set(PROJECT_VERSION "6.8.80")
 string(REPLACE "." ";" VERSION_LIST ${PROJECT_VERSION})
 list(GET VERSION_LIST 0 PROJECT_VERSION_MAJOR)
 list(GET VERSION_LIST 1 PROJECT_VERSION_MINOR)
 list(GET VERSION_LIST 2 PROJECT_VERSION_PATCH)
 
-set(PROJECT_DEP_VERSION "6.6.90")
-set(QT_MIN_VERSION "6.10.0")
-set(KF6_MIN_VERSION "6.26.0")
+set(PROJECT_DEP_VERSION "6.7.90")
+set(QT_MIN_VERSION "6.11.0")
+set(KF6_MIN_VERSION "6.30.0")
 option(WITH_X11_SESSION "Build and install X11 session (deprecated)" ON)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
@@ -192,15 +192,11 @@ if(WITH_X11)
     check_X11_lib(Xtst)
 
     set(HAVE_X11 1)
-    set(HAVE_XCURSOR 1)
-    set(HAVE_XFIXES 1)
 
     find_package(XCB MODULE REQUIRED COMPONENTS AUX XCB CURSOR RANDR IMAGE)
     set_package_properties(XCB PROPERTIES TYPE REQUIRED)
 else()
     set(HAVE_X11 0)
-    set(HAVE_XCURSOR 0)
-    set(HAVE_XFIXES 0)
 endif()
 
 # FreeBSD systems might have libxcrypt but their shadow equivalent doesn't use it
@@ -212,7 +208,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 endif()
 
 find_package(Qt6WaylandClient COMPONENTS Private)
-find_package(PlasmaWaylandProtocols 1.21.0 REQUIRED)
+find_package(PlasmaWaylandProtocols 1.22.0 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
 
 if(FONTCONFIG_FOUND)
@@ -359,7 +355,7 @@ set_package_properties(KIOFuse PROPERTIES DESCRIPTION "Provide KIO support to le
 
 find_package(KNightTime ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 
-find_package(Union ${PROJECT_VERSION} CONFIG REQUIRED)
+find_package(Union ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 
 # Clipboard applet
 ecm_find_qmlmodule(org.kde.prison 1.0)

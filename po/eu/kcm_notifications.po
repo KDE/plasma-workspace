@@ -1,7 +1,7 @@
 # Translation for kcm_notifications.po to Euskara/Basque (eu).
 # Copyright (C) 2019-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024-2026 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-06 00:45+0000\n"
-"PO-Revision-Date: 2026-02-11 17:44+0100\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"PO-Revision-Date: 2026-10-11 23:21+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: kcm.cpp:64
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Txandakatu «zaratarik ez»"
+msgstr "«Zaratarik ez» txandakatu"
 
 #: sourcesmodel.cpp:404
 #, kde-format
@@ -33,28 +33,28 @@ msgstr "Beste aplikazio batzuk"
 #: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
-msgstr "Erakutsi mezu gainerakorrak"
+msgstr "Mezu gainerakorrak erakutsi"
 
 #: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
-msgstr "Erakutsi «zaratarik ez» modua"
+msgstr "«Zaratarik ez» moduan erakutsi"
 
 #: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
 #, kde-format
 msgid "Show in history"
-msgstr "Erakutsi historian"
+msgstr "Historian erakutsi"
 
 #: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
-msgstr "Erakutsi jakinarazpen ikur txikiak"
+msgstr "Jakinarazpen ikur txikiak erakutsi"
 
 #: ui/ApplicationConfiguration.qml:180
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Konfiguratu gertaerak"
+msgstr "Gertaerak konfiguratu"
 
 #: ui/ApplicationConfiguration.qml:188
 #, kde-format
@@ -65,44 +65,68 @@ msgstr ""
 "Aplikazio honek ez du onartzen gertaera bakoitzeko jakinarazpenak "
 "konfiguratzea"
 
-#: ui/ApplicationConfiguration.qml:282
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr "Jakinarazpen hau gainerakor gisa erakutsiko da"
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr "Jakinarazpen hau ez da gainerakor gisa erakutsiko"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr "Jakinarazpen honek soinu bat joko du"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr "Jakinarazpen honek ez du soinurik joko"
+
+#: ui/ApplicationConfiguration.qml:306
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr "Erakutsi mezu bat leiho-gainerakor batean"
+msgstr "Mezu bat leiho-gainerakor batean erakutsi"
 
-#: ui/ApplicationConfiguration.qml:291
+#: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgid "Play a sound"
-msgstr "Jo soinu bat"
+msgstr "Soinu bat jo"
 
-#: ui/ApplicationConfiguration.qml:302
+#: ui/ApplicationConfiguration.qml:326
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr "Aurrez entzun soinua"
+msgstr "Soinua aurrez entzun"
 
-#: ui/ApplicationConfiguration.qml:328
+#: ui/ApplicationConfiguration.qml:352
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "Berrezarri"
 
-#: ui/ApplicationConfiguration.qml:340
+#: ui/ApplicationConfiguration.qml:364
 #, kde-format
 msgid "Choose sound file"
-msgstr "Hautatu soinu-fitxategia"
+msgstr "Soinu-fitxategia hautatu"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Konfiguratu sistemarako…"
+msgstr "Sistemarako konfiguratu…"
 
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Konfiguratu aplikazioetarako…"
+msgstr "Aplikazioetarako konfiguratu…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -138,7 +162,7 @@ msgstr "«Zaratarik ez» modua"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr "Gaitu automatikoki:"
+msgstr "Automatikoki gaitu:"
 
 #: ui/main.qml:132
 #, kde-format
@@ -180,7 +204,7 @@ msgstr "Jakinarazpen larriak:"
 #: ui/main.qml:183
 #, kde-format
 msgid "Show in Do Not Disturb mode"
-msgstr "Erakutsi «zaratarik ez» moduan"
+msgstr "«Zaratarik ez» moduan erakutsi"
 
 #: ui/main.qml:195
 #, kde-format
@@ -190,7 +214,7 @@ msgstr "Lehentasun txikiko jakinarazpenak:"
 #: ui/main.qml:196
 #, kde-format
 msgid "Show popup"
-msgstr "Erakutsi mezu gainerakorra"
+msgstr "Mezu gainerakorra erakutsi"
 
 #: ui/main.qml:225
 #, kde-format
@@ -227,14 +251,14 @@ msgstr[1] "%1 segundo"
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
-msgstr "Ezkutatu … ondoren:"
+msgstr "Igarotakoan ezkutatu:"
 
 #: ui/main.qml:306
 #, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Erakutsi denbora-muga adierazlea"
+msgstr "Denbora-muga adierazlea erakutsi"
 
 #: ui/main.qml:318
 #, kde-format
@@ -246,7 +270,7 @@ msgstr "Erreakzio osagarriak"
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
-msgstr "Erakutsi jakinarazpenetan"
+msgstr "Jakinarazpenetan erakutsi"
 
 #: ui/main.qml:325
 #, kde-format
@@ -257,7 +281,7 @@ msgstr "Aplikazioaren aurrerapena:"
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
-msgstr "Eduki mezu gainerakorra irekita aurrera egin ahala"
+msgstr "Aurreratu bitartean mezu gainerakorra irekita mantendu"
 
 #: ui/main.qml:352
 #, kde-format
@@ -267,7 +291,7 @@ msgstr "Jakinarazpen ikur txikiak:"
 #: ui/main.qml:353
 #, kde-format
 msgid "Show in task manager"
-msgstr "Erakutsi ataza kudeatzailean"
+msgstr "Ataza kudeatzailean erakutsi"
 
 #: ui/PopupPositionDialog.qml:15
 #, kde-format
@@ -303,7 +327,7 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
-"Hautatu aplikazio bat zerrendatik bere jakinarazpen ezarpenak eta jokabidea "
+"Zerrendako aplikazio bat hautatu bere jakinarazpen ezarpenak eta jokabidea "
 "konfiguratzeko"
 
 #~ msgctxt "@action:button Plasma-specific notifications"

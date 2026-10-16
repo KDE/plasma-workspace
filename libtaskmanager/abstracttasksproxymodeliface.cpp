@@ -248,4 +248,17 @@ void AbstractTasksProxyModelIface::requestPublishDelegateGeometry(const QModelIn
     }
 }
 
+void AbstractTasksProxyModelIface::requestSendToOutput(const QModelIndex &index, QScreen *output)
+{
+    if (!index.isValid()) {
+        return;
+    }
+
+    const QModelIndex &sourceIndex = mapIfaceToSource(index);
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+
+    if (m) {
+        const_cast<AbstractTasksModelIface *>(m)->requestSendToOutput(sourceIndex, output);
+    }
+}
 }

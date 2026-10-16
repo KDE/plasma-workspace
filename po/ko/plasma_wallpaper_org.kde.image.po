@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-21 00:46+0000\n"
-"PO-Revision-Date: 2026-02-03 23:37+0100\n"
+"PO-Revision-Date: 2026-09-28 23:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -334,6 +334,9 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"모든 시간을 0으로 설정하면 자동으로 배경 그림을 변경하지 않습니다. 바탕 화면"
+"의 상황에 맞는 메뉴에서 <interface>다음 배경 그림</interface>을 선택하면 수동"
+"으로 배경 그림을 변경할 수 있습니다."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format

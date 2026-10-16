@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-29 00:45+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-07-13 23:09+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,59 +17,83 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: devicenotifications.cpp:449
+#: devicenotifications.cpp:509
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Havaittiin näyttö"
 
-#: devicenotifications.cpp:450
-#, kde-format
-msgid "A display has been connected."
-msgstr "Näyttö on kytketty."
+#: devicenotifications.cpp:511
+#, fuzzy, kde-format
+#| msgid "%1 has been connected."
+msgctxt "Display connector (e.g. HDMI-1)"
+msgid "%1 has been connected."
+msgstr "%1 on kytketty."
 
-#: devicenotifications.cpp:470
+#: devicenotifications.cpp:514
+#, fuzzy, kde-format
+#| msgid "%1 has been connected."
+msgctxt "Display manufacturer, model (connector name)"
+msgid "%1 %2 (%3) has been connected."
+msgstr "%1 on kytketty."
+
+#: devicenotifications.cpp:549
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Irrotettiin näyttö"
 
-#: devicenotifications.cpp:471
-#, kde-format
-msgid "A display has been disconnected."
-msgstr "Näyttö on irrotettu."
+#: devicenotifications.cpp:551
+#, fuzzy, kde-format
+#| msgid "%1 has been disconnected."
+msgctxt "Display connector (e.g. HDMI-1)"
+msgid "%1 has been disconnected."
+msgstr "%1 on irrotettu."
 
-#: devicenotifications.cpp:517
+#: devicenotifications.cpp:554
+#, fuzzy, kde-format
+#| msgid "%1 has been disconnected."
+msgctxt "Display manufacturer, model (connector name)"
+msgid "%1 %2 (%3) has been disconnected."
+msgstr "%1 on irrotettu."
+
+#: devicenotifications.cpp:602
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 on kytketty."
 
-#: devicenotifications.cpp:517
+#: devicenotifications.cpp:602
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "USB-laite on kytketty."
 
-#: devicenotifications.cpp:522
+#: devicenotifications.cpp:607
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Havaittiin USB-laite"
 
-#: devicenotifications.cpp:560
+#: devicenotifications.cpp:645
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 on irrotettu."
 
-#: devicenotifications.cpp:560
+#: devicenotifications.cpp:645
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB-laite on irrotettu."
 
-#: devicenotifications.cpp:565
+#: devicenotifications.cpp:650
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "Irrotettiin USB-laite"
+
+#~ msgid "A display has been connected."
+#~ msgstr "Näyttö on kytketty."
+
+#~ msgid "A display has been disconnected."
+#~ msgstr "Näyttö on irrotettu."
 
 #~ msgctxt "@title:notifications"
 #~ msgid "USB Device Went Away"

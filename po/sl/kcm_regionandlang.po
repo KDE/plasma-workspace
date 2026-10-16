@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-04-07 07:48+0200\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-09-30 08:42+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -343,6 +343,12 @@ msgstr "Privzeto za sistem"
 msgid "Default"
 msgstr "Privzeto"
 
+#: localelistmodel.cpp:130
+#, kde-format
+msgctxt "@item:intable Friendly name for the C locale"
+msgid "ISO C Standard"
+msgstr "ISO C Standard"
+
 #: localelistmodel.cpp:142
 #, kde-format
 msgctxt ""
@@ -456,12 +462,12 @@ msgctxt ""
 msgid " (Standard format for %1)"
 msgstr " (Standardni format za %1)"
 
-#: ui/AdvancedLanguageSelectPage.qml:24
+#: ui/AdvancedLanguageSelectPage.qml:25
 #, kde-format
 msgid "Language"
 msgstr "Jezik"
 
-#: ui/AdvancedLanguageSelectPage.qml:37
+#: ui/AdvancedLanguageSelectPage.qml:38
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -472,61 +478,61 @@ msgstr ""
 "vedenje nekaterih aplikacij. Če želite, da vaš sistem uporablja angleščino, "
 "odstranite vse druge jezike."
 
-#: ui/AdvancedLanguageSelectPage.qml:46
+#: ui/AdvancedLanguageSelectPage.qml:47
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "Jezik \"%1\" ni podprt"
 
-#: ui/AdvancedLanguageSelectPage.qml:59
+#: ui/AdvancedLanguageSelectPage.qml:60
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr ""
 "Dodajte jezike v vrstnem redu, kakor jih želite videti v vaših aplikacijah."
 
-#: ui/AdvancedLanguageSelectPage.qml:101
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Spremeni jezik"
 
-#: ui/AdvancedLanguageSelectPage.qml:105
+#: ui/AdvancedLanguageSelectPage.qml:118
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Spremeni jezik"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Postavi na vrh"
 
-#: ui/AdvancedLanguageSelectPage.qml:123
+#: ui/AdvancedLanguageSelectPage.qml:136
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Odstrani"
 
-#: ui/AdvancedLanguageSelectPage.qml:138
+#: ui/AdvancedLanguageSelectPage.qml:152
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Ni konfiguriranega jezika"
 
-#: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
+#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Dodaj jezike"
 
-#: ui/AdvancedLanguageSelectPage.qml:236
+#: ui/AdvancedLanguageSelectPage.qml:250
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
 msgstr "Ta sistem ne vsebuje “%1”"
 
-#: ui/AdvancedLanguageSelectPage.qml:237
+#: ui/AdvancedLanguageSelectPage.qml:251
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -536,7 +542,7 @@ msgstr ""
 "Naučite se, kako pomagati pri <link url='%1'>prevajanju programske opreme "
 "KDE v vaš jezik</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:246
+#: ui/AdvancedLanguageSelectPage.qml:260
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

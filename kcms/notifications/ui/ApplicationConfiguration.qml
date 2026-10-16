@@ -238,17 +238,41 @@ ColumnLayout {
                             Kirigami.Icon {
                                 Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+                                readonly property bool popupActive: model?.actions?.includes("Popup") ?? false
 
                                 source: "dialog-information"
-                                opacity: model?.actions?.includes("Popup") ? 1 : 0.2
+                                opacity: popupActive ? 1 : 0.2
+
+                                Accessible.name: QQC2.ToolTip.text
+                                Accessible.role: Accessible.StaticText
+
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                                QQC2.ToolTip.text: popupActive ? i18nc("@info:tooltip", "This notification will be shown as a popup") : i18nc("@info:tooltip", "This notification will not be shown as a popup")
+                                QQC2.ToolTip.visible: popupHover.hovered
+
+                                HoverHandler {
+                                    id: popupHover
+                                }
                             }
 
                             Kirigami.Icon {
                                 Layout.preferredWidth: Kirigami.Units.iconSizes.smallMedium
                                 Layout.preferredHeight: Kirigami.Units.iconSizes.smallMedium
+                                readonly property bool soundActive: model?.actions?.includes("Sound") ?? false
 
                                 source: "audio-speakers-symbolic"
-                                opacity: model?.actions?.includes("Sound") ? 1 : 0.2
+                                opacity: soundActive ? 1 : 0.2
+
+                                Accessible.name: QQC2.ToolTip.text
+                                Accessible.role: Accessible.StaticText
+
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                                QQC2.ToolTip.text: soundActive ? i18nc("@info:tooltip", "This notification will play a sound") : i18nc("@info:tooltip", "This notification will not play a sound")
+                                QQC2.ToolTip.visible: soundHover.hovered
+
+                                HoverHandler {
+                                    id: soundHover
+                                }
                             }
 
                             QQC2.ToolButton {

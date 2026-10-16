@@ -7,7 +7,6 @@
 #pragma once
 
 #include <QAbstractItemModel>
-#include <QPointer>
 
 #include <KConfigWatcher>
 
@@ -90,12 +89,14 @@ private:
     void migrateFromSystrayContainer();
     SystemTrayModel *systemTrayModel();
     void initSettingsAndRegistry();
+    void initRegistry();
 
     KConfigWatcher::Ptr m_configWatcher;
     bool m_xwaylandClientsScale = true;
 
-    QPointer<SystemTraySettings> m_settings;
-    QPointer<PlasmoidRegistry> m_plasmoidRegistry;
+    SystemTraySettings *m_settings = nullptr;
+    PlasmoidRegistry *m_plasmoidRegistry = nullptr;
+    bool m_registryInitialized = false;
 
     PlasmoidModel *m_plasmoidModel = nullptr;
     StatusNotifierModel *m_statusNotifierModel = nullptr;

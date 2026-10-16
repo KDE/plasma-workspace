@@ -15,8 +15,13 @@
 
 #include <QApplication>
 #include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDBusMetaType>
+#include <QDBusPendingCallWatcher>
+#include <QDBusReply>
 #include <QDebug>
+#include <QFile>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QMenu>
@@ -113,8 +118,11 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_strutManager(new StrutManager(this))
     , m_shellContainmentConfig(nullptr)
 {
+    connect(this, &Plasma::Corona::containmentUiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
     setupWaylandIntegration();
 
+    QDBusConnection::sessionBus().interface()->registerService(QStringLiteral("org.kde.PlasmaLoading"),
+                                                               QDBusConnectionInterface::ServiceQueueOptions::ReplaceExistingService);
     qDBusRegisterMetaType<QColor>();
 
     setupLookAndFeel();
@@ -487,6 +495,8 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
             panelJson.insert(u"minimumLength", (qreal)view->minimumLength() / gridUnit);
             panelJson.insert(u"offset", (qreal)view->offset() / gridUnit);
             panelJson.insert(u"alignment", alignment == Qt::AlignRight ? u"right"_s : alignment == Qt::AlignCenter ? u"center"_s : u"left"_s);
+            panelJson.insert(u"floating"_s, view->floating());
+            panelJson.insert(u"floatingApplets"_s, view->floatingApplets());
 
             switch (view->visibilityMode()) {
             case PanelView::AutoHide:
@@ -1504,7 +1514,6 @@ void ShellCorona::addOutput(QScreen *screen)
     Q_ASSERT(screen == view->screen());
 
     checkAllDesktopsUiReady();
-    connect(containment, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
 
     if (!m_screenReorderInProgress) {
         Q_EMIT availableScreenRectChanged(insertPosition);
@@ -1526,12 +1535,7 @@ void ShellCorona::checkAllDesktopsUiReady()
     createWaitingPanels();
 
     qCDebug(PLASMASHELL) << "Plasma Shell startup completed";
-    QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("/KSplash"),
-                                                                         QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("setStage"));
-    ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
-    QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+    QDBusConnection::sessionBus().unregisterService(QStringLiteral("org.kde.PlasmaLoading"));
 
     m_waitingPanels.removeAll(nullptr);
     if (!m_waitingPanels.isEmpty()) {
@@ -2085,10 +2089,9 @@ void ShellCorona::currentActivityChanged(const QString &newActivity)
     for (auto it = m_desktopViewForScreen.constBegin(); it != m_desktopViewForScreen.constEnd(); ++it) {
         const int screen = it.key();
         Plasma::Containment *c = createContainmentForActivity(newActivity, screen);
-        connect(c, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady, Qt::UniqueConnection);
 
-        if (!c->isUiReady() && m_screensWithUiReady.remove(screen)) {
-            Q_EMIT screenUiReadyChanged(screen, false);
+        if (!c->isUiReady()) {
+            m_screensWithUiReady.remove(screen);
         }
 
         QAction *removeAction = c->internalAction(QStringLiteral("remove"));
@@ -2233,6 +2236,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(uint screen, const
     if (removeAction) {
         removeAction->deleteLater();
     }
+    m_screensWithUiReady.remove(screen);
     (*viewIt)->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
     newContainment->setScreen(oldContainment->screen());

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2013-01-06 03:54+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -23,13 +23,13 @@ msgstr ""
 "\n"
 "\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:82
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard history:"
 msgstr "Алмасу буферінің журналы"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:88
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -38,13 +38,13 @@ msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] " жазу"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:97
 #, fuzzy, kde-format
 #| msgid "Selection and Clipboard"
 msgid "Selection and Clipboard:"
 msgstr "Таңдау мен алмасу буфері"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:104
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -53,62 +53,65 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:136 configdialog.cpp:174
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
-msgid "Always save in history"
-msgstr "Журнал тізіміндегі әрекетті қайталау"
-
-#: configdialog.cpp:140
-#, fuzzy, kde-format
-#| msgid "Text selection only"
-msgid "Text selection:"
-msgstr "Тек мәтінді таңдау"
-
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:123
 #, kde-format
-msgid "Only when explicitly copied"
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:147
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Whether text selections are saved in the clipboard history."
-msgstr "Алмасу буферінің журналы толығымен өшірілсін бе?"
-
-#: configdialog.cpp:178
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
-msgid "Non-text selection:"
-msgstr "Таңдауды елемеу"
-
-#: configdialog.cpp:185
+#: configdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
-msgid "Never save in history"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
+msgid "Include in history:"
 msgstr "Журнал тізіміндегі әрекетті қайталау"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
+"Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:252
+#: configdialog.cpp:132
+#, kde-format
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Image data copied explicitly"
+msgstr ""
+
+#: configdialog.cpp:136
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+
+#: configdialog.cpp:145
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+
+#: configdialog.cpp:170
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "Әрекет қалқымалы мәзірдің күту уақыты:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -119,7 +122,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:274
+#: configdialog.cpp:191
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -128,65 +131,48 @@ msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] " секунд"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:284
+#: configdialog.cpp:201
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "Әрекеттер"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Сипаттамасы"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "Әрекетті қосу..."
 
-#: configdialog.cpp:328
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "Әрекетті өңдеу..."
 
-#: configdialog.cpp:333
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "Әрекетті өшіру"
 
-#: configdialog.cpp:340
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-
-#: configdialog.cpp:535
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -194,24 +180,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:536
+#: configdialog.cpp:427
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Әрекетті өшіру"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Жалпы"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "Жалпы баптау"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -219,32 +205,32 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Әрекеттер"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Әрекеттер"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, fuzzy, kde-format
 #| msgid "Actions Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Әрекеттерді баптау"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Әрекеттерді баптау"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Тіркесімдер"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Тркесімдерді баптау"
@@ -255,91 +241,107 @@ msgstr "Тркесімдерді баптау"
 msgid "Return to Clipboard"
 msgstr "Алмасу буферіне қосу"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, fuzzy, kde-format
 #| msgid "Add to Clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Алмасу буферіне қосу"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:305
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Алмасу буферінің журналы"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:362
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Алмасу буферінің журналы"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:376
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:378
 #, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:380
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<сәйкестіктер жоқ>"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Алмасу буфері бос"
@@ -350,31 +352,31 @@ msgstr "Алмасу буфері бос"
 msgid "Invoke action"
 msgstr "<жаңа әрекет>"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "&Штрихкодын көрсету..."
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Edit contents"
 msgstr "Мазмұнын өңдеу"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"
 msgstr "Журнал тізімінде таңдалған үшін әрекеттер қайталынсын"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove Star"
 msgstr "Журнал тізімінде таңдалған үшін әрекеттер қайталынсын"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, fuzzy, kde-format
 #| msgid "Start"
 msgid "Star"
@@ -546,10 +548,9 @@ msgstr "Команда"
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
 
 #: editcommanddialog.cpp:83
@@ -589,109 +590,122 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:281
+#: historymodel.cpp:375
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Алмасу буферінің журналы толығымен өшірілсін бе?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:377
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Алмасу буферінің журналын т&азалау"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:379 historymodel.cpp:679
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:543
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:544
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:73
+#: klipper.cpp:70
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "Алмасу буферінің журналы"
+
+#: klipper.cpp:74
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
+msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Әрекет қалқымалы мәзірдің күту уақыты:"
 
-#: klipper.cpp:90
+#: klipper.cpp:94
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Алмасу буферінің журналын т&азалау"
 
-#: klipper.cpp:95
+#: klipper.cpp:99
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Қолданыстағы алмасу буфер әрекетін қолмен таңдау"
 
-#: klipper.cpp:103
+#: klipper.cpp:107
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Мазмұнын өңдеу"
 
-#: klipper.cpp:111
+#: klipper.cpp:115
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Штрихкодын көрсету..."
 
-#: klipper.cpp:120
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#: klipper.cpp:124
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Журналдағы келесі жазуы"
+msgid "Rotate History Down"
+msgstr ""
 
-#: klipper.cpp:125
+#: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Журналдағы алдыңғы жазуы"
+msgid "Rotate History Up"
+msgstr "Алмасу буферінің журналы"
 
-#: klipper.cpp:132
+#: klipper.cpp:136
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Klipper тышқан меңзеген орында ашылсын"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "Алмасу буферінің журналы"
 
-#: klipper.cpp:420
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "жоғары"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:427
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "назардағы"
 
-#: klipper.cpp:434
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "төмен"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -729,139 +743,122 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, fuzzy, kde-format
 #| msgid "Selection and Clipboard"
 msgid "Keep the selection and clipboard the same"
 msgstr "Таңдау мен алмасу буфері"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:32
+#. i18n: ectx: label, entry (SaveSelection), group (General)
+#: klipper.kcfg:28
 #, fuzzy, kde-format
 #| msgid "Ignore selection"
-msgid "Ignore the selection"
+msgid "Save the selection"
 msgstr "Таңдауды елемеу"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:34
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:37
+#. i18n: ectx: label, entry (SaveImages), group (General)
+#: klipper.kcfg:33
 #, kde-format
-msgid "Text selection only"
-msgstr "Тек мәтінді таңдау"
-
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
+msgid "Save images"
 msgstr ""
 
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
+#: klipper.kcfg:35
 #, fuzzy, kde-format
-#| msgid "Ignore images"
-msgid "Always ignore images"
-msgstr "Кескіндерді елемеу"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
+#| msgid "Really delete entire clipboard history?"
+msgid "Store images in the clipboard history."
+msgstr "Алмасу буферінің журналы толығымен өшірілсін бе?"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:38
 #, fuzzy, kde-format
 #| msgid "Ignore selection"
 msgid "Immediately on selection"
 msgstr "Таңдауды елемеу"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:43
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Automatic action menu time:"
 msgstr "Әрекет қалқымалы мәзірдің күту уақыты:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:47
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Display the automatic action popup menu for this time."
 msgstr "Әрекет қалқымалы мәзірдің күту уақыты:"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:50
 #, fuzzy, kde-format
 #| msgid "Clipboard history size:"
 msgid "History size:"
 msgstr "Алмасу буферінің журналының өлшемі:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:54
 #, kde-format
-msgid "The clipboard history will store up to this many items."
+msgid ""
+"The clipboard history will store up to this many items. Maximum is 2048."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 "Әрекеттер бұтағы виджетте жасалған өзгерістерді белгілейтін шартты жазу"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:64
 #, fuzzy, kde-format
 #| msgid "Strip whitespace when executing an action"
-msgid "Trim whitespace from selection"
+msgid "Trim whitespace"
 msgstr "Әрекеттер орындау кезінде бос орындар өшірілсін"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:66
 #, kde-format
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:69
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "Журнал тізімінде таңдалған үшін әрекеттер қайталынсын"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:71
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid ""
@@ -870,30 +867,76 @@ msgid ""
 msgstr "Алмасу буферінің журналы толығымен өшірілсін бе?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
-msgid "Include MIME actions"
-msgstr "MIME-негіздеген әрекеттері болсын"
-
-#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:74
 #, kde-format
-msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+msgid "Offer applications for copied links and files"
 msgstr ""
 
-#: klipperpopup.cpp:38
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:76
+#, kde-format
+msgid ""
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
+msgstr ""
+
+#: klipperpopup.cpp:36
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard Popup"
 msgstr "Алмасу буферінің журналы"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "Қ&айту"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Журналдағы келесі жазуы"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Журналдағы алдыңғы жазуы"
+
+#~ msgid "up"
+#~ msgstr "жоғары"
+
+#~ msgid "down"
+#~ msgstr "төмен"
+
+#, fuzzy
+#~| msgid "Text selection only"
+#~ msgid "Text selection:"
+#~ msgstr "Тек мәтінді таңдау"
+
+#, fuzzy
+#~| msgid "Ignore selection"
+#~ msgid "Non-text selection:"
+#~ msgstr "Таңдауды елемеу"
+
+#, fuzzy
+#~| msgid "Replay action in history"
+#~ msgid "Never save in history"
+#~ msgstr "Журнал тізіміндегі әрекетті қайталау"
+
+#~ msgid "Text selection only"
+#~ msgstr "Тек мәтінді таңдау"
+
+#, fuzzy
+#~| msgid "Ignore images"
+#~ msgid "Always ignore images"
+#~ msgstr "Кескіндерді елемеу"
+
+#, fuzzy
+#~| msgid "Enable MIME-based actions"
+#~ msgid "Include MIME actions"
+#~ msgstr "MIME-негіздеген әрекеттері болсын"
 
 #, fuzzy
 #~| msgid "Clipboard Contents"

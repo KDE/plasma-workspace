@@ -132,6 +132,14 @@ void KdedGeoTimeZonePlugin::checkTimeZone()
     refresh();
 }
 
+void KdedGeoTimeZonePlugin::rememberLastConnection()
+{
+    if (const auto connection = NetworkManager::primaryConnection()) {
+        m_state.setLastConnectionUuid(connection->uuid());
+        m_state.save();
+    }
+}
+
 void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
 {
     org::freedesktop::timedate1 timedateInterface{s_timedateService, s_timedatePath, QDBusConnection::systemBus()};
@@ -145,6 +153,7 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
     // Not caching the current time zone as a member since it could have changed elsewhere (e.g. in the KCM).
     if (currentTimeZoneId == geoTimeZoneId) {
         qCDebug(GEOTIMEZONED_DEBUG) << "Time zone" << geoTimeZoneId << "is the same as the current time zone";
+        rememberLastConnection();
         return;
     }
 
@@ -165,10 +174,7 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
             return;
         }
 
-        if (const auto connection = NetworkManager::primaryConnection()) {
-            m_state.setLastConnectionUuid(connection->uuid());
-            m_state.save();
-        }
+        rememberLastConnection();
 
         QTimeZone timeZone(geoTimeZoneId);
 
@@ -180,16 +186,15 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
         const QTime newTime = QTime::currentTime();
         const QString displayTime = QLocale().toString(newTime, QLocale().timeFormat(QLocale::ShortFormat));
 
-        // Show OSD that clock or time zone got changed, depending on whether the time differs.
-        QString timeZoneOsdText;
+        // Show OSD that the time zone changed only when the time actually differs.
         if (newTime.hour() == oldTime.hour() && newTime.minute() == oldTime.minute()) {
-            timeZoneOsdText = i18nc("OSD, keep short", "Time zone changed to %1", timeZoneName);
-        } else {
-            timeZoneOsdText = i18nc("System clock was changed due to time zone change OSD, keep short: new time (time zone)",
-                                    "Clock changed to %1 (%2)",
-                                    displayTime,
-                                    timeZoneName);
+            return;
         }
+
+        const QString timeZoneOsdText = i18nc("System clock was changed due to time zone change OSD, keep short: new time (time zone)",
+                                              "Clock changed to %1 (%2)",
+                                              displayTime,
+                                              timeZoneName);
 
         QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.plasmashell"_s, u"/org/kde/osdService"_s, u"org.kde.osdService"_s, u"showText"_s);
         msg.setArguments({u"clock"_s, timeZoneOsdText});

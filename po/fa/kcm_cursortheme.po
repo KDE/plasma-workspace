@@ -1,64 +1,62 @@
-# translation of kcminput.po to Persian
+# translation of kcm_cursortheme.po to Persian
 # Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
 # Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
 # MaryamSadat Razavi <razavi@itland.ir>, 2006.
 # Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
 # Mohammad Reza Mirdamadi <mohi@linuxshop.ir>, 2012.
+# Sohrab Behdani <behdanisohrab@proton.me>, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: kcminput\n"
+"Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2012-01-12 16:57+0330\n"
-"Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
-"Language-Team: Farsi (Persian) <>\n"
+"PO-Revision-Date: 2026-10-01 11:15+0330\n"
+"Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current pointer theme"
-msgstr ""
+msgstr "نام پوستهٔ اشاره‌گر فعلی"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current pointer size"
-msgstr ""
+msgstr "اندازهٔ اشاره‌گر فعلی"
 
 #: kcmcursortheme.cpp:375
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "ناتوان در ایجاد پروندهٔ موقت."
 
 #: kcmcursortheme.cpp:386
-#, fuzzy, kde-format
-#| msgid "Unable to find the cursor theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "قادر به یافتن بایگانی چهره مکان‌نمای %1 نیست."
+msgstr "ناتوان در بارگیری بایگانی پوستهٔ شمایل: %1"
 
 #: kcmcursortheme.cpp:400
-#, fuzzy, kde-format
-#| msgid "Unable to find the cursor theme archive %1."
+#, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
-msgstr "قادر به یافتن بایگانی چهره مکان‌نمای %1 نیست."
+msgstr "ناتوان در باز کردن بایگانی پوستهٔ شمایل."
 
 #: kcmcursortheme.cpp:420
-#, fuzzy, kde-format
-#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+#, kde-format
 msgid "The file is not a valid icon theme archive."
-msgstr "به نظر نمی‌رسد پرونده %1یک بایگانی چهره مکان‌نمای معتبر باشد."
+msgstr "پرونده، یک بایگانی معتبر پوستهٔ شمایل نیست."
 
 #: kcmcursortheme.cpp:427
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr ""
+msgstr "ایجاد پوشهٔ «icons» شکست خورد."
 
 #: kcmcursortheme.cpp:436
 #, kde-format
@@ -66,25 +64,25 @@ msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr ""
-"هم اکنون، چهره‌ای با نام %1در پوشه چهره شمایل شما وجود دارد. آیا می‌خواهید با "
-"این جایگزین کنید؟"
+"پوسته‌ای با نام %1 از قبل در پوشهٔ پوستهٔ شمایل شما وجود دارد. آیا می‌خواهید این "
+"پوسته را جایگزین آن کنید؟"
 
 #: kcmcursortheme.cpp:440
 #, kde-format
 msgid "Overwrite Theme?"
-msgstr "چهره جای‌نوشت شود؟"
+msgstr "جایگزینی پوسته؟"
 
 #: kcmcursortheme.cpp:464
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "پوسته با موفقیت نصب شد."
 
 #. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
 #. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "زمان مهلت به ثانیه"
 
 #: plasma-apply-cursortheme.cpp:38
 #, kde-format
@@ -93,6 +91,9 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"این ابزار به شما امکان می‌دهد پوستهٔ اشاره‌گر موشی را برای نشست فعلی پلاسما "
+"تنظیم کنید، بدون اینکه تصادفاً آن را روی پوسته‌ای تنظیم کنید که در دسترس نیست "
+"یا از قبل تنظیم شده است."
 
 #: plasma-apply-cursortheme.cpp:42
 #, kde-format
@@ -100,17 +101,19 @@ msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
 msgstr ""
+"نام پوستهٔ اشاره‌گری که می‌خواهید برای نشست فعلی پلاسمای خود تنظیم کنید (ارسال "
+"مسیر کامل تنها از بخش پایانی مسیر استفاده خواهد کرد)"
 
 #: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "نمایش همهٔ پوسته‌های موجود در سامانه (و این‌که کدام پوستهٔ فعلی است)"
 
 #: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr ""
+msgstr "استفاده از یک اندازهٔ خاص، به‌جای اندازهٔ پیش‌گزیدهٔ پوسته"
 
 #: plasma-apply-cursortheme.cpp:65
 #, kde-format
@@ -118,166 +121,161 @@ msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr ""
+"پوستهٔ درخواستی «%1» از قبل به‌عنوان پوستهٔ نشست فعلی پلاسما تنظیم شده است."
 
 #: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
-msgstr ""
+msgstr "پوستهٔ اشاره‌گر موشی %1 با موفقیت روی نشست فعلی پلاسمای شما اعمال شد"
 
 #: plasma-apply-cursortheme.cpp:79
-#, fuzzy, kde-format
-#| msgid "You have to restart KDE for these changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
-msgstr "برای تأثیر داشتن این تغییرات، باید KDE را باز آغاز کنید."
+msgstr ""
+"برای نمایش درست پوستهٔ اشاره‌گر موشی تازه اعمال‌شده، باید نشست پلاسما را "
+"بازآغاز کنید."
 
 #: plasma-apply-cursortheme.cpp:89
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
-msgstr ""
+msgstr "پوستهٔ «%1» یافت نشد. پوسته باید یکی از گزینه‌های زیر باشد: %2"
 
 #: plasma-apply-cursortheme.cpp:97
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
-msgstr ""
+msgstr "پوسته‌های اشاره‌گر موشی زیر در سامانهٔ شما موجود هستند:"
 
 #: plasma-apply-cursortheme.cpp:102
 #, kde-format
 msgid "(Current theme for this Plasma session)"
-msgstr ""
+msgstr "(پوستهٔ فعلی برای این نشست پلاسما)"
 
 #: ui/Delegate.qml:48
-#, fuzzy, kde-format
-#| msgid "&Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
-msgstr "چهره &مکان‌نما‌"
+msgstr "حذف پوستهٔ اشاره‌گر"
 
 #: ui/Delegate.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
-msgstr ""
+msgstr "نمی‌توان پوستهٔ اشاره‌گر فعال را حذف کرد"
 
 #: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
-msgstr ""
+msgstr "نمی‌توان پوسته‌های اشاره‌گر نصب‌شده در سامانه را حذف کرد"
 
 #: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this pointer theme"
-msgstr ""
+msgstr "این پوستهٔ اشاره‌گر حذف نشود"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "بازخورد راه‌اندازی"
 
 #: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
-msgstr ""
+msgstr "پیکربندی پویانمایی‌های پخش‌شده هنگام راه‌اندازی برنامه."
 
 #: ui/LaunchFeedbackDialog.qml:49
-#, fuzzy, kde-format
-#| msgid "Pointer acceleration:"
+#, kde-format
 msgctxt "@label"
 msgid "Pointer feedback:"
-msgstr "شتاب‌دهی اشاره‌گر:"
+msgstr "بازخورد اشاره‌گر:"
 
 #: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
 msgctxt "@option:radio No pointer feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "هیچ‌کدام"
 
 #: ui/LaunchFeedbackDialog.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "ایستا"
 
 #: ui/LaunchFeedbackDialog.qml:68
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "چشمک‌زن"
 
 #: ui/LaunchFeedbackDialog.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "جهنده"
 
 #: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "بازخورد مدیر تکلیف:"
 
 #: ui/LaunchFeedbackDialog.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "فعال‌سازی پویانمایی"
 
 #: ui/LaunchFeedbackDialog.qml:113
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "توقف پویانمایی پس از:"
 
 #: ui/LaunchFeedbackDialog.qml:127 ui/LaunchFeedbackDialog.qml:139
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ثانیه"
+msgstr[1] "%1 ثانیه"
 
 #: ui/main.qml:106 ui/main.qml:144
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox cursor size"
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "اندازه:"
+msgstr "اندازه: %1"
 
 #: ui/main.qml:153
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "&پیکربندی بازخورد راه‌اندازی…"
 
 #: ui/main.qml:168
-#, fuzzy, kde-format
-#| msgid "Install From File..."
+#, kde-format
 msgid "&Install from File…"
-msgstr "نصب از روی پرونده..."
+msgstr "&نصب از پرونده…"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Get New Theme..."
+#, kde-format
 msgid "&Get New…"
-msgstr "دریافت چهره‌ی جدید..."
+msgstr "&دریافت تازه…"
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "حذف چهره"
+msgstr "باز کردن پوسته"
 
 #: ui/main.qml:190
 #, kde-format
 msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "پرونده‌های پوستهٔ اشاره‌گر (‎*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:56
 #, kde-format
@@ -285,13 +283,11 @@ msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
-msgstr ""
+msgstr "(اندازه‌های موجود: %1)"
 
-#, fuzzy
-#~| msgid "You have to restart KDE for these changes to take effect."
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "برای تأثیر داشتن این تغییرات، باید KDE را باز آغاز کنید."
+#~ msgstr "برای تأثیر داشتن این تغییرات، باید نشست پلاسما را بازآغاز کنید."
 
 #~ msgid "Remove Theme"
 #~ msgstr "حذف چهره"
@@ -310,10 +306,8 @@ msgstr ""
 #~ msgid "Your emails"
 #~ msgstr "mohi@linuxshop.ir , kazemi@itland.ir"
 
-#, fuzzy
-#~| msgid "&Cursor Theme"
 #~ msgid "Cursors"
-#~ msgstr "چهره &مکان‌نما‌"
+#~ msgstr "اشاره‌گرها"
 
 #~ msgid "(c) 2003-2007 Fredrik Höglund"
 #~ msgstr "(c) 2003-2007 Fredrik Höglund"
@@ -351,8 +345,6 @@ msgstr ""
 #~ "قادر به بارگیری بایگانی چهره مکان‌نما نیست؛ لطفاً، بررسی کنید که نشانی %1 "
 #~ "درست باشد."
 
-#, fuzzy
-#~| msgid "Select the cursor theme you want to use:"
 #~ msgid ""
 #~ "Select the cursor theme you want to use (hover preview to test cursor):"
 #~ msgstr "برگزیدن چهره مکان‌نمایی که می‌خواهید استفاده کنید:"

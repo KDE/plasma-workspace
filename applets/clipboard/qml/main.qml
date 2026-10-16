@@ -23,49 +23,59 @@ PlasmoidItem {
     id: main
 
     readonly property bool isClipboardEmpty: historyModel.sourceCount === 0
+    readonly property bool clipboardHasPassword: historyModel.sourceModel.clipboardHasPassword
+    readonly property bool selectionHasPassword: historyModel.sourceModel.selectionHasPassword
+    readonly property bool hasNothingToShow: isClipboardEmpty && !clipboardHasPassword && !selectionHasPassword
 
-    switchWidth: Kirigami.Units.gridUnit * 5
-    switchHeight: Kirigami.Units.gridUnit * 5
-    Plasmoid.status: isClipboardEmpty ? PlasmaCore.Types.PassiveStatus : PlasmaCore.Types.ActiveStatus
+    switchWidth: Kirigami.Units.gridUnit * 12
+    switchHeight: Kirigami.Units.gridUnit * 12
+    // Stays active while expanded, so the handler below can still collapse it
+    Plasmoid.status: if (!hasNothingToShow || main.expanded) {
+        PlasmaCore.Types.ActiveStatus
+    } else if (main.inEmbeddedContainment) {
+        PlasmaCore.Types.HiddenStatus
+    } else {
+        PlasmaCore.Types.PassiveStatus
+    }
     toolTipMainText: i18n("Clipboard Contents")
-    toolTipSubText: if (isClipboardEmpty) {
+    toolTipSubText: if (hasNothingToShow) {
         i18n("Clipboard is empty")
-    } else if (historyModel.sourceModel.hasPassword) {
+    } else if (clipboardHasPassword && selectionHasPassword) {
+        i18nc("@info", "The clipboard and the selection currently hold sensitive data")
+    } else if (clipboardHasPassword) {
         i18nc("@info", "The clipboard currently holds sensitive data")
+    } else if (selectionHasPassword) {
+        i18nc("@info", "The selection currently holds sensitive data")
     } else {
         historyModel.currentText
     }
     toolTipTextFormat: Text.PlainText
     Plasmoid.icon: "klipper-symbolic"
 
+    readonly property Private.ClipboardMenu clipboardMenu: main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu
+
     function action_configure() {
         klipper.configure();
     }
 
     function action_clearHistory() {
-        (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
+        main.clipboardMenu.clearHistory()
     }
 
     // BUG 520144
     // QTBUG-146886
     readonly property var backAction: Kirigami.Action {
-        enabled: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.T.StackView.view.depth === 2
-        onTriggered: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu).closeBarcode()
+        enabled: main.clipboardMenu?.T.StackView.view.depth === 2
+        onTriggered: main.clipboardMenu.closeBarcode()
     }
 
     property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
 
-    onIsClipboardEmptyChanged: {
-        if (isClipboardEmpty) {
-            if (!main.inEmbeddedContainment)
-                return;
-            // We need to hide the applet before changing its status to passive
-            // because only the active applet can hide itself
-            if (main.hideOnWindowDeactivate)
-                main.expanded = false;
-            Plasmoid.status = PlasmaCore.Types.HiddenStatus;
-        } else {
-            Plasmoid.status = PlasmaCore.Types.ActiveStatus
+    // We need to hide the applet before changing its status to passive
+    // because only the active applet can hide itself
+    onHasNothingToShowChanged: {
+        if (hasNothingToShow && main.inEmbeddedContainment && main.hideOnWindowDeactivate) {
+            main.expanded = false;
         }
     }
 
@@ -74,19 +84,20 @@ PlasmoidItem {
             id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            visible: !main.isClipboardEmpty && !(main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.editing && !copyClipboardAction.visible
-            onTriggered: (main.fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
+            priority: copyClipboardAction.visible || main.clipboardMenu?.editing ? PlasmaCore.Action.LowPriority : PlasmaCore.Action.NormalPriority
+            visible: !main.isClipboardEmpty
+            onTriggered: main.clipboardMenu.clearHistory()
         },
         PlasmaCore.Action {
             id: copyClipboardAction
 
-            readonly property var page: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.T.StackView.view.currentItem
+            readonly property var page: main.clipboardMenu?.T.StackView.view.currentItem
 
             icon.name: page?.copyAction?.icon.name ?? ""
             text: page?.copyAction?.tooltip ?? ""
             onTriggered: page.copyAction.triggered()
             enabled: page?.copyAction?.enabled ?? ""
-            visible: Plasmoid.containment.pluginName === "org.kde.plasma.systemtray" && page instanceof Private.BarcodePage
+            visible: page instanceof Private.BarcodePage && !page.showHeader
         }
     ]
 
@@ -130,10 +141,10 @@ PlasmoidItem {
             target: main
             function onExpandedChanged(expanded) {
                 if (expanded) {
-                    ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = -1;
-                    ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
+                    (menu.view as ListView).currentIndex = -1;
+                    (menu.view as ListView).positionViewAtBeginning();
                 } else {
-                    clipboardMenu.clearFilter();
+                    menu.clearFilter();
                 }
             }
         }
@@ -142,11 +153,12 @@ PlasmoidItem {
             id: stack
             anchors.fill: parent
             initialItem: Private.ClipboardMenu {
-                id: clipboardMenu
+                id: menu
                 expanded: main.expanded
                 dialogItem: dialogItem
                 model: historyModel
                 showsClearHistoryButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && clearAction.visible
+                keyboardActivated: false
                 barcodeType: Plasmoid.configuration.barcodeType
                 showHeader: Plasmoid.containment.pluginName !== "org.kde.plasma.systemtray"
 

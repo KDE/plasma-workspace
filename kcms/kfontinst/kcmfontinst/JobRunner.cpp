@@ -640,6 +640,7 @@ void CJobRunner::setPage(int page, const QString &msg)
             m_buttonBox->setStandardButtons(QDialogButtonBox::Close);
             m_skipButton->hide();
             m_autoSkipButton->hide();
+            adjustSize();
         }
         break;
     }

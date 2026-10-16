@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-04-07 08:36+0200\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-09-30 08:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -349,6 +349,12 @@ msgstr "Predeterminat del sistema"
 msgid "Default"
 msgstr "Predeterminat"
 
+#: localelistmodel.cpp:130
+#, kde-format
+msgctxt "@item:intable Friendly name for the C locale"
+msgid "ISO C Standard"
+msgstr "ISO C estàndard"
+
 #: localelistmodel.cpp:142
 #, kde-format
 msgctxt ""
@@ -462,12 +468,12 @@ msgctxt ""
 msgid " (Standard format for %1)"
 msgstr " (Format estàndard %1)"
 
-#: ui/AdvancedLanguageSelectPage.qml:24
+#: ui/AdvancedLanguageSelectPage.qml:25
 #, kde-format
 msgid "Language"
 msgstr "Idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:37
+#: ui/AdvancedLanguageSelectPage.qml:38
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -478,60 +484,60 @@ msgstr ""
 "en algunes aplicacions. Si voleu que el vostre sistema utilitzi l'anglès, "
 "elimineu tots els altres idiomes."
 
-#: ui/AdvancedLanguageSelectPage.qml:46
+#: ui/AdvancedLanguageSelectPage.qml:47
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "L'idioma «%1» no està implementat"
 
-#: ui/AdvancedLanguageSelectPage.qml:59
+#: ui/AdvancedLanguageSelectPage.qml:60
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Afegiu els idiomes en l'ordre que vulgueu veure'ls a les aplicacions."
 
-#: ui/AdvancedLanguageSelectPage.qml:101
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Canvia l'idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:105
+#: ui/AdvancedLanguageSelectPage.qml:118
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Canvi d'idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Mou a dalt de tot"
 
-#: ui/AdvancedLanguageSelectPage.qml:123
+#: ui/AdvancedLanguageSelectPage.qml:136
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Elimina"
 
-#: ui/AdvancedLanguageSelectPage.qml:138
+#: ui/AdvancedLanguageSelectPage.qml:152
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "No hi ha cap idioma configurat"
 
-#: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
+#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Afegeix idiomes"
 
-#: ui/AdvancedLanguageSelectPage.qml:236
+#: ui/AdvancedLanguageSelectPage.qml:250
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
 msgstr "Aquest sistema no inclou «%1»"
 
-#: ui/AdvancedLanguageSelectPage.qml:237
+#: ui/AdvancedLanguageSelectPage.qml:251
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -541,7 +547,7 @@ msgstr ""
 "Apreneu com ajudar a <link url='%1'>traduir el programari de KDE al vostre "
 "idioma</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:246
+#: ui/AdvancedLanguageSelectPage.qml:260
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

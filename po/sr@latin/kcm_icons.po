@@ -3,13 +3,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010, 2012, 2014, 2016, 2017.
 # Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-13 00:46+0000\n"
-"PO-Revision-Date: 2017-12-03 22:53+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +27,7 @@ msgstr ""
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "Ime tekuće teme ikonica"
 
 #: main.cpp:147
 #, kde-format
@@ -34,10 +35,9 @@ msgid "Unable to create a temporary file."
 msgstr "Ne mogu da napravim privremeni fajl."
 
 #: main.cpp:158
-#, fuzzy, kde-format
-#| msgid "Unable to find the icon theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Ne mogu da pronađem arhivu teme ikonica %1."
+msgstr "Ne mogu da preuzmem arhivu teme ikonica: %1"
 
 #: main.cpp:172
 #, kde-format
@@ -56,144 +56,60 @@ msgstr ""
 #: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "Tema uspešno instalirana."
 
 # >> @title:window
 #: main.cpp:227
-#, fuzzy, kde-format
-#| msgid "Installing icon themes..."
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "Instaliranje teme ikonica"
+msgstr "Instaliram teme ikonica…"
 
 # >> @title:window
 #: main.cpp:239
-#, fuzzy, kde-format
-#| msgid "Installing icon themes..."
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "Instaliranje teme ikonica"
+msgstr "Instaliram temu %1…"
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Install from File"
+#, kde-format
 msgid "Install from File…"
-msgstr "Instaliraj iz fajla"
+msgstr "Instaliraj iz fajla…"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Get New…"
-msgstr "Dobavi nove teme..."
+msgstr "Dobavi nove…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
-msgstr "Ukloni temu"
+msgstr "Ukloni temu ikonica"
 
 #: ui/main.qml:191
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr ""
+msgstr "Ne mogu da obrišem aktivnu temu ikonica"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed icon themes"
-msgstr ""
+msgstr "Ne mogu da obrišem sistemski instalirane teme ikonica"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "Ne briši ovu temu ikonica"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "Ukloni temu"
+msgstr "Otvaranje teme"
 
 #: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
-
-#, fuzzy
-#~| msgid "Remove Theme"
-#~ msgid "Restore Icon Theme"
-#~ msgstr "Ukloni temu"
-
-# >> @item:inlistbox
-#~ msgid "Main Toolbar"
-#~ msgstr "Glavna traka"
-
-# >> @item:inlistbox
-#, fuzzy
-#~| msgid "Main Toolbar"
-#~ msgid "Secondary Toolbars"
-#~ msgstr "Glavna traka"
-
-# >> @item:inlistbox
-#~ msgid "Small Icons"
-#~ msgstr "male ikonice"
-
-# >> @item:inlistbox
-#~ msgid "Dialogs"
-#~ msgstr "dijalozi"
-
-# >> @item:inlistbox
-#, fuzzy
-#~| msgid "Main Toolbar"
-#~ msgid "Main toolbar icons size"
-#~ msgstr "Glavna traka"
-
-# >> @item:inlistbox
-#, fuzzy
-#~| msgid "Small Icons"
-#~ msgid "Small icons size"
-#~ msgstr "male ikonice"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Toplica Tanasković"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "toptan@sezampro.yu"
-
-# >> @item:inlistbox
-#~ msgid "Desktop"
-#~ msgstr "površ"
-
-# >> @item:inlistbox
-#~ msgid "Toolbar"
-#~ msgstr "traka alatki"
-
-# >> @item:inlistbox
-#~ msgid "Panel"
-#~ msgstr "panel"
-
-#~ msgid "Icons"
-#~ msgstr "Ikonice"
-
-#~ msgid "Icons Control Panel Module"
-#~ msgstr ""
-#~ "Modul kontrolnog panela za ikonice|/|$[svojstva dat 'Modulu kontrolnog "
-#~ "panela za ikonice']"
-
-#~ msgid "(c) 2000-2003 Geert Jansen"
-#~ msgstr "© 2000-2003, Gert Jansen"
-
-#~ msgid "Geert Jansen"
-#~ msgstr "Gert Jansen"
-
-#~ msgid "Antonio Larrosa Jimenez"
-#~ msgstr "Antonio Larosa Himenez"
-
-#~ msgid "Torsten Rahn"
-#~ msgstr "Torsten Ran"
-
-#~ msgid "Jonathan Riddell"
-#~ msgstr "Džonatan Ridel"
+msgstr "fajlovi tema (*.tar.gz *.tar.bz2)"

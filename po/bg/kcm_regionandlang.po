@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-05-28 13:40+0200\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-10-08 16:03+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -344,6 +344,12 @@ msgstr "Стандартно за системата"
 msgid "Default"
 msgstr "По подразбиране"
 
+#: localelistmodel.cpp:130
+#, kde-format
+msgctxt "@item:intable Friendly name for the C locale"
+msgid "ISO C Standard"
+msgstr "Стандарт ISO C"
+
 #: localelistmodel.cpp:142
 #, kde-format
 msgctxt ""
@@ -457,12 +463,12 @@ msgctxt ""
 msgid " (Standard format for %1)"
 msgstr " (Стандартен формат за %1) "
 
-#: ui/AdvancedLanguageSelectPage.qml:24
+#: ui/AdvancedLanguageSelectPage.qml:25
 #, kde-format
 msgid "Language"
 msgstr "Език"
 
-#: ui/AdvancedLanguageSelectPage.qml:37
+#: ui/AdvancedLanguageSelectPage.qml:38
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -473,61 +479,61 @@ msgstr ""
 "някои приложения. Ако искате вашата система да използва английски, "
 "премахнете всички останали езици."
 
-#: ui/AdvancedLanguageSelectPage.qml:46
+#: ui/AdvancedLanguageSelectPage.qml:47
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "%1 език не се поддържа"
 
-#: ui/AdvancedLanguageSelectPage.qml:59
+#: ui/AdvancedLanguageSelectPage.qml:60
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr ""
 "Добавете езици в реда, който искате да ги видите във вашите приложения."
 
-#: ui/AdvancedLanguageSelectPage.qml:101
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Смяна на езика"
 
-#: ui/AdvancedLanguageSelectPage.qml:105
+#: ui/AdvancedLanguageSelectPage.qml:118
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Смяна на езика"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Преместване нагоре"
 
-#: ui/AdvancedLanguageSelectPage.qml:123
+#: ui/AdvancedLanguageSelectPage.qml:136
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Премахване"
 
-#: ui/AdvancedLanguageSelectPage.qml:138
+#: ui/AdvancedLanguageSelectPage.qml:152
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Няма конфигуриран език"
 
-#: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
+#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Добавяне на езици"
 
-#: ui/AdvancedLanguageSelectPage.qml:236
+#: ui/AdvancedLanguageSelectPage.qml:250
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
 msgstr "Тази система не включва „%1“"
 
-#: ui/AdvancedLanguageSelectPage.qml:237
+#: ui/AdvancedLanguageSelectPage.qml:251
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -537,7 +543,7 @@ msgstr ""
 "Научете как да помогнете с <link url='%1'>превода на софтуера KDE на вашия "
 "език</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:246
+#: ui/AdvancedLanguageSelectPage.qml:260
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

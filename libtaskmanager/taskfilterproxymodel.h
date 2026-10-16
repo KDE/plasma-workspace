@@ -52,6 +52,7 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
 
     Q_PROPERTY(bool demandingAttentionSkipsFilters READ demandingAttentionSkipsFilters WRITE setDemandingAttentionSkipsFilters NOTIFY
                    demandingAttentionSkipsFiltersChanged)
+    Q_PROPERTY(bool hideActivatedLaunchers READ hideActivatedLaunchers WRITE setHideActivatedLaunchers NOTIFY hideActivatedLaunchersChanged)
 
 public:
     explicit TaskFilterProxyModel(QObject *parent = nullptr);
@@ -388,6 +389,18 @@ public:
     void setDemandingAttentionSkipsFilters(bool skip);
 
     /**
+     * Whether launchers with a matching visible startup or window task are
+     * filtered out. Defaults to @c true.
+     */
+    bool hideActivatedLaunchers() const;
+
+    /**
+     * Set whether launchers with a matching visible startup or window task
+     * should be filtered out.
+     */
+    void setHideActivatedLaunchers(bool hide);
+
+    /**
      * Returns whether the filter model accepts this source row.
      *
      * @param int A row in the source model.
@@ -411,6 +424,7 @@ Q_SIGNALS:
     void filterSkipTaskbarChanged() const;
     void filterSkipPagerChanged() const;
     void demandingAttentionSkipsFiltersChanged() const;
+    void hideActivatedLaunchersChanged() const;
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;

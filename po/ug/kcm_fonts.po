@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:17-0400\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"PO-Revision-Date: 2026-09-24 20:27-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,63 +54,63 @@ msgstr "تىزىملىك خەت نۇسخىسى"
 msgid "Window title font"
 msgstr "كۆزنەك ماۋزۇ خەت نۇسخىسى"
 
-#: kxftconfig.cpp:454
+#: kxftconfig.cpp:453
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "تەمىنلىگۈچى كۆڭۈلدىكى قىممىتى"
 
-#: kxftconfig.cpp:456
+#: kxftconfig.cpp:455
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "يوق"
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:457
 #, kde-format
 msgid "RGB"
 msgstr "RGB"
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:459
 #, kde-format
 msgid "BGR"
 msgstr "BGR"
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:461
 #, kde-format
 msgid "Vertical RGB"
 msgstr "بويىغا RGB"
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:463
 #, kde-format
 msgid "Vertical BGR"
 msgstr "توغرىسىغا BGR"
 
-#: kxftconfig.cpp:492
+#: kxftconfig.cpp:491
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "تەمىنلىگۈچى كۆڭۈلدىكى قىممىتى"
 
-#: kxftconfig.cpp:494
+#: kxftconfig.cpp:493
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
-msgstr "ئوتتۇراھال"
+msgstr "ئوتتۇرا ھال"
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:495
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
 msgstr "يوق"
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:497
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "ئاز"
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:499
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"
@@ -353,25 +353,6 @@ msgstr ""
 
 #~ msgid "Force font DPI:"
 #~ msgstr "خەت نۇسخىسىنىڭ DPI غا مەجبۇرلايدۇ:"
-
-#~ msgctxt "@info:tooltip Force fonts DPI"
-#~ msgid ""
-#~ "<para>Enter your screen's DPI here to make on-screen fonts match their "
-#~ "physical sizes when printed. Changing this option from its default value "
-#~ "will conflict with many apps; some icons and images may not scale as "
-#~ "expected.</para><para>To increase text size, change the size of the fonts "
-#~ "above. To scale everything, use the scaling slider on the "
-#~ "<interface>Display & Monitor</interface> page.</para>"
-#~ msgstr ""
-#~ "<para>بۇ جايغا ئېكرانىڭىزنىڭ DPI قىممىتىنى تولدۇرۇڭ، ئۇ ئېكراندا "
-#~ "كۆرسىتىلگەن خەت نۇسخىسى بىلەن بېسىپ چىقىرىلغان خەت نۇسخىسىنىڭ فىزىكىلىق "
-#~ "چوڭ كىچىكلىكىنىڭ بىردەكلىكىنى ساقلايدۇ. بۇ قىممەتنى كۆڭۈلدىكى قىممەتتىن "
-#~ "باشقىسىغا ئۆزگەرتكەندە نۇرغۇن پىروگرامما بىلەن توقۇنۇشۇپ قالىدۇ؛ بەزى "
-#~ "سىنبەلگە ۋە سۈرەتنىڭ چوڭلۇقى ئۈمىد قىلغاندىكىدەك  تەڭشەلمەسلىكى مۇمكىن.</"
-#~ "para><para>ئەگەر پەقەت خەت نۇسخىسىنىڭ چوڭلۇقىنى زورايتماقچى بولغاندا، خەت "
-#~ "نۇسخىسىنىڭ چوڭلۇقىنى ئۆزگەرتىڭ. ئەگەر بارلىق مەزمۇننىڭ چوڭلۇقىنى "
-#~ "تەڭشىمەكچى بولسىڭىز، <interface>كۆرسىتىش ۋە كۆرسەتكۈچ</interface> "
-#~ "بېتىدىكى سىيرىلما نىسبىتىنى ئىشلىتىڭ.</para>"
 
 #~| msgid "Force fonts DPI:"
 #~ msgid "Force font DPI Wayland"

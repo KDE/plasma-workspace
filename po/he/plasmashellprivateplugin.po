@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2026-08-27 07:44+0300\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"PO-Revision-Date: 2026-09-13 11:36+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -152,13 +152,19 @@ msgstr "להשאיר פתוח"
 msgid "Configure…"
 msgstr "הגדרה…"
 
-#: loginlockscreen/Footer.qml:49
+#: loginlockscreen/Footer.qml:50
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "מקלדת וירטואלית"
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr "הסתרת מקלדת על המסך"
 
-#: loginlockscreen/Footer.qml:74
+#: loginlockscreen/Footer.qml:51
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr "הצגת מקלדת על המסך"
+
+#: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
@@ -381,24 +387,24 @@ msgstr "הורדת יישומונים חדשים לפלזמה"
 msgid "Install Widget From Local File…"
 msgstr "התקנת יישומון מקובץ מקומי…"
 
-#: shellprivate/widgetexplorer.cpp:484
+#: shellprivate/widgetexplorer.cpp:500
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "הורדת יישומונים חדשים"
 
-#: shellprivate/widgetexplorer.cpp:503
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "בחירת קובץ Plasmoid"
 
-#: shellprivate/widgetexplorer.cpp:519
+#: shellprivate/widgetexplorer.cpp:535
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "התקנת החבילה %1 נכשלה: %2"
 
-#: shellprivate/widgetexplorer.cpp:520
+#: shellprivate/widgetexplorer.cpp:536
 #, kde-format
 msgid "Installation Failure"
 msgstr "ההתקנה נכשלה"
@@ -412,47 +418,51 @@ msgid ""
 msgstr "אזור הזמן הנבחר לא זמין להמחשה במפה הזאת"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:340
+#: timezoneselector/TimezoneSelector.qml:347
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "בחירה…"
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:332
+#: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "אזור:"
 
 #: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:369
+#: timezoneselector/TimezoneSelector.qml:376
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "אזור זמן:"
 
-#: timezoneselector/TimezoneSelector.qml:287
+#: timezoneselector/TimezoneSelector.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "התקרבות"
 
-#: timezoneselector/TimezoneSelector.qml:303
+#: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "התרחקות"
 
-#: timezoneselector/TimezoneSelector.qml:344
+#: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
 msgstr "בורר אזורי זמן"
 
-#: timezoneselector/TimezoneSelector.qml:380
+#: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
 msgstr "בורר מקום אזור זמן"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "מקלדת וירטואלית"
 
 #~ msgid "Screen saver timeout"
 #~ msgstr "זמן מוקצב לשומר מסך"

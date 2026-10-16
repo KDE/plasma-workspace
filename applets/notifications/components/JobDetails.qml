@@ -12,12 +12,27 @@ import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 
 import org.kde.coreaddons as KCoreAddons
+import org.kde.notificationmanager as NotificationManager
 
 
 GridLayout {
     id: detailsGrid
 
     property ModelInterface modelInterface
+    property bool chartVisible
+
+    // The text of the notification counts one of the amounts below, so showing that one here again
+    // is the same pair of numbers twice.
+    readonly property string amountInText: {
+        switch (modelInterface.jobDetails ? modelInterface.jobDetails.amountType : NotificationManager.Job.AmountTypeNone) {
+        case NotificationManager.Job.AmountTypeFiles:
+            return "Files";
+        case NotificationManager.Job.AmountTypeItems:
+            return "Items";
+        default:
+            return "";
+        }
+    }
 
     columns: 2
     rowSpacing: Math.round(Kirigami.Units.smallSpacing / 2)
@@ -33,7 +48,7 @@ GridLayout {
             Layout.column: 0
             Layout.row: index
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
-            text: detailsGrid.modelInterface.jobDetails["descriptionLabel" + modelData] && modelInterface.jobDetails["descriptionValue" + modelData]
+            text: detailsGrid.modelInterface.jobDetails?.["descriptionLabel" + modelData] && modelInterface.jobDetails["descriptionValue" + modelData]
                 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", modelInterface.jobDetails["descriptionLabel" + modelData]) : ""
             font: Kirigami.Theme.smallFont
             textFormat: Text.PlainText
@@ -69,7 +84,7 @@ GridLayout {
             Component.onCompleted: bindText()
             function bindText() {
                 text = Qt.binding(function() {
-                    return detailsGrid.modelInterface.jobDetails["descriptionValue" + modelData] || "";
+                    return detailsGrid.modelInterface.jobDetails?.["descriptionValue" + modelData] || "";
                 });
             }
 
@@ -102,8 +117,8 @@ GridLayout {
             Layout.row: 2 + index
             Layout.fillWidth: true
             text: {
-                let processed = detailsGrid.modelInterface.jobDetails["processed" + modelData];
-                let total = detailsGrid.modelInterface.jobDetails["total" + modelData];
+                let processed = detailsGrid.modelInterface.jobDetails?.["processed" + modelData];
+                let total = detailsGrid.modelInterface.jobDetails?.["total" + modelData];
 
                 if (processed > 0 || total > 1) {
                     // Format numbers to not display as exponential
@@ -147,7 +162,7 @@ GridLayout {
             }
             font: Kirigami.Theme.smallFont
             textFormat: Text.PlainText
-            visible: text !== ""
+            visible: text !== "" && modelData !== detailsGrid.amountInText
         }
     }
 
@@ -155,10 +170,10 @@ GridLayout {
         Layout.column: 1
         Layout.row: 2 + 4
         Layout.fillWidth: true
-        text: detailsGrid.modelInterface.jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
+        text: detailsGrid.modelInterface.jobDetails?.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
             KCoreAddons.Format.formatByteSize(detailsGrid.modelInterface.jobDetails.speed)) : ""
         font: Kirigami.Theme.smallFont
         textFormat: Text.PlainText
-        visible: text !== "" && !(detailsGrid.modelInterface.percentage > 0 && detailsGrid.modelInterface.jobDetails.elapsedTime > 0) // SpeedChart should be visible then
+        visible: text !== "" && !detailsGrid.chartVisible
     }
 }

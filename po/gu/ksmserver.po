@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2008-10-22 08:23+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati\n"
@@ -86,13 +86,13 @@ msgstr "જો પ્રાપ્ત હોય તો સંગ્રહેલ �
 msgid "Also allow remote connections"
 msgstr "દૂરસ્થ જોડાણોને પણ પરવાનગી આપો"
 
-#: server.cpp:764
+#: server.cpp:757
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:787
+#: server.cpp:780
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -101,7 +101,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1042
+#: server.cpp:1035
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

@@ -1,0 +1,109 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-11 00:48+0000\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: qml/main.qml:20
+#, kde-format
+msgid "On-Screen Keyboard"
+msgstr "Tastatura na ekranu"
+
+#: qml/main.qml:77
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Disabled"
+msgstr "Isključeno"
+
+#: qml/main.qml:88
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch and Tablet"
+msgstr "Dodir i tablica"
+
+#: qml/main.qml:99
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch, Tablet, Mouse, and Touchpad"
+msgstr "Dodir, tablica, miš i dodirnik"
+
+#: qml/main.qml:116
+#, kde-format
+msgctxt "Opens the system settings module"
+msgid "Configure On-Screen Keyboards…"
+msgstr "Podesi tastature na ekranu…"
+
+#: qml/main.qml:133
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard: unavailable\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+"Tastatura na ekranu: nedostupna\n"
+"Kliknite ili tapnite da podesite postavke tastature na ekranu"
+
+#: qml/main.qml:143
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Configured not to show automatically\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+"Podešeno da se ne prikazuje automatski\n"
+"Kliknite ili tapnite da podesite postavke tastature na ekranu"
+
+#: qml/main.qml:156
+#, kde-format
+msgctxt ""
+"@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+"keyboard (no input-method features like preedit/word suggestions/etc)"
+msgid ""
+"No supported text field is currently active\n"
+"Click or tap to show in hardware keyboard emulation mode."
+msgstr ""
+"Trenutno nije aktivno nijedno podržano tekstualno polje\n"
+"Kliknite ili tapnite da je prikažete u režimu emulacije hardverske tastature."
+
+#: qml/main.qml:167
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard is visible\n"
+"Click or tap to hide the on-screen keyboard."
+msgstr ""
+"Tastatura na ekranu je vidljiva\n"
+"Kliknite ili tapnite da sakrijete tastaturu na ekranu."
+
+#: qml/main.qml:177
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when tapping a text field\n"
+"Tap to configure on-screen keyboard settings"
+msgstr ""
+"Prikazuje se automatski pri tapu na tekstualno polje\n"
+"Tapnite da podesite postavke tastature na ekranu"
+
+#: qml/main.qml:187
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when interacting with a text field\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+"Prikazuje se automatski pri radu sa tekstualnim poljem\n"
+"Kliknite ili tapnite da podesite postavke tastature na ekranu"

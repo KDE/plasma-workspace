@@ -206,6 +206,11 @@ void AbstractTasksModel::requestPublishDelegateGeometry(const QModelIndex &index
     Q_UNUSED(delegate)
 }
 
+void AbstractTasksModel::requestSendToOutput(const QModelIndex &index, QScreen *screen)
+{
+    Q_UNUSED(index)
+    Q_UNUSED(screen)
+}
 }
 
 #include "moc_abstracttasksmodel.cpp"

@@ -16,7 +16,6 @@ class KShortcutsEditor;
 class Klipper;
 class KActionCollection;
 class QCheckBox;
-class QRadioButton;
 class QSpinBox;
 class QTreeWidgetItem;
 class QLabel;
@@ -30,31 +29,14 @@ public:
     explicit GeneralWidget(QWidget *parent);
     ~GeneralWidget() override = default;
 
-    void updateWidgets();
-    void initWidgetStates();
-
-Q_SIGNALS:
-    void widgetChanged();
-
-public Q_SLOTS:
-    void slotWidgetModified();
-
 private:
     QCheckBox *m_enableHistoryCb;
     QCheckBox *m_syncClipboardsCb;
 
-    QRadioButton *m_alwaysTextRb;
-    QRadioButton *m_copiedTextRb;
-
-    QRadioButton *m_alwaysImageRb;
-    QRadioButton *m_copiedImageRb;
-    QRadioButton *m_neverImageRb;
+    QCheckBox *m_saveSelectionCb;
+    QCheckBox *m_saveImagesCb;
 
     QSpinBox *m_historySizeSb;
-
-    bool m_havePrevAlwaysImageTextConfig;
-    bool m_prevAlwaysImage;
-    bool m_prevAlwaysText;
 };
 
 class PopupWidget : public QWidget
@@ -69,7 +51,6 @@ private:
     QCheckBox *m_enablePopupCb;
     QCheckBox *m_historyPopupCb;
     QCheckBox *m_stripWhitespaceCb;
-    QCheckBox *m_mimeActionsCb;
 
     QSpinBox *m_actionTimeoutSb;
 };
@@ -102,6 +83,7 @@ private:
     void updateActionListView();
 
 private:
+    QCheckBox *m_mimeActionsCb;
     ActionsTreeWidget *m_actionsTree;
     QPushButton *m_addActionButton;
     QPushButton *m_editActionButton;

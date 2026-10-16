@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
-"PO-Revision-Date: 2026-06-16 15:49+0100\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-10-14 11:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,30 +16,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Contenido del portapapeles"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El portapapeles está vacío"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr ""
+"El portapapeles y la selección contienen actualmente datos confidenciales"
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "El portapapeles contiene actualmente datos confidenciales"
 
-#: qml/main.qml:75
+#: qml/main.qml:48
+#, kde-format
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr "La selección contiene actualmente datos confidenciales"
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "Borrar el historial"
 
-#: qml/main.qml:95
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar el Portapapeles…"

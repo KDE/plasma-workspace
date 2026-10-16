@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2026-06-18 20:12+0200\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"PO-Revision-Date: 2026-10-04 08:54+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -52,13 +52,13 @@ msgstr "Двоичная — кибибайты (КиБ), мебибайты (М
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Двоичная — килобайты (Кбайт), мегабайты (Мбайт), гигабайты (Гбайт)"
+msgstr "Двоичная — килобайты (КБ), мегабайты (МБ), гигабайты (ГБ)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Десятичная — килобайты (Кбайт), мегабайты (Мбайт), гигабайты (Гбайт)"
+msgstr "Десятичная — килобайты (кБ), мегабайты (МБ), гигабайты (ГБ)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -269,7 +269,7 @@ msgid ""
 "org</link>"
 msgstr ""
 "Не удалось определить доступные системные локали с помощью программы "
-"<command>localectl</command>. Создайте сообщение об ошибке на сайте  "
+"<command>localectl</command>. Создайте сообщение об ошибке на сайте "
 "<link>https://bugs.kde.org</link>."
 
 #: languagelistmodel.cpp:97
@@ -344,6 +344,12 @@ msgstr "По умолчанию для системы"
 #, kde-format
 msgid "Default"
 msgstr "По умолчанию"
+
+#: localelistmodel.cpp:130
+#, kde-format
+msgctxt "@item:intable Friendly name for the C locale"
+msgid "ISO C Standard"
+msgstr "Стандарт ISO C"
 
 #: localelistmodel.cpp:142
 #, kde-format
@@ -437,13 +443,13 @@ msgstr "КиБ, МиБ, ГиБ, %1"
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr "Кбайт, Мбайт, Гбайт, %1"
+msgstr "КБ, МБ, ГБ; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr "Кбайт, Мбайт, Гбайт, %1"
+msgstr "кБ, МБ, ГБ; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -458,12 +464,12 @@ msgctxt ""
 msgid " (Standard format for %1)"
 msgstr " (стандартный для %1)"
 
-#: ui/AdvancedLanguageSelectPage.qml:24
+#: ui/AdvancedLanguageSelectPage.qml:25
 #, kde-format
 msgid "Language"
 msgstr "Язык"
 
-#: ui/AdvancedLanguageSelectPage.qml:37
+#: ui/AdvancedLanguageSelectPage.qml:38
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -474,60 +480,60 @@ msgstr ""
 "могут работать некорректно. Чтобы использовать в системе английский, удалите "
 "все остальные языки."
 
-#: ui/AdvancedLanguageSelectPage.qml:46
+#: ui/AdvancedLanguageSelectPage.qml:47
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "Язык «%1» не поддерживается"
 
-#: ui/AdvancedLanguageSelectPage.qml:59
+#: ui/AdvancedLanguageSelectPage.qml:60
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Добавьте языки в том порядке, в котором они должны быть в приложениях."
 
-#: ui/AdvancedLanguageSelectPage.qml:101
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Сменить язык"
 
-#: ui/AdvancedLanguageSelectPage.qml:105
+#: ui/AdvancedLanguageSelectPage.qml:118
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Смена языка"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Переместить вверх"
 
-#: ui/AdvancedLanguageSelectPage.qml:123
+#: ui/AdvancedLanguageSelectPage.qml:136
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Удалить"
 
-#: ui/AdvancedLanguageSelectPage.qml:138
+#: ui/AdvancedLanguageSelectPage.qml:152
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Язык не настроен"
 
-#: ui/AdvancedLanguageSelectPage.qml:180 ui/AdvancedLanguageSelectPage.qml:214
+#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Добавление языков"
 
-#: ui/AdvancedLanguageSelectPage.qml:236
+#: ui/AdvancedLanguageSelectPage.qml:250
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
 msgstr "В системе отсутствует «%1»"
 
-#: ui/AdvancedLanguageSelectPage.qml:237
+#: ui/AdvancedLanguageSelectPage.qml:251
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -535,7 +541,7 @@ msgid ""
 "link>."
 msgstr "Как помочь <link url='%1'>перевести приложения KDE на ваш язык</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:246
+#: ui/AdvancedLanguageSelectPage.qml:260
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
@@ -570,9 +576,9 @@ msgid ""
 "they are and install them yourself."
 msgstr ""
 "Файлы локали и языковой поддержки созданы, но не удалось автоматически "
-"установить специальные шрифты для указанного языка. Если для надлежащего "
-"отображения информации на указанном языке требуются специальные шрифты, "
-"будет необходимо найти и установить их самостоятельно."
+"установить специальные шрифты для указанного языка. Если для правильного "
+"показа текста на указанном языке требуются специальные шрифты, будет "
+"необходимо найти и установить их самостоятельно."
 
 #: ui/main.qml:81
 #, kde-format

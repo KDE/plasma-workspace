@@ -29,6 +29,9 @@ JobPrivate::JobPrivate(uint id, QObject *parent)
     m_showTimer.setSingleShot(true);
     connect(&m_showTimer, &QTimer::timeout, this, &JobPrivate::requestShow);
 
+    // Readings are timed from here, so the first one carries how long the job took to reach it.
+    m_progressTimer.start();
+
     m_objectPath.setPath(QStringLiteral("/org/kde/notificationmanager/jobs/JobView_%1").arg(id));
 
     // TODO also v1? it's identical to V2 except it doesn't have setError method so supporting it should be easy
@@ -145,14 +148,13 @@ void JobPrivate::updateHasDetails()
 {
     // clang-format off
     const bool hasDetails = m_totalBytes > 0
-        // No point in showing details for "1 of 1 files/dirs/items" when there's no description.
-        || m_totalFiles > 1
+        // No point in showing details for "1 of 1 files/dirs/items" when there's no description,
+        // also JobDetails skips the amount when it is in the text, so only offer details
+        // when it has both.
+        || ((m_totalFiles > 1 || m_processedFiles > 1) && (m_totalItems > 1 || m_processedItems > 1))
         || m_totalDirectories > 1
-        || m_totalItems > 1
         || m_processedBytes > 1
-        || m_processedFiles > 1
         || m_processedDirectories > 1
-        || m_processedItems > 1
         || !m_descriptionValue1.isEmpty()
         || !m_descriptionValue2.isEmpty()
         || m_speed > 0
@@ -163,6 +165,24 @@ void JobPrivate::updateHasDetails()
         m_hasDetails = hasDetails;
         Q_EMIT static_cast<Job *>(parent())->hasDetailsChanged();
     }
+}
+
+Job::AmountType JobPrivate::amountType() const
+{
+    if (!m_errorText.isEmpty() || !m_infoMessage.isEmpty()) {
+        // Those are the text, and neither carries an amount.
+        return Job::AmountTypeNone;
+    }
+
+    if (m_totalFiles > 1) {
+        return Job::AmountTypeFiles;
+    }
+
+    if (m_totalItems > 1) {
+        return Job::AmountTypeItems;
+    }
+
+    return Job::AmountTypeNone;
 }
 
 QString JobPrivate::text() const
@@ -184,7 +204,9 @@ QString JobPrivate::text() const
         destUrlString = linkify(destUrl, prettyDestUrl);
     }
 
-    if (m_totalFiles > 1) {
+    const Job::AmountType amount = amountType();
+
+    if (amount == Job::AmountTypeFiles) {
         if (!destUrlString.isEmpty()) {
             if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
                 return i18ncp("Copying n of m files to locaton", "%2 of %1 file to %3", "%2 of %1 files to %3", m_totalFiles, m_processedFiles, destUrlString);
@@ -201,10 +223,10 @@ QString JobPrivate::text() const
         }
 
         return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles > 0 ? m_processedFiles : m_totalFiles);
-    } else if (m_totalItems > 1) {
+    } else if (amount == Job::AmountTypeItems) {
         // TODO support destUrl text as well (once someone actually uses that)
 
-        if (m_processedItems <= m_totalItems) {
+        if (m_processedItems > 0 && m_processedItems <= m_totalItems) {
             return i18ncp("Copying n of m items", "%2 of %1 item", "%2 of %1 items", m_totalItems, m_processedItems);
         }
 
@@ -339,7 +361,10 @@ void JobPrivate::setSuspended(bool suspended)
 void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
 {
     if (unit == QLatin1String("bytes")) {
-        updateField(amount, m_totalBytes, &Job::totalBytesChanged);
+        if (updateField(amount, m_totalBytes, &Job::totalBytesChanged)) {
+            // A different total spreads the same readings differently.
+            Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
+        }
     } else if (unit == QLatin1String("files")) {
         updateField(amount, m_totalFiles, &Job::totalFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
@@ -353,7 +378,9 @@ void JobPrivate::setTotalAmount(quint64 amount, const QString &unit)
 void JobPrivate::setProcessedAmount(quint64 amount, const QString &unit)
 {
     if (unit == QLatin1String("bytes")) {
-        updateField(amount, m_processedBytes, &Job::processedBytesChanged);
+        if (updateField(amount, m_processedBytes, &Job::processedBytesChanged)) {
+            recordProgressSample();
+        }
     } else if (unit == QLatin1String("files")) {
         updateField(amount, m_processedFiles, &Job::processedFilesChanged);
     } else if (unit == QLatin1String("dirs")) {
@@ -377,6 +404,20 @@ void JobPrivate::setSpeed(quint64 bytesPerSecond)
 {
     updateField(bytesPerSecond, m_speed, &Job::speedChanged);
     updateHasDetails();
+}
+
+void JobPrivate::recordProgressSample()
+{
+    // The chart has a hundred points to fill, so past this every second reading goes.
+    constexpr int maximumSamples = 512;
+    if (m_progressSamples.count() >= maximumSamples) {
+        for (int i = m_progressSamples.count() - 2; i > 0; i -= 2) {
+            m_progressSamples.removeAt(i);
+        }
+    }
+
+    m_progressSamples.append({m_progressTimer.elapsed(), m_processedBytes});
+    Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
 }
 
 void JobPrivate::setElapsedTime(qint64 elapsedTime)
@@ -491,12 +532,16 @@ void JobPrivate::update(const QVariantMap &properties)
     }
 
     updateFieldFromProperties(properties, QStringLiteral("processedFiles"), m_processedFiles, &Job::processedFilesChanged);
-    updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
+    // KIO's own tracker reports this way, so readings are noted here too. The chart is told once
+    // the whole update is applied: bytes and total arrive together, and one asked in between sees
+    // no total, draws nothing and is torn down and rebuilt.
+    const bool recordReading = updateFieldFromProperties(properties, QStringLiteral("processedBytes"), m_processedBytes, &Job::processedBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedDirectories"), m_processedDirectories, &Job::processedDirectoriesChanged);
     updateFieldFromProperties(properties, QStringLiteral("processedItems"), m_processedItems, &Job::processedItemsChanged);
 
     updateFieldFromProperties(properties, QStringLiteral("totalFiles"), m_totalFiles, &Job::totalFilesChanged);
-    updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);
+    // As in setTotalAmount.
+    const bool widthChanged = updateFieldFromProperties(properties, QStringLiteral("totalBytes"), m_totalBytes, &Job::totalBytesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalDirectories"), m_totalDirectories, &Job::totalDirectoriesChanged);
     updateFieldFromProperties(properties, QStringLiteral("totalItems"), m_totalItems, &Job::totalItemsChanged);
 
@@ -508,6 +553,12 @@ void JobPrivate::update(const QVariantMap &properties)
     it = properties.find(QStringLiteral("suspended"));
     if (it != end) {
         setSuspended(it->toBool());
+    }
+
+    if (recordReading) {
+        recordProgressSample();
+    } else if (widthChanged) {
+        Q_EMIT static_cast<Job *>(parent())->speedHistoryChanged();
     }
 
     updateHasDetails();

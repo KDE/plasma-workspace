@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2026-05-12 03:22+0900\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"PO-Revision-Date: 2026-09-15 17:05+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -150,17 +150,23 @@ msgstr "保持開啟"
 msgid "Configure…"
 msgstr "設定…"
 
-#: loginlockscreen/Footer.qml:49
+#: loginlockscreen/Footer.qml:50
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr ""
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr "隱藏螢幕鍵盤"
 
-#: loginlockscreen/Footer.qml:74
+#: loginlockscreen/Footer.qml:51
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr "切換螢幕鍵盤"
+
+#: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "切換佈局"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -378,24 +384,24 @@ msgstr "下載新的 Plasma 元件"
 msgid "Install Widget From Local File…"
 msgstr "從本地端檔案安裝元件…"
 
-#: shellprivate/widgetexplorer.cpp:484
+#: shellprivate/widgetexplorer.cpp:500
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "取得新元件"
 
-#: shellprivate/widgetexplorer.cpp:503
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "選擇 Plasmoid 檔"
 
-#: shellprivate/widgetexplorer.cpp:519
+#: shellprivate/widgetexplorer.cpp:535
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "安裝軟體包 %1 失敗：%2。"
 
-#: shellprivate/widgetexplorer.cpp:520
+#: shellprivate/widgetexplorer.cpp:536
 #, kde-format
 msgid "Installation Failure"
 msgstr "安裝失敗"
@@ -409,44 +415,44 @@ msgid ""
 msgstr "目前所選時區無法在此地圖上視覺化"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:340
+#: timezoneselector/TimezoneSelector.qml:347
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "選擇…"
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:332
+#: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "區域："
 
 #: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:369
+#: timezoneselector/TimezoneSelector.qml:376
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "時區："
 
-#: timezoneselector/TimezoneSelector.qml:287
+#: timezoneselector/TimezoneSelector.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "放大"
 
-#: timezoneselector/TimezoneSelector.qml:303
+#: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "縮小"
 
-#: timezoneselector/TimezoneSelector.qml:344
+#: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
 msgstr "時區區域選擇器"
 
-#: timezoneselector/TimezoneSelector.qml:380
+#: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
 msgstr "時區位置選擇器"

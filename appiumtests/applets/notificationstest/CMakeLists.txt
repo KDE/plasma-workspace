@@ -46,12 +46,6 @@ add_test(
 set_tests_properties(notificationstest_thumbnail PROPERTIES ENVIRONMENT "${notificationstest_env}")
 
 add_test(
-    NAME notificationstest_job_notification
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/test_8_job_notification.py --failfast
-)
-set_tests_properties(notificationstest_job_notification PROPERTIES ENVIRONMENT "${notificationstest_env}")
-
-add_test(
     NAME notificationstest_do_not_disturb
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/test_9_do_not_disturb.py --failfast
 )

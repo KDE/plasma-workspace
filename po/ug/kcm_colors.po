@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-06-01 18:16-0400\n"
+"PO-Revision-Date: 2026-09-24 20:26-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -687,7 +687,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "بۇ لايىھەنى ئوقۇشقىلا بولىدۇ. ئۆزگەرتىشنى باشقا ئىسىم بىلەن ساقلاڭ."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -1348,24 +1348,24 @@ msgstr "رەڭ لايىھەسى تەھرىرلە…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr ""
+msgstr "رەڭ لايىھەسىنى چىقىرىۋەت"
 
 #: ui/main.qml:313
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr ""
+msgstr "ئاكتىپ رەڭ لايىھەسىنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/main.qml:315
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "سىستېما ئورناتقان رەڭ لايىھەسىنى ئۆچۈرگىلى بولمايدۇ"
 
 #: ui/main.qml:323
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "بۇ رەڭ لايىھەسىنى ئۆچۈرمە"
 
 #: ui/main.qml:367
 #, kde-format

@@ -9,6 +9,8 @@
 #include <QBindable>
 #include <QObject>
 
+#include <KService>
+
 #include <qqmlregistration.h>
 
 #include "kmpris_export.h"
@@ -319,6 +321,7 @@ private Q_SLOTS:
 private:
     void initBindings();
     void updateFromMap(const QVariantMap &map);
+    void updateFromService(const KService::Ptr &service);
 
     int m_fetchesPending = 0;
     QString m_dbusAddress;

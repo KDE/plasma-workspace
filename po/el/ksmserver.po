@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2024-08-20 10:57+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -42,10 +42,10 @@ msgid "Logout canceled by '%1'"
 msgstr "Η αποσύνδεση ακυρώθηκε από το χρήστη '%1'"
 
 #: logout.cpp:354
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "Η συνεδρία τερματίζεται"
 
 #: main.cpp:69 main.cpp:77
 #, kde-format
@@ -97,13 +97,13 @@ msgstr "Επαναφέρει την αποθηκευμένη συνεδρία χ
 msgid "Also allow remote connections"
 msgstr "Να επιτρέπονται και απομακρυσμένες συνδέσεις"
 
-#: server.cpp:764
+#: server.cpp:757
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[άγνωστο]"
 
-#: server.cpp:787
+#: server.cpp:780
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 "κυριότεροι καταναλωτές πόρων συνεδρίας:\n"
 "%1"
 
-#: server.cpp:1042
+#: server.cpp:1035
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

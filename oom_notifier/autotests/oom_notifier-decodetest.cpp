@@ -5,7 +5,7 @@
 #include <QTemporaryDir>
 #include <QTest>
 
-#include "../decode.h"
+#include "systemd_decode.h"
 
 using namespace Qt::StringLiterals;
 

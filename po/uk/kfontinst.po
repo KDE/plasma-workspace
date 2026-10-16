@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2024-04-07 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -32,129 +32,6 @@ msgstr "о. Іван Петрущак"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "fr.ivan@ukrainian-orthodox.org"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-"Ви бажаєте встановити шрифти для особистого використання (для використання "
-"лише вами) чи загалом у системі (для всіх користувачів)?"
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "Адреса встановлення"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "Встановлення шрифтів"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "Програма встановлення шрифтів"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "© Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, kde-format
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr "Робить вікно перехідним для вікна, яке вказано windowHandle"
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "Адреса встановлення"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "Друк"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "Скасування…"
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "Друк шрифтів шрифтів"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "Проста програма для друку шрифтів"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr "Робить вікно прозорим для програми X з вказаним winid"
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "Розмір шрифту для друку шрифтів"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-"Шрифт для друку, вказаний як «Гарнітура,Стиль», де «Стиль» — це 24-бітове "
-"десяткове число, утворене у вигляді: <жирність><ширина><нахил>"
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "Файл, що містить список шрифтів для друку"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "Вилучити файл, що містить список шрифтів для друку"
-
-#: apps/Viewer.cpp:50
-#, kde-format
-msgid "Open an existing font file"
-msgstr "Відкрити наявний файл шрифту"
-
-#: apps/Viewer.cpp:51
-#, kde-format
-msgid "Print font preview"
-msgstr "Надрукувати зразок шрифту"
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "Виберіть шрифт для перегляду"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "Відкрити URL"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "Переглядач шрифтів"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "Простий переглядач шрифтів"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "© Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -203,6 +80,11 @@ msgstr "Ви дійсно хочете вилучити:"
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Скасувати пошук шрифтів?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr "Скасування…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -598,19 +480,19 @@ msgstr ""
 msgid "<h3>Error</h3>"
 msgstr "<h3>Помилка</h3>"
 
-#: kcmfontinst/JobRunner.cpp:692
+#: kcmfontinst/JobRunner.cpp:693
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Спроба отримання <i>%1</i> зазнала невдачі"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:695
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 "Системний сервер неочікувано завершив роботу. Будь ласка, повторіть спробу."
 "<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -618,7 +500,7 @@ msgstr ""
 "Файл <i>%1</i> містить растровий шрифт, підтримку таких шрифтів у вашій "
 "системі вимкнено."
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -627,47 +509,47 @@ msgstr ""
 "У файлі <i>%1</i> міститься шрифт <b>%2</b>. Шрифт з цією назвою вже "
 "встановлено."
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> не є шрифтом."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Не вдалося вилучити всі файли, пов’язані з <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Не вдалося запустити системну фонову службу.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:707 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> вже існує."
 
-#: kcmfontinst/JobRunner.cpp:710
+#: kcmfontinst/JobRunner.cpp:711
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> не існує."
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:713
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Відмовлено у доступі.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Дія не підтримується.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Спроба розпізнавання завершилася невдало.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Під час обробки сталася несподівана помилка: <i>%1</i>"
@@ -941,6 +823,20 @@ msgstr ""
 "<table><tr><td align=\"right\">Увімкнено:</td><td>%1</td></tr><tr><td align="
 "\"right\">Вимкнено:</td><td>%2</td></tr><tr><td align=\"right\">Загалом:</"
 "td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Ви бажаєте встановити шрифти для особистого використання (для використання "
+"лише вами) чи загалом у системі (для всіх користувачів)?"
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "Адреса встановлення"
 
 #: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
@@ -1233,54 +1129,54 @@ msgstr "Не вдалося вилучити всі файли, пов’яза�
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: lib/FcEngine.cpp:894
+#: lib/FcEngine.cpp:889
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Аа"
 
-#: lib/FcEngine.cpp:897
+#: lib/FcEngine.cpp:892
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "АаБбВвГгҐґДдЕеЄєЖжЗзИиIіЇїЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЮюЯяЬь0123456789"
 
-#: lib/FcEngine.cpp:1059
+#: lib/FcEngine.cpp:1054
 #, kde-format
 msgid "No characters found."
 msgstr "Не знайдено символів."
 
-#: lib/FcEngine.cpp:1097
+#: lib/FcEngine.cpp:1092
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Тест українських та English символів"
 
-#: lib/FcEngine.cpp:1102
+#: lib/FcEngine.cpp:1097
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ"
 
-#: lib/FcEngine.cpp:1107
+#: lib/FcEngine.cpp:1102
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "абвгґдеєжзиіїйклмнопрстуфхцчшщьюя"
 
-#: lib/FcEngine.cpp:1112
+#: lib/FcEngine.cpp:1107
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")№%^&-+@~£$€<>{}[]ІіЄєҐґ«»"
 
-#: lib/FcEngine.cpp:1510
+#: lib/FcEngine.cpp:1505
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "ПОМИЛКА: не вдається визначити назву шрифту."
 
-#: lib/FcEngine.cpp:1513
+#: lib/FcEngine.cpp:1508
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -2320,6 +2216,70 @@ msgstr "Фагс-Па"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Ї"
+
+#~ msgid "Font Installer"
+#~ msgstr "Встановлення шрифтів"
+
+#~ msgid "Simple font installer"
+#~ msgstr "Програма встановлення шрифтів"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "© Craig Drummond, 2007"
+
+#~ msgid "Makes the dialog transient for a window specified by windowHandle"
+#~ msgstr "Робить вікно перехідним для вікна, яке вказано windowHandle"
+
+#~ msgid "URL to install"
+#~ msgstr "Адреса встановлення"
+
+#~ msgid "Print"
+#~ msgstr "Друк"
+
+#~ msgid "Font Printer"
+#~ msgstr "Друк шрифтів шрифтів"
+
+#~ msgid "Simple font printer"
+#~ msgstr "Проста програма для друку шрифтів"
+
+#~ msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgstr "Робить вікно прозорим для програми X з вказаним winid"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "Розмір шрифту для друку шрифтів"
+
+#~ msgid ""
+#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
+#~ "decimal number composed as: <weight><width><slant>"
+#~ msgstr ""
+#~ "Шрифт для друку, вказаний як «Гарнітура,Стиль», де «Стиль» — це 24-бітове "
+#~ "десяткове число, утворене у вигляді: <жирність><ширина><нахил>"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "Файл, що містить список шрифтів для друку"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "Вилучити файл, що містить список шрифтів для друку"
+
+#~ msgid "Open an existing font file"
+#~ msgstr "Відкрити наявний файл шрифту"
+
+#~ msgid "Print font preview"
+#~ msgstr "Надрукувати зразок шрифту"
+
+#~ msgid "Select Font to View"
+#~ msgstr "Виберіть шрифт для перегляду"
+
+#~ msgid "URL to open"
+#~ msgstr "Відкрити URL"
+
+#~ msgid "Font Viewer"
+#~ msgstr "Переглядач шрифтів"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "Простий переглядач шрифтів"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "© Craig Drummond, 2004-2007"
 
 #~ msgid "Font Management"
 #~ msgstr "Керування шрифтами"

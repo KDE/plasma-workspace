@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-07-21 02:20+0900\n"
+"PO-Revision-Date: 2026-10-07 21:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -34,7 +34,7 @@ msgstr ""
 #: calculatorrunner.cpp:36
 #, kde-format
 msgid "Enter a common math function"
-msgstr "Su-ji̍p "
+msgstr "Su-ji̍p siông-iōng ê sòo-ha̍k hâm-sòo"
 
 #: calculatorrunner.cpp:140
 #, kde-format

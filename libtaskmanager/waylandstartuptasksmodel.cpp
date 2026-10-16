@@ -151,24 +151,19 @@ void WaylandStartupTasksModel::Private::loadConfig()
 void WaylandStartupTasksModel::Private::addActivation(PlasmaActivation *activation)
 {
     QObject::connect(activation, &PlasmaActivation::appId, q, [this, activation](const QString &appId) {
-        // The application id is guaranteed to be the desktop filename without ".desktop"
-        const QString desktopFileName = appId + QLatin1String(".desktop");
-        const QString desktopFilePath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, desktopFileName);
-        if (desktopFilePath.isEmpty()) {
-            qCWarning(TASKMANAGER_DEBUG) << "Got invalid activation app_id:" << appId;
+        const auto service = KService::serviceByDesktopName(appId);
+
+        if (!service) {
             return;
         }
-
-        const QUrl launcherUrl(QString(u"applications:" + desktopFileName));
-        const AppData appData = appDataFromUrl(QUrl::fromLocalFile(desktopFilePath));
 
         const int count = startups.size();
         q->beginInsertRows(QModelIndex(), count, count);
         startups.push_back(Startup{
-            .name = appData.name,
-            .icon = appData.icon,
+            .name = service->name(),
+            .icon = QIcon::fromTheme(service->icon()),
             .applicationId = appId,
-            .launcherUrl = launcherUrl,
+            .launcherUrl = QUrl(u"applications:" + service->menuId()),
             .activation = std::unique_ptr<PlasmaActivation>(activation),
         });
         q->endInsertRows();

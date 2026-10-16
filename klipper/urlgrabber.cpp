@@ -22,7 +22,6 @@
 #include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KStringHandler>
-#include <KWindowSystem>
 
 #include "clipcommandprocess.h"
 #include "klippersettings.h"
@@ -33,7 +32,6 @@
 
 URLGrabber::URLGrabber(QObject *parent)
     : QObject(parent)
-    , m_myCurrentAction(nullptr)
     , m_myPopupKillTimer(new QTimer(this))
     , m_myPopupKillTimeout(8)
     , m_stripWhiteSpace(true)
@@ -54,8 +52,33 @@ URLGrabber::~URLGrabber()
 //
 void URLGrabber::invokeAction(HistoryItemConstPtr item)
 {
-    m_myClipItem = item;
     actionMenu(item, false);
+}
+
+bool URLGrabber::hasMatchingActions(HistoryItemConstPtr item) const
+{
+    const QString text = actionText(item);
+
+    const QMimeType mimetype = urlMimeType(text);
+    if (mimetype.isValid() && !KApplicationTrader::queryByMimeType(mimetype.name()).isEmpty()) {
+        return true;
+    }
+
+    for (const ClipAction *action : m_myActions) {
+        if (action->match(text).hasMatch()) {
+            return true;
+        }
+    }
+    return false;
+}
+
+QString URLGrabber::actionText(const HistoryItemConstPtr &item) const
+{
+    QString text(item->text());
+    if (m_stripWhiteSpace) {
+        text = std::move(text).trimmed();
+    }
+    return text;
 }
 
 void URLGrabber::setActionList(const ActionList &list)
@@ -65,24 +88,24 @@ void URLGrabber::setActionList(const ActionList &list)
     m_myActions = list;
 }
 
-void URLGrabber::matchingMimeActions(const QString &clipData)
+QMimeType URLGrabber::urlMimeType(const QString &clipData) const
 {
-    QUrl url(clipData);
     if (!KlipperSettings::enableMagicMimeActions()) {
-        return;
+        return {};
     }
+    QUrl url(clipData);
     if (!url.isValid()) {
-        return;
+        return {};
     }
-    if (url.isRelative()) { // openinng a relative path will just not work. what path should be used?
-        return;
+    if (url.isRelative()) { // opening a relative path will just not work. what path should be used?
+        return {};
     }
     if (url.isLocalFile()) {
         if (clipData == QLatin1String("//")) {
-            return;
+            return {};
         }
         if (!QFile::exists(url.toLocalFile())) {
-            return;
+            return {};
         }
     }
 
@@ -90,11 +113,7 @@ void URLGrabber::matchingMimeActions(const QString &clipData)
     QMimeDatabase db;
     QMimeType mimetype = db.mimeTypeForUrl(url);
 
-    // let's see if we found some reasonable mimetype.
-    // If we do we'll populate menu with actions for apps
-    // that can handle that mimetype
-
-    // first: if clipboard contents starts with http, let's assume it's "text/html".
+    // if clipboard contents starts with http, let's assume it's "text/html".
     // That is even if we've url like "http://www.kde.org/somescript.pl", we'll
     // still treat that as html page, because determining a mimetype using kio
     // might take a long time, and i want this function to be quick!
@@ -102,7 +121,16 @@ void URLGrabber::matchingMimeActions(const QString &clipData)
         mimetype = db.mimeTypeForName(QStringLiteral("text/html"));
     }
 
-    if (!mimetype.isDefault()) {
+    return mimetype.isDefault() ? QMimeType() : mimetype;
+}
+
+void URLGrabber::matchingMimeActions(const QString &clipData)
+{
+    // let's see if we found some reasonable mimetype.
+    // If we do we'll populate menu with actions for apps
+    // that can handle that mimetype
+    const QMimeType mimetype = urlMimeType(clipData);
+    if (mimetype.isValid()) {
         const KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
         if (!lst.isEmpty()) {
             auto *action = new ClipAction(QString(), mimetype.comment());
@@ -118,18 +146,16 @@ const ActionList &URLGrabber::matchingActions(const QString &clipData, bool auto
 {
     m_myMatches.clear();
 
-    matchingMimeActions(clipData);
-
     // now look for matches in custom user actions
-    QRegularExpression re;
     for (ClipAction *action : std::as_const(m_myActions)) {
-        re.setPattern(action->actionRegexPattern());
-        const QRegularExpressionMatch match = re.match(clipData);
+        const QRegularExpressionMatch match = action->match(clipData);
         if (match.hasMatch() && (action->automatic() || !automatically_invoked)) {
             action->setActionCapturedTexts(match.capturedTexts());
             m_myMatches.append(action);
         }
     }
+
+    matchingMimeActions(clipData);
 
     return m_myMatches;
 }
@@ -145,10 +171,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         qCWarning(KLIPPER_LOG, "Attempt to invoke URLGrabber without an item");
         return;
     }
-    QString text(item->text());
-    if (m_stripWhiteSpace) {
-        text = std::move(text).trimmed();
-    }
+    const QString text = actionText(item);
     const ActionList matchingActionsList = matchingActions(text, automatically_invoked);
 
     if (!matchingActionsList.isEmpty()) {
@@ -158,9 +181,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
         m_myMenu.reset(new QMenu);
         m_myMenu->setWindowFlag(Qt::FramelessWindowHint, true);
-        if (KWindowSystem::isPlatformWayland()) {
-            m_myMenu->setWindowFlag(Qt::Popup, false);
-        }
+        m_myMenu->setWindowFlag(Qt::Popup, false);
         m_myMenu->setObjectName(QStringLiteral("klipperActionPopup"));
 
         connect(m_myMenu.get(), &QMenu::triggered, this, &URLGrabber::slotItemSelected);
@@ -238,10 +259,7 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
     ClipCommand command = action->command(cmdIdx);
 
     if (command.isEnabled) {
-        QString text(m_myClipItem->text());
-        if (m_stripWhiteSpace) {
-            text = std::move(text).trimmed();
-        }
+        const QString text = actionText(m_myClipItem);
         if (!command.serviceStorageId.isEmpty()) {
             KService::Ptr service = KService::serviceByStorageId(command.serviceStorageId);
             auto *job = new KIO::ApplicationLauncherJob(service);
@@ -365,6 +383,11 @@ ClipAction::ClipAction(KSharedConfigPtr kc, const QString &group)
 ClipAction::~ClipAction()
 {
     m_myCommands.clear();
+}
+
+QRegularExpressionMatch ClipAction::match(const QString &text) const
+{
+    return QRegularExpression(m_regexPattern).match(text);
 }
 
 void ClipAction::addCommand(const ClipCommand &cmd)

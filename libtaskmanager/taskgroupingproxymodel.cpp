@@ -1253,6 +1253,21 @@ void TaskGroupingProxyModel::requestPublishDelegateGeometry(const QModelIndex &i
     }
 }
 
+void TaskGroupingProxyModel::requestSendToOutput(const QModelIndex &index, QScreen *output)
+{
+    if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
+        return;
+    }
+
+    if (index.parent().isValid() || !d->isGroup(index.row())) {
+        d->abstractTasksSourceModel->requestSendToOutput(mapToSource(index), output);
+    } else {
+        for (int i = 0; i < rowCount(index); ++i) {
+            d->abstractTasksSourceModel->requestSendToOutput(mapToSource(this->index(i, 0, index)), output);
+        }
+    }
+}
+
 void TaskGroupingProxyModel::requestToggleGrouping(const QModelIndex &index)
 {
     const QString &appId = index.data(AbstractTasksModel::AppId).toString();

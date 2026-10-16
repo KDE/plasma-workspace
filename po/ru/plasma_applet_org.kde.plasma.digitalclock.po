@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_dig_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2026-06-18 18:54+0200\n"
+"PO-Revision-Date: 2026-10-04 08:54+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -241,7 +241,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "Отображение текста:"
+msgstr "Показ текста:"
 
 #: configAppearance.qml:284
 #, kde-format
@@ -382,12 +382,13 @@ msgid ""
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
 "Совет: добавьте свой домашний часовой пояс в этот список, чтобы видеть время "
-"дома даже в поездках. При нахождении дома он отображаться дважды не будет."
+"дома даже в поездках. Дома он не будет показываться дважды."
 
 #: configTimeZones.qml:245
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
-msgstr "Переключать отображаемый часовой пояс прокручиванием колесом мыши"
+msgstr ""
+"Переключать показываемый часовой пояс прокруткой колеса мыши над часами"
 
 #: configTimeZones.qml:254
 #, kde-format

@@ -76,6 +76,7 @@ PlasmaExtras.Representation {
             dialogItem: dialogItem
             model: historyModel
             showsClearHistoryButton: true
+            keyboardActivated: true
             barcodeType: "QRCode"
 
             onItemSelected: dialogItem.requestHidePopup()

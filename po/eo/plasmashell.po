@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-02-12 07:01+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -161,42 +161,42 @@ msgstr "Eniri Redaktan Reĝimon"
 msgid "Exit Edit Mode"
 msgstr "Eliri Redaktan Reĝimon"
 
-#: main.cpp:108
+#: main.cpp:126
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma-Ŝelo"
 
-#: main.cpp:121
+#: main.cpp:139
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Ebligi QML-Javascript-erarsermilon"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ne rekomenci plasma-shell aŭtomate post paneo"
 
-#: main.cpp:127
+#: main.cpp:145
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Devigi ŝargadon de la donita ŝela kromaĵo"
 
-#: main.cpp:131
+#: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Anstataŭigi ekzistantan instancon"
 
-#: main.cpp:134
+#: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Listigas la disponeblajn opciojn por uzant-sugestoj"
 
-#: main.cpp:190
+#: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma Malsukcesis Starti"
 
-#: main.cpp:191
+#: main.cpp:209
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -353,53 +353,53 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr "Malkonektita Ekrano %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "Montri labortablon"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Kaŝi Labortablo"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktivigi Aplikaĵ-Lanĉilon"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Montri Aktivecan Ŝaltilon"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Ŝanĝi al Antaŭa Agado"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Ŝanĝi al Sekva Agado"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Administri Labortablojn kaj Panelojn…"
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Movi klavaran fokuson inter paneloj"
 
-#: shellcorona.cpp:2275
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "Aldoni Panelon"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

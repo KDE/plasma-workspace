@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2026-06-21 20:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,28 +19,44 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "محتويات الحافظة"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "الحافظة فارغة"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr "تحتوي الحافظة حاليًا على بيانات حساسة"
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "تحتوي الحافظة حاليًا على بيانات حساسة"
 
-#: qml/main.qml:75
+#: qml/main.qml:48
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr "تحتوي الحافظة حاليًا على بيانات حساسة"
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "امحُ التّأريخ"
 
-#: qml/main.qml:95
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "اضبط الحافظة..."

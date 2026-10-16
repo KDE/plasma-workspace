@@ -31,10 +31,10 @@ ColumnLayout {
     LayoutMirroring.childrenInherit: true
 
     function isKeyUp(event) {
-        return event.key === Qt.Key_Up || (event.modifiers & Qt.ControlModifier && event.key === Qt.Key_K)
+        return (event.modifiers === Qt.NoModifier && event.key === Qt.Key_Up) || (event.modifiers & Qt.ControlModifier && event.key === Qt.Key_K)
     }
     function isKeyDown(event) {
-        return event.key === Qt.Key_Down || (event.modifiers & Qt.ControlModifier && event.key === Qt.Key_J)
+        return (event.modifiers === Qt.NoModifier && event.key === Qt.Key_Down) || (event.modifiers & Qt.ControlModifier && event.key === Qt.Key_J)
     }
 
     // Spacing needs to be 0 to not make the last spacer item add a fake margin
@@ -99,7 +99,11 @@ ColumnLayout {
     
     RowLayout {
         Layout.alignment: Qt.AlignTop
+
+        Keys.onEscapePressed: root.runnerWindow.visible = false
+
         PlasmaComponents3.ToolButton {
+            id: usageHelpButton
             visible: root.runnerWindow.helpEnabled
             checkable: true
             checked: root.query.startsWith("?")
@@ -108,6 +112,7 @@ ColumnLayout {
             icon.name: "question"
             Accessible.name: i18n("Show Usage Help")
             Accessible.description: i18n("Show Usage Help")
+            KeyNavigation.down: queryField.activeListView
             PlasmaComponents3.ToolTip {
                 text: i18n("Show Usage Help")
             }
@@ -130,6 +135,7 @@ ColumnLayout {
         PlasmaExtras.SearchField {
             id: queryField
             property bool allowCompletion: false
+            readonly property ListView activeListView: historyScrollView.visible ? listView : results
 
             Layout.minimumWidth: Kirigami.Units.gridUnit * 25
             Layout.maximumWidth: Kirigami.Units.gridUnit * 25
@@ -139,6 +145,11 @@ ColumnLayout {
                                                     "Search '%1'…", results.singleRunnerMetaData.name)
                                                 : i18nc("Textfield placeholder text", "Search…")
             background.z: -2 // The fadedTextCompletion has -1, so it appears over the background
+
+            KeyNavigation.up: activeListView
+            KeyNavigation.down: activeListView
+            KeyNavigation.left: usageHelpButton
+            KeyNavigation.right: configureButton
 
             QQC2.Label {
                 id: fadedTextCompletion
@@ -229,21 +240,29 @@ ColumnLayout {
                     fadedTextCompletion.text = ""
                     event.accepted = true
                 }
-                if (queryField.text.length === 0 && (root.isKeyUp(event) || root.isKeyDown(event))) {
-                    event.accepted = true
-                    root.showHistory = true;
-                    focusCurrentListView()
+                if (root.isKeyUp(event) || root.isKeyDown(event)) {
+                    if (root.isKeyUp(event)) {
+                        activeListView.currentIndex = activeListView.count - 1
+                    } else {
+                        activeListView.incrementCurrentIndex();
+                    }
+                    if (queryField.text.length === 0) {
+                        event.accepted = true
+                        root.showHistory = true
+                        focusCurrentListView()
+                    } else {
+                        return; // pass to KeyNavigation
+                    }
                 }
                 !event.accepted && results.navigationKeyHandler(event)
             }
             Keys.onTabPressed: event => {
-                if (root.runnerWindow.historyBehavior === RunnerWindow.CompletionSuggestion) {
-                    if (fadedTextCompletion.text && queryField.text !== fadedTextCompletion.text) {
-                        queryField.text = fadedTextCompletion.text
-                        fadedTextCompletion.text = ""
-                    } else {
-                        event.accepted = false
-                    }
+                if (root.runnerWindow.historyBehavior === RunnerWindow.CompletionSuggestion
+                    && fadedTextCompletion.text && queryField.text !== fadedTextCompletion.text) {
+                    queryField.text = fadedTextCompletion.text
+                    fadedTextCompletion.text = ""
+                } else {
+                    event.accepted = false
                 }
             }
             function closeOrRun(event) {
@@ -257,10 +276,6 @@ ColumnLayout {
             Keys.onEnterPressed: event => closeOrRun(event)
             Keys.onReturnPressed: event => closeOrRun(event)
 
-            Keys.onEscapePressed: {
-                root.runnerWindow.visible = false
-            }
-
             Kirigami.Icon {
                 anchors {
                     right: parent.right
@@ -273,7 +288,12 @@ ColumnLayout {
                 source: "expand"
                 visible: queryField.length === 0 && root.runnerManager.historyEnabled
                 enabled: root.runnerManager.history.length > 0
-
+                rotation: root.showHistory ? 180 : 0
+                Behavior on rotation {
+                    RotationAnimation {
+                        duration: Kirigami.Units.shortDuration
+                    }
+                }
                 MouseArea {
                     anchors.fill: parent
                     onPressed: {
@@ -288,6 +308,7 @@ ColumnLayout {
             }
         }
         PlasmaComponents3.ToolButton {
+            id: configureButton
             icon.name: "configure"
             onClicked: {
                 root.runnerWindow.visible = false
@@ -296,17 +317,21 @@ ColumnLayout {
             Accessible.name: i18n("Configure")
             Accessible.description: i18n("Configure KRunner Behavior")
             visible: KAuthorized.authorizeControlModule("kcm_krunnersettings")
+            KeyNavigation.right: pinButton
+            KeyNavigation.down: queryField.activeListView
             PlasmaComponents3.ToolTip {
                 text: i18n("Configure KRunner…")
             }
         }
         PlasmaComponents3.ToolButton {
+            id: pinButton
             checkable: true
             checked: root.runnerWindow.pinned
             onToggled: root.runnerWindow.pinned = checked
             icon.name: "window-pin"
             Accessible.name: i18n("Pin")
             Accessible.description: i18n("Pin Search")
+            KeyNavigation.down: queryField.activeListView
             PlasmaComponents3.ToolTip {
                 text: i18n("Keep Open")
             }
@@ -328,9 +353,12 @@ ColumnLayout {
             queryField: queryField
             singleRunner: root.singleRunner
 
+            keyNavigationWraps: false
             Keys.onEscapePressed: {
                 root.runnerWindow.visible = false
             }
+            KeyNavigation.up: queryField
+            KeyNavigation.down: queryField
 
             onActivated: {
                 if (!root.runnerWindow.pinned) {
@@ -347,6 +375,7 @@ ColumnLayout {
     }
 
     PlasmaComponents3.ScrollView {
+        id: historyScrollView
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.maximumHeight: listView.contentHeight
@@ -358,7 +387,7 @@ ColumnLayout {
 
         ListView {
             id: listView // needs this id so the delegate can access it
-            keyNavigationWraps: true
+            keyNavigationWraps: false
             highlight: PlasmaExtras.Highlight {}
             highlightMoveDuration: 0
             activeFocusOnTab: true
@@ -384,6 +413,8 @@ ColumnLayout {
                     currentIndex = 0;
                 }
             }
+            KeyNavigation.up: queryField
+            KeyNavigation.down: queryField
             Keys.onReturnPressed: runCurrentIndex(event)
             Keys.onEnterPressed: runCurrentIndex(event)
 
@@ -403,8 +434,14 @@ ColumnLayout {
             }
             Keys.onPressed: event => {
                 if (root.isKeyUp(event)) {
+                    if (currentIndex !== 0) {
+                        event.accepted = true;
+                    }
                     decrementCurrentIndex();
                 } else if (root.isKeyDown(event)) {
+                    if (currentIndex !== count - 1) {
+                        event.accepted = true;
+                    }
                     incrementCurrentIndex();
                 } else if (event.text !== "" && !event.accepted) {
                     // This prevents unprintable control characters from being inserted
@@ -417,8 +454,6 @@ ColumnLayout {
                 }
             }
 
-            Keys.onUpPressed: decrementCurrentIndex()
-            Keys.onDownPressed: incrementCurrentIndex()
 
             function runCurrentIndex(event) {
                 var entry = root.runnerManager.history[currentIndex]

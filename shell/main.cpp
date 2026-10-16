@@ -85,6 +85,24 @@ int main(int argc, char *argv[])
     // this variable controls whether to reconnect or exit if the compositor dies, given plasmashell does a lot of
     // bespoke wayland code disable for now. consider disabling when layer-shell lands
     qunsetenv("QT_WAYLAND_RECONNECT");
+    // Qt documentation says:
+    // https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#the-automatic-pipeline-cache
+    //
+    // The automatic pipeline cache uses a single file per application, but a
+    // different one for each RHI backend (graphics API). This means that
+    // changing to another graphics API in the next run of the application will
+    // not lead to losing the pipeline cache generated in the previous run.
+    // Applications with multiple QQuickWindow instances shown simultaneously may
+    // however not benefit 100% since the automatic cache can only store the data
+    // collected from one RHI object at a time. (and with the default threaded
+    // render loop each window has its own RHI as rendering operates
+    // independently on dedicated threads). To fully benefit from the disk
+    // cache in application with multiple windows, prefer setting the filename
+    // explicitly, per-window via setPipelineCacheSaveFile().
+    //
+    // The gains are minimal, disable until it's fixed.
+    QCoreApplication::setAttribute(Qt::AA_DisableShaderDiskCache);
+
     QApplication app(argc, argv);
 
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");

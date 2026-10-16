@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-06 00:45+0000\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -62,29 +62,53 @@ msgid ""
 "basis"
 msgstr "एतत् अनुप्रयोगं प्रति-घटना-आधारेण सूचनानां विन्यासस्य समर्थनं न करोति"
 
-#: ui/ApplicationConfiguration.qml:282
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr ""
+
+#: ui/ApplicationConfiguration.qml:306
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "एकस्मिन् पॉप-अप-मध्ये सन्देशं दर्शयतु"
 
-#: ui/ApplicationConfiguration.qml:291
+#: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgid "Play a sound"
 msgstr "एकं ध्वनिं वादयन्तु"
 
-#: ui/ApplicationConfiguration.qml:302
+#: ui/ApplicationConfiguration.qml:326
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "ध्वनि पूर्वावलोकन"
 
-#: ui/ApplicationConfiguration.qml:328
+#: ui/ApplicationConfiguration.qml:352
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "पुनः सेट् करें"
 
-#: ui/ApplicationConfiguration.qml:340
+#: ui/ApplicationConfiguration.qml:364
 #, kde-format
 msgid "Choose sound file"
 msgstr "ध्वनिसञ्चिकां चिनोतु"

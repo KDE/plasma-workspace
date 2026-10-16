@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-07-02 08:20+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -162,44 +162,44 @@ msgstr "Entra en el mode d'edició"
 msgid "Exit Edit Mode"
 msgstr "Surt del mode d'edició"
 
-#: main.cpp:108
+#: main.cpp:126
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Intèrpret d'ordres del Plasma"
 
-#: main.cpp:121
+#: main.cpp:139
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Habilita el depurador de JavaScript del QML"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 "No reiniciar automàticament l'intèrpret d'ordres del Plasma després d'una "
 "fallada"
 
-#: main.cpp:127
+#: main.cpp:145
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Força la càrrega del connector d'intèrpret d'ordres indicat"
 
-#: main.cpp:131
+#: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substitueix una instància existent"
 
-#: main.cpp:134
+#: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Llista les opcions disponibles per als comentaris dels usuaris"
 
-#: main.cpp:190
+#: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Ha fallat en iniciar el Plasma"
 
-#: main.cpp:191
+#: main.cpp:209
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -357,53 +357,53 @@ msgstr "Pantalla integrada"
 msgid "Disconnected Screen %1"
 msgstr "Pantalla desconnectada %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostra l'escriptori"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Oculta l'escriptori"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Activa el llançador d'aplicacions"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostra el commutador d'activitats"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Canvia a l'activitat anterior"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Canvia a l'activitat següent"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gestiona escriptoris i plafons…"
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mou el focus del teclat entre els plafons"
 
-#: shellcorona.cpp:2275
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "Afegeix un plafó"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

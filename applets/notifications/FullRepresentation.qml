@@ -396,7 +396,7 @@ PlasmaExtras.Representation {
                 required property string defaultActionLabel
                 required property int jobState
                 required property int percentage
-                required property string jobError
+                required property int jobError
                 required property bool suspendable
                 required property bool killable
                 required property QtObject jobDetails

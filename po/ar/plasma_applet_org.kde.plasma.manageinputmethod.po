@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-14 00:46+0000\n"
-"PO-Revision-Date: 2026-05-21 11:11+0400\n"
+"POT-Creation-Date: 2026-09-11 00:48+0000\n"
+"PO-Revision-Date: 2026-09-11 16:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,43 +16,116 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
-#: qml/main.qml:70
+#: qml/main.qml:20
+#, kde-format
+msgid "On-Screen Keyboard"
+msgstr "لوحة مفاتيح على الشاشة"
+
+#: qml/main.qml:77
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Disabled"
+msgstr "معطّلة"
+
+#: qml/main.qml:88
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch and Tablet"
+msgstr "اللمس واللوح"
+
+#: qml/main.qml:99
+#, kde-format
+msgctxt "@action:tray context menu"
+msgid "Touch, Tablet, Mouse, and Touchpad"
+msgstr "اللمس، واللوح، والفأرة، ولوحة اللمس"
+
+#: qml/main.qml:116
 #, kde-format
 msgctxt "Opens the system settings module"
-msgid "Configure Virtual Keyboards..."
-msgstr "اضبط لوحات المفاتيح الافتراضية..."
+msgid "Configure On-Screen Keyboards…"
+msgstr "اضبط لوحات المفاتيح على الشاشة…"
 
-#: qml/main.qml:87
+#: qml/main.qml:133
 #, kde-format
-msgid "Virtual Keyboard: unavailable"
-msgstr "لوحة المفاتيح الافتراضيّة: غير متوفرة"
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard: unavailable\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+"لوحة المفاتيح على الشاشة: غير متاحة\n"
+"انقر أو المس لضبط إعدادات لوحة المفاتيح على الشاشة"
 
-#: qml/main.qml:96
+#: qml/main.qml:143
 #, kde-format
-msgid "Virtual Keyboard: disabled"
-msgstr "لوحة المفاتيح الافتراضيّة: معطلة"
+msgctxt "@info:tooltip"
+msgid ""
+"Configured not to show automatically\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+"مضبوطة على عدم الظهور آليًا\n"
+"انقر أو المس لضبط إعدادات لوحة المفاتيح على الشاشة"
 
-#: qml/main.qml:108
+#: qml/main.qml:156
 #, kde-format
-msgid "Show Virtual Keyboard"
-msgstr "أظهر لوحة المفاتيح الافتراضية"
+msgctxt ""
+"@info:tooltip Hardware emulation mode means it acts like a regular dumb "
+"keyboard (no input-method features like preedit/word suggestions/etc)"
+msgid ""
+"No supported text field is currently active\n"
+"Click or tap to show in hardware keyboard emulation mode."
+msgstr ""
+"لا يوجد حقل نص مدعوم نشط حاليًا\n"
+"انقر أو المس للعرض في نمط محاكاة لوحة المفاتيح العتادية."
 
-#: qml/main.qml:119
+#: qml/main.qml:167
 #, kde-format
-msgid "Virtual Keyboard: visible"
-msgstr "لوحة المفاتيح الافتراضيّة: مرئية"
+msgctxt "@info:tooltip"
+msgid ""
+"On-Screen Keyboard is visible\n"
+"Click or tap to hide the on-screen keyboard."
+msgstr ""
+"لوحة المفاتيح على الشاشة ظاهرة\n"
+"انقر أو المس لإخفاء لوحة المفاتيح على الشاشة."
 
-#: qml/main.qml:128
+#: qml/main.qml:177
 #, kde-format
-msgid "Virtual Keyboard: Show on non-mouse input"
-msgstr "لوحة المفاتيح الافتراضية: اعرض عند الإدخال دون استخدام فأرة"
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when tapping a text field\n"
+"Tap to configure on-screen keyboard settings"
+msgstr ""
+"تظهر آليًا عند لمس حقل نص\n"
+"المس لضبط إعدادات لوحة المفاتيح على الشاشة"
 
-#: qml/main.qml:137
+#: qml/main.qml:187
 #, kde-format
-msgid "Virtual Keyboard: Show with all input devices"
-msgstr "لوحة المفاتيح الافتراضيّة: اعرض مع جميع أجهزة الإدخال"
+msgctxt "@info:tooltip"
+msgid ""
+"Shows automatically when interacting with a text field\n"
+"Click or tap to configure on-screen keyboard settings"
+msgstr ""
+"تظهر آليًا عند التفاعل مع حقل نص\n"
+"انقر أو المس لضبط إعدادات لوحة المفاتيح على الشاشة"
+
+#~ msgid "Virtual Keyboard: unavailable"
+#~ msgstr "لوحة المفاتيح الافتراضيّة: غير متوفرة"
+
+#~ msgid "Virtual Keyboard: disabled"
+#~ msgstr "لوحة المفاتيح الافتراضيّة: معطلة"
+
+#~ msgid "Show Virtual Keyboard"
+#~ msgstr "أظهر لوحة المفاتيح الافتراضية"
+
+#~ msgid "Virtual Keyboard: visible"
+#~ msgstr "لوحة المفاتيح الافتراضيّة: مرئية"
+
+#~ msgid "Virtual Keyboard: Show on non-mouse input"
+#~ msgstr "لوحة المفاتيح الافتراضية: اعرض عند الإدخال دون استخدام فأرة"
+
+#~ msgid "Virtual Keyboard: Show with all input devices"
+#~ msgstr "لوحة المفاتيح الافتراضيّة: اعرض مع جميع أجهزة الإدخال"
 
 #~ msgid "Virtual Keyboard: enabled"
 #~ msgstr "لوحة المفاتيح الافتراضيّة: مفعلة"

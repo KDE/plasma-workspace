@@ -31,10 +31,14 @@ private Q_SLOTS:
     void shouldFindApp_data();
     void testApplicationsUrl();
     void shouldCompareLauncherUrls();
-    void testWindowUrlFromMetadata();
-    void testWindowUrlFromMetadata_data();
+    void testServiceFromMetadata();
+    void testServiceFromMetadata_data();
     void testServiceFromCmdLine();
     void testServiceFromCmdLine_data();
+    void testServiceForUrl();
+    void testServiceForUrl_data();
+    void testAppDataForUrl_data();
+    void testAppDataForUrl();
 
 private:
     void createIcon();
@@ -110,9 +114,9 @@ void TaskToolsTest::shouldFindApp()
     QFETCH(QString, genericName);
     QFETCH(QUrl, url);
 
-    QCOMPARE(data.id, id);
-    QCOMPARE(data.name, name);
-    QCOMPARE(data.genericName, genericName);
+    QCOMPARE(data.service->desktopEntryName(), id);
+    QCOMPARE(data.service->name(), name);
+    QCOMPARE(appropriateCaption(data.service), genericName);
     QCOMPARE(data.url, url);
 }
 
@@ -122,9 +126,9 @@ void TaskToolsTest::testApplicationsUrl()
 
     const AppData &data = appDataFromUrl(url);
 
-    QCOMPARE(data.id, u"org.kde.konversation"_s);
-    QCOMPARE(data.name, u"Konversation"_s);
-    QCOMPARE(data.genericName, u"IRC Client"_s);
+    QCOMPARE(data.service->desktopEntryName(), u"org.kde.konversation"_s);
+    QCOMPARE(data.service->name(), u"Konversation"_s);
+    QCOMPARE(appropriateCaption(data.service), u"IRC Client"_s);
     QCOMPARE(data.url, url);
 }
 
@@ -150,42 +154,41 @@ void TaskToolsTest::shouldCompareLauncherUrls()
     QVERIFY(!launcherUrlsMatch(QUrl(c), QUrl(d), IgnoreQueryItems));
 }
 
-void TaskToolsTest::testWindowUrlFromMetadata()
+void TaskToolsTest::testServiceFromMetadata()
 {
     QFETCH(QString, appId);
     QFETCH(QString, xWindowsWMClassName);
-    QFETCH(QUrl, resultUrl);
+    QFETCH(QString, resultStorageId);
 
-    const QUrl actualResult = windowUrlFromMetadata(appId, 0, xWindowsWMClassName);
+    const auto service = serviceFromMetadata(appId, 0, xWindowsWMClassName);
 
-    QCOMPARE(actualResult, resultUrl);
+    QCOMPARE(service->storageId(), resultStorageId);
 }
 
-void TaskToolsTest::testWindowUrlFromMetadata_data()
+void TaskToolsTest::testServiceFromMetadata_data()
 {
     QTest::addColumn<QString>("appId");
     QTest::addColumn<QString>("xWindowsWMClassName");
-    QTest::addColumn<QUrl>("resultUrl");
+    QTest::addColumn<QString>("resultStorageId");
 
-    QTest::addRow("Dolphin") << QStringLiteral("org.kde.dolphin") << QString() << QUrl(QStringLiteral("applications:org.kde.dolphin.desktop"));
-    QTest::addRow("Element (Flatpak)") << QStringLiteral("Element") << QStringLiteral("element") << QUrl(QStringLiteral("applications:im.riot.Riot.desktop"));
-    QTest::addRow("Telegram (Flatpak)") << QStringLiteral("TelegramDesktop") << QStringLiteral("telegram-desktop")
-                                        << QUrl(QStringLiteral("applications:org.telegram.desktop.desktop"));
-    QTest::addRow("Spotify (Flatpak)") << QStringLiteral("Spotify") << QStringLiteral("spotify")
-                                       << QUrl(QStringLiteral("applications:com.spotify.Client.desktop"));
-    QTest::addRow("GammaRay") << QStringLiteral("GammaRay") << QStringLiteral("gammary-client") << QUrl(QStringLiteral("applications:GammaRay.desktop"));
-    QTest::addRow("Gwenview Importer") << QStringLiteral("org.kde.gwenview_importer") << QStringLiteral("gwenview_importer")
-                                       << QUrl(QStringLiteral("applications:org.kde.gwenview_importer.desktop"));
-    QTest::addRow("kcm_autostart") << QStringLiteral("kcm_autostart") << QString() << QUrl(QStringLiteral("applications:kcm_autostart.desktop"));
-    QTest::addRow("brave") << QStringLiteral("Brave-browser") << QStringLiteral("brave-browser") << QUrl(u"applications:brave-browser.desktop"_s);
-    QTest::addRow("brave_webapp") << QStringLiteral("Brave-browser") << QStringLiteral("crx_efmjfjelnicpmdcmfikempdhlmainjcb")
-                                  << QUrl(u"applications:brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"_s);
+    QTest::addRow("Dolphin") << "org.kde.dolphin" << QString() << "org.kde.dolphin.desktop";
+    QTest::addRow("Element (Flatpak)") << "Element" << "element" << "im.riot.Riot.desktop";
+    QTest::addRow("Telegram (Flatpak)") << "TelegramDesktop" << "telegram-desktop"
+                                        << "org.telegram.desktop.desktop";
+    QTest::addRow("Spotify (Flatpak)") << "Spotify" << "spotify"
+                                       << "com.spotify.Client.desktop";
+    QTest::addRow("GammaRay") << "GammaRay" << "gammary-client" << "GammaRay.desktop";
+    QTest::addRow("Gwenview Importer") << "org.kde.gwenview_importer" << "gwenview_importer"
+                                       << "org.kde.gwenview_importer.desktop";
+    QTest::addRow("kcm_autostart") << "kcm_autostart" << QString() << "kcm_autostart.desktop";
+    QTest::addRow("brave") << "Brave-browser" << "brave-browser" << "brave-browser.desktop";
+    QTest::addRow("brave_webapp") << "Brave-browser" << "crx_efmjfjelnicpmdcmfikempdhlmainjcb"
+                                  << "brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop";
 
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices6/kcm_kdeconnect") << QString()
-                                    << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
+    QTest::addRow("kcm_kdeconnect") << dataDir + u"/kservices6/kcm_kdeconnect" << QString() << dataDir + u"/kservices6/kcm_kdeconnect.desktop";
 
-    QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QUrl();
+    QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QString();
 }
 
 void TaskToolsTest::testServiceFromCmdLine_data()
@@ -215,6 +218,61 @@ void TaskToolsTest::testServiceFromCmdLine()
     QCOMPARE(services.first()->name(), serviceName);
     QCOMPARE(services.first()->exec(), serviceExec);
     QCOMPARE(services.first()->desktopEntryName(), serviceDesktopName);
+}
+
+void TaskToolsTest::testServiceForUrl_data()
+{
+    QTest::addColumn<QString>("url");
+    QTest::addColumn<QString>("expectedDesktopName");
+    QTest::addColumn<QString>("expectedStorageId");
+
+    QTest::addRow("applicationsUrl") << "applications:org.kde.dolphin.desktop" << "org.kde.dolphin" << "org.kde.dolphin.desktop";
+
+    QTest::addRow("absolute_app") << u"file://" + QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"applications/org.kde.dolphin.desktop"_s)
+                                  << "org.kde.dolphin" << "org.kde.dolphin.desktop";
+
+    QTest::addRow("absolute_desktop") << u"file://" + QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"kservices6/kcm_kdeconnect.desktop"_s)
+                                      << "kcm_kdeconnect"
+                                      << QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"kservices6/kcm_kdeconnect.desktop"_s);
+
+    QTest::addRow("executable") << "file:curl" << "" << "";
+
+    // TODO test preferred:// URL
+}
+
+void TaskToolsTest::testServiceForUrl()
+{
+    QFETCH(QString, url);
+    QFETCH(QString, expectedDesktopName);
+    QFETCH(QString, expectedStorageId);
+
+    const auto service = serviceForUrl(QUrl(url));
+    QCOMPARE(service->desktopEntryName(), expectedDesktopName);
+    QCOMPARE(service->storageId(), expectedStorageId);
+}
+
+void TaskToolsTest::testAppDataForUrl_data()
+{
+    QTest::addColumn<QUrl>("url");
+    QTest::addColumn<QString>("name");
+    QTest::addColumn<QIcon>("icon");
+
+    QTest::addRow("does_not_exist") << QUrl(u"applications:does.not.exist.desktop"_s) << u"does.not.exist.desktop"_s << QIcon::fromTheme(u"edit-delete"_s);
+    QTest::addRow("dolphin") << QUrl(u"applications:org.kde.dolphin.desktop"_s) << u"Dolphin"_s << QIcon::fromTheme(u"system-file-manager"_s);
+}
+
+void TaskToolsTest::testAppDataForUrl()
+{
+    QFETCH(QUrl, url);
+    QFETCH(QString, name);
+    QFETCH(QIcon, icon);
+
+    auto appData = appDataFromUrl(url, icon);
+
+    QVERIFY(appData.service);
+    QCOMPARE(appData.service->name(), name);
+    QCOMPARE(appData.icon, icon);
+    QCOMPARE(appData.url, url);
 }
 
 QTEST_MAIN(TaskToolsTest)

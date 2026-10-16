@@ -8,7 +8,6 @@
 
 #include <QMap>
 #include <QObject>
-#include <QPointer>
 
 class DBusServiceObserver;
 class KPluginMetaData;
@@ -18,7 +17,7 @@ class PlasmoidRegistry : public QObject
 {
     Q_OBJECT
 public:
-    explicit PlasmoidRegistry(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
+    explicit PlasmoidRegistry(SystemTraySettings *settings, QObject *parent = nullptr);
 
     void init();
 
@@ -72,8 +71,8 @@ private:
     void unregisterPlugin(const QString &pluginId);
     void sanitizeSettings();
 
-    QPointer<SystemTraySettings> m_settings;
-    QPointer<DBusServiceObserver> m_dbusObserver;
+    SystemTraySettings *m_settings = nullptr;
+    DBusServiceObserver *m_dbusObserver = nullptr;
 
     QMap<QString /*plugin id*/, KPluginMetaData> m_systrayApplets;
 };

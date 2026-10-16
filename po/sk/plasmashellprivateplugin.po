@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-08 00:48+0000\n"
-"PO-Revision-Date: 2023-11-11 14:56+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -148,17 +148,23 @@ msgstr "Ponechať otvorené"
 msgid "Configure…"
 msgstr "Nastaviť..."
 
-#: loginlockscreen/Footer.qml:49
+#: loginlockscreen/Footer.qml:50
 #, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr ""
+msgctxt "@action:button"
+msgid "Hide On-Screen Keyboard"
+msgstr "Skryť klávesnicu na obrazovke"
 
-#: loginlockscreen/Footer.qml:74
+#: loginlockscreen/Footer.qml:51
+#, kde-format
+msgctxt "@action:button"
+msgid "Show On-Screen Keyboard"
+msgstr "Zobraziť klávesnicu na obrazovke"
+
+#: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Prepnúť rozloženie"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -379,24 +385,24 @@ msgstr "Stiahnuť nové Plasma widgety"
 msgid "Install Widget From Local File…"
 msgstr "Inštalovať widget z lokálneho súboru..."
 
-#: shellprivate/widgetexplorer.cpp:484
+#: shellprivate/widgetexplorer.cpp:500
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Získať nové miniaplikácie"
 
-#: shellprivate/widgetexplorer.cpp:503
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vybrať súbor plazmoidu"
 
-#: shellprivate/widgetexplorer.cpp:519
+#: shellprivate/widgetexplorer.cpp:535
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Inštalácia balíčka %1 zlyhala: %2."
 
-#: shellprivate/widgetexplorer.cpp:520
+#: shellprivate/widgetexplorer.cpp:536
 #, kde-format
 msgid "Installation Failure"
 msgstr "Zlyhanie inštalácie"
@@ -411,44 +417,44 @@ msgstr ""
 "Aktuálne vybrané časové pásmo nie je k dispozícii na zobrazenie na tejto mape"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:340
+#: timezoneselector/TimezoneSelector.qml:347
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Vybrať..."
 
 #: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:332
+#: timezoneselector/TimezoneSelector.qml:339
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Región:"
 
 #: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:369
+#: timezoneselector/TimezoneSelector.qml:376
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Časové pásmo:"
 
-#: timezoneselector/TimezoneSelector.qml:287
+#: timezoneselector/TimezoneSelector.qml:294
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Priblížiť"
 
-#: timezoneselector/TimezoneSelector.qml:303
+#: timezoneselector/TimezoneSelector.qml:310
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Oddialiť"
 
-#: timezoneselector/TimezoneSelector.qml:344
+#: timezoneselector/TimezoneSelector.qml:351
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Výber časového pásma"
 
-#: timezoneselector/TimezoneSelector.qml:380
+#: timezoneselector/TimezoneSelector.qml:387
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Výber časového pásma"

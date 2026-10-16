@@ -20,7 +20,6 @@
 #include <X11/Xlib.h>
 #include <X11/extensions/Xrender.h>
 #include <math.h>
-#include <private/qtx11extras_p.h>
 // #define KFI_FC_DEBUG
 
 #define KFI_PREVIEW_GROUP "KFontInst Preview Settings"
@@ -36,11 +35,7 @@ static Display *xDisplay()
 {
     static Display *s_display = nullptr;
     if (!s_display) {
-        if (QX11Info::isPlatformX11()) {
-            s_display = QX11Info::display();
-        } else {
-            s_display = XOpenDisplay(NULL); // TODO close it again
-        }
+        s_display = XOpenDisplay(NULL); // TODO close it again
     }
     return s_display;
 }
@@ -610,7 +605,7 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
 
 inline int point2Pixel(int point)
 {
-    return (point * QX11Info::appDpiX() + 36) / 72;
+    return (point * 96 + 36) / 72;
 }
 
 static bool hasStr(XftFont *font, QString &str)

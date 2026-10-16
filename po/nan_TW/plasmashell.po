@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-08-18 03:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
@@ -157,42 +157,42 @@ msgstr "入去編輯模式"
 msgid "Exit Edit Mode"
 msgstr "離開編輯模式"
 
-#: main.cpp:108
+#: main.cpp:126
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:121
+#: main.cpp:139
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "啟用 QML Javascript debugger"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "莫佇 plasma-shell 崩去了後自動重啟動"
 
-#: main.cpp:127
+#: main.cpp:145
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "強制載入指定 ê 外掛程式"
 
-#: main.cpp:131
+#: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "取代現存 ê 實體"
 
-#: main.cpp:134
+#: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Kā 用者 feedback ē-sái 用 ê 選項列出來"
 
-#: main.cpp:190
+#: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma 啟動失敗"
 
-#: main.cpp:191
+#: main.cpp:209
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -348,53 +348,53 @@ msgstr "內建螢幕"
 msgid "Disconnected Screen %1"
 msgstr "無連線 ê 螢幕 %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "顯示桌面"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "隱藏桌面"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "拍開應用程式啟動器"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "顯示活動切換器"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "切換到頂一个活動"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "切換到下一个活動"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "管理桌面 kap 面板…"
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "佇面板之間移動齒盤焦點"
 
-#: shellcorona.cpp:2275
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "添面板"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

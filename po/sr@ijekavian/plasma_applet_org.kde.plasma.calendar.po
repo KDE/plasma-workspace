@@ -1,12 +1,13 @@
 # Translation of plasma_applet_org.kde.plasma.calendar.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2016-07-03 22:52+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavian\n"
 "MIME-Version: 1.0\n"
@@ -26,42 +27,28 @@ msgstr "Опште"
 #: qml/configGeneral.qml:21
 #, kde-format
 msgid "Calendar version:"
-msgstr ""
+msgstr "Календар:"
 
 #: qml/configGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Show week numbers in Calendar"
+#, kde-format
 msgid "Show week numbers"
-msgstr "Бројеви седмица у календару"
+msgstr "Прикажи бројеве седмица"
 
 #: qml/configGeneral.qml:32
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
-msgstr ""
+msgstr "Сажети приказ:"
 
 #: qml/configGeneral.qml:34
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
-msgstr ""
+msgstr "Прикажи дан у мјесецу"
 
 # >> @option:check Icon:
 #: qml/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgctxt "Show the week number (eg. 50) in the icon"
-#| msgid "Week number"
+#, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"
-msgstr "број седмице"
-
-#~ msgid "Working Day"
-#~ msgstr "Радни дан"
-
-# >> @option:check Working day...
-#~ msgid "Starts at 9"
-#~ msgstr "почиње у девет"
-
-# >> @option:check Working day...
-#~ msgid "Ends at 5"
-#~ msgstr "завршава се у 5"
+msgstr "Прикажи број седмице"

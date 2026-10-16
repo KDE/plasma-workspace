@@ -1,0 +1,50 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-12-02 00:43+0000\n"
+"PO-Revision-Date: 2026-10-07 19:31+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: donationmessage.cpp:80
+#, kde-format
+msgctxt "@title of a system notification"
+msgid "Donate to KDE"
+msgstr "Kā KDE Kià-hù"
+
+#: donationmessage.cpp:82
+#, kde-format
+msgctxt "@info body text of a system notification"
+msgid ""
+"KDE needs your help! Donations fund development and infrastructure important "
+"for KDE's continued existence."
+msgstr ""
+"KDE su-iàu lí ê tsi-tshî! Kià-hù hōo lán ē-sái ū tsînn khai-huat kap î-tshî "
+"KDE su-iàu ê ki-tshóo kiàn-siat."
+
+#: donationmessage.cpp:84
+#, kde-format
+msgctxt ""
+"@action:button Make a donation now; translate this in as short a form as "
+"possible"
+msgid "Donate…"
+msgstr "Kià-hù…"
+
+#: donationmessage.cpp:85
+#, kde-format
+msgctxt ""
+"@action:button don't donate this year; translate this in as short a form as "
+"possible"
+msgid "No Thanks"
+msgstr "Mài Kià-hù"

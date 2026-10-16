@@ -84,13 +84,13 @@ msgstr "Activé pour la dernière fois sur :"
 #: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr "Impossible de charger des journaux. Tentative de rafraîchissement."
+msgstr "Impossible de charger des journaux. Tentative de rafraichissement."
 
 #: ui/entry.qml:118
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr "Rafraîchir"
+msgstr "Rafraichir"
 
 #: ui/main.qml:35
 #, kde-format

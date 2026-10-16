@@ -1,19 +1,32 @@
-set(fontinst_bin_SRCS FcConfig.cpp FontInst.cpp Folder.cpp Main.cpp Utils.cpp ${libkfontinstdbusiface_SRCS} )
-set(fontinst_helper_SRCS FcConfig.cpp Helper.cpp Folder.cpp Utils.cpp ${libkfontinstdbusiface_SRCS} )
-
-# qt5_generate_dbus_interface(FontInst.h org.kde.fontinst.xml)
+set(fontinst_bin_SRCS FcConfig.cpp FontInst.cpp Folder.cpp Main.cpp Utils.cpp ../dbus/FontinstIface.cpp)
 qt_add_dbus_adaptor(fontinst_bin_SRCS org.kde.fontinst.xml FontInst.h KFI::FontInst)
-# qt_add_dbus_interface(fontinst_bin_SRCS org.kde.fontinst.xml FontinstIface)
 
 add_executable(fontinst_bin ${fontinst_bin_SRCS})
-add_executable(fontinst_helper ${fontinst_helper_SRCS})
+add_executable(fontinst_helper
+    FcConfig.cpp
+    Helper.cpp
+    Folder.cpp
+    Utils.cpp
+    ../dbus/FontinstIface.cpp
+)
 
 set_target_properties(fontinst_bin PROPERTIES OUTPUT_NAME fontinst)
 target_link_libraries(fontinst_bin 
-                      Qt::DBus Qt::Xml KF6::AuthCore KF6::KIOCore kfontinst)
+    Qt::DBus
+    Qt::Xml
+    KF6::AuthCore
+    KF6::KIOCore
+    kfontinst
+)
 
 set_target_properties(fontinst_helper PROPERTIES OUTPUT_NAME fontinst_helper)
-target_link_libraries(fontinst_helper Qt::DBus Qt::Xml KF6::AuthCore KF6::KIOCore kfontinst)
+target_link_libraries(fontinst_helper
+    Qt::DBus
+    Qt::Xml
+    KF6::AuthCore
+    KF6::KIOCore
+    kfontinst
+)
 
 ecm_qt_declare_logging_category(fontinst_bin
     HEADER kfontinst_debug.h

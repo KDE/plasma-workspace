@@ -9,7 +9,6 @@
 #include <QAbstractListModel>
 #include <QConcatenateTablesProxyModel>
 #include <QList>
-#include <QPointer>
 #include <QSortFilterProxyModel>
 #include <qqmlregistration.h>
 
@@ -44,7 +43,7 @@ public:
         LastBaseRole,
     };
 
-    explicit BaseModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
+    explicit BaseModel(SystemTraySettings *settings, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -55,7 +54,7 @@ protected:
     Plasma::Types::ItemStatus calculateEffectiveStatus(bool canRender, Plasma::Types::ItemStatus status, QString itemId) const;
 
 private:
-    QPointer<SystemTraySettings> m_settings;
+    SystemTraySettings *m_settings;
 
     bool m_showAllItems;
     QStringList m_shownItems;
@@ -74,7 +73,7 @@ public:
         HasApplet,
     };
 
-    explicit PlasmoidModel(const QPointer<SystemTraySettings> &settings, const QPointer<PlasmoidRegistry> &plasmoidRegistry, QObject *parent = nullptr);
+    explicit PlasmoidModel(SystemTraySettings *settings, PlasmoidRegistry *plasmoidRegistry, QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -96,7 +95,7 @@ private:
 
     int indexOfPluginId(const QString &pluginId) const;
 
-    QPointer<PlasmoidRegistry> m_plasmoidRegistry;
+    PlasmoidRegistry *m_plasmoidRegistry = nullptr;
 
     QList<Item> m_items;
 };
@@ -131,7 +130,7 @@ public:
     };
 
     explicit StatusNotifierModel(QObject *parent = nullptr);
-    explicit StatusNotifierModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
+    explicit StatusNotifierModel(SystemTraySettings *settings, QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -157,7 +156,7 @@ class BackgroundAppsModel : public BaseModel
 {
     Q_OBJECT
 public:
-    explicit BackgroundAppsModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
+    explicit BackgroundAppsModel(SystemTraySettings *settings, QObject *parent = nullptr);
 
     enum class Role {
         Name = static_cast<int>(BaseModel::BaseRole::LastBaseRole) + 1000,

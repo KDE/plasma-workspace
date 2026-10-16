@@ -105,7 +105,6 @@ private Q_SLOTS:
 private:
     explicit SystemClipboard();
 
-    bool blockFetchingNewData();
     void setMimeDataInternal(QMimeData *selection, QMimeData *clipboard, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
 
     KSystemClipboard *m_clip = nullptr;

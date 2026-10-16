@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2026-08-08 00:43+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -27,28 +27,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 26.04.3\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Arbelaren edukia"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Arbela hutsik dago"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr "Arbelak une honetan babes berezia behar duten datuak ditu"
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr "Arbelak une honetan babes berezia behar duten datuak ditu"
 
-#: qml/main.qml:75
+#: qml/main.qml:48
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "The clipboard currently holds sensitive data"
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr "Arbelak une honetan babes berezia behar duten datuak ditu"
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "Historia garbitu"
 
-#: qml/main.qml:95
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Arbela konfiguratu…"

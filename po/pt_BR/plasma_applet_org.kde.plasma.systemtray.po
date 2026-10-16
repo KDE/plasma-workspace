@@ -12,16 +12,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2026-05-17 07:21-0300\n"
+"POT-Creation-Date: 2026-10-15 00:48+0000\n"
+"PO-Revision-Date: 2026-10-15 10:06-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.04.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -34,56 +34,56 @@ msgstr "Sair %1"
 msgid "General"
 msgstr "Geral"
 
-#: qml/ConfigGeneral.qml:45
+#: qml/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Mostrar quando relevante"
 
-#: qml/ConfigGeneral.qml:49
+#: qml/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Sempre mostrar"
 
-#: qml/ConfigGeneral.qml:53
+#: qml/ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
 msgstr "Mostrar somente no popup"
 
-#: qml/ConfigGeneral.qml:57
+#: qml/ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
 msgstr "Nunca mostrar (desativado)"
 
-#: qml/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:129
 #, kde-format
 msgid "Application Status"
 msgstr "Status dos aplicativos"
 
-#: qml/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:131
 #, kde-format
 msgid "Communications"
 msgstr "Comunicações"
 
-#: qml/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:133
 #, kde-format
 msgid "System Services"
 msgstr "Serviços do sistema"
 
-#: qml/ConfigGeneral.qml:134
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Hardware Control"
 msgstr "Controle do hardware"
 
-#: qml/ConfigGeneral.qml:137
+#: qml/ConfigGeneral.qml:138
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Diversos"
 
-#: qml/ConfigGeneral.qml:174
+#: qml/ConfigGeneral.qml:175
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -100,13 +100,13 @@ msgstr ""
 "<nl/><nl/>Use essa configuração por sua conta e risco, e não relate "
 "problemas ao KDE ou ao autor do aplicativo."
 
-#: qml/ConfigGeneral.qml:177
+#: qml/ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Eu entendo os riscos"
 
-#: qml/ConfigGeneral.qml:189
+#: qml/ConfigGeneral.qml:190
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 "desativar o histórico da área de transferência, ou selecione a opção para "
 "lembrar de apenas um item por vez."
 
-#: qml/ConfigGeneral.qml:198
+#: qml/ConfigGeneral.qml:199
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -140,19 +140,19 @@ msgstr ""
 "em outro lugar ou se estiver usando intencionalmente um gerenciador de "
 "notificações de terceiros para lidar com as notificações."
 
-#: qml/ConfigGeneral.qml:210
+#: qml/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Escalar com a altura do painel"
 
-#: qml/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Escalar com a largura do painel"
 
-#: qml/ConfigGeneral.qml:213
+#: qml/ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
@@ -160,37 +160,43 @@ msgctxt ""
 msgid "Panel icon size:"
 msgstr "Tamanho do ícone no painel:"
 
-#: qml/ConfigGeneral.qml:217
+#: qml/ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Pequeno"
 
-#: qml/ConfigGeneral.qml:237
+#: qml/ConfigGeneral.qml:226
+#, kde-format
+msgctxt "@item:inlistbox Icon size"
+msgid "Tiny"
+msgstr "Minúsculo"
+
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr "Espaçamento:"
 
-#: qml/ConfigGeneral.qml:241
+#: qml/ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Pequeno"
 
-#: qml/ConfigGeneral.qml:245
+#: qml/ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: qml/ConfigGeneral.qml:249
+#: qml/ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Grande"
 
-#: qml/ConfigGeneral.qml:269
+#: qml/ConfigGeneral.qml:296
 #, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
@@ -198,39 +204,39 @@ msgctxt ""
 msgid "Direction:"
 msgstr "Direção:"
 
-#: qml/ConfigGeneral.qml:283
+#: qml/ConfigGeneral.qml:310
 #, kde-format
 msgid "Bottom-to-top"
 msgstr "De baixo para cima"
 
-#: qml/ConfigGeneral.qml:284
+#: qml/ConfigGeneral.qml:311
 #, kde-format
 msgid "Top-to-bottom"
 msgstr "De cima para baixo"
 
-#: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
+#: qml/ConfigGeneral.qml:316 qml/ConfigGeneral.qml:323
 #, kde-format
 msgid "Left-to-right"
 msgstr "Esquerda para a direita"
 
-#: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
+#: qml/ConfigGeneral.qml:317 qml/ConfigGeneral.qml:322
 #, kde-format
 msgid "Right-to-left"
 msgstr "Direita para a esquerda"
 
-#: qml/ConfigGeneral.qml:307
+#: qml/ConfigGeneral.qml:334
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Definir automaticamente para grande quando no modo de toque"
 
-#: qml/ConfigGeneral.qml:332
+#: qml/ConfigGeneral.qml:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Entradas"
 
-#: qml/ConfigGeneral.qml:336
+#: qml/ConfigGeneral.qml:363
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"

@@ -8,7 +8,7 @@
 # Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008, 2009.
 # Σπύρος Γεωργαράς <sngeorgaras@otenet.gr>, 2008.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2009.
+# SPDX-FileCopyrightText: 2009, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # Stelios <sstavra@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2017.
@@ -17,16 +17,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2024-08-14 17:00+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"PO-Revision-Date: 2026-10-12 18:09+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -38,127 +38,148 @@ msgstr "Το %1 δεν είναι έγκυρο αρχείο θέματος GTK."
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
 msgstr ""
+"Αποτυχία εγκατάστασης: Δεν είναι δυνατή η εγκατάσταση στιλ από απομακρυσμένη "
+"τοποθεσία."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης: Δεν ήταν δυνατή η ανάγνωση του αρχείου στιλ."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης: Το αρχείο στιλ δεν περιέχει δεδομένα."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης: Δεν ήταν δυνατή η αποσυμπίεση του αρχείου στιλ."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης: Το στιλ δεν βρέθηκε."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
 msgstr ""
+"Αποτυχία εγκατάστασης: Το επιλεγμένο αρχείο δεν είναι έγκυρο στιλ Union."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης: Το επιλεγμένο στιλ δεν υποστηρίζεται."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης του «%1»: Το στιλ είναι ήδη εγκατεστημένο."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης του «%1»: Δεν επιτρέπεται η πρόσβαση."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "Αποτυχία εγκατάστασης του «%1»: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "Το «%1» εγκαταστάθηκε με επιτυχία."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "Αποτυχία απεγκατάστασης: Δεν βρέθηκε το στιλ με αναγνωριστικό «%1»."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Αποτυχία απεγκατάστασης του «%1»: Δεν επιτρέπεται η πρόσβαση."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "Αποτυχία απεγκατάστασης του «%1»: Το στιλ δεν είναι εγκατεστημένο."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "Αποτυχία απεγκατάστασης του «%1»: Το στιλ χρησιμοποιείται."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "Αποτυχία απεγκατάστασης του «%1»: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "Δεν ήταν δυνατή η απεγκατάσταση των στιλ:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr ""
+"Το «%1» απεγκαταστάθηκε με επιτυχία, αλλά δεν ήταν δυνατή η απεγκατάσταση "
+"άλλων:\n"
+
+#: kcmstyle.cpp:229
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"Το %1 στιλ απεγκαταστάθηκε με επιτυχία, αλλά δεν ήταν δυνατή η απεγκατάσταση "
+"άλλων:\n"
 msgstr[1] ""
+"Τα %1 στιλ απεγκαταστάθηκαν με επιτυχία, αλλά δεν ήταν δυνατή η "
+"απεγκατάσταση άλλων:\n"
 
-#: kcmstyle.cpp:237
+#: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
-msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
+msgid "Successfully uninstalled “%1”."
+msgstr "Το «%1» απεγκαταστάθηκε με επιτυχία."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:242
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] "Το %1 στιλ απεγκαταστάθηκε με επιτυχία"
+msgstr[1] "Τα %1 στιλ απεγκαταστάθηκαν με επιτυχία."
+
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
 "Υπήρξε σφάλμα κατά τη φόρτωση του διαλόγου διαμόρφωσης για αυτό το στυλ."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Αποτυχία εφαρμογής του επιλεγμένου στυλ «%1»."
@@ -182,10 +203,9 @@ msgstr "%p%"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgid "Button"
-msgstr "Κουμπί πατήματος"
+msgstr "Κουμπί"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:99
@@ -208,10 +228,9 @@ msgstr "Κουμπί επιλογής"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
-msgstr "Μόνο κείμενο"
+msgstr "Πεδίο κειμένου"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:146
@@ -229,7 +248,7 @@ msgstr "Στυλ εφαρμογών"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Αναγνωριστικό στιλ Union"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -312,8 +331,7 @@ msgid "GNOME/GTK Application Style"
 msgstr "Στυλ εφαρμογών GNOME/GTK"
 
 #: ui/GtkStylePage.qml:38
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
 msgstr "Εγκατάσταση από αρχείο…"
@@ -322,7 +340,7 @@ msgstr "Εγκατάσταση από αρχείο…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr ""
+msgstr "Λήψη νέων…"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format
@@ -345,8 +363,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Αρχείο θέματος GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Εγκατάσταση από αρχείο…"
@@ -368,6 +385,9 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Αυτό το στιλ χρησιμοποιεί τη μηχανή στιλ Union, η οποία βρίσκεται ακόμη υπό "
+"ανάπτυξη. Ορισμένα στοιχεία ενδέχεται να μην εμφανίζονται ή να μη "
+"λειτουργούν σωστά με αυτό το στιλ."
 
 #: ui/main.qml:174
 #, kde-format
@@ -378,99 +398,91 @@ msgstr "Διαμόρφωση στυλ…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "Απεγκατάσταση…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
 msgstr ""
+"Δεν είναι δυνατή η απεγκατάσταση στιλ που έχουν εγκατασταθεί από το σύστημα."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Είναι δυνατή η απεγκατάσταση μόνο στιλ Union."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "Να μην απεγκατασταθεί αυτό το στιλ."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "Επιλογή στιλ Union για εγκατάσταση"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "Εγκατάσταση"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "Καρτέλα 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "Καρτέλα 2"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
-msgstr "Πλαίσιο επιλογής"
+msgstr "Πλαίσιο ελέγχου"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "Κουμπί επιλογής"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
-msgstr "Πλαίσιο συνδυασμού"
+msgstr "Σύνθετο πλαίσιο"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
-msgstr "Πλαίσιο συνδυασμού"
+msgstr "Στοιχείο σύνθετου πλαισίου"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
-msgstr "Κουμπί πατήματος"
+msgstr "Κουμπί"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
-msgstr "Μόνο κείμενο"
+msgstr "Πεδίο κειμένου"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr "%1%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "Λήψη νέων στυλ εφαρμογών GNOME/GTK…"

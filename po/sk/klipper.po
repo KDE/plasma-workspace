@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
-"PO-Revision-Date: 2023-08-06 11:28+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-09-14 20:10+0200\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -23,12 +23,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
 msgstr "História schránky:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:88
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -37,12 +37,12 @@ msgstr[0] "%v položka"
 msgstr[1] "%v položky"
 msgstr[2] "%v položiek"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Výber a schránka:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:104
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -51,67 +51,86 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
 "Keď je text alebo oblasť obrazovky zvýraznená myšou alebo klávesnicou, ide o "
 "<emphasis>výber</emphasis>. Možno ho vložiť pomocou stredného tlačidla myši."
 "<nl/><nl/>Ak sa výber explicitne skopíruje pomocou akcie "
 "<interface>Kopírovať</interface> alebo <interface>Vystrihnúť</interface>, "
 "uloží sa do <emphasis>schránky</emphasis>. Možno ho vložiť pomocou akcie "
-"<interface>Vložiť</interface>. <nl/><nl/>Pri zapnutí tejto možnosti zostáva "
+"<interface>Vložiť</interface>.<nl/><nl/>Pri zapnutí tejto možnosti zostáva "
 "výber a schránka rovnaké, takže akýkoľvek výber je okamžite k dispozícii na "
 "vloženie akýmkoľvek spôsobom. Ak je vypnutá, výber môže byť stále uložený v "
-"histórii schránky (podľa nižšie uvedených možností), ale môže byť vložený "
-"len pomocou stredného tlačidla myši."
+"histórii schránky (podľa možnosti nižšie), ale vložiť sa dá len pomocou "
+"stredného tlačidla myši."
 
-#: configdialog.cpp:136 configdialog.cpp:174
-#, kde-format
-msgid "Always save in history"
-msgstr "Vždy ukladať v histórií"
+#: configdialog.cpp:123
+#, fuzzy, kde-format
+#| msgid "Text selected with the pointer or keyboard"
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Text selected with the pointer or keyboard"
+msgstr "Text vybraný ukazovateľom alebo klávesnicou"
 
-#: configdialog.cpp:140
-#, kde-format
-msgid "Text selection:"
-msgstr "Výber textu:"
+#: configdialog.cpp:125
+#, fuzzy, kde-format
+#| msgid "Include in history:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
+msgid "Include in history:"
+msgstr "Zahrnúť do histórie:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
-#, kde-format
-msgid "Only when explicitly copied"
-msgstr "Len pri výslovnom kopírovaní"
-
-#: configdialog.cpp:147
-#, kde-format
-msgid "Whether text selections are saved in the clipboard history."
-msgstr "Či sa textové výbery ukladajú do histórie schránky."
-
-#: configdialog.cpp:178
-#, kde-format
-msgid "Non-text selection:"
-msgstr "Netextový výber:"
-
-#: configdialog.cpp:185
-#, kde-format
-msgid "Never save in history"
-msgstr "Nikdy neukladať v histórií"
-
-#: configdialog.cpp:190
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
+"Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
-"Či sa do histórie schránky ukladajú netextové výbery (napríklad obrázky)."
+"Explicitne skopírovaný text sa vždy uloží, pokiaľ nie je označený ako heslo."
 
-#: configdialog.cpp:252
+#: configdialog.cpp:132
+#, fuzzy, kde-format
+#| msgid "Image data copied explicitly"
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Image data copied explicitly"
+msgstr "Explicitne skopírované obrazové dáta"
+
+#: configdialog.cpp:136
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+"Napríklad vrstvy a výbery skopírované v editoroch obrázkov ako Krita alebo "
+"GIMP.<br/><a href=\"1\">Viac o obrázkoch v schránke.</a>"
+
+#: configdialog.cpp:145
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+"Schránka vždy umožní kopírovať obrázkové súbory ako názvy súborov a zobrazí "
+"ich náhľady. Toto nastavenie sa týka prípadov, keď sú obrázky uložené priamo "
+"ako dáta. Niektoré aplikácie podporujú oba prípady, no niektoré prijímajú "
+"obrázky len ako dáta.<nl/><nl/>Všimnite si tiež, že nástroj na snímky "
+"obrazovky Spectacle toto nastavenie ignoruje, ak je nastavený na ukladanie "
+"snímok do schránky. Ignoruje ho aj každá aplikácia, ktorá posiela text aj "
+"obrázok."
+
+#: configdialog.cpp:170
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Zobrazenie kontextovej ponuky akcie:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -126,7 +145,7 @@ msgstr ""
 "je tu automatická ponuka vypnutá alebo sa nezobrazuje pre vylúčené okno, "
 "potom ju možno zobraziť pomocou <shortcut>%1</shortcut> klávesovej skratky."
 
-#: configdialog.cpp:274
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -135,67 +154,45 @@ msgstr[0] "v% sekunda"
 msgstr[1] "%v sekundy"
 msgstr[2] "%v sekúnd"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Žiadne"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "Voľby:"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-"Keď sa <interface>vzor zhody</interface> zhoduje s obsahom schránky, jeho "
-"<interface>príkazy</interface> sa zobrazia vo vyskakovacej ponuke aplikácie "
-"Klipper a môžu sa vykonať."
-
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Zhoda vzorov a príkazov"
 
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Popis"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "Pridať akciu..."
 
-#: configdialog.cpp:328
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "Upraviť akciu..."
 
-#: configdialog.cpp:333
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "Odstrániť akciu"
 
-#: configdialog.cpp:340
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-"Tieto akcie sa zobrazujú vo vyskakovacej ponuke, ktorú možno nakonfigurovať "
-"na stránke <interface>Ponuka akcií</interface>."
-
-#: configdialog.cpp:535
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -204,51 +201,51 @@ msgid ""
 msgstr ""
 "Odstrániť vybranú akciu <resource>%1</resource><nl/>a všetky jej príkazy?"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Potvrdenie akcie vymazania"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Všeobecné"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "Všeobecné nastavenie"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Ponuka akcií"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "Ponuka akcií"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Nastavenie akcií"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Nastavenie akcií"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Skratky"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Nastavenie skratiek"
@@ -258,30 +255,30 @@ msgstr "Nastavenie skratiek"
 msgid "Return to Clipboard"
 msgstr "Návrat do schránky"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Kopírovať"
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Obrázok QR kódu bol skopírovaný do schránky."
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Kopírovať obrázok QR kódu do schránky"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr "QR kód"
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -289,58 +286,89 @@ msgstr ""
 "Na zobrazenie kódu QR nie je dostatok miesta. Skúste zmeniť veľkosť tohto "
 "appletu."
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Vytvorenie QR kódu zlyhalo"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Zbaliť"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozbaliť"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "História farieb"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "Všetka história"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "Iba s hviezdičkou"
 
-#: declarative/qml/ClipboardMenu.qml:349
-#, kde-format
+#: declarative/qml/ClipboardMenu.qml:376
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
+msgstr ""
+"Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
+
+#: declarative/qml/ClipboardMenu.qml:378
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"stored in history."
 msgstr ""
+"Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:380
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Vymazať tajné dáta"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr "Žiadne zhody"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdna"
@@ -350,27 +378,27 @@ msgstr "Schránka je prázdna"
 msgid "Invoke action"
 msgstr "Vyvolať akciu"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, kde-format
 msgid "Show QR code"
 msgstr "Zobraziť QR kód"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, kde-format
 msgid "Edit contents"
 msgstr "Upraviť obsah"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Remove from history"
 msgstr "Odstrániť z knižnice"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Remove Star"
 msgstr "Odstrániť hviezdu"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Star"
 msgstr "Hviezda"
@@ -547,14 +575,13 @@ msgstr "Príkaz:"
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
-"<placeholder>&#37;s</placeholder> v príkaze bude nahradený kompletným "
-"obsahom schránky. <placeholder>&#37;0</placeholder> až <placeholder>&#37;9</"
-"placeholder> budú nahradené príslušnými zachyteným textom zo vzoru zhody."
+"<b>&#37;s</b> v príkaze bude nahradené kompletným obsahom schránky. "
+"<b>&#37;0</b> až <b>&#37;9</b> budú nahradené príslušnými zachytenými "
+"textami zo vzoru zhody."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -591,100 +618,117 @@ msgstr "Obnovenie predvolenej ikony pre príkaz"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:375
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Naozaj chcete vyčistiť a odstrániť celú históriu schránky?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:377
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Vyčistiť históriu schránky"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:379 historymodel.cpp:679
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr ""
+
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Táto položka je označená hviezdičkou. Naozaj ju chcete odstrániť z histórie?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Odstrániť označený prvok"
 
-#: klipper.cpp:73
-#, kde-format
+#: klipper.cpp:70
+#, fuzzy, kde-format
+#| msgid "Clipboard Popup"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "História schránky"
+
+#: klipper.cpp:74
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Toggle automatic action"
+#| msgid "Automatic Action Popup Menu"
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
+msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Automatická akcia vyskakovacej ponuky"
 
-#: klipper.cpp:90
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Vyčistiť históriu schránky"
 
-#: klipper.cpp:95
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ručne spustiť akciu na aktuálnej schránke"
 
-#: klipper.cpp:103
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Upraviť obsah..."
 
-#: klipper.cpp:111
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Zobraziť čiarový kód..."
 
-#: klipper.cpp:120
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Nasledujúca položka histórie"
+msgid "Rotate History Down"
+msgstr ""
 
-#: klipper.cpp:125
-#, kde-format
+#: klipper.cpp:129
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Predchádzajúca položka histórie"
+msgid "Rotate History Up"
+msgstr "História farieb"
 
-#: klipper.cpp:132
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Zobraziť položky schránky na pozícii myši"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "História schránky"
 
-#: klipper.cpp:420
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "hore"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:427
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "aktuálne"
 
-#: klipper.cpp:434
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "dole"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -722,79 +766,59 @@ msgid ""
 msgstr "Nepovoliť vymazanie schránky, napríklad keď aplikácia skončí."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "Výber a schránka zostávajú rovnaké"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Obsah vybraný kurzorom sa automaticky skopíruje do schránky, aby ho bolo "
-"možné vložiť pomocou akcie Vložiť alebo kliknutím stredným tlačidlom myši."
+"Obsah vybraný ukazovateľom sa automaticky skopíruje do schránky, aby ho bolo "
+"možné vložiť akciou <i>Vložiť</i> alebo kliknutím stredným tlačidlom myši."
 "<br/><a href=\"1\">Viac o výbere a schránke</a>."
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:32
+#. i18n: ectx: label, entry (SaveSelection), group (General)
+#: klipper.kcfg:28
 #, kde-format
-msgid "Ignore the selection"
-msgstr "Ignorovať výber"
+msgid "Save the selection"
+msgstr "Uložiť výber"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:34
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
-"Obsah vybraný kurzorom, ale nie explicitne skopírovaný do schránky, sa "
-"automaticky neukladá do histórie schránky a možno ho vložiť len pomocou "
-"stredného tlačidla myši."
+"Obsah vybraný ukazovateľom, ale explicitne neskopírovaný do schránky, sa "
+"automaticky ukladá do histórie schránky."
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:37
+#. i18n: ectx: label, entry (SaveImages), group (General)
+#: klipper.kcfg:33
 #, kde-format
-msgid "Text selection only"
-msgstr "Len textový výber"
+msgid "Save images"
+msgstr "Ukladať obrázky"
 
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
+#: klipper.kcfg:35
 #, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
-msgstr ""
-"Do histórie schránky sa ukladajú len textové výbery, nie obrázky alebo iné "
-"typu údajov."
-
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr "Vždy ignorovať obrázky"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
-"Obrázky neukladať do histórie schránky, ani keď sú výslovne skopírované."
+msgid "Store images in the clipboard history."
+msgstr "Ukladať obrázky do histórie schránky."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:38
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Okamžite po výbere"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -802,63 +826,61 @@ msgstr ""
 "Zobrazenie kontextovej ponuky príslušných akcií hneď po vykonaní výberu."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:43
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Čas automatickej akcie ponuky:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:47
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Zobrazenie kontextovej ponuky automatickej akcie na takýto čas."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:50
 #, kde-format
 msgid "History size:"
 msgstr "Veľkosť histórie:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
-#, kde-format
-msgid "The clipboard history will store up to this many items."
+#: klipper.kcfg:54
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid ""
+"The clipboard history will store up to this many items. Maximum is 2048."
 msgstr "Do histórie schránky sa uloží až toľkoto položiek."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Fiktívna položka pre označenie zmien v prvku strome akcií"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:64
 #, kde-format
-msgid "Trim whitespace from selection"
-msgstr "Orezanie bielych znakov z výberu"
+msgid "Trim whitespace"
+msgstr "Orezať biele znaky"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:66
 #, kde-format
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
 msgstr ""
-"Odstránenie bielych znakov zo začiatku a konci vybraného textu pred "
-"vykonaním akcie. Tým sa napríklad zabezpečí, že adresa URL vložená do "
-"prehliadača sa interpretuje podľa očakávania. Text uložený v schránke nie je "
-"ovplyvnený."
+"Odstráni všetky biele znaky zo začiatku a konca textu odovzdaného akcii. "
+"Text uložený v histórii to neovplyvní."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:69
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Pre položku vybranú z histórie"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -868,30 +890,110 @@ msgstr ""
 "histórie schránky."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:74
 #, kde-format
-msgid "Include MIME actions"
-msgstr "Zahrnúť akcie MIME"
+msgid "Offer applications for copied links and files"
+msgstr "Ponúkať aplikácie pre skopírované odkazy a súbory"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
 msgstr ""
-"Ak je vybraný názov súboru alebo adresa URL, zahrnúť aplikácie, ktoré môžu "
-"prijať jeho MIME typ vo vyskakovacej ponuke."
+"Pri odkaze začínajúcom na <i>http://</i> alebo <i>https://</i> a pri "
+"súboroch sa popri vašich zodpovedajúcich akciách ponúknu aj aplikácie, ktoré "
+"ich vedia otvoriť."
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "História schránky"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "&Zrušiť"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Nasledujúca položka histórie"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Predchádzajúca položka histórie"
+
+#~ msgid "up"
+#~ msgstr "hore"
+
+#~ msgid "down"
+#~ msgstr "dole"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "These actions appear in the popup menu which can be configured on the "
+#~ "<interface>Action Menu</interface> page."
+#~ msgstr ""
+#~ "Tieto akcie sa zobrazujú vo vyskakovacej ponuke, ktorú možno "
+#~ "nakonfigurovať na stránke <interface>Ponuka akcií</interface>."
+
+#~ msgid "Text selection:"
+#~ msgstr "Výber textu:"
+
+#~ msgid "Only when explicitly copied"
+#~ msgstr "Len pri výslovnom kopírovaní"
+
+#~ msgid "Non-text selection:"
+#~ msgstr "Netextový výber:"
+
+#~ msgid "Never save in history"
+#~ msgstr "Nikdy neukladať v histórií"
+
+#~ msgid ""
+#~ "Whether non-text selections (such as images) are saved in the clipboard "
+#~ "history."
+#~ msgstr ""
+#~ "Či sa do histórie schránky ukladajú netextové výbery (napríklad obrázky)."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When a <interface>match pattern</interface> matches the clipboard "
+#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
+#~ "menu and can be executed."
+#~ msgstr ""
+#~ "Keď sa <interface>vzor zhody</interface> zhoduje s obsahom schránky, jeho "
+#~ "<interface>príkazy</interface> sa zobrazia vo vyskakovacej ponuke "
+#~ "aplikácie Klipper a môžu sa vykonať."
+
+#~ msgid "Text selection only"
+#~ msgstr "Len textový výber"
+
+#~ msgid ""
+#~ "Only store text selections in the clipboard history, not images or any "
+#~ "other type of data."
+#~ msgstr ""
+#~ "Do histórie schránky sa ukladajú len textové výbery, nie obrázky alebo "
+#~ "iné typu údajov."
+
+#~ msgid "Always ignore images"
+#~ msgstr "Vždy ignorovať obrázky"
+
+#~ msgid ""
+#~ "Do not store images in the clipboard history, even if explicitly copied."
+#~ msgstr ""
+#~ "Obrázky neukladať do histórie schránky, ani keď sú výslovne skopírované."
+
+#~ msgid "Include MIME actions"
+#~ msgstr "Zahrnúť akcie MIME"
+
+#~ msgid ""
+#~ "If a file name or URL is selected, include applications that can accept "
+#~ "its MIME type in the popup menu."
+#~ msgstr ""
+#~ "Ak je vybraný názov súboru alebo adresa URL, zahrnúť aplikácie, ktoré "
+#~ "môžu prijať jeho MIME typ vo vyskakovacej ponuke."
 
 #~ msgid "The clipboard history contains starred items. Clear them too?"
 #~ msgstr ""

@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 X əyyam
-# SPDX-FileCopyrightText: 2024, 2025 Kheyyam Godjayev <xxmn77@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
-"PO-Revision-Date: 2025-10-21 19:50+0400\n"
-"Last-Translator: linux <xxmn77@gmail.com>\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-09-24 23:20+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -159,42 +159,42 @@ msgstr "Düzəliş rejiminə giriş"
 msgid "Exit Edit Mode"
 msgstr "Düzəliş rejimindən çıxış"
 
-#: main.cpp:108
+#: main.cpp:126
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma örtüyü"
 
-#: main.cpp:121
+#: main.cpp:139
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML Javascript sazlayıcısını aktiv etmək"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Çökdükdən sonra plasma üz qabığını avtomatik başlatmamaq"
 
-#: main.cpp:127
+#: main.cpp:145
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Göstərilən modulun məcburi başladılması"
 
-#: main.cpp:131
+#: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Cari başladılan əməliyyatı əvəz etmək"
 
-#: main.cpp:134
+#: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "İstifadəçi rəyi üçün mövcud seçimlərin siyahısı"
 
-#: main.cpp:190
+#: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma başladıla bilmədi"
 
-#: main.cpp:191
+#: main.cpp:209
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -344,60 +344,60 @@ msgstr "%1%"
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "Daxili ekran"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Ayrılmış ekran %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "İş masasını Göstərmək"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "İş masasını Gizlətmək"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Tətbiq başladıcını aktiv etmək"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Otaq dəyişdiricisi"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Əvvəlki İş otağına Keçid"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Növbəti İş otağına Keçid"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "İş masalarının və Panellərin idarə edilməsi..."
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Klaviatura fokusunu panellər arasında dəyişmək"
 
-#: shellcorona.cpp:2275
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel əlavə edin"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

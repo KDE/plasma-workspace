@@ -18,23 +18,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
-"PO-Revision-Date: 2026-08-26 12:33+0200\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-14 12:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Klembordgeschiedenis:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:88
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -42,12 +42,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v item"
 msgstr[1] "%v items"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Selectie en klembord:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:104
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -56,11 +56,11 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
 "Wanneer tekst of een gebied van het scherm is geaccentueerd met de muis of "
 "toetsenbord, dan is dat de <emphasis>selectie</emphasis>. Het kan geplakt "
@@ -72,55 +72,73 @@ msgstr ""
 "bevat de selectie en het klembord hetzelfde, zodat elke selectie "
 "onmiddellijk beschikbaar is om op elke manier te worden geplakt. Als het is "
 "uitgeschakeld kan de selectie nog steeds opgeslagen worden in de "
-"geschiedenis van het klembord (afhankelijk van de onderstaande opties), maar "
+"geschiedenis van het klembord (afhankelijk van de onderstaande optie), maar "
 "het kan alleen geplakt worden met de middelste muisknop."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:123
 #, kde-format
-msgid "Always save in history"
-msgstr "Altijd in de geschiedenis opslaan"
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Text selected with the pointer or keyboard"
+msgstr "Tekst geselecteerd met de aanwijzer of het toetsenbord"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:125
 #, kde-format
-msgid "Text selection:"
-msgstr "Tekstselectie:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
+msgid "Include in history:"
+msgstr "Opnemen in de geschiedenis:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
-#, kde-format
-msgid "Only when explicitly copied"
-msgstr "Alleen wanneer expliciet gekopieerd"
-
-#: configdialog.cpp:147
-#, kde-format
-msgid "Whether text selections are saved in the clipboard history."
-msgstr ""
-"Of tekstselecties opgeslagen worden in de geschiedenis van het klembord?"
-
-#: configdialog.cpp:178
-#, kde-format
-msgid "Non-text selection:"
-msgstr "Niet-tekstselectie:"
-
-#: configdialog.cpp:185
-#, kde-format
-msgid "Never save in history"
-msgstr "Nooit in de geschiedenis opslaan"
-
-#: configdialog.cpp:190
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
+"Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
-"Of niet-tekstselecties (zoals afbeeldingen) opgeslagen worden in de "
-"geschiedenis van het klembord?"
+"Expliciet gekopieerde tekst wordt altijd opgeslagen, tenzij deze als "
+"wachtwoord is gemarkeerd."
 
-#: configdialog.cpp:252
+#: configdialog.cpp:132
+#, kde-format
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Image data copied explicitly"
+msgstr "Afbeeldingsgegevens expliciet gekopieerd"
+
+#: configdialog.cpp:136
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+"Bijvoorbeeld lagen en selecties die zijn gekopieerd in "
+"beeldbewerkingsprogramma's zoals Krita of GIMP.<br/><a href=\"1\">Meer "
+"informatie over afbeeldingen op het klembord.</a>"
+
+#: configdialog.cpp:145
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+"Het klembord maakt het altijd mogelijk om afbeeldingsbestanden als "
+"bestandsnamen te kopiëren en toont de bijbehorende miniaturen. Deze "
+"instelling is van toepassing op gevallen waarin afbeeldingen rechtstreeks "
+"als gegevens worden opgeslagen. Sommige toepassingen ondersteunen beide "
+"methoden, terwijl andere afbeeldingen uitsluitend als gegevens accepteren."
+"<nl/><nl/>Houd er ook rekening mee dat de schermafdruk-hulpmiddel Spectacle "
+"deze instelling negeert wanneer deze zo is geconfigureerd dat "
+"schermafdrukken op het klembord worden opgeslagen. Ook toepassingen die "
+"zowel tekst als afbeeldingen versturen, zullen deze instelling negeren."
+
+#: configdialog.cpp:170
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Actie-pop-up-menu tonen:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -136,7 +154,7 @@ msgstr ""
 "het wordt niet getoond voor een uitgesloten venster, dan kan het getoond "
 "worden door de sneltoets <shortcut>%1</shortcut> te gebruiken."
 
-#: configdialog.cpp:274
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -144,67 +162,45 @@ msgid_plural "%v seconds"
 msgstr[0] "&v seconde"
 msgstr[1] "%v seconden"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Geen"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "Opties:"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-"Wanneer een <interface>overeenkomstpatroon</interface> overeenkomt met de "
-"inhoud van het klembord, verschijnen zijn <interface>commando's</interface> "
-"in het Klipper pop-up-menu en kan worden uitgevoerd."
-
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Overeenkomstpatroon en commando's"
 
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Beschrijving"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "Actie toevoegen..."
 
-#: configdialog.cpp:328
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "Actie bewerken..."
 
-#: configdialog.cpp:333
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "Actie verwijderen"
 
-#: configdialog.cpp:340
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-"De acties verschijnen in het pop-up-menu die geconfigureerd kan worden op de "
-"pagina <interface>Menu Actie</interface> page."
-
-#: configdialog.cpp:535
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -214,51 +210,51 @@ msgstr ""
 "De geselecteerde actie <resource>%1</resource> verwijderen<nl/>en al zijn "
 "commando's?"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Actie verwijderen bevestigen"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Algemeen"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "Algemene configuratie"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Sneltoetsen instellen"
@@ -268,30 +264,30 @@ msgstr "Sneltoetsen instellen"
 msgid "Return to Clipboard"
 msgstr "Terug naar klembord"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Een afbeelding van de QR-code is gekopieerd naar het klembord"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "QR-code afbeelding kopiëren naar het klembord"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr "QR-code"
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -299,60 +295,80 @@ msgstr ""
 "Er is niet genoeg ruimte om de QR-code te tonen. Probeer dit applet een "
 "andere grootte te geven."
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Aanmaken van QR-code is mislukt"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Invouwen"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Uitvouwen"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "Gehele geschiedenis"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "Alleen met ster"
 
-#: declarative/qml/ClipboardMenu.qml:349
+#: declarative/qml/ClipboardMenu.qml:376
 #, kde-format
 msgctxt "@info"
 msgid ""
-"The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
 msgstr ""
 "Het klembord bevat op dit moment een gevoelig stukje gegevens die niet in de "
 "geschiedenis zal worden opgeslagen."
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:378
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The clipboard currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"Het klembord bevat op dit moment een gevoelig stukje gegevens dat niet in de "
+"geschiedenis zal worden opgeslagen."
+
+#: declarative/qml/ClipboardMenu.qml:380
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr ""
+"De selectie bevat op dit moment een gevoelig stukje gegevens dat niet in de "
+"geschiedenis zal worden opgeslagen."
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Geheime gegevens wissen"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr "geen overeenkomsten"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"
@@ -362,27 +378,27 @@ msgstr "Klembordgeschiedenis is leeg"
 msgid "Invoke action"
 msgstr "Actie aanroepen"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, kde-format
 msgid "Show QR code"
 msgstr "QR-code tonen"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, kde-format
 msgid "Edit contents"
 msgstr "Inhoud bewerken"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Remove from history"
 msgstr "Uit geschiedenis verwijderen"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Remove Star"
 msgstr "Ster verwijderen"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Star"
 msgstr "Ster"
@@ -560,15 +576,13 @@ msgstr "Commando:"
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
-"Een <placeholder>&#37;s</placeholder> in het commando zal vervagen worden "
-"door de volledige inhoud van het klembord. <placeholder>&#37;0</placeholder> "
-"tot <placeholder>&#37;9</placeholder> zal vervagen worden door de "
-"overeenkomstige gevangen teksten uit het overeenkomstpatroon."
+"Een <b>&#37;s</b> in de opdracht wordt vervangen door de volledige inhoud "
+"van het klembord. <b>&#37;0</b> tot en met <b>&#37;9</b> worden vervangen "
+"door de bijbehorende tekstfragmenten uit het overeenkomende patroon."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -605,99 +619,113 @@ msgstr "Het pictogram resetten naar de standaard voor het commando"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:375
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:377
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Klembordgeschiedenis wissen"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:379 historymodel.cpp:679
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr "Deze vraag niet meer stellen"
+
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Dit item heeft een ster. Wilt u deze uit de geschiedenis verwijderen?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Item met ster verwijderen"
 
-#: klipper.cpp:73
+#: klipper.cpp:70
+#, kde-format
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "Klembord"
+
+#: klipper.cpp:74
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
-msgstr "Automatisch actie-pop-up-menu"
+msgid "Toggle Automatic Popping Up of Action Menu"
+msgstr "Automatisch actie-pop-up-menu omschakelen"
 
-#: klipper.cpp:90
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Klembordgeschiedenis &wissen"
 
-#: klipper.cpp:95
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Handmatig een actie op huidig klembord uitvoeren"
 
-#: klipper.cpp:103
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Inhoud be&werken…"
 
-#: klipper.cpp:111
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Barcode &tonen…"
 
-#: klipper.cpp:120
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Volgende item uit geschiedenis"
+msgid "Rotate History Down"
+msgstr ""
 
-#: klipper.cpp:125
-#, kde-format
+#: klipper.cpp:129
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Vorige item uit geschiedenis"
+msgid "Rotate History Up"
+msgstr "Geschiedenis wissen"
 
-#: klipper.cpp:132
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Items in klembord op de muispositie tonen"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klembordgeschiedenis"
 
-#: klipper.cpp:420
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "omhoog"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:427
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "huidige"
 
-#: klipper.cpp:434
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "omlaag"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -738,80 +766,60 @@ msgstr ""
 "toepassing eindigt."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "De selectie en het klembord hetzelfde houden"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Inhoud geselecteerd met de cursor wordt automatisch gekopieerd naar het "
-"klembord zodat het geplakt kan worden met ofwel een actie Plakken of een "
-"midden-klik.<br/><a href=\"1\">Meer over de selectie en het klembord</a>."
+"Inhoud geselecteerd met de aanwijzer wordt automatisch gekopieerd naar het "
+"klembord zodat het geplakt kan worden met ofwel een actie <i>Plakken</i> of "
+"een midden-klik.<br/><a href=\"1\">Meer over de selectie en het klembord</a>."
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:32
+#. i18n: ectx: label, entry (SaveSelection), group (General)
+#: klipper.kcfg:28
 #, kde-format
-msgid "Ignore the selection"
-msgstr "De selectie negeren"
+msgid "Save the selection"
+msgstr "De selectie opslaan"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:34
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
-"Inhoud geselecteerd met de cursor maar niet expliciet gekopieerd naar het "
+"Inhoud geselecteerd met de aanwijzer maar niet expliciet gekopieerd naar het "
 "klembord wordt niet automatisch opgeslagen in de geschiedenis van het "
-"klembord en kan alleen geplakt worden met een midden-klik."
+"klembord."
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:37
+#. i18n: ectx: label, entry (SaveImages), group (General)
+#: klipper.kcfg:33
 #, kde-format
-msgid "Text selection only"
-msgstr "Alleen geselecteerde tekst"
+msgid "Save images"
+msgstr "Afbeeldingen opslaan"
 
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
+#: klipper.kcfg:35
 #, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
-msgstr ""
-"Alleen tekstselecties opslaan in de geschiedenis van het klembord, geen "
-"afbeeldingen of elk ander type gegeven."
-
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr "Altijd afbeeldingen negeren"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
-"Geen afbeeldingen in de geschiedenis van het klembord opslaan, zelfs niet "
-"bij expliciet kopiëren."
+msgid "Store images in the clipboard history."
+msgstr "Afbeeldingen in de klembordgeschiedenis opslaan."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:38
 #, kde-format
 msgid "Immediately on selection"
 msgstr "Onmiddellijk op selectie"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
@@ -819,63 +827,63 @@ msgstr ""
 "Het pop-up-menu tonen van toepasselijke acties zodra een selectie is gemaakt."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:43
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Automatisch actie-menu-tijd:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:47
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Toon de automatische actie-pop-up-menu gedurende deze tijd."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:50
 #, kde-format
 msgid "History size:"
 msgstr "Geschiedenisgrootte:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
-#, kde-format
-msgid "The clipboard history will store up to this many items."
-msgstr "De geschiedenis van het klembord zal dit aantal items opslaan."
-
-#. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
-#, kde-format
-msgid "Dummy entry for indicating changes in an action's tree widget"
-msgstr "Dummyitem voor het aangeven van wijzigingen in een actieboom-widget"
-
-#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
-#, kde-format
-msgid "Trim whitespace from selection"
-msgstr "Witruimte uit selectie trimmen"
-
-#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:54
 #, kde-format
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"The clipboard history will store up to this many items. Maximum is 2048."
 msgstr ""
-"Elke witruimte aan het begin en einde van geselecteerde tekst, alvorens een "
-"actie uit te voeren. Dit verzekert, bijvoorbeeld, dat de URL geplakt in een "
-"browser geïnterpreteerd wordt zoals verwacht. De tekst opgeslagen in het "
-"klembord blijft hetzelfde."
+"De geschiedenis van het klembord zal dit aantal items opslaan. Maximum is "
+"2048."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Dummy-item voor het aangeven van wijzigingen in een actieboom-widget"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Trim whitespace"
+msgstr "Witruimte trimmen"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:66
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
+msgstr ""
+"Verwijder eventuele witruimte aan het begin en einde van de tekst die aan "
+"een actie wordt doorgegeven. De in de geschiedenis opgeslagen tekst blijft "
+"ongewijzigd."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:69
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Voor een item gekozen uit de geschiedenis"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -885,30 +893,112 @@ msgstr ""
 "geschiedenis van het klembord?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:74
 #, kde-format
-msgid "Include MIME actions"
-msgstr "MIME-acties meenemen"
+msgid "Offer applications for copied links and files"
+msgstr "Bied toepassingen aan voor gekopieerde koppelingen en bestanden"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
 msgstr ""
-"Als een bestandsnaam of URL is geselecteerd, neem dan toepassingen mee die "
-"zijn MIME-type kan accepteren in het pop-up-menu."
+"Bij een koppeling die begint met <i>http://</i> of <i>https://</i>, of bij "
+"bestanden, worden toepassingen die deze kunnen openen aangeboden naast uw "
+"bijbehorende acties, indien van toepassing."
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Klembordverschijning"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annuleren"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Volgende item uit geschiedenis"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Vorige item uit geschiedenis"
+
+#~ msgid "up"
+#~ msgstr "omhoog"
+
+#~ msgid "down"
+#~ msgstr "omlaag"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "These actions appear in the popup menu which can be configured on the "
+#~ "<interface>Action Menu</interface> page."
+#~ msgstr ""
+#~ "De acties verschijnen in het pop-up-menu die geconfigureerd kan worden op "
+#~ "de pagina <interface>Menu Actie</interface> page."
+
+#~ msgid "Text selection:"
+#~ msgstr "Tekstselectie:"
+
+#~ msgid "Only when explicitly copied"
+#~ msgstr "Alleen wanneer expliciet gekopieerd"
+
+#~ msgid "Non-text selection:"
+#~ msgstr "Niet-tekstselectie:"
+
+#~ msgid "Never save in history"
+#~ msgstr "Nooit in de geschiedenis opslaan"
+
+#~ msgid ""
+#~ "Whether non-text selections (such as images) are saved in the clipboard "
+#~ "history."
+#~ msgstr ""
+#~ "Of niet-tekstselecties (zoals afbeeldingen) opgeslagen worden in de "
+#~ "geschiedenis van het klembord?"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When a <interface>match pattern</interface> matches the clipboard "
+#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
+#~ "menu and can be executed."
+#~ msgstr ""
+#~ "Wanneer een <interface>overeenkomstpatroon</interface> overeenkomt met de "
+#~ "inhoud van het klembord, verschijnen zijn <interface>commando's</"
+#~ "interface> in het Klipper pop-up-menu en kan worden uitgevoerd."
+
+#~ msgid "Text selection only"
+#~ msgstr "Alleen geselecteerde tekst"
+
+#~ msgid ""
+#~ "Only store text selections in the clipboard history, not images or any "
+#~ "other type of data."
+#~ msgstr ""
+#~ "Alleen tekstselecties opslaan in de geschiedenis van het klembord, geen "
+#~ "afbeeldingen of elk ander type gegeven."
+
+#~ msgid "Always ignore images"
+#~ msgstr "Altijd afbeeldingen negeren"
+
+#~ msgid ""
+#~ "Do not store images in the clipboard history, even if explicitly copied."
+#~ msgstr ""
+#~ "Geen afbeeldingen in de geschiedenis van het klembord opslaan, zelfs niet "
+#~ "bij expliciet kopiëren."
+
+#~ msgid "Include MIME actions"
+#~ msgstr "MIME-acties meenemen"
+
+#~ msgid ""
+#~ "If a file name or URL is selected, include applications that can accept "
+#~ "its MIME type in the popup menu."
+#~ msgstr ""
+#~ "Als een bestandsnaam of URL is geselecteerd, neem dan toepassingen mee "
+#~ "die zijn MIME-type kan accepteren in het pop-up-menu."
 
 #~ msgid "The clipboard history contains starred items. Clear them too?"
 #~ msgstr ""

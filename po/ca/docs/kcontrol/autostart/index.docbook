@@ -92,7 +92,7 @@
 ><guimenuitem
 >Surt</guimenuitem
 ></menuchoice
-> (el &konversation;, &kopete;), altrament l'aplicació encara s'estarà executant a la safata del sistema i es reiniciarà durant el proper inici de la sessió. </para>
+> (el &konversation;, &kopete;), altrament l'aplicació encara s'estarà executant a la safata del sistema i es reiniciarà durant l'inici de sessió següent. </para>
 
 <sect2 id="migration">
 <title

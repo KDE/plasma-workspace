@@ -158,7 +158,12 @@ void MenuProxy::enableGtkSettings(bool enable)
 
 QString MenuProxy::gtkRc2Path()
 {
-    return QDir::homePath() + QLatin1String("/.gtkrc-2.0");
+    // Same as kde-gtk-config
+    QString gtkrcPath = qEnvironmentVariable("GTK2_RC_FILES").section(QLatin1Char(':'), 0, 0);
+    if (gtkrcPath.isEmpty()) {
+        gtkrcPath = QDir::homePath() + QStringLiteral("/.gtkrc-2.0");
+    }
+    return gtkrcPath;
 }
 
 QString MenuProxy::gtk3SettingsIniPath()

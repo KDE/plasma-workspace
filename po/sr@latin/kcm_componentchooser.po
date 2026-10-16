@@ -2,13 +2,14 @@
 # Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2008, 2009, 2011, 2016, 2017.
 # Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-03 15:51+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -23,99 +24,94 @@ msgstr ""
 #: applicationmodel.cpp:64
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "Drugi…"
 
 #: components/componentchooserarchivemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default archive manager"
-msgstr "Izaberite željeni klijent e‑pošte:"
+msgstr "Izaberite podrazumevani menadžer arhiva"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr ""
+msgstr "Izaberite podrazumevani pregledač"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Izaberite željeni terminalski program:"
+msgstr "Izaberite podrazumevani kalendarski program"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
 msgid "Select default e-mail client"
-msgstr ""
+msgstr "Izaberite podrazumevani klijent e‑pošte"
 
 #: components/componentchooserfilemanager.cpp:15
-#, fuzzy, kde-format
-#| msgid "Select preferred email client:"
+#, kde-format
 msgid "Select default file manager"
-msgstr "Izaberite željeni klijent e‑pošte:"
+msgstr "Izaberite podrazumevani menadžer fajlova"
 
 #: components/componentchoosergeo.cpp:13
 #, kde-format
 msgid "Select default map"
-msgstr ""
+msgstr "Izaberite podrazumevani program za mape"
 
 #: components/componentchooserimageviewer.cpp:15
 #, kde-format
 msgid "Select default image viewer"
-msgstr ""
+msgstr "Izaberite podrazumevani prikazivač slika"
 
 #: components/componentchoosermusicplayer.cpp:15
 #, kde-format
 msgid "Select default music player"
-msgstr ""
+msgstr "Izaberite podrazumevani muzički plejer"
 
 #: components/componentchooserpdfviewer.cpp:11
 #, kde-format
 msgid "Select default PDF viewer"
-msgstr ""
+msgstr "Izaberite podrazumevani PDF prikazivač"
 
 #: components/componentchoosertel.cpp:17
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default dialer application"
-msgstr "Izaberite željeni terminalski program:"
+msgstr "Izaberite podrazumevani program za biranje brojeva"
 
 #: components/componentchooserterminal.cpp:25
-#, fuzzy, kde-format
-#| msgid "Select preferred terminal application:"
+#, kde-format
 msgid "Select default terminal emulator"
-msgstr "Izaberite željeni terminalski program:"
+msgstr "Izaberite podrazumevani emulator terminala"
 
 #: components/componentchoosertexteditor.cpp:15
 #, kde-format
 msgid "Select default text editor"
-msgstr ""
+msgstr "Izaberite podrazumevani uređivač teksta"
 
 #: components/componentchooservideoplayer.cpp:15
 #, kde-format
 msgid "Select default video player"
-msgstr ""
+msgstr "Izaberite podrazumevani video plejer"
 
 #: ui/ComponentOverlay.qml:54
 #, kde-format
 msgid "Details"
-msgstr ""
+msgstr "Detalji"
 
 #: ui/ComponentOverlay.qml:84
 #, kde-format
 msgid "This application can also open these file types:"
-msgstr ""
+msgstr "Ovaj program može da otvara i ove tipove fajlova:"
 
 #: ui/ComponentOverlay.qml:98
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (trenutno se otvara u programu %2)"
 
 #: ui/ComponentOverlay.qml:111
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Otvori sve u programu %1"
 
 #: ui/ComponentOverlay.qml:130
 #, kde-format
@@ -123,17 +119,19 @@ msgid ""
 "This application does not advertise support for the following file types, "
 "but may be able to open them anyway:"
 msgstr ""
+"Ovaj program ne navodi podršku za sledeće tipove fajlova, ali možda ipak "
+"može da ih otvori:"
 
 #: ui/ComponentOverlay.qml:147
 #, kde-format
 msgctxt "@action:button"
 msgid "Force All to Open in %1"
-msgstr ""
+msgstr "Prinudno otvori sve u programu %1"
 
 #: ui/ComponentOverlay.qml:159
 #, kde-format
 msgid "Configure Manually…"
-msgstr ""
+msgstr "Podesi ručno…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -141,127 +139,109 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
+"Izgleda da „%1“ ne podržava sledeće MIME tipove pridružene ovoj vrsti "
+"programa: %2"
 
 #: ui/main.qml:34
 #, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
-msgstr ""
+msgstr "Ovaj program možda neće moći da otvori sve tipove fajlova."
 
 #: ui/main.qml:36
 #, kde-format
 msgctxt "@action:button"
 msgid "View Details"
-msgstr ""
+msgstr "Prikaži detalje"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: ui/main.qml:69
 #, kde-format
 msgid "Web browser:"
-msgstr ""
+msgstr "Veb pregledač:"
 
 #: ui/main.qml:83
 #, kde-format
 msgid "Email client:"
-msgstr ""
+msgstr "Klijent e‑pošte:"
 
 #: ui/main.qml:97
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Kalendar:"
 
 #: ui/main.qml:111
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
-msgstr ""
+msgstr "Brojevi telefona:"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedija"
 
 #: ui/main.qml:131
 #, kde-format
 msgid "Image viewer:"
-msgstr ""
+msgstr "Prikazivač slika:"
 
 #: ui/main.qml:145
 #, kde-format
 msgid "Music player:"
-msgstr ""
+msgstr "Muzički plejer:"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Video player:"
-msgstr ""
+msgstr "Video plejer:"
 
 #: ui/main.qml:173
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Dokumenti"
 
 #: ui/main.qml:179
 #, kde-format
 msgid "Text editor:"
-msgstr ""
+msgstr "Uređivač teksta:"
 
 #: ui/main.qml:194
 #, kde-format
 msgid "PDF viewer:"
-msgstr ""
+msgstr "PDF prikazivač:"
 
 #: ui/main.qml:208
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
-msgstr ""
+msgstr "Alatke"
 
 #: ui/main.qml:214
 #, kde-format
 msgid "File manager:"
-msgstr ""
+msgstr "Menadžer fajlova:"
 
 #: ui/main.qml:228
 #, kde-format
 msgid "Terminal emulator:"
-msgstr ""
+msgstr "Emulator terminala:"
 
 #: ui/main.qml:242
 #, kde-format
 msgid "Archive manager:"
-msgstr ""
+msgstr "Menadžer arhiva:"
 
 #: ui/main.qml:256
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
-msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Toplica Tanasković"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "toptan@kde.org.yu"
-
-#~ msgid "Unknown"
-#~ msgstr "nepoznato"
-
-#~ msgid "Component Chooser"
-#~ msgstr "Birač komponenata|/|$[svojstva dat 'Biraču komponenata']"
-
-#~ msgid "(c), 2002 Joseph Wenninger"
-#~ msgstr "© 2002, Jozef Veninger"
-
-#~ msgid "Joseph Wenninger"
-#~ msgstr "Jozef Veninger"
+msgstr "Mape:"

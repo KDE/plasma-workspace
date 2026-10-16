@@ -40,53 +40,6 @@
 
 using namespace Qt::StringLiterals;
 
-static void showSystemTrayMenuX11(QMenu *menu, QQuickItem *trayItem, const QPoint &pos, Plasma::Types::Location location)
-{
-    int x = pos.x();
-    int y = pos.y();
-
-    // try tofind the icon screen coordinates, and adjust the position as a poor
-    // man's popupPosition
-
-    QRect screenItemRect(trayItem->mapToScene(QPointF(0, 0)).toPoint(), QSize(trayItem->width(), trayItem->height()));
-
-    if (trayItem->window()) {
-        screenItemRect.moveTopLeft(trayItem->window()->mapToGlobal(screenItemRect.topLeft()));
-    }
-
-    menu->adjustSize();
-
-    switch (location) {
-    case Plasma::Types::LeftEdge:
-        x = screenItemRect.right();
-        y = screenItemRect.top();
-        break;
-    case Plasma::Types::RightEdge:
-        x = screenItemRect.left() - menu->width();
-        y = screenItemRect.top();
-        break;
-    case Plasma::Types::TopEdge:
-        x = screenItemRect.left();
-        y = screenItemRect.bottom();
-        break;
-    case Plasma::Types::BottomEdge:
-        x = screenItemRect.left();
-        y = screenItemRect.top() - menu->height();
-        break;
-    default:
-        x = screenItemRect.left();
-        if (screenItemRect.top() - menu->height() >= trayItem->window()->screen()->geometry().top()) {
-            y = screenItemRect.top() - menu->height();
-        } else {
-            y = screenItemRect.bottom();
-        }
-    }
-
-    menu->winId();
-    menu->windowHandle()->setTransientParent(trayItem->window());
-    menu->popup(QPoint(x, y));
-}
-
 static void showSystemTrayMenuWayland(QMenu *menu, QQuickItem *trayItem, Plasma::Types::Location location)
 {
     QWindow *trayWindow = trayItem->window();
@@ -211,6 +164,14 @@ void SystemTray::initSettingsAndRegistry()
     }
 }
 
+void SystemTray::initRegistry()
+{
+    if (m_plasmoidRegistry && !m_registryInitialized) {
+        m_plasmoidRegistry->init();
+        m_registryInitialized = true;
+    }
+}
+
 void SystemTray::migrateFromSystrayContainer()
 {
     // Search the old systray containment config group
@@ -294,7 +255,7 @@ void SystemTray::restoreContents(KConfigGroup &group)
     }
 
     initSettingsAndRegistry();
-    m_plasmoidRegistry->init();
+    initRegistry();
 }
 
 void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
@@ -357,11 +318,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
 
     KAcceleratorManager::manage(desktopMenu);
 
-    if (KWindowSystem::isPlatformWayland()) {
-        showSystemTrayMenuWayland(desktopMenu, appletInterface, location());
-    } else {
-        showSystemTrayMenuX11(desktopMenu, appletInterface, pos.toPoint(), location());
-    }
+    showSystemTrayMenuWayland(desktopMenu, appletInterface, location());
 }
 
 QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
@@ -375,20 +332,6 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
     QQuickWindow *const window = visualParent->window();
     if (window && window->screen()) {
         pos = window->mapToGlobal(pos.toPoint());
-#if HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            const auto devicePixelRatio = window->screen()->devicePixelRatio();
-            if (QGuiApplication::screens().size() == 1) {
-                return pos * devicePixelRatio;
-            }
-
-            const QRect geometry = window->screen()->geometry();
-            const QRect nativeGeometry = window->screen()->handle()->geometry();
-            const QPointF nativeGlobalPosOnCurrentScreen = (pos - geometry.topLeft()) * devicePixelRatio;
-
-            return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
-        }
-#endif
 
         if (KWindowSystem::isPlatformWayland()) {
             if (!m_xwaylandClientsScale) {
@@ -423,11 +366,20 @@ bool SystemTray::isSystemTrayApplet(const QString &appletId)
 SystemTrayModel *SystemTray::systemTrayModel()
 {
     if (!m_systemTrayModel) {
+        // Ensure settings and registry are initialized before creating the model.
+        // This can be called from QML property binding before init() completes.
+        initSettingsAndRegistry();
+
         m_systemTrayModel = new SystemTrayModel(this);
 
         m_plasmoidModel = new PlasmoidModel(m_settings, m_plasmoidRegistry, m_systemTrayModel);
         connect(this, &SystemTray::appletAdded, m_plasmoidModel, &PlasmoidModel::addApplet);
         connect(this, &SystemTray::appletRemoved, m_plasmoidModel, &PlasmoidModel::removeApplet);
+
+        // Initialize registry after model is created so signals are properly connected
+        initRegistry();
+
+        // Add any applets that already exist
         for (auto applet : applets()) {
             m_plasmoidModel->addApplet(applet);
         }
@@ -572,10 +524,6 @@ void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *status
         Qt::SingleShotConnection);
 
     QWindow *window = nullptr;
-    if (KWindowSystem::isPlatformX11()) {
-        source->activate(pos.x(), pos.y());
-        return;
-    }
 
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
     tokenFuture.then(source, [source, service, pos](const QString &token) {
@@ -594,10 +542,6 @@ void SystemTray::secondaryActivate(const QString &service, QPoint pos)
     }
 
     QWindow *window = nullptr;
-    if (KWindowSystem::isPlatformX11()) {
-        source->secondaryActivate(pos.x(), pos.y());
-        return;
-    }
 
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
     tokenFuture.then(source, [source, pos](const QString &token) {
@@ -619,29 +563,15 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
         source,
         &StatusNotifierItemSource::contextMenuReady,
         this,
-        [this, statusNotifierIcon, pos](QMenu *menu) {
-            if (menu && !menu->isEmpty()) {
+        [this, statusNotifierIcon = QPointer<QQuickItem>{statusNotifierIcon}](QMenu *menu) {
+            if (statusNotifierIcon && menu && !menu->isEmpty()) {
                 KAcceleratorManager::manage(menu);
-
-                if (KWindowSystem::isPlatformWayland()) {
-                    showSystemTrayMenuWayland(menu, statusNotifierIcon, location());
-                } else {
-                    showSystemTrayMenuX11(menu, statusNotifierIcon, pos, location());
-
-                    // Workaround for QTBUG-59044
-                    if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
-                        item->ungrabMouse();
-                    }
-                }
+                showSystemTrayMenuWayland(menu, statusNotifierIcon, location());
             }
         },
         Qt::SingleShotConnection);
 
     QWindow *window = nullptr;
-    if (KWindowSystem::isPlatformX11()) {
-        source->contextMenu(pos.x(), pos.y());
-        return;
-    }
 
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
     tokenFuture.then(source, [source, pos](const QString &token) {

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
-"PO-Revision-Date: 2026-07-17 16:21+0200\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-09 18:12+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -139,9 +139,9 @@ msgid ""
 "filename> config file."
 msgstr ""
 "Tu es secur que tu vole celar permanentemente le standardo de vista "
-"preliminar?<nl/><nl/>Iste action pote solmente esser annullateper remover le "
-"rango initiante con  <icode>ShowDesktopPreviewBanner</icode> in le file de "
-"configuration <filename>kdeglobals</filename>."
+"preliminar?<nl/><nl/>Iste action pote solmente esser annullate per remover "
+"le rango initiante con  <icode>ShowDesktopPreviewBanner</icode> in le file "
+"de configuration <filename>kdeglobals</filename>."
 
 #: desktopview.cpp:305
 #, kde-format
@@ -159,42 +159,42 @@ msgstr "Entra modo de modificar"
 msgid "Exit Edit Mode"
 msgstr "Exi modo de modificar"
 
-#: main.cpp:108
+#: main.cpp:126
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell (Shell de Plasma)"
 
-#: main.cpp:121
+#: main.cpp:139
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Habilita Cribrator (Debugger) de JavaScript de QML"
 
-#: main.cpp:124
+#: main.cpp:142
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Non reinitia automaticamente le shell de plasma postea un fracasso"
 
-#: main.cpp:127
+#: main.cpp:145
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Fortia a encargar le date plugin de shell"
 
-#: main.cpp:131
+#: main.cpp:149
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Reimplacia un instantia existente"
 
-#: main.cpp:134
+#: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lista le optiones disponibile per responsa al usator"
 
-#: main.cpp:190
+#: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma falleva a initiar"
 
-#: main.cpp:191
+#: main.cpp:209
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -351,53 +351,53 @@ msgstr "Schermo includite"
 msgid "Disconnected Screen %1"
 msgstr "Schermo Disconnectite %1"
 
-#: shellcorona.cpp:173 shellcorona.cpp:175
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "Monstra Scriptorio"
 
-#: shellcorona.cpp:175
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Cela Scriptorio"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Activa Lanceator de application "
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Monstra commutator de activitate"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Commuta a previe activitate"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Commuta a proxime activitate"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gere scriptorios e pannellos..."
 
-#: shellcorona.cpp:269
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Move foco de claviero inter pannellos"
 
-#: shellcorona.cpp:2275
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "Adde Pannello"
 
-#: shellcorona.cpp:2362
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -10,6 +10,8 @@
 
 #include "taskmanager_export.h"
 
+class QScreen;
+
 namespace TaskManager
 {
 /**
@@ -207,6 +209,15 @@ public:
      * @since 6.6
      **/
     virtual void requestToggleExcludeFromCapture(const QModelIndex &index) = 0;
+
+    /**
+     * Request sending the task at the given index to the specified output.
+     *
+     * @param index An index in this tasks model.
+     * @param screen The output to send it to.
+     * @since 6.9
+     */
+    virtual void requestSendToOutput(const QModelIndex &index, QScreen *screen) = 0;
 };
 
 }

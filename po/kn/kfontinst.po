@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2010-01-28 23:29+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -28,129 +28,6 @@ msgstr "ಶಂಕರ ಪ್ರಸಾದ್ ಎಂ ವಿ, ವಾಸುದೇವ 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "svenkate@redhat.com,kamathvasudev@gmail.com"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "ಎಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸಬೇಕು"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕ"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕ"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "(C) Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr "winid ಸೂಚಿಸಲಾದ ಒಂದು X app ಗಾಗಿ ಸಂವಾದ ಚೌಕವನ್ನು ಕ್ಷಣಿಕವಾಗಿಸುತ್ತದೆ"
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "ಅನುಸ್ಥಾಪಿಸಲು ತಾಣಸೂಚಿ"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "ಮುದ್ರಣ"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, fuzzy, kde-format
-#| msgid "Canceling..."
-msgid "Canceling…"
-msgstr "ರದ್ದು ಮಾಡಲಾಗುತ್ತಿದೆ..."
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "ಅಕ್ಷರಶೈಲಿ ಮುದ್ರಕ"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ಮುದ್ರಕ"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr "winid ಸೂಚಿಸಲಾದ ಒಂದು X app ಗಾಗಿ ಸಂವಾದ ಚೌಕವನ್ನು ಕ್ಷಣಿಕವಾಗಿಸುತ್ತದೆ"
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಮುದ್ರಿಸಲು ಗಾತ್ರ ಸೂಚಿ"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "ಮುದ್ರಿಸಬೇಕಿರುವ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತ"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "ಮುದ್ರಿಸಬೇಕಿರುವ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತವನ್ನು ತೆಗೆದು ಹಾಕಿ"
-
-#: apps/Viewer.cpp:50
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
-msgid "Open an existing font file"
-msgstr "ಎಲ್ಲಾ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕದಲ್ಲಿ ತೆರೆಯಬೇಕೆ?"
-
-#: apps/Viewer.cpp:51
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
-msgid "Print font preview"
-msgstr "ಅಕ್ಷರಶೈಲಿಯ ನಮೂನೆಗಳನ್ನು ಮುದ್ರಿಸಿ"
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "ನೋಡಲು ಅಕ್ಷರಶೈಲಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "ತೆರೆಯಬೇಕಿರುವ ತಾಣಸೂಚಿ"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕ"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕ"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -198,6 +75,12 @@ msgstr "ನೀವು ಖಚಿತವಾಗಿಯೂ ಅಳಿಸಲು ಬಯಸ
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "ಅಕ್ಷರಶೈಲಿಯ ಶೋಧನೆಯನ್ನು ನಿಲ್ಲಿಸಬೇಕೆ?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, fuzzy, kde-format
+#| msgid "Canceling..."
+msgid "Canceling…"
+msgstr "ರದ್ದು ಮಾಡಲಾಗುತ್ತಿದೆ..."
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -578,17 +461,17 @@ msgstr "ಬ್ಯಾಕೆಂಡ್ ಕೊನೆಗೊಂಡಿದೆ, ಆದರ
 msgid "<h3>Error</h3>"
 msgstr "<h3>ದೋಷ</h3>"
 
-#: kcmfontinst/JobRunner.cpp:692
+#: kcmfontinst/JobRunner.cpp:693
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<i>%1</i> ಡೌನಲೋಡ್ ವಿಫಲಗೊಂಡಿದೆ"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:695
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಬ್ಯಾಕೆಂಡ್ ಕೊನೆಗೊಂಡಿದೆ. ದಯವಿಟ್ಟು ಮರು ಪ್ರಯತ್ನಿಸಿ. <br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -596,7 +479,7 @@ msgstr ""
 "<i>%1</i> ಒಂದು ಬಿಟ್ ಮ್ಯಾಪ್ ಅಕ್ಷರಶೈಲಿಯಾಗಿದೆ, ಹಾಗು ನಿಮ್ಮ ಗಣಕದಲ್ಲಿ ಇವುಗಳನ್ನು "
 "ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ."
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -605,47 +488,47 @@ msgstr ""
 "<i>%1</i> ರಲ್ಲಿ <b>%2</b> ಅಕ್ಷರಶೈಲಿಯಿದೆ, ಇದನ್ನು ಈಗಾಗಲೆ ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ "
 "ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ."
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> ಅಕ್ಷರಶೈಲಿಯಾಗಿಲ್ಲ."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "<i>%1</i> ಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ಕಡತಗಳನ್ನು ತೆಗೆಯಲು ಆಗುತ್ತಿಲ್ಲ"
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಡೀಮನ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ವಿಫಲವಾಗಿದೆ.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:707 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>'%1'</i>ಈಗಾಗಲೆ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ."
 
-#: kcmfontinst/JobRunner.cpp:710
+#: kcmfontinst/JobRunner.cpp:711
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ."
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:713
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "ಅನುಮತಿ ನಿರಾಕರಿಸಲಾಗಿದೆ. <br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "ಬೆಂಬಲವಿಲ್ಲದ ಕಾರ್ಯ.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "ದೃಢೀಕರಣ ವಿಫಲವಾಯಿತು.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, fuzzy, kde-format
 #| msgid "Unexpected error whilst processing: <i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
@@ -934,6 +817,18 @@ msgstr ""
 "ಶಕ್ತಗೊಳಿಸಲಾದ ಅಕ್ಷರಶೈಲಿಗಳು:</td><td>%3</td></tr><tr><td>ಒಟ್ಟು ಅಕ್ಷರಶೈಲಿಗಳು:</"
 "td><td>%4</td></tr></table>"
 
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "ಎಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸಬೇಕು"
+
 #: kcmfontinst/KCmFontInst.cpp:979
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
@@ -1214,54 +1109,54 @@ msgstr "%1ಗೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ಕಡತಗಳನ�
 msgid "Unknown"
 msgstr "ಅಜ್ಞಾತ"
 
-#: lib/FcEngine.cpp:894
+#: lib/FcEngine.cpp:889
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:897
+#: lib/FcEngine.cpp:892
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1059
+#: lib/FcEngine.cpp:1054
 #, kde-format
 msgid "No characters found."
 msgstr "ಯಾವುದೆ ಅಕ್ಷರಗಳು ಕಂಡುಬಂದಿಲ್ಲ."
 
-#: lib/FcEngine.cpp:1097
+#: lib/FcEngine.cpp:1092
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "The quick brown fox jumps over the lazy dog"
 
-#: lib/FcEngine.cpp:1102
+#: lib/FcEngine.cpp:1097
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1107
+#: lib/FcEngine.cpp:1102
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1112
+#: lib/FcEngine.cpp:1107
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1510
+#: lib/FcEngine.cpp:1505
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "ದೋಷ: ಅಕ್ಷರಶೈಲಿಯ ಹೆಸರನ್ನು ನಿರ್ಧರಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
 
-#: lib/FcEngine.cpp:1513
+#: lib/FcEngine.cpp:1508
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -2301,6 +2196,69 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "Font Installer"
+#~ msgstr "ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "Simple font installer"
+#~ msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕ"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "(C) Craig Drummond, 2007"
+
+#, fuzzy
+#~| msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgid "Makes the dialog transient for a window specified by windowHandle"
+#~ msgstr "winid ಸೂಚಿಸಲಾದ ಒಂದು X app ಗಾಗಿ ಸಂವಾದ ಚೌಕವನ್ನು ಕ್ಷಣಿಕವಾಗಿಸುತ್ತದೆ"
+
+#~ msgid "URL to install"
+#~ msgstr "ಅನುಸ್ಥಾಪಿಸಲು ತಾಣಸೂಚಿ"
+
+#~ msgid "Print"
+#~ msgstr "ಮುದ್ರಣ"
+
+#~ msgid "Font Printer"
+#~ msgstr "ಅಕ್ಷರಶೈಲಿ ಮುದ್ರಕ"
+
+#~ msgid "Simple font printer"
+#~ msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ಮುದ್ರಕ"
+
+#~ msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgstr "winid ಸೂಚಿಸಲಾದ ಒಂದು X app ಗಾಗಿ ಸಂವಾದ ಚೌಕವನ್ನು ಕ್ಷಣಿಕವಾಗಿಸುತ್ತದೆ"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಮುದ್ರಿಸಲು ಗಾತ್ರ ಸೂಚಿ"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "ಮುದ್ರಿಸಬೇಕಿರುವ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತ"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "ಮುದ್ರಿಸಬೇಕಿರುವ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತವನ್ನು ತೆಗೆದು ಹಾಕಿ"
+
+#, fuzzy
+#~| msgid "Open all %1 fonts in font viewer?"
+#~ msgid "Open an existing font file"
+#~ msgstr "ಎಲ್ಲಾ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕದಲ್ಲಿ ತೆರೆಯಬೇಕೆ?"
+
+#, fuzzy
+#~| msgid "Print Font Samples"
+#~ msgid "Print font preview"
+#~ msgstr "ಅಕ್ಷರಶೈಲಿಯ ನಮೂನೆಗಳನ್ನು ಮುದ್ರಿಸಿ"
+
+#~ msgid "Select Font to View"
+#~ msgstr "ನೋಡಲು ಅಕ್ಷರಶೈಲಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
+
+#~ msgid "URL to open"
+#~ msgstr "ತೆರೆಯಬೇಕಿರುವ ತಾಣಸೂಚಿ"
+
+#~ msgid "Font Viewer"
+#~ msgstr "ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕ"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕ"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "(C) Craig Drummond, 2004-2007"
 
 #, fuzzy
 #~| msgid "Font Management Mode"

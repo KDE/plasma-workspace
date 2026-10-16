@@ -1,13 +1,14 @@
 # Translation of plasma_runner_kill into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2009.
 # Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-runner-kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2009-12-29 22:11+0100\n"
-"Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +48,7 @@ msgstr "Obustavi %1"
 #: killrunner.cpp:86
 #, kde-format
 msgid "Process ID: %1"
-msgstr ""
+msgstr "ID procesa: %1"
 
 # >> @item:inlistbox Sort by:
 #: killrunner_config.cpp:25

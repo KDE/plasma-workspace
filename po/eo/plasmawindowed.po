@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-27 00:47+0000\n"
+"POT-Creation-Date: 2026-10-01 17:43+0000\n"
 "PO-Revision-Date: 2023-11-20 23:15+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -56,7 +56,7 @@ msgstr "Argumento donenda al la plasmoido."
 msgid "Internal, for testing"
 msgstr ""
 
-#: plasmawindowedview.cpp:121
+#: plasmawindowedview.cpp:127
 #, kde-format
 msgid "Close %1"
 msgstr "Fermi %1"

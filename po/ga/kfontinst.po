@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/kfontinst.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-02-18 07:04+0000\n"
 "Last-Translator: charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -27,130 +27,6 @@ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-"An bhfuil fonn ort an cló nó na clónna a shuiteáil d'úsáid phearsanta (ar do "
-"shonsa amháin), nó ar fud an chórais (ar son gach úsáideora)?"
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "Suíomh Suiteála"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "Suiteálaí Clónna"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "Suiteálaí simplí clónna"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "© Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, kde-format
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr ""
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "URL le suiteáil"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "Priontáil"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr ""
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "Printéir Cló"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "Printéir simplí cló"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr ""
-"Déan an dialóg sealadach le haghaidh an fheidhmchláir X sonraithe ag winid"
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "Clómhéid le priontáil"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-"An cló le priontáil, sonraithe mar \"Clann,Stíl\" agus is uimhir dheachúlach "
-"24-giotán é \"Stíl\" san fhoirm seo: <troime><leithead><claonadh>"
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "Comhad ina bhfuil liosta de chlónna le priontáil"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "Bain an comhad ina bhfuil liosta de chlónna le priontáil"
-
-#: apps/Viewer.cpp:50
-#, kde-format
-msgid "Open an existing font file"
-msgstr ""
-
-#: apps/Viewer.cpp:51
-#, kde-format
-msgid "Print font preview"
-msgstr ""
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "Roghnaigh Cló le Taispeáint"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "URL le hoscailt"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "Amharcán Clónna"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "Amharcán simplí clónna"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "© Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -200,6 +76,11 @@ msgstr "An bhfuil tú cinnte go dteastaíonn uait é seo a scriosadh:"
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Cealaigh scanadh na gclónna?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr ""
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -594,70 +475,70 @@ msgstr ""
 msgid "<h3>Error</h3>"
 msgstr "<h3>Earráid</h3>"
 
-#: kcmfontinst/JobRunner.cpp:692
+#: kcmfontinst/JobRunner.cpp:693
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Theip ar <i>%1</i> a íosluchtú"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:695
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "Ní cló é <i>%1</i>."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:707 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "Tá <i>%1</i> ann cheana."
 
-#: kcmfontinst/JobRunner.cpp:710
+#: kcmfontinst/JobRunner.cpp:711
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "Níl <i>%1</i> ann."
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:713
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Cead diúltaithe.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Theip ar fhíordheimhniú.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:719
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr ""
@@ -935,6 +816,20 @@ msgid ""
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
+
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"An bhfuil fonn ort an cló nó na clónna a shuiteáil d'úsáid phearsanta (ar do "
+"shonsa amháin), nó ar fud an chórais (ar son gach úsáideora)?"
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "Suíomh Suiteála"
 
 #: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
@@ -1234,56 +1129,56 @@ msgstr ""
 msgid "Unknown"
 msgstr "Anaithnid"
 
-#: lib/FcEngine.cpp:894
+#: lib/FcEngine.cpp:889
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:897
+#: lib/FcEngine.cpp:892
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaÁáBbCcDdEeÉéFfGgHhIiÍíJjKkLlMmNnOoÓóPpQqRrSsTtUuÚúVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1059
+#: lib/FcEngine.cpp:1054
 #, kde-format
 msgid "No characters found."
 msgstr "Níor aimsíodh aon charachtair."
 
 # http://en.wikipedia.org/wiki/Gaelic_script
-#: lib/FcEngine.cpp:1097
+#: lib/FcEngine.cpp:1092
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr ""
 "Chuaigh bé mhórshách le dlúthspád fíorfhinn trí hata mo dhea-phorcáin bhig"
 
-#: lib/FcEngine.cpp:1102
+#: lib/FcEngine.cpp:1097
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "AÁBCDEÉFGHIÍJKLMNOÓPQRSTUÚVWXYZ"
 
-#: lib/FcEngine.cpp:1107
+#: lib/FcEngine.cpp:1102
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "aábcdeéfghiíjklmnoópqrstuúvwxyz"
 
-#: lib/FcEngine.cpp:1112
+#: lib/FcEngine.cpp:1107
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1510
+#: lib/FcEngine.cpp:1505
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "EARRÁID: Níorbh fhéidir ainm an chló a dhéanamh amach."
 
-#: lib/FcEngine.cpp:1513
+#: lib/FcEngine.cpp:1508
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
@@ -2326,3 +2221,60 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi Hangalach"
+
+#~ msgid "Font Installer"
+#~ msgstr "Suiteálaí Clónna"
+
+#~ msgid "Simple font installer"
+#~ msgstr "Suiteálaí simplí clónna"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "© Craig Drummond, 2007"
+
+#~ msgid "URL to install"
+#~ msgstr "URL le suiteáil"
+
+#~ msgid "Print"
+#~ msgstr "Priontáil"
+
+#~ msgid "Font Printer"
+#~ msgstr "Printéir Cló"
+
+#~ msgid "Simple font printer"
+#~ msgstr "Printéir simplí cló"
+
+#~ msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgstr ""
+#~ "Déan an dialóg sealadach le haghaidh an fheidhmchláir X sonraithe ag winid"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "Clómhéid le priontáil"
+
+#~ msgid ""
+#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
+#~ "decimal number composed as: <weight><width><slant>"
+#~ msgstr ""
+#~ "An cló le priontáil, sonraithe mar \"Clann,Stíl\" agus is uimhir "
+#~ "dheachúlach 24-giotán é \"Stíl\" san fhoirm seo: "
+#~ "<troime><leithead><claonadh>"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "Comhad ina bhfuil liosta de chlónna le priontáil"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "Bain an comhad ina bhfuil liosta de chlónna le priontáil"
+
+#~ msgid "Select Font to View"
+#~ msgstr "Roghnaigh Cló le Taispeáint"
+
+#~ msgid "URL to open"
+#~ msgstr "URL le hoscailt"
+
+#~ msgid "Font Viewer"
+#~ msgstr "Amharcán Clónna"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "Amharcán simplí clónna"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "© Craig Drummond, 2004-2007"

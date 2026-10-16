@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020-2021, 2023-2026 Xavier Besnard <xavier.besnard@kde.org>
 # Yoann Laissus <yoann.laissus@gmail.com>, 2019.
 # Simon Depiets <sdepiets@gmail.com>, 2019, 2020.
 # Xavier Besnard <xavier.besnard@kde.org>, 2022.
@@ -6,10 +6,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-06 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 08:14+0100\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"PO-Revision-Date: 2026-10-03 07:41+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Text-Markup: kde4\n"
 
 #: kcm.cpp:64
@@ -65,29 +65,53 @@ msgstr ""
 "Cette application ne prend pas en charge la configuration des notifications "
 "selon le type d'évènement"
 
-#: ui/ApplicationConfiguration.qml:282
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr "Cette notification sera affichée sous forme de menu contextuel."
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr "Cette notification sera affichée sous forme de menu contextuel."
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr "Cette notification émettra un son."
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr "Cette notification n'émettra aucun son."
+
+#: ui/ApplicationConfiguration.qml:306
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Afficher un message dans une infobulle"
 
-#: ui/ApplicationConfiguration.qml:291
+#: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgid "Play a sound"
 msgstr "Jouer un son"
 
-#: ui/ApplicationConfiguration.qml:302
+#: ui/ApplicationConfiguration.qml:326
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "Produire un aperçu de son"
 
-#: ui/ApplicationConfiguration.qml:328
+#: ui/ApplicationConfiguration.qml:352
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "Réinitialiser"
 
-#: ui/ApplicationConfiguration.qml:340
+#: ui/ApplicationConfiguration.qml:364
 #, kde-format
 msgid "Choose sound file"
 msgstr "Sélectionner un fichier de son"

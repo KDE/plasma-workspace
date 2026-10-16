@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# SPDX-FileCopyrightText: 2010, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Nikos Pantazis <pantazisnikolaos@gmail.com>, 2011.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2013, 2014.
 # Stelios <sstavra@gmail.com>, 2012.
@@ -11,16 +11,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-03 00:45+0000\n"
-"PO-Revision-Date: 2024-08-24 11:39+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"PO-Revision-Date: 2026-10-13 22:00+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -105,75 +105,66 @@ msgstr "Ελαχιστοποίηση"
 msgid "Close"
 msgstr "Κλείσιμο"
 
-#: components/JobDetails.qml:37
+#: components/JobDetails.qml:52
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:118
+#: components/JobDetails.qml:133
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 από %1"
 
-#: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#: components/JobDetails.qml:137
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 από το %1 αρχείο"
-msgstr[1] "%2 από %1 αρχεία"
+msgstr[0] "%3 από %2 αρχείο"
+msgstr[1] "%3 από %2 αρχεία"
 
-#: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#: components/JobDetails.qml:140
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 από %1 φάκελος"
-msgstr[1] "%2 από %1 φάκελοι"
+msgstr[0] "%3 από %2 φάκελο"
+msgstr[1] "%3 από %2 φακέλους"
 
-#: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#: components/JobDetails.qml:143
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 από %1 στοιχείο"
-msgstr[1] "%2 από %1 στοιχεία"
+msgstr[0] "%3 από %2 στοιχείο"
+msgstr[1] "%3 από %2 στοιχεία"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:152
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 αρχείο"
 msgstr[1] "%1 αρχεία"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:154
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 φάκελος"
 msgstr[1] "%1 φάκελοι"
 
-#: components/JobDetails.qml:141
+#: components/JobDetails.qml:156
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 στοιχείο"
 msgstr[1] "%1 στοιχεία"
 
-#: components/JobDetails.qml:158 components/SpeedChart.qml:75
-#: components/SpeedChart.qml:102 components/SpeedChart.qml:203
-#: components/SpeedChart.qml:216
+#: components/JobDetails.qml:173 components/SpeedChart.qml:91
+#: components/SpeedChart.qml:119 components/SpeedChart.qml:245
+#: components/SpeedChart.qml:262
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -203,17 +194,17 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: components/JobItem.qml:125 components/ThumbnailStrip.qml:154
+#: components/JobItem.qml:126 components/ThumbnailStrip.qml:154
 #, kde-format
 msgid "More Options…"
 msgstr "Περισσότερες επιλογές…"
 
-#: components/JobItem.qml:153
+#: components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "Άνοιγμα"
 
-#: components/JobItem.qml:160 filemenu.cpp:117
+#: components/JobItem.qml:161 filemenu.cpp:117
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Άνοιγμα περιέχοντος φακέλου"
@@ -230,17 +221,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Αποστολή"
 
-#: components/SpeedChart.qml:154
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Ταχύτητα"
 
-#: components/SpeedChart.qml:211
+#: components/SpeedChart.qml:257
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Μέση ταχύτητα"
 
-#: components/SpeedChart.qml:271
+#: components/SpeedChart.qml:300
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
@@ -363,13 +354,13 @@ msgstr "Οι οθόνες καθρεφτίζονται"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Μια εφαρμογή πλήρους οθόνης έχει την εστίαση"
 
 #: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Προβολή"
 
 #: FullRepresentation.qml:597
 #, kde-format
@@ -409,11 +400,10 @@ msgid "Toggle do not disturb"
 msgstr "Εναλλαγή μην ενοχλείτε"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Εκκαθάριση όλων των ειδοποιήσεων"
+msgstr "Εκκαθάριση ιστορικού ειδοποιήσεων"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -428,12 +418,10 @@ msgid "Notifications On"
 msgstr "Ειδοποιήσεις ενεργές"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Ειδοποιήσεις ενεργές"
+msgstr "Το ιστορικό ειδοποιήσεων εκκαθαρίστηκε"
 
 #: main.qml:61
 #, kde-format
@@ -463,13 +451,11 @@ msgstr[0] "%1 μη αναγνωσμένη ειδοποίηση"
 msgstr[1] "%1 μη αναγνωσμένες ειδοποιήσεις"
 
 #: main.qml:88
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 μη αναγνωσμένη ειδοποίηση"
-msgstr[1] "%1 μη αναγνωσμένες ειδοποιήσεις"
+msgstr[0] "%1 ενεργή ειδοποίηση"
+msgstr[1] "%1 ενεργές ειδοποιήσεις"
 
 #: main.qml:101
 #, kde-format

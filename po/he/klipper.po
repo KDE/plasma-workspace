@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-02 00:46+0000\n"
-"PO-Revision-Date: 2026-08-26 08:39+0300\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-09 10:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -28,14 +28,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.04.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
 msgstr "היסטוריית לוח הגזירים:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:88
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -45,12 +45,12 @@ msgstr[1] "שתי רשומות"
 msgstr[2] "%v רשומות"
 msgstr[3] "%v רשומות"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "בחירה ולוח גזירים:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:104
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -59,11 +59,11 @@ msgid ""
 "the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
 "using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
 "is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
+"<interface>Paste</interface> action.<nl/><nl/>When turned on, this option "
+"keeps the selection and the clipboard the same,  so that any selection is "
 "immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"selection may still be saved in the clipboard history (subject to the option "
+"below), but it can only be pasted using the middle mouse button."
 msgstr ""
 "כאשר טקסט או אזור במסך מודגש עם המקלדת או העכבר, זאת ה<emphasis>בחירה</"
 "emphasis>. אפשר להדביק אותה באמצעות לחצן העכבר האמצעי.<nl/><nl/>אם הבחירה "
@@ -72,52 +72,66 @@ msgstr ""
 "לאחר מכן אפשר להדביק אותה בעזרת פעולת <interface>הדבקה</interface>.‏ <nl/><nl/"
 ">כאשר האפשרות הזאת פעילה היא שומרת על הבחירה ועל לוח הגזירים זהים, כך שכל "
 "בחירה מיידית זמינה להדבקה בכל אופן שהוא. אם היא כבויה, הבחירה עשויה להישמר "
-"בהיסטוריית לוח הגזירים (בכפוף לאפשרויות שלהלן), אך ניתן יהיה להדביק אותה רק "
+"בהיסטוריית לוח הגזירים (בכפוף לאפשרות שלהלן), אך ניתן יהיה להדביק אותה רק "
 "באמצעות לחצן העכבר האמצעי."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:123
 #, kde-format
-msgid "Always save in history"
-msgstr "תמיד לשמור בהיסטוריה"
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Text selected with the pointer or keyboard"
+msgstr "טקסט שנבחר עם הסמן או המקלדת"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:125
 #, kde-format
-msgid "Text selection:"
-msgstr "בחירת טקסט:"
+msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
+msgid "Include in history:"
+msgstr "לכלול בהיסטוריה:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
-#, kde-format
-msgid "Only when explicitly copied"
-msgstr "רק כשהועתק במפורש"
-
-#: configdialog.cpp:147
-#, kde-format
-msgid "Whether text selections are saved in the clipboard history."
-msgstr "האם בחירות טקסט נשמרות בהיסטוריית לוח הגזירים."
-
-#: configdialog.cpp:178
-#, kde-format
-msgid "Non-text selection:"
-msgstr "בחירה שאינה טקסט:"
-
-#: configdialog.cpp:185
-#, kde-format
-msgid "Never save in history"
-msgstr "לעולם לא לשמור בהיסטוריה"
-
-#: configdialog.cpp:190
+#: configdialog.cpp:127
 #, kde-format
 msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
-msgstr "האם בחירות שאינן טקסט (כגון תמונות) תישמרנה בהיסטוריית לוח הגזירים."
+"Text copied explicitly is always saved unless it is marked as a password."
+msgstr "טקסט שהועתק מפורשות תמיד יישמר אלא אם כן סומן כסיסמה."
 
-#: configdialog.cpp:252
+#: configdialog.cpp:132
+#, kde-format
+msgctxt "@option:check Part of the setting 'Include in history:'"
+msgid "Image data copied explicitly"
+msgstr "נתוני תמונה שהועתקו מפורשות"
+
+#: configdialog.cpp:136
+#, kde-format
+msgid ""
+"For example, layers and selections copied in image editors like Krita or "
+"GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
+msgstr ""
+"למשל, שכבות ובחירות שהועתקו בעורכי תמונות כמו Krita או GIMP.<br/><a href="
+"\"1\">מידע נוסף על תמונות בלוח הגזירים.</a>"
+
+#: configdialog.cpp:145
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"Clipboard will always allow copying image files as filenames and will show "
+"their thumbnails.  This setting covers cases where images are stored "
+"directly as data.  Some applications support both cases, but some only "
+"accept images as data.<nl/><nl/>Also note that the Spectacle screenshot tool "
+"will ignore this setting when configured to save screenshots to the "
+"clipboard. Any application that sends both text and image will also ignore "
+"it."
+msgstr ""
+"לוח הגזירים תמיד יאפשר העתקת קובצי תמונות בתור שמות קבצים ויציג את התמונות "
+"הממוזערות שלהם. ההגדרה הזאת מכסה מקרים שבהם תמונות מאוחסות כנתונים ישירות. "
+"חלק מהיישומים תומכים במקרים כאלה, אבל חלק מקבלי תמונת כנתונים בלבד.<nl/><nl/"
+">חשוב גם לשים לב שכלי צילום המסך Spectacle יתעלם מההגדרה הזאת כשהיא מוגדרת "
+"כדי לשמור צילומי מסך ללוח הגזירים. כל יישום ששולחן טקסט ותמונה גם יתעלם ממנה."
+
+#: configdialog.cpp:170
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "הצגת תפריט פעולות קופץ:"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:179
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -132,7 +146,7 @@ msgstr ""
 "כאן, או שאינו מופיע לחלון מוחרג, אפשר להציג אותו באמצעות מקשי הקיצור "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:274
+#: configdialog.cpp:191
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -142,67 +156,45 @@ msgstr[1] "שתי שניות"
 msgstr[2] "%v שניות"
 msgstr[3] "%v שניות"
 
-#: configdialog.cpp:275
+#: configdialog.cpp:192
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "ללא"
 
-#: configdialog.cpp:284
+#: configdialog.cpp:201
 #, kde-format
 msgid "Options:"
 msgstr "אפשרויות:"
 
-#: configdialog.cpp:309
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-"כאשר <interface>תבנית לכידה</interface> לוכדת תוכן מלוח הגזירים, "
-"ה<interface>פקודות</interface> שלה תופענה בתפריט הקופץ של Klipper וניתן יהיה "
-"להפעיל אותו."
-
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "תבניות לכידה ופקודות"
 
-#: configdialog.cpp:318
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "תיאור"
 
-#: configdialog.cpp:324
+#: configdialog.cpp:232
 #, kde-format
 msgid "Add Action..."
 msgstr "הוספת פעולה…"
 
-#: configdialog.cpp:328
+#: configdialog.cpp:236
 #, kde-format
 msgid "Edit Action..."
 msgstr "עריכת פעולה…"
 
-#: configdialog.cpp:333
+#: configdialog.cpp:241
 #, kde-format
 msgid "Delete Action"
 msgstr "מחיקת פעולה"
 
-#: configdialog.cpp:340
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-"הפעולות האלו מופיעות בתפריט הקופץ שאותו ניתן להגדיר בעמוד <interface>תפריט "
-"הפעולות</interface>."
-
-#: configdialog.cpp:535
+#: configdialog.cpp:426
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -211,51 +203,51 @@ msgid ""
 msgstr ""
 "למחוק את הפעולה <resource>%1</resource><nl/> הנבחרת ואת כל הפקודות שלה?"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:427
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "אישור פעולת מחיקה"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "כללי"
 
-#: configdialog.cpp:589
+#: configdialog.cpp:480
 #, kde-format
 msgid "General Configuration"
 msgstr "הגדרות כלליות"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:590
+#: configdialog.cpp:481
 #, kde-format
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:482
 #, kde-format
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "קיצורי מקשים"
 
-#: configdialog.cpp:598
+#: configdialog.cpp:489
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "הגדרות קיצורי מקשים"
@@ -265,87 +257,115 @@ msgstr "הגדרות קיצורי מקשים"
 msgid "Return to Clipboard"
 msgstr "חזרה ללוח הגזירים"
 
-#: declarative/qml/BarcodePage.qml:69
+#: declarative/qml/BarcodePage.qml:72
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "העתקה"
 
-#: declarative/qml/BarcodePage.qml:75
+#: declarative/qml/BarcodePage.qml:78
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "תמונה של קוד ה־QR שהועתק ללוח הגזירים"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:81
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "העתקת תמונת קוד QR ללוח הגזירים"
 
-#: declarative/qml/BarcodePage.qml:113
+#: declarative/qml/BarcodePage.qml:116
 #, kde-format
 msgid "QR Code"
 msgstr "קוד QR"
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "אין מספיק מקום להציג קוד QR. נא לנסות לשנות את גודל היישומונית."
 
-#: declarative/qml/BarcodePage.qml:162
+#: declarative/qml/BarcodePage.qml:166
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "יצירת קוד QR נכשלה"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "צמצום"
 
-#: declarative/qml/ClipboardItemDelegate.qml:202
+#: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "הרחבה"
 
-#: declarative/qml/ClipboardMenu.qml:285
+#: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
 msgid "Clear History"
 msgstr "פינוי ההיסטוריה"
 
-#: declarative/qml/ClipboardMenu.qml:339
+#: declarative/qml/ClipboardMenu.qml:362
 #, kde-format
 msgid "All History"
 msgstr "כל ההיסטוריה"
 
-#: declarative/qml/ClipboardMenu.qml:344
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "Starred Only"
 msgstr "עם כוכב בלבד"
 
-#: declarative/qml/ClipboardMenu.qml:349
-#, kde-format
+#: declarative/qml/ClipboardMenu.qml:376
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The clipboard and the selection currently hold a sensitive piece of data "
+"that will not be stored in history."
+msgstr "לוח הגזירים הנוכחי מחזיק כרגע נתונים רגישים שלא יאוחסנו בהיסטוריה."
+
+#: declarative/qml/ClipboardMenu.qml:378
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
-"stored in the history."
+"stored in history."
 msgstr "לוח הגזירים הנוכחי מחזיק כרגע נתונים רגישים שלא יאוחסנו בהיסטוריה."
 
-#: declarative/qml/ClipboardMenu.qml:358
+#: declarative/qml/ClipboardMenu.qml:380
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The clipboard currently holds a sensitive piece of data that will not be "
+#| "stored in the history."
+msgctxt "@info"
+msgid ""
+"The selection currently holds a sensitive piece of data that will not be "
+"stored in history."
+msgstr "לוח הגזירים הנוכחי מחזיק כרגע נתונים רגישים שלא יאוחסנו בהיסטוריה."
+
+#: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "איפוס נתונים סודיים"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "No matches"
 msgstr "אין לכידות"
 
-#: declarative/qml/ClipboardMenu.qml:467
+#: declarative/qml/ClipboardMenu.qml:530
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "לוח הגזירים ריק"
@@ -355,27 +375,27 @@ msgstr "לוח הגזירים ריק"
 msgid "Invoke action"
 msgstr "לעורר פעולה"
 
-#: declarative/qml/DelegateToolButtons.qml:42
+#: declarative/qml/DelegateToolButtons.qml:43
 #, kde-format
 msgid "Show QR code"
 msgstr "הצגת קוד QR"
 
-#: declarative/qml/DelegateToolButtons.qml:48
+#: declarative/qml/DelegateToolButtons.qml:49
 #, kde-format
 msgid "Edit contents"
 msgstr "עריכת תוכן"
 
-#: declarative/qml/DelegateToolButtons.qml:54
+#: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Remove from history"
 msgstr "הסרה מההיסטוריה"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Remove Star"
 msgstr "הסרת כוכב"
 
-#: declarative/qml/DelegateToolButtons.qml:59
+#: declarative/qml/DelegateToolButtons.qml:60
 #, kde-format
 msgid "Star"
 msgstr "כוכב"
@@ -549,14 +569,13 @@ msgstr "פקודה:"
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
+"A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
+"contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
+"corresponding captured texts from the match pattern."
 msgstr ""
-"<placeholder>&#37;s</placeholder> בפקודה יוחלף בתוכן המלא מלוח הגזירים. "
-"<placeholder>&#37;0</placeholder> עד <placeholder>&#37;9</placeholder> יוחלף "
-"בטקסטים שנלכדו עם תבנית הלכידה."
+"<b>&#37;s</b> בפקודה יוחלף בתוכן המלא מלוח הגזירים. <placeholder>&#37;0</"
+"placeholder> עד <placeholder>&#37;9</placeholder> יוחלפו בטקסטים המתאימים "
+"שנלכדו עם תבנית הלכידה."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -593,99 +612,115 @@ msgstr "איפוס הסמל לברירת המחדל לפקודה"
 msgid "Icon:"
 msgstr "סמל:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:375
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הגזירים?"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:377
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "פינוי היסטוריית לוח הגזירים"
 
-#: historymodel.cpp:363
+#: historymodel.cpp:379 historymodel.cpp:679
+#, kde-format
+msgctxt "@option:check"
+msgid "Do not ask again"
+msgstr "לא לשאול שוב"
+
+#: historymodel.cpp:486
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:543
+#: historymodel.cpp:675
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "הפריט הזה מסומן בכוכב. להסיר אותו מההיסטוריה?"
 
-#: historymodel.cpp:544
+#: historymodel.cpp:677
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "הסרת פריט מסומן בכוכב"
 
-#: klipper.cpp:73
+#: klipper.cpp:70
 #, kde-format
-msgctxt "@action:inmenu Toggle automatic action"
-msgid "Automatic Action Popup Menu"
-msgstr "תפריט פעולות קופץ אוטומטי"
+msgctxt "@title shortcut group"
+msgid "Clipboard"
+msgstr "חלונית לוח גזירים צצה"
 
-#: klipper.cpp:90
+#: klipper.cpp:74
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu Toggle automatic action"
+#| msgid "Automatic Action Popup Menu"
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Toggle Automatic Popping Up of Action Menu"
+msgstr "החלפת מצב הקפצה אוטומטית של תפריט פעולות"
+
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&פינוי היסטוריית לוח הגזירים"
 
-#: klipper.cpp:95
+#: klipper.cpp:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "הפעלת פעולה ידנית על לוח הגזירים הנוכחי"
 
-#: klipper.cpp:103
+#: klipper.cpp:107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&עריכת תוכן…"
 
-#: klipper.cpp:111
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "ה&צגת ברקוד…"
 
-#: klipper.cpp:120
+#: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "הפריט הבא בהיסטוריה"
+msgid "Rotate History Down"
+msgstr ""
 
-#: klipper.cpp:125
-#, kde-format
+#: klipper.cpp:129
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "הפריט הקודם בהיסטוריה"
+msgid "Rotate History Up"
+msgstr "פינוי ההיסטוריה"
 
-#: klipper.cpp:132
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "הצגת פריטי לוח גזירים במקום של העכבר"
 
-#: klipper.cpp:394 klipper.cpp:403
+#: klipper.cpp:385 klipper.cpp:394
 #, kde-format
 msgid "Clipboard history"
 msgstr "היסטוריית לוח הגזירים"
 
-#: klipper.cpp:420
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "למעלה"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:427
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "נוכחי"
 
-#: klipper.cpp:434
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "למטה"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -723,139 +758,119 @@ msgid ""
 msgstr "לא לאפשר את פינוי לוח הגזירים, למשל ביציאה מהיישום."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
+#: klipper.kcfg:23
 #, kde-format
 msgid "Keep the selection and clipboard the same"
 msgstr "לשמור על הבחירה וה"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
+#: klipper.kcfg:25
 #, kde-format
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the pointer is automatically copied to the clipboard "
+"so that it can be pasted with either a <i>Paste</i> action or a middle-click."
+"<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"התוכן שנבחר עם סמן העכבר מועתק אוטומטית ללוח הגזירים כדי שאפשר יהיה להדביק "
-"אותו או בפעולת הדברה או בלחיצה אמצעית בעכבר.<br/><a href=\"1\">מידע נוסף על "
-"בחירה ולוח הגזירים</a>."
+"התוכן שנבחר עם הסמן מועתק אוטומטית ללוח הגזירים כדי שאפשר יהיה להדביק אותו "
+"או בפעולת <i>הדבקה</i> או בלחיצה אמצעית בעכבר.<br/><a href=\"1\">מידע נוסף "
+"על בחירה ולוח הגזירים</a>."
 
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:32
+#. i18n: ectx: label, entry (SaveSelection), group (General)
+#: klipper.kcfg:28
 #, kde-format
-msgid "Ignore the selection"
-msgstr "התעלמות מהבחירה"
+msgid "Save the selection"
+msgstr "שמירת הבחירה"
 
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:34
+#. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
+#: klipper.kcfg:30
 #, kde-format
 msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
+"Content selected with the pointer but not explicitly copied to the clipboard "
+"is automatically stored in the clipboard history."
 msgstr ""
 "התוכן שנבחר עם הסמן אך לא הועתק במפורש ללוח הגזירים לא מאוחסן אוטומטית "
-"בהיסטוריית לוח הגזירים ואפשר להדביק אותו רק בלחיצה אמצעית בעכבר."
+"בהיסטוריית לוח הגזירים."
 
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:37
+#. i18n: ectx: label, entry (SaveImages), group (General)
+#: klipper.kcfg:33
 #, kde-format
-msgid "Text selection only"
-msgstr "בחירה של טקסט בלבד"
+msgid "Save images"
+msgstr "שמירת תמונות"
 
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
+#. i18n: ectx: whatsthis, entry (SaveImages), group (General)
+#: klipper.kcfg:35
 #, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
-msgstr ""
-"לאחר רק את בחירות הטקסט בהיסטוריית לוח הגזירים, לא תמונות וסוגים נוספים של "
-"נתונים."
-
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr "תמיד להתעלם מתמונות"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr "לא לאחסן תמונות בהיסטוריית לוח הגזירים, אפילו אם הועתקו במפורש."
+msgid "Store images in the clipboard history."
+msgstr "אחסון תמונות בהיסטוריית לוח הגזירים."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:38
 #, kde-format
 msgid "Immediately on selection"
 msgstr "מיידית עם הבחירה"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:48
+#: klipper.kcfg:39
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "להציג חלונית קופצת עם פעולות תקפות מיד עם הבחירה."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:52
+#: klipper.kcfg:43
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "זמן תפריט פעולות אוטומטי:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:56
+#: klipper.kcfg:47
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "להציג את תפריט הפעולות הקופץ למשך זמן זה."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:59
+#: klipper.kcfg:50
 #, kde-format
 msgid "History size:"
 msgstr "גודל ההיסטוריה:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:63
+#: klipper.kcfg:54
 #, kde-format
-msgid "The clipboard history will store up to this many items."
-msgstr "היסטוריית לוח הגזירים תאחסן עד כמות כזאת של פריטים."
+msgid ""
+"The clipboard history will store up to this many items. Maximum is 2048."
+msgstr "היסטוריית לוח הגזירים תאחסן עד כמות כזאת של פריטים. 2048 לכל היותר."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:66
+#: klipper.kcfg:57
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "כניסת דמה לציון שינויים ביישומון העץ של הפעולה"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:64
 #, kde-format
-msgid "Trim whitespace from selection"
-msgstr "קיצוץ רווחים מהבחירה"
+msgid "Trim whitespace"
+msgstr "קיצוץ רווחים"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:78
+#: klipper.kcfg:66
 #, kde-format
 msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
+"Remove any whitespace from the start and end of the text passed to an "
+"action. The text saved in history is not affected."
 msgstr ""
-"להסיר רווחים עודפים מההתחלה ומהסוף של הטקסט הנבחר בטרם ביצוע פעולה כלשהי. "
-"למשל, כך ניתן לוודא שכתובת שמודבקת בדפדפן מפוענחת כראוי. הטקסט שנשמר בלוח "
-"הגזירים לא יושפע מזה."
+"להסיר רווחים מהתחלת או סוף הטקסט שהועבר לפעולה. הטקסט שנשמר בהיסטוריה לא "
+"יושפע."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:81
+#: klipper.kcfg:69
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "לפריט שנבחר מההיסטוריה"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:83
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -865,30 +880,107 @@ msgstr ""
 "הגזירים."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:74
 #, kde-format
-msgid "Include MIME actions"
-msgstr "לכלול פעולות MIME"
+msgid "Offer applications for copied links and files"
+msgstr "הצעת יישומים לקישורים וקבצים שהועתקו"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:88
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
+"For a link starting with <i>http://</i> or <i>https://</i> or for files, "
+"applications that can open them will be offered alongside your matching "
+"actions, if any."
 msgstr ""
-"אם נבחר שם קובץ או כתובת, לכלול יישומים שיכולים לקבל את סוג ה־MIME בתפריט "
-"הקופץ."
+"לקישור שמתחיל ב־<i>http://‎</i> או ב־<i>https://‎</i> או לקבצים, יישומים "
+"שיכולים לפתוח אותם יוצעו לצד הפעולות התואמות שלך, אם יש כאלה."
 
-#: klipperpopup.cpp:38
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "חלונית לוח גזירים צצה"
 
-#: urlgrabber.cpp:197
+#: urlgrabber.cpp:218
 #, kde-format
 msgid "&Cancel"
 msgstr "&ביטול"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "הפריט הבא בהיסטוריה"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "הפריט הקודם בהיסטוריה"
+
+#~ msgid "up"
+#~ msgstr "למעלה"
+
+#~ msgid "down"
+#~ msgstr "למטה"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "These actions appear in the popup menu which can be configured on the "
+#~ "<interface>Action Menu</interface> page."
+#~ msgstr ""
+#~ "הפעולות האלו מופיעות בתפריט הקופץ שאותו ניתן להגדיר בעמוד "
+#~ "<interface>תפריט הפעולות</interface>."
+
+#~ msgid "Text selection:"
+#~ msgstr "בחירת טקסט:"
+
+#~ msgid "Only when explicitly copied"
+#~ msgstr "רק כשהועתק במפורש"
+
+#~ msgid "Non-text selection:"
+#~ msgstr "בחירה שאינה טקסט:"
+
+#~ msgid "Never save in history"
+#~ msgstr "לעולם לא לשמור בהיסטוריה"
+
+#~ msgid ""
+#~ "Whether non-text selections (such as images) are saved in the clipboard "
+#~ "history."
+#~ msgstr "האם בחירות שאינן טקסט (כגון תמונות) תישמרנה בהיסטוריית לוח הגזירים."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "When a <interface>match pattern</interface> matches the clipboard "
+#~ "contents, its <interface>commands</interface> appear in the Klipper popup "
+#~ "menu and can be executed."
+#~ msgstr ""
+#~ "כאשר <interface>תבנית לכידה</interface> לוכדת תוכן מלוח הגזירים, "
+#~ "ה<interface>פקודות</interface> שלה תופענה בתפריט הקופץ של Klipper וניתן "
+#~ "יהיה להפעיל אותו."
+
+#~ msgid "Text selection only"
+#~ msgstr "בחירה של טקסט בלבד"
+
+#~ msgid ""
+#~ "Only store text selections in the clipboard history, not images or any "
+#~ "other type of data."
+#~ msgstr ""
+#~ "לאחר רק את בחירות הטקסט בהיסטוריית לוח הגזירים, לא תמונות וסוגים נוספים "
+#~ "של נתונים."
+
+#~ msgid "Always ignore images"
+#~ msgstr "תמיד להתעלם מתמונות"
+
+#~ msgid ""
+#~ "Do not store images in the clipboard history, even if explicitly copied."
+#~ msgstr "לא לאחסן תמונות בהיסטוריית לוח הגזירים, אפילו אם הועתקו במפורש."
+
+#~ msgid "Include MIME actions"
+#~ msgstr "לכלול פעולות MIME"
+
+#~ msgid ""
+#~ "If a file name or URL is selected, include applications that can accept "
+#~ "its MIME type in the popup menu."
+#~ msgstr ""
+#~ "אם נבחר שם קובץ או כתובת, לכלול יישומים שיכולים לקבל את סוג ה־MIME בתפריט "
+#~ "הקופץ."
 
 #~ msgid "The clipboard history contains starred items. Clear them too?"
 #~ msgstr "היסטוריית לוח הגזירים מכילה פריטים שמסומנים בכוכב. לפנות גם אותם?"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
 "PO-Revision-Date: 2024-09-18 21:22+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -130,26 +130,38 @@ msgstr ""
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr ""
+
+#: kcmstyle.cpp:229
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kcmstyle.cpp:237
+#: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
+msgid "Successfully uninstalled “%1”."
+msgstr ""
+
+#: kcmstyle.cpp:242
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
 msgstr[0] ""
 msgstr[1] ""
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "Hiba történt a stílushoz tartozó beállítóablak betöltése közben."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Nem sikerült alkalmazni a kiválasztott stílust: „%1”."

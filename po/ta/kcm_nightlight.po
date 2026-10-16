@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-04-12 17:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -31,7 +31,7 @@ msgid ""
 "%2"
 msgstr "நிறவெப்பம், பகலுக்கானதாக %1-க்கு மாறத் தொடங்கி, %2-க்குள் முழுதாக மாறியிருக்கும்"
 
-#: ui/main.qml:39
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
@@ -39,61 +39,100 @@ msgstr ""
 "நீங்கள் தேர்ந்தெடுக்கும் நேரங்களில் திரையிலுள்ள நிறங்களை நயமானவையாக (சிவந்தவையாக) இந்த நீல "
 "வடிகட்டி மாற்றும்."
 
-#: ui/main.qml:50
+#: ui/main.qml:117
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily activated until %1."
+msgstr ""
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily activated until it is manually turned off."
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily suspended until %1."
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily suspended until it is manually resumed."
+msgstr ""
+
+#: ui/main.qml:130
+#, fuzzy, kde-format
+#| msgid "Turn off at:"
+msgctxt "@action:button turn off Night Light feature"
+msgid "Turn Off"
+msgstr "இந்த நேரத்தில் முடக்கு:"
+
+#: ui/main.qml:141
+#, kde-format
+msgctxt ""
+"@action:button resume Light Light feature, which had been temporarily "
+"disabled"
+msgid "Resume"
+msgstr ""
+
+#: ui/main.qml:159
 #, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "மாறும் நேரம்:"
 
-#: ui/main.qml:61
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "ஒருபோதும் வேண்டாம்"
 
-#: ui/main.qml:62
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
 msgstr "எப்போதும் இயங்கட்டும்"
 
-#: ui/main.qml:63
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
 msgstr "சூரிய தோற்றமும் மறைவும்"
 
-#: ui/main.qml:80
+#: ui/main.qml:189
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "அமை..."
 
-#: ui/main.qml:131 ui/main.qml:182 ui/main.qml:248
+#: ui/main.qml:240 ui/main.qml:291 ui/main.qml:357
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
 msgstr "%1 K"
 
-#: ui/main.qml:138
+#: ui/main.qml:247
 #, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "பகலுக்கான நிறவெப்பநிலை:"
 
-#: ui/main.qml:189 ui/main.qml:255
+#: ui/main.qml:298 ui/main.qml:364
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "நீலம் (நிறமாற்றம் இல்லாமல்)"
 
-#: ui/main.qml:196 ui/main.qml:262
+#: ui/main.qml:305 ui/main.qml:371
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "சிவப்பு"
 
-#: ui/main.qml:204
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
@@ -248,9 +287,6 @@ msgstr "இரவுக்கான நிறவெப்பநிலை:"
 
 #~ msgid "Turn on at:"
 #~ msgstr "இந்த நேரத்தில் இயக்கு:"
-
-#~ msgid "Turn off at:"
-#~ msgstr "இந்த நேரத்தில் முடக்கு:"
 
 #~ msgid "Night Color begins changing back at %1 and ends at %2"
 #~ msgstr "நிறம் %1-க்கு இயல்புநிலைக்கு மாறத் தொடங்கி, %2-க்குள் இயல்புநிலையை அடையும்"

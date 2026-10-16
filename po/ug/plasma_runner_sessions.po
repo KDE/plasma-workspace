@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-06-01 18:26-0400\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"PO-Revision-Date: 2026-09-23 06:56+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.9\n"
 
-#: sessionrunner.cpp:20
+#: sessionrunner.cpp:22
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -26,12 +26,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "logout;log out;تىزىمدىن چىق"
 
-#: sessionrunner.cpp:23
+#: sessionrunner.cpp:25
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "تىزىمدىن چىقىدۇ، ھازىرقى ئۈستەلئۈستى جەريانچاقنى ئاخىرلاشتۇرىدۇ"
 
-#: sessionrunner.cpp:27
+#: sessionrunner.cpp:29
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -40,12 +40,12 @@ msgid "shutdown;shut down;power;poweroff;power off"
 msgstr ""
 "shutdown;shut down;power;poweroff;power off;تاقا;توك مەنبە;توك مەنبەنى ئۈز"
 
-#: sessionrunner.cpp:30
+#: sessionrunner.cpp:32
 #, kde-format
 msgid "Turns off the computer"
 msgstr "كومپيۇتېرنىڭ توكىنى ئۈزىدۇ"
 
-#: sessionrunner.cpp:33
+#: sessionrunner.cpp:35
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -53,24 +53,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "restart;reboot;قايتا قوزغات;قايتا باشلا"
 
-#: sessionrunner.cpp:36
+#: sessionrunner.cpp:38
 #, kde-format
 msgid "Reboots the computer"
 msgstr "كومپيۇتېرنى قايتا قوزغىتىدۇ"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:42
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "lock;lock screen;قۇلۇپلا;ئېكراننى قۇلۇپلا"
 
-#: sessionrunner.cpp:42
+#: sessionrunner.cpp:44
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "ھازىرقى جەريانچاقنى قۇلۇپلاپ، ئېكران قوغدىغۇچنى باشلايدۇ"
 
-#: sessionrunner.cpp:45
+#: sessionrunner.cpp:47
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -78,12 +78,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "save;save session;ساقلا;جەريانچاقنى ساقلا"
 
-#: sessionrunner.cpp:48
+#: sessionrunner.cpp:50
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "جەريانچانى ئەسلىگە كەلتۈرۈش ئۈچۈن نۆۋەتتىكى جەريانچاقنى ساقلايدۇ"
 
-#: sessionrunner.cpp:51
+#: sessionrunner.cpp:53
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -91,41 +91,41 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "switch user;new session;ئىشلەتكۈچى ئالماشتۇر;يېڭى جەريانچاق"
 
-#: sessionrunner.cpp:54
+#: sessionrunner.cpp:56
 #, kde-format
 msgid "Switch to a session as a different user"
 msgstr "باشقا ئىشلەتكۈچىدەك جەريانچاققا ئالماشتۇرىدۇ"
 
-#: sessionrunner.cpp:75
+#: sessionrunner.cpp:101
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "تىزىمدىن چىق"
 
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:102
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "تاقا"
 
-#: sessionrunner.cpp:90
+#: sessionrunner.cpp:103
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "قايتا قوزغات"
 
-#: sessionrunner.cpp:97
+#: sessionrunner.cpp:104
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "قۇلۇپلا"
 
-#: sessionrunner.cpp:104
+#: sessionrunner.cpp:105
 #, kde-format
 msgid "Save Session"
 msgstr "جەريانچاقنى ساقلا"
 
-#: sessionrunner.cpp:111
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Switch User"
 msgstr "ئىشلەتكۈچى ئالماشتۇر"

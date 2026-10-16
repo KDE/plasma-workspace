@@ -1,0 +1,325 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Укључи/искључи „Не узнемиравај“"
+
+#: sourcesmodel.cpp:404
+#, kde-format
+msgid "Other Applications"
+msgstr "Остали програми"
+
+#: ui/ApplicationConfiguration.qml:105
+#, kde-format
+msgid "Show popups"
+msgstr "Прикажи искакаче"
+
+#: ui/ApplicationConfiguration.qml:119
+#, kde-format
+msgid "Show in do not disturb mode"
+msgstr "Прикажи у режиму „Не узнемиравај“"
+
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
+#, kde-format
+msgid "Show in history"
+msgstr "Прикажи у историјату"
+
+#: ui/ApplicationConfiguration.qml:143
+#, kde-format
+msgid "Show notification badges"
+msgstr "Прикажи значке обавјештења"
+
+#: ui/ApplicationConfiguration.qml:180
+#, kde-format
+msgctxt "@title:table Configure individual notification events in an app"
+msgid "Configure Events"
+msgstr "Подешавање догађаја"
+
+#: ui/ApplicationConfiguration.qml:188
+#, kde-format
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis"
+msgstr "Овај програм не подржава подешавање обавјештења по догађајима"
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr "Ово обавјештење ће бити приказано као искакач"
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr "Ово обавјештење неће бити приказано као искакач"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr "Уз ово обавјештење биће пуштен звук"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr "Уз ово обавјештење неће бити пуштен звук"
+
+#: ui/ApplicationConfiguration.qml:306
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr "Прикажи искачућу поруку"
+
+#: ui/ApplicationConfiguration.qml:315
+#, kde-format
+msgid "Play a sound"
+msgstr "Пусти звук"
+
+#: ui/ApplicationConfiguration.qml:326
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound"
+msgstr "Преслушај звук"
+
+#: ui/ApplicationConfiguration.qml:352
+#, kde-format
+msgctxt "Reset the notification sound to a default one"
+msgid "Reset"
+msgstr "Ресетуј"
+
+#: ui/ApplicationConfiguration.qml:364
+#, kde-format
+msgid "Choose sound file"
+msgstr "Изабери звучни фајл"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt "@action:button Plasma-specific notifications"
+msgid "Configure for System…"
+msgstr "Подеси за систем…"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@action:button Application-specific notifications"
+msgid "Configure for Applications…"
+msgstr "Подеси за програме…"
+
+#: ui/main.qml:96
+#, kde-format
+msgid ""
+"Could not find a 'Notifications' widget, which is required for displaying "
+"notifications. Make sure that it is enabled either in your System Tray or as "
+"a standalone widget."
+msgstr ""
+"Не могу да нађем виџет „Обавјештења“, који је потребан за приказивање "
+"обавјештења. Увјерите се да је укључен, било у системској касети или као "
+"самосталан виџет."
+
+#: ui/main.qml:107
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
+msgstr "Обавјештења тренутно пружа „%1 %2“ умјесто Плазме."
+
+#: ui/main.qml:111
+#, kde-format
+msgid "Notifications are currently not provided by Plasma."
+msgstr "Обавјештења тренутно не пружа Плазма."
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@title:group"
+msgid "Do Not Disturb mode"
+msgstr "Режим „Не узнемиравај“"
+
+#: ui/main.qml:131
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr "Аутоматски укључи:"
+
+#: ui/main.qml:132
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "When screens are mirrored"
+msgstr "Кад су екрани пресликани"
+
+#: ui/main.qml:144
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
+msgid "During screen sharing"
+msgstr "Током дијељења екрана"
+
+#: ui/main.qml:158
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr "Док је фокусиран програм преко цијелог екрана"
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+msgid "Manually toggle with shortcut:"
+msgstr "Ручно укључи/искључи пречицом:"
+
+#: ui/main.qml:177
+#, kde-format
+msgctxt "@title:group"
+msgid "Visibility conditions"
+msgstr "Услови видљивости"
+
+#: ui/main.qml:182
+#, kde-format
+msgid "Critical notifications:"
+msgstr "Критична обавјештења:"
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Show in Do Not Disturb mode"
+msgstr "Прикажи у режиму „Не узнемиравај“"
+
+#: ui/main.qml:195
+#, kde-format
+msgid "Low priority notifications:"
+msgstr "Обавјештења ниског приоритета:"
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Show popup"
+msgstr "Прикажи искакач"
+
+#: ui/main.qml:225
+#, kde-format
+msgctxt "@title:group As in: 'notification popups'"
+msgid "Popups"
+msgstr "Искакачи"
+
+#: ui/main.qml:231
+#, kde-format
+msgctxt "@label"
+msgid "Location:"
+msgstr "Положај:"
+
+#: ui/main.qml:232
+#, kde-format
+msgctxt "Popup position near notification plasmoid"
+msgid "Near notification icon"
+msgstr "Близу иконице обавјештења"
+
+#: ui/main.qml:269
+#, kde-format
+msgctxt "@action:button choose custom notification position"
+msgid "Choose…"
+msgstr "Изабери…"
+
+#: ui/main.qml:278 ui/main.qml:294
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунде"
+msgstr[2] "%1 секунди"
+msgstr[3] "%1 секунда"
+
+#: ui/main.qml:283
+#, kde-format
+msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
+msgid "Hide after:"
+msgstr "Сакриј послије:"
+
+#: ui/main.qml:306
+#, kde-format
+msgctxt ""
+"@option:check Show progress bar on notifications indicating when it will hide"
+msgid "Show timeout indicator"
+msgstr "Прикажи показатељ прековремена"
+
+#: ui/main.qml:318
+#, kde-format
+msgctxt "@title:group"
+msgid "Additional feedback"
+msgstr "Додатни одзив"
+
+#: ui/main.qml:324
+#, kde-format
+msgctxt "Show application jobs in notification widget"
+msgid "Show in notifications"
+msgstr "Прикажи у обавјештењима"
+
+#: ui/main.qml:325
+#, kde-format
+msgid "Application progress:"
+msgstr "Напредак програма:"
+
+#: ui/main.qml:339
+#, kde-format
+msgctxt "Keep application job popup open for entire duration of job"
+msgid "Keep popup open during progress"
+msgstr "Држи искакач отворен током напретка"
+
+#: ui/main.qml:352
+#, kde-format
+msgid "Notification badges:"
+msgstr "Значке обавјештења:"
+
+#: ui/main.qml:353
+#, kde-format
+msgid "Show in task manager"
+msgstr "Прикажи у менаџеру задатака"
+
+#: ui/PopupPositionDialog.qml:15
+#, kde-format
+msgid "Popup Position"
+msgstr "Положај искакача"
+
+#: ui/SourcesPage.qml:20
+#, kde-format
+msgctxt ""
+"@title:window kcm page title, configure app-specific notification settings"
+msgid "Application Notifications"
+msgstr "Обавјештења програма"
+
+#: ui/SourcesPage.qml:108
+#, kde-format
+msgid "Applications"
+msgstr "Програми"
+
+#: ui/SourcesPage.qml:109
+#, kde-format
+msgid "System Services"
+msgstr "Системски сервиси"
+
+#: ui/SourcesPage.qml:157
+#, kde-format
+msgid "No application or event matches your search term"
+msgstr "Ниједан програм ни догађај не одговара изразу за претрагу"
+
+#: ui/SourcesPage.qml:181
+#, kde-format
+msgid ""
+"Select an application from the list to configure its notification settings "
+"and behavior"
+msgstr ""
+"Изаберите програм са списка да бисте подесили његове поставке и понашање "
+"обавјештења"

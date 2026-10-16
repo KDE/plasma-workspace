@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-10-13 00:48+0000\n"
 "PO-Revision-Date: 2025-09-27 14:06+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -92,28 +92,28 @@ msgstr ""
 "Sistemul vă va notifica dacă spațiul liber scade sub MiO specificați și sub "
 "procentajul specificat de spațiu disponibil."
 
-#: module.cpp:121
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
 msgstr "Partiția %1 rămâne fără spațiu pe disc, mai rămân %2 MiO (%3%)."
 
-#: module.cpp:123
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr "Partiția-rădăcină rămâne fără spațiu pe disc, mai rămân %1 MiO (%2%)."
 
-#: module.cpp:125
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr "Dosarul Acasă rămâne fără spațiu pe disc, mai aveți %1 MiO (%2%)."
 
-#: module.cpp:150
+#: module.cpp:152
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

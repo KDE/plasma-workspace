@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-09-01 04:39+0200\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"PO-Revision-Date: 2026-09-10 06:16+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -129,26 +129,38 @@ msgstr "ვერ წაიშალა სტილები:\n"
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
-msgid_plural ""
-"Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] ""
-msgstr[1] ""
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr "წარმატებით წაიშლა \"%1\", მაგრამ ვერ წაიშალა სხვები:\n"
 
-#: kcmstyle.cpp:237
+#: kcmstyle.cpp:229
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
-msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
+msgid_plural ""
+"Successfully uninstalled %1 styles but could not uninstall others:\n"
+msgstr[0] "წარმატებით წაიშალა %1 სტილი, მაგრამ ვერ წაიშალა სხვები:\n"
+msgstr[1] "წარმატებით წაიშალა %1 სტილი, მაგრამ ვერ წაიშალა სხვები:\n"
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:240
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled “%1”."
+msgstr "\"%1\" წარმატებით წაიშალა."
+
+#: kcmstyle.cpp:242
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] "წარმატებით წაიშალა %1 სტილი"
+msgstr[1] "წარმატებით წაიშალა %1 სტილი."
+
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr "ამ სტილის მორგების ფანჯრის ჩატვირთვის შეცდომა."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "არჩეული სტილის (%1) გადატარების შეცდომა."

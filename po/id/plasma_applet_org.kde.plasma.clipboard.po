@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:47+0000\n"
+"POT-Creation-Date: 2026-10-14 00:50+0000\n"
 "PO-Revision-Date: 2023-01-15 13:12+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -18,28 +18,40 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
 
-#: qml/main.qml:30
+#: qml/main.qml:40
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Daftar Isi Papan Klip"
 
-#: qml/main.qml:32
+#: qml/main.qml:42
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Papan klip kosong"
 
-#: qml/main.qml:34
+#: qml/main.qml:44
+#, kde-format
+msgctxt "@info"
+msgid "The clipboard and the selection currently hold sensitive data"
+msgstr ""
+
+#: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
 msgstr ""
 
-#: qml/main.qml:75
+#: qml/main.qml:48
+#, kde-format
+msgctxt "@info"
+msgid "The selection currently holds sensitive data"
+msgstr ""
+
+#: qml/main.qml:85
 #, kde-format
 msgid "Clear History"
 msgstr "Hapus Riwayat"
 
-#: qml/main.qml:95
+#: qml/main.qml:106
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Konfigurasi Papan Klip…"

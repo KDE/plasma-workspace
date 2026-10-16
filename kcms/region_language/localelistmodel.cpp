@@ -127,7 +127,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
     case DisplayName: {
         // 0 is unset option, 1 is locale C
         if (dataIndex == 1) {
-            return data.countryCode;
+            return i18nc("@item:intable Friendly name for the C locale", "ISO C Standard");
         }
         const QString clabel = !data.nativeCountryName.isEmpty() ? data.nativeCountryName : data.englishCountryName;
         QString languageName;
@@ -143,7 +143,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
     }
     case LocaleName: {
         QString cvalue = data.countryCode;
-        if (!cvalue.contains(QLatin1Char('.')) && cvalue != QLatin1Char('C') && cvalue != i18n("Default")) {
+        if (!cvalue.contains(QLatin1Char('.')) && cvalue != i18n("Default")) {
             // explicitly add the encoding,
             // otherwise Qt doesn't accept dead keys and garbles the output as well
             cvalue.append(QLatin1String(".UTF-8"));

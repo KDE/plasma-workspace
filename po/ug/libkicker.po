@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:47+0000\n"
-"PO-Revision-Date: 2026-06-01 18:22-0400\n"
+"PO-Revision-Date: 2026-09-24 20:34-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -151,7 +151,7 @@ msgstr "ئىچىدىكى قىسقۇچنى ئاچ"
 #: recentusagemodel.cpp:380
 #, kde-format
 msgid "Forget Folder"
-msgstr ""
+msgstr "قىسقۇچنى ئۇنتۇ"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -201,7 +201,7 @@ msgstr "يېقىنقى ئورۇن"
 #: rootmodel.cpp:581
 #, kde-format
 msgid "Often Used Places"
-msgstr ""
+msgstr "دائىم ئىشلىتىدىغان ئورۇن"
 
 #: rootmodel.cpp:590
 #, kde-format

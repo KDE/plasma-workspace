@@ -13,11 +13,14 @@
 #include <QVariantMap>
 
 #include <KDesktopFile>
+#include <KService>
 
 #include "dbusproperties.h"
 #include "libkmpris_debug.h"
 #include "mprisplayer.h"
 #include "mprisroot.h"
+
+#include "systemd_decode.h"
 
 AbstractPlayerContainer::AbstractPlayerContainer(QObject *parent)
     : QObject(parent)
@@ -561,10 +564,12 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
         if (propName == QLatin1String("Identity")) {
             updateSingleProperty(m_identity, it.value(), QMetaType::QString, &PlayerContainer::identityChanged);
         } else if (propName == QLatin1String("DesktopEntry")) {
-            if (QString iconName = KDesktopFile(it.value().toString() + QLatin1String(".desktop")).readIcon(); !iconName.isEmpty()) {
-                m_iconName = std::move(iconName);
+            const QString desktopEntry = it->toString();
+            if (auto service = KService::serviceByDesktopName(desktopEntry)) {
+                updateFromService(service);
+            } else {
+                updateSingleProperty(m_desktopEntry, it.value(), QMetaType::QString, &PlayerContainer::desktopEntryChanged);
             }
-            updateSingleProperty(m_desktopEntry, it.value(), QMetaType::QString, &PlayerContainer::desktopEntryChanged);
         } else if (propName == QLatin1String("SupportedUriSchemes")) {
             updateSingleProperty(m_supportedUriSchemes, it.value(), QMetaType::QStringList, &PlayerContainer::supportedUriSchemesChanged);
         } else if (propName == QLatin1String("SupportedMimeTypes")) {
@@ -669,6 +674,20 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
     }
 }
 
+void PlayerContainer::updateFromService(const KService::Ptr &service)
+{
+    Q_ASSERT(service);
+
+    const QString desktopEntry = service->desktopEntryName();
+    if (m_desktopEntry == desktopEntry) {
+        return;
+    }
+
+    m_desktopEntry = desktopEntry;
+    m_iconName = service->icon();
+    Q_EMIT desktopEntryChanged();
+}
+
 void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
 {
     QDBusPendingReply<QVariantMap> propsReply = *watcher;
@@ -698,10 +717,49 @@ void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
             return;
         }
 
-        Q_EMIT initialFetchFinished(this);
+        auto reportFetchFinished = [this] {
+            Q_EMIT initialFetchFinished(this);
 
-        connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
-        connect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::onSeeked);
+            connect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
+            connect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::onSeeked);
+        };
+
+        auto service = KService::serviceByDesktopName(m_desktopEntry);
+        // Try to look up the app id from systemd unit (e.g. renamed Flatpak)
+        if (!service) {
+            QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                                              QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                              QStringLiteral("GetUnitByPID"));
+
+            msg << uint32_t(m_instancePid);
+
+            auto *watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(msg), this);
+            connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, reportFetchFinished, pid = m_instancePid]() {
+                QDBusPendingReply<QDBusObjectPath> reply = *watcher;
+                watcher->deleteLater();
+
+                if (reply.isError()) {
+                    qCWarning(MPRIS2).nospace() << "Failed to GetUnitByPID(" << pid << "): " << reply.error().message();
+                } else {
+                    const auto unit = decodeUnitName(reply.value().path().section(QLatin1Char('/'), -1));
+                    const auto service = serviceForUnitName(unit);
+                    if (!service) {
+                        qCInfo(MPRIS2) << "Failed to get service from unit name" << unit;
+                    } else {
+                        qCDebug(MPRIS2) << "Corrected" << m_desktopEntry << "to" << service->desktopEntryName() << "via systemd";
+                        updateFromService(service);
+                    }
+                }
+
+                // Failure to resolve the desktop entry doesn't block the player from being usable.
+                reportFetchFinished();
+            });
+
+            return;
+        }
+
+        reportFetchFinished();
     }
 }
 

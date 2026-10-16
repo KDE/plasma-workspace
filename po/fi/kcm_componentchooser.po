@@ -8,7 +8,7 @@
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2013, 2016.
-# SPDX-FileCopyrightText: 2017, 2018, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2026 Tommi Nieminen <translator@legisign.org>
 # Copyright © 2010 This_file_is_part_of_KDE
 #
 # KDE Finnish translation sprint participants:
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-07 00:46+0000\n"
-"PO-Revision-Date: 2024-10-18 10:25+0300\n"
+"PO-Revision-Date: 2026-08-24 20:09+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
@@ -43,10 +43,9 @@ msgid "Select default browser"
 msgstr "Valitse oletusselain"
 
 #: components/componentchoosercalendar.cpp:10
-#, fuzzy, kde-format
-#| msgid "Select default dialer application"
+#, kde-format
 msgid "Select default calendar application"
-msgstr "Valitse oletuspuhelusovellus"
+msgstr "Valitse oletuskalenterisovellus"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
@@ -181,7 +180,7 @@ msgstr "Sähköpostiohjelma:"
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
-msgstr ""
+msgstr "Kalenteri:"
 
 #: ui/main.qml:111
 #, kde-format

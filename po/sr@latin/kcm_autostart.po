@@ -1,12 +1,13 @@
 # Translation of kcm_autostart.po into Serbian.
 # Chusslove Illich <caslav.ilic@gmx.net>, 2008, 2009, 2010, 2011, 2012, 2015, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-21 00:47+0000\n"
-"PO-Revision-Date: 2017-09-28 17:58+0200\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
 "MIME-Version: 1.0\n"
@@ -19,10 +20,9 @@ msgstr ""
 "X-Environment: kde\n"
 
 #: autostartmodel.cpp:378
-#, fuzzy, kde-format
-#| msgid "\"%1\" is not an absolute path."
+#, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr "‘%1’ nije apsolutna putanja."
+msgstr "‘%1’ nije apsolutan URL."
 
 #: autostartmodel.cpp:381
 #, kde-format
@@ -44,34 +44,31 @@ msgstr "‘%1’ nije čitljiv."
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "Zaustavi"
 
 # >> @item:intable Run application on...
 #: ui/entry.qml:31
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr "po pokretanju"
+msgstr "Pokreni"
 
 # >> @title:column
 #: ui/entry.qml:71
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr "ime"
+msgstr "Ime:"
 
 # >> @title:column
 #: ui/entry.qml:77
-#, fuzzy, kde-format
-#| msgid "Status"
+#, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr "stanje"
+msgstr "Stanje:"
 
 #: ui/entry.qml:83
 #, kde-format
@@ -79,86 +76,81 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "Poslednje pokretanje:"
 
 #: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "Ne mogu da učitam dnevnike. Pokušajte da osvežite."
 
 #: ui/entry.qml:118
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "Osveži"
 
 #: ui/main.qml:35
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "Učini izvršnim"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
-msgstr ""
+msgstr "Fajl „%1“ mora biti izvršni da bi se pokrenuo pri odjavi."
 
 #: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr ""
+msgstr "Fajl „%1“ mora biti izvršni da bi se pokrenuo pri prijavi."
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Dodaj novo"
 
 #: ui/main.qml:69
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "Dodaj novi program ili skriptu"
 
 #: ui/main.qml:73
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr ""
+msgstr "Program…"
 
 #: ui/main.qml:75
 #, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr ""
+msgstr "Dodaj program"
 
 #: ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Dodaj skriptu..."
+msgstr "Skripta pri prijavi…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "Dodaj skriptu..."
+msgstr "Dodaj skriptu pri prijavi"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Dodaj skriptu..."
+msgstr "Skripta pri odjavi…"
 
-# >> @item:intable Run application on...
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "na odjavljivanju"
+msgstr "Dodaj skriptu pri odjavi"
 
 #: ui/main.qml:121
 #, kde-format
@@ -166,211 +158,133 @@ msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
+"Samopokretanje za %1 još nije obavljeno. Detalji će biti dostupni po "
+"ponovnom pokretanju sistema."
 
 #: ui/main.qml:133
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
-msgstr ""
+msgstr "Isključi samopokretanje za %1"
 
 #: ui/main.qml:134
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
-msgstr ""
+msgstr "Uključi samopokretanje za %1"
 
 #: ui/main.qml:137
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
-msgstr ""
+msgstr "Isključi samopokretanje"
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
-msgstr ""
+msgstr "Uključi samopokretanje"
 
 #: ui/main.qml:159
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "Još nije samopokrenuto"
 
 #: ui/main.qml:168
-#, fuzzy, kde-format
-#| msgid "&Properties..."
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "&Svojstva..."
+msgstr "Pogledaj svojstva"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "&Ukloni"
+msgstr "Ukloni stavku"
 
 #: ui/main.qml:195
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Programi"
 
 #: ui/main.qml:198
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "Skripte pri prijavi"
 
+# >> @item:intable Run application on...
 #: ui/main.qml:201
 #, kde-format
 msgid "Pre-startup Scripts"
-msgstr ""
+msgstr "Skripte pre pokretanja"
 
 # >> @item:intable Run application on...
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Logout"
+#, kde-format
 msgid "Logout Scripts"
-msgstr "na odjavljivanju"
+msgstr "Skripte pri odjavi"
 
 #: ui/main.qml:213
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "Nema stavki samopokretanja koje je zadao korisnik"
 
 #: ui/main.qml:214
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr ""
+"Kliknite na dugme <interface>Dodaj novo</interface> da biste dodali stavke"
 
 #: ui/main.qml:229
 #, kde-format
 msgid "Choose Login Script"
-msgstr ""
+msgstr "Izbor skripte pri prijavi"
 
 #: ui/main.qml:249
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "Izbor skripte pri odjavi"
 
 #: unit.cpp:26
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "Radi"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "Ne radi"
 
 # >> @item:intable Run application on...
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "po pokretanju"
+msgstr "Pokreće se"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "Zaustavlja se"
 
 #: unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "Propalo"
 
 #: unit.cpp:81
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr ""
+msgstr "Došlo je do greške pri primanju odgovora na poziv GetAll %1"
 
 #: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Časlav Ilić"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "caslav.ilic@gmx.net"
-
-#~ msgid "Shell script path:"
-#~ msgstr "Putanja skripte školjke:"
-
-#~ msgid "Create as symlink"
-#~ msgstr "Napravi kao simvezu"
-
-# >> @option:check
-#~ msgid "Autostart only in Plasma"
-#~ msgstr "Pokreni samo u Plasmi"
-
-# >> @title:column
-#~ msgid "Command"
-#~ msgstr "naredba"
-
-#~ msgctxt ""
-#~ "@title:column The name of the column that decides if the program is run "
-#~ "on session startup, on session shutdown, etc"
-#~ msgid "Run On"
-#~ msgstr "izvrši"
-
-#~ msgid "Session Autostart Manager"
-#~ msgstr "menadžer samopokretanja u sesiji"
-
-#~ msgid "Session Autostart Manager Control Panel Module"
-#~ msgstr ""
-#~ "Kontrolni modul menadžera samopokretanja u sesiji|/|$[svojstva dat "
-#~ "'Kontrolnom modulu menadžera samopokretanja u sesiji']"
-
-#~ msgid "Copyright © 2006–2010 Autostart Manager team"
-#~ msgstr "© 2006–2010, tim menadžera samopokretanja"
-
-#~ msgid "Stephen Leaf"
-#~ msgstr "Stiven Lif"
-
-#~ msgid "Montel Laurent"
-#~ msgstr "Loren Montel"
-
-#~ msgid "Maintainer"
-#~ msgstr "održavalac"
-
-# >> @item:intable +
-#~ msgctxt "The program will be run"
-#~ msgid "Enabled"
-#~ msgstr "uključen"
-
-# >> @item:intable +
-#~ msgctxt "The program won't be run"
-#~ msgid "Disabled"
-#~ msgstr "isključen"
-
-# >? Does "Desktop file" make sense? The button is "Add Program".
-# rewrite-msgid: /Desktop File/Program/
-# >> @item:intable
-#~ msgid "Desktop File"
-#~ msgstr "programi"
-
-# >> @item:intable
-#~ msgid "Script File"
-#~ msgstr "skripte"
-
-#~ msgid "Advanced..."
-#~ msgstr "Napredno..."
-
-#~ msgid "Add Program..."
-#~ msgstr "Dodaj program..."
-
-# >> @item:intable Run application on...
-#~ msgid "Before session startup"
-#~ msgstr "pre pokretanja sesije"
+msgstr "Ne mogu da otvorim dnevnik"

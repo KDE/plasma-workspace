@@ -34,7 +34,8 @@ GridLayout {
         {
             role: DelegateToolButtons.ButtonRole.InvokeAction,
             icon: "system-run",
-            text: i18nd("klipper", "Invoke action")
+            text: i18nd("klipper", "Invoke action"),
+            visible: menuItem.model?.hasAction ?? false
         },
         {
             role: DelegateToolButtons.ButtonRole.ShowQRCode,
@@ -84,6 +85,9 @@ GridLayout {
         switch (actionRole) {
         case DelegateToolButtons.ButtonRole.ToggleStar:
             if (menuItem.model) {
+                // Make sure highlight does not jump where pointer is when using a keyboard
+                menuItem.ListView.view.clipboardMenu.hoverBlock.reset();
+                menuItem.ListView.view.clipboardMenu.keyboardActivated = true;
                 menuItem.model.starred = !(menuItem.model?.starred ?? false);
             }
             break;

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-01 00:48+0000\n"
-"PO-Revision-Date: 2026-09-02 11:01+0200\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"PO-Revision-Date: 2026-09-10 12:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -136,27 +136,45 @@ msgstr "Kon de installatie van stijlen niet ongedaan maken:\n"
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2” but could not uninstall others:\n"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr ""
+"Installatie van “%1” met succes ongedaan gemaakt maar anderen zijn niet "
+"gelukt:\n"
+
+#: kcmstyle.cpp:229
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"Installatie van %1 stijl met succes ongedaan gemaakt maar anderen zijn niet "
+"gelukt:\n"
 msgstr[1] ""
+"Installatie van %1 stijlen met succes ongedaan gemaakt maar anderen zijn "
+"niet gelukt:\n"
 
-#: kcmstyle.cpp:237
-#, fuzzy, kde-format
+#: kcmstyle.cpp:240
+#, kde-format
 msgctxt "@info:status"
-msgid "Successfully uninstalled “%2”."
-msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "Installatie van %1 met succes ongedaan gemaakt"
-msgstr[1] ""
+msgid "Successfully uninstalled “%1”."
+msgstr "Installatie van “%1” met succes ongedaan gemaakt."
 
-#: kcmstyle.cpp:300 kcmstyle.cpp:307
+#: kcmstyle.cpp:242
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] "Installatie van %1 stijl met succes ongedaan gemaakt."
+msgstr[1] "Installatie van %1 stijlen met succes ongedaan gemaakt."
+
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
 "Er ging iets fout bij het laden van de configuratiedialoog van deze stijl."
 
-#: kcmstyle.cpp:414
+#: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
 msgstr "Toepassen van geselecteerde stijl '%1' is mislukt."

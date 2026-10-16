@@ -3,7 +3,6 @@
 
 #include <QDebug>
 #include <QTest>
-#include <private/qtx11extras_p.h>
 
 #include <kxftconfig.h>
 
@@ -35,14 +34,7 @@ private Q_SLOTS:
         QCOMPARE(from, 8);
         QCOMPARE(to, 15);
 
-        const int appDpiY = QX11Info::appDpiY();
-        qDebug() << "QX11Info::appDpiY()" << appDpiY;
-        if (appDpiY == 96) {
-            QVERIFY(!c.changed());
-        } else {
-            // pointSize and pixelSize do not match
-            QVERIFY(c.changed());
-        }
+        QVERIFY(!c.changed());
     }
 };
 

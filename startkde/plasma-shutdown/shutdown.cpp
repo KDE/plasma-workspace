@@ -6,6 +6,7 @@
 #include <QDir>
 #include <QProcess>
 #include <QStandardPaths>
+#include <QTimer>
 
 #include "debug.h"
 #include "ksmserver_interface.h"
@@ -17,6 +18,14 @@
 Shutdown::Shutdown(QObject *parent)
     : QObject(parent)
 {
+    // handle the obscure case where we are started but the caller doesn't call any of the shutdown methods
+    QTimer::singleShot(100, this, [this]() {
+        if (m_shutdownType == ShutdownTypeNone) {
+            qCWarning(PLASMA_SESSION) << "No shutdown type specified, quitting";
+            qApp->quit();
+            return;
+        }
+    });
     new ShutdownAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Shutdown"), QStringLiteral("org.kde.Shutdown"), this);
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Shutdown"));
@@ -24,21 +33,28 @@ Shutdown::Shutdown(QObject *parent)
 
 void Shutdown::logout()
 {
-    startLogout(KWorkSpace::ShutdownTypeNone);
+    startLogout(ShutdownTypeLogout);
 }
 
 void Shutdown::logoutAndShutdown()
 {
-    startLogout(KWorkSpace::ShutdownTypeHalt);
+    startLogout(ShutdownTypeHalt);
 }
 
 void Shutdown::logoutAndReboot()
 {
-    startLogout(KWorkSpace::ShutdownTypeReboot);
+    startLogout(ShutdownTypeReboot);
 }
 
-void Shutdown::startLogout(KWorkSpace::ShutdownType shutdownType)
+void Shutdown::startLogout(ShutdownType shutdownType)
 {
+    // Ignore a second concurrent request instead of racing a duplicate flow
+    // against the first one (BUG: 525911).
+    if (m_shutdownType != ShutdownTypeNone) {
+        qCWarning(PLASMA_SESSION) << "Logout already in progress, ignoring duplicate request";
+        return;
+    }
+
     m_shutdownType = shutdownType;
 
     OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
@@ -118,7 +134,7 @@ void Shutdown::ksmServerComplete()
 
 void Shutdown::logoutCancelled()
 {
-    m_shutdownType = KWorkSpace::ShutdownTypeNone;
+    m_shutdownType = ShutdownTypeNone;
     qApp->quit();
 }
 
@@ -168,9 +184,9 @@ void Shutdown::logoutComplete()
         reply.waitForFinished();
     }
 
-    if (m_shutdownType == KWorkSpace::ShutdownTypeHalt) {
+    if (m_shutdownType == ShutdownTypeHalt) {
         SessionBackend::self()->shutdown();
-    } else if (m_shutdownType == KWorkSpace::ShutdownTypeReboot) {
+    } else if (m_shutdownType == ShutdownTypeReboot) {
         SessionBackend::self()->reboot();
     } else { // logout
         qApp->quit();

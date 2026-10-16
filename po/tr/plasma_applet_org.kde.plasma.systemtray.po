@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2026-04-29 14:40+0300\n"
+"POT-Creation-Date: 2026-10-15 00:48+0000\n"
+"PO-Revision-Date: 2026-10-15 21:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.0\n"
 "X-POOTLE-MTIME: 1413102226.000000\n"
 
 #: qml/BackgroundAppItem.qml:76
@@ -30,56 +30,56 @@ msgstr "Çık: %1"
 msgid "General"
 msgstr "Genel"
 
-#: qml/ConfigGeneral.qml:45
+#: qml/ConfigGeneral.qml:46
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "İlgili olduğunda göster"
 
-#: qml/ConfigGeneral.qml:49
+#: qml/ConfigGeneral.qml:50
 #, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Her zaman göster"
 
-#: qml/ConfigGeneral.qml:53
+#: qml/ConfigGeneral.qml:54
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
 msgstr "Yalnızca açılır pencerede göster"
 
-#: qml/ConfigGeneral.qml:57
+#: qml/ConfigGeneral.qml:58
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
 msgstr "Hiçbir zaman gösterme (devre dışı)"
 
-#: qml/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:129
 #, kde-format
 msgid "Application Status"
 msgstr "Uygulama Durumu"
 
-#: qml/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:131
 #, kde-format
 msgid "Communications"
 msgstr "İletişim"
 
-#: qml/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:133
 #, kde-format
 msgid "System Services"
 msgstr "Sistem Hizmetleri"
 
-#: qml/ConfigGeneral.qml:134
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Hardware Control"
 msgstr "Donanım Denetimi"
 
-#: qml/ConfigGeneral.qml:137
+#: qml/ConfigGeneral.qml:138
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Çeşitli"
 
-#: qml/ConfigGeneral.qml:174
+#: qml/ConfigGeneral.qml:175
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -96,13 +96,13 @@ msgstr ""
 ">Bu ayarı kendi riskinizle kullanın ve sorunları KDE’ye veya uygulamanın "
 "yazarına bildirmeyin."
 
-#: qml/ConfigGeneral.qml:177
+#: qml/ConfigGeneral.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Riskleri Anlıyorum"
 
-#: qml/ConfigGeneral.qml:189
+#: qml/ConfigGeneral.qml:190
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -120,7 +120,7 @@ msgstr ""
 "dışı bırakacak veya bir kerede yalnızca bir ögeyi hatırlayacak şekilde "
 "yapılandırmayı düşünün."
 
-#: qml/ConfigGeneral.qml:198
+#: qml/ConfigGeneral.qml:199
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -134,19 +134,19 @@ msgstr ""
 "bir bildirim araç takımını elle etkinleştirdiyseniz veya bildirimleri "
 "yönetmek için başka bir bildirim yöneticisi kullanıyorsanız yapın."
 
-#: qml/ConfigGeneral.qml:210
+#: qml/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Panel yüksekliğiyle ölçeklendir"
 
-#: qml/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:212
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Panel genişliğiyle ölçeklendir"
 
-#: qml/ConfigGeneral.qml:213
+#: qml/ConfigGeneral.qml:214
 #, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
@@ -154,37 +154,43 @@ msgctxt ""
 msgid "Panel icon size:"
 msgstr "Panel simgesi boyutu:"
 
-#: qml/ConfigGeneral.qml:217
+#: qml/ConfigGeneral.qml:222
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Küçük"
 
-#: qml/ConfigGeneral.qml:237
+#: qml/ConfigGeneral.qml:226
+#, kde-format
+msgctxt "@item:inlistbox Icon size"
+msgid "Tiny"
+msgstr "Minik"
+
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr "Boşluklandırma:"
 
-#: qml/ConfigGeneral.qml:241
+#: qml/ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Küçük"
 
-#: qml/ConfigGeneral.qml:245
+#: qml/ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Olağan"
 
-#: qml/ConfigGeneral.qml:249
+#: qml/ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Büyük"
 
-#: qml/ConfigGeneral.qml:269
+#: qml/ConfigGeneral.qml:296
 #, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
@@ -192,39 +198,39 @@ msgctxt ""
 msgid "Direction:"
 msgstr "Yön:"
 
-#: qml/ConfigGeneral.qml:283
+#: qml/ConfigGeneral.qml:310
 #, kde-format
 msgid "Bottom-to-top"
 msgstr "Aşağıdan yukarıya"
 
-#: qml/ConfigGeneral.qml:284
+#: qml/ConfigGeneral.qml:311
 #, kde-format
 msgid "Top-to-bottom"
 msgstr "Yukarıdan aşağıya"
 
-#: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
+#: qml/ConfigGeneral.qml:316 qml/ConfigGeneral.qml:323
 #, kde-format
 msgid "Left-to-right"
 msgstr "Soldan sağa"
 
-#: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
+#: qml/ConfigGeneral.qml:317 qml/ConfigGeneral.qml:322
 #, kde-format
 msgid "Right-to-left"
 msgstr "Sağdan sola"
 
-#: qml/ConfigGeneral.qml:307
+#: qml/ConfigGeneral.qml:334
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Dokunmatik Kip’teyken kendiliğinden büyük olarak ayarlanır"
 
-#: qml/ConfigGeneral.qml:332
+#: qml/ConfigGeneral.qml:359
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Girdiler"
 
-#: qml/ConfigGeneral.qml:336
+#: qml/ConfigGeneral.qml:363
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"

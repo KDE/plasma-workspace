@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2021, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014-2016, 2020-2021, 2024, 2026 A S Alam <aalam@users.sf.net>
 # Aman Alam <alam.yellow@gmail.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-06 00:47+0000\n"
-"PO-Revision-Date: 2024-10-25 23:31-0500\n"
+"PO-Revision-Date: 2026-10-12 19:53-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: actionlist.cpp:93
 #, kde-format
@@ -141,7 +141,7 @@ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਭੁਲਾਓ"
 #: recentusagemodel.cpp:328
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "ਫੋਲਡਰ"
 
 #: recentusagemodel.cpp:375
 #, kde-format
@@ -149,10 +149,9 @@ msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
 #: recentusagemodel.cpp:380
-#, fuzzy, kde-format
-#| msgid "Forget File"
+#, kde-format
 msgid "Forget Folder"
-msgstr "ਫ਼ਾਇਲ ਨੂੰ ਭੁਲਾਓ"
+msgstr "ਫੋਲਡਰ ਨੂੰ ਭੁਲਾਓ"
 
 #: recentusagemodel.cpp:380
 #, kde-format
@@ -170,10 +169,9 @@ msgid "Forget All Applications"
 msgstr "ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਭੁਲਾਓ"
 
 #: recentusagemodel.cpp:530
-#, fuzzy, kde-format
-#| msgid "Forget All Files"
+#, kde-format
 msgid "Forget All Folders"
-msgstr "ਸਾਰੀਆਂ ਫਾਇਲ ਭੁਲਾਓ"
+msgstr "ਸਭ ਫੋਲਡਰਾਂ ਨੂੰ ਭੁਲਾਓ"
 
 #: recentusagemodel.cpp:533
 #, kde-format
@@ -196,16 +194,14 @@ msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "ਇਹ ਦਿਖਾਈ ਨਹੀਂ ਦੇਵੇਗਾ! ਛੱਡੋ ਪਰ੍ਹਾ"
 
 #: rootmodel.cpp:581
-#, fuzzy, kde-format
-#| msgid "Recent Files"
+#, kde-format
 msgid "Recent Places"
-msgstr "ਤਾਜ਼ਾ ਫ਼ਾਇਲਾਂ"
+msgstr "ਸੱਜਰੀਆਂ ਥਾਵਾਂ"
 
 #: rootmodel.cpp:581
-#, fuzzy, kde-format
-#| msgid "Often Used Files"
+#, kde-format
 msgid "Often Used Places"
-msgstr "ਅਕਸਰ ਵਰਤੀਆਂ ਫਾਇਲ"
+msgstr "ਅਕਸਰ ਵਰਤੀਆਂ ਥਾਵਾਂ"
 
 #: rootmodel.cpp:590
 #, kde-format

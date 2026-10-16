@@ -285,7 +285,9 @@ PlasmoidItem {
         // The user requested to show the notifications popup, probably by 
         // clicking the "Missed Notifications in Do Not Disturb" notification.
         function onShowNotificationsRequested(): void {
-            root.expanded = true;
+            if (root === Notifications.Globals.plasmoidItem) {
+                root.expanded = true;
+            }
         }
     }
 }

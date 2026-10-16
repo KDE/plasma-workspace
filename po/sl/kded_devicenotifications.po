@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-29 00:45+0000\n"
-"PO-Revision-Date: 2025-07-08 06:45+0200\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-14 07:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,61 +16,81 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.9\n"
 
-#: devicenotifications.cpp:449
+#: devicenotifications.cpp:509
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Zaznan zaslon"
 
-#: devicenotifications.cpp:450
+#: devicenotifications.cpp:511
 #, kde-format
-msgid "A display has been connected."
-msgstr "Zaslon je bil priklopljen."
+msgctxt "Display connector (e.g. HDMI-1)"
+msgid "%1 has been connected."
+msgstr "%1 je bil(a) priklopljen(a)."
 
-#: devicenotifications.cpp:470
+#: devicenotifications.cpp:514
+#, kde-format
+msgctxt "Display manufacturer, model (connector name)"
+msgid "%1 %2 (%3) has been connected."
+msgstr "%1 %2 (%3) je bil(a) priklopljen(a)."
+
+#: devicenotifications.cpp:549
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Zaslon odstranjen"
 
-#: devicenotifications.cpp:471
+#: devicenotifications.cpp:551
 #, kde-format
-msgid "A display has been disconnected."
-msgstr "Zaslon je bil odklopljen."
+msgctxt "Display connector (e.g. HDMI-1)"
+msgid "%1 has been disconnected."
+msgstr "%1 je bil(a) odklopljen(a)."
 
-#: devicenotifications.cpp:517
+#: devicenotifications.cpp:554
+#, kde-format
+msgctxt "Display manufacturer, model (connector name)"
+msgid "%1 %2 (%3) has been disconnected."
+msgstr "%1 %2 (%3) je bil(a) odklopljen(a)."
+
+#: devicenotifications.cpp:602
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 je bil(a) priklopljen(a)."
 
-#: devicenotifications.cpp:517
+#: devicenotifications.cpp:602
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Naprava USB je bila priklopljena."
 
-#: devicenotifications.cpp:522
+#: devicenotifications.cpp:607
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Zaznana naprava USB"
 
-#: devicenotifications.cpp:560
+#: devicenotifications.cpp:645
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 je bil(a) odklopljen(a)."
 
-#: devicenotifications.cpp:560
+#: devicenotifications.cpp:645
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Naprava USB je bila odklopljena."
 
-#: devicenotifications.cpp:565
+#: devicenotifications.cpp:650
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "Naprava USB odstranjena"
+
+#~ msgid "A display has been connected."
+#~ msgstr "Zaslon je bil priklopljen."
+
+#~ msgid "A display has been disconnected."
+#~ msgstr "Zaslon je bil odklopljen."
 
 #~ msgctxt "@title:notifications"
 #~ msgid "USB Device Went Away"

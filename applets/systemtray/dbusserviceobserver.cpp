@@ -16,7 +16,7 @@
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
 
-DBusServiceObserver::DBusServiceObserver(const QPointer<SystemTraySettings> &settings, QObject *parent)
+DBusServiceObserver::DBusServiceObserver(SystemTraySettings *settings, QObject *parent)
     : QObject(parent)
     , m_settings(settings)
     , m_sessionServiceWatcher(new QDBusServiceWatcher(this))
