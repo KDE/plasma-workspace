@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-08-24 19:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -35,67 +35,106 @@ msgstr ""
 "Värilämpötila alkaa vaihtua päiväväriksi %1 ja on täysin vaihtunut %2 "
 "mennessä"
 
-#: ui/main.qml:39
+#: ui/main.qml:104
 #, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Sinisen valon suodatin tekee näyttöväreistä lämpimämmät."
 
-#: ui/main.qml:50
+#: ui/main.qml:117
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily activated until %1."
+msgstr ""
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily activated until it is manually turned off."
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily suspended until %1."
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily suspended until it is manually resumed."
+msgstr ""
+
+#: ui/main.qml:130
+#, fuzzy, kde-format
+#| msgid "Turn off at:"
+msgctxt "@action:button turn off Night Light feature"
+msgid "Turn Off"
+msgstr "Poista käytöstä:"
+
+#: ui/main.qml:141
+#, kde-format
+msgctxt ""
+"@action:button resume Light Light feature, which had been temporarily "
+"disabled"
+msgid "Resume"
+msgstr ""
+
+#: ui/main.qml:159
 #, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Vaihtoajat:"
 
-#: ui/main.qml:61
+#: ui/main.qml:170
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Aina poissa käytöstä"
 
-#: ui/main.qml:62
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
 msgstr "Aina käytössä"
 
-#: ui/main.qml:63
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
 msgstr "Auringonnousu ja -lasku"
 
-#: ui/main.qml:80
+#: ui/main.qml:189
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "Asetukset…"
 
-#: ui/main.qml:131 ui/main.qml:182 ui/main.qml:248
+#: ui/main.qml:240 ui/main.qml:291 ui/main.qml:357
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
 msgstr "%1 K"
 
-#: ui/main.qml:138
+#: ui/main.qml:247
 #, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Päivävalon lämpötila:"
 
-#: ui/main.qml:189 ui/main.qml:255
+#: ui/main.qml:298 ui/main.qml:364
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Viileä (ei suodatinta)"
 
-#: ui/main.qml:196 ui/main.qml:262
+#: ui/main.qml:305 ui/main.qml:371
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Lämmin"
 
-#: ui/main.qml:204
+#: ui/main.qml:313
 #, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
@@ -256,9 +295,6 @@ msgstr "Yövalon lämpötila:"
 
 #~ msgid "Turn on at:"
 #~ msgstr "Ota käyttöön:"
-
-#~ msgid "Turn off at:"
-#~ msgstr "Poista käytöstä:"
 
 #~ msgid "Night Color begins changing back at %1 and ends at %2"
 #~ msgstr "Yöväri alkaa vaihtua takaisin %1 ja päättyy %2"

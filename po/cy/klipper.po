@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2003-12-27 14:52+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -671,17 +671,16 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Maint hanes y c&lipfwrdd"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
+msgid "Rotate History Up"
 msgstr "Maint hanes y c&lipfwrdd"
 
 #: klipper.cpp:136
@@ -697,19 +696,19 @@ msgstr "&Naidlen wrth leoliad cyrchydd y llygoden"
 msgid "Clipboard history"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
+msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:418
+#: klipper.cpp:417
 #, kde-format
-msgid "current"
+msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
+msgid "Older: "
 msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
@@ -896,6 +895,18 @@ msgstr "Maint hanes y c&lipfwrdd"
 #, kde-format
 msgid "&Cancel"
 msgstr ""
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Maint hanes y c&lipfwrdd"
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Maint hanes y c&lipfwrdd"
 
 #, fuzzy
 #~| msgid "&Ignore selection"

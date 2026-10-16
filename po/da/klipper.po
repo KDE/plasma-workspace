@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-10-31 23:16+0100\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -685,14 +685,15 @@ msgstr "&Vis stregkode..."
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Næste historikelement"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Forrige historikelement"
+msgid "Rotate History Up"
+msgstr "Ryd historik"
 
 #: klipper.cpp:136
 #, kde-format
@@ -705,20 +706,21 @@ msgstr "Åbn udklipsholderelementer ved musseposition"
 msgid "Clipboard history"
 msgstr "Udklipsholderhistorik"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "op"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "nuværende"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "ned"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -923,6 +925,20 @@ msgstr "Udklipsholder-popop"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annullér"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Næste historikelement"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Forrige historikelement"
+
+#~ msgid "up"
+#~ msgstr "op"
+
+#~ msgid "down"
+#~ msgstr "ned"
 
 #~ msgctxt "@info"
 #~ msgid ""

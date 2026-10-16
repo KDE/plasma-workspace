@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2024-04-08 11:58+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -26,130 +26,6 @@ msgstr "Giovanni Sora"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "g.sora@tiscali.it"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-"Tu vole installar le font(es) pro uso personal (solmente disponibile pro "
-"te), o pro tote le systema (disponibile a omne usatores)?"
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "Ubi installar"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "Installator de Font"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "Simplice Installator de Font"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "(C) Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, kde-format
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr ""
-"Il face le dialogo transiente pro un fenestra specificate per windowHandle"
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "URL a installar"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "Imprime"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "Il es cancellante ..."
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "Imprimitor de Font"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "Simple imprimitor de font"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr "Il face le dialogo transiente pro un app X specificate per winid"
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "Indice de dimension pro imprimer fonts"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-"Font de imprimer, specificate como \"Familia,Stilo\" ubi Stilo es un numero "
-"decimal de 24-bit composite como: <weight><width><slant>"
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "File continente lista de fontes a imprimer"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "Remove file continente lista de fonts a imprimer"
-
-#: apps/Viewer.cpp:50
-#, kde-format
-msgid "Open an existing font file"
-msgstr "Aperi un file de font existente"
-
-#: apps/Viewer.cpp:51
-#, kde-format
-msgid "Print font preview"
-msgstr "Imprime vista preliminar  de Font"
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "Selectiona un font a vider"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "URL que debe aperir se"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "Visor de Font"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "Simple Visor de Font"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -196,6 +72,11 @@ msgstr "Tu es secur que tu vole deler:"
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Cancella scansion de font?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr "Il es cancellante ..."
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -927,6 +808,20 @@ msgstr ""
 "<table><tr><td align=\"right\">Habilitate:</td><td>%1</td></tr><tr><td align="
 "\"right\">Dishabilitate:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Tu vole installar le font(es) pro uso personal (solmente disponibile pro "
+"te), o pro tote le systema (disponibile a omne usatores)?"
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "Ubi installar"
 
 #: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
@@ -2285,6 +2180,71 @@ msgstr "Phags-pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "Font Installer"
+#~ msgstr "Installator de Font"
+
+#~ msgid "Simple font installer"
+#~ msgstr "Simplice Installator de Font"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "(C) Craig Drummond, 2007"
+
+#~ msgid "Makes the dialog transient for a window specified by windowHandle"
+#~ msgstr ""
+#~ "Il face le dialogo transiente pro un fenestra specificate per windowHandle"
+
+#~ msgid "URL to install"
+#~ msgstr "URL a installar"
+
+#~ msgid "Print"
+#~ msgstr "Imprime"
+
+#~ msgid "Font Printer"
+#~ msgstr "Imprimitor de Font"
+
+#~ msgid "Simple font printer"
+#~ msgstr "Simple imprimitor de font"
+
+#~ msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgstr "Il face le dialogo transiente pro un app X specificate per winid"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "Indice de dimension pro imprimer fonts"
+
+#~ msgid ""
+#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
+#~ "decimal number composed as: <weight><width><slant>"
+#~ msgstr ""
+#~ "Font de imprimer, specificate como \"Familia,Stilo\" ubi Stilo es un "
+#~ "numero decimal de 24-bit composite como: <weight><width><slant>"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "File continente lista de fontes a imprimer"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "Remove file continente lista de fonts a imprimer"
+
+#~ msgid "Open an existing font file"
+#~ msgstr "Aperi un file de font existente"
+
+#~ msgid "Print font preview"
+#~ msgstr "Imprime vista preliminar  de Font"
+
+#~ msgid "Select Font to View"
+#~ msgstr "Selectiona un font a vider"
+
+#~ msgid "URL to open"
+#~ msgstr "URL que debe aperir se"
+
+#~ msgid "Font Viewer"
+#~ msgstr "Visor de Font"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "Simple Visor de Font"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "(C) Craig Drummond, 2004-2007"
 
 #~ msgid "Font Management"
 #~ msgstr "Gestion de font"

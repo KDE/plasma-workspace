@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -356,53 +356,53 @@ msgstr "Уграђени екран"
 msgid "Disconnected Screen %1"
 msgstr "Неповезан екран %1"
 
-#: shellcorona.cpp:179 shellcorona.cpp:181
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "Прикажи површ"
 
-#: shellcorona.cpp:181
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Сакриј површ"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Активирај покретач програма"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Прикажи мењач активности"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Пребаци на претходну активност"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Пребаци на наредну активност"
 
-#: shellcorona.cpp:253
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Управљај површима и панелима…"
 
-#: shellcorona.cpp:275
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Помери фокус тастатуре између панела"
 
-#: shellcorona.cpp:2287
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "Додај панел"
 
-#: shellcorona.cpp:2374
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

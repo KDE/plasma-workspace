@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2007-09-02 15:24+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -673,17 +673,16 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "اندازه تاریخچه &تخته یادداشت:‌"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
+msgid "Rotate History Up"
 msgstr "اندازه تاریخچه &تخته یادداشت:‌"
 
 #: klipper.cpp:136
@@ -699,19 +698,19 @@ msgstr "گزینگان &بالاپر در موقعیت مکان‌نمای مو�
 msgid "Clipboard history"
 msgstr "اندازه تاریخچه &تخته یادداشت:‌"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
+msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:418
+#: klipper.cpp:417
 #, kde-format
-msgid "current"
+msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
+msgid "Older: "
 msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
@@ -898,6 +897,18 @@ msgstr "اندازه تاریخچه &تخته یادداشت:‌"
 #, kde-format
 msgid "&Cancel"
 msgstr "&لغو‌"
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "اندازه تاریخچه &تخته یادداشت:‌"
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "اندازه تاریخچه &تخته یادداشت:‌"
 
 #, fuzzy
 #~| msgid "&Ignore selection"

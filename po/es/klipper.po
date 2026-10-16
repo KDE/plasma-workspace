@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-14 11:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -689,14 +689,15 @@ msgstr "Mostrar código de &barras…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Siguiente elemento del historial"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Anterior elemento del historial"
+msgid "Rotate History Up"
+msgstr "Borrar el historial"
 
 #: klipper.cpp:136
 #, kde-format
@@ -709,20 +710,21 @@ msgstr "Mostrar elementos del portapapeles en la posición del ratón"
 msgid "Clipboard history"
 msgstr "Historial del portapapeles"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "arriba"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "actual"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "abajo"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -916,3 +918,17 @@ msgstr "Ventana emergente del portapapeles"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Siguiente elemento del historial"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Anterior elemento del historial"
+
+#~ msgid "up"
+#~ msgstr "arriba"
+
+#~ msgid "down"
+#~ msgstr "abajo"

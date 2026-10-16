@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-02-21 11:46+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -26,133 +26,6 @@ msgstr "Freek de Kruijf - 2020 t/m 2024"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-"Wilt u de lettertypen voor persoonlijk gebruik (alleen voor uzelf) of "
-"systeemwijd (beschikbaar voor alle gebruikers) installeren?"
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "Waar installeren"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "Lettertypeninstallatie"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "Eenvoudig lettertype-installatieprogramma"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "(c) Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, kde-format
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr ""
-"Maakt de dialoog kortstondig voor een venster gespecificeerd door "
-"windowHandle"
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "URL-adres om te installeren"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "Afdrukken"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "Annuleren…"
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "Lettertypenafdrukker"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "Eenvoudig lettertypenafdrukker"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr ""
-"Zorgt er voor dat het venster zich gedraagt als dialoogvenster voor een X11-"
-"toepassing die wordt gespecificeerd via winid"
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "Grootte-index voor het afdrukken van lettertypen"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-"Lettertypen om af te drukken, opgegeven als \"Familie,stijl\", waarbij stijl "
-"een 24-bits decimaal getal is dat is samengesteld als: <weight><width><slant>"
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "Bestand dat lijst met af te drukken lettertypen bevat"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "Bestand dat lijst met af te drukken lettertypen bevat verwijderen"
-
-#: apps/Viewer.cpp:50
-#, kde-format
-msgid "Open an existing font file"
-msgstr "Een bestaand lettertypebestand openen"
-
-#: apps/Viewer.cpp:51
-#, kde-format
-msgid "Print font preview"
-msgstr "Lettertypevoorbeeld afdrukken"
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "Lettertype om te tonen selecteren"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "URL-adres om te openen"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "Lettertypeweergave"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "Eenvoudig lettertype-weergaveprogramma"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -199,6 +72,11 @@ msgstr "Wilt u het volgende verwijderen:"
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Scannen naar lettertypen afbreken?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr "Annuleren…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -927,6 +805,20 @@ msgstr ""
 "<table><tr><td align=\"right\">Ingeschakeld:</td><td>%1</td></tr><tr><td "
 "align=\"right\">Uitgeschakeld:</td><td>%2</td></tr><tr><td align=\"right"
 "\">Totaal aantal:</td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Wilt u de lettertypen voor persoonlijk gebruik (alleen voor uzelf) of "
+"systeemwijd (beschikbaar voor alle gebruikers) installeren?"
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "Waar installeren"
 
 #: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
@@ -2286,6 +2178,75 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "Font Installer"
+#~ msgstr "Lettertypeninstallatie"
+
+#~ msgid "Simple font installer"
+#~ msgstr "Eenvoudig lettertype-installatieprogramma"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "(c) Craig Drummond, 2007"
+
+#~ msgid "Makes the dialog transient for a window specified by windowHandle"
+#~ msgstr ""
+#~ "Maakt de dialoog kortstondig voor een venster gespecificeerd door "
+#~ "windowHandle"
+
+#~ msgid "URL to install"
+#~ msgstr "URL-adres om te installeren"
+
+#~ msgid "Print"
+#~ msgstr "Afdrukken"
+
+#~ msgid "Font Printer"
+#~ msgstr "Lettertypenafdrukker"
+
+#~ msgid "Simple font printer"
+#~ msgstr "Eenvoudig lettertypenafdrukker"
+
+#~ msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgstr ""
+#~ "Zorgt er voor dat het venster zich gedraagt als dialoogvenster voor een "
+#~ "X11-toepassing die wordt gespecificeerd via winid"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "Grootte-index voor het afdrukken van lettertypen"
+
+#~ msgid ""
+#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
+#~ "decimal number composed as: <weight><width><slant>"
+#~ msgstr ""
+#~ "Lettertypen om af te drukken, opgegeven als \"Familie,stijl\", waarbij "
+#~ "stijl een 24-bits decimaal getal is dat is samengesteld als: "
+#~ "<weight><width><slant>"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "Bestand dat lijst met af te drukken lettertypen bevat"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "Bestand dat lijst met af te drukken lettertypen bevat verwijderen"
+
+#~ msgid "Open an existing font file"
+#~ msgstr "Een bestaand lettertypebestand openen"
+
+#~ msgid "Print font preview"
+#~ msgstr "Lettertypevoorbeeld afdrukken"
+
+#~ msgid "Select Font to View"
+#~ msgstr "Lettertype om te tonen selecteren"
+
+#~ msgid "URL to open"
+#~ msgstr "URL-adres om te openen"
+
+#~ msgid "Font Viewer"
+#~ msgstr "Lettertypeweergave"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "Eenvoudig lettertype-weergaveprogramma"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "(C) Craig Drummond, 2004-2007"
 
 #~ msgid "Font Management"
 #~ msgstr "Lettertypenbeheer"

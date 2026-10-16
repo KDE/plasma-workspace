@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-09-27 09:16+0300\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-09 10:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -645,8 +645,7 @@ msgid "Remove Starred Item"
 msgstr "הסרת פריט מסומן בכוכב"
 
 #: klipper.cpp:70
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
 msgstr "חלונית לוח גזירים צצה"
@@ -657,7 +656,7 @@ msgstr "חלונית לוח גזירים צצה"
 #| msgid "Automatic Action Popup Menu"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "תפריט פעולות קופץ אוטומטי"
+msgstr "החלפת מצב הקפצה אוטומטית של תפריט פעולות"
 
 #: klipper.cpp:94
 #, kde-format
@@ -686,14 +685,15 @@ msgstr "ה&צגת ברקוד…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "הפריט הבא בהיסטוריה"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "הפריט הקודם בהיסטוריה"
+msgid "Rotate History Up"
+msgstr "פינוי ההיסטוריה"
 
 #: klipper.cpp:136
 #, kde-format
@@ -706,20 +706,21 @@ msgstr "הצגת פריטי לוח גזירים במקום של העכבר"
 msgid "Clipboard history"
 msgstr "היסטוריית לוח הגזירים"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "למעלה"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "נוכחי"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "למטה"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -904,6 +905,20 @@ msgstr "חלונית לוח גזירים צצה"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ביטול"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "הפריט הבא בהיסטוריה"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "הפריט הקודם בהיסטוריה"
+
+#~ msgid "up"
+#~ msgstr "למעלה"
+
+#~ msgid "down"
+#~ msgstr "למטה"
 
 #~ msgctxt "@info"
 #~ msgid ""

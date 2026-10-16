@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2008-10-18 22:34+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -678,17 +678,16 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "&Pamier historyi abmiennaha bufera:"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
+msgid "Rotate History Up"
 msgstr "&Pamier historyi abmiennaha bufera:"
 
 #: klipper.cpp:136
@@ -704,19 +703,19 @@ msgstr "&Vyjaŭlaj menu ŭ miescy kursora myšy"
 msgid "Clipboard history"
 msgstr "&Pamier historyi abmiennaha bufera:"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
+msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:418
+#: klipper.cpp:417
 #, kde-format
-msgid "current"
+msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
+msgid "Older: "
 msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
@@ -903,6 +902,18 @@ msgstr "&Pamier historyi abmiennaha bufera:"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anuluj"
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "&Pamier historyi abmiennaha bufera:"
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "&Pamier historyi abmiennaha bufera:"
 
 #, fuzzy
 #~| msgid "&Ignore selection"

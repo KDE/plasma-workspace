@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -698,14 +698,15 @@ msgstr "Mo&strar o Código de Barras…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Item do Histórico Seguinte"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Item do Histórico Anterior"
+msgid "Rotate History Up"
+msgstr "Histórico da área de transferência"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -720,20 +721,21 @@ msgstr "Mostrar os Itens na Posição do Rato"
 msgid "Clipboard history"
 msgstr "Histórico da área de transferência"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "cima"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "actual"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "baixo"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -947,6 +949,20 @@ msgstr "Histórico da área de transferência"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Item do Histórico Seguinte"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Item do Histórico Anterior"
+
+#~ msgid "up"
+#~ msgstr "cima"
+
+#~ msgid "down"
+#~ msgstr "baixo"
 
 #~ msgctxt "@info"
 #~ msgid ""

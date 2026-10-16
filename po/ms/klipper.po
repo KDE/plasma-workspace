@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2011-01-13 21:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -668,18 +668,17 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "C&lipboard history size:"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Item Sejarah Berikut"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Item Sejarah Terdahulu"
+msgid "Rotate History Up"
+msgstr "Saiz rekod papan k&lip:"
 
 #: klipper.cpp:136
 #, kde-format
@@ -693,19 +692,19 @@ msgstr ""
 msgid "Clipboard history"
 msgstr "Saiz rekod papan k&lip:"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
+msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:418
+#: klipper.cpp:417
 #, kde-format
-msgid "current"
+msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
+msgid "Older: "
 msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
@@ -892,6 +891,18 @@ msgstr "Saiz rekod papan k&lip:"
 #, fuzzy, kde-format
 msgid "&Cancel"
 msgstr "&Batal"
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Item Sejarah Berikut"
+
+#, fuzzy
+#~| msgid "C&lipboard history size:"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Item Sejarah Terdahulu"
 
 #, fuzzy
 #~| msgid "&Ignore selection"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-06-18 21:41+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -684,14 +684,15 @@ msgstr "Vonalkód megjeleníté&se…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Következő előzményelem"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Előző előzményelem"
+msgid "Rotate History Up"
+msgstr "Előzmények törlése"
 
 #: klipper.cpp:136
 #, kde-format
@@ -704,20 +705,21 @@ msgstr "Vágólapelemek megjelenítése a kurzorpozíciónál"
 msgid "Clipboard history"
 msgstr "Vágólapnapló"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "fel"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "jelenlegi"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "le"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -922,6 +924,20 @@ msgstr "Felugró vágólap"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Mégse"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Következő előzményelem"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Előző előzményelem"
+
+#~ msgid "up"
+#~ msgstr "fel"
+
+#~ msgid "down"
+#~ msgstr "le"
 
 #~ msgctxt "@info"
 #~ msgid ""

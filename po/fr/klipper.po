@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-10-06 09:20+0200\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-14 10:13+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -676,11 +676,10 @@ msgid "Remove Starred Item"
 msgstr "Supprimer les éléments marqués d'une étoile"
 
 #: klipper.cpp:70
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "Menu contextuel du presse-papier"
+msgstr "Presse-papier"
 
 #: klipper.cpp:74
 #, kde-format
@@ -716,14 +715,15 @@ msgstr "A&fficher le code barre..."
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Élément suivant de l'historique"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Élément précédent de l'historique"
+msgid "Rotate History Up"
+msgstr "Effacer l'historique"
 
 #: klipper.cpp:136
 #, kde-format
@@ -736,20 +736,21 @@ msgstr "Afficher les éléments du presse-papier à la position de la souris"
 msgid "Clipboard history"
 msgstr "Historique du presse-papier"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "haut"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "actuel"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "bas"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -947,6 +948,20 @@ msgstr "Menu contextuel du presse-papier"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annuler"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Élément suivant de l'historique"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Élément précédent de l'historique"
+
+#~ msgid "up"
+#~ msgstr "haut"
+
+#~ msgid "down"
+#~ msgstr "bas"
 
 #~ msgctxt "@info"
 #~ msgid ""

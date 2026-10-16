@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -697,14 +697,15 @@ msgstr "Hiện mã &vạch…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Mục lịch sử sau"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Mục lịch sử trước"
+msgid "Rotate History Up"
+msgstr "Lịch sử bảng nháp"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -719,20 +720,21 @@ msgstr "Hiện các mục tại vị trí con trỏ chuột"
 msgid "Clipboard history"
 msgstr "Lịch sử bảng nháp"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "lên"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "hiện tại"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "xuống"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -940,6 +942,20 @@ msgstr "Lịch sử bảng nháp"
 #, kde-format
 msgid "&Cancel"
 msgstr "H&uỷ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Mục lịch sử sau"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Mục lịch sử trước"
+
+#~ msgid "up"
+#~ msgstr "lên"
+
+#~ msgid "down"
+#~ msgstr "xuống"
 
 #~ msgctxt "@info"
 #~ msgid ""

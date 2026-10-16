@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-15 00:07+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -677,14 +677,15 @@ msgstr "Zobrazit čárový &kód..."
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Následující položka v historii"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Předchozí položka v historii"
+msgid "Rotate History Up"
+msgstr "Vyprázdnit historii"
 
 #: klipper.cpp:136
 #, kde-format
@@ -697,20 +698,21 @@ msgstr "Zobrazit položky ve schránce na pozici myši"
 msgid "Clipboard history"
 msgstr "Historie schránky"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "nahoru"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "současný"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "dolů"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -899,6 +901,20 @@ msgstr "Vyskakovací okno schránky"
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Následující položka v historii"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Předchozí položka v historii"
+
+#~ msgid "up"
+#~ msgstr "nahoru"
+
+#~ msgid "down"
+#~ msgstr "dolů"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-10-16 12:38-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -629,14 +629,15 @@ msgstr "…ਬਾਰਕੋਡ ਵੇਖੋ(&S)"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "ਅਗਲੀ ਅਤੀਤ ਆਈਟਮ"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "ਪਿਛਲੀ ਅਤੀਤ ਆਈਟਮ"
+msgid "Rotate History Up"
+msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
 #: klipper.cpp:136
 #, kde-format
@@ -649,20 +650,21 @@ msgstr "ਮਾਊਸ ਸਥਿਤੀ ਉੱਤੇ ਕਲਿੱਪਬੋਰਡ �
 msgid "Clipboard history"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "ਉੱਤੇ"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "ਮੌਜੂਦਾ"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "ਹੇਠਾਂ"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -840,6 +842,20 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਪੌਪਅੱਪ"
 #, kde-format
 msgid "&Cancel"
 msgstr "ਰੱਦ ਕਰੋ(&C)"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "ਅਗਲੀ ਅਤੀਤ ਆਈਟਮ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "ਪਿਛਲੀ ਅਤੀਤ ਆਈਟਮ"
+
+#~ msgid "up"
+#~ msgstr "ਉੱਤੇ"
+
+#~ msgid "down"
+#~ msgstr "ਹੇਠਾਂ"
 
 #~ msgid "Text selection:"
 #~ msgstr "ਲਿਖਤ ਦੀ ਚੋਣ:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2010-07-16 13:01+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -667,18 +667,17 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Folgend skiednis item"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Foarich skiednis item"
+msgid "Rotate History Up"
+msgstr "Klamboerdskiednis"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -692,20 +691,21 @@ msgstr "Popup by mûsposysje"
 msgid "Clipboard history"
 msgstr "Klamboerdskiednis"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "omheech"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "aktive"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "omleech"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -891,6 +891,24 @@ msgstr "Klamboerdskiednis"
 #, kde-format
 msgid "&Cancel"
 msgstr "Ofbre&kke"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Folgend skiednis item"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Foarich skiednis item"
+
+#~ msgid "up"
+#~ msgstr "omheech"
+
+#~ msgid "down"
+#~ msgstr "omleech"
 
 #, fuzzy
 #~| msgid "Text selection only"

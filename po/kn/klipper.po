@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -678,18 +678,17 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next history item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "ಚರಿತ್ರೆಯ ಮುಂದಿನ ಅಂಶ"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous history item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "ಚರಿತ್ರೆಯ ಹಿಂದಿನ ಅಂಶ"
+msgid "Rotate History Up"
+msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -703,20 +702,21 @@ msgstr "ಮೌಸ್ ಸೂಚಕನ ಸ್ಥಾನದಲ್ಲಿ ಪುಟಿ
 msgid "Clipboard history"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "ಮೇಲಕ್ಕೆ"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "ಪ್ರಸ್ತುತ"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "ಕೆಳಕ್ಕೆ"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -901,6 +901,24 @@ msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
 #, kde-format
 msgid "&Cancel"
 msgstr "ರದ್ದುಮಾಡು(&C)"
+
+#, fuzzy
+#~| msgid "Next history item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "ಚರಿತ್ರೆಯ ಮುಂದಿನ ಅಂಶ"
+
+#, fuzzy
+#~| msgid "Previous history item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "ಚರಿತ್ರೆಯ ಹಿಂದಿನ ಅಂಶ"
+
+#~ msgid "up"
+#~ msgstr "ಮೇಲಕ್ಕೆ"
+
+#~ msgid "down"
+#~ msgstr "ಕೆಳಕ್ಕೆ"
 
 #, fuzzy
 #~| msgid "Text selection only"

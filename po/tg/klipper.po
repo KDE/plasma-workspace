@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -651,14 +651,15 @@ msgstr "&Намоиш додани рамзи наворӣ..."
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
+msgid "Rotate History Down"
 msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete clipboard history?"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr ""
+msgid "Rotate History Up"
+msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -672,19 +673,19 @@ msgstr "Менюи ба &рӯй бароянда дар мавқеъи ҷойг�
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
+msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:418
+#: klipper.cpp:417
 #, kde-format
-msgid "current"
+msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
+msgid "Older: "
 msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)

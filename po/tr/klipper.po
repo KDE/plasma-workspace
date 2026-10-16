@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-14 19:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -673,14 +673,15 @@ msgstr "&Barkodu Göster…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Sonraki Geçmiş Ögesi"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Önceki Geçmiş Ögesi"
+msgid "Rotate History Up"
+msgstr "Geçmişi Temizle"
 
 #: klipper.cpp:136
 #, kde-format
@@ -693,20 +694,21 @@ msgstr "Fare Konumunda Pano Ögelerini Göster"
 msgid "Clipboard history"
 msgstr "Pano geçmişi"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "üstteki"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "geçerli"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "alttaki"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -898,6 +900,20 @@ msgstr "Pano Açılır Penceresi"
 #, kde-format
 msgid "&Cancel"
 msgstr "İ&ptal"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Sonraki Geçmiş Ögesi"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Önceki Geçmiş Ögesi"
+
+#~ msgid "up"
+#~ msgstr "üstteki"
+
+#~ msgid "down"
+#~ msgstr "alttaki"
 
 #~ msgctxt "@info"
 #~ msgid ""

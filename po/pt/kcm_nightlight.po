@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-15 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2022-09-11 11:07+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr ""
 "A temperatura da cor começa a mudar para a versão diurna às %1 e muda por "
 "completo às %2"
 
-#: ui/main.qml:39
+#: ui/main.qml:104
 #, fuzzy, kde-format
 #| msgid "The blue light filter makes the colors on the screen warmer."
 msgctxt "@info"
@@ -46,53 +46,91 @@ msgstr ""
 "O filtro de luz azul torna as cores no ecrã mais quentes para reduzir o "
 "cansaço ocular."
 
-#: ui/main.qml:50
+#: ui/main.qml:117
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily activated until %1."
+msgstr ""
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily activated until it is manually turned off."
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily suspended until %1."
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily suspended until it is manually resumed."
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgctxt "@action:button turn off Night Light feature"
+msgid "Turn Off"
+msgstr ""
+
+#: ui/main.qml:141
+#, kde-format
+msgctxt ""
+"@action:button resume Light Light feature, which had been temporarily "
+"disabled"
+msgid "Resume"
+msgstr ""
+
+#: ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Switching times:"
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Horas de mudança:"
 
-#: ui/main.qml:61
+#: ui/main.qml:170
 #, fuzzy, kde-format
 #| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Sempre desligado"
 
-#: ui/main.qml:62
+#: ui/main.qml:171
 #, fuzzy, kde-format
 #| msgid "Always off"
 msgctxt "@item:inlistbox switching times"
 msgid "Always on"
 msgstr "Sempre desligado"
 
-#: ui/main.qml:63
+#: ui/main.qml:172
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
 msgstr ""
 
-#: ui/main.qml:80
+#: ui/main.qml:189
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: ui/main.qml:131 ui/main.qml:182 ui/main.qml:248
+#: ui/main.qml:240 ui/main.qml:291 ui/main.qml:357
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
 msgstr ""
 
-#: ui/main.qml:138
+#: ui/main.qml:247
 #, fuzzy, kde-format
 #| msgid "Day color temperature:"
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Temperatura da cor diurna:"
 
-#: ui/main.qml:189 ui/main.qml:255
+#: ui/main.qml:298 ui/main.qml:364
 #, fuzzy, kde-format
 #| msgctxt "No blue light filter activated"
 #| msgid "Cool (no filter)"
@@ -100,13 +138,13 @@ msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Frio (sem filtro)"
 
-#: ui/main.qml:196 ui/main.qml:262
+#: ui/main.qml:305 ui/main.qml:371
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Quente"
 
-#: ui/main.qml:204
+#: ui/main.qml:313
 #, fuzzy, kde-format
 #| msgid "Night color temperature:"
 msgctxt "@label:slider"

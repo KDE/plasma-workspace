@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2013-01-06 03:54+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -667,18 +667,17 @@ msgid "&Show Barcode…"
 msgstr "&Штрихкодын көрсету..."
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Журналдағы келесі жазуы"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Журналдағы алдыңғы жазуы"
+msgid "Rotate History Up"
+msgstr "Алмасу буферінің журналы"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -692,20 +691,21 @@ msgstr "Klipper тышқан меңзеген орында ашылсын"
 msgid "Clipboard history"
 msgstr "Алмасу буферінің журналы"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "жоғары"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "назардағы"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "төмен"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -891,6 +891,24 @@ msgstr "Алмасу буферінің журналы"
 #, kde-format
 msgid "&Cancel"
 msgstr "Қ&айту"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Журналдағы келесі жазуы"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Журналдағы алдыңғы жазуы"
+
+#~ msgid "up"
+#~ msgstr "жоғары"
+
+#~ msgid "down"
+#~ msgstr "төмен"
 
 #, fuzzy
 #~| msgid "Text selection only"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-13 19:20+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -703,14 +703,15 @@ msgstr "&Εμφάνιση Barcode…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Επόμενο στοιχείο ιστορικού"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Προηγούμενο στοιχείο ιστορικού"
+msgid "Rotate History Up"
+msgstr "Εκκαθάριση ιστορικού"
 
 #: klipper.cpp:136
 #, kde-format
@@ -723,20 +724,21 @@ msgstr "Εμφάνιση στοιχείων πρόχειρου στη θέση �
 msgid "Clipboard history"
 msgstr "Ιστορικό του προχείρου"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "πάνω"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "τρέχον"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "κάτω"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -933,6 +935,20 @@ msgstr "Αναδυόμενο μενού πρόχειρου"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Ακύρωση"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Επόμενο στοιχείο ιστορικού"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Προηγούμενο στοιχείο ιστορικού"
+
+#~ msgid "up"
+#~ msgstr "πάνω"
+
+#~ msgid "down"
+#~ msgstr "κάτω"
 
 #~ msgctxt "@info"
 #~ msgid ""

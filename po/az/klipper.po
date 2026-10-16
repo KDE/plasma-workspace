@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-04-01 15:05+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -684,14 +684,15 @@ msgstr "Barkodu gö&stərmək..."
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Tarixçənin növbəti elementi"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Tarixçənin əvvəlki elementi"
+msgid "Rotate History Up"
+msgstr "Tarixçəni silmək"
 
 #: klipper.cpp:136
 #, kde-format
@@ -704,20 +705,21 @@ msgstr "Kursorun altında mübadilə yaddaşı elementlərini göstərmək"
 msgid "Clipboard history"
 msgstr "Mübadilə tarixçəsi"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "yuxarı"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "cari"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "aşağı"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -925,6 +927,20 @@ msgstr "Mübadilə yaddaşı pəncərəsi"
 #, kde-format
 msgid "&Cancel"
 msgstr "&İmtina etmək"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Tarixçənin növbəti elementi"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Tarixçənin əvvəlki elementi"
+
+#~ msgid "up"
+#~ msgstr "yuxarı"
+
+#~ msgid "down"
+#~ msgstr "aşağı"
 
 #~ msgctxt "@info"
 #~ msgid ""

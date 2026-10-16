@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-03-31 19:23+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -686,14 +686,15 @@ msgstr "バーコードを表示(&S)…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "履歴をひとつ進める"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "履歴をひとつ戻す"
+msgid "Rotate History Up"
+msgstr "履歴を消去"
 
 #: klipper.cpp:136
 #, kde-format
@@ -706,20 +707,21 @@ msgstr "クリップボード履歴をマウスカーソルの位置に表示"
 msgid "Clipboard history"
 msgstr "クリップボードの履歴"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "上"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "現在"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "下"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -916,6 +918,20 @@ msgstr "クリップボードのポップアップ"
 #, kde-format
 msgid "&Cancel"
 msgstr "キャンセル(&C)"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "履歴をひとつ進める"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "履歴をひとつ戻す"
+
+#~ msgid "up"
+#~ msgstr "上"
+
+#~ msgid "down"
+#~ msgstr "下"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -665,18 +665,17 @@ msgid "&Show Barcode…"
 msgstr "แ&สดงบาร์โค้ด..."
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "ตัวถัดไปในรายการประวัติ"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "ตัวก่อนหน้านี้ในรายการประวัติ"
+msgid "Rotate History Up"
+msgstr "ขนาดของประวัติคลิปบอร์ด"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -690,20 +689,21 @@ msgstr "เรียกเมนูผุดที่ตำแหน่งตั
 msgid "Clipboard history"
 msgstr "ขนาดของประวัติคลิปบอร์ด"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "ขึ้น"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "ปัจจุบัน"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "ลง"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -888,6 +888,24 @@ msgstr "ขนาดของประวัติคลิปบอร์ด"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ยกเลิก"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "ตัวถัดไปในรายการประวัติ"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "ตัวก่อนหน้านี้ในรายการประวัติ"
+
+#~ msgid "up"
+#~ msgstr "ขึ้น"
+
+#~ msgid "down"
+#~ msgstr "ลง"
 
 #, fuzzy
 #~| msgid "Text selection only"

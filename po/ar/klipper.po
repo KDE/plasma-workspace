@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-09-25 16:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -681,14 +681,15 @@ msgstr "أظهر &شفرة شريطية..."
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "العنصر التالي في التاريخ"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "العنصر السابق في التاريخ"
+msgid "Rotate History Up"
+msgstr "امحُ التاريخ"
 
 #: klipper.cpp:136
 #, kde-format
@@ -701,20 +702,21 @@ msgstr "اعرض عناصر الحافظة عند موضع الفأرة"
 msgid "Clipboard history"
 msgstr "تاريخ الحافظة: "
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "أعلى"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "الحالي"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "أسفل"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -901,6 +903,20 @@ msgstr "منبثقة الحافظة"
 #, kde-format
 msgid "&Cancel"
 msgstr "أ&لغ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "العنصر التالي في التاريخ"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "العنصر السابق في التاريخ"
+
+#~ msgid "up"
+#~ msgstr "أعلى"
+
+#~ msgid "down"
+#~ msgstr "أسفل"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2009-12-16 23:31+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -668,18 +668,17 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next history item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Nôslédny element historëji"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous history item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "wczasniészi element historëji"
+msgid "Rotate History Up"
+msgstr "Historëja tacnika"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -693,20 +692,21 @@ msgstr "Menu w placu kùrsora mëszë"
 msgid "Clipboard history"
 msgstr "Historëja tacnika"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "w górã"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "aktualné"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "w dół"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -891,6 +891,24 @@ msgstr "Historëja tacnika"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anulëjë"
+
+#, fuzzy
+#~| msgid "Next history item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Nôslédny element historëji"
+
+#, fuzzy
+#~| msgid "Previous history item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "wczasniészi element historëji"
+
+#~ msgid "up"
+#~ msgstr "w górã"
+
+#~ msgid "down"
+#~ msgstr "w dół"
 
 #, fuzzy
 #~| msgid "Text selection only"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2019-12-18 18:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -668,18 +668,17 @@ msgid "&Show Barcode…"
 msgstr "&Näita ribakoodi..."
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Ajaloo järgmine element"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Ajaloo eelmine element"
+msgid "Rotate History Up"
+msgstr "Lõikepuhvri ajalugu"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -693,20 +692,21 @@ msgstr "Klipper avatakse hiirekursori asukohas"
 msgid "Clipboard history"
 msgstr "Lõikepuhvri ajalugu"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "üles"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "aktiivne"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "alla"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -891,6 +891,24 @@ msgstr "Lõikepuhvri ajalugu"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Loobu"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Ajaloo järgmine element"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Ajaloo eelmine element"
+
+#~ msgid "up"
+#~ msgstr "üles"
+
+#~ msgid "down"
+#~ msgstr "alla"
 
 #, fuzzy
 #~| msgid "Text selection only"

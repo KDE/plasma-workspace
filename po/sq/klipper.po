@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2010-02-17 02:14+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -651,15 +651,14 @@ msgstr ""
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
+msgid "Rotate History Down"
 msgstr ""
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Mirëmbajtës"
+msgid "Rotate History Up"
+msgstr ""
 
 #: klipper.cpp:136
 #, kde-format
@@ -672,20 +671,21 @@ msgstr ""
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "sipër"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "e tanishme"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "poshtë"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -861,6 +861,18 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anullo"
+
+#, fuzzy
+#~| msgid "Maintainer"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Mirëmbajtës"
+
+#~ msgid "up"
+#~ msgstr "sipër"
+
+#~ msgid "down"
+#~ msgstr "poshtë"
 
 #, fuzzy
 #~| msgid "Ignore"

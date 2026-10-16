@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-01-19 13:39+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -698,14 +698,15 @@ msgstr "&Amosar o código de barras…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Seguinte elemento do historial"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Anterior elemento do historial"
+msgid "Rotate History Up"
+msgstr "Borrar o historial"
 
 #: klipper.cpp:136
 #, kde-format
@@ -718,20 +719,21 @@ msgstr "Amosar os elementos do portapapeis na posición do rato"
 msgid "Clipboard history"
 msgstr "Historial do portapapeis"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "arriba"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "actual"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "abaixo"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -940,6 +942,20 @@ msgstr "Xanela emerxente do portapapeis"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Seguinte elemento do historial"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Anterior elemento do historial"
+
+#~ msgid "up"
+#~ msgstr "arriba"
+
+#~ msgid "down"
+#~ msgstr "abaixo"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2025-09-17 13:05+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -689,14 +689,15 @@ msgstr "&Sýna strikamerki..."
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Næsta atriði í ferli"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Fyrra atriði í ferli"
+msgid "Rotate History Up"
+msgstr "Hreinsa feril"
 
 #: klipper.cpp:136
 #, kde-format
@@ -709,20 +710,21 @@ msgstr "Sýna klippispjaldsatriði við bendil"
 msgid "Clipboard history"
 msgstr "Klippispjaldsferill"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "upp"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "núverandi"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "niður"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -928,6 +930,20 @@ msgstr "Sprettivalmynd klippispjalds"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Hætta við"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Næsta atriði í ferli"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Fyrra atriði í ferli"
+
+#~ msgid "up"
+#~ msgstr "upp"
+
+#~ msgid "down"
+#~ msgstr "niður"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 00:49+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-09-24 20:39-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -353,53 +353,53 @@ msgstr "ئىچكى ئېكران"
 msgid "Disconnected Screen %1"
 msgstr "ئۈزۈلگەن ئېكران %1"
 
-#: shellcorona.cpp:179 shellcorona.cpp:181
+#: shellcorona.cpp:181 shellcorona.cpp:183
 #, kde-format
 msgid "Show Desktop"
 msgstr "ئۈستەلئۈستىنى كۆرسەت"
 
-#: shellcorona.cpp:181
+#: shellcorona.cpp:183
 #, kde-format
 msgid "Hide Desktop"
 msgstr "ئۈستەلئۈستىنى يوشۇر"
 
-#: shellcorona.cpp:197
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "پىروگرامما قوزغاتقۇچنى ئاكتىپلا"
 
-#: shellcorona.cpp:205
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "پائالىيەت ئالماشتۇرغۇچنى كۆرسەت"
 
-#: shellcorona.cpp:214
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "ئالدىنقى پائالىيەتكە ئالماشتۇر"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "كېيىنكى پائالىيەتكە ئالماشتۇر"
 
-#: shellcorona.cpp:253
+#: shellcorona.cpp:255
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "ئۈستەلئۈستى ۋە كۆزنەكچە باشقۇر…"
 
-#: shellcorona.cpp:275
+#: shellcorona.cpp:277
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "ھەرپتاختا فوكۇسىنى كۆزنەكچە ئارىسىدا يۆتكە"
 
-#: shellcorona.cpp:2287
+#: shellcorona.cpp:2286
 #, kde-format
 msgid "Add Panel"
 msgstr "كۆزنەكچە قوش"
 
-#: shellcorona.cpp:2374
+#: shellcorona.cpp:2373
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

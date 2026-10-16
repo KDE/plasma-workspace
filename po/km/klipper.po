@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2012-06-14 13:47+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -662,18 +662,17 @@ msgid "&Show Barcode…"
 msgstr "បង្ហាញ​កូដ​ផលិតផល..."
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "ធាតុ​ប្រវត្តិ​បន្ទាប់"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "ធាតុ​ប្រវត្តិ​មុន"
+msgid "Rotate History Up"
+msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -687,20 +686,21 @@ msgstr "បើក​ Klipper នៅ​ទីតាំង​កណ្ដុរ"
 msgid "Clipboard history"
 msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "ឡើង​លើ"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "បច្ចុប្បន្ន"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "ចុះក្រោម"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -885,6 +885,24 @@ msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទា
 #, kde-format
 msgid "&Cancel"
 msgstr "បោះបង់​"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "ធាតុ​ប្រវត្តិ​បន្ទាប់"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "ធាតុ​ប្រវត្តិ​មុន"
+
+#~ msgid "up"
+#~ msgstr "ឡើង​លើ"
+
+#~ msgid "down"
+#~ msgstr "ចុះក្រោម"
 
 #, fuzzy
 #~| msgid "Text selection only"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-14 10:43+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -686,14 +686,15 @@ msgstr "&Rodyti brūkšninį kodą…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Kitas istorijos elementas"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Ankstesnis istorijos elementas"
+msgid "Rotate History Up"
+msgstr "Išvalyti istoriją"
 
 #: klipper.cpp:136
 #, kde-format
@@ -706,20 +707,21 @@ msgstr "Rodyti iškarpinės elementus ties pelės vieta"
 msgid "Clipboard history"
 msgstr "Iškarpinės istorija"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "aukštyn"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "dabartinis"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "žemyn"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -911,6 +913,20 @@ msgstr "Iškarpinės iškylantysis langas"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atsisakyti"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Kitas istorijos elementas"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Ankstesnis istorijos elementas"
+
+#~ msgid "up"
+#~ msgstr "aukštyn"
+
+#~ msgid "down"
+#~ msgstr "žemyn"
 
 #~ msgctxt "@info"
 #~ msgid ""

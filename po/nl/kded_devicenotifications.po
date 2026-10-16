@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-14 12:08+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,69 +17,69 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.08.2\n"
 
-#: devicenotifications.cpp:504
+#: devicenotifications.cpp:509
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Scherm gedetecteerd"
 
-#: devicenotifications.cpp:506
+#: devicenotifications.cpp:511
 #, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "%1 is verbonden."
 
-#: devicenotifications.cpp:509
+#: devicenotifications.cpp:514
 #, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
 msgstr "%1 %2 (%3) is verbonden."
 
-#: devicenotifications.cpp:544
+#: devicenotifications.cpp:549
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Scherm verwijderd"
 
-#: devicenotifications.cpp:546
+#: devicenotifications.cpp:551
 #, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "Verbinding met %1 is verbroken."
 
-#: devicenotifications.cpp:549
+#: devicenotifications.cpp:554
 #, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
 msgstr "Verbinding met %1 %2 (%3) is verbroken."
 
-#: devicenotifications.cpp:597
+#: devicenotifications.cpp:602
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 is verbonden."
 
-#: devicenotifications.cpp:597
+#: devicenotifications.cpp:602
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Een USB-apparaat is verbonden."
 
-#: devicenotifications.cpp:602
+#: devicenotifications.cpp:607
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-apparaat gedetecteerd"
 
-#: devicenotifications.cpp:640
+#: devicenotifications.cpp:645
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "Verbinding met %1 is verbroken."
 
-#: devicenotifications.cpp:640
+#: devicenotifications.cpp:645
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Verbinding met een USB-apparaat is verbroken."
 
-#: devicenotifications.cpp:645
+#: devicenotifications.cpp:650
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

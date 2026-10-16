@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2010-01-30 09:51+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -669,18 +669,17 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next history item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Следен елемент од историјата"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous history item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Претходен елемент од историјата"
+msgid "Rotate History Up"
+msgstr "Историја на таблата"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -694,20 +693,21 @@ msgstr "Прикажи мени кај позицијата на глушецо�
 msgid "Clipboard history"
 msgstr "Историја на таблата"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "нагоре"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "тековен"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "надолу"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -893,6 +893,24 @@ msgstr "Историја на таблата"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Откажи"
+
+#, fuzzy
+#~| msgid "Next history item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Следен елемент од историјата"
+
+#, fuzzy
+#~| msgid "Previous history item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Претходен елемент од историјата"
+
+#~ msgid "up"
+#~ msgstr "нагоре"
+
+#~ msgid "down"
+#~ msgstr "надолу"
 
 #, fuzzy
 #~| msgid "Text selection only"

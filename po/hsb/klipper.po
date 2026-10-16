@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2008-11-06 22:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -656,20 +656,17 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgctxt "GenericName"
-#| msgid "Clipboard Viewer"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Přehladowar za clipboard"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgctxt "GenericName"
-#| msgid "Clipboard Viewer"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Přehladowar za clipboard"
+msgid "Rotate History Up"
+msgstr "Wobsah zapisnika"
 
 #: klipper.cpp:136
 #, kde-format
@@ -682,19 +679,19 @@ msgstr ""
 msgid "Clipboard history"
 msgstr "Wobsah zapisnika"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
+msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:418
+#: klipper.cpp:417
 #, kde-format
-msgid "current"
+msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
+msgid "Older: "
 msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
@@ -878,6 +875,20 @@ msgstr "Wobsah zapisnika"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Přetorhnyć"
+
+#, fuzzy
+#~| msgctxt "GenericName"
+#~| msgid "Clipboard Viewer"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Přehladowar za clipboard"
+
+#, fuzzy
+#~| msgctxt "GenericName"
+#~| msgid "Clipboard Viewer"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Přehladowar za clipboard"
 
 #, fuzzy
 #~| msgid "&Selected text"

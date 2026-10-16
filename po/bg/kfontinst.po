@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2024-11-10 15:01+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -28,130 +28,6 @@ msgstr "Радостин Раднев,Златко Попов, Минчо Кон
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "radnev@yahoo.com,zlatkopopov@fsa-bg.org,mkondarev@yahoo.de"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-"Искате ли да инсталирате шрифтовете за лична употреба или за всички "
-"потребители?"
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "Инсталиране в"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "Инсталатор на шрифтове"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "Обикновен инсталатор на шрифтове"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "(c) Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, kde-format
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr ""
-"Прави диалоговия прозорец преходен за прозорец, определен от windowHandle"
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "Инсталиране в"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "Печат"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "Отменяне…"
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "Печат на шрифтове"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "Обикновен печат на шрифтове"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr "Прозорецът става вътрешен за програмата, зададена с winid"
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "Индекс с размера на шрифтовете"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-"Шрифт за печат, посочен като  \"Семейство, стил \", където Стил е 24-битов "
-"десетичен знак, съставен като: <weight ><width><slant>"
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "Файл, съдържащ списък с шрифтове за печат"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "Премахване на файла, съдържащ списък с шрифтове за печат"
-
-#: apps/Viewer.cpp:50
-#, kde-format
-msgid "Open an existing font file"
-msgstr "Отваряне на съществуващ шрифтов файл"
-
-#: apps/Viewer.cpp:51
-#, kde-format
-msgid "Print font preview"
-msgstr "Предварителен преглед на шрифт"
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "Избор на шрифт за преглед"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "Адрес за отваряне"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "Преглед на шрифтове"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "Семпъл визуализатор на шрифтове"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(c) Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -198,6 +74,11 @@ msgstr "Наистина ли искате да изтриете:"
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Да се прекъсне ли претърсването за шрифтове?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr "Отменяне…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -927,6 +808,20 @@ msgstr ""
 "<table><tr><td align =  \"right \"> Активирано: </td><td>%1 </td></tr> "
 "<tr><td align = \"right \"> Деактивирано: </td><td>%2 </td></tr><tr> <td "
 "align =  \"right \"> Общо: </td><td>%3 </td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Искате ли да инсталирате шрифтовете за лична употреба или за всички "
+"потребители?"
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "Инсталиране в"
 
 #: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
@@ -2286,3 +2181,68 @@ msgstr "Фагс Па"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "Font Installer"
+#~ msgstr "Инсталатор на шрифтове"
+
+#~ msgid "Simple font installer"
+#~ msgstr "Обикновен инсталатор на шрифтове"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "(c) Craig Drummond, 2007"
+
+#~ msgid "Makes the dialog transient for a window specified by windowHandle"
+#~ msgstr ""
+#~ "Прави диалоговия прозорец преходен за прозорец, определен от windowHandle"
+
+#~ msgid "URL to install"
+#~ msgstr "Инсталиране в"
+
+#~ msgid "Print"
+#~ msgstr "Печат"
+
+#~ msgid "Font Printer"
+#~ msgstr "Печат на шрифтове"
+
+#~ msgid "Simple font printer"
+#~ msgstr "Обикновен печат на шрифтове"
+
+#~ msgid "Makes the dialog transient for an X app specified by winid"
+#~ msgstr "Прозорецът става вътрешен за програмата, зададена с winid"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "Индекс с размера на шрифтовете"
+
+#~ msgid ""
+#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
+#~ "decimal number composed as: <weight><width><slant>"
+#~ msgstr ""
+#~ "Шрифт за печат, посочен като  \"Семейство, стил \", където Стил е 24-"
+#~ "битов десетичен знак, съставен като: <weight ><width><slant>"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "Файл, съдържащ списък с шрифтове за печат"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "Премахване на файла, съдържащ списък с шрифтове за печат"
+
+#~ msgid "Open an existing font file"
+#~ msgstr "Отваряне на съществуващ шрифтов файл"
+
+#~ msgid "Print font preview"
+#~ msgstr "Предварителен преглед на шрифт"
+
+#~ msgid "Select Font to View"
+#~ msgstr "Избор на шрифт за преглед"
+
+#~ msgid "URL to open"
+#~ msgstr "Адрес за отваряне"
+
+#~ msgid "Font Viewer"
+#~ msgstr "Преглед на шрифтове"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "Семпъл визуализатор на шрифтове"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "(c) Craig Drummond, 2004-2007"

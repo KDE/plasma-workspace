@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-10-14 16:03+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -686,14 +686,15 @@ msgstr "П&оказати штрихкод…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Наступний запис журналу"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Попередній запис журналу"
+msgid "Rotate History Up"
+msgstr "Спорожнити журнал"
 
 #: klipper.cpp:136
 #, kde-format
@@ -706,20 +707,21 @@ msgstr "Показувати записи буфера на позиції вк�
 msgid "Clipboard history"
 msgstr "Журнал буфера даних"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "вгору"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "поточний"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "вниз"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -912,6 +914,20 @@ msgstr "Контекстна панель буфера даних"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасувати"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Наступний запис журналу"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Попередній запис журналу"
+
+#~ msgid "up"
+#~ msgstr "вгору"
+
+#~ msgid "down"
+#~ msgstr "вниз"
 
 #~ msgctxt "@info"
 #~ msgid ""

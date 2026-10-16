@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-13 00:48+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2009-12-20 18:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -29,132 +29,6 @@ msgstr "Mark Kwidzińsczi, Michôł Òstrowsczi"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mark@linuxcsb.org, michol@linuxcsb.org"
-
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
-#, kde-format
-msgid ""
-"Do you wish to install the font(s) for personal use (only available to you), "
-"or system-wide (available to all users)?"
-msgstr ""
-"Chcesz winstalowac fònt(ë) dlô swòjégò brëkùnkù (przëstãpné blós dlô ce), "
-"czë dlô systemòwégò (dlô wszëtczich brëkòwników)?"
-
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
-#, kde-format
-msgid "Where to Install"
-msgstr "Môl instalacëji"
-
-#: apps/Installer.cpp:113
-#, kde-format
-msgid "Font Installer"
-msgstr "Instalownik fòntów"
-
-#: apps/Installer.cpp:115
-#, kde-format
-msgid "Simple font installer"
-msgstr "Prosti instalownik fòntów"
-
-#: apps/Installer.cpp:117 apps/Printer.cpp:327
-#, kde-format
-msgid "(C) Craig Drummond, 2007"
-msgstr "(C) Craig Drummond, 2007"
-
-#: apps/Installer.cpp:124
-#, kde-format
-msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr ""
-
-#: apps/Installer.cpp:127
-#, kde-format
-msgid "URL to install"
-msgstr "URL do instalacëji"
-
-#: apps/Printer.cpp:239
-#, kde-format
-msgid "Print"
-msgstr "Drëkùjë"
-
-#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
-#, fuzzy, kde-format
-#| msgid "Canceling..."
-msgid "Canceling…"
-msgstr "Òprzestanié..."
-
-#: apps/Printer.cpp:323
-#, kde-format
-msgid "Font Printer"
-msgstr "Drëkôrz fòntów"
-
-#: apps/Printer.cpp:325
-#, kde-format
-msgid "Simple font printer"
-msgstr "Prosti drëkôrz fòntów"
-
-#: apps/Printer.cpp:333
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
-msgstr ""
-
-#: apps/Printer.cpp:335
-#, kde-format
-msgid "Size index to print fonts"
-msgstr "Miara indeksu do drëkòwaniô fòntów"
-
-#: apps/Printer.cpp:339
-#, kde-format
-msgid ""
-"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
-"number composed as: <weight><width><slant>"
-msgstr ""
-"Fònt do drëkù pòdóny jakno \"Familëjô, Sztél\". Nen sztél je 24-bitowim "
-"decymalnym fòrmatã: <wôga><szérzô><ùchëł>"
-
-#: apps/Printer.cpp:342
-#, kde-format
-msgid "File containing list of fonts to print"
-msgstr "Lopk zamëkający w se lëstã fòntów do drëkù"
-
-#: apps/Printer.cpp:344
-#, kde-format
-msgid "Remove file containing list of fonts to print"
-msgstr "Rëmôj lopk zamëkający lëstã fòntów do drëkù"
-
-#: apps/Viewer.cpp:50
-#, fuzzy, kde-format
-#| msgid "Open all %1 fonts in font viewer?"
-msgid "Open an existing font file"
-msgstr "Òtemknąc wszëtczé %1 fòntë w przezérnikù fòntów?"
-
-#: apps/Viewer.cpp:51
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
-msgid "Print font preview"
-msgstr "Drëkùjë próbczi fòntów"
-
-#: apps/Viewer.cpp:68
-#, kde-format
-msgid "Select Font to View"
-msgstr "Wëbiérzë wëskrzëniwóny fònt"
-
-#: apps/Viewer.cpp:108
-#, kde-format
-msgid "URL to open"
-msgstr "Adresa do òtemkniãcô"
-
-#: apps/Viewer.cpp:150
-#, kde-format
-msgid "Font Viewer"
-msgstr "Przezérnik fòntów"
-
-#: apps/Viewer.cpp:152
-#, kde-format
-msgid "Simple font viewer"
-msgstr "Prosti przezérnik fòntów"
-
-#: apps/Viewer.cpp:154
-#, kde-format
-msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
@@ -203,6 +77,12 @@ msgstr "Na gwës chcesz to rëmnąc:"
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Òprzestac skanowanié fòntów?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, fuzzy, kde-format
+#| msgid "Canceling..."
+msgid "Canceling…"
+msgstr "Òprzestanié..."
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -961,6 +841,20 @@ msgstr ""
 "<table><tr><td>Włączoné fòntë:</td><td>%1</td></tr><tr><td>Wëłączoné fòntë:</"
 "td><td>%2</td></tr><tr><td>Dzélowò włączoné fòntë:</td><td>%3</td></"
 "tr><tr><td>Całowné fòntë:</td><td>%4</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:946
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Chcesz winstalowac fònt(ë) dlô swòjégò brëkùnkù (przëstãpné blós dlô ce), "
+"czë dlô systemòwégò (dlô wszëtczich brëkòwników)?"
+
+#: kcmfontinst/KCmFontInst.cpp:949
+#, kde-format
+msgid "Where to Install"
+msgstr "Môl instalacëji"
 
 #: kcmfontinst/KCmFontInst.cpp:979
 #, fuzzy, kde-format
@@ -2337,6 +2231,68 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "Font Installer"
+#~ msgstr "Instalownik fòntów"
+
+#~ msgid "Simple font installer"
+#~ msgstr "Prosti instalownik fòntów"
+
+#~ msgid "(C) Craig Drummond, 2007"
+#~ msgstr "(C) Craig Drummond, 2007"
+
+#~ msgid "URL to install"
+#~ msgstr "URL do instalacëji"
+
+#~ msgid "Print"
+#~ msgstr "Drëkùjë"
+
+#~ msgid "Font Printer"
+#~ msgstr "Drëkôrz fòntów"
+
+#~ msgid "Simple font printer"
+#~ msgstr "Prosti drëkôrz fòntów"
+
+#~ msgid "Size index to print fonts"
+#~ msgstr "Miara indeksu do drëkòwaniô fòntów"
+
+#~ msgid ""
+#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
+#~ "decimal number composed as: <weight><width><slant>"
+#~ msgstr ""
+#~ "Fònt do drëkù pòdóny jakno \"Familëjô, Sztél\". Nen sztél je 24-bitowim "
+#~ "decymalnym fòrmatã: <wôga><szérzô><ùchëł>"
+
+#~ msgid "File containing list of fonts to print"
+#~ msgstr "Lopk zamëkający w se lëstã fòntów do drëkù"
+
+#~ msgid "Remove file containing list of fonts to print"
+#~ msgstr "Rëmôj lopk zamëkający lëstã fòntów do drëkù"
+
+#, fuzzy
+#~| msgid "Open all %1 fonts in font viewer?"
+#~ msgid "Open an existing font file"
+#~ msgstr "Òtemknąc wszëtczé %1 fòntë w przezérnikù fòntów?"
+
+#, fuzzy
+#~| msgid "Print Font Samples"
+#~ msgid "Print font preview"
+#~ msgstr "Drëkùjë próbczi fòntów"
+
+#~ msgid "Select Font to View"
+#~ msgstr "Wëbiérzë wëskrzëniwóny fònt"
+
+#~ msgid "URL to open"
+#~ msgstr "Adresa do òtemkniãcô"
+
+#~ msgid "Font Viewer"
+#~ msgstr "Przezérnik fòntów"
+
+#~ msgid "Simple font viewer"
+#~ msgstr "Prosti przezérnik fòntów"
+
+#~ msgid "(C) Craig Drummond, 2004-2007"
+#~ msgstr "(C) Craig Drummond, 2004-2007"
 
 #, fuzzy
 #~| msgid "KDE Font Installer"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2014-08-15 14:42+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -667,18 +667,17 @@ msgid "&Show Barcode…"
 msgstr "Streekkode &wiesen..."
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Nakamen Vörgeschicht-Indrag"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Verleden Vörgeschicht-Indrag"
+msgid "Rotate History Up"
+msgstr "Twischenaflaag-Vörgeschicht"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -692,20 +691,21 @@ msgstr "Klipper bi Steed vun de Muus opmaken"
 msgid "Clipboard history"
 msgstr "Twischenaflaag-Vörgeschicht"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "na baven"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "aktuell"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "na nerrn"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -890,6 +890,24 @@ msgstr "Twischenaflaag-Vörgeschicht"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Afbreken"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Nakamen Vörgeschicht-Indrag"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Verleden Vörgeschicht-Indrag"
+
+#~ msgid "up"
+#~ msgstr "na baven"
+
+#~ msgid "down"
+#~ msgstr "na nerrn"
 
 #, fuzzy
 #~| msgid "Text selection only"

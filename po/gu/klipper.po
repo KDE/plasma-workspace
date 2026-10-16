@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2009-04-07 22:47+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -667,17 +667,16 @@ msgid "&Show Barcode…"
 msgstr ""
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Clipboard history size"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
+msgid "Rotate History Up"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
 #: klipper.cpp:136
@@ -693,19 +692,19 @@ msgstr "માઉસ સ્થિતિ પર પોપઅપ"
 msgid "Clipboard history"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
+msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:418
+#: klipper.cpp:417
 #, kde-format
-msgid "current"
+msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
+msgid "Older: "
 msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
@@ -890,6 +889,18 @@ msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 #, kde-format
 msgid "&Cancel"
 msgstr "રદ કરો (&C)"
+
+#, fuzzy
+#~| msgid "Clipboard history size"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
+
+#, fuzzy
+#~| msgid "Clipboard history size"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
 #, fuzzy
 #~| msgid "Selection text only"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2026-01-19 16:56+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -684,14 +684,15 @@ msgstr "&Rādīt svītrkodu…"
 #: klipper.cpp:124
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Nākamais vēstures ieraksts"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Clear History"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Iepriekšējais vēstures ieraksts"
+msgid "Rotate History Up"
+msgstr "Notīrīt vēsturi"
 
 #: klipper.cpp:136
 #, kde-format
@@ -704,20 +705,21 @@ msgstr "Atvērt starpliktuves vienumu pie peles kursora"
 msgid "Clipboard history"
 msgstr "Starpliktuves vēsture"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "augšup"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "aktīvais"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "lejup"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -921,6 +923,20 @@ msgstr "Starpliktuves uznirstošais lodziņš"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atcelt"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Nākamais vēstures ieraksts"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Iepriekšējais vēstures ieraksts"
+
+#~ msgid "up"
+#~ msgstr "augšup"
+
+#~ msgid "down"
+#~ msgstr "lejup"
 
 #~ msgctxt "@info"
 #~ msgid ""

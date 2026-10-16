@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2012-11-14 22:26+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -665,18 +665,17 @@ msgid "&Show Barcode…"
 msgstr "Mo&strer côde bår..."
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Cayet shuvant e l' istwere"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Cayet di dvant e l' istwere"
+msgid "Rotate History Up"
+msgstr "Istwere do presse-papî"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -690,20 +689,21 @@ msgstr "Drovi Klipper a l' eplaeçmint del sori"
 msgid "Clipboard history"
 msgstr "Istwere do presse-papî"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "pus hôt"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "do moumint"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "pus bas"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -890,6 +890,24 @@ msgstr "Istwere do presse-papî"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Rinoncî"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Cayet shuvant e l' istwere"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Cayet di dvant e l' istwere"
+
+#~ msgid "up"
+#~ msgstr "pus hôt"
+
+#~ msgid "down"
+#~ msgstr "pus bas"
 
 #, fuzzy
 #~| msgid "Text selection only"

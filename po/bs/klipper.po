@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
 "PO-Revision-Date: 2014-10-20 20:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -682,18 +682,17 @@ msgid "&Show Barcode…"
 msgstr "&Prikaži prugasti kod..."
 
 #: klipper.cpp:124
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Next History Item"
-msgstr "Sljedeća stavka istorijata"
+msgid "Rotate History Down"
+msgstr ""
 
 #: klipper.cpp:129
 #, fuzzy, kde-format
-#| msgid "Previous History Item"
+#| msgid "Clipboard history"
 msgctxt "@action:inmenu"
-msgid "Previous History Item"
-msgstr "Prethodna stavka istorijata"
+msgid "Rotate History Up"
+msgstr "Istorijat klipborda"
 
 #: klipper.cpp:136
 #, fuzzy, kde-format
@@ -707,20 +706,21 @@ msgstr "Otvori Klipper na poziciji miša"
 msgid "Clipboard history"
 msgstr "Istorijat klipborda"
 
-#: klipper.cpp:411
+#: klipper.cpp:410
 #, kde-format
-msgid "up"
-msgstr "gore"
+msgid "Newer: "
+msgstr ""
 
-#: klipper.cpp:418
-#, kde-format
-msgid "current"
+#: klipper.cpp:417
+#, fuzzy, kde-format
+#| msgid "current"
+msgid "Current: "
 msgstr "tekuće"
 
-#: klipper.cpp:425
+#: klipper.cpp:424
 #, kde-format
-msgid "down"
-msgstr "dolje"
+msgid "Older: "
+msgstr ""
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -905,6 +905,24 @@ msgstr "Istorijat klipborda"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Odustani"
+
+#, fuzzy
+#~| msgid "Next History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Next History Item"
+#~ msgstr "Sljedeća stavka istorijata"
+
+#, fuzzy
+#~| msgid "Previous History Item"
+#~ msgctxt "@action:inmenu"
+#~ msgid "Previous History Item"
+#~ msgstr "Prethodna stavka istorijata"
+
+#~ msgid "up"
+#~ msgstr "gore"
+
+#~ msgid "down"
+#~ msgstr "dolje"
 
 #, fuzzy
 #~| msgid "Text selection only"
