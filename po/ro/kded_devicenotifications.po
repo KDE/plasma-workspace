@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 20:16+0000\n"
+"POT-Creation-Date: 2026-10-16 03:04+0000\n"
 "PO-Revision-Date: 2025-12-12 11:15+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: devicenotifications.cpp:485
+#: devicenotifications.cpp:490
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Afișaj detectat"
 
-#: devicenotifications.cpp:486
+#: devicenotifications.cpp:491
 #, kde-format
 msgid "A display has been connected."
 msgstr "A fost conectat un afișaj."
 
-#: devicenotifications.cpp:522
+#: devicenotifications.cpp:527
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Afișaj eliminat"
 
-#: devicenotifications.cpp:523
+#: devicenotifications.cpp:528
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "A fost deconectat un afișaj."
 
-#: devicenotifications.cpp:567
+#: devicenotifications.cpp:572
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 a fost conectat."
 
-#: devicenotifications.cpp:567
+#: devicenotifications.cpp:572
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "A fost conectat un dispozitiv USB."
 
-#: devicenotifications.cpp:572
+#: devicenotifications.cpp:577
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Dispozitiv USB detectat"
 
-#: devicenotifications.cpp:610
+#: devicenotifications.cpp:615
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 a fost deconectat."
 
-#: devicenotifications.cpp:610
+#: devicenotifications.cpp:615
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "A fost deconectat un dispozitiv USB."
 
-#: devicenotifications.cpp:615
+#: devicenotifications.cpp:620
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

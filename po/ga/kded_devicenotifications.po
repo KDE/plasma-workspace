@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 20:16+0000\n"
+"POT-Creation-Date: 2026-10-16 03:04+0000\n"
 "PO-Revision-Date: 2026-01-11 05:45+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: devicenotifications.cpp:485
+#: devicenotifications.cpp:490
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Bhraith Scáileán"
 
-#: devicenotifications.cpp:486
+#: devicenotifications.cpp:491
 #, kde-format
 msgid "A display has been connected."
 msgstr "Bhí ceangailte ag scáileán."
 
-#: devicenotifications.cpp:522
+#: devicenotifications.cpp:527
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Bhain Scáileán"
 
-#: devicenotifications.cpp:523
+#: devicenotifications.cpp:528
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Bhí dícheangailte ag scáileán."
 
-#: devicenotifications.cpp:567
+#: devicenotifications.cpp:572
 #, kde-format
 msgid "%1 has been connected."
 msgstr "Bhí ceangailte ag %1."
 
-#: devicenotifications.cpp:567
+#: devicenotifications.cpp:572
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Bhí ceangailte ag gléas USB."
 
-#: devicenotifications.cpp:572
+#: devicenotifications.cpp:577
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Bhraith Gléas USB"
 
-#: devicenotifications.cpp:610
+#: devicenotifications.cpp:615
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "Bhí dícheangailte ag %1."
 
-#: devicenotifications.cpp:610
+#: devicenotifications.cpp:615
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Bhí dícheangailte ag gléas USB."
 
-#: devicenotifications.cpp:615
+#: devicenotifications.cpp:620
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
