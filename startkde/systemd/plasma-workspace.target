@@ -2,19 +2,20 @@
 Description=KDE Plasma Workspace
 Requires=plasma-core.target
 Requires=graphical-session.target
+BindsTo=graphical-session.target
+
+# Be mindful of what we Wants=. Usually it makes more sense to get passively WantedBy= rather than actively Wants=.
 Wants=plasma-restoresession.service
 Wants=plasma-xembedsniproxy.service
 Wants=plasma-gmenudbusmenuproxy.service
 Wants=plasma-powerdevil.service
 Wants=plasma-polkit-agent.service
-Wants=kde-baloo.service
 Wants=plasma-foreground-booster.service
 Wants=plasma-kwallet-pam.service
 Wants=plasma-kglobalaccel.service
 Wants=plasma-kaccess.service
 Wants=plasma-startupsound.service
 Wants=xdg-desktop-autostart.target
-BindsTo=graphical-session.target
 
 # .target units automatically add After= for Wants=. In some cases we actually do not want there to be a dependency order.
 # Explicitly setting a Before= disables the automatic After= that would normally be added.
@@ -23,7 +24,6 @@ Before=graphical-session.target
 Before=xdg-desktop-autostart.target
 Before=plasma-startupsound.service
 Before=plasma-restoresession.service
-Before=kde-baloo.service
 
 RefuseManualStart=yes
 StopWhenUnneeded=true
