@@ -14,4 +14,4 @@ Then you call one of the [prompt methods](src/org.kde.secretprompter.xm) with th
 KSecretPrompter will display a UI prompt to the user and once that is done call back to you on your object path.
 
 ## Building
-The easiest way to make changes and test them during development is to build it with [https://community.kde.org/Get_Involved/development/Build_software_with_kdesrc-build](kdesrc-build).
+The easiest way to make changes and test them during development is to [build it with kde-builder](https://develop.kde.org/docs/getting-started/building).
