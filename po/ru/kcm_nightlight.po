@@ -45,32 +45,32 @@ msgstr "Фильтр синего цвета увеличивает цветов
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily activated until %1."
-msgstr ""
+msgstr "Ночная цветовая схема временно включена до %1."
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily activated until it is manually turned off."
-msgstr ""
+msgstr "Ночная цветовая схема временно включена до ручного выключения."
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily suspended until %1."
-msgstr ""
+msgstr "Ночная цветовая схема временно приостановлена до %1."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily suspended until it is manually resumed."
 msgstr ""
+"Ночная цветовая схема временно приостановлена до ручного возобновления."
 
 #: ui/main.qml:130
-#, fuzzy, kde-format
-#| msgid "Turn off at:"
+#, kde-format
 msgctxt "@action:button turn off Night Light feature"
 msgid "Turn Off"
-msgstr "Выключать в:"
+msgstr "Выключить"
 
 #: ui/main.qml:141
 #, kde-format
@@ -78,7 +78,7 @@ msgctxt ""
 "@action:button resume Light Light feature, which had been temporarily "
 "disabled"
 msgid "Resume"
-msgstr ""
+msgstr "Возобновить"
 
 #: ui/main.qml:159
 #, kde-format

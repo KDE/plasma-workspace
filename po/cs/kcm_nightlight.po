@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <libor.filipek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-03-30 12:56+0200\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-10-17 01:09+0200\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -41,31 +42,32 @@ msgstr "Filtr modré barvy způsobí, že barvy na monitoru jsou teplejší."
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily activated until %1."
-msgstr ""
+msgstr "Noční světlo je dočasně aktivováno do %1."
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily activated until it is manually turned off."
-msgstr ""
+msgstr "Noční světlo je dočasně aktivováno, dokud není ručně vypnuto."
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily suspended until %1."
-msgstr ""
+msgstr "Noční světlo je dočasně pozastaveno do %1."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily suspended until it is manually resumed."
 msgstr ""
+"Noční světlo je dočasně pozastaveno, dokud nebude ručně znovu obnoveno."
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@action:button turn off Night Light feature"
 msgid "Turn Off"
-msgstr ""
+msgstr "Vypnout"
 
 #: ui/main.qml:141
 #, kde-format
@@ -73,7 +75,7 @@ msgctxt ""
 "@action:button resume Light Light feature, which had been temporarily "
 "disabled"
 msgid "Resume"
-msgstr ""
+msgstr "Obnovit"
 
 #: ui/main.qml:159
 #, kde-format

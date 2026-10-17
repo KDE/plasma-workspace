@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-14 12:10+0200\n"
+"PO-Revision-Date: 2026-10-16 12:43+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -691,14 +691,13 @@ msgstr "Barcode &tonen…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Geschiedenis omlaag roteren"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Geschiedenis wissen"
+msgstr "Geschiedenis omhoog roteren"
 
 #: klipper.cpp:136
 #, kde-format
@@ -714,18 +713,17 @@ msgstr "Klembordgeschiedenis"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Nieuwer: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "huidige"
+msgstr "Huidige: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Ouder: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10

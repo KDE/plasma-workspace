@@ -1,20 +1,20 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024-2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2025-07-08 11:45+0300\n"
+"PO-Revision-Date: 2026-10-15 17:25+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -25,18 +25,16 @@ msgid "Display Detected"
 msgstr "זוהה צג"
 
 #: devicenotifications.cpp:511
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "%1 חובר."
 
 #: devicenotifications.cpp:514
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "%1 חובר."
+msgstr "%1 %2 (%3) חובר."
 
 #: devicenotifications.cpp:549
 #, kde-format
@@ -45,18 +43,16 @@ msgid "Display Removed"
 msgstr "צג הוסר"
 
 #: devicenotifications.cpp:551
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "%1 נותק."
 
 #: devicenotifications.cpp:554
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "%1 נותק."
+msgstr "%1 %2 (%3) נותק."
 
 #: devicenotifications.cpp:602
 #, kde-format

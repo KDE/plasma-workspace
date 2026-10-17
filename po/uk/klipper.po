@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-14 16:03+0300\n"
+"PO-Revision-Date: 2026-10-16 08:41+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -687,14 +687,13 @@ msgstr "П&оказати штрихкод…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Гортати журнал вниз"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Спорожнити журнал"
+msgstr "Гортати журнал вгору"
 
 #: klipper.cpp:136
 #, kde-format
@@ -710,18 +709,17 @@ msgstr "Журнал буфера даних"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Новіше: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "поточний"
+msgstr "Поточний: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Старіше: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10

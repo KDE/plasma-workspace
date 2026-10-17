@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-16 00:46+0000\n"
-"PO-Revision-Date: 2026-10-05 20:34+0900\n"
+"PO-Revision-Date: 2026-10-16 20:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -311,7 +311,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
-msgstr ""
+msgstr "Phóo-thong ê bûn-jī"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
 #: editor/preview.ui:262
@@ -471,7 +471,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-sets"
 msgid "Button"
-msgstr ""
+msgstr "Tshi̍h-liú"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -688,7 +688,7 @@ msgstr ""
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
-msgstr ""
+msgstr "Tshò-gōo"
 
 #: editor/scmeditordialog.cpp:194
 #, kde-format
@@ -705,7 +705,7 @@ msgstr "Sik-tshái:"
 #: editor/scmeditoreffects.ui:27
 #, kde-format
 msgid "Intensity:"
-msgstr ""
+msgstr "Kiông-tōo:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:37
@@ -931,7 +931,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "link"
-msgstr ""
+msgstr "liân-kiat"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
 #: editor/setpreview.ui:77
@@ -947,7 +947,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "visited"
-msgstr ""
+msgstr "pài-hóng kuè ê"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
 #: editor/setpreview.ui:90

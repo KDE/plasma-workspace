@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-08-14 22:58+0900\n"
+"PO-Revision-Date: 2026-10-16 20:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -257,13 +257,13 @@ msgstr "Kiàn-li̍p QR code sit-pāi--ah"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Siu--khí-lâi"
 
 #: declarative/qml/ClipboardItemDelegate.qml:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Thián-khui"
 
 #: declarative/qml/ClipboardMenu.qml:305
 #, kde-format
@@ -564,7 +564,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Mài koh mn̄g--ah"
 
 #: historymodel.cpp:486
 #, kde-format
@@ -583,11 +583,10 @@ msgid "Remove Starred Item"
 msgstr ""
 
 #: klipper.cpp:70
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "Thiam kàu Tsián-tah-phōo"
+msgstr "Tsián-tah-phōo"
 
 #: klipper.cpp:74
 #, kde-format

@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-14 07:23+0200\n"
+"PO-Revision-Date: 2026-10-16 11:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -685,14 +685,13 @@ msgstr "Prikaži črtno kodo…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Zavrti zgodovino navzdol"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Počisti zgodovino"
+msgstr "Zavrti zgodovino navzgor"
 
 #: klipper.cpp:136
 #, kde-format
@@ -708,18 +707,17 @@ msgstr "Zgodovina odložišča"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Novejše: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "trenutno"
+msgstr "Trenutno: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Starejše: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10

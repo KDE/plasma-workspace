@@ -1,0 +1,136 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-10-16 21:19+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
+"Language: nan_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 26.11.70\n"
+
+#: ui/DayNightView.qml:154
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+
+#: ui/DayNightView.qml:157
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+
+#: ui/main.qml:104
+#, kde-format
+msgctxt "@info"
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr ""
+
+#: ui/main.qml:117
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily activated until %1."
+msgstr ""
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily activated until it is manually turned off."
+msgstr ""
+
+#: ui/main.qml:121
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily suspended until %1."
+msgstr ""
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily suspended until it is manually resumed."
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgctxt "@action:button turn off Night Light feature"
+msgid "Turn Off"
+msgstr ""
+
+#: ui/main.qml:141
+#, kde-format
+msgctxt ""
+"@action:button resume Light Light feature, which had been temporarily "
+"disabled"
+msgid "Resume"
+msgstr ""
+
+#: ui/main.qml:159
+#, kde-format
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr ""
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr "一直關"
+
+#: ui/main.qml:171
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Always on"
+msgstr "一直開"
+
+#: ui/main.qml:172
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr ""
+
+#: ui/main.qml:189
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: ui/main.qml:240 ui/main.qml:291 ui/main.qml:357
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1 K"
+msgstr ""
+
+#: ui/main.qml:247
+#, kde-format
+msgctxt "@label:slider"
+msgid "Day light temperature:"
+msgstr ""
+
+#: ui/main.qml:298 ui/main.qml:364
+#, kde-format
+msgctxt "Night colour blue-ish; no blue light filter activated"
+msgid "Cool (no filter)"
+msgstr ""
+
+#: ui/main.qml:305 ui/main.qml:371
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr ""
+
+#: ui/main.qml:313
+#, kde-format
+msgctxt "@label:slider"
+msgid "Night light temperature:"
+msgstr ""

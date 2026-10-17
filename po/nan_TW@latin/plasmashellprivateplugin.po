@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 00:47+0000\n"
-"PO-Revision-Date: 2026-08-18 04:50+0900\n"
+"PO-Revision-Date: 2026-10-16 20:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -162,7 +162,7 @@ msgstr ""
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "Tshiat-uānn pòo-kio̍k"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -219,7 +219,7 @@ msgstr ""
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Bô-tsiòng-gāi"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
@@ -289,7 +289,7 @@ msgstr "Kî-thann"
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "To-muî-thé"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-08-18 02:34+0900\n"
+"PO-Revision-Date: 2026-10-16 20:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -1106,7 +1106,7 @@ msgstr ""
 
 #: lib/KfiConstants.h:78
 msgid "Light"
-msgstr ""
+msgstr "Kng-ê"
 
 #: lib/KfiConstants.h:79
 msgid "Regular"
@@ -2106,7 +2106,7 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
-msgstr ""
+msgstr "Yi"
 
 #~ msgid "Font Installer"
 #~ msgstr "Jī-hîng An-tsong-khì"

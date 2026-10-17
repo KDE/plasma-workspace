@@ -700,14 +700,13 @@ msgstr "&Показать штрихкод…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Прокрутить журнал вниз"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Очистить журнал"
+msgstr "Прокрутить журнал вверх"
 
 #: klipper.cpp:136
 #, kde-format
@@ -723,18 +722,17 @@ msgstr "Журнал буфера обмена"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Более новое: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "выбрано:"
+msgstr "Текущее: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Более старое: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10

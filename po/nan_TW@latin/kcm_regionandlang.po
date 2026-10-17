@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-08-18 02:34+0900\n"
+"PO-Revision-Date: 2026-10-16 20:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
@@ -163,19 +163,19 @@ msgstr "Too-tshī"
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
-msgstr ""
+msgstr "Tsiu"
 
 #: exampleutility.cpp:120
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "Ka-tso̍k Miâ"
 
 #: exampleutility.cpp:121
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "KA-TSO̍K MIÂ"
 
 #: exampleutility.cpp:122
 #, kde-format
