@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-14 10:43+0300\n"
+"PO-Revision-Date: 2026-10-17 12:39+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -687,14 +687,13 @@ msgstr "&Rodyti brūkšninį kodą…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Apsukti istoriją žemyn"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Išvalyti istoriją"
+msgstr "Apsukti istoriją aukštyn"
 
 #: klipper.cpp:136
 #, kde-format
@@ -710,18 +709,17 @@ msgstr "Iškarpinės istorija"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Naujesnis: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "dabartinis"
+msgstr "Dabartinis: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Senesnis: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
