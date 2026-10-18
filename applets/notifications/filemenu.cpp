@@ -218,23 +218,30 @@ void FileMenu::open(int x, int y)
     QTimer::singleShot(0, m_visualParent, ungrabMouseHack);
     // end workaround
 
+    menu->setAttribute(Qt::WA_TranslucentBackground);
+    menu->winId();
+    auto *window = menu->windowHandle();
+    window->setTransientParent(m_visualParent->window());
+
     QPoint pos;
     if (x == -1 && y == -1) { // align "bottom left of visualParent"
-        menu->adjustSize();
-
-        pos = m_visualParent->mapToGlobal(QPointF(0, m_visualParent->height())).toPoint();
-
-        if (!qApp->isRightToLeft()) {
-            pos.rx() += m_visualParent->width();
-            pos.rx() -= menu->width();
+        // pos doesn't really matter when we set proper positioner properties.
+        const QRect anchorRect = QRectF{m_visualParent->mapToScene(QPointF{0, 0}), m_visualParent->size()}.toRect();
+        Qt::Edges anchor = Qt::BottomEdge | Qt::RightEdge;
+        Qt::Edges gravity = Qt::BottomEdge | Qt::LeftEdge;
+        if (qApp->isRightToLeft()) {
+            anchor = Qt::BottomEdge | Qt::LeftEdge;
+            gravity = Qt::BottomEdge | Qt::RightEdge;
         }
+
+        window->setProperty("_q_waylandPopupAnchorRect", anchorRect);
+        window->setProperty("_q_waylandPopupAnchor", int(anchor));
+        window->setProperty("_q_waylandPopupGravity", int(gravity));
+        window->setProperty("_q_waylandPopupConstraintAdjustment", 1u | 8u); // slide_x | flip_y
     } else {
         pos = m_visualParent->mapToGlobal(QPointF(x, y)).toPoint();
     }
 
-    menu->setAttribute(Qt::WA_TranslucentBackground);
-    menu->winId();
-    menu->windowHandle()->setTransientParent(m_visualParent->window());
     menu->popup(pos);
 
     m_visible = true;
