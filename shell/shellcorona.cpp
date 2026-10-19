@@ -1841,7 +1841,11 @@ void ShellCorona::handleColorRequestedFromDBus(const QDBusMessage &msg)
 
     m_fakeColorRequestConn = connect(this, &ShellCorona::colorChanged, this, [this, msg] {
         disconnect(m_fakeColorRequestConn);
-        const QRgb color = desktopForScreen(m_screenPool->primaryScreen())->accentColor().rgba();
+        const DesktopView *desktopView = desktopForScreen(m_screenPool->primaryScreen());
+        if (!desktopView) {
+            return;
+        }
+        const QRgb color = desktopView->accentColor().rgba();
 
         m_accentColorFromWallpaperEnabled = false;
         Q_EMIT accentColorFromWallpaperEnabledChanged();
@@ -1866,13 +1870,13 @@ QRgb ShellCorona::color() const
     // may not be removed accidentally.
 
     static QRgb defaultColor = QColor(Qt::transparent).rgba();
-    auto const primaryDesktopViewExists = desktopForScreen(m_screenPool->primaryScreen());
-    if (!primaryDesktopViewExists) {
+    const DesktopView *primaryDesktopView = desktopForScreen(m_screenPool->primaryScreen());
+    if (!primaryDesktopView) {
         return defaultColor;
     }
 
     if (m_accentColorFromWallpaperEnabled) {
-        return desktopForScreen(m_screenPool->primaryScreen())->accentColor().rgba();
+        return primaryDesktopView->accentColor().rgba();
     } else if (calledFromDBus()) {
         if (m_fakeColorRequestConn) {
             disconnect(m_fakeColorRequestConn);
