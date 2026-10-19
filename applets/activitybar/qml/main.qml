@@ -50,6 +50,13 @@ PlasmoidItem {
             }
         }
 
+        Component.onCompleted: {
+            // in a panel, the ListView arrow key navigation interacts very badly with the
+            // key navigation that panelview injects, which does the job just fine.
+            const listView = tabBar.contentItem as ListView;
+            listView.keyNavigationEnabled = Plasmoid.location === PlasmaCore.Types.Floating
+        }
+
         Repeater {
             model: Activities.ActivityModel {
                 id: activityModel
@@ -88,14 +95,6 @@ PlasmoidItem {
 
                 onClicked: {
                     activityModel.setCurrentActivity(id, function() {});
-                }
-
-                onCheckedChanged: {
-                    if(current) {
-                        if (tabBar.activeFocus) {
-                            forceActiveFocus();
-                        }
-                    }
                 }
             }
         }
