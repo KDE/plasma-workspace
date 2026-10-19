@@ -337,7 +337,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
     m_editDialogProcess = new QProcess(this);
     m_editDialogProcess->setProgram(QStringLiteral("kcolorschemeeditor"));
-    connect(m_editDialogProcess, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
+    connect(m_editDialogProcess, &QProcess::finished, this, [this, ctx](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode);
         Q_UNUSED(exitStatus);
 
@@ -353,6 +353,11 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
             }
 
             m_model->setSelectedScheme(savedThemes.constLast());
+        }
+        if (ctx && ctx->window()) {
+            if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(ctx->window())) {
+                KWaylandExtras::unexportToplevel(actualWindow);
+            }
         }
 
         m_editDialogProcess->deleteLater();
