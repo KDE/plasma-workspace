@@ -18,7 +18,9 @@
 #include <Plasma/Containment>
 
 class QMenu;
+class QLineEdit;
 class QModelIndex;
+class QEvent;
 class QDBusServiceWatcher;
 class KDBusMenuImporter;
 
@@ -61,6 +63,8 @@ public:
     void setScreenGeometry(QRect geometry);
     QList<QAction *> flatActionList();
 
+    bool eventFilter(QObject *watched, QEvent *event) override;
+
 Q_SIGNALS:
     void requestActivateIndex(int index);
     void bringToFocus(int index);
@@ -90,6 +94,7 @@ private:
     std::unique_ptr<QMenu> m_searchMenu;
     QPointer<QMenu> m_menu;
     QPointer<QAction> m_searchAction;
+    QPointer<QLineEdit> m_searchBar;
     QList<QAction *> m_currentSearchActions;
 
     void removeSearchActionsFromMenu();
