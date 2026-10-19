@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021-2026 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2019.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-03-26 12:25+0100\n"
+"PO-Revision-Date: 2026-10-17 18:29+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/DayNightView.qml:154
@@ -48,32 +48,35 @@ msgstr "Le filtre de lumière bleue rend les couleurs sur l'écran plus chaudes.
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily activated until %1."
-msgstr ""
+msgstr "La veilleuse est temporairement activée jusqu'à %1."
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily activated until it is manually turned off."
 msgstr ""
+"La veilleuse est temporairement activée jusqu'à ce qu'elle soit éteinte "
+"manuellement."
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily suspended until %1."
-msgstr ""
+msgstr "La veilleuse est temporairement suspendue jusqu'à %1."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily suspended until it is manually resumed."
 msgstr ""
+"La veilleuse est temporairement suspendue jusqu'à ce qu'elle soit réactivée "
+"manuellement."
 
 #: ui/main.qml:130
-#, fuzzy, kde-format
-#| msgid "Turn off at:"
+#, kde-format
 msgctxt "@action:button turn off Night Light feature"
 msgid "Turn Off"
-msgstr "Désactiver à :"
+msgstr "Éteindre"
 
 #: ui/main.qml:141
 #, kde-format
@@ -81,7 +84,7 @@ msgctxt ""
 "@action:button resume Light Light feature, which had been temporarily "
 "disabled"
 msgid "Resume"
-msgstr ""
+msgstr "Reprendre"
 
 #: ui/main.qml:159
 #, kde-format

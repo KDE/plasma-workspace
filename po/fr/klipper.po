@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-16 18:13+0200\n"
+"PO-Revision-Date: 2026-10-17 13:36+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -704,14 +704,13 @@ msgstr "A&fficher le code barre..."
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Faire pivoter l'historique vers le bas"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Effacer l'historique"
+msgstr "Faire pivoter l'historique vers le haut"
 
 #: klipper.cpp:136
 #, kde-format
@@ -727,18 +726,17 @@ msgstr "Historique du presse-papier"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Plus récent :"
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "actuel"
+msgstr "Courant :"
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Plus ancien :"
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
