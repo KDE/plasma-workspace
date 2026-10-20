@@ -9,7 +9,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                                                CATEGORY_NAME kde.plasmashell
                                                DEFAULT_SEVERITY Info)
                 set(USE_SCRIPTING 0)
-                configure_file(../config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-plasma.h)
+                configure_file(../config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/noscripting/config-plasma.h)
                 set(test_SRCS
                     ${_testname}.cpp
                     debug.cpp
@@ -35,6 +35,8 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                kconfig_add_kcfg_files(test_SRCS ../../kcms/colors/colorssettings.kcfgc GENERATE_MOC)
 
                add_executable(${_testname} ${test_SRCS})
+               # Ahead of the config-plasma.h of plasmashell, which has the scripting engine
+               target_include_directories(${_testname} BEFORE PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/noscripting)
                target_link_libraries(${_testname}
                             Qt::Test
                             Qt::Gui
@@ -80,3 +82,28 @@ PLASMASHELL_UNIT_TESTS(
 
 kde_target_enable_exceptions(shelltest PRIVATE)
 target_compile_definitions(shelltest PRIVATE QTEST_THROW_ON_FAIL)
+
+# shelltest again with the scripting engine, for the cases that layout scripts drive. The shell of the
+# test adds a panel from its layout script at startup, so this binary runs these cases only.
+set(USE_SCRIPTING 1)
+configure_file(../config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/scripting/config-plasma.h)
+get_target_property(shelltest_SRCS shelltest SOURCES)
+get_target_property(shelltest_LIBS shelltest LINK_LIBRARIES)
+add_executable(shelltest-scripting
+    ${shelltest_SRCS}
+    ../scripting/appinterface.cpp
+    ../scripting/applet.cpp
+    ../scripting/containment.cpp
+    ../scripting/configgroup.cpp
+    ../scripting/panel.cpp
+    ../scripting/scriptengine.cpp
+    ../scripting/scriptengine_v1.cpp
+    ../scripting/widget.cpp
+)
+target_include_directories(shelltest-scripting BEFORE PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/scripting)
+target_link_libraries(shelltest-scripting ${shelltest_LIBS} KF6::CoreAddons KF6::Solid)
+kde_target_enable_exceptions(shelltest-scripting PRIVATE)
+target_compile_definitions(shelltest-scripting PRIVATE QTEST_THROW_ON_FAIL)
+add_test(NAME shelltest-scripting COMMAND dbus-run-session $<TARGET_FILE:shelltest-scripting> testScriptPanelKeepsItsScreen)
+set_tests_properties(shelltest-scripting PROPERTIES ENVIRONMENT "QT_NO_XDG_DESKTOP_PORTAL=1")
+ecm_mark_as_test(shelltest-scripting)
