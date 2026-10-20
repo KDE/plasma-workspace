@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-27 00:47+0000\n"
-"PO-Revision-Date: 2024-09-13 18:18+0300\n"
-"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
-"Language-Team: el <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2026-10-19 11:44+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: main.cpp:60 plasmawindowedcorona.cpp:106
 #, kde-format
@@ -54,7 +55,7 @@ msgstr "Τα ορίσματα για χρήση από το πλασμοειδέ
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "Εσωτερική χρήση, για δοκιμές"
 
 #: plasmawindowedview.cpp:121
 #, kde-format
