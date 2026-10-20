@@ -445,6 +445,8 @@ PlasmaExtras.Representation {
                     value: 0
                     visible: expandedRepresentation.canSeek
                     stepSize: 5000000 // 5s in microseconds.
+                     // avoid tick marks, PC3 Slider only shows >=20
+                    Kirigami.StyleHints.tickMarkStepSize: (to - from) / 21
 
                     KeyNavigation.backtab: playerSelector.currentItem
                     KeyNavigation.up: KeyNavigation.backtab
