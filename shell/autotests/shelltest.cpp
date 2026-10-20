@@ -8,6 +8,7 @@
 
 #include <QDBusConnection>
 #include <QDir>
+#include <QScopeGuard>
 #include <QScreen>
 #include <QSignalSpy>
 #include <QStandardPaths>
@@ -20,6 +21,7 @@
 #include "../panelview.h"
 #include "../screenpool.h"
 #include "../shellcorona.h"
+#include "config-plasma.h"
 #include "mockcompositor.h"
 #include "xdgoutputv1.h"
 
@@ -72,14 +74,22 @@ private Q_SLOTS:
     void testPanelSizeModes();
     void testOutputOrderChanged();
     void testClonedPanelKeepsItsScreen();
+#if USE_SCRIPTING
+    void testScriptPanelKeepsItsScreen();
+#endif
 
 private:
     ShellCorona *m_corona;
     QDir m_plasmaDir;
+    // The output that activeOutputName() answers, the first one of the output order when empty
+    QString m_activeOutputName;
 };
 
 QString ShellTest::activeOutputName()
 {
+    if (!m_activeOutputName.isEmpty()) {
+        return m_activeOutputName;
+    }
     if (outputOrder()->list().isEmpty()) {
         return {};
     }
@@ -832,5 +842,33 @@ void ShellTest::testClonedPanelKeepsItsScreen()
     QCOMPARE(clone->screen(), 1);
     QCOMPARE(m_corona->m_panelViews[clone]->screen(), secondScreen);
 }
+
+#if USE_SCRIPTING
+// A panel that a layout script adds, as the "Default Panel" template does, stays on the screen it was
+// added to.
+void ShellTest::testScriptPanelKeepsItsScreen()
+{
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
+    QTRY_VERIFY(m_corona->isScreenUiReady(1));
+
+    const auto panelsBefore = m_corona->m_panelViews.keys();
+    m_activeOutputName = u"DP-1"_s;
+    auto resetActiveOutput = qScopeGuard([this] {
+        m_activeOutputName.clear();
+    });
+    QCOMPARE(m_corona->evaluateScript(u"var panel = new Panel(\"org.kde.plasma.testpanel\"); print(panel.screen)"_s), u"1"_s);
+
+    const Plasma::Containment *panelCont = nullptr;
+    for (auto it = m_corona->m_panelViews.constBegin(); it != m_corona->m_panelViews.constEnd(); ++it) {
+        if (!panelsBefore.contains(it.key())) {
+            panelCont = it.key();
+        }
+    }
+    QVERIFY(panelCont);
+    QCOMPARE(panelCont->screen(), 1);
+    QCOMPARE(m_corona->m_panelViews[panelCont]->screen()->name(), u"DP-1"_s);
+}
+#endif
 
 #include "shelltest.moc"

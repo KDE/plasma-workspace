@@ -372,12 +372,10 @@ Plasma::Containment *ScriptEngine::createContainment(const QString &type, const 
 
     if (c) {
         if (type == QLatin1String("Panel")) {
-            // we have to force lastScreen of the newly created containment,
-            // or it won't have a screen yet at that point, breaking JS code
-            // that relies on it
+            // restore() reads the screen from lastScreen, so it gets the screen that addPanel() chose
             // NOTE: if we'll allow setting a panel screen from JS, it will have to use the following lines as well
             KConfigGroup cg = c->config();
-            cg.writeEntry(QStringLiteral("lastScreen"), 0);
+            cg.writeEntry(QStringLiteral("lastScreen"), c->screen());
             c->restore(cg);
         }
         c->updateConstraints(Plasma::Applet::AllConstraints | Plasma::Applet::StartupCompletedConstraint);
