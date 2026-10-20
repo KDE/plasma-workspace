@@ -475,7 +475,12 @@ void TasksModel::Private::updateManualSortMap()
                     // Once we got a match, check if the filter model accepts the potential
                     // sibling. We don't want to sort new tasks in next to tasks it will
                     // filter out once it sees it anyway.
-                    if (appsMatch(concatProxyIndex, idx) && filterProxyModel->acceptsRow(concatProxyIndex.row())) {
+                    // An exception is a launcher that is hidden because it has a matching
+                    // running task: when launchers are not kept separate the
+                    // new task should be where the launcher was.
+                    const bool isActivatedLauncher = concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool() && q->hideActivatedLaunchers();
+
+                    if (appsMatch(concatProxyIndex, idx) && (isActivatedLauncher || filterProxyModel->acceptsRow(concatProxyIndex.row()))) {
                         sortedPreFilterRows.move(row, j + 1);
                         moved = true;
 
