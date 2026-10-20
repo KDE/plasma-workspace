@@ -71,6 +71,7 @@ private Q_SLOTS:
     void testReorderContainments();
     void testPanelSizeModes();
     void testOutputOrderChanged();
+    void testClonedPanelKeepsItsScreen();
 
 private:
     ShellCorona *m_corona;
@@ -807,5 +808,29 @@ void ShellTest::testOutputOrderChanged()
 }
 
 QCOMPOSITOR_TEST_MAIN(ShellTest)
+
+// A copy of a panel made for another screen stays on that screen.
+void ShellTest::testClonedPanelKeepsItsScreen()
+{
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
+    QTRY_VERIFY(m_corona->isScreenUiReady(1));
+
+    auto *panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    QCOMPARE(panelCont->screen(), 0);
+    QScreen *secondScreen = m_corona->m_screenPool->screenForId(1);
+    m_corona->clonePanelTo(m_corona->m_panelViews[panelCont], Plasma::Types::TopEdge, secondScreen);
+
+    QCOMPARE(m_corona->m_panelViews.size(), 2);
+    const Plasma::Containment *clone = nullptr;
+    for (auto it = m_corona->m_panelViews.constBegin(); it != m_corona->m_panelViews.constEnd(); ++it) {
+        if (it.key() != panelCont) {
+            clone = it.key();
+        }
+    }
+    QVERIFY(clone);
+    QCOMPARE(clone->screen(), 1);
+    QCOMPARE(m_corona->m_panelViews[clone]->screen(), secondScreen);
+}
 
 #include "shelltest.moc"
