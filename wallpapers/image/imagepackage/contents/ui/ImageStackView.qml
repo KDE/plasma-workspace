@@ -136,11 +136,13 @@ QQC2.StackView {
         // Given it's such a heavy item, try to cleanup as early as possible
         pendingImage.QQC2.StackView.onDeactivated.connect(pendingImage.destroy);
         pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
+        // view.replace can sent pendingImage.status from Ready to Loading, as TransientImage will reload every time it gets resized
+        const imageStatus = pendingImage.status;
         view.replace(pendingImage, {}, QQC2.StackView.Transition);
 
         wallpaperInterface.loading = false;
 
-        if (pendingImage.status !== Image.Ready) {
+        if (imageStatus === Image.Error) {
             mediaProxy.useSingleImageDefaults();
         }
 
