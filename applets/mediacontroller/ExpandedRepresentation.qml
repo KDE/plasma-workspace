@@ -445,6 +445,7 @@ PlasmaExtras.Representation {
                     value: 0
                     visible: expandedRepresentation.canSeek
                     stepSize: 5000000 // 5s in microseconds.
+                    Kirigami.StyleHints.tickMarkStepSize: 0 // no tickmarks
 
                     KeyNavigation.backtab: playerSelector.currentItem
                     KeyNavigation.up: KeyNavigation.backtab
