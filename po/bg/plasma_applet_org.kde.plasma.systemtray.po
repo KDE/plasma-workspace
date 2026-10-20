@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-15 00:48+0000\n"
-"PO-Revision-Date: 2026-05-28 13:30+0200\n"
+"PO-Revision-Date: 2026-10-19 16:13+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -163,7 +163,7 @@ msgstr "Малък"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "Много малък"
 
 #: qml/ConfigGeneral.qml:264
 #, kde-format

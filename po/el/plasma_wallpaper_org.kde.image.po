@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
-# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# SPDX-FileCopyrightText: 2010, 2026 Petros Vidalis <p_vidalis@hotmail.com>
 # Antonis Geralis <capoiosct@gmail.com>, 2012, 2013.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
@@ -12,15 +12,15 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-21 00:46+0000\n"
-"PO-Revision-Date: 2024-08-24 16:01+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-19 11:40+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -75,43 +75,41 @@ msgid "Centered"
 msgstr "Κεντρικό"
 
 #: imagepackage/contents/ui/config.qml:199
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Ορισμός ως ταπετσαρία"
+msgstr "Εναλλαγή δυναμικών ταπετσαριών:"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgstr "Ανάλογα με το αν το στιλ του Plasma είναι φωτεινό ή σκοτεινό "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "Ανάλογα με τον κύκλο ημέρας και νύχτας"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "Πάντα χρήση της φωτεινής παραλλαγής"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "Πάντα χρήση της σκοτεινής παραλλαγής"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Διαμόρφωση…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format
@@ -171,25 +169,25 @@ msgstr "Λήψη νέων εικόνων ταπετσαρίας…"
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Επιλογή όλων"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Επιλογή όλων των διαφανειών"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "Καμία επιλογή"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Αποεπιλογή όλων των διαφανειών"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
@@ -354,6 +352,10 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"Ορίστε όλους τους χρόνους σε 0 για να απενεργοποιήσετε την αυτόματη αλλαγή "
+"ταπετσαρίας. Μπορείτε ακόμη να αλλάζετε ταπετσαρία χειροκίνητα από την "
+"επιλογή <interface>Επόμενη εικόνα ταπετσαρίας</interface> στο μενού "
+"περιβάλλοντος της επιφάνειας εργασίας."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format

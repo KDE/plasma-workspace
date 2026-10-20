@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-04-03 01:54+0200\n"
+"PO-Revision-Date: 2026-10-19 16:11+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -42,31 +42,31 @@ msgstr "Филтъра за синя светлина прави цветове�
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily activated until %1."
-msgstr ""
+msgstr "Вечерни цветове е временно активиран до %1."
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily activated until it is manually turned off."
-msgstr ""
+msgstr "Вечерни цветове е временно активиран, докато не бъде изключен ръчно."
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily suspended until %1."
-msgstr ""
+msgstr "Вечерни цветове е временно спрян до %1."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily suspended until it is manually resumed."
-msgstr ""
+msgstr "Вечерни цветове е временно спрян до ръчното му възобновяване."
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@action:button turn off Night Light feature"
 msgid "Turn Off"
-msgstr ""
+msgstr "Изключване"
 
 #: ui/main.qml:141
 #, kde-format
@@ -74,7 +74,7 @@ msgctxt ""
 "@action:button resume Light Light feature, which had been temporarily "
 "disabled"
 msgid "Resume"
-msgstr ""
+msgstr "Възобновяване"
 
 #: ui/main.qml:159
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "Време за активиране:"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr "Винаги изключен"
+msgstr "Винаги изключено"
 
 #: ui/main.qml:171
 #, kde-format

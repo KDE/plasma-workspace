@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-15 00:48+0000\n"
-"PO-Revision-Date: 2026-10-13 22:01+0300\n"
+"PO-Revision-Date: 2026-10-19 11:35+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -166,7 +166,7 @@ msgstr "Μικρό"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "Μικροσκοπικό"
 
 #: qml/ConfigGeneral.qml:264
 #, kde-format

@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2026 Petros Vidalis <pvidalis@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2024-08-20 11:28+0300\n"
-"Last-Translator: Dimitrys Meliates <demetresmeliates+i18n@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-10-19 11:48+0300\n"
+"Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: abstractnotificationsmodel.cpp:378
 #, kde-format
@@ -103,7 +104,7 @@ msgid "Application closed unexpectedly."
 msgstr "Η εφαρμογή έκλεισε απροσδόκητα."
 
 #: notifications.cpp:985
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
@@ -111,7 +112,7 @@ msgstr[0] "Μη αναγνωσμένη ειδοποίηση"
 msgstr[1] "Μη αναγνωσμένες ειδοποιήσεις"
 
 #: notifications.cpp:987
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
@@ -120,7 +121,7 @@ msgstr[1] ""
 "%1 ειδοποιήσεις ελήφθησαν ενώ ήταν ενεργή η λειτουργία «Μην ενοχλείτε»."
 
 #: notifications.cpp:995
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Εμφάνιση ειδοποιήσεων"

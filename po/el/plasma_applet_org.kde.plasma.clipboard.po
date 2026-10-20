@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-10-13 21:56+0300\n"
+"PO-Revision-Date: 2026-10-19 11:35+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -30,12 +30,10 @@ msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι άδειο"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "Το πρόχειρο περιέχει αυτή τη στιγμή ευαίσθητα δεδομένα"
+msgstr "Το πρόχειρο και η επιλογή περιέχουν αυτή τη στιγμή ευαίσθητα δεδομένα"
 
 #: qml/main.qml:46
 #, kde-format
@@ -44,12 +42,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "Το πρόχειρο περιέχει αυτή τη στιγμή ευαίσθητα δεδομένα"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "Το πρόχειρο περιέχει αυτή τη στιγμή ευαίσθητα δεδομένα"
+msgstr "Η επιλογή περιέχει αυτή τη στιγμή ευαίσθητα δεδομένα"
 
 #: qml/main.qml:85
 #, kde-format

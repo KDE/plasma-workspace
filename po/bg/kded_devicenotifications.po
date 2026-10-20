@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2024-2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2025-07-28 18:06+0200\n"
+"PO-Revision-Date: 2026-10-19 16:11+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: devicenotifications.cpp:509
 #, kde-format
@@ -24,18 +24,16 @@ msgid "Display Detected"
 msgstr "Открит е екран"
 
 #: devicenotifications.cpp:511
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
-msgstr "Устройство %1 е свързано."
+msgstr "%1 е свързан."
 
 #: devicenotifications.cpp:514
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "Устройство %1 е свързано."
+msgstr "%1 %2 (%3) е свързан."
 
 #: devicenotifications.cpp:549
 #, kde-format
@@ -44,18 +42,16 @@ msgid "Display Removed"
 msgstr "Екранът e премахнат"
 
 #: devicenotifications.cpp:551
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
-msgstr "Устройство %1 е отделено."
+msgstr "%1 е изключен."
 
 #: devicenotifications.cpp:554
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "Устройство %1 е отделено."
+msgstr "%1 %2 (%3) е изключен."
 
 #: devicenotifications.cpp:602
 #, kde-format
@@ -88,9 +84,3 @@ msgstr "USB устройство е отделено."
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "USB устройство e премахнато"
-
-#~ msgid "A display has been connected."
-#~ msgstr "Установено е свързване на екран."
-
-#~ msgid "A display has been disconnected."
-#~ msgstr "Установено е изключване на екран."

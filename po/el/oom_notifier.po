@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-18 00:47+0000\n"
-"PO-Revision-Date: 2026-10-12 13:38+0300\n"
+"PO-Revision-Date: 2026-10-19 11:35+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -24,7 +24,7 @@ msgid "Memory Shortage Avoided"
 msgstr "Αποτράπηκε η έλλειψη μνήμης"
 
 #: module.cpp:71
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "<command>%1</command> has been terminated by the Linux kernel because the "
@@ -37,7 +37,7 @@ msgstr ""
 "χρησιμοποιείτε."
 
 #: module.cpp:77
-#, fuzzy, kde-kuit-format
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "The background service <command>%1</command> has been terminated by the "
@@ -50,7 +50,7 @@ msgstr ""
 "που δεν χρησιμοποιείτε."
 
 #: module.cpp:85
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action"
 msgid "Restart Application"
 msgstr "Επανεκκίνηση εφαρμογής"

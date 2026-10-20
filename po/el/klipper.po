@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-13 19:20+0300\n"
+"PO-Revision-Date: 2026-10-19 11:33+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -325,25 +325,17 @@ msgid "Starred Only"
 msgstr "Μόνο με αστέρι"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"Το πρόχειρο περιέχει αυτή τη στιγμή ευαίσθητα δεδομένα που δεν θα "
-"αποθηκευτούν στο ιστορικό."
+"Το πρόχειρο και η επιλογή περιέχουν αυτή τη στιγμή ευαίσθητα δεδομένα που "
+"δεν θα αποθηκευτούν στο ιστορικό."
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -353,18 +345,14 @@ msgstr ""
 "αποθηκευτούν στο ιστορικό."
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Το πρόχειρο περιέχει αυτή τη στιγμή ευαίσθητα δεδομένα που δεν θα "
-"αποθηκευτούν στο ιστορικό."
+"Η επιλογή περιέχει αυτή τη στιγμή ευαίσθητα δεδομένα που δεν θα αποθηκευτούν "
+"στο ιστορικό."
 
 #: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
@@ -704,14 +692,13 @@ msgstr "&Εμφάνιση Barcode…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Μετακίνηση προς τα κάτω στο ιστορικό"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Εκκαθάριση ιστορικού"
+msgstr "Μετακίνηση προς τα πάνω στο ιστορικό"
 
 #: klipper.cpp:136
 #, kde-format
@@ -727,18 +714,17 @@ msgstr "Ιστορικό του προχείρου"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Νεότερο: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "τρέχον"
+msgstr "Τρέχον: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Παλαιότερο: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-08 16:03+0200\n"
+"PO-Revision-Date: 2026-10-19 16:12+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: configdialog.cpp:82
 #, kde-format
@@ -315,45 +315,33 @@ msgid "Starred Only"
 msgstr "Само със звезда"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"Тъй като в клипборда се съдържат чувствителни данни, те няма да бъдат "
-"запазени в историята."
+"Клипбордът и селекцията в момента съдържат чувствителни данни, които няма да "
+"бъдат запазени в историята."
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Тъй като в клипборда се съдържат чувствителни данни, те няма да бъдат "
-"запазени в историята."
+"В клипборда в момента има чувствителни данни, които няма да бъдат запазени в "
+"историята."
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Тъй като в клипборда се съдържат чувствителни данни, те няма да бъдат "
+"Селекцията в момента съдържа чувствителни данни, които няма да бъдат "
 "запазени в историята."
 
 #: declarative/qml/ClipboardMenu.qml:392
@@ -653,11 +641,10 @@ msgid "Remove Starred Item"
 msgstr "Премахване на елемент, означен със звезда"
 
 #: klipper.cpp:70
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "Изчакащ прозорец на клипборд"
+msgstr "Клипборд"
 
 #: klipper.cpp:74
 #, kde-format
@@ -693,14 +680,13 @@ msgstr "&Показване на баркод…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Превъртане на историята надолу"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Изчистване на историята"
+msgstr "Превъртане на историята нагоре"
 
 #: klipper.cpp:136
 #, kde-format
@@ -716,18 +702,17 @@ msgstr "Историята на буфера"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "По-нови:"
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "текущо"
+msgstr "Текущ:"
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "По-стари:"
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -919,17 +904,3 @@ msgstr "Изчакащ прозорец на клипборд"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Next History Item"
-#~ msgstr "Следващ елемент от историята"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Previous History Item"
-#~ msgstr "Предишен елемент от историята"
-
-#~ msgid "up"
-#~ msgstr "нагоре"
-
-#~ msgid "down"
-#~ msgstr "надолу"

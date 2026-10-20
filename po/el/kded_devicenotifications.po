@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-13 19:15+0300\n"
+"PO-Revision-Date: 2026-10-19 11:33+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -25,18 +25,16 @@ msgid "Display Detected"
 msgstr "Ανιχνεύθηκε οθόνη"
 
 #: devicenotifications.cpp:511
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "Συνδέθηκε η συσκευή %1."
 
 #: devicenotifications.cpp:514
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "Συνδέθηκε η συσκευή %1."
+msgstr "Συνδέθηκε η συσκευή %1 %2 (%3)."
 
 #: devicenotifications.cpp:549
 #, kde-format
@@ -45,18 +43,16 @@ msgid "Display Removed"
 msgstr "Αφαιρέθηκε οθόνη"
 
 #: devicenotifications.cpp:551
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "Αποσυνδέθηκε η συσκευή %1."
 
 #: devicenotifications.cpp:554
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "Αποσυνδέθηκε η συσκευή %1."
+msgstr "Αποσυνδέθηκε η συσκευή %1 %2 (%3)."
 
 #: devicenotifications.cpp:602
 #, kde-format

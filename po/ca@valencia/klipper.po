@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-14 10:20+0200\n"
+"PO-Revision-Date: 2026-10-16 10:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -684,14 +684,13 @@ msgstr "Mo&stra el codi de barres…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Gira avall l'historial"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Neteja l'historial"
+msgstr "Gira amunt l'historial"
 
 #: klipper.cpp:136
 #, kde-format
@@ -707,18 +706,17 @@ msgstr "Historial del porta-retalls"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Més nou: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "actual"
+msgstr "Actual: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Més antic: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -913,17 +911,3 @@ msgstr "Menú emergent del porta-retalls"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Next History Item"
-#~ msgstr "Element següent de l'historial"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Previous History Item"
-#~ msgstr "Element anterior de l'historial"
-
-#~ msgid "up"
-#~ msgstr "amunt"
-
-#~ msgid "down"
-#~ msgstr "avall"

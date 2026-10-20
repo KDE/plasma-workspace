@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-06-17 16:00+0200\n"
+"PO-Revision-Date: 2026-10-19 16:13+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: qml/main.qml:40
 #, kde-format
@@ -28,12 +28,10 @@ msgid "Clipboard is empty"
 msgstr "Буферът е празен"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "Клипбордът в момента съдържа поверителни данни"
+msgstr "Клипбордът и селекцията в момента съдържат чувствителни данни"
 
 #: qml/main.qml:46
 #, kde-format
@@ -42,12 +40,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "Клипбордът в момента съдържа поверителни данни"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "Клипбордът в момента съдържа поверителни данни"
+msgstr "В момента селекцията съдържа чувствителни данни"
 
 #: qml/main.qml:85
 #, kde-format

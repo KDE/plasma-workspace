@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:46+0000\n"
+"POT-Creation-Date: 2026-10-20 00:54+0000\n"
 "PO-Revision-Date: 2023-06-18 16:11+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.2\n"
 
-#: appmenumodel.cpp:85
+#: appmenumodel.cpp:86
 #, kde-format
 msgid "Search"
 msgstr "Buscar"
 
-#: appmenumodel.cpp:92
+#: appmenumodel.cpp:93
 #, kde-format
 msgid "Search…"
 msgstr "Buscar…"
