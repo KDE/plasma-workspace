@@ -88,7 +88,10 @@ PlasmaComponents.AbstractButton {
     readonly property date thisDate: {
         const monthNumber = (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearAndMonth) ? model.monthNumber - 1 : 0;
         const dayNumber = (dateMatchingPrecision >= PlasmaCalendar.Calendar.MatchYearMonthAndDay) ? model.dayNumber : 1;
-        return new Date(yearNumber, monthNumber, dayNumber);
+        // Don't use new Date(year, month, day), it maps years 0-99 to 1900-1999
+        const date = new Date(2000, 0, 1);
+        date.setFullYear(yearNumber, monthNumber, dayNumber);
+        return date;
     }
 
     Accessible.name: thisDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
