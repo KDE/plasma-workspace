@@ -40,17 +40,15 @@ void ApplicationIntegration::launchCalendar() const
 
 void ApplicationIntegration::refresh()
 {
-    KService::Ptr newService = KApplicationTrader::preferredService(QStringLiteral("text/calendar"));
+    const KService::List services = KApplicationTrader::queryByMimeType(u"text/calendar"_s, [](const KService::Ptr &service) {
+        // This does deliberately not include inherited mime types, so that we only consider "real" calendar applications.
+        return !service->noDisplay() && service->mimeTypes().contains(u"text/calendar"_s);
+    });
 
     bool wasInstalled = calendarInstalled();
     QString oldName = calendarApplicationName();
 
-    // This does deliberately not include inherited mime types, so that we only consider "real" calendar applications.
-    if (newService && newService->mimeTypes().contains(u"text/calendar"_s)) {
-        m_calendarService = newService;
-    } else {
-        m_calendarService = nullptr;
-    }
+    m_calendarService = services.value(0);
 
     if (wasInstalled != calendarInstalled()) {
         Q_EMIT calendarInstalledChanged();
