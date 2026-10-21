@@ -426,7 +426,7 @@ MouseArea {
                     family: fontHelper.font.family
                     weight: fontHelper.font.weight
                     italic: fontHelper.font.italic
-                    features: { "tnum": 1 }
+                    features: Object.assign({}, Kirigami.Theme.defaultFont.features, { "tnum": 1 })
                     pixelSize: 1024
                 }
                 minimumPixelSize: 1
