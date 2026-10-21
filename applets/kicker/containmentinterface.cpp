@@ -9,8 +9,17 @@
 #include <Plasma/Applet>
 #include <Plasma/Containment>
 #include <Plasma/Corona>
+#include <PlasmaActivities/Consumer>
 #include <PlasmaQuick/AppletQuickItem>
 #include <algorithm>
+
+namespace
+{
+Plasma::Containment *currentDesktopContainment(Plasma::Corona *corona, uint screen)
+{
+    return corona->containmentForScreen(screen, KActivities::Consumer().currentActivity(), QString());
+}
+}
 
 // FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
 // applets we know to expose the correct interface right now -- this is slated
@@ -49,7 +58,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
 
     switch (target) {
     case Desktop: {
-        containment = corona->containmentForScreen(containment->screen(), QString(), QString());
+        containment = currentDesktopContainment(corona, containment->screen());
 
         if (containment) {
             return (containment->immutability() == Plasma::Types::Mutable);
@@ -150,7 +159,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
 
     switch (target) {
     case Desktop: {
-        containment = corona->containmentForScreen(containment->screen(), QString(), QString());
+        containment = currentDesktopContainment(corona, containment->screen());
 
         if (!containment) {
             return;
@@ -220,7 +229,7 @@ QObject *ContainmentInterface::screenContainment(QObject *appletInterface)
         return nullptr;
     }
 
-    return corona->containmentForScreen(containment->screen(), QString(), QString());
+    return currentDesktopContainment(corona, containment->screen());
 }
 
 bool ContainmentInterface::screenContainmentMutable(QObject *appletInterface)
