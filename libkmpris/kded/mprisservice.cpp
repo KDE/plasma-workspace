@@ -135,9 +135,12 @@ void MprisService::enableGlobalShortcuts()
         action->setText(text);
         KGlobalAccel::setGlobalShortcut(action, keySequence);
         connect(action, &QAction::triggered, this, callback);
+        return action;
     };
 
-    addGlobalShortcut(QStringLiteral("playpausemedia"), i18nc("@title shortcut", "Play/Pause media playback"), Qt::Key_MediaPlay, &MprisService::onPlayPause);
+    QAction *playPauseAction =
+        addGlobalShortcut(QStringLiteral("playpausemedia"), i18nc("@title shortcut", "Play/Pause media playback"), Qt::Key_MediaPlay, &MprisService::onPlayPause);
+    playPauseAction->setAutoRepeat(false);
     addGlobalShortcut(QStringLiteral("nextmedia"), i18nc("@title shortcut", "Media playback next"), Qt::Key_MediaNext, &MprisService::onNext);
     addGlobalShortcut(QStringLiteral("previousmedia"), i18nc("@title shortcut", "Media playback previous"), Qt::Key_MediaPrevious, &MprisService::onPrevious);
     addGlobalShortcut(QStringLiteral("seekforwardmedia"),
