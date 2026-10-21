@@ -53,6 +53,18 @@ Item {
 
     property int firstDay: new Date(showDate.getFullYear(), showDate.getMonth(), 1).getDay()
     property alias today: calendarBackend.today
+    // Used to move the selection along with today at midnight, unless the user selected another day
+    property date previousToday
+
+    onTodayChanged: {
+        if (root.currentDate.toDateString() === root.previousToday.toDateString()
+                && root.today.toDateString() !== root.previousToday.toDateString()) {
+            root.currentDate = root.today;
+            root.currentDateAuxilliaryText = root.todayAuxilliaryText;
+        }
+        root.previousToday = root.today;
+    }
+
     property bool showWeekNumbers: false
 
     // properties for communicating with the digital clock applet
@@ -470,5 +482,6 @@ Item {
 
     Component.onCompleted: {
         root.currentDate = calendarBackend.today;
+        root.previousToday = calendarBackend.today;
     }
 }
