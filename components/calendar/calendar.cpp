@@ -7,6 +7,8 @@
 
 #include <QDebug>
 
+#include <algorithm>
+
 #include "calendar.h"
 #include "daydata.h"
 
@@ -60,14 +62,21 @@ QDateTime Calendar::displayedDate() const
 
 void Calendar::setDisplayedDate(const QDate &dateTime)
 {
-    if (d->displayedDate == dateTime) {
+    // Ignore invalid dates, e.g. in year 0, which QDate doesn't have
+    if (!dateTime.isValid()) {
+        return;
+    }
+
+    // Negative years don't make sense
+    const QDate date = std::max(dateTime, QDate(1, 1, 1));
+    if (d->displayedDate == date) {
         return;
     }
 
     const int oldMonth = d->displayedDate.month();
     const int oldYear = d->displayedDate.year();
 
-    d->displayedDate = dateTime;
+    d->displayedDate = date;
 
     //  m_dayHelper->setDate(m_displayedDate.year(), m_displayedDate.month());
 
@@ -355,10 +364,7 @@ void Calendar::nextDecade()
 
 void Calendar::previousDecade()
 {
-    // Negative years don't make sense
-    if (d->displayedDate.year() >= 10) {
-        setDisplayedDate(d->displayedDate.addYears(-10));
-    }
+    setDisplayedDate(d->displayedDate.addYears(-10));
 }
 
 void Calendar::nextYear()
@@ -368,10 +374,7 @@ void Calendar::nextYear()
 
 void Calendar::previousYear()
 {
-    // Negative years don't make sense
-    if (d->displayedDate.year() >= 1) {
-        setDisplayedDate(d->displayedDate.addYears(-1));
-    }
+    setDisplayedDate(d->displayedDate.addYears(-1));
 }
 
 void Calendar::nextMonth()
