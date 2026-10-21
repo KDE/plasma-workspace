@@ -222,6 +222,8 @@ void Notifications::Private::initProxyModels()
         connect(filterModel, &NotificationFilterProxyModel::ignoreBlacklistDuringInhibitionChanged, q, &Notifications::ignoreBlacklistDuringInhibitionChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedNotifyRcNamesChanged, q, &Notifications::blacklistedNotifyRcNamesChanged);
+        connect(filterModel, &NotificationFilterProxyModel::popupBlacklistedDesktopEntriesChanged, q, &Notifications::popupBlacklistedDesktopEntriesChanged);
+        connect(filterModel, &NotificationFilterProxyModel::popupBlacklistedNotifyRcNamesChanged, q, &Notifications::popupBlacklistedNotifyRcNamesChanged);
 
         filterModel->setSourceModel(notificationsAndJobsModel);
 
@@ -590,6 +592,26 @@ QStringList Notifications::blacklistedNotifyRcNames() const
 void Notifications::setBlacklistedNotifyRcNames(const QStringList &blacklist)
 {
     d->filterModel->setBlacklistedNotifyRcNames(blacklist);
+}
+
+QStringList Notifications::popupBlacklistedDesktopEntries() const
+{
+    return d->filterModel->popupBlacklistedDesktopEntries();
+}
+
+void Notifications::setPopupBlacklistedDesktopEntries(const QStringList &blacklist)
+{
+    d->filterModel->setPopupBlacklistedDesktopEntries(blacklist);
+}
+
+QStringList Notifications::popupBlacklistedNotifyRcNames() const
+{
+    return d->filterModel->popupBlacklistedNotifyRcNames();
+}
+
+void Notifications::setPopupBlacklistedNotifyRcNames(const QStringList &blacklist)
+{
+    d->filterModel->setPopupBlacklistedNotifyRcNames(blacklist);
 }
 
 QStringList Notifications::whitelistedDesktopEntries() const
@@ -971,6 +993,15 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
         }
         // Set expired so the individual notifications don't pop up, only the summary does - but they still show up in the history.
         d->notificationsAndJobsModel->setData(idx, true, Notifications::ExpiredRole);
+
+        const QString desktopEntry = Utils::settingsDesktopEntry(idx);
+        if (!desktopEntry.isEmpty() && blacklistedDesktopEntries.contains(desktopEntry)) {
+            continue;
+        }
+        const QString notifyRcName = idx.data(Notifications::NotifyRcNameRole).toString();
+        if (!notifyRcName.isEmpty() && blacklistedNotifyRcNames.contains(notifyRcName)) {
+            continue;
+        }
         ++inhibited;
     }
 

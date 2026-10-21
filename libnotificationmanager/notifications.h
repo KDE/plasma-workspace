@@ -96,6 +96,12 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
      */
     Q_PROPERTY(QStringList blacklistedNotifyRcNames READ blacklistedNotifyRcNames WRITE setBlacklistedNotifyRcNames NOTIFY blacklistedNotifyRcNamesChanged)
 
+    Q_PROPERTY(QStringList popupBlacklistedDesktopEntries READ popupBlacklistedDesktopEntries WRITE setPopupBlacklistedDesktopEntries NOTIFY
+                   popupBlacklistedDesktopEntriesChanged)
+
+    Q_PROPERTY(QStringList popupBlacklistedNotifyRcNames READ popupBlacklistedNotifyRcNames WRITE setPopupBlacklistedNotifyRcNames NOTIFY
+                   popupBlacklistedNotifyRcNamesChanged)
+
     /**
      * A list of desktop entries for which notifications should be shown.
      *
@@ -415,6 +421,12 @@ public:
     QStringList blacklistedNotifyRcNames() const;
     void setBlacklistedNotifyRcNames(const QStringList &blacklist);
 
+    QStringList popupBlacklistedDesktopEntries() const;
+    void setPopupBlacklistedDesktopEntries(const QStringList &blacklist);
+
+    QStringList popupBlacklistedNotifyRcNames() const;
+    void setPopupBlacklistedNotifyRcNames(const QStringList &blacklist);
+
     QStringList whitelistedDesktopEntries() const;
     void setWhitelistedDesktopEntries(const QStringList &whitelist);
 
@@ -598,6 +610,8 @@ Q_SIGNALS:
     void ignoreBlacklistDuringInhibitionChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
+    void popupBlacklistedDesktopEntriesChanged();
+    void popupBlacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
     void whitelistedNotifyRcNamesChanged();
     void showNotificationsChanged();

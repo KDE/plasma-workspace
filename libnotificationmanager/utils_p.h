@@ -19,6 +19,8 @@ QString processNameFromPid(uint pid);
 
 QString desktopEntryFromPid(uint pid);
 
+QString settingsDesktopEntry(const QModelIndex &idx);
+
 /**
  * Map a given index to a given source model
  * @param The index

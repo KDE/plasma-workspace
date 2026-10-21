@@ -6,6 +6,8 @@
 
 #include "notificationfilterproxymodel_p.h"
 
+#include "utils_p.h"
+
 using namespace NotificationManager;
 
 NotificationFilterProxyModel::NotificationFilterProxyModel(QObject *parent)
@@ -121,6 +123,36 @@ void NotificationFilterProxyModel::setBlacklistedNotifyRcNames(const QStringList
     }
 }
 
+QStringList NotificationFilterProxyModel::popupBlacklistedDesktopEntries() const
+{
+    return m_popupBlacklistedDesktopEntries;
+}
+
+void NotificationFilterProxyModel::setPopupBlacklistedDesktopEntries(const QStringList &blacklist)
+{
+    if (m_popupBlacklistedDesktopEntries != blacklist) {
+        beginFilterChange();
+        m_popupBlacklistedDesktopEntries = blacklist;
+        endFilterChange();
+        Q_EMIT popupBlacklistedDesktopEntriesChanged();
+    }
+}
+
+QStringList NotificationFilterProxyModel::popupBlacklistedNotifyRcNames() const
+{
+    return m_popupBlacklistedNotifyRcNames;
+}
+
+void NotificationFilterProxyModel::setPopupBlacklistedNotifyRcNames(const QStringList &blacklist)
+{
+    if (m_popupBlacklistedNotifyRcNames != blacklist) {
+        beginFilterChange();
+        m_popupBlacklistedNotifyRcNames = blacklist;
+        endFilterChange();
+        Q_EMIT popupBlacklistedNotifyRcNamesChanged();
+    }
+}
+
 QStringList NotificationFilterProxyModel::whitelistedDesktopEntries() const
 {
     return m_whitelistedDesktopEntries;
@@ -167,17 +199,12 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         return false;
     }
 
-    QString desktopEntry = sourceIdx.data(Notifications::DesktopEntryRole).toString();
-    if (desktopEntry.isEmpty()) {
-        // For non-configurable notifications use the fake "@other" category.
-        if (!sourceIdx.data(Notifications::ConfigurableRole).toBool()
-            // jobs are never configurable so this only applies to notifications
-            && sourceIdx.data(Notifications::TypeRole).toInt() == Notifications::NotificationType) {
-            desktopEntry = QStringLiteral("@other");
-        }
-    }
+    const QString desktopEntry = Utils::settingsDesktopEntry(sourceIdx);
 
-    bool ignoreBlacklist = m_ignoreBlacklistDuringInhibition && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool();
+    const QString notifyRcName = sourceIdx.data(Notifications::NotifyRcNameRole).toString();
+    const bool popupBlacklisted = (!desktopEntry.isEmpty() && m_popupBlacklistedDesktopEntries.contains(desktopEntry))
+        || (!notifyRcName.isEmpty() && m_popupBlacklistedNotifyRcNames.contains(notifyRcName));
+    const bool ignoreBlacklist = m_ignoreBlacklistDuringInhibition && !popupBlacklisted && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool();
 
     // Blacklist takes precedence over whitelist, i.e. when in doubt don't show
     if (!m_blacklistedDesktopEntries.isEmpty() && !ignoreBlacklist) {
@@ -187,7 +214,6 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
     }
 
     if (!m_blacklistedNotifyRcNames.isEmpty() && !ignoreBlacklist) {
-        const QString notifyRcName = sourceIdx.data(Notifications::NotifyRcNameRole).toString();
         if (!notifyRcName.isEmpty() && m_blacklistedNotifyRcNames.contains(notifyRcName)) {
             return false;
         }
@@ -200,7 +226,6 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
     }
 
     if (!m_whitelistedNotifyRcNames.isEmpty()) {
-        const QString notifyRcName = sourceIdx.data(Notifications::NotifyRcNameRole).toString();
         if (!notifyRcName.isEmpty() && m_whitelistedNotifyRcNames.contains(notifyRcName)) {
             return true;
         }

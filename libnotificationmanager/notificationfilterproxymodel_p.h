@@ -42,6 +42,12 @@ public:
     QStringList blacklistedNotifyRcNames() const;
     void setBlacklistedNotifyRcNames(const QStringList &blacklist);
 
+    QStringList popupBlacklistedDesktopEntries() const;
+    void setPopupBlacklistedDesktopEntries(const QStringList &blacklist);
+
+    QStringList popupBlacklistedNotifyRcNames() const;
+    void setPopupBlacklistedNotifyRcNames(const QStringList &blacklist);
+
     QStringList whitelistedDesktopEntries() const;
     void setWhiteListedDesktopEntries(const QStringList &whitelist);
 
@@ -56,6 +62,8 @@ Q_SIGNALS:
     void ignoreBlacklistDuringInhibitionChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
+    void popupBlacklistedDesktopEntriesChanged();
+    void popupBlacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
     void whitelistedNotifyRcNamesChanged();
 
@@ -67,10 +75,13 @@ private:
     bool m_showDismissed = false;
     bool m_showExpired = false;
     bool m_showAddedDuringInhibition = true;
-    bool m_ignoreBlacklistDuringInhibition = true;
+    bool m_ignoreBlacklistDuringInhibition = false;
 
     QStringList m_blacklistedDesktopEntries;
     QStringList m_blacklistedNotifyRcNames;
+
+    QStringList m_popupBlacklistedDesktopEntries;
+    QStringList m_popupBlacklistedNotifyRcNames;
 
     QStringList m_whitelistedDesktopEntries;
     QStringList m_whitelistedNotifyRcNames;

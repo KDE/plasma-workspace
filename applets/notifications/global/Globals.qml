@@ -39,7 +39,7 @@ QtObject {
 
         if (!inhibited) {
             const urgency = notificationSettings.lowPriorityHistory ? NotificationManager.Notifications.LowUrgency : NotificationManager.Notifications.NormalUrgency;
-            popupNotificationsModel.showInhibitionSummary(urgency, notificationSettings.historyBlacklistedApplications, notificationSettings.historyBlacklistedServices);
+            popupNotificationsModel.showInhibitionSummary(urgency, notificationSettings.popupBlacklistedApplications, notificationSettings.popupBlacklistedServices);
         }
 
         var pa = pulseAudio.item;

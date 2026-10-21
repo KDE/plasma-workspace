@@ -106,6 +106,18 @@ QString Utils::desktopEntryFromPid(uint pid)
     return {};
 }
 
+QString Utils::settingsDesktopEntry(const QModelIndex &idx)
+{
+    const QString desktopEntry = idx.data(Notifications::DesktopEntryRole).toString();
+    // For non-configurable notifications use the fake "@other" category.
+    if (desktopEntry.isEmpty() && !idx.data(Notifications::ConfigurableRole).toBool()
+        // jobs are never configurable so this only applies to notifications
+        && idx.data(Notifications::TypeRole).toInt() == Notifications::NotificationType) {
+        return QStringLiteral("@other");
+    }
+    return desktopEntry;
+}
+
 QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceModel)
 {
     // KModelIndexProxyMapper can only map different indices to a single source

@@ -183,6 +183,8 @@ PlasmoidItem {
         ignoreBlacklistDuringInhibition: true
         blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
+        popupBlacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
+        popupBlacklistedNotifyRcNames: notificationSettings.popupBlacklistedServices
         urgencies: {
             var urgencies = NotificationManager.Notifications.CriticalUrgency
                           | NotificationManager.Notifications.NormalUrgency;
@@ -207,6 +209,7 @@ PlasmoidItem {
             showDismissed: historyModel.showDismissed
             showJobs: historyModel.showJobs
             showNotifications: false
+            ignoreBlacklistDuringInhibition: historyModel.ignoreBlacklistDuringInhibition
             blacklistedDesktopEntries: historyModel.blacklistedDesktopEntries
             blacklistedNotifyRcNames: historyModel.blacklistedNotifyRcNames
             urgencies: historyModel.urgencies
