@@ -531,7 +531,13 @@ MouseArea {
 
         // because QLocale is incredibly stupid and does not convert 12h/24h clock format
         // when uppercase H is used for hours, needs to be h or hh, so toLowerCase()
-        let result = hours.toLowerCase() + delimiter + minutes;
+        let hoursFormat = hours.toLowerCase();
+        // A 12h locale has no convention for 24h times to follow, so when the 24h
+        // format is forced, use the common zero-padded hours (00:27, not 0:27)
+        if (Plasmoid.configuration.use24hFormat === Qt.Checked && !uses24hFormatByDefault) {
+            hoursFormat = "hh";
+        }
+        let result = hoursFormat + delimiter + minutes;
 
         let result_sec = result + delimiter + seconds;
 
