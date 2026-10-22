@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:46+0000\n"
+"POT-Creation-Date: 2026-10-22 02:47+0000\n"
 "PO-Revision-Date: 2026-03-14 06:34+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.9\n"
 
-#: appmenumodel.cpp:85
+#: appmenumodel.cpp:86
 #, kde-format
 msgid "Search"
 msgstr "ძებნა"
 
-#: appmenumodel.cpp:92
+#: appmenumodel.cpp:93
 #, kde-format
 msgid "Search…"
 msgstr "ძებნა…"

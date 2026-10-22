@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:46+0000\n"
+"POT-Creation-Date: 2026-10-22 02:47+0000\n"
 "PO-Revision-Date: 2026-03-17 11:20+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: appmenumodel.cpp:85
+#: appmenumodel.cpp:86
 #, kde-format
 msgid "Search"
 msgstr "Leita"
 
-#: appmenumodel.cpp:92
+#: appmenumodel.cpp:93
 #, kde-format
 msgid "Search…"
 msgstr "Leita…"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-14 00:46+0000\n"
+"POT-Creation-Date: 2026-10-22 02:47+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Associated-UI-Catalogs: kcmstyle systemsettings.desktop\n"
 
-#: appmenumodel.cpp:85
+#: appmenumodel.cpp:86
 #, kde-format
 msgid "Search"
 msgstr "Traži"
 
-#: appmenumodel.cpp:92
+#: appmenumodel.cpp:93
 #, kde-format
 msgid "Search…"
 msgstr "Traži…"
