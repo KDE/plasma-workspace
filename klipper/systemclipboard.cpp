@@ -107,11 +107,25 @@ void DatabaseRecordToMimeDataJob::start()
 
 QMimeData *DatabaseRecordToMimeDataJob::mimeData() const
 {
+    static constexpr auto imagePrefix = "image/"_L1;
+    bool hasPng = std::ranges::any_of(m_mimeDataList, [](const auto &pair) {
+        return pair.first == s_imageFormat;
+    });
+    auto lastImageIt = std::ranges::find_if(m_mimeDataList | std::views::reverse, [](const auto &pair) {
+        return pair.first.startsWith(imagePrefix);
+    }).base();
     auto mimeData = new QMimeData;
-    for (auto &[format, data] : m_mimeDataList) {
+    for (auto it = m_mimeDataList.cbegin(); it != m_mimeDataList.cend(); ++it) {
+        const auto [format, data] = *it;
         mimeData->setData(format, data);
-        if (format == s_imageFormat) {
-            mimeData->setImageData(QImage::fromData(data, "PNG"));
+        if (format == s_imageFormat // Ensure PNG so web browsers can accept image data.
+            || (!hasPng && it == lastImageIt)) {
+            const auto image = QImage::fromData(data);
+            // Don't add extra formats if the image can't be read.
+            if (!image.isNull()) {
+                mimeData->setImageData(image);
+                hasPng = true;
+            }
         }
     }
     return mimeData;
