@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2024 Niccolò Venerandi <niccolo@venerandi.com>
+    SPDX-FileCopyrightText: 2026 Onat Ribar <onatribar@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
