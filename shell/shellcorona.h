@@ -281,6 +281,9 @@ private Q_SLOTS:
 
 private:
     void sanitizeScreenLayout(const QString &configFileName);
+    // Moves the newer of two panels that overlap on the same edge of a screen to a screen without a panel
+    // on that edge. Plasma 6.8.0 saved some cloned and new panels on the first screen, see bug 527445.
+    void moveOverlappingPanels(QList<Plasma::Containment *> panels);
     void destroyDesktopsAndPanels();
     void updateStruts();
     DesktopView *desktopForScreen(QScreen *screen) const;

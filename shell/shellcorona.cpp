@@ -828,6 +828,13 @@ void ShellCorona::load()
             return ((containment->containmentType() == Plasma::Containment::Panel || containment->containmentType() == Plasma::Containment::CustomPanel)
                     && !m_waitingPanels.contains(containment) && !m_panelViews.contains(containment));
         });
+        QList<Plasma::Containment *> panels;
+        for (Plasma::Containment *panel : std::as_const(m_waitingPanels)) {
+            if (panel) {
+                panels << panel;
+            }
+        }
+        moveOverlappingPanels(panels);
     }
 
     // NOTE: this is needed in case loadLayout() did *not* call loadDefaultLayout()
@@ -2054,6 +2061,77 @@ void ShellCorona::cleanupOldPanelConfig()
                 applicationConfig()->group(u"PlasmaViews"_s).deleteGroup(groupName);
             }
         }
+    }
+}
+
+void ShellCorona::moveOverlappingPanels(QList<Plasma::Containment *> panels)
+{
+    // The part of the screen edge that a panel covers, from its view config. A panel that fits its
+    // content covers an unknown length, so only the point where it is anchored counts.
+    auto spanOnEdge = [this](Plasma::Containment *panel, QScreen *screen) -> std::pair<int, int> {
+        const KConfigGroup resolutionConfig = PanelView::panelConfig(this, panel, screen);
+        const KConfigGroup defaultsConfig = PanelView::panelConfigDefaults(this, panel, screen);
+        const KConfigGroup panelConfig = resolutionConfig.parent();
+        const int edgeLength = panel->formFactor() == Plasma::Types::Vertical ? screen->size().height() : screen->size().width();
+
+        const auto lengthMode = static_cast<PanelView::LengthMode>(panelConfig.readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
+        if (lengthMode == PanelView::LengthMode::FillAvailable) {
+            return {0, edgeLength};
+        }
+        int offset = 0;
+        int length = 1;
+        if (lengthMode == PanelView::LengthMode::Custom) {
+            offset = resolutionConfig.readEntry("offset", defaultsConfig.readEntry("offset", 0));
+            length = resolutionConfig.readEntry("maxLength", defaultsConfig.readEntry("maxLength", edgeLength));
+        }
+        const auto alignment =
+            static_cast<Qt::Alignment>(panelConfig.readEntry<int>("alignment", resolutionConfig.readEntry<int>("alignment", Qt::AlignCenter)));
+        if (alignment == Qt::AlignLeft) {
+            return {offset, offset + length};
+        }
+        if (alignment == Qt::AlignRight) {
+            return {edgeLength - offset - length, edgeLength - offset};
+        }
+        const int center = edgeLength / 2 + offset;
+        return {center - length / 2, center - length / 2 + length};
+    };
+    // createWaitingPanels() shows a panel without a screen on the first one.
+    auto screenIdOf = [](Plasma::Containment *panel) {
+        const int screenId = panel->screen();
+        return screenId < 0 ? 0 : screenId;
+    };
+
+    std::ranges::sort(panels, {}, &Plasma::Containment::id);
+
+    QList<Plasma::Containment *> placed;
+    for (Plasma::Containment *panel : std::as_const(panels)) {
+        const int screenId = screenIdOf(panel);
+        QScreen *screen = m_screenPool->screenForId(screenId);
+        if (!screen) {
+            continue;
+        }
+        const auto [start, end] = spanOnEdge(panel, screen);
+        const bool overlaps = std::ranges::any_of(placed, [&](Plasma::Containment *other) {
+            if (screenIdOf(other) != screenId || other->location() != panel->location()) {
+                return false;
+            }
+            const auto [otherStart, otherEnd] = spanOnEdge(other, screen);
+            return start < otherEnd && otherStart < end;
+        });
+        if (overlaps) {
+            const QList<QScreen *> screens = m_screenPool->screenOrder();
+            for (int targetId = 0; targetId < screens.size(); ++targetId) {
+                const bool edgeTaken = std::ranges::any_of(panels, [&](Plasma::Containment *other) {
+                    return other != panel && screenIdOf(other) == targetId && other->location() == panel->location();
+                });
+                if (targetId != screenId && !edgeTaken) {
+                    qCInfo(PLASMASHELL) << "Panel" << panel->id() << "overlaps another panel on screen" << screenId << ", moving it to screen" << targetId;
+                    panel->setScreen(targetId);
+                    break;
+                }
+            }
+        }
+        placed << panel;
     }
 }
 

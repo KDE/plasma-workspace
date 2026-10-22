@@ -74,6 +74,8 @@ private Q_SLOTS:
     void testPanelSizeModes();
     void testOutputOrderChanged();
     void testClonedPanelKeepsItsScreen();
+    void testOverlappingPanelMoves();
+    void testSideBySidePanelsStay();
 #if USE_SCRIPTING
     void testScriptPanelKeepsItsScreen();
 #endif
@@ -841,6 +843,57 @@ void ShellTest::testClonedPanelKeepsItsScreen()
     QVERIFY(clone);
     QCOMPARE(clone->screen(), 1);
     QCOMPARE(m_corona->m_panelViews[clone]->screen(), secondScreen);
+}
+
+// Plasma 6.8.0 saved cloned and new panels on the first screen. The newer of two panels that overlap there
+// goes to the screen that has no panel on that edge.
+void ShellTest::testOverlappingPanelMoves()
+{
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
+    QTRY_VERIFY(m_corona->isScreenUiReady(1));
+
+    auto *first = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    auto *second = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    second->setLocation(first->location());
+    QCOMPARE(first->screen(), 0);
+    QCOMPARE(second->screen(), 0);
+    QVERIFY(first->id() < second->id());
+
+    m_corona->moveOverlappingPanels({second, first});
+    QCOMPARE(first->screen(), 0);
+    QCOMPARE(second->screen(), 1);
+
+    // Nothing moves when the other screen already has a panel on that edge.
+    second->setScreen(0);
+    auto *third = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    third->setLocation(first->location());
+    third->setScreen(1);
+    m_corona->moveOverlappingPanels({first, second, third});
+    QCOMPARE(second->screen(), 0);
+}
+
+// Two short panels at the two ends of the same edge do not overlap, and both stay.
+void ShellTest::testSideBySidePanelsStay()
+{
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
+    QTRY_VERIFY(m_corona->isScreenUiReady(1));
+
+    auto *left = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    auto *right = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    right->setLocation(left->location());
+    QScreen *screen = m_corona->m_screenPool->screenForId(0);
+    for (const auto &[panel, alignment] : {std::pair{left, Qt::AlignLeft}, std::pair{right, Qt::AlignRight}}) {
+        KConfigGroup panelConfig = PanelView::panelConfig(m_corona, panel, screen).parent();
+        panelConfig.writeEntry("panelLengthMode", int(PanelView::LengthMode::Custom));
+        panelConfig.writeEntry("alignment", int(alignment));
+        PanelView::panelConfig(m_corona, panel, screen).writeEntry("maxLength", 600);
+    }
+
+    m_corona->moveOverlappingPanels({left, right});
+    QCOMPARE(left->screen(), 0);
+    QCOMPARE(right->screen(), 0);
 }
 
 #if USE_SCRIPTING
