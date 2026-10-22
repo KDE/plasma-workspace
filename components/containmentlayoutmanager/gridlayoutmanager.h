@@ -95,4 +95,5 @@ private:
     QHash<ItemContainer *, QSet<QPair<int, int>>> m_pointsForItem;
 
     QHash<QString, Geom> m_parsedConfig;
+    QSet<QString> m_restoredItemKeys;
 };

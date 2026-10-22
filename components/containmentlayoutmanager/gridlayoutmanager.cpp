@@ -167,6 +167,7 @@ bool GridLayoutManager::restoreItem(ItemContainer *item)
         item->setPosition(QPointF(it.value().x, it.value().y));
         item->setSize(QSizeF(it.value().width, it.value().height));
         item->setRotation(it.value().rotation);
+        m_restoredItemKeys.insert(item->key());
 
         // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
         // If size is empty the layout is not in a valid state and probably startup is not completed yet
@@ -286,17 +287,20 @@ void GridLayoutManager::adjustToItemSizeHints(ItemContainer *item)
         changed = true;
     }
 
-    // Preferred
-    const qreal newPreferredHeight = item->layoutAttached()->property("preferredHeight").toReal();
-    const qreal newPreferredWidth = item->layoutAttached()->property("preferredWidth").toReal();
+    // Preferred: only for items which do not have a saved geometry, otherwise the
+    // applet's preferred size would override the size chosen by the user on every startup
+    if (!m_restoredItemKeys.contains(item->key())) {
+        const qreal newPreferredHeight = item->layoutAttached()->property("preferredHeight").toReal();
+        const qreal newPreferredWidth = item->layoutAttached()->property("preferredWidth").toReal();
 
-    if (newPreferredHeight > item->height()) {
-        item->setHeight(layout()->cellHeight() * ceil(newPreferredHeight / layout()->cellHeight()));
-        changed = true;
-    }
-    if (newPreferredWidth > item->width()) {
-        item->setWidth(layout()->cellWidth() * ceil(newPreferredWidth / layout()->cellWidth()));
-        changed = true;
+        if (newPreferredHeight > item->height()) {
+            item->setHeight(layout()->cellHeight() * ceil(newPreferredHeight / layout()->cellHeight()));
+            changed = true;
+        }
+        if (newPreferredWidth > item->width()) {
+            item->setWidth(layout()->cellWidth() * ceil(newPreferredWidth / layout()->cellWidth()));
+            changed = true;
+        }
     }
 
     /*// Maximum : IGNORE?
