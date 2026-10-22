@@ -7,7 +7,6 @@
 #include "virtualdesktopinfo.h"
 #include "libtaskmanager_debug.h"
 
-#include <KLocalizedString>
 #include <KWindowSystem>
 #include <KX11Extras>
 
@@ -445,7 +444,7 @@ void VirtualDesktopInfo::WaylandPrivate::requestCreateDesktop(quint32 position)
     if (!virtualDesktopManagement->isActive()) {
         return;
     }
-    virtualDesktopManagement->request_create_virtual_desktop(i18n("New Desktop"), position);
+    virtualDesktopManagement->request_create_virtual_desktop(QString(), position);
 }
 
 void VirtualDesktopInfo::WaylandPrivate::requestRemoveDesktop(quint32 position)
