@@ -468,6 +468,15 @@ QBindable<int> HistoryModel::bindableStarredCount() const
     return &m_starredCount;
 }
 
+// Get the list of readable image mimetypes for a SQL query.
+// The list can change during runtime and Klipper is a system service,
+// so get again it each time you need it.
+auto imageMimeTypesSqlList()
+{
+    const auto supportedMimeTypes = QImageReader::supportedMimeTypes();
+    return supportedMimeTypes.empty() ? QByteArray{} : "'" % supportedMimeTypes.join("', '") % "'";
+};
+
 QVariant HistoryModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_items.size() || index.column() != 0) {
@@ -477,10 +486,12 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     Q_ASSERT_X(m_db.isOpen(), Q_FUNC_INFO, qPrintable(m_db.lastError().text()));
     const std::shared_ptr<HistoryItem> &item = m_items.at(index.row());
 
+    constexpr QStringView selectImageQuery = u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype IN (%2)) ORDER BY rowid ASC";
+
     switch (role) {
     case Qt::DisplayRole: {
         if (item->type() == HistoryItemType::Image) {
-            QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2') ORDER BY rowid ASC"_s.arg(item->uuid(), s_imageFormat), m_db);
+            QSqlQuery query(selectImageQuery.arg(item->uuid(), imageMimeTypesSqlList()), m_db);
             if (query.exec() && query.isSelect() && query.next()) {
                 QSize size = QImageReader(QString(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString())).size();
                 return QString(u"▨ " + i18nc("@info:tooltip width x height", "%1x%2", QString::number(size.width()), QString::number(size.height())));
@@ -492,7 +503,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         if (!(item->allTypes() & HistoryItemType::Image)) {
             return QUrl();
         }
-        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2') ORDER BY rowid ASC"_s.arg(item->uuid(), s_imageFormat), m_db);
+        QSqlQuery query(selectImageQuery.arg(item->uuid(), imageMimeTypesSqlList()), m_db);
         if (query.exec() && query.isSelect() && query.next()) {
             return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString());
         }
@@ -502,7 +513,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         if (!(item->allTypes() & HistoryItemType::Image)) {
             return QSize();
         }
-        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2') ORDER BY rowid ASC"_s.arg(item->uuid(), s_imageFormat), m_db);
+        QSqlQuery query(selectImageQuery.arg(item->uuid(), imageMimeTypesSqlList()), m_db);
         if (query.exec() && query.isSelect() && query.next()) {
             return QImageReader(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString()).size();
         }
