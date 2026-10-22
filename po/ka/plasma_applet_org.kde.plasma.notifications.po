@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-03-05 03:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -468,12 +468,12 @@ msgstr "რეჟიმი \"არ შემაწუხოთ\" აქტი�
 msgid "Middle-click to enter do not disturb mode"
 msgstr "შუა წკაპი \"არ შემაწუხოთ\" რეჟიმში გადასასვლელად"
 
-#: main.qml:245
+#: main.qml:248
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "ყველა შეტყობინების გასუფთავება"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&მოვლენების შეტყობინებებისა და ქმედებების მორგება…"

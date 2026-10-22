@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-05-21 14:22+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -479,12 +479,12 @@ msgstr "Mode « Ne pas déranger » activé. Faites un clic central pour quitt
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Faites un clic central pour basculer en mode « Ne pas déranger »"
 
-#: main.qml:245
+#: main.qml:248
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Effacer toutes les notifications"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configurer les notifications et les actions pour les évènements…"

@@ -20,30 +20,28 @@ msgstr ""
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Skærmtastatur"
 
 #: qml/main.qml:77
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Disabled"
-msgstr ""
+msgstr "Deaktiveret"
 
 #: qml/main.qml:88
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Berøring og tablet"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Berøring, tablet, mus og touchpad"
 
 #: qml/main.qml:116
-#, fuzzy, kde-format
-#| msgctxt "Opens the system settings module"
-#| msgid "Configure Virtual Keyboards..."
+#, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
 msgstr "Indstil virtuelt tastatur..."
@@ -55,6 +53,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Skærmtastatur: utilgængeligt\n"
+"Klik eller tryk for at indstille skærmtastaturet"
 
 #: qml/main.qml:143
 #, kde-format
@@ -63,6 +63,8 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Indstillet til ikke at blive vist automatisk\n"
+"Klik eller tryk for at indstille skærmtastaturet"
 
 #: qml/main.qml:156
 #, kde-format
@@ -73,6 +75,8 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Intet understøttet tekstfelt er i øjeblikket aktivt\n"
+"Klik eller tryk for at vise i emuleringstilstand for hardwaretastatur."
 
 #: qml/main.qml:167
 #, kde-format
@@ -81,6 +85,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Skærmtastaturet er synligt\n"
+"Klik eller tryk for at skjule skærmtastaturet."
 
 #: qml/main.qml:177
 #, kde-format
@@ -89,6 +95,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Vises automatisk når der trykkes på et tekstfelt\n"
+"Tryk for at indstille skærmtastaturet"
 
 #: qml/main.qml:187
 #, kde-format
@@ -97,6 +105,8 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Vises automatisk når der interageres med et tekstfelt\n"
+"Klik eller tryk for at indstille skærmtastaturet"
 
 #~ msgid "Virtual Keyboard: unavailable"
 #~ msgstr "Virtuelt tastatur: utilgængeligt"
@@ -111,12 +121,10 @@ msgstr ""
 #~ msgstr "Virtuelt tastatur: synligt"
 
 #, fuzzy
-#~| msgid "Virtual Keyboard: visible"
 #~ msgid "Virtual Keyboard: Show on non-mouse input"
 #~ msgstr "Virtuelt tastatur: synligt"
 
 #, fuzzy
-#~| msgid "Virtual Keyboard: disabled"
 #~ msgid "Virtual Keyboard: Show with all input devices"
 #~ msgstr "Virtuelt tastatur: deaktiveret"
 

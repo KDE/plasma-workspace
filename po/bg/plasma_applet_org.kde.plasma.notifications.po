@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-04-03 02:46+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -469,12 +469,12 @@ msgstr ""
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Среден бутон на мишката за влизане в режим Не безпокойте"
 
-#: main.qml:245
+#: main.qml:248
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Изчистване на всички известия"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Конфигуриране на известия за събития и действия…"

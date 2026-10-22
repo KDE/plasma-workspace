@@ -159,6 +159,8 @@ msgid ""
 "Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
 "characters were removed."
 msgstr ""
+"Kun små bogstaver, tal, bindestreger og understreger er tilladt. Ugyldige "
+"tegn blev fjernet."
 
 #: src/ui/CreateUser.qml:84
 #, kde-format
@@ -167,6 +169,8 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"Brugernavne skal være med små bogstaver. Store bogstaver blev konverteret "
+"til små bogstaver."
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
 #, kde-format

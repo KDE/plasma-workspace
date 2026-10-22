@@ -66,25 +66,25 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "Denne bekendtgørelse vil blive vist som en pop op"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "Denne bekendtgørelse vil ikke blive vist som en pop op"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "Denne bekendtgørelse vil afspille en lyd"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "Denne bekendtgørelse vil ikke afspille en lyd"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format
@@ -347,7 +347,6 @@ msgstr ""
 #~ msgstr "Programindstillinger..."
 
 #, fuzzy
-#~| msgid "Application Settings"
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Programindstillinger"

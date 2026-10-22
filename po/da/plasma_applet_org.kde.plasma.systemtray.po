@@ -127,6 +127,11 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Det anbefales ikke at deaktivere widgetten Bekendtgørelser, da "
+"bekendtgørelser sendt af apps ikke længere vil blive vist.<nl/><nl/>Gør kun "
+"dette, hvis du manuelt har tilføjet en selvstændig widget til "
+"bekendtgørelser et andet sted, eller bevidst bruger en tredjeparts "
+"bekendtgørelseshåndtering til at håndtere bekendtgørelser."
 
 #: qml/ConfigGeneral.qml:211
 #, kde-format
@@ -158,7 +163,7 @@ msgstr "Lille"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "Meget lille"
 
 #: qml/ConfigGeneral.qml:264
 #, kde-format
@@ -345,7 +350,6 @@ msgstr "AILlmyjgGJP"
 #~ msgstr "<b>Status</b>"
 
 #, fuzzy
-#~| msgid " (Automatic load)"
 #~ msgid "Automatic"
 #~ msgstr " (automatisk indlæsning)"
 

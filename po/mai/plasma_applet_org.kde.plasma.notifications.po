@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2010-09-24 16:02+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <bhashaghar@googlegroups.com>\n"
@@ -483,13 +483,13 @@ msgstr ""
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: main.qml:245
+#: main.qml:248
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgid "Clear All Notifications"
 msgstr "सूचनासभ"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-01-10 05:32+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -123,7 +123,7 @@ msgstr "%1 ó %2"
 msgid "Application closed unexpectedly."
 msgstr "Dúnadh an feidhmchlár go gan choinne."
 
-#: notifications.cpp:985
+#: notifications.cpp:1016
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -134,7 +134,7 @@ msgstr[2] "Fógraí Gan Léamh Agat"
 msgstr[3] "Fógraí Gan Léamh Agat"
 msgstr[4] "Fógraí Gan Léamh Agat"
 
-#: notifications.cpp:987
+#: notifications.cpp:1018
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -142,7 +142,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] ""
 msgstr[1] ""
 
-#: notifications.cpp:995
+#: notifications.cpp:1026
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

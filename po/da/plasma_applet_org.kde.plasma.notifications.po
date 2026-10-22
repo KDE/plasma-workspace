@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-05-07 10:33+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -468,12 +468,12 @@ msgstr "Forstyr ikke-tilstand aktiveret; midter-klik for at afslutte"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Midter-klik for at slå Forstyr ikke til"
 
-#: main.qml:245
+#: main.qml:248
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Ryd alle bekendtgørelser"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Indstil bekendtgørelser og handlinger for hændelser…"

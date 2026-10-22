@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-03-16 16:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -458,12 +458,12 @@ msgstr "請勿打擾模式已啟用；按中鍵來結束"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "按中鍵來進入請勿打擾模式"
 
-#: main.qml:245
+#: main.qml:248
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "清除所有通知"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "設定事件通知與動作(&C)..."

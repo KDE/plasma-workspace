@@ -32,19 +32,19 @@ msgstr "Udklipsholderen er tom"
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr ""
+msgstr "Udklipsholderen og markeringen indeholder i øjeblikket følsomme data"
 
 #: qml/main.qml:46
 #, kde-format
 msgctxt "@info"
 msgid "The clipboard currently holds sensitive data"
-msgstr ""
+msgstr "Udklipsholderen indeholder i øjeblikket følsomme data"
 
 #: qml/main.qml:48
 #, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr ""
+msgstr "Markeringen indeholder i øjeblikket følsomme data"
 
 #: qml/main.qml:85
 #, kde-format

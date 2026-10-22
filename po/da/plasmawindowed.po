@@ -54,7 +54,7 @@ msgstr "Argumenter , der skal videregives til plasmoidet."
 #: main.cpp:73
 #, kde-format
 msgid "Internal, for testing"
-msgstr ""
+msgstr "Internt, til test"
 
 #: plasmawindowedview.cpp:127
 #, kde-format

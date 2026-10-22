@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-05-07 10:25+0200\n"
+"PO-Revision-Date: 2026-10-21 20:30+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.04.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: devicenotifications.cpp:509
 #, kde-format
@@ -24,18 +24,16 @@ msgid "Display Detected"
 msgstr "Skærm detekteret"
 
 #: devicenotifications.cpp:511
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "%1 er blevet tilsluttet."
 
 #: devicenotifications.cpp:514
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "%1 er blevet tilsluttet."
+msgstr "%1 %2 (%3) er blevet tilsluttet."
 
 #: devicenotifications.cpp:549
 #, kde-format
@@ -44,18 +42,16 @@ msgid "Display Removed"
 msgstr "Skærm fjernet"
 
 #: devicenotifications.cpp:551
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "%1 er blevet tilsluttet."
 
 #: devicenotifications.cpp:554
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "%1 er blevet tilsluttet."
+msgstr "%1 %2 (%3) kunne ikke tilsluttes."
 
 #: devicenotifications.cpp:602
 #, kde-format
@@ -96,8 +92,6 @@ msgstr "USB-enhed fjernet"
 #~ msgstr "En skærm er blevet tilsluttet."
 
 #, fuzzy
-#~| msgctxt "@title:notifications"
-#~| msgid "USB Device Detected"
 #~ msgctxt "@title:notifications"
 #~ msgid "USB Device Went Away"
 #~ msgstr "USB-enhed detekteret"

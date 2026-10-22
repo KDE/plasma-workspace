@@ -71,9 +71,7 @@ msgid "Centered"
 msgstr "Centreret"
 
 #: imagepackage/contents/ui/config.qml:199
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
@@ -349,6 +347,9 @@ msgid ""
 "change wallpapers manually with the <interface>Next Wallpaper Image</"
 "interface> menu item in the desktop context menu."
 msgstr ""
+"Sæt alle tider til 0 for at deaktivere automatisk skift af baggrundsbillede. "
+"Du kan stadig skifte baggrundsbilleder manuelt med menupunktet "
+"<interface>Næste baggrundsbillede</interface> i skrivebordets kontekstmenu."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
@@ -425,7 +426,6 @@ msgstr ""
 #~ msgstr "Fliselagt"
 
 #, fuzzy
-#~| msgid "Open Image"
 #~ msgctxt "@title:window"
 #~ msgid "Open Media"
 #~ msgstr "Åbn billede"

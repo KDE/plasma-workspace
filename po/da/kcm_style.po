@@ -4,21 +4,21 @@
 #
 # Erik Kjær Pedersen <erik@binghamton.edu>, 2000, 2002, 2003, 2004, 2005.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2012, 2017, 2018, 2020.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2026 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2024-10-26 10:55+0200\n"
-"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"PO-Revision-Date: 2026-10-21 20:27+0200\n"
+"Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -30,108 +30,109 @@ msgstr "%1 er ikke et gyldigt GTK-temaarkiv."
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
 msgstr ""
+"Installation mislykkedes: Kan ikke installere en stil fra en fjernplacering."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr ""
+msgstr "Installation mislykkedes: Stilfilen kunne ikke læses."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr ""
+msgstr "Installation mislykkedes: Stilfilen indeholder ingen data."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr ""
+msgstr "Installation mislykkedes: Stilfilen kunne ikke udpakkes."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr ""
+msgstr "Installation mislykkedes: Stilen kunne ikke findes."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr ""
+msgstr "Installation mislykkedes: Den valgte fil er ikke en gyldig Union-stil."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr ""
+msgstr "Installation mislykkedes: Den valgte stil understøttes ikke."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr ""
+msgstr "Installation af \"%1\" mislykkedes: Stilen er allerede installeret."
 
 #: kcmstyle.cpp:170
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Installation af \"%1\" mislykkedes: Tilladelse nægtet."
 
 #: kcmstyle.cpp:174
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: %2"
-msgstr ""
+msgstr "Installation af \"%1\" mislykkedes: %2"
 
 #: kcmstyle.cpp:179
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully installed “%1”."
-msgstr ""
+msgstr "Installerede \"%1\" med succes."
 
 #: kcmstyle.cpp:192
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr ""
+msgstr "Afinstallation mislykkedes: Stilen med id \"%1\" kunne ikke findes."
 
 #: kcmstyle.cpp:202
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: Permission was denied."
-msgstr ""
+msgstr "Afinstallation af \"%1\" mislykkedes: Adgang nægtet."
 
 #: kcmstyle.cpp:204
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr ""
+msgstr "Afinstallation af \"%1\" mislykkedes: Stilen er ikke installeret."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr ""
+msgstr "Afinstallation af \"%1\" mislykkedes: Stilen er i brug."
 
 #: kcmstyle.cpp:208
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: %2"
-msgstr ""
+msgstr "Afinstallation af \"%1\" mislykkedes: %2"
 
 #: kcmstyle.cpp:223
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr ""
+msgstr "Kunne ikke afinstallere stile:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
-msgstr ""
+msgstr "Afinstallerede \"%1\" med succes, men kunne ikke afinstallere andre:\n"
 
 #: kcmstyle.cpp:229
 #, kde-format
@@ -140,21 +141,23 @@ msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
 msgstr[0] ""
+"Afinstallerede %1 stil med succes, men kunne ikke afinstallere andre:\n"
 msgstr[1] ""
+"Afinstallerede %1 stile med succes, men kunne ikke afinstallere andre:\n"
 
 #: kcmstyle.cpp:240
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled “%1”."
-msgstr ""
+msgstr "Afinstallerede \"%1\" med succes."
 
 #: kcmstyle.cpp:242
 #, kde-format
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Afinstallerede %1 stil med succes"
+msgstr[1] "Afinstallerede %1 stile med succes."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
@@ -186,8 +189,7 @@ msgstr "%p%"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:85
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgid "Button"
 msgstr "Trykknap"
 
@@ -212,8 +214,7 @@ msgstr "Radioknap"
 
 #. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
 #: stylepreview.ui:138
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgid "Text Field"
 msgstr "Kun tekst"
 
@@ -233,7 +234,7 @@ msgstr "Programstil"
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr ""
+msgstr "Union-stil-id"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -316,8 +317,7 @@ msgid "GNOME/GTK Application Style"
 msgstr "Programstil for GNOME-/GTK-programmer"
 
 #: ui/GtkStylePage.qml:38
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install from File…"
 msgstr "Installér fra fil..."
@@ -326,7 +326,7 @@ msgstr "Installér fra fil..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New…"
-msgstr ""
+msgstr "Hent nye…"
 
 #: ui/GtkStylePage.qml:60
 #, kde-format
@@ -349,8 +349,7 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK temaarkiv (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Install from File…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Install From File…"
 msgstr "Installér fra fil..."
@@ -372,6 +371,8 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
+"Denne stil bruger Union-stilmotoren, som stadig er under udvikling. Nogle "
+"ting kan se ud eller opføre sig forkert, når denne stil bruges."
 
 #: ui/main.qml:174
 #, kde-format
@@ -382,99 +383,90 @@ msgstr "Konfigurér stil..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Uninstall…"
-msgstr ""
+msgstr "Afinstallér…"
 
 #: ui/main.qml:184
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr ""
+msgstr "Kan ikke afinstallere systeminstallerede stile."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr ""
+msgstr "Kan kun afinstallere Union-stile."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr ""
+msgstr "Afinstallér ikke denne stil."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr ""
+msgstr "Vælg Union-stil der skal installeres"
 
 #: ui/main.qml:246
 #, kde-format
 msgctxt "@action:button"
 msgid "Install"
-msgstr ""
+msgstr "Installér"
 
 #: ui/UnionThumbnailItem.qml:25
-#, fuzzy, kde-format
-#| msgid "Tab 1"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 1"
 msgstr "Faneblad 1"
 
 #: ui/UnionThumbnailItem.qml:29
-#, fuzzy, kde-format
-#| msgid "Tab 2"
+#, kde-format
 msgctxt "@title:tab"
 msgid "Tab 2"
 msgstr "Faneblad 2"
 
 #: ui/UnionThumbnailItem.qml:50
-#, fuzzy, kde-format
-#| msgid "Checkbox"
+#, kde-format
 msgctxt "@option:check"
 msgid "Checkbox"
 msgstr "Afkrydsningsfelt"
 
 #: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Radio Button"
 msgstr "Radioknap"
 
 #: ui/UnionThumbnailItem.qml:84
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box"
 msgstr "Kombinationsfelt"
 
 #: ui/UnionThumbnailItem.qml:85
-#, fuzzy, kde-format
-#| msgid "Combo box"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Combo Box Item"
 msgstr "Kombinationsfelt"
 
 #: ui/UnionThumbnailItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Push Button"
+#, kde-format
 msgctxt "@action:button"
 msgid "Button"
 msgstr "Trykknap"
 
 #: ui/UnionThumbnailItem.qml:107
-#, fuzzy, kde-format
-#| msgid "Text only"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Text Field"
 msgstr "Kun tekst"
 
 #: ui/UnionThumbnailItem.qml:122
-#, fuzzy, kde-format
-#| msgid "%p%"
+#, kde-format
 msgctxt "@item:inrange Progress bar value"
 msgid "%1%"
-msgstr "%p%"
+msgstr "%1%"
 
 #~ msgid "Get New GNOME/GTK Application Styles…"
 #~ msgstr "Hent nye GNOME-/GTK-programstile..."
@@ -498,7 +490,6 @@ msgstr "%p%"
 #~ msgstr "Programstil"
 
 #, fuzzy
-#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
 #~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
 #~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
 
@@ -549,9 +540,6 @@ msgstr "%p%"
 #~ "information som marmor-tekstur eller en overgang)."
 
 #, fuzzy
-#~| msgid ""
-#~| "If you enable this option, KDE Applications will show small icons "
-#~| "alongside some important buttons."
 #~ msgid ""
 #~ "If you enable this option, applications will show small icons alongside "
 #~ "some important buttons."
@@ -560,9 +548,6 @@ msgstr "%p%"
 #~ "nogle vigtige knapper."
 
 #, fuzzy
-#~| msgid ""
-#~| "If you enable this option, KDE Applications will show small icons "
-#~| "alongside most menu items."
 #~ msgid ""
 #~ "If you enable this option, applications will show small icons alongside "
 #~ "most menu items."
@@ -571,13 +556,6 @@ msgstr "%p%"
 #~ "de fleste menupunkter."
 
 #, fuzzy
-#~| msgid ""
-#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
-#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
-#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
-#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
-#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
-#~| "below the icon."
 #~ msgid ""
 #~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
 #~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
@@ -599,7 +577,6 @@ msgstr "%p%"
 #~ msgstr "Ingen tekst"
 
 #, fuzzy
-#~| msgid "Widget style:"
 #~ msgid "Widget Style"
 #~ msgstr "Kontrolstil:"
 
@@ -640,7 +617,6 @@ msgstr "%p%"
 #~ msgstr "Titellinjeknap"
 
 #, fuzzy
-#~| msgid "Application Menu widget"
 #~ msgid "Global Menu widget"
 #~ msgstr "Widget til programmenu"
 
@@ -719,13 +695,11 @@ msgstr "%p%"
 #~ "bedste ydelse er det tilrådeligt at deaktivere disse effekter."
 
 #, fuzzy
-#~| msgid "High&light buttons under mouse"
 #~ msgctxt "@option:check"
 #~ msgid "High&light buttons under mouse"
 #~ msgstr "Frem&hæv knapper under mus"
 
 #, fuzzy
-#~| msgid "E&nable tooltips"
 #~ msgctxt "@option:check"
 #~ msgid "E&nable tooltips"
 #~ msgstr "&Aktivér værktøjsvink"

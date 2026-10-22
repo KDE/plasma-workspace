@@ -47,29 +47,28 @@ msgstr "Det blå lysfilter gør farverne på skærmen varmere."
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily activated until %1."
-msgstr ""
+msgstr "Nattelys er midlertidigt aktiveret indtil %1."
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily activated until it is manually turned off."
-msgstr ""
+msgstr "Nattelys er midlertidigt aktiveret indtil det slås fra manuelt."
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily suspended until %1."
-msgstr ""
+msgstr "Nattelys er midlertidigt suspenderet indtil %1."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily suspended until it is manually resumed."
-msgstr ""
+msgstr "Nattelys er midlertidigt suspenderet indtil det genoptages manuelt."
 
 #: ui/main.qml:130
-#, fuzzy, kde-format
-#| msgid "Turn off at:"
+#, kde-format
 msgctxt "@action:button turn off Night Light feature"
 msgid "Turn Off"
 msgstr "Slå fra kl.:"
@@ -80,7 +79,7 @@ msgctxt ""
 "@action:button resume Light Light feature, which had been temporarily "
 "disabled"
 msgid "Resume"
-msgstr ""
+msgstr "Genoptag"
 
 #: ui/main.qml:159
 #, kde-format
@@ -143,7 +142,6 @@ msgid "Night light temperature:"
 msgstr "Nattelysets temperatur:"
 
 #, fuzzy
-#~| msgid "Always on night light"
 #~ msgctxt "@item:inlistbox switching times"
 #~ msgid "Always on night light"
 #~ msgstr "Nattelys altid til"
@@ -285,7 +283,6 @@ msgstr "Nattelysets temperatur:"
 #~ msgstr "Kølig"
 
 #, fuzzy
-#~| msgid "Activate Night Color"
 #~ msgid "Activate blue light filter"
 #~ msgstr "Aktivér natfarve"
 
@@ -293,7 +290,6 @@ msgstr "Nattelysets temperatur:"
 #~ msgstr "Slå til kl.:"
 
 #, fuzzy
-#~| msgid "Night Color begins changing back at %1"
 #~ msgid "Night Color begins changing back at %1 and ends at %2"
 #~ msgstr "Natfarver begynder at ændre sig tilbage kl. %1"
 

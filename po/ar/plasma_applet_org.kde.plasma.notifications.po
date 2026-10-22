@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2026-03-08 09:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -525,12 +525,12 @@ msgstr "نمط عدم الإزعاج نشط، انقر الزر الأوسط ل�
 msgid "Middle-click to enter do not disturb mode"
 msgstr "انقر بالزر الأوسط للدخول إلى نمط عدم الإزعاج"
 
-#: main.qml:245
+#: main.qml:248
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "امحُ جميع الإشعارات"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "ا&ضبط إشعارات الأحداث والإجراءات..."

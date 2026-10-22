@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-22 00:52+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -483,12 +483,12 @@ msgstr "मोड सक्रियं मा बाधतु; निर्ग�
 msgid "Middle-click to enter do not disturb mode"
 msgstr "do not disturb mode इति प्रविष्टुं मध्य-क्लिक् कुर्वन्तु"
 
-#: main.qml:245
+#: main.qml:248
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "सर्वाणि सूचनानि स्वच्छं कुर्वन्तु"
 
-#: main.qml:264
+#: main.qml:267
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&इवेण्ट् सूचनाः क्रियाः च विन्यस्तं कुर्वन्तु..."
