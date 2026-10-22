@@ -330,10 +330,10 @@ Item {
 
             width: mainLayout.implicitWidth + Kirigami.Units.largeSpacing * 2
             height: mainLayout.implicitHeight + Kirigami.Units.largeSpacing * 2
+            horizontalPadding: Kirigami.Units.largeSpacing
 
             contentItem: RowLayout {
                 id: mainLayout
-                anchors.centerIn: parent
                 spacing: Kirigami.Units.smallSpacing
 
                 QQC2.Label {
