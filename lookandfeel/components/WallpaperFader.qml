@@ -38,6 +38,8 @@ Item {
     ShaderEffect {
         id: wallpaperShader
         anchors.fill: parent
+        // Only show shader if the fade is meant to be visible
+        visible: wallpaperFader.factor > 0
         supportsAtlasTextures: true
         property var source: ShaderEffectSource {
             sourceItem: wallpaperBlur
