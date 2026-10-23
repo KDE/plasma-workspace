@@ -83,8 +83,11 @@ void TaskFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
         }
     });
     connect(sourceModel, &QAbstractItemModel::dataChanged, this, [this](const QModelIndex &, const QModelIndex &, const QList<int> &roles) {
-        if (d->hideActivatedLaunchers
-            && (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId) || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon))) {
+        if ((d->hideActivatedLaunchers
+             && (roles.isEmpty() || roles.contains(AbstractTasksModel::AppId)
+                 || roles.contains(AbstractTasksModel::LauncherUrlWithoutIcon)
+                 // Launchers are hidden based on windows passing the other filters, so re-check them when a window changes screen.
+                 || (d->filterByScreen && roles.contains(AbstractTasksModel::ScreenGeometry))))) {
             invalidateFilter();
         }
     });
