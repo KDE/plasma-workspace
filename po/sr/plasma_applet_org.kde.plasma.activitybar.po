@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-11 00:46+0000\n"
+"POT-Creation-Date: 2026-10-23 02:58+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: qml/main.qml:86
+#: qml/main.qml:93
 #, kde-format
 msgid "Switch to activity %1"
 msgstr "Пребаци на активност %1"
 
-#: qml/main.qml:106
+#: qml/main.qml:105
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Прикажи менаџер активности"
 
-#: qml/main.qml:114
+#: qml/main.qml:113
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"

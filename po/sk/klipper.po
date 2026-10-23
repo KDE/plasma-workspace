@@ -69,15 +69,13 @@ msgstr ""
 "stredného tlačidla myši."
 
 #: configdialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Text vybraný ukazovateľom alebo klávesnicou"
 
 #: configdialog.cpp:126
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Zahrnúť do histórie:"
@@ -90,8 +88,7 @@ msgstr ""
 "Explicitne skopírovaný text sa vždy uloží, pokiaľ nie je označený ako heslo."
 
 #: configdialog.cpp:133
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Explicitne skopírované obrazové dáta"
@@ -612,7 +609,7 @@ msgstr "Vyčistiť históriu schránky"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Viac sa nepýtať"
 
 #: historymodel.cpp:403
 #, kde-format
@@ -632,12 +629,10 @@ msgid "Remove Starred Item"
 msgstr "Odstrániť označený prvok"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Automatická akcia vyskakovacej ponuky"
+msgstr "Prepnúť automatické zobrazovanie ponuky akcií"
 
 #: klipper.cpp:92
 #, kde-format
