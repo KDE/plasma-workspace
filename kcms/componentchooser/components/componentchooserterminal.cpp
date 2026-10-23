@@ -14,8 +14,11 @@
 
 #include <KQuickConfigModule>
 #include <KService>
+#include <kapplicationtrader.h>
 
 #include "terminal_settings.h"
+
+using namespace Qt::StringLiterals;
 
 ComponentChooserTerminal::ComponentChooserTerminal(QObject *parent)
     : ComponentChooser(parent,
@@ -53,4 +56,10 @@ void ComponentChooserTerminal::save()
     terminalSettings.save();
 
     m_currentApplication = storageId;
+
+    if (auto service = KService::KService::serviceByStorageId(storageId); service && service->supportedIntents().contains("org.freedesktop.Terminal1"_L1)) {
+        KApplicationTrader::setPreferredServiceForIntent("org.freedesktop.Terminal1"_L1, service);
+    } else {
+        KApplicationTrader::setPreferredServiceForIntent(u"org.kde.plasma-terminalintent-wrapper"_s, service);
+    }
 }

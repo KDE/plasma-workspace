@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Plasma Terminal Intent Wrapper
+DBusActivatable=true
+Implements=org.freedesktop.Terminal1
+OnlyShowIn=KDE
+NoDisplay=true
