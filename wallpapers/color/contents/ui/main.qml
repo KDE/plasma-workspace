@@ -11,19 +11,15 @@ import org.kde.plasma.plasmoid
 WallpaperItem {
     id: root
 
+    accentColor: root.configuration.Color
+
     Rectangle {
         anchors.fill: parent
         color: root.configuration.Color
 
         Behavior on color {
-            SequentialAnimation {
-                ColorAnimation {
-                    duration: Kirigami.Units.longDuration
-                }
-
-                ScriptAction {
-                    script: root.accentColorChanged()
-                }
+            ColorAnimation {
+                duration: Kirigami.Units.longDuration
             }
         }
     }
