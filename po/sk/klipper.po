@@ -69,15 +69,13 @@ msgstr ""
 "stredného tlačidla myši."
 
 #: configdialog.cpp:123
-#, fuzzy, kde-format
-#| msgid "Text selected with the pointer or keyboard"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Text vybraný ukazovateľom alebo klávesnicou"
 
 #: configdialog.cpp:125
-#, fuzzy, kde-format
-#| msgid "Include in history:"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Zahrnúť do histórie:"
@@ -90,8 +88,7 @@ msgstr ""
 "Explicitne skopírovaný text sa vždy uloží, pokiaľ nie je označený ako heslo."
 
 #: configdialog.cpp:132
-#, fuzzy, kde-format
-#| msgid "Image data copied explicitly"
+#, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Explicitne skopírované obrazové dáta"
@@ -319,24 +316,17 @@ msgid "Starred Only"
 msgstr "Iba s hviezdičkou"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
+"Schránka a výber momentálne obsahujú citlivý údaj, ktorý sa neuloží do "
+"histórie."
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -345,17 +335,12 @@ msgstr ""
 "Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
-msgstr ""
-"Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
+msgstr "Výber momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
 #: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
@@ -632,7 +617,7 @@ msgstr "Vyčistiť históriu schránky"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Viac sa nepýtať"
 
 #: historymodel.cpp:486
 #, kde-format
@@ -652,19 +637,16 @@ msgid "Remove Starred Item"
 msgstr "Odstrániť označený prvok"
 
 #: klipper.cpp:70
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "História schránky"
+msgstr "Schránka"
 
 #: klipper.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Automatická akcia vyskakovacej ponuky"
+msgstr "Prepnúť automatické zobrazovanie ponuky akcií"
 
 #: klipper.cpp:94
 #, kde-format
@@ -694,14 +676,13 @@ msgstr "&Zobraziť čiarový kód..."
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Posunúť históriu nadol"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "História farieb"
+msgstr "Posunúť históriu nahor"
 
 #: klipper.cpp:136
 #, kde-format
@@ -717,18 +698,17 @@ msgstr "História schránky"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Novšie: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "aktuálne"
+msgstr "Aktuálne: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Staršie: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -845,11 +825,10 @@ msgstr "Veľkosť histórie:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:54
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "Do histórie schránky sa uloží až toľkoto položiek."
+msgstr "Do histórie schránky sa uloží až toľkoto položiek. Maximum je 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:57

@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: qml/main.qml:40
 #, kde-format
@@ -28,12 +28,10 @@ msgid "Clipboard is empty"
 msgstr "Schránka je prázdna"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "Schránka práve obsahuje citlivé údaje"
+msgstr "Schránka a výber práve obsahujú citlivé údaje"
 
 #: qml/main.qml:46
 #, kde-format
@@ -42,12 +40,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "Schránka práve obsahuje citlivé údaje"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "Schránka práve obsahuje citlivé údaje"
+msgstr "Výber práve obsahuje citlivé údaje"
 
 #: qml/main.qml:85
 #, kde-format

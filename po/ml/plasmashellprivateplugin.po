@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-23 00:50+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -404,7 +404,7 @@ msgstr "%1 പാക്കേജ് ഇൻസ്റ്റാൾ ചെയ്യ�
 msgid "Installation Failure"
 msgstr "ഇൻസ്റ്റാളേഷൻ പരാജയം"
 
-#: timezoneselector/TimezoneSelector.qml:107
+#: timezoneselector/TimezoneSelector.qml:108
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -412,45 +412,45 @@ msgid ""
 "map"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:347
+#: timezoneselector/TimezoneSelector.qml:123
+#: timezoneselector/TimezoneSelector.qml:348
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:339
+#: timezoneselector/TimezoneSelector.qml:125
+#: timezoneselector/TimezoneSelector.qml:340
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:376
+#: timezoneselector/TimezoneSelector.qml:152
+#: timezoneselector/TimezoneSelector.qml:377
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:294
+#: timezoneselector/TimezoneSelector.qml:295
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:310
+#: timezoneselector/TimezoneSelector.qml:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:351
+#: timezoneselector/TimezoneSelector.qml:352
 #, kde-format
 msgid "Timezone region selector"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:387
+#: timezoneselector/TimezoneSelector.qml:388
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""

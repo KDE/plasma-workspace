@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-05 16:56+0200\n"
+"PO-Revision-Date: 2026-10-19 16:41+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Poedit 3.10\n"
 
 #: configdialog.cpp:82
 #, kde-format
@@ -316,46 +316,34 @@ msgid "Starred Only"
 msgstr "Solo contrassegnati con la stella"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"Gli appunti contengono attualmente dati sensibili che non saranno "
-"memorizzati nella cronologia."
+"Gli appunti e la selezione contengono attualmente un dato sensibileche non "
+"sarà memorizzato nella cronologia."
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Gli appunti contengono attualmente dati sensibili che non saranno "
-"memorizzati nella cronologia."
+"Gli appunti contengono attualmente un dato sensibile che non sarà salvato "
+"nella cronologia."
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Gli appunti contengono attualmente dati sensibili che non saranno "
-"memorizzati nella cronologia."
+"La selezione contiene attualmente un dato sensibile che non sarà memorizzato "
+"nella cronologia."
 
 #: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
@@ -654,11 +642,10 @@ msgid "Remove Starred Item"
 msgstr "Rimuovi elemento contrassegnato con una stella"
 
 #: klipper.cpp:70
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "Finestra a comparsa degli appunti"
+msgstr "Appunti"
 
 #: klipper.cpp:74
 #, kde-format
@@ -694,14 +681,13 @@ msgstr "Mo&stra il codice a barre…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Scorri la cronologia in basso"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Cancella cronologia"
+msgstr "Scorri la cronologia in alto"
 
 #: klipper.cpp:136
 #, kde-format
@@ -717,18 +703,17 @@ msgstr "Cronologia degli appunti"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Più recente: "
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "corrente"
+msgstr "Attuale: "
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Più vecchio: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10

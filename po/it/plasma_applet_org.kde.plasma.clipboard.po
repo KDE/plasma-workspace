@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-06-17 11:59+0200\n"
+"PO-Revision-Date: 2026-10-15 10:13+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: qml/main.qml:40
 #, kde-format
@@ -28,12 +28,10 @@ msgid "Clipboard is empty"
 msgstr "Gli appunti sono vuoti"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "Attualmente gli appunti contengono dati sensibili"
+msgstr "Gli appunti e la selezione contengono attualmente dati sensibili"
 
 #: qml/main.qml:46
 #, kde-format
@@ -42,12 +40,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "Attualmente gli appunti contengono dati sensibili"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "Attualmente gli appunti contengono dati sensibili"
+msgstr "La selezione contiene attualmente dati sensibili"
 
 #: qml/main.qml:85
 #, kde-format

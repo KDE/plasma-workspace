@@ -22,18 +22,16 @@ msgid "Display Detected"
 msgstr "Displej bol detekovaný"
 
 #: devicenotifications.cpp:511
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "%1 bol pripojený."
 
 #: devicenotifications.cpp:514
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "%1 bol pripojený."
+msgstr "%1 %2 (%3) bol pripojený."
 
 #: devicenotifications.cpp:549
 #, kde-format
@@ -42,18 +40,16 @@ msgid "Display Removed"
 msgstr "Displej bol odpojený"
 
 #: devicenotifications.cpp:551
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "%1 bolo odpojené."
 
 #: devicenotifications.cpp:554
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "%1 bolo odpojené."
+msgstr "%1 %2 (%3) bol odpojený."
 
 #: devicenotifications.cpp:602
 #, kde-format

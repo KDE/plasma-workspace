@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 00:47+0000\n"
+"POT-Creation-Date: 2026-10-23 00:50+0000\n"
 "PO-Revision-Date: 2026-05-06 10:34+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -406,7 +406,7 @@ msgstr "Uppsetning á pakkanum %1 mistókst: %2."
 msgid "Installation Failure"
 msgstr "Uppsetning mistókst"
 
-#: timezoneselector/TimezoneSelector.qml:107
+#: timezoneselector/TimezoneSelector.qml:108
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -416,45 +416,45 @@ msgstr ""
 "Tímabeltið sem er valið er ekki tiltækt til að hægt sé að sýna það á þessu "
 "korti"
 
-#: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:347
+#: timezoneselector/TimezoneSelector.qml:123
+#: timezoneselector/TimezoneSelector.qml:348
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Velja…"
 
-#: timezoneselector/TimezoneSelector.qml:124
-#: timezoneselector/TimezoneSelector.qml:339
+#: timezoneselector/TimezoneSelector.qml:125
+#: timezoneselector/TimezoneSelector.qml:340
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Svæði:"
 
-#: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:376
+#: timezoneselector/TimezoneSelector.qml:152
+#: timezoneselector/TimezoneSelector.qml:377
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Tímabelti:"
 
-#: timezoneselector/TimezoneSelector.qml:294
+#: timezoneselector/TimezoneSelector.qml:295
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Auka aðdrátt"
 
-#: timezoneselector/TimezoneSelector.qml:310
+#: timezoneselector/TimezoneSelector.qml:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Minnka aðdrátt"
 
-#: timezoneselector/TimezoneSelector.qml:351
+#: timezoneselector/TimezoneSelector.qml:352
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Svæðisval tímabeltis"
 
-#: timezoneselector/TimezoneSelector.qml:387
+#: timezoneselector/TimezoneSelector.qml:388
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Staðarval tímabeltis"

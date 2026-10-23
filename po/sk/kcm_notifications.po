@@ -65,25 +65,25 @@ msgstr "Táto aplikácia nepodporuje nastavenie upozornení na základe udalost�
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "Toto upozornenie sa zobrazí ako vyskakovacie okno"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "Toto upozornenie sa nezobrazí ako vyskakovacie okno"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "Toto upozornenie prehrá zvuk"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "Toto upozornenie neprehrá zvuk"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format

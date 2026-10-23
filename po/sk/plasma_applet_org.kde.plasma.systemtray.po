@@ -162,7 +162,7 @@ msgstr "Malá"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "Drobné"
 
 #: qml/ConfigGeneral.qml:264
 #, kde-format
