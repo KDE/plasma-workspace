@@ -356,17 +356,30 @@ QPair<int, int> GridLayoutManager::nextCell(const QPair<int, int> &cell, Applets
 
     switch (direction) {
     case AppletsLayout::AppletsLayout::BottomToTop:
-        --nCell.first;
+        if (--nCell.first < 0) {
+            nCell.first = rows() - 1;
+            ++nCell.second;
+        }
         break;
     case AppletsLayout::AppletsLayout::TopToBottom:
         ++nCell.first;
+        if (++nCell.first <= rows()) {
+            nCell.first = 0;
+            ++nCell.second;
+        }
         break;
     case AppletsLayout::AppletsLayout::RightToLeft:
-        --nCell.second;
+        if (--nCell.second < 0) {
+            nCell.second = columns() - 1;
+            ++nCell.first;
+        }
         break;
     case AppletsLayout::AppletsLayout::LeftToRight:
     default:
-        ++nCell.second;
+        if (++nCell.second >= columns()) {
+            nCell.second = 0;
+            ++nCell.first;
+        }
         break;
     }
 
