@@ -81,7 +81,7 @@ void DatabaseRecordToMimeDataJob::start()
     }
 
     QSqlQuery query(db);
-    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(m_uuid));
+    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1' ORDER BY rowid ASC"_s.arg(m_uuid));
     while (query.next()) {
         const QString mimeType = query.value(0).toString();
         const QString dataUuid = query.value(1).toString();

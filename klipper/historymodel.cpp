@@ -480,7 +480,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
         if (item->type() == HistoryItemType::Image) {
-            QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
+            QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2') ORDER BY rowid ASC"_s.arg(item->uuid(), s_imageFormat), m_db);
             if (query.exec() && query.isSelect() && query.next()) {
                 QSize size = QImageReader(QString(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString())).size();
                 return QString(u"▨ " + i18nc("@info:tooltip width x height", "%1x%2", QString::number(size.width()), QString::number(size.height())));
@@ -492,7 +492,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         if (!(item->allTypes() & HistoryItemType::Image)) {
             return QUrl();
         }
-        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
+        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2') ORDER BY rowid ASC"_s.arg(item->uuid(), s_imageFormat), m_db);
         if (query.exec() && query.isSelect() && query.next()) {
             return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString());
         }
@@ -502,7 +502,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         if (!(item->allTypes() & HistoryItemType::Image)) {
             return QSize();
         }
-        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
+        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2') ORDER BY rowid ASC"_s.arg(item->uuid(), s_imageFormat), m_db);
         if (query.exec() && query.isSelect() && query.next()) {
             return QImageReader(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString()).size();
         }
