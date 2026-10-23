@@ -324,6 +324,26 @@ public:
         }
 
         auto normalized = normalizedId(resource);
+
+        // in some edge cases, we may still add favorite apps with the old, scheme-less
+        // format to the database (such as when a system default favorite is not available
+        // during a user's very first plasma startup).
+        // if we notice we have this situation, migrate it to the new format in the database.
+        // TODO: Remove if we're really sure this can't happen anymore.
+        auto applicationsPrefix = QLatin1String("applications:");
+        if (!(_resource.startsWith(applicationsPrefix)) && normalized.value().startsWith(applicationsPrefix)) {
+            // Let's try to restore the precise activities, in case the user somehow managed to set those
+            auto query = LinkedResources | Agent{AGENT_APPLICATIONS} | Type::any() | Activity::any() | Url(_resource) | Limit(1);
+            ResultSet results(query);
+            auto linkedActivities = results.at(0).linkedActivities();
+
+            m_ignoredItems << normalized.value(); // try to skip the unlink handler
+            m_watcher.unlinkFromActivity(QUrl(_resource), QStringLiteral(":any"), AGENT_APPLICATIONS);
+            for (QString activity : linkedActivities) {
+                m_watcher.linkToActivity(QUrl(normalized.value()), activity, AGENT_APPLICATIONS);
+            }
+        }
+
         m_items.insert(index, normalized);
         m_itemEntries[normalized.value()] = entry;
 
