@@ -16,6 +16,7 @@
 #include <QDebug>
 #include <QQmlComponent>
 #include <QQmlContext>
+#include <QQuickItem>
 #include <QScreen>
 #include <QTimer>
 #include <QWindow>
@@ -23,6 +24,7 @@
 #include <KLocalizedQmlContext>
 #include <KRuntimePlatform>
 #include <PlasmaQuick/PlasmaQuick>
+#include <PlasmaQuick/PlasmaWindow>
 #include <klocalizedstring.h>
 
 #include <algorithm> // std::ranges::sort
@@ -311,6 +313,8 @@ void Osd::showOsd()
         return;
     }
 
+    updateWindowSize();
+
     // if our OSD understands animating the opacity, do it;
     // otherwise just show it to not break existing lnf packages
     if (m_osdObject->property("animateOpacity").isValid()) {
@@ -324,6 +328,26 @@ void Osd::showOsd()
     }
 
     m_osdTimer->start(m_timeout);
+}
+
+void Osd::updateWindowSize()
+{
+    auto window = qobject_cast<PlasmaQuick::PlasmaWindow *>(m_osdObject.get());
+    if (!window) {
+        return;
+    }
+
+    // Layouts only update their implicit size when they get polished, which doesn't happen while the window
+    // is hidden. Do it now, so that the window gets shown with the size of its new content right away,
+    // instead of with the size of the previous one and then resizing
+    if (QQuickItem *mainItem = window->mainItem()) {
+        mainItem->ensurePolished();
+    }
+
+    const QSize size(window->property("preferredWidth").toInt(), window->property("preferredHeight").toInt());
+    if (!size.isEmpty()) {
+        window->resize(size);
+    }
 }
 
 void Osd::hide()

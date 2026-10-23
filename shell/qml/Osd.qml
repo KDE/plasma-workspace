@@ -22,8 +22,13 @@ OsdWindow {
     property alias icon: osd.icon
     property alias showingProgress: osd.showingProgress
 
-    width: Math.max(Math.min(Screen.desktopAvailableWidth / 2, mainItem.implicitWidth), Kirigami.Units.gridUnit * 15) +  leftPadding + rightPadding
-    height: mainItem.implicitHeight + topPadding + bottomPadding
+    // Osd::showOsd() applies these again before every show: the bindings below don't do it
+    // if the compositor resized the window while the content size stayed the same
+    readonly property int preferredWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, mainItem.implicitWidth), Kirigami.Units.gridUnit * 15) +  leftPadding + rightPadding
+    readonly property int preferredHeight: mainItem.implicitHeight + topPadding + bottomPadding
+
+    width: preferredWidth
+    height: preferredHeight
 
     mainItem: OsdItem {
         id: osd

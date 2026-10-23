@@ -55,6 +55,7 @@ private:
 
     void showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText = QString(), bool showOnMobile = true);
     void showOsd();
+    void updateWindowSize();
 
     ShellCorona *const m_corona;
     std::shared_ptr<QQmlEngine> m_engine;
