@@ -59,7 +59,7 @@ private:
     void slotResult(KJob *job) override;
 
     QString m_uuid;
-    std::list<std::pair<QString /*type*/, QByteArray /*data*/>> m_mimeDataList;
+    QMap<qsizetype /*index*/, std::pair<QString /*type*/, QByteArray /*data*/>> m_mimeDataStore;
 };
 
 DatabaseRecordToMimeDataJob::DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data)
@@ -81,18 +81,19 @@ void DatabaseRecordToMimeDataJob::start()
     }
 
     QSqlQuery query(db);
-    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(m_uuid));
+    query.exec(u"SELECT mimetype,data_uuid,rowid FROM aux WHERE uuid='%1' ORDER BY rowid ASC"_s.arg(m_uuid));
     while (query.next()) {
         const QString mimeType = query.value(0).toString();
         const QString dataUuid = query.value(1).toString();
+        const auto rowId = query.value(2).toLongLong();
         if (mimeType.isEmpty() || dataUuid.isEmpty()) {
             continue;
         }
         const QString dataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + m_uuid + u'/' + dataUuid;
         auto job = KIO::open(QUrl::fromLocalFile(dataPath), QIODevice::ReadOnly);
-        connect(job, &KIO::FileJob::open, this, [this, job, mimeType] {
-            connect(job, &KIO::FileJob::data, this, [this, job, mimeType](KJob *, const QByteArray &data) {
-                m_mimeDataList.emplace_back(mimeType, data);
+        connect(job, &KIO::FileJob::open, this, [this, job, mimeType, rowId] {
+            connect(job, &KIO::FileJob::data, this, [this, job, mimeType, rowId](KJob *, const QByteArray &data) {
+                m_mimeDataStore.insert(rowId, {mimeType, data});
                 job->close();
             });
             job->read(job->size());
@@ -108,7 +109,7 @@ void DatabaseRecordToMimeDataJob::start()
 QMimeData *DatabaseRecordToMimeDataJob::mimeData() const
 {
     auto mimeData = new QMimeData;
-    for (auto &[format, data] : m_mimeDataList) {
+    for (auto &[format, data] : m_mimeDataStore) {
         mimeData->setData(format, data);
         if (format == s_imageFormat) {
             mimeData->setImageData(QImage::fromData(data, "PNG"));
