@@ -327,21 +327,22 @@ Item {
             anchors.bottomMargin: Kirigami.Units.gridUnit
             anchors.horizontalCenter: parent.horizontalCenter
 
-            width: mainLayout.implicitWidth + Kirigami.Units.largeSpacing * 2
+            width: mainLayout.implicitWidth
             height: mainLayout.implicitHeight + Kirigami.Units.largeSpacing * 2
 
             contentItem: RowLayout {
                 id: mainLayout
-                anchors.centerIn: parent
                 spacing: Kirigami.Units.smallSpacing
 
                 QQC2.Label {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
                     text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
                     textFormat: Text.PlainText
                 }
 
                 QQC2.ComboBox {
                     id: regionComboBox
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
                     model: [chooseText, ...regionsModel]
 
                     property string chooseText: i18ndc("plasmashellprivateplugin", "Placeholder for empty time zone combobox selector", "Choose…")
