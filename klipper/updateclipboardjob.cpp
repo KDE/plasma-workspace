@@ -53,17 +53,45 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
     QCryptographicHash hash(QCryptographicHash::Sha1);
     std::list<MimeData> mimeDataList;
     const QStringList formats = mimeData->formats();
+    const auto begin = formats.cbegin();
+    const auto end = formats.cend();
+    // Formats that require special logic
+    auto plainTextIt = end;
+    auto plainUtf8TextIt = end;
+    auto uriListIt = end;
+    auto pngIt = end;
+    auto qImageIt = end;
+    auto suggestedFilenameIt = end;
+    auto anyNotFound = [&] {
+        return plainTextIt == end || plainUtf8TextIt == end || uriListIt == end || pngIt == end || qImageIt == end || suggestedFilenameIt == end;
+    };
+    for (auto it = begin; it != end && anyNotFound(); ++it) {
+        if (plainTextIt == end && *it == s_plainTextPrefix) {
+            plainTextIt = it;
+        } else if (plainUtf8TextIt == end && *it == s_plainUtf8Text) {
+            plainUtf8TextIt = it;
+        } else if (uriListIt == end && *it == s_uriList) {
+            uriListIt = it;
+        } else if (pngIt == end && *it == s_imageFormat) {
+            pngIt = it;
+        } else if (qImageIt == end && *it == s_qImageFormat) {
+            qImageIt = it;
+        } else if (suggestedFilenameIt == end && *it == s_suggestedFileNameFormat) {
+            suggestedFilenameIt = it;
+        }
+    }
 
     bool isUriListSet = false;
     bool isPlainTextSet = false;
     bool isPngSet = false;
-    const bool usePng = mimeData->hasFormat(s_imageFormat);
-    for (const QString &format : formats) {
+    const bool usePng = pngIt != end;
+    for (auto it = begin; it != end; ++it) {
+        const auto &format = *it;
         if (!format.contains(u'/')) {
             continue;
         }
 
-        if (format == s_uriList) {
+        if (it == uriListIt) {
             if (isUriListSet) {
                 continue;
             }
@@ -75,7 +103,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
             continue;
         }
 
-        const bool isPlainText = format == s_plainTextPrefix || format == s_plainUtf8Text;
+        const bool isPlainText = it == plainTextIt || it == plainUtf8TextIt;
         if (isPlainText) {
             if (isPlainTextSet) {
                 continue;
@@ -89,7 +117,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
             continue;
         }
 
-        const bool isImage = format.startsWith(s_imageFormatPrefix) || format == s_qImageFormat;
+        const bool isImage = it == qImageIt || format.startsWith(s_imageFormatPrefix);
         if (isImage) {
             if (isPngSet) {
                 continue;
@@ -114,7 +142,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
         }
 
         // Keep the suggested file name.
-        if (format != s_suggestedFileNameFormat && !hasAcceptableTextFormatPrefix(format)) {
+        if (it != suggestedFilenameIt && !hasAcceptableTextFormatPrefix(format)) {
             // Don't create un-asked for DDE links in LibreOffice apps;
             // we don't want them.
             continue;
