@@ -119,26 +119,41 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
 
         const bool isImage = it == qImageIt || format.startsWith(s_imageFormatPrefix);
         if (isImage) {
-            if (isPngSet) {
+            // Skip image formats after QImage/PNG because they're probably
+            // generated on demand.
+            // We keep PNGs even if they're generated from a QImage because PNGs
+            // created from lossy formats can be much larger than the QImage PNG
+            // would have been.
+            const bool likelyGeneratedImage = qImageIt != end && it > qImageIt && it != pngIt;
+            if (likelyGeneratedImage) {
                 continue;
             }
-            isPngSet = true;
-            QByteArray data;
-            QImage image;
-            // If png is available directly do not do a needless encoding
-            if (usePng) {
-                data = mimeData->data(s_imageFormat);
-                image = QImage::fromData(data, "PNG");
-            } else {
-                image = mimeData->imageData().value<QImage>();
-                QBuffer buffer(&data);
-                QImageWriter encoder(&buffer, "PNG");
-                encoder.write(image);
+            const bool isPngOrQImage = it == pngIt || it == qImageIt;
+            if (!isPngOrQImage) {
+                const auto data = mimeData->data(format);
+                hash.reset();
+                hash.addData(data);
+                mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            } else if (!isPngSet) {
+                isPngSet = true;
+                QByteArray data;
+                QImage image;
+                // If png is available directly do not do a needless encoding
+                if (usePng) {
+                    data = mimeData->data(s_imageFormat);
+                    image = QImage::fromData(data, "PNG");
+                } else {
+                    image = mimeData->imageData().value<QImage>();
+                    QBuffer buffer(&data);
+                    QImageWriter encoder(&buffer, "PNG");
+                    encoder.write(image);
+                }
+                auto imageHashBytes = reinterpret_cast<const char *>(image.constBits());
+                hash.reset();
+                hash.addData({imageHashBytes, image.sizeInBytes()});
+                mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
             }
-            auto imageHashBytes = reinterpret_cast<const char *>(image.constBits());
-            hash.reset();
-            hash.addData({imageHashBytes, image.sizeInBytes()});
-            mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
+            continue;
         }
 
         // Keep the suggested file name.
