@@ -6,6 +6,7 @@
 
 #include "updateclipboardjob.h"
 #include "mimetypes.h"
+#include "utils.h"
 
 #include <QBuffer>
 #include <QCryptographicHash>
@@ -52,17 +53,29 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
     QCryptographicHash hash(QCryptographicHash::Sha1);
     std::list<MimeData> mimeDataList;
     const QStringList formats = mimeData->formats();
+    const auto begin = formats.cbegin();
+    const auto end = formats.cend();
+    // Formats that require special logic
+    const auto foundIterators = Utils::find(formats,
+                                            MimeTypes::plainText,
+                                            MimeTypes::plainUtf8Text,
+                                            MimeTypes::uriList,
+                                            MimeTypes::png,
+                                            MimeTypes::qtImage,
+                                            MimeTypes::kdeSuggestedFileName);
+    const auto [plainTextIt, plainUtf8TextIt, uriListIt, pngIt, qtImageIt, suggestedFilenameIt] = foundIterators;
 
     bool isUriListSet = false;
     bool isPlainTextSet = false;
     bool isPngSet = false;
-    const bool usePng = mimeData->hasFormat(MimeTypes::png);
-    for (const QString &format : formats) {
+    const bool usePng = pngIt != end;
+    for (auto it = begin; it != end; ++it) {
+        const auto &format = *it;
         if (!format.contains(u'/')) {
             continue;
         }
 
-        if (format == MimeTypes::uriList) {
+        if (it == uriListIt) {
             if (isUriListSet) {
                 continue;
             }
@@ -74,7 +87,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
             continue;
         }
 
-        const bool isPlainText = MimeTypes::isPlainText(format);
+        const bool isPlainText = it == plainTextIt || it == plainUtf8TextIt;
         if (isPlainText) {
             if (isPlainTextSet) {
                 continue;
@@ -97,7 +110,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
             continue;
         }
 
-        const bool isImage = MimeTypes::isImage(format);
+        const bool isImage = it == qtImageIt || format.startsWith(MimeTypes::imagePrefix);
         if (isImage) {
             if (isPngSet) {
                 continue;
@@ -123,7 +136,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
         }
 
         // Keep the suggested file name and text formats that aren't plain text.
-        if (format != MimeTypes::kdeSuggestedFileName && !hasAcceptableTextFormatPrefix(format)) {
+        if (it != suggestedFilenameIt && !hasAcceptableTextFormatPrefix(format)) {
             // Don't create un-asked for DDE links in LibreOffice apps;
             // we don't want them.
             continue;
