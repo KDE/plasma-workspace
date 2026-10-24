@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-29 00:44+0000\n"
+"POT-Creation-Date: 2026-10-24 00:52+0000\n"
 "PO-Revision-Date: 2025-11-29 18:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -23,73 +23,73 @@ msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "媒體控制器"
 
-#: kded/mprisservice.cpp:140
+#: kded/mprisservice.cpp:142
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "播放/暫停媒體"
 
-#: kded/mprisservice.cpp:141
+#: kded/mprisservice.cpp:144
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "媒體播放下一首"
 
-#: kded/mprisservice.cpp:142
+#: kded/mprisservice.cpp:145
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "媒體播放上一首"
 
-#: kded/mprisservice.cpp:144
+#: kded/mprisservice.cpp:147
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
 msgstr "媒體向前跳轉 5 秒"
 
-#: kded/mprisservice.cpp:148
+#: kded/mprisservice.cpp:151
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
 msgstr "媒體向後跳轉 5 秒"
 
-#: kded/mprisservice.cpp:152
+#: kded/mprisservice.cpp:155
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
 msgstr "媒體向前跳轉 30 秒"
 
-#: kded/mprisservice.cpp:156
+#: kded/mprisservice.cpp:159
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
 msgstr "媒體向後跳轉 30 秒"
 
-#: kded/mprisservice.cpp:159
+#: kded/mprisservice.cpp:162
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "停止媒體播放"
 
-#: kded/mprisservice.cpp:160
+#: kded/mprisservice.cpp:163
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "暫停媒體播放"
 
-#: kded/mprisservice.cpp:161
+#: kded/mprisservice.cpp:164
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "播放媒體"
 
-#: kded/mprisservice.cpp:162
+#: kded/mprisservice.cpp:165
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "提高媒體音量"
 
-#: kded/mprisservice.cpp:163
+#: kded/mprisservice.cpp:166
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

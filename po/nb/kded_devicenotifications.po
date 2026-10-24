@@ -90,9 +90,3 @@ msgstr "En USB-enhet ble koblet fra."
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "USB-enhet fjernet"
-
-#~ msgid "A display has been connected."
-#~ msgstr "En ny skjerm ble koblet til."
-
-#~ msgid "A display has been disconnected."
-#~ msgstr "En skjerm ble koblet fra."

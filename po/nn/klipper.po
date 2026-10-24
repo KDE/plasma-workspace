@@ -908,17 +908,3 @@ msgstr "Utklippstavle-sprettopp"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Next History Item"
-#~ msgstr "Neste historikkelement"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Previous History Item"
-#~ msgstr "Førre historikkelement"
-
-#~ msgid "up"
-#~ msgstr "opp"
-
-#~ msgid "down"
-#~ msgstr "ned"

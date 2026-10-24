@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-29 00:44+0000\n"
+"POT-Creation-Date: 2026-10-24 00:52+0000\n"
 "PO-Revision-Date: 2025-12-19 13:25+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -24,73 +24,73 @@ msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Управление медиапроигрывателем"
 
-#: kded/mprisservice.cpp:140
+#: kded/mprisservice.cpp:142
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Начать/приостановить воспроизведение"
 
-#: kded/mprisservice.cpp:141
+#: kded/mprisservice.cpp:144
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Перейти к следующей дорожке"
 
-#: kded/mprisservice.cpp:142
+#: kded/mprisservice.cpp:145
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Перейти к предыдущей дорожке"
 
-#: kded/mprisservice.cpp:144
+#: kded/mprisservice.cpp:147
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
 msgstr "Перемотать вперёд на 5 с"
 
-#: kded/mprisservice.cpp:148
+#: kded/mprisservice.cpp:151
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
 msgstr "Перемотать назад на 5 с"
 
-#: kded/mprisservice.cpp:152
+#: kded/mprisservice.cpp:155
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
 msgstr "Перемотать вперёд на 30 с"
 
-#: kded/mprisservice.cpp:156
+#: kded/mprisservice.cpp:159
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
 msgstr "Перемотать назад на 30 с"
 
-#: kded/mprisservice.cpp:159
+#: kded/mprisservice.cpp:162
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Остановить воспроизведение"
 
-#: kded/mprisservice.cpp:160
+#: kded/mprisservice.cpp:163
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Приостановить воспроизведение"
 
-#: kded/mprisservice.cpp:161
+#: kded/mprisservice.cpp:164
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Начать воспроизведение"
 
-#: kded/mprisservice.cpp:162
+#: kded/mprisservice.cpp:165
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Увеличить громкость"
 
-#: kded/mprisservice.cpp:163
+#: kded/mprisservice.cpp:166
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

@@ -90,9 +90,3 @@ msgstr "Ei USB-eining vart kopla frå."
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "USB-eining fjerna"
-
-#~ msgid "A display has been connected."
-#~ msgstr "Ein ny skjerm vart kopla til."
-
-#~ msgid "A display has been disconnected."
-#~ msgstr "Ein skjerm vart kopla frå."

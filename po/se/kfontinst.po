@@ -2114,39 +2114,3 @@ msgstr ""
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr ""
-
-#~ msgid "Font Installer"
-#~ msgstr "Fontasajáiduhtti"
-
-#~ msgid "Simple font installer"
-#~ msgstr "Oktageardánis fontasajáiduhtti"
-
-#~ msgid "(C) Craig Drummond, 2007"
-#~ msgstr "© Craig Drummond, 2007"
-
-#~ msgid "URL to install"
-#~ msgstr "URL maid sajáiduhttit"
-
-#~ msgid "Print"
-#~ msgstr "Čálit"
-
-#~ msgid "Font Printer"
-#~ msgstr "Fontačálán"
-
-#~ msgid "Simple font printer"
-#~ msgstr "Oktageardánis fontačálán"
-
-#~ msgid "Select Font to View"
-#~ msgstr "Vállje fontta maid čájehit"
-
-#~ msgid "URL to open"
-#~ msgstr "Fierpmádatčujuhus maid rahpat"
-
-#~ msgid "Font Viewer"
-#~ msgstr "Fontačájeheaddji"
-
-#~ msgid "Simple font viewer"
-#~ msgstr "Oktageardánis fontačájeheaddji"
-
-#~ msgid "(C) Craig Drummond, 2004-2007"
-#~ msgstr "© Craig Drummond, 2004-2007"
