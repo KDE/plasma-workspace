@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkmpris\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-29 00:44+0000\n"
+"POT-Creation-Date: 2026-10-24 02:55+0000\n"
 "PO-Revision-Date: 2023-12-09 09:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -21,73 +21,73 @@ msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Ovládač médií"
 
-#: kded/mprisservice.cpp:140
+#: kded/mprisservice.cpp:142
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Spustiť/pozastaviť prehrávanie média"
 
-#: kded/mprisservice.cpp:141
+#: kded/mprisservice.cpp:144
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Prehrávanie média ďalšie"
 
-#: kded/mprisservice.cpp:142
+#: kded/mprisservice.cpp:145
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Prehrávanie média predošlé"
 
-#: kded/mprisservice.cpp:144
+#: kded/mprisservice.cpp:147
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
 msgstr "Prehrávanie médií, posun vpred o 5 sekúnd"
 
-#: kded/mprisservice.cpp:148
+#: kded/mprisservice.cpp:151
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
 msgstr "Prehrávanie médií, posun vzad o 5 sekúnd"
 
-#: kded/mprisservice.cpp:152
+#: kded/mprisservice.cpp:155
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
 msgstr "Prehrávanie médií, posun vpred o 30 sekúnd"
 
-#: kded/mprisservice.cpp:156
+#: kded/mprisservice.cpp:159
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
 msgstr "Prehrávanie médií, posun vzad o 30 sekúnd"
 
-#: kded/mprisservice.cpp:159
+#: kded/mprisservice.cpp:162
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Zastaviť prehrávanie média"
 
-#: kded/mprisservice.cpp:160
+#: kded/mprisservice.cpp:163
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Pozastaviť prehrávanie média"
 
-#: kded/mprisservice.cpp:161
+#: kded/mprisservice.cpp:164
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Spustiť prehrávanie média"
 
-#: kded/mprisservice.cpp:162
+#: kded/mprisservice.cpp:165
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Zvýšiť hlasitosť médií"
 
-#: kded/mprisservice.cpp:163
+#: kded/mprisservice.cpp:166
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

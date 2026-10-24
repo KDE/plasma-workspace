@@ -1,12 +1,13 @@
 # SPDX-FileCopyrightText: 2023, 2025, 2026 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-22 02:51+0000\n"
-"PO-Revision-Date: 2026-05-24 17:59+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2026-10-17 14:57+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,17 +16,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Ryuichi Yamada"
+msgstr "Ryuichi Yamada,Mint"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ryuichi_ya220@outlook.jp"
+msgstr "ryuichi_ya220@outlook.jp,5602mint@gmail.com"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:45
 #, kde-format
@@ -150,19 +151,19 @@ msgstr "設定..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "オンスクリーンキーボードを非表示"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "オンスクリーンキーボードを表示"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "レイアウトを切り替え"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -224,7 +225,7 @@ msgid ""
 "version of Plasma installed on this system. Please update Plasma in order to "
 "use the widget."
 msgstr ""
-"このウィジェットは Plasma %1 のために作成されており、最新バージョンの Plasma "
+"このウィジェットは Plasma %1 のために作成されており、古いバージョンの Plasma "
 "には対応していません。このウィジェットを使用するためには、Plasma を更新してく"
 "ださい。"
 
@@ -457,9 +458,3 @@ msgstr "タイムゾーン地域セレクタ"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "タイムゾーン場所セレクタ"
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "スクリーンセーバーのタイムアウト"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "スクリーンがロックされるまでの時間 (分) を設定します。"
