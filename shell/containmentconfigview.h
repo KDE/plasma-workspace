@@ -9,6 +9,7 @@
 #include <PlasmaQuick/ConfigModel>
 #include <PlasmaQuick/ConfigView>
 #include <QQmlPropertyMap>
+#include <QUrl>
 
 namespace Plasma
 {
@@ -29,6 +30,7 @@ class ContainmentConfigView : public PlasmaQuick::ConfigView
     Q_PROPERTY(QQmlPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
     Q_PROPERTY(QString currentWallpaper READ currentWallpaper WRITE setCurrentWallpaper NOTIFY currentWallpaperChanged)
     Q_PROPERTY(QString containmentPlugin READ containmentPlugin WRITE setContainmentPlugin NOTIFY containmentPluginChanged)
+    Q_PROPERTY(QUrl currentPage READ currentPage WRITE setCurrentPage NOTIFY currentPageChanged)
 
 public:
     explicit ContainmentConfigView(Plasma::Containment *interface, QWindow *parent = nullptr);
@@ -45,6 +47,8 @@ public:
     QQmlPropertyMap *wallpaperConfiguration() const;
     QString containmentPlugin() const;
     void setContainmentPlugin(const QString &plugin);
+    QUrl currentPage() const;
+    void setCurrentPage(const QUrl &page);
 
     Q_INVOKABLE void applyWallpaper();
 
@@ -55,6 +59,7 @@ Q_SIGNALS:
     void currentWallpaperChanged();
     void wallpaperConfigurationChanged();
     void containmentPluginChanged();
+    void currentPageChanged();
 
 protected:
     void syncWallpaperObjects();
@@ -66,6 +71,7 @@ private:
     PlasmaQuick::ConfigModel *m_containmentPluginsConfigModel = nullptr;
     CurrentContainmentActionsModel *m_currentContainmentActionsModel = nullptr;
     QString m_currentWallpaperPlugin;
+    QUrl m_currentPage;
     QQmlPropertyMap *m_currentWallpaperConfig = nullptr;
     QQmlPropertyMap *m_ownWallpaperConfig = nullptr;
 };

@@ -470,15 +470,18 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     auto *cont = qobject_cast<Plasma::Containment *>(applet);
 
     if (cont && cont->isContainment() && cont->containmentType() == Plasma::Containment::Desktop) {
-        m_configView = new ContainmentConfigView(cont);
+        auto *containmentConfigView = new ContainmentConfigView(cont);
+        containmentConfigView->setCurrentPage(std::exchange(m_pendingConfigPage, QUrl()));
+        m_configView = containmentConfigView;
         // if we changed containment with the config open, relaunch the config dialog but for the new containment
         // third arg is used to disconnect when the config closes
-        connect(this, &ContainmentView::containmentChanged, m_configView.data(), [this]() {
+        connect(this, &ContainmentView::containmentChanged, m_configView.data(), [this, containmentConfigView]() {
             // If m_configView is not visible anymore, the user clicked OK instead of apply:
             // don't reopen it anymore
             if (!m_configView->isVisible()) {
                 return;
             }
+            m_pendingConfigPage = containmentConfigView->currentPage();
             if (containment()->property("wallpaperGraphicsObject").value<QObject *>()) {
                 showConfigurationInterface(containment());
             } else {

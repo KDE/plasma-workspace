@@ -108,6 +108,21 @@ void ContainmentConfigView::setContainmentPlugin(const QString &plugin)
     Q_EMIT containmentPluginChanged();
 }
 
+QUrl ContainmentConfigView::currentPage() const
+{
+    return m_currentPage;
+}
+
+void ContainmentConfigView::setCurrentPage(const QUrl &page)
+{
+    if (m_currentPage == page) {
+        return;
+    }
+
+    m_currentPage = page;
+    Q_EMIT currentPageChanged();
+}
+
 PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
 {
     if (!m_wallpaperConfigModel) {

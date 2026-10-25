@@ -12,6 +12,7 @@
 #include <PlasmaQuick/ContainmentView>
 #include <QFuture>
 #include <QPointer>
+#include <QUrl>
 
 #include "config-workspace.h"
 #include "panelview.h"
@@ -122,6 +123,7 @@ private:
 
     std::optional<QColor> m_accentColor;
     QPointer<PlasmaQuick::ConfigView> m_configView;
+    QUrl m_pendingConfigPage;
     QPointer<QScreen> m_screenToFollow;
     LayerShellQt::Window *m_layerWindow = nullptr;
     QString m_krunnerText;
