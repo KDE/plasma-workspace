@@ -237,9 +237,10 @@ void KLookAndFeelManager::setIcons(const QString &theme)
 
     writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("Icons"), QStringLiteral("Theme"), theme, KConfig::Notify);
     if (m_mode == Mode::Apply) {
-        for (int i = 0; i < KIconLoader::LastGroup; i++) {
-            KIconLoader::emitChange(KIconLoader::Group(i));
-        }
+        // An icon theme is not a per group setting: when it changes, the icons of every group
+        // change at once, so one notification is enough. Notifying once per group made Plasma
+        // reload the whole icon theme six times in a row, with the same end result.
+        KIconLoader::emitChange(KIconLoader::Desktop);
     }
 
     Q_EMIT iconsChanged();
