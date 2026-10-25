@@ -152,8 +152,22 @@ class KickerTest(unittest.TestCase):
         2. Remove the entry from Favorites
         3. Hide invalid entries automatically and don't crash when there are multiple entries with the same desktop name
         """
-        with subprocess.Popen([QMLTEST_EXEC, "-input", os.path.join(os.path.dirname(os.path.abspath(__file__)), 'favoritetest.qml')], stdout=sys.stderr, stderr=sys.stderr) as process:
-            self.assertEqual(process.wait(60), 0)
+        try:
+            result = subprocess.run(
+                [QMLTEST_EXEC, "-input", os.path.join(os.path.dirname(os.path.abspath(__file__)), "favoritetest.qml")],
+                stdout=sys.stderr,
+                stderr=sys.stderr,
+                timeout=60,
+            )
+        except subprocess.TimeoutExpired:
+            # subprocess.run() already killed qmltestrunner, so we don't hang here and only
+            # fail the test instead of eating up the whole ctest timeout.
+            self.fail(
+                f"{QMLTEST_EXEC} timed out after 60s, see its output above. QtQuickTest waits "
+                f"forever if a TestCase expects windowShown but the window is never exposed, so "
+                f"this is either a hung test case or an overloaded runner."
+            )
+        self.assertEqual(result.returncode, 0)
 
 
 if __name__ == '__main__':
