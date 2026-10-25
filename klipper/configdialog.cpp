@@ -229,11 +229,11 @@ ActionsWidget::ActionsWidget(QWidget *parent)
     layout->setRowStretch(2, 1);
 
     // Action buttons
-    m_addActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Action..."), this);
+    m_addActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Action…"), this);
     connect(m_addActionButton, &QPushButton::clicked, this, &ActionsWidget::onAddAction);
     layout->addWidget(m_addActionButton, 3, 0);
 
-    m_editActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Action..."), this);
+    m_editActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Action…"), this);
     connect(m_editActionButton, &QPushButton::clicked, this, &ActionsWidget::onEditAction);
     layout->addWidget(m_editActionButton, 3, 1);
     layout->setColumnStretch(2, 1);

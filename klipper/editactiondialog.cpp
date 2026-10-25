@@ -266,12 +266,12 @@ popup is activated manually with the <shortcut>%1</shortcut> key shortcut.",
     listLayout->setRowStretch(0, 1);
 
     // "Add" button
-    m_addCommandPb = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Command..."), listWidget);
+    m_addCommandPb = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Command…"), listWidget);
     connect(m_addCommandPb, &QPushButton::clicked, this, &EditActionDialog::onAddCommand);
     listLayout->addWidget(m_addCommandPb, 1, 0);
 
     // "Edit" button
-    m_editCommandPb = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Command..."), this);
+    m_editCommandPb = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Command…"), this);
     connect(m_editCommandPb, &QPushButton::clicked, this, &EditActionDialog::onEditCommand);
     listLayout->addWidget(m_editCommandPb, 1, 1);
     listLayout->setColumnStretch(2, 1);
