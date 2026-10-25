@@ -12,6 +12,7 @@
 
 class KConfigSkeleton;
 class KConfigSkeletonItem;
+class KMessageWidget;
 class KShortcutsEditor;
 class Klipper;
 class KActionCollection;
@@ -47,7 +48,11 @@ public:
     explicit PopupWidget(QWidget *parent);
     ~PopupWidget() override = default;
 
+    void setActionsOffered(bool offered);
+
 private:
+    KMessageWidget *m_noActionsMessage;
+    QWidget *m_form;
     QCheckBox *m_enablePopupCb;
     QCheckBox *m_historyPopupCb;
     QCheckBox *m_stripWhitespaceCb;
@@ -67,6 +72,7 @@ public:
 
     void resetModifiedState();
     bool hasChanged() const;
+    bool offersActions() const;
 
 Q_SIGNALS:
     void widgetChanged();
@@ -120,6 +126,8 @@ protected Q_SLOTS:
     void updateWidgetsDefault() override;
 
 private:
+    void updateActionsOffered();
+
     GeneralWidget *m_generalPage;
     PopupWidget *m_popupPage;
     ActionsWidget *m_actionsPage;

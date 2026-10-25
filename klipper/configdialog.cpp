@@ -7,6 +7,8 @@
 
 #include "configdialog.h"
 
+#include <algorithm>
+
 #include <QCheckBox>
 #include <QFontDatabase>
 #include <QFormLayout>
@@ -22,6 +24,7 @@
 #include <KActionCollection>
 #include <KConfigSkeleton>
 #include <KLocalization>
+#include <KMessageWidget>
 #include <KShortcutsEditor>
 #include <kconfigskeleton.h>
 #include <kglobalaccel.h>
@@ -161,7 +164,26 @@ GeneralWidget::GeneralWidget(QWidget *parent)
 PopupWidget::PopupWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *layout = new QFormLayout(this);
+    auto *pageLayout = new QVBoxLayout(this);
+    // A header has no margins
+    pageLayout->setContentsMargins({});
+
+    m_noActionsMessage = new KMessageWidget(xi18nc("@info",
+                                                   "On the <interface>Actions Configuration</interface> page, "
+                                                   "enable the <interface>Offer applications for copied links and files</interface> setting "
+                                                   "or enable at least one action to make settings on this page have any effect."),
+                                            this);
+    m_noActionsMessage->setMessageType(KMessageWidget::Information);
+    m_noActionsMessage->setPosition(KMessageWidget::Header);
+    m_noActionsMessage->setIcon(QIcon::fromTheme(u"emblem-information"_s));
+    m_noActionsMessage->setCloseButtonVisible(false);
+    m_noActionsMessage->setWordWrap(true);
+    m_noActionsMessage->hide();
+    pageLayout->addWidget(m_noActionsMessage);
+
+    m_form = new QWidget(this);
+    pageLayout->addWidget(m_form);
+    auto *layout = new QFormLayout(m_form);
 
     // Automatic popup
     const KConfigSkeletonItem *item = KlipperSettings::self()->uRLGrabberEnabledItem();
@@ -204,6 +226,12 @@ PopupWidget::PopupWidget(QWidget *parent)
     layout->addRow(QString(), new QLabel(this));
 }
 
+void PopupWidget::setActionsOffered(bool offered)
+{
+    m_noActionsMessage->setVisible(!offered);
+    m_form->setEnabled(offered);
+}
+
 //////////////////////////
 //  ActionsWidget       //
 //////////////////////////
@@ -219,6 +247,7 @@ ActionsWidget::ActionsWidget(QWidget *parent)
     m_mimeActionsCb->setObjectName(QLatin1String("kcfg_EnableMagicMimeActions"));
     layout->addWidget(m_mimeActionsCb, 0, 0, 1, -1);
     layout->addWidget(ConfigDialog::createHintLabel(item, this), 1, 0, 1, -1);
+    connect(m_mimeActionsCb, &QCheckBox::toggled, this, &ActionsWidget::widgetChanged);
 
     // Scrolling list
     m_actionsTree = new ActionsTreeWidget(this);
@@ -442,6 +471,11 @@ bool ActionsWidget::hasChanged() const
     return (m_actionsTree->actionsChanged() != -1);
 }
 
+bool ActionsWidget::offersActions() const
+{
+    return std::ranges::any_of(m_actionList, &ClipAction::hasEnabledCommand) || m_mimeActionsCb->isChecked();
+}
+
 void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int /*col*/)
 {
     QTreeWidgetItem *parentItem = item->parent(); // parent of the command item
@@ -489,6 +523,7 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     addPage(shortcutsPage, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
+    connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::updateActionsOffered);
     connect(m_shortcutsWidget, &KShortcutsEditor::keyChange, this, &ConfigDialog::settingsChangedSlot);
 
     // from KWindowConfig::restoreWindowSize() API documentation
@@ -533,6 +568,7 @@ void ConfigDialog::updateWidgets()
 
     if (m_klipper && m_klipper->urlGrabber()) {
         m_actionsPage->setActionList(m_klipper->urlGrabber()->actionList());
+        updateActionsOffered();
     } else {
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
@@ -546,6 +582,11 @@ void ConfigDialog::updateWidgetsDefault()
     // settings of "Actions Configuration" are not reset to the default.
 
     m_shortcutsWidget->allDefault();
+}
+
+void ConfigDialog::updateActionsOffered()
+{
+    m_popupPage->setActionsOffered(m_actionsPage->offersActions());
 }
 
 bool ConfigDialog::hasChanged()
