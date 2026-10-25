@@ -13,7 +13,10 @@ TestCase {
     id: root
     width: 100
     height: 100
-    when: windowShown
+
+    // Don't wait for windowShown here: this test case only checks the model, nothing is
+    // rendered. If the window is never exposed (e.g. the compositor takes too long to map it),
+    // qmltestrunner waits forever and the whole test just times out.
 
     readonly property string service: "org.kde.kickertest"
     readonly property string path: "/test"
