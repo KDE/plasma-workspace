@@ -218,6 +218,8 @@ public:
         return m_myCommands;
     }
 
+    bool hasEnabledCommand() const;
+
     /**
      * Saves this action to a a given KConfig object
      */

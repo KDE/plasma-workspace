@@ -5,6 +5,8 @@
 */
 #include "urlgrabber.h"
 
+#include <algorithm>
+
 #include <netwm.h>
 
 #include "klipper_debug.h"
@@ -65,7 +67,7 @@ bool URLGrabber::hasMatchingActions(HistoryItemConstPtr item) const
     }
 
     for (const ClipAction *action : m_myActions) {
-        if (action->match(text).hasMatch()) {
+        if (action->hasEnabledCommand() && action->match(text).hasMatch()) {
             return true;
         }
     }
@@ -149,7 +151,7 @@ const ActionList &URLGrabber::matchingActions(const QString &clipData, bool auto
     // now look for matches in custom user actions
     for (ClipAction *action : std::as_const(m_myActions)) {
         const QRegularExpressionMatch match = action->match(clipData);
-        if (match.hasMatch() && (action->automatic() || !automatically_invoked)) {
+        if (match.hasMatch() && action->hasEnabledCommand() && (action->automatic() || !automatically_invoked)) {
             action->setActionCapturedTexts(match.capturedTexts());
             m_myMatches.append(action);
         }
@@ -388,6 +390,11 @@ ClipAction::~ClipAction()
 QRegularExpressionMatch ClipAction::match(const QString &text) const
 {
     return QRegularExpression(m_regexPattern).match(text);
+}
+
+bool ClipAction::hasEnabledCommand() const
+{
+    return std::ranges::any_of(m_myCommands, &ClipCommand::isEnabled);
 }
 
 void ClipAction::addCommand(const ClipCommand &cmd)
