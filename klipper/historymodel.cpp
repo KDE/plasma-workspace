@@ -174,6 +174,13 @@ QString computeUuid(const QMimeData *data)
     }
     return QString::fromLatin1(hash.result().toHex());
 }
+
+QString computeUuid(const QString &text)
+{
+    QMimeData data;
+    data.setText(text);
+    return computeUuid(&data);
+}
 }
 
 std::shared_ptr<HistoryModel> HistoryModel::self()
@@ -539,7 +546,18 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
             return false;
         }
         QStringList mimetypes{u"text/plain"_s, u"text/plain;charset=utf-8"_s};
-        QString newUuid = QString::fromLatin1(QCryptographicHash::hash(text.toUtf8(), QCryptographicHash::Sha1).toHex());
+        QString newUuid = computeUuid(text);
+        const int existingRow = indexOf(newUuid);
+        if (existingRow >= 0) {
+            if (isItemStarred(item->uuid())) {
+                setData(this->index(existingRow), true, StarredRole);
+            }
+            if (!removeRow(index.row())) {
+                return false;
+            }
+            moveToTop(newUuid);
+            return true;
+        }
         {
             TransactionGuard transaction(&m_db);
             {
