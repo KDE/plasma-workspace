@@ -66,7 +66,7 @@ PlasmoidItem {
     // QTBUG-146886
     readonly property var backAction: Kirigami.Action {
         enabled: main.clipboardMenu?.T.StackView.view.depth === 2
-        onTriggered: main.clipboardMenu.closeBarcode()
+        onTriggered: main.clipboardMenu.popSubPage()
     }
 
     property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
@@ -144,7 +144,7 @@ PlasmoidItem {
                     (menu.view as ListView).currentIndex = -1;
                     (menu.view as ListView).positionViewAtBeginning();
                 } else {
-                    menu.clearFilter();
+                    menu.resetToList();
                 }
             }
         }

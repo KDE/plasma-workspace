@@ -238,8 +238,25 @@ PlasmaComponents3.ScrollView {
         filter.clear();
     }
 
-    function closeBarcode(): void {
-        clipboardMenu.T.StackView.view.pop()
+    /**
+     * Pop the current sub-page (action menu, edit or barcode page) back to the
+     * clipboard list. Used by the system tray's back button.
+     */
+    function popSubPage(): void {
+        clipboardMenu.T.StackView.view.popToIndex(0);
+    }
+
+    /**
+     * Reset to the clipboard list when the popup is hidden or collapsed: drop
+     * any sub-page, clear the filter and scroll back to the top, so that
+     * re-opening the popup shows the history again.
+     */
+    function resetToList(): void {
+        if (clipboardMenu.T.StackView.view.depth > 1) {
+            clipboardMenu.T.StackView.view.popToIndex(0, T.StackView.Immediate);
+        }
+        filter.clear();
+        (clipboardMenu.view as ListView).positionViewAtBeginning();
     }
 
     function showActionMenu(uuid: string, text: string, automaticallyInvoked: bool, hidePopupOnExit: bool) {
