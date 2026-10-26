@@ -30,7 +30,7 @@ PlasmaComponents3.ScrollView {
     signal remove(var uuid)
     signal edit(var modelData)
     signal barcode(string text)
-    signal triggerAction(string uuid, string text, bool automaticallyInvoked)
+    signal triggerAction(string uuid, string text, bool automaticallyInvoked, bool hidePopupOnExit)
 
     required property bool expanded
     required property PlasmaExtras.Representation dialogItem
@@ -81,7 +81,7 @@ PlasmaComponents3.ScrollView {
             showHeader: clipboardMenu.showHeader
         });
     }
-    onTriggerAction: (uuid, text, automaticallyInvoked) => showActionMenu(uuid, text, automaticallyInvoked)
+    onTriggerAction: (uuid, text, automaticallyInvoked, hidePopupOnExit) => showActionMenu(uuid, text, automaticallyInvoked, hidePopupOnExit)
 
     onExpandedChanged: {
         hoverBlock.reset();
@@ -242,11 +242,12 @@ PlasmaComponents3.ScrollView {
         clipboardMenu.T.StackView.view.pop()
     }
 
-    function showActionMenu(uuid: string, text: string, automaticallyInvoked: bool) {
+    function showActionMenu(uuid: string, text: string, automaticallyInvoked: bool, hidePopupOnExit: bool) {
         const menu = clipboardMenu.T.StackView.view.pushItem(Qt.resolvedUrl("ActionMenu.qml"), {
             uuid: uuid,
             text: text,
             automaticallyInvoked: automaticallyInvoked,
+            hidePopupOnExit: hidePopupOnExit,
         }, automaticallyInvoked ? T.StackView.Immediate : T.StackView.PushTransition);
         menu.requestHidePopup.connect(clipboardMenu.requestHidePopup);
         menu.requestResizeHeight.connect(clipboardMenu.requestResizeHeight);

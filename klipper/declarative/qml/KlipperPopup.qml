@@ -48,7 +48,7 @@ PlasmaExtras.Representation {
         (view.currentItem as ClipboardItemDelegate).barcode();
     }
 
-    function showActionMenu(index: int, automaticallyInvoked: bool): void {
+    function showActionMenu(index: int, automaticallyInvoked: bool, hidePopupOnExit: bool): void {
         historyModel.starredOnly = 0;
         if (index < 0 || index >= clipboardMenu.view.count) {
             return;
@@ -58,7 +58,7 @@ PlasmaExtras.Representation {
         }
         const view = clipboardMenu.view as ListView;
         view.currentIndex = index;
-        (view.currentItem as ClipboardItemDelegate).triggerAction(automaticallyInvoked);
+        (view.currentItem as ClipboardItemDelegate).triggerAction(automaticallyInvoked, hidePopupOnExit);
     }
 
     function updateContentSize(screenSize: size): void {

@@ -92,7 +92,7 @@ GridLayout {
             }
             break;
         case DelegateToolButtons.ButtonRole.InvokeAction:
-            menuItem.triggerAction(false);
+            menuItem.triggerAction(false, false);
             break;
         case DelegateToolButtons.ButtonRole.ShowQRCode:
             menuItem.barcode();

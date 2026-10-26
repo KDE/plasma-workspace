@@ -87,10 +87,14 @@ void KlipperPopup::showCurrentBarcode()
 void KlipperPopup::showActionMenu(int index, bool automaticallyInvoked)
 {
     Q_ASSERT_X(index >= 0, Q_FUNC_INFO, QString(u"index must be >= 0, current index is "_s + QString::number(index)).toLatin1().constData());
-    if (!isVisible()) {
+    // If the popup was already open, the action menu is a page in it and closing
+    // the menu should return to the clipboard list. Otherwise the popup was only
+    // opened to show the action menu, so it should be hidden again on timeout.
+    const bool hidePopupOnExit = !isVisible();
+    if (hidePopupOnExit) {
         show();
     }
-    QMetaObject::invokeMethod(mainItem(), "showActionMenu", Q_ARG(int, index), Q_ARG(bool, automaticallyInvoked));
+    QMetaObject::invokeMethod(mainItem(), "showActionMenu", Q_ARG(int, index), Q_ARG(bool, automaticallyInvoked), Q_ARG(bool, hidePopupOnExit));
 }
 
 void KlipperPopup::hide()

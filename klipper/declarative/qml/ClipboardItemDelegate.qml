@@ -55,7 +55,7 @@ PlasmaComponents.ItemDelegate {
     signal remove()
     signal edit()
     signal barcode()
-    signal triggerAction(bool automaticallyInvoked)
+    signal triggerAction(bool automaticallyInvoked, bool hidePopupOnExit)
 
     // the 1.6 comes from ToolButton's default height
     height: Math.max(label.height, Math.round(Kirigami.Units.gridUnit * 1.6)) + 2 * Kirigami.Units.smallSpacing + (!!(expandButtonLoader.item as PlasmaComponents.ToolButton)?.checked ? toolButtonsLoader.implicitHeight : 0)
@@ -77,7 +77,7 @@ PlasmaComponents.ItemDelegate {
     onRemove: (menuItem.ListView.view.parent as ClipboardMenu).remove(uuid)
     onEdit: (menuItem.ListView.view.parent as ClipboardMenu).edit(model)
     onBarcode: (menuItem.ListView.view.parent as ClipboardMenu).barcode(model.display)
-    onTriggerAction: automaticallyInvoked => (menuItem.ListView.view.parent as ClipboardMenu).triggerAction(uuid, model.display, automaticallyInvoked)
+    onTriggerAction: (automaticallyInvoked, hidePopupOnExit) => (menuItem.ListView.view.parent as ClipboardMenu).triggerAction(uuid, model.display, automaticallyInvoked, hidePopupOnExit)
 
     Accessible.onPressAction: menuItem.itemSelected()
     Keys.onEnterPressed: event => Keys.returnPressed(event)

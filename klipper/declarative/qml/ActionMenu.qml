@@ -19,6 +19,7 @@ Loader {
     required property string uuid
     required property string text
     required property bool automaticallyInvoked
+    required property bool hidePopupOnExit
     readonly property var matchingActions: Private.URLGrabber.matchingActions(text, automaticallyInvoked)
     property int hoveredCount: 0
 
@@ -29,10 +30,10 @@ Loader {
         PlasmaComponents3.Button {
             anchors.fill: parent
             icon.name: "go-previous-view"
-            text: actionMenu.automaticallyInvoked ?
+            text: actionMenu.hidePopupOnExit ?
                 i18ndc("klipper", "@action:button", "Cancel") :
                 i18nd("klipper", "Return to Clipboard")
-            onClicked: actionMenu.exit(actionMenu.automaticallyInvoked)
+            onClicked: actionMenu.exit(actionMenu.hidePopupOnExit)
         }
     }
 
@@ -51,10 +52,9 @@ Loader {
         interval: 1000 * Private.URLGrabber.popupKillTimeout
         repeat: false
         running: interval >= 1000
-            && actionMenu.automaticallyInvoked
             && actionMenu.T.StackView.visible
             && actionMenu.hoveredCount === 0
-        onTriggered: actionMenu.exit(true)
+        onTriggered: actionMenu.exit(actionMenu.hidePopupOnExit)
     }
 
     Component {
@@ -76,7 +76,7 @@ Loader {
             background: null
             contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
             focus: true
-            Keys.onEscapePressed: actionMenu.exit(actionMenu.automaticallyInvoked)
+            Keys.onEscapePressed: actionMenu.exit(actionMenu.hidePopupOnExit)
             PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
             onImplicitHeightChanged: if (height < implicitHeight) {
                 actionMenu.requestResizeHeight(implicitHeight)
