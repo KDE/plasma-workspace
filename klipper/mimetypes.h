@@ -13,6 +13,7 @@ inline constexpr auto textPrefix = "text/"_L1;
 
 // Image Formats
 inline constexpr auto png = "image/png"_L1;
+inline constexpr auto jpeg = "image/jpeg"_L1;
 inline constexpr auto qtImage = "application/x-qt-image"_L1;
 
 // Text Formats

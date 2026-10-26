@@ -6,10 +6,13 @@
 
 #include "../historymodel.h"
 #include "../historyitem.h"
+#include "../mimetypes.h"
 #include "systemclipboard.h"
 #include "testhelpers.h"
 
 #include <QAbstractItemModelTester>
+#include <QBuffer>
+#include <QImageReader>
 #include <QMimeData>
 #include <QStandardPaths>
 #include <QTest>
@@ -67,6 +70,7 @@ private Q_SLOTS:
     void testKnownItemForgetsOnlyThatBuffer_data();
     void testKnownItemForgetsOnlyThatBuffer();
     void testRemovingAnItemKeepsThePassword();
+    void testNonPngDecorations();
 };
 
 void HistoryModelTest::writeSetting(const QString &key, bool value)
@@ -497,6 +501,46 @@ void HistoryModelTest::testRemovingAnItemKeepsThePassword()
 
     // Must run at the end of last test to clean up after ourselves
     QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper").removeRecursively();
+}
+
+void HistoryModelTest::testNonPngDecorations()
+{
+    auto history = HistoryModel::self();
+    history->clear();
+    history->setMaxSize(10);
+
+    // Validate JPEG data
+    QFile jpegFile(QFINDTESTDATA("./data/formats/rgb-black.jpg"));
+    QVERIFY2(jpegFile.open(QFile::ReadOnly), qUtf8Printable(jpegFile.errorString()));
+    const auto jpegData = jpegFile.readAll();
+    QVERIFY2(!jpegData.isEmpty(), qUtf8Printable(jpegFile.errorString()));
+    const auto [jpegImage, jpegReaderError] = imageAndErrorForData(jpegData, "jpeg");
+    QVERIFY2(!jpegImage.isNull(), qUtf8Printable(jpegReaderError));
+
+    // Add JPEG data to the model
+    auto data = new QMimeData;
+    data->setData(MimeTypes::jpeg, jpegData);
+    data->setData(MimeTypes::kdeForceImageCopy, {});
+    history->insert(data);
+    QTRY_COMPARE(history->pendingJobs(), 0);
+    QTRY_VERIFY(SystemClipboard::self()->findChildren<KJob *>().isEmpty());
+    QTRY_COMPARE(history->rowCount(), 1);
+    QTRY_COMPARE(history->first()->type(), HistoryItemType::Image);
+
+    // Verify that the JPEG is usable for the model item decoration.
+    QUrl decorationUrl = history->data(history->index(0, 0), HistoryModel::ImageUrlRole).toUrl();
+    QVERIFY(!decorationUrl.isEmpty());
+    QVERIFY2(decorationUrl.isLocalFile(), qUtf8Printable(decorationUrl.toString()));
+    QFile decorationFile(decorationUrl.toLocalFile());
+    QVERIFY2(decorationFile.open(QIODeviceBase::ReadOnly), qUtf8Printable(decorationFile.errorString()));
+    const auto decorationData = decorationFile.readAll();
+    QVERIFY2(!decorationData.isEmpty(), qUtf8Printable(decorationFile.errorString()));
+    const auto [decorationImage, decorationReaderError] = imageAndErrorForData(decorationData);
+    QVERIFY2(!decorationImage.isNull(), qUtf8Printable(decorationReaderError));
+
+    // Verify that the original data is the same as the decoration data.
+    QCOMPARE(jpegData, decorationData);
+    QCOMPARE(jpegImage, decorationImage);
 }
 QTEST_MAIN(HistoryModelTest)
 #include "historymodeltest.moc"
