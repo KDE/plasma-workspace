@@ -84,13 +84,13 @@ void KlipperPopup::showCurrentBarcode()
     QMetaObject::invokeMethod(mainItem(), "showBarcode", Q_ARG(int, 0));
 }
 
-void KlipperPopup::showActionMenu(int index)
+void KlipperPopup::showActionMenu(int index, bool automaticallyInvoked)
 {
     Q_ASSERT_X(index >= 0, Q_FUNC_INFO, QString(u"index must be >= 0, current index is "_s + QString::number(index)).toLatin1().constData());
     if (!isVisible()) {
         show();
     }
-    QMetaObject::invokeMethod(mainItem(), "showActionMenu", Q_ARG(int, index), Q_ARG(bool, false));
+    QMetaObject::invokeMethod(mainItem(), "showActionMenu", Q_ARG(int, index), Q_ARG(bool, automaticallyInvoked));
 }
 
 void KlipperPopup::hide()

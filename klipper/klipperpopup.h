@@ -22,7 +22,7 @@ public:
 
     void editCurrentClipboard();
     void showCurrentBarcode();
-    void showActionMenu(int index);
+    void showActionMenu(int index, bool automaticallyInvoked = false);
 
 public Q_SLOTS:
     void show();
