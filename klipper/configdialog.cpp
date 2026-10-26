@@ -512,8 +512,8 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     , m_klipper(klipper)
 {
     addPage(m_generalPage, i18nc("General Config", "General"), QStringLiteral("klipper"), i18n("General Configuration"));
-    addPage(m_popupPage, i18nc("Popup Menu Config", "Action Menu"), QStringLiteral("open-menu-symbolic"), i18n("Action Menu"));
     addPage(m_actionsPage, i18nc("Actions Config", "Actions Configuration"), QStringLiteral("system-run"), i18n("Actions Configuration"));
+    addPage(m_popupPage, i18nc("Popup Menu Config", "Action Menu"), QStringLiteral("open-menu-symbolic"), i18n("Action Menu"));
 
     QWidget *shortcutsPage = new QWidget(this);
     QVBoxLayout *shortcutsLayout = new QVBoxLayout(shortcutsPage);
