@@ -67,8 +67,8 @@ QList<QVariantMap> URLGrabberSingleton::matchingActions(const QString &text, boo
     }
 
     const ActionList actionList = matchActions(text, automaticallyInvoked);
-    for (const ClipAction *clipAction : actionList) {
-        const QList<ClipCommand> &cmdList = clipAction->commands;
+    for (const ClipAction &clipAction : actionList) {
+        const QList<ClipCommand> &cmdList = clipAction.commands;
         for (int i = 0, listSize = cmdList.size(); i < listSize; ++i) {
             const ClipCommand &command = cmdList.at(i);
             if (!command.isEnabled) {
@@ -84,8 +84,8 @@ QList<QVariantMap> URLGrabberSingleton::matchingActions(const QString &text, boo
             action.insert(u"actionText"_s, item);
             action.insert(u"iconText"_s, command.icon);
             action.insert(u"command"_s, QVariant::fromValue(command));
-            action.insert(u"actionCapturedTexts"_s, clipAction->actionCapturedTexts);
-            action.insert(u"sectionName"_s, clipAction->description);
+            action.insert(u"actionCapturedTexts"_s, clipAction.actionCapturedTexts);
+            action.insert(u"sectionName"_s, clipAction.description);
             actionListMap.append(std::move(action));
         }
     }
@@ -198,11 +198,11 @@ ActionList URLGrabberSingleton::matchMimeActions(const QString &clipData)
         const KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
         if (!lst.isEmpty()) {
             matches.reserve(lst.size());
-            auto *action = new ClipAction(QString(), mimetype.comment());
+            ClipAction action(QString(), mimetype.comment());
             for (const KService::Ptr &service : lst) {
-                action->addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
+                action.addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
             }
-            matches.append(action);
+            matches.append(std::move(action));
         }
     }
 
@@ -215,12 +215,12 @@ ActionList URLGrabberSingleton::matchActions(const QString &text, bool automatic
     QRegularExpression re;
     ActionList matches;
     matches.reserve(m_actions.size());
-    for (ClipAction *action : m_actions) {
-        re.setPattern(action->actionRegexPattern);
+    for (ClipAction action : std::as_const(m_actions)) {
+        re.setPattern(action.actionRegexPattern);
         const QRegularExpressionMatch match = re.match(text);
-        if (match.hasMatch() && (action->automatic || !automaticallyInvoked)) {
-            action->actionCapturedTexts = match.capturedTexts();
-            matches.append(action);
+        if (match.hasMatch() && (action.automatic || !automaticallyInvoked)) {
+            action.actionCapturedTexts = match.capturedTexts();
+            matches.append(std::move(action));
         }
     }
 

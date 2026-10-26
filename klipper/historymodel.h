@@ -11,7 +11,6 @@
 #include <QBindable>
 #include <QClipboard>
 #include <QDateTime>
-#include <QPointer>
 #include <QSqlDatabase>
 
 #include "klipper_export.h"
@@ -20,7 +19,6 @@
 class KCoreConfigSkeleton;
 class HistoryItem;
 class UpdateDatabaseJob;
-class URLGrabber;
 
 class KLIPPER_EXPORT HistoryModel : public QAbstractListModel
 {
@@ -115,12 +113,8 @@ public:
 
     Q_INVOKABLE void clearPasswords();
 
-    void setURLGrabber(URLGrabber *grabber);
-
 Q_SIGNALS:
     void changed(bool isTop = false);
-
-    void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
 
     void hasPasswordChanged();
 
@@ -162,7 +156,6 @@ private:
 
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
-    QPointer<URLGrabber> m_urlGrabber;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(HistoryModel, int, m_starredCount, 0)
     int m_pendingJobs = 0;
     QString m_dbFolder;

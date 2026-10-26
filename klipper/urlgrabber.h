@@ -5,24 +5,11 @@
 */
 #pragma once
 
-#include <memory>
-
-#include <QHash>
 #include <QStringList>
 
 #include <KSharedConfig>
 
 #include "klipper_export.h"
-
-class HistoryCycler;
-class HistoryItem;
-class QTimer;
-
-class KConfig;
-class QMenu;
-class QMimeType;
-class QRegularExpressionMatch;
-class QAction;
 
 class KLIPPER_EXPORT ClipCommand
 {
@@ -76,91 +63,15 @@ public:
     bool automatic = false;
 };
 
-typedef QList<ClipAction *> ActionList;
+using ActionList = QList<ClipAction>;
 
-class KLIPPER_EXPORT URLGrabber : public QObject
+namespace URLGrabber
 {
-    Q_OBJECT
-
-public:
-    explicit URLGrabber(QObject *parent);
-    ~URLGrabber() override;
-
-    /**
-     * Checks a given string whether it matches any of the user-defined criteria.
-     * If it does, the configured action will be executed.
-     */
-    void checkNewData(std::shared_ptr<const HistoryItem> item);
-    void invokeAction(std::shared_ptr<const HistoryItem> item);
-
-    /**
-     * Whether invokeAction() would show a menu for @p item.
-     */
-    bool hasMatchingActions(std::shared_ptr<const HistoryItem> item) const;
-
-    ActionList actionList() const
-    {
-        return m_myActions;
-    }
-    void setActionList(const ActionList &);
-
-    void loadSettings();
-    void saveSettings() const;
-
-    /**
-     * Reads the configured actions from the application settings.
-     */
-    static ActionList loadActions();
-    static void saveActions(const ActionList &actions);
-
-    int popupTimeout() const
-    {
-        return m_myPopupKillTimeout;
-    }
-    void setPopupTimeout(int timeout)
-    {
-        m_myPopupKillTimeout = timeout;
-    }
-
-    bool stripWhiteSpace() const
-    {
-        return m_stripWhiteSpace;
-    }
-    void setStripWhiteSpace(bool enable)
-    {
-        m_stripWhiteSpace = enable;
-    }
-
-private:
-    const ActionList &matchingActions(const QString &, bool automatically_invoked);
-    void execute(const ClipAction *action, int commandIdx) const;
-    void actionMenu(std::shared_ptr<const HistoryItem> item, bool automatically_invoked);
-    void matchingMimeActions(const QString &clipData);
-    /**
-     * The mimetype of @p clipData, if it is a usable URL. Only absolute URLs, and
-     * only existing files for file URLs, are matched.
-     */
-    QMimeType urlMimeType(const QString &clipData) const;
-    /**
-     * The item's text as the actions see it, honouring StripWhiteSpace.
-     */
-    QString actionText(const std::shared_ptr<const HistoryItem> &item) const;
-
-    ActionList m_myActions;
-    ActionList m_myMatches;
-    std::shared_ptr<const HistoryItem> m_myClipItem;
-
-    // holds mappings of menu action IDs to action commands (action+cmd index in it)
-    QHash<QString, QPair<ClipAction *, int>> m_myCommandMapper;
-    std::unique_ptr<QMenu, QScopedPointerDeleteLater> m_myMenu;
-    QTimer *m_myPopupKillTimer;
-    int m_myPopupKillTimeout;
-    bool m_stripWhiteSpace;
-
-private Q_SLOTS:
-    void slotItemSelected(QAction *action);
-    void slotKillPopupMenu();
-
-Q_SIGNALS:
-    void sigPopup(QMenu *);
-};
+KLIPPER_EXPORT ActionList loadActions();
+KLIPPER_EXPORT void saveActions(const ActionList &actions);
+/**
+ * Whether any configured or mimetype-based action matches @p text, without
+ * considering whether the action is marked as automatic.
+ */
+KLIPPER_EXPORT bool hasMatchingActions(const QString &text);
+}

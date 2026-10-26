@@ -17,15 +17,12 @@
 #include <KSharedConfig>
 
 #include "klipper_export.h"
-#include "urlgrabber.h"
 
 class KToggleAction;
 class KActionCollection;
 class KlipperPopup;
 class HistoryCycler;
 class QAction;
-class QMenu;
-class QMimeData;
 class HistoryItem;
 class HistoryModel;
 class KNotification;
@@ -58,14 +55,8 @@ public:
     Klipper(QObject *parent = nullptr);
     ~Klipper() override;
 
-    bool eventFilter(QObject *object, QEvent *event) override;
-
-    URLGrabber *urlGrabber() const
-    {
-        return m_myURLGrabber;
-    }
-
-    void saveSettings() const;
+    void showActionMenu(int itemIndex);
+    void saveSettings();
 
     KlipperPopup *popup();
 
@@ -82,20 +73,15 @@ Q_SIGNALS:
 
 public Q_SLOTS:
     void slotPopupMenu();
-    void setURLGrabberEnabled(bool);
-
-protected Q_SLOTS:
-    void showPopupMenu(QMenu *);
-    void slotRepeatAction();
 
 private Q_SLOTS:
-    void slotHistoryChanged(bool isTop = false);
-
     void slotStartShowTimer();
 
     void loadSettings();
 
 private:
+    void setURLGrabberEnabled(bool enable);
+
     std::shared_ptr<SystemClipboard> m_clip;
     HistoryCycler *m_historyCycler = nullptr;
 
@@ -112,13 +98,6 @@ private:
     QAction *m_cycleNextAction;
     QAction *m_cyclePrevAction;
     QAction *m_showOnMousePos;
-
-    bool m_bURLGrabber : 1;
-    bool m_bReplayActionInHistory : 1;
-
-    URLGrabber *m_myURLGrabber;
-    QString m_lastURLGrabberTextSelection;
-    QString m_lastURLGrabberTextClipboard;
 
     QString cycleText() const;
     KActionCollection *m_collection;
