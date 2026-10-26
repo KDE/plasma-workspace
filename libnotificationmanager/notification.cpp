@@ -88,8 +88,8 @@ QString Notification::Private::sanitize(const QString &text)
     // We then replace the match with the corresponding symbol, and add the captured bit back.
     static const QRegularExpression ltExpr(QStringLiteral("<([^\\/,a-zA-Z])"));
     t.replace(ltExpr, QLatin1String("&lt;\\1"));
-    // Check for " in case the item is something like <img src="bla">
-    static const QRegularExpression gtExpr(QStringLiteral("([^\\/,a-zA-Z,\"])>"));
+    // Check for " and ' in case the item is something like <img src="bla"> or <a href='bla'>
+    static const QRegularExpression gtExpr(QStringLiteral("([^\\/,a-zA-Z,\"'])>"));
     t.replace(gtExpr, QLatin1String("\\1&gt;"));
 
     // Don't bother adding some HTML structure if the body is now empty
