@@ -271,7 +271,7 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
             job->start();
         } else {
-            auto *proc = new ClipCommandProcess(*action, command, text, m_myClipItem);
+            auto *proc = new ClipCommandProcess(action->actionCapturedTexts, command, text, m_myClipItem->uuid());
             if (proc->program().isEmpty()) {
                 delete std::exchange(proc, nullptr);
             } else {
