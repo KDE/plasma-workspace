@@ -313,15 +313,15 @@ void ActionsWidget::updateActionItem(QTreeWidgetItem *item, const ClipAction *ac
 
     // clear children if any
     item->takeChildren();
-    item->setText(0, action->actionRegexPattern());
-    item->setText(1, action->description());
+    item->setText(0, action->actionRegexPattern);
+    item->setText(1, action->description);
 
     item->setFlags(item->flags() | Qt::ItemIsUserCheckable | Qt::ItemIsAutoTristate);
     // There is no need to explicitly set the CheckState of the action item,
     // because with the ItemIsAutoTristate flag it is completely determined
     // by the state of the child command items.
 
-    for (const ClipCommand &command : action->commands()) {
+    for (const ClipCommand &command : action->commands) {
         QStringList cmdProps;
         cmdProps << command.command << command.description;
         auto *child = new QTreeWidgetItem(item, cmdProps);
@@ -452,7 +452,7 @@ void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int /*col*/)
     int actionIdx = m_actionsTree->indexOfTopLevelItem(parentItem);
     ClipAction *action = m_actionList.at(actionIdx);
     int commandIdx = parentItem->indexOfChild(item);
-    ClipCommand command = action->command(commandIdx);
+    ClipCommand command = action->commands[commandIdx];
 
     // Ensure that the change being made really is a check state change.
     // because this slot is also called for multiple items when they are
@@ -461,7 +461,7 @@ void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int /*col*/)
     const bool nowEnabled = (item->checkState(0) == Qt::Checked);
     if (nowEnabled != wasEnabled) {
         command.isEnabled = nowEnabled;
-        action->replaceCommand(commandIdx, command);
+        action->commands[commandIdx] = command;
         Q_EMIT widgetChanged();
     }
 }

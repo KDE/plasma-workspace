@@ -76,7 +76,7 @@ private:
 
 ActionDetailModel::ActionDetailModel(ClipAction *action, QObject *parent)
     : QAbstractTableModel(parent)
-    , m_commands(action->commands())
+    , m_commands(action->commands)
 {
 }
 
@@ -325,9 +325,9 @@ void EditActionDialog::updateWidgets(int commandIdxToSelect)
         return;
     }
 
-    m_regExpEdit->setText(m_action->actionRegexPattern());
-    m_descriptionEdit->setText(m_action->description());
-    m_automaticCheck->setChecked(m_action->automatic());
+    m_regExpEdit->setText(m_action->actionRegexPattern);
+    m_descriptionEdit->setText(m_action->description);
+    m_automaticCheck->setChecked(m_action->automatic);
 
     if (commandIdxToSelect != -1) {
         m_commandList->setCurrentIndex(m_model->index(commandIdxToSelect, 0));
@@ -343,11 +343,11 @@ void EditActionDialog::saveAction()
         return;
     }
 
-    m_action->setActionRegexPattern(m_regExpEdit->text());
-    m_action->setDescription(m_descriptionEdit->text());
-    m_action->setAutomatic(m_automaticCheck->isChecked());
+    m_action->actionRegexPattern = m_regExpEdit->text();
+    m_action->description = m_descriptionEdit->text();
+    m_action->automatic = m_automaticCheck->isChecked();
 
-    m_action->clearCommands();
+    m_action->commands.clear();
 
     for (const auto commands = m_model->commands(); const ClipCommand &cmd : commands) {
         m_action->addCommand(cmd);
