@@ -10,7 +10,6 @@ import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.components as KirigamiComponents
 import org.kde.kcmutils as KCM
 import org.kde.plasma.kcm.users as UsersKCM
 
@@ -128,37 +127,46 @@ KCM.SimpleKCM {
     }
 
     ColumnLayout {
-        KirigamiComponents.AvatarButton {
-            readonly property int size: 6 * Kirigami.Units.gridUnit
-
-            Layout.preferredWidth: size
-            Layout.preferredHeight: size
-            Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: Kirigami.Units.largeSpacing
-
-            source: usersDetailPage.user.faceValid ? usersDetailPage.user.face : ""
-            cache: false
-            name: user.realName
-
-            focus: true
-            text: i18n("Change avatar")
-
-            KeyNavigation.down: realNametextField
-
-            onClicked: {
-                const component = Qt.createComponent("PicturesSheet.qml")
-                const obj = component.incubateObject(usersDetailPage, {
-                    focus: true,
-                    usersDetailPage: usersDetailPage
-                })
-                if (obj == null) {
-                    console.log(component.errorString())
-                }
-                component.destroy()
-            }
-        }
-
         Kirigami.FormLayout {
+            QQC2.Button {
+                readonly property int size: 6 * Kirigami.Units.gridUnit
+
+                padding: Kirigami.Units.largeSpacing
+                implicitWidth: size + padding * 2
+                implicitHeight: size + padding * 2
+                Layout.alignment: Qt.AlignHCenter
+                Layout.topMargin: Kirigami.Units.largeSpacing
+
+                KeyNavigation.down: realNametextField
+
+                focus: true
+                text: i18n("Change avatar")
+                QQC2.ToolTip.visible: text.length > 0 && (hovered || activeFocus)
+                QQC2.ToolTip.text: text
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+
+                onClicked: {
+                    const component = Qt.createComponent("PicturesSheet.qml")
+                    const obj = component.incubateObject(usersDetailPage, {
+                        focus: true,
+                        usersDetailPage: usersDetailPage
+                    })
+                    if (obj == null) {
+                        console.log(component.errorString())
+                    }
+                    component.destroy()
+                }
+
+                contentItem: Kirigami.Avatar {
+                    source: usersDetailPage.user.faceValid ? usersDetailPage.user.face : ""
+                    cache: false
+                    name: user.realName
+
+                    focus: true
+                }
+            }
+
             QQC2.TextField  {
                 id: realNametextField
                 text: user.realName

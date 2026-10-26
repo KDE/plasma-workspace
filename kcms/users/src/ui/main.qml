@@ -11,7 +11,6 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
-import org.kde.kirigamiaddons.components as KirigamiComponents
 import org.kde.plasma.kcm.users as UsersKCM
 
 KCM.ScrollViewKCM {
@@ -147,7 +146,7 @@ KCM.ScrollViewKCM {
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
 
-                KirigamiComponents.Avatar {
+                Kirigami.Avatar {
                     source: model.faceValid ? model.decoration + '?' + avatarVersion : ""// force reload after saving
                     cache: false // avoid caching
                     name: model.displayPrimaryName
