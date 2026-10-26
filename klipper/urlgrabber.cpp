@@ -13,6 +13,7 @@
 
 #include <KApplicationTrader>
 #include <KConfigGroup>
+#include <KService>
 
 #include "klippersettings.h"
 
@@ -64,38 +65,84 @@ void saveActions(const ActionList &actions)
     Q_EMIT KlipperSettings::self()->ActionListChanged();
 }
 
-bool hasMatchingActions(const QString &text)
+static ActionList mimeActions(const QString &clipData)
+{
+    ActionList matches;
+    if (!KlipperSettings::enableMagicMimeActions()) {
+        return matches;
+    }
+
+    const QUrl url(clipData);
+    if (!url.isValid()) {
+        return matches;
+    }
+    if (url.isRelative()) { // openinng a relative path will just not work. what path should be used?
+        return matches;
+    }
+    if (url.isLocalFile()) {
+        if (clipData == QLatin1String("//")) {
+            return matches;
+        }
+        if (!QFileInfo::exists(url.toLocalFile())) {
+            return matches;
+        }
+    }
+
+    // try to figure out if clipData contains a filename
+    QMimeDatabase db;
+    QMimeType mimetype = db.mimeTypeForUrl(url);
+
+    // if clipboard contents starts with http, let's assume it's "text/html".
+    // That is even if we've URL like "http://www.kde.org/somescript.pl", we'll
+    // still treat that as html page, because determining a mimetype using kio
+    // might take a long time, and i want this function to be quick!
+    if ((clipData.startsWith(u"http://") || clipData.startsWith(u"https://")) && mimetype.name() != u"text/html") {
+        mimetype = db.mimeTypeForName(u"text/html"_s);
+    }
+
+    if (!mimetype.isDefault()) {
+        const KService::List services = KApplicationTrader::queryByMimeType(mimetype.name());
+        if (!services.isEmpty()) {
+            matches.reserve(1);
+            ClipAction action(QString(), mimetype.comment());
+            for (const KService::Ptr &service : services) {
+                action.addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
+            }
+            matches.append(std::move(action));
+        }
+    }
+
+    return matches;
+}
+
+ActionList matchingActions(const QString &text, bool automaticallyInvoked, const ActionList &actions)
 {
     QString clipData = text;
     if (KlipperSettings::stripWhiteSpace()) {
         clipData = std::move(clipData).trimmed();
     }
 
-    // mime-based actions (file URLs and http(s) links)
-    QUrl url(clipData);
-    if (KlipperSettings::enableMagicMimeActions() && url.isValid() && !url.isRelative()) {
-        if (!(url.isLocalFile() && !QFileInfo::exists(url.toLocalFile()))) {
-            QMimeDatabase db;
-            QMimeType mimetype = db.mimeTypeForUrl(url);
-            if ((clipData.startsWith(u"http://") || clipData.startsWith(u"https://")) && mimetype.name() != u"text/html") {
-                mimetype = db.mimeTypeForName(u"text/html"_s);
-            }
-            if (!mimetype.isDefault() && !KApplicationTrader::queryByMimeType(mimetype.name()).isEmpty()) {
-                return true;
-            }
+    ActionList matches;
+    matches.reserve(actions.size() + 1);
+    QRegularExpression re;
+    for (ClipAction action : actions) {
+        re.setPattern(action.actionRegexPattern);
+        const QRegularExpressionMatch match = re.match(clipData);
+        if (match.hasMatch() && (action.automatic || !automaticallyInvoked)) {
+            action.actionCapturedTexts = match.capturedTexts();
+            matches.append(std::move(action));
         }
     }
 
-    // configured custom actions
-    QRegularExpression re;
-    const ActionList actions = loadActions();
-    for (const ClipAction &action : std::as_const(actions)) {
-        re.setPattern(action.actionRegexPattern);
-        if (re.match(clipData).hasMatch()) {
-            return true;
-        }
-    }
-    return false;
+    // place MIME actions after user configured actions in the actions menu
+    matches.append(mimeActions(clipData));
+
+    return matches;
+}
+
+bool hasMatchingActions(const QString &text, bool automaticallyInvoked)
+{
+    return !matchingActions(text, automaticallyInvoked, loadActions()).isEmpty();
 }
 }
 

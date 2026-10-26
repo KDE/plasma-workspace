@@ -70,8 +70,15 @@ namespace URLGrabber
 KLIPPER_EXPORT ActionList loadActions();
 KLIPPER_EXPORT void saveActions(const ActionList &actions);
 /**
- * Whether any configured or mimetype-based action matches @p text, without
- * considering whether the action is marked as automatic.
+ * Returns the actions matching @p text, i.e. the entries of @p actions whose
+ * regular expression matches, followed by mimetype-based actions for URL-like
+ * contents. With @p automaticallyInvoked set, actions which are not marked as
+ * automatic are skipped.
  */
-KLIPPER_EXPORT bool hasMatchingActions(const QString &text);
+KLIPPER_EXPORT ActionList matchingActions(const QString &text, bool automaticallyInvoked, const ActionList &actions);
+/**
+ * Whether any configured or mimetype-based action matches @p text. With
+ * @p automaticallyInvoked set, only actions marked as automatic are considered.
+ */
+KLIPPER_EXPORT bool hasMatchingActions(const QString &text, bool automaticallyInvoked = false);
 }

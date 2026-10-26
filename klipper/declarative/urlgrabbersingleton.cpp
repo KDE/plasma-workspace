@@ -7,11 +7,7 @@
 
 #include "urlgrabbersingleton.h"
 
-#include <QFileInfo>
-#include <QMimeDatabase>
-#include <QRegularExpression>
 
-#include <KApplicationTrader>
 #include <KIO/ApplicationLauncherJob>
 #include <KNotificationJobUiDelegate>
 #include <KService>
@@ -66,7 +62,7 @@ QList<QVariantMap> URLGrabberSingleton::matchingActions(const QString &text, boo
         return actionListMap;
     }
 
-    const ActionList actionList = matchActions(text, automaticallyInvoked);
+    const ActionList actionList = URLGrabber::matchingActions(text, automaticallyInvoked, m_actions);
     for (const ClipAction &clipAction : actionList) {
         const QList<ClipCommand> &cmdList = clipAction.commands;
         for (int i = 0, listSize = cmdList.size(); i < listSize; ++i) {
@@ -154,80 +150,6 @@ void URLGrabberSingleton::checkNewData(bool isTop)
     if (KlipperSettings::replayActionInHistory()) {
         Q_EMIT requestShowCurrentActionMenu();
     }
-}
-
-ActionList URLGrabberSingleton::matchMimeActions(const QString &clipData)
-{
-    ActionList matches;
-    QUrl url(clipData);
-    if (!KlipperSettings::enableMagicMimeActions()) {
-        return matches;
-    }
-    if (!url.isValid()) {
-        return matches;
-    }
-    if (url.isRelative()) { // openinng a relative path will just not work. what path should be used?
-        return matches;
-    }
-    if (url.isLocalFile()) {
-        if (clipData == QLatin1String("//")) {
-            return matches;
-        }
-        if (!QFileInfo::exists(url.toLocalFile())) {
-            return matches;
-        }
-    }
-
-    // try to figure out if clipData contains a filename
-    QMimeDatabase db;
-    QMimeType mimetype = db.mimeTypeForUrl(url);
-
-    // let's see if we found some reasonable mimetype.
-    // If we do we'll populate menu with actions for apps
-    // that can handle that mimetype
-
-    // first: if clipboard contents starts with http, let's assume it's "text/html".
-    // That is even if we've url like "http://www.kde.org/somescript.pl", we'll
-    // still treat that as html page, because determining a mimetype using kio
-    // might take a long time, and i want this function to be quick!
-    if ((clipData.startsWith(u"http://") || clipData.startsWith(u"https://")) && mimetype.name() != u"text/html") {
-        mimetype = db.mimeTypeForName(u"text/html"_s);
-    }
-
-    if (!mimetype.isDefault()) {
-        const KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
-        if (!lst.isEmpty()) {
-            matches.reserve(lst.size());
-            ClipAction action(QString(), mimetype.comment());
-            for (const KService::Ptr &service : lst) {
-                action.addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
-            }
-            matches.append(std::move(action));
-        }
-    }
-
-    return matches;
-}
-
-ActionList URLGrabberSingleton::matchActions(const QString &text, bool automaticallyInvoked)
-{
-    // now look for matches in custom user actions
-    QRegularExpression re;
-    ActionList matches;
-    matches.reserve(m_actions.size());
-    for (ClipAction action : std::as_const(m_actions)) {
-        re.setPattern(action.actionRegexPattern);
-        const QRegularExpressionMatch match = re.match(text);
-        if (match.hasMatch() && (action.automatic || !automaticallyInvoked)) {
-            action.actionCapturedTexts = match.capturedTexts();
-            matches.append(std::move(action));
-        }
-    }
-
-    // place MIME actions after user configured actions in the actions menu
-    matches.append(matchMimeActions(text));
-
-    return matches;
 }
 
 void URLGrabberSingleton::loadConfig()

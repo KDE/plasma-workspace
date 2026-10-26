@@ -48,8 +48,6 @@ Q_SIGNALS:
 
 private:
     void checkNewData(bool isTop);
-    ActionList matchMimeActions(const QString &clipData);
-    ActionList matchActions(const QString &text, bool automaticallyInvoked);
     void loadConfig();
 
     std::shared_ptr<SystemClipboard> m_clip;
