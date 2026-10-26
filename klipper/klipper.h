@@ -80,7 +80,6 @@ private Q_SLOTS:
     void loadSettings();
 
 private:
-    static void updateTimestamp();
     void setURLGrabberEnabled(bool enable);
 
     std::shared_ptr<SystemClipboard> m_clip;
