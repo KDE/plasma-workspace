@@ -35,6 +35,7 @@ target_link_libraries(klipperplugin
 
 ecm_target_qml_sources(klipperplugin VERSION 0.1 SOURCES
     qml/KlipperPopup.qml
+    qml/ActionMenu.qml
     qml/ClipboardMenu.qml
     qml/ClipboardItemDelegate.qml
     qml/TextItemDelegate.qml
