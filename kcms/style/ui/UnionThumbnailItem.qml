@@ -68,7 +68,7 @@ Union.Pane {
                     Layout.fillWidth: true
                     from: 0
                     to: 100
-                    value: 70
+                    value: 30
                     stepSize: 10
 
                     wheelEnabled: false
@@ -115,7 +115,7 @@ Union.Pane {
 
                         from: 0
                         to: 100
-                        value: slider.value
+                        value: 70
                     }
 
                     Union.Label {
