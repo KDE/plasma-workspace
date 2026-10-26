@@ -106,6 +106,7 @@
         "Name[zh_CN]": "默认应用程序",
         "Name[zh_TW]": "預設應用程式"
     },
+    "X-DocPath": "kcontrol/componentchooser/index.html",
     "X-KDE-Keywords": "default applications,default apps,components,component chooser,resources,web browser,browser,internet,file manager,dolphin,email,e-mail,email client,terminal,terminal emulator,konsole,defaults,open with,file association",
     "X-KDE-Keywords[ar]": "التطبيقات المبدئية,التطبيقات المبدئية,المكونات,محدد المكونات,الموارد,متصفح الويب,المتصفح,الإنترنت,مدير الملفات,دولفين,البريد الإلكتروني,البريد الإلكتروني,عميل البريد الإلكتروني,المحطة الطرفية,محاكي المحطة الطرفية,وحدة التحكم,الإعدادات المبدئية,الفتح باستخدام,ارتباط الملف",
     "X-KDE-Keywords[az]": "standart tətbiq,standart tətbiqlər,komponentlər,seçici,mənbələr,veb-bələdçi,brouzer,internet,fayl meneceri,dolphin,email,e-poçt,e-poçt müştərisi,terminal,terminal emulyatoru,konsol,varsayılanlar,bununla açın,fayl əlaqələri",
