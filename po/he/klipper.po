@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2026-10-09 10:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -180,13 +180,15 @@ msgid "Description"
 msgstr "תיאור"
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "הוספת פעולה…"
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "עריכת פעולה…"
 
 #: configdialog.cpp:241
@@ -525,13 +527,15 @@ msgstr ""
 "ידנית עם מקשי הקיצור <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, kde-format
-msgid "Add Command..."
+#, fuzzy, kde-format
+#| msgid "Add Command..."
+msgid "Add Command…"
 msgstr "הוספת פקודה…"
 
 #: editactiondialog.cpp:274
-#, kde-format
-msgid "Edit Command..."
+#, fuzzy, kde-format
+#| msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "עריכת פקודה…"
 
 #: editactiondialog.cpp:280

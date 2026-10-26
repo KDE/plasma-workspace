@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2011-02-15 16:10+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -163,13 +163,15 @@ msgid "Description"
 msgstr "Opis"
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "Dodaj radnju …"
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "Uredi radnju …"
 
 #: configdialog.cpp:241
@@ -510,13 +512,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Dodaj naredbu"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Dodaj naredbu"
 
 #: editactiondialog.cpp:280

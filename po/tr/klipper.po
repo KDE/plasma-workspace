@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2026-10-16 19:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -176,13 +176,15 @@ msgid "Description"
 msgstr "Açıklama"
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "Eylem Ekle…"
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "Eylemi Düzenle…"
 
 #: configdialog.cpp:241
@@ -514,13 +516,15 @@ msgstr ""
 "shortcut> düğme kısayolu ile el ile etkinleştirilen menüde bulunurlar."
 
 #: editactiondialog.cpp:269
-#, kde-format
-msgid "Add Command..."
+#, fuzzy, kde-format
+#| msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Komut Ekle…"
 
 #: editactiondialog.cpp:274
-#, kde-format
-msgid "Edit Command..."
+#, fuzzy, kde-format
+#| msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Komutu Düzenle…"
 
 #: editactiondialog.cpp:280

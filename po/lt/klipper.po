@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2026-10-17 12:39+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -182,13 +182,15 @@ msgid "Description"
 msgstr "Aprašas"
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "Pridėti veiksmą..."
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "Keisti veiksmą..."
 
 #: configdialog.cpp:241
@@ -526,13 +528,15 @@ msgstr ""
 "<shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, kde-format
-msgid "Add Command..."
+#, fuzzy, kde-format
+#| msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Pridėti komandą..."
 
 #: editactiondialog.cpp:274
-#, kde-format
-msgid "Edit Command..."
+#, fuzzy, kde-format
+#| msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Taisyti komandą..."
 
 #: editactiondialog.cpp:280

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -157,13 +157,15 @@ msgid "Description"
 msgstr "വിവരണം"
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "പ്രവൃത്തി ചേര്‍ക്കുക..."
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "പ്രവൃത്തി ക്രമീകരിക്കുക..."
 
 #: configdialog.cpp:241
@@ -500,13 +502,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "ആജ്ഞ ചേര്‍ക്കുക"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "ആജ്ഞ ചേര്‍ക്കുക"
 
 #: editactiondialog.cpp:280

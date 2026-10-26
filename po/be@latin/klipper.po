@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2008-10-18 22:34+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -160,13 +160,13 @@ msgstr "Apisańnie"
 #: configdialog.cpp:232
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Add Action..."
+msgid "Add Action…"
 msgstr "&Dadaj aperacyju"
 
 #: configdialog.cpp:236
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "&Dadaj aperacyju"
 
 #: configdialog.cpp:241
@@ -512,13 +512,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Dadaj zahad"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Dadaj zahad"
 
 #: editactiondialog.cpp:280

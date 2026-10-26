@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2012-06-14 13:47+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -153,13 +153,15 @@ msgid "Description"
 msgstr "ការ​ពិពណ៌នា"
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "បន្ថែម​សកម្មភាព..."
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "កែសម្រួល​អំពើ..."
 
 #: configdialog.cpp:241
@@ -496,13 +498,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "បន្ថែម​ពាក្យ​បញ្ជា"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "បន្ថែម​ពាក្យ​បញ្ជា"
 
 #: editactiondialog.cpp:280

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2008-08-05 22:26+0200\n"
 "Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
 "Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
@@ -155,14 +155,14 @@ msgstr "Descripcion"
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
-msgid "Add Action..."
+msgid "Add Action…"
 msgstr "Accions"
 
 #: configdialog.cpp:236
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
-msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "Accions"
 
 #: configdialog.cpp:241
@@ -489,14 +489,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Accions"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Accions"
 
 #: editactiondialog.cpp:280

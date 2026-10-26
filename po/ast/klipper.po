@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -150,12 +150,12 @@ msgstr "Descripción"
 
 #: configdialog.cpp:232
 #, kde-format
-msgid "Add Action..."
+msgid "Add Action…"
 msgstr ""
 
 #: configdialog.cpp:236
 #, kde-format
-msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr ""
 
 #: configdialog.cpp:241
@@ -475,14 +475,16 @@ msgid ""
 msgstr ""
 
 #: editactiondialog.cpp:269
-#, kde-format
-msgid "Add Command..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Command:"
+msgid "Add Command…"
+msgstr "Comandu:"
 
 #: editactiondialog.cpp:274
-#, kde-format
-msgid "Edit Command..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Command:"
+msgid "Edit Command…"
+msgstr "Comandu:"
 
 #: editactiondialog.cpp:280
 #, kde-format

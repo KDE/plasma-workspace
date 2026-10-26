@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2007-11-01 18:39+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -159,13 +159,13 @@ msgstr "वर्णन"
 #: configdialog.cpp:232
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Add Action..."
+msgid "Add Action…"
 msgstr "अतिरिक्त कार्य"
 
 #: configdialog.cpp:236
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "अतिरिक्त कार्य"
 
 #: configdialog.cpp:241
@@ -510,13 +510,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "आदेश थप्नुहोस्"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "आदेश थप्नुहोस्"
 
 #: editactiondialog.cpp:280

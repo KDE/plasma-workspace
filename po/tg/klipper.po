@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -150,13 +150,15 @@ msgid "Description"
 msgstr "Тавсиф"
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "Илова кардани амалиёт..."
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "Таҳрир кардани амалиёт..."
 
 #: configdialog.cpp:241
@@ -489,13 +491,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Action..."
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Илова кардани амалиёт..."
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Таҳрир кардани амалиёт..."
 
 #: editactiondialog.cpp:280

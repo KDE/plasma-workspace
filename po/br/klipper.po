@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -153,13 +153,13 @@ msgstr "Deskrivadur"
 #: configdialog.cpp:232
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Add Action..."
+msgid "Add Action…"
 msgstr "&Ouzhpennañ ur wezhiad"
 
 #: configdialog.cpp:236
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "&Ouzhpennañ ur wezhiad"
 
 #: configdialog.cpp:241
@@ -501,13 +501,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Ouzhpennañ un urzhiad"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Ouzhpennañ un urzhiad"
 
 #: editactiondialog.cpp:280

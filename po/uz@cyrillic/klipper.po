@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2006-12-17 12:20+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -151,13 +151,13 @@ msgstr "Таърифи"
 #: configdialog.cpp:232
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Add Action..."
+msgid "Add Action…"
 msgstr "&Амални қўшиш"
 
 #: configdialog.cpp:236
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "&Амални қўшиш"
 
 #: configdialog.cpp:241
@@ -497,13 +497,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Буйруқни қўшиш"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Буйруқни қўшиш"
 
 #: editactiondialog.cpp:280

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2011-01-13 21:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -159,13 +159,13 @@ msgstr "Huraian"
 #: configdialog.cpp:232
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Add Action..."
+msgid "Add Action…"
 msgstr "T&ambah Aksi"
 
 #: configdialog.cpp:236
 #, fuzzy, kde-format
 #| msgid "&Add Action"
-msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "T&ambah Aksi"
 
 #: configdialog.cpp:241
@@ -504,13 +504,13 @@ msgstr ""
 #: editactiondialog.cpp:269
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Add Command..."
+msgid "Add Command…"
 msgstr "Tambah Arahan"
 
 #: editactiondialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Command"
-msgid "Edit Command..."
+msgid "Edit Command…"
 msgstr "Tambah Arahan"
 
 #: editactiondialog.cpp:280

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"POT-Creation-Date: 2026-10-26 00:51+0000\n"
 "PO-Revision-Date: 2026-01-11 01:40+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -144,13 +144,15 @@ msgid "Description"
 msgstr ""
 
 #: configdialog.cpp:232
-#, kde-format
-msgid "Add Action..."
+#, fuzzy, kde-format
+#| msgid "Add Action..."
+msgid "Add Action…"
 msgstr "Cuir Gníomh Leis..."
 
 #: configdialog.cpp:236
-#, kde-format
-msgid "Edit Action..."
+#, fuzzy, kde-format
+#| msgid "Edit Action..."
+msgid "Edit Action…"
 msgstr "Cuir Gníomh in Eagar..."
 
 #: configdialog.cpp:241
@@ -467,14 +469,16 @@ msgid ""
 msgstr ""
 
 #: editactiondialog.cpp:269
-#, kde-format
-msgid "Add Command..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Command"
+msgid "Add Command…"
+msgstr "Ordú"
 
 #: editactiondialog.cpp:274
-#, kde-format
-msgid "Edit Command..."
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Command"
+msgid "Edit Command…"
+msgstr "Ordú"
 
 #: editactiondialog.cpp:280
 #, kde-format
