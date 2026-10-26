@@ -248,6 +248,7 @@ PlasmaComponents3.ScrollView {
             text: text,
             automaticallyInvoked: automaticallyInvoked,
             hidePopupOnExit: hidePopupOnExit,
+            showHeader: clipboardMenu.showHeader,
         }, automaticallyInvoked ? T.StackView.Immediate : T.StackView.PushTransition);
         menu.requestHidePopup.connect(clipboardMenu.requestHidePopup);
         menu.requestResizeHeight.connect(clipboardMenu.requestResizeHeight);

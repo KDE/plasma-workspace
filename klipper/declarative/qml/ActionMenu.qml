@@ -20,13 +20,17 @@ Loader {
     required property string text
     required property bool automaticallyInvoked
     required property bool hidePopupOnExit
+    required property bool showHeader
     readonly property var matchingActions: Private.URLGrabber.matchingActions(text, automaticallyInvoked)
     property int hoveredCount: 0
 
     signal requestHidePopup
     signal requestResizeHeight(real contentHeight)
 
+    // In the system tray the containment provides its own back button (Plasmoid.backAction),
+    // so the page only shows its own header in the standalone popup and other containments.
     property PlasmaExtras.PlasmoidHeading header: PlasmaExtras.PlasmoidHeading {
+        visible: actionMenu.showHeader
         PlasmaComponents3.Button {
             anchors.fill: parent
             icon.name: "go-previous-view"
