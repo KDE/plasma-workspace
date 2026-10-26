@@ -78,6 +78,7 @@ private Q_SLOTS:
     void slotStartShowTimer();
 
     void loadSettings();
+    void slotHistoryChanged(bool isTop);
 
 private:
     void setURLGrabberEnabled(bool enable);
@@ -89,6 +90,9 @@ private:
 
     std::shared_ptr<HistoryModel> m_historyModel;
     std::unique_ptr<KlipperPopup> m_popup;
+
+    QString m_lastURLGrabberTextSelection;
+    QString m_lastURLGrabberTextClipboard;
 
     KToggleAction *m_toggleURLGrabAction;
     QAction *m_clearHistoryAction;

@@ -78,15 +78,6 @@ PlasmaExtras.Representation {
         }
     }
 
-    Connections {
-        enabled: Private.URLGrabber.enabled
-        target: Private.URLGrabber
-        function onRequestShowCurrentActionMenu() {
-            dialogItem.requestShowPopup();
-            dialogItem.showActionMenu(0, true);
-        }
-    }
-
     Private.HistoryModel {
         id: historyModel
     }
