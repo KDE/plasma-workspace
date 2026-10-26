@@ -202,9 +202,6 @@ void Klipper::slotStartShowTimer()
 
 void Klipper::loadSettings()
 {
-    // NOTE: not used atm - kregexpeditor is not ported to kde4
-    m_bUseGUIRegExpEditor = KlipperSettings::useGUIRegExpEditor();
-
     m_historyModel->loadSettings();
 }
 

@@ -100,8 +100,6 @@ private:
     QAction *m_cyclePrevAction;
     QAction *m_showOnMousePos;
 
-    bool m_bUseGUIRegExpEditor : 1;
-
     QString cycleText() const;
     KActionCollection *m_collection;
     QPointer<KNotification> m_notification;
