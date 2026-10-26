@@ -52,8 +52,6 @@ Klipper::Klipper(QObject *parent)
                                                  QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
     m_historyModel = HistoryModel::self();
-    connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
-    connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
 
     // Prevent the action menu from popping up on start, the top history entry is put on the
     // clipboard when Klipper starts, and that arrives as a new clipboard event.
@@ -61,6 +59,9 @@ Klipper::Klipper(QObject *parent)
         m_lastURLGrabberTextSelection = top->text();
         m_lastURLGrabberTextClipboard = top->text();
     }
+
+    connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
+    connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
 
     // Forget the last text when the grabber is (re-)enabled, so that the menu is offered
     // again for the current clipboard contents.
@@ -222,16 +223,19 @@ void Klipper::slotHistoryChanged(bool isTop)
         return;
     }
 
-    const bool urlGrabberEnabled = KlipperSettings::uRLGrabberEnabled();
     const bool selectionLocked = m_clip->isLocked(QClipboard::Selection);
     QString &lastURLGrabberText = selectionLocked ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
     const auto item = m_historyModel->first();
-    const ActionList actions = urlGrabberEnabled ? URLGrabber::loadActions() : ActionList();
-    if (urlGrabberEnabled && item && item->allTypes().testFlag(HistoryItemType::Text)) {
+    if (!KlipperSettings::uRLGrabberEnabled()) {
+        lastURLGrabberText.clear();
+        return;
+    }
+
+    if (item && item->allTypes().testFlag(HistoryItemType::Text)) {
         // Do not offer the menu for the same action twice (ie. you select and copy, or press ctrl+C twice)
         if (item->text() != lastURLGrabberText) {
             lastURLGrabberText = item->text();
-            if (!URLGrabber::matchingActions(item->text(), true, actions).isEmpty()) {
+            if (!URLGrabber::matchingActions(item->text(), true, URLGrabber::cachedActions()).isEmpty()) {
                 popup()->showActionMenu(0, true);
             }
         }
@@ -243,7 +247,7 @@ void Klipper::slotHistoryChanged(bool isTop)
         return;
     }
     // Selecting an item from the history replays all applicable actions, not only the automatic ones
-    if (urlGrabberEnabled && KlipperSettings::replayActionInHistory() && item && !URLGrabber::matchingActions(item->text(), false, actions).isEmpty()) {
+    if (KlipperSettings::replayActionInHistory() && item && !URLGrabber::matchingActions(item->text(), false, URLGrabber::cachedActions()).isEmpty()) {
         popup()->showActionMenu(0, false);
     }
 }

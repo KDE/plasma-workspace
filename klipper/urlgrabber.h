@@ -70,6 +70,11 @@ namespace URLGrabber
 KLIPPER_EXPORT ActionList loadActions();
 KLIPPER_EXPORT void saveActions(const ActionList &actions);
 /**
+ * The configured actions, read from the configuration on the first use and
+ * reloaded whenever the action list changes.
+ */
+KLIPPER_EXPORT const ActionList &cachedActions();
+/**
  * Returns the actions matching @p text, i.e. the entries of @p actions whose
  * regular expression matches, followed by mimetype-based actions for URL-like
  * contents. With @p automaticallyInvoked set, actions which are not marked as
