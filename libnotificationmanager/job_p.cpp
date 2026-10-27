@@ -235,7 +235,7 @@ QString JobPrivate::text() const
         const QUrl url = descriptionUrl();
 
         if (!destUrlString.isEmpty()) {
-            const QString currentFileName = url.fileName().toHtmlEscaped();
+            const QString currentFileName = localFileOrUrl(m_descriptionValue1).fileName().toHtmlEscaped();
             if (!currentFileName.isEmpty()) {
                 return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
             } else {
