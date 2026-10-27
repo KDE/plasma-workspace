@@ -1,17 +1,16 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasmawindowed\")
 
-set(plasmawindowed-app_SRCS
+# Core corona+view logic, shared by the plasmawindowed executable and by tests
+# that host an applet's AppletQuickItem in their own scene (see autotests/).
+# PIC is required because tests link this into a shared QML plugin.
+add_library(plasmawindowedcore STATIC
     plasmawindowedcorona.cpp
-    plasmawindowedview.cpp
     plasmawindowedcorona.h
+    plasmawindowedview.cpp
     plasmawindowedview.h
-    main.cpp
 )
-
-add_executable(plasmawindowed ${plasmawindowed-app_SRCS})
-
-target_link_libraries(
-    plasmawindowed
+set_target_properties(plasmawindowedcore PROPERTIES POSITION_INDEPENDENT_CODE ON)
+target_link_libraries(plasmawindowedcore PUBLIC
     Qt::Widgets
     Qt::Quick
     Qt::Qml
@@ -26,7 +25,11 @@ target_link_libraries(
     KF6::StatusNotifierItem
 )
 
+add_executable(plasmawindowed main.cpp)
+target_link_libraries(plasmawindowed PRIVATE plasmawindowedcore)
+
 install(TARGETS plasmawindowed ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 #even if hidden, the desktop file is needed anyways for kdbusservice::unique
 configure_file(org.kde.plasmawindowed.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmawindowed.desktop @ONLY)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmawindowed.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+

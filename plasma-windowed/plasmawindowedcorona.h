@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include <Plasma/Applet>
 #include <Plasma/Corona>
 
 #include "plasmawindowedview.h"
@@ -24,6 +25,14 @@ public:
     void setHasStatusNotifier(bool stay);
     void loadApplet(const QString &applet, const QVariantList &arguments);
     bool hasAppletError() const;
+
+    /**
+     * Load @p applet into the containment without creating or showing a
+     * PlasmaWindowedView. Returns the applet (owned by the containment) or
+     * nullptr on failure. Lets tests host the applet's AppletQuickItem in their
+     * own scene instead of a separate plasmawindowed window.
+     */
+    Plasma::Applet *loadAppletWithoutView(const QString &applet, const QVariantList &arguments);
 
 public Q_SLOTS:
     void load();

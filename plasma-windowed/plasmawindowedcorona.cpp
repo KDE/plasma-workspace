@@ -30,6 +30,58 @@ PlasmaWindowedCorona::PlasmaWindowedCorona(const QString &shell, QObject *parent
     load();
 }
 
+Plasma::Applet *PlasmaWindowedCorona::loadAppletWithoutView(const QString &applet, const QVariantList &arguments)
+{
+    if (containments().isEmpty()) {
+        return nullptr;
+    }
+
+    Plasma::Containment *cont = containments().constFirst();
+
+    KConfigGroup appletsGroup(KSharedConfig::openConfig(), QStringLiteral("Applets"));
+    QString plugin;
+    for (const QString &group : appletsGroup.groupList()) {
+        KConfigGroup cg(&appletsGroup, group);
+        plugin = cg.readEntry("plugin", QString());
+
+        if (plugin == applet) {
+            auto a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
+            auto appletPtr = a.get();
+            if (!a) {
+                qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
+                return nullptr;
+            }
+            // Some applets call corona() in their restore function,
+            // which requires a set parent.
+            a->setParent(this);
+            a->restore(cg);
+
+            // Access a->config() before adding to containment
+            // will cause applets to be saved in palsmawindowedrc
+            // so applets will only be created on demand
+            KConfigGroup cg2 = a->config();
+            cont->addApplet(std::move(a));
+
+            return appletPtr;
+        }
+    }
+
+    auto a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
+    auto appletPtr = a.get();
+    if (!a) {
+        qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
+        return nullptr;
+    }
+
+    // Access a->config() before adding to containment
+    // will cause applets to be saved in palsmawindowedrc
+    // so applets will only be created on demand
+    KConfigGroup cg2 = a->config();
+    cont->addApplet(std::move(a));
+
+    return appletPtr;
+}
+
 void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList &arguments)
 {
     if (containments().isEmpty()) {
@@ -44,53 +96,16 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
             return;
         }
     }
+
     m_view = std::make_unique<PlasmaWindowedView>();
     m_view->setHasStatusNotifier(m_hasStatusNotifier);
     m_view->show();
 
-    KConfigGroup appletsGroup(KSharedConfig::openConfig(), QStringLiteral("Applets"));
-    QString plugin;
-    for (const QString &group : appletsGroup.groupList()) {
-        KConfigGroup cg(&appletsGroup, group);
-        plugin = cg.readEntry("plugin", QString());
-
-        if (plugin == applet) {
-            auto a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
-            auto appletPtr = a.get();
-            if (!a) {
-                qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
-                m_view.reset();
-                return;
-            }
-            // Some applets call corona() in their restore function,
-            // which requires a set parent.
-            a->setParent(this);
-            a->restore(cg);
-
-            // Access a->config() before adding to containment
-            // will cause applets to be saved in palsmawindowedrc
-            // so applets will only be created on demand
-            KConfigGroup cg2 = a->config();
-            cont->addApplet(std::move(a));
-
-            m_view->setApplet(appletPtr);
-            return;
-        }
-    }
-
-    auto a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
-    auto appletPtr = a.get();
-    if (!a) {
-        qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
+    Plasma::Applet *appletPtr = loadAppletWithoutView(applet, arguments);
+    if (!appletPtr) {
         m_view.reset();
         return;
     }
-
-    // Access a->config() before adding to containment
-    // will cause applets to be saved in palsmawindowedrc
-    // so applets will only be created on demand
-    KConfigGroup cg2 = a->config();
-    cont->addApplet(std::move(a));
 
     m_view->setApplet(appletPtr);
 }
