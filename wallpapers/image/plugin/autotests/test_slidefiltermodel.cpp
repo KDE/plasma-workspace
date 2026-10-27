@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include <QImage>
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
@@ -27,6 +28,7 @@ private Q_SLOTS:
     void testSlideFilterModelSortingOrder_data();
     void testSlideFilterModelSortingOrder();
     void testSlideFilterModelSortingRandomOrder();
+    void testSlideFilterModelSortingRandomOrderOnSetSourceModel();
     /**
      * When a wallpaper file is added/removed, the random order list (m_randomOrder) should be
      * able to provide a correct updated list.
@@ -35,6 +37,7 @@ private Q_SLOTS:
     void testSlideFilterModelSortingRandomOrderWithFileAddedRemoved_data();
     void testSlideFilterModelSortingRandomOrderWithFileAddedRemoved();
     void testSlideFilterModelUncheckedSlides();
+    void testSortCallbackReentrancy();
 
 private:
     QPointer<SlideModel> m_model = nullptr;
@@ -67,21 +70,26 @@ void SlideFilterModelTest::initTestCase()
     QVERIFY(imageDir.mkpath(m_standardPath + QStringLiteral("a/")));
     QVERIFY(imageDir.mkpath(m_standardPath + QStringLiteral("d/")));
 
-    QFile imageFile(m_wallpaperPath);
+    // Save the copies through QImage instead of copying the file, so they carry
+    // no EXIF metadata. ImageListModel returns the image title from
+    // Qt::DisplayRole as soon as its asynchronous metadata lookup finishes, and
+    // the sorting tests below expect the file names to be compared.
+    const QImage image(m_wallpaperPath);
+    QVERIFY(!image.isNull());
 
     m_pathB = imageDir.absoluteFilePath(QStringLiteral("d/b.jpg"));
-    QVERIFY(imageFile.copy(m_pathB));
+    QVERIFY(image.save(m_pathB));
 
     // Explicitly wait 1s
     QThread::sleep(1);
 
     m_pathA = imageDir.absoluteFilePath(QStringLiteral("d/a.jpg"));
-    QVERIFY(imageFile.copy(m_pathA));
+    QVERIFY(image.save(m_pathA));
 
     QThread::sleep(1);
 
     m_pathC = imageDir.absoluteFilePath(QStringLiteral("a/c.jpg"));
-    QVERIFY(imageFile.copy(m_pathC));
+    QVERIFY(image.save(m_pathC));
 }
 
 void SlideFilterModelTest::init()
@@ -104,8 +112,10 @@ void SlideFilterModelTest::init()
 
 void SlideFilterModelTest::cleanup()
 {
-    m_model->deleteLater();
-    m_filterModel->deleteLater();
+    delete m_filterModel;
+    m_filterModel = nullptr;
+    delete m_model;
+    m_model = nullptr;
 }
 
 void SlideFilterModelTest::cleanupTestCase()
@@ -174,6 +184,33 @@ void SlideFilterModelTest::testSlideFilterModelSortingRandomOrder()
     for (int c : std::as_const(counts)) {
         QVERIFY(std::clamp(c, 200, 400) == c);
     }
+}
+
+void SlideFilterModelTest::testSlideFilterModelSortingRandomOrderOnSetSourceModel()
+{
+    // imagebackend relies on the random order being in effect as soon as
+    // setSourceModel() returns and does not invalidate or sort afterwards, so
+    // the proxy must not be left with the source row order. A single random
+    // permutation of three rows can happen to match that order, so retry with
+    // fresh proxy models.
+    m_sortingMode = SortingMode::Random;
+    m_sortingFoldersFirst = false;
+
+    const QString sourceFirstRow = m_model->index(0, 0).data(ImageRoles::SourceRole).toUrl().toLocalFile();
+    bool differsFromSourceOrder = false;
+    for (int i = 0; i < 10 && !differsFromSourceOrder; ++i) {
+        auto *filterModel = new SlideFilterModel(QBindable<QSize>(&m_targetSize), //
+                                                 QBindable<bool>(&m_usedInConfig), //
+                                                 QBindable<SortingMode::Mode>(&m_sortingMode), //
+                                                 QBindable<bool>(&m_sortingFoldersFirst), //
+                                                 this);
+        filterModel->setSourceModel(m_model);
+        QCOMPARE(filterModel->rowCount(), 3);
+        differsFromSourceOrder = filterModel->index(0, 0).data(ImageRoles::SourceRole).toUrl().toLocalFile() != sourceFirstRow;
+        delete filterModel;
+    }
+
+    QVERIFY(differsFromSourceOrder);
 }
 
 void SlideFilterModelTest::testSlideFilterModelSortingRandomOrderWithFileAddedRemoved_data()
@@ -254,6 +291,34 @@ void SlideFilterModelTest::testSlideFilterModelUncheckedSlides()
 
     m_usedInConfig = false;
     QCOMPARE(m_filterModel->rowCount(), 2);
+}
+
+void SlideFilterModelTest::testSortCallbackReentrancy()
+{
+    // Changing m_SortingMode triggers sortCallback, which invalidates the proxy
+    // mapping and thereby emits layoutAboutToBeChanged/layoutChanged. Changing
+    // m_SortingMode again from one of those signals re-enters sortCallback; the
+    // model must not operate on a mapping that the outer invocation has just
+    // cleared (that used to be a heap-use-after-free, see the fix for the same
+    // re-entrancy in SlideFilterModel::invalidate(), commit e314739e).
+    //
+    // Note: this test uses Alphabetical/AlphabeticalReversed, which do not read
+    // m_randomOrder in lessThan(), so it verifies that the re-entrancy is handled
+    // (the mode is flipped and the model stays consistent) rather than directly
+    // reproducing the m_randomOrder heap-use-after-free of e314739e. That specific
+    // Random path is covered by testSlideFilterModelSortingRandomOrder together
+    // with the ASAN CI job.
+    QObject::connect(m_filterModel, &QAbstractItemModel::layoutChanged, m_filterModel, [this] {
+        if (m_sortingMode == SortingMode::Alphabetical) {
+            m_sortingMode = SortingMode::AlphabeticalReversed;
+        }
+    });
+
+    m_sortingMode = SortingMode::Alphabetical;
+
+    // The re-entrant change must have been handled without corrupting the model.
+    QCOMPARE(m_sortingMode, SortingMode::AlphabeticalReversed);
+    QCOMPARE(m_filterModel->rowCount(), 3);
 }
 
 QTEST_MAIN(SlideFilterModelTest)
