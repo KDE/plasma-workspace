@@ -365,7 +365,6 @@ void ImageBackend::backgroundsFound()
     // setSourceModel must be called after the model is loaded to generate a complete random order
     Q_ASSERT(!m_slideFilterModel->sourceModel());
     m_slideFilterModel->setSourceModel(m_slideshowModel);
-    m_slideFilterModel->sort(0);
 
     if (m_slideFilterModel->rowCount() == 0 || m_usedInConfig) {
         return;

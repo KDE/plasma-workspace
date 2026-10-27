@@ -57,8 +57,16 @@ SlideFilterModel::SlideFilterModel(const QBindable<QSize> &targetSize,
         if (m_SortingMode == SortingMode::Random && !m_usedInConfig) {
             buildRandomOrder();
         }
+        // invalidate() does not sort, it only clears the mapping, and
+        // QSortFilterProxyModel sorts a rebuilt mapping with lessThan(), so no
+        // sort() call is needed here. Dropping it also makes this callback
+        // re-entrancy-safe: invalidate() emits layoutAboutToBeChanged/
+        // layoutChanged, and a handler of those signals could synchronously
+        // change m_SortingMode again, but the re-entrant call then only
+        // invalidates the mapping again instead of iterating over one that the
+        // outer call has already cleared (the heap-use-after-free fixed in
+        // commit e314739e, which was in the same invalidate()+sort() pair).
         QSortFilterProxyModel::invalidate();
-        sort(0);
     };
     m_SortingModeNotifier = m_SortingMode.addNotifier(sortCallback);
     m_slideshowFoldersFirstNotifier = m_SortingFoldersFirst.addNotifier(sortCallback);
@@ -129,11 +137,17 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
             }
         });
     }
-    // Update random order before QSortFilterProxyModel sorts
     QSortFilterProxyModel::setSourceModel(sourceModel);
     if (m_SortingMode == SortingMode::Random && !m_usedInConfig) {
         buildRandomOrder();
     }
+    // QSortFilterProxyModel::setSourceModel() has already built the mapping at
+    // this point, ordered by source row because no sort column was known yet,
+    // and only sort() re-sorts a mapping that already exists, so apply the sort
+    // column here. From then on sortCallback() never needs to call sort() again,
+    // which is what keeps it free of re-entrancy; a mapping rebuilt after
+    // invalidate() is sorted with lessThan() anyway.
+    sort(0);
 }
 
 bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
@@ -238,7 +252,6 @@ void SlideFilterModel::swapFirstWithRandom()
     m_randomOrder.swapItemsAt(rndIdxA, rndIdxB);
 
     QSortFilterProxyModel::invalidate();
-    sort(0);
 }
 
 int SlideFilterModel::indexOf(const QString &path)
