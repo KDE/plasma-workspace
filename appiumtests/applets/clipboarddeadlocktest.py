@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 import os
+import subprocess
 import sys
 import unittest
 
@@ -24,9 +25,24 @@ class ClipboardDeadlockTest(unittest.TestCase):
     def setUpClass(cls) -> None:
         options = AppiumOptions()
         options.set_capability("app", f"python3 {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'clipboardtest', 'deadlocktestwindow.py')}")
-        options.set_capability("environ", {
+        environ = {
             "QT_QPA_PLATFORM": "wayland" if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") != "0" else "xcb",
-        })
+        }
+        # In CI, KDE dependencies (such as KGuiAddons) are built with ASAN
+        # instrumentation (`ECM_ENABLE_SANITIZERS=address`), while Qt and
+        # PySide6 are the distribution's packages and are not. When the
+        # subprocess creates QTextEdit, Qt's QWidget::grabGesture() deletes the
+        # old gesture objects (QPanGesture etc.). Because the KDE libraries
+        # pulled ASAN's runtime into the process, that delete is intercepted by
+        # ASAN, but the gesture objects' memory was not allocated by ASAN's
+        # allocator, so ASAN reports a bad-free. Preloading libasan makes the
+        # subprocess use ASAN's allocator for all allocations (including
+        # PySide6's and Qt's) from the very start, so the delete matches and no
+        # bad-free occurs. Only do this in CI, as LD_PRELOAD breaks running the
+        # test locally out of the box.
+        if "KDECI_BUILD" in os.environ:
+            environ["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
+        options.set_capability("environ", environ)
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
