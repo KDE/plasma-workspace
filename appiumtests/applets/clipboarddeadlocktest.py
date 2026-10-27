@@ -35,12 +35,10 @@ class ClipboardDeadlockTest(unittest.TestCase):
         # memory was not allocated by ASAN's allocator, so ASAN reports a
         # bad-free. Preloading libasan makes the subprocess use ASAN's
         # allocator for all allocations (including PySide6's), so the delete
-        # matches and no bad-free occurs. detect_leaks=0 avoids a non-zero exit
-        # code from LSAN. Only do this in CI, as LD_PRELOAD breaks running the
-        # test locally out of the box.
+        # matches and no bad-free occurs. Only do this in CI, as LD_PRELOAD
+        # breaks running the test locally out of the box.
         if "KDECI_BUILD" in os.environ:
             environ["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
-            environ["ASAN_OPTIONS"] = "new_delete_type_mismatch=0:detect_odr_violation=0:stack-use-after-scope=0:verify_asan_link_order=0:detect_leaks=0"
         options.set_capability("environ", environ)
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
