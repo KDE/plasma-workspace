@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 02:51+0000\n"
+"POT-Creation-Date: 2026-10-27 03:19+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -420,7 +420,7 @@ msgid ""
 msgstr "Trenutno izabrana vremenska zona ne može da se prikaže na ovoj mapi"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:347
+#: timezoneselector/TimezoneSelector.qml:348
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
@@ -434,7 +434,7 @@ msgid "Region:"
 msgstr "Regija:"
 
 #: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:376
+#: timezoneselector/TimezoneSelector.qml:377
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
@@ -452,12 +452,12 @@ msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Umanji"
 
-#: timezoneselector/TimezoneSelector.qml:351
+#: timezoneselector/TimezoneSelector.qml:352
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Birač regije vremenske zone"
 
-#: timezoneselector/TimezoneSelector.qml:387
+#: timezoneselector/TimezoneSelector.qml:388
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Birač lokacije vremenske zone"

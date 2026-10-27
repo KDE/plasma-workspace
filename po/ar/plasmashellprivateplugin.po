@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 02:51+0000\n"
+"POT-Creation-Date: 2026-10-27 03:19+0000\n"
 "PO-Revision-Date: 2026-09-14 21:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -419,7 +419,7 @@ msgid ""
 msgstr "المنطقة الزمنية المحددة حاليًا غير متاحة للتوضيح على هذه الخريطة"
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:347
+#: timezoneselector/TimezoneSelector.qml:348
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
@@ -433,7 +433,7 @@ msgid "Region:"
 msgstr "المنطقة:"
 
 #: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:376
+#: timezoneselector/TimezoneSelector.qml:377
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
@@ -451,12 +451,12 @@ msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "بعّد"
 
-#: timezoneselector/TimezoneSelector.qml:351
+#: timezoneselector/TimezoneSelector.qml:352
 #, kde-format
 msgid "Timezone region selector"
 msgstr "محدد المنطقة الزمنية"
 
-#: timezoneselector/TimezoneSelector.qml:387
+#: timezoneselector/TimezoneSelector.qml:388
 #, kde-format
 msgid "Timezone location selector"
 msgstr "محدد موقع المنطقة الزمنية"

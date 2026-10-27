@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 02:51+0000\n"
+"POT-Creation-Date: 2026-10-27 03:19+0000\n"
 "PO-Revision-Date: 2026-09-13 08:56+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -426,7 +426,7 @@ msgstr ""
 "l'affichage sur cette carte."
 
 #: timezoneselector/TimezoneSelector.qml:122
-#: timezoneselector/TimezoneSelector.qml:347
+#: timezoneselector/TimezoneSelector.qml:348
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
@@ -440,7 +440,7 @@ msgid "Region:"
 msgstr "Région :"
 
 #: timezoneselector/TimezoneSelector.qml:151
-#: timezoneselector/TimezoneSelector.qml:376
+#: timezoneselector/TimezoneSelector.qml:377
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
@@ -458,12 +458,12 @@ msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Zoom arrière"
 
-#: timezoneselector/TimezoneSelector.qml:351
+#: timezoneselector/TimezoneSelector.qml:352
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Sélecteur de région de fuseau horaire"
 
-#: timezoneselector/TimezoneSelector.qml:387
+#: timezoneselector/TimezoneSelector.qml:388
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Sélecteur d'emplacement de fuseau horaire"
