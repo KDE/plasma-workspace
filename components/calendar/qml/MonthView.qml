@@ -374,7 +374,10 @@ Item {
 
                 onActivated: (index, date, item) => {
                     const rowNumber = Math.floor(index / root.columns);
-                    root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
+                    // Don't use new Date(year, month, day), it maps years 0-99 to 1900-1999
+                    const selectedDate = new Date(2000, 0, 1);
+                    selectedDate.setFullYear(date.yearNumber, date.monthNumber - 1, date.dayNumber);
+                    root.currentDate = selectedDate;
 
                     if (date.subLabel) {
                         root.currentDateAuxilliaryText = date.subLabel;
