@@ -18,7 +18,7 @@ sys.path.insert(0, _applets_dir)
 
 from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib
-from selenium.common.exceptions import NoSuchElementException, WebDriverException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -76,6 +76,28 @@ class TestJobNotification(NotificationsTestBase):
             None, Gio.DBusSendMessageFlags.NONE, 1000,
         )
 
+    def _wait_until(self, wait: WebDriverWait, condition, stderr_file: str):
+        """Run wait.until() but include the subprocess stderr in the timeout error.
+
+        When the jobnotification.py subprocess stays alive but produces no UI
+        (e.g. it fails to connect to the D-Bus session), the element never
+        appears and WebDriverWait raises a bare TimeoutException with no
+        context. Reading the stderr file makes the failure diagnosable.
+        """
+        try:
+            return wait.until(condition)
+        except TimeoutException:
+            stderr_output = ""
+            try:
+                with open(stderr_file, "r") as f:
+                    stderr_output = f.read().strip()
+            except OSError:
+                pass
+            msg = "Timed out waiting for element"
+            if stderr_output:
+                msg += f"; jobnotification.py stderr:\n{stderr_output}"
+            raise AssertionError(msg) from None
+
     def test_0_job_notification(self) -> None:
         """
         https://bugs.kde.org/show_bug.cgi?id=501991
@@ -106,11 +128,11 @@ class TestJobNotification(NotificationsTestBase):
         # Check that the subprocess is alive before waiting for UI elements.
         # If jobnotification.py crashes (e.g. missing KCoreAddons/KJobWidgets),
         # report the stderr output immediately instead of timing out.
-        wait.until(_ProcessAliveOrElementPresent(proc, AppiumBy.NAME, "10%", stderr_file.name))
-        wait.until(_ProcessAliveOrElementPresent(proc, AppiumBy.XPATH, "//notification[contains(@description, '1 file')]", stderr_file.name))
+        self._wait_until(wait, _ProcessAliveOrElementPresent(proc, AppiumBy.NAME, "10%", stderr_file.name), stderr_file.name)
+        self._wait_until(wait, _ProcessAliveOrElementPresent(proc, AppiumBy.XPATH, "//notification[contains(@description, '1 file')]", stderr_file.name), stderr_file.name)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause"))).click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Resume"))).click()
-        wait.until(_ProcessAliveOrElementPresent(proc, AppiumBy.XPATH, "//button[@name='Details' and contains(@accessibility-id, 'NotificationPopup')]", stderr_file.name)).click()
+        self._wait_until(wait, _ProcessAliveOrElementPresent(proc, AppiumBy.XPATH, "//button[@name='Details' and contains(@accessibility-id, 'NotificationPopup')]", stderr_file.name), stderr_file.name).click()
 
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         size = 1024 * 1024
