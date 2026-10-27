@@ -10,5 +10,6 @@
 #
 # Reference: https://bugs.kde.org/show_bug.cgi?id=501991
 
-# QPanGesture::~QPanGesture() bad-free triggered via QTextEdit construction in PySide6
-asan:QPanGesture::~QPanGesture
+# QPanGesture::~QPanGesture() bad-free triggered via QTextEdit construction in PySide6.
+# "bad-free" errors are suppressed via the alloc_dealloc_mismatch type.
+alloc_dealloc_mismatch:QPanGesture
