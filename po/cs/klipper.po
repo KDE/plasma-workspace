@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-26 00:51+0000\n"
-"PO-Revision-Date: 2026-10-17 01:07+0200\n"
+"PO-Revision-Date: 2026-10-26 12:35+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -176,16 +176,14 @@ msgid "Description"
 msgstr "Popis"
 
 #: configdialog.cpp:232
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
-msgstr "Přidat činnost..."
+msgstr "Přidat činnosti…"
 
 #: configdialog.cpp:236
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "Upravit činnost..."
+msgstr "Upravit činnost…"
 
 #: configdialog.cpp:241
 #, kde-format
@@ -520,16 +518,14 @@ msgstr ""
 "pomocí klávesové zkratky <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
-msgstr "Přidat příkaz..."
+msgstr "Přidat příkaz…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
-msgstr "Upravit příkaz..."
+msgstr "Upravit příkaz…"
 
 #: editactiondialog.cpp:280
 #, kde-format
