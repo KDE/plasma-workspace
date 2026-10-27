@@ -5,10 +5,11 @@
     Replaces the open check of appiumtests/applets/devicenotifiertest.py:
         self.driver.find_element(AppiumBy.NAME, "No removable devices attached")
 
-    Only the empty state is portable: the device listing tests drive a mocked
-    udisks2 on a private system bus, which this harness does not provide. This
-    also means the empty state is not guaranteed here: on a machine with a
-    mounted removable device the applet lists it instead and this test fails.
+    Only the empty state is portable: the device listing tests add mock devices
+    to a udisks2 mock (python3-dbusmock), which is out of scope here. Instead
+    this test runs on a private system bus with no udisks2 at all, started by
+    run_qmltest_with_bus.py, so the empty state holds no matter what is plugged
+    into the host.
 */
 
 import QtQuick

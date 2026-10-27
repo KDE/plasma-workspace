@@ -50,6 +50,7 @@ set(_plasmoid_test_environment
     "QT_QPA_PLATFORM=offscreen;LC_ALL=en_US.UTF-8;QML2_IMPORT_PATH=${CMAKE_BINARY_DIR}/bin;QT_LOGGING_RULES=qt.accessibility.atspi.warning=false"
 )
 
+# Tests that only need the applet itself.
 set(_plasmoid_qml_tests
     by_test
     icon_test
@@ -59,7 +60,6 @@ set(_plasmoid_qml_tests
     analogclock_test
     appmenu_test
     cameraindicator_test
-    devicenotifier_test
 )
 
 foreach(_test ${_plasmoid_qml_tests})
@@ -73,3 +73,43 @@ foreach(_test ${_plasmoid_qml_tests})
         ENVIRONMENT "${_plasmoid_test_environment}"
     )
 endforeach()
+
+# Tests that need a D-Bus service the host cannot be trusted to provide run
+# through run_qmltest_with_bus.py: it starts private dbus-daemons, runs the mock
+# services on them, waits until they own their bus names and only then launches
+# qmltestrunner with DBUS_SESSION_BUS_ADDRESS/DBUS_SYSTEM_BUS_ADDRESS pointing
+# at the private buses. The mocks are Python, hence the interpreter lookup.
+find_package(Python3 COMPONENTS Interpreter)
+if(Python3_Interpreter_FOUND)
+    set(_mediacontroller_dir ${CMAKE_SOURCE_DIR}/appiumtests/applets/mediacontrollertest)
+
+    # No udisks2 on the private system bus => the applet always shows its empty
+    # state, regardless of removable devices on the host.
+    add_test(
+        NAME plasmoidtest_devicenotifier_test
+        COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/run_qmltest_with_bus.py
+                --system-bus
+                --
+                ${_qmltestrunner} -input ${CMAKE_CURRENT_SOURCE_DIR}/devicenotifier_test.qml
+    )
+
+    # An MPRIS player on the private session bus provides the track metadata.
+    add_test(
+        NAME plasmoidtest_mediacontroller_test
+        COMMAND ${Python3_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/run_qmltest_with_bus.py
+                --session-bus
+                # The service is parsed with shlex, so quote each path: source
+                # and build directories may contain spaces.
+                --service "\"${Python3_EXECUTABLE}\" \"${_mediacontroller_dir}/mediaplayer.py\" \"${_mediacontroller_dir}/player_a.json\" --start-index 0"
+                --wait-name-prefix org.mpris.MediaPlayer2.appiumtest
+                --
+                ${_qmltestrunner} -input ${CMAKE_CURRENT_SOURCE_DIR}/mediacontroller_test.qml
+    )
+
+    set_tests_properties(plasmoidtest_devicenotifier_test plasmoidtest_mediacontroller_test PROPERTIES
+        TIMEOUT 120
+        ENVIRONMENT "${_plasmoid_test_environment}"
+    )
+else()
+    message(STATUS "Python3 not found, the D-Bus mock based plasmoidtests (devicenotifier, mediacontroller) are skipped")
+endif()
