@@ -125,6 +125,7 @@ Item {
                 id: actionContainer
                 Layout.alignment: Qt.AlignRight
                 Layout.horizontalStretchFactor: 1000 // Compress layout...
+                Layout.fillWidth: true
                 Layout.maximumWidth: thumbnailActionRow.width - menuButton.width - thumbnailActionRow.spacing
                 modelInterface: thumbnailArea.modelInterface
             }
