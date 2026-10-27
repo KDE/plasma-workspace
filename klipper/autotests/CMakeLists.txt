@@ -20,6 +20,13 @@ if (LINUX)
     target_link_libraries(klippertest PRIVATE klipper Qt::Test KF6::Service KF6::ConfigCore)
 
     add_test(NAME klippertest COMMAND dbus-run-session --config-file=${CMAKE_CURRENT_SOURCE_DIR}/isolated-session-bus.conf kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:klippertest>)
+
+    # Clipboard deadlock regression test
+    add_executable(clipboarddeadlocktest clipboarddeadlocktest.cpp)
+    target_link_libraries(clipboarddeadlocktest PRIVATE Qt::Test Qt::Widgets KF6::GuiAddons)
+
+    add_test(NAME clipboarddeadlocktest COMMAND dbus-run-session --config-file=${CMAKE_CURRENT_SOURCE_DIR}/isolated-session-bus.conf kwin_wayland --virtual --exit-with-session=$<TARGET_FILE:clipboarddeadlocktest>)
+    set_tests_properties(clipboarddeadlocktest PROPERTIES TIMEOUT 60)
 endif()
 
 # Test Utils
