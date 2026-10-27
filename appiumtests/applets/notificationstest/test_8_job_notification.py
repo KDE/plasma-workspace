@@ -103,8 +103,11 @@ class TestJobNotification(NotificationsTestBase):
         self.addCleanup(stderr_fh.close)
         self.addCleanup(os.unlink, stderr_file.name)
 
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "10%")))
-        wait.until(EC.presence_of_element_located((AppiumBy.XPATH, "//notification[contains(@description, '1 file')]")))
+        # Check that the subprocess is alive before waiting for UI elements.
+        # If jobnotification.py crashes (e.g. missing KCoreAddons/KJobWidgets),
+        # report the stderr output immediately instead of timing out.
+        wait.until(_ProcessAliveOrElementPresent(proc, AppiumBy.NAME, "10%", stderr_file.name))
+        wait.until(_ProcessAliveOrElementPresent(proc, AppiumBy.XPATH, "//notification[contains(@description, '1 file')]", stderr_file.name))
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Pause"))).click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Resume"))).click()
         wait.until(_ProcessAliveOrElementPresent(proc, AppiumBy.XPATH, "//button[@name='Details' and contains(@accessibility-id, 'NotificationPopup')]", stderr_file.name)).click()
