@@ -110,15 +110,19 @@ class TestJobNotification(NotificationsTestBase):
         wait = WebDriverWait(self.driver, 10, ignored_exceptions=(NoSuchElementException, WebDriverException))
 
         subprocess_env: dict[str, str] = os.environ.copy()
-        # The subprocess creates a QGuiApplication via PySide6. Because Qt is
-        # built with ASAN instrumentation while PySide6 is not, the subprocess
-        # triggers a bad-free false positive in
-        # QtWaylandClient::QWaylandIntegration::reconfigureInputContext().
-        # This cannot be suppressed (see clipboarddeadlocktest.py), so
-        # halt_on_error lets ASAN report it without aborting the subprocess.
-        # The memory is actually owned by the Qt/PySide6 object, so the free is
-        # harmless.
-        subprocess_env["ASAN_OPTIONS"] = "new_delete_type_mismatch=0:detect_odr_violation=0:stack-use-after-scope=0:halt_on_error=0:exitcode=0:verify_asan_link_order=0:detect_leaks=0"
+        # In CI, KDE dependencies (including Qt) are built with ASAN
+        # instrumentation, but PySide6 and the Python runtime are not. When the
+        # subprocess creates a QGuiApplication, Qt's
+        # QWaylandIntegration::reconfigureInputContext() frees a pointer not
+        # allocated by ASAN's allocator, so ASAN reports a bad-free.
+        # Preloading libasan makes the subprocess use ASAN's allocator for all
+        # allocations (including PySide6's), so the free matches and no
+        # bad-free occurs. detect_leaks=0 avoids a non-zero exit code from
+        # LSAN. Only do this in CI, as LD_PRELOAD breaks running the test
+        # locally out of the box.
+        if "KDECI_BUILD" in os.environ:
+            subprocess_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
+            subprocess_env["ASAN_OPTIONS"] = "new_delete_type_mismatch=0:detect_odr_violation=0:stack-use-after-scope=0:verify_asan_link_order=0:detect_leaks=0"
 
         # Capture stderr to a temporary file so we can include it in failure
         # messages when the subprocess exits unexpectedly (e.g. crashes).

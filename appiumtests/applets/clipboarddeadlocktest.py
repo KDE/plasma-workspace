@@ -25,22 +25,23 @@ class ClipboardDeadlockTest(unittest.TestCase):
     def setUpClass(cls) -> None:
         options = AppiumOptions()
         options.set_capability("app", f"python3 {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'clipboardtest', 'deadlocktestwindow.py')}")
-        # The subprocess creates Qt widgets via PySide6. Because Qt is built
-        # with ASAN instrumentation while PySide6 is not,
-        # QPanGesture::~QPanGesture() triggers a bad-free false positive (free
-        # on an address not malloc()-ed by ASAN's allocator). This cannot be
-        # suppressed: ASAN suppression files only accept interceptor_name,
-        # interceptor_via_fun, interceptor_via_lib, odr_violation and
-        # alloc_dealloc_mismatch, and none of them match bad-free (verified
-        # with interceptor_via_fun:main/free/operator delete,
-        # interceptor_via_lib:libasan and interceptor_name:free). The only way
-        # to proceed is halt_on_error, which lets ASAN report it without
-        # aborting. The memory is actually owned by the Qt/PySide6 object, so
-        # the free is harmless.
-        options.set_capability("environ", {
+        environ = {
             "QT_QPA_PLATFORM": "wayland" if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") != "0" else "xcb",
-            "ASAN_OPTIONS": "new_delete_type_mismatch=0:detect_odr_violation=0:stack-use-after-scope=0:halt_on_error=0:exitcode=0:verify_asan_link_order=0:detect_leaks=0",
-        })
+        }
+        # In CI, KDE dependencies (including Qt) are built with ASAN
+        # instrumentation, but PySide6 and the Python runtime are not. When the
+        # subprocess creates QTextEdit, Qt's QWidget::grabGesture() deletes the
+        # old gesture objects (QPanGesture etc.) with ASAN's delete, but their
+        # memory was not allocated by ASAN's allocator, so ASAN reports a
+        # bad-free. Preloading libasan makes the subprocess use ASAN's
+        # allocator for all allocations (including PySide6's), so the delete
+        # matches and no bad-free occurs. detect_leaks=0 avoids a non-zero exit
+        # code from LSAN. Only do this in CI, as LD_PRELOAD breaks running the
+        # test locally out of the box.
+        if "KDECI_BUILD" in os.environ:
+            environ["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
+            environ["ASAN_OPTIONS"] = "new_delete_type_mismatch=0:detect_odr_violation=0:stack-use-after-scope=0:verify_asan_link_order=0:detect_leaks=0"
+        options.set_capability("environ", environ)
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
