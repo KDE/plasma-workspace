@@ -45,7 +45,13 @@ def start_kactivitymanagerd() -> subprocess.Popen:
     os.makedirs(os.path.join(GLib.get_user_config_dir(), "menus"))
     shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "applications.menu"), os.path.join(GLib.get_user_config_dir(), "menus"))
 
-    kactivitymanagerd = subprocess.Popen([KACTIVITYMANAGERD_PATH], stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
+    env = os.environ.copy()
+    # kactivitymanagerd is a daemon that doesn't need a display, but it is a Qt
+    # application and will try to initialize a platform plugin. Inside the test's
+    # dbus-run-session there may be no Wayland compositor available yet, so force
+    # the offscreen platform to avoid a crash.
+    env['QT_QPA_PLATFORM'] = 'offscreen'
+    kactivitymanagerd = subprocess.Popen([KACTIVITYMANAGERD_PATH], stdout=sys.stderr, stderr=sys.stderr, env=env)
     kactivitymanagerd_started: bool = False
     for _ in range(10):
         if name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME):
