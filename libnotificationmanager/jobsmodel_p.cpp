@@ -32,6 +32,7 @@
 
 #include <algorithm>
 #include <chrono>
+#include <utility>
 
 using namespace NotificationManager;
 using namespace std::literals::chrono_literals;
@@ -49,9 +50,7 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
     m_compressUpdatesTimer->setInterval(0);
     m_compressUpdatesTimer->setSingleShot(true);
     connect(m_compressUpdatesTimer, &QTimer::timeout, this, [this] {
-        for (auto it = m_pendingDirtyRoles.constBegin(), end = m_pendingDirtyRoles.constEnd(); it != end; ++it) {
-            Job *job = it.key();
-            const QList<int> roles = it.value();
+        for (const auto &[job, roles] : std::exchange(m_pendingDirtyRoles, {}).asKeyValueRange()) {
             const int row = m_jobViews.indexOf(job);
             if (row == -1) {
                 continue;
@@ -64,8 +63,6 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
                 updateApplicationPercentage(job->desktopEntry());
             }
         }
-
-        m_pendingDirtyRoles.clear();
     });
 
     connect(m_settings, &Settings::settingsChanged, this, [this] {
