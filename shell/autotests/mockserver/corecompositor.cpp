@@ -51,16 +51,26 @@ CoreCompositor::CoreCompositor()
 
 CoreCompositor::~CoreCompositor()
 {
+    // Stop the dispatch thread before tearing down the globals and the display.
+    // Otherwise the dispatch thread can still run bind/destroy callbacks (e.g.
+    // XdgOutputManagerV1's resource map) concurrently with the main thread
+    // destroying those globals here, which is a data race and can result in a
+    // double-free (seen under ASAN on qt612).
+    //
+    // wl_display_destroy_clients() is also called before the globals are
+    // deleted: its destroy callbacks touch the globals' resources, so they
+    // must run while the globals are still alive.
+    m_running = false;
+    m_dispatchThread.join();
+
+    wl_display_destroy_clients(m_display);
+
     auto global = m_globals.begin();
     while (global != m_globals.end()) {
         delete *global;
         global = m_globals.erase(global);
     }
 
-    wl_display_destroy_clients(m_display);
-
-    m_running = false;
-    m_dispatchThread.join();
     wl_display_destroy(m_display);
 }
 
