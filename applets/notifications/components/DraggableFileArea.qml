@@ -55,6 +55,7 @@ Item {
 
     DragHandler {
         id: dragHandler
+        enabled: hoverHandler.hovered
 
         onActiveChanged: {
             if (active) {

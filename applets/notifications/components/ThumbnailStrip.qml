@@ -108,52 +108,52 @@ Item {
             running: thumbnailer.busy
             visible: thumbnailer.busy
         }
+    }
 
-        RowLayout {
-            id: thumbnailActionRow
-            anchors {
-                top: parent.top
-                left: parent.left
-                right: parent.right
-                // The thumbnail has small spacing around it,
-                // and the buttons should have small spacing to the thumbnail.
-                margins: 2 * Kirigami.Units.smallSpacing
-            }
-            spacing: Kirigami.Units.smallSpacing
+    RowLayout {
+        id: thumbnailActionRow
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            // The thumbnail has small spacing around it,
+            // and the buttons should have small spacing to the thumbnail.
+            margins: 2 * Kirigami.Units.smallSpacing
+        }
+        spacing: Kirigami.Units.smallSpacing
 
-            ActionContainer {
-                id: actionContainer
-                Layout.alignment: Qt.AlignRight
-                Layout.horizontalStretchFactor: 1000 // Compress layout...
-                Layout.fillWidth: true
-                Layout.maximumWidth: thumbnailActionRow.width - menuButton.width - thumbnailActionRow.spacing
-                modelInterface: thumbnailArea.modelInterface
-            }
+        ActionContainer {
+            id: actionContainer
+            Layout.alignment: Qt.AlignRight
+            Layout.horizontalStretchFactor: 1000 // Compress layout...
+            Layout.fillWidth: true
+            Layout.maximumWidth: Math.min(thumbnailActionRow.width - menuButton.width - thumbnailActionRow.spacing, implicitWidth)
+            modelInterface: thumbnailArea.modelInterface
+        }
 
-            PlasmaComponents3.Button {
-                id: menuButton
-                Layout.alignment: Qt.AlignTop
-                Accessible.name: tooltip.text
-                icon.name: "application-menu"
-                checkable: true
+        PlasmaComponents3.Button {
+            id: menuButton
+            Layout.alignment: Qt.AlignTop
+            Accessible.name: tooltip.text
+            icon.name: "application-menu"
+            checkable: true
 
-                onPressedChanged: {
-                    if (pressed) {
-                        // fake "pressed" while menu is open
-                        checked = Qt.binding(function() {
-                            return fileMenu.visible;
-                        });
+            onPressedChanged: {
+                if (pressed) {
+                    // fake "pressed" while menu is open
+                    checked = Qt.binding(function() {
+                        return fileMenu.visible;
+                    });
 
-                        fileMenu.visualParent = this;
-                        // -1 tells it to "align bottom left of visualParent (this)"
-                        fileMenu.open(-1, -1);
-                    }
+                    fileMenu.visualParent = this;
+                    // -1 tells it to "align bottom left of visualParent (this)"
+                    fileMenu.open(-1, -1);
                 }
+            }
 
-                PlasmaComponents3.ToolTip {
-                    id: tooltip
-                    text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
-                }
+            PlasmaComponents3.ToolTip {
+                id: tooltip
+                text: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
             }
         }
     }
