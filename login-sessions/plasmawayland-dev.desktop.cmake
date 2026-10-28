@@ -18,6 +18,7 @@ Name[sk]=Plasma (Development ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sl]=Plasma (Razvoj ${CMAKE_INSTALL_FULL_BINDIR})
 Name[tr]=Plasma (Geliştirme ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Плазма (Розробка, ${CMAKE_INSTALL_FULL_BINDIR})
+Name[zh_TW]=Plasma (開發版本，${CMAKE_INSTALL_FULL_BINDIR})
 Comment=Plasma by KDE
 Comment[ar]=بلازما كِيدِي
 Comment[az]=KDE Plasma
