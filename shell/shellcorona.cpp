@@ -2965,7 +2965,7 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
     QList<Plasma::Containment *> conts = containments();
 
     // Sort key: containments on the active screen first, then panels before desktops, then by id.
-    // A lexicographic tuple is a strict weak ordering; a mixed boolean comparator is not.
+    // Requires strict weak ordering; to avoid bugs like https://gcc.gnu.org/bugzilla/show_bug.cgi?id=59391
     std::sort(conts.begin(), conts.end(), [screenId](Plasma::Containment *conta, Plasma::Containment *contb) {
         const auto key = [screenId](Plasma::Containment *cont) {
             const auto type = cont->containmentType();
