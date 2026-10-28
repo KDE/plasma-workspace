@@ -1380,18 +1380,11 @@ void PanelView::updateMask()
 
     if (m_backgroundHints == Plasma::Types::NoBackground) {
         KWindowEffects::enableBlurBehind(this, false);
-        KWindowEffects::enableBackgroundContrast(this, false);
     } else {
         // We use mask for graphical effect which tightly  covers the panel
         // For the input region (QWindow::mask) screenPanelRect includes area around the floating
         // panel in order to respect Fitt's law
         KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
-        KWindowEffects::enableBackgroundContrast(this,
-                                                 m_theme.backgroundContrastEnabled(),
-                                                 m_theme.backgroundContrast(),
-                                                 m_theme.backgroundIntensity(),
-                                                 m_theme.backgroundSaturation(),
-                                                 mask);
     }
 
     const QRect bounding = mask.boundingRect();
