@@ -12,9 +12,11 @@
 #include <QFuture>
 #include <QImageReader>
 #include <QPainter>
+#include <QPointer>
 #include <QSGImageNode>
 #include <QSGTexture>
 #include <QSvgRenderer>
+#include <QThreadPool>
 #include <QtConcurrent>
 
 TransientImageNode::TransientImageNode(QQuickWindow *window)
@@ -319,9 +321,29 @@ static QImage loadImage(const TransientImageOptions &options)
     return QImage();
 }
 
+static QThreadPool *imageThreadPool()
+{
+    // Enforce only one image loader thread at a time
+    // Context: fast consecutive screen size changes (ex. screen rotation on mobile) can
+    // lead to lots of concurrent image load requests
+    static const auto pool = [] {
+        auto pool = std::make_unique<QThreadPool>();
+        pool->setMaxThreadCount(1);
+        return pool;
+    }();
+    return pool.get();
+}
+
 void TransientImageReader::start()
 {
-    QtConcurrent::run(loadImage, m_options).then(this, [this](const QImage &image) {
+    const QPointer<TransientImageReader> guard(this);
+    QtConcurrent::run(imageThreadPool(), [guard, options = m_options] {
+        // If the image was reset before this thread started, return early
+        if (!guard) {
+            return QImage();
+        }
+        return loadImage(options);
+    }).then(this, [this](const QImage &image) {
         Q_EMIT finished(image);
     });
 }
