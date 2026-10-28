@@ -75,6 +75,7 @@
 #include <algorithm>
 #include <chrono>
 #include <ranges>
+#include <tuple>
 
 #ifndef NDEBUG
 #define CHECK_SCREEN_INVARIANTS screenInvariants();
@@ -2963,19 +2964,16 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
 
     QList<Plasma::Containment *> conts = containments();
 
-    // Sort in a way that containments with the "proper" screen are before the others,
-    // and panels go before desktops
+    // Sort key: containments on the active screen first, then panels before desktops, then by id.
+    // A lexicographic tuple is a strict weak ordering; a mixed boolean comparator is not.
     std::sort(conts.begin(), conts.end(), [screenId](Plasma::Containment *conta, Plasma::Containment *contb) {
-        if (conta->screen() == screenId && contb->screen() != screenId) {
-            return true;
-        }
+        const auto key = [screenId](Plasma::Containment *cont) {
+            const auto type = cont->containmentType();
+            const bool isPanel = type == Plasma::Containment::Panel || type == Plasma::Containment::CustomPanel;
+            return std::tuple(cont->screen() != screenId, !isPanel, cont->id());
+        };
 
-        if ((conta->containmentType() == Plasma::Containment::Panel || conta->containmentType() == Plasma::Containment::CustomPanel)
-            && (contb->containmentType() != Plasma::Containment::Panel && contb->containmentType() != Plasma::Containment::CustomPanel)) {
-            return true;
-        }
-        // Make it stable
-        return conta->id() < contb->id();
+        return key(conta) < key(contb);
     });
 
     for (auto *cont : std::as_const(conts)) {
