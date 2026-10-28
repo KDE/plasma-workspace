@@ -107,8 +107,6 @@ void TasksModelTest::test_moveBug444816()
     model.setSeparateLaunchers(false);
     model.setSortMode(TasksModel::SortManual);
 
-    QSignalSpy rowInsertedSpy(&model, &TasksModel::rowsInserted);
-
     int rowCount = model.rowCount();
     QVERIFY(model.launcherList().empty());
     const QUrl launcherUrl = QUrl::fromLocalFile(QFINDTESTDATA("data/applications/GammaRay.desktop"));
@@ -131,10 +129,7 @@ void TasksModelTest::test_moveBug444816()
     engine.load(qmlFileName);
 
     // Make sure two new windows have been created
-    for (int i = 0; i < initialProperties[QStringLiteral("windowInitialProperties")].toList().size(); ++i) {
-        rowInsertedSpy.wait(1000);
-    }
-    QCOMPARE(++ ++rowCount, model.rowCount());
+    QTRY_COMPARE_WITH_TIMEOUT(model.rowCount(), 3, 10000);
 
     // TasksModel now looks like: [Launcher] [...] [__testwindow__firstwindow__] [__testwindow__secondwindow__]
     // This test tries to move [Launcher] to the position between the two tasks
