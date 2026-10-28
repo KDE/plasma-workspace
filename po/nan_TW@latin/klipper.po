@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2026-10-16 20:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
@@ -17,24 +17,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 26.11.70\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Tsián-tah-phōo li̍k-sú:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] "%v ê hāng-bo̍k"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Suán-ti̍k-khu kap Tsián-tah-phōo"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -50,38 +50,38 @@ msgid ""
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr ""
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -94,12 +94,21 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, kde-format
 msgid "Show action popup menu:"
 msgstr ""
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -110,54 +119,54 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] "%v bió"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Bô"
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, kde-format
 msgid "Options:"
 msgstr "Suán-hāng:"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Suat-bîng"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "Thiam Tōng-tsok..."
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "Pian-tsi̍p Tōng-tsok..."
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "Thâi-tiāu Tōng-tsok"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -165,51 +174,51 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Khak-tīng Thâi-tiāu Tōng-tsok"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "It-puann"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "It-puann Siat-tīng"
 
-#: configdialog.cpp:481
-#, kde-format
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "Tōng-tsok Suán-tuann"
-
-#: configdialog.cpp:481
-#, kde-format
-msgid "Action Menu"
-msgstr "Tōng-tsok Suán-tuann"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Tōng-tsok Siat-tīng"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Tōng-tsok Siat-tīng"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Tōng-tsok Suán-tuann"
+
+#: configdialog.cpp:516
+#, kde-format
+msgid "Action Menu"
+msgstr "Tōng-tsok Suán-tuann"
+
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Khuài-sok-khí"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Khuài-sok-khí Siat-tīng"
@@ -828,7 +837,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr ""
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "Tshú-siau(&C)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2026-09-28 23:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -62,13 +62,13 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "기타"
 
-#: calendar/qml/DayDelegate.qml:97
+#: calendar/qml/DayDelegate.qml:100
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "행사 %1개"
 
-#: calendar/qml/DayDelegate.qml:98
+#: calendar/qml/DayDelegate.qml:101
 #, kde-format
 msgid "No events"
 msgstr "행사 없음"

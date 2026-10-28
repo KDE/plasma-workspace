@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -64,7 +64,7 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Drugo"
 
-#: calendar/qml/DayDelegate.qml:97
+#: calendar/qml/DayDelegate.qml:100
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
@@ -73,7 +73,7 @@ msgstr[1] "%1 događaja"
 msgstr[2] "%1 događaja"
 msgstr[3] "jedan događaj"
 
-#: calendar/qml/DayDelegate.qml:98
+#: calendar/qml/DayDelegate.qml:101
 #, kde-format
 msgid "No events"
 msgstr "Nema događaja"

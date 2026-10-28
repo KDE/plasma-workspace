@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2026-10-12 00:04+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -24,12 +24,12 @@ msgstr ""
 "X-Generator: Lokalize 26.08.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Arbelaren historia:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -37,12 +37,12 @@ msgid_plural "%v entries"
 msgstr[0] "sarrera %v"
 msgstr[1] "%v sarrera"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Hautapena eta arbela:"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -68,19 +68,19 @@ msgstr ""
 "hautapena oraindik gorde liteke arbeleko historian (beheko aukeren arabera), "
 "baina saguaren erdiko botoia erabiliz baino ezin daiteke itsatsi."
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Erakuslearekin edo teklatuarekin hautatutako testua"
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Historian sartu:"
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
@@ -88,13 +88,13 @@ msgstr ""
 "Esplizituki kopiatutako testua beti gordetzen da, pasahitz gisa markatuta "
 "egon ezean."
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Esplizituki kopiatutako irudi-datuak"
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -104,7 +104,7 @@ msgstr ""
 "hautapenak.<br/><a href=\"1\">Arbelean dauden irudiei buruzko informazio "
 "gehiago.</a>"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -125,12 +125,21 @@ msgstr ""
 "gordetzeko konfiguratuta dagoenean. Testua eta irudia biak bidaltzen dituen "
 "edozein aplikaziok ere ezarpen honi ezikusi egingo dio."
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Ekintza menu gainerakorra erakutsi:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -146,7 +155,7 @@ msgstr ""
 "erakusten kanpoan utzitako leiho baterako, <shortcut>%1</shortcut> tekla "
 "lasterbidea erabiliz erakuts daiteke."
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -154,47 +163,47 @@ msgid_plural "%v seconds"
 msgstr[0] "segundo %v"
 msgstr[1] "%v segundo"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Bat ere ez"
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, kde-format
 msgid "Options:"
 msgstr "Aukerak:"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Bat-etortze eredua eta komandoak"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Deskribapena"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "Gehitu ekintza..."
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "Editatu ekintza..."
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "Ezabatu ekintza"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -204,51 +213,51 @@ msgstr ""
 "Hautatutako <resource>%1</resource> ekintza<nl/>eta bere komando guztiak "
 "ezabatu?"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Berretsi ezabatzeko ekintza"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Orokorra"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "Konfigurazio orokorra"
 
-#: configdialog.cpp:481
-#, kde-format
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "Ekintza-menua"
-
-#: configdialog.cpp:481
-#, kde-format
-msgid "Action Menu"
-msgstr "Ekintza-menua"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Ekintzen konfigurazioa"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Ekintzen konfigurazioa"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Ekintza-menua"
+
+#: configdialog.cpp:516
+#, kde-format
+msgid "Action Menu"
+msgstr "Ekintza-menua"
+
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Lasterbideak"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Lasterbideen konfigurazioa"
@@ -922,7 +931,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Arbelaren leiho gainerakorra"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "&Utzi"

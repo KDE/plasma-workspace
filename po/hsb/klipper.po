@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2008-11-06 22:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard history:"
 msgstr "Wobsah zapisnika"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, fuzzy, kde-format
 #| msgid "No entries"
 msgctxt "Number of entries"
@@ -34,13 +34,13 @@ msgstr[1] "Žane zapisy"
 msgstr[2] "Žane zapisy"
 msgstr[3] "Žane zapisy"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, fuzzy, kde-format
 #| msgid "Replace Clipboard"
 msgid "Selection and Clipboard:"
 msgstr "Zapisnik narunać"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -56,38 +56,38 @@ msgid ""
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr ""
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -100,13 +100,22 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, fuzzy, kde-format
 #| msgid "Action properties:"
 msgid "Show action popup menu:"
 msgstr "Swójstwa přikaza:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -117,7 +126,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -129,50 +138,50 @@ msgstr[1] "sekundźe"
 msgstr[2] "sekundy"
 msgstr[3] "sekundow"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "Akcije"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Wopisanje"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "Akciju dodać..."
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "Akciju wobdźěłać..."
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "Akciju zničić"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -180,24 +189,36 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Akciju zničić"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Powšitkownje"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "Powšitkowne připrawjenje"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:515
+#, fuzzy, kde-format
+#| msgid "Actions Configuration"
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "Připrawjenje akcijow"
+
+#: configdialog.cpp:515
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Připrawjenje akcijow"
+
+#: configdialog.cpp:516
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -205,32 +226,20 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Akcije"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:516
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Akcije"
 
-#: configdialog.cpp:482
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
-msgctxt "Actions Config"
-msgid "Actions Configuration"
-msgstr "Připrawjenje akcijow"
-
-#: configdialog.cpp:482
-#, kde-format
-msgid "Actions Configuration"
-msgstr "Připrawjenje akcijow"
-
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Skrótšenki"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Připrawjenje skótšenkow"
@@ -873,7 +882,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Wobsah zapisnika"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "&Přetorhnyć"

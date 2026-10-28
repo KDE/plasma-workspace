@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -20,12 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.1\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Riwayat papan klip:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -33,12 +33,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v entri"
 msgstr[1] "%v entri"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Pemilihan dan Papan Klip:"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -78,39 +78,39 @@ msgstr ""
 "pada opsi di bawah), tetapi hanya bisa ditempelkan menggunakan tombol tengah "
 "mouse."
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, fuzzy, kde-format
 #| msgid "Always save in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Selalu simpan di riwayat"
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -123,12 +123,21 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Tampilkan sembulan menu tindakan:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,7 +153,7 @@ msgstr ""
 "ditampilkan untuk jendela yang dikecualikan, maka menu tersebut bisa "
 "ditampilkan dengan menggunakan pintasan tombol <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -152,47 +161,47 @@ msgid_plural "%v seconds"
 msgstr[0] "%v detik"
 msgstr[1] "%v detik"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nihil"
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, kde-format
 msgid "Options:"
 msgstr "Opsi:"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Perintah dan pola cocok"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Deskripsi"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "Tambah Tindakan..."
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "Edit Tindakan..."
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "Hapus Tindakan"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -202,51 +211,51 @@ msgstr ""
 "Hapus tindakan <resource>%1</resource><nl/> yang dipilihdan semua perintah-"
 "perintahnya?"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Konfirmasi Tindakan Menghapus"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Umum"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "Konfigurasi Umum"
 
-#: configdialog.cpp:481
-#, kde-format
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "Menu Tindakan"
-
-#: configdialog.cpp:481
-#, kde-format
-msgid "Action Menu"
-msgstr "Menu Tindakan"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Konfigurasi Tindakan"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Konfigurasi Tindakan"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Menu Tindakan"
+
+#: configdialog.cpp:516
+#, kde-format
+msgid "Action Menu"
+msgstr "Menu Tindakan"
+
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Pintasan"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Konfigurasi Pintasan"
@@ -929,7 +938,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Sembulan Papan Klip"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "&Batal"

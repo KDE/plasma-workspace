@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -23,12 +23,12 @@ msgstr ""
 "klipper.po\n"
 "X-Crowdin-File-ID: 10788\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Гісторыя буфера абмену:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -38,12 +38,12 @@ msgstr[1] "%v запісы"
 msgstr[2] "%v запісаў"
 msgstr[3] "%v запісы"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Абраныя элементы і буфер абмену:"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -83,39 +83,39 @@ msgstr ""
 "абмену (з улікам параметраў ніжэй), але іх можна ўстаўляць толькі з "
 "дапамогай сярэдняй кнопкі мышы."
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, fuzzy, kde-format
 #| msgid "Always save in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Заўсёды захоўваць у гісторыі"
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -128,12 +128,21 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Паказ выплыўнога меню дзеянняў:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -149,7 +158,7 @@ msgstr ""
 "выключаным акном, то меню можна вывесці з дапамогай спалучэння клавіш "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -159,47 +168,47 @@ msgstr[1] "%v секунды"
 msgstr[2] "%v секунд"
 msgstr[3] "%v секунды"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Няма"
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, kde-format
 msgid "Options:"
 msgstr "Параметры:"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Шаблон супадзення і каманды"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Апісанне"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "Дадаць дзеянне..."
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "Рэдагаваць дзеянне..."
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "Выдаліць дзеянне"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -208,51 +217,51 @@ msgid ""
 msgstr ""
 "Выдаліць абранае дзеянне <resource>%1</resource><nl/>і ўсе яго каманды?"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Пацвердзіць выдаленне дзеяння"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Асноўныя"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "Асноўная канфігурацыя"
 
-#: configdialog.cpp:481
-#, kde-format
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "Меню дзеянняў"
-
-#: configdialog.cpp:481
-#, kde-format
-msgid "Action Menu"
-msgstr "Меню дзеянняў"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Канфігурацыя дзеянняў"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Канфігурацыя дзеянняў"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Меню дзеянняў"
+
+#: configdialog.cpp:516
+#, kde-format
+msgid "Action Menu"
+msgstr "Меню дзеянняў"
+
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Спалучэнні клавіш"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Канфігурацыя спалучэнняў клавіш"
@@ -932,7 +941,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Выплыўное акно буфера абмену"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасаваць"

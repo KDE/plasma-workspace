@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2003-12-27 14:52+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -22,13 +22,13 @@ msgstr ""
 "X-Generator: KBabel 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history:"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -38,13 +38,13 @@ msgid_plural "%v entries"
 msgstr[0] "cofnod"
 msgstr[1] "cofnod"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, fuzzy, kde-format
 #| msgid "Pre&vent empty clipboard"
 msgid "Selection and Clipboard:"
 msgstr "A&tal gludfwrdd gwag"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -60,39 +60,39 @@ msgid ""
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "&Ailadrodd gweithredoedd ar eitem wedi'i ddewis o'r hanes"
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -105,13 +105,22 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Show action popup menu:"
 msgstr "&Goramser naidlenni gweithredoedd:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -122,7 +131,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, fuzzy, kde-format
 #| msgid " sec"
 msgctxt "Unit of time"
@@ -131,50 +140,50 @@ msgid_plural "%v seconds"
 msgstr[0] "eil"
 msgstr[1] "eil"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Options:"
 msgstr "&Gweithredoedd"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Disgrifiad"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Add Action…"
 msgstr "&Ychwanegu Gweithred"
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Edit Action…"
 msgstr "&Ychwanegu Gweithred"
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Delete Action"
 msgstr "&Dileu Gweithred"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -182,58 +191,58 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Confirm Delete Action"
 msgstr "&Dileu Gweithred"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, fuzzy, kde-format
 #| msgid "&General"
 msgctxt "General Config"
 msgid "General"
 msgstr "&Cyffredinol"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, fuzzy, kde-format
 #| msgid "&General"
 msgid "General Configuration"
 msgstr "&Cyffredinol"
 
-#: configdialog.cpp:481
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "&Gweithredoedd"
-
-#: configdialog.cpp:481
-#, fuzzy, kde-format
-#| msgid "Ac&tions"
-msgid "Action Menu"
-msgstr "&Gweithredoedd"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "&Gweithredoedd"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Actions Configuration"
 msgstr "&Gweithredoedd"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "&Gweithredoedd"
+
+#: configdialog.cpp:516
+#, fuzzy, kde-format
+#| msgid "Ac&tions"
+msgid "Action Menu"
+msgstr "&Gweithredoedd"
+
+#: configdialog.cpp:523
 #, fuzzy, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "B&yrlwybrau Eang"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, fuzzy, kde-format
 msgid "Shortcuts Configuration"
 msgstr "B&yrlwybrau Eang"
@@ -891,7 +900,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr ""

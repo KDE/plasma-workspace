@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
-"PO-Revision-Date: 2026-10-01 01:04+0900\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
+"PO-Revision-Date: 2026-10-28 06:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -29,24 +29,24 @@ msgstr ""
 "X-Generator: Lokalize 26.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "剪貼簿歷史紀錄："
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] "%v 個項目"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "選取區與剪貼簿："
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -69,31 +69,31 @@ msgstr ""
 "可以馬上用任何方式貼上它。關閉這個選項的話，選取區可能還是會被儲存到剪貼簿歷"
 "史紀錄裡（根據下方選項），但它只能被使用滑鼠中鍵貼上。"
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "用游標或鍵盤選取的文字"
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "包含在歷史紀錄："
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr "明確複製的文字總是會儲存，除非它被標記為祕密。"
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "直接作為資料所複製的影像"
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -102,7 +102,7 @@ msgstr ""
 "像是 Krita 或 GIMP 等影像編輯器的圖層或選取範圍。<br/><a href=\"1\">關於剪貼"
 "簿中的影像的更多資訊。</a>"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -118,12 +118,21 @@ msgstr ""
 "直接作為資料來複製的影像。<nl/><nl/>請注意，Spectacle 截圖工具設定將截圖儲存"
 "到剪貼簿時會忽略此設定。任何會同時傳送文字與影像資料的應用程式也會忽略它。"
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "顯示動作彈出式選單："
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -137,54 +146,52 @@ msgstr ""
 "動作的彈出式選單。如果這個自動選單被從這裡關掉，或因為在已排除的視窗中而沒有"
 "顯示它時，可以使用 <shortcut>%1</shortcut> 鍵盤快捷鍵來顯示它。"
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] "%v 秒"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "無"
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, kde-format
 msgid "Options:"
 msgstr "選項："
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "比對樣式與命令"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "描述"
 
-#: configdialog.cpp:232
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#: configdialog.cpp:261
+#, kde-format
 msgid "Add Action…"
-msgstr "新增動作..."
+msgstr "新增動作…"
 
-#: configdialog.cpp:236
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#: configdialog.cpp:265
+#, kde-format
 msgid "Edit Action…"
-msgstr "編輯動作..."
+msgstr "編輯動作…"
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "刪除動作"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -192,51 +199,51 @@ msgid ""
 "commands?"
 msgstr "確定要刪除已選動作 <resource>%1</resource><nl/>以及它的所有命令嗎？"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "確認刪除動作"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "一般"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "一般設定"
 
-#: configdialog.cpp:481
-#, kde-format
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "動作選單"
-
-#: configdialog.cpp:481
-#, kde-format
-msgid "Action Menu"
-msgstr "動作選單"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "動作設定"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgid "Actions Configuration"
 msgstr "動作設定"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "動作選單"
+
+#: configdialog.cpp:516
+#, kde-format
+msgid "Action Menu"
+msgstr "動作選單"
+
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "捷徑"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "捷徑設定"
@@ -308,23 +315,15 @@ msgid "Starred Only"
 msgstr "僅已固定"
 
 #: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
-msgstr "剪貼簿目前含有祕密資訊，不會被儲存到歷史紀錄。"
+msgstr "剪貼簿與選取區目前含有祕密資訊，不會被儲存到歷史紀錄。"
 
 #: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -332,16 +331,12 @@ msgid ""
 msgstr "剪貼簿目前含有祕密資訊，不會被儲存到歷史紀錄。"
 
 #: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
-msgstr "剪貼簿目前含有祕密資訊，不會被儲存到歷史紀錄。"
+msgstr "選取區目前含有祕密資訊，不會被儲存到歷史紀錄。"
 
 #: declarative/qml/ClipboardMenu.qml:392
 #, kde-format
@@ -517,14 +512,12 @@ msgstr ""
 "含。"
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
 msgstr "新增命令…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
 msgstr "編輯命令…"
 
@@ -638,19 +631,16 @@ msgid "Remove Starred Item"
 msgstr "移除已固定的項目"
 
 #: klipper.cpp:70
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "剪貼簿彈出視窗"
+msgstr "剪貼簿"
 
 #: klipper.cpp:74
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "自動動作彈出選單"
+msgstr "切換是否自動彈出動作選單"
 
 #: klipper.cpp:94
 #, kde-format
@@ -683,11 +673,10 @@ msgid "Rotate History Down"
 msgstr ""
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "清除歷史"
+msgstr ""
 
 #: klipper.cpp:136
 #, kde-format
@@ -703,18 +692,17 @@ msgstr "剪貼簿歷史紀錄"
 #: klipper.cpp:410
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "較新的："
 
 #: klipper.cpp:417
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "目前"
+msgstr "目前："
 
 #: klipper.cpp:424
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "較舊的："
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -888,7 +876,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "剪貼簿彈出視窗"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"

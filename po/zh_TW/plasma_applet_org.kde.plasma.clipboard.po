@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-06-17 13:00+0900\n"
+"PO-Revision-Date: 2026-10-28 06:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -31,12 +31,10 @@ msgid "Clipboard is empty"
 msgstr "剪貼簿是空的"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "剪貼簿目前含有祕密資訊"
+msgstr "剪貼簿與選取區目前含有祕密資訊"
 
 #: qml/main.qml:46
 #, kde-format
@@ -45,12 +43,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "剪貼簿目前含有祕密資訊"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "剪貼簿目前含有祕密資訊"
+msgstr "選取區目前含有祕密資訊"
 
 #: qml/main.qml:85
 #, kde-format

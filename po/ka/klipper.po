@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2026-10-26 05:12+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.10\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "ბაფერის ისტორია:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -31,12 +31,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v ჩანაწერი"
 msgstr[1] "%v ჩანაწერი"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "მონიშნული და ბაფერი:"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -62,19 +62,19 @@ msgstr ""
 "შეიძლება, ბუფერის ისტორიაში იყოს შენახული (ეხება პარამეტრს ქვემოთ), მაგრამ "
 "მისი ჩასმა, მხოლოდ, თაგუნას შუა ღილაკით შეგიძლიათ."
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "კურსორით, ან კლავიატურით მონიშნული ტექსტი"
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "ისტორიაში ჩასმა:"
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
@@ -82,13 +82,13 @@ msgstr ""
 "აშკარად დაკოპირებული ტექსტის შენახვა ყოველთვის მოხდება იმ შემთხვევის გარდა, "
 "თუ ის პაროლია."
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "აშკარად კოპირებული გამოსახულების მონაცემები"
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -98,7 +98,7 @@ msgstr ""
 "რედაქტორებში, როგორიცაა Krita, ან GIMP.<b/><a href=\"1\">გაიგეთ მეტი ბუფერში "
 "გამოსახულების შესახებ.</a>"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -119,12 +119,21 @@ msgstr ""
 "აქვს, რომ ეკრანის ანაბეჭდი ბუფერში შეინახოს. ამას ასევე დააიგნორებს ყველა "
 "აპლიკაცია, რომელის ორივეს, ტექსტსაც, და გამოსახულებებსაც აგზავნის."
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "ქმედების მხტუნარა მენიუში ჩვენება:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -140,7 +149,7 @@ msgstr ""
 "ფანჯრისთვის ის ნაჩვენები არ იქნება. თუ მაინც გნებავთ, ნახოთ, გამოიყენეთ "
 "კლავიატურის მალსახმობი <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -148,45 +157,45 @@ msgid_plural "%v seconds"
 msgstr[0] "%v წამი"
 msgstr[1] "%v წამი"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "არაფერი"
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, kde-format
 msgid "Options:"
 msgstr "პარამეტრები:"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "შაბლონებისა და ბრძანებების დამთხვევა"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "აღწერა"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, kde-format
 msgid "Add Action…"
 msgstr "ქმედების დამატება…"
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, kde-format
 msgid "Edit Action…"
 msgstr "ქმედების ჩასწორება…"
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "ქმედების წაშლა"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -196,51 +205,51 @@ msgstr ""
 "წავშალო მონიშნული ქმედება <resource>%1</resource><nl/> და ყველა მისი "
 "ბრძანება?"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "წაშლის ქმედებსი დადასტურება"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "ზოგადი"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "ზოგადი კონფიგურაცია"
 
-#: configdialog.cpp:481
-#, kde-format
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "ქმედებების მენიუ"
-
-#: configdialog.cpp:481
-#, kde-format
-msgid "Action Menu"
-msgstr "ქმედებების მენიუ"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "ქმედებების მორგება"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgid "Actions Configuration"
 msgstr "ქმედებების მორგება"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "ქმედებების მენიუ"
+
+#: configdialog.cpp:516
+#, kde-format
+msgid "Action Menu"
+msgstr "ქმედებების მენიუ"
+
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "მალსახმობები"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "მალსახმობების მორგება"
@@ -892,7 +901,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "ბუფერის მხტუნარა"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "&შეწყვეტა"

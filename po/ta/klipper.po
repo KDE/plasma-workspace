@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2026-10-04 11:42+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.08.1\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "பிடிப்புப்பலகை வரலாறு:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -33,12 +33,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v பதிவு"
 msgstr[1] "%v பதிவுகள்"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "தேர்வும் பிடிப்புப்பலகையும்"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -54,32 +54,32 @@ msgid ""
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "சுட்டியாலோ விசைப்பலகையாலோ தேர்ந்தெடுத்த உரை"
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "வரலாற்றில் அடங்கவேண்டியவை:"
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 "நகலெடுக்கப்படும் உரை எப்போதும் சேமிக்கப்படும் (அது கடவுச்சொல்லாக குறிக்கப்படாத பட்சத்தில்)."
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "நகலெடுக்கப்படும் படங்கள்"
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -88,7 +88,7 @@ msgstr ""
 "எ.கா. Krita மற்றும் GIMP போன்ற படத்திருத்திகளிலிருந்து நகலெடுக்கப்படும் தேர்வுகளும் "
 "அடுக்குகளும்.<br/><a href=\"1\">படங்களை நகலெடுப்பது பற்றிய கூடுதல் விவரங்கள்.</a>"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -107,12 +107,21 @@ msgstr ""
 "(திரைப்பிடிப்பு செயலி) இத்தேர்வை பொருட்படுத்தாது. மேலும், கோப்புப்பாதையையும் படத்தையும் "
 "சேர்த்து பிடிப்புப்பலகையில் இடும் செயலிகளும் இதை ஆதரிக்காது."
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "செயல்களைக் கொண்ட மேல்தோன்றும் பட்டியை காட்டு:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -123,7 +132,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -131,47 +140,47 @@ msgid_plural "%v seconds"
 msgstr[0] "%v நொடி"
 msgstr[1] "%v நொடி"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "ஏதுமில்லை"
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, kde-format
 msgid "Options:"
 msgstr "விருப்பங்கள்:"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "பாங்கும் கட்டளைகளும்"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "விவரணம்"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "செயல்முறையை சேர்..."
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "செயல்முறையை திருத்து..."
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "செயல்முறையை நீக்கு"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -181,51 +190,51 @@ msgstr ""
 "<resource>%1</resource><nl/> என்ற தேர்ந்தெடுக்கப்பட்டுள்ள செயல்முறையையும் அதற்கான "
 "கட்டளைகளையும் நீக்க வேண்டுமா?"
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "செயல்முறையை நீக்குவதை உறுதி செய்தல்"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgid "General Configuration"
 msgstr "பொது அமைப்புகள்"
 
-#: configdialog.cpp:481
-#, kde-format
-msgctxt "Popup Menu Config"
-msgid "Action Menu"
-msgstr "செயல்முறைப்பட்டி"
-
-#: configdialog.cpp:481
-#, kde-format
-msgid "Action Menu"
-msgstr "செயல்முறைப்பட்டி"
-
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "செயல்முறைகளுக்கான அமைப்புகள்"
 
-#: configdialog.cpp:482
+#: configdialog.cpp:515
 #, kde-format
 msgid "Actions Configuration"
 msgstr "செயல்முறைகளுக்கான அமைப்புகள்"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:516
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "செயல்முறைப்பட்டி"
+
+#: configdialog.cpp:516
+#, kde-format
+msgid "Action Menu"
+msgstr "செயல்முறைப்பட்டி"
+
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "சுருக்குவழிகள்"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "சுருக்குவழிகளுக்கான அமைப்பு"
@@ -886,7 +895,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "மேல்தோன்றும் பிடிப்புப்பலகை சாளரம்"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "&ரத்து செய்"

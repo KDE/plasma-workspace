@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-04-08 22:35+0900\n"
+"PO-Revision-Date: 2026-10-28 06:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -63,11 +63,10 @@ msgid "Night Light is temporarily suspended until it is manually resumed."
 msgstr ""
 
 #: ui/main.qml:130
-#, fuzzy, kde-format
-#| msgid "Turn off at:"
+#, kde-format
 msgctxt "@action:button turn off Night Light feature"
 msgid "Turn Off"
-msgstr "關閉時間："
+msgstr "關閉"
 
 #: ui/main.qml:141
 #, kde-format

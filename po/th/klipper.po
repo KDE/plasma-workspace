@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-26 00:51+0000\n"
+"POT-Creation-Date: 2026-10-28 01:03+0000\n"
 "PO-Revision-Date: 2010-12-17 20:06+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:85
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard history:"
 msgstr "ขนาดของประวัติคลิปบอร์ด"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:91
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -33,13 +33,13 @@ msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] " รายการ"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:100
 #, fuzzy, kde-format
 #| msgid "Selection and Clipboard"
 msgid "Selection and Clipboard:"
 msgstr "การเลือกและคลิปบอร์ด"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -55,39 +55,39 @@ msgid ""
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:123
+#: configdialog.cpp:126
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:125
+#: configdialog.cpp:128
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "ทำการกระทำในประวัติอีกครั้ง"
 
-#: configdialog.cpp:127
+#: configdialog.cpp:130
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:132
+#: configdialog.cpp:135
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:136
+#: configdialog.cpp:139
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:145
+#: configdialog.cpp:148
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -100,13 +100,22 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:170
+#: configdialog.cpp:172
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"On the <interface>Actions Configuration</interface> page, enable the "
+"<interface>Offer applications for copied links and files</interface> setting "
+"or enable at least one action to make settings on this page have any effect."
+msgstr ""
+
+#: configdialog.cpp:192
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "ช่วงเวลาแสดงหน้าต่างผุดของการกระทำ:"
 
-#: configdialog.cpp:179
+#: configdialog.cpp:201
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -117,7 +126,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:191
+#: configdialog.cpp:213
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -126,50 +135,50 @@ msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] " วินาที"
 
-#: configdialog.cpp:192
+#: configdialog.cpp:214
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:201
+#: configdialog.cpp:223
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "การกระทำ"
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:226
+#: configdialog.cpp:255
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "คำอธิบาย"
 
-#: configdialog.cpp:232
+#: configdialog.cpp:261
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "เพิ่มการกระทำ..."
 
-#: configdialog.cpp:236
+#: configdialog.cpp:265
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "แก้ไขการกระทำ..."
 
-#: configdialog.cpp:241
+#: configdialog.cpp:270
 #, kde-format
 msgid "Delete Action"
 msgstr "ลบการกระทำ"
 
-#: configdialog.cpp:426
+#: configdialog.cpp:455
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -177,25 +186,38 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:427
+#: configdialog.cpp:456
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "ลบการกระทำ"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "ค่าทั่วไป"
 
-#: configdialog.cpp:480
+#: configdialog.cpp:514
 #, fuzzy, kde-format
 #| msgid "General Config"
 msgid "General Configuration"
 msgstr "ตั้งค่าทั่วไป"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:515
+#, fuzzy, kde-format
+#| msgid "Actions Config"
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "ตั้งค่าการกระทำ"
+
+#: configdialog.cpp:515
+#, fuzzy, kde-format
+#| msgid "Actions Config"
+msgid "Actions Configuration"
+msgstr "ตั้งค่าการกระทำ"
+
+#: configdialog.cpp:516
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -203,33 +225,20 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "การกระทำ"
 
-#: configdialog.cpp:481
+#: configdialog.cpp:516
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "การกระทำ"
 
-#: configdialog.cpp:482
-#, fuzzy, kde-format
-#| msgid "Actions Config"
-msgctxt "Actions Config"
-msgid "Actions Configuration"
-msgstr "ตั้งค่าการกระทำ"
-
-#: configdialog.cpp:482
-#, fuzzy, kde-format
-#| msgid "Actions Config"
-msgid "Actions Configuration"
-msgstr "ตั้งค่าการกระทำ"
-
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "ปุ่มพิมพ์ลัด"
 
-#: configdialog.cpp:489
+#: configdialog.cpp:523
 #, fuzzy, kde-format
 #| msgid "Shortcuts Config"
 msgid "Shortcuts Configuration"
@@ -886,7 +895,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "ขนาดของประวัติคลิปบอร์ด"
 
-#: urlgrabber.cpp:218
+#: urlgrabber.cpp:220
 #, kde-format
 msgid "&Cancel"
 msgstr "&ยกเลิก"
