@@ -1679,8 +1679,31 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
 {
     connect(c, &Plasma::Containment::showAddWidgetsInterface, this, &ShellCorona::toggleWidgetExplorer);
     connect(c, &Plasma::Containment::appletAlternativesRequested, this, &ShellCorona::showAlternativesForApplet);
-    connect(c, &Plasma::Containment::appletCreated, this, [this, c](Plasma::Applet *applet) {
+    auto registerIfLauncher = [this](Plasma::Applet *applet) {
+        if (!applet) {
+            return;
+        }
+        const auto provides = applet->pluginMetaData().value(u"X-Plasma-Provides", QStringList());
+        if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
+            if (!m_launcherApplets.contains(applet)) {
+                m_launcherApplets.append(applet);
+            }
+        }
+    };
+
+    // Index any applets already present in this containment (e.g. at startup)
+    const auto existingApplets = c->applets();
+    for (Plasma::Applet *applet : existingApplets) {
+        registerIfLauncher(applet);
+    }
+    // Check if the containment itself provides the launcher menu
+    registerIfLauncher(c);
+
+    // Watch for dynamically added applets
+    connect(c, &Plasma::Containment::appletAdded, this, registerIfLauncher);
+    connect(c, &Plasma::Containment::appletCreated, this, [this, c, registerIfLauncher](Plasma::Applet *applet) {
         executeSetupPlasmoidScript(c, applet);
+        registerIfLauncher(applet);
     });
 
     // When a containment is removed, delete the PanelView (so that you cannot
@@ -1703,6 +1726,7 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
             QFile f(snapshotPath);
             f.remove();
         }
+        m_launcherApplets.removeAll(nullptr);
     });
 }
 
@@ -2936,6 +2960,23 @@ void ShellCorona::updateStruts()
 
 void ShellCorona::activateLauncherMenu()
 {
+    // Fast path: On single-screen systems (the vast majority of desktop/laptop setups),
+    // there is only one screen, so the active output is unambiguously the primary screen.
+    // Calling KWin over D-Bus introduces unnecessary IPC round-trip latency and yields
+    // to the event loop before the launcher begins opening.
+    const auto screens = m_screenPool->screenOrder();
+    if (screens.count() <= 1) {
+        QScreen *primary = m_screenPool->primaryScreen();
+        if (primary) {
+            activateLauncherMenu(primary->name());
+            return;
+        }
+    }
+
+    // Multi-screen path: When multiple screens exist, query KWin asynchronously to determine
+    // which output is currently active (where the active window or pointer resides).
+    // Note: We cannot rely on in-process Qt focus information because plasmashell does not
+    // own the active window when external applications (browser, editor, etc.) are focused.
     auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
     auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message));
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher] {
@@ -2943,12 +2984,72 @@ void ShellCorona::activateLauncherMenu()
         QDBusReply<QString> reply = *watcher;
         if (reply.isValid()) {
             activateLauncherMenu(reply.value());
+        } else {
+            QScreen *primary = m_screenPool->primaryScreen();
+            if (primary) {
+                activateLauncherMenu(primary->name());
+            }
         }
     });
 }
 
 void ShellCorona::activateLauncherMenu(const QString &screenName)
 {
+    const auto screenOpt = m_screenPool->idForName(screenName);
+    const uint screenId = screenOpt.value_or(0);
+
+    // Prune stale entries
+    m_launcherApplets.removeAll(nullptr);
+
+    auto isPanel = [](Plasma::Applet *applet) -> bool {
+        Plasma::Containment *cont = applet->containment();
+        if (!cont) {
+            cont = qobject_cast<Plasma::Containment *>(applet);
+        }
+        return cont && (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel);
+    };
+
+    auto getScreen = [](Plasma::Applet *applet) -> int {
+        Plasma::Containment *cont = applet->containment();
+        if (!cont) {
+            cont = qobject_cast<Plasma::Containment *>(applet);
+        }
+        return cont ? cont->screen() : -1;
+    };
+
+    // Priority 1: Panel launcher on the active screen
+    for (const auto &launcher : std::as_const(m_launcherApplets)) {
+        if (launcher && getScreen(launcher) == static_cast<int>(screenId) && isPanel(launcher)) {
+            Q_EMIT launcher->activated();
+            return;
+        }
+    }
+
+    // Priority 2: Any launcher on the active screen (e.g. desktop containment)
+    for (const auto &launcher : std::as_const(m_launcherApplets)) {
+        if (launcher && getScreen(launcher) == static_cast<int>(screenId)) {
+            Q_EMIT launcher->activated();
+            return;
+        }
+    }
+
+    // Priority 3: Panel launcher on any other screen
+    for (const auto &launcher : std::as_const(m_launcherApplets)) {
+        if (launcher && isPanel(launcher)) {
+            Q_EMIT launcher->activated();
+            return;
+        }
+    }
+
+    // Priority 4: Any launcher on any screen
+    for (const auto &launcher : std::as_const(m_launcherApplets)) {
+        if (launcher) {
+            Q_EMIT launcher->activated();
+            return;
+        }
+    }
+
+    // Fallback: Full scan if cache did not match
     auto activateLauncher = [](Plasma::Applet *applet) -> bool {
         const auto provides = applet->pluginMetaData().value(u"X-Plasma-Provides", QStringList());
         if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
@@ -2958,26 +3059,17 @@ void ShellCorona::activateLauncherMenu(const QString &screenName)
         return false;
     };
 
-    const auto screenOpt = m_screenPool->idForName(screenName);
-    const uint screenId = screenOpt.value_or(0);
-
     QList<Plasma::Containment *> conts = containments();
-
-    // Sort in a way that containments with the "proper" screen are before the others,
-    // and panels go before desktops
     std::sort(conts.begin(), conts.end(), [screenId](Plasma::Containment *conta, Plasma::Containment *contb) {
         if (conta->screen() == screenId && contb->screen() != screenId) {
             return true;
         }
-
         if ((conta->containmentType() == Plasma::Containment::Panel || conta->containmentType() == Plasma::Containment::CustomPanel)
             && (contb->containmentType() != Plasma::Containment::Panel && contb->containmentType() != Plasma::Containment::CustomPanel)) {
             return true;
         }
-        // Make it stable
         return conta->id() < contb->id();
     });
-
     for (auto *cont : std::as_const(conts)) {
         const auto applets = cont->applets();
         for (auto applet : applets) {

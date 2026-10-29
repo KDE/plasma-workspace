@@ -334,6 +334,13 @@ private:
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
     // The set of all the screens which have both the desktop and all panels (if any) fully loaded
     QSet<uint> m_screensWithUiReady;
+
+    // Cache of launcher applets (those providing "org.kde.plasma.launchermenu").
+    // Populated on containment and applet addition, invalidated on removal. Avoids
+    // allocating lists, sorting containments, and reparsing JSON metadata on every
+    // launcher shortcut press.
+    QList<QPointer<Plasma::Applet>> m_launcherApplets;
+
     friend class ShellTest;
 };
 
