@@ -76,7 +76,7 @@
         This will leave the color of highlighted elements up to the color scheme, and not set a global accent color for all schemes. You can learn more about editing color schemes in the section below.
       </para></listitem>
       <listitem><para><guilabel>From current wallpaper</guilabel>:
-        This will automatically extract a matching color from your desktop background image.
+        This will automatically extract a matching color from the desktop background image on your primary display.
       </para></listitem>
       <listitem><para><guilabel>Custom</guilabel>:
         Here you can choose from a set of predefined colors or pick a custom color.
