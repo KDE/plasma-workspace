@@ -152,31 +152,6 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
 
     if (!(appId.isEmpty() && xWindowsWMClassName.isEmpty())) {
         if (!appId.isEmpty()) {
-            // Try matching both appId and xWindowsWMClassName against StartupWMClass.
-            // We do this before evaluating the mapping rules further, because StartupWMClass
-            // is essentially a mapping rule, and we expect it to be set deliberately and
-            // sensibly to instruct us what to do. Also, mapping rules
-            //
-            // StartupWMClass=STRING
-            //
-            //   If true, it is KNOWN that the application will map at least one
-            //   window with the given string as its WM class or WM name hint.
-            //
-            // Source: https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
-            if (services.isEmpty() && !xWindowsWMClassName.isEmpty()) {
-                services = KApplicationTrader::query([&xWindowsWMClassName](const KService::Ptr &service) {
-                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, xWindowsWMClassName);
-            }
-
-            if (services.isEmpty()) {
-                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
-                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(appId, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, appId);
-            }
-
             // The appId looks like a path.
             if (services.isEmpty() && appId.startsWith(QLatin1String("/"))) {
                 // Check if it's a path to a .desktop file.
@@ -205,6 +180,21 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
             if (services.isEmpty()) {
                 services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
                     return !service->noDisplay() && service->name().compare(appId, Qt::CaseInsensitive) == 0;
+                });
+                sortServicesByMenuId(services, appId);
+            }
+
+            // Try matching against StartupWMClass, some apps ship that or users may have set it up.
+            if (services.isEmpty() && !xWindowsWMClassName.isEmpty()) {
+                services = KApplicationTrader::query([&xWindowsWMClassName](const KService::Ptr &service) {
+                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
+                });
+                sortServicesByMenuId(services, xWindowsWMClassName);
+            }
+
+            if (services.isEmpty()) {
+                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
+                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(appId, Qt::CaseInsensitive) == 0;
                 });
                 sortServicesByMenuId(services, appId);
             }
