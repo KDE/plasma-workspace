@@ -48,6 +48,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_minLength(0)
     , m_contentLength(0)
     , m_thickness(30)
+    , m_configuredThickness(30)
     , m_minDrawingWidth(0)
     , m_minDrawingHeight(0)
     , m_initCompleted(false)
@@ -270,19 +271,26 @@ int PanelView::totalThickness() const
 
 void PanelView::setThickness(int value)
 {
-    if (value < minThickness()) {
-        value = minThickness();
+    if (value != m_configuredThickness) {
+        m_configuredThickness = value;
+        // For thickness, always use the default thickness value for horizontal/vertical panel
+        configDefaults().writeEntry("thickness", value);
+        m_corona->requestApplicationConfigSync();
     }
-    if (value == thickness()) {
+    updateThickness();
+}
+
+void PanelView::updateThickness()
+{
+    // The Plasma style can need more room than the user chose: grow for it, but don't save that,
+    // or the panel stays that big after the style (or its minimum) changes
+    const int value = std::max(m_configuredThickness, minThickness());
+    if (value == m_thickness) {
         return;
     }
 
     m_thickness = value;
     Q_EMIT thicknessChanged();
-
-    // For thickness, always use the default thickness value for horizontal/vertical panel
-    configDefaults().writeEntry("thickness", value);
-    m_corona->requestApplicationConfigSync();
     positionAndResizePanel();
 }
 
@@ -841,7 +849,7 @@ void PanelView::restore()
 
     setFloating((bool)resolutionIndependentConfig().readEntry<int>("floating", defaultFloating()));
     setFloatingApplets((bool)resolutionIndependentConfig().readEntry<int>("floatingApplets", false));
-    setThickness(configDefaults().readEntry("thickness", m_thickness));
+    setThickness(configDefaults().readEntry("thickness", m_configuredThickness));
 
     const QSize screenSize = m_screenToFollow->size();
 
@@ -1721,7 +1729,7 @@ void PanelView::updatePadding()
     m_minDrawingHeight = rootObject()->property("minPanelHeight").toInt();
     m_minDrawingWidth = rootObject()->property("minPanelWidth").toInt();
     Q_EMIT minThicknessChanged();
-    setThickness(m_thickness);
+    updateThickness();
 }
 
 void PanelView::updateShadows()
