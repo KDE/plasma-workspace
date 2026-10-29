@@ -1684,16 +1684,20 @@ void PanelView::updateEnabledBorders()
                                   int(std::round(rootObject()->property("bottomShadowMargin").toReal()))};
 
         if (m_screenToFollow) {
-            if (x() - shadowPadding.left() <= m_screenToFollow->geometry().x()) {
+            // Use the geometry we ask the compositor for: we never learn our real position, and mixing the guessed
+            // position with the real size (shortened by other panels) wrongly rounds the corners next to them
+            const QRect panelGeometry = geometryByDistance(0);
+            const QRect screenGeometry = m_screenToFollow->geometry();
+            if (panelGeometry.x() - shadowPadding.left() <= screenGeometry.x()) {
                 borders &= ~KSvg::FrameSvg::LeftBorder;
             }
-            if (x() + width() + shadowPadding.right() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
+            if (panelGeometry.x() + panelGeometry.width() + shadowPadding.right() >= screenGeometry.x() + screenGeometry.width()) {
                 borders &= ~KSvg::FrameSvg::RightBorder;
             }
-            if (y() - shadowPadding.top() <= m_screenToFollow->geometry().y()) {
+            if (panelGeometry.y() - shadowPadding.top() <= screenGeometry.y()) {
                 borders &= ~KSvg::FrameSvg::TopBorder;
             }
-            if (y() + height() + shadowPadding.bottom() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
+            if (panelGeometry.y() + panelGeometry.height() + shadowPadding.bottom() >= screenGeometry.y() + screenGeometry.height()) {
                 borders &= ~KSvg::FrameSvg::BottomBorder;
             }
         }
