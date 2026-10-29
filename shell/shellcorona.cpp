@@ -2506,6 +2506,9 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
     targetGeneralConfig.writeEntry("AppletOrder", appletsOrderList.join(QStringLiteral(";")));
 
     Q_ASSERT(targetPanel);
+    // The screen is what the panel is restored on, so the copy gets the screen it is made for.
+    const uint targetScreen = wantedScreen ? m_screenPool->idForScreen(wantedScreen).value_or(oldPanel->screen()) : oldPanel->screen();
+    targetPanel->setScreen(targetScreen);
     m_waitingPanels << targetPanel;
     // immediately create the panel here so that we have access to the panel view
     createWaitingPanels();
