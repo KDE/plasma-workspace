@@ -22,6 +22,7 @@
 #include <QQuickItem>
 #include <QQuickView>
 #include <QTimer>
+#include <QtEnvironmentVariables>
 #include <limits>
 
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
@@ -109,6 +110,7 @@ KSMShutdownDlg::KSMShutdownDlg(QQmlEngine *engine, ShutdownType sdtype, bool win
     context->setContextProperty(u"isUefi"_s, false);
     context->setContextProperty(u"rebootToBootLoaderMenu"_s, false);
     context->setContextProperty(u"rebootToBootLoaderEntry"_s, u""_s);
+    context->setContextProperty(u"exitingSafeMode"_s, qEnvironmentVariableIntValue("KDE_SAFEMODE") > 0);
 
     {
         QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, QStringLiteral("Get"));
