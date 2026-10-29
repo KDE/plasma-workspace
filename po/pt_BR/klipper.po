@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:03+0000\n"
-"PO-Revision-Date: 2026-10-26 08:54-0300\n"
+"PO-Revision-Date: 2026-10-28 09:10-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -138,6 +138,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"Na página <interface>Configuração das ações</interface>, ative a opção "
+"<interface>Oferecer aplicativos para links e arquivos copiados</interface> "
+"ou habilite pelo menos uma ação para que as definições nesta página produzam "
+"algum efeito."
 
 #: configdialog.cpp:192
 #, kde-format
@@ -906,7 +910,7 @@ msgstr ""
 #: klipper.kcfg:74
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr "Oferecer opções para links e arquivos copiados"
+msgstr "Oferecer aplicativos para links e arquivos copiados"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:76

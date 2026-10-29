@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -350,53 +350,53 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr "विच्छिन्नपर्दे %1"
 
-#: shellcorona.cpp:181 shellcorona.cpp:183
+#: shellcorona.cpp:182 shellcorona.cpp:184
 #, kde-format
 msgid "Show Desktop"
 msgstr "कार्यमुखम् दर्शयतु"
 
-#: shellcorona.cpp:183
+#: shellcorona.cpp:184
 #, kde-format
 msgid "Hide Desktop"
 msgstr "कार्यमुखम् गोपयन्तु"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "अनुप्रयोग प्रक्षेपक सक्रिय करें"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "क्रियाकलाप परिवर्तकम् दर्शयतु"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "पूर्व गतिविधि परिवर्तय"
 
-#: shellcorona.cpp:224
+#: shellcorona.cpp:225
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "अग्रगतिविधिं परिवर्तय"
 
-#: shellcorona.cpp:255
+#: shellcorona.cpp:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr ""
 
-#: shellcorona.cpp:277
+#: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "फलकयोः मध्ये कीलफलक-केन्द्रीकरणं चालयन्तु"
 
-#: shellcorona.cpp:2290
+#: shellcorona.cpp:2291
 #, kde-format
 msgid "Add Panel"
 msgstr "पैनलं संयोजयति"
 
-#: shellcorona.cpp:2377
+#: shellcorona.cpp:2378
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

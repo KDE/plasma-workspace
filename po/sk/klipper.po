@@ -130,6 +130,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"Aby nastavenia na tejto stránke mali nejaký účinok, na stránke "
+"<interface>Nastavenie akcií</interface> zapnite nastavenie "
+"<interface>Ponúkať aplikácie pre kopírované odkazy a súbory</interface> "
+"alebo zapnite aspoň jednu akciu."
 
 #: configdialog.cpp:192
 #, kde-format
@@ -184,16 +188,14 @@ msgid "Description"
 msgstr "Popis"
 
 #: configdialog.cpp:261
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
-msgstr "Pridať akciu..."
+msgstr "Pridať akciu…"
 
 #: configdialog.cpp:265
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "Upraviť akciu..."
+msgstr "Upraviť akciu…"
 
 #: configdialog.cpp:270
 #, kde-format
@@ -527,16 +529,14 @@ msgstr ""
 "ručne pomocou klávesovej skratky <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
-msgstr "Pridať príkaz..."
+msgstr "Pridať príkaz…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
-msgstr "Upraviť príkaz..."
+msgstr "Upraviť príkaz…"
 
 #: editactiondialog.cpp:280
 #, kde-format

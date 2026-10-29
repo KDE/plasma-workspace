@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:03+0000\n"
-"PO-Revision-Date: 2026-10-17 12:39+0300\n"
+"PO-Revision-Date: 2026-10-28 21:06+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: configdialog.cpp:85
 #, kde-format
@@ -135,6 +135,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"Jei norite, kad šiame puslapyje esančios nuostatos turėtų kokį nors poveikį, "
+"įjunkite <interface>Veiksmų konfigūracijos</interface> puslapyje nuostatą "
+"<interface>Siūlyti nukopijuotoms nuorodoms ir failams skirtas programas</"
+"interface> arba įjunkite bent vieną veiksmą."
 
 #: configdialog.cpp:192
 #, kde-format
@@ -191,16 +195,14 @@ msgid "Description"
 msgstr "Aprašas"
 
 #: configdialog.cpp:261
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
-msgstr "Pridėti veiksmą..."
+msgstr "Pridėti veiksmą…"
 
 #: configdialog.cpp:265
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "Keisti veiksmą..."
+msgstr "Taisyti veiksmą…"
 
 #: configdialog.cpp:270
 #, kde-format
@@ -537,16 +539,14 @@ msgstr ""
 "<shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
-msgstr "Pridėti komandą..."
+msgstr "Pridėti komandą…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
-msgstr "Taisyti komandą..."
+msgstr "Taisyti komandą…"
 
 #: editactiondialog.cpp:280
 #, kde-format

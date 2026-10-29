@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-28 01:03+0000\n"
-"PO-Revision-Date: 2026-10-17 13:36+0200\n"
+"PO-Revision-Date: 2026-10-27 12:41+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -199,16 +199,14 @@ msgid "Description"
 msgstr "Description"
 
 #: configdialog.cpp:261
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
 msgstr "Ajouter une action..."
 
 #: configdialog.cpp:265
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "Modifier l'action..."
+msgstr "Modifier une action..."
 
 #: configdialog.cpp:270
 #, kde-format
@@ -549,14 +547,12 @@ msgstr ""
 "%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
 msgstr "Ajouter une commande..."
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
 msgstr "Modifier une commande..."
 

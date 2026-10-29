@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2025-11-30 15:19+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -351,53 +351,53 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr "Aftengdur skjár %1"
 
-#: shellcorona.cpp:181 shellcorona.cpp:183
+#: shellcorona.cpp:182 shellcorona.cpp:184
 #, kde-format
 msgid "Show Desktop"
 msgstr "Sýna skjáborðið"
 
-#: shellcorona.cpp:183
+#: shellcorona.cpp:184
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Fela skjáborðið"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Virkja forritaræsi"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Sýna athafnastjóra"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Skipta í fyrri athöfn"
 
-#: shellcorona.cpp:224
+#: shellcorona.cpp:225
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Skipta í næstu athöfn"
 
-#: shellcorona.cpp:255
+#: shellcorona.cpp:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Vinna með skjáborð og skjáborðsstikur…"
 
-#: shellcorona.cpp:277
+#: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Færa lyklaborðsfókus á milli skjáborðsstika"
 
-#: shellcorona.cpp:2290
+#: shellcorona.cpp:2291
 #, kde-format
 msgid "Add Panel"
 msgstr "Bæta við skjáborðsstiku"
 
-#: shellcorona.cpp:2377
+#: shellcorona.cpp:2378
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

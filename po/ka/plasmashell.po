@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-10-29 00:55+0000\n"
 "PO-Revision-Date: 2026-07-02 05:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -350,53 +350,53 @@ msgstr "ჩაშენებული ეკრანი"
 msgid "Disconnected Screen %1"
 msgstr "გაითიშა ეკრანი %1"
 
-#: shellcorona.cpp:181 shellcorona.cpp:183
+#: shellcorona.cpp:182 shellcorona.cpp:184
 #, kde-format
 msgid "Show Desktop"
 msgstr "სამუშაო მაგიდის ჩვენება"
 
-#: shellcorona.cpp:183
+#: shellcorona.cpp:184
 #, kde-format
 msgid "Hide Desktop"
 msgstr "სამუშაო მაგიდის დამალვა"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:200
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "აპლიკაციების გამშვების აქტივაცია"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "აქტივობების გადამრთველის ჩვენება"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "წინა აქტივობაზე გადართვა"
 
-#: shellcorona.cpp:224
+#: shellcorona.cpp:225
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "შემდეგ აქტივობაზე გადართვა"
 
-#: shellcorona.cpp:255
+#: shellcorona.cpp:256
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "სამუშაო მაგიდებისა და პანელების მართვა…"
 
-#: shellcorona.cpp:277
+#: shellcorona.cpp:278
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "კლავიატურის ფოკუსის პანელებს შორის გადატანა"
 
-#: shellcorona.cpp:2290
+#: shellcorona.cpp:2291
 #, kde-format
 msgid "Add Panel"
 msgstr "პანელის დამატება"
 
-#: shellcorona.cpp:2377
+#: shellcorona.cpp:2378
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
