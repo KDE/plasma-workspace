@@ -1,4 +1,5 @@
 /*
+    SPDX-FileCopyrightText: 2025 David Edmundson <davidedmundson@kde.org>
     SPDX-FileCopyrightText: 2026 Fushan Wen <qydwhotmail@gmail.com>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
