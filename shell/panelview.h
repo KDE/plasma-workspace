@@ -317,6 +317,7 @@ private:
     void updateLayerWindow();
     void positionPanel();
     void positionAndResizePanel();
+    void updateThickness();
     void integrateScreen();
     void updateEditModeLabel();
     bool containmentContainsPosition(const QPointF &point) const;
@@ -328,7 +329,8 @@ private:
     int m_maxLength;
     int m_minLength;
     int m_contentLength;
-    int m_thickness;
+    int m_thickness; // what the panel uses: at least minThickness()
+    int m_configuredThickness; // what the user chose, the only value saved to the config
     int m_bottomPadding;
     int m_topPadding;
     int m_leftPadding;
