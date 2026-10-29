@@ -1005,6 +1005,9 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     }
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
+
+    // A new thickness or length updates the mask right away, while the window still has its old size
+    updateMask();
 }
 
 void PanelView::moveEvent(QMoveEvent *ev)
