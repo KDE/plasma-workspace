@@ -195,8 +195,9 @@ QUrl Job::effectiveDestUrl() const
     // For a single file show the file url
     // Otherwise the destination folder
     if (d->m_totalFiles == 1) {
-        url = d->descriptionUrl();
-    } else {
+        url = JobPrivate::localFileOrUrl(d->m_descriptionValue2);
+    }
+    if (!url.isValid()) {
         url = d->m_destUrl;
     }
 
