@@ -1378,7 +1378,18 @@ void PanelView::updateMask()
     }
 
     if (mask.isEmpty()) {
-        mask = QRegion(QRect(screenPanelRect));
+        // No background to take the mask from (e.g. NoBackground): use the area the background would cover,
+        // not the whole window, which also contains the floating margins
+        QRect backgroundRect = screenPanelRect;
+        const QPoint offset = rootObject ? rootObject->property("floatingTranslucentItemOffset").toPoint() : QPoint();
+        if (formFactor() == Plasma::Types::Vertical) {
+            backgroundRect.setLeft(offset.x());
+            backgroundRect.setWidth(thickness());
+        } else {
+            backgroundRect.setTop(offset.y());
+            backgroundRect.setHeight(thickness());
+        }
+        mask = QRegion(backgroundRect);
     }
 
     if (m_backgroundHints == Plasma::Types::NoBackground) {
