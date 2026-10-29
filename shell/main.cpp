@@ -85,6 +85,12 @@ int main(int argc, char *argv[])
     // this variable controls whether to reconnect or exit if the compositor dies, given plasmashell does a lot of
     // bespoke wayland code disable for now. consider disabling when layer-shell lands
     qunsetenv("QT_WAYLAND_RECONNECT");
+
+    // TODO: Remove once Plasma's settings pages are adapted to the card style.
+    if (qgetenv("KDE_KIRIGAMI_FORMS_STYLE") != "cards") {
+        qputenv("KDE_KIRIGAMI_FORMS_STYLE", "flat");
+    }
+
     // Qt documentation says:
     // https://doc.qt.io/qt-6/qquickgraphicsconfiguration.html#the-automatic-pipeline-cache
     //
