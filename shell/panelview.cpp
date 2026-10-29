@@ -682,7 +682,6 @@ void PanelView::positionAndResizePanel()
     } else {
         setGeometry(geom);
     }
-    updateMask();
 
     if (geomChanged) {
         Q_EMIT geometryChanged();
@@ -1005,6 +1004,9 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     }
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
+
+    // The mask follows the window size, which only changes once the compositor applies a new thickness or length
+    updateMask();
 }
 
 void PanelView::moveEvent(QMoveEvent *ev)
