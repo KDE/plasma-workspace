@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-30 00:56+0000\n"
 "PO-Revision-Date: 2026-06-02 22:32+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -490,49 +490,49 @@ msgstr ""
 "Adja hozzá a nyelveket abban a sorrendben, ahogyan azokat az alkalmazásokban "
 "látni szeretné."
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Nyelvváltás"
 
-#: ui/AdvancedLanguageSelectPage.qml:118
+#: ui/AdvancedLanguageSelectPage.qml:123
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Nyelvváltás"
 
-#: ui/AdvancedLanguageSelectPage.qml:127
+#: ui/AdvancedLanguageSelectPage.qml:132
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Mozgatás legfelülre"
 
-#: ui/AdvancedLanguageSelectPage.qml:136
+#: ui/AdvancedLanguageSelectPage.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: ui/AdvancedLanguageSelectPage.qml:152
+#: ui/AdvancedLanguageSelectPage.qml:157
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Nincs beállítva nyelv"
 
-#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
+#: ui/AdvancedLanguageSelectPage.qml:199 ui/AdvancedLanguageSelectPage.qml:233
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Nyelvek hozzáadása"
 
-#: ui/AdvancedLanguageSelectPage.qml:250
+#: ui/AdvancedLanguageSelectPage.qml:255
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
 msgstr "A(z) „%1” nem része ennek a rendszernek."
 
-#: ui/AdvancedLanguageSelectPage.qml:251
+#: ui/AdvancedLanguageSelectPage.qml:256
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -542,7 +542,7 @@ msgstr ""
 "Tudja meg, hogyan segíthet <link url='%1'>lefordítani a KDE-t a saját "
 "nyelvére</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:260
+#: ui/AdvancedLanguageSelectPage.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

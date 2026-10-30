@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 00:47+0000\n"
+"POT-Creation-Date: 2026-10-30 00:56+0000\n"
 "PO-Revision-Date: 2022-07-11 20:10+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -152,86 +152,86 @@ msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
 msgstr "Kịch bản đăng xuất"
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
 
-#: ui/main.qml:133
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
 msgstr ""
 
-#: ui/main.qml:134
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
 msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgid "Autostart"
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
 msgstr "Khởi động tự động"
 
-#: ui/main.qml:138
+#: ui/main.qml:141
 #, fuzzy, kde-format
 #| msgid "Autostart"
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
 msgstr "Khởi động tự động"
 
-#: ui/main.qml:159
+#: ui/main.qml:162
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr ""
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, fuzzy, kde-format
 #| msgid "Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Thuộc tính"
 
-#: ui/main.qml:179
+#: ui/main.qml:182
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Xoá"
 
-#: ui/main.qml:195
+#: ui/main.qml:198
 #, kde-format
 msgid "Applications"
 msgstr "Ứng dụng"
 
-#: ui/main.qml:198
+#: ui/main.qml:201
 #, kde-format
 msgid "Login Scripts"
 msgstr "Kịch bản đăng nhập"
 
-#: ui/main.qml:201
+#: ui/main.qml:204
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Kịch bản tiền khởi động"
 
-#: ui/main.qml:204
+#: ui/main.qml:207
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Kịch bản đăng xuất"
 
-#: ui/main.qml:213
+#: ui/main.qml:216
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Không có mục khởi động nào do người dùng chỉ định"
 
-#: ui/main.qml:214
+#: ui/main.qml:217
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Click the <interface>Add…</interface> button below to add some"
@@ -239,12 +239,12 @@ msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "Bấm nút <interface>Thêm…</interface> bên dưới để thêm"
 
-#: ui/main.qml:229
+#: ui/main.qml:232
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Chọn kịch bản đăng nhập"
 
-#: ui/main.qml:249
+#: ui/main.qml:252
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Chọn kịch bản đăng xuất"

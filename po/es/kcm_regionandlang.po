@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-30 00:56+0000\n"
 "PO-Revision-Date: 2026-10-01 00:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -490,49 +490,49 @@ msgstr "El idioma «%1» no es compatible"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Añada idiomas en el orden en el que desea verlos en las aplicaciones."
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Cambiar idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:118
+#: ui/AdvancedLanguageSelectPage.qml:123
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Cambiar idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:127
+#: ui/AdvancedLanguageSelectPage.qml:132
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Mover arriba"
 
-#: ui/AdvancedLanguageSelectPage.qml:136
+#: ui/AdvancedLanguageSelectPage.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: ui/AdvancedLanguageSelectPage.qml:152
+#: ui/AdvancedLanguageSelectPage.qml:157
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Ningún idioma configurado"
 
-#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
+#: ui/AdvancedLanguageSelectPage.qml:199 ui/AdvancedLanguageSelectPage.qml:233
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Añadir idiomas"
 
-#: ui/AdvancedLanguageSelectPage.qml:250
+#: ui/AdvancedLanguageSelectPage.qml:255
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
 msgstr "Este sistema no incluye «%1»"
 
-#: ui/AdvancedLanguageSelectPage.qml:251
+#: ui/AdvancedLanguageSelectPage.qml:256
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -542,7 +542,7 @@ msgstr ""
 "Descubra cómo ayudar a <link url='%1'>traducir software de KDE a su idioma</"
 "link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:260
+#: ui/AdvancedLanguageSelectPage.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

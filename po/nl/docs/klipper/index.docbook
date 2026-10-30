@@ -166,7 +166,7 @@
 <title
 >Algemeen</title>
 <para
->&klipper; can be used to set the behavior of the clipboard and selection in &plasma;. To adjust their behavior, see <xref linkend="general-page"/>. </para>
+>&klipper; kan gebruikt worden om het gedrag van het klembord in combinatie met selecties binnen &plasma; in te stellen. Raadpleeg <xref linkend="general-page"/> om hun gedrag aan te passen. </para>
 
 <note
 ><para
@@ -203,11 +203,11 @@
 >Algemene opties</title>
 <note
 ><para
->Options below distinguish between <emphasis
->selection</emphasis
-> and <emphasis
->clipboard</emphasis
->. To understand the difference, see <xref linkend="clipboard-modes"/>. </para
+>De onderstaande opties maken onderscheid tussen <emphasis
+>selectie</emphasis
+> en <emphasis
+>klembord</emphasis
+>. Zie <xref linkend="clipboard-modes"/> om het verschil te begrijpen. </para
 ></note>
 
 

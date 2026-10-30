@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-14 00:50+0000\n"
+"POT-Creation-Date: 2026-10-30 00:56+0000\n"
 "PO-Revision-Date: 2026-10-01 13:26+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -492,49 +492,49 @@ msgstr ""
 "Ajouter des langues dans l'ordre dans lequel vous voulez les voir dans vos "
 "applications."
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:119
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Changer de langue"
 
-#: ui/AdvancedLanguageSelectPage.qml:118
+#: ui/AdvancedLanguageSelectPage.qml:123
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Changer de langue"
 
-#: ui/AdvancedLanguageSelectPage.qml:127
+#: ui/AdvancedLanguageSelectPage.qml:132
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Déplacer vers le haut"
 
-#: ui/AdvancedLanguageSelectPage.qml:136
+#: ui/AdvancedLanguageSelectPage.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Supprimer"
 
-#: ui/AdvancedLanguageSelectPage.qml:152
+#: ui/AdvancedLanguageSelectPage.qml:157
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Aucune langue configurée"
 
-#: ui/AdvancedLanguageSelectPage.qml:194 ui/AdvancedLanguageSelectPage.qml:228
+#: ui/AdvancedLanguageSelectPage.qml:199 ui/AdvancedLanguageSelectPage.qml:233
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Ajouter des langues"
 
-#: ui/AdvancedLanguageSelectPage.qml:250
+#: ui/AdvancedLanguageSelectPage.qml:255
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "This system does not include “%1”"
 msgstr "Ce système n'inclut pas « %1 »"
 
-#: ui/AdvancedLanguageSelectPage.qml:251
+#: ui/AdvancedLanguageSelectPage.qml:256
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -544,7 +544,7 @@ msgstr ""
 "Apprenez comment aider à <link url='%1'>traduire les logiciels KDE dans "
 "votre langue</link>."
 
-#: ui/AdvancedLanguageSelectPage.qml:260
+#: ui/AdvancedLanguageSelectPage.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

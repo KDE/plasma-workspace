@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 00:47+0000\n"
+"POT-Creation-Date: 2026-10-30 00:56+0000\n"
 "PO-Revision-Date: 2009-01-03 17:31+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -154,97 +154,97 @@ msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
 msgstr "ಸ್ಕ್ರಿಪ್ಟನ್ನು ಸೇರಿಸು..."
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
 
-#: ui/main.qml:133
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
 msgstr ""
 
-#: ui/main.qml:134
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
 msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
 msgstr ""
 
-#: ui/main.qml:138
+#: ui/main.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
 msgstr ""
 
-#: ui/main.qml:159
+#: ui/main.qml:162
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr ""
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, fuzzy, kde-format
 #| msgid "&Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "ಗುಣಗಳು(&P)"
 
-#: ui/main.qml:179
+#: ui/main.qml:182
 #, fuzzy, kde-format
 #| msgid "&Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "ತೆಗೆದುಹಾಕು(&R)"
 
-#: ui/main.qml:195
+#: ui/main.qml:198
 #, kde-format
 msgid "Applications"
 msgstr ""
 
-#: ui/main.qml:198
+#: ui/main.qml:201
 #, kde-format
 msgid "Login Scripts"
 msgstr ""
 
-#: ui/main.qml:201
+#: ui/main.qml:204
 #, fuzzy, kde-format
 #| msgid "Pre-KDE startup"
 msgid "Pre-startup Scripts"
 msgstr "KDE ಪೂರ್ವದ ಆರಂಭಿಕ ಸಿದ್ಧತೆ"
 
-#: ui/main.qml:204
+#: ui/main.qml:207
 #, kde-format
 msgid "Logout Scripts"
 msgstr ""
 
-#: ui/main.qml:213
+#: ui/main.qml:216
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr ""
 
-#: ui/main.qml:214
+#: ui/main.qml:217
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr ""
 
-#: ui/main.qml:229
+#: ui/main.qml:232
 #, fuzzy, kde-format
 #| msgid "Add Script..."
 msgid "Choose Login Script"
 msgstr "ಸ್ಕ್ರಿಪ್ಟನ್ನು ಸೇರಿಸು..."
 
-#: ui/main.qml:249
+#: ui/main.qml:252
 #, kde-format
 msgid "Choose Logout Script"
 msgstr ""

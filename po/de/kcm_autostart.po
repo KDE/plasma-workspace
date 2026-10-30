@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-21 00:47+0000\n"
+"POT-Creation-Date: 2026-10-30 00:56+0000\n"
 "PO-Revision-Date: 2026-08-29 13:58+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -157,7 +157,7 @@ msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
 msgstr "Abmeldungs-Skript hinzufügen"
 
-#: ui/main.qml:121
+#: ui/main.qml:124
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -166,75 +166,75 @@ msgstr ""
 "%1 wurde noch nicht automatisch gestartet. Details werden nach dem Neustart "
 "des Systems verfügbar sein."
 
-#: ui/main.qml:133
+#: ui/main.qml:136
 #, kde-format
 msgctxt "@action:button"
 msgid "Disable autostart for %1"
 msgstr "Automatisch starten für %1 deaktivieren"
 
-#: ui/main.qml:134
+#: ui/main.qml:137
 #, kde-format
 msgctxt "@action:button"
 msgid "Enable autostart for %1"
 msgstr "Automatisch starten für %1 aktivieren"
 
-#: ui/main.qml:137
+#: ui/main.qml:140
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Disable autostart"
 msgstr "Automatisch starten deaktivieren"
 
-#: ui/main.qml:138
+#: ui/main.qml:141
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable autostart"
 msgstr "Automatisch starten aktivieren"
 
-#: ui/main.qml:159
+#: ui/main.qml:162
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Noch nicht automatisch gestartet"
 
-#: ui/main.qml:168
+#: ui/main.qml:171
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Eigenschaften anzeigen"
 
-#: ui/main.qml:179
+#: ui/main.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Eintrag entfernen"
 
-#: ui/main.qml:195
+#: ui/main.qml:198
 #, kde-format
 msgid "Applications"
 msgstr "Programme"
 
-#: ui/main.qml:198
+#: ui/main.qml:201
 #, kde-format
 msgid "Login Scripts"
 msgstr "Anmeldungs-Skript"
 
-#: ui/main.qml:201
+#: ui/main.qml:204
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skripte vor der Anmeldung"
 
-#: ui/main.qml:204
+#: ui/main.qml:207
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Abmeldungs-Skript"
 
-#: ui/main.qml:213
+#: ui/main.qml:216
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Keine benutzerdefinierten Autostart-Einträge vorhanden"
 
-#: ui/main.qml:214
+#: ui/main.qml:217
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
@@ -242,12 +242,12 @@ msgstr ""
 "Auf den Knopf <interface>Neue hinzufügen</interface> klicken um Einträge "
 "hinzuzufügen"
 
-#: ui/main.qml:229
+#: ui/main.qml:232
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Anmeldungs-Skript auswählen"
 
-#: ui/main.qml:249
+#: ui/main.qml:252
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Abmeldungs-Skript auswählen"
