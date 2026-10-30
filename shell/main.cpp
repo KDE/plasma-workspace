@@ -34,6 +34,8 @@
 #include <KLocalizedString>
 #include <KSignalHandler>
 
+#include <kworkspace.h>
+
 #include <csignal>
 
 #if __has_include(<malloc.h>)
@@ -212,6 +214,13 @@ int main(int argc, char *argv[])
             app.exit(-1);
         });
         replace = cliOptions.isSet(replaceOption);
+    }
+
+    // Restarting plasmashell with --replace bypasses systemd, which results in a
+    // different environment than a regular start and can cause subtle bugs.
+    if (replace && KWorkSpace::isUsingSystemdBoot()) {
+        qCWarning(PLASMASHELL) << "The --replace option is intended for development and debugging. If you are not using it for that, in the future "
+                                  "please restart Plasma with \"systemctl restart --user plasma-plasmashell.service\" instead.";
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(replace ? KDBusService::Replace : 0));
