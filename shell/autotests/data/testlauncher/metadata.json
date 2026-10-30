@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "mart@kde.org",
+                "Name": "Marco Martin"
+            }
+        ],
+        "Category": "",
+        "Id": "org.kde.plasma.testlauncher",
+        "License": "GPL-2.0+",
+        "Name": "Test Launcher",
+        "Website": "https://www.kde.org/plasma-desktop"
+    },
+    "Keywords": "",
+    "NoDisplay": true,
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-ContainmentType": "Panel",
+    "X-Plasma-Provides": [
+        "org.kde.plasma.launchermenu"
+    ]
+}

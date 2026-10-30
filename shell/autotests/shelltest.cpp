@@ -74,6 +74,7 @@ private Q_SLOTS:
     void testPanelSizeModes();
     void testOutputOrderChanged();
     void testClonedPanelKeepsItsScreen();
+    void testActivateLauncherMenu();
 #if USE_SCRIPTING
     void testScriptPanelKeepsItsScreen();
 #endif
@@ -209,6 +210,7 @@ void ShellTest::initTestCase()
     m_plasmaDir.removeRecursively();
 
     copyDirectory(QFINDTESTDATA("data/testpanel"), m_plasmaDir.absolutePath() + u"/plasmoids/org.kde.plasma.testpanel");
+    copyDirectory(QFINDTESTDATA("data/testlauncher"), m_plasmaDir.absolutePath() + u"/plasmoids/org.kde.plasma.testlauncher");
 
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
@@ -841,6 +843,72 @@ void ShellTest::testClonedPanelKeepsItsScreen()
     QVERIFY(clone);
     QCOMPARE(clone->screen(), 1);
     QCOMPARE(m_corona->m_panelViews[clone]->screen(), secondScreen);
+}
+
+// Opening the launcher by shortcut (as the Meta key does) must activate the launcher that belongs to
+// the active screen, and must not crash when there are many containments. The segfault was caused by
+// a comparator that was not a strict weak ordering: std::sort relies on it once it sorts more than a
+// handful of elements, and the non-strict ordering was undefined behaviour (BUG: 527810).
+void ShellTest::testActivateLauncherMenu()
+{
+    // Two screens; the mocked KWin (activeOutputName()) reports the first output, WL-1, as active.
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
+    QTRY_VERIFY(m_corona->isScreenUiReady(1));
+
+    QCOMPARE(activeOutputName(), u"WL-1"_s);
+    QVERIFY(m_corona->m_screenPool->idForName(u"WL-1"_s).has_value());
+    QCOMPARE(*m_corona->m_screenPool->idForName(u"WL-1"_s), 0u);
+    QVERIFY(m_corona->m_screenPool->idForName(u"DP-1"_s).has_value());
+    QCOMPARE(*m_corona->m_screenPool->idForName(u"DP-1"_s), 1u);
+
+    // Create the launcher that will end up on the other screen first (it is created on the active
+    // screen and then moved), so that it gets a lower id. The two launchers on the active screen are
+    // created afterwards and therefore have higher ids. The assertions below thus prove that the
+    // active screen is the primary sort key (the lower-id launcher on the other screen loses) and
+    // that among launchers on the same screen the lowest id wins.
+    auto *otherLauncher = addTestPanel(QStringLiteral("org.kde.plasma.testlauncher"));
+    QVERIFY(otherLauncher);
+    m_corona->m_panelViews[otherLauncher]->moveToScreen(m_corona->m_screenPool->screenForId(1));
+    QCOMPARE(otherLauncher->screen(), 1);
+
+    auto *activeLauncher = addTestPanel(QStringLiteral("org.kde.plasma.testlauncher"));
+    QVERIFY(activeLauncher);
+    QCOMPARE(activeLauncher->screen(), 0);
+
+    auto *activeLauncher2 = addTestPanel(QStringLiteral("org.kde.plasma.testlauncher"));
+    QVERIFY(activeLauncher2);
+    QCOMPARE(activeLauncher2->screen(), 0);
+
+    QVERIFY(otherLauncher->id() < activeLauncher->id());
+    QVERIFY(activeLauncher->id() < activeLauncher2->id());
+
+    // Push the number of containments past the point where std::sort stops using insertion sort.
+    // The old, non-strict comparator was undefined behaviour here and crashed; a strict weak
+    // ordering must simply work, regardless of how many containments there are.
+    const int desiredContainments = 32;
+    int fillerCount = 0;
+    while (m_corona->containments().size() < desiredContainments) {
+        auto *filler = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
+        QVERIFY(filler);
+        // Spread the fillers over both screens so the sort sees a mix of screens and types.
+        if (fillerCount++ % 2 == 1) {
+            m_corona->m_panelViews[filler]->moveToScreen(m_corona->m_screenPool->screenForId(1));
+        }
+    }
+    QVERIFY(m_corona->containments().size() >= desiredContainments);
+
+    QSignalSpy activeActivatedSpy(activeLauncher, &Plasma::Applet::activated);
+    QSignalSpy activeActivated2Spy(activeLauncher2, &Plasma::Applet::activated);
+    QSignalSpy otherActivatedSpy(otherLauncher, &Plasma::Applet::activated);
+
+    // Same path the keyboard shortcut takes: the public slot queries KWin for the active output and
+    // then runs the sorting, which is what used to crash.
+    m_corona->activateLauncherMenu();
+
+    QTRY_COMPARE(activeActivatedSpy.count(), 1);
+    QCOMPARE(activeActivated2Spy.count(), 0);
+    QCOMPARE(otherActivatedSpy.count(), 0);
 }
 
 #if USE_SCRIPTING
