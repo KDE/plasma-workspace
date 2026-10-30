@@ -48,6 +48,11 @@ add_test(NAME testimagebackend
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+# WindowVisibilityMonitor test
+ecm_add_test(test_windowvisibilitymonitor.cpp TEST_NAME testwindowvisibilitymonitor
+    LINK_LIBRARIES Qt::Test Qt::Gui Qt::Quick plasma_wallpaper_imageplugin_static)
+set_tests_properties(testwindowvisibilitymonitor PROPERTIES ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+
 # ImageFrontend test
 ecm_add_test(tst_imagefrontend.cpp TEST_NAME testimagefrontend
     LINK_LIBRARIES Qt::Qml Qt::QuickTest Qt::Test plasma_wallpaper_imageplugin_static)

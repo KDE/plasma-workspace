@@ -20,6 +20,7 @@ set(image_SRCS
     utils/dynamicmode.h
     utils/maximizedwindowmonitor.cpp utils/maximizedwindowmonitor.h
     utils/mediaproxy.cpp utils/mediaproxy.h
+    utils/windowvisibilitymonitor.cpp utils/windowvisibilitymonitor.h
     transientimage.cpp transientimage.h
 )
 
