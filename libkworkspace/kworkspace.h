@@ -89,6 +89,15 @@ enum ShutdownMode {
 KWORKSPACE_EXPORT bool isShuttingDown();
 
 /**
+ * Used to check whether the Plasma session is currently managed by systemd,
+ * i.e. whether plasma-workspace.target is active.
+ *
+ * This queries the runtime state instead of the configuration that would be
+ * used on the next login, so it stays correct when the session setup changes.
+ */
+KWORKSPACE_EXPORT bool isUsingSystemdBoot();
+
+/**
  * Propagates the network address of the session manager in the
  * SESSION_MANAGER environment variable so that child processes can
  * pick it up.
