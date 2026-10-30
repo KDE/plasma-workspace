@@ -8,6 +8,8 @@
 #include <QStandardPaths>
 #include <QTimer>
 
+#include <kworkspace.h>
+
 #include "debug.h"
 #include "ksmserver_interface.h"
 #include "kwin_interface.h"
@@ -138,34 +140,11 @@ void Shutdown::logoutCancelled()
     qApp->quit();
 }
 
-bool Shutdown::usingSystemdManagedSession()
-{
-    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
-                                              QStringLiteral("/org/freedesktop/systemd1"),
-                                              QStringLiteral("org.freedesktop.systemd1.Manager"),
-                                              QStringLiteral("GetUnit"));
-    msg << QStringLiteral("plasma-workspace.target");
-
-    QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
-    if (!reply.isValid()) {
-        return false;
-    } else {
-        msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
-                                             reply.value().path(),
-                                             QStringLiteral("org.freedesktop.DBus.Properties"),
-                                             QStringLiteral("Get"));
-        msg << QStringLiteral("org.freedesktop.systemd1.Unit") << QStringLiteral("ActiveState");
-
-        QDBusReply<QVariant> reply = QDBusConnection::sessionBus().call(msg);
-        return reply.isValid() && reply.value().toString() == QLatin1String("active");
-    }
-}
-
 void Shutdown::logoutComplete()
 {
     runShutdownScripts();
 
-    if (usingSystemdManagedSession()) {
+    if (KWorkSpace::isUsingSystemdBoot()) {
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                                   QStringLiteral("/org/freedesktop/systemd1"),
                                                   QStringLiteral("org.freedesktop.systemd1.Manager"),

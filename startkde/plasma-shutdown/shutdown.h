@@ -34,7 +34,6 @@ private Q_SLOTS:
 private:
     void startLogout(ShutdownType shutdownType);
     void runShutdownScripts();
-    bool usingSystemdManagedSession();
     // ShutdownTypeNone means idle, see startLogout().
     ShutdownType m_shutdownType = ShutdownTypeNone;
 };
