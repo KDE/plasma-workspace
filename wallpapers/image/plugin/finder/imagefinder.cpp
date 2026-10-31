@@ -55,7 +55,7 @@ QStringList ImageWallpaper::findAll(const QStringList &searchPaths)
             const QFileInfo realwp(findSymlinkTarget(wp));
 
             if (realwp.isFile()) {
-                if (filterCondition(realwp) && !realwp.isSymLink() && isAcceptableSuffix(realwp.suffix())) {
+                if (filterCondition(wp) && !realwp.isSymLink() && isAcceptableSuffix(realwp.suffix())) {
                     images.append(realwp.filePath());
                 }
             } else if (realwp.isDir() && !realwp.absoluteFilePath().contains(QLatin1String("contents/images"))) {
