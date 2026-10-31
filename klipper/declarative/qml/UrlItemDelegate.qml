@@ -15,7 +15,7 @@ import org.kde.plasma.private.clipboard as Private // image provider
 
 ClipboardItemDelegate {
     id: menuItem
-    property int maximumNumberOfPreviews: Math.floor(width / (Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing))
+    property int maximumNumberOfPreviews: Math.max(0, Math.floor(width / (Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing)))
     Accessible.name: menuItem.model?.display ?? ""
     mainItem: Item {
         id: previewItem
