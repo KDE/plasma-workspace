@@ -770,7 +770,7 @@ void stopSystemdSession()
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.systemd1.Manager"),
                                               QStringLiteral("StopUnit"));
-    msg << QStringLiteral("plasma-workspace.target") << QStringLiteral("fail");
+    msg << QStringLiteral("graphical-session.target") << QStringLiteral("fail");
     QDBusConnection::sessionBus().call(msg);
 }
 
