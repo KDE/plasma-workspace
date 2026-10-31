@@ -13,7 +13,6 @@ import QtQuick.Controls as QQC2 // For StackView
 import QtQuick.Templates as T
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg as KSvg
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
 
@@ -23,8 +22,8 @@ PlasmoidItem {
     id: main
 
     readonly property bool isClipboardEmpty: historyModel.sourceCount === 0
-    readonly property bool clipboardHasPassword: historyModel.sourceModel.clipboardHasPassword
-    readonly property bool selectionHasPassword: historyModel.sourceModel.selectionHasPassword
+    readonly property bool clipboardHasPassword: historyModel.clipboardHasPassword
+    readonly property bool selectionHasPassword: historyModel.selectionHasPassword
     readonly property bool hasNothingToShow: isClipboardEmpty && !clipboardHasPassword && !selectionHasPassword
 
     switchWidth: Kirigami.Units.gridUnit * 12
@@ -121,7 +120,7 @@ PlasmoidItem {
     }
 
     fullRepresentation: PlasmaExtras.Representation {
-        id: dialogItem
+        id: root
         Layout.minimumWidth: Kirigami.Units.gridUnit * 24
         Layout.minimumHeight: Kirigami.Units.gridUnit * 24
         Layout.maximumWidth: Kirigami.Units.gridUnit * 80
@@ -130,7 +129,7 @@ PlasmoidItem {
 
         focus: true
 
-        header: stack.currentItem.header
+        header: ((stack.currentItem as Private.ClipboardMenu)?.header ?? (stack.currentItem as Private.BarcodePage)?.header)
 
         readonly property var appletInterface: main
         readonly property alias clipboardMenu: stack.initialItem // Required to let the outside world access the property
@@ -155,7 +154,7 @@ PlasmoidItem {
             initialItem: Private.ClipboardMenu {
                 id: menu
                 expanded: main.expanded
-                dialogItem: dialogItem
+                dialogItem: root
                 model: historyModel
                 showsClearHistoryButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && clearAction.visible
                 keyboardActivated: false
