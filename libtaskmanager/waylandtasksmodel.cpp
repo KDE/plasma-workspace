@@ -1036,7 +1036,7 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
 
     const auto service = d->appData(d->windows.at(index.row()).get()).service;
 
-    if (service) {
+    if (service && !service->exec().isEmpty()) {
         runApp(service);
     }
 }
