@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-28 01:03+0000\n"
+"POT-Creation-Date: 2026-10-31 00:53+0000\n"
 "PO-Revision-Date: 2026-03-31 19:23+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -141,15 +141,23 @@ msgstr ""
 msgid "Show action popup menu:"
 msgstr "アクションポップアップの表示:"
 
-#: configdialog.cpp:201
-#, kde-kuit-format
+#: configdialog.cpp:209
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "When text that matches an action pattern is selected or is chosen from "
+#| "the clipboard history, automatically show the popup menu with applicable "
+#| "actions. If the automatic menu is turned off here, or it is not shown for "
+#| "an excluded window, then it can be shown by using the <shortcut>%1</"
+#| "shortcut> key shortcut."
 msgctxt "@info"
 msgid ""
-"When text that matches an action pattern is selected or is chosen from the "
-"clipboard history, automatically show the popup menu with applicable "
-"actions. If the automatic menu is turned off here, or it is not shown for an "
-"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
-"key shortcut."
+"When text that matches an action pattern is copied, selected or chosen from "
+"the clipboard history, automatically show the popup menu with applicable "
+"actions. For files, this only applies when they are copied or chosen from "
+"history.<nl/><nl/>The menu can also be reached by using the <shortcut>%1</"
+"shortcut> key shortcut or with a button for each matching entry in the "
+"history."
 msgstr ""
 "アクションのパターンに一致するテキストが選択されたとき、またはクリップボード"
 "履歴から選択されたときに、該当するアクションのポップアップメニューを自動的に"
@@ -157,54 +165,54 @@ msgstr ""
 "で表示されない場合は、<shortcut>%1</shortcut> キーショートカットで表示できま"
 "す。"
 
-#: configdialog.cpp:213
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] "%v 秒"
 
-#: configdialog.cpp:214
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "なし"
 
-#: configdialog.cpp:223
+#: configdialog.cpp:236
 #, kde-format
 msgid "Options:"
 msgstr "オプション:"
 
-#: configdialog.cpp:255
+#: configdialog.cpp:268
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "マッチパターンとコマンド"
 
-#: configdialog.cpp:255
+#: configdialog.cpp:268
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "説明"
 
-#: configdialog.cpp:261
+#: configdialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "アクションを追加..."
 
-#: configdialog.cpp:265
+#: configdialog.cpp:278
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "アクションを編集..."
 
-#: configdialog.cpp:270
+#: configdialog.cpp:283
 #, kde-format
 msgid "Delete Action"
 msgstr "アクションを削除"
 
-#: configdialog.cpp:455
+#: configdialog.cpp:468
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -214,51 +222,51 @@ msgstr ""
 "選択したアクション <resource>%1</resource> とそのすべてのコマンドを削除します"
 "か？"
 
-#: configdialog.cpp:456
+#: configdialog.cpp:469
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "アクション削除の確認"
 
-#: configdialog.cpp:514
+#: configdialog.cpp:527
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "全般"
 
-#: configdialog.cpp:514
+#: configdialog.cpp:527
 #, kde-format
 msgid "General Configuration"
 msgstr "全般設定"
 
-#: configdialog.cpp:515
+#: configdialog.cpp:528
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "アクション設定"
 
-#: configdialog.cpp:515
+#: configdialog.cpp:528
 #, kde-format
 msgid "Actions Configuration"
 msgstr "アクション設定"
 
-#: configdialog.cpp:516
+#: configdialog.cpp:529
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "アクションメニュー"
 
-#: configdialog.cpp:516
+#: configdialog.cpp:529
 #, kde-format
 msgid "Action Menu"
 msgstr "アクションメニュー"
 
-#: configdialog.cpp:523
+#: configdialog.cpp:536
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "ショートカット"
 
-#: configdialog.cpp:523
+#: configdialog.cpp:536
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "ショートカット設定"
@@ -625,46 +633,46 @@ msgstr "コマンドのアイコンをデフォルトにリセット"
 msgid "Icon:"
 msgstr "アイコン:"
 
-#: historymodel.cpp:375
+#: historymodel.cpp:371
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "本当にクリップボードの全履歴を消去しますか？"
 
-#: historymodel.cpp:377
+#: historymodel.cpp:373
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "クリップボードの履歴を消去"
 
-#: historymodel.cpp:379 historymodel.cpp:679
+#: historymodel.cpp:375 historymodel.cpp:675
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:486
+#: historymodel.cpp:482
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:675
+#: historymodel.cpp:671
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "この項目はスターがついています。本当に履歴から削除しますか？"
 
-#: historymodel.cpp:677
+#: historymodel.cpp:673
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "スターつき項目削除"
 
-#: klipper.cpp:70
+#: klipper.cpp:69
 #, fuzzy, kde-format
 #| msgid "Clipboard Popup"
 msgctxt "@title shortcut group"
 msgid "Clipboard"
 msgstr "クリップボードのポップアップ"
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu Toggle automatic action"
 #| msgid "Automatic Action Popup Menu"
@@ -672,66 +680,66 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "自動アクションポップアップの切り替え"
 
-#: klipper.cpp:94
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "クリップボードの履歴を消去(&L)"
 
-#: klipper.cpp:99
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "現在のクリップボードに対するアクションを手動で呼び出す"
 
-#: klipper.cpp:107
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "内容を編集(&E)…"
 
-#: klipper.cpp:115
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "バーコードを表示(&S)…"
 
-#: klipper.cpp:124
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:129
+#: klipper.cpp:131
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "履歴を消去"
 
-#: klipper.cpp:136
+#: klipper.cpp:138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "クリップボード履歴をマウスカーソルの位置に表示"
 
-#: klipper.cpp:385 klipper.cpp:394
+#: klipper.cpp:399 klipper.cpp:408
 #, kde-format
 msgid "Clipboard history"
 msgstr "クリップボードの履歴"
 
-#: klipper.cpp:410
+#: klipper.cpp:424
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:417
+#: klipper.cpp:431
 #, fuzzy, kde-format
 #| msgid "current"
 msgid "Current: "
 msgstr "現在"
 
-#: klipper.cpp:424
+#: klipper.cpp:438
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -826,36 +834,52 @@ msgstr "テキストの範囲選択をクリップボード履歴に保存する
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:38
 #, kde-format
-msgid "Immediately on selection"
-msgstr "範囲選択時すぐに"
+msgid "When text or a file is copied"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Show the popup menu of applicable actions as soon as a selection is made."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show the popup menu of applicable actions as soon as a selection is made."
+msgid "Show the popup menu as soon as text or file is copied."
 msgstr "範囲選択されたらすぐに実行可能なアクション一覧のポップアップを表示する"
 
-#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
+#, fuzzy, kde-format
+#| msgid "Non-text selection:"
+msgid "When text is selected"
+msgstr "テキスト以外の範囲選択:"
+
+#. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Show the popup menu as soon as text is selected, without waiting for it to "
+"be copied."
+msgstr ""
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:48
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "自動アクションメニューのタイムアウト:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:52
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "この時間の間、アクションポップアップを表示します。"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:50
+#: klipper.kcfg:55
 #, kde-format
 msgid "History size:"
 msgstr "履歴サイズ:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:54
+#: klipper.kcfg:59
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid ""
@@ -863,20 +887,20 @@ msgid ""
 msgstr "クリップボード履歴はここで設定された最大値まで保存されます。"
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:57
+#: klipper.kcfg:62
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "アクションのツリーウィジェットでの変更を示すためのダミーエントリ"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:64
+#: klipper.kcfg:69
 #, fuzzy, kde-format
 #| msgid "Trim whitespace from selection"
 msgid "Trim whitespace"
 msgstr "選択範囲から空白を削除"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:66
+#: klipper.kcfg:71
 #, fuzzy, kde-format
 #| msgid ""
 #| "Remove any whitespace from the start and end of selected text, before "
@@ -892,13 +916,14 @@ msgstr ""
 "ようになります。クリップボードに保存されたテキストには影響しません。"
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:69
-#, kde-format
-msgid "For an item chosen from history"
+#: klipper.kcfg:74
+#, fuzzy, kde-format
+#| msgid "For an item chosen from history"
+msgid "When an item is chosen from history"
 msgstr "履歴から項目を選択したとき"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:71
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -908,13 +933,13 @@ msgstr ""
 "プを表示する"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:74
+#: klipper.kcfg:79
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:81
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "
@@ -931,6 +956,9 @@ msgstr "クリップボードのポップアップ"
 #, kde-format
 msgid "&Cancel"
 msgstr "キャンセル(&C)"
+
+#~ msgid "Immediately on selection"
+#~ msgstr "範囲選択時すぐに"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "Next History Item"
@@ -959,9 +987,6 @@ msgstr "キャンセル(&C)"
 
 #~ msgid "Only when explicitly copied"
 #~ msgstr "明示的にコピーしたときのみ"
-
-#~ msgid "Non-text selection:"
-#~ msgstr "テキスト以外の範囲選択:"
 
 #~ msgid "Never save in history"
 #~ msgstr "履歴に保存しない"

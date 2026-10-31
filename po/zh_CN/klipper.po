@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-28 01:03+0000\n"
+"POT-Creation-Date: 2026-10-31 00:53+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -108,68 +108,76 @@ msgstr ""
 msgid "Show action popup menu:"
 msgstr "显示操作弹出菜单："
 
-#: configdialog.cpp:201
-#, kde-kuit-format
+#: configdialog.cpp:209
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "When text that matches an action pattern is selected or is chosen from "
+#| "the clipboard history, automatically show the popup menu with applicable "
+#| "actions. If the automatic menu is turned off here, or it is not shown for "
+#| "an excluded window, then it can be shown by using the <shortcut>%1</"
+#| "shortcut> key shortcut."
 msgctxt "@info"
 msgid ""
-"When text that matches an action pattern is selected or is chosen from the "
-"clipboard history, automatically show the popup menu with applicable "
-"actions. If the automatic menu is turned off here, or it is not shown for an "
-"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
-"key shortcut."
+"When text that matches an action pattern is copied, selected or chosen from "
+"the clipboard history, automatically show the popup menu with applicable "
+"actions. For files, this only applies when they are copied or chosen from "
+"history.<nl/><nl/>The menu can also be reached by using the <shortcut>%1</"
+"shortcut> key shortcut or with a button for each matching entry in the "
+"history."
 msgstr ""
 "当选中的文本、或者从剪贴板历史记录中选中的文本匹配某个操作模式时，自动显示包"
 "含可用操作的弹出菜单。如果在此关闭了自动菜单，或者因为属于已排除窗口而不显示"
 "时，该菜单可以通过 <shortcut>%1</shortcut> 快捷键显示。"
 
-#: configdialog.cpp:213
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] "%v 秒"
 
-#: configdialog.cpp:214
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "无"
 
-#: configdialog.cpp:223
+#: configdialog.cpp:236
 #, kde-format
 msgid "Options:"
 msgstr "选项："
 
-#: configdialog.cpp:255
+#: configdialog.cpp:268
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "匹配模式和命令"
 
-#: configdialog.cpp:255
+#: configdialog.cpp:268
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "描述"
 
-#: configdialog.cpp:261
+#: configdialog.cpp:274
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "添加操作..."
 
-#: configdialog.cpp:265
+#: configdialog.cpp:278
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "编辑操作..."
 
-#: configdialog.cpp:270
+#: configdialog.cpp:283
 #, kde-format
 msgid "Delete Action"
 msgstr "删除操作"
 
-#: configdialog.cpp:455
+#: configdialog.cpp:468
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -177,51 +185,51 @@ msgid ""
 "commands?"
 msgstr "删除选中的操作 <resource>%1</resource><nl/>和它的所有命令吗？"
 
-#: configdialog.cpp:456
+#: configdialog.cpp:469
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "确认删除操作"
 
-#: configdialog.cpp:514
+#: configdialog.cpp:527
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "常规"
 
-#: configdialog.cpp:514
+#: configdialog.cpp:527
 #, kde-format
 msgid "General Configuration"
 msgstr "常规配置"
 
-#: configdialog.cpp:515
+#: configdialog.cpp:528
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "操作配置"
 
-#: configdialog.cpp:515
+#: configdialog.cpp:528
 #, kde-format
 msgid "Actions Configuration"
 msgstr "操作配置"
 
-#: configdialog.cpp:516
+#: configdialog.cpp:529
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "操作菜单"
 
-#: configdialog.cpp:516
+#: configdialog.cpp:529
 #, kde-format
 msgid "Action Menu"
 msgstr "操作菜单"
 
-#: configdialog.cpp:523
+#: configdialog.cpp:536
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "快捷键"
 
-#: configdialog.cpp:523
+#: configdialog.cpp:536
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "快捷键配置"
@@ -584,46 +592,46 @@ msgstr "重置图标为命令的默认值"
 msgid "Icon:"
 msgstr "图标："
 
-#: historymodel.cpp:375
+#: historymodel.cpp:371
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "您确定要清除剪贴板的所有历史记录吗？"
 
-#: historymodel.cpp:377
+#: historymodel.cpp:373
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "清除剪贴板历史记录"
 
-#: historymodel.cpp:379 historymodel.cpp:679
+#: historymodel.cpp:375 historymodel.cpp:675
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:486
+#: historymodel.cpp:482
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:675
+#: historymodel.cpp:671
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "此项目已加星标。您确定要将其从历史记录中移除吗？"
 
-#: historymodel.cpp:677
+#: historymodel.cpp:673
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "移除星标项目"
 
-#: klipper.cpp:70
+#: klipper.cpp:69
 #, fuzzy, kde-format
 #| msgid "Clipboard Popup"
 msgctxt "@title shortcut group"
 msgid "Clipboard"
 msgstr "剪贴板弹窗"
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu Toggle automatic action"
 #| msgid "Automatic Action Popup Menu"
@@ -631,66 +639,66 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "自动弹出操作菜单"
 
-#: klipper.cpp:94
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "清除剪贴板历史(&L)"
 
-#: klipper.cpp:99
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "在当前剪贴板上手动执行操作"
 
-#: klipper.cpp:107
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "编辑内容(&E)…"
 
-#: klipper.cpp:115
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "显示条形码(&S)…"
 
-#: klipper.cpp:124
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:129
+#: klipper.cpp:131
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "清除历史记录"
 
-#: klipper.cpp:136
+#: klipper.cpp:138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "在鼠标位置显示剪贴板项目"
 
-#: klipper.cpp:385 klipper.cpp:394
+#: klipper.cpp:399 klipper.cpp:408
 #, kde-format
 msgid "Clipboard history"
 msgstr "剪贴板历史"
 
-#: klipper.cpp:410
+#: klipper.cpp:424
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:417
+#: klipper.cpp:431
 #, fuzzy, kde-format
 #| msgid "current"
 msgid "Current: "
 msgstr "当前"
 
-#: klipper.cpp:424
+#: klipper.cpp:438
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -773,36 +781,51 @@ msgstr ""
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:38
 #, kde-format
-msgid "Immediately on selection"
-msgstr "选中后立即弹出"
+msgid "When text or a file is copied"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Show the popup menu of applicable actions as soon as a selection is made."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show the popup menu of applicable actions as soon as a selection is made."
+msgid "Show the popup menu as soon as text or file is copied."
 msgstr "选择对象后立即显示包含可应用操作的弹出菜单。"
 
-#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
+#, kde-format
+msgid "When text is selected"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Show the popup menu as soon as text is selected, without waiting for it to "
+"be copied."
+msgstr ""
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:48
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "自动操作菜单弹出时间："
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:52
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "设置显示自动操作弹出菜单的时间。"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:50
+#: klipper.kcfg:55
 #, kde-format
 msgid "History size:"
 msgstr "历史记录数量："
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:54
+#: klipper.kcfg:59
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid ""
@@ -810,19 +833,19 @@ msgid ""
 msgstr "剪贴板历史记录保存的记录条数。"
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:57
+#: klipper.kcfg:62
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "在操作的树形部件中用于表示改动的空条目"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:64
+#: klipper.kcfg:69
 #, kde-format
 msgid "Trim whitespace"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:66
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
@@ -830,13 +853,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:69
-#, kde-format
-msgid "For an item chosen from history"
+#: klipper.kcfg:74
+#, fuzzy, kde-format
+#| msgid "For an item chosen from history"
+msgid "When an item is chosen from history"
 msgstr "在历史记录中选择项目时弹出"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:71
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -844,13 +868,13 @@ msgid ""
 msgstr "在剪贴板历史记录中选择条目时，显示可应用操作的弹出菜单。"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:74
+#: klipper.kcfg:79
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:81
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "
@@ -867,6 +891,9 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
+
+#~ msgid "Immediately on selection"
+#~ msgstr "选中后立即弹出"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "Next History Item"

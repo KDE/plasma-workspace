@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-28 01:03+0000\n"
+"POT-Creation-Date: 2026-10-31 00:53+0000\n"
 "PO-Revision-Date: 2026-10-28 13:31+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -151,15 +151,23 @@ msgstr ""
 msgid "Show action popup menu:"
 msgstr "Actie-pop-up-menu tonen:"
 
-#: configdialog.cpp:201
-#, kde-kuit-format
+#: configdialog.cpp:209
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "When text that matches an action pattern is selected or is chosen from "
+#| "the clipboard history, automatically show the popup menu with applicable "
+#| "actions. If the automatic menu is turned off here, or it is not shown for "
+#| "an excluded window, then it can be shown by using the <shortcut>%1</"
+#| "shortcut> key shortcut."
 msgctxt "@info"
 msgid ""
-"When text that matches an action pattern is selected or is chosen from the "
-"clipboard history, automatically show the popup menu with applicable "
-"actions. If the automatic menu is turned off here, or it is not shown for an "
-"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
-"key shortcut."
+"When text that matches an action pattern is copied, selected or chosen from "
+"the clipboard history, automatically show the popup menu with applicable "
+"actions. For files, this only applies when they are copied or chosen from "
+"history.<nl/><nl/>The menu can also be reached by using the <shortcut>%1</"
+"shortcut> key shortcut or with a button for each matching entry in the "
+"history."
 msgstr ""
 "Wanneer tekst, die overeenkomt met een actiepatroon, is geselecteerd of is "
 "gekozen uit de klembordgeschiedenis, toon dan automatisch het pop-up-menu "
@@ -167,7 +175,7 @@ msgstr ""
 "het wordt niet getoond voor een uitgesloten venster, dan kan het getoond "
 "worden door de sneltoets <shortcut>%1</shortcut> te gebruiken."
 
-#: configdialog.cpp:213
+#: configdialog.cpp:226
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -175,45 +183,45 @@ msgid_plural "%v seconds"
 msgstr[0] "&v seconde"
 msgstr[1] "%v seconden"
 
-#: configdialog.cpp:214
+#: configdialog.cpp:227
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Geen"
 
-#: configdialog.cpp:223
+#: configdialog.cpp:236
 #, kde-format
 msgid "Options:"
 msgstr "Opties:"
 
-#: configdialog.cpp:255
+#: configdialog.cpp:268
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Overeenkomstpatroon en commando's"
 
-#: configdialog.cpp:255
+#: configdialog.cpp:268
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Beschrijving"
 
-#: configdialog.cpp:261
+#: configdialog.cpp:274
 #, kde-format
 msgid "Add Action…"
 msgstr "Actie toevoegen…"
 
-#: configdialog.cpp:265
+#: configdialog.cpp:278
 #, kde-format
 msgid "Edit Action…"
 msgstr "Actie bewerken…"
 
-#: configdialog.cpp:270
+#: configdialog.cpp:283
 #, kde-format
 msgid "Delete Action"
 msgstr "Actie verwijderen"
 
-#: configdialog.cpp:455
+#: configdialog.cpp:468
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -223,51 +231,51 @@ msgstr ""
 "De geselecteerde actie <resource>%1</resource> verwijderen<nl/>en al zijn "
 "commando's?"
 
-#: configdialog.cpp:456
+#: configdialog.cpp:469
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Actie verwijderen bevestigen"
 
-#: configdialog.cpp:514
+#: configdialog.cpp:527
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Algemeen"
 
-#: configdialog.cpp:514
+#: configdialog.cpp:527
 #, kde-format
 msgid "General Configuration"
 msgstr "Algemene configuratie"
 
-#: configdialog.cpp:515
+#: configdialog.cpp:528
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:515
+#: configdialog.cpp:528
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:516
+#: configdialog.cpp:529
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:516
+#: configdialog.cpp:529
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:523
+#: configdialog.cpp:536
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
-#: configdialog.cpp:523
+#: configdialog.cpp:536
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Sneltoetsen instellen"
@@ -632,108 +640,108 @@ msgstr "Het pictogram resetten naar de standaard voor het commando"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: historymodel.cpp:375
+#: historymodel.cpp:371
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
 
-#: historymodel.cpp:377
+#: historymodel.cpp:373
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Klembordgeschiedenis wissen"
 
-#: historymodel.cpp:379 historymodel.cpp:679
+#: historymodel.cpp:375 historymodel.cpp:675
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Deze vraag niet meer stellen"
 
-#: historymodel.cpp:486
+#: historymodel.cpp:482
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:675
+#: historymodel.cpp:671
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Dit item heeft een ster. Wilt u deze uit de geschiedenis verwijderen?"
 
-#: historymodel.cpp:677
+#: historymodel.cpp:673
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Item met ster verwijderen"
 
-#: klipper.cpp:70
+#: klipper.cpp:69
 #, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
 msgstr "Klembord"
 
-#: klipper.cpp:74
+#: klipper.cpp:73
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
 msgstr "Automatisch actie-pop-up-menu omschakelen"
 
-#: klipper.cpp:94
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Klembordgeschiedenis &wissen"
 
-#: klipper.cpp:99
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Handmatig een actie op huidig klembord uitvoeren"
 
-#: klipper.cpp:107
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Inhoud be&werken…"
 
-#: klipper.cpp:115
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Barcode &tonen…"
 
-#: klipper.cpp:124
+#: klipper.cpp:126
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr "Geschiedenis omlaag roteren"
 
-#: klipper.cpp:129
+#: klipper.cpp:131
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "Geschiedenis omhoog roteren"
 
-#: klipper.cpp:136
+#: klipper.cpp:138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Items in klembord op de muispositie tonen"
 
-#: klipper.cpp:385 klipper.cpp:394
+#: klipper.cpp:399 klipper.cpp:408
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klembordgeschiedenis"
 
-#: klipper.cpp:410
+#: klipper.cpp:424
 #, kde-format
 msgid "Newer: "
 msgstr "Nieuwer: "
 
-#: klipper.cpp:417
+#: klipper.cpp:431
 #, kde-format
 msgid "Current: "
 msgstr "Huidige: "
 
-#: klipper.cpp:424
+#: klipper.cpp:438
 #, kde-format
 msgid "Older: "
 msgstr "Ouder: "
@@ -826,37 +834,53 @@ msgstr "Afbeeldingen in de klembordgeschiedenis opslaan."
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:38
 #, kde-format
-msgid "Immediately on selection"
-msgstr "Onmiddellijk op selectie"
+msgid "When text or a file is copied"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Show the popup menu of applicable actions as soon as a selection is made."
+#, fuzzy, kde-format
+#| msgid ""
+#| "Show the popup menu of applicable actions as soon as a selection is made."
+msgid "Show the popup menu as soon as text or file is copied."
 msgstr ""
 "Het pop-up-menu tonen van toepasselijke acties zodra een selectie is gemaakt."
 
-#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
+#, fuzzy, kde-format
+#| msgid "Non-text selection:"
+msgid "When text is selected"
+msgstr "Niet-tekstselectie:"
+
+#. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Show the popup menu as soon as text is selected, without waiting for it to "
+"be copied."
+msgstr ""
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:48
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Automatisch actie-menu-tijd:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:47
+#: klipper.kcfg:52
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Toon de automatische actie-pop-up-menu gedurende deze tijd."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:50
+#: klipper.kcfg:55
 #, kde-format
 msgid "History size:"
 msgstr "Geschiedenisgrootte:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:54
+#: klipper.kcfg:59
 #, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
@@ -865,19 +889,19 @@ msgstr ""
 "2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:57
+#: klipper.kcfg:62
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Dummy-item voor het aangeven van wijzigingen in een actieboom-widget"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:64
+#: klipper.kcfg:69
 #, kde-format
 msgid "Trim whitespace"
 msgstr "Witruimte trimmen"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:66
+#: klipper.kcfg:71
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
@@ -888,13 +912,14 @@ msgstr ""
 "ongewijzigd."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:69
-#, kde-format
-msgid "For an item chosen from history"
+#: klipper.kcfg:74
+#, fuzzy, kde-format
+#| msgid "For an item chosen from history"
+msgid "When an item is chosen from history"
 msgstr "Voor een item gekozen uit de geschiedenis"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:71
+#: klipper.kcfg:76
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -904,13 +929,13 @@ msgstr ""
 "geschiedenis van het klembord?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:74
+#: klipper.kcfg:79
 #, kde-format
 msgid "Offer applications for copied links and files"
 msgstr "Bied toepassingen aan voor gekopieerde koppelingen en bestanden"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:76
+#: klipper.kcfg:81
 #, kde-format
 msgid ""
 "For a link starting with <i>http://</i> or <i>https://</i> or for files, "
@@ -930,6 +955,9 @@ msgstr "Klembordverschijning"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annuleren"
+
+#~ msgid "Immediately on selection"
+#~ msgstr "Onmiddellijk op selectie"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "Next History Item"
@@ -958,9 +986,6 @@ msgstr "&Annuleren"
 
 #~ msgid "Only when explicitly copied"
 #~ msgstr "Alleen wanneer expliciet gekopieerd"
-
-#~ msgid "Non-text selection:"
-#~ msgstr "Niet-tekstselectie:"
 
 #~ msgid "Never save in history"
 #~ msgstr "Nooit in de geschiedenis opslaan"
