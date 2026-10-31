@@ -929,7 +929,6 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     } else {
         containment()->corona()->setEditMode(false);
         if (m_appletConfigView && m_appletConfigView->applet() == applet) {
-            m_appletConfigView->show();
             m_appletConfigView->requestActivate();
             return;
         } else if (m_appletConfigView) {
