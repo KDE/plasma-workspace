@@ -9,14 +9,12 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as QQC
-import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 
 import org.kde.kirigami as Kirigami
-import org.kde.ksvg as KSvg
 
 PlasmaComponents.ItemDelegate {
     id: menuItem
@@ -92,7 +90,7 @@ PlasmaComponents.ItemDelegate {
         }
     }
     ListView.onPooled: if (expandButtonLoader.active) {
-        expandButtonLoader.item.checked = false;
+        (expandButtonLoader.item as PlasmaComponents.ToolButton).checked = false;
     }
 
     onHoveredChanged: if (hovered) ListView.view.currentIndex = index
@@ -189,8 +187,8 @@ PlasmaComponents.ItemDelegate {
         anchors.rightMargin: expandButtonLoader.implicitWidth + expandButtonLoader.anchors.rightMargin
         anchors.verticalCenter: parent.verticalCenter
         anchors.topMargin: expandButtonLoader.anchors.topMargin
-        width: menuItem.ListView.view.clipboardMenu.starMetricsImplicitWidth
-        height: menuItem.ListView.view.clipboardMenu.starMetricsImplicitHeight
+        width: (menuItem.ListView.view.parent as ClipboardMenu).starMetricsImplicitWidth
+        height: (menuItem.ListView.view.parent as ClipboardMenu).starMetricsImplicitHeight
         visible: (menuItem.model?.starred ?? false) && !toolButtonsLoader.active
 
         Kirigami.Icon {
@@ -226,7 +224,7 @@ PlasmaComponents.ItemDelegate {
             PlasmaComponents.ToolTip.visible: pressed
 
             Connections {
-                target: menuItem.ListView.view.clipboardMenu
+                target: (menuItem.ListView.view.parent as ClipboardMenu)
                 function onExpandedChanged() {
                     expandButton.checked = false;
                 }
@@ -261,7 +259,7 @@ PlasmaComponents.ItemDelegate {
         }
         width: menuItem.shouldUseOverflowButton ? label.width + label.anchors.rightMargin - label.anchors.leftMargin : implicitWidth
         sourceComponent: DelegateToolButtons {
-            menuItem: menuItem
+            delegateItem: menuItem
             shouldUseOverflowButton: menuItem.shouldUseOverflowButton
         }
         active: (menuItem.ListView.isCurrentItem && ((!menuItem.keyboardActivated && menuItem.hovered) || (menuItem.keyboardActivated && menuItem.ListView.view.activeFocus)) && !menuItem.shouldUseOverflowButton)

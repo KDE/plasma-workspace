@@ -40,7 +40,7 @@ PlasmaComponents3.ScrollView {
     readonly property bool editing: T.StackView.view.currentItem instanceof EditPage
 
     property alias view: menuListView
-    property alias hoverBlock: hoverBlock
+    property alias hoverBlock: hoverBlocker
     property bool showHeader: true
     // used to help determine whether the action buttons should show. visualFocus does not work,
     // as Qt sets OtherFocusReason even if the currentItem change was initiated by keyboard
@@ -59,7 +59,7 @@ PlasmaComponents3.ScrollView {
         menuListView.forceLayout();
     }
     onEdit: modelData => {
-        hoverBlock.reset();
+        hoverBlocker.reset();
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("EditPage.qml"), {
             dialogItem: clipboardMenu.dialogItem,
             historyModel: clipboardMenu.model,
@@ -67,7 +67,7 @@ PlasmaComponents3.ScrollView {
         });
     }
     onBarcode: text => {
-        hoverBlock.reset();
+        hoverBlocker.reset();
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("BarcodePage.qml"), {
             expanded: Qt.binding(() => clipboardMenu.expanded),
             stack: clipboardMenu.T.StackView.view,
@@ -77,12 +77,12 @@ PlasmaComponents3.ScrollView {
         });
     }
     onTriggerAction: uuid => {
-        hoverBlock.reset();
+        hoverBlocker.reset();
         model.invokeAction(uuid);
     }
 
     onExpandedChanged: {
-        hoverBlock.reset();
+        hoverBlocker.reset();
         if (expanded) {
             menuListView.forceActiveFocus(Qt.OtherFocusReason);
         }
@@ -167,7 +167,7 @@ PlasmaComponents3.ScrollView {
                 } else {
                     menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
                 }
-                hoverBlock.reset();
+                hoverBlocker.reset();
                 if (menuListView.currentItem) {
                     menuListView.currentItem.forceActiveFocus(Qt.BacktabFocusReason)
                 }
@@ -184,7 +184,7 @@ PlasmaComponents3.ScrollView {
                 // Regular PgDn: Navigate list
                 menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
-                hoverBlock.reset();
+                hoverBlocker.reset();
                 if (menuListView.currentItem) {
                     menuListView.currentItem.forceActiveFocus(Qt.TabFocusReason)
                 }
@@ -335,7 +335,7 @@ PlasmaComponents3.ScrollView {
                     clipboardMenu.model.starredOnly = (currentIndex === 1)
                     // Reset selection to first item when switching tabs
                     if (menuListView.count > 0) {
-                        hoverBlock.reset();
+                        hoverBlocker.reset();
                         menuListView.currentIndex = 0;
                         menuListView.positionViewAtBeginning();
                     }
@@ -352,8 +352,8 @@ PlasmaComponents3.ScrollView {
                 }
             }
             Kirigami.InlineMessage {
-                readonly property bool clipboardHasPassword: clipboardMenu.model.sourceModel.clipboardHasPassword
-                readonly property bool selectionHasPassword: clipboardMenu.model.sourceModel.selectionHasPassword
+                readonly property bool clipboardHasPassword: clipboardMenu.model.clipboardHasPassword
+                readonly property bool selectionHasPassword: clipboardMenu.model.selectionHasPassword
 
                 text: if (clipboardHasPassword && selectionHasPassword) {
                     i18nc("@info", "The clipboard and the selection currently hold a sensitive piece of data that will not be stored in history.")
@@ -374,7 +374,7 @@ PlasmaComponents3.ScrollView {
                     Kirigami.Action {
                         text: i18nc("@action:button", "Clear Secret Data")
                         icon.name: "list-remove"
-                        onTriggered: clipboardMenu.model.sourceModel.clearPasswords()
+                        onTriggered: clipboardMenu.model.clearPasswords()
                     }
                 ]
             }
@@ -397,7 +397,7 @@ PlasmaComponents3.ScrollView {
             delegate: TextItemDelegate {
                 listMargins: listItemSvg.margins
                 keyboardActivated: clipboardMenu.keyboardActivated
-                hoverEnabled: !hoverBlock.enabled
+                hoverEnabled: !hoverBlocker.enabled
                 onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
@@ -406,7 +406,7 @@ PlasmaComponents3.ScrollView {
             delegate: ImageItemDelegate  {
                 listMargins: listItemSvg.margins
                 keyboardActivated: clipboardMenu.keyboardActivated
-                hoverEnabled: !hoverBlock.enabled
+                hoverEnabled: !hoverBlocker.enabled
                 onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
@@ -415,7 +415,7 @@ PlasmaComponents3.ScrollView {
             delegate: UrlItemDelegate {
                 listMargins: listItemSvg.margins
                 keyboardActivated: clipboardMenu.keyboardActivated
-                hoverEnabled: !hoverBlock.enabled
+                hoverEnabled: !hoverBlocker.enabled
                 onHoveredChanged: if (hovered) {clipboardMenu.keyboardActivated = false}
             }
         }
@@ -423,8 +423,6 @@ PlasmaComponents3.ScrollView {
 
     contentItem: ListView {
         id: menuListView
-
-        readonly property alias clipboardMenu: clipboardMenu
 
         highlightFollowsCurrentItem: false
         currentIndex: 0
@@ -439,7 +437,7 @@ PlasmaComponents3.ScrollView {
             onFilterRegularExpressionChanged: {
                 menuListView.currentIndex = 0;
                 menuListView.positionViewAtBeginning();
-                hoverBlock.reset();
+                hoverBlocker.reset();
             }
         }
 
@@ -455,7 +453,7 @@ PlasmaComponents3.ScrollView {
         delegate: chooser
 
         HoverBlocker {
-            id: hoverBlock
+            id: hoverBlocker
             anchors.fill: parent
             z: 10
         }
@@ -469,7 +467,7 @@ PlasmaComponents3.ScrollView {
                 } else {
                     menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
                 }
-                hoverBlock.reset();
+                hoverBlocker.reset();
             } else {
                 // At top of list, or list is empty. Focus TabBar or filter depending on visibility.
                 if (tabBar.visible) {
@@ -485,7 +483,7 @@ PlasmaComponents3.ScrollView {
                 menuListView.incrementCurrentIndex();
                 clipboardMenu.keyboardActivated = true
                 menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Contain);
-                hoverBlock.reset();
+                hoverBlocker.reset();
             } else {
                 // At bottom of list, or list is empty.
                 // If list is not empty, stay here. If empty, let nav happen.

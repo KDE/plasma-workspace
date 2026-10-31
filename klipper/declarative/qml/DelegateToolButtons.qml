@@ -24,8 +24,10 @@ GridLayout {
         Remove
     }
 
-    required property PlasmaComponents3.ItemDelegate menuItem
+    required property PlasmaComponents3.ItemDelegate delegateItem
     required property bool shouldUseOverflowButton
+
+    readonly property ClipboardItemDelegate item: delegateItem as ClipboardItemDelegate
 
     // Constants for item types (from HistoryItemType enum in historyitem.h)
     readonly property int textItemType: 2  // HistoryItemType::Text = 1 << 1
@@ -35,19 +37,19 @@ GridLayout {
             role: DelegateToolButtons.ButtonRole.InvokeAction,
             icon: "system-run",
             text: i18nd("klipper", "Invoke action"),
-            visible: menuItem.model?.hasAction ?? false
+            visible: item.model?.hasAction ?? false
         },
         {
             role: DelegateToolButtons.ButtonRole.ShowQRCode,
             icon: "view-barcode-qr",
             text: i18nd("klipper", "Show QR code"),
-            visible: menuItem.type === toolButtonsLayout.textItemType
+            visible: item.type === toolButtonsLayout.textItemType
         },
         {
             role: DelegateToolButtons.ButtonRole.Edit,
             icon: "document-edit",
             text: i18nd("klipper", "Edit contents"),
-            visible: menuItem.type === toolButtonsLayout.textItemType
+            visible: item.type === toolButtonsLayout.textItemType
         },
         {
             role: DelegateToolButtons.ButtonRole.Remove,
@@ -56,9 +58,9 @@ GridLayout {
         },
         {
             role: DelegateToolButtons.ButtonRole.ToggleStar,
-            icon: (menuItem.model?.starred ?? false) ? "starred-symbolic" : "non-starred-symbolic",
-            text: (menuItem.model?.starred ?? false) ? i18nd("klipper", "Remove Star") : i18nd("klipper", "Star"),
-            enabled: !!menuItem.model
+            icon: (item.model?.starred ?? false) ? "starred-symbolic" : "non-starred-symbolic",
+            text: (item.model?.starred ?? false) ? i18nd("klipper", "Remove Star") : i18nd("klipper", "Star"),
+            enabled: !!item.model
         }
     ]
 
@@ -84,24 +86,24 @@ GridLayout {
     function trigger(actionRole: int): void {
         switch (actionRole) {
         case DelegateToolButtons.ButtonRole.ToggleStar:
-            if (menuItem.model) {
+            if (item.model) {
                 // Make sure highlight does not jump where pointer is when using a keyboard
-                menuItem.ListView.view.clipboardMenu.hoverBlock.reset();
-                menuItem.ListView.view.clipboardMenu.keyboardActivated = true;
-                menuItem.model.starred = !(menuItem.model?.starred ?? false);
+                (delegateItem.ListView.view.parent as ClipboardMenu).hoverBlock.reset();
+                (delegateItem.ListView.view.parent as ClipboardMenu).keyboardActivated = true;
+                item.model.starred = !(item.model?.starred ?? false);
             }
             break;
         case DelegateToolButtons.ButtonRole.InvokeAction:
-            menuItem.triggerAction();
+            item.triggerAction();
             break;
         case DelegateToolButtons.ButtonRole.ShowQRCode:
-            menuItem.barcode();
+            item.barcode();
             break;
         case DelegateToolButtons.ButtonRole.Edit:
-            menuItem.edit();
+            item.edit();
             break;
         case DelegateToolButtons.ButtonRole.Remove:
-            menuItem.remove();
+            item.remove();
             break;
         }
     }
@@ -124,8 +126,8 @@ GridLayout {
             enabled: modelData.enabled ?? true
             visible: modelData.visible ?? true
 
-            KeyNavigation.right: (index === repeater.count - 1 ? toolButtonsLayout.menuItem.ListView.view : repeater.itemAt(index + 1))
-            KeyNavigation.left: (index === 0 ? toolButtonsLayout.menuItem : repeater.itemAt(index - 1))
+            KeyNavigation.right: (index === repeater.count - 1 ? toolButtonsLayout.delegateItem.ListView.view : repeater.itemAt(index + 1))
+            KeyNavigation.left: (index === 0 ? toolButtonsLayout.delegateItem : repeater.itemAt(index - 1))
             PlasmaComponents3.ToolTip.text: text
             PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             PlasmaComponents3.ToolTip.visible: hovered || (activeFocus && (focusReason === Qt.TabFocusReason || focusReason === Qt.BacktabFocusReason))

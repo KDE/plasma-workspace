@@ -32,6 +32,7 @@ DeclarativeHistoryModel::DeclarativeHistoryModel(QObject *parent)
     });
 
     connect(m_model.get(), &HistoryModel::changed, this, &DeclarativeHistoryModel::currentTextChanged);
+    connect(m_model.get(), &HistoryModel::hasPasswordChanged, this, &DeclarativeHistoryModel::hasPasswordChanged);
 }
 
 DeclarativeHistoryModel::~DeclarativeHistoryModel() = default;
@@ -86,6 +87,21 @@ void DeclarativeHistoryModel::invokeAction(const QString &uuid)
     if (const qsizetype row = m_model->indexOf(uuid); row >= 0) {
         Q_EMIT m_model->actionInvoked(m_model->m_items[row]);
     }
+}
+
+bool DeclarativeHistoryModel::clipboardHasPassword() const
+{
+    return m_model->clipboardHasPassword();
+}
+
+bool DeclarativeHistoryModel::selectionHasPassword() const
+{
+    return m_model->selectionHasPassword();
+}
+
+void DeclarativeHistoryModel::clearPasswords()
+{
+    m_model->clearPasswords();
 }
 
 bool DeclarativeHistoryModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const

@@ -15,7 +15,7 @@ import org.kde.plasma.private.clipboard as Private
 import org.kde.kirigami as Kirigami
 
 PlasmaExtras.Representation {
-    id: dialogItem
+    id: root
 
     implicitWidth: 100 // A friendly initial size
     implicitHeight: 100
@@ -24,7 +24,7 @@ PlasmaExtras.Representation {
 
     focus: true
     collapseMarginsHint: true
-    header: stack.currentItem.header as Item
+    header: ((stack.currentItem as Private.ClipboardMenu)?.header ?? (stack.currentItem as BarcodePage)?.header) as Item
 
     Keys.onEscapePressed: requestHidePopup()
     Keys.forwardTo: [stack.currentItem]
@@ -47,14 +47,14 @@ PlasmaExtras.Representation {
     }
 
     function updateContentSize(screenSize: size): void {
-        dialogItem.implicitWidth = Math.max(Kirigami.Units.gridUnit * 15, Math.min(screenSize.width / 4, Kirigami.Units.gridUnit * 40));
-        dialogItem.implicitHeight = Math.min(screenSize.height / 2, Kirigami.Units.gridUnit * 40);
+        root.implicitWidth = Math.max(Kirigami.Units.gridUnit * 15, Math.min(screenSize.width / 4, Kirigami.Units.gridUnit * 40));
+        root.implicitHeight = Math.min(screenSize.height / 2, Kirigami.Units.gridUnit * 40);
     }
 
     Connections {
-        target: dialogItem.Window.window
+        target: root.Window.window
         function onVisibleChanged() {
-            if (!dialogItem.Window.window.visible) {
+            if (!root.Window.window.visible) {
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
             } else {
                 clipboardMenu.clearFilter();
@@ -72,14 +72,14 @@ PlasmaExtras.Representation {
         anchors.fill: parent
         initialItem: Private.ClipboardMenu {
             id: clipboardMenu
-            expanded: dialogItem.Window.window.visible
-            dialogItem: dialogItem
+            expanded: root.Window.window.visible
+            dialogItem: root
             model: historyModel
             showsClearHistoryButton: true
             keyboardActivated: true
             barcodeType: "QRCode"
 
-            onItemSelected: dialogItem.requestHidePopup()
+            onItemSelected: root.requestHidePopup()
         }
     }
 }

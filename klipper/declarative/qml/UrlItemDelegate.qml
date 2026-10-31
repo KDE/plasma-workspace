@@ -11,7 +11,6 @@ import QtQuick
 
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.private.clipboard as Private // image provider
 
 ClipboardItemDelegate {
     id: menuItem

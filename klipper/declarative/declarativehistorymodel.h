@@ -27,6 +27,9 @@ class DeclarativeHistoryModel : public QSortFilterProxyModel
 
     Q_PROPERTY(bool starredOnly READ starredOnly WRITE setStarredOnly NOTIFY starredOnlyChanged)
 
+    Q_PROPERTY(bool clipboardHasPassword READ clipboardHasPassword NOTIFY hasPasswordChanged)
+    Q_PROPERTY(bool selectionHasPassword READ selectionHasPassword NOTIFY hasPasswordChanged)
+
 public:
     explicit DeclarativeHistoryModel(QObject *parent = nullptr);
     ~DeclarativeHistoryModel() override;
@@ -38,6 +41,9 @@ public:
     bool starredOnly() const;
     void setStarredOnly(bool value);
 
+    bool clipboardHasPassword() const;
+    bool selectionHasPassword() const;
+
     Q_INVOKABLE void moveToTop(const QString &uuid);
 
     Q_INVOKABLE void remove(const QString &uuid);
@@ -45,12 +51,15 @@ public:
 
     Q_INVOKABLE void invokeAction(const QString &uuid);
 
+    Q_INVOKABLE void clearPasswords();
+
 Q_SIGNALS:
     void countChanged();
     void sourceCountChanged();
     void starredCountChanged();
     void currentTextChanged();
     void starredOnlyChanged();
+    void hasPasswordChanged();
 
 protected:
     bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
