@@ -10,6 +10,7 @@
 #include <QDBusPendingCall>
 #include <QObject>
 #include <QObjectBindableProperty>
+#include <QSet>
 #include <qqmlregistration.h>
 
 #include <solid/battery.h>
@@ -106,6 +107,8 @@ Q_SIGNALS:
     void percentChanged(int percent);
 
 private:
+    void updateDistinctlyNamedBatteries();
+
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasCumulative, false, &BatteryControlModel::hasCumulativeChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasBatteries, false, &BatteryControlModel::hasBatteriesChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasInternalBatteries, false, &BatteryControlModel::hasInternalBatteriesChanged)
@@ -122,4 +125,5 @@ private:
     QList<QString> m_batterySources;
     QHash<QString, uint> m_batteryPositions;
     QList<QString> m_internalBatteries;
+    QSet<QString> m_distinctlyNamedBatteries;
 };

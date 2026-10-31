@@ -14,7 +14,7 @@
 class BatteriesNamesMonitor
 {
 public:
-    QString updateBatteryName(const Solid::Device &deviceBattery, Solid::Battery *battery);
+    QString updateBatteryName(const Solid::Device &deviceBattery, Solid::Battery *battery, bool distinctlyNamed = false);
     void removeBatteryName(const QString &udi);
 
 private:

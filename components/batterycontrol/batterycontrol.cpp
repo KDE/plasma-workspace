@@ -231,7 +231,7 @@ QVariant BatteryControlModel::data(const QModelIndex &index, int role) const
     case ChargeState:
         return QVariant::fromValue(updateBatteryState(battery));
     case PrettyName:
-        return QVariant::fromValue(m_namesMonitor->updateBatteryName(deviceBattery, battery));
+        return QVariant::fromValue(m_namesMonitor->updateBatteryName(deviceBattery, battery, m_distinctlyNamedBatteries.contains(deviceBattery.udi())));
     case Type:
         return QVariant::fromValue(batteryTypeToString(battery));
     }
@@ -312,6 +312,8 @@ void BatteryControlModel::deviceAdded(const QString &udi)
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Battery with udi: " << udi << " is added";
 
     m_hasBatteries = true;
+
+    updateDistinctlyNamedBatteries();
 }
 
 void BatteryControlModel::deviceRemoved(const QString &udi)
@@ -347,6 +349,8 @@ void BatteryControlModel::deviceRemoved(const QString &udi)
     m_batteryPositions.erase(position);
 
     m_hasBatteries = !m_batterySources.isEmpty();
+    m_distinctlyNamedBatteries.remove(udi);
+    updateDistinctlyNamedBatteries();
 
     auto deleteBattery = Solid::Device(udi).as<Solid::Battery>();
 
@@ -391,6 +395,48 @@ void BatteryControlModel::updateBatteryPowerSupplyState(bool newState, const QSt
     Q_UNUSED(newState);
     QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
     Q_EMIT dataChanged(index, index, {IsPowerSupply});
+    updateDistinctlyNamedBatteries();
+}
+
+void BatteryControlModel::updateDistinctlyNamedBatteries()
+{
+    // Primary power supply batteries are shown as "Battery N" (see BatteriesNamesMonitor). With several of
+    // them that does not tell which one is which, so name those that report a product name of their own.
+    QHash<QString, QString> names;
+    QHash<QString, int> nameCounts;
+    for (const QString &udi : std::as_const(m_batterySources)) {
+        const Solid::Device device(udi);
+        const auto *battery = device.as<Solid::Battery>();
+        if (!battery || battery->type() != Solid::Battery::PrimaryBattery || !battery->isPowerSupply()) {
+            continue;
+        }
+        const QString name = device.vendor() + QLatin1Char(' ') + device.product();
+        names.insert(udi, name);
+        if (!device.product().isEmpty()) {
+            ++nameCounts[name];
+        }
+    }
+
+    QSet<QString> distinctlyNamed;
+    if (names.size() > 1) {
+        for (auto it = names.cbegin(); it != names.cend(); ++it) {
+            if (nameCounts.value(it.value()) == 1) {
+                distinctlyNamed.insert(it.key());
+            }
+        }
+    }
+
+    if (distinctlyNamed == m_distinctlyNamedBatteries) {
+        return;
+    }
+    const QSet<QString> changed = (distinctlyNamed - m_distinctlyNamedBatteries) + (m_distinctlyNamedBatteries - distinctlyNamed);
+    m_distinctlyNamedBatteries = distinctlyNamed;
+    for (const QString &udi : changed) {
+        if (auto position = m_batteryPositions.constFind(udi); position != m_batteryPositions.constEnd()) {
+            const QModelIndex index = BatteryControlModel::index(*position);
+            Q_EMIT dataChanged(index, index, {PrettyName});
+        }
+    }
 }
 
 void BatteryControlModel::updatePluggedInState(bool onBattery, const QString &udi)

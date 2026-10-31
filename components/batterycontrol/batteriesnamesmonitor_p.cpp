@@ -8,10 +8,11 @@
 
 #include <klocalizedstring.h>
 
-QString BatteriesNamesMonitor::updateBatteryName(const Solid::Device &deviceBattery, Solid::Battery *battery)
+QString BatteriesNamesMonitor::updateBatteryName(const Solid::Device &deviceBattery, Solid::Battery *battery, bool distinctlyNamed)
 {
     // Don't show battery name for primary power supply batteries. They usually have cryptic serial number names.
-    bool showBatteryName = battery->type() != Solid::Battery::PrimaryBattery || !battery->isPowerSupply();
+    // When there are several of them and each has its own name, though, "Battery 2" says less than the name.
+    bool showBatteryName = battery->type() != Solid::Battery::PrimaryBattery || !battery->isPowerSupply() || distinctlyNamed;
     if (!deviceBattery.product().isEmpty() && deviceBattery.product() != QLatin1String("Unknown Battery") && showBatteryName) {
         if (!deviceBattery.vendor().isEmpty()) {
             return (QString(deviceBattery.vendor() + QLatin1Char(' ') + deviceBattery.product()));
