@@ -184,9 +184,3 @@ msgstr "Obre un tema"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Fitxers de temes (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "Elimina el tema"
-
-#~ msgid "Restore Theme"
-#~ msgstr "Restaura el tema"

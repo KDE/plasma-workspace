@@ -462,13 +462,3 @@ msgstr "Selector de regió de fus horari"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selector d'ubicació de fus horari"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Teclat virtual"
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Temps d'espera de l'estalvi de pantalla"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Estableix els minuts després dels quals es bloqueja la pantalla."

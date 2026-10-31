@@ -110,24 +110,3 @@ msgid ""
 msgstr ""
 "Mostra automàticament en interactuar amb un camp de text\n"
 "Feu clic o toqueu per a configurar els paràmetres del teclat en pantalla"
-
-#~ msgid "Virtual Keyboard: unavailable"
-#~ msgstr "Teclat virtual: no disponible"
-
-#~ msgid "Virtual Keyboard: disabled"
-#~ msgstr "Teclat virtual: desactivat"
-
-#~ msgid "Show Virtual Keyboard"
-#~ msgstr "Mostra el teclat virtual"
-
-#~ msgid "Virtual Keyboard: visible"
-#~ msgstr "Teclat virtual: visible"
-
-#~ msgid "Virtual Keyboard: Show on non-mouse input"
-#~ msgstr "Teclat virtual: mostra en l'entrada que no sigui de ratolí"
-
-#~ msgid "Virtual Keyboard: Show with all input devices"
-#~ msgstr "Teclat virtual: mostra en tots els dispositius d'entrada"
-
-#~ msgid "Virtual Keyboard: enabled"
-#~ msgstr "Teclat virtual: activat"

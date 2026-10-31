@@ -36,7 +36,3 @@ msgstr "L'actualització encara està en curs."
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "S'ha rebut un fus horari no vàlid o no s'ha rebut."
-
-#~ msgctxt "OSD, keep short"
-#~ msgid "Time zone changed to %1"
-#~ msgstr "El fus horari ha canviat a %1"

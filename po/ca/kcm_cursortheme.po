@@ -292,16 +292,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Mides disponibles: %1)"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr ""
-#~ "Cal tornar a engegar la sessió del Plasma perquè aquests canvis tinguin "
-#~ "efecte."
-
-#~ msgid "The requested size '%1' is not available, using %2 instead."
-#~ msgstr ""
-#~ "La mida sol·licitada «%1» no és disponible, en el seu lloc s'usa %2."
-
-#~ msgid "Remove Theme"
-#~ msgstr "Elimina el tema"

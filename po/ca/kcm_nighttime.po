@@ -230,11 +230,3 @@ msgstr ""
 "World_location_map_(equirectangular_180).svg'>mapa mundial d'emplaçaments</"
 "link> per TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "Emplaçament actual:"
-
-#~ msgctxt "@info"
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "Latitud: %1°   Longitud: %2°"

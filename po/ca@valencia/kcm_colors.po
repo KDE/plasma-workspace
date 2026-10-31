@@ -698,7 +698,7 @@ msgstr ""
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
 msgstr ""
-"Este esquema és de només lectura. Guardeu les modificacions amb un altre nom."
+"Este esquema només és de lectura. Guardeu les modificacions amb un altre nom."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -902,7 +902,7 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
-"Els valors de contrast per davall del 15% poden produir efectes visualment "
+"Els valors de contrast per davall del 15 % poden produir efectes visualment "
 "incòmodes amb algunes aplicacions i esquemes de color. Vos hem avisat!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)

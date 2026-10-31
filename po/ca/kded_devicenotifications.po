@@ -72,7 +72,3 @@ msgstr "S'ha desconnectat un dispositiu USB."
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "S'ha extret un dispositiu USB"
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Went Away"
-#~ msgstr "Ha desaparegut un dispositiu USB"

@@ -440,25 +440,3 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
-
-#~ msgid "Activate Task Manager Entry %1"
-#~ msgstr "Activa l'entrada %1 del gestor de tasques"
-
-#~ msgid "Internal Screen on %1"
-#~ msgstr "Pantalla interna a %1"
-
-#~ msgctxt "Screen manufacturer and model on connector"
-#~ msgid "%1 %2 on %3"
-#~ msgstr "%1 %2 a %3"
-
-#~ msgid ""
-#~ "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode "
-#~ "are known to cause poor window drag and resize performance. Consider "
-#~ "using other settings."
-#~ msgstr ""
-#~ "Amb una GPU NVIDIA a l'X11, l'estil flotant i el mode d'opacitat "
-#~ "adaptativa són coneguts per provocar un rendiment deficient en arrossegar "
-#~ "i redimensionar les finestres. Considereu utilitzar altres paràmetres."
-
-#~ msgid "Stop Current Activity"
-#~ msgstr "Atura l'activitat actual"

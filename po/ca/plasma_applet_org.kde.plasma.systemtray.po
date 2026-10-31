@@ -282,29 +282,3 @@ msgstr "Quadrícula amb %1 elements en %2 columnes"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Automatically enabled when in Touch Mode"
-#~ msgstr "Activat automàticament en el mode tàctil"
-
-#~ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#~ msgid "Panel icon spacing:"
-#~ msgstr "Espaiat de les icones del plafó:"
-
-#~ msgid "Always hidden"
-#~ msgstr "Sempre ocult"
-
-#~ msgid "Disabled"
-#~ msgstr "Desactivat"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Entrada"
-
-#~ msgid "Visibility"
-#~ msgstr "Visibilitat"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Drecera de teclat"
-
-#~ msgid "Always show all entries"
-#~ msgstr "Mostra sempre totes les entrades"

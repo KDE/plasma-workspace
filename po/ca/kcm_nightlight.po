@@ -105,11 +105,3 @@ msgstr "Càlid"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura de la llum de nit:"
-
-#~ msgctxt "@item:inlistbox switching times"
-#~ msgid "Always on night light"
-#~ msgstr "Llum de nit sempre activa"
-
-#~ msgctxt "Color temperature in Kelvin"
-#~ msgid "%1K"
-#~ msgstr "%1K"

@@ -344,7 +344,7 @@ msgstr "Mostra la configuració del quadro"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
