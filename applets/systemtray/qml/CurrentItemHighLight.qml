@@ -119,10 +119,14 @@ KSvg.FrameSvgItem {
 
         const p = parent.mapFromItem(nextItem, 0, 0);
         if (containerMargins && (parent.oneRowOrColumn || forceEdgeHighlight)) {
-            x = p.x - containerMargins('left', /*returnAllMargins*/true);
-            y = p.y - containerMargins('top', /*returnAllMargins*/true);
-            width = nextItem.width + containerMargins('left', /*returnAllMargins*/true) + containerMargins('right', /*returnAllMargins*/true);
-            height = nextItem.height + containerMargins('bottom', /*returnAllMargins*/true) + containerMargins('top', /*returnAllMargins*/true);
+            const left = parent.vertical ? containerMargins('left', /*returnAllMargins*/true) : 0;
+            const right = parent.vertical ? containerMargins('right', /*returnAllMargins*/true) : 0;
+            const top = parent.vertical ? 0 : containerMargins('top', /*returnAllMargins*/true);
+            const bottom = parent.vertical ? 0 : containerMargins('bottom', /*returnAllMargins*/true);
+            x = p.x - left;
+            y = p.y - top;
+            width = nextItem.width + left + right;
+            height = nextItem.height + top + bottom;
         } else {
             x = p.x;
             y = p.y;
