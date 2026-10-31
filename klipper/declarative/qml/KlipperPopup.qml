@@ -24,7 +24,7 @@ PlasmaExtras.Representation {
 
     focus: true
     collapseMarginsHint: true
-    header: ((stack.currentItem as Private.ClipboardMenu)?.header ?? (stack.currentItem as BarcodePage)?.header) as Item
+    header: stack.currentItem.header as Item
 
     Keys.onEscapePressed: requestHidePopup()
     Keys.forwardTo: [stack.currentItem]

@@ -129,7 +129,7 @@ PlasmoidItem {
 
         focus: true
 
-        header: ((stack.currentItem as Private.ClipboardMenu)?.header ?? (stack.currentItem as Private.BarcodePage)?.header)
+        header: stack.currentItem.header
 
         readonly property var appletInterface: main
         readonly property alias clipboardMenu: stack.initialItem // Required to let the outside world access the property
