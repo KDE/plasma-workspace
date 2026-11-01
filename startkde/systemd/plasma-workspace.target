@@ -8,6 +8,7 @@ Wants=plasma-gmenudbusmenuproxy.service
 Wants=plasma-powerdevil.service
 Wants=plasma-polkit-agent.service
 Wants=kde-baloo.service
+Wants=kio-fuse.service
 Wants=plasma-foreground-booster.service
 Wants=plasma-kwallet-pam.service
 Wants=plasma-kglobalaccel.service
