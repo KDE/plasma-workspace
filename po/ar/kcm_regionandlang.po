@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 20:16+0000\n"
-"PO-Revision-Date: 2026-04-09 11:53+0400\n"
+"PO-Revision-Date: 2026-09-30 18:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -347,7 +347,7 @@ msgstr "المبدئيّ"
 #, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO C القياسية"
 
 #: localelistmodel.cpp:142
 #, kde-format
