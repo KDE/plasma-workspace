@@ -38,6 +38,7 @@ private Q_SLOTS:
     void testSplashScreen();
     void testWindowSwitcher();
     void testSave();
+    void testPackageContents();
 
 private:
     QDir m_configDir;
@@ -243,6 +244,19 @@ void LookAndFeelManagerTest::testSave()
     cgd = KConfigGroup(&kwinConfigDefault, u"TabBox"_s);
     QCOMPARE(cg.readEntry("LayoutName", QString()), QString());
     QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
+}
+
+void LookAndFeelManagerTest::testPackageContents()
+{
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    package.setPath(QFINDTESTDATA("lookandfeel"));
+    QVERIFY(package.isValid());
+
+    const KLookAndFeelManager::Contents contents = m_lookAndFeel->packageContents(package);
+    QVERIFY(contents.testFlag(KLookAndFeelManager::Colors));
+    QVERIFY(contents.testFlag(KLookAndFeelManager::Icons));
+    // Fonts are read from [kdeglobals][General]
+    QVERIFY(contents.testFlag(KLookAndFeelManager::Fonts));
 }
 
 QTEST_MAIN(LookAndFeelManagerTest)

@@ -96,8 +96,8 @@ KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackag
         contents.setFlag(BorderSize, configProvides(conf, u"kwinrc/org.kde.kdecoration2"_s, u"BorderSize"_s));
 
         contents.setFlag(Fonts,
-                         configProvides(conf, u"kdeglobals/WM"_s, {u"font"_s, u"fixed"_s, u"smallestReadableFont"_s, u"toolBarFont"_s, u"menuFont"_s})
-                             || configProvides(conf, u"kdeglobals/General"_s, u"activeFont"_s));
+                         configProvides(conf, u"kdeglobals/General"_s, {u"font"_s, u"fixed"_s, u"smallestReadableFont"_s, u"toolBarFont"_s, u"menuFont"_s})
+                             || configProvides(conf, u"kdeglobals/WM"_s, u"activeFont"_s));
 
         contents.setFlag(WindowPlacement, configProvides(conf, u"kwinrc/Windows"_s, u"Placement"_s));
 
