@@ -109,6 +109,7 @@ RowLayout {
                 textFormat: Text.PlainText
                 wrapMode: Text.NoWrap
                 visible: root.showingProgress
+                font.features: Object.assign({}, Kirigami.Theme.defaultFont.features, { "tnum": 1 })
                 // Display a subtle visual indication that the volume might be
                 // dangerously high
                 // ------------------------------------------------
