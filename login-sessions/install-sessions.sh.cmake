@@ -30,7 +30,7 @@ cat > /tmp/00-plasma.conf << EOF
 </busconfig>
 EOF
 sudo mkdir -p /etc/dbus-1/session.d/
-sudo mv /tmp/00-plasma.conf /etc/dbus-1/session.d/
+sudo install --mode=644 -D /tmp/00-plasma.conf --target-directory=/etc/dbus-1/session.d/
 
 cat > /tmp/00-plasma.conf << EOF
 <!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
@@ -43,4 +43,4 @@ cat > /tmp/00-plasma.conf << EOF
 </busconfig>
 EOF
 sudo mkdir -p /etc/dbus-1/system.d/
-sudo mv /tmp/00-plasma.conf /etc/dbus-1/system.d/
+sudo install --mode=644 -D /tmp/00-plasma.conf --target-directory=/etc/dbus-1/system.d/
