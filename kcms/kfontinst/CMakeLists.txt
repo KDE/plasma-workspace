@@ -22,5 +22,5 @@ if (HAVE_X11)
     add_subdirectory(thumbnail)
     add_subdirectory(viewpart)
 
-    ecm_install_icons(ICONS sc-apps-preferences-desktop-font-installer.svgz DESTINATION ${KDE_INSTALL_ICONDIR})
+    ecm_install_icons(ICONS sc-apps-preferences-desktop-font-installer.svg DESTINATION ${KDE_INSTALL_ICONDIR})
 endif ()
