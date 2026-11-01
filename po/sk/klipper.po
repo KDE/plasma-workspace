@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
 "PO-Revision-Date: 2026-09-14 20:10+0200\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -268,35 +268,35 @@ msgstr "Skratky"
 msgid "Shortcuts Configuration"
 msgstr "Nastavenie skratiek"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Návrat do schránky"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Kopírovať"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Obrázok QR kódu bol skopírovaný do schránky."
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Kopírovať obrázok QR kódu do schránky"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "QR kód"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -304,7 +304,7 @@ msgstr ""
 "Na zobrazenie kódu QR nie je dostatok miesta. Skúste zmeniť veľkosť tohto "
 "appletu."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Vytvorenie QR kódu zlyhalo"
@@ -321,22 +321,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozbaliť"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "História farieb"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "Všetka história"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "Iba s hviezdičkou"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -346,7 +346,7 @@ msgstr ""
 "Schránka a výber momentálne obsahujú citlivý údaj, ktorý sa neuloží do "
 "histórie."
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -355,7 +355,7 @@ msgid ""
 msgstr ""
 "Schránka momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -363,18 +363,18 @@ msgid ""
 "stored in history."
 msgstr "Výber momentálne obsahuje citlivý údaj, ktorý sa neuloží do histórie."
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Vymazať tajné dáta"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "Žiadne zhody"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdna"
@@ -415,13 +415,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Textové pole"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Uložiť"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

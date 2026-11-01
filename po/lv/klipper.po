@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
 "PO-Revision-Date: 2026-01-19 16:56+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -270,41 +270,41 @@ msgstr "Saīsnes"
 msgid "Shortcuts Configuration"
 msgstr "Saīsņu konfigurācija"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Atgriezties uz starpliktuvi"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Kopēt"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Kvadrātkoda attēls ir nokopēts starpliktuvē"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Kopēt kvadrātkoda attēlu starpilktuvē"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "Kvadrātkods"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "Nepietiek vietas kvadrātkoda parādīšanai. Mainiet sīklietotnes izmēru."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Neizdevās izveidot kvadrātkodu"
@@ -321,22 +321,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Izvērst"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "Notīrīt vēsturi"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "Visa vēsture"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "Tikai ar zvaigznīti"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -344,7 +344,7 @@ msgid ""
 "that will not be stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -352,7 +352,7 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -360,18 +360,18 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "Nav atbilsmju"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Starpliktuve ir tukša"
@@ -412,13 +412,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Teksta rediģēšanas reģions"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Saglabāt"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

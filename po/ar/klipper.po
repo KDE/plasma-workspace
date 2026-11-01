@@ -7,13 +7,13 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2008, 2021, 2022, 2024, 2025, 2026 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021-2022, 2024-2026 zayed <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
-"PO-Revision-Date: 2026-09-25 16:43+0400\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"PO-Revision-Date: 2026-10-31 20:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: configdialog.cpp:85
 #, kde-format
@@ -129,6 +129,9 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"في صفحة <interface>ضبط الإجراءات</interface>، فعّل إعداد <interface>اعرض "
+"تطبيقات للروابط والملفات المنسوخة</interface> أو فعّل إجراءً واحدًا على الأقل "
+"لكي يكون لإعدادات هذه الصفحة أي تأثير."
 
 #: configdialog.cpp:192
 #, kde-format
@@ -194,16 +197,14 @@ msgid "Description"
 msgstr "الوصف"
 
 #: configdialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
-msgstr "أضف إجراء..."
+msgstr "أضف إجراء…"
 
 #: configdialog.cpp:278
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "حرر إجراء..."
+msgstr "حرر إجراء…"
 
 #: configdialog.cpp:283
 #, kde-format
@@ -267,41 +268,41 @@ msgstr "الاختصارات"
 msgid "Shortcuts Configuration"
 msgstr "ضبط الاختصارات"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "ارجع إلى الحافظة"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "انسخ"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "نُسخت صورة رمز الاستجابة السريعة إلى الحافظة"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "انسخ صورة رمز الاستجابة السريعة إلى الحافظة"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "رمز الاستجابة السريعة"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "لا توجد مساحة كافية لعرض رمز الاستجابة السريعة حاول تغيير حجم التطبيق."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "فشل إنشاء رمز الاستجابة السريعة"
@@ -318,69 +319,57 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "وسع"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "امحُ التاريخ"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "كل التأريخ"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "المُفضّل فقط"
 
-#: declarative/qml/ClipboardMenu.qml:376
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#: declarative/qml/ClipboardMenu.qml:359
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
-msgstr "تحتوي الحافظة حاليًا على بيانات حساسة ولن تحفظ تلك البيانات في التاريخ."
+msgstr "تحتوي الحافظة والتحديد حاليًا على بيانات حساسة لن تُخزَّن في السجل."
 
-#: declarative/qml/ClipboardMenu.qml:378
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#: declarative/qml/ClipboardMenu.qml:361
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in history."
-msgstr "تحتوي الحافظة حاليًا على بيانات حساسة ولن تحفظ تلك البيانات في التاريخ."
+msgstr "تحتوي الحافظة حاليًا على بيانات حساسة لن تُخزَّن في السجل."
 
-#: declarative/qml/ClipboardMenu.qml:380
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#: declarative/qml/ClipboardMenu.qml:363
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
-msgstr "تحتوي الحافظة حاليًا على بيانات حساسة ولن تحفظ تلك البيانات في التاريخ."
+msgstr "يحتوي التحديد حاليًا على بيانات حساسة لن تُخزَّن في السجل."
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "امحُ البيانات السرية"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "لا يوجد تطابق"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "الحافظة فارغة"
@@ -421,13 +410,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "منطقة تحرير النص"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "احفظ"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -540,14 +529,12 @@ msgstr ""
 "النافذة المنبثقة يدويًا باستخدام اختصار المفتاح <shortcut>%1 </shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
-msgstr "أضف أمر ..."
+msgstr "أضف أمر…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
 msgstr "حرر أمر…"
 
@@ -661,19 +648,16 @@ msgid "Remove Starred Item"
 msgstr "أزل العنصر مُفضّل"
 
 #: klipper.cpp:69
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "منبثقة الحافظة"
+msgstr "الحافظة"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "قائمة الإجراءات المنبثقة الآليّة"
+msgstr "بدّل الظهور الآلي لقائمة الإجراءات"
 
 #: klipper.cpp:96
 #, kde-format
@@ -703,14 +687,13 @@ msgstr "أظهر &شفرة شريطية..."
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "دوّر السجل للأسفل"
 
 #: klipper.cpp:131
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "امحُ التاريخ"
+msgstr "دوّر السجل للأعلى"
 
 #: klipper.cpp:138
 #, kde-format
@@ -726,18 +709,17 @@ msgstr "تاريخ الحافظة: "
 #: klipper.cpp:424
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "الأحدث: "
 
 #: klipper.cpp:431
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "الحالي"
+msgstr "الحالي: "
 
 #: klipper.cpp:438
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "الأقدم: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10

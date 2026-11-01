@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
 "PO-Revision-Date: 2026-10-28 03:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -266,42 +266,42 @@ msgstr "მალსახმობები"
 msgid "Shortcuts Configuration"
 msgstr "მალსახმობების მორგება"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "ბუფერზე დაბრუნება"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "კოპირება"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "QR კოდის გამოსახულება დაკოპირდა ბუფერში"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "QR კოდის გამოსახულების კოპირება ბუფერში"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "QR კოდი"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "QR კოდის საჩვენებლად საკმარისი ადგილი არაა. სცადეთ, აპლეტის ზომა შეცვალოთ."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR კოდის შექმნის შეცდომა"
@@ -318,22 +318,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "ამოკეცვა"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "ისტორიის გასუფთავება"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "სრული ისტორია"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "მხოლოდ ვარსკვლავიანები"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -343,7 +343,7 @@ msgstr ""
 "ბუფერი და მონიშნული, ამჟამად, შეიცავს მგრძნობიარე მონაცემებს, რომლის "
 "შენახვაც ისტორიაში არ მოხდება."
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -353,7 +353,7 @@ msgstr ""
 "ბუფერი, ამჟამად, შეიცავს მგრძნობიარე მონაცემებს, რომლის შენახვაც ისტორიაში "
 "არ მოხდება."
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -363,18 +363,18 @@ msgstr ""
 "მონიშნული, ამჟამად, შეიცავს მგრძნობიარე მონაცემებს, რომლის შენახვაც "
 "ისტორიაში არ მოხდება."
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "საიდუმლო მონაცემების გასუფთავება"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "დამთხვევა არ არსებობს"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ბუფერი ცარიელია"
@@ -415,13 +415,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "ტექსტის ჩასწორების ალაგი"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "შენახვა"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

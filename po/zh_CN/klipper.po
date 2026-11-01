@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -234,41 +234,41 @@ msgstr "快捷键"
 msgid "Shortcuts Configuration"
 msgstr "快捷键配置"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "返回剪贴板"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "复制"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "该二维码图像已复制到剪贴板"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "复制二维码图像到剪贴板"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "二维码"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "没有足够的空间显示二维码。请尝试调整这个小程序的大小。"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "创建二维码失败"
@@ -285,22 +285,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "展开"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "清除历史记录"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "所有历史记录"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "仅星标项目"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -312,7 +312,7 @@ msgid ""
 "that will not be stored in history."
 msgstr "剪贴板当前包含一条敏感数据，该数据不会被保存到历史记录中。"
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -324,7 +324,7 @@ msgid ""
 "stored in history."
 msgstr "剪贴板当前包含一条敏感数据，该数据不会被保存到历史记录中。"
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -336,18 +336,18 @@ msgid ""
 "stored in history."
 msgstr "剪贴板当前包含一条敏感数据，该数据不会被保存到历史记录中。"
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "清除敏感数据"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "没有匹配的内容"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪贴板为空"
@@ -388,13 +388,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "文本编辑区域"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "保存"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

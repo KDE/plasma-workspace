@@ -145,7 +145,9 @@
 >Edita el contingut...</guimenuitem
 > a la dreta de l'entrada al porta-retalls, i podreu modificar el contingut del porta-retalls en el diàleg que aparegui, abans de fer clic al botó <guibutton
 >D'acord</guibutton
-> per a executar l'acció apropiada.</para>
+>. La finestra emergent d'accions es mostra automàticament per al contingut editat si està activada <guilabel
+>Quan es tria un element de l'historial</guilabel
+>.</para>
 
 <para
 >Si definiu una drecera per a <guilabel
@@ -273,11 +275,33 @@
 <varlistentry>
 <term
 ><guilabel
->Per a un element triat de l'historial</guilabel
+>Mostra el menú emergent d'accions: quan es copia text o un fitxer</guilabel
 ></term>
 <listitem
 ><para
->Si aquesta opció és activada, seleccionar un element de l'historial causarà que el &klipper; mostri les accions emergents sobre aquest element, si fos apropiat.</para>
+>Si està activada, el menú emergent apareixerà tan aviat com es copiï el text que coincideixi o un fitxer. Si l'opció de sota està marcada, l'únic efecte d'aquesta opció és fer que el menú aparegui en copiar fitxers.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostra el menú emergent d'accions: quan se selecciona text</guilabel
+></term>
+<listitem
+><para
+>Si està activada, el menú emergent apareixerà tan aviat com se seleccioni text, sense esperar que es copiï. Això funciona encara que les seleccions no es desin a l'historial del porta-retalls.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostra el menú emergent d'acció: quan es triï un element de l'historial</guilabel
+></term>
+<listitem
+><para
+>Si està activada, seleccionar un element de l'historial causarà que el &klipper; mostri les accions emergents sobre aquest element, si fos apropiat.</para>
 </listitem>
 </varlistentry>
 

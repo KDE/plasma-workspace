@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
 "PO-Revision-Date: 2026-10-04 11:42+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -240,41 +240,41 @@ msgstr "சுருக்குவழிகள்"
 msgid "Shortcuts Configuration"
 msgstr "சுருக்குவழிகளுக்கான அமைப்பு"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "பிடிப்புப்பலகைக்கு திரும்பசெல்"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "நகலெடு"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "QR குறி, படமாக பிடிப்புப்பலகைக்கு நகலெடுக்கப்பட்டுள்ளது"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "QR குறியை பிடிப்புப்பலகைக்கு நகலெடு"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "QR குறி"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "QR குறியை காட்ட போதிய இடம் இல்லை. இச்சாளரத்தை பெரிதாக்கி பாருங்கள்."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR குறியை உருவாக்குவது தோல்வியடைந்தது"
@@ -291,22 +291,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "விரி"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "வரலாற்றை காலியாக்கு"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "முழு வரலாறு"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "நட்சத்திரமிட்டவை மட்டும்"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -320,7 +320,7 @@ msgstr ""
 "பிடிப்புப்பலகையிலுள்ளது, கமுக்கமாக வைத்துக்கொள்ள வேண்டியதாக (எ.கா. கடவுச்சொல்லாக) "
 "உள்ளதால் வரலாற்றில் செமிக்கப்படாது."
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -334,7 +334,7 @@ msgstr ""
 "பிடிப்புப்பலகையிலுள்ளது, கமுக்கமாக வைத்துக்கொள்ள வேண்டியதாக (எ.கா. கடவுச்சொல்லாக) "
 "உள்ளதால் வரலாற்றில் செமிக்கப்படாது."
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -348,18 +348,18 @@ msgstr ""
 "பிடிப்புப்பலகையிலுள்ளது, கமுக்கமாக வைத்துக்கொள்ள வேண்டியதாக (எ.கா. கடவுச்சொல்லாக) "
 "உள்ளதால் வரலாற்றில் செமிக்கப்படாது."
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "கமுக்கத் தரவை அழி"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
@@ -400,13 +400,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "உரைதிருத்த பகுதி"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "சேமி"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

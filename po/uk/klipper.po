@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
-"PO-Revision-Date: 2026-10-28 15:06+0200\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"PO-Revision-Date: 2026-10-31 16:05+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -147,14 +147,7 @@ msgid "Show action popup menu:"
 msgstr "Показ контекстного меню дій:"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -166,9 +159,10 @@ msgid ""
 msgstr ""
 "Якщо буде позначено або вибрано з журналу буфера обміну даними текст, який "
 "відповідає взірцю для дії, автоматично показати контекстне меню із "
-"відповідними пунктами дій. Якщо тут буде вимкнено автоматичний показ меню "
-"або меню не буде показано для виключеного вікна, відкрити меню можна буде за "
-"допомогою клавіатурного скорочення <shortcut>%1</shortcut>."
+"відповідними пунктами дій. Для файлів це стосується лише випадків, коли їх "
+"скопійовано або вибрано з журналу.<nl/><nl/>До цього меню також можна "
+"перейти за допомогоюклавіатурного скорочення <shortcut>%1</shortcut> або "
+"натиснувши кнопку, яка відповідає певному запису у журналі."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -275,42 +269,42 @@ msgstr "Скорочення"
 msgid "Shortcuts Configuration"
 msgstr "Налаштування скорочень"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Повернути до буфера обміну"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Копіювати"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Зображення QR-коду було скопійовано до буфера обміну даними"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Скопіювати зображення QR-коду до буфера обміну даними"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "QR-код"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "Недостатньо місця для показу QR-коду. Спробуйте змінити розміри цього аплету."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не вдалося створити QR-код"
@@ -327,22 +321,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Розгорнути"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "Спорожнити журнал"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "Увесь журнал"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "Лише з зірками"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -352,7 +346,7 @@ msgstr ""
 "У буфері обміну і записі позначеного зберігаються конфіденційні дані, які не "
 "буде збережено у журналі дій."
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -362,7 +356,7 @@ msgstr ""
 "У буфері обміну зберігаються конфіденційні дані, які не буде збережено у "
 "журналі дій."
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -372,18 +366,18 @@ msgstr ""
 "У позначеному зберігаються конфіденційні дані, які не буде збережено у "
 "журналі дій."
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Вилучити закриті дані"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "Немає відповідників"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Кишеня порожня"
@@ -424,13 +418,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Область редагування тексту"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Зберегти"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -831,22 +825,20 @@ msgstr "Зберігати зображення у журналі буфера �
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "коли скопійовано текст або файл"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr "Показувати контекстне меню відповідних дій щойно буде щось позначено."
+msgstr ""
+"Показувати контекстне меню відповідних дій щойно буде щось скопійовано."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Нетекстовий вибір:"
+msgstr "якщо позначено текст"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -855,6 +847,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Показувати контекстне меню відповідних дій щойно буде щось позначено, не "
+"чекаючи на копіювання."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -908,10 +902,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Для вибраного запису з журналу"
+msgstr "якщо вибрано пункт з журналу"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

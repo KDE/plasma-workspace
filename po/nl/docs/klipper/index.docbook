@@ -149,7 +149,9 @@
 >Inhoud bewerken...</guimenuitem
 > rechts van het klembord-item u kunt de inhoud van het klembord-item aanpassen in de dialoog die verschijnt voordat u op de knop <guibutton
 >OK</guibutton
-> heeft geklikt om de gewenste actie uit te voeren.</para>
+> heeft geklikt om de gewenste actie uit te voeren. De pop-up met acties wordt vervolgens automatisch getoond voor de bewerkte inhoud, mits <guilabel
+>Wanneer een item uit de geschiedenis wordt gekozen</guilabel
+> is geactiveerd.</para>
 
 <para
 >Als u een sneltoets instelt voor <guilabel
@@ -281,11 +283,33 @@
 <varlistentry>
 <term
 ><guilabel
->Voor een item gekozen uit de geschiedenis</guilabel
+>Actie-pop-up-menu tonen: wanneer tekst of bestand is gekopieerd</guilabel
 ></term>
 <listitem
 ><para
->Indien geselecteerd zal wanner er een ingang uit de geschiedenis van &klipper; geselecteerd wordt, nogmaals het actie-venster getoond worden, indien van toepassing.</para>
+>Indien geactiveerd, verschijnt het pop-up-menu zodra overeenkomende tekst of een overeenkomend bestand wordt gekopieerd. Als de onderstaande optie is geactiveerd, is het enige effect van deze optie dat het menu verschijnt wanneer bestanden worden gekopieerd.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Actie-pop-up-menu tonen: wanneer tekst is geselecteerd</guilabel
+></term>
+<listitem
+><para
+>Indien geactiveerd, verschijnt het pop-up-menu zodra overeenkomende tekst wordt geselecteerd, zonder te wachten tot deze naar het klembord is gekopieerd. Dit werkt zelfs wanneer selecties niet in de klembordgeschiedenis worden opgeslagen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Actie-pop-up-menu tonen: wanneer een item uit de geschiedenis is gekozen</guilabel
+></term>
+<listitem
+><para
+>Indien geactiveerd zal, wanneer er een item uit de geschiedenis van &klipper; geselecteerd wordt, nogmaals de actie-pop-up op dat item getoond worden, indien van toepassing.</para>
 </listitem>
 </varlistentry>
 

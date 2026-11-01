@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
-"PO-Revision-Date: 2026-10-28 07:27+0100\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"PO-Revision-Date: 2026-10-31 07:15+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -147,14 +147,7 @@ msgid "Show action popup menu:"
 msgstr "Prikaži pojavno okno dejavnosti:"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -164,10 +157,11 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Kadar se izbrano besedilo ali izbrano besedilo iz zgodovine odložišča ujema "
-"z vzorcem dejanj, se samodejno prikaže pojavni meni z ustreznimi dejanji. Če "
-"je samodejni meni tukaj izklopljen ali ni prikazan zaradi izključenega okna, "
-"ga lahko prikažemo z uporabo bližnjice <shortcut>%1</shortcut>."
+"Ko je besedilo, ki ustreza vzorcu dejanj, kopirano, izbrano ali izbrano iz "
+"zgodovine odložišča, se samodejno prikaže pojavni meni z ustreznimi dejanji. "
+"Pri datotekah to velja le, če so kopirane ali izbrane iz zgodovine.<nl/><nl/"
+">Do ​​menija lahko dostopate tudi s tipkovno bližnjico <shortcut>%1</shortcut> "
+"ali z gumbom ob vsakem ustreznem vnosu v zgodovini."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -275,35 +269,35 @@ msgstr "Bližnjice"
 msgid "Shortcuts Configuration"
 msgstr "Nastavitev bližnjic"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Vrni na odložišče"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Slika kode QR je bila prekopirana na odložišče"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Kopiraj sliko kode QR na odložišče"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "Koda QR"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -311,7 +305,7 @@ msgstr ""
 "Ni dovolj prostora za prikaz kode QR. Poskusite spremeniti velikost tega "
 "programčka."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Kreiranje kode QR ni uspelo"
@@ -328,22 +322,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Razširi"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "Vso zgodovino"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "Samo označeno z zvezdicami"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -353,7 +347,7 @@ msgstr ""
 "Odložišče in izbira trenutno vsebujeta občutljive podatke, ki ne bodo "
 "shranjeni v zgodovini."
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -363,7 +357,7 @@ msgstr ""
 "Odložišče trenutno vsebuje občutljive podatke, ki ne bodo shranjeni v "
 "zgodovini."
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -373,18 +367,18 @@ msgstr ""
 "Odložišče trenutno vsebuje občutljive podatke, ki ne bodo shranjeni v "
 "zgodovini."
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Počisti tajne podatke"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "Ni ujemanj"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
@@ -425,13 +419,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Področje urejanja besedila"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Shrani"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -826,23 +820,19 @@ msgstr "Shrani slike v zgodovino odložišča."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Ko je besedilo ali datoteka kopirano"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Prikaži pojavno okno primernih dejavnosti takoj, ko je določena izbira."
+msgstr "Prikaži pojavni meni takoj, ko je besedilo ali datoteka kopirana."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Izbor brez besedila:"
+msgstr "Ko je izbrano besedilo"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -851,6 +841,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Prikaži pojavni meni takoj, ko je besedilo izbrano, ne da bi čakali na "
+"njegovo kopiranje."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -903,10 +895,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Za izbran predmet iz zgodovine"
+msgstr "Ko je izbran predmet iz zgodovine"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

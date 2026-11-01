@@ -147,7 +147,9 @@
 >Editar contenido…</guimenuitem
 > a la derecha de la entrada del portapapeles para poder cambiar el contenido del portapapeles en el diálogo que aparecerá, antes de pulsar el botón <guibutton
 >Aceptar</guibutton
-> para ejecutar la acción apropiada.</para>
+>. Se mostrará automáticamente un menú de acciones para el contenido editado si está marcada la opción <guilabel
+>Cuando se elige un elemento del historial</guilabel
+>.</para>
 
 <para
 >Si define un atajo de teclado para <guilabel
@@ -275,11 +277,33 @@
 <varlistentry>
 <term
 ><guilabel
->Para un elemento seleccionado del historial</guilabel
+>Mostrar menú emergente de acciones: Cuando se copia texto o un archivo</guilabel
 ></term>
 <listitem
 ><para
->Si esta opción está activada, al seleccionar un elemento del historial hará que, si es apropiado, &klipper; muestre las operaciones emergentes en ese elemento.</para>
+>Si está marcada esta opción, el menú emergente aparece en cuanto se copia texto o un archivo. Si la opción inferior está marcada, el único efecto de esta opción es hacer que se muestre el menú cuando se copian archivos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar menú emergente de acciones: Cuando se selecciona texto</guilabel
+></term>
+<listitem
+><para
+>Si está marcada, el menú emergente aparece en cuanto se selecciona un texto coincidente, sin esperar a que se copie. Esto funciona incluso cuando no se guardan las selecciones en el historial del portapapeles.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar menú emergente de acciones: Cuando se escoge un elemento del historial</guilabel
+></term>
+<listitem
+><para
+>Si está marcada esta opción, al seleccionar un elemento del historial, &klipper; mostrará el menú emergente de acciones para dicho elemento, cuando proceda.</para>
 </listitem>
 </varlistentry>
 

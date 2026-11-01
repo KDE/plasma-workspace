@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-31 00:53+0000\n"
-"PO-Revision-Date: 2026-10-28 09:10-0300\n"
+"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"PO-Revision-Date: 2026-10-31 07:22-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -149,14 +149,7 @@ msgid "Show action popup menu:"
 msgstr "Mostrar menu de contexto de ações:"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -166,11 +159,13 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Quando o texto que corresponde a um padrão de ação é selecionado ou "
-"escolhido no histórico da área de transferência, mostrar automaticamente o "
-"menu de contexto com as ações aplicáveis. Se o menu automático estiver "
-"desativado aqui ou não for exibido para uma janela excluída, ele poderá ser "
-"exibido usando a tecla de atalho <shortcut>%1</shortcut>."
+"Quando um texto que corresponde a um padrão de ação é copiado, selecionado "
+"ou escolhido a partir do histórico da área de transferência, um menu pop-up "
+"com as ações aplicáveis ​​é exibido automaticamente. No caso de arquivos, isso "
+"se aplica apenas quando são copiados ou escolhidos a partir do histórico.<nl/"
+"><nl/>O menu também pode ser acessado por meio do atalho de teclado "
+"<shortcut>%1</shortcut> ou por um botão presente em cada item correspondente "
+"no histórico."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -277,35 +272,35 @@ msgstr "Atalhos"
 msgid "Shortcuts Configuration"
 msgstr "Configuração dos atalhos"
 
-#: declarative/qml/BarcodePage.qml:48
+#: declarative/qml/BarcodePage.qml:43
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Retornar a área de transferência"
 
-#: declarative/qml/BarcodePage.qml:72
+#: declarative/qml/BarcodePage.qml:67
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Copiar"
 
-#: declarative/qml/BarcodePage.qml:78
+#: declarative/qml/BarcodePage.qml:73
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Uma imagem do código QR foi copiada para a área de transferência"
 
-#: declarative/qml/BarcodePage.qml:81
+#: declarative/qml/BarcodePage.qml:76
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Copiar a imagem do código QR para a área de transferência"
 
-#: declarative/qml/BarcodePage.qml:116
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgid "QR Code"
 msgstr "QR Code"
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -313,7 +308,7 @@ msgstr ""
 "Não há espaço suficiente para exibir o QR Code. Tente redimensionar este "
 "applet."
 
-#: declarative/qml/BarcodePage.qml:166
+#: declarative/qml/BarcodePage.qml:161
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Falha ao criar o QR Code"
@@ -330,22 +325,22 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Expandir"
 
-#: declarative/qml/ClipboardMenu.qml:305
+#: declarative/qml/ClipboardMenu.qml:294
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar histórico"
 
-#: declarative/qml/ClipboardMenu.qml:362
+#: declarative/qml/ClipboardMenu.qml:345
 #, kde-format
 msgid "All History"
 msgstr "Todo o histórico"
 
-#: declarative/qml/ClipboardMenu.qml:367
+#: declarative/qml/ClipboardMenu.qml:350
 #, kde-format
 msgid "Starred Only"
 msgstr "Apenas com estrelas"
 
-#: declarative/qml/ClipboardMenu.qml:376
+#: declarative/qml/ClipboardMenu.qml:359
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -355,7 +350,7 @@ msgstr ""
 "A área de transferência e a seleção contêm atualmente um dado sensível que "
 "não será armazenado no histórico."
 
-#: declarative/qml/ClipboardMenu.qml:378
+#: declarative/qml/ClipboardMenu.qml:361
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -365,7 +360,7 @@ msgstr ""
 "A área de transferência contém atualmente um dado sensível que não será "
 "armazenado no histórico."
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:363
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -375,18 +370,18 @@ msgstr ""
 "A seleção contém atualmente um dado sensível que não será armazenado no "
 "histórico."
 
-#: declarative/qml/ClipboardMenu.qml:392
+#: declarative/qml/ClipboardMenu.qml:375
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Limpar dados secretos"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "No matches"
 msgstr "Nenhuma ocorrência"
 
-#: declarative/qml/ClipboardMenu.qml:530
+#: declarative/qml/ClipboardMenu.qml:510
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está vazia"
@@ -427,13 +422,13 @@ msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Área de edição de texto"
 
-#: declarative/qml/EditPage.qml:81
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Salvar"
 
-#: declarative/qml/EditPage.qml:89
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -838,23 +833,19 @@ msgstr "Armazena imagens no histórico da área de transferência."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Quando um texto ou um arquivo é copiado"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Mostrar o menu de contexto de ações aplicáveis assim que a seleção for feita."
+msgstr "Mostra o menu pop-up assim que um texto ou arquivo for copiado."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Seleção não textual:"
+msgstr "Quando um texto é selecionado"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -863,6 +854,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Mostra o menu pop-up assim que o texto for selecionado, sem aguardar que ele "
+"seja copiado."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -916,10 +909,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Para um item escolhido do histórico"
+msgstr "Quando um item é escolhido do histórico"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

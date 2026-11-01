@@ -101,7 +101,7 @@
 
   <para
 >Se puede filtrar la lista de esquemas usando el campo <guilabel
->Buscar...</guilabel
+>Buscar…</guilabel
 > que hay sobre la cuadrícula. Además, puede usar la lista desplegable que hay junto a este campo para mostrar solo los <guimenuitem
 >Esquemas claros</guimenuitem
 > o los <guimenuitem
@@ -110,7 +110,7 @@
 
   <para
 >Si dispone de conexión a Internet, también puede obtener esquemas creados por usuarios en <guibutton
->Obtener nuevos esquemas de color...</guibutton
+>Obtener nuevos esquemas de color…</guibutton
 >.</para>
 
   <para
@@ -145,7 +145,7 @@
 ><para
 ><guilabel
 >Del fondo de escritorio actual</guilabel
->: Esto extraerá automáticamente un color coincidente a partir de la imagen del fondo del escritorio actual. </para
+>: Esto extraerá automáticamente un color coincidente a partir de la imagen del fondo del escritorio actual de la pantalla principal. </para
 ></listitem>
       <listitem
 ><para
