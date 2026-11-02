@@ -63,6 +63,10 @@ PlasmaExtras.Representation {
         }
     }
 
+    Private.KlipperInterface {
+        id: klipper
+    }
+
     Private.HistoryModel {
         id: historyModel
     }
@@ -76,10 +80,15 @@ PlasmaExtras.Representation {
             dialogItem: dialogItem
             model: historyModel
             showsClearHistoryButton: true
+            showsConfigureButton: true
             keyboardActivated: true
             barcodeType: "QRCode"
 
             onItemSelected: dialogItem.requestHidePopup()
+            onConfigureClicked: {
+                klipper.configure()
+                dialogItem.requestHidePopup()
+            }
         }
     }
 }

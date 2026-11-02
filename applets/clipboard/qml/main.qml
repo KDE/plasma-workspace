@@ -158,6 +158,7 @@ PlasmoidItem {
                 dialogItem: dialogItem
                 model: historyModel
                 showsClearHistoryButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && clearAction.visible
+                showsConfigureButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && configureAction.visible
                 keyboardActivated: false
                 barcodeType: Plasmoid.configuration.barcodeType
                 showHeader: Plasmoid.containment.pluginName !== "org.kde.plasma.systemtray"
@@ -165,6 +166,7 @@ PlasmoidItem {
                 onItemSelected: if (main.hideOnWindowDeactivate) {
                     main.expanded = false;
                 }
+                onConfigureClicked: configureAction.trigger()
             }
         }
     }

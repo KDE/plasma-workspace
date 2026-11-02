@@ -29,11 +29,13 @@ PlasmaComponents3.ScrollView {
     signal edit(var modelData)
     signal barcode(string text)
     signal triggerAction(var uuid)
+    signal configureClicked
 
     required property bool expanded
     required property PlasmaExtras.Representation dialogItem
     required property Private.HistoryModel model
     required property bool showsClearHistoryButton
+    required property bool showsConfigureButton
     required property string barcodeType
 
     readonly property int pageUpPageDownSkipCount: menuListView.visibleArea.heightRatio * menuListView.count
@@ -300,6 +302,25 @@ PlasmaComponents3.ScrollView {
 
                     PlasmaComponents3.ToolTip {
                         text: clearHistoryButton.text
+                    }
+                }
+
+                PlasmaComponents3.ToolButton {
+                    id: configureButton
+                    visible: clipboardMenu.showsConfigureButton
+
+                    icon.name: "configure"
+
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    text: i18nd("klipper", "Configure Clipboard…")
+
+                    KeyNavigation.left: clearHistoryButton
+                    KeyNavigation.down: tabBar.visible ? tabBar : menuListView
+
+                    onClicked: clipboardMenu.configureClicked()
+
+                    PlasmaComponents3.ToolTip {
+                        text: configureButton.text
                     }
                 }
             }
