@@ -103,7 +103,7 @@ RowLayout {
                 Layout.preferredWidth: Math.ceil(widestLabelSize.advanceWidth)
                 Layout.alignment: Qt.AlignVCenter
                 level: 3
-                horizontalAlignment: Text.AlignHCenter
+                horizontalAlignment: Text.AlignRight
                 verticalAlignment: Text.AlignVCenter
                 text: root.formatPercent(progressBar.value)
                 textFormat: Text.PlainText
