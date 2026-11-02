@@ -12,6 +12,8 @@ ecm_target_qml_sources(components SOURCES
     components/SessionManagementScreen.qml
     components/UserDelegate.qml
     components/UserList.qml
+    components/VirtualKeyboard.qml
+    components/VirtualKeyboardLoader.qml
     components/WallpaperFader.qml
 )
 target_sources(components PRIVATE components/componentsplugin.cpp)
