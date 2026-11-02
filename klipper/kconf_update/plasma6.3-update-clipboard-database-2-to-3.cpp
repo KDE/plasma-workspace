@@ -4,6 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+// TODO: Remove this for Plasma 7.0 and with that, remove the timestamp parameter that is only used by this
+// https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/6056
+
 #include <cstdlib>
 #include <zlib.h>
 
