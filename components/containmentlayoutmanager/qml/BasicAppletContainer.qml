@@ -80,8 +80,8 @@ ContainmentLayoutManager.AppletContainer {
     layer.enabled: (rotation % 90 !== 0) && !(configOverlayItem && configOverlayItem.visible)
     layer.smooth: true
 
-    initialSize.width: applet.switchWidth + leftPadding + rightPadding
-    initialSize.height: applet.switchHeight + topPadding + bottomPadding
+    initialSize.width: applet.switchWidth + layout.cellWidth + leftPadding + rightPadding
+    initialSize.height: applet.switchHeight + layout.cellHeight + topPadding + bottomPadding
 
     background: KSvg.FrameSvgItem {
         id: background
