@@ -235,7 +235,12 @@ void ShellCorona::init()
         for (auto it = m_desktopViewForScreen.keyBegin(); it != m_desktopViewForScreen.keyEnd(); it = std::next(it)) {
             Q_EMIT availableScreenRectChanged(*it);
         }
-        setDashboardShown(edit);
+        if (edit) {
+            m_editModeShowedDesktop = !KWindowSystem::showingDesktop();
+            setDashboardShown(true);
+        } else if (m_editModeShowedDesktop) {
+            setDashboardShown(false);
+        }
     });
     connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [this](bool showingDesktop) {
         if (!showingDesktop) {

@@ -318,6 +318,7 @@ private:
     KPackage::Package m_lookAndFeelPackage;
 
     bool m_blockRestorePreviousWindow = false;
+    bool m_editModeShowedDesktop = false;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
