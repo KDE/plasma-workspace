@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-01 00:57+0000\n"
-"PO-Revision-Date: 2026-10-28 03:55+0100\n"
+"PO-Revision-Date: 2026-11-01 04:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -138,14 +138,7 @@ msgid "Show action popup menu:"
 msgstr "ქმედების მხტუნარა მენიუში ჩვენება:"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -155,11 +148,12 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"როცა მონიშნულია ან ბუფერის ისტორიიდან არჩეულია ტექსტი, რომელიც ქმედების "
-"ნიმუშს ემთხვევა, ავტომატურად ნაჩვენები იქნება მხტუნარა მენიუ, რომელიც "
-"შესაბამის ქმედებებს სეიცავს. თუ ავტომატური მენიუს აქ გამორთავთ, ამოღებული "
-"ფანჯრისთვის ის ნაჩვენები არ იქნება. თუ მაინც გნებავთ, ნახოთ, გამოიყენეთ "
-"კლავიატურის მალსახმობი <shortcut>%1</shortcut>."
+"როცა ტექსტი, რომელიც ემთხვევა ქმედების ნიმუშს, კოპირდება, მოინიშნება, ან მას "
+"ბუფერის ისტოიიდან აირჩევთ, ავტომატურად ნაჩვენების იქნება მხტუნარა მენიუ "
+"შესაბამისი ქმედებებით. ფაილებისთვის ეს, მხოლოდ, მაშინ მუშაობს, როცა მათ "
+"დააკოპირებთ, ან აირჩევთ ისტორიიდან.<nl/><nl/>ამ მენიუს დანახვა ასევე "
+"შეგიძლიათ კლავიატურის მალსახმობით <shortcut>%1</shortcut>, ან ღილაკით "
+"ისტორიაში ყველა შესაბამისი ჩანაწერისთვის."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -815,24 +809,19 @@ msgstr "გამოსახულებების შენახვა ბ�
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "როცა ტექსტი, ან ფაილი კოპირდება"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"მონიშვნისთანავე მხტუნარა მენიუს ჩვენება, რომელიც შესაბამის ქმედებებს "
-"შემოგთავაზებთ."
+msgstr "მხტუნარა მენიუს ჩვენება მაშინვე, როცა ტექსტი, ან ფაილი დაკოპირდება."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "არა-ტექსტური მონიშვნა:"
+msgstr "ტექსტის მონიშვნისას"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -841,6 +830,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"მხტუნარა მენიუს ჩვენება, როცა ტექსტს მონიშნავთ, ამ ტექსტის კოპირების "
+"მოლოდინის გარეშე."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -892,10 +883,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "ისტორიიდან არჩეული ჩანაწერისთვის"
+msgstr "როცა ელემენტი არჩეულია ისტორიიდან"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

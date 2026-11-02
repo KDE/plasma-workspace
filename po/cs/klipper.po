@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-01 00:57+0000\n"
-"PO-Revision-Date: 2026-10-28 22:49+0100\n"
+"PO-Revision-Date: 2026-11-02 01:47+0100\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -141,14 +141,7 @@ msgid "Show action popup menu:"
 msgstr "Zobrazit vyskakovací nabídku činností:"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -158,10 +151,11 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Když je vybrán text, který odpovídá vzoru akce, nebo je vybrán z historie "
-"schránky, automaticky se zobrazí rozbalovací nabídka s příslušnými akcemi. "
-"Pokud je automatická nabídka zde vypnutá nebo se nezobrazuje pro vyloučené "
-"okno, lze ji zobrazit pomocí klávesové zkratky <shortcut>%1</shortcut>."
+"Při zkopírování, označení nebo výběru textu, který odpovídá vzoru akce, se "
+"automaticky zobrazí kontextová nabídka s příslušnými akcemi. U souborů to "
+"platí pouze v případě, že jsou zkopírovány nebo vybrány z historie.<nl/><nl/"
+">Do nabídky se lze dostat také pomocí klávesové zkratky <shortcut>%1</"
+"shortcut> nebo pomocí tlačítka u každé odpovídající položky v historii."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -818,23 +812,19 @@ msgstr "Ukládat obrázky do historie schránky."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Při zkopírování textu nebo souboru"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Jakmile je proveden výběr, zobrazí se vyskakovací nabídka příslušných akcí."
+msgstr "Zobrazit kontextovou nabídku ihned po zkopírování textu nebo souboru."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Netextový výběr:"
+msgstr "Při výběru textu"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -843,6 +833,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Zobrazit kontextovou nabídku ihned po výběru textu, aniž by se čekalo na "
+"jeho zkopírování."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -895,10 +887,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Pro položku vybranou z historie"
+msgstr "Při výběru položky z historie"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

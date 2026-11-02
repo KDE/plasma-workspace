@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-01 00:57+0000\n"
-"PO-Revision-Date: 2026-10-28 21:06+0200\n"
+"PO-Revision-Date: 2026-11-01 23:28+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -146,14 +146,7 @@ msgid "Show action popup menu:"
 msgstr "Rodyti veiksmų iškylantįjį meniu:"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -163,11 +156,12 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Kai pažymimas ar iš iškarpinės istorijos pasirenkamas tekstas, kuris "
-"atitinka veiksmo šabloną, automatiškai rodyti iškylantįjį meniu su "
-"pritaikyti galimais veiksmais. Jei automatinis meniu čia yra išjungtas arba "
-"nėra rodomas išskirtam langui, tuomet jis gali būti parodytas naudojant "
-"spartųjį klavišą <shortcut>%1</shortcut>."
+"Kai nukopijuojamas, pažymimas ar iš iškarpinės istorijos pasirenkamas "
+"tekstas, kuris atitinka veiksmo šabloną, automatiškai rodyti iškylantįjį "
+"meniu su pritaikyti galimais veiksmais. Failams tai taikoma tik tada, kai "
+"jie nukopijuojami ar pasirenkami iš istorijos.<nl/><nl/>Meniu taip pat "
+"galima pasiekti naudojant spartųjį klavišą <shortcut>%1</shortcut> arba "
+"kiekvieno atitinkančio istorijos įrašo mygtuką."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -830,24 +824,20 @@ msgstr "Saugoti paveikslus iškarpinės istorijoje."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Kai nukopijuojamas tekstas ar failas"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
 msgstr ""
-"Rodyti iškylantįjį pritaikyti galimų veiksmų meniu iš karto, kai tik "
-"atliekamas žymėjimas."
+"Rodyti iškylantįjį meniu iš karto, kai tik nukopijuojamas tekstas ar failas."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Ne teksto žymėjimai:"
+msgstr "Kai pažymimas tekstas"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -856,6 +846,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Rodyti iškylantįjį meniu iš karto, kai tik pažymimas tekstas, nelaukiant, "
+"kol jis bus kopijuotas."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -907,10 +899,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Iš istorijos pasirinktiems elementams"
+msgstr "Kai iš istorijos pasirenkamas elementas"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
