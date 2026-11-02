@@ -29,7 +29,7 @@ PlasmoidItem {
         id: tabBar
 
         anchors.centerIn: parent
-        rotation: Plasmoid.formFactor === PlasmaCore.Types.Vertical ?  -90 : 0
+        rotation: Plasmoid.formFactor === PlasmaCore.Types.Vertical ?  90 : 0
         transformOrigin: Item.Center
         width: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? parent.height : parent.width
         height: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? parent.width : parent.height
@@ -42,7 +42,7 @@ PlasmoidItem {
 
         position: {
             switch (Plasmoid.location) {
-            case PlasmaCore.Types.LeftEdge:
+            case PlasmaCore.Types.RightEdge:
             case PlasmaCore.Types.TopEdge:
                 return PlasmaComponents.TabBar.Header;
             default:
