@@ -313,8 +313,8 @@ KCMUtils.SimpleKCM {
                 icon.name: "settings-configure"
                 enabled: manualFontAndSizeRadioButton.checked
                 onClicked: {
-                    fontDialog.currentFont = fontDialog.fontChosen
                     fontDialog.open()
+                    fontDialog.currentFont = fontDialog.fontChosen
                 }
             }
 
