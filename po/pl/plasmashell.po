@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:55+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-07-18 16:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -381,23 +381,23 @@ msgstr "Przełącz na poprzednią aktywność"
 msgid "Switch to Next Activity"
 msgstr "Przełącz na następną aktywność"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:261
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Zarządzaj pulpitami i paskami…"
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:283
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Przeskakuj klawiaturą na paski"
 
-#: shellcorona.cpp:2291
+#: shellcorona.cpp:2296
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj pasek"
 
-#: shellcorona.cpp:2378
+#: shellcorona.cpp:2383
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

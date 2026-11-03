@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2014-10-20 20:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -307,24 +307,30 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Istorijat klipborda"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, fuzzy, kde-format
+#| msgid "&Configure Klipper..."
+msgid "Configure Clipboard…"
+msgstr "&Podesi Klipper..."
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Istorijat klipborda"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -332,7 +338,7 @@ msgid ""
 "that will not be stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -340,7 +346,7 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -348,19 +354,19 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<placeholder>nema poklapanja</placeholder>"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klipbord je prazan"
@@ -998,12 +1004,6 @@ msgstr "&Odustani"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "Bez radnji za WM_CLASS"
-
-#, fuzzy
-#~| msgid "&Configure Klipper..."
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Podesi Klipper..."
 
 #~ msgid "Disable This Popup"
 #~ msgstr "Isključi ovo iskakanje"

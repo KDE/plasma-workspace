@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-10-12 18:05+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Η συσκευή αποσυνδέθηκε."
 msgid "An unknown error has occurred."
 msgstr "Προέκυψε ένα άγνωστο σφάλμα."
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "Αλλαγή κωδικού πρόσβασης"
@@ -145,12 +145,12 @@ msgstr "Διατήρηση αμετάβλητο"
 msgid "Create User"
 msgstr "Δημιουργία χρήστη"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "Όνομα:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "Όνομα χρήστη:"
@@ -175,17 +175,17 @@ msgstr ""
 "Τα ονόματα χρηστών πρέπει να περιέχουν πεζά γράμματα. Οι κεφαλαίοι "
 "χαρακτήρες μετατράπηκαν σε πεζούς."
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "Τυπικός"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "Διαχειριστής"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "Τύπος λογαριασμού:"
@@ -410,24 +410,24 @@ msgstr "Διαγραφή αποτυπώματος"
 msgid "No fingerprints added"
 msgstr "Δεν έχουν προστεθεί δακτυλικά αποτυπώματα"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr "Χρήστες"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "Προσθήκη νέου…"
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Προσθήκη νέου χρήστη…"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -596,19 +596,19 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "Εικονίδιο προσωρινής εικόνας χρήστη"
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr "Διαγραφή συνδεδεμένου χρήστη χωρίς διαγραφή αρχείων;"
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "Διαγραφή συνδεδεμένου χρήστη;"
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -621,7 +621,7 @@ msgstr ""
 "διαγραφή, ο χρήστης %1 δεν θα μπορεί να συνδεθεί ξανά και ενδέχεται να "
 "παρουσιαστεί ασυνήθιστη συμπεριφορά μέχρι να αποσυνδεθεί."
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -632,18 +632,18 @@ msgstr ""
 "του, δεν θα μπορεί να συνδεθεί ξανά και ενδέχεται να παρουσιαστεί ασυνήθιστη "
 "συμπεριφορά μέχρι να αποσυνδεθεί."
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "Διαγραφή του %1"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "Αλλαγή εικόνας"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -654,7 +654,7 @@ msgstr ""
 "Αποσυνδεθείτε και συνδεθείτε ως άλλος χρήστης για να αλλάξετε το όνομα "
 "χρήστη αυτού του λογαριασμού."
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -664,7 +664,7 @@ msgstr ""
 "Δεν μπορείτε να αλλάξετε το όνομα χρήστη ενός συνδεδεμένου χρήστη. "
 "Περιμένετε πρώτα να αποσυνδεθεί."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -676,27 +676,27 @@ msgstr ""
 "αυτόν, ο έλεγχος ταυτότητας θα ήταν αδύνατος ή θα απαιτούσε την ανασφαλή "
 "χρήση του κωδικού πρόσβασης ρίζας."
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "Διεύθυνση ηλ. ταχυδρομείου:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "Διαγραφή αρχείων"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "Διατήρηση αρχείων"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "Διαγραφή Χρήστη…"
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -706,12 +706,12 @@ msgstr ""
 "Δεν μπορείτε να διαγράψετε τον δικό σας λογαριασμό! Αποσυνδεθείτε και "
 "συνδεθείτε ως άλλος χρήστης για να τον διαγράψετε."
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Διαμόρφωση ταυτοποίησης με δακτυλικό αποτύπωμα…"
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

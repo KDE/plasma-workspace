@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2013-01-06 03:54+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -300,24 +300,30 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Алмасу буферінің журналы"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, fuzzy, kde-format
+#| msgid "&Configure Klipper..."
+msgid "Configure Clipboard…"
+msgstr "Klipper-ді &баптау..."
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Алмасу буферінің журналы"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -325,7 +331,7 @@ msgid ""
 "that will not be stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -333,7 +339,7 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -341,19 +347,19 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<сәйкестіктер жоқ>"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Алмасу буфері бос"
@@ -984,12 +990,6 @@ msgstr "Қ&айту"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "WM_CLASS үшін әрекеттер жоқ"
-
-#, fuzzy
-#~| msgid "&Configure Klipper..."
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "Klipper-ді &баптау..."
 
 #~ msgid "Disable This Popup"
 #~ msgstr "Осы мәзір бұғатталсын"

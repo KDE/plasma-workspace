@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2025-12-04 09:02+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -66,7 +66,7 @@ msgstr "Tækið var aftengt."
 msgid "An unknown error has occurred."
 msgstr "Óþekkt villa kom upp."
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "Breyta lykilorði"
@@ -141,12 +141,12 @@ msgstr "Láta vera óbreytt"
 msgid "Create User"
 msgstr "Búa til notandaaðgang"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "Nafn:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "Notandanafn:"
@@ -167,17 +167,17 @@ msgid ""
 "lowercase."
 msgstr ""
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "Staðlað"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "Kerfisstjóri"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "Tegund notandaaðgangs:"
@@ -362,24 +362,24 @@ msgstr "Eyða fingrafari"
 msgid "No fingerprints added"
 msgstr "Engum fingraförum bætt við"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr "Notendur"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "Bæta við nýjum..."
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Bæta við nýjum notanda…"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -548,19 +548,19 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "Staðgengilstákn notandamyndar"
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr "Eyða innskráðum notanda án þess að eyða skrám?"
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "Eyða innskráðum notanda?"
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -573,7 +573,7 @@ msgstr ""
 "inn aftur og gæti upplifað undarlega hegðun í kerfinu þar til hann hefur "
 "skráð sig út."
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -584,18 +584,18 @@ msgstr ""
 "sig inn aftur og gæti upplifað undarlega hegðun í kerfinu þar til hann "
 "skráir sig út."
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "Eyða %1"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "Skipta um notandamynd"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -606,7 +606,7 @@ msgstr ""
 "Skráðu þig út og skráðu þig svo aftur inn sem annar notandi til að breyta "
 "notandanafninu á þessum notandaaðgangi."
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -616,7 +616,7 @@ msgstr ""
 "Ekki er hægt að breyta notandanafni þessa innskráða notanda; bíddu þangað "
 "til þessi notandi skráir út."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -628,27 +628,27 @@ msgstr ""
 "væri auðkenning ómöguleg eða myndi krefjast óöruggrar notkunar á "
 "rótarlykilorði."
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "Netfang:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "Eyða skrám"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "Halda skrám"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "Eyða notanda…"
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -658,12 +658,12 @@ msgstr ""
 "Notandi má ekki eyða sjálfum sér! Skráðu þig út og skráðu þig svo aftur inn "
 "sem annar notandi til að eyða þessum notandaaðgangi."
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Grunnstilla auðkenningu með fingraförum…"
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

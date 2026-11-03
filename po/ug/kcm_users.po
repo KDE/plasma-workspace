@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-09-24 20:30-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "ئۈسكۈنە ئۈزۈلدى."
 msgid "An unknown error has occurred."
 msgstr "نامەلۇم خاتالىق كۆرۈلدى."
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "ئىم ئۆزگەرت"
@@ -142,12 +142,12 @@ msgstr "ئۆزگەرتمەي ئايرىل"
 msgid "Create User"
 msgstr "ئىشلەتكۈچى قۇر"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "ئاتى:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "ئىشلەتكۈچى ئاتى:"
@@ -172,17 +172,17 @@ msgstr ""
 "ئىشلەتكۈچى ئاتى چوقۇم كىچىك ھەرپ بولىدۇ. چوڭ ھەرپ كىچىك ھەرپكە "
 "ئايلاندۇرۇلغان."
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "ئۆلچەملىك"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "باشقۇرغۇچى"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "ھېساب تۈرى:"
@@ -367,24 +367,24 @@ msgstr "بارماق ئىزىنى ئۆچۈر"
 msgid "No fingerprints added"
 msgstr "ھېچقانداق بارماق ئىزى قوشۇلمىدى"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr "ئىشلەتكۈچى"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "يېڭىدىن قوش…"
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "يېڭى ئىشلەتكۈچى قوش…"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -553,19 +553,19 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "ئىشلەتكۈچى سىماسى ئورۇن بەلگىسى"
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr "ھۆججەتنى ئۆچۈرمەي تىزىمغا كىرگەن ئىشلەتكۈچىنى ئۆچۈرەمدۇ؟"
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "تىزىمغا كىرگەن ئىشلەتكۈچىنى ئۆچۈرەمدۇ؟"
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -577,7 +577,7 @@ msgstr ""
 "ئۆچۈرەمدۇ؟<nl/><nl/>بۇ مەشغۇلات %1 نىڭ قايتا تىزىمغا كىرەلمەسلىكىنى كەلتۈرۈپ "
 "چىقىرىدۇ ۋە ئۇ تىزىمدىن چىقىشتىن ئىلگىرى غەلىتە قىلمىش پەيدا بولۇشى مۇمكىن."
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -588,18 +588,18 @@ msgstr ""
 "كەلتۈرۈپ چىقىرىدۇ ۋە ئۇ تىزىمدىن چىقىشتىن ئىلگىرى غەلىتە قىلمىش پەيدا بولۇشى "
 "مۇمكىن."
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "%1 ئۆچۈر"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "سىما ئۆزگەرت"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -610,7 +610,7 @@ msgstr ""
 "ئىشلەتكۈچى ئاتىنى ئۆزگەرتىشتە تىزىمدىن چىقىپ ئاندىن باشقا ئىشلەتكۈچى "
 "سۈپىتىدە تىزىمغا كىرىش كېرەك."
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -620,7 +620,7 @@ msgstr ""
 "تىزىمغا كىرگەن ھېسابنىڭ ئىشلەتكۈچى ئاتىنى ئۆزگەرتەلمەيدۇ؛ ئالدى بىلەن بۇ "
 "ئىشلەتكۈچىنىڭ تىزىمدىن چىقىشىنى كۈتۈش كېرەك."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -632,27 +632,27 @@ msgstr ""
 "بىرى بولمىسا، كىملىك دەلىللەش مۇمكىن بولمايدۇ ياكى غول يەنى ئالىي باشقۇرغۇچى "
 "ئىم ئارقىلىق كىملىك دەلىللەش زۆرۈر، بۇ بىخەتەر ئەمەس."
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "ئېلخەت ئادرېسى:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "ھۆججەت ئۆچۈر"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "ھۆججەتنى ساقلاپ قال"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "ئىشلەتكۈچى ئۆچۈر…"
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -662,12 +662,12 @@ msgstr ""
 "ئۆزىنى ئۆچۈرەلمەيدۇ! بۇ ھېسابنى ئۆچۈرۈش ئۈچۈن تىزىمدىن چىقىپ ئاندىن باشقا "
 "ئىشلەتكۈچى سۈپىتىدە تىزىمغا كىرىش كېرەك."
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "بارماق ئىزى كىملىك دەلىللەش سەپلە…"
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

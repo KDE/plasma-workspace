@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-10-28 06:33+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -307,22 +307,29 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "展開"
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, kde-format
 msgid "Clear History"
 msgstr "清除歷史"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Configure Klipper…"
+msgid "Configure Clipboard…"
+msgstr "設定 Klipper(&C)…"
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
 msgid "All History"
 msgstr "所有歷史"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr "僅已固定"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -330,7 +337,7 @@ msgid ""
 "that will not be stored in history."
 msgstr "剪貼簿與選取區目前含有祕密資訊，不會被儲存到歷史紀錄。"
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -338,7 +345,7 @@ msgid ""
 "stored in history."
 msgstr "剪貼簿目前含有祕密資訊，不會被儲存到歷史紀錄。"
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -346,18 +353,18 @@ msgid ""
 "stored in history."
 msgstr "選取區目前含有祕密資訊，不會被儲存到歷史紀錄。"
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "清除祕密資料"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "No matches"
 msgstr "無相符"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪貼簿是空的"
@@ -1060,10 +1067,6 @@ msgstr "取消(&C)"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "沒有 WM_CLASS 的動作"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "設定 Klipper(&C)…"
 
 #~ msgctxt "@info"
 #~ msgid ""

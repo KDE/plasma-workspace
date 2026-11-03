@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-01-19 16:56+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -321,22 +321,29 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Izvērst"
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, kde-format
 msgid "Clear History"
 msgstr "Notīrīt vēsturi"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Configure Klipper…"
+msgid "Configure Clipboard…"
+msgstr "&Konfigurēt „Klipper“…"
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
 msgid "All History"
 msgstr "Visa vēsture"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr "Tikai ar zvaigznīti"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -344,7 +351,7 @@ msgid ""
 "that will not be stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -352,7 +359,7 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -360,18 +367,18 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "No matches"
 msgstr "Nav atbilsmju"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Starpliktuve ir tukša"
@@ -1128,10 +1135,6 @@ msgstr "&Atcelt"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "Nav darbību priekš WM_CLASS"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Konfigurēt „Klipper“…"
 
 #~ msgctxt "@info"
 #~ msgid ""

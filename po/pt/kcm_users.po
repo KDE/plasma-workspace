@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2023-01-11 09:35+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "O dispositivo foi desligado."
 msgid "An unknown error has occurred."
 msgstr "Ocorreu um erro desconhecido."
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "Mudar a Senha"
@@ -147,12 +147,12 @@ msgstr "Deixar Inalterado"
 msgid "Create User"
 msgstr "Criar um Utilizador"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "Nome:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "Utilizador:"
@@ -173,17 +173,17 @@ msgid ""
 "lowercase."
 msgstr ""
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "Normal"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "Administrador"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "Tipo de conta:"
@@ -411,26 +411,26 @@ msgstr "Apagar a impressão digital"
 msgid "No fingerprints added"
 msgstr "Sem impressões digitais adicionadas"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr ""
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, fuzzy, kde-format
 #| msgid "Add New User"
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "Adicionar um Novo Utilizador"
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid "Add New User"
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Adicionar um Novo Utilizador"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -597,20 +597,20 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, fuzzy, kde-format
 #| msgid "Delete User…"
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "Apagar o Utilizador…"
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -619,7 +619,7 @@ msgid ""
 "may experience strange behaviors until they log out."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -627,19 +627,19 @@ msgid ""
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, fuzzy, kde-format
 #| msgid "Delete files"
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "Apagar os ficheiros"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "Mudar o avatar"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -647,7 +647,7 @@ msgid ""
 "another user to change this account’s username."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -655,7 +655,7 @@ msgid ""
 "out first."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -663,27 +663,27 @@ msgid ""
 "become impossible or require the insecure use of the root password."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "Endereço de e-mail:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "Apagar os ficheiros"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "Manter os ficheiros"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "Apagar o Utilizador…"
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -691,12 +691,12 @@ msgid ""
 "this user account."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Configurar a Autenticação por Impressão Digital…"
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

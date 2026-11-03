@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-08-08 12:02+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -67,7 +67,7 @@ msgstr "Urządzenie zostało odłączone."
 msgid "An unknown error has occurred."
 msgstr "Wystąpił nieznany błąd."
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "Zmień hasło"
@@ -142,12 +142,12 @@ msgstr "Pozostaw bez zmian"
 msgid "Create User"
 msgstr "Utwórz użytkownika"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "Nazwa wyświetlana:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "Nazwa katalogu:"
@@ -172,17 +172,17 @@ msgstr ""
 "Nazwy użytkownika muszą składać się z małych liter. Wielkie litery "
 "przekształcono na małe."
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "Zwykłe"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "Administrator"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "Rodzaj konta:"
@@ -398,24 +398,24 @@ msgstr "Usuń odcisk palca"
 msgid "No fingerprints added"
 msgstr "Nie dodano żadnego odcisku palca"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr "Użytkownicy"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "Dodaj nowy…"
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Dodaj nowego użytkownika…"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -584,19 +584,19 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "Ikona zastępcza dla awatara użytkownika"
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr "Usunąć zalogowanego użytkownika bez usuwania plików?"
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "Czy usunąć zalogowanego użytkownika?"
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -608,7 +608,7 @@ msgstr ""
 "tylko jego konto?<nl/><nl/>Spowoduje to, że %1 nie będzie się mógł ponownie "
 "zalogować i dziwne zachowanie dopóki się nie wyloguje."
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -618,18 +618,18 @@ msgstr ""
 "%1 jest obecnie zalogowany. Usunięcie jego konta spowoduje to, że nie będzie "
 "się mógł ponownie zalogować i dziwne zachowanie dopóki się nie wyloguje."
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "Usuń %1"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "Zmień awatara"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -640,7 +640,7 @@ msgstr ""
 "wyloguj się, a następnie zaloguj jako inny użytkownik, aby zmienić nazwę "
 "tego konta."
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -650,7 +650,7 @@ msgstr ""
 "Nie możesz zmienić nazwy użytkownika zalogowanego użytkownika; poczekaj aż "
 "ten użytkownik się wyloguje."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -661,27 +661,27 @@ msgstr ""
 "innego administratora na tym systemie. Bez niego, uwierzytelnianie jest "
 "niemożliwe lub będzie wymagało niebezpiecznego użycia hasła administratora."
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "Adres e-mail:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "Usuń pliki"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "Zachowaj pliki"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "Usuń użytkownika..."
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -691,12 +691,12 @@ msgstr ""
 "Nie możesz usunąć samego siebie! Wyloguj się, a następnie zaloguj jako inny "
 "użytkownik, aby usunąć to konto."
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Ustawienia uwierzytelniania odciskiem palca..."
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

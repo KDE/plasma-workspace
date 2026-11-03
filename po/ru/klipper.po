@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-10-31 12:02+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -335,22 +335,29 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Развернуть"
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, kde-format
 msgid "Clear History"
 msgstr "Очистить журнал"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Configure Klipper…"
+msgid "Configure Clipboard…"
+msgstr "&Настроить Klipper…"
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
 msgid "All History"
 msgstr "Весь журнал"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr "Только избранное"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -360,7 +367,7 @@ msgstr ""
 "Буфер обмена и выделенный фрагмент сейчас содержат конфиденциальные данные, "
 "которые не будут сохранены в журнале."
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -370,7 +377,7 @@ msgstr ""
 "В буфере обмена сейчас находятся конфиденциальные данные, которые не будут "
 "сохранены в журнале."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -380,18 +387,18 @@ msgstr ""
 "Выделенный фрагмент сейчас содержит конфиденциальные данные, которые не "
 "будут сохранены в журнале."
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Очистить секретные данные"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "No matches"
 msgstr "Совпадений не найдено"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
@@ -1116,10 +1123,6 @@ msgstr "О&тмена"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "Отключить действия для окон класса WM_CLASS"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Настроить Klipper…"
 
 #~ msgctxt "@info"
 #~ msgid ""

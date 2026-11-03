@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-08-04 05:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "მოწყობილობა გათიშულია."
 msgid "An unknown error has occurred."
 msgstr "უცნობი შეცდომა."
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "პაროლის შეცვლა"
@@ -139,12 +139,12 @@ msgstr "შეუცვლელად დატოვება"
 msgid "Create User"
 msgstr "მომხმარებლის შექმნა"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "სახელი:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "მომხმარებელი:"
@@ -169,17 +169,17 @@ msgstr ""
 "მომხმარებლის სახელები უნდა შეიცავდეს, მხოლოდ, მხედრულ ასოებს. მთავრული "
 "ასოები გადაკეთდა მხედრულებად."
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "სტანდარტული"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "ადმინისტრატორი"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "ანგარიშის ტიპი:"
@@ -368,24 +368,24 @@ msgstr "ანაბეჭდის წაშლა"
 msgid "No fingerprints added"
 msgstr "ანაბეჭდები დამატებული არაა"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr "მომხმარებლები"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "ახლის დამატება…"
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "ახალი მომხმარებლის დამატება…"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -554,19 +554,19 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "მომხმარებლის ავატარის ადგილმჭერი ხატულა"
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr "წავშალო სისტემაში შესული მომხმარებელი ფაილების წაშლის გარეშე?"
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "წავშალო სისტემაში შესული მომხმარებელი?"
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -578,7 +578,7 @@ msgstr ""
 "უბრალოდ, ანგარიში წავშალო?<nl/><nl/>ეს სისტემაში %1-ის შესვლას შეუძლებელს "
 "გახდის და შეიძლება, უცნაური რაღაცები მოუვიდეს, სანამ სისტემიდან გავა."
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -589,18 +589,18 @@ msgstr ""
 "შეუძლებელს გახდის და მათ შეიძლება, უცნაური რაღაცები შეამჩნიონ, სანამ გავლენ "
 "სისტემიდან."
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "%1-ის წაშლა"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "აირჩიეთ ავატარი"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -610,7 +610,7 @@ msgstr ""
 "სანამ შესული ბრძანდებით, საკუთარი მომხმარებლის სახელს ვერ შეცვლით. გადით, "
 "შედით სხვა მომხმარებლით და სცადეთ, ამ ანგარიშის მომხმარებლის სახელი შეცვალოთ."
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -620,7 +620,7 @@ msgstr ""
 "შესული მომხმარებლის სახელს ვერ შეცვლით. დაელოდეთ, სანამ მომხმარებელი გავა და "
 "შემდეგ სცადეთ."
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -631,27 +631,27 @@ msgstr ""
 "ადმინისტრატორი მაინც არ არსებობს. მის გარეშე ავთენტიკაციას ვერ "
 "განახორციელებთ ან მოითხოვს root მომხმარებლის პაროლის დაუცველ გამოყენებას."
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "ელფოსტის მისამართი:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "ფაილების წაშლა"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "ფაილების დატოვება"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "მომხმარებლის წაშლა…"
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -661,12 +661,12 @@ msgstr ""
 "საკუთარ თავს ვერ წაშლით! გადით ამ მომხმარებლიდან, შედით სხვით და შემდეგ "
 "სცადეთ ამ ანგარიშის წაშლა."
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "ანაბეჭდებით ავთენტიკაციის მორგება…"
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

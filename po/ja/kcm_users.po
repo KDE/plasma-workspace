@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-05-10 18:13+0900\n"
 "Last-Translator: Mint <5602mint@gmail.com>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "デバイスが切断されました。"
 msgid "An unknown error has occurred."
 msgstr "不明なエラーが発生しました。"
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "パスワードを変更"
@@ -145,12 +145,12 @@ msgstr "変更しない"
 msgid "Create User"
 msgstr "ユーザを作成"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "名前:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "ユーザ名:"
@@ -171,17 +171,17 @@ msgid ""
 "lowercase."
 msgstr ""
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "標準"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "管理者"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "アカウントのタイプ:"
@@ -367,18 +367,18 @@ msgstr "指紋を削除"
 msgid "No fingerprints added"
 msgstr "指紋は追加されていません"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr "ユーザ"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "新しく追加…"
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, fuzzy, kde-format
 #| msgctxt "@action:button As in, 'add new user'"
 #| msgid "Add New"
@@ -386,7 +386,7 @@ msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "新しいユーザを追加"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -555,20 +555,20 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, fuzzy, kde-format
 #| msgid "Delete User…"
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "ユーザを削除..."
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -577,7 +577,7 @@ msgid ""
 "may experience strange behaviors until they log out."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -585,19 +585,19 @@ msgid ""
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, fuzzy, kde-format
 #| msgid "Delete files"
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "ファイルを削除"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "アバターを選択"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -607,7 +607,7 @@ msgstr ""
 "ログイン中はユーザー名を変更できません。このアカウントのユーザー名を変更する"
 "には、一度ログアウトしてから別のユーザーとしてログインしてください。"
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -617,7 +617,7 @@ msgstr ""
 "ログイン中のユーザーのユーザー名は変更できません。ユーザーがログアウトするま"
 "でお待ちください。"
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -628,27 +628,27 @@ msgstr ""
 "に変更することはできません。管理者アカウントがない場合、認証が不可能になる"
 "か、ルートパスワードの不適切な使用を行うことになります。"
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "メールアドレス:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "ファイルを削除"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "ファイルを残す"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "ユーザを削除..."
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -658,12 +658,12 @@ msgstr ""
 "自分自身を削除することはできません。一度ログアウトし、別のユーザーからこの"
 "ユーザーアカウントを削除してください。"
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "指紋認証を設定する..."
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

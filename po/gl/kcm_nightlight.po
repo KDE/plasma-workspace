@@ -121,8 +121,7 @@ msgid "%1 K"
 msgstr ""
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Temperatura de luz diúrna:"
@@ -140,8 +139,7 @@ msgid "Warm"
 msgstr "Cálida"
 
 #: ui/main.qml:313
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura de luz nocturna:"

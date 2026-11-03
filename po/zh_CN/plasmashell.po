@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:55+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -379,23 +379,23 @@ msgstr "切换到上一个活动"
 msgid "Switch to Next Activity"
 msgstr "切换到下一个活动"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:261
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "管理桌面和面板…"
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:283
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "在面板之间移动键盘焦点"
 
-#: shellcorona.cpp:2291
+#: shellcorona.cpp:2296
 #, kde-format
 msgid "Add Panel"
 msgstr "添加面板"
 
-#: shellcorona.cpp:2378
+#: shellcorona.cpp:2383
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

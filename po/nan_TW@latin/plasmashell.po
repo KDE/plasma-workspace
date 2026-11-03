@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 00:55+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-08-18 02:34+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
@@ -381,23 +381,23 @@ msgstr "Tshiat-uānn kàu Tíng-tsi̍t-ê Ua̍h-tāng"
 msgid "Switch to Next Activity"
 msgstr "Tshiat-uānn kàu Ē-tsi̍t-ê Ua̍h-tāng"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:261
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Kuán-lí Toh-bīn kah Bīn-pán…"
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:283
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Tī bīn-pán tsi-king î-tōng khí-puânn tsiau-tiám"
 
-#: shellcorona.cpp:2291
+#: shellcorona.cpp:2296
 #, kde-format
 msgid "Add Panel"
 msgstr "Thiam Bīn-pán"
 
-#: shellcorona.cpp:2378
+#: shellcorona.cpp:2383
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

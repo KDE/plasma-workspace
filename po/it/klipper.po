@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-10-19 16:41+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -319,22 +319,29 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Espandi"
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, kde-format
 msgid "Clear History"
 msgstr "Cancella cronologia"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Configure Klipper…"
+msgid "Configure Clipboard…"
+msgstr "&Configura Klipper…"
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
 msgid "All History"
 msgstr "Tutta la cronologia"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr "Solo contrassegnati con la stella"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -344,7 +351,7 @@ msgstr ""
 "Gli appunti e la selezione contengono attualmente un dato sensibileche non "
 "sarà memorizzato nella cronologia."
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -354,7 +361,7 @@ msgstr ""
 "Gli appunti contengono attualmente un dato sensibile che non sarà salvato "
 "nella cronologia."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -364,18 +371,18 @@ msgstr ""
 "La selezione contiene attualmente un dato sensibile che non sarà memorizzato "
 "nella cronologia."
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Cancella dati segreti"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "No matches"
 msgstr "Nessuna corrispondenza"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Gli appunti sono vuoti"
@@ -1112,10 +1119,6 @@ msgstr "Ann&ulla"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "Nessuna azione per WM_CLASS"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Configura Klipper…"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-10-07 11:45+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -321,22 +321,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Raširi"
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, kde-format
 msgid "Clear History"
 msgstr "Očisti istorijat"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
 msgid "All History"
 msgstr "Cio istorijat"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr "Samo sa zvjezdicom"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -350,7 +355,7 @@ msgstr ""
 "Klipbord trenutno sadrži osjetljiv podatak koji neće biti sačuvan u "
 "istorijatu."
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -364,7 +369,7 @@ msgstr ""
 "Klipbord trenutno sadrži osjetljiv podatak koji neće biti sačuvan u "
 "istorijatu."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -378,18 +383,18 @@ msgstr ""
 "Klipbord trenutno sadrži osjetljiv podatak koji neće biti sačuvan u "
 "istorijatu."
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Očisti tajne podatke"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "No matches"
 msgstr "Nema poklapanja"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klipbord je prazan"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-01 00:57+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2026-10-05 19:16+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -324,22 +324,29 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Ausklappen"
 
-#: declarative/qml/ClipboardMenu.qml:294
+#: declarative/qml/ClipboardMenu.qml:296
 #, kde-format
 msgid "Clear History"
 msgstr "Verlauf leeren"
 
-#: declarative/qml/ClipboardMenu.qml:345
+#: declarative/qml/ClipboardMenu.qml:315
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Configure Klipper…"
+msgid "Configure Clipboard…"
+msgstr "&Klipper einrichten …"
+
+#: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
 msgid "All History"
 msgstr "Gesamter Verlauf"
 
-#: declarative/qml/ClipboardMenu.qml:350
+#: declarative/qml/ClipboardMenu.qml:371
 #, kde-format
 msgid "Starred Only"
 msgstr "Nur Favoriten"
 
-#: declarative/qml/ClipboardMenu.qml:359
+#: declarative/qml/ClipboardMenu.qml:380
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -353,7 +360,7 @@ msgstr ""
 "Die Zwischenablage enthält derzeit sensible Daten, die nicht im Verlauf "
 "gespeichert werden."
 
-#: declarative/qml/ClipboardMenu.qml:361
+#: declarative/qml/ClipboardMenu.qml:382
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -367,7 +374,7 @@ msgstr ""
 "Die Zwischenablage enthält derzeit sensible Daten, die nicht im Verlauf "
 "gespeichert werden."
 
-#: declarative/qml/ClipboardMenu.qml:363
+#: declarative/qml/ClipboardMenu.qml:384
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -381,18 +388,18 @@ msgstr ""
 "Die Zwischenablage enthält derzeit sensible Daten, die nicht im Verlauf "
 "gespeichert werden."
 
-#: declarative/qml/ClipboardMenu.qml:375
+#: declarative/qml/ClipboardMenu.qml:396
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Geheime Daten leeren"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "No matches"
 msgstr "Keine Übereinstimmungen"
 
-#: declarative/qml/ClipboardMenu.qml:510
+#: declarative/qml/ClipboardMenu.qml:531
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Die Zwischenablage ist leer"
@@ -1132,10 +1139,6 @@ msgstr "&Abbrechen"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "Keine Aktionen für WM_CLASS"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Klipper einrichten …"
 
 #~ msgctxt "@info"
 #~ msgid ""

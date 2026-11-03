@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-04 00:47+0000\n"
+"POT-Creation-Date: 2026-11-03 00:57+0000\n"
 "PO-Revision-Date: 2025-09-15 10:02-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "ਡਿਵਾਈਸ ਡਿਸ-ਕਨੈਕਟ ਸੀ।"
 msgid "An unknown error has occurred."
 msgstr "ਅਣਪਛਾਤੀ ਗਲਤੀ ਆਈ ਹੈ।"
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
 msgstr "ਪਾਸਵਰਡ ਬਦਲੋ"
@@ -138,12 +138,12 @@ msgstr "ਨਾ-ਬਦਲਿਆ ਹੀ ਛੱਡੋ"
 msgid "Create User"
 msgstr "ਵਰਤੋਂਕਾਰ ਬਣਾਓ"
 
-#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Name:"
 msgstr "ਨਾਂ:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:171
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
 #, kde-format
 msgid "Username:"
 msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ:"
@@ -164,17 +164,17 @@ msgid ""
 "lowercase."
 msgstr ""
 
-#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:203
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Standard"
 msgstr "ਸਟੈਂਡਰਡ"
 
-#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:204
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
 #, kde-format
 msgid "Administrator"
 msgstr "ਪਰਸ਼ਾਸ਼ਕ"
 
-#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:193
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Account type:"
 msgstr "ਖਾਤੇ ਦੀ ਕਿਸਮ:"
@@ -359,24 +359,24 @@ msgstr "ਫਿੰਗਰ-ਪਰਿੰਟ ਹਟਾਓ"
 msgid "No fingerprints added"
 msgstr "ਕੋਈ ਫਿੰਗਰ-ਪਰਿੰਟ ਨਹੀਂ ਜੋੜੇ"
 
-#: src/ui/main.qml:20
+#: src/ui/main.qml:19
 #, kde-format
 msgid "Users"
 msgstr "ਵਰਤੋਂਕਾਰ"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:30
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "ਨਵਾਂ ਜੋੜੋ…"
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਜੋੜੋ…"
 
-#: src/ui/main.qml:137
+#: src/ui/main.qml:136
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -545,19 +545,19 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "ਵਰਤੋਂਕਾਰ ਅਵਤਾਰ ਥਾਂ ਆਈਕਾਨ"
 
-#: src/ui/UserDetailsPage.qml:114
+#: src/ui/UserDetailsPage.qml:113
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr "ਬਿਨਾਂ ਫ਼ਾਇਲਾਂ ਨੂੰ ਹਟਾਏ ਲਾਗਇਨ ਹੋਏ ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
 
-#: src/ui/UserDetailsPage.qml:115
+#: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
 msgstr "ਲਾਗਇਨ ਕੀਤੇ ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
 
-#: src/ui/UserDetailsPage.qml:117
+#: src/ui/UserDetailsPage.qml:116
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -566,7 +566,7 @@ msgid ""
 "may experience strange behaviors until they log out."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:118
+#: src/ui/UserDetailsPage.qml:117
 #, kde-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -574,18 +574,18 @@ msgid ""
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:125
+#: src/ui/UserDetailsPage.qml:124
 #, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
 msgstr "%1 ਨੂੰ ਹਟਾਓ"
 
-#: src/ui/UserDetailsPage.qml:144
+#: src/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Change avatar"
 msgstr "ਅਵਤਾਰ ਨੂੰ ਬਦਲੋ"
 
-#: src/ui/UserDetailsPage.qml:185
+#: src/ui/UserDetailsPage.qml:193
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -593,7 +593,7 @@ msgid ""
 "another user to change this account’s username."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:186
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -601,7 +601,7 @@ msgid ""
 "out first."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:214
+#: src/ui/UserDetailsPage.qml:222
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -609,27 +609,27 @@ msgid ""
 "become impossible or require the insecure use of the root password."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:222
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Email address:"
 msgstr "ਈਮੇਲ ਐਡਰੈਸ:"
 
-#: src/ui/UserDetailsPage.qml:254
+#: src/ui/UserDetailsPage.qml:262
 #, kde-format
 msgid "Delete files"
 msgstr "ਫ਼ਾਇਲਾਂ ਨੂੰ ਹਟਾਓ"
 
-#: src/ui/UserDetailsPage.qml:261
+#: src/ui/UserDetailsPage.qml:269
 #, kde-format
 msgid "Keep files"
 msgstr "ਫਾਇਲਾਂ ਨੂੰ ਰੱਖੋ"
 
-#: src/ui/UserDetailsPage.qml:268
+#: src/ui/UserDetailsPage.qml:276
 #, kde-format
 msgid "Delete User…"
 msgstr "…ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਓ"
 
-#: src/ui/UserDetailsPage.qml:274
+#: src/ui/UserDetailsPage.qml:282
 #, kde-format
 msgctxt "@label:tooltip"
 msgid ""
@@ -637,12 +637,12 @@ msgid ""
 "this user account."
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:286
+#: src/ui/UserDetailsPage.qml:294
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "…ਫਿੰਗਰ-ਪਰਿੰਟ ਪਰਮਾਣਕਿਤਾ ਦੀ ਸੰਰਚਨਾ"
 
-#: src/ui/UserDetailsPage.qml:318
+#: src/ui/UserDetailsPage.qml:326
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
