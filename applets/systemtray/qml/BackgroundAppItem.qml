@@ -17,10 +17,10 @@ import org.kde.plasma.extras
 AbstractItem {
     id: taskIcon
 
-    itemId: model.itemId
-    text: model.name
-    mainText: inVisibleLayout ? model.name : ""
-    subText: model.message
+    itemId: model?.itemId ?? ""
+    text: model?.name ?? ""
+    mainText: inVisibleLayout ? text : ""
+    subText: model?.message ?? ""
     textFormat: Text.AutoText
     active: inVisibleLayout || text != mainText || subText.length > 0
 
@@ -29,7 +29,7 @@ AbstractItem {
         parent: taskIcon.iconContainer
         anchors.fill: iconItem.parent
 
-        source: taskIcon.model.icon
+        source: taskIcon.model?.icon ?? undefined
         active: taskIcon.containsMouse
     }
 
@@ -73,7 +73,7 @@ AbstractItem {
     Menu {
         id: contextMenu
         MenuItem {
-            text: i18nc("@action:inmenu", "Quit %1", model.name)
+            text: i18nc("@action:inmenu", "Quit %1", taskIcon.text)
             icon: "application-exit"
             onClicked: {
                 const index = baseModelIndex();
