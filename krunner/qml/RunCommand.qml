@@ -241,17 +241,19 @@ ColumnLayout {
                     event.accepted = true
                 }
                 if (root.isKeyUp(event) || root.isKeyDown(event)) {
+                    event.accepted = true
                     if (root.isKeyUp(event)) {
+                        if (!results.visible && !listView.visible) {
+                            return
+                        }
                         activeListView.currentIndex = activeListView.count - 1
-                    } else {
-                        activeListView.incrementCurrentIndex();
-                    }
-                    if (queryField.text.length === 0) {
-                        event.accepted = true
+                        KeyNavigation.up.forceActiveFocus(Qt.BacktabFocusReason);
+                    } else if (queryField.text.length === 0 && !root.showHistory) {
                         root.showHistory = true
                         focusCurrentListView()
                     } else {
-                        return; // pass to KeyNavigation
+                        activeListView.incrementCurrentIndex();
+                        KeyNavigation.down.forceActiveFocus(Qt.TabFocusReason);
                     }
                 }
                 !event.accepted && results.navigationKeyHandler(event)
@@ -347,6 +349,15 @@ ColumnLayout {
         // This replaces the ColumnLayout spacing
         Layout.topMargin: Kirigami.Units.smallSpacing
 
+        // vim bindings for moving out of ResultsView need to be handled here, it already has its
+        // own Keys.onPressed handler
+        Keys.onPressed: event => {
+            if (event.modifiers & Qt.ControlModifier && (event.key == Qt.Key_J || event.key == Qt.Key_K)) {
+                queryField.forceActiveFocus(event.key == Qt.Key_J ? Qt.TabFocusReason : Qt.BacktabFocusReason)
+                event.accepted = true;
+            }
+        }
+
         Milou.ResultsView {
             id: results
             queryString: root.query
@@ -434,13 +445,15 @@ ColumnLayout {
             }
             Keys.onPressed: event => {
                 if (root.isKeyUp(event)) {
-                    if (currentIndex !== 0) {
-                        event.accepted = true;
+                    event.accepted = true;
+                    if (currentIndex === 0) {
+                        KeyNavigation.up.forceActiveFocus(Qt.BacktabFocusReason)
                     }
                     decrementCurrentIndex();
                 } else if (root.isKeyDown(event)) {
+                    event.accepted = true;
                     if (currentIndex !== count - 1) {
-                        event.accepted = true;
+                        KeyNavigation.down.forceActiveFocus(Qt.TabFocusReason)
                     }
                     incrementCurrentIndex();
                 } else if (event.text !== "" && !event.accepted) {
