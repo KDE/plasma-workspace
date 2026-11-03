@@ -17,6 +17,7 @@ target_link_libraries(plasma-kded6-x11
     KF6::CoreAddons # Needed for KPluginFactory
     KF6::DBusAddons # Needed for kdedmodule.h
     KF6::ConfigCore
+    XCB::XFIXES
 )
 
 install(TARGETS plasma-kded6-x11 DESTINATION ${KDE_INSTALL_LIBEXECDIR})
