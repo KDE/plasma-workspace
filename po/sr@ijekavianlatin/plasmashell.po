@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 03:09+0000\n"
+"POT-Creation-Date: 2026-11-03 03:01+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -386,23 +386,23 @@ msgstr "Prebaci na prethodnu aktivnost"
 msgid "Switch to Next Activity"
 msgstr "Prebaci na narednu aktivnost"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Upravljaj površima i panelima…"
 
-#: shellcorona.cpp:271
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Pomjeri fokus tastature između panela"
 
-#: shellcorona.cpp:2285
+#: shellcorona.cpp:2290
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj panel"
 
-#: shellcorona.cpp:2372
+#: shellcorona.cpp:2377
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

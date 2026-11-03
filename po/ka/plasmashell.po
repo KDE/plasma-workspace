@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-29 03:09+0000\n"
+"POT-Creation-Date: 2026-11-03 03:01+0000\n"
 "PO-Revision-Date: 2026-07-02 05:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -380,23 +380,23 @@ msgstr "წინა აქტივობაზე გადართვა"
 msgid "Switch to Next Activity"
 msgstr "შემდეგ აქტივობაზე გადართვა"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:254
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "სამუშაო მაგიდებისა და პანელების მართვა…"
 
-#: shellcorona.cpp:271
+#: shellcorona.cpp:276
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "კლავიატურის ფოკუსის პანელებს შორის გადატანა"
 
-#: shellcorona.cpp:2285
+#: shellcorona.cpp:2290
 #, kde-format
 msgid "Add Panel"
 msgstr "პანელის დამატება"
 
-#: shellcorona.cpp:2372
+#: shellcorona.cpp:2377
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -309,8 +309,7 @@ msgid "Save Current Theme…"
 msgstr ""
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "Obter novidades…"

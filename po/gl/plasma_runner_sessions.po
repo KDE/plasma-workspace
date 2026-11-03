@@ -36,11 +36,7 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Sae da sesión de escritorio"
 
 #: sessionrunner.cpp:27
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down;power;power off"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
