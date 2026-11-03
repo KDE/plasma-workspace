@@ -10,6 +10,7 @@
 #include "dbusmenutypes_p.h"
 #include "menuimporteradaptor.h"
 
+#include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QDBusServiceWatcher>
 
@@ -36,7 +37,7 @@ MenuImporter::~MenuImporter()
 
 bool MenuImporter::connectToBus()
 {
-    if (!QDBusConnection::sessionBus().registerService(DBUS_SERVICE)) {
+    if (!QDBusConnection::sessionBus().interface()->registerService(DBUS_SERVICE, QDBusConnectionInterface::ReplaceExistingService).isValid()) {
         return false;
     }
     new MenuImporterAdaptor(this);

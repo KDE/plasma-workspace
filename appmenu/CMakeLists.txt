@@ -1,78 +1,12 @@
-include(CheckCXXSourceCompiles)
+# SPDX-FileCopyrightText: 2026 David Edmundson <davidedmundson@kde.org>
+# SPDX-License-Identifier: BSD-2-Clause
 
-set(_appmenu_saved_required_libraries "${CMAKE_REQUIRED_LIBRARIES}")
-list(APPEND CMAKE_REQUIRED_LIBRARIES Qt::WaylandClientPrivate Qt::GuiPrivate)
-check_cxx_source_compiles("
-    #include <QtWaylandClient/private/qwaylanddisplay_p.h>
-    #include <QtWaylandClient/private/qwaylandwindow_p.h>
+add_subdirectory(x11)
 
-    int main()
-    {
-        auto display = static_cast<QtWaylandClient::QWaylandDisplay *>(nullptr);
-        auto device = static_cast<QtWaylandClient::QWaylandInputDevice *>(nullptr);
-        auto window = static_cast<QtWaylandClient::QWaylandWindow *>(nullptr);
-        display->setLastInputDevice(device, 1, window->waylandSurface());
-        return 0;
-    }
-" HAVE_QT_WAYLAND_SETLASTINPUTDEVICE_SURFACE)
-set(CMAKE_REQUIRED_LIBRARIES "${_appmenu_saved_required_libraries}")
-
-set(kded_appmenu_SRCS
-    appmenu.cpp
-    menuimporter.cpp
-    appmenu_dbus.cpp
-    verticalmenu.cpp
-
-    appmenu.h
-    menuimporter.h
-    appmenu_dbus.h
-    verticalmenu.h
-    )
-
-qt_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml
-    menuimporter.h MenuImporter menuimporteradaptor MenuImporterAdaptor)
-
-qt_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
-    appmenu_dbus.h AppmenuDBus appmenuadaptor AppmenuAdaptor)
-
-kcoreaddons_add_plugin(appmenu SOURCES ${kded_appmenu_SRCS} INSTALL_NAMESPACE "kf6/kded")
-
-if (HAVE_QT_WAYLAND_SETLASTINPUTDEVICE_SURFACE)
-    target_compile_definitions(appmenu PRIVATE HAVE_QT_WAYLAND_SETLASTINPUTDEVICE_SURFACE)
-endif()
-
-pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
-
-qt_generate_wayland_protocol_client_sources(appmenu
-    PRIVATE_CODE
-    FILES
-        "${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml"
-)
+kcoreaddons_add_plugin(appmenu SOURCES appmenustub.cpp INSTALL_NAMESPACE "kf6/kded")
 
 target_link_libraries(appmenu
     Qt::DBus
-    Qt::WaylandClientPrivate
+    KF6::CoreAddons
     KF6::DBusAddons
-    KF6::KIOCore
-    KF6::WindowSystem
-    Wayland::Client
-    PkgConfig::XKBCommon
-    Plasma::PlasmaQuick
-    dbusmenuqt
 )
-if (HAVE_X11)
-    target_link_libraries(appmenu XCB::XCB)
-endif()
-
-ecm_qt_declare_logging_category(appmenu
-    HEADER appmenu_debug.h
-    IDENTIFIER APPMENU_DEBUG
-    CATEGORY_NAME org.kde.plasma.appmenu
-    DESCRIPTION "appmenu"
-    EXPORT PLASMAWORKSPACE
-)
-
-########### install files ###############
-
-install( FILES com.canonical.AppMenu.Registrar.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
-install( FILES org.kde.kappmenu.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )
