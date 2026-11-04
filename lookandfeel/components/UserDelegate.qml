@@ -36,7 +36,7 @@ Item {
     opacity: isCurrent ? 1.0 : 0.75
 
     Behavior on opacity {
-        OpacityAnimator {
+        NumberAnimation {
             duration: Kirigami.Units.longDuration
         }
     }
