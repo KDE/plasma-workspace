@@ -748,6 +748,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
 void AppsModel::sortEntries(QList<AbstractEntry *> &entryList)
 {
     QCollator c;
+    c.setNumericMode(true);
 
     std::ranges::sort(entryList, [&c](AbstractEntry *a, AbstractEntry *b) {
         if (a->type() != b->type()) {
