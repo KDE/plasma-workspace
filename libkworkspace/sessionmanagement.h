@@ -8,15 +8,27 @@
 
 #include "kworkspace_export.h"
 #include <QObject>
+#include <qqmlregistration.h>
 
 /**
- * Public facing API for SessionManagement
+    Public facing API for SessionManagement
+
+    May be used from QML as well.
+
+    \qml
+        import QtQuick
+        import org.kde.kworkspace as KWorkspace
+        Text {
+            readonly property KWorkspace.SessionManagement sessionManagement: KWorkspace.SessionManagement {}
+            text: sessionManagement.canShutdown ? "Can shutdown" : "Cannot shutdown"
+        }
+    \endqml
  */
 class KWORKSPACE_EXPORT SessionManagement : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(State state READ state NOTIFY stateChanged)
-
     Q_PROPERTY(bool canShutdown READ canShutdown NOTIFY canShutdownChanged)
     Q_PROPERTY(bool canReboot READ canReboot NOTIFY canRebootChanged)
     Q_PROPERTY(bool canLogout READ canLogout NOTIFY canLogoutChanged)
