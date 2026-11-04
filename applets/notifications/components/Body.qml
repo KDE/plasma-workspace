@@ -26,6 +26,8 @@ Kirigami.SelectableLabel {
     // Default WordWrap fails for long unbroken text e.g. URLs
     wrapMode: TextEdit.Wrap
 
+    textFormat: TextEdit.RichText
+
     // HACK RichText does not allow to specify link color and since LineEdit
     // does not support StyledText, we have to inject some CSS to force the color,
     // cf. QTBUG-81463 and to some extent QTBUG-80354
