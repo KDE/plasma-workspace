@@ -44,6 +44,7 @@ using namespace Qt::StringLiterals;
 {
     auto *hintLabel = new QLabel(text, parent);
     hintLabel->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
+    hintLabel->setTextFormat(Qt::RichText);
     hintLabel->setWordWrap(true);
     hintLabel->setAlignment(Qt::AlignLeft | Qt::AlignTop);
 
@@ -173,6 +174,7 @@ PopupWidget::PopupWidget(QWidget *parent)
                                                    "enable the <interface>Offer applications for copied links and files</interface> setting "
                                                    "or enable at least one action to make settings on this page have any effect."),
                                             this);
+    m_noActionsMessage->setTextFormat(Qt::RichText);
     m_noActionsMessage->setMessageType(KMessageWidget::Information);
     m_noActionsMessage->setPosition(KMessageWidget::Header);
     m_noActionsMessage->setIcon(QIcon::fromTheme(u"emblem-information"_s));
