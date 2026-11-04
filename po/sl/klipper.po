@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-03 00:57+0000\n"
-"PO-Revision-Date: 2026-10-31 07:15+0100\n"
+"PO-Revision-Date: 2026-11-03 07:22+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -328,11 +328,9 @@ msgid "Clear History"
 msgstr "Počisti zgodovino"
 
 #: declarative/qml/ClipboardMenu.qml:315
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "Nastavi Klipper…"
+msgstr "Konfiguriraj odložišče…"
 
 #: declarative/qml/ClipboardMenu.qml:366
 #, kde-format

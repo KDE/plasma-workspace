@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-03 00:57+0000\n"
-"PO-Revision-Date: 2026-10-31 12:47+0100\n"
+"PO-Revision-Date: 2026-11-03 11:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -331,7 +331,7 @@ msgstr "Borrar el historial"
 #: declarative/qml/ClipboardMenu.qml:315
 #, kde-format
 msgid "Configure Clipboard…"
-msgstr ""
+msgstr "Configurar el Portapapeles…"
 
 #: declarative/qml/ClipboardMenu.qml:366
 #, kde-format

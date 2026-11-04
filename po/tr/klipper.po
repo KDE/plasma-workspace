@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-03 00:57+0000\n"
-"PO-Revision-Date: 2026-10-16 19:24+0300\n"
+"PO-Revision-Date: 2026-11-03 22:13+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -131,6 +131,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"<interface>Eylemler Yapılandırması</interface> sayfasından, "
+"<interface>Kopyalanan bağlantılar ve dosyalar için uygulamalar öner</"
+"interface> ayarını etkinleştirin veya bu sayfadaki ayarların bir etkisinin "
+"olması için en az bir eylemi etkinleştirin."
 
 #: configdialog.cpp:192
 #, kde-format
@@ -138,14 +142,7 @@ msgid "Show action popup menu:"
 msgstr "Eylem açılır menüsünü göster:"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -155,11 +152,12 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Bir eylem dizgisiyle eşleşen metin seçildiğinde veya pano geçmişinden "
-"seçildiğinde, uygun eylemlerle birlikte açılır menüyü kendiliğinden "
-"gösterin. Burada otomatik menü kapalıysa veya dışlanan bir pencere için "
-"gösterilmiyorsa <shortcut>%1</shortcut> düğme kısayolu kullanılarak "
-"görüntülenebilir."
+"Bir eylem modeliyle eşleşen metin kopyalandığında, seçildiğinde veya pano "
+"geçmişinden seçildiğinde, ilgili eylemlerin bulunduğu açılır menü "
+"kendiliğinden gösterilir. Dosyalar için bu yalnızca kopyalandıklarında veya "
+"geçmişten seçildiğinde geçerlidir.<nl/><nl/>Menüye ayrıca <shortcut>%1</"
+"shortcut> düğme kısayolu kullanılarak veya geçmişteki eşleşen her giriş için "
+"bir düğme kullanılarak da ulaşılabilir."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -193,14 +191,12 @@ msgid "Description"
 msgstr "Açıklama"
 
 #: configdialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
 msgstr "Eylem Ekle…"
 
 #: configdialog.cpp:278
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
 msgstr "Eylemi Düzenle…"
 
@@ -327,11 +323,9 @@ msgid "Clear History"
 msgstr "Geçmişi Temizle"
 
 #: declarative/qml/ClipboardMenu.qml:315
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "&Klipper Uygulamasını Yapılandır…"
+msgstr "Panoyu Yapılandır…"
 
 #: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
@@ -540,14 +534,12 @@ msgstr ""
 "shortcut> düğme kısayolu ile el ile etkinleştirilen menüde bulunurlar."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
 msgstr "Komut Ekle…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
 msgstr "Komutu Düzenle…"
 
@@ -823,24 +815,19 @@ msgstr "Görselleri pano geçmişinde depolayın."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Bir metin veya dosya kopyalandığında"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Seçim yapıldığı anda uygulanabilir eylemlerin olduğu bir açılır menü "
-"gösterin."
+msgstr "Bir metin veya dosya kopyalandığında anında açılır menüyü göster"
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Metin olmayan seçim:"
+msgstr "Bir metin seçildiğinde"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -849,6 +836,7 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Bir metin seçildiğinde, onun kopyalanmasını beklemeden açılır menüyü göster"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -902,10 +890,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Geçmişten seçilen bir öge için"
+msgstr "Geçmişten bir öge seçildiğinde"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

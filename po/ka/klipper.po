@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-03 00:57+0000\n"
-"PO-Revision-Date: 2026-11-01 04:56+0100\n"
+"PO-Revision-Date: 2026-11-03 03:29+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -318,11 +318,9 @@ msgid "Clear History"
 msgstr "ისტორიის გასუფთავება"
 
 #: declarative/qml/ClipboardMenu.qml:315
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "Klipper-ის &მორგება…"
+msgstr "ბუფერის მორგება…"
 
 #: declarative/qml/ClipboardMenu.qml:366
 #, kde-format

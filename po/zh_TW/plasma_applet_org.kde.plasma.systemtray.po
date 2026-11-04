@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-15 00:48+0000\n"
-"PO-Revision-Date: 2026-05-12 03:22+0900\n"
+"PO-Revision-Date: 2026-11-03 20:55+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.11.70\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "小"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "極小"
 
 #: qml/ConfigGeneral.qml:264
 #, kde-format

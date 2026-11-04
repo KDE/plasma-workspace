@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 00:57+0000\n"
+"POT-Creation-Date: 2026-11-04 01:05+0000\n"
 "PO-Revision-Date: 2026-08-01 17:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -321,13 +321,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "அதிவேக பயன்முறை"
 
-#: panelview.cpp:1066
+#: panelview.cpp:1076
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "பலகை அமைப்புகளை மறை"
 
-#: panelview.cpp:1068
+#: panelview.cpp:1078
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

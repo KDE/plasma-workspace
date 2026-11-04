@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-03 00:57+0000\n"
-"PO-Revision-Date: 2026-10-28 06:33+0900\n"
+"PO-Revision-Date: 2026-11-03 21:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -126,6 +126,9 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"要讓這個頁面的設定有效果，請在 <interface>動作設定</interface> 頁面啟用 "
+"<interface>為已複製的連結與檔案提供應用程式選項</interface> 的設定或是至少啟"
+"用一個動作。"
 
 #: configdialog.cpp:192
 #, kde-format
@@ -133,14 +136,7 @@ msgid "Show action popup menu:"
 msgstr "顯示動作彈出式選單："
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -150,9 +146,10 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"當符合動作樣式的文字被選取起來或被從剪貼簿歷史紀錄中選取時，自動顯示包含可用"
-"動作的彈出式選單。如果這個自動選單被從這裡關掉，或因為在已排除的視窗中而沒有"
-"顯示它時，可以使用 <shortcut>%1</shortcut> 鍵盤快捷鍵來顯示它。"
+"當符合動作樣式的文字被複製、選取或被從剪貼簿歷史紀錄中挑選時，自動顯示包含可"
+"用動作的彈出式選單。對於檔案，這只會套用於複製或從歷史紀錄挑選時。<nl/><nl/>"
+"這個選單也可以利用 <shortcut>%1</shortcut> 快捷鍵或是各個相符歷史項目的按鈕來"
+"觸發。"
 
 #: configdialog.cpp:226
 #, kde-format
@@ -313,11 +310,9 @@ msgid "Clear History"
 msgstr "清除歷史"
 
 #: declarative/qml/ClipboardMenu.qml:315
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "設定 Klipper(&C)…"
+msgstr "設定剪貼簿…"
 
 #: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
@@ -800,22 +795,19 @@ msgstr "將影像儲存到剪貼簿歷史紀錄中。"
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "複製文字或檔案時"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr "選取內容時馬上顯示包含可用動作的彈出選單。"
+msgstr "複製文字或檔案後馬上顯示彈出選單。"
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "非文字的選取區："
+msgstr "選取文字時"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -823,7 +815,7 @@ msgstr "非文字的選取區："
 msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
-msgstr ""
+msgstr "選取文字後馬上顯示彈出選單，不等它被複製。"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -873,10 +865,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "為從歷史紀錄中選擇的項目"
+msgstr "從歷史紀錄挑選項目時"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

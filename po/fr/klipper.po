@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-03 00:57+0000\n"
-"PO-Revision-Date: 2026-10-29 12:02+0100\n"
+"PO-Revision-Date: 2026-11-02 13:41+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -156,14 +156,7 @@ msgid "Show action popup menu:"
 msgstr "Afficher un menu contextuel d'action :"
 
 #: configdialog.cpp:209
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -173,11 +166,13 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Lorsque le texte correspondant à un modèle d'action est sélectionné ou est "
-"sélectionné dans l'historique du presse-papier, affichez automatiquement le "
-"menu contextuel avec les actions applicables. Si le menu automatique est "
-"désactivé ici ou s'il est masqué pour une fenêtre exclue, alors il peut être "
-"affiché en utilisant le raccourci de clavier <shortcut>%1</shortcut>."
+"Lorsque le texte correspondant à un modèle d'action est copié, sélectionné "
+"dans l'historique du presse-papier, affichez automatiquement le menu "
+"contextuel avec les actions applicables. Pour les fichiers, cela ne "
+"s’applique que lorsqu’ils sont copiés ou sélectionnés parmi  l'historique."
+"<nl/><nl/>Le menu est également accessible en utilisant le raccourci "
+"<shortcut>%1</shortcut> ou le bouton pour chaque entrée correspondance dans "
+"l’historique."
 
 #: configdialog.cpp:226
 #, kde-format
@@ -856,24 +851,20 @@ msgstr "Enregistrer des images dans l'historique du presse-papier."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Lorsque du texte ou un fichier est copié"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
 msgstr ""
-"Afficher le menu contextuel des actions applicables dès qu'une sélection est "
-"réalisée."
+"Afficher le menu contextuel dès que du texte ou un fichier est sélectionné."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Sélection non textuelle :"
+msgstr "Lorsque du texte est sélectionné"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -882,6 +873,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Afficher le menu contextuel dès que le texte est sélectionné, sans attendre "
+"qu'il soit copié."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -937,10 +930,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Pour un élément sélectionné dans l'historique"
+msgstr "Lorsqu'un élément est sélectionné dans l'historique"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76

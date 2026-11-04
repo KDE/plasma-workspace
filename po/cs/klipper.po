@@ -323,7 +323,7 @@ msgstr "Vyprázdnit historii"
 #: declarative/qml/ClipboardMenu.qml:315
 #, kde-format
 msgid "Configure Clipboard…"
-msgstr ""
+msgstr "Nastavit schránku…"
 
 #: declarative/qml/ClipboardMenu.qml:366
 #, kde-format
