@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 00:57+0000\n"
+"POT-Creation-Date: 2026-11-05 00:58+0000\n"
 "PO-Revision-Date: 2026-11-03 11:35+0100\n"
 "Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -29,12 +29,12 @@ msgstr ""
 "X-Generator: Lokalize 25.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:86
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Klembordgeschiedenis:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:92
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -42,12 +42,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v item"
 msgstr[1] "%v items"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:101
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Selectie en klembord:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:108
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -75,19 +75,19 @@ msgstr ""
 "geschiedenis van het klembord (afhankelijk van de onderstaande optie), maar "
 "het kan alleen geplakt worden met de middelste muisknop."
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Tekst geselecteerd met de aanwijzer of het toetsenbord"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Opnemen in de geschiedenis:"
 
-#: configdialog.cpp:130
+#: configdialog.cpp:131
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
@@ -95,13 +95,13 @@ msgstr ""
 "Expliciet gekopieerde tekst wordt altijd opgeslagen, tenzij deze als "
 "wachtwoord is gemarkeerd."
 
-#: configdialog.cpp:135
+#: configdialog.cpp:136
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Afbeeldingsgegevens expliciet gekopieerd"
 
-#: configdialog.cpp:139
+#: configdialog.cpp:140
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -111,7 +111,7 @@ msgstr ""
 "beeldbewerkingsprogramma's zoals Krita of GIMP.<br/><a href=\"1\">Meer "
 "informatie over afbeeldingen op het klembord.</a>"
 
-#: configdialog.cpp:148
+#: configdialog.cpp:149
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 "schermafdrukken op het klembord worden opgeslagen. Ook toepassingen die "
 "zowel tekst als afbeeldingen versturen, zullen deze instelling negeren."
 
-#: configdialog.cpp:172
+#: configdialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -146,12 +146,12 @@ msgstr ""
 "interface> in, of activeer ten minste één actie, om ervoor te zorgen dat de "
 "instellingen op deze pagina effect hebben."
 
-#: configdialog.cpp:192
+#: configdialog.cpp:194
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Actie-pop-up-menu tonen:"
 
-#: configdialog.cpp:209
+#: configdialog.cpp:211
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -169,7 +169,7 @@ msgstr ""
 ">Het menu is ook toegankelijk via de sneltoets <shortcut>%1</shortcut> of "
 "via een knop bij elk overeenkomend item in de geschiedenis."
 
-#: configdialog.cpp:226
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -177,45 +177,45 @@ msgid_plural "%v seconds"
 msgstr[0] "&v seconde"
 msgstr[1] "%v seconden"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Geen"
 
-#: configdialog.cpp:236
+#: configdialog.cpp:238
 #, kde-format
 msgid "Options:"
 msgstr "Opties:"
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Overeenkomstpatroon en commando's"
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Beschrijving"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:276
 #, kde-format
 msgid "Add Action…"
 msgstr "Actie toevoegen…"
 
-#: configdialog.cpp:278
+#: configdialog.cpp:280
 #, kde-format
 msgid "Edit Action…"
 msgstr "Actie bewerken…"
 
-#: configdialog.cpp:283
+#: configdialog.cpp:285
 #, kde-format
 msgid "Delete Action"
 msgstr "Actie verwijderen"
 
-#: configdialog.cpp:468
+#: configdialog.cpp:470
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -225,51 +225,51 @@ msgstr ""
 "De geselecteerde actie <resource>%1</resource> verwijderen<nl/>en al zijn "
 "commando's?"
 
-#: configdialog.cpp:469
+#: configdialog.cpp:471
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Actie verwijderen bevestigen"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Algemeen"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, kde-format
 msgid "General Configuration"
 msgstr "Algemene configuratie"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Sneltoetsen instellen"
@@ -327,27 +327,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Uitvouwen"
 
-#: declarative/qml/ClipboardMenu.qml:296
+#: declarative/qml/ClipboardMenu.qml:297
 #, kde-format
 msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
-#: declarative/qml/ClipboardMenu.qml:315
+#: declarative/qml/ClipboardMenu.qml:316
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Klembord configureren…"
 
-#: declarative/qml/ClipboardMenu.qml:366
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "All History"
 msgstr "Gehele geschiedenis"
 
-#: declarative/qml/ClipboardMenu.qml:371
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgid "Starred Only"
 msgstr "Alleen met ster"
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -357,7 +357,7 @@ msgstr ""
 "Het klembord bevat op dit moment een gevoelig stukje gegevens die niet in de "
 "geschiedenis zal worden opgeslagen."
 
-#: declarative/qml/ClipboardMenu.qml:382
+#: declarative/qml/ClipboardMenu.qml:383
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -367,7 +367,7 @@ msgstr ""
 "Het klembord bevat op dit moment een gevoelig stukje gegevens dat niet in de "
 "geschiedenis zal worden opgeslagen."
 
-#: declarative/qml/ClipboardMenu.qml:384
+#: declarative/qml/ClipboardMenu.qml:385
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -377,18 +377,18 @@ msgstr ""
 "De selectie bevat op dit moment een gevoelig stukje gegevens dat niet in de "
 "geschiedenis zal worden opgeslagen."
 
-#: declarative/qml/ClipboardMenu.qml:396
+#: declarative/qml/ClipboardMenu.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Geheime gegevens wissen"
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
 msgid "No matches"
 msgstr "geen overeenkomsten"
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"
@@ -423,19 +423,19 @@ msgstr "Ster verwijderen"
 msgid "Star"
 msgstr "Ster"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:61
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Tekstgebied voor bewerken"
 
-#: declarative/qml/EditPage.qml:79
+#: declarative/qml/EditPage.qml:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Opslaan"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:85
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -639,34 +639,34 @@ msgstr "Het pictogram resetten naar de standaard voor het commando"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: historymodel.cpp:371
+#: historymodel.cpp:378
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:380
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Klembordgeschiedenis wissen"
 
-#: historymodel.cpp:375 historymodel.cpp:675
+#: historymodel.cpp:382 historymodel.cpp:694
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Deze vraag niet meer stellen"
 
-#: historymodel.cpp:482
+#: historymodel.cpp:489
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:671
+#: historymodel.cpp:690
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Dit item heeft een ster. Wilt u deze uit de geschiedenis verwijderen?"
 
-#: historymodel.cpp:673
+#: historymodel.cpp:692
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Item met ster verwijderen"

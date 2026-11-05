@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1750185 2026-10-13 01:51:06Z scripty $
+# $Id: kcm_fonts.po 1751989 2026-11-05 01:42:33Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-13 00:48+0000\n"
-"PO-Revision-Date: 2025-07-10 14:16+0200\n"
+"PO-Revision-Date: 2026-11-04 22:17+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.10\n"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -326,7 +326,7 @@ msgstr ""
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "Namigi:"
+msgstr "Hinting:"
 
 #: ui/main.qml:394
 #, kde-kuit-format

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 00:57+0000\n"
+"POT-Creation-Date: 2026-11-05 00:58+0000\n"
 "PO-Revision-Date: 2026-10-09 10:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -30,12 +30,12 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:86
 #, kde-format
 msgid "Clipboard history:"
 msgstr "היסטוריית לוח הגזירים:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:92
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -45,12 +45,12 @@ msgstr[1] "שתי רשומות"
 msgstr[2] "%v רשומות"
 msgstr[3] "%v רשומות"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:101
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "בחירה ולוח גזירים:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:108
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -75,31 +75,31 @@ msgstr ""
 "בהיסטוריית לוח הגזירים (בכפוף לאפשרות שלהלן), אך ניתן יהיה להדביק אותה רק "
 "באמצעות לחצן העכבר האמצעי."
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "טקסט שנבחר עם הסמן או המקלדת"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "לכלול בהיסטוריה:"
 
-#: configdialog.cpp:130
+#: configdialog.cpp:131
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr "טקסט שהועתק מפורשות תמיד יישמר אלא אם כן סומן כסיסמה."
 
-#: configdialog.cpp:135
+#: configdialog.cpp:136
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "נתוני תמונה שהועתקו מפורשות"
 
-#: configdialog.cpp:139
+#: configdialog.cpp:140
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -108,7 +108,7 @@ msgstr ""
 "למשל, שכבות ובחירות שהועתקו בעורכי תמונות כמו Krita או GIMP.<br/><a href="
 "\"1\">מידע נוסף על תמונות בלוח הגזירים.</a>"
 
-#: configdialog.cpp:148
+#: configdialog.cpp:149
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -126,7 +126,7 @@ msgstr ""
 ">חשוב גם לשים לב שכלי צילום המסך Spectacle יתעלם מההגדרה הזאת כשהיא מוגדרת "
 "כדי לשמור צילומי מסך ללוח הגזירים. כל יישום ששולחן טקסט ותמונה גם יתעלם ממנה."
 
-#: configdialog.cpp:172
+#: configdialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -135,12 +135,12 @@ msgid ""
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
 
-#: configdialog.cpp:192
+#: configdialog.cpp:194
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "הצגת תפריט פעולות קופץ:"
 
-#: configdialog.cpp:209
+#: configdialog.cpp:211
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid ""
@@ -163,7 +163,7 @@ msgstr ""
 "כאן, או שאינו מופיע לחלון מוחרג, אפשר להציג אותו באמצעות מקשי הקיצור "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:226
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -173,47 +173,47 @@ msgstr[1] "שתי שניות"
 msgstr[2] "%v שניות"
 msgstr[3] "%v שניות"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "ללא"
 
-#: configdialog.cpp:236
+#: configdialog.cpp:238
 #, kde-format
 msgid "Options:"
 msgstr "אפשרויות:"
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "תבניות לכידה ופקודות"
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "תיאור"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:276
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "הוספת פעולה…"
 
-#: configdialog.cpp:278
+#: configdialog.cpp:280
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "עריכת פעולה…"
 
-#: configdialog.cpp:283
+#: configdialog.cpp:285
 #, kde-format
 msgid "Delete Action"
 msgstr "מחיקת פעולה"
 
-#: configdialog.cpp:468
+#: configdialog.cpp:470
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,51 +222,51 @@ msgid ""
 msgstr ""
 "למחוק את הפעולה <resource>%1</resource><nl/> הנבחרת ואת כל הפקודות שלה?"
 
-#: configdialog.cpp:469
+#: configdialog.cpp:471
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "אישור פעולת מחיקה"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "כללי"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, kde-format
 msgid "General Configuration"
 msgstr "הגדרות כלליות"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, kde-format
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, kde-format
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "קיצורי מקשים"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "הגדרות קיצורי מקשים"
@@ -322,29 +322,29 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "הרחבה"
 
-#: declarative/qml/ClipboardMenu.qml:296
+#: declarative/qml/ClipboardMenu.qml:297
 #, kde-format
 msgid "Clear History"
 msgstr "פינוי ההיסטוריה"
 
-#: declarative/qml/ClipboardMenu.qml:315
+#: declarative/qml/ClipboardMenu.qml:316
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "&Configure Klipper…"
 msgid "Configure Clipboard…"
 msgstr "ה&גדרת Klipper…"
 
-#: declarative/qml/ClipboardMenu.qml:366
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "All History"
 msgstr "כל ההיסטוריה"
 
-#: declarative/qml/ClipboardMenu.qml:371
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgid "Starred Only"
 msgstr "עם כוכב בלבד"
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:381
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -356,7 +356,7 @@ msgid ""
 "that will not be stored in history."
 msgstr "לוח הגזירים הנוכחי מחזיק כרגע נתונים רגישים שלא יאוחסנו בהיסטוריה."
 
-#: declarative/qml/ClipboardMenu.qml:382
+#: declarative/qml/ClipboardMenu.qml:383
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -368,7 +368,7 @@ msgid ""
 "stored in history."
 msgstr "לוח הגזירים הנוכחי מחזיק כרגע נתונים רגישים שלא יאוחסנו בהיסטוריה."
 
-#: declarative/qml/ClipboardMenu.qml:384
+#: declarative/qml/ClipboardMenu.qml:385
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -380,18 +380,18 @@ msgid ""
 "stored in history."
 msgstr "לוח הגזירים הנוכחי מחזיק כרגע נתונים רגישים שלא יאוחסנו בהיסטוריה."
 
-#: declarative/qml/ClipboardMenu.qml:396
+#: declarative/qml/ClipboardMenu.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "איפוס נתונים סודיים"
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
 msgid "No matches"
 msgstr "אין לכידות"
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "לוח הגזירים ריק"
@@ -426,19 +426,19 @@ msgstr "הסרת כוכב"
 msgid "Star"
 msgstr "כוכב"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:61
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "אזור עריכת טקסט"
 
-#: declarative/qml/EditPage.qml:79
+#: declarative/qml/EditPage.qml:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "שמירה"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:85
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -640,34 +640,34 @@ msgstr "איפוס הסמל לברירת המחדל לפקודה"
 msgid "Icon:"
 msgstr "סמל:"
 
-#: historymodel.cpp:371
+#: historymodel.cpp:378
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הגזירים?"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:380
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "פינוי היסטוריית לוח הגזירים"
 
-#: historymodel.cpp:375 historymodel.cpp:675
+#: historymodel.cpp:382 historymodel.cpp:694
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "לא לשאול שוב"
 
-#: historymodel.cpp:482
+#: historymodel.cpp:489
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:671
+#: historymodel.cpp:690
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "הפריט הזה מסומן בכוכב. להסיר אותו מההיסטוריה?"
 
-#: historymodel.cpp:673
+#: historymodel.cpp:692
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "הסרת פריט מסומן בכוכב"

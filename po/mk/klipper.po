@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 00:57+0000\n"
+"POT-Creation-Date: 2026-11-05 00:58+0000\n"
 "PO-Revision-Date: 2010-01-30 09:51+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
 "2;\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:86
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard history:"
 msgstr "Историја на таблата"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:92
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -37,13 +37,13 @@ msgstr[0] " ставка"
 msgstr[1] " ставки"
 msgstr[2] " ставки"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:101
 #, fuzzy, kde-format
 #| msgid "Selection and clipboard"
 msgid "Selection and Clipboard:"
 msgstr "Избор и табла со исечоци"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:108
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -59,39 +59,39 @@ msgid ""
 "below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Повтори дејство од историјата"
 
-#: configdialog.cpp:130
+#: configdialog.cpp:131
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:135
+#: configdialog.cpp:136
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:139
+#: configdialog.cpp:140
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:148
+#: configdialog.cpp:149
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -104,7 +104,7 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:172
+#: configdialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,13 +113,13 @@ msgid ""
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
 
-#: configdialog.cpp:192
+#: configdialog.cpp:194
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "Истек на време за покренување на акции:"
 
-#: configdialog.cpp:209
+#: configdialog.cpp:211
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -131,7 +131,7 @@ msgid ""
 "history."
 msgstr ""
 
-#: configdialog.cpp:226
+#: configdialog.cpp:228
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -142,50 +142,50 @@ msgstr[0] " секунда"
 msgstr[1] " секунди"
 msgstr[2] " секунди"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:236
+#: configdialog.cpp:238
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "Дејства"
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Опис"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:276
 #, fuzzy, kde-format
 #| msgid "Add Action..."
 msgid "Add Action…"
 msgstr "Додај дејство..."
 
-#: configdialog.cpp:278
+#: configdialog.cpp:280
 #, fuzzy, kde-format
 #| msgid "Edit Action..."
 msgid "Edit Action…"
 msgstr "Уреди дејство..."
 
-#: configdialog.cpp:283
+#: configdialog.cpp:285
 #, kde-format
 msgid "Delete Action"
 msgstr "Отстрани дејство"
 
-#: configdialog.cpp:468
+#: configdialog.cpp:470
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -193,38 +193,38 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:469
+#: configdialog.cpp:471
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Отстрани дејство"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Општо"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, fuzzy, kde-format
 #| msgid "General Config"
 msgid "General Configuration"
 msgstr "Општa конфигурација"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Конфигурација на дејства"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgid "Actions Configuration"
 msgstr "Конфигурација на дејства"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -232,20 +232,20 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Дејства"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Дејства"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Кратенки"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, fuzzy, kde-format
 #| msgid "Shortcuts Config"
 msgid "Shortcuts Configuration"
@@ -304,30 +304,30 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:296
+#: declarative/qml/ClipboardMenu.qml:297
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Историја на таблата"
 
-#: declarative/qml/ClipboardMenu.qml:315
+#: declarative/qml/ClipboardMenu.qml:316
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgid "Configure Clipboard…"
 msgstr "&Конфигурирај го Klipper..."
 
-#: declarative/qml/ClipboardMenu.qml:366
+#: declarative/qml/ClipboardMenu.qml:367
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Историја на таблата"
 
-#: declarative/qml/ClipboardMenu.qml:371
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -335,7 +335,7 @@ msgid ""
 "that will not be stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:382
+#: declarative/qml/ClipboardMenu.qml:383
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -343,7 +343,7 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:384
+#: declarative/qml/ClipboardMenu.qml:385
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -351,19 +351,19 @@ msgid ""
 "stored in history."
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:396
+#: declarative/qml/ClipboardMenu.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<нема совпаѓања>"
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Таблата е празна"
@@ -403,19 +403,19 @@ msgstr "Повтори ги дејствата на елемент избран 
 msgid "Star"
 msgstr "Стартувај"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:61
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:79
+#: declarative/qml/EditPage.qml:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:85
 #, fuzzy, kde-format
 #| msgid "&Cancel"
 msgctxt "@action:button"
@@ -611,36 +611,36 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:371
+#: historymodel.cpp:378
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Дали навистина сакате да ја избришете историја на таблата?"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:380
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Исчисти историја на таб&лата"
 
-#: historymodel.cpp:375 historymodel.cpp:675
+#: historymodel.cpp:382 historymodel.cpp:694
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr ""
 
-#: historymodel.cpp:482
+#: historymodel.cpp:489
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:671
+#: historymodel.cpp:690
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:673
+#: historymodel.cpp:692
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

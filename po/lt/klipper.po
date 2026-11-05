@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 00:57+0000\n"
-"PO-Revision-Date: 2026-11-01 23:28+0200\n"
+"POT-Creation-Date: 2026-11-05 00:58+0000\n"
+"PO-Revision-Date: 2026-11-04 16:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,12 +22,12 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.10\n"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:86
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Iškarpinės istorija:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:92
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -37,12 +37,12 @@ msgstr[1] "%v įrašai"
 msgstr[2] "%v įrašų"
 msgstr[3] "%v įrašas"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:101
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Žymėjimas ir iškarpinė:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:108
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -70,19 +70,19 @@ msgstr ""
 "nuo žemiau pasirinktų parinkčių), bet gali būti įdėtas tik naudojant "
 "vidurinįjį pelės mygtuką."
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Tekstas, pažymėtas naudojant pelės rodyklę ar klaviatūrą"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Įtraukti į istoriją:"
 
-#: configdialog.cpp:130
+#: configdialog.cpp:131
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
@@ -90,13 +90,13 @@ msgstr ""
 "Aiškiai nukopijuotas tekstas yra visada įrašomas, nebent jis pažymėtas kaip "
 "slaptažodis."
 
-#: configdialog.cpp:135
+#: configdialog.cpp:136
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Aiškiai nukopijuoti paveikslo duomenys"
 
-#: configdialog.cpp:139
+#: configdialog.cpp:140
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -106,7 +106,7 @@ msgstr ""
 "redaktoriuose kaip Krita ar GIMP.<br/><a href=\"1\">More about images in the "
 "clipboard.</a>"
 
-#: configdialog.cpp:148
+#: configdialog.cpp:149
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -127,7 +127,7 @@ msgstr ""
 "iškarpinę. Bet kuri programa, kuri siunčia ir tekstą, ir paveikslą, taip pat "
 "nepaisys šios nuostatos."
 
-#: configdialog.cpp:172
+#: configdialog.cpp:173
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -140,12 +140,12 @@ msgstr ""
 "<interface>Siūlyti nukopijuotoms nuorodoms ir failams skirtas programas</"
 "interface> arba įjunkite bent vieną veiksmą."
 
-#: configdialog.cpp:192
+#: configdialog.cpp:194
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Rodyti veiksmų iškylantįjį meniu:"
 
-#: configdialog.cpp:209
+#: configdialog.cpp:211
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -163,7 +163,7 @@ msgstr ""
 "galima pasiekti naudojant spartųjį klavišą <shortcut>%1</shortcut> arba "
 "kiekvieno atitinkančio istorijos įrašo mygtuką."
 
-#: configdialog.cpp:226
+#: configdialog.cpp:228
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -173,45 +173,45 @@ msgstr[1] "%v sekundės"
 msgstr[2] "%v sekundžių"
 msgstr[3] "%v sekundė"
 
-#: configdialog.cpp:227
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nėra"
 
-#: configdialog.cpp:236
+#: configdialog.cpp:238
 #, kde-format
 msgid "Options:"
 msgstr "Parinktys:"
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Atitikimo šablonas ir komandos"
 
-#: configdialog.cpp:268
+#: configdialog.cpp:270
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Aprašas"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:276
 #, kde-format
 msgid "Add Action…"
 msgstr "Pridėti veiksmą…"
 
-#: configdialog.cpp:278
+#: configdialog.cpp:280
 #, kde-format
 msgid "Edit Action…"
 msgstr "Taisyti veiksmą…"
 
-#: configdialog.cpp:283
+#: configdialog.cpp:285
 #, kde-format
 msgid "Delete Action"
 msgstr "Ištrinti veiksmą"
 
-#: configdialog.cpp:468
+#: configdialog.cpp:470
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,51 +220,51 @@ msgid ""
 msgstr ""
 "Ištrinti pažymėtą veiksmą <resource>%1</resource><nl/>ir visas jo komandas?"
 
-#: configdialog.cpp:469
+#: configdialog.cpp:471
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Patvirtinti veiksmo ištrynimą"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Bendri"
 
-#: configdialog.cpp:527
+#: configdialog.cpp:529
 #, kde-format
 msgid "General Configuration"
 msgstr "Bendra konfigūracija"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Veiksmų konfigūracija"
 
-#: configdialog.cpp:528
+#: configdialog.cpp:530
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Veiksmų konfigūracija"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Veiksmų meniu"
 
-#: configdialog.cpp:529
+#: configdialog.cpp:531
 #, kde-format
 msgid "Action Menu"
 msgstr "Veiksmų meniu"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Spartieji klavišai"
 
-#: configdialog.cpp:536
+#: configdialog.cpp:538
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Sparčiųjų klavišų konfigūracija"
@@ -322,29 +322,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Išskleisti"
 
-#: declarative/qml/ClipboardMenu.qml:296
+#: declarative/qml/ClipboardMenu.qml:297
 #, kde-format
 msgid "Clear History"
 msgstr "Išvalyti istoriją"
 
-#: declarative/qml/ClipboardMenu.qml:315
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#: declarative/qml/ClipboardMenu.qml:316
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "&Konfigūruoti Klipper…"
+msgstr "Konfigūruoti iškarpinę…"
 
-#: declarative/qml/ClipboardMenu.qml:366
+#: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
 msgid "All History"
 msgstr "Visa istorija"
 
-#: declarative/qml/ClipboardMenu.qml:371
+#: declarative/qml/ClipboardMenu.qml:372
 #, kde-format
 msgid "Starred Only"
 msgstr "Tik žvaigždute pažymėti elementai"
 
-#: declarative/qml/ClipboardMenu.qml:380
+#: declarative/qml/ClipboardMenu.qml:381
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -354,7 +352,7 @@ msgstr ""
 "Šiuo metu iškarpinėje ir žymėjime yra slaptų duomenų dalis, kuri nebus "
 "saugoma istorijoje."
 
-#: declarative/qml/ClipboardMenu.qml:382
+#: declarative/qml/ClipboardMenu.qml:383
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -364,7 +362,7 @@ msgstr ""
 "Šiuo metu iškarpinėje yra slaptų duomenų dalis, kuri nebus saugoma "
 "istorijoje."
 
-#: declarative/qml/ClipboardMenu.qml:384
+#: declarative/qml/ClipboardMenu.qml:385
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -373,18 +371,18 @@ msgid ""
 msgstr ""
 "Šiuo metu žymėjime yra slaptų duomenų dalis, kuri nebus saugoma istorijoje."
 
-#: declarative/qml/ClipboardMenu.qml:396
+#: declarative/qml/ClipboardMenu.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
 msgstr "Išvalyti slaptus duomenis"
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
 msgid "No matches"
 msgstr "Nėra atitikmenų"
 
-#: declarative/qml/ClipboardMenu.qml:531
+#: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"
@@ -419,19 +417,19 @@ msgstr "Nebežymėti žvaigždute"
 msgid "Star"
 msgstr "Pažymėti žvaigždute"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:61
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Teksto taisymo sritis"
 
-#: declarative/qml/EditPage.qml:79
+#: declarative/qml/EditPage.qml:77
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Įrašyti"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:85
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
@@ -635,36 +633,36 @@ msgstr "Atstatyti komandai skirtą piktogramą į numatytąją"
 msgid "Icon:"
 msgstr "Piktograma:"
 
-#: historymodel.cpp:371
+#: historymodel.cpp:378
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ar tikrai norite išvalyti ir ištrinti visą iškarpinės istoriją?"
 
-#: historymodel.cpp:373
+#: historymodel.cpp:380
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Išvalyti iškarpinės istoriją"
 
-#: historymodel.cpp:375 historymodel.cpp:675
+#: historymodel.cpp:382 historymodel.cpp:694
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Daugiau nebeklausti"
 
-#: historymodel.cpp:482
+#: historymodel.cpp:489
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:671
+#: historymodel.cpp:690
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Šis elementas pažymėtas žvaigždute. Ar tikrai norite pašalinti jį iš "
 "istorijos?"
 
-#: historymodel.cpp:673
+#: historymodel.cpp:692
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Šalinti žvaigždute pažymėtą elementą"
