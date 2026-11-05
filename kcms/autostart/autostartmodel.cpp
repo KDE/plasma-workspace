@@ -188,7 +188,8 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
     // Creates if doesn't already exist
     dir.mkpath(QStringLiteral("."));
 
-    const auto autostartDirFilesInfo = dir.entryInfoList(QDir::Files);
+    const QStringList nameFilters = kind == AutostartModel::AutostartEntrySource::PlasmaEnvScripts ? QStringList{QStringLiteral("*.sh")} : QStringList{};
+    const auto autostartDirFilesInfo = dir.entryInfoList(nameFilters, QDir::Files);
     for (const QFileInfo &fi : autostartDirFilesInfo) {
         QString targetFileDir = fi.absoluteDir().path();
         QString fileName = fi.fileName();
