@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 03:01+0000\n"
+"POT-Creation-Date: 2026-11-05 03:00+0000\n"
 "PO-Revision-Date: 2026-10-09 10:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -30,12 +30,12 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "היסטוריית לוח הגזירים:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -45,12 +45,12 @@ msgstr[1] "שתי רשומות"
 msgstr[2] "%v רשומות"
 msgstr[3] "%v רשומות"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "בחירה ולוח גזירים:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -75,34 +75,34 @@ msgstr ""
 "בהיסטוריית לוח הגזירים (בכפוף לאפשרות שלהלן), אך ניתן יהיה להדביק אותה רק "
 "באמצעות לחצן העכבר האמצעי."
 
-#: configdialog.cpp:124
+#: configdialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "Text selected with the pointer or keyboard"
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "טקסט שנבחר עם הסמן או המקלדת"
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, fuzzy, kde-format
 #| msgid "Include in history:"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "לכלול בהיסטוריה:"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr "טקסט שהועתק מפורשות תמיד יישמר אלא אם כן סומן כסיסמה."
 
-#: configdialog.cpp:133
+#: configdialog.cpp:134
 #, fuzzy, kde-format
 #| msgid "Image data copied explicitly"
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "נתוני התמונה הועתקו מפורשות"
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -111,7 +111,7 @@ msgstr ""
 "למשל, שכבות ובחירות שהועתקו בעורכי תמונות כמו Krita או GIMP.<br/><a href="
 "\"1\">מידע נוסף על תמונות בלוח הגזירים.</a>"
 
-#: configdialog.cpp:146
+#: configdialog.cpp:147
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -129,12 +129,12 @@ msgstr ""
 ">חשוב גם לשים לב שכלי צילום המסך Spectacle יתעלם מההגדרה הזאת כשהיא מוגדרת "
 "כדי לשמור צילומי מסך ללוח הגזירים. כל יישום ששולחן טקסט ותמונה גם יתעלם ממנה."
 
-#: configdialog.cpp:171
+#: configdialog.cpp:172
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "הצגת תפריט פעולות קופץ:"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:182
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -149,7 +149,7 @@ msgstr ""
 "כאן, או שאינו מופיע לחלון מוחרג, אפשר להציג אותו באמצעות מקשי הקיצור "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:193
+#: configdialog.cpp:194
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -159,45 +159,45 @@ msgstr[1] "שתי שניות"
 msgstr[2] "%v שניות"
 msgstr[3] "%v שניות"
 
-#: configdialog.cpp:194
+#: configdialog.cpp:195
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "ללא"
 
-#: configdialog.cpp:203
+#: configdialog.cpp:204
 #, kde-format
 msgid "Options:"
 msgstr "אפשרויות:"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "תבניות לכידה ופקודות"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "תיאור"
 
-#: configdialog.cpp:234
+#: configdialog.cpp:235
 #, kde-format
 msgid "Add Action..."
 msgstr "הוספת פעולה…"
 
-#: configdialog.cpp:238
+#: configdialog.cpp:239
 #, kde-format
 msgid "Edit Action..."
 msgstr "עריכת פעולה…"
 
-#: configdialog.cpp:243
+#: configdialog.cpp:244
 #, kde-format
 msgid "Delete Action"
 msgstr "מחיקת פעולה"
 
-#: configdialog.cpp:250
+#: configdialog.cpp:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -207,7 +207,7 @@ msgstr ""
 "הפעולות האלו מופיעות בתפריט הקופץ שאותו ניתן להגדיר בעמוד <interface>תפריט "
 "הפעולות</interface>."
 
-#: configdialog.cpp:445
+#: configdialog.cpp:447
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -216,51 +216,51 @@ msgid ""
 msgstr ""
 "למחוק את הפעולה <resource>%1</resource><nl/> הנבחרת ואת כל הפקודות שלה?"
 
-#: configdialog.cpp:446
+#: configdialog.cpp:448
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "אישור פעולת מחיקה"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "כללי"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgid "General Configuration"
 msgstr "הגדרות כלליות"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "קיצורי מקשים"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "הגדרות קיצורי מקשים"

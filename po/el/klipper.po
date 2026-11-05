@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 03:01+0000\n"
+"POT-Creation-Date: 2026-11-05 03:00+0000\n"
 "PO-Revision-Date: 2026-10-13 19:20+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -27,12 +27,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.12.3\n"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Ιστορικό πρόχειρου:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -40,12 +40,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v καταχώρηση"
 msgstr[1] "%v καταχωρήσεις"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Επιλογή και πρόχειρο:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:106
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -87,20 +87,20 @@ msgstr ""
 "παρακάτω επιλογών), αλλά μπορεί να επικολληθεί μόνο με τη χρήση του μεσαίου "
 "πλήκτρου του ποντικιού."
 
-#: configdialog.cpp:124
+#: configdialog.cpp:125
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Κείμενο επιλεγμένο με τον δείκτη ή το πληκτρολόγιο"
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, fuzzy, kde-format
 #| msgid "Always save in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Πάντα αποθήκευση στο ιστορικό"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
@@ -108,13 +108,13 @@ msgstr ""
 "Το κείμενο που αντιγράφεται ρητά αποθηκεύεται πάντα, εκτός αν έχει "
 "επισημανθεί ως κωδικός πρόσβασης."
 
-#: configdialog.cpp:133
+#: configdialog.cpp:134
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Δεδομένα εικόνας που αντιγράφονται ρητά"
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -124,7 +124,7 @@ msgstr ""
 "εικόνων όπως το Krita ή το GIMP.<br/><a href=\"1\">Περισσότερα για τις "
 "εικόνες στο πρόχειρο.</a>"
 
-#: configdialog.cpp:146
+#: configdialog.cpp:147
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -145,12 +145,12 @@ msgstr ""
 "στιγμιότυπα στο πρόχειρο. Την αγνοεί επίσης κάθε εφαρμογή που στέλνει "
 "ταυτόχρονα κείμενο και εικόνα."
 
-#: configdialog.cpp:171
+#: configdialog.cpp:172
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Εμφάνιση αναδυόμενου μενού ενεργειών:"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:182
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -166,7 +166,7 @@ msgstr ""
 "δεν εμφανίζεται για ένα αποκλεισμένο παράθυρο, τότε μπορεί να εμφανιστεί με "
 "τη χρήση της συντόμευσης πλήκτρου <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:193
+#: configdialog.cpp:194
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -174,45 +174,45 @@ msgid_plural "%v seconds"
 msgstr[0] "%v δεύτερο"
 msgstr[1] "%v δευτερόλεπτα"
 
-#: configdialog.cpp:194
+#: configdialog.cpp:195
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Κανένα"
 
-#: configdialog.cpp:203
+#: configdialog.cpp:204
 #, kde-format
 msgid "Options:"
 msgstr "Επιλογές:"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Μοτίβο αντιστοίχισης και εντολές"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Περιγραφή"
 
-#: configdialog.cpp:234
+#: configdialog.cpp:235
 #, kde-format
 msgid "Add Action..."
 msgstr "Προσθήκη ενέργειας..."
 
-#: configdialog.cpp:238
+#: configdialog.cpp:239
 #, kde-format
 msgid "Edit Action..."
 msgstr "Επεξεργασία ενέργειας..."
 
-#: configdialog.cpp:243
+#: configdialog.cpp:244
 #, kde-format
 msgid "Delete Action"
 msgstr "Διαγραφή ενέργειας"
 
-#: configdialog.cpp:250
+#: configdialog.cpp:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,7 +222,7 @@ msgstr ""
 "Αυτές οι ενέργειες εμφανίζονται στο αναδυόμενο μενού, το οποίο μπορεί να "
 "ρυθμιστεί στη σελίδα <interface>Μενού ενεργειών</interface>."
 
-#: configdialog.cpp:445
+#: configdialog.cpp:447
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -232,51 +232,51 @@ msgstr ""
 "Διαγραφή της επιλεγμένης ενέργειας <resource>%1</resource><nl/>και όλων των "
 "εντολών της;"
 
-#: configdialog.cpp:446
+#: configdialog.cpp:448
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Επιβεβαίωση διαγραφής ενέργειας"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Γενικά"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgid "General Configuration"
 msgstr "Γενική διαμόρφωση"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Μενού ενεργειών"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgid "Action Menu"
 msgstr "Μενού ενεργειών"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Διαμόρφωση ενεργειών"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Διαμόρφωση ενεργειών"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Συντομεύσεις"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Διαμόρφωση συντομεύσεων"

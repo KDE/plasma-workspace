@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 03:01+0000\n"
+"POT-Creation-Date: 2026-11-05 03:00+0000\n"
 "PO-Revision-Date: 2025-04-01 15:05+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Mübadilə tarixçəsi:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -31,12 +31,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v giriş"
 msgstr[1] "%v girişlər"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Seçim və Mübadilə buferi:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:106
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:tooltip"
 #| msgid ""
@@ -76,39 +76,39 @@ msgstr ""
 "(aşağıdakı seçimlərdən asılı olaraq), lakin, yalnız siçanın orta düyməsi ilə "
 "yerləşdirilə bilər."
 
-#: configdialog.cpp:124
+#: configdialog.cpp:125
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr ""
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, fuzzy, kde-format
 #| msgid "Always save in history"
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Həmişə tarixçədə saxlamaq"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
 
-#: configdialog.cpp:133
+#: configdialog.cpp:134
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr ""
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
 
-#: configdialog.cpp:146
+#: configdialog.cpp:147
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -121,12 +121,12 @@ msgid ""
 "it."
 msgstr ""
 
-#: configdialog.cpp:171
+#: configdialog.cpp:172
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Fəaliyyət pəncərəsini göstərmək"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:182
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 "edilmiş pəncərədə göstərilməyibsə, o zaman o <shortcut>%1</shortcut> "
 "qısayolundan istifadə etməklə göstərilə bilər."
 
-#: configdialog.cpp:193
+#: configdialog.cpp:194
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -150,45 +150,45 @@ msgid_plural "%v seconds"
 msgstr[0] "%v saniyə"
 msgstr[1] "%v saniyə"
 
-#: configdialog.cpp:194
+#: configdialog.cpp:195
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Heç biri"
 
-#: configdialog.cpp:203
+#: configdialog.cpp:204
 #, kde-format
 msgid "Options:"
 msgstr "Seçimlər:"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Oxşar nümunə və əmrlər"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Təsviri"
 
-#: configdialog.cpp:234
+#: configdialog.cpp:235
 #, kde-format
 msgid "Add Action..."
 msgstr "Fəaliyyət əlavə etmək..."
 
-#: configdialog.cpp:238
+#: configdialog.cpp:239
 #, kde-format
 msgid "Edit Action..."
 msgstr "Fəaliyyətə düzəliş etmək..."
 
-#: configdialog.cpp:243
+#: configdialog.cpp:244
 #, kde-format
 msgid "Delete Action"
 msgstr "Fəaliyyəti silmək"
 
-#: configdialog.cpp:250
+#: configdialog.cpp:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -198,7 +198,7 @@ msgstr ""
 "Bu əməllər açılan menyuda görünür, hansılar ki, <interface>Fəaliyyət "
 "menyusu</interface> səhifəsində tənzimlənə bilər."
 
-#: configdialog.cpp:445
+#: configdialog.cpp:447
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -207,51 +207,51 @@ msgid ""
 msgstr ""
 "Seçilmiş <resource>%1</resource> əməlini və onun bütün əmrlərini silək?"
 
-#: configdialog.cpp:446
+#: configdialog.cpp:448
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Silimə əməlini təsdiq edin"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Əsas"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgid "General Configuration"
 msgstr "Əsas Tənzimləmələr"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Fəaliyyət menyusu"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgid "Action Menu"
 msgstr "Fəaliyyət menyusu"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Fəaliyyətləri tənzimləmək"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Fəaliyyətləri Tənzimləmək"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Qısayollar"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Qısayollar Tənzimləməsi"

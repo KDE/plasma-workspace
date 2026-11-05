@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-09 03:01+0000\n"
+"POT-Creation-Date: 2026-11-05 03:00+0000\n"
 "PO-Revision-Date: 2026-10-05 13:15+0200\n"
 "Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 26.08.2\n"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Historie schránky:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -35,12 +35,12 @@ msgstr[0] "%v záznam"
 msgstr[1] "%v záznamy"
 msgstr[2] "%v záznamů"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Výběr a schránka:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -66,19 +66,19 @@ msgstr ""
 "historii schránky (v závislosti na níže uvedené volbě), ale lze jej vložit "
 "pouze pomocí prostředního tlačítka myši."
 
-#: configdialog.cpp:124
+#: configdialog.cpp:125
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
 msgstr "Text vybraný ukazatelem nebo klávesnicí"
 
-#: configdialog.cpp:126
+#: configdialog.cpp:127
 #, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
 msgstr "Zahrnout do historie:"
 
-#: configdialog.cpp:128
+#: configdialog.cpp:129
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
@@ -86,13 +86,13 @@ msgstr ""
 "Text, který byl výslovně zkopírován, se vždy uloží, pokud není označen jako "
 "heslo."
 
-#: configdialog.cpp:133
+#: configdialog.cpp:134
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
 msgstr "Výslovně zkopírovaná obrazová data"
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, kde-format
 msgid ""
 "For example, layers and selections copied in image editors like Krita or "
@@ -102,7 +102,7 @@ msgstr ""
 "Krita nebo GIMP.<br/><a href=\"1\">Více informací o obrázcích ve schránce.</"
 "a>"
 
-#: configdialog.cpp:146
+#: configdialog.cpp:147
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -122,12 +122,12 @@ msgstr ""
 "je-li nakonfigurován tak, aby ukládal snímky obrazovky do schránky. Ignorují "
 "ho také všechny aplikace, které odesílají jak text, tak obrázky."
 
-#: configdialog.cpp:171
+#: configdialog.cpp:172
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Zobrazit vyskakovací nabídku činností:"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:182
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,7 +142,7 @@ msgstr ""
 "Pokud je automatická nabídka zde vypnutá nebo se nezobrazuje pro vyloučené "
 "okno, lze ji zobrazit pomocí klávesové zkratky <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:193
+#: configdialog.cpp:194
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -152,45 +152,45 @@ msgstr[1] "%v sekundy"
 msgstr[2] "%v sekund"
 
 # žádné parametry funkce v inspektoru funkcí
-#: configdialog.cpp:194
+#: configdialog.cpp:195
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Žádný"
 
-#: configdialog.cpp:203
+#: configdialog.cpp:204
 #, kde-format
 msgid "Options:"
 msgstr "Volby:"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Vzor porovnání a příkazy"
 
-#: configdialog.cpp:228
+#: configdialog.cpp:229
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Popis"
 
-#: configdialog.cpp:234
+#: configdialog.cpp:235
 #, kde-format
 msgid "Add Action..."
 msgstr "Přidat činnost..."
 
-#: configdialog.cpp:238
+#: configdialog.cpp:239
 #, kde-format
 msgid "Edit Action..."
 msgstr "Upravit činnost..."
 
-#: configdialog.cpp:243
+#: configdialog.cpp:244
 #, kde-format
 msgid "Delete Action"
 msgstr "Smazat činnost"
 
-#: configdialog.cpp:250
+#: configdialog.cpp:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -200,7 +200,7 @@ msgstr ""
 "Tyto činnosti budou zobrazeny ve vyskakovací nabídce, kterou lze nastavit na "
 "straně <interface>Nabídka činností</interface>."
 
-#: configdialog.cpp:445
+#: configdialog.cpp:447
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -209,51 +209,51 @@ msgid ""
 msgstr ""
 "Odstranit vybranou akci <resource>%1</resource><nl/>a všechny její příkazy?"
 
-#: configdialog.cpp:446
+#: configdialog.cpp:448
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Potvrdit smazání činnosti "
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Obecné"
 
-#: configdialog.cpp:499
+#: configdialog.cpp:501
 #, kde-format
 msgid "General Configuration"
 msgstr "Obecná nastavení"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Nabídka činností"
 
-#: configdialog.cpp:500
+#: configdialog.cpp:502
 #, kde-format
 msgid "Action Menu"
 msgstr "Nabídka činností"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Nastavení činností"
 
-#: configdialog.cpp:501
+#: configdialog.cpp:503
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Nastavení činností"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Klávesové zkratky"
 
-#: configdialog.cpp:508
+#: configdialog.cpp:510
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Nastavení klávesových zkratek"
