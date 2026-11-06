@@ -117,7 +117,8 @@ int main(int argc, char **argv)
     xcb_disconnect(connection);
 #endif
 
-    QProcess::startDetached(QStringLiteral(PLASMA_KDED_X11_PATH));
-
+    QProcess x11KdedProcess;
+    x11KdedProcess.start(QStringLiteral(PLASMA_KDED_X11_PATH));
+    x11KdedProcess.waitForFinished(); // it will fork itself
     return 0;
 }

@@ -16,6 +16,8 @@
 #include <KPluginMetaData>
 #include <KSharedConfig>
 
+#include <unistd.h>
+
 class Kded : public QObject
 {
 public:
@@ -62,5 +64,13 @@ int main(int argc, char *argv[])
     app.setQuitLockEnabled(false);
 
     Kded kded;
+
+    const pid_t pid = fork();
+    if (pid < 0) {
+        qCWarning(KDED) << "Could not fork into the background";
+    } else if (pid > 0) {
+        return 0;
+    }
+
     return app.exec();
 }
