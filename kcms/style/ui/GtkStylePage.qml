@@ -60,10 +60,16 @@ Kirigami.Page {
                 Kirigami.FormData.label: i18n("GTK theme:")
 
                 Flow {
+                    id: gtkThemeControls
+
+                    // Styles size text and icon-only controls differently
+                    readonly property real controlHeight: Math.max(gtkThemeCombo.implicitHeight, gtkRemoveButton.implicitHeight, gtkPreviewButton.implicitHeight)
+
                     spacing: Kirigami.Units.smallSpacing
 
                     QtControls.ComboBox {
                         id: gtkThemeCombo
+                        height: gtkThemeControls.controlHeight
                         model: kcm.gtkPage.gtkThemesModel
                         currentIndex: model.findThemeIndex(kcm.gtkPage.gtkThemesModel.selectedTheme)
                         onCurrentTextChanged: function() {
@@ -72,24 +78,57 @@ Kirigami.Page {
                         }
                         onActivated: model.setSelectedThemeDirty()
                         textRole: "theme-name"
+                        delegate: QtControls.ItemDelegate {
+                            id: gtkThemeDelegate
+
+                            required property int index
+                            required property var model
+
+                            width: parent?.width ?? 0
+                            highlighted: gtkThemeCombo.highlightedIndex === index
+                            text: model["theme-name"]
+
+                            contentItem: Kirigami.TitleSubtitle {
+                                title: gtkThemeDelegate.text
+                                subtitle: i18nc("@item:inlistbox Supported GTK versions, %1 is a list of numbers", "GTK %1", gtkThemeDelegate.model["gtk-versions"].join(", "))
+                                font: gtkThemeDelegate.font
+                                selected: gtkThemeDelegate.highlighted || gtkThemeDelegate.down
+                            }
+                        }
                     }
 
                     QtControls.Button {
                         id: gtkRemoveButton
+                        height: gtkThemeControls.controlHeight
                         icon.name: "edit-delete"
                         onClicked: gtkThemeCombo.model.removeSelectedTheme()
                     }
 
                     QtControls.Button {
+                        id: gtkPreviewButton
+                        height: gtkThemeControls.controlHeight
                         icon.name: "preview"
                         text: i18n("Preview…")
                         onClicked: kcm.gtkPage.showGtkPreview()
                         visible: kcm.gtkPage.gtkPreviewAvailable()
-                    }
+                        enabled: kcm.gtkPage.gtkThemesModel.selectedThemeSupportsGtk4
 
+                        QtControls.ToolTip {
+                            text: i18n("Preview supports GTK4 themes only")
+                            delay: Kirigami.Units.toolTipDelay
+                            visible: gtkPreviewButton.hovered && !gtkPreviewButton.enabled
+                        }
+                    }
                 }
             }
+        }
 
+        Kirigami.InlineMessage {
+            Layout.fillWidth: true
+            visible: kcm.gtkPage.gtkThemesModel.selectedThemeMissingGtkVersions.length > 0
+            text: i18nc("@info %1 is a list of GTK versions",
+                        "This theme does not support GTK %1. Applications built with those versions will fall back to GTK defaults.",
+                        kcm.gtkPage.gtkThemesModel.selectedThemeMissingGtkVersions.join(", "))
         }
 
         Item {

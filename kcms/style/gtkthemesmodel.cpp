@@ -13,6 +13,21 @@
 
 #include "gtkthemesmodel.h"
 
+static QList<int> gtkVersionsList(bool gtk2, bool gtk3, bool gtk4)
+{
+    QList<int> versions;
+    if (gtk2) {
+        versions << 2;
+    }
+    if (gtk3) {
+        versions << 3;
+    }
+    if (gtk4) {
+        versions << 4;
+    }
+    return versions;
+}
+
 GtkThemesModel::GtkThemesModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_selectedTheme(QStringLiteral("Breeze"))
@@ -22,39 +37,46 @@ GtkThemesModel::GtkThemesModel(QObject *parent)
 
 void GtkThemesModel::load()
 {
-    QMap<QString, QString> gtk3ThemesNames;
+    QMap<QString, GtkTheme> themes;
 
-    static const QStringList gtk3SubdirPattern(QStringLiteral("gtk-3.*"));
     for (const QString &possibleThemePath : possiblePathsToThemes()) {
-        // If the directory contains any of gtk-3.X folders, it is the GTK3 theme for sure
         QDir possibleThemeDirectory(possibleThemePath);
-        if (!possibleThemeDirectory.entryList(gtk3SubdirPattern, QDir::Dirs).isEmpty()) {
+        const auto hasSubdir = [&possibleThemeDirectory](const QString &pattern) {
+            return !possibleThemeDirectory.entryList({pattern}, QDir::Dirs).isEmpty();
+        };
+
+        GtkTheme theme;
+        theme.path = possibleThemeDirectory.path();
+        theme.gtk2 = hasSubdir(QStringLiteral("gtk-2.0"));
+        theme.gtk3 = hasSubdir(QStringLiteral("gtk-3.*"));
+        theme.gtk4 = hasSubdir(QStringLiteral("gtk-4.*"));
+
+        if (theme.gtk2 || theme.gtk3 || theme.gtk4) {
             // Do not show dark Breeze GTK variant, since the colors of it
             // are coming from the color scheme and selecting them here
             // is redundant and does not work
             if (possibleThemeDirectory.dirName() == u"Breeze-Dark") {
                 continue;
             }
+            // Setting gtk-theme-name to "Default" breaks dark theme, Adwaita is listed instead
             if (possibleThemeDirectory.dirName() == u"Default") {
-                // Adwaita is a special case, since it is implemented inside GTK itself
-                // also setting gtk-theme-name to "Default" breaks dark theme
-                gtk3ThemesNames.insert(QStringLiteral("Adwaita"), possibleThemeDirectory.path());
                 continue;
             }
-            gtk3ThemesNames.insert(possibleThemeDirectory.dirName(), possibleThemeDirectory.path());
+            themes.insert(possibleThemeDirectory.dirName(), theme);
         }
     }
 
-    setThemesList(gtk3ThemesNames);
+    // Built into GTK, may have no theme directory
+    GtkTheme &adwaita = themes[QStringLiteral("Adwaita")];
+    adwaita.gtk3 = true;
+    adwaita.gtk4 = true;
+
+    setThemesList(themes);
 }
 
 QString GtkThemesModel::themePath(const QString &themeName)
 {
-    if (themeName.isEmpty()) {
-        return {};
-    } else {
-        return m_themes.constFind(themeName).value();
-    }
+    return m_themes.value(themeName).path;
 }
 
 QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
@@ -71,7 +93,9 @@ QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
     case Roles::ThemeNameRole:
         return it.key();
     case Roles::ThemePathRole:
-        return it.value();
+        return it.value().path;
+    case Roles::GtkVersionsRole:
+        return QVariant::fromValue(gtkVersionsList(it.value().gtk2, it.value().gtk3, it.value().gtk4));
     default:
         return {};
     }
@@ -82,6 +106,7 @@ QHash<int, QByteArray> GtkThemesModel::roleNames() const
     QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
     roles[Roles::ThemeNameRole] = QByteArrayLiteral("theme-name");
     roles[Roles::ThemePathRole] = QByteArrayLiteral("theme-path");
+    roles[Roles::GtkVersionsRole] = QByteArrayLiteral("gtk-versions");
 
     return roles;
 }
@@ -94,16 +119,11 @@ int GtkThemesModel::rowCount(const QModelIndex &parent) const
     return m_themes.count();
 }
 
-void GtkThemesModel::setThemesList(const QMap<QString, QString> &themes)
+void GtkThemesModel::setThemesList(const QMap<QString, GtkTheme> &themes)
 {
     beginResetModel();
     m_themes = themes;
     endResetModel();
-}
-
-QMap<QString, QString> GtkThemesModel::themesList()
-{
-    return m_themes;
 }
 
 void GtkThemesModel::setSelectedTheme(const QString &themeName)
@@ -115,6 +135,20 @@ void GtkThemesModel::setSelectedTheme(const QString &themeName)
 QString GtkThemesModel::selectedTheme()
 {
     return m_selectedTheme;
+}
+
+bool GtkThemesModel::selectedThemeSupportsGtk4() const
+{
+    return m_themes.value(m_selectedTheme).gtk4;
+}
+
+QList<int> GtkThemesModel::selectedThemeMissingGtkVersions() const
+{
+    const auto it = m_themes.constFind(m_selectedTheme);
+    if (it == m_themes.constEnd()) {
+        return {};
+    }
+    return gtkVersionsList(!it->gtk2, !it->gtk3, !it->gtk4);
 }
 
 QStringList GtkThemesModel::possiblePathsToThemes()
