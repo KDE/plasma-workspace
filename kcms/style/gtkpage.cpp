@@ -4,11 +4,15 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+#include <QColor>
 #include <QDBusPendingCall>
 #include <QDir>
+#include <QProcessEnvironment>
 #include <QStandardPaths>
 #include <QUrl>
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KTar>
 
@@ -30,14 +34,36 @@ GtkPage::GtkPage(QObject *parent)
 
 GtkPage::~GtkPage() = default;
 
+static QString gtkPreviewExecutable()
+{
+    return QStandardPaths::findExecutable(QStringLiteral("gtk4_preview"), {QString::fromLocal8Bit(CMAKE_INSTALL_FULL_LIBEXECDIR)});
+}
+
+static bool preferDarkGtkTheme()
+{
+    const KConfig kdeglobals(QStringLiteral("kdeglobals"));
+    const QColor background = kdeglobals.group(QStringLiteral("Colors:Window")).readEntry("BackgroundNormal", QColor(239, 240, 241));
+    return qGray(background.rgb()) < 192;
+}
+
 bool GtkPage::gtkPreviewAvailable()
 {
-    return !QStandardPaths::findExecutable(QStringLiteral("gtk3_preview"), {QString::fromLocal8Bit(CMAKE_INSTALL_FULL_LIBEXECDIR)}).isEmpty();
+    return !gtkPreviewExecutable().isEmpty();
 }
 
 void GtkPage::showGtkPreview()
 {
-    m_gtkConfigInterface.showGtkThemePreview(m_gtkThemesModel->selectedTheme());
+    if (m_gtkPreviewProcess.state() != QProcess::NotRunning) {
+        m_gtkPreviewProcess.close();
+        return;
+    }
+
+    // GTK4 falls back to its default theme on ":light"
+    const QString theme = m_gtkThemesModel->selectedTheme();
+    QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
+    environment.insert(QStringLiteral("GTK_THEME"), preferDarkGtkTheme() ? theme + QStringLiteral(":dark") : theme);
+    m_gtkPreviewProcess.setProcessEnvironment(environment);
+    m_gtkPreviewProcess.start(gtkPreviewExecutable(), QStringList());
 }
 
 void GtkPage::onThemeRemoved()

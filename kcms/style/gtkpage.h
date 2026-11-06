@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QObject>
+#include <QProcess>
 #include <QQmlListReference>
 
 #include "gtkthemesmodel.h"
@@ -49,4 +50,6 @@ private:
     GtkThemesModel *m_gtkThemesModel;
 
     OrgKdeGtkConfigInterface m_gtkConfigInterface;
+
+    QProcess m_gtkPreviewProcess;
 };

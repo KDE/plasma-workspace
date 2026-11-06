@@ -8,8 +8,5 @@
     <method name="gtkTheme">
       <arg type="s" direction="out"/>
     </method>
-    <method name="showGtkThemePreview">
-      <arg name="themeName" type="s" direction="in"/>
-    </method>
   </interface>
 </node>
