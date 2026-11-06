@@ -147,8 +147,7 @@ msgid ""
 "button)"
 msgstr ""
 "Näytä ”Käytä”-painike, joka tallentaa muutokset kysymättä (toisin kuin "
-"”Tallenna nimellä”)Näytä ”Käytä”-painike, joka tallentaa muutokset kysymättä "
-"(toisin kuin ”Tallenna nimellä”)"
+"”Tallenna nimellä”)"
 
 # *** TARKISTA: Mikä on sanan ”transient” merkitys tässä – liikkuva? tilapäinen? Ja mitä tässä ylipäänsä tehdään?
 #: editor/kcolorschemeeditor.cpp:39
