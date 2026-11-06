@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-02 00:47+0000\n"
-"PO-Revision-Date: 2026-02-24 19:29+0200\n"
+"PO-Revision-Date: 2026-10-05 17:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -66,25 +66,25 @@ msgstr "Tämä sovellus ei tue tapahtumakohtaisten ilmoitusten asettamista"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "Tämä ilmoitus näytetään ponnahdusviestinä"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "Tätä ilmoitusta ei näytetä ponnahdusviestinä"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "Tämä ilmoitus soittaa äänen"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "Tämä ilmoitus ei soita ääntä"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format

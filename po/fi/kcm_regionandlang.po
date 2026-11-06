@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-30 00:56+0000\n"
-"PO-Revision-Date: 2026-08-24 19:33+0300\n"
+"PO-Revision-Date: 2026-10-05 17:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -352,7 +352,7 @@ msgstr "Oletus"
 #, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO C -standardi"
 
 #: localelistmodel.cpp:142
 #, kde-format

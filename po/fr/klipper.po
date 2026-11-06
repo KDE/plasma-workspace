@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:58+0000\n"
-"PO-Revision-Date: 2026-11-02 13:41+0100\n"
+"PO-Revision-Date: 2026-11-04 17:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -338,11 +338,9 @@ msgid "Clear History"
 msgstr "Effacer l'historique"
 
 #: declarative/qml/ClipboardMenu.qml:316
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "&Configurer Klipper..."
+msgstr "Configurer le presse-papier..."
 
 #: declarative/qml/ClipboardMenu.qml:367
 #, kde-format

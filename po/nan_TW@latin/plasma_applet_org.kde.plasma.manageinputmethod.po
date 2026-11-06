@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-11 00:48+0000\n"
-"PO-Revision-Date: 2026-10-16 20:03+0900\n"
+"PO-Revision-Date: 2026-10-28 22:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
+"Language-Team: Min Nan - Taiwan (Latin) <zh-l10n@lists.slat.org>\n"
 "Language: nan_TW@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: qml/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "Îng-bōo Khí-puânn"
 
 #: qml/main.qml:77
 #, kde-format
@@ -32,19 +32,19 @@ msgstr "Thîng-iōng"
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch and Tablet"
-msgstr ""
+msgstr "Tshiok-khòng kap Uē-tôo-pán"
 
 #: qml/main.qml:99
 #, kde-format
 msgctxt "@action:tray context menu"
 msgid "Touch, Tablet, Mouse, and Touchpad"
-msgstr ""
+msgstr "Tshiok-khòng, Uē-tôo-pán, Ku̍t-tshí kap Uē-tôo-pán"
 
 #: qml/main.qml:116
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure On-Screen Keyboards…"
-msgstr ""
+msgstr "Siat-tīng Îng-bōo Khí-puânn…"
 
 #: qml/main.qml:133
 #, kde-format
@@ -53,6 +53,8 @@ msgid ""
 "On-Screen Keyboard: unavailable\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Îng-bōo Khí-puânn: bē-sái iōng\n"
+"Tiám tse lâi siat-tīng îng-bōo khí-puânn"
 
 #: qml/main.qml:143
 #, kde-format
@@ -61,6 +63,8 @@ msgid ""
 "Configured not to show automatically\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Siat-tīng mài tsū-tōng hián-sī\n"
+"Tiám tse lâi siat-tīng îng-bōo khí-puânn"
 
 #: qml/main.qml:156
 #, kde-format
@@ -71,6 +75,8 @@ msgid ""
 "No supported text field is currently active\n"
 "Click or tap to show in hardware keyboard emulation mode."
 msgstr ""
+"Tsit-má bô tsi-uān ê bûn-jī lân-uī ū leh iōng\n"
+"Tiám tse lâi iōng ngē-thé khí-puânn bôo-gí bôo-sik lâi hián-sī."
 
 #: qml/main.qml:167
 #, kde-format
@@ -79,6 +85,8 @@ msgid ""
 "On-Screen Keyboard is visible\n"
 "Click or tap to hide the on-screen keyboard."
 msgstr ""
+"Îng-bōo Khí-puânn tsit-má ē-khuànn--ê\n"
+"Tiám tse lâi kā îng-bōo khí-puânn ún-tsông."
 
 #: qml/main.qml:177
 #, kde-format
@@ -87,6 +95,8 @@ msgid ""
 "Shows automatically when tapping a text field\n"
 "Tap to configure on-screen keyboard settings"
 msgstr ""
+"Tiám bûn-jī lân-uī ê sî-tsūn tsū-tōng hián-sī\n"
+"Tiám tse lâi siat-tīng îng-bōo khí-puânn"
 
 #: qml/main.qml:187
 #, kde-format
@@ -95,3 +105,5 @@ msgid ""
 "Shows automatically when interacting with a text field\n"
 "Click or tap to configure on-screen keyboard settings"
 msgstr ""
+"Kap bûn-jī lân-uī hōo-tōng ê sî-tsūn tsū-tōng hián-sī\n"
+"Tiám tse lâi siat-tīng îng-bōo khí-puânn"

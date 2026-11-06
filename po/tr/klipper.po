@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: configdialog.cpp:86
 #, kde-format
@@ -815,7 +815,7 @@ msgstr "Görselleri pano geçmişinde depolayın."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr "Bir metin veya dosya kopyalandığında"
+msgstr "Metin veya dosya kopyalandığında"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
@@ -827,7 +827,7 @@ msgstr "Bir metin veya dosya kopyalandığında anında açılır menüyü göst
 #: klipper.kcfg:43
 #, kde-format
 msgid "When text is selected"
-msgstr "Bir metin seçildiğinde"
+msgstr "Metin seçildiğinde"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44

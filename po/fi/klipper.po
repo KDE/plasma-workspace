@@ -7,7 +7,7 @@
 # Tapio Kautto <eleknader@phnet.fi>, 2004.
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2006, 2007.
-# SPDX-FileCopyrightText: 2009, 2010, 2018, 2019, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2009, 2010, 2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 # Copyright © 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 00:58+0000\n"
-"PO-Revision-Date: 2025-09-11 17:34+0300\n"
+"PO-Revision-Date: 2026-10-06 10:17+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -49,20 +49,7 @@ msgid "Selection and Clipboard:"
 msgstr "Valinta ja leikepöytä:"
 
 #: configdialog.cpp:108
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -78,35 +65,40 @@ msgid ""
 msgstr ""
 "Kun näytöltä on hiirellä tai näppäimistöllä korostettu tekstiä tai alue, "
 "tämä on <emphasis>valinta</emphasis>, jonka voi liittää hiiren "
-"keskipainikkeella.<nl/><nl/>Jos valinta nimenomaisesti kopioidaan "
+"keskipainikkeella.<nl/><nl/>Jos valinta kopioidaan nimenomaisesti "
 "<interface>Kopioi</interface>- tai <interface>Leikkaa</interface>-"
 "toiminnolla, se tallentuu <emphasis>leikepöydälle</emphasis>, josta sen voi "
-"liittää <interface>Liitä</interface>-toiminnolla.<nl/><nl/>"
+"liittää <interface>Liitä</interface>-toiminnolla.<nl/> <nl/>Jos tämä on "
+"valittu, valinta ja leikepöytä pidetään samana, jolloin mikä tahansa valinta "
+"on heti käytettävissä liitettäväksi millä tahansa tavalla. Ellei tätä ole "
+"valittu, valinnan voi yhä tallentaa leikepöytähistoriaan (alla olevan "
+"valinnan mukaisesti), mutta sen voi liittää vain hiiren keskipainikkeella."
 
 #: configdialog.cpp:127
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Osoittimella tai näppäimistöllä valittu teksti"
 
 #: configdialog.cpp:129
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
-msgstr "Tallenna aina historiaan"
+msgstr "Sisällytä historiaan:"
 
 #: configdialog.cpp:131
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Nimenomaisesti kopioitu teksti tallennetaan aina, ellei sitä ole merkitty "
+"salasanaksi."
 
 #: configdialog.cpp:136
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Kopioitiin nimenomaisesti kuvadata"
 
 #: configdialog.cpp:140
 #, kde-format
@@ -114,6 +106,8 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Esimerkiksi Kritan tai GIMPin tapaisista kuvakäsittelyohjelmista kopioidut "
+"tasot ja valinnat.<br/><a href=\"1\">Lisää kuvista leikepöydällä</a>."
 
 #: configdialog.cpp:149
 #, kde-kuit-format
@@ -127,6 +121,13 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Leikepöytä sallii aina kuvatiedostojen kopioimisen tiedostoniminä ja näyttää "
+"niiden pienoiskuvat. Tämä asetus koskee tapauksia, joissa kuvat on "
+"talletettu suoraan datana. Jotkin sovellukset tukevat kumpaakin, mutta "
+"toiset hyväksyvät vain kuvadatan.<nl/><nl/>Huomaa myös, että Spectacle-"
+"kuvakaappaustyökalu sivuuttaa tämän asetuksen, kun se on asetettu "
+"tallentamaan kuvakaappaukset leikepöydälle. Myös sovellukset, jotka "
+"lähettävät niin tekstiä kuin kuvaa, sivuuttavat sen."
 
 #: configdialog.cpp:173
 #, kde-kuit-format
@@ -375,7 +376,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Tyhjennä salatieto"
 
 #: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
@@ -588,22 +589,16 @@ msgid "Command:"
 msgstr "Komento:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"<placeholder>&#37;</placeholder> komennossa korvataan leikepöydän koko "
-"sisällöllä. <placeholder>&#37;0</placeholder>–<placeholder>&#37;9</"
-"placeholder> korvataan sovituskuvion vastaavalla tekstikaappauksella."
+"Komennossa <b>&#37;</b>:t komennossa korvataan leikepöydän koko sisällöllä. "
+"<b>&#37;0</b>–<b>&#37;9</b> korvataan sovituskuvion vastaavilla "
+"tekstikaappauksilla."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -654,7 +649,7 @@ msgstr "Tyhjennä leikepöydän historia"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Älä kysy uudelleen"
 
 #: historymodel.cpp:489
 #, kde-format
@@ -796,54 +791,43 @@ msgstr "Pidä valinta ja leikepöytä samoina"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Kohdistimella valittu sisältö kopioituu automaattisesti leikepöydälle, josta "
-"sen voi liittää joko Liitä-toiminnolla tai hiiren keskipainikkeella.<br/><a "
-"href=\"1\">Lisätietoa valinnasta ja leikepöydästä</a>."
+"Osoittimella valittu sisältö kopioituu automaattisesti leikepöydälle, josta "
+"sen voi liittää joko <i>Liitä</i>-toiminnolla tai hiiren keskipainikkeella."
+"<br/><a href=\"1\">Lisätietoa valinnasta ja leikepöydästä</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Sivuuta valinta"
+msgstr "Tallenna valinta"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:30
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Kohdistimella valittu sisältö, jota ei ole kopioitu, ei automaattisesti "
-"tallennu leikepöytähistoriaan, ja sen voi liittää vain hiiren "
-"keskipainikkeella."
+"Osoittimella valittua sisältöä, jota ei nimenomaisesti kopioida "
+"leikepöydälle, ei automaattisesti talleteta leikepöytähistoriaan."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:33
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Tallenna kuvat"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:35
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Tallentuvatko tekstivalinnat leikepöytähistoriaan."
+msgstr "Talleta kuvat leikepöytähistoriaan."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:38
@@ -896,11 +880,12 @@ msgstr "Historian koko:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:59
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "Leikepöytähistoria tallentaa enintään näin monta tietuetta."
+msgstr ""
+"Leikepöytähistoria tallettaa enintään näin monta tietuetta. Enimmäisarvo on "
+"2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:62
@@ -910,26 +895,19 @@ msgstr "Tyhjä tietue (osoittaa toiminnon puusovelman muutoksia)"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:69
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "Poista valinnasta tyhjemerkit"
+msgstr "Poista tyhjemerkit"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Poista tyhjemerkit valitun tekstin alusta ja lopusta ennen toiminnon "
-"suorittamista. Tällä voi esimerkiksi varmistaa, että selaimeen liitetty "
-"verkko-osoite toimii oikein. Leikepöydälle tallennettua tekstiä ei muuteta."
+"Poista toiminnolle välitetystä tekstistä tyhjemerkit alusta ja lopusta. "
+"Historiaan tallennettuun tekstiin ei kajota."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
@@ -952,7 +930,7 @@ msgstr ""
 #: klipper.kcfg:79
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Tarjoa kopioiduille linkeille ja tiedostoille sovelluksia"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:81
@@ -962,6 +940,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Tiedostoille ja linkeille, jotka alkavat <i>http://</i> tai <i>https://</i>, "
+"tarjotaan mahdollisten muiden soveltuvien toimenpiteiden ohella sovelluksia, "
+"jotka voivat avata ne."
 
 #: klipperpopup.cpp:36
 #, kde-format
