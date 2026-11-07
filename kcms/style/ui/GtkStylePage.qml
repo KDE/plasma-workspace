@@ -10,6 +10,7 @@ import QtQuick.Layouts
 import QtQuick.Dialogs as QtDialogs
 import QtQuick.Controls as QtControls
 import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
 import org.kde.newstuff as NewStuff
 
 Kirigami.Page {
@@ -129,6 +130,22 @@ Kirigami.Page {
             text: i18nc("@info %1 is a list of GTK versions",
                         "This theme does not support GTK %1. Applications built with those versions will fall back to GTK defaults.",
                         kcm.gtkPage.gtkThemesModel.selectedThemeMissingGtkVersions.join(", "))
+        }
+
+        QtControls.CheckBox {
+            Layout.alignment: Qt.AlignHCenter
+            text: i18n("Colorize Adwaita apps")
+            checked: kcm.styleSettings.colorizeAdwaita
+            onToggled: kcm.styleSettings.colorizeAdwaita = checked
+
+            QtControls.ToolTip.visible: hovered
+            QtControls.ToolTip.delay: Kirigami.Units.toolTipDelay
+            QtControls.ToolTip.text: i18n("Apply the current Plasma color scheme and accent color to GTK 4 and libadwaita apps that use the default Adwaita style.")
+
+            KCM.SettingStateBinding {
+                configObject: kcm.styleSettings
+                settingName: "colorizeAdwaita"
+            }
         }
 
         Item {
