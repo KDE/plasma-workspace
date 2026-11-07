@@ -21,6 +21,10 @@
       <label>Show icons in menus</label>
       <default>true</default>
     </entry>
+    <entry name="colorizeAdwaita" key="ColorizeAdwaita" type="Bool">
+      <label>Colorize Adwaita apps</label>
+      <default>false</default>
+    </entry>
   </group>
   <group name="Toolbar style">
     <entry name="toolButtonStyle" key="ToolButtonStyle" type="String">
