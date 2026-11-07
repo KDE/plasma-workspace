@@ -163,6 +163,13 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
             //   window with the given string as its WM class or WM name hint.
             //
             // Source: https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
+
+            if (services.isEmpty()) {
+                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
+                    return (service->desktopEntryName() + QStringLiteral(".desktop")) == appId;
+                });
+            }
+
             if (services.isEmpty() && !xWindowsWMClassName.isEmpty()) {
                 services = KApplicationTrader::query([&xWindowsWMClassName](const KService::Ptr &service) {
                     return service->property<QString>(QStringLiteral("StartupWMClass")).compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
