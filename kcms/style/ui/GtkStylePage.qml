@@ -101,7 +101,7 @@ Kirigami.Page {
 
             QtControls.ToolTip.visible: hovered
             QtControls.ToolTip.delay: Kirigami.Units.toolTipDelay
-            QtControls.ToolTip.text: i18n("Apply the current Plasma color scheme and accent color to GTK 4 and libadwaita apps that use the default Adwaita style.")
+            QtControls.ToolTip.text: i18n("Apply the Plasma color-scheme to Adwaita styled GTK 4 apps.")
 
             KCM.SettingStateBinding {
                 configObject: kcm.styleSettings
