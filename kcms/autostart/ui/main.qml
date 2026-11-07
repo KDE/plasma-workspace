@@ -230,6 +230,7 @@ KCM.ScrollViewKCM {
                 id: loginFileDialog
 
                 title: i18n("Choose Login Script")
+                nameFilters: [i18nc("@item:inlistbox file filter for shell scripts", "Shell Scripts (*.sh)")]
                 currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
                 onAccepted: {
                     kcm.model.addScript(loginFileDialog.selectedFile, AutostartModel.XdgScripts);

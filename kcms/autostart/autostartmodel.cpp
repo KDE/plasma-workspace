@@ -387,6 +387,9 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
     } else if (!file.isReadable()) {
         Q_EMIT error(i18n("\"%1\" is not readable.", url.toLocalFile()));
         return;
+    } else if (kind == AutostartModel::AutostartEntrySource::XdgScripts && !file.fileName().endsWith(u".sh")) {
+        Q_EMIT error(i18n("\"%1\" is not a shell script. Login scripts must have a file name ending in \".sh\".", url.toLocalFile()));
+        return;
     }
 
     QFile scriptFile(url.toLocalFile());
