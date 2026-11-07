@@ -25,7 +25,7 @@ msgstr "kulupu pi ante toki pi toki pona"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "lipu pi tawa linluwi"
 
 #: currentcontainmentactionsmodel.cpp:201
 #, kde-format
@@ -86,56 +86,56 @@ msgstr "ilo Plasma"
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "ilo Plasma"
+msgstr "ilo Plasma pi pali sin %1"
 
 #: desktopview.cpp:254
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "ilo Plasma sin %1 pi nanpa pali %2"
 
 #: desktopview.cpp:258
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "ilo Plasma"
+msgstr "ilo Plasma %1"
 
 #: desktopview.cpp:264
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "sina wile pana sona pi ijo pakala la o tawa bugs.kde.org"
 
 #: desktopview.cpp:272
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "o tu e nanpa pi ilo Plasma"
 
 #: desktopview.cpp:278
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "o pana sona pi ijo pakala"
 
 #: desktopview.cpp:288
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "sitelen pi lukin sama o len"
 
 #: desktopview.cpp:290
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "tenpo ni la o len"
 
 #: desktopview.cpp:297
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "tenpo ale la o len.."
 
 #: desktopview.cpp:303
 #, kde-kuit-format
@@ -146,22 +146,25 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"sina wile ala wile len e sitelen pi lukin sama?<nl/><nl/>sina wile ante e ni "
+"la sina wile weka e toki ilo pi nimi <icode>ShowDesktopPreviewBanner</icode> "
+"lon lipu <filename>kdeglobals</filename>."
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "o len e ni?"
 
 #: desktopview.cpp:520 desktopview.cpp:536
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "o nasin ante"
 
 #: desktopview.cpp:534
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "o nasin ante ala"
 
 #: main.cpp:126
 #, kde-format
@@ -191,12 +194,12 @@ msgstr "o weka e ilo lon"
 #: main.cpp:152
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "ni li pana e nimi ken pi ante ilo"
 
 #: main.cpp:208
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr ""
+msgstr "ilo Plasma li ken open ala"
 
 #: main.cpp:209
 #, kde-format
@@ -205,30 +208,33 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
+"ilo Plasma li ken open ala tan ni: ilo Plasma li wile e ilo OpenGL nanpa 2 "
+"anu ilo kon sitelen\n"
+"o alasa sona pi pakala ilo e ilo kon sitelen sina."
 
 #: osd.cpp:70
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:98
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
-msgstr ""
+msgstr "kalama ala"
 
 #: osd.cpp:121
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr ""
+msgstr "ilo uta li kute ala"
 
 #: osd.cpp:137
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr ""
+msgstr "%1 li kalama ala"
 
 #: osd.cpp:159
 #, kde-format
@@ -298,37 +304,37 @@ msgstr "ilo sitelen lon sinpin ilo li pali ala"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "ilo sitelen sona li len ala li lape ala"
 
 #: osd.cpp:208
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "ilo sitelen sona li len li ken lape"
 
 #: osd.cpp:218
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "nasin pi wawa awen"
 
 #: osd.cpp:221
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "nasin wawa meso"
 
 #: osd.cpp:224
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "nasin wawa pi pali mute"
 
 #: panelview.cpp:1076
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "o len a ilo lawa pi palisa ni"
 
 #: panelview.cpp:1078
 #, kde-format
@@ -340,17 +346,17 @@ msgstr "o lukin e ilo lawa pi palisa ni"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: shellcontainmentconfig.cpp:109
 #, kde-format
 msgid "Built-in Screen"
-msgstr ""
+msgstr "ilo sitelen pi ilo sina"
 
 #: shellcontainmentconfig.cpp:138
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "ilo sitelen %1 li weka"
 
 #: shellcorona.cpp:182 shellcorona.cpp:184
 #, kde-format
@@ -365,33 +371,33 @@ msgstr "o lukin ala e tomo lipu"
 #: shellcorona.cpp:200
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "o open e lipu pi ilo kon"
 
 #: shellcorona.cpp:208
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr ""
+msgstr "o len ala e ilo kepeken pi supa ante"
 
 #: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Previous Activity"
-msgstr ""
+msgstr "o kepeken e supa monsi"
 
 #: shellcorona.cpp:225
 #, kde-format
 msgid "Switch to Next Activity"
-msgstr ""
+msgstr "o kepeken e supa sinpin"
 
 #: shellcorona.cpp:261
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "o ante e supa..."
 
 #: shellcorona.cpp:283
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "meso palisa la o tawa e ilo kon kepeken pi ilo nena"
 
 #: shellcorona.cpp:2296
 #, kde-format
@@ -402,46 +408,41 @@ msgstr "o lon e palisa ilo sin"
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr ""
+msgstr "%1 pi ijo ala"
 
 #: softwarerendernotifier.cpp:34
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "mi kepeken e ilo kon sitelen"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "mi kepeken e ilo kon sitelen"
 
 #: softwarerendernotifier.cpp:36
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "ken la sitelen li pakala"
 
 #: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
-msgstr ""
+msgstr "tenpo ale la o len"
 
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr ""
+msgstr "nanpa palisa"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr ""
+msgstr "ni li nanpa e palisa"
 
 #~ msgid ""
 #~ "Load plasmashell as a standalone application, needs the shell-plugin "
 #~ "option to be specified"
-#~ msgstr ""
-#~ "o open e ilo plasmashell lon leko sin. ni li wile e pana pi lawa \"shell-"
-#~ "option\""
-
-#~ msgid "Unknown %1"
-#~ msgstr "sona ala %1"
+#~ msgstr "o open e ilo plasmashell, ni li wile e nimi shell-plugin"
