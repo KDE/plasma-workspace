@@ -17,6 +17,7 @@
 #include <KSharedConfig>
 
 #include <errno.h>
+#include <fcntl.h>
 #include <unistd.h>
 #include <xcb/xfixes.h>
 
@@ -81,9 +82,6 @@ static void configureDisconnectMode()
 
 int main(int argc, char *argv[])
 {
-    qputenv("QT_QPA_PLATFORM", "xcb");
-    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
-
     int readyPipe[2];
     if (pipe(readyPipe) != 0) {
         qCWarning(KDED) << "Could not create the startup pipe";
@@ -107,6 +105,24 @@ int main(int argc, char *argv[])
 
     close(readyPipe[0]);
 
+    if (const int nullFd = open("/dev/null", O_RDWR); nullFd == -1) {
+        qCWarning(KDED) << "Failed to redirect stdin, stdout, and stderr";
+    } else {
+        dup2(nullFd, STDIN_FILENO);
+        dup2(nullFd, STDOUT_FILENO);
+        dup2(nullFd, STDERR_FILENO);
+        if (nullFd > 2) {
+            close(nullFd);
+        }
+    }
+
+    if (setsid() < 0) {
+        qCWarning(KDED) << "Failed to take control of the new session";
+        return 1;
+    }
+
+    qputenv("QT_QPA_PLATFORM", "xcb");
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QGuiApplication app(argc, argv);
     configureDisconnectMode();
     app.setQuitOnLastWindowClosed(false);
