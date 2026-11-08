@@ -52,20 +52,6 @@ FdoSelectionManager::FdoSelectionManager(QObject *parent, const QList<QVariant> 
 
     qCDebug(SNIPROXY) << "starting";
 
-    // we may end up calling QCoreApplication::quit() in this method, at which point we need the event loop running
-    QTimer::singleShot(0, this, &FdoSelectionManager::init);
-}
-
-FdoSelectionManager::~FdoSelectionManager()
-{
-    qCDebug(SNIPROXY) << "closing";
-    m_selectionOwner->release();
-    delete Xcb::atoms;
-    delete Xcb::trayVisual;
-}
-
-void FdoSelectionManager::init()
-{
     // load damage extension
     xcb_connection_t *c = m_x11Interface->connection();
     xcb_prefetch_extension_data(c, &xcb_damage_id);
@@ -75,8 +61,7 @@ void FdoSelectionManager::init()
         xcb_damage_query_version_unchecked(c, XCB_DAMAGE_MAJOR_VERSION, XCB_DAMAGE_MINOR_VERSION);
     } else {
         // no XDamage means
-        qCCritical(SNIPROXY) << "could not load damage extension. Quitting";
-        qApp->exit(-1);
+        qCCritical(SNIPROXY) << "could not load damage extension";
     }
 
     qApp->installNativeEventFilter(this);
@@ -85,6 +70,14 @@ void FdoSelectionManager::init()
     connect(m_selectionOwner, &KSelectionOwner::failedToClaimOwnership, this, &FdoSelectionManager::onFailedToClaimOwnership);
     connect(m_selectionOwner, &KSelectionOwner::lostOwnership, this, &FdoSelectionManager::onLostOwnership);
     m_selectionOwner->claim(false);
+}
+
+FdoSelectionManager::~FdoSelectionManager()
+{
+    qCDebug(SNIPROXY) << "closing";
+    m_selectionOwner->release();
+    delete Xcb::atoms;
+    delete Xcb::trayVisual;
 }
 
 bool FdoSelectionManager::addDamageWatch(xcb_window_t client)
@@ -205,14 +198,12 @@ void FdoSelectionManager::onClaimedOwnership()
 
 void FdoSelectionManager::onFailedToClaimOwnership()
 {
-    qCWarning(SNIPROXY) << "failed to claim ownership of Systray Manager";
-    qApp->exit(-1);
+    qCCritical(SNIPROXY) << "failed to claim ownership of Systray Manager";
 }
 
 void FdoSelectionManager::onLostOwnership()
 {
-    qCWarning(SNIPROXY) << "lost ownership of Systray Manager";
-    qApp->exit(-1);
+    qCCritical(SNIPROXY) << "lost ownership of Systray Manager";
 }
 
 void FdoSelectionManager::setSystemTrayVisual()
