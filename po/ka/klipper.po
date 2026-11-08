@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:58+0000\n"
+"POT-Creation-Date: 2026-11-08 03:00+0000\n"
 "PO-Revision-Date: 2026-11-03 03:29+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -633,24 +633,24 @@ msgstr "მართლა გნებავთ ბუფერის ისტ
 msgid "Clear Clipboard History"
 msgstr "ბუფერის ისტორიის გასუფთავება"
 
-#: historymodel.cpp:382 historymodel.cpp:694
+#: historymodel.cpp:382 historymodel.cpp:705
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "აღარ მკითხო"
 
-#: historymodel.cpp:489
+#: historymodel.cpp:500
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:690
+#: historymodel.cpp:701
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "ამ ელემენტს ვარსკვლავი აქვთ. მართლა გნებავთ მისი წაშლა ისტორიიდან?"
 
-#: historymodel.cpp:692
+#: historymodel.cpp:703
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "ვარსკვლავიანი ელემენტის წაშლა"

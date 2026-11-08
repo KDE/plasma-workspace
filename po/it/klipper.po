@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:58+0000\n"
+"POT-Creation-Date: 2026-11-08 03:00+0000\n"
 "PO-Revision-Date: 2026-10-19 16:41+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -645,26 +645,26 @@ msgstr ""
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"
 
-#: historymodel.cpp:382 historymodel.cpp:694
+#: historymodel.cpp:382 historymodel.cpp:705
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Non chiedere più"
 
-#: historymodel.cpp:489
+#: historymodel.cpp:500
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:690
+#: historymodel.cpp:701
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Questo elemento è contrassegnato con una stella. Vuoi davvero rimuoverlo "
 "dalla cronologia?"
 
-#: historymodel.cpp:692
+#: historymodel.cpp:703
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Rimuovi elemento contrassegnato con una stella"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:58+0000\n"
+"POT-Creation-Date: 2026-11-08 03:00+0000\n"
 "PO-Revision-Date: 2026-09-27 14:59+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -654,25 +654,25 @@ msgstr "Vill du verkligen tömma och ta bort hela klippbordshistoriken?"
 msgid "Clear Clipboard History"
 msgstr "Töm klippbordshistorik"
 
-#: historymodel.cpp:382 historymodel.cpp:694
+#: historymodel.cpp:382 historymodel.cpp:705
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Fråga inte igen"
 
-#: historymodel.cpp:489
+#: historymodel.cpp:500
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 x %2"
 
-#: historymodel.cpp:690
+#: historymodel.cpp:701
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Objektet har en stjärna. Vill du verkligen ta bort det från historiken?"
 
-#: historymodel.cpp:692
+#: historymodel.cpp:703
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Ta bort objekt med stjärnor"

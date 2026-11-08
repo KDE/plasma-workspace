@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-07 00:51+0000\n"
+"POT-Creation-Date: 2026-11-08 03:00+0000\n"
 "PO-Revision-Date: 2026-09-24 20:33-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -96,42 +96,42 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "ئىزدە…"
 
-#: qml/RunCommand.qml:317
+#: qml/RunCommand.qml:319
 #, kde-format
 msgid "Configure"
 msgstr "سەپلە"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:320
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "KRunner قىلمىشىنى سەپلەيدۇ"
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:325
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "KRunner نى سەپلە…"
 
-#: qml/RunCommand.qml:332
+#: qml/RunCommand.qml:334
 #, kde-format
 msgid "Pin"
 msgstr "مىخلا"
 
-#: qml/RunCommand.qml:333
+#: qml/RunCommand.qml:335
 #, kde-format
 msgid "Pin Search"
 msgstr "ئىزدەشنى مىخلا"
 
-#: qml/RunCommand.qml:336
+#: qml/RunCommand.qml:338
 #, kde-format
 msgid "Keep Open"
 msgstr "ئوچۇق تۇت"
 
-#: qml/RunCommand.qml:402 qml/RunCommand.qml:408
+#: qml/RunCommand.qml:413 qml/RunCommand.qml:419
 #, kde-format
 msgid "Recent Queries"
 msgstr "يېقىنقى سۈرۈشتۈرۈش"
 
-#: qml/RunCommand.qml:406
+#: qml/RunCommand.qml:417
 #, kde-format
 msgid "Remove"
 msgstr "چىقىرىۋەت"

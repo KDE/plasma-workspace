@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:58+0000\n"
+"POT-Creation-Date: 2026-11-08 03:00+0000\n"
 "PO-Revision-Date: 2026-10-07 11:45+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -664,26 +664,26 @@ msgstr "Želite li zaista da očistite i obrišete ceo istorijat klipborda?"
 msgid "Clear Clipboard History"
 msgstr "Čišćenje istorijata klipborda"
 
-#: historymodel.cpp:382 historymodel.cpp:694
+#: historymodel.cpp:382 historymodel.cpp:705
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Ne pitaj više"
 
-#: historymodel.cpp:489
+#: historymodel.cpp:500
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:690
+#: historymodel.cpp:701
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Ova stavka je označena zvezdicom. Želite li zaista da je uklonite iz "
 "istorijata?"
 
-#: historymodel.cpp:692
+#: historymodel.cpp:703
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Uklanjanje stavke sa zvezdicom"

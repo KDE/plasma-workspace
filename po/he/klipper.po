@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:58+0000\n"
-"PO-Revision-Date: 2026-11-05 13:57+0200\n"
+"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"PO-Revision-Date: 2026-11-07 22:12+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -632,24 +632,24 @@ msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הג�
 msgid "Clear Clipboard History"
 msgstr "פינוי היסטוריית לוח הגזירים"
 
-#: historymodel.cpp:382 historymodel.cpp:694
+#: historymodel.cpp:382 historymodel.cpp:705
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "לא לשאול שוב"
 
-#: historymodel.cpp:489
+#: historymodel.cpp:500
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:690
+#: historymodel.cpp:701
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "הפריט הזה מסומן בכוכב. להסיר אותו מההיסטוריה?"
 
-#: historymodel.cpp:692
+#: historymodel.cpp:703
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "הסרת פריט מסומן בכוכב"
@@ -817,11 +817,9 @@ msgstr "כשטקסט או קובץ מועתקים"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr "להציג חלונית קופצת עם פעולות תקפות מיד עם הבחירה."
+msgstr "להציג את התפריט הצץ ברגע שטקסט או קובץ מועתקים."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43

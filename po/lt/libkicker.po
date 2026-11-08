@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 01:02+0000\n"
+"POT-Creation-Date: 2026-11-07 09:25+0000\n"
 "PO-Revision-Date: 2026-04-25 23:29+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -84,7 +84,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:220
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:229
+#: recentusagemodel.cpp:145 recentusagemodel.cpp:216
 #, kde-format
 msgid "Applications"
 msgstr "Programos"
@@ -120,62 +120,62 @@ msgstr "Kompiuteris"
 msgid "Favorites"
 msgstr "Žymelės"
 
-#: recentusagemodel.cpp:156
+#: recentusagemodel.cpp:143
 #, kde-format
 msgid "Recently Used"
 msgstr "Paskiausiai naudoti"
 
-#: recentusagemodel.cpp:160
+#: recentusagemodel.cpp:147
 #, kde-format
 msgid "Places"
 msgstr "Vietos"
 
-#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
+#: recentusagemodel.cpp:150 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "Failai"
 
-#: recentusagemodel.cpp:263
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Pamiršti programą"
 
-#: recentusagemodel.cpp:328
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr "Aplankai"
 
-#: recentusagemodel.cpp:375
+#: recentusagemodel.cpp:362
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atverti vidinį aplanką"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:367
 #, kde-format
 msgid "Forget Folder"
 msgstr "Pamiršti aplanką"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:367
 #, kde-format
 msgid "Forget File"
 msgstr "Pamiršti failą"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:513
 #, kde-format
 msgid "Forget All"
 msgstr "Viską pamiršti"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:515
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Pamiršti visas programas"
 
-#: recentusagemodel.cpp:530
+#: recentusagemodel.cpp:517
 #, kde-format
 msgid "Forget All Folders"
 msgstr "Pamiršti visus aplankus"
 
-#: recentusagemodel.cpp:533
+#: recentusagemodel.cpp:520
 #, kde-format
 msgid "Forget All Files"
 msgstr "Pamiršti visus failus"

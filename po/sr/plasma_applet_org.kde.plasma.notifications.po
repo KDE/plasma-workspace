@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-22 00:52+0000\n"
+"POT-Creation-Date: 2026-11-07 11:03+0000\n"
 "PO-Revision-Date: 2026-09-30 12:00+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -211,7 +211,7 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Одустани"
 
-#: components/JobItem.qml:126 components/ThumbnailStrip.qml:154
+#: components/JobItem.qml:126 components/ThumbnailStrip.qml:155
 #, kde-format
 msgid "More Options…"
 msgstr "Више опција…"

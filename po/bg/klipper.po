@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-05 00:58+0000\n"
-"PO-Revision-Date: 2026-10-28 16:47+0200\n"
+"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"PO-Revision-Date: 2026-11-07 23:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: configdialog.cpp:86
 #, kde-format
@@ -139,14 +139,7 @@ msgid "Show action popup menu:"
 msgstr "Показване на изскачащо меню:"
 
 #: configdialog.cpp:211
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -156,11 +149,12 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Когато се избере текст, който съответства на шаблон за действие, или се "
-"избере от историята на клипборда, автоматично се показва изскачащото меню с "
-"приложимите действия. Ако автоматичното меню е изключено тук или не се "
-"показва за даден прозорец, то може да бъде показано с помощта на <shortcut>"
-"%1</shortcut> клавишна комбинация."
+"Когато текст, съответстващ на шаблон за действие, бъде копиран, избран или "
+"избран от историята на клипборда, автоматично се показва изскачащото меню с "
+"приложимите действия. За файлове това важи само при копиране или избор от "
+"историята.<nl/><nl/>До менюто може да се стигне и чрез клавишната комбинация "
+"<shortcut>%1</shortcut> или чрез бутон за всеки съответстващ запис в "
+"историята."
 
 #: configdialog.cpp:228
 #, kde-format
@@ -328,7 +322,7 @@ msgstr "Изчистване на историята"
 #: declarative/qml/ClipboardMenu.qml:316
 #, kde-format
 msgid "Configure Clipboard…"
-msgstr ""
+msgstr "Конфигурация на клипборда…"
 
 #: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
@@ -642,26 +636,26 @@ msgstr "Наистина ли да се изчисти цялата истори
 msgid "Clear Clipboard History"
 msgstr "&Изчистване историята на клипборда"
 
-#: historymodel.cpp:382 historymodel.cpp:694
+#: historymodel.cpp:382 historymodel.cpp:705
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
 msgstr "Без повторно запитване"
 
-#: historymodel.cpp:489
+#: historymodel.cpp:500
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:690
+#: historymodel.cpp:701
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Този елемент е маркиран със звезда. Наистина ли искате да го премахнете от "
 "историята?"
 
-#: historymodel.cpp:692
+#: historymodel.cpp:703
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Премахване на елемент, означен със звезда"
@@ -828,23 +822,19 @@ msgstr "Съхранение на изображения в историята �
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "При копиране на текст или файл"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Показване на изскачащото меню с приложимите действия, веднага щом бъде "
-"извършена селекция."
+msgstr "Показване на изскачащо меню веднага след копиране на текст или файл."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
 #, kde-format
 msgid "When text is selected"
-msgstr ""
+msgstr "Когато е избран текст"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -853,6 +843,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Показване на изскачащото меню веднага след избиране на текст, без изчакване "
+"на копиране."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -904,10 +896,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "За елемент, избран от историята"
+msgstr "При избор на елемент от историята"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -946,6 +937,3 @@ msgstr "Изчакащ прозорец на клипборд"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgid "Immediately on selection"
-#~ msgstr "Веднага при селекция"
