@@ -56,7 +56,7 @@ ContainmentItem {
     KItemModels.KSortFilterProxyModel {
         id: activeModel
         filterRoleName: "effectiveStatus"
-        dynamicSortFilter: !systemTrayState.expanded
+        dynamicSortFilter: !root.filtersFrozen
         filterRowCallback: (sourceRow, sourceParent) => {
             let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
             return value === PlasmaCore.Types.ActiveStatus;
@@ -67,7 +67,7 @@ ContainmentItem {
     KItemModels.KSortFilterProxyModel {
         id: hiddenModel
         filterRoleName: "effectiveStatus"
-        dynamicSortFilter: !systemTrayState.expanded
+        dynamicSortFilter: !root.filtersFrozen
         filterRowCallback: (sourceRow, sourceParent) => {
             let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
             return value === PlasmaCore.Types.PassiveStatus
@@ -75,16 +75,23 @@ ContainmentItem {
         Component.onCompleted: sourceModel = Plasmoid.systemTrayModel // avoid unnecessary binding, it causes loops
     }
 
-    // Re-evaluate filters when the popup closes to apply any status changes
-    // that accumulated while the popup was open
-    Connections {
-        target: systemTrayState
-        function onExpandedChanged() {
-            if (!systemTrayState.expanded) {
-                activeModel.invalidateFilter();
-                hiddenModel.invalidateFilter();
-            }
+
+    // Re-evaluate filters to apply any status changes that accumulated
+    // when filters were frozen because the user was likely interacting with the SystemTray.
+    // Freezing tries to prevent content changing under their hands.
+    readonly property bool filtersFrozen: systemTrayState.expanded
+        && (!Plasmoid.configuration.pin || dialog.active
+            || (trayHover.hovered && Qt.application.state !== Qt.ApplicationActive))
+
+    onFiltersFrozenChanged: {
+        if (!filtersFrozen) {
+            activeModel.invalidateFilter();
+            hiddenModel.invalidateFilter();
         }
+    }
+
+    HoverHandler {
+        id: trayHover
     }
 
     Instantiator {
