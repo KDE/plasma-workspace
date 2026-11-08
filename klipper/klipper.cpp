@@ -322,7 +322,12 @@ void Klipper::slotRepeatAction(bool fromHistory)
         return;
     }
     auto top = std::static_pointer_cast<const HistoryItem>(m_historyModel->first());
-    if (top) {
+    if (!top) {
+        return;
+    }
+    if (fromHistory) {
+        m_myURLGrabber->checkNewData(top);
+    } else {
         m_myURLGrabber->invokeAction(top);
     }
 }
