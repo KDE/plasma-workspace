@@ -16,6 +16,7 @@
 #include <KPluginMetaData>
 #include <KSharedConfig>
 
+#include <errno.h>
 #include <unistd.h>
 #include <xcb/xfixes.h>
 
@@ -82,21 +83,39 @@ int main(int argc, char *argv[])
 {
     qputenv("QT_QPA_PLATFORM", "xcb");
     QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
-    QApplication app(argc, argv);
 
-    configureDisconnectMode();
-
-    app.setQuitOnLastWindowClosed(false);
-    app.setQuitLockEnabled(false);
-
-    Kded kded;
+    int readyPipe[2];
+    if (pipe(readyPipe) != 0) {
+        qCWarning(KDED) << "Could not create the startup pipe";
+        return 1;
+    }
 
     const pid_t pid = fork();
     if (pid < 0) {
         qCWarning(KDED) << "Could not fork into the background";
+        close(readyPipe[0]);
+        close(readyPipe[1]);
+        return 1;
     } else if (pid > 0) {
+        close(readyPipe[1]);
+
+        char ready;
+        while (read(readyPipe[0], &ready, 1) < 0 && errno == EINTR) { }
+        close(readyPipe[0]);
         return 0;
     }
+
+    close(readyPipe[0]);
+
+    QGuiApplication app(argc, argv);
+    configureDisconnectMode();
+    app.setQuitOnLastWindowClosed(false);
+    app.setQuitLockEnabled(false);
+    Kded kded;
+
+    const char ready = 1;
+    (void)write(readyPipe[1], &ready, 1);
+    close(readyPipe[1]);
 
     return app.exec();
 }
