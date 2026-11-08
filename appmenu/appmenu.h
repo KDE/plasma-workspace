@@ -8,11 +8,6 @@
 
 #pragma once
 
-#include <config-X11.h>
-#ifdef HAVE_X11
-#include <xcb/xcb.h>
-#endif
-
 #include <kdedmodule.h>
 
 #include "menuimporter.h"
@@ -28,7 +23,6 @@ class AppMenuModule : public KDEDModule, protected QDBusContext
     Q_OBJECT
 public:
     explicit AppMenuModule(QObject *parent, const QList<QVariant> &list);
-    ~AppMenuModule() override;
 
 Q_SIGNALS:
     /**
@@ -78,8 +72,4 @@ private:
     AppmenuDBus *m_appmenuDBus;
     QDBusServiceWatcher *m_menuViewWatcher;
     QPointer<VerticalMenu> m_menu;
-
-#ifdef HAVE_X11
-    xcb_connection_t *m_xcbConn = nullptr;
-#endif
 };

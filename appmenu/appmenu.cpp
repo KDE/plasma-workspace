@@ -7,6 +7,9 @@
 */
 
 #include "appmenu.h"
+
+#include "config-X11.h"
+
 #include "../c_ptr.h"
 #include "appmenu_dbus.h"
 #include "appmenu_debug.h"
@@ -27,6 +30,10 @@
 #include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
 #include <kpluginfactory.h>
+
+#if HAVE_X11
+#include <xcb/xcb.h>
+#endif
 
 K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory, "appmenu.json", registerPlugin<AppMenuModule>();)
 
@@ -103,33 +110,17 @@ AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kappmenuview"))) {
         setupMenuImporter();
     }
-
-#if HAVE_X11
-    if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>(); !interface || !interface->connection()) {
-        m_xcbConn = xcb_connect(nullptr, nullptr);
-    }
-#endif
-}
-
-AppMenuModule::~AppMenuModule()
-{
-#if HAVE_X11
-    if (m_xcbConn) {
-        xcb_disconnect(m_xcbConn);
-    }
-#endif
 }
 
 void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, const QDBusObjectPath &menuObjectPath)
 {
 #if HAVE_X11
-    auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
-    auto *c = interface ? interface->connection() : nullptr;
-    if (!c) {
-        c = m_xcbConn;
-    }
+    xcb_connection_t *c = xcb_connect(nullptr, nullptr);
+    const auto _ = qScopeGuard([&c]() {
+        xcb_disconnect(c);
+    });
 
-    if (c) {
+    if (!xcb_connection_has_error(c)) {
         static xcb_atom_t s_serviceNameAtom = XCB_ATOM_NONE;
         static xcb_atom_t s_objectPathAtom = XCB_ATOM_NONE;
 
