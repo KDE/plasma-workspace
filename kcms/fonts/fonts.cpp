@@ -18,7 +18,6 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QFontDatabase>
-#include <QProcess>
 #include <QQmlEngine>
 #include <QQuickItem>
 #include <QQuickView>
@@ -134,10 +133,6 @@ void KFonts::save()
         QDBusMessage message = QDBusMessage::createSignal(u"/KDEPlatformTheme"_s, u"org.kde.KDEPlatformTheme"_s, u"refreshFonts"_s);
         QDBusConnection::sessionBus().send(message);
     }
-
-#if HAVE_X11
-    QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
-#endif
 }
 
 void KFonts::adjustFont(const QFont &font, const QString &category)

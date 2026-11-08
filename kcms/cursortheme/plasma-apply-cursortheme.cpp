@@ -7,7 +7,6 @@
 #include "cursorthemesettings.h"
 
 #include "../kcms-common_p.h"
-#include "config-X11.h"
 
 #include "xcursor/cursortheme.h"
 #include "xcursor/thememodel.h"
@@ -18,7 +17,6 @@
 #include <QCommandLineParser>
 #include <QDebug>
 #include <QFile>
-#include <QProcess>
 #include <QTimer>
 
 using namespace Qt::StringLiterals;
@@ -74,9 +72,6 @@ int main(int argc, char **argv)
                 settings->setCursorTheme(theme->name());
                 if (settings->save()) {
                     notifyKcmChange(GlobalChangeType::CursorChanged);
-#if HAVE_X11
-                    QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
-#endif
                     ts << i18n("Successfully applied the mouse pointer theme %1 to your current Plasma session", theme->title()) << Qt::endl;
                 } else {
                     ts << i18n("You have to restart the Plasma session for your newly applied mouse pointer theme to display correctly.") << Qt::endl;

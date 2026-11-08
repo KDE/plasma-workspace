@@ -14,13 +14,7 @@ target_link_libraries(plasma-setup-xwayland
     Qt::Core
     KF6::ConfigCore
     KF6::CoreAddons
+    xsystemsettings
 )
-
-if(HAVE_X11)
-    target_link_libraries(plasma-setup-xwayland
-        XCB::XCB
-        XCB::CURSOR
-    )
-endif()
 
 install(TARGETS plasma-setup-xwayland DESTINATION ${KDE_INSTALL_LIBEXECDIR})

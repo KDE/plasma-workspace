@@ -1,0 +1,6 @@
+{
+    "KPlugin": {
+        "Description": "Applies appearance settings, e.g. cursor theme, to X11 applications",
+        "Name": "X11 system settings"
+    }
+}

@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2026 David Edmundson <davidedmundson@kde.org>
 # SPDX-License-Identifier: BSD-2-Clause
 
+add_subdirectory(configurator)
+
 add_executable(plasma-kded6-x11 kded.cpp)
 
 ecm_qt_declare_logging_category(
