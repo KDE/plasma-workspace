@@ -135,7 +135,9 @@ void KFonts::save()
         QDBusConnection::sessionBus().send(message);
     }
 
+#if HAVE_X11
     QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
+#endif
 }
 
 void KFonts::adjustFont(const QFont &font, const QString &category)

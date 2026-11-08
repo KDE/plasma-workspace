@@ -10,6 +10,9 @@
 */
 
 #include "klookandfeelmanager.h"
+
+#include "config-X11.h"
+
 #include "../kcms/colors/colorsapplicator.h"
 #include "../kcms/kcms-common_p.h"
 #include <KIO/CommandLauncherJob>
@@ -654,7 +657,9 @@ void KLookAndFeelManager::setCursorTheme(const QString themeName)
 
     writeNewDefaults(QStringLiteral("kcminputrc"), QStringLiteral("Mouse"), QStringLiteral("cursorTheme"), themeName, KConfig::Notify);
     if (m_mode == Mode::Apply) {
+#if HAVE_X11
         QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
+#endif
         // Notify all applications that the cursor theme has changed
         notifyKcmChange(GlobalChangeType::CursorChanged);
     }

@@ -298,7 +298,9 @@ void CursorThemeConfig::save()
     KQuickManagedConfigModule::save();
     setPreferredSize(cursorThemeSettings()->cursorSize());
 
+#if HAVE_X11
     QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-setup-xwayland"));
+#endif
 
     removeThemes();
 
