@@ -256,7 +256,10 @@ void WallpaperModule::onWallpaperChanged(uint screenIdx)
     m_config->markAsClean();
     m_config->reparseConfiguration();
 
-    Q_ASSERT(m_selectedScreen);
+    if (!m_selectedScreen) {
+        // Screen was removed; the outputOrderChanged handler will pick a new one
+        return;
+    }
     int screen = screenIdFromName(m_selectedScreen->name());
     if (screen >= 0 && screenIdx == uint(screen)) {
         onScreenChanged();
