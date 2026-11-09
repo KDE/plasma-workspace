@@ -67,8 +67,7 @@ void Configurator::sync()
     QString theme = mousecfg.readEntry("cursorTheme", u"breeze_cursors"_s);
     int cursorSize = mousecfg.readEntry("cursorSize", 24);
 
-    KConfig kwinConfig(u"kwinrc"_s);
-    KConfigGroup xwaylandGroup(&kwinConfig, u"Xwayland"_s);
+    KConfigGroup xwaylandGroup(m_kwinrcWatcher->config(), u"Xwayland"_s);
     qreal xwaylandScale = xwaylandGroup.readEntry("Scale", 1.0);
     cursorSize *= xwaylandScale;
 
