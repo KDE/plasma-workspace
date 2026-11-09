@@ -21,5 +21,7 @@ public Q_SLOTS:
     void onRefreshFonts();
 
 private:
+    void sync();
+
     KConfigWatcher::Ptr m_kwinrcWatcher;
 };

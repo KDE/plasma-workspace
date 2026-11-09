@@ -12,5 +12,6 @@ target_link_libraries(configurator PRIVATE
     KF6::ConfigCore
     KF6::CoreAddons
     KF6::DBusAddons
-    xsystemsettings
+    XCB::XCB
+    XCB::CURSOR
 )

@@ -27,29 +27,9 @@ kconfig_target_kcfg_file(startplasma-wayland
     MUTATORS
 )
 
-if(HAVE_X11)
-    add_library(xsystemsettings OBJECT)
-
-    target_sources(xsystemsettings PRIVATE
-        xsystemsettings.cpp
-    )
-
-    target_include_directories(xsystemsettings
-        PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
-    )
-
-    target_link_libraries(xsystemsettings PRIVATE
-        KF6::ConfigCore
-        KF6::CoreAddons
-        XCB::XCB
-        XCB::CURSOR
-    )
-endif()
-
 add_subdirectory(plasma-session)
 add_subdirectory(plasma-shutdown)
 if(WITH_X11)
-    add_subdirectory(plasma-setup-xwayland)
     add_subdirectory(kded-x11)
 endif()
 add_subdirectory(session-shortcuts)
