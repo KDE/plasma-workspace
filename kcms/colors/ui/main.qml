@@ -53,9 +53,11 @@ KCM.GridViewKCM {
         id: fontMetrics
     }
 
+    // This is the height of one of the three example delegates inside the grid cell
+    property int demotextDelegateHeight: fontMetrics.height
     // The thumbnails are a bit more elaborate and need more room, especially when translated
     view.implicitCellWidth: Math.max(Kirigami.Units.gridUnit, fontMetrics.averageCharacterWidth) * 15
-    view.implicitCellHeight: Math.max(Kirigami.Units.gridUnit, fontMetrics.height) * 13
+    view.implicitCellHeight: Math.max(Kirigami.Units.gridUnit, fontMetrics.height) * 8 + (demotextDelegateHeight * 3)
 
     // we have a duplicate property here as "var" instead of "color", so that we
     // can set it to "undefined", which lets us use the "a || b" shorthand for
@@ -271,6 +273,13 @@ KCM.GridViewKCM {
                             width: parent.width
                             text: i18n("Normal text") + listPreviewColumn.demoText(model.palette)
                             activeFocusOnTab: false
+                            // Calculate the new height for the examples,
+                            // to avoid multiline delegates portruding outside of the item
+                            onImplicitHeightChanged: {
+                                if (root.demotextDelegateHeight < implicitHeight) {
+                                    root.demotextDelegateHeight = implicitHeight
+                                }
+                            }
                         }
 
                         QtControls.ItemDelegate {
