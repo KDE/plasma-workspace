@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2026-06-13 10:18+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -32,33 +32,33 @@ msgstr "Назва поточної теми вказівників"
 msgid "Current pointer size"
 msgstr "Поточний розмір вказівника"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не вдалося створити тимчасовий файл."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не вдалося отримати архів теми вказівника %1."
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Не вдалося відкрити архів із темою піктограм."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Цей файл не є архівом тем."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Не вдалося створити теку «icons»."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +66,12 @@ msgid ""
 msgstr ""
 "Тема з назвою %1 вже існує у вашій теці тем піктограм. Замінити її новою?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Перезаписати тему?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Тему успішно встановлено."
@@ -83,7 +83,7 @@ msgstr "Тему успішно встановлено."
 msgid "Timeout in seconds"
 msgstr "Час очікування у секундах"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -94,7 +94,7 @@ msgstr ""
 "поточного сеансу Плазми без випадкового встановлення теми, яка або є "
 "недоступною, або вже встановленою."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -104,26 +104,26 @@ msgstr ""
 "Плазми (якщо передати шлях повністю, буде використано лише останню частину "
 "шляху)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Вивести список усіх тем, які доступні у системі (і те, яка з тем є поточною)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Використати вказаний розмір, а не типовий для теми розмір"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr "Бажану тему «%1» вже встановлено як тему для поточного сеансу Плазми."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -131,7 +131,7 @@ msgid ""
 msgstr ""
 "Тему вказівника миші %1 успішно застосовано до вашого поточного сеансу Плазми"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -140,19 +140,19 @@ msgstr ""
 "Для належного показу щойно застосованої теми вказівника миші вам слід "
 "перезапустити сеанс Плазми."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr "Не вдалося знайти тему «%1». Тему слід вибрати з таких варіантів: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "У вашій системі виявлено такі теми вказівників миші:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Поточна тема для цього сеансу Плазми)"

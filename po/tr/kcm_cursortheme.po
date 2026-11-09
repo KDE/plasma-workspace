@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2026-06-13 19:40+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -42,33 +42,33 @@ msgstr "Geçerli işaretçi temasının adı"
 msgid "Current pointer size"
 msgstr "Geçerli işaretçi boyutu"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Geçici dosya oluşturulamıyor."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Simge teması arşivi indirilemedi: %1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Simge teması arşivi açılamadı."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Dosya geçerli bir ikon tema arşivi değil."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "“icons” klasörü oluşturulamadı."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -77,12 +77,12 @@ msgstr ""
 "Simge temaları klasörünüzde %1 adında bir tema hâlihazırda var. Onu, bununla "
 "değiştirmek istiyor musunuz?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Temanın Üzerine Yaz?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema başarıyla kuruldu."
@@ -94,7 +94,7 @@ msgstr "Tema başarıyla kuruldu."
 msgid "Timeout in seconds"
 msgstr "Saniye türünden zaman aşımı"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -105,7 +105,7 @@ msgstr ""
 "geçerli Plasma oturumu için fare işaretçisi temasını ayarlamanıza olanak "
 "tanır."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -114,7 +114,7 @@ msgstr ""
 "Geçerli Plasma oturumunuz için ayarlamak istediğiniz işaretçi temasının adı "
 "(tam bir yolu girmek, yolun yalnızca son kısmını kullanır)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -122,12 +122,12 @@ msgstr ""
 "Sistemde kullanılabilir olan tüm temaları göster (ve hangisinin şu anki "
 "olduğunu)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Tema öntanımlı boyutu yerine belirli bir boyut kullan"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -136,7 +136,7 @@ msgstr ""
 "İstenen tema “%1”, hâlihazırda geçerli Plasma oturumu teması olarak "
 "ayarlanmış."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -144,7 +144,7 @@ msgid ""
 msgstr ""
 "Fare işaretçisi teması %1, başarıyla geçerli Plasma oturumunuza uygulandı"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -153,7 +153,7 @@ msgstr ""
 "Yeni uygulanan fare işaretçisi temanızın doğru şekilde görüntülenmesi için "
 "Plasma oturumunu yeniden başlatmanız gerekir."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -161,12 +161,12 @@ msgid ""
 msgstr ""
 "“%1” teması bulunamadı. Tema aşağıdaki seçeneklerden biri olmalıdır: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Sisteminizde aşağıdaki fare işaretçisi temaları var:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Bu Plasma oturumu için geçerli tema)"

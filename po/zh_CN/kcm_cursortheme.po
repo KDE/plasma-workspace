@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,45 +29,45 @@ msgstr "当前指针主题名称"
 msgid "Current pointer size"
 msgstr "当前指针大小"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "无法创建临时文件。"
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "无法下载图标主题压缩文件：%1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "无法打开图标主题压缩文件。"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "文件不是一个有效的图标主题压缩文件。"
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "无法创建“icons”文件夹。"
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "您的图标主题文件夹中已存在名为 %1 的主题。您想要用此主题替换它吗？"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "覆盖主题吗？"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "主题安装成功。"
@@ -79,7 +79,7 @@ msgstr "主题安装成功。"
 msgid "Timeout in seconds"
 msgstr "超时秒数"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -89,7 +89,7 @@ msgstr ""
 "此工具用于设置当前 Plasma 会话的鼠标指针主题，并避免将其设置为不可用的或已经"
 "设置的主题。"
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -98,51 +98,51 @@ msgstr ""
 "您想要为当前 Plasma 会话设置的鼠标指针主题的名称 (传递完整路径时将只使用路径"
 "的最后一部分)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "显示系统的所有可用主题 (含当前主题)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "使用指定的大小，而不是主题的默认大小"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr "请求的主题“%1”已经是当前的 Plasma 会话的主题。"
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "成功应用鼠标指针主题 %1 到当前 Plasma 会话"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
 "theme to display correctly."
 msgstr "为了使刚刚应用的鼠标指针主题能够正确显示，您必须重启 Plasma 会话。"
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr "无法找到主题“%1”。主题应当是以下选项之一：%2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "您的系统已安装以下鼠标指针主题："
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(此 Plasma 会话的当前主题)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -34,33 +34,33 @@ msgstr "Ime tekuće teme pokazivača"
 msgid "Current pointer size"
 msgstr "Tekuća veličina pokazivača"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ne mogu da napravim privremeni fajl."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ne mogu da preuzmem arhivu teme ikonica: %1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Ne mogu da otvorim arhivu teme ikonica."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ovaj fajl nije ispravna arhiva teme ikonica."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Ne mogu da napravim fasciklu ikonica „icons“."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "Tema ikonica po imenu %1 već postoji u fascikli tema. Želite li da je "
 "zamenite ovom?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Prebrisati temu?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema uspešno instalirana."
@@ -86,7 +86,7 @@ msgstr "Tema uspešno instalirana."
 msgid "Timeout in seconds"
 msgstr "Prekovreme u sekundama"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -97,7 +97,7 @@ msgstr ""
 "Plasme, bez slučajnog postavljanja teme koja nije dostupna ili koja je već "
 "postavljena."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -106,32 +106,32 @@ msgstr ""
 "Ime teme pokazivača koju želite da postavite za tekuću sesiju Plasme (ako "
 "zadate punu putanju, biće upotrebljen samo njen poslednji deo)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Prikaži sve teme dostupne na sistemu (i koja je tekuća tema)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Upotrebi zadatu veličinu umesto podrazumevane veličine teme"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr "Tražena tema „%1“ je već postavljena kao tema tekuće sesije Plasme."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "Tema pokazivača miša %1 uspešno je primenjena na tekuću sesiju Plasme"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -140,19 +140,19 @@ msgstr ""
 "Morate ponovo pokrenuti sesiju Plasme da bi se novoprimenjena tema "
 "pokazivača miša ispravno prikazala."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr "Ne mogu da nađem temu „%1“. Tema treba da bude jedna od sledećih: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Na sistemu imate sledeće teme pokazivača miša:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(tekuća tema ove sesije Plasme)"

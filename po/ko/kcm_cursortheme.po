@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2026-09-24 13:52+0200\n"
 "Last-Translator: Shinjo Park <peremen@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -30,45 +30,45 @@ msgstr "현재 포인터 테마 이름"
 msgid "Current pointer size"
 msgstr "현재 포인터 크기"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "임시 파일을 만들 수 없습니다."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "아이콘 테마 압축 파일을 다운로드할 수 없음: %1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "커서 테마 압축 파일을 열 수 없습니다."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "올바른 아이콘 테마 압축 파일이 아닙니다."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' 폴더를 만들 수 없습니다."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "아이콘 테마 폴더에 테마 %1이(가) 이미 존재합니다. 덮어쓰시겠습니까?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "테마를 덮어쓰시겠습니까?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "테마를 설치했습니다."
@@ -80,7 +80,7 @@ msgstr "테마를 설치했습니다."
 msgid "Timeout in seconds"
 msgstr "초 단위 시간 제한"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -91,7 +91,7 @@ msgstr ""
 "미 선택된 마우스 포인터 테마를 다시 선택하지 않고 현재 Plasma 세션의 마우스 "
 "포인터 테마를 설정할 수 있습니다."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -100,32 +100,32 @@ msgstr ""
 "현재 Plasma 세션에 적용할 포인터 테마(전체 경로를 지정하면 마지막 부분만 사"
 "용)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "시스템에 있는 모든 테마 표시(현재 테마 포함)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "테마 기본 크기 대신 지정한 크기 사용"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr "요청한 \"%1\" 테마는 현재 Plasma 세션의 테마로 설정되어 있습니다."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "현재 Plasma 세션 마우스 포인터 테마를 %1(으)로 설정함"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -133,19 +133,19 @@ msgid ""
 msgstr ""
 "마우스 포인터 테마 변경 사항을 적용하려면 Plasma 세션을 다시 시작해야 합니다."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr "테마 \"%1\"을(를) 찾을 수 없습니다. 다음 중 하나여야 합니다: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "시스템에 다음 마우스 포인터 테마가 설치되어 있습니다:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(이 Plasma 세션의 현재 테마)"

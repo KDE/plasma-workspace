@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2026-09-24 20:26-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -30,45 +30,45 @@ msgstr "نۆۋەتتىكى نىشانلىغۇچ ئۆرنەكنىڭ ئاتى"
 msgid "Current pointer size"
 msgstr "نۆۋەتتىكى نىشانلىغۇچ چوڭلۇقى"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ۋاقىتلىق ھۆججەت قۇرالمايدۇ."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "سىنبەلگە ئۆرنەك ئارخىپىنى چۈشۈرەلمەيدۇ: %1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "سىنبەلگە ئۆرنەك ئارخىپىنى ئاچقىلى بولمىدى."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "بۇ ھۆججەت ئىناۋەتلىك سىنبەلگە ئۆرنەك ئارخىپى ئەمەس."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "«icons» قىسقۇچىنى قۇرالمىدى."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "سىنبەلگە  ئۆرنەك قىسقۇچىدا %1 ئاتلىق ئۆرنەك مەۋجۇت. ئالماشتۇرامسىز؟"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "ئۆرنەكنى قاپلامسىز؟"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ئۆرنەك ئوڭۇشلۇق ئورنىتىلدى."
@@ -80,7 +80,7 @@ msgstr "ئۆرنەك ئوڭۇشلۇق ئورنىتىلدى."
 msgid "Timeout in seconds"
 msgstr "سېكۇنتتا مۆھلەت توشىدۇ"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -91,7 +91,7 @@ msgstr ""
 "تەڭشىشىگە يول قويىدۇ، ئۇنى ئىشلەتكىلى بولمايدىغان لايىھە قىلىپ تەڭشەش ياكى  "
 "ئىشلىتىلىۋاتقان لايىھە قىلىپ تەڭشەشتىن ساقلىنىدۇ."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -100,7 +100,7 @@ msgstr ""
 "نۆۋەتتىكى Plasma جەريانچاق (تولۇق يول يەتكۈزۈلسە يولنىڭ پەقەت ئاخىرقى "
 "بۆلىكىلا ئىشلىتىلىدۇ) قا تەڭشىمەكچى بولغان نىشانلىغۇچ ئۆرنەك ئىسمى"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -108,14 +108,14 @@ msgstr ""
 "سىستېمىدا ئىشلەتكىلى بولىدىغان ھەممە ئۆرنەك (ۋە قايسىسىنىڭ نۆۋەتتە "
 "ئىشلىتىلىۋاتقىنى ئىكەنلىكى) نى كۆرسىتىدۇ"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 "ئۆرنەكنىڭ كۆڭۈلدىكى چوڭلۇقىنى ئىشلەتكەننىڭ ئورنىغا بەلگىلەنگەن چوڭلۇقىنى "
 "ئىشلىتىدۇ"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -124,7 +124,7 @@ msgstr ""
 "ئىلتىماس قىلىنغان ئۆرنەك «%1‎‏» ئاللىبۇرۇن نۆۋەتتىكى  Plasma جەريانچاقنىڭ "
 "ئۆرنىكىگە تەڭشەلگەن."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -133,7 +133,7 @@ msgstr ""
 "چاشقىنەك نىشانلىغۇچ ئۆرنىكى %1 نى مۇۋەپپەقىيەتلىك ھالدا نۆۋەتتىكى Plasma "
 "جەريانچاققا قوللاندى"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -142,7 +142,7 @@ msgstr ""
 "يېڭىدىن قوللانغان چاشقىنەك نىشانلىغۇچ ئۆرنەكنىڭ توغرا كۆرۈنۈشى ئۈچۈن Plasma "
 "جەريانچاقنى قايتا قوزغىتىشىڭىز كېرەك."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -150,12 +150,12 @@ msgid ""
 msgstr ""
 "«%1» ئۆرنەكنى تاپالمىدى. ئۆرنەك تۆۋەندىكى تاللانمىدىن بىرى بولۇشى كېرەك: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "سىستېمىڭىزدا تۆۋەندىكى چاشقىنەك نىشانلىغۇچ ئۆرنىكى بار:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(بۇ Plasma جەريانچاقنىڭ نۆۋەتتىكى ئۆرنىكى)"

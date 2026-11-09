@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -33,34 +33,34 @@ msgstr "वर्तमान कर्सर विषयस्य नाम"
 msgid "Current pointer size"
 msgstr "वर्तमान कर्सर आकार"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "अस्थायीसञ्चिकां निर्मातुं असमर्थः ।"
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "चिह्नविषयसङ्ग्रहं डाउनलोड् कर्तुं असमर्थः: %1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, fuzzy, kde-format
 #| msgid "Unable to download the icon theme archive: %1"
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "चिह्नविषयसङ्ग्रहं डाउनलोड् कर्तुं असमर्थः: %1"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "सञ्चिका वैधः चिह्नविषयसङ्ग्रहः नास्ति ।"
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' पुटस्य निर्माणे असफलम् ।"
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "%1 इति नामकं विषयवस्तु भवतः चिह्नविषयपुटे पूर्वमेव विद्यते । किं भवन्तः तस्य स्थाने एतेन "
 "प्रतिस्थापयितुं इच्छन्ति ?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "विषयं अधिलिखयतु?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "विषयः सफलतया संस्थापितः।"
@@ -86,7 +86,7 @@ msgstr "विषयः सफलतया संस्थापितः।"
 msgid "Timeout in seconds"
 msgstr "सेकेण्ड् मध्ये समयसमाप्तिः"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -100,7 +100,7 @@ msgstr ""
 "एतत् साधनं वर्तमानप्लाज्मासत्रस्य कृते मूषकस्य कर्सरविषयं सेट् कर्तुं शक्नोति, आकस्मिकतया एकं वा "
 "सेट् न कृत्वा यत् वा उपलब्धं नास्ति, अथवा यत् पूर्वमेव सेट् कृतम् अस्ति"
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -112,18 +112,18 @@ msgstr ""
 "यस्य कर्सर-विषयस्य नाम भवान् स्वस्य वर्तमान-प्लाज्मा-सत्रस्य कृते सेट् कर्तुम् इच्छति (पूर्णमार्गं "
 "पारयन् केवलं मार्गस्य अन्तिमभागस्य उपयोगं करिष्यति)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "प्रणाल्यां उपलभ्यमानानि सर्वाणि विषयाणि दर्शयन्तु (वर्तमानः विषयः च कः)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "विषयस्य पूर्वनिर्धारित आकारस्य अपेक्षया, विशिष्टस्य आकारस्य उपयोगं कुर्वन्तु"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -133,7 +133,7 @@ msgid ""
 "session."
 msgstr "अनुरोधितः विषयः \"%1\" पूर्वमेव वर्तमानप्लाज्मासत्रस्य विषयवस्तुरूपेण सेट् कृतः अस्ति ।"
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -143,7 +143,7 @@ msgid ""
 "session"
 msgstr "भवतः वर्तमानप्लाज्मासत्रे %1 इति मूषकस्य कर्सरविषयं सफलतया प्रयुक्तम्"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -155,7 +155,7 @@ msgstr ""
 "भवद्भिः स्वस्य नवप्रयुक्तस्य मूषककर्सरविषयस्य कृते Plasma सत्रं पुनः आरभ्यतव्यं यत् सम्यक् "
 "प्रदर्शयितुं शक्यते ।"
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -165,13 +165,13 @@ msgid ""
 "%2"
 msgstr "\"%1\" इति विषयः न लब्धः । विषयः निम्नलिखितविकल्पेषु अन्यतमः भवेत्: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "भवतः प्रणाल्यां निम्नलिखितमूषककर्सरविषयाणि सन्ति ।"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(अस्य प्लाज्मा सत्रस्य वर्तमानः विषयः)"

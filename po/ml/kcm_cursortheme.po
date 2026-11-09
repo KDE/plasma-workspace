@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -34,34 +34,34 @@ msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്�
 msgid "Current pointer size"
 msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരൽ വലിപ്പം"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "താത്കാലിക ഫയൽ നിർമ്മിക്കാൻ കഴിഞ്ഞില്ല."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "%1 എന്ന ചിഹനപ്രമേയശേഖരം ഡൗൺലോഡാൻ കഴിഞ്ഞില്ല"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, fuzzy, kde-format
 #| msgid "Unable to download the icon theme archive: %1"
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "%1 എന്ന ചിഹനപ്രമേയശേഖരം ഡൗൺലോഡാൻ കഴിഞ്ഞില്ല"
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ഫയല്‍ ശരിയായ ഒരു ചിഹ്ന പ്രമേയ ശേഖരം അല്ല."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' അറ നിർമ്മിക്കുന്നത് പരാജയപ്പെട്ടു."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -70,12 +70,12 @@ msgstr ""
 "%1 എന്ന പേരിലുള്ള ഒരു പ്രമേയം നിങ്ങളുടെ ചിഹ്ന പ്രമേയ അറയിൽ ഇതിനകം നിലവിലുണ്ട്. നിങ്ങൾക്ക് "
 "ഇത് മാറ്റിസ്ഥാപിക്കണോ?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "പ്രമേയം മാറ്റിയെഴുതട്ടെ?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "പ്രമേയം വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു."
@@ -87,7 +87,7 @@ msgstr "പ്രമേയം വിജയകരമായി ഇൻസ്റ്�
 msgid "Timeout in seconds"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -102,7 +102,7 @@ msgstr ""
 "ക്രമീകരിക്കാതെ, നിലവിലെ പ്ലാസ്മ സെഷനായി ചൂണ്ടുവിരല്‍ പ്രമേയം സജ്ജീകരിക്കാൻ ഈ ഉപകരണം "
 "നിങ്ങളെ അനുവദിക്കുന്നു."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -114,18 +114,18 @@ msgstr ""
 "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനായി നിങ്ങൾ സജ്ജമാക്കാൻ ആഗ്രഹിക്കുന്ന ചൂണ്ടുവിരല്‍ തീമിന്റെ പേര് "
 "(ഒരു പൂർണ്ണ പാത നൽകിയാലും അതിന്റെ അവസാന ഭാഗം മാത്രമേ ഉപയോഗിക്കൂ)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "സിസ്റ്റത്തിൽ ലഭ്യമായ എല്ലാ പ്രമേയങ്ങളും കാണിക്കുക (കൂടാതെ നിലവിലെ തീമും)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -137,7 +137,7 @@ msgstr ""
 "അഭ്യർത്ഥിച്ച പ്രമേയം \"%1\" നിലവിലെ പ്ലാസ്മ സെഷന്റെ പ്രമേയം ആയി ഇതിനകം "
 "സജ്ജീകരിച്ചിരിക്കുന്നു."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -147,7 +147,7 @@ msgid ""
 "session"
 msgstr "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനിൽ ചൂണ്ടുവിരല്‍ പ്രമേയം %1 വിജയകരമായി പ്രയോഗിച്ചു"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -159,7 +159,7 @@ msgstr ""
 "നിങ്ങളുടെ പുതുതായി പ്രയോഗിച്ച ചൂണ്ടുവിരല്‍ പ്രമേയം ശരിയായി പ്രദർശിപ്പിക്കുന്നതിന് നിങ്ങൾ പ്ലാസ്മ "
 "സെഷൻ പുനരാരംഭിക്കേണ്ടതുണ്ട്."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -170,13 +170,13 @@ msgid ""
 msgstr ""
 "\"%1\" പ്രമേയം കണ്ടെത്താനായില്ല. പ്രമേയം ഇനിപ്പറയുന്ന ഓപ്ഷനുകളിൽ ഒന്നായിരിക്കണം: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇനിപ്പറയുന്ന ചൂണ്ടുവിരല്‍ പ്രമേയങ്ങൾ ഉണ്ട്:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr ""

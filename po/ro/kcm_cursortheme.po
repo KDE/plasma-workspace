@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2026-06-15 13:19+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -29,33 +29,33 @@ msgstr "Denumirea tematicii de indicatori actuale"
 msgid "Current pointer size"
 msgstr "Dimensiune actuală indicator"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nu s-a putut crea un fișier temporar."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nu s-a putut descărca arhiva cu tematici de pictograme: %1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Nu s-a putut deschide arhiva cu tematici de pictograme."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fișierul nu este o arhivă validă cu tematici de pictograme."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Eșec la crearea dosarului „icons”."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -64,12 +64,12 @@ msgstr ""
 "O tematică cu denumirea %1 există deja în dosarul cu tematici de pictograme. "
 "Doriți s-o înlocuiți cu aceasta?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Suprascrieți tema?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tematica a fost instalată cu succes."
@@ -81,7 +81,7 @@ msgstr "Tematica a fost instalată cu succes."
 msgid "Timeout in seconds"
 msgstr "Expirare în secunde"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -92,7 +92,7 @@ msgstr ""
 "pentru sesiunea Plasma actuală, fără a o stabili din greșeală la una "
 "indisponibilă sau care e deja stabilită."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -102,19 +102,19 @@ msgstr ""
 "sesiunea Plasma actuală (transmiterea unei căi complete va duce la folosirea "
 "ultimei componente a căii)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Arată toate tematicile disponibile în sistem (și care e cea actuală)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 "Folosește o anumită dimensiune în loc de dimensiunea implicită a tematicii"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -123,7 +123,7 @@ msgstr ""
 "Tematica cerută „%1” e stabilită deja ca tematică pentru sesiunea Plasma "
 "actuală."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -132,7 +132,7 @@ msgstr ""
 "Tematica %1 pentru indicatorul mausului a fost aplicată cu succes la "
 "sesiunea Plasma actuală"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -141,7 +141,7 @@ msgstr ""
 "Trebuie să reporniți sesiunea Plasma pentru ca tematica pentru indicator "
 "aplicată acum să fie afișată corect."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -150,12 +150,12 @@ msgstr ""
 "Tematica „%1” nu a putut fi găsită. Tematica trebuie să fie una dintre "
 "următoarele opțiuni: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Aveți următoarele tematici de indicatori în sistem:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tematica actuală pentru această sesiune Plasma)"

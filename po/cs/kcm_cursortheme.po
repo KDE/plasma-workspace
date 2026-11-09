@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:46+0000\n"
+"POT-Creation-Date: 2026-11-09 00:57+0000\n"
 "PO-Revision-Date: 2026-06-13 12:03+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -33,33 +33,33 @@ msgstr "Název nynějšího motivu ukazatele"
 msgid "Current pointer size"
 msgstr "Současná velikost ukazatele"
 
-#: kcmcursortheme.cpp:375
+#: kcmcursortheme.cpp:377
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nelze vytvořit dočasný soubor."
 
-#: kcmcursortheme.cpp:386
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nelze stáhnout archiv motivu s ikonami: %1"
 
-#: kcmcursortheme.cpp:400
+#: kcmcursortheme.cpp:402
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Nelze otevřít archiv motivů ikon."
 
-#: kcmcursortheme.cpp:420
+#: kcmcursortheme.cpp:422
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Tento soubor není platný archiv motivu s ikonami."
 
-#: kcmcursortheme.cpp:427
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Nelze vytvořit složku 'ikony'."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:438
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgstr ""
 "Motiv s názvem %1 již existuje ve vaší složce s motivy. Přejete si ji "
 "nahradit touto?"
 
-#: kcmcursortheme.cpp:440
+#: kcmcursortheme.cpp:442
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Přepsat motiv?"
 
-#: kcmcursortheme.cpp:464
+#: kcmcursortheme.cpp:466
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Motiv byl úspěšně nainstalován."
@@ -85,7 +85,7 @@ msgstr "Motiv byl úspěšně nainstalován."
 msgid "Timeout in seconds"
 msgstr "Čas vypršení v sekundách"
 
-#: plasma-apply-cursortheme.cpp:38
+#: plasma-apply-cursortheme.cpp:39
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -96,7 +96,7 @@ msgstr ""
 "Plasma bez neúmyslného nastavení na takový, který není k dispozici nebo je "
 "již nastaven."
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -105,19 +105,19 @@ msgstr ""
 "Název motivu ukazatele, který si přejete nastavit pro vaše aktuální sezení "
 "Plasma (pokud zadáte celou cestu, bude použita jenom poslední část)"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Zobrazit všechny motivy dostupné na systému (a který je aktuální motiv)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:45
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Použít konkrétní velikost namísto výchozí velikosti motivu"
 
-#: plasma-apply-cursortheme.cpp:65
+#: plasma-apply-cursortheme.cpp:66
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -126,14 +126,14 @@ msgstr ""
 "Požadovaný motiv \"%1\" je již nastaven jako motiv pro současné sezení "
 "Plasma."
 
-#: plasma-apply-cursortheme.cpp:77
+#: plasma-apply-cursortheme.cpp:80
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "Motiv ukazatele %1 byl ve vašem sezení Plasma úspěšně nastaven"
 
-#: plasma-apply-cursortheme.cpp:79
+#: plasma-apply-cursortheme.cpp:82
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -141,7 +141,7 @@ msgid ""
 msgstr ""
 "Pro správné nastavení motivu ukazatele myši musíte restartovat sezení Plasma."
 
-#: plasma-apply-cursortheme.cpp:89
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -149,12 +149,12 @@ msgid ""
 msgstr ""
 "Nelze najít motiv \"%1\". Motiv by měl být jedna z následujících možností: %2"
 
-#: plasma-apply-cursortheme.cpp:97
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Ve vašem systému jsou dostupné následující motivy ukazatelů:"
 
-#: plasma-apply-cursortheme.cpp:102
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Současný motiv pro toto sezení Plasma)"
