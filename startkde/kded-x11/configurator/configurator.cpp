@@ -60,14 +60,14 @@ void Configurator::sync()
         return;
     }
 
-    KConfigGroup generalCfgGroup(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), u"General"_s);
+    KConfigGroup generalCfgGroup(KSharedConfig::openConfig(u"kdeglobals"_s), u"General"_s);
 
     // Export the Xcursor theme & size settings
-    KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), u"Mouse"_s);
-    QString theme = mousecfg.readEntry("cursorTheme", QStringLiteral("breeze_cursors"));
+    KConfigGroup mousecfg(KSharedConfig::openConfig(u"kcminputrc"_s), u"Mouse"_s);
+    QString theme = mousecfg.readEntry("cursorTheme", u"breeze_cursors"_s);
     int cursorSize = mousecfg.readEntry("cursorSize", 24);
 
-    KConfig kwinConfig(QStringLiteral("kwinrc"));
+    KConfig kwinConfig(u"kwinrc"_s);
     KConfigGroup xwaylandGroup(&kwinConfig, u"Xwayland"_s);
     qreal xwaylandScale = xwaylandGroup.readEntry("Scale", 1.0);
     cursorSize *= xwaylandScale;
@@ -78,25 +78,25 @@ void Configurator::sync()
 
     const int dpi = xwaylandScale * 96;
     contents += "Xft.dpi: "_L1 + QString::number(dpi) + u'\n';
-    contents += QLatin1String("Xft.antialias: ");
+    contents += "Xft.antialias: "_L1;
     if (generalCfgGroup.readEntry("XftAntialias", true))
-        contents += QLatin1String("1\n");
+        contents += "1\n"_L1;
     else
-        contents += QLatin1String("0\n");
+        contents += "0\n"_L1;
 
-    const QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", QStringLiteral("hintslight"));
-    contents += QLatin1String("Xft.hinting: ");
+    const QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", u"hintslight"_s);
+    contents += "Xft.hinting: "_L1;
     if (hintStyle.isEmpty())
-        contents += QLatin1String("-1\n");
+        contents += "-1\n"_L1;
     else {
-        if (hintStyle != QLatin1String("hintnone"))
-            contents += QLatin1String("1\n");
+        if (hintStyle != "hintnone"_L1)
+            contents += "1\n"_L1;
         else
-            contents += QLatin1String("0\n");
+            contents += "0\n"_L1;
         contents += "Xft.hintstyle: "_L1 + hintStyle + u'\n';
     }
 
-    const QString subPixel = generalCfgGroup.readEntry("XftSubPixel", QStringLiteral("rgb"));
+    const QString subPixel = generalCfgGroup.readEntry("XftSubPixel", u"rgb"_s);
     if (!subPixel.isEmpty())
         contents += "Xft.rgba: "_L1 + subPixel + u'\n';
 
@@ -107,7 +107,7 @@ void Configurator::sync()
 
     KProcess proc;
 #ifndef NDEBUG
-    proc << QStringLiteral("xrdb") << QStringLiteral("-merge") << tmpFile.fileName();
+    proc << u"xrdb"_s << u"-merge"_s << tmpFile.fileName();
 #else
     proc << u"xrdb"_s << u"-quiet"_s << u"-merge"_s << tmpFile.fileName();
 #endif
