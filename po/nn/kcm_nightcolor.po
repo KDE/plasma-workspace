@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 16:19+0000\n"
+"POT-Creation-Date: 2023-11-15 18:20+0000\n"
 "PO-Revision-Date: 2024-03-17 10:54+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -22,15 +22,13 @@ msgstr ""
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
-msgctxt ""
-"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgctxt "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "Trykk på kartet for å markera kor du er."
 
 #: package/contents/ui/LocationsFixedView.qml:40
 #, kde-format
-msgctxt ""
-"@label:chooser Click should be translated to mean clicking using a mouse"
+msgctxt "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "Trykk på kartet for å markera kor du er."
 
@@ -43,16 +41,8 @@ msgstr "Forstørr"
 #: package/contents/ui/LocationsFixedView.qml:222
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/"
-"File:World_location_map_(equirectangular_180).svg'>World location map</link> "
-"by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"Tilpassa utgåve av <link url='https://commons.wikimedia.org/wiki/"
-"File:World_location_map_(equirectangular_180).svg'>World location map</link> "
-"av TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+msgid "Modified from <link url='https://commons.wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>World location map</link> by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr "Tilpassa utgåve av <link url='https://commons.wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>World location map</link> av TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
 #: package/contents/ui/LocationsFixedView.qml:235
 #, kde-format
@@ -104,14 +94,8 @@ msgstr "Alltid kveldsfargar"
 #: package/contents/ui/main.qml:167
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"The device's location will be periodically updated using GPS (if available), "
-"or by sending network information to <link url='https://"
-"location.services.mozilla.com'>Mozilla Location Service</link>."
-msgstr ""
-"Plasseringa til eininga vert regel­messig oppdatert ved hjelp av GPS (viss "
-"tilgjengeleg), eller ved å senda informasjon om nettverket til <link "
-"url='https://location.services.mozilla.com'>Mozilla Location Service</link>."
+msgid "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>."
+msgstr "Plasseringa til eininga vert regel­messig oppdatert ved hjelp av GPS (viss tilgjengeleg), eller ved å senda informasjon om nettverket til <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>."
 
 #: package/contents/ui/main.qml:186
 #, kde-format
@@ -197,14 +181,10 @@ msgstr "Finn posisjon …"
 
 #: package/contents/ui/TimingsView.qml:32
 #, kde-format
-msgid ""
-"Color temperature begins changing to night time at %1 and is fully changed "
-"by %2"
+msgid "Color temperature begins changing to night time at %1 and is fully changed by %2"
 msgstr "Endring til kveldsfargar tek til kl. %1 og er klar kl. %2"
 
 #: package/contents/ui/TimingsView.qml:39
 #, kde-format
-msgid ""
-"Color temperature begins changing to day time at %1 and is fully changed by "
-"%2"
+msgid "Color temperature begins changing to day time at %1 and is fully changed by %2"
 msgstr "Endring til dagfargar tek til kl. %1 og er klar kl. %2"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 16:19+0000\n"
+"POT-Creation-Date: 2023-05-20 01:32+0000\n"
 "PO-Revision-Date: 2023-07-29 09:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -193,12 +193,8 @@ msgstr "Tilpassa"
 
 #: package/contents/ui/configAppearance.qml:198
 #, kde-format
-msgid ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-"
-"method\">Time Format Documentation</a>"
-msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-"
-"method\">Dokumentasjon på tidsformat</a>"
+msgid "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>"
+msgstr "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method\">Dokumentasjon på tidsformat</a>"
 
 #: package/contents/ui/configAppearance.qml:222
 #, kde-format
@@ -215,11 +211,8 @@ msgstr "Automatisk"
 #: package/contents/ui/configAppearance.qml:228
 #, kde-format
 msgctxt "@label"
-msgid ""
-"Text will follow the system font and expand to fill the available space."
-msgstr ""
-"Teksten vil bruka systemskrifta og vert automatisk utvida til å fylla all "
-"ledig plass."
+msgid "Text will follow the system font and expand to fill the available space."
+msgstr "Teksten vil bruka systemskrifta og vert automatisk utvida til å fylla all ledig plass."
 
 #: package/contents/ui/configAppearance.qml:237
 #, kde-format
@@ -267,14 +260,8 @@ msgstr "Tilgjengelege programtillegg:"
 
 #: package/contents/ui/configTimeZones.qml:39
 #, kde-format
-msgid ""
-"Tip: if you travel frequently, add another entry for your home time zone to "
-"this list. It will only appear when you change the systemwide time zone to "
-"something else."
-msgstr ""
-"Tips: Viss du ofte er på reisefot, legg til ei ekstra oppføring for tidssona "
-"til heimstaden din her. Denne vert då berre vist når du byter tidssona for "
-"heile systemet til ei anna tidssone."
+msgid "Tip: if you travel frequently, add another entry for your home time zone to this list. It will only appear when you change the systemwide time zone to something else."
+msgstr "Tips: Viss du ofte er på reisefot, legg til ei ekstra oppføring for tidssona til heimstaden din her. Denne vert då berre vist når du byter tidssona for heile systemet til ei anna tidssone."
 
 #: package/contents/ui/configTimeZones.qml:101
 #, kde-format
@@ -283,10 +270,7 @@ msgstr "Klokka brukar denne tidssona"
 
 #: package/contents/ui/configTimeZones.qml:103
 #, kde-format
-msgctxt ""
-"@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
-"plasmoid's popup"
+msgctxt "@label This list item shows a time zone city name that is identical to the local time zone's city, and will be hidden in the timezone display in the plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr "Vert gøymd viss dette er byen til den lokale tidssona"
 
@@ -312,12 +296,8 @@ msgstr "Fleire tidssoner"
 
 #: package/contents/ui/configTimeZones.qml:148
 #, kde-format
-msgid ""
-"Add more time zones to display all of them in the applet's pop-up, or use "
-"one of them for the clock itself"
-msgstr ""
-"Legg til fleire tidssoner for å visa dei alle i sprettopp­vindauget til skjerm­"
-"elementet, eller bruk éi av dei for klokka."
+msgid "Add more time zones to display all of them in the applet's pop-up, or use one of them for the clock itself"
+msgstr "Legg til fleire tidssoner for å visa dei alle i sprettopp­vindauget til skjerm­elementet, eller bruk éi av dei for klokka."
 
 #: package/contents/ui/configTimeZones.qml:155
 #, kde-format
@@ -331,12 +311,8 @@ msgstr "Byt vist tidssone ved bruk av musehjulet på klokka"
 
 #: package/contents/ui/configTimeZones.qml:172
 #, kde-format
-msgid ""
-"Using this feature does not change the systemwide time zone. When you "
-"travel, switch the systemwide time zone instead."
-msgstr ""
-"Denne funksjonen endrar ikkje tidssona for heile systemet. Når du reiser, "
-"byt heller den tidssona."
+msgid "Using this feature does not change the systemwide time zone. When you travel, switch the systemwide time zone instead."
+msgstr "Denne funksjonen endrar ikkje tidssona for heile systemet. Når du reiser, byt heller den tidssona."
 
 #: package/contents/ui/configTimeZones.qml:198
 #, kde-format
@@ -345,11 +321,8 @@ msgstr "Legg til fleire tidssoner"
 
 #: package/contents/ui/configTimeZones.qml:209
 #, kde-format
-msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
-"automatically."
-msgstr ""
-"Du må velja minst éi tidssone. Den lokale tidssona di vart automatisk valt."
+msgid "At least one time zone needs to be enabled. Your local timezone was enabled automatically."
+msgstr "Du må velja minst éi tidssone. Den lokale tidssona di vart automatisk valt."
 
 #: package/contents/ui/configTimeZones.qml:234
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 16:19+0000\n"
+"POT-Creation-Date: 2026-11-08 06:31+0000\n"
 "PO-Revision-Date: 2026-07-05 16:19+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -214,32 +214,20 @@ msgstr " "
 
 #: exampleutility.cpp:133
 #, kde-format
-msgctxt ""
-"This is returned when an example test could not be made from locale "
-"information"
+msgctxt "This is returned when an example test could not be made from locale information"
 msgid "Could not find an example for this locale"
 msgstr "Fann ikkje noko eksempel for dette språkområdet"
 
 #: kcmregionandlang.cpp:54
 #, kde-format
-msgid ""
-"You can configure the formats used for time, dates, money and other numbers "
-"here."
-msgstr ""
-"Her kan du setja opp formata som vert brukt for tid, dato, pengar og andre "
-"tal."
+msgid "You can configure the formats used for time, dates, money and other numbers here."
+msgstr "Her kan du setja opp formata som vert brukt for tid, dato, pengar og andre tal."
 
 #: kcmregionandlang.cpp:93
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
-msgid ""
-"Could not find the system's available locales using the <command>localectl</"
-"command> tool. Please file a bug report about this at <link>https://"
-"bugs.kde.org</link>"
-msgstr ""
-"Fann ikkje oversikt over tilgjengelege språkområde (lokale) via programmet "
-"<command>localectl</command>. Meld frå om denne feilen på <link>https://"
-"bugs.kde.org</link>."
+msgid "Could not find the system's available locales using the <command>localectl</command> tool. Please file a bug report about this at <link>https://bugs.kde.org</link>"
+msgstr "Fann ikkje oversikt over tilgjengelege språkområde (lokale) via programmet <command>localectl</command>. Meld frå om denne feilen på <link>https://bugs.kde.org</link>."
 
 #: languagelistmodel.cpp:86
 #, kde-format
@@ -249,9 +237,7 @@ msgstr "%1 (%2)"
 
 #: languagelistmodel.cpp:92
 #, kde-format
-msgctxt ""
-"%1 is português in system locale name, Brazil is to distinguish European "
-"português and Brazilian português"
+msgctxt "%1 is português in system locale name, Brazil is to distinguish European português and Brazilian português"
 msgid "%1 (Brazil)"
 msgstr "%1 (Brasil)"
 
@@ -317,23 +303,19 @@ msgstr "Standard"
 
 #: localelistmodel.cpp:81
 #, kde-format
-msgctxt ""
-"the first is language name, the second is the country name, like 'English "
-"(America)'"
+msgctxt "the first is language name, the second is the country name, like 'English (America)'"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: localelistmodel.cpp:164
 #, kde-format
-msgctxt ""
-"@info:title, meaning the current locale is system default(which is `C`)"
+msgctxt "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "Systemstandard C"
 
 #: localelistmodel.cpp:167
 #, kde-format
-msgctxt ""
-"@info:title the current locale is the default for %1, %1 is the country name"
+msgctxt "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
 msgstr "Standard for %1"
 
@@ -400,8 +382,7 @@ msgstr "Systemstandard"
 
 #: optionsmodel.cpp:306
 #, kde-format
-msgctxt ""
-"as subtitle, remind user that the format used now is inherited from locale %1"
+msgctxt "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
 msgstr " (standardformat for %1)"
 
@@ -412,14 +393,8 @@ msgstr "Språk"
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:31
 #, kde-format
-msgid ""
-"Putting American English above other languages will cause undesired behavior "
-"in some applications. If you would like your system to use American English, "
-"remove all other languages."
-msgstr ""
-"Viss du legg andre språk nedanfor amerikansk engelsk i lista, kan det føra "
-"til at enkelte program ikkje oppfører seg rett. Viss du ønskjer å sjå alle "
-"programma på amerikansk engelsk, fjern dei andre språka."
+msgid "Putting American English above other languages will cause undesired behavior in some applications. If you would like your system to use American English, remove all other languages."
+msgstr "Viss du legg andre språk nedanfor amerikansk engelsk i lista, kan det føra til at enkelte program ikkje oppfører seg rett. Viss du ønskjer å sjå alle programma på amerikansk engelsk, fjern dei andre språka."
 
 #: package/contents/ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format
@@ -489,36 +464,20 @@ msgstr "Start på nytt no"
 #: package/contents/ui/main.qml:52
 #, kde-format
 msgctxt "@info"
-msgid ""
-"Generating locale and language support files; don't turn off the computer "
-"yet."
-msgstr ""
-"Genererer språkområde-oppsett og tilhøyrande språkstøtte­filer. Ikkje slå av "
-"maskina enno."
+msgid "Generating locale and language support files; don't turn off the computer yet."
+msgstr "Genererer språkområde-oppsett og tilhøyrande språkstøtte­filer. Ikkje slå av maskina enno."
 
 #: package/contents/ui/main.qml:61
 #, kde-format
 msgctxt "@info"
-msgid ""
-"Locale and language support files have been generated, but language-specific "
-"fonts could not be automatically installed. If your language requires "
-"specialized fonts to be displayed properly, you will need to discover what "
-"they are and install them yourself."
-msgstr ""
-"Språkområde-oppsett og tilhøyrande språkstøtte­filer er no genererte, men "
-"klarte ikkje automatisk installera språkspesifikke skrifter. Viss språket "
-"krev særskilde skrifter for å visast skikkeleg, må du sjølv finna ut kva "
-"skrifter som trengst og installera dei manuelt."
+msgid "Locale and language support files have been generated, but language-specific fonts could not be automatically installed. If your language requires specialized fonts to be displayed properly, you will need to discover what they are and install them yourself."
+msgstr "Språkområde-oppsett og tilhøyrande språkstøtte­filer er no genererte, men klarte ikkje automatisk installera språkspesifikke skrifter. Viss språket krev særskilde skrifter for å visast skikkeleg, må du sjølv finna ut kva skrifter som trengst og installera dei manuelt."
 
 #: package/contents/ui/main.qml:75
 #, kde-format
 msgctxt "@info"
-msgid ""
-"Necessary locale and language support files have been installed. It is now "
-"safe to turn off the computer."
-msgstr ""
-"Språkområde-oppsett og tilhøyrande språkstøtte­filer er no installert. Du kan "
-"trygt slå av maskina."
+msgid "Necessary locale and language support files have been installed. It is now safe to turn off the computer."
+msgstr "Språkområde-oppsett og tilhøyrande språkstøtte­filer er no installert. Du kan trygt slå av maskina."
 
 #: package/contents/ui/main.qml:139
 #, kde-format
