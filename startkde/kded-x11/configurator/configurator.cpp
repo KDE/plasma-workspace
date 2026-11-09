@@ -12,6 +12,7 @@
 #include <KProcess>
 
 #include <QDBusConnection>
+#include <QGuiApplication>
 #include <QTemporaryFile>
 
 #include <xcb/xcb.h>
@@ -54,6 +55,9 @@ void Configurator::onRefreshFonts()
 
 void Configurator::sync()
 {
+    const auto nativeInterface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+    Q_ASSERT(nativeInterface);
+
     QTemporaryFile tmpFile;
     if (!tmpFile.open()) {
         qDebug() << "Couldn't open temp file";
@@ -112,29 +116,24 @@ void Configurator::sync()
 #endif
     proc.execute();
 
-    xcb_connection_t *connection = xcb_connect(nullptr, nullptr);
-    if (!xcb_connection_has_error(connection)) {
-        xcb_screen_t *screen = xcb_setup_roots_iterator(xcb_get_setup(connection)).data;
+    xcb_connection_t *connection = nativeInterface->connection();
+    xcb_screen_t *screen = xcb_setup_roots_iterator(xcb_get_setup(connection)).data;
 
-        // Needed for applications that don't set their own cursor.
-        xcb_cursor_context_t *context = nullptr;
-        if (xcb_cursor_context_new(connection, screen, &context) < 0) {
-            qWarning() << "xcb_cursor_context_new() failed";
-        } else {
-            xcb_cursor_t cursor = xcb_cursor_load_cursor(context, "left_ptr");
-            auto cookie = xcb_change_window_attributes_checked(connection, screen->root, XCB_CW_CURSOR, &cursor);
-            if (auto error = xcb_request_check(connection, cookie)) {
-                qWarning() << "Failed to set root window cursor, error code:" << error->error_code;
-                free(error);
-            }
-            xcb_free_cursor(connection, cursor);
-            xcb_cursor_context_free(context);
-        }
+    // Needed for applications that don't set their own cursor.
+    xcb_cursor_context_t *context = nullptr;
+    if (xcb_cursor_context_new(connection, screen, &context) < 0) {
+        qWarning() << "xcb_cursor_context_new() failed";
     } else {
-        qWarning() << "xcb_connect() failed";
+        xcb_cursor_t cursor = xcb_cursor_load_cursor(context, "left_ptr");
+        auto cookie = xcb_change_window_attributes_checked(connection, screen->root, XCB_CW_CURSOR, &cursor);
+        if (auto error = xcb_request_check(connection, cookie)) {
+            qWarning() << "Failed to set root window cursor, error code:" << error->error_code;
+            free(error);
+        }
+        xcb_free_cursor(connection, cursor);
+        xcb_cursor_context_free(context);
+        xcb_flush(connection);
     }
-
-    xcb_disconnect(connection);
 }
 
 #include "configurator.moc"

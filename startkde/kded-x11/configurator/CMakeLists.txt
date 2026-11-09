@@ -9,6 +9,7 @@ target_sources(configurator PRIVATE
 
 target_link_libraries(configurator PRIVATE
     Qt6::DBus
+    Qt6::Gui
     KF6::ConfigCore
     KF6::CoreAddons
     KF6::DBusAddons
