@@ -82,29 +82,33 @@ void Configurator::sync()
     const int dpi = xwaylandScale * 96;
     contents += "Xft.dpi: "_L1 + QString::number(dpi) + u'\n';
     contents += "Xft.antialias: "_L1;
-    if (generalCfgGroup.readEntry("XftAntialias", true))
+    if (generalCfgGroup.readEntry("XftAntialias", true)) {
         contents += "1\n"_L1;
-    else
+    } else {
         contents += "0\n"_L1;
+    }
 
     const QString hintStyle = generalCfgGroup.readEntry("XftHintStyle", u"hintslight"_s);
     contents += "Xft.hinting: "_L1;
-    if (hintStyle.isEmpty())
+    if (hintStyle.isEmpty()) {
         contents += "-1\n"_L1;
-    else {
-        if (hintStyle != "hintnone"_L1)
+    } else {
+        if (hintStyle != "hintnone"_L1) {
             contents += "1\n"_L1;
-        else
+        } else {
             contents += "0\n"_L1;
+        }
         contents += "Xft.hintstyle: "_L1 + hintStyle + u'\n';
     }
 
     const QString subPixel = generalCfgGroup.readEntry("XftSubPixel", u"rgb"_s);
-    if (!subPixel.isEmpty())
+    if (!subPixel.isEmpty()) {
         contents += "Xft.rgba: "_L1 + subPixel + u'\n';
+    }
 
-    if (!contents.isEmpty())
+    if (!contents.isEmpty()) {
         tmpFile.write(contents.toLatin1());
+    }
 
     tmpFile.flush();
 
