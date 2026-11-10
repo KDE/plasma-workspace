@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-11-05 09:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -670,52 +670,52 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "استدع إجراء على الحافظة الحالية يدويًا"
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&حرّر المحتويات"
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "أظهر &شفرة شريطية..."
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr "دوّر السجل للأسفل"
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "دوّر السجل للأعلى"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "اعرض عناصر الحافظة عند موضع الفأرة"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "تاريخ الحافظة: "
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr "الأحدث: "
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, kde-format
 msgid "Current: "
 msgstr "الحالي: "
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr "الأقدم: "
@@ -914,7 +914,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "منبثقة الحافظة"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "أ&لغ"

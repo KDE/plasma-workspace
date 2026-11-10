@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 11:03+0000\n"
+"POT-Creation-Date: 2026-11-09 07:32+0000\n"
 "PO-Revision-Date: 2026-10-03 19:57-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -180,7 +180,7 @@ msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ۋاز كەچ"
 
-#: components/JobItem.qml:126 components/ThumbnailStrip.qml:155
+#: components/JobItem.qml:126 components/ThumbnailStrip.qml:156
 #, kde-format
 msgid "More Options…"
 msgstr "تېخىمۇ كۆپ تاللانما…"

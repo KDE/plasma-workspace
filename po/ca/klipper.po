@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-11-03 10:13+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -688,52 +688,52 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualment una acció al porta-retalls actual"
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Edita el contingut…"
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra el codi de barres…"
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr "Gira avall l'historial"
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "Gira amunt l'historial"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra els elements del porta-retalls a la posició del ratolí"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del porta-retalls"
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr "Més nou: "
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, kde-format
 msgid "Current: "
 msgstr "Actual: "
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr "Més antic: "
@@ -939,7 +939,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Menú emergent del porta-retalls"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel·la"

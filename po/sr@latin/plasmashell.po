@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:05+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -161,43 +161,43 @@ msgstr "Uđi u režim uređivanja"
 msgid "Exit Edit Mode"
 msgstr "Izađi iz režima uređivanja"
 
-#: main.cpp:126
+#: main.cpp:132
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma školjka"
 
-#: main.cpp:139
+#: main.cpp:145
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Aktiviraj ispravljač QML JavaScripta"
 
 # literal-segment: plasma-shell
-#: main.cpp:142
+#: main.cpp:148
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ne pokreći plasma-shell automatski po padu"
 
-#: main.cpp:145
+#: main.cpp:151
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Nametni učitavanje datog priključka školjke"
 
-#: main.cpp:149
+#: main.cpp:155
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Zameni postojeći primerak"
 
-#: main.cpp:152
+#: main.cpp:158
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Nabroji dostupne opcije povratnih informacija korisnika"
 
-#: main.cpp:208
+#: main.cpp:214
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma ne može da se pokrene"
 
-#: main.cpp:209
+#: main.cpp:215
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

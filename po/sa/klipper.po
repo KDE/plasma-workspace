@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -691,55 +691,55 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "वर्तमान क्लिप्बोर्ड् मध्ये मैन्युअल् रूपेण क्रियाम् आह्वयन्तु"
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, fuzzy, kde-format
 #| msgid "Edit contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "सामग्रीं सम्पादयन्तु"
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&बारकोडं दर्शयतु..."
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "इतिहासं स्पष्टं कुरुत"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, fuzzy, kde-format
 #| msgid "current"
 msgid "Current: "
 msgstr "वर्त्तमानः"
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -957,7 +957,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड पॉपअप"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "&निरसयतु"

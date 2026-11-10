@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
-"PO-Revision-Date: 2026-10-19 16:41+0200\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
+"PO-Revision-Date: 2026-11-05 17:24+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.10\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: configdialog.cpp:86
 #, kde-format
@@ -129,6 +129,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"Nella pagina <interface>Configurazione delle azioni</interface>, abilita "
+"l'impostazione <interface>Proponi applicazioni per i collegamenti e per i "
+"file copiati</interface> oppure abilita almeno un'azioneaffinché le "
+"impostazioni in questa pagina abbiano effetto."
 
 #: configdialog.cpp:194
 #, kde-format
@@ -136,14 +140,7 @@ msgid "Show action popup menu:"
 msgstr "Mostra il menu a comparsa delle azioni:"
 
 #: configdialog.cpp:211
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -153,11 +150,13 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Quando il testo che corrisponde a uno schema di azione viene selezionato o "
-"viene scelto dalla cronologia degli appunti, mostra automaticamente il menu "
-"a comparsa con le azioni applicabili. Se il menu automatico viene "
-"disattivato qui o non viene mostrato per una finestra esclusa, può essere "
-"mostrato utilizzando la scorciatoia <shortcut>%1</shortcut>."
+"Quando viene copiato, selezionato o scelto dalla cronologia degli appunti un "
+"testo che corrisponde a un modello di azione, viene visualizzato "
+"automaticamente un menu a comparsa con le azioni applicabili. Per i file, "
+"ciò avviene solo quando vengono copiati o scelti dalla cronologia.<nl/><nl/"
+">È inoltre possibile accedere al menu utilizzando la scorciatoia da tastiera "
+"<shortcut>%1</shortcut> oppure tramite un pulsante presente accanto a "
+"ciascun elemento corrispondente nella cronologia."
 
 #: configdialog.cpp:228
 #, kde-format
@@ -191,16 +190,14 @@ msgid "Description"
 msgstr "Descrizione"
 
 #: configdialog.cpp:276
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
-msgstr "Aggiungi azione..."
+msgstr "Aggiungi azione…"
 
 #: configdialog.cpp:280
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "Modifica azione..."
+msgstr "Modifica azione…"
 
 #: configdialog.cpp:285
 #, kde-format
@@ -325,11 +322,9 @@ msgid "Clear History"
 msgstr "Cancella cronologia"
 
 #: declarative/qml/ClipboardMenu.qml:316
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "&Configura Klipper…"
+msgstr "Configura gli appunti..."
 
 #: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
@@ -545,16 +540,14 @@ msgstr ""
 "attivato manualmente con la scorciatoia da tastiera <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
-msgstr "Aggiungi comando..."
+msgstr "Aggiungi comando…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
-msgstr "Modifica comando..."
+msgstr "Modifica comando…"
 
 #: editactiondialog.cpp:280
 #, kde-format
@@ -693,52 +686,52 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente le azioni sugli appunti correnti"
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Modifica i cont&enuti…"
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra il codice a barre…"
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr "Scorri la cronologia in basso"
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "Scorri la cronologia in alto"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra gli elementi degli appunti alla posizione del mouse"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "Cronologia degli appunti"
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr "Più recente: "
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, kde-format
 msgid "Current: "
 msgstr "Attuale: "
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr "Più vecchio: "
@@ -833,24 +826,19 @@ msgstr "Memorizza le immagini nella cronologia degli appunti."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Quando viene copiato un testo o un file"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Mostra il menu a comparsa delle azioni applicabili non appena viene "
-"effettuata una selezione."
+msgstr "Mostra il menu a comparsa non appena viene copiato un testo o un file."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Selezione non testuale:"
+msgstr "Quando un testo è selezionato"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -859,6 +847,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Mostra il menu a comparsa non appena viene selezionato del testo, senza "
+"attendere che venga copiato."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -911,10 +901,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Per un elemento scelto dalla cronologia"
+msgstr "Quando un elemento viene scelto dalla cronologia"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -949,7 +938,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Finestra a comparsa degli appunti"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "Ann&ulla"

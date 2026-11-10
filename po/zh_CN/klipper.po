@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -656,54 +656,54 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "在当前剪贴板上手动执行操作"
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "编辑内容(&E)…"
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "显示条形码(&S)…"
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "清除历史记录"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "在鼠标位置显示剪贴板项目"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "剪贴板历史"
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, fuzzy, kde-format
 #| msgid "current"
 msgid "Current: "
 msgstr "当前"
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -892,7 +892,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "剪贴板弹窗"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"

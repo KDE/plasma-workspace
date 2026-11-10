@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1752419 $
+# Version: $Revision: 1752572 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-10-04 14:39+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -709,54 +709,54 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ręcznie wywołaj działanie na zawartości schowka"
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Zmi&eń zawartość…"
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Pokaż kod kre&skowy…"
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "Wyczyść historię"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Pokaż rzeczy schowka pod wskaźnikiem myszy"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historia schowka"
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, fuzzy, kde-format
 #| msgid "current"
 msgid "Current: "
 msgstr "aktualna"
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -960,7 +960,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Okno wysuwne schowka"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anuluj"

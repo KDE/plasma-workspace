@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -652,56 +652,56 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, fuzzy, kde-format
 #| msgid "&Edit Contents..."
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Таҳрир кардани муҳтаво..."
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Намоиш додани рамзи наворӣ..."
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Delete clipboard history?"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, fuzzy, kde-format
 #| msgid "Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Менюи ба &рӯй бароянда дар мавқеъи ҷойгиршавии нишоннамо"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, kde-format
 msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -889,7 +889,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "&Бекор кардан"

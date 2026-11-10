@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:05+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2025-11-30 15:19+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -159,42 +159,42 @@ msgstr "Opna breytisnið"
 msgid "Exit Edit Mode"
 msgstr "Hætta í breytisniði"
 
-#: main.cpp:126
+#: main.cpp:132
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma-skel"
 
-#: main.cpp:139
+#: main.cpp:145
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Virkja QML Javascript-aflúsara"
 
-#: main.cpp:142
+#: main.cpp:148
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Ekki endurræsa plasmaskel sjálfkrafa eftir hrun"
 
-#: main.cpp:145
+#: main.cpp:151
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Þvinga keyrslu á tiltekinni skeljaviðbót"
 
-#: main.cpp:149
+#: main.cpp:155
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Skipta út fyrirliggjandi tilviki"
 
-#: main.cpp:152
+#: main.cpp:158
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Birtir lista yfir tiltæka valkosti fyrir umsagnir notenda"
 
-#: main.cpp:208
+#: main.cpp:214
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Mistókst að ræss Plasma"
 
-#: main.cpp:209
+#: main.cpp:215
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

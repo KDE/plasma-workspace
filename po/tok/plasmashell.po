@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:05+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2024-07-07 20:22-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -166,42 +166,42 @@ msgstr "o nasin ante"
 msgid "Exit Edit Mode"
 msgstr "o nasin ante ala"
 
-#: main.cpp:126
+#: main.cpp:132
 #, kde-format
 msgid "Plasma Shell"
 msgstr "ilo Plasmashell"
 
-#: main.cpp:139
+#: main.cpp:145
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "o open e ilo pali pi ilo QML Javascript"
 
-#: main.cpp:142
+#: main.cpp:148
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "o sin ala e ilo plasmashell moli"
 
-#: main.cpp:145
+#: main.cpp:151
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "o kepeken wawa e ilo lili pana"
 
-#: main.cpp:149
+#: main.cpp:155
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "o weka e ilo lon"
 
-#: main.cpp:152
+#: main.cpp:158
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "ni li pana e nimi ken pi ante ilo"
 
-#: main.cpp:208
+#: main.cpp:214
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "ilo Plasma li ken open ala"
 
-#: main.cpp:209
+#: main.cpp:215
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

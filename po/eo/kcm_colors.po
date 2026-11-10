@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2024-09-18 19:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -1264,7 +1264,7 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Propra akcentkoloro"
 
-#: ui/main.qml:94
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
@@ -1272,112 +1272,112 @@ msgstr ""
 "La kolorskemo '%1' ne estas instalita. Elektante la defaŭltan temon "
 "anstataŭe."
 
-#: ui/main.qml:126
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Ĉiuj skemoj"
 
-#: ui/main.qml:127
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "Helaj skemoj"
 
-#: ui/main.qml:128
+#: ui/main.qml:130
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Malhelaj skemoj"
 
-#: ui/main.qml:139
+#: ui/main.qml:141
 #, kde-format
 msgid "Install from File…"
 msgstr "Instali el Dosiero…"
 
-#: ui/main.qml:144
+#: ui/main.qml:146
 #, kde-format
 msgid "Get New…"
 msgstr "Akiri Novon…"
 
-#: ui/main.qml:191
+#: ui/main.qml:193
 #, kde-format
 msgid "Window Title"
 msgstr "Fenestra Titolo"
 
-#: ui/main.qml:214
+#: ui/main.qml:216
 #, kde-format
 msgid "Window text"
 msgstr "Fenestra teksto"
 
-#: ui/main.qml:222
+#: ui/main.qml:224
 #, kde-format
 msgid "Button"
 msgstr "Butono"
 
-#: ui/main.qml:262
+#: ui/main.qml:264
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ligilo"
 
-#: ui/main.qml:264
+#: ui/main.qml:266
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "vizitita"
 
-#: ui/main.qml:272
+#: ui/main.qml:274
 #, kde-format
 msgid "Normal text"
 msgstr "Normala teksto"
 
-#: ui/main.qml:279
+#: ui/main.qml:288
 #, kde-format
 msgid "Highlighted text"
 msgstr "Vizitita teksto"
 
-#: ui/main.qml:286
+#: ui/main.qml:295
 #, kde-format
 msgid "Disabled text"
 msgstr "Malŝaltita teksto"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Redakti Koloraron…"
 
-#: ui/main.qml:311
+#: ui/main.qml:320
 #, fuzzy, kde-format
 #| msgid "Remove Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Forigi Koloraron"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, fuzzy, kde-format
 #| msgid "Utility to edit and create color schemes"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Utilaĵo por redakti kaj krei kolorarojn"
 
-#: ui/main.qml:315
+#: ui/main.qml:324
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:323
+#: ui/main.qml:332
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr ""
 
-#: ui/main.qml:367
+#: ui/main.qml:376
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Malfermi Koloraron"
 
-#: ui/main.qml:369
+#: ui/main.qml:378
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Kolorardosieroj (*.colors)"

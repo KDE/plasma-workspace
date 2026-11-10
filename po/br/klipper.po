@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -667,55 +667,55 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr ""
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "Ment istor ar go&lver :"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, fuzzy, kde-format
 #| msgid "&Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "&Lañser kemperzhel er reti al logodenn"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "Ment istor ar go&lver :"
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, kde-format
 msgid "Current: "
 msgstr ""
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -909,7 +909,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Ment istor ar go&lver :"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "&Nullañ"

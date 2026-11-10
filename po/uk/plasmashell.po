@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:05+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-07-02 11:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -161,42 +161,42 @@ msgstr "Увійти до режиму редагування"
 msgid "Exit Edit Mode"
 msgstr "Вийти з режиму редагування"
 
-#: main.cpp:126
+#: main.cpp:132
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Оболонка Плазми"
 
-#: main.cpp:139
+#: main.cpp:145
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Увімкнути засіб діагностики Javascript QML"
 
-#: main.cpp:142
+#: main.cpp:148
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не перезапускати оболонку Плазми автоматично після аварії"
 
-#: main.cpp:145
+#: main.cpp:151
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Примусово завантажити вказаний додаток оболонки"
 
-#: main.cpp:149
+#: main.cpp:155
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Замінити наявний екземпляр"
 
-#: main.cpp:152
+#: main.cpp:158
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Показати доступні варіанти для відгуків користувача"
 
-#: main.cpp:208
+#: main.cpp:214
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Не вдалося запустити Плазму"
 
-#: main.cpp:209
+#: main.cpp:215
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

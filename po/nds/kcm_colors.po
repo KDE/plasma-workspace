@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2014-02-16 23:02+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1271,64 +1271,64 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Klöör för nich aktiev Elementen"
 
-#: ui/main.qml:94
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:126
+#: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Schema &hoochladen..."
 
-#: ui/main.qml:127
+#: ui/main.qml:129
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "&Schema"
 
-#: ui/main.qml:128
+#: ui/main.qml:130
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Schema sekern..."
 
-#: ui/main.qml:139
+#: ui/main.qml:141
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:146
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:191
+#: ui/main.qml:193
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Finstertext"
 
-#: ui/main.qml:214
+#: ui/main.qml:216
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Finstertext"
 
-#: ui/main.qml:222
+#: ui/main.qml:224
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "Knoop"
 
-#: ui/main.qml:262
+#: ui/main.qml:264
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1336,7 +1336,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "Link"
 
-#: ui/main.qml:264
+#: ui/main.qml:266
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1344,64 +1344,64 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "opropen"
 
-#: ui/main.qml:272
+#: ui/main.qml:274
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Normaal Text"
 
-#: ui/main.qml:279
+#: ui/main.qml:288
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Opropen Link"
 
-#: ui/main.qml:286
+#: ui/main.qml:295
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Utmaakt"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "Schema &hoochladen..."
 
-#: ui/main.qml:311
+#: ui/main.qml:320
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Klöörschema sekern"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, fuzzy, kde-format
 #| msgid "Save the current color scheme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "Dat aktuelle Klöörschema sekern"
 
-#: ui/main.qml:315
+#: ui/main.qml:324
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:323
+#: ui/main.qml:332
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr ""
 
-#: ui/main.qml:367
+#: ui/main.qml:376
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Klöörschema sekern"
 
-#: ui/main.qml:369
+#: ui/main.qml:378
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

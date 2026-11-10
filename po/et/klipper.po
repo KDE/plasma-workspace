@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2019-12-18 18:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -671,57 +671,57 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Toimingu käsitsi rakendamine lõikepuhvri aktiivsele sisule"
 
-#: klipper.cpp:109
+#: klipper.cpp:111
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Sisu muutmine"
 
-#: klipper.cpp:117
+#: klipper.cpp:119
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Näita ribakoodi..."
 
-#: klipper.cpp:126
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
 msgstr ""
 
-#: klipper.cpp:131
+#: klipper.cpp:133
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
 msgstr "Lõikepuhvri ajalugu"
 
-#: klipper.cpp:138
+#: klipper.cpp:140
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Klipper avatakse hiirekursori asukohas"
 
-#: klipper.cpp:399 klipper.cpp:408
+#: klipper.cpp:402 klipper.cpp:412
 #, kde-format
 msgid "Clipboard history"
 msgstr "Lõikepuhvri ajalugu"
 
-#: klipper.cpp:424
+#: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
 msgstr ""
 
-#: klipper.cpp:431
+#: klipper.cpp:435
 #, fuzzy, kde-format
 #| msgid "current"
 msgid "Current: "
 msgstr "aktiivne"
 
-#: klipper.cpp:438
+#: klipper.cpp:442
 #, kde-format
 msgid "Older: "
 msgstr ""
@@ -918,7 +918,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Lõikepuhvri ajalugu"
 
-#: urlgrabber.cpp:220
+#: urlgrabber.cpp:216
 #, kde-format
 msgid "&Cancel"
 msgstr "&Loobu"

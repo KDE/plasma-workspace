@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:05+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-07-06 08:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -160,42 +160,42 @@ msgstr "進入編輯模式"
 msgid "Exit Edit Mode"
 msgstr "離開編輯模式"
 
-#: main.cpp:126
+#: main.cpp:132
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:139
+#: main.cpp:145
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "開啟 QML Javascript 除錯器"
 
-#: main.cpp:142
+#: main.cpp:148
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "崩潰後不要自動啟動 plasma-shell"
 
-#: main.cpp:145
+#: main.cpp:151
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "強制載入指定的 shell 外掛程式"
 
-#: main.cpp:149
+#: main.cpp:155
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "取代現存實體"
 
-#: main.cpp:152
+#: main.cpp:158
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "列出能用於使用者回饋的選項"
 
-#: main.cpp:208
+#: main.cpp:214
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma 無法啟動"
 
-#: main.cpp:209
+#: main.cpp:215
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

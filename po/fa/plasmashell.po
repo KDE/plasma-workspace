@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-04 01:05+0000\n"
+"POT-Creation-Date: 2026-11-10 00:59+0000\n"
 "PO-Revision-Date: 2026-10-01 10:45+0330\n"
 "Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -160,42 +160,42 @@ msgstr "ورود به حالت ویرایش"
 msgid "Exit Edit Mode"
 msgstr "خروج از حالت ویرایش"
 
-#: main.cpp:126
+#: main.cpp:132
 #, kde-format
 msgid "Plasma Shell"
 msgstr "پوستهٔ پلاسما"
 
-#: main.cpp:139
+#: main.cpp:145
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "فعال‌سازی اشکال‌زدای جاوااسکریپت QML"
 
-#: main.cpp:142
+#: main.cpp:148
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "عدم راه‌اندازی دوبارهٔ خودکار پوستهٔ پلاسما پس از فروپاشی"
 
-#: main.cpp:145
+#: main.cpp:151
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "اجبار به بارگیری افزونهٔ پوستهٔ داده‌شده"
 
-#: main.cpp:149
+#: main.cpp:155
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "جایگزینی یک نمونهٔ موجود"
 
-#: main.cpp:152
+#: main.cpp:158
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "فهرست کردن گزینه‌های موجود برای بازخورد کاربر"
 
-#: main.cpp:208
+#: main.cpp:214
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "آغاز پلاسما شکست خورد"
 
-#: main.cpp:209
+#: main.cpp:215
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
