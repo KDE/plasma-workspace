@@ -74,6 +74,7 @@ Q_SIGNALS:
     void closed();
 
     void infoMessageChanged();
+    void mostLocalDestUrlChanged();
 
     // DBus
     // V1 and V2
@@ -116,6 +117,9 @@ private:
     void requestShow();
 
     QUrl destUrl() const;
+    QUrl mostLocalDestUrl() const;
+    void setDestUrlInternal(const QUrl &destUrl);
+    void resolveMostLocalDestUrl();
     QString prettyUrl(const QUrl &url) const;
     void updateHasDetails();
 
@@ -149,6 +153,7 @@ private:
     bool m_transient = false;
 
     QUrl m_destUrl;
+    QUrl m_mostLocalDestUrl;
 
     /**
      * How far the job had got, and when, from the start of the job. Speed and progress are both

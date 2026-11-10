@@ -29,6 +29,8 @@ Job::Job(uint id, QObject *parent)
     connect(this, &Job::destUrlChanged, this, &Job::textChanged);
     connect(this, &Job::errorTextChanged, this, &Job::textChanged);
     connect(this, &Job::destUrlChanged, this, &Job::effectiveDestUrlChanged);
+    connect(d, &JobPrivate::mostLocalDestUrlChanged, this, &Job::textChanged);
+    connect(d, &JobPrivate::mostLocalDestUrlChanged, this, &Job::effectiveDestUrlChanged);
     connect(this, &Job::descriptionUrlChanged, this, &Job::effectiveDestUrlChanged);
     connect(this, &Job::stateChanged, this, &Job::effectiveDestUrlChanged);
 }
@@ -197,7 +199,7 @@ QUrl Job::effectiveDestUrl() const
     if (d->m_totalFiles == 1) {
         url = d->descriptionUrl();
     } else {
-        url = d->m_destUrl;
+        url = d->mostLocalDestUrl();
     }
 
     // Don't offer opening files in Trash

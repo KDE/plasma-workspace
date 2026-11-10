@@ -12,7 +12,9 @@
 #include <QDebug>
 
 #include <KFilePlacesModel>
+#include <KIO/StatJob>
 #include <KLocalizedString>
+#include <KProtocolInfo>
 #include <KShell>
 
 #include <kio/global.h>
@@ -84,9 +86,49 @@ QString JobPrivate::linkify(const QUrl &url, const QString &caption)
     return QStringLiteral("<a href=\"%1\">%2</a>").arg(url.toString(QUrl::PrettyDecoded), caption.toHtmlEscaped());
 }
 
+QUrl JobPrivate::mostLocalDestUrl() const
+{
+    return m_mostLocalDestUrl.isValid() ? m_mostLocalDestUrl : m_destUrl;
+}
+
+void JobPrivate::setDestUrlInternal(const QUrl &destUrl)
+{
+    if (m_destUrl == destUrl) {
+        return;
+    }
+
+    m_mostLocalDestUrl.clear();
+    updateField(destUrl, m_destUrl, &Job::destUrlChanged);
+
+    resolveMostLocalDestUrl();
+}
+
+void JobPrivate::resolveMostLocalDestUrl()
+{
+    const QUrl destUrl = m_destUrl;
+
+    if (!destUrl.isValid() || destUrl.isLocalFile() || destUrl.scheme() == QLatin1String("trash")
+        || KProtocolInfo::protocolClass(destUrl.scheme()) != QLatin1String(":local")) {
+        return;
+    }
+
+    const auto job = KIO::mostLocalUrl(destUrl, KIO::HideProgressInfo);
+    connect(job, &KJob::result, this, [this, job, destUrl] {
+        if (job->error() || m_destUrl != destUrl) {
+            return;
+        }
+
+        const auto mostLocalUrl = job->mostLocalUrl();
+        if (mostLocalUrl.isLocalFile() && mostLocalUrl != m_mostLocalDestUrl) {
+            m_mostLocalDestUrl = mostLocalUrl;
+            Q_EMIT mostLocalDestUrlChanged();
+        }
+    });
+}
+
 QUrl JobPrivate::destUrl() const
 {
-    QUrl url = m_destUrl;
+    QUrl url = mostLocalDestUrl();
     // In case of a single file and no destUrl, try using the second label (most likely "Destination")...
     if (!url.isValid() && m_totalFiles == 1) {
         url = localFileOrUrl(m_descriptionValue2).adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash);
@@ -332,6 +374,11 @@ void JobPrivate::finish()
         m_killTimer->stop();
     }
 
+    // The destination may not have existed when the job started, e.g. the file of a single file copy.
+    if (!m_mostLocalDestUrl.isValid()) {
+        resolveMostLocalDestUrl();
+    }
+
     Job *job = static_cast<Job *>(parent());
     // update timestamp
     job->resetUpdated();
@@ -465,7 +512,7 @@ void JobPrivate::setDestUrl(const QDBusVariant &urlVariant)
         destUrl.setScheme(QStringLiteral("file"));
     }
 
-    updateField(destUrl, m_destUrl, &Job::destUrlChanged);
+    setDestUrlInternal(destUrl);
 }
 
 void JobPrivate::setError(uint errorCode)
@@ -518,7 +565,7 @@ void JobPrivate::update(const QVariantMap &properties)
     it = properties.find(QStringLiteral("destUrl"));
     if (it != end) {
         const QUrl destUrl = QUrl(it->toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
-        updateField(destUrl, m_destUrl, &Job::destUrlChanged);
+        setDestUrlInternal(destUrl);
     }
 
     it = properties.find(QStringLiteral("speed"));
