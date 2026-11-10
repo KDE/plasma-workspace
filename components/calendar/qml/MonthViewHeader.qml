@@ -43,6 +43,8 @@ Item {
     readonly property alias heading: heading
     readonly property alias configureButton: dateAndPinButtons.configureButton
     readonly property alias pinButton: dateAndPinButtons.pinButton
+    // Optional secondary line below the heading, e.g. the date in an alternate calendar system
+    property string subtitle
 
     implicitWidth: viewHeader.implicitWidth
     implicitHeight: viewHeader.implicitHeight
@@ -101,6 +103,19 @@ Item {
                 sourceComponent: dateAndPin
                 active: root.isDigitalClock
             }
+        }
+
+        PlasmaComponents.Label {
+            visible: root.subtitle.length > 0
+            Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing
+            Layout.rightMargin: Kirigami.Units.largeSpacing
+            Layout.topMargin: -Kirigami.Units.smallSpacing
+
+            font.pixelSize: Kirigami.Theme.smallFont.pixelSize
+            text: root.subtitle
+            textFormat: Text.PlainText
+            elide: Text.ElideRight
         }
 
         RowLayout {

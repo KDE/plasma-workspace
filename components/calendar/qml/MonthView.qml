@@ -72,6 +72,8 @@ Item {
     property var digitalClock: null
     property var eventButton: null
     property alias viewHeader: viewHeader
+    // Optional secondary line below the header's heading, e.g. the date in an alternate calendar system
+    property string headerSubtitle
 
     /**
      * SwipeView currentIndex needed for binding a TabBar to the MonthView.
@@ -260,6 +262,7 @@ Item {
         anchors.top: parent.top
         swipeView: swipeView
         monthViewRoot: root
+        subtitle: root.headerSubtitle
         KeyNavigation.down: (swipeView?.currentItem as InfiniteList)?.currentItem ?? null
     }
 

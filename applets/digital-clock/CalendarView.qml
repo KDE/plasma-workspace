@@ -39,7 +39,7 @@ PlasmaExtras.Representation {
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.inherit: false
 
-    Layout.minimumWidth: (calendar.showAgenda || calendar.showClocks) ? Kirigami.Units.gridUnit * 45 : Kirigami.Units.gridUnit * 22
+    Layout.minimumWidth: calendar.showLeadingColumn ? Kirigami.Units.gridUnit * 45 : Kirigami.Units.gridUnit * 22
     Layout.maximumWidth: Kirigami.Units.gridUnit * 80
 
     Layout.minimumHeight: Kirigami.Units.gridUnit * 25
@@ -48,8 +48,10 @@ PlasmaExtras.Representation {
     collapseMarginsHint: true
 
     readonly property int paddings: Kirigami.Units.largeSpacing
-    readonly property bool showAgenda: eventPluginsManager.enabledPlugins.length > 0
+    // The alternate calendar only provides day labels, not events
+    readonly property bool showAgenda: eventPluginsManager.enabledPlugins.some(p => p !== "alternatecalendar")
     readonly property bool showClocks: clocksList.count > 1
+    readonly property bool showLeadingColumn: showAgenda || showClocks
 
     readonly property alias monthView: monthView
     // This helps synchronize the header of the agenda and the monthView.
@@ -71,7 +73,7 @@ PlasmaExtras.Representation {
     ColumnLayout {
         id: leadingColumn
 
-        visible: calendar.showAgenda || calendar.showClocks
+        visible: calendar.showLeadingColumn
 
         anchors {
             top: parent.top
@@ -597,7 +599,7 @@ PlasmaExtras.Representation {
         }
 
         width: naturalSize.width
-        visible: calendar.showAgenda || calendar.showClocks
+        visible: calendar.showLeadingColumn
 
         imagePath: "widgets/line"
         elementId: "vertical-line"
@@ -615,11 +617,13 @@ PlasmaExtras.Representation {
         }
 
         // Not anchoring to horizontalCenter to avoid sub-pixel misalignments
-        width: (calendar.showAgenda || calendar.showClocks) ? Math.round(parent.width / 2) : parent.width
+        width: calendar.showLeadingColumn ? Math.round(parent.width / 2) : parent.width
 
         PlasmaCalendar.MonthView {
             id: monthView
             viewHeader.height: calendar.headerHeight
+            // Without the leading column, show the alternate calendar date in our own header instead
+            headerSubtitle: calendar.showLeadingColumn ? "" : monthView.currentDateAuxilliaryText
 
             anchors {
                 fill: parent
