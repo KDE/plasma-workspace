@@ -2,7 +2,7 @@
 chartFace=org.kde.ksysguard.piechart
 highPrioritySensorIds=["cpu/all/usage"]
 totalSensors=["cpu/all/usage"]
-lowPrioritySensorIds=["cpu/all/cpuCount","cpu/all/coreCount"]
+lowPrioritySensorIds=["cpu/all/cpuCount","cpu/all/physicalCoreCount","cpu/all/coreCount"]
 
 [FaceConfig]
 rangeAuto=false
