@@ -11,44 +11,84 @@
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
 #include <QDBusMetaType>
+#include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
 #include <QDBusReply>
 #include <QDBusServiceWatcher>
 
 #include <klocalizedstring.h>
+#include <sessionmanagement.h>
 
-#include <solid/device.h>
-#include <solid/deviceinterface.h>
-#include <solid/devicenotifier.h>
+#include <algorithm>
+#include <utility>
 
 #include "batteriesnamesmonitor_p.h"
+#include "upowerbattery_p.h"
 
 static const QString SOLID_POWERMANAGEMENT_SERVICE = QStringLiteral("org.kde.Solid.PowerManagement");
 static const QString SOLID_POWERMANAGEMENT_PATH = QStringLiteral("/org/kde/Solid/PowerManagement");
 static const QString SOLID_POWERMANAGEMENT_IFACE = QStringLiteral("org.kde.Solid.PowerManagement");
 
+static const QString UPOWER_SERVICE = QStringLiteral("org.freedesktop.UPower");
+static const QString UPOWER_PATH = QStringLiteral("/org/freedesktop/UPower");
+static const QString UPOWER_IFACE = QStringLiteral("org.freedesktop.UPower");
+
+namespace
+{
+using Change = UPowerBattery::Change;
+
+constexpr UPowerBattery::Changes overallBatteryChanges = Change::Present | Change::ChargePercent | Change::ChargeState | Change::Energy | Change::EnergyFull;
+
+QList<int> rolesForChanges(UPowerBattery::Changes changes)
+{
+    QList<int> roles;
+    if (changes.testFlag(Change::Present)) {
+        roles << BatteryControlModel::PluggedIn;
+    }
+    if (changes.testFlag(Change::ChargePercent)) {
+        roles << BatteryControlModel::Percent;
+    }
+    if (changes.testFlag(Change::Capacity)) {
+        roles << BatteryControlModel::Capacity;
+    }
+    if (changes.testFlag(Change::PowerSupply)) {
+        roles << BatteryControlModel::IsPowerSupply;
+    }
+    if (changes.testFlag(Change::ChargeState)) {
+        roles << BatteryControlModel::ChargeState;
+    }
+    if (changes.testFlag(Change::Energy)) {
+        roles << BatteryControlModel::Energy;
+    }
+    return roles;
+}
+}
+
 BatteryControlModel::BatteryControlModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_namesMonitor(new BatteriesNamesMonitor)
     , m_solidWatcher(new QDBusServiceWatcher)
+    , m_upowerWatcher(new QDBusServiceWatcher)
 {
     m_internalBatteries.reserve(2);
 
-    const QList<Solid::Device> listBattery = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
+    QDBusConnection systemBus = QDBusConnection::systemBus();
 
-    if (!listBattery.isEmpty()) {
-        for (const Solid::Device &deviceBattery : listBattery) {
-            deviceAdded(deviceBattery.udi());
-        }
+    m_upowerWatcher->setConnection(systemBus);
+    m_upowerWatcher->setWatchMode(QDBusServiceWatcher::WatchForRegistration | QDBusServiceWatcher::WatchForUnregistration);
+    m_upowerWatcher->addWatchedService(UPOWER_SERVICE);
+    connect(m_upowerWatcher.get(), &QDBusServiceWatcher::serviceRegistered, this, &BatteryControlModel::loadDevices);
+    connect(m_upowerWatcher.get(), &QDBusServiceWatcher::serviceUnregistered, this, &BatteryControlModel::onUPowerServiceUnregistered);
 
-        m_hasBatteries = true;
-        updateOverallBattery();
-    } else {
-        m_hasBatteries = false;
-        m_hasCumulative = false;
-    }
+    systemBus.connect(UPOWER_SERVICE, UPOWER_PATH, UPOWER_IFACE, QStringLiteral("DeviceAdded"), this, SLOT(onUPowerDeviceAdded(QDBusObjectPath)));
+    systemBus.connect(UPOWER_SERVICE, UPOWER_PATH, UPOWER_IFACE, QStringLiteral("DeviceRemoved"), this, SLOT(onUPowerDeviceRemoved(QDBusObjectPath)));
 
-    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &BatteryControlModel::deviceAdded);
-    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &BatteryControlModel::deviceRemoved);
+    auto sessionManagement = new SessionManagement(this);
+    connect(sessionManagement, &SessionManagement::resumingFromSuspend, this, &BatteryControlModel::onResumingFromSuspend);
+
+    m_hasBatteries = false;
+    m_hasCumulative = false;
+    loadDevices();
 
     // Watch for PowerDevil's power management service
     m_solidWatcher->setConnection(QDBusConnection::sessionBus());
@@ -207,15 +247,16 @@ int BatteryControlModel::rowCount(const QModelIndex &parent) const
 
 QVariant BatteryControlModel::data(const QModelIndex &index, int role) const
 {
-    Solid::Device deviceBattery(m_batterySources[index.row()]);
-    if (!deviceBattery.isValid()) {
+    if (!checkIndex(index, CheckIndexOption::IndexIsValid | CheckIndexOption::ParentIsInvalid)) {
         return {};
     }
 
-    auto battery = deviceBattery.as<Solid::Battery>();
-    if (!battery) {
+    const auto it = m_batteries.find(m_batterySources[index.row()]);
+    if (it == m_batteries.end()) {
         return {};
     }
+
+    const UPowerBattery *battery = it->second.get();
 
     switch (role) {
     case Percent:
@@ -231,7 +272,7 @@ QVariant BatteryControlModel::data(const QModelIndex &index, int role) const
     case ChargeState:
         return QVariant::fromValue(updateBatteryState(battery));
     case PrettyName:
-        return QVariant::fromValue(m_namesMonitor->updateBatteryName(deviceBattery, battery));
+        return QVariant::fromValue(m_namesMonitor->updateBatteryName(*battery));
     case Type:
         return QVariant::fromValue(batteryTypeToString(battery));
     }
@@ -256,42 +297,67 @@ void BatteryControlModel::deviceAdded(const QString &udi)
 {
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Device add signal arrived. Udi: " << udi;
 
-    Solid::Device deviceBattery(udi);
-    if (!deviceBattery.isValid()) {
-        return;
-    }
-    auto *battery = deviceBattery.as<Solid::Battery>();
-
-    if (!battery) {
+    if (m_batteries.contains(udi) || m_pendingBatteries.contains(udi)) {
         return;
     }
 
-    int position = m_batterySources.size();
+    m_batteryOrder[udi] = m_nextBatteryOrder++;
 
-    if (battery->type() == Solid::Battery::PrimaryBattery) {
-        position = m_internalBatteries.size();
+    auto newBattery = std::make_unique<UPowerBattery>(udi);
+    UPowerBattery *battery = newBattery.get();
+    connect(battery, &UPowerBattery::loadFinished, this, &BatteryControlModel::onBatteryLoadFinished);
+    m_pendingBatteries[udi] = std::move(newBattery);
+    battery->load();
+}
 
-        m_internalBatteries.append(udi);
+void BatteryControlModel::onBatteryLoadFinished(const QString &udi, bool isBattery)
+{
+    const auto it = m_pendingBatteries.find(udi);
+    if (it == m_pendingBatteries.end()) {
+        return;
+    }
+
+    std::unique_ptr<UPowerBattery> battery = std::move(it->second);
+    m_pendingBatteries.erase(it);
+
+    if (isBattery) {
+        addBattery(std::move(battery));
+    } else {
+        m_batteryOrder.remove(udi);
+        battery->disconnect(this);
+        battery.release()->deleteLater();
+    }
+}
+
+void BatteryControlModel::addBattery(std::unique_ptr<UPowerBattery> newBattery)
+{
+    const QString udi = newBattery->udi();
+    UPowerBattery *battery = newBattery.get();
+    m_batteries[udi] = std::move(newBattery);
+
+    // Keep internal batteries first and order each group by when UPower announced the device,
+    // independently of the order in which property replies arrive.
+    const auto announcedBefore = [this](const QString &lhs, const QString &rhs) {
+        return m_batteryOrder.value(lhs) < m_batteryOrder.value(rhs);
+    };
+
+    int position = 0;
+    if (battery->type() == UPowerBattery::Type::Primary) {
+        position = std::ranges::lower_bound(std::as_const(m_internalBatteries), udi, announcedBefore) - m_internalBatteries.cbegin();
+
+        m_internalBatteries.insert(position, udi);
 
         m_hasInternalBatteries = true;
 
         qCDebug(COMPONENTS::BATTERYCONTROL) << "Is have internal batteries: true";
-
-        connect(battery, &Solid::Battery::presentStateChanged, this, &BatteryControlModel::updateOverallBattery);
-        connect(battery, &Solid::Battery::energyChanged, this, &BatteryControlModel::updateOverallBattery);
-        connect(battery, &Solid::Battery::energyFullChanged, this, &BatteryControlModel::updateOverallBattery);
-        connect(battery, &Solid::Battery::chargePercentChanged, this, &BatteryControlModel::updateOverallBattery);
-        connect(battery, &Solid::Battery::chargeStateChanged, this, &BatteryControlModel::updateOverallBattery);
-
-        updateOverallBattery();
+    } else {
+        const auto externalBegin = m_batterySources.cbegin() + m_internalBatteries.size();
+        position = std::lower_bound(externalBegin, m_batterySources.cend(), udi, announcedBefore) - m_batterySources.cbegin();
     }
 
-    connect(battery, &Solid::Battery::chargeStateChanged, this, &BatteryControlModel::updateBatteryChargeState);
-    connect(battery, &Solid::Battery::chargePercentChanged, this, &BatteryControlModel::updateBatteryChargePercent);
-    connect(battery, &Solid::Battery::energyChanged, this, &BatteryControlModel::updateBatteryEnergy);
-    connect(battery, &Solid::Battery::presentStateChanged, this, &BatteryControlModel::updatePluggedInState);
-    connect(battery, &Solid::Battery::powerSupplyStateChanged, this, &BatteryControlModel::updateBatteryPowerSupplyState);
-    connect(battery, &Solid::Battery::capacityChanged, this, &BatteryControlModel::updateBatteryCapacity);
+    connect(battery, &UPowerBattery::changed, this, [this](UPowerBattery::Changes changes, const QString &udi) {
+        onBatteryChanged(udi, rolesForChanges(changes), changes.testAnyFlags(overallBatteryChanges));
+    });
 
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Position for battery with udi : " << udi << "initialized : " << position;
 
@@ -312,11 +378,19 @@ void BatteryControlModel::deviceAdded(const QString &udi)
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Battery with udi: " << udi << " is added";
 
     m_hasBatteries = true;
+
+    updateOverallBattery();
 }
 
 void BatteryControlModel::deviceRemoved(const QString &udi)
 {
     qCDebug(COMPONENTS::BATTERYCONTROL) << "Device remove signal arrived. Udi: " << udi;
+
+    if (m_pendingBatteries.erase(udi) > 0) {
+        m_batteryOrder.remove(udi);
+        return;
+    }
+
     if (m_batterySources.isEmpty()) {
         return;
     }
@@ -328,7 +402,8 @@ void BatteryControlModel::deviceRemoved(const QString &udi)
 
     m_namesMonitor->removeBatteryName(udi);
 
-    if (m_internalBatteries.removeOne(udi)) {
+    const bool wasInternal = m_internalBatteries.removeOne(udi);
+    if (wasInternal) {
         m_hasInternalBatteries = !m_internalBatteries.isEmpty();
         qCDebug(COMPONENTS::BATTERYCONTROL) << "Is have internal batteries: " << m_hasInternalBatteries;
     }
@@ -348,56 +423,93 @@ void BatteryControlModel::deviceRemoved(const QString &udi)
 
     m_hasBatteries = !m_batterySources.isEmpty();
 
-    auto deleteBattery = Solid::Device(udi).as<Solid::Battery>();
+    m_batteries.erase(udi);
+    m_batteryOrder.remove(udi);
 
-    if (deleteBattery) {
-        deleteBattery->disconnect(this);
-        if (deleteBattery->type() == Solid::Battery::PrimaryBattery) {
-            updateOverallBattery();
-        }
+    if (wasInternal) {
+        updateOverallBattery();
     }
 }
 
-void BatteryControlModel::updateBatteryCapacity(int newState, const QString &udi)
+void BatteryControlModel::onUPowerDeviceAdded(const QDBusObjectPath &path)
 {
-    Q_UNUSED(newState);
-    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
-    Q_EMIT dataChanged(index, index, {Capacity});
+    deviceAdded(path.path());
 }
 
-void BatteryControlModel::updateBatteryChargeState(int newState, const QString &udi)
+void BatteryControlModel::onUPowerDeviceRemoved(const QDBusObjectPath &path)
 {
-    Q_UNUSED(newState);
-    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
-    Q_EMIT dataChanged(index, index, {ChargeState});
+    deviceRemoved(path.path());
 }
 
-void BatteryControlModel::updateBatteryChargePercent(int newValue, const QString &udi)
+void BatteryControlModel::loadDevices()
 {
-    Q_UNUSED(newValue);
-    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
-    Q_EMIT dataChanged(index, index, {Percent});
+    // A newer enumeration supersedes the one in flight; deleting its watcher drops the outdated reply.
+    delete m_enumerationWatcher;
+
+    const QDBusMessage message = QDBusMessage::createMethodCall(UPOWER_SERVICE, UPOWER_PATH, UPOWER_IFACE, QStringLiteral("EnumerateDevices"));
+    m_enumerationWatcher = new QDBusPendingCallWatcher(QDBusConnection::systemBus().asyncCall(message), this);
+    connect(m_enumerationWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        m_enumerationWatcher = nullptr;
+        watcher->deleteLater();
+
+        const QDBusPendingReply<QList<QDBusObjectPath>> reply = *watcher;
+        if (reply.isError()) {
+            qCWarning(COMPONENTS::BATTERYCONTROL) << "error enumerating UPower devices:" << reply.error();
+            return;
+        }
+
+        const QList<QDBusObjectPath> paths = reply.value();
+        for (const QDBusObjectPath &path : paths) {
+            deviceAdded(path.path());
+        }
+    });
 }
 
-void BatteryControlModel::updateBatteryEnergy(double newValue, const QString &udi)
+void BatteryControlModel::onUPowerServiceUnregistered()
 {
-    Q_UNUSED(newValue);
-    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
-    Q_EMIT dataChanged(index, index, {Energy});
+    delete std::exchange(m_enumerationWatcher, nullptr);
+    m_pendingBatteries.clear();
+    m_batteryOrder.clear();
+
+    if (m_batterySources.isEmpty()) {
+        return;
+    }
+
+    beginResetModel();
+    for (const QString &udi : std::as_const(m_batterySources)) {
+        m_namesMonitor->removeBatteryName(udi);
+    }
+    m_batteries.clear();
+    m_batterySources.clear();
+    m_batteryPositions.clear();
+    m_internalBatteries.clear();
+    endResetModel();
+
+    m_hasInternalBatteries = false;
+    m_hasBatteries = false;
+    updateOverallBattery();
 }
 
-void BatteryControlModel::updateBatteryPowerSupplyState(bool newState, const QString &udi)
+void BatteryControlModel::onResumingFromSuspend()
 {
-    Q_UNUSED(newState);
-    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
-    Q_EMIT dataChanged(index, index, {IsPowerSupply});
+    for (const auto &[udi, battery] : m_batteries) {
+        battery->load();
+    }
+    for (const auto &[udi, battery] : m_pendingBatteries) {
+        battery->load();
+    }
 }
 
-void BatteryControlModel::updatePluggedInState(bool onBattery, const QString &udi)
+void BatteryControlModel::onBatteryChanged(const QString &udi, const QList<int> &roles, bool overallChanged)
 {
-    Q_UNUSED(onBattery);
-    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
-    Q_EMIT dataChanged(index, index, {PluggedIn});
+    if (overallChanged && m_internalBatteries.contains(udi)) {
+        updateOverallBattery();
+    }
+
+    if (!roles.isEmpty()) {
+        const QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
+        Q_EMIT dataChanged(index, index, roles);
+    }
 }
 
 void BatteryControlModel::batteryRemainingTimeChanged(qulonglong time)
@@ -434,18 +546,17 @@ void BatteryControlModel::updateOverallBattery()
     int count = 0;
 
     for (const QString &internalBattery : std::as_const(m_internalBatteries)) {
-        Solid::Device deviceBattery(internalBattery);
-        const Solid::Battery *battery = deviceBattery.as<Solid::Battery>();
-        if (battery && battery->isPresent()) {
+        const UPowerBattery *battery = m_batteries.at(internalBattery).get();
+        if (battery->isPresent()) {
             hasCumulative = true;
 
             energy += battery->energy();
             totalEnergy += battery->energyFull();
             totalPercentage += battery->chargePercent();
-            allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
-            charging = charging || (battery->chargeState() == Solid::Battery::Charging);
-            discharging = discharging || (battery->chargeState() == Solid::Battery::Discharging);
-            noCharge = noCharge || (battery->chargeState() == Solid::Battery::NoCharge);
+            allFullyCharged = allFullyCharged && (battery->chargeState() == UPowerBattery::ChargeState::FullyCharged);
+            charging = charging || (battery->chargeState() == UPowerBattery::ChargeState::Charging);
+            discharging = discharging || (battery->chargeState() == UPowerBattery::ChargeState::Discharging);
+            noCharge = noCharge || (battery->chargeState() == UPowerBattery::ChargeState::NoCharge);
             ++count;
         }
     }
@@ -550,7 +661,7 @@ QBindable<int> BatteryControlModel::bindablePercent()
     return &m_percent;
 }
 
-BatteryControlModel::ChargeStateEnum BatteryControlModel::updateBatteryState(const Solid::Battery *battery) const
+BatteryControlModel::ChargeStateEnum BatteryControlModel::updateBatteryState(const UPowerBattery *battery) const
 {
     // When we are using a charge threshold, the kernel
     // may stop charging within a percentage point of the actual threshold
@@ -560,56 +671,59 @@ BatteryControlModel::ChargeStateEnum BatteryControlModel::updateBatteryState(con
         // Also, Upower may give us a status of "Not charging" rather than
         // "Fully charged", so we need to account for that as well. See
         // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
-        && (battery->chargeState() == Solid::Battery::NoCharge || battery->chargeState() == Solid::Battery::FullyCharged)) {
+        && (battery->chargeState() == UPowerBattery::ChargeState::NoCharge || battery->chargeState() == UPowerBattery::ChargeState::FullyCharged)) {
         return FullyCharged;
     }
 
     // Otherwise, just look at the charge state
     switch (battery->chargeState()) {
-    case Solid::Battery::ChargeState::NoCharge:
+    case UPowerBattery::ChargeState::NoCharge:
         return NoCharge;
-    case Solid::Battery::ChargeState::FullyCharged:
+    case UPowerBattery::ChargeState::FullyCharged:
         return FullyCharged;
-    case Solid::Battery::ChargeState::Charging:
+    case UPowerBattery::ChargeState::Charging:
         return Charging;
-    case Solid::Battery::ChargeState::Discharging:
+    case UPowerBattery::ChargeState::Discharging:
         return Discharging;
     }
     Q_UNREACHABLE_RETURN(NoCharge);
 }
 
-QString BatteryControlModel::batteryTypeToString(const Solid::Battery *battery) const
+QString BatteryControlModel::batteryTypeToString(const UPowerBattery *battery) const
 {
     switch (battery->type()) {
-    case Solid::Battery::PrimaryBattery:
+    case UPowerBattery::Type::Primary:
         return QStringLiteral("Battery");
-    case Solid::Battery::UpsBattery:
+    case UPowerBattery::Type::Ups:
         return QStringLiteral("Ups");
-    case Solid::Battery::MonitorBattery:
-        return QStringLiteral("Monitor");
-    case Solid::Battery::MouseBattery:
+    case UPowerBattery::Type::Mouse:
         return QStringLiteral("Mouse");
-    case Solid::Battery::KeyboardBattery:
+    case UPowerBattery::Type::Keyboard:
         return QStringLiteral("Keyboard");
-    case Solid::Battery::PdaBattery:
+    case UPowerBattery::Type::Pda:
         return QStringLiteral("Pda");
-    case Solid::Battery::PhoneBattery:
+    case UPowerBattery::Type::Phone:
         return QStringLiteral("Phone");
-    case Solid::Battery::GamingInputBattery:
+    case UPowerBattery::Type::GamingInput:
         return QStringLiteral("GamingInput");
-    case Solid::Battery::BluetoothBattery:
+    case UPowerBattery::Type::Bluetooth:
         return QStringLiteral("Bluetooth");
-    case Solid::Battery::TabletBattery:
+    case UPowerBattery::Type::Tablet:
         return QStringLiteral("Tablet");
-    case Solid::Battery::HeadphoneBattery:
+    case UPowerBattery::Type::Headphone:
         return QStringLiteral("Headphone");
-    case Solid::Battery::HeadsetBattery:
+    case UPowerBattery::Type::Headset:
         return QStringLiteral("Headset");
-    case Solid::Battery::TouchpadBattery:
+    case UPowerBattery::Type::Touchpad:
         return QStringLiteral("Touchpad");
-    default:
+    case UPowerBattery::Type::Wearable:
+        return QStringLiteral("Wearable");
+    case UPowerBattery::Type::Speakers:
+        return QStringLiteral("Speakers");
+    case UPowerBattery::Type::Unknown:
         return QStringLiteral("Unknown");
     }
+    Q_UNREACHABLE_RETURN(QStringLiteral("Unknown"));
 }
 
 #include "moc_batterycontrol.cpp"

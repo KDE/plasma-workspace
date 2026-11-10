@@ -7,15 +7,19 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QDBusObjectPath>
 #include <QDBusPendingCall>
 #include <QObject>
 #include <QObjectBindableProperty>
 #include <qqmlregistration.h>
 
-#include <solid/battery.h>
+#include <map>
+#include <memory>
 
+class QDBusPendingCallWatcher;
 class QDBusServiceWatcher;
 class BatteriesNamesMonitor;
+class UPowerBattery;
 
 class BatteryControlModel : public QAbstractListModel
 {
@@ -71,25 +75,27 @@ private:
     QBindable<qulonglong> bindableSmoothedRemainingMsec();
     QBindable<int> bindablePercent();
 
-    ChargeStateEnum updateBatteryState(const Solid::Battery *battery) const;
-    QString batteryTypeToString(const Solid::Battery *battery) const;
+    ChargeStateEnum updateBatteryState(const UPowerBattery *battery) const;
+    QString batteryTypeToString(const UPowerBattery *battery) const;
+
+    void addBattery(std::unique_ptr<UPowerBattery> newBattery);
+    void onBatteryChanged(const QString &udi, const QList<int> &roles, bool overallChanged);
 
 private Q_SLOTS:
     void onServiceRegistered(const QString &serviceName);
     void onServiceUnregistered(const QString &serviceName);
+    void onUPowerDeviceAdded(const QDBusObjectPath &path);
+    void onUPowerDeviceRemoved(const QDBusObjectPath &path);
+    void onUPowerServiceUnregistered();
+    void onResumingFromSuspend();
+    void loadDevices();
+    void onBatteryLoadFinished(const QString &udi, bool isBattery);
 
     void batteryRemainingTimeChanged(qulonglong time);
     void smoothedBatteryRemainingTimeChanged(qulonglong time);
     void updateBatteryChargeStopThreshold(int threshold);
     void updateAcPlugState(bool onBattery);
     void updateOverallBattery();
-
-    void updateBatteryCapacity(int newState, const QString &udi);
-    void updateBatteryChargeState(int newState, const QString &udi);
-    void updateBatteryChargePercent(int newValue, const QString &udi);
-    void updateBatteryEnergy(double newValue, const QString &udi);
-    void updateBatteryPowerSupplyState(bool newState, const QString &udi);
-    void updatePluggedInState(bool onBattery, const QString &udi);
 
     void deviceAdded(const QString &udi);
     void deviceRemoved(const QString &udi);
@@ -118,8 +124,15 @@ private:
 
     std::unique_ptr<BatteriesNamesMonitor> m_namesMonitor;
     std::unique_ptr<QDBusServiceWatcher> m_solidWatcher;
+    std::unique_ptr<QDBusServiceWatcher> m_upowerWatcher;
+
+    std::map<QString, std::unique_ptr<UPowerBattery>> m_batteries;
+    std::map<QString, std::unique_ptr<UPowerBattery>> m_pendingBatteries;
+    QDBusPendingCallWatcher *m_enumerationWatcher = nullptr;
 
     QList<QString> m_batterySources;
     QHash<QString, uint> m_batteryPositions;
     QList<QString> m_internalBatteries;
+    QHash<QString, quint64> m_batteryOrder;
+    quint64 m_nextBatteryOrder = 0;
 };

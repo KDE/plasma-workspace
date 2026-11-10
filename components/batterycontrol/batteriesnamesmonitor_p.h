@@ -7,14 +7,14 @@
 #pragma once
 
 #include <QMap>
+#include <QString>
 
-#include <Solid/Battery>
-#include <Solid/Device>
+class UPowerBattery;
 
 class BatteriesNamesMonitor
 {
 public:
-    QString updateBatteryName(const Solid::Device &deviceBattery, Solid::Battery *battery);
+    QString updateBatteryName(const UPowerBattery &battery);
     void removeBatteryName(const QString &udi);
 
 private:

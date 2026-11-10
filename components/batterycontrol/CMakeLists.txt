@@ -4,6 +4,8 @@
 set(batterycontrol_SRCS
         batterycontrol.cpp batterycontrol.h
         batteriesnamesmonitor_p.cpp batteriesnamesmonitor_p.h
+        upowerbattery_p.cpp upowerbattery_p.h
+        upowertypes_p.h
 )
 
 ecm_qt_declare_logging_category(batterycontrol_SRCS
@@ -24,9 +26,9 @@ target_link_libraries(batterycontrol
         PUBLIC
         Qt::Core
         Qt::Qml
-        KF6::Solid
         PRIVATE
         Qt::DBus
+        PW::KWorkspace
         KF6::Service
         KF6::I18n
 )
@@ -45,3 +47,7 @@ ecm_qt_install_logging_categories(
         FILE components/batterycontrol.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()

@@ -6,22 +6,26 @@
 
 #include "batteriesnamesmonitor_p.h"
 
+#include "upowerbattery_p.h"
+
 #include <klocalizedstring.h>
 
-QString BatteriesNamesMonitor::updateBatteryName(const Solid::Device &deviceBattery, Solid::Battery *battery)
+QString BatteriesNamesMonitor::updateBatteryName(const UPowerBattery &battery)
 {
     // Don't show battery name for primary power supply batteries. They usually have cryptic serial number names.
-    bool showBatteryName = battery->type() != Solid::Battery::PrimaryBattery || !battery->isPowerSupply();
-    if (!deviceBattery.product().isEmpty() && deviceBattery.product() != QLatin1String("Unknown Battery") && showBatteryName) {
-        if (!deviceBattery.vendor().isEmpty()) {
-            return (QString(deviceBattery.vendor() + QLatin1Char(' ') + deviceBattery.product()));
+    bool showBatteryName = battery.type() != UPowerBattery::Type::Primary || !battery.isPowerSupply();
+    const QString product = battery.product();
+    if (!product.isEmpty() && product != QLatin1String("Unknown Battery") && showBatteryName) {
+        const QString vendor = battery.vendor();
+        if (!vendor.isEmpty()) {
+            return QString(vendor + QLatin1Char(' ') + product);
         }
-        return deviceBattery.product();
+        return product;
     }
 
     // If we can't show a real name, let's do it ourselves
     uint batteryIndex;
-    if (auto it = m_namedBatteries.constFind(deviceBattery.udi()); it != m_namedBatteries.constEnd()) {
+    if (auto it = m_namedBatteries.constFind(battery.udi()); it != m_namedBatteries.constEnd()) {
         // We've already named this battery
         batteryIndex = *it;
     } else {
@@ -38,7 +42,7 @@ QString BatteriesNamesMonitor::updateBatteryName(const Solid::Device &deviceBatt
             }
         }
 
-        m_namedBatteries.insert(deviceBattery.udi(), batteryIndex);
+        m_namedBatteries.insert(battery.udi(), batteryIndex);
     }
 
     if (batteryIndex > 1) {
