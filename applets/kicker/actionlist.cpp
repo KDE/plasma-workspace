@@ -14,6 +14,7 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QStandardPaths>
+#include <QThreadPool>
 
 #include <KApplicationTrader>
 #include <KFileUtils>
@@ -408,12 +409,42 @@ bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &s
 }
 
 #ifdef HAVE_APPSTREAMQT
-Q_GLOBAL_STATIC(AppStream::Pool, appstreamPool)
+using ComponentIdMap = QHash<QString, QString>;
+Q_GLOBAL_STATIC(ComponentIdMap, appstreamComponentIds)
+
+static void startAppstreamLoading()
+{
+    QThreadPool::globalInstance()->start([] {
+        AppStream::Pool pool;
+        if (!pool.load()) {
+            qWarning() << "Failed to load AppStream metadata pool:" << pool.lastError();
+            return;
+        }
+
+        ComponentIdMap componentIds;
+        const auto components = pool.components().toList();
+        for (const auto &component : components) {
+            const auto desktopIds = component.launchable(AppStream::Launchable::KindDesktopId).entries();
+            for (const QString &desktopId : desktopIds) {
+                componentIds.try_emplace(desktopId, component.id());
+            }
+        }
+
+        QMetaObject::invokeMethod(QCoreApplication::instance(), [componentIds = std::move(componentIds)]() mutable {
+            *appstreamComponentIds = std::move(componentIds);
+        });
+    });
+}
+Q_COREAPP_STARTUP_FUNCTION(startAppstreamLoading)
+
+static QString appstreamComponentId(const KService::Ptr &service)
+{
+    return appstreamComponentIds->value(service->desktopEntryName() + QLatin1String(".desktop"));
+}
 #endif
 
 QVariantList appstreamActions(const KService::Ptr &service)
 {
-    Q_UNUSED(service)
 #ifdef HAVE_APPSTREAMQT
     const KService::Ptr appStreamHandler = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/appstream"));
 
@@ -422,11 +453,16 @@ QVariantList appstreamActions(const KService::Ptr &service)
         return {};
     }
 
+    if (appstreamComponentId(service).isEmpty()) {
+        return {};
+    }
+
     QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons…"),
                                                            appStreamHandler->icon(),
                                                            QStringLiteral("manageApplication"));
     return {appstreamAction};
 #else
+    Q_UNUSED(service)
     return {};
 #endif
 }
@@ -437,17 +473,13 @@ bool handleAppstreamActions(const QString &actionId, const KService::Ptr &servic
         return false;
     }
 #ifdef HAVE_APPSTREAMQT
-    if (!appstreamPool.exists()) {
-        appstreamPool->load();
-    }
-
-    const auto components =
-        appstreamPool->componentsByLaunchable(AppStream::Launchable::KindDesktopId, service->desktopEntryName() + QLatin1String(".desktop")).toList();
-    if (components.empty()) {
+    const auto componentId = appstreamComponentId(service);
+    if (componentId.isEmpty()) {
         return false;
     }
-    return QDesktopServices::openUrl(QUrl(QLatin1String("appstream://") + components[0].id()));
+    return QDesktopServices::openUrl(QUrl(QLatin1String("appstream://") + componentId));
 #else
+    Q_UNUSED(service)
     return false;
 #endif
 }
