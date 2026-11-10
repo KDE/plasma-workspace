@@ -3,6 +3,7 @@ widgetStyle=testValue
 
 [kdeglobals][General]
 ColorScheme=testValue
+font=Noto Sans,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [kdeglobals][Icons]
 Theme=testValue
