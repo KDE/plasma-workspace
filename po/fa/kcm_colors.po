@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 00:16+0000\n"
+"POT-Creation-Date: 2026-11-10 03:05+0000\n"
 "PO-Revision-Date: 2007-09-02 12:20+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -1228,121 +1228,121 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "پنجره غیرفعال"
 
-#: ui/main.qml:94
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:126
+#: ui/main.qml:128
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "طرحواره رنگ"
 
-#: ui/main.qml:127
+#: ui/main.qml:129
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "&حذف طرحواره‌"
 
-#: ui/main.qml:128
+#: ui/main.qml:130
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "ذخیره طرحواره رنگ"
 
-#: ui/main.qml:139
+#: ui/main.qml:141
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:144
+#: ui/main.qml:146
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:191
+#: ui/main.qml:193
 #, fuzzy, kde-format
 msgid "Window Title"
 msgstr "پنجره"
 
-#: ui/main.qml:214
+#: ui/main.qml:216
 #, fuzzy, kde-format
 msgid "Window text"
 msgstr "پنجره"
 
-#: ui/main.qml:222
+#: ui/main.qml:224
 #, fuzzy, kde-format
 msgid "Button"
 msgstr "دکمه"
 
-#: ui/main.qml:262
+#: ui/main.qml:264
 #, fuzzy, kde-format
 #| msgid "link"
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "پیوند"
 
-#: ui/main.qml:264
+#: ui/main.qml:266
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr ""
 
-#: ui/main.qml:272
+#: ui/main.qml:274
 #, kde-format
 msgid "Normal text"
 msgstr ""
 
-#: ui/main.qml:279
+#: ui/main.qml:288
 #, fuzzy, kde-format
 #| msgid "Selected text"
 msgid "Highlighted text"
 msgstr "متن برگزیده"
 
-#: ui/main.qml:286
+#: ui/main.qml:295
 #, fuzzy, kde-format
 msgid "Disabled text"
 msgstr "دکمه عنوان غیرفعال"
 
-#: ui/main.qml:304
+#: ui/main.qml:313
 #, fuzzy, kde-format
 msgid "Edit Color Scheme…"
 msgstr "طرحواره رنگ"
 
-#: ui/main.qml:311
+#: ui/main.qml:320
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "ذخیره طرحواره رنگ"
 
-#: ui/main.qml:313
+#: ui/main.qml:322
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
 msgstr "ذخیره طرحواره رنگ"
 
-#: ui/main.qml:315
+#: ui/main.qml:324
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:323
+#: ui/main.qml:332
 #, kde-format
 msgid "Don’t delete this color scheme"
 msgstr ""
 
-#: ui/main.qml:367
+#: ui/main.qml:376
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "ذخیره طرحواره رنگ"
 
-#: ui/main.qml:369
+#: ui/main.qml:378
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
