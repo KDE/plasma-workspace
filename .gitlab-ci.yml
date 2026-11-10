@@ -10,6 +10,7 @@ include:
       - /gitlab-templates/xml-lint.yml
       - /gitlab-templates/yaml-lint.yml
       - /gitlab-templates/qml-lint.yml
+      - /gitlab-templates/reuse-lint-relaxed.yml
 
 suse_tumbleweed_qt612_reduced_featureset:
   extends: suse_tumbleweed_qt612
