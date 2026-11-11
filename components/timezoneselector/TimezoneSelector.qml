@@ -8,6 +8,7 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
+import QtQuick.Effects
 
 import QtPositioning
 import QtLocation
@@ -37,6 +38,16 @@ Item {
     * @property string selectedTimeZone
     */
     property string selectedTimeZone: ""
+    onSelectedTimeZoneChanged: {
+        const data = geoDatabase.dataForTimeZone(root.selectedTimeZone)
+        if (data?.properties?.centroid) {
+            view.animateCenterTo(QtPositioning.coordinate(data.properties.centroid[1], data.properties.centroid[0]))
+        }
+        if (data?.properties?.bounds) {
+            view.animateZoomLevel(view.suggestedZoomOf(QtPositioning.rectangle(QtPositioning.coordinate(data.properties.bounds[3], data.properties.bounds[0]), QtPositioning.coordinate(data.properties.bounds[1], data.properties.bounds[2]))))
+        }
+    }
+
     /**
      * @brief This property holds the currently hovered timezone.
      *
@@ -44,6 +55,27 @@ Item {
      * which timezone the user is hovering.
      */
     property string hoveredTimeZone: ""
+
+    /**
+     * @brief Whether a frame should be shown around the map.
+     *
+     * When true, the map is given rounded corners, a border line, and a shadow.
+     * This is intended for use as a floating UI element.
+     *
+     * When false, the map corners are square and there is an underline separating
+     * the map from the time zone selector combobox. This is intended for use
+     * where the component hugs the bounds of its parent view.
+     *
+     * @note This has no effect in mobile mode, which does not show a map.
+     */
+    property bool framed: true
+
+    /**
+     * @brief The horizontal padding of the region selection combo boxes.
+     *
+     * @note This has no effect in mobile mode, which does not show a map.
+     */
+    property real comboHorizontalPadding: 0
 //END properties
 
     property var availableMapTimeZones: geoDatabase.model[0].data.map(zone => zone?.properties?.tzid)
@@ -53,6 +85,10 @@ Item {
         // GeoJsonData does not support qrc paths, so we have to install
         // the timezones file into the shared folder.
         sourceUrl: StandardPaths.locate(StandardPaths.GenericDataLocation, "timezonefiles", StandardPaths.LocateDirectory)  + "/timezones.json"
+
+        function dataForTimeZone(timeZone: string): var {
+            return geoDatabase.model[0].data.find(zone => zone?.properties?.tzid === timeZone)
+        }
     }
 
     // These values get populated by GeoJsonDelegates when the
@@ -166,242 +202,261 @@ Item {
         }
     }
 
-    MapView {
-        id: view
-
-        visible: !Kirigami.Settings.isMobile
+    ColumnLayout {
         anchors.fill: parent
+        visible: !Kirigami.Settings.isMobile
+        spacing: Kirigami.Units.largeSpacing
 
-        // HACK: to work around the Qt bug QTBUG-136711,
-        // we use the "target" property instead of
-        // "NumberAnimotion on map.zoomLevel"
-        NumberAnimation {
-            target: view
-            property: "map.zoomLevel"
-            id: zoomLevelAnimation
-            running: false
-            duration: Kirigami.Units.shortDuration
-            easing.type: Easing.InOutCubic
-        }
-        CoordinateAnimation {
-            id: coordAnimation
-            target: view
-            property: "map.center"
-            // HACK: The Map QML element has a bug that sometimes resets
-            // its center to the default value when assigned a new
-            // (valid) coordinate. To avoid this, we make the animation
-            // always last at least one frame, which effectively acts
-            // as a timer and re-sets the coordinate to the correct one
-            // after that frame. This is not visible by the user but
-            // works around the map bug.
-            duration: Kirigami.Units.shortDuration + 1
-            easing.type: Easing.InOutCubic
-            running: false
-        }
+        ColumnLayout {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            spacing: 0
+            Kirigami.AbstractCard {
+                id: card
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                padding: root.framed ? 1 : 0
+                background.visible: root.framed
 
-        function animateCenterTo(coordinate) {
-            coordAnimation.to = coordinate
-            coordAnimation.running = true
-        }
-
-        function suggestedZoomOf(rect) {
-            const deltaLat = Math.abs(rect.topLeft.latitude - rect.bottomRight.latitude);
-            const deltaLon = Math.abs(rect.topLeft.longitude - rect.bottomRight.longitude);
-            const delta = Math.max(deltaLat, deltaLon);
-            let zoom = Math.round(Math.log2(360 / delta)) * 0.7;
-            zoom = Math.min(Math.max(zoom, 1), view.map.maximumZoomLevel);
-            if (Math.abs(zoom - view.map.zoomLevel) < 1) {
-                return view.map.zoomLevel
-            }
-            return zoom
-        }
-
-        function animateZoomLevel(target: var): void {
-            zoomLevelAnimation.to = target
-            zoomLevelAnimation.running = true
-        }
-
-        map {
-            plugin: Plugin {
-                name: "osm"
-                PluginParameter {
-                    name: 'osm.mapping.offline.directory'
-                    value: ":/plasma-workspace/timezone/offline_tiles"
+                Rectangle {
+                    id: maskRect
+                    layer.enabled: true
+                    width: view.width
+                    height: view.height
+                    radius: ((card.background as Kirigami.ShadowedRectangle)?.radius ?? 0) + 1
+                    visible: false
                 }
-                PluginParameter {
-                    name: "osm.mapping.providersrepository.disabled"
-                    value: true
-                }
-            }
-            zoomLevel: 0
-            minimumZoomLevel: 0
-            // Weirdly enough, the included offline maps of zoom level 0-4
-            // only work until a zoom level of ~4.90, whereas zoom level
-            // 5 (or even 4.99) would require offline maps for zoom level 5.
-            maximumZoomLevel: 4.90
-            maximumTilt: 0
-            // No maximumBearing property exists, apparently
-            onBearingChanged: {
-                view.map.bearing = 0
-            }
-            activeMapType: view.map.supportedMapTypes[0]
 
-            onCopyrightLinkActivated: (link) => { Qt.openUrlExternally(link); }
-        }
-
-        // HACK: Workaround QTBUG-150559. When the map is resized from small to
-        // large the first time the map item sized are not updated. This fixes it.
-        onWidthChanged: {
-            map.pan(1, 1);
-            map.pan(-1, -1);
-        }
-
-        property variant referenceSurface: QtLocation.ReferenceSurface.Map
-
-        MapItemView {
-            parent: view.map
-            model: geoDatabase.model
-            delegate: GeoJsonDelegate {
-                selectedTimeZone: root.selectedTimeZone
-                hoveredTimeZone: root.hoveredTimeZone
-
-                onTimeZoneselected: (timeZoneId, centroid, bounds) => {
-                    root.selectedTimeZone = timeZoneId
-                    view.animateCenterTo(centroid)
-                    view.animateZoomLevel(view.suggestedZoomOf(bounds))
-                }
-                onTimeZoneHovered: (timeZoneId, hovered) => {
-                    if (hovered) {
-                        root.hoveredTimeZone = timeZoneId;
-                    } else if (root.hoveredTimeZone === timeZoneId) {
-                        root.hoveredTimeZone = "";
+                contentItem: MapView {
+                    id: view
+                    layer.enabled: root.framed
+                    layer.effect: MultiEffect {
+                        maskEnabled: true
+                        maskSource: maskRect
                     }
-                }
-            }
-        }
 
-        RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-            anchors {
-                right: parent.right
-                rightMargin: Kirigami.Units.largeSpacing
-                bottom: parent.bottom
-                bottomMargin: Kirigami.Units.largeSpacing
-            }
+                    // HACK: to work around the Qt bug QTBUG-136711,
+                    // we use the "target" property instead of
+                    // "NumberAnimotion on map.zoomLevel"
+                    NumberAnimation {
+                        target: view
+                        property: "map.zoomLevel"
+                        id: zoomLevelAnimation
+                        running: false
+                        duration: Kirigami.Units.shortDuration
+                        easing.type: Easing.InOutCubic
+                    }
+                    CoordinateAnimation {
+                        id: coordAnimation
+                        target: view
+                        property: "map.center"
+                        // HACK: The Map QML element has a bug that sometimes resets
+                        // its center to the default value when assigned a new
+                        // (valid) coordinate. To avoid this, we make the animation
+                        // always last at least one frame, which effectively acts
+                        // as a timer and re-sets the coordinate to the correct one
+                        // after that frame. This is not visible by the user but
+                        // works around the map bug.
+                        duration: Kirigami.Units.shortDuration + 1
+                        easing.type: Easing.InOutCubic
+                        running: false
+                    }
 
-            QQC2.Button {
-                id: zoomInButton
+                    function animateCenterTo(coordinate) {
+                        coordAnimation.to = coordinate
+                        coordAnimation.running = true
+                    }
 
-                text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom in")
-                display: QQC2.AbstractButton.IconOnly
-                icon.name: "zoom-in-map-symbolic"
-                enabled: view.map.zoomLevel < view.map.maximumZoomLevel
-
-                onClicked: view.map.zoomLevel += 0.5
-                onDoubleClicked: view.map.zoomLevel += 0.5
-
-                QQC2.ToolTip.text: zoomInButton.text
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-            }
-
-            QQC2.Button {
-                id: zoomOutButton
-
-                text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom out")
-                display: QQC2.AbstractButton.IconOnly
-                icon.name: "zoom-out-map-symbolic"
-                enabled: view.map.zoomLevel > view.map.minimumZoomLevel
-
-                onClicked: view.map.zoomLevel -= 0.5
-                onDoubleClicked: view.map.zoomLevel -= 0.5
-
-                QQC2.ToolTip.text: zoomOutButton.text
-                QQC2.ToolTip.visible: hovered
-                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-            }
-        }
-
-        Components.FloatingToolBar {
-
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: Kirigami.Units.gridUnit
-            anchors.horizontalCenter: parent.horizontalCenter
-
-            width: mainLayout.implicitWidth + Kirigami.Units.largeSpacing * 2
-            height: mainLayout.implicitHeight + Kirigami.Units.largeSpacing * 2
-            horizontalPadding: Kirigami.Units.largeSpacing
-
-            contentItem: RowLayout {
-                id: mainLayout
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.Label {
-                    text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
-                    textFormat: Text.PlainText
-                }
-
-                QQC2.ComboBox {
-                    id: regionComboBox
-                    model: [chooseText, ...regionsModel]
-
-                    property string chooseText: i18ndc("plasmashellprivateplugin", "Placeholder for empty time zone combobox selector", "Choose…")
-
-                    displayText: currentText
-
-                    Accessible.name: i18nd("plasmashellprivateplugin", "Timezone region selector")
-
-                    Connections {
-                        target: root
-                        function onSelectedTimeZoneChanged() {
-                            regionComboBox.currentIndex = Math.max(regionComboBox.model.indexOf(root.split(root.selectedTimeZone)[0]), 0)
+                    function suggestedZoomOf(rect) {
+                        const deltaLat = Math.abs(rect.topLeft.latitude - rect.bottomRight.latitude);
+                        const deltaLon = Math.abs(rect.topLeft.longitude - rect.bottomRight.longitude);
+                        const delta = Math.max(deltaLat, deltaLon);
+                        let zoom = Math.round(Math.log2(360 / delta)) * 0.7;
+                        zoom = Math.min(Math.max(zoom, 1), view.map.maximumZoomLevel);
+                        if (Math.abs(zoom - view.map.zoomLevel) < 1) {
+                            return view.map.zoomLevel
                         }
+                        return zoom
                     }
 
-                    onActivated: {
-                        if (regionComboBox.currentText === chooseText) return;
-                        if (regionComboBox.currentText !== root.split(root.selectedTimeZone)[0]) {
-                            let locations = root.areasByRegion[regionComboBox.currentText]
-                            locationComboBox.forceActiveFocus();
-                            if (locations.length > 0) {
-                                const technicalRegion = root.technical(regionComboBox.currentText)
-                                const technicalLocation = root.technical(locations[0])
-                                root.selectedTimeZone = technicalRegion + '/' + technicalLocation
+                    function animateZoomLevel(target: var): void {
+                        zoomLevelAnimation.to = target
+                        zoomLevelAnimation.running = true
+                    }
+
+                    map {
+                        plugin: Plugin {
+                            name: "osm"
+                            PluginParameter {
+                                name: 'osm.mapping.offline.directory'
+                                value: ":/plasma-workspace/timezone/offline_tiles"
                             }
-                            locationComboBox.popup.visible = true
+                            PluginParameter {
+                                name: "osm.mapping.providersrepository.disabled"
+                                value: true
+                            }
+                        }
+                        zoomLevel: 0
+                        minimumZoomLevel: 0
+                        // Weirdly enough, the included offline maps of zoom level 0-4
+                        // only work until a zoom level of ~4.90, whereas zoom level
+                        // 5 (or even 4.99) would require offline maps for zoom level 5.
+                        maximumZoomLevel: 4.90
+                        maximumTilt: 0
+                        // No maximumBearing property exists, apparently
+                        onBearingChanged: {
+                            view.map.bearing = 0
+                        }
+                        activeMapType: view.map.supportedMapTypes[0]
+
+                        onCopyrightLinkActivated: (link) => { Qt.openUrlExternally(link); }
+                    }
+
+                    // HACK: Workaround QTBUG-150559. When the map is resized from small to
+                    // large the first time the map item sized are not updated. This fixes it.
+                    onWidthChanged: {
+                        map.pan(1, 1);
+                        map.pan(-1, -1);
+                    }
+
+                    property variant referenceSurface: QtLocation.ReferenceSurface.Map
+
+                    MapItemView {
+                        parent: view.map
+                        model: geoDatabase.model
+                        delegate: GeoJsonDelegate {
+                            selectedTimeZone: root.selectedTimeZone
+                            hoveredTimeZone: root.hoveredTimeZone
+
+                            onTimeZoneselected: (timeZoneId, centroid, bounds) => root.selectedTimeZone = timeZoneId
+                            onTimeZoneHovered: (timeZoneId, hovered) => {
+                                if (hovered) {
+                                    root.hoveredTimeZone = timeZoneId;
+                                } else if (root.hoveredTimeZone === timeZoneId) {
+                                    root.hoveredTimeZone = "";
+                                }
+                            }
+                        }
+                    }
+
+                    RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+                        anchors {
+                            right: parent.right
+                            rightMargin: Kirigami.Units.largeSpacing
+                            bottom: parent.bottom
+                            bottomMargin: Kirigami.Units.largeSpacing
+                        }
+
+                        QQC2.Button {
+                            id: zoomInButton
+
+                            text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom in")
+                            display: QQC2.AbstractButton.IconOnly
+                            icon.name: "zoom-in-map-symbolic"
+                            enabled: view.map.zoomLevel < view.map.maximumZoomLevel
+
+                            onClicked: view.map.zoomLevel += 0.5
+                            onDoubleClicked: view.map.zoomLevel += 0.5
+
+                            QQC2.ToolTip.text: zoomInButton.text
+                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                        }
+
+                        QQC2.Button {
+                            id: zoomOutButton
+
+                            text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom out")
+                            display: QQC2.AbstractButton.IconOnly
+                            icon.name: "zoom-out-map-symbolic"
+                            enabled: view.map.zoomLevel > view.map.minimumZoomLevel
+
+                            onClicked: view.map.zoomLevel -= 0.5
+                            onDoubleClicked: view.map.zoomLevel -= 0.5
+
+                            QQC2.ToolTip.text: zoomOutButton.text
+                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         }
                     }
                 }
+            }
+            Kirigami.Separator {
+                Layout.fillWidth: true
+                visible: !root.framed
+            }
+        }
+        RowLayout {
+            Layout.leftMargin: root.comboHorizontalPadding
+            Layout.rightMargin: root.comboHorizontalPadding
+            spacing: Kirigami.Units.largeSpacing
+            QQC2.Label {
+                text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
+                textFormat: Text.PlainText
+            }
 
-                QQC2.Label {
-                    text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
-                    visible: locationComboBox.visible
-                    textFormat: Text.PlainText
+            QQC2.ComboBox {
+                id: regionComboBox
+                Layout.fillWidth: true
+                model: [chooseText, ...root.regionsModel]
+
+                property string chooseText: i18ndc("plasmashellprivateplugin", "Placeholder for empty time zone combobox selector", "Choose…")
+
+                displayText: currentText
+
+                Accessible.name: i18nd("plasmashellprivateplugin", "Timezone region selector")
+
+                Connections {
+                    target: root
+                    function onSelectedTimeZoneChanged() {
+                        regionComboBox.currentIndex = Math.max(regionComboBox.model.indexOf(root.split(root.selectedTimeZone)[0]), 0)
+                    }
                 }
 
-                QQC2.ComboBox {
-                    id: locationComboBox
-
-                    visible: regionComboBox.currentText !== regionComboBox.chooseText
-                    displayText: currentText
-
-                    Accessible.name: i18nd("plasmashellprivateplugin", "Timezone location selector")
-
-                    Connections {
-                        target: root
-                        function onSelectedTimeZoneChanged() {
-                            let [prefix, suffix] = root.split(root.selectedTimeZone)
-                            locationComboBox.model = root.areasByRegion[prefix]
-                            locationComboBox.currentIndex = locationComboBox.model.indexOf(suffix)
+                onActivated: {
+                    if (regionComboBox.currentText === chooseText) return;
+                    if (regionComboBox.currentText !== root.split(root.selectedTimeZone)[0]) {
+                        let locations = root.areasByRegion[regionComboBox.currentText]
+                        locationComboBox.forceActiveFocus();
+                        if (locations.length > 0) {
+                            const technicalRegion = root.technical(regionComboBox.currentText)
+                            const technicalLocation = root.technical(locations[0])
+                            root.selectedTimeZone = technicalRegion + '/' + technicalLocation
                         }
+                        locationComboBox.popup.visible = true
                     }
+                }
+            }
 
-                    onActivated: {
-                        root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText)
+            QQC2.Label {
+                text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
+                visible: locationComboBox.visible
+                textFormat: Text.PlainText
+            }
+
+            QQC2.ComboBox {
+                id: locationComboBox
+                Layout.fillWidth: true
+
+                visible: regionComboBox.currentText !== regionComboBox.chooseText
+                displayText: currentText
+
+                Accessible.name: i18nd("plasmashellprivateplugin", "Timezone location selector")
+
+                Connections {
+                    target: root
+                    function onSelectedTimeZoneChanged() {
+                        let [prefix, suffix] = root.split(root.selectedTimeZone)
+                        locationComboBox.model = root.areasByRegion[prefix]
+                        locationComboBox.currentIndex = locationComboBox.model.indexOf(suffix)
                     }
+                }
+
+                onActivated: {
+                    root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText)
                 }
             }
         }
     }
-
 }
