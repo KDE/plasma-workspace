@@ -6,9 +6,11 @@
 #include "Installer.h"
 #include "FontsPackage.h"
 #include "JobRunner.h"
+#include "MainWindow.h"
 #include "Misc.h"
 #include "config-workspace.h"
 #include <KAboutData>
+#include <KDBusService>
 #include <KIO/StatJob>
 #include <KMessageBox>
 #include <KMessageDialog>
@@ -110,11 +112,13 @@ int main(int argc, char **argv)
 
     KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
     KAboutData aboutData(u"kfontinst"_s,
-                         i18n("Font Installer"),
+                         i18nc("@title application name", "Font Management"),
                          QLatin1String(WORKSPACE_VERSION_STRING),
-                         i18n("Simple font installer"),
+                         i18nc("@info application description", "Install, manage, and preview fonts"),
                          KAboutLicense::GPL,
                          i18n("(C) Craig Drummond, 2007"));
+    aboutData.setDesktopFileName(u"org.kde.kfontinst"_s);
+    aboutData.setProductName("systemsettings/kcm_fontinst");
     KAboutData::setApplicationData(aboutData);
 
     QGuiApplication::setWindowIcon(QIcon::fromTheme(u"preferences-desktop-font-installer"_s));
@@ -141,5 +145,16 @@ int main(int argc, char **argv)
         return inst.install(urls);
     }
 
-    return -1;
+    KDBusService dbusService(KDBusService::Unique);
+
+    auto *window = new KFI::MainWindow;
+    window->setAttribute(Qt::WA_DeleteOnClose);
+    window->show();
+
+    QObject::connect(&dbusService, &KDBusService::activateRequested, window, [window] {
+        KWindowSystem::updateStartupId(window->windowHandle());
+        KWindowSystem::activateWindow(window->windowHandle());
+    });
+
+    return app.exec();
 }

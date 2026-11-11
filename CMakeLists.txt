@@ -424,6 +424,10 @@ add_subdirectory(statusnotifierwatcher)
 add_subdirectory(startkde)
 add_subdirectory(themes)
 
+if(FONTCONFIG_FOUND)
+    add_subdirectory(kfontinst)
+endif()
+
 add_subdirectory(kcms)
 
 add_subdirectory(containmentactions)

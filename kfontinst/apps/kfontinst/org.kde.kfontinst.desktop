@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Tobias Fella <tobias.fella@kde.org>
+# SPDX-License-Identifier: CC0-1.0
+
+[Desktop Entry]
+Name=Font Management
+Exec=kfontinst %U
+Icon=preferences-desktop-font-installer
+StartupNotify=true
+Type=Application
+MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;application/x-font-pcf;application/x-font-bdf;application/vnd.kde.fontspackage;font/otf;font/ttf;font/collection;
+GenericName=Font Installer
+Comment=Install, manage and preview fonts
+Categories=Qt;KDE;Utility;
+Keywords=font;fonts;installer;truetype;type1;bitmap;
+X-DocPath=kcontrol/fontinst/index.html

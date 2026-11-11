@@ -38,11 +38,6 @@ add_test(
 )
 
 add_test(
-    NAME kcm_fontinst_test
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_fontinst_test.py
-)
-
-add_test(
     NAME kcm_lookandfeel_test
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_lookandfeel_test.py
 )

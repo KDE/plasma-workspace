@@ -1,18 +1,18 @@
-#pragma once
-
 /*
  * SPDX-FileCopyrightText: 2003-2007 Craig Drummond <craig@kde.org>
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
+#pragma once
+
 #include "GroupList.h"
 #include "JobRunner.h"
-#include <KCModule>
 #include <KConfig>
 #include <KIO/Job>
 #include <KNSWidgets/Button>
 #include <QSet>
 #include <QUrl>
+#include <QWidget>
 
 class QPushButton;
 class QProgressDialog;
@@ -32,13 +32,13 @@ class CFontListView;
 class CProgressBar;
 class CPreviewListView;
 
-class CKCmFontInst : public KCModule
+class CFontManager : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit CKCmFontInst(QObject *parent, const KPluginMetaData &data);
-    ~CKCmFontInst() override;
+    explicit CFontManager(QWidget *parent = nullptr);
+    ~CFontManager() override;
 
 public Q_SLOTS:
 

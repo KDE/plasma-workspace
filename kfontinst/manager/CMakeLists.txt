@@ -1,28 +1,25 @@
-kcoreaddons_add_plugin(kcm_fontinst INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")
+add_library(kfontinstmanager_static STATIC)
 
-target_sources(kcm_fontinst PRIVATE
+target_sources(kfontinstmanager_static PRIVATE
     ../viewpart/FontPreview.cpp
     ../viewpart/PreviewSelectAction.cpp
-    ..//viewpart/CharTip.cpp
+    ../viewpart/CharTip.cpp
     ../dbus/FontinstIface.cpp
     DuplicatesDialog.cpp
     FontList.cpp
+    FontManager.cpp
     GroupList.cpp
-    KCmFontInst.cpp
     PrintDialog.cpp
     FontFilter.cpp
     FontFilterProxyStyle.cpp
     FcQuery.cpp
     PreviewList.cpp
-    ../kcmfontinst/JobRunner.cpp
-    ../kcmfontinst/FontsPackage.cpp
+    JobRunner.cpp
+    FontsPackage.cpp
 )
 
-kcmutils_generate_desktop_file(kcm_fontinst)
-
-target_link_libraries(kcm_fontinst
+target_link_libraries(kfontinstmanager_static PUBLIC
     KF6::Archive
-    KF6::KCMUtils
     KF6::IconThemes
     KF6::KIOCore
     KF6::KIOWidgets
@@ -34,7 +31,7 @@ target_link_libraries(kcm_fontinst
     X11::X11
 )
 
-install(FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR})
+install(FILES kfontinst.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 ecm_install_icons( ICONS
     16-actions-addfont.png
