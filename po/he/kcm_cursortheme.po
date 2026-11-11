@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2026-06-13 16:25+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -43,33 +43,33 @@ msgstr "שם ערכת הסמנים הנוכחית"
 msgid "Current pointer size"
 msgstr "גודל סמן נוכחי"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "לא ניתן ליצור קובץ זמני."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "לא ניתן להוריד את ארכיון ערכת הסמלים: %1"
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "לא ניתן לפתוח את ארכיון ערכת הסמלים."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "הקובץ אינו ארכיון ערכת סמלים תקני."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "יצירת התיקייה ‚icons’ (סמלים) נכשלה."
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -77,12 +77,12 @@ msgid ""
 msgstr ""
 "ערכת סמלים בשם %1 כבר קיימת בתיקיית ערכות הסמלים שלך. להחליפה בערכת נושא זו?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "לדרוס ערכת סמלים?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "הערכה הותקנה בהצלחה."
@@ -94,7 +94,7 @@ msgstr "הערכה הותקנה בהצלחה."
 msgid "Timeout in seconds"
 msgstr "זמן קצוב בשניות"
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -104,7 +104,7 @@ msgstr ""
 "כלי זה מאפשר לך להגדיר את ערכת סמני העכבר להפעלת הפלזמה הנוכחית מבלי להגדיר "
 "בטעות ערכה שלא זמינה או שכבר מוגדרת."
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -113,18 +113,18 @@ msgstr ""
 "שם ערכת הסמנים להגדרה בהפעלת הפלזמה הנוכחית שלך (העברת נתיב מלא תשתמש רק "
 "בחלק האחרון של הנתיב)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "הצגת כל ערכות הסמנים הזמינות במערכת (ומה הערכה הנוכחית)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "להשתמש בגודל מסוים במקום בגודל ברירת המחדל של הערכה"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -132,14 +132,14 @@ msgid ""
 msgstr ""
 "הערכה המבוקשת „%1” כבר מוגדר כערכת ברירת המחדל של הפעלת הפלזמה הנוכחית."
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "ערכת סמני העכבר %1 הוחלה בהצלחה על הפעלת הפלזמה הנוכחית שלך"
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -147,7 +147,7 @@ msgid ""
 msgstr ""
 "יש להפעיל את הפעלת הפלזמה מחדש כדי שערכת הסמנים החדשה שהחלת תופיע כראוי."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -155,12 +155,12 @@ msgid ""
 msgstr ""
 "לא ניתן למצוא את ערכת הסמנים „%1”. הערכה צריכה להיות אחת מהאפשרויות הבאות: %2"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "ערכות הסמנים הבאות נמצאות במערכת שלך:"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(ערכת סמלים נוכחית להפעלת פלזמה זו)"

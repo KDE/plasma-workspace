@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-28 01:03+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2026-09-15 06:01-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -33,15 +33,58 @@ msgid "Your emails"
 msgstr ""
 "elchevive@opensuse.org, geraldosimiao@fedoraproject.org, zic@zicstardust.com"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:45
+#: batterycontrol/batteriesnamesmonitor_p.cpp:49
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Bateria %1"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:47
+#: batterycontrol/batteriesnamesmonitor_p.cpp:51
 #, kde-format
 msgid "Battery"
+msgstr "Bateria"
+
+#: batterycontrol/upowerbattery_p.cpp:59
+#, kde-format
+msgctxt "battery technology"
+msgid "Lithium Ion"
+msgstr ""
+
+#: batterycontrol/upowerbattery_p.cpp:61
+#, kde-format
+msgctxt "battery technology"
+msgid "Lithium Polymer"
+msgstr ""
+
+#: batterycontrol/upowerbattery_p.cpp:63
+#, kde-format
+msgctxt "battery technology"
+msgid "Lithium Iron Phosphate"
+msgstr ""
+
+#: batterycontrol/upowerbattery_p.cpp:65
+#, kde-format
+msgctxt "battery technology"
+msgid "Lead Acid"
+msgstr ""
+
+#: batterycontrol/upowerbattery_p.cpp:67
+#, kde-format
+msgctxt "battery technology"
+msgid "Nickel Cadmium"
+msgstr ""
+
+#: batterycontrol/upowerbattery_p.cpp:69
+#, kde-format
+msgctxt "battery technology"
+msgid "Nickel Metal Hydride"
+msgstr ""
+
+#: batterycontrol/upowerbattery_p.cpp:163
+#, fuzzy, kde-format
+#| msgid "Battery"
+msgctxt "%1 is battery technology"
+msgid "%1 Battery"
 msgstr "Bateria"
 
 #: calendar/eventdatadecorator.cpp:50

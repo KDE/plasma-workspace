@@ -1,0 +1,279 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Abenezer Wesenseged <wseged@proton.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"PO-Revision-Date: 2026-11-03 06:10+0300\n"
+"Last-Translator: Abenezer Wesenseged <wseged@proton.me>\n"
+"Language-Team: Amharic <kde-l10n-am@kde.org>\n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current pointer theme"
+msgstr "የአሁኑ ጠቋሚ ገጽታ ስም"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current pointer size"
+msgstr "የጠቋሚው የአሁኑ መጠን"
+
+#: kcmcursortheme.cpp:372
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "ጊዜያዊ ፋይል መፍጠር አልተቻለም።"
+
+#: kcmcursortheme.cpp:383
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "የአዶ ገጽታ ማህደርን ማውረድ አልተቻለም፦ %1"
+
+#: kcmcursortheme.cpp:397
+#, kde-format
+msgctxt "@info"
+msgid "Unable to open the icon theme archive."
+msgstr "የአዶ ገጽታ ማህደሩን መክፈት አልተቻለም።"
+
+#: kcmcursortheme.cpp:417
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ፋይሉ ትክክለኛ የአዶ ገጽታ ማህደር አይደለም።"
+
+#: kcmcursortheme.cpp:424
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "'icons' አቃፊ መፍጠር አልተቻለም።"
+
+#: kcmcursortheme.cpp:433
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr "በአዶ ገጽታዎች ማህደርዎ ውስጥ %1 የሚባል ገጽታ አስቀድሞ አለ። ይህንን በአዲስ መተካት ይፈልጋሉ?"
+
+#: kcmcursortheme.cpp:437
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "ገጽታውን (Theme) ይተካው?"
+
+#: kcmcursortheme.cpp:461
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ገጽታው በተሳካ ሁኔታ ተጭኗል።"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "የጊዜ ገደብ (በሰከንዶች)"
+
+#: plasma-apply-cursortheme.cpp:37
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse pointer theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"ይህ መሳሪያ፣ በአሁኑ የPlasma ክፍለ ጊዜ (session) ውስጥ የመዳፊት ጠቋሚ (mouse pointer) ገጽታን "
+"እንዲያዘጋጁ ያስችልዎታል። ይህን ሲያደርጉም፣ በስህተት የማይገኝ ወይም ቀድሞውኑ የተመረጠ ገጽታን የመምረጥ አደጋ "
+"አይኖርም።"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid ""
+"The name of the pointer theme you wish to set for your current Plasma "
+"session (passing a full path will only use the last part of the path)"
+msgstr ""
+"ለአሁኑ የPlasma ክፍለ ጊዜ ማዘጋጀት የሚፈልጉት የጠቋሚ ገጽታ ስም። (ሙሉ የፋይል ዱካ ካስገቡ፣ የዱካው የመጨረሻ "
+"ክፍል ብቻ ጥቅም ላይ ይውላል።)"
+
+#: plasma-apply-cursortheme.cpp:42
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "በስርዓቱ ላይ ያሉትን ገጽታዎች በሙሉ አሳይ (እንዲሁም አሁን ጥቅም ላይ እየዋለ ያለውን ገጽታ አመልክት)"
+
+#: plasma-apply-cursortheme.cpp:43
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr "ከገጽታው (theme) ነባሪ መጠን ይልቅ፣ የተወሰነ መጠን ይጠቀሙ።"
+
+#: plasma-apply-cursortheme.cpp:64
+#, kde-format
+msgid ""
+"The requested theme “%1” is already set as the theme for the current Plasma "
+"session."
+msgstr "የተጠየቀው ገጽታ “%1” ለአሁኑ የPlasma ክፍለ ጊዜ እንደ ገጽታ ሆኖ አስቀድሞ ተዋቅሯል።"
+
+#: plasma-apply-cursortheme.cpp:75
+#, kde-format
+msgid ""
+"Successfully applied the mouse pointer theme %1 to your current Plasma "
+"session"
+msgstr "የመዳፊት ጠቋሚ ገጽታ %1ን አሁን ባለው የPlasma ክፍለ ጊዜዎ ላይ በተሳካ ሁኔታ ተግብሯል"
+
+#: plasma-apply-cursortheme.cpp:77
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse pointer "
+"theme to display correctly."
+msgstr ""
+"አዲስ የተተገበረው የመዳፊት ጠቋሚ ገጽታ በትክክል እንዲታይ፣ የPlasma ክፍለ ጊዜን እንደገና ማስጀመር አለብዎት።"
+
+#: plasma-apply-cursortheme.cpp:87
+#, kde-format
+msgid ""
+"Could not find theme “%1”. The theme should be one of the following options: "
+"%2"
+msgstr "“%1” የሚል ገጽታ (theme) ማግኘት አልተቻለም። ገጽታው ከሚከተሉት አማራጮች አንዱ መሆን አለበት፦ %2"
+
+#: plasma-apply-cursortheme.cpp:95
+#, kde-format
+msgid "You have the following mouse pointer themes on your system:"
+msgstr "በስርዓትዎ ላይ የሚከተሉት የመዳፊት(mouse) ጠቋሚ ገጽታዎች አሉዎት፦"
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr "(ለዚህ የPlasma ክፍለ ጊዜ የአሁኑ ገጽታ)"
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove pointer theme"
+msgstr "የጠቋሚ ገጽታን ያስወግዱ"
+
+#: ui/Delegate.qml:50
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active pointer theme"
+msgstr "በአሁኑ ጊዜ ጥቅም ላይ እየዋለ ያለውን የጠቋሚ ገጽታ (pointer theme) መሰረዝ አይቻልም"
+
+#: ui/Delegate.qml:52
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed pointer themes"
+msgstr "በስርዓቱ የተጫኑ የጠቋሚ ገጽታዎችን መሰረዝ አይቻልም"
+
+#: ui/Delegate.qml:60
+#, kde-format
+msgid "Don’t delete this pointer theme"
+msgstr "ይህን የጠቋሚ ገጽታ አትሰርዝ"
+
+#: ui/LaunchFeedbackDialog.qml:16
+#, kde-format
+msgctxt "@title"
+msgid "Launch Feedback"
+msgstr "የማስጀመር ግብረመልስ"
+
+#: ui/LaunchFeedbackDialog.qml:27
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Configure the animations played while an application is launching."
+msgstr "አንድ መተግበሪያ በሚከፈትበት ጊዜ የሚታዩትን አኒሜሽኖች ያዋቅሩ።"
+
+#: ui/LaunchFeedbackDialog.qml:49
+#, kde-format
+msgctxt "@label"
+msgid "Pointer feedback:"
+msgstr "የጠቋሚ ግብረመልስ፦"
+
+#: ui/LaunchFeedbackDialog.qml:50
+#, kde-format
+msgctxt "@option:radio No pointer feedback when launching apps"
+msgid "None"
+msgstr "ምንም"
+
+#: ui/LaunchFeedbackDialog.qml:59
+#, kde-format
+msgctxt "@option:radio"
+msgid "Static"
+msgstr "Static"
+
+#: ui/LaunchFeedbackDialog.qml:68
+#, kde-format
+msgctxt "@option:radio"
+msgid "Blinking"
+msgstr "Blinking"
+
+#: ui/LaunchFeedbackDialog.qml:77
+#, kde-format
+msgctxt "@option:radio"
+msgid "Bouncing"
+msgstr "Bouncing"
+
+#: ui/LaunchFeedbackDialog.qml:92
+#, kde-format
+msgctxt "@label"
+msgid "Task Manager feedback:"
+msgstr "የTask Manager ግብረመልስ፦"
+
+#: ui/LaunchFeedbackDialog.qml:94
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable animation"
+msgstr "አኒሜሽን አንቃ"
+
+#: ui/LaunchFeedbackDialog.qml:113
+#, kde-format
+msgctxt "@label"
+msgid "Stop animations after:"
+msgstr "አኒሜሽኖችን ከዚህ በኋላ አቁም፦"
+
+#: ui/LaunchFeedbackDialog.qml:127 ui/LaunchFeedbackDialog.qml:139
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 ሰከንድ"
+msgstr[1] "%1 ሰከንዶች"
+
+#: ui/main.qml:106 ui/main.qml:144
+#, kde-format
+msgid "Size: %1"
+msgstr "መጠን፦ %1"
+
+#: ui/main.qml:153
+#, kde-format
+msgctxt "@action:button"
+msgid "&Configure Launch Feedback…"
+msgstr "የማስጀመሪያ ግብረመልስን ያዋቅሩ(&C)…"
+
+#: ui/main.qml:168
+#, kde-format
+msgid "&Install from File…"
+msgstr "ከፋይል ጫን(&I)…"
+
+#: ui/main.qml:174
+#, kde-format
+msgid "&Get New…"
+msgstr "አዲስ ያግኙ(&G)…"
+
+#: ui/main.qml:188
+#, kde-format
+msgid "Open Theme"
+msgstr "ገጽታ ክፍት"
+
+#: ui/main.qml:190
+#, kde-format
+msgid "Pointer Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "የጠቋሚ ገጽታ ፋይሎች (*.tar.gz *.tar.bz2)"
+
+#: xcursor/xcursortheme.cpp:56
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(የሚገኙ መጠኖች፦ %1)"

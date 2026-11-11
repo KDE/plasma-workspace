@@ -1,0 +1,321 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Abenezer Wesenseged <wseged@proton.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-02 00:47+0000\n"
+"PO-Revision-Date: 2026-11-04 07:56+0300\n"
+"Last-Translator: Abenezer Wesenseged <wseged@proton.me>\n"
+"Language-Team: Amharic <kde-l10n-am@kde.org>\n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "አትረብሽ የሚለውን አማራጭ ይቀያይሩ"
+
+#: sourcesmodel.cpp:404
+#, kde-format
+msgid "Other Applications"
+msgstr "ሌሎች መተግበሪያዎች"
+
+#: ui/ApplicationConfiguration.qml:105
+#, kde-format
+msgid "Show popups"
+msgstr "ብቅ-ባዮችን(popups) አሳይ"
+
+#: ui/ApplicationConfiguration.qml:119
+#, kde-format
+msgid "Show in do not disturb mode"
+msgstr "አትረብሽ ሁነታ ላይ አሳይ"
+
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
+#, kde-format
+msgid "Show in history"
+msgstr "በታሪክ ውስጥ አሳይ"
+
+#: ui/ApplicationConfiguration.qml:143
+#, kde-format
+msgid "Show notification badges"
+msgstr "የማሳወቂያ ምልክቶችን አሳይ"
+
+#: ui/ApplicationConfiguration.qml:180
+#, kde-format
+msgctxt "@title:table Configure individual notification events in an app"
+msgid "Configure Events"
+msgstr "ክስተቶችን ያዋቅሩ"
+
+#: ui/ApplicationConfiguration.qml:188
+#, kde-format
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis"
+msgstr "ይህ መተግበሪያ ማሳወቂያዎችን በእያንዳንዱ ክስተት መሰረት ማዋቀርን አይደግፍም።"
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will be shown as a popup"
+msgstr "ይህ ማሳወቂያ እንደ ብቅ-ባይ (popup) ይታያል።"
+
+#: ui/ApplicationConfiguration.qml:250
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not be shown as a popup"
+msgstr "ይህ ማሳወቂያ እንደ ብቅ-ባይ (popup) አይታይም።"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will play a sound"
+msgstr "ይህ ማሳወቂያ ድምፅ ያሰማል"
+
+#: ui/ApplicationConfiguration.qml:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This notification will not play a sound"
+msgstr "ይህ ማሳወቂያ ድምፅ አያሰማም"
+
+#: ui/ApplicationConfiguration.qml:306
+#, kde-format
+msgid "Show a message in a pop-up"
+msgstr "በብቅ-ባይ መስኮት መልእክት አሳይ"
+
+#: ui/ApplicationConfiguration.qml:315
+#, kde-format
+msgid "Play a sound"
+msgstr "ድምፅ አጫውት"
+
+#: ui/ApplicationConfiguration.qml:326
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound"
+msgstr "ድምፅ ቅድመ እይታ"
+
+#: ui/ApplicationConfiguration.qml:352
+#, kde-format
+msgctxt "Reset the notification sound to a default one"
+msgid "Reset"
+msgstr "ዳግም አስጀምር"
+
+#: ui/ApplicationConfiguration.qml:364
+#, kde-format
+msgid "Choose sound file"
+msgstr "የድምፅ ፋይል ይምረጡ"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt "@action:button Plasma-specific notifications"
+msgid "Configure for System…"
+msgstr "ለስርዓት ያዋቅሩ…"
+
+#: ui/main.qml:53
+#, kde-format
+msgctxt "@action:button Application-specific notifications"
+msgid "Configure for Applications…"
+msgstr "ለመተግበሪያዎች ያዋቅሩ…"
+
+#: ui/main.qml:96
+#, kde-format
+msgid ""
+"Could not find a 'Notifications' widget, which is required for displaying "
+"notifications. Make sure that it is enabled either in your System Tray or as "
+"a standalone widget."
+msgstr ""
+"ማሳወቂያዎችን ለማሳየት የሚያስፈልገው 'Notifications' (ማሳወቂያዎች) ዊጅት (widget) አልተገኘም። ይህ "
+"ዊጅት በSystem Tray (የስርዓት መሣሪያዎች አሞሌ) ውስጥ ወይም እንደ ገለልተኛ ዊጅት መብራቱን (enabled "
+"መሆኑን) ያረጋግጡ።"
+
+#: ui/main.qml:107
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
+msgstr "በአሁኑ ወቅት ማሳወቂያዎች የሚቀርቡት ከPlasma ይልቅ በ'%1 %2' አማካኝነት ነው።"
+
+#: ui/main.qml:111
+#, kde-format
+msgid "Notifications are currently not provided by Plasma."
+msgstr "በአሁኑ ወቅት በPlasma በኩል ማሳወቂያዎች አይሰጡም።"
+
+#: ui/main.qml:126
+#, kde-format
+msgctxt "@title:group"
+msgid "Do Not Disturb mode"
+msgstr "አትረብሽ ሁነታ"
+
+#: ui/main.qml:131
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "Enable automatically:"
+msgstr "በራስ-ሰር አንቃ፦"
+
+#: ui/main.qml:132
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
+msgid "When screens are mirrored"
+msgstr "ስክሪኖች በሚያንጸባርቁበት ጊዜ (mirrored)"
+
+#: ui/main.qml:144
+#, kde-format
+msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
+msgid "During screen sharing"
+msgstr "ስክሪን በሚጋራበት ጊዜ"
+
+#: ui/main.qml:158
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr "ሙሉ ስክሪን መተግበሪያ ትኩረት ላይ ባለበት ወቅት"
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
+msgid "Manually toggle with shortcut:"
+msgstr "በአቋራጭ ቁልፍ በመጠቀም ማንዋሊ ቀያይር፦"
+
+#: ui/main.qml:177
+#, kde-format
+msgctxt "@title:group"
+msgid "Visibility conditions"
+msgstr "የእይታ ሁኔታዎች"
+
+#: ui/main.qml:182
+#, kde-format
+msgid "Critical notifications:"
+msgstr "ወሳኝ ማሳወቂያዎች፦"
+
+#: ui/main.qml:183
+#, kde-format
+msgid "Show in Do Not Disturb mode"
+msgstr "አትረብሽ ሁነታ ላይ አሳይ"
+
+#: ui/main.qml:195
+#, kde-format
+msgid "Low priority notifications:"
+msgstr "ዝቅተኛ ቅድሚያ የሚሰጣቸው ማሳወቂያዎች፦"
+
+#: ui/main.qml:196
+#, kde-format
+msgid "Show popup"
+msgstr "ብቅ-ባይ(popup) አሳይ"
+
+#: ui/main.qml:225
+#, kde-format
+msgctxt "@title:group As in: 'notification popups'"
+msgid "Popups"
+msgstr "ብቅ-ባዮችን"
+
+#: ui/main.qml:231
+#, kde-format
+msgctxt "@label"
+msgid "Location:"
+msgstr "መገኛ፦"
+
+#: ui/main.qml:232
+#, kde-format
+msgctxt "Popup position near notification plasmoid"
+msgid "Near notification icon"
+msgstr "ከማሳወቂያ ምልክቱ አጠገብ"
+
+#: ui/main.qml:269
+#, kde-format
+msgctxt "@action:button choose custom notification position"
+msgid "Choose…"
+msgstr "ይምረጡ…"
+
+#: ui/main.qml:278 ui/main.qml:294
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 ሰከንድ"
+msgstr[1] "%1 ሰከንዶች"
+
+#: ui/main.qml:283
+#, kde-format
+msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
+msgid "Hide after:"
+msgstr "ከዚህ በኋላ ደብቅ፦"
+
+#: ui/main.qml:306
+#, kde-format
+msgctxt ""
+"@option:check Show progress bar on notifications indicating when it will hide"
+msgid "Show timeout indicator"
+msgstr "የጊዜ ማብቂያ አመልካች አሳይ"
+
+#: ui/main.qml:318
+#, kde-format
+msgctxt "@title:group"
+msgid "Additional feedback"
+msgstr "ተጨማሪ አስተያየት"
+
+#: ui/main.qml:324
+#, kde-format
+msgctxt "Show application jobs in notification widget"
+msgid "Show in notifications"
+msgstr "በማሳወቂያዎች ውስጥ አሳይ"
+
+#: ui/main.qml:325
+#, kde-format
+msgid "Application progress:"
+msgstr "የመተግበሪያ ሂደት፦"
+
+#: ui/main.qml:339
+#, kde-format
+msgctxt "Keep application job popup open for entire duration of job"
+msgid "Keep popup open during progress"
+msgstr "ሂደቱ በሚካሄድበት ወቅት ብቅ-ባይ መስኮቱን ክፍት አድርገው ይቆዩ"
+
+#: ui/main.qml:352
+#, kde-format
+msgid "Notification badges:"
+msgstr "የማሳወቂያ ምልክቶች፦"
+
+#: ui/main.qml:353
+#, kde-format
+msgid "Show in task manager"
+msgstr "በTask Manager ውስጥ አሳይ"
+
+#: ui/PopupPositionDialog.qml:15
+#, kde-format
+msgid "Popup Position"
+msgstr "የብቅ-ባይ ቦታ"
+
+#: ui/SourcesPage.qml:20
+#, kde-format
+msgctxt ""
+"@title:window kcm page title, configure app-specific notification settings"
+msgid "Application Notifications"
+msgstr "የመተግበሪያ ማሳወቂያዎች"
+
+#: ui/SourcesPage.qml:108
+#, kde-format
+msgid "Applications"
+msgstr "መተግበሪያዎች"
+
+#: ui/SourcesPage.qml:109
+#, kde-format
+msgid "System Services"
+msgstr "የስርዓት አገልግሎቶች"
+
+#: ui/SourcesPage.qml:157
+#, kde-format
+msgid "No application or event matches your search term"
+msgstr "ከፍለጋ ቃልዎ ጋር የሚዛመድ መተግበሪያ ወይም ክስተት የለም"
+
+#: ui/SourcesPage.qml:181
+#, kde-format
+msgid ""
+"Select an application from the list to configure its notification settings "
+"and behavior"
+msgstr "የማሳወቂያ ቅንብሮቹን እና አሠራሩን ለማስተካከል ከዝርዝሩ ውስጥ አንድ መተግበሪያ ይምረጡ።"

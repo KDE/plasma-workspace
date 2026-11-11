@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2025-02-20 21:25+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -40,34 +40,34 @@ msgstr "Navn på gjeldene pekertema"
 msgid "Current pointer size"
 msgstr "Gjeldende pekerstørrelse"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Klarte ikke opprette midlertidig fil."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Klarte ikke laste ned ikontema-arkivet: %1"
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, fuzzy, kde-format
 #| msgid "Unable to download the icon theme archive: %1"
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Klarte ikke laste ned ikontema-arkivet: %1"
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fila er ikke et gyldig ikontema-arkiv."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Klarte ikke opprette ikonmappa."
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -76,12 +76,12 @@ msgstr ""
 "Det finnes allerede et tema som heter %1 i mappa for ikontema. Vil du bytte "
 "ut det gamle temaet?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Skriv over tema?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Temaet er nå installert."
@@ -93,7 +93,7 @@ msgstr "Temaet er nå installert."
 msgid "Timeout in seconds"
 msgstr "Tidsavbrudd i sekunder"
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -107,7 +107,7 @@ msgstr ""
 "Dette verktøyet lar deg velge pekertemaet for den gjeldende Plasma-økta og "
 "hindrer deg i å velge et tema som ikke finnes eller som allerede er valgt."
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -119,18 +119,18 @@ msgstr ""
 "Navnet på pekertemaet du vil bruke for gjeldende Plasma-økt (hvis du oppgir "
 "en fullstendig filadresse, blir bare den siste delen av adressen brukt)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Vis alle temaene som finnes på systemet (og hva som er gjeldende tema)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Bruk spesifikk størrelse i stedet for standardstørrelsen i temaet"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -141,7 +141,7 @@ msgid ""
 msgstr ""
 "Det valgte temaet «%1» er allerede i bruk som tema for gjelende Plasma-økt."
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -151,7 +151,7 @@ msgid ""
 "session"
 msgstr "Pekertemaet %1 er nå tatt i bruk i gjeldende Plasma-økt."
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -161,7 +161,7 @@ msgid ""
 "theme to display correctly."
 msgstr "Du må starte økta på nytt for at pekertemaet skal vises riktig."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -171,13 +171,13 @@ msgid ""
 "%2"
 msgstr "Fant ikke temaet «%1». Temaet må være ett av følgende: %2"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Du har disse pekertemaene tilgjengelig:"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(gjeldende tema for denne Plasma-økta)"

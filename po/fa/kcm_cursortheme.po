@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2026-10-01 11:15+0330\n"
 "Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -32,33 +32,33 @@ msgstr "نام پوستهٔ اشاره‌گر فعلی"
 msgid "Current pointer size"
 msgstr "اندازهٔ اشاره‌گر فعلی"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ناتوان در ایجاد پروندهٔ موقت."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ناتوان در بارگیری بایگانی پوستهٔ شمایل: %1"
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "ناتوان در باز کردن بایگانی پوستهٔ شمایل."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "پرونده، یک بایگانی معتبر پوستهٔ شمایل نیست."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "ایجاد پوشهٔ «icons» شکست خورد."
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -67,12 +67,12 @@ msgstr ""
 "پوسته‌ای با نام %1 از قبل در پوشهٔ پوستهٔ شمایل شما وجود دارد. آیا می‌خواهید این "
 "پوسته را جایگزین آن کنید؟"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "جایگزینی پوسته؟"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "پوسته با موفقیت نصب شد."
@@ -84,7 +84,7 @@ msgstr "پوسته با موفقیت نصب شد."
 msgid "Timeout in seconds"
 msgstr "زمان مهلت به ثانیه"
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -95,7 +95,7 @@ msgstr ""
 "تنظیم کنید، بدون اینکه تصادفاً آن را روی پوسته‌ای تنظیم کنید که در دسترس نیست "
 "یا از قبل تنظیم شده است."
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -104,18 +104,18 @@ msgstr ""
 "نام پوستهٔ اشاره‌گری که می‌خواهید برای نشست فعلی پلاسمای خود تنظیم کنید (ارسال "
 "مسیر کامل تنها از بخش پایانی مسیر استفاده خواهد کرد)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "نمایش همهٔ پوسته‌های موجود در سامانه (و این‌که کدام پوستهٔ فعلی است)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "استفاده از یک اندازهٔ خاص، به‌جای اندازهٔ پیش‌گزیدهٔ پوسته"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -123,14 +123,14 @@ msgid ""
 msgstr ""
 "پوستهٔ درخواستی «%1» از قبل به‌عنوان پوستهٔ نشست فعلی پلاسما تنظیم شده است."
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "پوستهٔ اشاره‌گر موشی %1 با موفقیت روی نشست فعلی پلاسمای شما اعمال شد"
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -139,19 +139,19 @@ msgstr ""
 "برای نمایش درست پوستهٔ اشاره‌گر موشی تازه اعمال‌شده، باید نشست پلاسما را "
 "بازآغاز کنید."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr "پوستهٔ «%1» یافت نشد. پوسته باید یکی از گزینه‌های زیر باشد: %2"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "پوسته‌های اشاره‌گر موشی زیر در سامانهٔ شما موجود هستند:"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(پوستهٔ فعلی برای این نشست پلاسما)"

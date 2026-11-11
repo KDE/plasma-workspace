@@ -1,0 +1,137 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Abenezer Wesenseged <wseged@proton.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-10-16 00:50+0000\n"
+"PO-Revision-Date: 2026-11-03 07:54+0300\n"
+"Last-Translator: Abenezer Wesenseged <wseged@proton.me>\n"
+"Language-Team: Amharic <kde-l10n-am@kde.org>\n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
+
+#: ui/DayNightView.qml:154
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr "የቀለም ሙቀት በ%1 ላይ ወደ ማታ ሁኔታ መቀየር ይጀምራል፤ በ%2 ላይ ደግሞ ሙሉ በሙሉ ተቀይሮ ያበቃል።"
+
+#: ui/DayNightView.qml:157
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+"የቀለም ሙቀት በ%1 ላይ ወደ የቀን ብርሃን ሁኔታ መለወጥ ይጀምራል፤ በ%2 ላይ ደግሞ ሙሉ በሙሉ ተለውጦ ያበቃል።"
+
+#: ui/main.qml:104
+#, kde-format
+msgctxt "@info"
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr "ሰማያዊ ብርሃን ማጣሪያው በስክሪኑ ላይ ያሉትን ቀለማት ይበልጥ ሞቅ ያለ ያደርጋቸዋል።"
+
+#: ui/main.qml:117
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily activated until %1."
+msgstr "የሌሊት ብርሃን(Night Light) እስከ %1 ድረስ ለጊዜው ነቅቷል።"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily activated until it is manually turned off."
+msgstr "የሌሊት ብርሃን(Night Light) በእጅ እስኪጠፋ ድረስ ለጊዜው ይነቃል።"
+
+#: ui/main.qml:121
+#, kde-format
+msgctxt "@info Placeholder is for time"
+msgid "Night Light is temporarily suspended until %1."
+msgstr "የሌሊት ብርሃን(Night Light) እስከ %1 ድረስ ለጊዜው ታግዷል።"
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@info"
+msgid "Night Light is temporarily suspended until it is manually resumed."
+msgstr "በእጅ እስኪበራ ድረስ፣ የሌሊት ብርሃን(Night Light) ለጊዜው ታግዷል።"
+
+#: ui/main.qml:130
+#, kde-format
+msgctxt "@action:button turn off Night Light feature"
+msgid "Turn Off"
+msgstr "አጥፋ"
+
+#: ui/main.qml:141
+#, kde-format
+msgctxt ""
+"@action:button resume Light Light feature, which had been temporarily "
+"disabled"
+msgid "Resume"
+msgstr "ቀጥል"
+
+#: ui/main.qml:159
+#, kde-format
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr "የመቀያየር ጊዜዎች፦"
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr "ሁልጊዜ ጥፋ"
+
+#: ui/main.qml:171
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Always on"
+msgstr "ሁልጊዜ ብራ"
+
+#: ui/main.qml:172
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr "የፀሐይ ስትወጣ እና ፀሐይ ስትጠልቅ"
+
+#: ui/main.qml:189
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr "አዋቅር…"
+
+#: ui/main.qml:240 ui/main.qml:291 ui/main.qml:357
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1 K"
+msgstr "%1 K"
+
+#: ui/main.qml:247
+#, kde-format
+msgctxt "@label:slider"
+msgid "Day light temperature:"
+msgstr "የቀን ብርሃን የቀለም ሙቀት፦"
+
+#: ui/main.qml:298 ui/main.qml:364
+#, kde-format
+msgctxt "Night colour blue-ish; no blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "ቀዝቃዛ (ያለ ማጣሪያ)"
+
+#: ui/main.qml:305 ui/main.qml:371
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "ሞቃታማ"
+
+#: ui/main.qml:313
+#, kde-format
+msgctxt "@label:slider"
+msgid "Night light temperature:"
+msgstr "የሌሊት ብርሃን ሙቀት፦"

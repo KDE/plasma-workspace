@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2026-07-29 12:03+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -29,33 +29,33 @@ msgstr "Nomine del thema de punctator currente"
 msgid "Current pointer size"
 msgstr "Grandor de punctator currente"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Incapace a crear un file temporari."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Incapace a discargar le archivo de thema de icone: %1."
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Incapace a aperir le archivo de thema de icone."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Le file non es un valide archivo de thema de icone."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Falleva a crear le dossier  'icones'"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -64,12 +64,12 @@ msgstr ""
 "Un thema appellate %1 ja existe in tu dossier de thema de icone. Tu vole "
 "reimplaciar lo con isto?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Super scriber le thema?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Thema installate con successo."
@@ -81,7 +81,7 @@ msgstr "Thema installate con successo."
 msgid "Timeout in seconds"
 msgstr "Tempore limite in secundas"
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -92,7 +92,7 @@ msgstr ""
 "session currente de Plasma sin fixar lo accidentalmente a un que o non es "
 "disponibile, o qual es ja fixate."
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -102,7 +102,7 @@ msgstr ""
 "de Plasma (passar un percurso plen solmente usara le ultime parte del "
 "percurso)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -110,12 +110,12 @@ msgstr ""
 "Monstra tote le themas de color disponibile sur le systema (e qual es le "
 "thema currente)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Usa un grandor specific,plus tostoque le grandor de thema predefinite"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -124,7 +124,7 @@ msgstr ""
 "Le thema requirite \"%1\"  ja es fixate como le thema per le session "
 "currente de Plasma."
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
@@ -133,7 +133,7 @@ msgstr ""
 "Applicate con successo le thema de punctator de mus %1  a tu session de "
 "Plasma currente"
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -142,7 +142,7 @@ msgstr ""
 "Tu debe re-initiar le session de Plasma pro applicar tu nove thema de "
 "punctator de mus pro monstrar correctemente."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -151,12 +151,12 @@ msgstr ""
 "Non poteva trovar le thema \"%1\". Le thema deberea esser un del sequente "
 "optiones: %2"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Tu ha le sequente themas de punctator de mus sur tu systema:"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Thema currente pro iste session de Plasma)"

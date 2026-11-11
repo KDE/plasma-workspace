@@ -1,0 +1,462 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Abenezer Wesenseged <wseged@proton.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"PO-Revision-Date: 2026-11-10 07:27+0300\n"
+"Last-Translator: Abenezer Wesenseged <wseged@proton.me>\n"
+"Language-Team: Amharic <kde-l10n-am@kde.org>\n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.3\n"
+
+#: gtkpage.cpp:57
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 የሚሰራ የGTK ገጽታ ማህደር አይደለም።"
+
+#: kcmstyle.cpp:117
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: Cannot install a style from a remote location."
+msgstr "መጫኑ አልተሳካም፦ ከርቀት ቦታ ስታይል መጫን አይቻልም።"
+
+#: kcmstyle.cpp:123
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style file could not be read."
+msgstr "መጫኑ አልተሳካም፦ የስታይል ፋይሉ ሊነበብ አልቻለም።"
+
+#: kcmstyle.cpp:128
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style file does not contain any data."
+msgstr "መጫኑ አልተሳካም፦ የስታይል ፋይሉ ምንም ውሂብ አልያዘም።"
+
+#: kcmstyle.cpp:134
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style file could not be unpacked."
+msgstr "መጫኑ አልተሳካም፦ የስታይል ፋይሉ ከተጨመቀበት ሊወጣ አልቻለም።"
+
+#: kcmstyle.cpp:144
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The style could not be found."
+msgstr "መጫኑ አልተሳካም፦ ስታይሉ ሊገኝ አልቻለም።"
+
+#: kcmstyle.cpp:148
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The selected file is not a valid Union style."
+msgstr "መጫኑ አልተሳካም፦ የተመረጠው ፋይል የሚሰራ የዩኒየን ስታይል አይደለም።"
+
+#: kcmstyle.cpp:151
+#, kde-format
+msgctxt "@info:status"
+msgid "Installation failed: The selected style is not supported."
+msgstr "መጫኑ አልተሳካም፦ የተመረጠው ስታይል አይደገፍም።"
+
+#: kcmstyle.cpp:165
+#, kde-format
+msgctxt "@info:status"
+msgid "Installing “%1” failed: The style is already installed."
+msgstr "\"%1\"ን መጫን አልተሳካም፦ ስታይል አስቀድሞ ተጭኗል።"
+
+#: kcmstyle.cpp:170
+#, kde-format
+msgctxt "@info:status"
+msgid "Installing “%1” failed: Permission was denied."
+msgstr "\"%1\"ን መጫን አልተሳካም፦ ፈቃድ ተከልክሏል።"
+
+#: kcmstyle.cpp:174
+#, kde-format
+msgctxt "@info:status"
+msgid "Installing “%1” failed: %2"
+msgstr "\"%1\" መጫን አልተሳካም፦ %2"
+
+#: kcmstyle.cpp:179
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully installed “%1”."
+msgstr "በተሳካ ሁኔታ \"%1\" ተጭኗል።"
+
+#: kcmstyle.cpp:192
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstall failed: The style with ID “%1” could not be found."
+msgstr "ማራገፉ አልተሳካም፦ “%1” መለያ ያለው ስታይል ሊገኝ አልቻለም።"
+
+#: kcmstyle.cpp:202
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: Permission was denied."
+msgstr "\"%1\"ን ማራገፍ አልተሳካም፦ ፈቃዱ ተከልክሏል።"
+
+#: kcmstyle.cpp:204
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: The style is not installed."
+msgstr "\"%1\"ን ማራገፍ አልተሳካም፦ ስታይሉ አልተጫነም።"
+
+#: kcmstyle.cpp:206
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: The style is in use."
+msgstr "\"%1\"ን ማራገፍ አልተሳካም፦ ስታይሉ ጥቅም ላይ እየዋለ ነው።"
+
+#: kcmstyle.cpp:208
+#, kde-format
+msgctxt "@info:status"
+msgid "Uninstalling “%1” failed: %2"
+msgstr "\"%1\"ን ማራገፍ አልተሳካም፦ %2"
+
+#: kcmstyle.cpp:223
+#, kde-format
+msgctxt "@info:status"
+msgid "Could not uninstall styles:\n"
+msgstr "ስታይሎችን ማራገፍ አልተቻለም፦ \n"
+
+#: kcmstyle.cpp:226
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled “%1” but could not uninstall others:\n"
+msgstr "በተሳካ ሁኔታ \"%1\"ን አራግፏል ነገር ግን ሌሎችን ማራገፍ አልተቻለም፦\n"
+
+#: kcmstyle.cpp:229
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
+msgid_plural ""
+"Successfully uninstalled %1 styles but could not uninstall others:\n"
+msgstr[0] "የ%1 ስታይል በተሳካ ሁኔታ ተወግዷል፣ ነገር ግን ሌሎቹን ማራገፍ አልተቻለም፦\n"
+msgstr[1] "%1 ስታይሎች  በተሳካ ሁኔታ ተወግደዋል፣ ነገር ግን ሌሎቹን ማራገፍ አልተቻለም፦\n"
+
+#: kcmstyle.cpp:240
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled “%1”."
+msgstr "በተሳካ ሁኔታ \"%1\" ን አራግፏል።"
+
+#: kcmstyle.cpp:242
+#, kde-format
+msgctxt "@info:status"
+msgid "Successfully uninstalled %1 style"
+msgid_plural "Successfully uninstalled %1 styles."
+msgstr[0] "በተሳካ ሁኔታ የ %1  ስታይል አራግፏል"
+msgstr[1] "በተሳካ ሁኔታ የ %1 ስታይሎች አራግፏል."
+
+#: kcmstyle.cpp:306 kcmstyle.cpp:313
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "ለዚህ ስታይል የማዋቀሪያ መስኮቱን በመጫን ሂደት ላይ ስህተት ተከስቷል።"
+
+#: kcmstyle.cpp:420
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "የተመረጠውን ስታይል '%1'ን መፈጸም አልተሳካም።"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 ያዋቅሩ"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "ትር 1"
+
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:65
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:85
+#, kde-format
+msgid "Button"
+msgstr "አዝራር"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:99
+#, kde-format
+msgid "Combo box"
+msgstr "ጥምር ሳጥን"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:109
+#, kde-format
+msgid "Checkbox"
+msgstr "የምልክት ሳጥን"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:119 stylepreview.ui:129
+#, kde-format
+msgid "Radio button"
+msgstr "የምርጫ አዝራር"
+
+#. i18n: ectx: property (placeholderText), widget (QLineEdit, lineEdit)
+#: stylepreview.ui:138
+#, kde-format
+msgid "Text Field"
+msgstr "የጽሑፍ መስክ"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:146
+#, kde-format
+msgid "Tab 2"
+msgstr "ትር 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "የመተግበሪያ ስታይል"
+
+#. i18n: ectx: label, entry (unionStyle), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Union Style ID"
+msgstr "የዩኒየን ስታይል ID"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "አዶዎችን በ አዝራሮች ላይ አሳይ"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:21
+#, kde-format
+msgid "Show icons in menus"
+msgstr "በምናሌዎች ውስጥ አዶዎችን አሳይ"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Main toolbar label"
+msgstr "ዋና የመሣሪያ አሞሌ መለያ"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:31
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "የሁለተኛ ደረጃ የመሣሪያ አሞሌ መለያ"
+
+#: ui/EffectSettingsPopup.qml:19
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icons and Toolbars"
+msgstr "አዶዎችን እና የመሳሪያ አሞሌዎችን ያዋቅሩ"
+
+#: ui/EffectSettingsPopup.qml:36
+#, kde-format
+msgid "Show icons:"
+msgstr "አዶዎችን አሳይ፦"
+
+#: ui/EffectSettingsPopup.qml:37
+#, kde-format
+msgid "On buttons"
+msgstr "በአዝራሮች ላይ"
+
+#: ui/EffectSettingsPopup.qml:48
+#, kde-format
+msgid "In menus"
+msgstr "በምናሌዎች ውስጥ"
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "ዋና የመሣሪያ አሞሌ መለያ፦"
+
+#: ui/EffectSettingsPopup.qml:62
+#, kde-format
+msgid "None"
+msgstr "ምንም"
+
+#: ui/EffectSettingsPopup.qml:63
+#, kde-format
+msgid "Text only"
+msgstr "ጽሁፍ ብቻ"
+
+#: ui/EffectSettingsPopup.qml:64
+#, kde-format
+msgid "Beside icons"
+msgstr "ከአዶዎች አጠገብ"
+
+#: ui/EffectSettingsPopup.qml:65
+#, kde-format
+msgid "Below icon"
+msgstr "ከአዶ በታች"
+
+#: ui/EffectSettingsPopup.qml:80
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "የሁለተኛ ደረጃ የመሣሪያ አሞሌ መለያ፦"
+
+#: ui/GtkStylePage.qml:17
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK የመተግበሪያ ስታይል"
+
+#: ui/GtkStylePage.qml:38
+#, kde-format
+msgctxt "@action:button"
+msgid "Install from File…"
+msgstr "ከፋይል ጫን…"
+
+#: ui/GtkStylePage.qml:43
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New…"
+msgstr "አዲስ ያግኙ…"
+
+#: ui/GtkStylePage.qml:60
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK ገጽታ፦"
+
+#: ui/GtkStylePage.qml:85
+#, kde-format
+msgid "Preview…"
+msgstr "ቅድመ እይታ…"
+
+#: ui/GtkStylePage.qml:104
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "የGTK ገጽታ ማህደር ይምረጡ"
+
+#: ui/GtkStylePage.qml:106
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "የGTK ገጽታ ማህደር (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: ui/main.qml:85
+#, kde-format
+msgctxt "@action:button"
+msgid "Install From File…"
+msgstr "ከፋይል ጫን…"
+
+#: ui/main.qml:90
+#, kde-format
+msgid "Configure Icons and Toolbars…"
+msgstr "አዶዎችን እና የመሳሪያ አሞሌዎችን ያዋቅሩ..."
+
+#: ui/main.qml:108
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "የ GNOME/GTK መተግበሪያ ስታይልን ያዋቅሩ..."
+
+#: ui/main.qml:170
+#, kde-format
+msgctxt "@info:tooltip"
+msgid ""
+"This style is using the Union style engine which is still under development. "
+"Some things may look or behave incorrectly when using this style."
+msgstr ""
+"ይህ ስታይል አሁንም በመገንባት ላይ ያለውን የዩኒየን ስታይል ኢንጂን እየተጠቀመ ነው። ይህን ዘይቤ ሲጠቀሙ አንዳንድ "
+"ነገሮች ሊመስሉ ወይም የተሳሳቱ ሊሆኑ ይችላሉ።"
+
+#: ui/main.qml:174
+#, kde-format
+msgid "Configure Style…"
+msgstr "ስታይሉን አዋቅር..."
+
+#: ui/main.qml:182
+#, kde-format
+msgctxt "@action:button"
+msgid "Uninstall…"
+msgstr "አራግፍ…"
+
+#: ui/main.qml:184
+#, kde-format
+msgctxt "@action:button"
+msgid "Cannot uninstall system-installed styles."
+msgstr "በስርዓት የተጫኑ ስታይሎችን ማራገፍ አልተቻለም።"
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@action:button"
+msgid "Can only uninstall Union styles."
+msgstr "የዩኒየን ስታይሎችን ብቻ ማራገፍ ይችላል።"
+
+#: ui/main.qml:199
+#, kde-format
+msgid "Do not uninstall this style."
+msgstr "ይህን ስታይል አያራግፉ።"
+
+#: ui/main.qml:245
+#, kde-format
+msgctxt "@title:dialog"
+msgid "Choose Union Style to Install"
+msgstr "ለመጫን የዩኒየን ስታይልን ይምረጡ"
+
+#: ui/main.qml:246
+#, kde-format
+msgctxt "@action:button"
+msgid "Install"
+msgstr "ጫን"
+
+#: ui/UnionThumbnailItem.qml:25
+#, kde-format
+msgctxt "@title:tab"
+msgid "Tab 1"
+msgstr "ትር 1"
+
+#: ui/UnionThumbnailItem.qml:29
+#, kde-format
+msgctxt "@title:tab"
+msgid "Tab 2"
+msgstr "ትር 2"
+
+#: ui/UnionThumbnailItem.qml:50
+#, kde-format
+msgctxt "@option:check"
+msgid "Checkbox"
+msgstr "የምልክት ሳጥን"
+
+#: ui/UnionThumbnailItem.qml:56 ui/UnionThumbnailItem.qml:62
+#, kde-format
+msgctxt "@option:radio"
+msgid "Radio Button"
+msgstr "የምርጫ አዝራር"
+
+#: ui/UnionThumbnailItem.qml:84
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Combo Box"
+msgstr "ጥምር ሣጥን"
+
+#: ui/UnionThumbnailItem.qml:85
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Combo Box Item"
+msgstr "ጥምር ሣጥን ንጥል"
+
+#: ui/UnionThumbnailItem.qml:94
+#, kde-format
+msgctxt "@action:button"
+msgid "Button"
+msgstr "አዝራር"
+
+#: ui/UnionThumbnailItem.qml:107
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Text Field"
+msgstr "የጽሑፍ መስክ"
+
+#: ui/UnionThumbnailItem.qml:122
+#, kde-format
+msgctxt "@item:inrange Progress bar value"
+msgid "%1%"
+msgstr "%1%"

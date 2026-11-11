@@ -1,0 +1,105 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Abenezer Wesenseged <wseged@proton.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-13 00:46+0000\n"
+"PO-Revision-Date: 2026-11-03 08:20+0300\n"
+"Last-Translator: Abenezer Wesenseged <wseged@proton.me>\n"
+"Language-Team: Amharic <kde-l10n-am@kde.org>\n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "የአሁኑ አዶ ገጽታ ስም"
+
+#: main.cpp:147
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "ጊዜያዊ ፋይል መፍጠር አልተቻለም።"
+
+#: main.cpp:158
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "የአዶ ገጽታ ማህደርን ማውረድ አልተቻለም፦ %1"
+
+#: main.cpp:172
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ፋይሉ ትክክለኛ የአዶ ገጽታ ማህደር አይደለም።"
+
+#: main.cpp:177
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr "በመጫን ሂደቱ ወቅት ችግር አጋጥሟል፤ ሆኖም በማህደሩ ውስጥ ያሉት አብዛኛዎቹ ገጽታዎች ተጭነዋል።"
+
+#: main.cpp:181
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ገጽታው በተሳካ ሁኔታ ተጭኗል።"
+
+#: main.cpp:227
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "የአዶ ገጽታዎችን በመጫን ላይ…"
+
+#: main.cpp:239
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "የ%1 ገጽታ በመጫን ላይ…"
+
+#: ui/main.qml:67
+#, kde-format
+msgid "Install from File…"
+msgstr "ከፋይል ጫን…"
+
+#: ui/main.qml:72
+#, kde-format
+msgid "Get New…"
+msgstr "አዲስ ያግኙ…"
+
+#: ui/main.qml:189
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
+msgstr "የአዶ ገጽታን አስወግድ"
+
+#: ui/main.qml:191
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr "አሁን ጥቅም ላይ ያለውን የአዶ ገጽታ መሰረዝ አይቻልም"
+
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
+msgstr "በስርዓቱ የተጫኑ የአዶ ገጽታዎችን መሰረዝ አይቻልም"
+
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr "ይህን የአዶ ገጽታ አትሰርዝ"
+
+#: ui/main.qml:250
+#, kde-format
+msgid "Open Theme"
+msgstr "ገጽታ ክፍት"
+
+#: ui/main.qml:252
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "ገጽታ ፋይሎች (*.tar.gz *.tar.bz2)"

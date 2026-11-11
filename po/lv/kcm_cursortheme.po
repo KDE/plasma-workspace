@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2026-08-14 22:57+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -34,33 +34,33 @@ msgstr "Aktīvā rādītāja motīva nosaukums"
 msgid "Current pointer size"
 msgstr "Aktīvā rādītāja lielums"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Neizdodas izveidot pagaidu datni."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Neizdodas lejupielādēt ikonu motīva arhīvu: %1"
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Neizdodas atvērt ikonu motīva arhīvu."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Datne nav derīgs ikonu motīva arhīvs."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Neizdodas izveidot ikonu mapi („icons“)."
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgid ""
 msgstr ""
 "Motīvu mapē jau atrodas motīvs ar nosaukumu „%1“. Vai vēlaties to aizvietot?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Pārrakstīt motīvu?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Motīvs ir veiksmīgi instalēts."
@@ -85,7 +85,7 @@ msgstr "Motīvs ir veiksmīgi instalēts."
 msgid "Timeout in seconds"
 msgstr "Noildze sekundēs"
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -95,7 +95,7 @@ msgstr ""
 "Šis rīks ļauj iestatīt šīs „Plasma“ sesijas peles rādītāja motīvu, to "
 "neļaujot nejauši iestatīt uz nepieejamu vai jau iestatītu motīvu."
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -104,18 +104,18 @@ msgstr ""
 "Rādītāja motīva nosaukums, kuru vēlaties iestatīt šai „Plasma“ sesijai "
 "(norādot pilnu ceļu, vērā tiks ņemta tika šī ceļa beigu daļa)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Parādīt visus sistēmā pieejamos motīvus (un šobrīd aktīvo motīvu)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Izmantot noteiktu izmēru motīva noklusējuma izmēra vietā"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -123,14 +123,14 @@ msgid ""
 msgstr ""
 "Pieprasītais motīvs „%1“ jau ir iestatīts kā šīs „Plasma“ sesijas motīvs."
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "Šai „Plasma“ sesijai ir pielietots peles rādītāju motīvs „%1“"
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -139,19 +139,19 @@ msgstr ""
 "Lai pielietotais peles rādītāju motīvs darbotos pareizi, „Plasma“ sesija ir "
 "jāpārstartē."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr "Nevar atrast motīvu „%1“. Motīvam jābūt vienam no šiem: %2"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Sistēmā šobrīd ir instalēti šādi peles rādītāju motīvi:"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Aktīvais motīvs šajā „Plasma“ sesijā)"

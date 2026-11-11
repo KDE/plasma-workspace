@@ -1,0 +1,702 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2026 Abenezer Wesenseged <wseged@proton.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-11-02 08:58+0000\n"
+"PO-Revision-Date: 2026-11-02 03:46+0300\n"
+"Last-Translator: Abenezer Wesenseged <wseged@proton.me>\n"
+"Language-Team: \n"
+"Language: am\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.2\n"
+
+#: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "የጣት አሻራ መሳሪያ አልተገኘም።"
+
+#: src/fingerprintmodel.cpp:301
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "ጣትዎን እንደገና ለመቃኘት ይሞክሩ።"
+
+#: src/fingerprintmodel.cpp:303
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "ጣትዎን በበቂ ርዝመት አላንሸራተቱም። እንደገና ይሞክሩ።"
+
+#: src/fingerprintmodel.cpp:305
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "ጣትዎ በመቀበያው መሃል ላይ አይደለም። እንደገና ይሞክሩ።"
+
+#: src/fingerprintmodel.cpp:307
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "ጣትዎን ከመቀበያው ላይ ያስወግዱ እና እንደገና ይሞክሩ።"
+
+#: src/fingerprintmodel.cpp:315
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "የጣት አሻራ ምዝገባ አልተሳካም።"
+
+#: src/fingerprintmodel.cpp:318
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr "ለዚህ መሳሪያ የቀረ ቦታ የለም፣ ለመቀጠል ሌሎች የጣት አሻራዎችን ሰርዝ።"
+
+#: src/fingerprintmodel.cpp:321
+#, kde-format
+msgid "The device was disconnected."
+msgstr "መሣሪያው ተቋርጧል።"
+
+#: src/fingerprintmodel.cpp:326
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "ያልታወቀ ስህተት ተከስቷል።"
+
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
+#, kde-format
+msgid "Change Password"
+msgstr "የይለፍ ቃል ይቀይሩ"
+
+#: src/ui/ChangePassword.qml:35
+#, kde-format
+msgid "Set Password"
+msgstr "የይለፍ ቃል ያዘጋጁ"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "የይለፍ ቃል"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "የይለፍ ቃል ያረጋግጡ"
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:114
+#, kde-format
+msgid "Passwords must match"
+msgstr "የይለፍ ቃሎች መመሳሰል አለባቸው"
+
+#: src/ui/ChangeWalletPassword.qml:18
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "የዋሌት ይለፍ ቃል መቀየር?"
+
+#: src/ui/ChangeWalletPassword.qml:29
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, consider changing the "
+"password on your default KWallet to match it."
+msgstr ""
+"አሁን የመግቢያ የይለፍ ቃልዎን ስለቀየሩ፣ በነባሪ KWalletዎ ላይ ያለውን የይለፍ ቃል ከእሱ ጋር ለማዛመድ ለመቀየር "
+"ያስቡበት።"
+
+#: src/ui/ChangeWalletPassword.qml:35
+#, kde-format
+msgid "What is KWallet?"
+msgstr "KWallet ምንድን ነው?"
+
+#: src/ui/ChangeWalletPassword.qml:45
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet የይለፍ ቃላትዎን ለገመድ አልባ አውታረ መረቦች እና ለሌሎች የተመሰጠሩ ሀብቶች የሚያከማች የይለፍ ቃል "
+"አስተዳዳሪ ነው። ከመግቢያ የይለፍ ቃልዎ የተለየ በሆነ የራሱ የይለፍ ቃል ተቆልፏል። ሁለቱ የይለፍ ቃላት ከተመሳሰሉ፣ "
+"በመግቢያ ጊዜ በራስ-ሰር ሊከፈት ስለሚችል የKWallet የይለፍ ቃል እራስዎ ማስገባት የለብዎትም።"
+
+#: src/ui/ChangeWalletPassword.qml:60
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "የዋሌት ይለፍ ቃል መቀየር"
+
+#: src/ui/ChangeWalletPassword.qml:69
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "ሳይለወጥ ይተዉት"
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "ተጠቃሚ ፍጠር"
+
+#: src/ui/CreateUser.qml:40 src/ui/UserDetailsPage.qml:173
+#, kde-format
+msgid "Name:"
+msgstr "ስም፦"
+
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:179
+#, kde-format
+msgid "Username:"
+msgstr "የተጠቃሚ ስም፦"
+
+#: src/ui/CreateUser.qml:82
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"Only lowercase letters, digits, dashes, and underscores are allowed. Invalid "
+"characters were removed."
+msgstr ""
+"lowercase ፊደላት፣ አሃዞች፣ ሰረዞች እና የግርጌ ሰረዞች(underscores) ብቻ ይፈቀዳሉ። ተቀባይነት የሌላቸው "
+"ፊደላቶች ተወግደዋል።"
+
+#: src/ui/CreateUser.qml:84
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"Usernames must be lowercase. Uppercase characters were converted to "
+"lowercase."
+msgstr ""
+"የተጠቃሚ ስሞች በትንሽ ፊደላት(lowercase) መጻፍ አለባቸው። ትላልቅ ፊደላት(Uppercase) ወደ ትናንሽ ፊደላት "
+"ተቀይረዋል።"
+
+#: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
+#, kde-format
+msgid "Standard"
+msgstr "መደበኛ"
+
+#: src/ui/CreateUser.qml:94 src/ui/UserDetailsPage.qml:212
+#, kde-format
+msgid "Administrator"
+msgstr "አስተዳዳሪ"
+
+#: src/ui/CreateUser.qml:97 src/ui/UserDetailsPage.qml:201
+#, kde-format
+msgid "Account type:"
+msgstr "የመለያ አይነት፦"
+
+#: src/ui/CreateUser.qml:102
+#, kde-format
+msgid "Password:"
+msgstr "የይለፍ ቃል፦"
+
+#: src/ui/CreateUser.qml:107
+#, kde-format
+msgid "Confirm password:"
+msgstr "የይለፍ ቃል ያረጋግጡ፦"
+
+#: src/ui/CreateUser.qml:129
+#, kde-format
+msgctxt "@action:button Create a new user"
+msgid "Create"
+msgstr "ፍጠር"
+
+#: src/ui/CreateUser.qml:152
+#, kde-format
+msgctxt "@action:button Cancel creating new user"
+msgid "Cancel"
+msgstr "ሰርዝ"
+
+#: src/ui/CropSheet.qml:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Picture Area"
+msgstr "የምስል ቦታ ይምረጡ"
+
+#: src/ui/EnrolledConfirmation.qml:20
+#, kde-format
+msgctxt "@info:status"
+msgid "Finger enrolled"
+msgstr "ጣት ተመዝግቧል"
+
+#: src/ui/EnrollFeedback.qml:28
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የቀኝ አመልካች ጣትዎን ደጋግመው ይጫኑ።"
+
+#: src/ui/EnrollFeedback.qml:30
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የቀኝ መሃል ጣትዎን ደጋግመው ይጫኑት።"
+
+#: src/ui/EnrollFeedback.qml:32
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የቀኝ ቀለበት ጣትዎን ደጋግመው ይጫኑ።"
+
+#: src/ui/EnrollFeedback.qml:34
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የቀኝ ትንሹን ጣትዎን ደጋግመው ይጫኑት።"
+
+#: src/ui/EnrollFeedback.qml:36
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የቀኝ አውራ ጣትዎን ደጋግመው ይጫኑ።"
+
+#: src/ui/EnrollFeedback.qml:38
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የግራ አመልካች ጣትዎን ደጋግመው ይጫኑ።"
+
+#: src/ui/EnrollFeedback.qml:40
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የግራ መሃል ጣትዎን ደጋግመው ይጫኑት።"
+
+#: src/ui/EnrollFeedback.qml:42
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የግራ ቀለበት ጣትዎን ደጋግመው ይጫኑ።"
+
+#: src/ui/EnrollFeedback.qml:44
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የግራ ትንሹን ጣትዎን ደጋግመው ይጫኑት።"
+
+#: src/ui/EnrollFeedback.qml:46
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "የጣት አሻራ ዳሳሹን በመጠቀም የግራ አውራ ጣትዎን ደጋግመው ይጫኑ።"
+
+#: src/ui/EnrollFeedback.qml:50
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "የቀኝ አመልካች ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:52
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "የቀኝ መሃል ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:54
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "የቀኝ ቀለበት ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:56
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "የቀኝ ትንሹን ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:58
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "የቀኝ አውራ ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:60
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "የግራ አመልካች ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:62
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "የግራ መሃል ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:64
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "የግራ ቀለበት ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:66
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "የግራ ትንሹን ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/EnrollFeedback.qml:68
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "የግራ አውራ ጣትዎን በጣት አሻራ ዳሳሹ ላይ ደጋግመው ያንሸራትቱ።"
+
+#: src/ui/FingerprintDialog.qml:28
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "የጣት አሻራዎችን ያዋቅሩ"
+
+#: src/ui/FingerprintDialog.qml:39
+#, kde-format
+msgid "Add"
+msgstr "ያክሉ"
+
+#: src/ui/FingerprintDialog.qml:52
+#, kde-format
+msgid "Done"
+msgstr "ተጠናቅቋል"
+
+#: src/ui/FingerprintList.qml:47
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "ጣትዎን እንደገና ያስመዝግቡ"
+
+#: src/ui/FingerprintList.qml:59
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "የጣት አሻራ ሰርዝ"
+
+#: src/ui/FingerprintList.qml:75
+#, kde-format
+msgid "No fingerprints added"
+msgstr "ምንም የጣት አሻራዎች አልተጨመሩም"
+
+#: src/ui/main.qml:19
+#, kde-format
+msgid "Users"
+msgstr "ተጠቃሚዎች"
+
+#: src/ui/main.qml:30
+#, kde-format
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New…"
+msgstr "አዲስ ያክሉ…"
+
+#: src/ui/main.qml:31
+#, kde-format
+msgctxt "@action:button"
+msgid "Add New User…"
+msgstr "አዲስ ተጠቃሚ ያክሉ…"
+
+#: src/ui/main.qml:136
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr "የተጠቃሚ መገለጫውን ለማርትዕ Spaceን ይጫኑ"
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "ለመመዝገብ ጣት ይምረጡ"
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "ምስል ቀይር"
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "ምንም አይደለም"
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Feisty Flamingo"
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Dragon's Fruit"
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Sweet Potato"
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ambient Amber"
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Sparkle Sunbeam"
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Lemon-Lime"
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Verdant Charm"
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Mellow Meadow"
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Tepid Teal"
+
+#: src/ui/PicturesSheet.qml:38
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Plasma Blue"
+
+#: src/ui/PicturesSheet.qml:39
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Pon Purple"
+
+#: src/ui/PicturesSheet.qml:40
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Bajo Purple"
+
+#: src/ui/PicturesSheet.qml:41
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Burnt Charcoal"
+
+#: src/ui/PicturesSheet.qml:42
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Paper Perfection"
+
+#: src/ui/PicturesSheet.qml:43
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Cafétera Brown"
+
+#: src/ui/PicturesSheet.qml:44
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Rich Hardwood"
+
+#: src/ui/PicturesSheet.qml:63
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "ተመለስ"
+
+#: src/ui/PicturesSheet.qml:81
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr "የመጀመሪያ ፊደላት"
+
+#: src/ui/PicturesSheet.qml:135
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "ፋይል ይምረጡ…"
+
+#: src/ui/PicturesSheet.qml:140
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "ስዕል ይምረጡ"
+
+#: src/ui/PicturesSheet.qml:144
+#, kde-format
+msgctxt ""
+"@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
+"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *."
+"avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *."
+"tiff, *.wbmp, *.webp, *.xbm, *.xpm"
+msgid ""
+"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
+"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+msgstr ""
+"የምስል ፋይሎች (ሁሉም ዋና ዋና የፋይል ዓይነቶች) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
+"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+
+#: src/ui/PicturesSheet.qml:201
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr "የቦታ ያዥ አዶ"
+
+#: src/ui/PicturesSheet.qml:290
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr "የተጠቃሚ አምሳያ ቦታ ያዥ አዶ"
+
+#: src/ui/UserDetailsPage.qml:113
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User Without Deleting Files?"
+msgstr "ፋይሎችን ሳይሰርዙ የገባ ተጠቃሚን ይሰርዙ?"
+
+#: src/ui/UserDetailsPage.qml:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User?"
+msgstr "የገባ ተጠቃሚ ይሰረዝ?"
+
+#: src/ui/UserDetailsPage.qml:116
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in, so their files cannot be deleted. Delete just the "
+"account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
+"may experience strange behaviors until they log out."
+msgstr ""
+"%1 በአሁኑ ጊዜ ገብቷል፣ ስለዚህ ፋይሎቻቸው ሊሰረዙ አይችሉም። በምትኩ መለያውን ብቻ ይሰርዙ?<nl/><nl/>ይህ %1 "
+"እንደገና መግባት እንዳይችል ያደርጋቸዋል፣ እና እስኪወጡ ድረስ እንግዳ ባህሪያት ሊያጋጥሟቸው ይችላሉ።"
+
+#: src/ui/UserDetailsPage.qml:117
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in. Deleting the account will make them unable to log "
+"in again, and they may experience strange behaviors until they log out."
+msgstr ""
+"%1 በአሁኑ ሰዓት ገብቷል። መለያውን መሰረዝ ዳግመኛ እንዳይገባ ያደርገዋል፤ እንዲሁም ከስርዓቱ እስኪወጣ ድረስ "
+"ያልተለመዱ ነገሮች ሊያጋጥሙት ይችላሉ።"
+
+#: src/ui/UserDetailsPage.qml:124
+#, kde-format
+msgctxt "@action: button"
+msgid "Delete %1"
+msgstr "ሰርዝ %1"
+
+#: src/ui/UserDetailsPage.qml:143
+#, kde-format
+msgid "Change avatar"
+msgstr "ምስል ቀይር"
+
+#: src/ui/UserDetailsPage.qml:193
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot change your own username while logged in; log out and then log in as "
+"another user to change this account’s username."
+msgstr ""
+"ሲገቡ የራስዎን የተጠቃሚ ስም መቀየር አይቻልም፤ ውጣና ከዚያ የዚህን መለያ የተጠቃሚ ስም ለመቀየር እንደ ሌላ ተጠቃሚ "
+"ግባ።"
+
+#: src/ui/UserDetailsPage.qml:194
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot change the username of a logged-in user; wait until this user logs "
+"out first."
+msgstr "የገባ ተጠቃሚን የተጠቃሚ ስም መቀየር አይቻልም፤ ይህ ተጠቃሚ መጀመሪያ እስኪወጣ ድረስ ይጠብቁ።"
+
+#: src/ui/UserDetailsPage.qml:222
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+"በስርዓቱ ላይ ቢያንስ አንድ ሌላ የአስተዳዳሪ መለያ ከሌለ በስተቀር የመለያውን አይነት ወደ መደበኛ መለወጥ አይቻልም። "
+"ያለሱ፣ ማረጋገጫ የማይቻል ይሆናል ወይም ደህንነቱ ያልተጠበቀ የስር ይለፍ ቃል መጠቀምን ይጠይቃል።"
+
+#: src/ui/UserDetailsPage.qml:230
+#, kde-format
+msgid "Email address:"
+msgstr "የኢሜይል አድራሻ፦"
+
+#: src/ui/UserDetailsPage.qml:262
+#, kde-format
+msgid "Delete files"
+msgstr "ፋይሎችን ሰርዝ"
+
+#: src/ui/UserDetailsPage.qml:269
+#, kde-format
+msgid "Keep files"
+msgstr "ፋይሎችን ያስቀምጡ"
+
+#: src/ui/UserDetailsPage.qml:276
+#, kde-format
+msgid "Delete User…"
+msgstr "ተጠቃሚን ሰርዝ…"
+
+#: src/ui/UserDetailsPage.qml:282
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot delete yourself! Log out and then log in as another user to delete "
+"this user account."
+msgstr "እራስዎን መሰረዝ አይችሉም! ይህንን የተጠቃሚ መለያ ለመሰረዝ ይውጡ እና ከዚያ እንደ ሌላ ተጠቃሚ ይግቡ።"
+
+#: src/ui/UserDetailsPage.qml:294
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "የጣት አሻራ ማረጋገጫን ያዋቅሩ…"
+
+#: src/ui/UserDetailsPage.qml:326
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"ማያ ገጹን ሲከፍቱ እና ለመተግበሪያዎች እና ለትእዛዝ መስመር ፕሮግራሞች የአስተዳዳሪ ፈቃዶችን ሲሰጡ የይለፍ ቃል ምትክ "
+"የጣት አሻራዎች ጥቅም ላይ ሊውሉ ይችላሉ።<nl/><nl/>በጣት አሻራዎ ወደ ስርዓቱ መግባት እስካሁን አይደገፍም።"
+
+#: src/user.cpp:141
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr "ምስሉን ለመቁርጥ አልተሳካም፦ %1"
+
+#: src/user.cpp:337
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "ተጠቃሚን %1 ለማስቀመጥ ፈቃድ ማግኘት አልተቻለም"
+
+#: src/user.cpp:342
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "ለውጦችን በማስቀመጥ ላይ ስህተት ነበር"
+
+#: src/user.cpp:474
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr "የምስል መጠን መቀየር አልተሳካም፡ የtemp ፋይልን መክፈት አልተሳካም"
+
+#: src/user.cpp:482
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr "የምስል መጠን መቀየር አልተሳካም፡ ወደ temp ፋይል መጻፍ አልተሳካም"
+
+#: src/usermodel.cpp:170
+#, kde-format
+msgid "Your Account"
+msgstr "የእርስዎ መለያ"
+
+#: src/usermodel.cpp:170
+#, kde-format
+msgid "Other Accounts"
+msgstr "ሌሎች መለያዎች"

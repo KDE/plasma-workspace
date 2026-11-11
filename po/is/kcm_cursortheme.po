@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2026-06-24 11:16+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -37,33 +37,33 @@ msgstr "Heiti á núverandi bendilþema"
 msgid "Current pointer size"
 msgstr "Núverandi stærð bendils"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ekki tókst að búa til bráðabirgðaskrá."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ekki tókst að sækja bendilþemusafnið %1."
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Ekki tókst að opna táknmyndaþemusafnið."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Skráin er ekki gilt bendilþemusafn."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Mistókst að útbúa möppuna 'tákn'."
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -72,12 +72,12 @@ msgstr ""
 "Þema nefnt %1 er til nú þegar í möppu fyrir táknaþemu. Viltu nota það í "
 "staðinn fyrir þetta?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Skrifa yfir þema?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Uppsetning á þema er lokið."
@@ -89,7 +89,7 @@ msgstr "Uppsetning á þema er lokið."
 msgid "Timeout in seconds"
 msgstr "Tímamörk í sekúndum"
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -100,7 +100,7 @@ msgstr ""
 "Plasma-setu, án þess að velja fyrir slysni þema sem er annað hvort ekki til "
 "eða sem búið er að velja nú þegar."
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
@@ -109,19 +109,19 @@ msgstr ""
 "Heiti bendilþemans sem þú vilt nota fyrir núverandi Plasma-setu (ef öll "
 "slóðin er sett inn er einungis síðasti hluti hennar notaður)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Sýna öll þemu sem eru í boði í tölvunni (og hvert þeirra er núverandi þema)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Nota tiltekna stærð, frekar en sjálfgefna stærð þemans"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
@@ -129,14 +129,14 @@ msgid ""
 msgstr ""
 "Umbeðið þema \"%1\" er nú þegar valið sem þema fyrir núverandi Plasma-setu."
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr "Tókst að nota músarbendilsþema %1 á núverandi Plasma-setu þína"
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse pointer "
@@ -145,7 +145,7 @@ msgstr ""
 "Þú þarft að endurræsa Plasma-setuna til að nýja músarbendilsþemað birtist "
 "rétt."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
@@ -154,12 +154,12 @@ msgstr ""
 "Tókst ekki að finna þemað \"%1\". Þemað þarf að vera einn af eftirfarandi "
 "valkostum: %2"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "Þú ert með eftirfarandi músarbendilsþemu í tölvunni þinni:"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Núverandi þema fyrir þessa Plasma-setu)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2005-10-19 21:17+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -29,48 +29,48 @@ msgstr ""
 msgid "Current pointer size"
 msgstr ""
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Kursor mavzusining %1 arxivi topilmadi."
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "Kursor mavzusining %1 arxivi topilmadi."
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "%1 fayli haqiqiy kursor mavzusining arxiviga oʻxshamaydi."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "%1 mavzusi allaqachon mavjud. Uni almashtirishni istaysizmi?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Mavzuni almashtirish"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
@@ -82,7 +82,7 @@ msgstr ""
 msgid "Timeout in seconds"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse pointer theme for the current Plasma "
@@ -90,39 +90,39 @@ msgid ""
 "available, or which is already set."
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, kde-format
 msgid ""
 "The requested theme “%1” is already set as the theme for the current Plasma "
 "session."
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, kde-format
 msgid ""
 "Successfully applied the mouse pointer theme %1 to your current Plasma "
 "session"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
@@ -131,19 +131,19 @@ msgid ""
 msgstr ""
 "Oʻzgarishlar kuchga kirishi uchun KDE'ni qaytadan ishga tushirishingiz kerak."
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -34,34 +34,34 @@ msgstr "वर्तमान संकेतक प्रसंग का न�
 msgid "Current pointer size"
 msgstr "वर्तमान संकेतक आकार"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "अस्थायी फ़ाइल बनाने में अक्षम ।"
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "संकेतक प्रसंग संग्रह %1 डाउनलोड करने में अक्षम ।"
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, fuzzy, kde-format
 #| msgid "Unable to download the icon theme archive: %1"
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "संकेतक प्रसंग संग्रह %1 डाउनलोड करने में अक्षम ।"
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "फ़ाइल एक वैध संकेतक प्रसंग संग्रह नहीं है।"
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "प्रतीक फ़ोल्डर बनाने में विफल ।"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -70,12 +70,12 @@ msgstr ""
 "एक प्रसंग %1 नाम से प्रतीक प्रसंग फ़ोल्डर में पहले से ही उपलब्ध है. क्या आप उसे इससे बदलना "
 "चाहते हैं?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "प्रसंग मिटाकर लिखें?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "प्रसंग सफलतापूर्वक स्थापित।"
@@ -87,7 +87,7 @@ msgstr "प्रसंग सफलतापूर्वक स्थापि�
 msgid "Timeout in seconds"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -102,7 +102,7 @@ msgstr ""
 "गलती से इसे किसी ऐसे पर नियत नही करता है जो या तो उपलब्ध नहीं है, या जो पहले से नियत "
 "है।"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, fuzzy, kde-format
 #| msgid ""
 #| "The name of the cursor theme you wish to set for your current Plasma "
@@ -114,18 +114,18 @@ msgstr ""
 "संकेतक प्रसंग का नाम जिसे आप अपने वर्तमान प्लाज़्मा सत्र के लिए नियत करना चाहते हैं (एक पूर्ण "
 "पथ देने करने से केवल पथ के अंतिम भाग का उपयोग होगा)"
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "तंत्र पर उपलब्ध सभी प्रसंग दिखाएं (और जो वर्तमान प्रसंग है)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "थीम पूर्वन्यस्त आकार के बजाय एक विशिष्ट आकार का उपयोग करें"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -136,7 +136,7 @@ msgid ""
 msgstr ""
 "अनुरोधित प्रसंग \"%1\" पहले से ही वर्तमान प्लाज़्मा सत्र के लिए प्रसंग के रूप में नियत है।"
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -146,7 +146,7 @@ msgid ""
 "session"
 msgstr "आपके वर्तमान प्लाज़्मा सत्र में संकेतक प्रसंग %1 को सफलतापूर्वक लागू किया गया है"
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -158,7 +158,7 @@ msgstr ""
 "आपको अपने नए लागू संकेतक प्रसंग को सही ढंग से प्रदर्शित करने के लिए प्लाज़्मा सत्र को पुनरारंभ "
 "करना होगा।"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not find theme \"%1\". The theme should be one of the following "
@@ -168,13 +168,13 @@ msgid ""
 "%2"
 msgstr "प्रसंग \"%1\" नहीं मिल सका। प्रसंग निम्न विकल्पों में से एक होनी चाहिए : %2"
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, fuzzy, kde-format
 #| msgid "You have the following mouse cursor themes on your system:"
 msgid "You have the following mouse pointer themes on your system:"
 msgstr "आपके तंत्र पर निम्न संकेतक प्रसंग हैं :"
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(इस प्लाज्मा सत्र के लिए वर्तमान प्रसंग)"

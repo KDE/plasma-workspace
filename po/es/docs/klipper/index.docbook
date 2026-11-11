@@ -133,7 +133,7 @@
 >, que puede configurar en la página <guilabel
 >Atajos de teclado</guilabel
 >, o marcando <guilabel
->Inmediatamente al seleccionar</guilabel
+>Cuando se copia un texto o un archivo</guilabel
 > bajo <guilabel
 >Mostrar un menú de acciones emergente</guilabel
 > en la página <guilabel
@@ -303,7 +303,7 @@
 ></term>
 <listitem
 ><para
->Si está marcada esta opción, al seleccionar un elemento del historial, &klipper; mostrará el menú emergente de acciones para dicho elemento, cuando proceda.</para>
+>Si está marcada esta opción, al seleccionar o editar un elemento del historial, o al llegar a él con un atajo del teclado, &klipper; mostrará el menú emergente de acciones para dicho elemento, cuando proceda.</para>
 </listitem>
 </varlistentry>
 

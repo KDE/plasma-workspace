@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-09 00:57+0000\n"
+"POT-Creation-Date: 2026-11-11 01:04+0000\n"
 "PO-Revision-Date: 2024-10-25 23:38-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -33,34 +33,34 @@ msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਥੀਮ ਦਾ ਨਾਂ ਹੈ"
 msgid "Current pointer size"
 msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਆਕਾਰ"
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:372
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ਆਰਜ਼ੀ ਫ਼ਾਇਲ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:383
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ਆਈਕਾਨ ਥੀਮ ਅਕਾਇਵ ਡਾਊਨਲੋਡ ਤੋਂ ਅਸਮਰੱਥ ਹੈ: %1"
 
-#: kcmcursortheme.cpp:402
+#: kcmcursortheme.cpp:397
 #, fuzzy, kde-format
 #| msgid "Unable to download the icon theme archive: %1"
 msgctxt "@info"
 msgid "Unable to open the icon theme archive."
 msgstr "ਆਈਕਾਨ ਥੀਮ ਅਕਾਇਵ ਡਾਊਨਲੋਡ ਤੋਂ ਅਸਮਰੱਥ ਹੈ: %1"
 
-#: kcmcursortheme.cpp:422
+#: kcmcursortheme.cpp:417
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ਇਹ ਫਾਇਲ਼ ਠੀਕ ਆਈਕਾਨ ਥੀਮ ਅਕਾਈਵ ਨਹੀਂ ਹੈ।"
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:424
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' ਫੋਲਡਰ ਬਣਾਉਣ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
 
-#: kcmcursortheme.cpp:438
+#: kcmcursortheme.cpp:433
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -68,12 +68,12 @@ msgid ""
 msgstr ""
 "ਤੁਹਾਡੇ ਆਈਕਾਨ ਥੀਮ ਫੋਲਡਰ ਵਿੱਚ ਥੀਮ %1 ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਤਬਦੀਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kcmcursortheme.cpp:442
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "ਥੀਮ ਉੱਤੇ ਲਿਖਣਾ ਹੈ?"
 
-#: kcmcursortheme.cpp:466
+#: kcmcursortheme.cpp:461
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ।"
@@ -85,7 +85,7 @@ msgstr "ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤਾ �
 msgid "Timeout in seconds"
 msgstr "ਸਮਾਂ-ਸਮਾਪਤੀ ਸਕਿੰਟਾਂ ਵਿੱਚ"
 
-#: plasma-apply-cursortheme.cpp:39
+#: plasma-apply-cursortheme.cpp:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -99,25 +99,25 @@ msgstr ""
 "ਇਹ ਟੂਲ ਤੁਹਾਨੂੰ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਮਾਊਸ ਕਰਸਰ ਥੀਮ ਸੈੱਟ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ, ਬਿਨਾਂ ਗਲਤੀ ਨਾਲ "
 "ਅਜਿਹੀ ਸੈਟਿੰਗ ਕਰਨ ਦੇ, ਜੋ ਮੌਜੂਦ ਨਾ ਹੋਵੇ ਜਾਂ ਜੋ ਪਹਿਲਾਂ ਹੀ ਸੈੱਟ ਹੋਵੇ।"
 
-#: plasma-apply-cursortheme.cpp:43
+#: plasma-apply-cursortheme.cpp:41
 #, kde-format
 msgid ""
 "The name of the pointer theme you wish to set for your current Plasma "
 "session (passing a full path will only use the last part of the path)"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:44
+#: plasma-apply-cursortheme.cpp:42
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "ਸਿਸਟਮ ਉੱਤੇ ਮੌਜੂਦ ਸਭ ਥੀਮ ਵੇਖਾਓ (ਅਤੇ ਜੋ ਵੀ ਮੌਜੂਦਾ ਥੀਮ ਹੈ)"
 
-#: plasma-apply-cursortheme.cpp:45
+#: plasma-apply-cursortheme.cpp:43
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "ਥੀਮ ਦੇ ਮੂਲ ਆਕਾਰ ਦੀ ਬਜਾਏ ਖਾਸ ਆਕਾਰ ਨੂੰ ਵਰਤੋਂ"
 
-#: plasma-apply-cursortheme.cpp:66
+#: plasma-apply-cursortheme.cpp:64
 #, fuzzy, kde-format
 #| msgid ""
 #| "The requested theme \"%1\" is already set as the theme for the current "
@@ -127,7 +127,7 @@ msgid ""
 "session."
 msgstr "ਮੰਗਿਆ ਥੀਮ \"%1\" ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਥੀਮ ਵਜੋਂ ਸੈੱਟ ਹੈ।"
 
-#: plasma-apply-cursortheme.cpp:80
+#: plasma-apply-cursortheme.cpp:75
 #, fuzzy, kde-format
 #| msgid ""
 #| "Successfully applied the mouse cursor theme %1 to your current Plasma "
@@ -137,7 +137,7 @@ msgid ""
 "session"
 msgstr "ਮਾਊਸ ਕਰਸਰ ਥੀਮ %1 ਨੂੰ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਕਾਮਯਾਬੀ ਨਾਲ ਲਾਗੂ ਕੀਤਾ"
 
-#: plasma-apply-cursortheme.cpp:82
+#: plasma-apply-cursortheme.cpp:77
 #, fuzzy, kde-format
 #| msgid ""
 #| "You have to restart the Plasma session for your newly applied mouse "
@@ -148,19 +148,19 @@ msgid ""
 msgstr ""
 "ਤੁਹਾਡੇ ਨਵੇਂ ਲਾਗੂ ਕੀਤੇ ਕਰਸਰ ਥੀਮ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
-#: plasma-apply-cursortheme.cpp:92
+#: plasma-apply-cursortheme.cpp:87
 #, kde-format
 msgid ""
 "Could not find theme “%1”. The theme should be one of the following options: "
 "%2"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:100
+#: plasma-apply-cursortheme.cpp:95
 #, kde-format
 msgid "You have the following mouse pointer themes on your system:"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:105
+#: plasma-apply-cursortheme.cpp:100
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(ਇਸ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਮੌਜੂਦਾ ਥੀਮ)"
