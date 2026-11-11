@@ -54,7 +54,7 @@ msgstr "Egenskaper"
 #: globalshortcuts.cpp:23
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Slå av/på «Ikke forstyrr»"
+msgstr "Slå på/av «Ikke forstyrr»"
 
 #: globalshortcuts.cpp:42
 #, kde-format
