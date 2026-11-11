@@ -404,7 +404,7 @@ msgstr "Varslinger er håndtert av «%1 %2»"
 #: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Slå av/på «Ikke forstyrr»"
+msgstr "Slå på/av «Ikke forstyrr»"
 
 #: globalshortcuts.cpp:33
 #, fuzzy, kde-format
