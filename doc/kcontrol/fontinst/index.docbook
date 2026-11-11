@@ -27,7 +27,7 @@
 <sect1 id="kcm_fontinst">
 <title>Font Management</title>
 
-<para>This module is responsible for installing, un-installing, previewing and managing your fonts.</para>
+<para>This application is responsible for installing, un-installing, previewing and managing your fonts.</para>
 
 <sect2 id="font-groups">
 <title>Font Groups</title>

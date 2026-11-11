@@ -11,12 +11,12 @@ if (HAVE_X11)
         ${CMAKE_CURRENT_SOURCE_DIR}/dbus
         ${CMAKE_CURRENT_BINARY_DIR}/dbus
         ${CMAKE_CURRENT_SOURCE_DIR}/viewpart
-        ${CMAKE_CURRENT_SOURCE_DIR}/kcmfontinst
-        ${CMAKE_CURRENT_BINARY_DIR}/kcmfontinst)
+        ${CMAKE_CURRENT_SOURCE_DIR}/manager
+        ${CMAKE_CURRENT_BINARY_DIR}/manager)
 
     add_subdirectory(lib)
     add_subdirectory(dbus)
-    add_subdirectory(kcmfontinst)
+    add_subdirectory(manager)
     add_subdirectory(apps)
     add_subdirectory(kio)
     add_subdirectory(thumbnail)

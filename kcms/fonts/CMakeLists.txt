@@ -17,7 +17,7 @@ target_sources(kcm_fonts PRIVATE
     previewimageprovider.cpp
     fonts.cpp
     fontsaasettings.cpp
-    ../kfontinst/lib/FcEngine.cpp
+    ${CMAKE_SOURCE_DIR}/kfontinst/lib/FcEngine.cpp
     ../kcms-common.cpp
     devicepixelratiohelper.cpp
 )

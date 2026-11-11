@@ -18,5 +18,6 @@ endif()
 
 add_subdirectory(applets)
 add_subdirectory(kcms)
+add_subdirectory(kfontinst)
 add_subdirectory(krunner)
 add_subdirectory(wallpapers)

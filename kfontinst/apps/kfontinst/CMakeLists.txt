@@ -1,14 +1,13 @@
 add_executable(kfontinst_bin
-    ../../dbus/FontinstIface.cpp
-    ../../kcmfontinst/FontsPackage.cpp
-    ../../kcmfontinst/JobRunner.cpp
     Installer.cpp
+    MainWindow.cpp
 )
 
 set_target_properties(kfontinst_bin PROPERTIES OUTPUT_NAME kfontinst)
 
 target_link_libraries(kfontinst_bin
     KF6::Archive
+    KF6::DBusAddons
     KF6::IconThemes
     KF6::KIOCore
     KF6::KIOWidgets
@@ -17,6 +16,7 @@ target_link_libraries(kfontinst_bin
     X11::X11
     kfontinst
     kfontinstui
+    kfontinstmanager_static
     Qt::GuiPrivate
 )
 
