@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: CC0-1.0
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=FLOSS.social
+Exec=/usr/lib64/chromium-browser/chromium-browser.sh --profile-directory=Default --app-id=mlbnfdlkgcjnjnjfliemlppklmpchgib
+Icon=/home/nico/.local/share/icons/hicolor/512x512/apps/chrome-mlbnfdlkgcjnjnjfliemlppklmpchgib-Default.png
+StartupWMClass=crx_mlbnfdlkgcjnjnjfliemlppklmpchgib

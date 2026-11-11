@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Brave
-StartupWMClass=brave-browser
-Exec=brave %U

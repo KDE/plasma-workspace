@@ -68,6 +68,7 @@ public:
     QList<QString> activities;
     quint32 pid;
     QString resourceName;
+    QString resourceClass;
     QPointer<PlasmaWindow> parentWindow;
     bool wasUnmapped = false;
     bool wasMapped = false;
@@ -309,6 +310,10 @@ protected:
     {
         resourceName = resource_name;
     }
+    void org_kde_plasma_window_resource_class_changed(const QString &resource_class) override
+    {
+        resourceClass = resource_class;
+    }
     void org_kde_plasma_window_parent_window(::org_kde_plasma_window *parent) override
     {
         PlasmaWindow *parentWindow = nullptr;
@@ -381,7 +386,7 @@ class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWind
 {
     Q_OBJECT
 public:
-    static constexpr int s_version = 21;
+    static constexpr int s_version = 23;
     PlasmaWindowManagement()
         : QWaylandClientExtensionTemplate(s_version)
     {
@@ -819,7 +824,7 @@ const AppData &WaylandTasksModel::Private::appData(PlasmaWindow *window)
         return *it;
     }
 
-    const auto service = serviceFromMetadata(window->appId, window->pid, window->resourceName);
+    const auto service = serviceFromMetadata(window->appId, window->pid, window->resourceName, window->resourceClass);
     return *appDataCache.emplace(window, appDataFromService(service));
 }
 

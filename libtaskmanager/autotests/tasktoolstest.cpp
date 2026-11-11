@@ -62,14 +62,11 @@ void TaskToolsTest::initTestCase()
     QFile::copy(QFINDTESTDATA("data/applications/org.kde.konversation.desktop"), dataDir + QLatin1String("/applications/org.kde.konversation.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/im.riot.Riot.desktop"), dataDir + QLatin1String("/applications/im.riot.Riot.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/org.telegram.desktop.desktop"), dataDir + QLatin1String("/applications/org.telegram.desktop.desktop"));
-    QFile::copy(QFINDTESTDATA("data/applications/com.spotify.Client.desktop"), dataDir + QLatin1String("/applications/com.spotify.Client.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/GammaRay.desktop"), dataDir + QLatin1String("/applications/GammaRay.desktop"));
-    QFile::copy(QFINDTESTDATA("data/applications/org.kde.gwenview_importer.desktop"),
-                dataDir + QLatin1String("/applications/org.kde.gwenview_importer.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/kcm_autostart.desktop"), dataDir + QLatin1String("/applications/kcm_autostart.desktop"));
-    QFile::copy(QFINDTESTDATA("data/applications/brave-browser.desktop"), dataDir + QLatin1String("/applications/brave-browser.desktop"));
-    QFile::copy(QFINDTESTDATA("data/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"),
-                dataDir + QLatin1String("/applications/brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/chromium-browser.desktop"), dataDir + QLatin1String("/applications/chromium-browser.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/chrome-mlbnfdlkgcjnjnjfliemlppklmpchgib-Default.desktop"),
+                dataDir + QLatin1String("/applications/chrome-mlbnfdlkgcjnjnjfliemlppklmpchgib-Default.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/marisa..desktop"), dataDir + QLatin1String("/applications/marisa..desktop"));
 
     QFile::copy(QFINDTESTDATA("data/applications/kcm_kdeconnect.desktop"), dataDir + QLatin1String("/kservices6/kcm_kdeconnect.desktop"));
@@ -158,9 +155,10 @@ void TaskToolsTest::testServiceFromMetadata()
 {
     QFETCH(QString, appId);
     QFETCH(QString, xWindowsWMClassName);
+    QFETCH(QString, xWindowsWMClassClass);
     QFETCH(QString, resultStorageId);
 
-    const auto service = serviceFromMetadata(appId, 0, xWindowsWMClassName);
+    const auto service = serviceFromMetadata(appId, 0, xWindowsWMClassName, xWindowsWMClassClass);
 
     QCOMPARE(service->storageId(), resultStorageId);
 }
@@ -169,26 +167,27 @@ void TaskToolsTest::testServiceFromMetadata_data()
 {
     QTest::addColumn<QString>("appId");
     QTest::addColumn<QString>("xWindowsWMClassName");
+    QTest::addColumn<QString>("xWindowsWMClassClass");
     QTest::addColumn<QString>("resultStorageId");
 
-    QTest::addRow("Dolphin") << "org.kde.dolphin" << QString() << "org.kde.dolphin.desktop";
-    QTest::addRow("Element (Flatpak)") << "Element" << "element" << "im.riot.Riot.desktop";
-    QTest::addRow("Telegram (Flatpak)") << "TelegramDesktop" << "telegram-desktop"
+    QTest::addRow("Dolphin") << "org.kde.dolphin" << "" << "" << "org.kde.dolphin.desktop";
+    QTest::addRow("Element (Flatpak)") << "im.riot.Riot" << "" << "" << "im.riot.Riot.desktop";
+    QTest::addRow("Telegram (Flatpak)") << "org.telegram.desktop" << "" << ""
                                         << "org.telegram.desktop.desktop";
-    QTest::addRow("Spotify (Flatpak)") << "Spotify" << "spotify"
-                                       << "com.spotify.Client.desktop";
-    QTest::addRow("GammaRay") << "GammaRay" << "gammary-client" << "GammaRay.desktop";
-    QTest::addRow("Gwenview Importer") << "org.kde.gwenview_importer" << "gwenview_importer"
-                                       << "org.kde.gwenview_importer.desktop";
-    QTest::addRow("kcm_autostart") << "kcm_autostart" << QString() << "kcm_autostart.desktop";
-    QTest::addRow("brave") << "Brave-browser" << "brave-browser" << "brave-browser.desktop";
-    QTest::addRow("brave_webapp") << "Brave-browser" << "crx_efmjfjelnicpmdcmfikempdhlmainjcb"
-                                  << "brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop";
+    QTest::addRow("chromium") << "chromium-browser" << "" << "" << "chromium-browser.desktop";
+    QTest::addRow("chromium_x11") << "" << "chromium-browser" << "Chromium-browser" << "chromium-browser.desktop";
+
+    QTest::addRow("chromium_webapp") << "chrome-mlbnfdlkgcjnjnjfliemlppklmpchgib-Default" << "" << ""
+                                     << "chrome-mlbnfdlkgcjnjnjfliemlppklmpchgib-Default.desktop";
+    QTest::addRow("chromium_webapp_x11") << "" << "crx_mlbnfdlkgcjnjnjfliemlppklmpchgib" << "Chromium-browser"
+                                         << "chrome-mlbnfdlkgcjnjnjfliemlppklmpchgib-Default.desktop";
+
+    QTest::addRow("kcm_autostart") << "kcm_autostart" << QString() << QString() << "kcm_autostart.desktop";
 
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    QTest::addRow("kcm_kdeconnect") << dataDir + u"/kservices6/kcm_kdeconnect" << QString() << dataDir + u"/kservices6/kcm_kdeconnect.desktop";
+    QTest::addRow("kcm_kdeconnect") << dataDir + u"/kservices6/kcm_kdeconnect" << QString() << QString() << dataDir + u"/kservices6/kcm_kdeconnect.desktop";
 
-    QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QString();
+    QTest::addRow("Empty appId and xWindowsWMClassName, don't match marisa..desktop") << QString() << QString() << QString() << QString();
 }
 
 void TaskToolsTest::testServiceFromCmdLine_data()
