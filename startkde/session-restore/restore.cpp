@@ -99,6 +99,7 @@ int main(int argc, char *argv[])
 
         qCDebug(FALLBACK_SESSION_RESTORE) << "launching " << service->name();
         auto job = new KIO::ApplicationLauncherJob(service);
+        job->setStartupId(QByteArrayLiteral("SESSION_RESTORE")); // a magic token used by kwin to know why we are restoring this
 
         QObject::connect(job, &KJob::finished, &e, [job, &jobs, &e]() {
             jobs.removeOne(job);
