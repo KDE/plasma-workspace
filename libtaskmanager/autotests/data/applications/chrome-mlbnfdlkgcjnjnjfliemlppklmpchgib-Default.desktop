@@ -1,0 +1,21 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=FLOSS.social
+Exec=/usr/lib64/chromium-browser/chromium-browser.sh --profile-directory=Default --app-id=mlbnfdlkgcjnjnjfliemlppklmpchgib
+Icon=/home/nico/.local/share/icons/hicolor/512x512/apps/chrome-mlbnfdlkgcjnjnjfliemlppklmpchgib-Default.png
+StartupWMClass=crx_mlbnfdlkgcjnjnjfliemlppklmpchgib
+Actions=Compose-new-post;Explore;Notifications
+
+[Desktop Action Compose-new-post]
+Name=Compose new post
+Exec=/usr/lib64/chromium-browser/chromium-browser.sh --profile-directory=Default --app-id=mlbnfdlkgcjnjnjfliemlppklmpchgib --app-launch-url-for-shortcuts-menu-item=https://floss.social/publish
+
+[Desktop Action Explore]
+Name=Explore
+Exec=/usr/lib64/chromium-browser/chromium-browser.sh --profile-directory=Default --app-id=mlbnfdlkgcjnjnjfliemlppklmpchgib --app-launch-url-for-shortcuts-menu-item=https://floss.social/explore
+
+[Desktop Action Notifications]
+Name=Notifications
+Exec=/usr/lib64/chromium-browser/chromium-browser.sh --profile-directory=Default --app-id=mlbnfdlkgcjnjnjfliemlppklmpchgib --app-launch-url-for-shortcuts-menu-item=https://floss.social/notifications

@@ -113,11 +113,8 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     return AppData{.icon = fallbackIcon, .url = url, .service = KService::Ptr(new KService(url.fileName(), QString(), fallbackIcon.name()))};
 }
 
-KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
+KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName, const QString &xWindowsWMClassClass)
 {
-    KService::List services;
-    bool triedPid = false;
-
     // The code below this function goes on a hunt for services based on the metadata
     // that has been passed in. Occasionally, it will find more than one matching
     // service. In some scenarios (e.g. multiple identically-named .desktop files)
@@ -150,75 +147,77 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
         }
     };
 
-    if (!(appId.isEmpty() && xWindowsWMClassName.isEmpty())) {
-        if (!appId.isEmpty()) {
-            // Try matching both appId and xWindowsWMClassName against StartupWMClass.
-            // We do this before evaluating the mapping rules further, because StartupWMClass
-            // is essentially a mapping rule, and we expect it to be set deliberately and
-            // sensibly to instruct us what to do. Also, mapping rules
-            //
-            // StartupWMClass=STRING
-            //
-            //   If true, it is KNOWN that the application will map at least one
-            //   window with the given string as its WM class or WM name hint.
-            //
-            // Source: https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
-            if (services.isEmpty() && !xWindowsWMClassName.isEmpty()) {
-                services = KApplicationTrader::query([&xWindowsWMClassName](const KService::Ptr &service) {
-                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, xWindowsWMClassName);
-            }
+    if (!appId.isEmpty()) {
+        auto services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
+            return service->desktopEntryName().compare(appId, Qt::CaseInsensitive) == 0;
+        });
+        sortServicesByMenuId(services, appId);
 
-            if (services.isEmpty()) {
-                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
-                    return service->property<QString>(QStringLiteral("StartupWMClass")).compare(appId, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, appId);
-            }
-
-            // The appId looks like a path.
-            if (services.isEmpty() && appId.startsWith(QLatin1String("/"))) {
-                // Check if it's a path to a .desktop file.
-                if (KDesktopFile::isDesktopFile(appId) && QFile::exists(appId)) {
-                    return KService::Ptr(new KService(appId));
-                }
-
-                // Check if the appId passes as a .desktop file path if we add the extension.
-                const QString appIdPlusExtension(appId + QStringLiteral(".desktop"));
-
-                if (KDesktopFile::isDesktopFile(appIdPlusExtension) && QFile::exists(appIdPlusExtension)) {
-                    return KService::Ptr(new KService(appIdPlusExtension));
-                }
-            }
-
-            // Try matching appId against DesktopEntryName.
-            if (services.isEmpty()) {
-                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
-                    return service->desktopEntryName().compare(appId, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, appId);
-            }
-
-            // Try matching appId against 'Name'.
-            // This has a shaky chance of success as appId is untranslated, but 'Name' may be localized.
-            if (services.isEmpty()) {
-                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
-                    return !service->noDisplay() && service->name().compare(appId, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, appId);
-            }
+        if (!services.isEmpty()) {
+            return services.first();
         }
 
-        if (services.isEmpty()) {
-            services = servicesFromEnvironment(pid);
-        }
+        // The appId looks like a path.
+        if (appId.startsWith(QLatin1String("/"))) {
+            // Check if it's a path to a .desktop file.
+            if (KDesktopFile::isDesktopFile(appId) && QFile::exists(appId)) {
+                return KService::Ptr(new KService(appId));
+            }
 
-        // Ok, absolute *last* chance, try matching via pid (but only if we have not already tried this!) ...
-        if (services.isEmpty() && !triedPid) {
-            services = servicesFromPid(pid);
+            // Check if the appId passes as a .desktop file path if we add the extension.
+            const QString appIdPlusExtension(appId + QStringLiteral(".desktop"));
+
+            if (KDesktopFile::isDesktopFile(appIdPlusExtension) && QFile::exists(appIdPlusExtension)) {
+                return KService::Ptr(new KService(appIdPlusExtension));
+            }
         }
     }
+
+    // try to map either WMClassName or WMClassClass to StartupWMClass
+    // see https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
+
+    if (!xWindowsWMClassName.isEmpty()) {
+        auto services = KApplicationTrader::query([&xWindowsWMClassName](const KService::Ptr &service) {
+            return service->property<QString>(QStringLiteral("StartupWMClass")).compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
+        });
+        sortServicesByMenuId(services, xWindowsWMClassName);
+
+        if (!services.isEmpty()) {
+            return services.first();
+        }
+    }
+
+    if (!xWindowsWMClassClass.isEmpty()) {
+        auto services = KApplicationTrader::query([&xWindowsWMClassClass](const KService::Ptr &service) {
+            return service->property<QString>(QStringLiteral("StartupWMClass")).compare(xWindowsWMClassClass, Qt::CaseInsensitive) == 0;
+        });
+        sortServicesByMenuId(services, xWindowsWMClassClass);
+
+        if (!services.isEmpty()) {
+            return services.first();
+        }
+    }
+
+    // Try matching appId against 'Name'.
+    // This has a shaky chance of success as appId is untranslated, but 'Name' may be localized.
+    if (!appId.isEmpty()) {
+        auto services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
+            return !service->noDisplay() && service->name().compare(appId, Qt::CaseInsensitive) == 0;
+        });
+        sortServicesByMenuId(services, appId);
+
+        if (!services.isEmpty()) {
+            return services.first();
+        }
+    }
+
+    auto services = servicesFromEnvironment(pid);
+    if (!services.isEmpty()) {
+        return services.first();
+    }
+
+    // Ok, absolute *last* chance, try matching via pid
+    services = servicesFromPid(pid);
 
     if (!services.isEmpty()) {
         return services.first();

@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Gwenview Importer
-Exec=gwenview_importer %u
-Icon=gwenview
-Type=Application
-NoDisplay=true
