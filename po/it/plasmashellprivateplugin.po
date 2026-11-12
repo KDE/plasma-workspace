@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
 "PO-Revision-Date: 2026-09-13 19:14+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -449,7 +449,7 @@ msgstr "Installazione del pacchetto %1 non riuscita: %2."
 msgid "Installation Failure"
 msgstr "Installazione non riuscita"
 
-#: timezoneselector/TimezoneSelector.qml:108
+#: timezoneselector/TimezoneSelector.qml:144
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -459,45 +459,45 @@ msgstr ""
 "Il fuso orario attualmente selezionato non può essere visualizzato su questa "
 "mappa"
 
-#: timezoneselector/TimezoneSelector.qml:123
-#: timezoneselector/TimezoneSelector.qml:348
+#: timezoneselector/TimezoneSelector.qml:159
+#: timezoneselector/TimezoneSelector.qml:404
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Scegli…"
 
-#: timezoneselector/TimezoneSelector.qml:125
-#: timezoneselector/TimezoneSelector.qml:340
+#: timezoneselector/TimezoneSelector.qml:161
+#: timezoneselector/TimezoneSelector.qml:395
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Regione:"
 
-#: timezoneselector/TimezoneSelector.qml:152
-#: timezoneselector/TimezoneSelector.qml:377
+#: timezoneselector/TimezoneSelector.qml:188
+#: timezoneselector/TimezoneSelector.qml:433
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Fuso orario:"
 
-#: timezoneselector/TimezoneSelector.qml:295
+#: timezoneselector/TimezoneSelector.qml:354
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Ingrandisci"
 
-#: timezoneselector/TimezoneSelector.qml:311
+#: timezoneselector/TimezoneSelector.qml:370
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Rimpicciolisci"
 
-#: timezoneselector/TimezoneSelector.qml:352
+#: timezoneselector/TimezoneSelector.qml:408
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Selettore della regione del fuso orario"
 
-#: timezoneselector/TimezoneSelector.qml:388
+#: timezoneselector/TimezoneSelector.qml:445
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selettore del luogo del fuso orario"

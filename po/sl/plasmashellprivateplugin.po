@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
-"PO-Revision-Date: 2026-09-12 07:30+0200\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2026-11-11 07:37+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,44 +46,43 @@ msgstr "Baterija"
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Ion"
-msgstr ""
+msgstr "Litij ionski"
 
 #: batterycontrol/upowerbattery_p.cpp:61
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Polymer"
-msgstr ""
+msgstr "Litij polimer"
 
 #: batterycontrol/upowerbattery_p.cpp:63
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Iron Phosphate"
-msgstr ""
+msgstr "Litijev železov fosfat"
 
 #: batterycontrol/upowerbattery_p.cpp:65
 #, kde-format
 msgctxt "battery technology"
 msgid "Lead Acid"
-msgstr ""
+msgstr "Svinčevo kislinska"
 
 #: batterycontrol/upowerbattery_p.cpp:67
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Cadmium"
-msgstr ""
+msgstr "Nikelj kadmij"
 
 #: batterycontrol/upowerbattery_p.cpp:69
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Metal Hydride"
-msgstr ""
+msgstr "Nikelj metalhidrid"
 
 #: batterycontrol/upowerbattery_p.cpp:163
-#, fuzzy, kde-format
-#| msgid "Battery"
+#, kde-format
 msgctxt "%1 is battery technology"
 msgid "%1 Battery"
-msgstr "Baterija"
+msgstr "%1 Baterija"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -455,7 +454,7 @@ msgstr "Nameščanje paketa %1 ni uspelo: %2."
 msgid "Installation Failure"
 msgstr "Spodletela namestitev"
 
-#: timezoneselector/TimezoneSelector.qml:108
+#: timezoneselector/TimezoneSelector.qml:144
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -464,45 +463,45 @@ msgid ""
 msgstr ""
 "Trenutno izbrani časovni pas ni na voljo za vizualizacijo na tem zemljevidu"
 
-#: timezoneselector/TimezoneSelector.qml:123
-#: timezoneselector/TimezoneSelector.qml:348
+#: timezoneselector/TimezoneSelector.qml:159
+#: timezoneselector/TimezoneSelector.qml:404
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Izberi…"
 
-#: timezoneselector/TimezoneSelector.qml:125
-#: timezoneselector/TimezoneSelector.qml:340
+#: timezoneselector/TimezoneSelector.qml:161
+#: timezoneselector/TimezoneSelector.qml:395
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Regija:"
 
-#: timezoneselector/TimezoneSelector.qml:152
-#: timezoneselector/TimezoneSelector.qml:377
+#: timezoneselector/TimezoneSelector.qml:188
+#: timezoneselector/TimezoneSelector.qml:433
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Časovni pas:"
 
-#: timezoneselector/TimezoneSelector.qml:295
+#: timezoneselector/TimezoneSelector.qml:354
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Približaj"
 
-#: timezoneselector/TimezoneSelector.qml:311
+#: timezoneselector/TimezoneSelector.qml:370
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Oddalji"
 
-#: timezoneselector/TimezoneSelector.qml:352
+#: timezoneselector/TimezoneSelector.qml:408
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Izbirnik regije časovnega pasu"
 
-#: timezoneselector/TimezoneSelector.qml:388
+#: timezoneselector/TimezoneSelector.qml:445
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Izbirnik lokacije časovnega pasu"

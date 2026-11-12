@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-09 07:32+0000\n"
-"PO-Revision-Date: 2026-03-06 14:10+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-11 23:01+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -259,7 +259,7 @@ msgstr "Средняя скорость"
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: components/Summary.qml:36
 #, kde-format
@@ -460,16 +460,16 @@ msgstr[3] "%1 выполняющееся задание"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr "%1 (%2%)"
+msgstr "%1 (%2 %)"
 
 #: main.qml:70
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "Выполняется %1 задание (%2%)"
-msgstr[1] "Выполняется %1 задания (%2%)"
-msgstr[2] "Выполняется %1 заданий (%2%)"
-msgstr[3] "Выполняется 1 задание (%2%)"
+msgstr[0] "Выполняется %1 задание (%2 %)"
+msgstr[1] "Выполняется %1 задания (%2 %)"
+msgstr[2] "Выполняется %1 заданий (%2 %)"
+msgstr[3] "Выполняется 1 задание (%2 %)"
 
 #: main.qml:83
 #, kde-format

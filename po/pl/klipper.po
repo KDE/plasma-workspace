@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1752572 $
+# Version: $Revision: 1752680 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-10-04 14:39+0200\n"
+"PO-Revision-Date: 2026-11-11 18:44+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: configdialog.cpp:86
 #, kde-format
@@ -135,6 +135,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"Na stronie <interface>Ustawienia działań</interface>, zaznacz pole "
+"<interface>Przedstaw aplikacje dla skopiowanych odnośników i plików</"
+"interface> lub włącz co najmniej jedno działanie, aby ustawienia na tej "
+"stronie miały jakiekolwiek zastosowanie."
 
 #: configdialog.cpp:194
 #, kde-format
@@ -142,14 +146,7 @@ msgid "Show action popup menu:"
 msgstr "Pokaż menu wysuwne działań:"
 
 #: configdialog.cpp:211
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -159,10 +156,11 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Po wybraniu tekstu, który pasuje do wzorca działania, z historii schowka, "
-"pokaż menu wysuwne z możliwymi działaniami. Jeśli menu to zostanie tutaj "
-"wyłączone lub nie zostanie pokazane dla wykluczonych okien, to można je "
-"pokazać przy użyciu skrótu klawiszowego <shortcut>%1</shortcut>."
+"Po skopiowaniu lub wybraniu tekstu z historii schowka, który pasuje do "
+"wzorca działania, pokaż menu wysuwne z możliwymi działaniami. Dla plików "
+"działa to tylko wtedy, gdy je skopiujesz lub wybierzesz z historii.<nl/><nl/"
+">Menu to można także wywołać przy użyciu skrótu klawiszowego <shortcut>%1</"
+"shortcut> lub przy użyciu przycisku dla każdego pasującego wpisu w historii."
 
 #: configdialog.cpp:228
 #, kde-format
@@ -197,14 +195,12 @@ msgid "Description"
 msgstr "Opis"
 
 #: configdialog.cpp:276
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
 msgstr "Dodaj działanie…"
 
 #: configdialog.cpp:280
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
 msgstr "Dostosuj działanie…"
 
@@ -329,11 +325,9 @@ msgid "Clear History"
 msgstr "Wyczyść historię"
 
 #: declarative/qml/ClipboardMenu.qml:316
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "&Ustawienia Klippera..."
+msgstr "Ustawienia schowka…"
 
 #: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
@@ -346,25 +340,17 @@ msgid "Starred Only"
 msgstr "Tylko z gwiazdkami"
 
 #: declarative/qml/ClipboardMenu.qml:381
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"Schowek obecnie przechowuje dane poufne, które nie zostaną zapamiętane w "
-"historii."
+"Schowek i zaznaczenie obecnie przechowuje dane poufne, które nie zostaną "
+"zapamiętane w historii."
 
 #: declarative/qml/ClipboardMenu.qml:383
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -374,17 +360,13 @@ msgstr ""
 "historii."
 
 #: declarative/qml/ClipboardMenu.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Schowek obecnie przechowuje dane poufne, które nie zostaną zapamiętane w "
+"Zaznaczenie obecnie przechowuje dane poufne, które nie zostaną zapamiętane w "
 "historii."
 
 #: declarative/qml/ClipboardMenu.qml:397
@@ -561,14 +543,12 @@ msgstr ""
 "shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
 msgstr "Dodaj polecenie…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
 msgstr "Edytuj polecenie…"
 
@@ -683,19 +663,16 @@ msgid "Remove Starred Item"
 msgstr "Usuń rzecz z gwiazdką"
 
 #: klipper.cpp:69
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "Okno wysuwne schowka"
+msgstr "Schowek"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Menu wysuwne domyślnego działania"
+msgstr "Przełącz samoczynne wysuwanie się menu podręcznego z działaniami"
 
 #: klipper.cpp:96
 #, kde-format
@@ -725,14 +702,13 @@ msgstr "Pokaż kod kre&skowy…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Obróć historię w dół"
 
 #: klipper.cpp:133
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Wyczyść historię"
+msgstr "Obróć historię w górę"
 
 #: klipper.cpp:140
 #, kde-format
@@ -748,18 +724,17 @@ msgstr "Historia schowka"
 #: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Nowsze: "
 
 #: klipper.cpp:435
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "aktualna"
+msgstr "Bieżący: "
 
 #: klipper.cpp:442
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Starsze: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -848,23 +823,19 @@ msgstr "Przechowuj obrazy w historii schowka."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Gdy skopiowano tekst lub plik"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Pokaż menu wysuwne możliwych działań natychmiast po wykonaniu zaznaczenia."
+msgstr "Pokaż menu podręczne natychmiast po skopiowaniu tekstu lub pliku."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Zaznaczenie nie-tekstowe:"
+msgstr "Gdy zaznaczony jest tekst"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -873,6 +844,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Pokaż menu podręczne zaraz po zaznaczeniu tekstu, bez czekania na jego "
+"skopiowanie."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -923,10 +896,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Dla wpisu wybranego z historii"
+msgstr "Gdy zaznaczono wpis z historii"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -941,7 +913,7 @@ msgstr ""
 #: klipper.kcfg:79
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr "Podsuwaj aplikacje dla skopiowanych odnośników i plików"
+msgstr "Przedstaw aplikacje dla skopiowanych odnośników i plików"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:81

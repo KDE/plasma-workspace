@@ -22,7 +22,7 @@ msgstr ""
 #: kcm.cpp:64
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Slå av/på «Ikke forstyrr»"
+msgstr "Slå på/av «Ikke forstyrr»"
 
 #: sourcesmodel.cpp:404
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "Mens et fullskjermprogram er i fokus"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr "Slå av/på med hurtigtast:"
+msgstr "Slå på/av med hurtigtast:"
 
 #: ui/main.qml:177
 #, kde-format

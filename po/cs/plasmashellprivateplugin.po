@@ -9,16 +9,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
-"PO-Revision-Date: 2026-09-12 23:00+0200\n"
-"Last-Translator: Libor Filipek <libor.filipek@gmail.com>\n"
+"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"PO-Revision-Date: 2026-11-11 12:28+0100\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,44 +45,43 @@ msgstr "Baterie"
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Ion"
-msgstr ""
+msgstr "Lithium iontová"
 
 #: batterycontrol/upowerbattery_p.cpp:61
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Polymer"
-msgstr ""
+msgstr "Lithium polymerová"
 
 #: batterycontrol/upowerbattery_p.cpp:63
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Iron Phosphate"
-msgstr ""
+msgstr "Lithium-železo fosfátová"
 
 #: batterycontrol/upowerbattery_p.cpp:65
 #, kde-format
 msgctxt "battery technology"
 msgid "Lead Acid"
-msgstr ""
+msgstr "Olověná"
 
 #: batterycontrol/upowerbattery_p.cpp:67
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Cadmium"
-msgstr ""
+msgstr "Nikl kadmiová"
 
 #: batterycontrol/upowerbattery_p.cpp:69
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Metal Hydride"
-msgstr ""
+msgstr "Nikl metal hydridová"
 
 #: batterycontrol/upowerbattery_p.cpp:163
-#, fuzzy, kde-format
-#| msgid "Battery"
+#, kde-format
 msgctxt "%1 is battery technology"
 msgid "%1 Battery"
-msgstr "Baterie"
+msgstr "Baterie typu \"%1\""
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -454,7 +453,7 @@ msgstr "Instalace balíčku %1 selhala: %2."
 msgid "Installation Failure"
 msgstr "Chyba instalace"
 
-#: timezoneselector/TimezoneSelector.qml:108
+#: timezoneselector/TimezoneSelector.qml:144
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -462,45 +461,45 @@ msgid ""
 "map"
 msgstr "Aktuálně vybrané časové pásmo nemůže být na této mapě zobrazeno"
 
-#: timezoneselector/TimezoneSelector.qml:123
-#: timezoneselector/TimezoneSelector.qml:348
+#: timezoneselector/TimezoneSelector.qml:159
+#: timezoneselector/TimezoneSelector.qml:404
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Vybrat…"
 
-#: timezoneselector/TimezoneSelector.qml:125
-#: timezoneselector/TimezoneSelector.qml:340
+#: timezoneselector/TimezoneSelector.qml:161
+#: timezoneselector/TimezoneSelector.qml:395
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Region:"
 
-#: timezoneselector/TimezoneSelector.qml:152
-#: timezoneselector/TimezoneSelector.qml:377
+#: timezoneselector/TimezoneSelector.qml:188
+#: timezoneselector/TimezoneSelector.qml:433
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Časové pásmo:"
 
-#: timezoneselector/TimezoneSelector.qml:295
+#: timezoneselector/TimezoneSelector.qml:354
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Přiblížit"
 
-#: timezoneselector/TimezoneSelector.qml:311
+#: timezoneselector/TimezoneSelector.qml:370
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Oddálit"
 
-#: timezoneselector/TimezoneSelector.qml:352
+#: timezoneselector/TimezoneSelector.qml:408
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Výběr oblasti časového pásma"
 
-#: timezoneselector/TimezoneSelector.qml:388
+#: timezoneselector/TimezoneSelector.qml:445
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Výběr umístění časového pásma"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2026-09-10 19:14+0300\n"
+"PO-Revision-Date: 2026-11-10 21:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: gtkpage.cpp:57
 #, kde-format
@@ -29,49 +29,49 @@ msgstr "%1 geçerli bir GTK Teması arşivi değil."
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: Cannot install a style from a remote location."
-msgstr "Kurulum başarısız: Uzak bir konumdan biçem kurulumu yapılamıyor."
+msgstr "Kurulum başarısız: Uzak bir konumdan stil kurulumu yapılamıyor."
 
 #: kcmstyle.cpp:123
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be read."
-msgstr "Kurulum başarısız: Biçem dosyası okunamadı."
+msgstr "Kurulum başarısız: Stil dosyası okunamadı."
 
 #: kcmstyle.cpp:128
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file does not contain any data."
-msgstr "Kurulum başarısız: Biçem dosyası herhangi bir veri içermiyor."
+msgstr "Kurulum başarısız: Stil dosyası herhangi bir veri içermiyor."
 
 #: kcmstyle.cpp:134
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style file could not be unpacked."
-msgstr "Kurulum başarısız: Biçem dosyasının paketi açılamadı."
+msgstr "Kurulum başarısız: Stil dosyasının paketi açılamadı."
 
 #: kcmstyle.cpp:144
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The style could not be found."
-msgstr "Kurulum başarısız: Biçem bulunamadı."
+msgstr "Kurulum başarısız: Stil bulunamadı."
 
 #: kcmstyle.cpp:148
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected file is not a valid Union style."
-msgstr "Kurulum başarısız: Seçili dosya, geçerli bir Union biçemi değil."
+msgstr "Kurulum başarısız: Seçili dosya, geçerli bir Union stili değil."
 
 #: kcmstyle.cpp:151
 #, kde-format
 msgctxt "@info:status"
 msgid "Installation failed: The selected style is not supported."
-msgstr "Kurulum başarısız: Seçili biçem desteklenmiyor."
+msgstr "Kurulum başarısız: Seçili stil desteklenmiyor."
 
 #: kcmstyle.cpp:165
 #, kde-format
 msgctxt "@info:status"
 msgid "Installing “%1” failed: The style is already installed."
-msgstr "“%1” kurulumu başarısız: Biçem hâlihazırda kurulu."
+msgstr "“%1” kurulumu başarısız: Stil hâlihazırda kurulu."
 
 #: kcmstyle.cpp:170
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "“%1”, başarıyla kuruldu."
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstall failed: The style with ID “%1” could not be found."
-msgstr "Kurulum kaldırılamadı: “%1” kimliğine sahip biçem bulunamadı."
+msgstr "Kurulum kaldırılamadı: “%1” kimliğine sahip stil bulunamadı."
 
 #: kcmstyle.cpp:202
 #, kde-format
@@ -107,13 +107,13 @@ msgstr "“%1” kurulumu kaldırılamadı: İzin verilmedi."
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is not installed."
-msgstr "“%1” kurulumu kaldırılamadı: Biçem kurulu değil."
+msgstr "“%1” kurulumu kaldırılamadı: Stil kurulu değil."
 
 #: kcmstyle.cpp:206
 #, kde-format
 msgctxt "@info:status"
 msgid "Uninstalling “%1” failed: The style is in use."
-msgstr "“%1” kurulumu kaldırılamadı: Biçem kullanımda."
+msgstr "“%1” kurulumu kaldırılamadı: Stil kullanımda."
 
 #: kcmstyle.cpp:208
 #, kde-format
@@ -125,7 +125,7 @@ msgstr "“%1” kurulumu kaldırılamadı: %2"
 #, kde-format
 msgctxt "@info:status"
 msgid "Could not uninstall styles:\n"
-msgstr "Biçemler kaldırılamadı:\n"
+msgstr "Stiller kaldırılamadı:\n"
 
 #: kcmstyle.cpp:226
 #, kde-format
@@ -139,8 +139,8 @@ msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style but could not uninstall others:\n"
 msgid_plural ""
 "Successfully uninstalled %1 styles but could not uninstall others:\n"
-msgstr[0] "%1 biçem başarıyla kaldırıldı; ancak diğerleri kaldırılamadı:\n"
-msgstr[1] "%1 biçem başarıyla kaldırıldı; ancak diğerleri kaldırılamadı:\n"
+msgstr[0] "%1 stil başarıyla kaldırıldı; ancak diğerleri kaldırılamadı:\n"
+msgstr[1] "%1 stil başarıyla kaldırıldı; ancak diğerleri kaldırılamadı:\n"
 
 #: kcmstyle.cpp:240
 #, kde-format
@@ -153,18 +153,18 @@ msgstr "“%1”, başarıyla kaldırıldı."
 msgctxt "@info:status"
 msgid "Successfully uninstalled %1 style"
 msgid_plural "Successfully uninstalled %1 styles."
-msgstr[0] "%1 biçem başarıyla kaldırıldı."
-msgstr[1] "%1 biçem başarıyla kaldırıldı."
+msgstr[0] "%1 stil başarıyla kaldırıldı."
+msgstr[1] "%1 stil başarıyla kaldırıldı."
 
 #: kcmstyle.cpp:306 kcmstyle.cpp:313
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
-msgstr "Bu biçemin yapılandırma iletişim kutusu yüklenemedi."
+msgstr "Bu stilin yapılandırma iletişim kutusu yüklenemedi."
 
 #: kcmstyle.cpp:420
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr "Seçili “%1” biçemi uygulanamadı."
+msgstr "Seçili “%1” stili uygulanamadı."
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -224,13 +224,13 @@ msgstr "2. Sekme"
 #: stylesettings.kcfg:9
 #, kde-format
 msgid "Application style"
-msgstr "Uygulama biçemi"
+msgstr "Uygulama stili"
 
 #. i18n: ectx: label, entry (unionStyle), group (KDE)
 #: stylesettings.kcfg:13
 #, kde-format
 msgid "Union Style ID"
-msgstr "Union biçem kimliği"
+msgstr "Union stil kimliği"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:17
@@ -310,7 +310,7 @@ msgstr "İkincil araç çubuğu etiketi:"
 #: ui/GtkStylePage.qml:17
 #, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "GNOME/GTK Uygulama Biçemi"
+msgstr "GNOME/GTK Uygulama Stili"
 
 #: ui/GtkStylePage.qml:38
 #, kde-format
@@ -358,7 +358,7 @@ msgstr "Simgeleri ve Araç Çubuklarını Yapılandır…"
 #: ui/main.qml:108
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "GNOME/GTK Uygulama Biçemini Yapılandır…"
+msgstr "GNOME/GTK Uygulama Stilini Yapılandır…"
 
 #: ui/main.qml:170
 #, kde-format
@@ -367,14 +367,14 @@ msgid ""
 "This style is using the Union style engine which is still under development. "
 "Some things may look or behave incorrectly when using this style."
 msgstr ""
-"Bu biçem, henüz geliştirme aşamasında olan Union biçem işletkesini "
-"kullanıyor. Bu biçemi kullanırken bazı ögeler yanlış görünebilir veya düzgün "
+"Bu stil, henüz geliştirme aşamasında olan Union stil işletkesini kullanıyor. "
+"Bu stili kullanırken bazı ögeler yanlış görünebilir veya düzgün "
 "çalışmayabilir."
 
 #: ui/main.qml:174
 #, kde-format
 msgid "Configure Style…"
-msgstr "Biçemi Yapılandır…"
+msgstr "Stili Yapılandır…"
 
 #: ui/main.qml:182
 #, kde-format
@@ -386,24 +386,24 @@ msgstr "Kurulumu Kaldır…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Cannot uninstall system-installed styles."
-msgstr "Sistem tarafından kurulan biçemler kaldırılamaz."
+msgstr "Sistem tarafından kurulan stiller kaldırılamaz."
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Can only uninstall Union styles."
-msgstr "Yalnızca Union biçemlerinin kurulumu kaldırılabilir."
+msgstr "Yalnızca Union stillerinin kurulumu kaldırılabilir."
 
 #: ui/main.qml:199
 #, kde-format
 msgid "Do not uninstall this style."
-msgstr "Bu biçemi kaldırmayın."
+msgstr "Bu stili kaldırmayın."
 
 #: ui/main.qml:245
 #, kde-format
 msgctxt "@title:dialog"
 msgid "Choose Union Style to Install"
-msgstr "Kurulacak Union Biçemi Seç"
+msgstr "Kurulacak Union Stili Seç"
 
 #: ui/main.qml:246
 #, kde-format

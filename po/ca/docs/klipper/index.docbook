@@ -131,7 +131,7 @@
 > que podeu configurar a la pàgina <guilabel
 >Dreceres</guilabel
 >, o marcant <guilabel
->Immediatament a la selecció</guilabel
+>Quan es copia text o un fitxer</guilabel
 > a <guilabel
 >Mostra el menú emergent d'acció</guilabel
 > a la pàgina <guilabel
@@ -301,7 +301,7 @@
 ></term>
 <listitem
 ><para
->Si està activada, seleccionar un element de l'historial causarà que el &klipper; mostri les accions emergents sobre aquest element, si fos apropiat.</para>
+>Si està activada, seleccionar un element de l'historial, editar-lo o circulant-hi amb una drecera de teclat farà que el &klipper; mostri les accions emergents sobre aquest element, si s'escau.</para>
 </listitem>
 </varlistentry>
 

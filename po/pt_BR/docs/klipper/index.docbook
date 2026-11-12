@@ -13,59 +13,13 @@
 <title
 >Manual do &klipper; </title>
 
-<authorgroup>
-<author
->&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
-
-<othercredit role="developer"
->&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
-
-<othercredit role="translator"
-><firstname
->Marcus</firstname
-><surname
->Gama</surname
-><affiliation
-><address
-><email
->marcus.gama@gmail.com</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-><othercredit role="translator"
-><firstname
->André Marcelo</firstname
-><surname
->Alvarenga</surname
-><affiliation
-><address
-><email
->alvarenga@kde.org</email
-></address
-></affiliation
-><contrib
->Tradução</contrib
-></othercredit
-> 
-
-</authorgroup>
-
-<copyright>
-<year
->2000-2003</year>
-<holder
->&Philip.Rodrigues;</holder>
-</copyright>
-
 <legalnotice
 >&FDLNotice;</legalnotice>
 
 <date
->05/05/2022</date>
+>09/09/2026</date>
 <releaseinfo
->Plasma 5.25</releaseinfo>
+>Plasma 6.8</releaseinfo>
 
 <abstract>
 <para
@@ -83,15 +37,13 @@
 >área de transferência</keyword>
 </keywordset>
 </bookinfo>
-<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
 <chapter id="introduction">
 <title
 >Introdução</title>
 <para
 >O &klipper; é um utilitário de área de transferência do &plasma;. Ele armazena um histórico da área de transferência, e permite ligar tipos de conteúdo da área de transferência a ações de aplicativos. Por favor, comunique qualquer problema ou pedido de recurso no <ulink url="http://bugs.kde.org"
->Bugzilla do KDE</ulink
+>Sistema de rastreamento de bugs do KDE</ulink
 >.</para>
-
 </chapter>
 
 <chapter id="using-klipper">
@@ -119,9 +71,6 @@
 </screenshot>
 
 <para
->O widget do &klipper; ficará oculto se a área de transferência estiver vazia.</para>
-
-<para
 >Para mostrar o histórico da área de transferência, clique no ícone do &klipper; na área de notificação.</para>
 
 <sect2 id="klipper-widget">
@@ -141,11 +90,12 @@
 </mediaobject>
 </screenshot>
 
+<!-- TODO: Document starred functionality -->
 <para
 >Passe o ponteiro do mouse sobre um item para aparecerem quatro ícones, os quais lhe permitem efetuar uma ação, mostrar o código de barras, editar o conteúdo ou remover o item do histórico. Use o &spectacle; para capturar os códigos de barras e depois salvá-los. </para>
 
 <para
->Você pode procurar pelo histórico da área de transferência abrindo-o (clique no &klipper;) e digitando a sua pesquisa. Os resultados são atualizados à medida que você digita. Para limpar o histórico da área de transferência, clique no ícone à direita do campo de pesquisa. </para>
+>Você pode pesquisar no histórico da área de transferência digitando sua consulta no campo de pesquisa. Os resultados são atualizados à medida que você digita. Para limpar o histórico da área de transferência, clique no ícone à direita do campo de pesquisa. </para>
 
 <para
 >A ação <guilabel
@@ -162,46 +112,51 @@
 >Ações</title>
 
 <para
->O &klipper; pode executar ações sobre os conteúdos da área de transferência baseado na correspondência do mesmo com uma determinada expressão regular. Por exemplo, qualquer conteúdo da área de transferência iniciando com <quote
+>O &klipper; pode realizar ações com o conteúdo da área de transferência, dependendo de ele corresponder a uma determinada expressão regular. Existe uma ação integrada que atua sobre endereços da web e arquivos. Ela permite enviar um endereço da web que comece com <quote
 >http://</quote
-> pode ser passado para o Firefox ou o &konqueror; como uma &URL; a ser aberta. Adicionalmente, se o conteúdo corresponder a um caminho, ações similares podem ser realizadas de acordo com o tipo de arquivo. Por exemplo, se o caminho para um arquivo <acronym
+> ou <quote
+>https://</quote
+> para um navegador, ou um arquivo — por exemplo, um <acronym
 >PDF</acronym
-> for copiado para a área de transferência, o arquivo pode ser visualizado no &okular;.</para>
+> — para um aplicativo compatível, como o &okular;.</para>
 
 <para
->Para usar este recurso, basta selecionar um &URL; ou caminho. Se existir uma correspondência com alguma expressão regular da lista do &klipper;, um menu aparecerá mostrando os programas disponíveis para sua seleção. Use o mouse ou teclado para selecionar um programa, e o &klipper; executará este programa, abrindo o endereço apontado pelo conteúdo da área de transferência.</para>
+>Você pode criar suas próprias ações na página <guilabel
+>Configuração de ações</guilabel
+> da <link linkend="preferences"
+>janela de configurações</link
+>, onde também pode desativar a ação integrada por meio da opção <guilabel
+>Oferecer aplicativos para links e arquivos copiados</guilabel
+>. </para>
 
 <para
->Você pode alterar o tempo de exibição do menu nas configurações, com a opção <guilabel
->Mostrar menu popup de ações</guilabel
-> na página <guilabel
->Geral</guilabel
->. Você pode desativar separadamente a parte do caminho do arquivo usando a opção <guilabel
->Incluir ações MIME</guilabel
-> na página <guilabel
+>Você pode sempre acessar o menu de ações correspondente através de um botão ao lado do item no seu histórico. Também é possível optar por exibir um menu de ações sempre que um item for colocado na área de transferência, utilizando o atalho <guilabel
+>Menu de contexto de ação automática</guilabel
+> (que pode ser configurado na página <guilabel
+>Atalhos</guilabel
+>) ou marcando a opção <guilabel
+>Quando um texto ou um arquivo é copiado</guilabel
+> dentro de <guilabel
+>Mostrar menu de contexto de ações</guilabel
+>, na página <guilabel
 >Menu de ações</guilabel
->.</para>
-
-<para
->Ações podem ser desabilitadas completamente pressionando <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->X</keycap
-></keycombo
->.</para>
+>. Nessa mesma página, através da opção <guilabel
+>Tempo para menu automático de ações</guilabel
+>, você também pode definir quanto tempo o menu automático leva para fechar sozinho caso nenhuma ação seja realizada.</para>
 
 <para
 >O conteúdo da área de transferência que corresponde a uma expressão regular também pode ser editado antes de executar uma ação sobre ele. Selecione <guimenuitem
 >Editar conteúdo...</guimenuitem
 > à direita do item da área de transferência, para que possa mudar o seu conteúdo na caixa de diálogo que aparece, antes de clicar no botão <guibutton
 >OK</guibutton
-> para executar a ação correspondente.</para>
+> para executar a ação correspondente. O menu de contexto de ações é exibido automaticamente para o conteúdo editado caso a opção <guilabel
+>Ao selecionar um item do histórico</guilabel
+> esteja marcada.</para>
 
 <para
->Pressionar <keycombo action="simul"
->&Ctrl;&Alt;<keycap
->R</keycap
-></keycombo
-> mostra o menu para repetir a última ação que o &klipper; executou.</para>
+>Se você definir um atalho para <guilabel
+>Invocar manualmente a ação na área de transferência atual</guilabel
+>, pressionar esse atalho exibirá o menu pop-up apropriado.</para>
 
 </sect1>
 
@@ -213,11 +168,11 @@
 <title
 >Geral</title>
 <para
->O &klipper; pode ser usado para configurar o comportamento da área de transferência e seleção no &plasma;. </para>
+>O &klipper; pode ser usado para configurar o comportamento da área de transferência e seleção no &plasma;. Para ajustar o comportamento deles, consulte <xref linkend="general-page"/>. </para>
 
 <note
 ><para
->O &X-Window; usa dois buffers separados de área de transferência: o de <quote
+>Existem dois buffers separados de área de transferência: o de <quote
 >seleção</quote
 > e o da <quote
 >área de transferência</quote
@@ -237,44 +192,8 @@
 >Colar</guimenuitem
 > no menu de contexto.</para>
 </note>
-
 </sect2>
-
-<sect2 id="changing-clipboard-modes">
-<title
->Mudando o Comportamento da Área de Transferência/Seleção</title>
-<para
->Para mudar o comportamento da área de transferência/seleção, selecione <guimenuitem
->Configurar área de transferência...</guimenuitem
-> no menu de contexto, e na caixa de diálogo que aparecer, selecione a página <guilabel
->Geral</guilabel
->. Desmarcar <guilabel
->Seleção e área de transferência</guilabel
-> faz com que as funções de área de transferência e seleção ocupem buffers distintos conforme descrito anteriormente. Com esta opção configurada, a opção <guilabel
->Ignorar seleção</guilabel
-> evitará que o &klipper; inclua conteúdo da seleção no seu histórico da área de transferência e que ele execute ações sobre o conteúdo da seleção. Selecionar <guilabel
->Seleção e área de transferência</guilabel
-> fará com que os buffers da área de transferência e seleção sejam sempre o mesmo, fazendo com que o texto na seleção possa ser colado tanto com o botão <mousebutton
->do meio</mousebutton
-> do mouse ou a combinação de teclas <keycombo
->&Ctrl;<keycap
->V</keycap
-> </keycombo
->, e da mesma maneira que o texto no buffer da área de transferência. </para>
-
- <!-- The
-<guilabel
->Synchronize contents of the clipboard and the
-selection</guilabel
-> check box determines the clipboard mode. If the box is
-selected, the clipboard functions in the &UNIX; mode; if not, the
-&Windows;/&Mac; mode is used. -->
-
-</sect2>
-
-
 </sect1>
-
 </chapter>
 
 <chapter id="preferences">
@@ -284,91 +203,70 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <sect1 id="general-page">
 <title
 >Opções gerais</title>
+<note
+><para
+>As opções abaixo distinguem entre <emphasis
+>seleção</emphasis
+> e <emphasis
+>área de transferência</emphasis
+>. Para entender a diferença, consulte <xref linkend="clipboard-modes"/>. </para
+></note>
+
 
 <variablelist>
 
 <varlistentry
 ><term
 ><guilabel
->Seleção e área de transferência</guilabel
+>Histórico da área de transferência: Salvar histórico entre sessões da área de trabalho</guilabel
 ></term>
 <listitem
 ><para
->Quando um texto ou uma área da tela é selecionada com o mouse ou o teclado, essa é a <emphasis
->seleção</emphasis
->. Ela pode ser colada usando o botão do meio do mouse.</para
-><para
->Se a seleção for copiada explicitamente usando uma ação <guimenuitem
->Copiar</guimenuitem
-> ou <guimenuitem
->Recortar</guimenuitem
->, ela será salva na <emphasis
->área de transferência</emphasis
->. Ela poderá ser colada usando uma ação <guimenuitem
->Colar</guimenuitem
->.</para
-><para
->Quando ativada, esta opção mantém a seleção e a área de transferência iguais, de modo que qualquer seleção esteja imediatamente disponível para colar por qualquer meio. Se estiver desativada, a seleção ainda poderá ser salva no histórico da área de transferência (sujeito às opções abaixo), mas só poderá ser colada usando o botão do meio do mouse.</para
+>Alterna se o histórico da área de transferência é preservado ao fazer logoff ou desligar o computador.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Histórico da área de transferência</guilabel
+>Tamanho do histórico</guilabel
 ></term>
 <listitem
 ><para
->Alterna o histórico da área de transferência.</para
+>Configura o número de itens que serão armazenados no histórico da área de transferência. O valor pode estar entre 1 e 2048.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Número de entradas</guilabel
+>Seleção e área de transferência: Manter a seleção e a área de transferência inalteradas</guilabel
 ></term>
 <listitem
 ><para
->Configura o número de itens que serão armazenados no histórico da área de transferência.</para
+>Quando ativada, esta opção mantém a seleção e a área de transferência iguais, de modo que qualquer seleção e área de transferência estejam imediatamente disponíveis para colar por qualquer meio. Se estiver desativada, a seleção ainda poderá ser salva no histórico da área de transferência (sujeito às opções abaixo), mas só poderá ser colada usando o botão do meio do mouse. </para
 ></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Seleção de texto</guilabel
+>Incluir no histórico: Texto selecionado com o ponteiro ou o teclado</guilabel
 ></term>
 <listitem
 ><para
->Quando uma área da tela é selecionada com o mouse ou teclado, isso é chamado de <quote
->seleção</quote
->. Esta opção determina se as seleções de texto são salvas no histórico da área de transferência. É possível escolher entre <guilabel
->Sempre salvar no histórico</guilabel
-> e <guilabel
->Somente quando copiado explicitamente</guilabel
->. A opção <guilabel
->Sempre salvar no histórico</guilabel
-> não está disponível se a sincronização de seleção/área de transferência estiver desativada &dash; nesse caso, a seleção nunca é salva automaticamente no histórico da área de transferência. Consulte <xref linkend="clipboard-modes"/>. </para>
+>Quando ativado, a seleção é salva no histórico. O conteúdo da área de transferência é sempre salvo. </para>
 </listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Seleção não textual</guilabel
+>Incluir no histórico: Dados de imagem copiados explicitamente</guilabel
 ></term>
 <listitem
 ><para
->Esta opção determina se seleções que não sejam texto (como imagens) são salvas no histórico da área de transferência. É possível escolher entre <guilabel
->Sempre salvar no histórico</guilabel
->, <guilabel
->Somente quando explicitamente copiado</guilabel
-> e <guilabel
->Nunca salvar no histórico</guilabel
->. A opção <guilabel
->Sempre salvar no histórico</guilabel
-> não está disponível se a sincronização de seleção/área de transferência estiver desativada &dash; nesse caso, a seleção nunca é salva automaticamente no histórico da área de transferência. Consulte <xref linkend="clipboard-modes"/>. </para>
+>Quando essa opção está marcada, imagens copiadas como dados — como camadas e seleções copiadas em um editor de imagens, por exemplo — são salvas no histórico da área de transferência. Arquivos de imagem copiados de um gerenciador de arquivos são sempre salvos. No histórico, eles aparecem como imagens, mas tratam-se apenas de visualizações; internamente, são apenas nomes de arquivo. Capturas de tela salvas pelo &spectacle; também serão armazenadas se essa opção estiver configurada no programa. </para>
 </listitem>
 </varlistentry>
 
@@ -385,44 +283,55 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <varlistentry>
 <term
 ><guilabel
->Mostra menu de contexto de ações</guilabel
+>Mostrar menu de contexto de ações: Quando um texto ou um arquivo é copiado</guilabel
 ></term>
 <listitem
 ><para
->Configura o tempo que o menu das ações irá permanecer aberto, se você não selecionar nenhuma ação dele.</para
+>Se esta opção estiver marcada, o menu de contexto aparecerá assim que um texto ou arquivo correspondente for copiado. Se a opção abaixo estiver marcada, o único efeito desta opção será fazer com que o menu apareça ao copiar arquivos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar menu de contexto de ações: Quando um texto é selecionado</guilabel
+></term>
+<listitem
+><para
+>Se esta opção estiver marcada, o menu de contexto aparece assim que um texto correspondente é selecionado, sem a necessidade de aguardar que ele seja copiado. Isso funciona mesmo quando as seleções não são salvas no histórico da área de transferência.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Mostrar menu de contexto de ações: Quando um item é escolhido do histórico</guilabel
+></term>
+<listitem
+><para
+>Se esta opção estiver marcada, selecionar um item do histórico, editar um item no histórico ou navegar até ele por meio de um atalho de teclado fará com que o &klipper; exiba a janela de contexto de ações para esse item, caso seja apropriado.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Tempo para menu automático de ações</guilabel
+></term>
+<listitem
+><para
+>Define quanto tempo o menu automático leva para fechar sozinho caso você não interaja com ele.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry>
 <term
 ><guilabel
->Repetir ações sobre um item selecionado do histórico</guilabel
+>Remover espaços em branco</guilabel
 ></term>
 <listitem
 ><para
->Se esta opção estiver habilitada, selecionar um item do histórico fará com que o &klipper; exiba o menu de ações sobre este item, se necessário.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Remover espaços em branco ao executar as ações</guilabel
-></term>
-<listitem
-><para
->Se estiver selecionada, todos os caracteres em branco (espaços, tabulações, &etc;) no início e no fim do conteúdo da área de transferência serão removidos antes de passar o conteúdo da área de transferência para o aplicativo. Isto é útil, por exemplo, se a área de transferência contiver um &URL; com espaços que, ao ser aberto por um navegador Web, poderia causar um erro.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Incluir ações MIME</guilabel
-></term>
-<listitem
-><para
->Se selecionado, inclui aplicativos que possam aceitar o tipo &MIME; de um nome de arquivo ou URL selecionado no menu popup.</para>
+>Se estiver selecionada, todos os caracteres em branco (espaços, tabulações, &etc;) no início e no fim do conteúdo da área de transferência serão removidos antes de passar o conteúdo da área de transferência para o aplicativo. O texto salvo no histórico não é afetado.</para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -433,6 +342,21 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Configuração das ações</title>
 
 <variablelist>
+<varlistentry>
+<term
+><guilabel
+>Oferecer opções para links e arquivos copiados</guilabel
+></term>
+<listitem
+><para
+>Se selecionado, o menu de contexto oferece aplicativos capazes de abrir um arquivo ou link copiado (que comece com <quote
+>http://</quote
+> ou <quote
+>https://</quote
+>), mesmo quando não houver uma ação correspondente definida por você.</para>
+</listitem>
+</varlistentry>
+
 <varlistentry>
 <term
 >Editando Expressões/Ações</term>
@@ -585,9 +509,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >Direito de cópia do programa de 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
 <para
->Mantido atualmente por Esben Mose Hansen. Veja em <ulink url="http://mosehansen.dk/about"
->http://mosehansen.dk/about</ulink
-> os detalhes de contato. </para>
+>Atualmente mantido pelos desenvolvedores do KDE &plasma;. </para>
 
 <para
 >Direito de cópia de documentação de 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
@@ -599,7 +521,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >alvarenga@kde.org</email
 ></para
 > &underFDL; &underGPL; </chapter>
-
 
 &documentation.index;
 

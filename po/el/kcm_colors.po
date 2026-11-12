@@ -33,12 +33,11 @@ msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης, Πέτρος Βιδάλης"
 
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org, p_vidalis@hotmail."
-"com"
+"sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org, pvidalis@gmail.com"
 
 #: colors.cpp:251
 #, kde-format
