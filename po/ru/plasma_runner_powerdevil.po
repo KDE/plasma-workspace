@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2021-12-28 15:19+0300\n"
+"PO-Revision-Date: 2026-11-11 22:56+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -103,12 +103,12 @@ msgid ""
 msgstr ""
 "Показать режимы яркости экрана и позволяет установить яркость экрана с "
 "использованием ключевого слова. Например, «яркость экрана 50» затемнит экран "
-"до 50% от максимальной яркости экрана"
+"до 50 % от максимальной яркости экрана"
 
 #: PowerDevilRunner.cpp:95
 #, kde-format
 msgid "Set Brightness to %1%"
-msgstr "Установить яркость экрана в %1%"
+msgstr "Установить яркость экрана в %1 %"
 
 #: PowerDevilRunner.cpp:104
 #, kde-format
