@@ -360,7 +360,7 @@ Item {
                             onDoubleClicked: view.map.zoomLevel += 0.5
 
                             QQC2.ToolTip.text: zoomInButton.text
-                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.visible: hovered || visualFocus
                             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         }
 
@@ -376,7 +376,7 @@ Item {
                             onDoubleClicked: view.map.zoomLevel -= 0.5
 
                             QQC2.ToolTip.text: zoomOutButton.text
-                            QQC2.ToolTip.visible: hovered
+                            QQC2.ToolTip.visible: hovered ||visualFocus
                             QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         }
                     }

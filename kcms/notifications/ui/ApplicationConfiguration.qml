@@ -327,7 +327,7 @@ ColumnLayout {
 
                                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                                     QQC2.ToolTip.text: text
-                                    QQC2.ToolTip.visible: hovered || activeFocus
+                                    QQC2.ToolTip.visible: hovered || visualFocus
 
                                     onClicked: kcm.playSound(model.sound)
                                 }
@@ -353,7 +353,7 @@ ColumnLayout {
 
                                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                                     QQC2.ToolTip.text: text
-                                    QQC2.ToolTip.visible: hovered || activeFocus
+                                    QQC2.ToolTip.visible: hovered || visualFocus
 
                                     onClicked: model.sound = model.defaultSound
                                 }
@@ -365,7 +365,7 @@ ColumnLayout {
 
                                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                                     QQC2.ToolTip.text: text
-                                    QQC2.ToolTip.visible: hovered || activeFocus
+                                    QQC2.ToolTip.visible: hovered || visualFocus
 
                                     onClicked: {
                                         soundSelector.eventRow = model.index

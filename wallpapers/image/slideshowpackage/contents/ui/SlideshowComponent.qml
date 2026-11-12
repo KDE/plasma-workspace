@@ -251,7 +251,7 @@ ColumnLayout {
                                 display: QQC2.Button.IconOnly
                                 onClicked: imageWallpaper.removeSlidePath(baseListItem.modelData)
 
-                                QQC2.ToolTip.visible: hovered
+                                QQC2.ToolTip.visible: hovered || visualFocus
                                 QQC2.ToolTip.text: text
                                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }
@@ -262,7 +262,7 @@ ColumnLayout {
                                 display: QQC2.Button.IconOnly
                                 onClicked: Qt.openUrlExternally(baseListItem.modelData)
 
-                                QQC2.ToolTip.visible: hovered
+                                QQC2.ToolTip.visible: hovered || visualFocus
                                 QQC2.ToolTip.text: text
                                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                             }

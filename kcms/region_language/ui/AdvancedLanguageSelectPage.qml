@@ -82,7 +82,7 @@ KCM.ScrollViewKCM {
                 Kirigami.Theme.useAlternateBackgroundColor: true
 
                 QQC2.ToolTip.text: text
-                QQC2.ToolTip.visible: languageLabel.truncated && (hovered || activeFocus)
+                QQC2.ToolTip.visible: languageLabel.truncated && (hovered || visualFocus)
                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
                 // There's no need for one of these list items to ever be selected
@@ -130,7 +130,7 @@ KCM.ScrollViewKCM {
                         display: QQC2.AbstractButton.IconOnly
                         icon.name: "go-top"
                         QQC2.ToolTip.text: i18nc("@info:tooltip", "Move to top")
-                        QQC2.ToolTip.visible: hovered || activeFocus
+                        QQC2.ToolTip.visible: hovered || visualFocus
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         onClicked: languageListModel.selectedLanguageModel.move(listItemRoot.index, 0)
                     }
@@ -139,7 +139,7 @@ KCM.ScrollViewKCM {
                         display: QQC2.AbstractButton.IconOnly
                         icon.name: "edit-delete-remove"
                         QQC2.ToolTip.text: i18nc("@info:tooltip", "Remove")
-                        QQC2.ToolTip.visible: hovered || activeFocus
+                        QQC2.ToolTip.visible: hovered || visualFocus
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                         onClicked: languageListModel.selectedLanguageModel.remove(listItemRoot.index)
                     }

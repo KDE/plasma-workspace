@@ -857,7 +857,7 @@ PlasmaExtras.Representation {
 
                     PlasmaComponents3.ToolTip.text: text
                     PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
-                    PlasmaComponents3.ToolTip.visible: hovered || (activeFocus && (focusReason === Qt.TabFocusReason || focusReason === Qt.BacktabFocusReason))
+                    PlasmaComponents3.ToolTip.visible: hovered || (visualFocus && (focusReason === Qt.TabFocusReason || focusReason === Qt.BacktabFocusReason))
                 }
             }
         }

@@ -128,7 +128,7 @@ GridLayout {
             KeyNavigation.left: (index === 0 ? toolButtonsLayout.menuItem : repeater.itemAt(index - 1))
             PlasmaComponents3.ToolTip.text: text
             PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
-            PlasmaComponents3.ToolTip.visible: hovered || (activeFocus && (focusReason === Qt.TabFocusReason || focusReason === Qt.BacktabFocusReason))
+            PlasmaComponents3.ToolTip.visible: hovered || (visualFocus && (focusReason === Qt.TabFocusReason || focusReason === Qt.BacktabFocusReason))
             onClicked: toolButtonsLayout.trigger(modelData.role)
         }
     }

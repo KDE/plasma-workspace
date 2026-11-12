@@ -216,7 +216,7 @@ Kirigami.Dialog {
 
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.text: modelData
-                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.visible: hovered || visualFocus
                     text: modelData
 
                     Kirigami.ShadowedImage {
@@ -257,7 +257,7 @@ Kirigami.Dialog {
                     text: modelData.name
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     QQC2.ToolTip.text: modelData.name
-                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.visible: hovered || visualFocus
 
                     onClicked: {
                         colorRectangle.grabToImage(function(result) {

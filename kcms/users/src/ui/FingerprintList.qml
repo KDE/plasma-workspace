@@ -49,7 +49,7 @@ ListView {
 
                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 QQC2.ToolTip.text: text
-                QQC2.ToolTip.visible: hovered || activeFocus
+                QQC2.ToolTip.visible: hovered || visualFocus
 
                 onClicked: root.reenrollFinger(delegate.internalName)
             }
@@ -61,7 +61,7 @@ ListView {
 
                 QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                 QQC2.ToolTip.text: text
-                QQC2.ToolTip.visible: hovered || activeFocus
+                QQC2.ToolTip.visible: hovered || visualFocus
 
                 onClicked: root.deleteFinger(delegate.internalName)
             }
