@@ -259,7 +259,7 @@ PlasmaExtras.Representation {
                 name: "albumArtReady"
                 when: root.expanded && backgroundImage.visible && (albumArt.albumArt.currentItem as Image)?.paintedWidth > 0
                 PropertyChanges {
-                    backgroundImage.scaleFactor: Math.max(parent.width / (albumArt.albumArt.currentItem as Image).paintedWidth, parent.height / (albumArt.albumArt.currentItem as Image).paintedHeight)
+                    backgroundImage.scaleFactor: Math.max(backgroundImage.parent.width / (albumArt.albumArt.currentItem as Image).paintedWidth, backgroundImage.parent.height / (albumArt.albumArt.currentItem as Image).paintedHeight)
                     backgroundImage.width: Math.round((albumArt.albumArt.currentItem as Image).paintedWidth * backgroundImage.scaleFactor)
                     backgroundImage.height: Math.round((albumArt.albumArt.currentItem as Image).paintedHeight * backgroundImage.scaleFactor)
                     // HACK: Fix background ratio when DPI > 1
