@@ -1,6 +1,30 @@
 {
     "KPlugin": {
         "Description": "Handles legacy XEmbed system tray icons",
-        "Name": "XEmbed SNI Proxy"
+        "Description[bg]": "Поддръжка на остарели икони в системния панел (XEmbed)",
+        "Description[ca]": "Gestiona les icones antigues XEmbed de la safata del sistema",
+        "Description[cs]": "Zpracovává starší ikony XEmbed v systémové liště",
+        "Description[es]": "Gestión de iconos heredados de XEmbed para la bandeja del sistema",
+        "Description[ka]": "განკუთვნილია მოძველებული XEmbed სისტემურ საათთან არსებული ხატულების მხარდაჭერისთვის",
+        "Description[nl]": "Ondersteunt verouderde XEmbed-systeemvakpictogrammen",
+        "Description[pl]": "Obsługuje przestarzałe ikony tacki systemowej XEmbed",
+        "Description[pt_BR]": "Lida com ícones da bandeja do sistema no padrão legado XEmbed",
+        "Description[ru]": "Поддержка устаревших значков XEmbed в системном лотке",
+        "Description[sl]": "Obravnava stare ikone v sistemski vrstici XEmbed",
+        "Description[tr]": "Eski tür XEmber sistem tepsisi simgelerini işler",
+        "Description[uk]": "Обробляє застарілі піктограми XEmbed системного лотка",
+        "Name": "XEmbed SNI Proxy",
+        "Name[bg]": "XEmbed SNI Proxy",
+        "Name[ca]": "Servidor intermediari XEmbed SNI",
+        "Name[cs]": "Proxy XEmbed SNI",
+        "Name[es]": "Proxy SNI de XEmbed",
+        "Name[ka]": "XEmbed SNI პროქსი",
+        "Name[nl]": "XEmbed SNI-proxy",
+        "Name[pl]": "Pośrednik SNI XEmbed",
+        "Name[pt_BR]": "Proxy SNI XEmbed",
+        "Name[ru]": "XEmbed SNI Proxy",
+        "Name[sl]": "XEmbed SNI Proxy",
+        "Name[tr]": "XEmbed SNI Vekili",
+        "Name[uk]": "Проксі SNI XEmbed"
     }
 }

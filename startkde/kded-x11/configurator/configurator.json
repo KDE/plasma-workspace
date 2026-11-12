@@ -1,6 +1,24 @@
 {
     "KPlugin": {
         "Description": "Applies appearance settings, e.g. cursor theme, to X11 applications",
-        "Name": "X11 system settings"
+        "Description[bg]": "Прилага настройките за външен вид, напр. тема на показалеца, към приложения за X11",
+        "Description[ca]": "Aplica la configuració de l'aparença, p. ex. el tema del cursor, a les aplicacions X11",
+        "Description[cs]": "Použije nastavení vzhledu, např. motiv kurzoru, na aplikace X11",
+        "Description[pl]": "Nakłada ustawienia wyglądu, np. zestaw wskaźników, na aplikacje X11",
+        "Description[pt_BR]": "Aplica configurações de aparência, como o tema do cursor, a aplicativos X11",
+        "Description[ru]": "Применение параметров внешнего вида, например темы курсоров, к приложениям X11",
+        "Description[sl]": "Uveljavi nastavitve videza, npr. temo kazalca, v aplikacijah X11",
+        "Description[tr]": "Görünüş ayarlarını; örneğin, imleç teması gibi, X11 uygulamalarına uygular",
+        "Description[uk]": "Застосовує параметри вигляду, наприклад, тему вказівників, до програм X11",
+        "Name": "X11 system settings",
+        "Name[bg]": "Системни настройки на X11",
+        "Name[ca]": "Arranjament del sistema X11",
+        "Name[cs]": "Nastavení systému X11",
+        "Name[pl]": "Ustawienia systemu X11",
+        "Name[pt_BR]": "Configurações do sistema X11",
+        "Name[ru]": "Системные параметры X11",
+        "Name[sl]": "Sistemske nastavitve X11",
+        "Name[tr]": "X11 Sistem Ayarları",
+        "Name[uk]": "Системні параметри X11"
     }
 }
