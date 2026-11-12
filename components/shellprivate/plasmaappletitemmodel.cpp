@@ -54,28 +54,6 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     setData(0, PlasmaAppletItemModel::RunningRole);
     setData(m_local, PlasmaAppletItemModel::LocalRole);
     setData(isRecent(), PlasmaAppletItemModel::RecentRole);
-
-    QString iconName;
-
-    if (QIcon::hasThemeIcon(m_info.pluginId())) {
-        iconName = m_info.pluginId();
-    } else if (!m_info.iconName().isEmpty()) {
-        if (m_info.iconName().startsWith(QLatin1String("/"))) {
-            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
-            pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
-            pkg.setPath(m_info.pluginId());
-            if (pkg.isValid()) {
-                iconName = pkg.filePath("", pkg.metadata().iconName());
-            }
-        } else {
-            iconName = m_info.iconName();
-        }
-    } else {
-        iconName = QStringLiteral("application-x-plasma");
-    }
-
-    // Do not use setIcon here, we need to pass the icon name to the delegate, otherwise Kirigami.Icon will load it with the wrong colors
-    setData(iconName, Qt::DecorationRole);
 }
 
 QString PlasmaAppletItem::pluginName() const
@@ -300,6 +278,28 @@ QStringList PlasmaAppletItem::mimeTypes() const
 QVariant PlasmaAppletItem::data(int role) const
 {
     switch (role) {
+    case Qt::DecorationRole:
+        // null = not yet done, empty = no icon.
+        if (m_iconName.isNull()) {
+            if (QIcon::hasThemeIcon(m_info.pluginId())) {
+                m_iconName = m_info.pluginId();
+            } else if (!m_info.iconName().isEmpty()) {
+                if (m_info.iconName().startsWith(QLatin1String("/"))) {
+                    KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
+                    pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
+                    pkg.setPath(m_info.pluginId());
+                    if (pkg.isValid()) {
+                        m_iconName = pkg.filePath("", pkg.metadata().iconName());
+                    }
+                } else {
+                    m_iconName = m_info.iconName();
+                }
+            }
+        }
+        if (m_iconName.isEmpty()) {
+            return QStringLiteral("application-x-plasma");
+        }
+        return m_iconName;
     case PlasmaAppletItemModel::ScreenshotRole:
         // null = not yet done, empty = tried and failed
         if (m_screenshot.isNull()) {
