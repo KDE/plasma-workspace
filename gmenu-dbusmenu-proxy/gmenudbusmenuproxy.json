@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Proxies GTK D-Bus menus to a Plasma-readable format",
+        "Description[ar]": "يمرر قوائم GTK عبر D-Bus إلى صيغة تقرأها بلازما",
         "Description[bg]": "Осигурява съвместимост на GTK D-Bus менюта за Plasma",
         "Description[ca@valencia]": "Fa d'intermediari dels menús GTK D-Bus a un format que Plasma pot llegir",
         "Description[ca]": "Fa d'intermediari dels menús GTK D-Bus a un format que el Plasma pot llegir",
@@ -9,6 +10,7 @@
         "Description[fr]": "Menus en GTK /D-Bus des serveurs mandataires dans un format lisible sous Plasma",
         "Description[it]": "Trasforma i menu D-Bus GTK in un formato leggibile da Plasma",
         "Description[ka]": "პროქსავს GTK D-Bus-ის მენიუებს Plasma-ის მიერ წაკითხვად ფორმატში",
+        "Description[lt]": "Perkeičia GTK D-Bus meniu į Plasma apdorojamą formatą",
         "Description[nl]": "Proxies GTK-D-Bus-menu's naar een Plasma-leesbaar formaat",
         "Description[pl]": "Przekształca menu D-Bus GTK do postaci odczytywalnej przez Plazmę",
         "Description[pt_BR]": "Encaminha menus D-Bus do GTK para um formato legível pelo Plasma",
@@ -16,7 +18,9 @@
         "Description[sl]": "Posreduje menije GTK D-Bus v format, ki ga lahko bere Plasma",
         "Description[tr]": "GTK D-Bus menülerini, Plasma tarafından okunabilir bir biçime aktarır",
         "Description[uk]": "Створює замінник меню D-Bus GTK у придатному для читання Плазмою форматі",
+        "Description[zh_TW]": "代理 GTK D-Bus 選單，轉換為 Plasma 可讀取的格式",
         "Name": "GMenu D-Bus Menu Proxy",
+        "Name[ar]": "وكيل قوائم GMenu عبر D-Bus",
         "Name[bg]": "GMenu D-Bus Menu Proxy",
         "Name[ca@valencia]": "Intermediari de menús GTK D-Bus GMenu",
         "Name[ca]": "Intermediari de menús GTK D-Bus GMenu",
@@ -25,12 +29,14 @@
         "Name[fr]": "Serveur mandataire pour le menu « D-Bus » de GMenu",
         "Name[it]": "Proxy di menu D-Bus GMenu",
         "Name[ka]": "GMenu D-Bus მენიუს პროქსი",
+        "Name[lt]": "GMenu D-Bus meniu įgaliotoji programa",
         "Name[nl]": "GMenu-D-Bus-Menu proxy",
         "Name[pl]": "Pośrednik Menu D-Bus GMenu",
         "Name[pt_BR]": "Proxy de menu D-Bus do GMenu",
         "Name[ru]": "GMenu D-Bus Menu Proxy",
         "Name[sl]": "GMenu D-Bus Menu Proxy",
         "Name[tr]": "GMenu D-Bus Menü Vekili",
-        "Name[uk]": "Проксі-меню GMenu D-Bus"
+        "Name[uk]": "Проксі-меню GMenu D-Bus",
+        "Name[zh_TW]": "GMenu D-Bus 選單項目"
     }
 }

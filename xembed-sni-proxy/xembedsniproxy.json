@@ -1,11 +1,15 @@
 {
     "KPlugin": {
         "Description": "Handles legacy XEmbed system tray icons",
+        "Description[ar]": "يعالج أيقونات صينية النظام القديمة XEmbed",
         "Description[bg]": "Поддръжка на остарели икони в системния панел (XEmbed)",
+        "Description[ca@valencia]": "Gestiona les icones antigues XEmbed de la safata del sistema",
         "Description[ca]": "Gestiona les icones antigues XEmbed de la safata del sistema",
         "Description[cs]": "Zpracovává starší ikony XEmbed v systémové liště",
         "Description[es]": "Gestión de iconos heredados de XEmbed para la bandeja del sistema",
+        "Description[fr]": "Gère les anciennes icônes de la boite à miniatures de XEmbed",
         "Description[ka]": "განკუთვნილია მოძველებული XEmbed სისტემურ საათთან არსებული ხატულების მხარდაჭერისთვის",
+        "Description[lt]": "Apdoroja pasenusias XEmbed sistemos dėklo piktogramas",
         "Description[nl]": "Ondersteunt verouderde XEmbed-systeemvakpictogrammen",
         "Description[pl]": "Obsługuje przestarzałe ikony tacki systemowej XEmbed",
         "Description[pt_BR]": "Lida com ícones da bandeja do sistema no padrão legado XEmbed",
@@ -13,18 +17,24 @@
         "Description[sl]": "Obravnava stare ikone v sistemski vrstici XEmbed",
         "Description[tr]": "Eski tür XEmber sistem tepsisi simgelerini işler",
         "Description[uk]": "Обробляє застарілі піктограми XEmbed системного лотка",
+        "Description[zh_TW]": "處理舊式 XEmbed 系統匣圖示",
         "Name": "XEmbed SNI Proxy",
+        "Name[ar]": "وكيل XEmbed SNI",
         "Name[bg]": "XEmbed SNI Proxy",
+        "Name[ca@valencia]": "Servidor intermediari XEmbed SNI",
         "Name[ca]": "Servidor intermediari XEmbed SNI",
         "Name[cs]": "Proxy XEmbed SNI",
         "Name[es]": "Proxy SNI de XEmbed",
+        "Name[fr]": "Serveur mandataire « XEmbed SNI »",
         "Name[ka]": "XEmbed SNI პროქსი",
+        "Name[lt]": "XEmbed SNI įgaliotoji programa",
         "Name[nl]": "XEmbed SNI-proxy",
         "Name[pl]": "Pośrednik SNI XEmbed",
         "Name[pt_BR]": "Proxy SNI XEmbed",
         "Name[ru]": "XEmbed SNI Proxy",
         "Name[sl]": "XEmbed SNI Proxy",
         "Name[tr]": "XEmbed SNI Vekili",
-        "Name[uk]": "Проксі SNI XEmbed"
+        "Name[uk]": "Проксі SNI XEmbed",
+        "Name[zh_TW]": "XEmbed SNI 代理"
     }
 }
