@@ -1,0 +1,519 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klipper;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Arabic "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<book id="klipper" lang="&language;">
+<bookinfo>
+<title
+>دليل كليبر </title>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2026-09-09</date>
+<releaseinfo
+>بلازما 6.8</releaseinfo>
+
+<abstract>
+<para
+>كليبر هو أداة قص ولصق الحافظة في بلازما.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>كليبر</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>حافظة</keyword>
+</keywordset>
+</bookinfo>
+<chapter id="introduction">
+<title
+>مقدمة</title>
+<para
+>كليبر هو أداة الحافظة لبلازما. يخزن تأريخ الحافظة، ويسمح لك بربط محتويات الحافظة بإجراءات التطبيقات. يرجى الإبلاغ عن أي مشاكل أو طلبات ميزات إلى <ulink url="http://bugs.kde.org"
+>نظام تتبع العلل لكيدي</ulink
+>.</para>
+</chapter>
+
+<chapter id="using-klipper">
+<title
+>استخدام كليبر</title>
+
+<sect1 id="basic-usage">
+<title
+>الاستخدام الأساسي</title>
+<para
+>يمكنك استخدام كليبر في صينية النظام إما كودجت بلازما أو كتطبيق كلاسيكي. كلاهما يتشاركان في الوظائف نفسها ولكن لديهما واجهة مستخدم رسومية مختلفة، ويعرضان آخر عنصر في التأريخ عند حوم مؤشر الفأرة فوق أيقونة كليبر في صينية النظام: </para>
+
+<screenshot>
+<screeninfo
+>أيقونة كليبر.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>أيقونة كليبر</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>لعرض تأريخ الحافظة، انقر فوق أيقونة كليبر في صينية النظام.</para>
+
+<sect2 id="klipper-widget">
+<title
+>ودجت كليبر</title>
+<screenshot>
+<screeninfo
+>ودجت كليبر.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>ودجت كليبر</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<!-- TODO: Document starred functionality -->
+<para
+>حوم فوق أحد المدخلات بمؤشر الفأرة لتظهر أربع أيقونات تمكنك من استدعاء إجراء، أو إظهار الرمز الشريطي، أو تحرير المحتوى، أو إزالة المدخل من التأريخ. استخدم سبكتيكل (Spectacle) لالتقاط الرموز الشريطية وحفظها. </para>
+
+<para
+>يمكنك البحث في تاريخ الحافظة بكتابة استعلامك في حقل البحث. تُحدَّث النتائج أثناء الكتابة. لمسح تاريخ الحافظة، انقر على الأيقونة على يمين حقل البحث. </para>
+
+<para
+>يفتح إجراء <guilabel
+>اضبط الحافظة...</guilabel
+> في القائمة السياقية <link linkend="preferences"
+>مربع حوار الإعدادات</link
+>. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="actions">
+<title
+>الإجراءات</title>
+
+<para
+>يستطيع كليبر تنفيذ إجراءات على محتويات الحافظة، بناءً على مطابقتها لتعبير نمطي معين. هناك إجراء مدمج يعمل على عناوين الوِب والملفات. يتيح لك تمرير عنوان وِب يبدأ بـ <quote
+>http://</quote
+> أو <quote
+>https://</quote
+> إلى متصفح وِب، أو ملف، مثل <acronym
+>PDF</acronym
+>، إلى تطبيق متوافق مثل أوكلار.</para>
+
+<para
+>يمكنك كتابة إجراءاتك الخاصة في صفحة <guilabel
+>ضبط الإجراءات</guilabel
+> من <link linkend="preferences"
+>حوار الإعدادات</link
+>، حيث يمكنك أيضًا تعطيل الإجراء المدمج عبر <guilabel
+>اقترح تطبيقات للروابط والملفات المنسوخة</guilabel
+>. </para>
+
+<para
+>يمكنك دائمًا الوصول إلى قائمة الإجراءات المطابقة عبر زر بجوار العنصر في تاريخك. يمكنك أيضًا اختيار ظهور قائمة الإجراءات تلقائيًا كلما وُضعت مطابقة على الحافظة باستخدام اختصار <guilabel
+>قائمة الإجراءات المنبثقة الآلية</guilabel
+> الذي يمكنك إعداده في صفحة <guilabel
+>الاختصارات</guilabel
+>، أو بتحديد <guilabel
+>فورًا عند التحديد</guilabel
+> تحت <guilabel
+>أظهر قائمة الإجراءات المنبثقة</guilabel
+> في صفحة <guilabel
+>قائمة الإجراءات</guilabel
+>. هناك، مع خيار <guilabel
+>زمن قائمة الإجراءات الآلية</guilabel
+>، يمكنك أيضًا تغيير المدة التي تستغرقها القائمة الآلية لتُغلق من تلقاء نفسها إذا لم تتخذ أي إجراء.</para>
+
+<para
+>يمكن أيضًا تحرير محتويات الحافظة التي تطابق تعبيرًا نمطيًا قبل تنفيذ إجراء عليها. اختر <guimenuitem
+>حرر المحتويات...</guimenuitem
+> على يمين مدخل الحافظة، ويمكنك تغيير محتويات الحافظة في مربع الحوار الذي يظهر، قبل النقر فوق زر <guibutton
+>موافق</guibutton
+> لتشغيل الإجراء المناسب.</para>
+
+<para
+>إذا حددت اختصارًا لـ <guilabel
+>تنفيذ الإجراء يدويًّا على محتوى الحافظة الحالي</guilabel
+>، فسيؤدي الضغط على هذا الاختصار إلى عرض القائمة المنبثقة المناسبة.</para>
+
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title
+>سلوك الحافظة/الاختيار</title>
+
+<sect2 id="clipboard-modes-general">
+<title
+>عام</title>
+<para
+>يمكن استخدام كليبر لضبط سلوك الحافظة والاختيار في بلازما. لتعديل سلوكهما انظر <xref linkend="general-page"/>. </para>
+
+<note
+><para
+>يوجد خبيئتين منفصلتين للحافظة: <quote
+>الاختيار</quote
+> و<quote
+>الحافظة</quote
+>. يوضع النص في خبيئة الاختيار بمجرد تحديده، ويمكن لصقه بزر الفأرة الأوسط. لوضع النص في خبيئة الحافظة، حدده واضغط <keycombo
+>&Ctrl;<keycap
+>X</keycap
+> </keycombo
+> أو <keycombo
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>. يُلصق النص من خبيئة الحافظة باستخدام <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+> أو باختيار <guimenuitem
+>لصق</guimenuitem
+> من القائمة السياقية.</para>
+</note>
+</sect2>
+</sect1>
+</chapter>
+
+<chapter id="preferences">
+<title
+>ضبط كليبر</title>
+
+<sect1 id="general-page">
+<title
+>الخيارات العامة</title>
+<note
+><para
+>تميّز الخيارات أدناه بين <emphasis
+>التحديد</emphasis
+> و<emphasis
+>الحافظة</emphasis
+>. لفهم الفرق، انظر <xref linkend="clipboard-modes"/>. </para
+></note>
+
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>تاريخ الحافظة: احفظ التاريخ عبر جلسات سطح المكتب</guilabel
+></term>
+<listitem
+><para
+>يبدّل ما إذا كان تاريخ الحافظة يُحفظ عند تسجيل الخروج أو إغلاق الحاسوب.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>حجم التاريخ</guilabel
+></term>
+<listitem
+><para
+>يحدد عدد العناصر التي تُخزن في تأريخ الحافظة. يمكن أن تتراوح القيمة بين 1 و2048.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>التحديد والحافظة: أبقِ التحديد والحافظة متطابقين</guilabel
+></term>
+<listitem
+><para
+>عند تفعيل هذا الخيار، تظل الحافظة والاختيار متطابقين، بحيث يكون أي اختيار أو حافظة متاحًا فورًا للصق بأي وسيلة. إذا أُغلق، فقد يظل الاختيار محفوظًا في تأريخ الحافظة (حسب الخيارات أدناه)، ولكن لا يمكن لصقه إلا باستخدام زر الفأرة الأوسط. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>ضمّن في التاريخ: النص المحدد بالمؤشر أو لوحة المفاتيح</guilabel
+></term>
+<listitem
+><para
+>عند التحديد، يُحفظ التحديد في التاريخ. تُحفظ الحافظة دائمًا. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>ضمّن في التاريخ: بيانات الصور المنسوخة صراحةً</guilabel
+></term>
+<listitem
+><para
+>عند التحديد، تُحفظ الصور المنسوخة كبيانات — الطبقات والتحديدات المنسوخة في محرر صور، على سبيل المثال — في تاريخ الحافظة. تُحفظ ملفات الصور المنسوخة من مدير ملفات دائمًا. في التاريخ، تظهر كصور، لكنها مجرد معاينات، وفي الحقيقة هي مجرد أسماء ملفات. ستُحفظ أيضًا لقطات الشاشة التي يحفظها &spectacle; عند ضبطه على ذلك هناك. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+<sect1 id="action-menu-page">
+<title
+>قائمة الإجراءات</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>لعنصر مختار من التاريخ</guilabel
+></term>
+<listitem
+><para
+>إذا فُعل هذا، فإن اختيار عنصر من التأريخ يجعل كليبر يعرض منبثقة الإجراءات على هذا العنصر، إذا كان ذلك مناسبًا.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>زمن قائمة الإجراءات الآلية</guilabel
+></term>
+<listitem
+><para
+>اضبط المدة التي تستغرقها القائمة الآلية لتُغلق من تلقاء نفسها إذا لم تتخذ أي إجراء.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>شذّب المسافات البيضاء</guilabel
+></term>
+<listitem
+><para
+>عند التحديد، تُزال أي مسافات بيضاء (مسافات، جدولات، &etc;) في بداية ونهاية محتويات الحافظة قبل تمرير محتويات الحافظة إلى تطبيق. لا يتأثر النص المحفوظ في التاريخ.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="actions-configuration-page">
+<title
+>ضبط الإجراءات</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>اقترح تطبيقات للروابط والملفات المنسوخة</guilabel
+></term>
+<listitem
+><para
+>عند التحديد، تعرض القائمة المنبثقة تطبيقات يمكنها فتح ملف منسوخ، أو رابط منسوخ يبدأ بـ <quote
+>http://</quote
+> أو <quote
+>https://</quote
+>، حتى عندما لا يطابق أي إجراء خاص بك.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>تحرير التعبيرات/الإجراءات</term>
+<listitem
+><para
+>في صفحة <guilabel
+>الإجراءات</guilabel
+>، انقر نقرًا مزدوجًا فوق التعبير النمطي أو الإجراء الذي تريد تحريره، أو حدده واضغط على زر <guibutton
+>حرر الإجراء</guibutton
+>. سيظهر مربع حوار حيث يمكن تحرير نص التعبير كما تشاء.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>إضافة تعبيرات/إجراءات</term>
+<listitem
+><para
+>انقر فوق زر <guibutton
+>أضف إجراءً...</guibutton
+> لإضافة تعبير نمطي ليطابقه كليبر. يستخدم كليبر <classname
+>QRegularExpression</classname
+> من كيوت (Qt)، والذي يستخدم PCRE (تعبيرات بيرل النمطية المتوافقة).</para>
+<para
+>يمكنك إضافة وصف لنوع التعبير النمطي (مثلًا: <quote
+>رابط HTTP</quote
+>) عبر النقر بـ <mousebutton
+>يسار</mousebutton
+> الفأرة في عمود <guilabel
+>الوصف</guilabel
+>.</para>
+
+<note
+><para
+>يمكنك العثور على معلومات مفصلة حول استخدام تعبيرات <classname
+>QRegularExpression</classname
+> النمطية في <ulink url="https://doc.qt.io/qt-5/qregularexpression.html#details"
+>توثيق كيوت (Qt) المصدري</ulink
+>.</para
+></note>
+
+<para
+>حرر التعبير النمطي كما هو موضح أعلاه. لإضافة أمر لتنفيذه، انقر فوق <guimenuitem
+>أضف أمرًا</guimenuitem
+> وحرر الأمر في صندوق تحرير النص الموضعي. يتيح لك النقر المزدوج على الأمر تحريره.</para>
+
+<para
+>لاحظ أن <token
+>%s</token
+> في سطر الأوامر يُستبدل بمحتويات الحافظة، فمثلًا: إذا كان تعريف أمرك هو <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+> وكانت محتويات حافظتك هي <filename
+>/home/phil/textfile</filename
+>، فسيُشغّل الأمر <userinput
+><command
+>kwrite</command
+> <filename
+>/home/phil/textfile</filename
+></userinput
+>. لتضمين <token
+>%s</token
+> حرفيًا في سطر الأوامر، استخدم الهروب ببراغي خلفي: <userinput
+>\%s</userinput
+>.</para>
+
+<para
+>تُستبدل المداخل من <userinput
+><token
+>%0</token
+></userinput
+> إلى <userinput
+><token
+>%9</token
+></userinput
+> بالنصوص الملتقطة المقابلة من نمط المطابقة. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="shortcuts-page">
+<title
+>خيارات الاختصارات</title>
+
+<para
+>تتيح لك صفحة الاختصارات تغيير اختصارات لوحة المفاتيح المستخدمة للوصول إلى وظائف كليبر. يمكنك تغيير الاختصار إلى واحد من ثلاثة أشياء:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>لا شيء</guilabel
+></term>
+<listitem
+><para
+>لا يمكن الوصول إلى الإجراء المحدد مباشرة من لوحة المفاتيح</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>المبدئيّ</guilabel
+></term>
+<listitem
+><para
+>يستخدم الإجراء المحدد مفتاح كليبر المبدئي. هذه هي الاختصارات المشار إليها في هذا الدليل.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مخصص</guilabel
+></term>
+<listitem
+><para
+>يُعيّن الإجراء المختار للمفاتيح التي تختارها.</para>
+<para
+>لاختيار مفتاح مخصص للإجراء الذي حددته، انقر فوق <guilabel
+>مخصص</guilabel
+> ثم <guilabel
+>لا شيء</guilabel
+>. الآن اكتب مزيج المفاتيح المطلوب على لوحة المفاتيح، كما هو الحال في أي تطبيق كيدي. </para
+> </listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>إذا حددت اختصارًا لـ <guilabel
+>افتح كليبر عند موضع الفأرة</guilabel
+>، فإن الضغط على هذا الاختصار سيفتح قائمة كليبر المنبثقة عند موضع مؤشر الفأرة، بدلًا من موضعها المبدئي (في لوحة بلازما). هذا مفيد إذا كنت تستخدم الفأرة أكثر من لوحة المفاتيح.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>الحقوق والترخيص</title>
+
+<para
+>كليبر </para>
+<para
+>حقوق ملكية البرنامج 1998 &Andrew.Stanley-Jones; <email
+>asj@cban.com</email
+> </para>
+<para
+>حقوق ملكية البرنامج 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>يُصان حاليًا بواسطة مطوّري &plasma; من كيدي. </para>
+
+<para
+>حقوق ملكية التوثيق 2000-2003، 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+
+<para
+>الترجمة: زايد السعيدي <email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+&documentation.index;
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step: 0
+End:
+-->
+
+
+
+
+
+
+
+
+
+
