@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-13 01:01+0000\n"
 "PO-Revision-Date: 2026-10-12 09:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -120,69 +120,69 @@ msgstr[1] "%1 ekitaldi"
 msgid "No events"
 msgstr "Ekitaldirik ez"
 
-#: calendar/qml/MonthViewHeader.qml:74
+#: calendar/qml/MonthViewHeader.qml:76
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: calendar/qml/MonthViewHeader.qml:145
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Days"
 msgstr "Egunak"
 
-#: calendar/qml/MonthViewHeader.qml:153
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Months"
 msgstr "Hilabeteak"
 
-#: calendar/qml/MonthViewHeader.qml:162
+#: calendar/qml/MonthViewHeader.qml:177
 #, kde-format
 msgid "Years"
 msgstr "Urteak"
 
-#: calendar/qml/MonthViewHeader.qml:206
+#: calendar/qml/MonthViewHeader.qml:221
 #, kde-format
 msgid "Previous Month"
 msgstr "Aurreko hilabetea"
 
-#: calendar/qml/MonthViewHeader.qml:208
+#: calendar/qml/MonthViewHeader.qml:223
 #, kde-format
 msgid "Previous Year"
 msgstr "Aurreko urtea"
 
-#: calendar/qml/MonthViewHeader.qml:210
+#: calendar/qml/MonthViewHeader.qml:225
 #, kde-format
 msgid "Previous Decade"
 msgstr "Aurreko hamarkada"
 
-#: calendar/qml/MonthViewHeader.qml:229
+#: calendar/qml/MonthViewHeader.qml:244
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Gaur"
 
-#: calendar/qml/MonthViewHeader.qml:230
+#: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Ekarri egutegia gaurko egunera"
 
-#: calendar/qml/MonthViewHeader.qml:243
+#: calendar/qml/MonthViewHeader.qml:258
 #, kde-format
 msgid "Next Month"
 msgstr "Hurrengo hilabetea"
 
-#: calendar/qml/MonthViewHeader.qml:245
+#: calendar/qml/MonthViewHeader.qml:260
 #, kde-format
 msgid "Next Year"
 msgstr "Hurrengo urtea"
 
-#: calendar/qml/MonthViewHeader.qml:247
+#: calendar/qml/MonthViewHeader.qml:262
 #, kde-format
 msgid "Next Decade"
 msgstr "Hurrengo hamarkada"
 
-#: calendar/qml/MonthViewHeader.qml:306
+#: calendar/qml/MonthViewHeader.qml:321
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
@@ -233,7 +233,7 @@ msgstr "Saio berria"
 msgid "Filters"
 msgstr "Iragazkiak"
 
-#: shellprivate/plasmaappletitemmodel.cpp:199
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
@@ -244,7 +244,7 @@ msgstr ""
 "da Plasma %1(r)ekin bateragarria. Mesedez, jar zaitez trepeta-egilearekin "
 "harremanetan bertsio eguneratu baterako."
 
-#: shellprivate/plasmaappletitemmodel.cpp:203
+#: shellprivate/plasmaappletitemmodel.cpp:181
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -254,7 +254,7 @@ msgstr ""
 "bateragarria. Mesedez, jar zaitez trepeta-egilearekin harremanetan bertsio "
 "eguneratu baterako."
 
-#: shellprivate/plasmaappletitemmodel.cpp:207
+#: shellprivate/plasmaappletitemmodel.cpp:185
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -263,7 +263,7 @@ msgstr ""
 "Trepeta hau Plasma %1(e)rako idatzi zen eta ez da Plasma %2(r)ekin "
 "bateragarria. Mesedez, eguneratu Plasma trepeta erabili ahal izateko."
 
-#: shellprivate/plasmaappletitemmodel.cpp:212
+#: shellprivate/plasmaappletitemmodel.cpp:190
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "

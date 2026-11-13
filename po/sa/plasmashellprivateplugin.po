@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-13 01:01+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -119,69 +119,69 @@ msgstr[1] "%1 घटनाः"
 msgid "No events"
 msgstr "न घटनाः"
 
-#: calendar/qml/MonthViewHeader.qml:74
+#: calendar/qml/MonthViewHeader.qml:76
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:145
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Days"
 msgstr "दिवसाः"
 
-#: calendar/qml/MonthViewHeader.qml:153
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Months"
 msgstr "मासाः"
 
-#: calendar/qml/MonthViewHeader.qml:162
+#: calendar/qml/MonthViewHeader.qml:177
 #, kde-format
 msgid "Years"
 msgstr "वर्षाः"
 
-#: calendar/qml/MonthViewHeader.qml:206
+#: calendar/qml/MonthViewHeader.qml:221
 #, kde-format
 msgid "Previous Month"
 msgstr "पूर्वमासः"
 
-#: calendar/qml/MonthViewHeader.qml:208
+#: calendar/qml/MonthViewHeader.qml:223
 #, kde-format
 msgid "Previous Year"
 msgstr "पूर्ववर्षम्"
 
-#: calendar/qml/MonthViewHeader.qml:210
+#: calendar/qml/MonthViewHeader.qml:225
 #, kde-format
 msgid "Previous Decade"
 msgstr "पूर्वदशकम्"
 
-#: calendar/qml/MonthViewHeader.qml:229
+#: calendar/qml/MonthViewHeader.qml:244
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "अद्य"
 
-#: calendar/qml/MonthViewHeader.qml:230
+#: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "अद्यत्वे पञ्चाङ्गं पुनः सेट् कुर्वन्तु"
 
-#: calendar/qml/MonthViewHeader.qml:243
+#: calendar/qml/MonthViewHeader.qml:258
 #, kde-format
 msgid "Next Month"
 msgstr "अग्रिमे मासे"
 
-#: calendar/qml/MonthViewHeader.qml:245
+#: calendar/qml/MonthViewHeader.qml:260
 #, kde-format
 msgid "Next Year"
 msgstr "अग्रिमवर्षे"
 
-#: calendar/qml/MonthViewHeader.qml:247
+#: calendar/qml/MonthViewHeader.qml:262
 #, kde-format
 msgid "Next Decade"
 msgstr "अग्रिमः दशकः"
 
-#: calendar/qml/MonthViewHeader.qml:306
+#: calendar/qml/MonthViewHeader.qml:321
 #, fuzzy, kde-format
 #| msgid "Keep Open"
 msgctxt "@info:tooltip"
@@ -233,7 +233,7 @@ msgstr "नव सत्र"
 msgid "Filters"
 msgstr "फ़िल्टर"
 
-#: shellprivate/plasmaappletitemmodel.cpp:199
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, fuzzy, kde-format
 #| msgid ""
 #| "This Widget was written for an unknown older version of Plasma and is not "
@@ -247,7 +247,7 @@ msgstr ""
 "इदं विजेट् प्लाज्मा इत्यस्य अज्ञातस्य प्राचीनसंस्करणस्य कृते लिखितम् अस्ति तथा च प्लाज्मा %1 "
 "इत्यनेन सह सङ्गतं नास्ति । अद्यतनसंस्करणार्थं विजेट्-लेखकस्य सम्पर्कं कुर्वन्तु ।"
 
-#: shellprivate/plasmaappletitemmodel.cpp:203
+#: shellprivate/plasmaappletitemmodel.cpp:181
 #, fuzzy, kde-format
 #| msgid ""
 #| "This Widget was written for Plasma %1 and is not compatible with Plasma "
@@ -259,7 +259,7 @@ msgstr ""
 "इदं विजेट् प्लाज्मा %1 कृते लिखितम् अस्ति तथा च प्लाज्मा %2 इत्यनेन सह सङ्गतं नास्ति । "
 "अद्यतनसंस्करणार्थं विजेट्-लेखकस्य सम्पर्कं कुर्वन्तु ।"
 
-#: shellprivate/plasmaappletitemmodel.cpp:207
+#: shellprivate/plasmaappletitemmodel.cpp:185
 #, fuzzy, kde-format
 #| msgid ""
 #| "This Widget was written for Plasma %1 and is not compatible with Plasma "
@@ -271,7 +271,7 @@ msgstr ""
 "इदं विजेट् प्लाज्मा %1 कृते लिखितम् अस्ति तथा च प्लाज्मा %2 इत्यनेन सह सङ्गतं नास्ति । कृपया "
 "विजेट् इत्यस्य उपयोगाय प्लाज्मा अपडेट् कुर्वन्तु ।"
 
-#: shellprivate/plasmaappletitemmodel.cpp:212
+#: shellprivate/plasmaappletitemmodel.cpp:190
 #, fuzzy, kde-format
 #| msgid ""
 #| "This Widget was written for Plasma %1 and is not compatible with the "

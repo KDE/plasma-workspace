@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2026-09-12 12:12+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"POT-Creation-Date: 2026-11-13 01:01+0000\n"
+"PO-Revision-Date: 2026-11-12 18:29+0100\n"
+"Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,44 +42,43 @@ msgstr "Batterij"
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Ion"
-msgstr ""
+msgstr "Lithium-ion"
 
 #: batterycontrol/upowerbattery_p.cpp:61
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Polymer"
-msgstr ""
+msgstr "Lithium-polymeer"
 
 #: batterycontrol/upowerbattery_p.cpp:63
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Iron Phosphate"
-msgstr ""
+msgstr "Lithium-ijzer-fosfaat"
 
 #: batterycontrol/upowerbattery_p.cpp:65
 #, kde-format
 msgctxt "battery technology"
 msgid "Lead Acid"
-msgstr ""
+msgstr "Loodzuur"
 
 #: batterycontrol/upowerbattery_p.cpp:67
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Cadmium"
-msgstr ""
+msgstr "Nickel-cadmium"
 
 #: batterycontrol/upowerbattery_p.cpp:69
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Metal Hydride"
-msgstr ""
+msgstr "Nickelmetaal-hydride"
 
 #: batterycontrol/upowerbattery_p.cpp:163
-#, fuzzy, kde-format
-#| msgid "Battery"
+#, kde-format
 msgctxt "%1 is battery technology"
 msgid "%1 Battery"
-msgstr "Batterij"
+msgstr "%1 Batterij"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -117,69 +116,69 @@ msgstr[1] "%1 gebeurtenissen"
 msgid "No events"
 msgstr "Geen gebeurtenissen"
 
-#: calendar/qml/MonthViewHeader.qml:74
+#: calendar/qml/MonthViewHeader.qml:76
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:145
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Days"
 msgstr "Dagen"
 
-#: calendar/qml/MonthViewHeader.qml:153
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Months"
 msgstr "Maanden"
 
-#: calendar/qml/MonthViewHeader.qml:162
+#: calendar/qml/MonthViewHeader.qml:177
 #, kde-format
 msgid "Years"
 msgstr "Jaren"
 
-#: calendar/qml/MonthViewHeader.qml:206
+#: calendar/qml/MonthViewHeader.qml:221
 #, kde-format
 msgid "Previous Month"
 msgstr "Vorige maand"
 
-#: calendar/qml/MonthViewHeader.qml:208
+#: calendar/qml/MonthViewHeader.qml:223
 #, kde-format
 msgid "Previous Year"
 msgstr "Vorig jaar"
 
-#: calendar/qml/MonthViewHeader.qml:210
+#: calendar/qml/MonthViewHeader.qml:225
 #, kde-format
 msgid "Previous Decade"
 msgstr "Vorige decade"
 
-#: calendar/qml/MonthViewHeader.qml:229
+#: calendar/qml/MonthViewHeader.qml:244
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Vandaag"
 
-#: calendar/qml/MonthViewHeader.qml:230
+#: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Zet de agenda terug op vandaag"
 
-#: calendar/qml/MonthViewHeader.qml:243
+#: calendar/qml/MonthViewHeader.qml:258
 #, kde-format
 msgid "Next Month"
 msgstr "Volgende maand"
 
-#: calendar/qml/MonthViewHeader.qml:245
+#: calendar/qml/MonthViewHeader.qml:260
 #, kde-format
 msgid "Next Year"
 msgstr "Volgend jaar"
 
-#: calendar/qml/MonthViewHeader.qml:247
+#: calendar/qml/MonthViewHeader.qml:262
 #, kde-format
 msgid "Next Decade"
 msgstr "Volgende decade"
 
-#: calendar/qml/MonthViewHeader.qml:306
+#: calendar/qml/MonthViewHeader.qml:321
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
@@ -231,7 +230,7 @@ msgstr "Nieuwe sessie"
 msgid "Filters"
 msgstr "Filters"
 
-#: shellprivate/plasmaappletitemmodel.cpp:199
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
@@ -242,7 +241,7 @@ msgstr ""
 "niet compatibel met Plasma %1. Neem contact op met de auteur van het widget "
 "voor een bijgewerkte versie."
 
-#: shellprivate/plasmaappletitemmodel.cpp:203
+#: shellprivate/plasmaappletitemmodel.cpp:181
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -251,7 +250,7 @@ msgstr ""
 "Dit widget is geschreven voor Plasma %1 en is niet compatibel met Plasma %2. "
 "Neem contact op met de auteur van het widget voor een bijgewerkte versie."
 
-#: shellprivate/plasmaappletitemmodel.cpp:207
+#: shellprivate/plasmaappletitemmodel.cpp:185
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -260,7 +259,7 @@ msgstr ""
 "Dit widget is geschreven voor Plasma %1 en is niet compatibel met Plasma %2. "
 "Werk Plasma bij om het widget te kunnen gebruiken."
 
-#: shellprivate/plasmaappletitemmodel.cpp:212
+#: shellprivate/plasmaappletitemmodel.cpp:190
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "

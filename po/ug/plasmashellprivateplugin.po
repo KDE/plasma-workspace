@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-13 01:01+0000\n"
 "PO-Revision-Date: 2026-10-03 19:58-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -117,69 +117,69 @@ msgstr[0] "%1 پائالىيەت"
 msgid "No events"
 msgstr "پائالىيەت يوق"
 
-#: calendar/qml/MonthViewHeader.qml:74
+#: calendar/qml/MonthViewHeader.qml:76
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:145
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Days"
 msgstr "كۈن"
 
-#: calendar/qml/MonthViewHeader.qml:153
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Months"
 msgstr "ئاي"
 
-#: calendar/qml/MonthViewHeader.qml:162
+#: calendar/qml/MonthViewHeader.qml:177
 #, kde-format
 msgid "Years"
 msgstr "يىل"
 
-#: calendar/qml/MonthViewHeader.qml:206
+#: calendar/qml/MonthViewHeader.qml:221
 #, kde-format
 msgid "Previous Month"
 msgstr "ئالدىنقى ئاي"
 
-#: calendar/qml/MonthViewHeader.qml:208
+#: calendar/qml/MonthViewHeader.qml:223
 #, kde-format
 msgid "Previous Year"
 msgstr "ئالدىنقى يىل"
 
-#: calendar/qml/MonthViewHeader.qml:210
+#: calendar/qml/MonthViewHeader.qml:225
 #, kde-format
 msgid "Previous Decade"
 msgstr "ئالدىنقى ئون يىل"
 
-#: calendar/qml/MonthViewHeader.qml:229
+#: calendar/qml/MonthViewHeader.qml:244
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "بۈگۈن"
 
-#: calendar/qml/MonthViewHeader.qml:230
+#: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "يىلنامەنى بۈگۈنگە ئەسلىگە قايتۇر"
 
-#: calendar/qml/MonthViewHeader.qml:243
+#: calendar/qml/MonthViewHeader.qml:258
 #, kde-format
 msgid "Next Month"
 msgstr "كېيىنكى ئاي"
 
-#: calendar/qml/MonthViewHeader.qml:245
+#: calendar/qml/MonthViewHeader.qml:260
 #, kde-format
 msgid "Next Year"
 msgstr "كېيىنكى يىل"
 
-#: calendar/qml/MonthViewHeader.qml:247
+#: calendar/qml/MonthViewHeader.qml:262
 #, kde-format
 msgid "Next Decade"
 msgstr "كېيىنكى ئون يىل"
 
-#: calendar/qml/MonthViewHeader.qml:306
+#: calendar/qml/MonthViewHeader.qml:321
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
@@ -231,7 +231,7 @@ msgstr "يېڭى جەريانچاق"
 msgid "Filters"
 msgstr "سۈزگۈچ"
 
-#: shellprivate/plasmaappletitemmodel.cpp:199
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
@@ -241,7 +241,7 @@ msgstr ""
 "بۇ ئەپچە يوچۇن كونا نەشرىدىكى Plasma غا يېزىلغان، ئۇ Plasma %1 بىلەن "
 "ماسلاشمايدۇ. ئەپچە يازغۇچىسى بىلەن ئالاقىلىشىپ يېڭى نەشرىگە ئېرىشىڭ."
 
-#: shellprivate/plasmaappletitemmodel.cpp:203
+#: shellprivate/plasmaappletitemmodel.cpp:181
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -250,7 +250,7 @@ msgstr ""
 "بۇ ئەپچە Plasma %1 غا يېزىلغان، ئۇ Plasma %2‎‏ بىلەن ماسلاشمايدۇ. ئەپچە "
 "يازغۇچىسى بىلەن ئالاقىلىشىپ يېڭى نەشرىگە ئېرىشىڭ."
 
-#: shellprivate/plasmaappletitemmodel.cpp:207
+#: shellprivate/plasmaappletitemmodel.cpp:185
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -259,7 +259,7 @@ msgstr ""
 "بۇ ئەپچە Plasma %1 غا يېزىلغان، ئۇ Plasma %2 بىلەن ماسلاشمايدۇ. بۇ ئەپچىنى "
 "ئىشلىتىش ئۈچۈن Plasma نى يېڭىلاڭ."
 
-#: shellprivate/plasmaappletitemmodel.cpp:212
+#: shellprivate/plasmaappletitemmodel.cpp:190
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "

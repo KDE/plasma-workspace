@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
+"POT-Creation-Date: 2026-11-13 01:01+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -121,69 +121,69 @@ msgstr[3] "један догађај"
 msgid "No events"
 msgstr "Нема догађаја"
 
-#: calendar/qml/MonthViewHeader.qml:74
+#: calendar/qml/MonthViewHeader.qml:76
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:145
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Days"
 msgstr "Дани"
 
-#: calendar/qml/MonthViewHeader.qml:153
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Months"
 msgstr "Мјесеци"
 
-#: calendar/qml/MonthViewHeader.qml:162
+#: calendar/qml/MonthViewHeader.qml:177
 #, kde-format
 msgid "Years"
 msgstr "Године"
 
-#: calendar/qml/MonthViewHeader.qml:206
+#: calendar/qml/MonthViewHeader.qml:221
 #, kde-format
 msgid "Previous Month"
 msgstr "Претходни мјесец"
 
-#: calendar/qml/MonthViewHeader.qml:208
+#: calendar/qml/MonthViewHeader.qml:223
 #, kde-format
 msgid "Previous Year"
 msgstr "Претходна година"
 
-#: calendar/qml/MonthViewHeader.qml:210
+#: calendar/qml/MonthViewHeader.qml:225
 #, kde-format
 msgid "Previous Decade"
 msgstr "Претходна деценија"
 
-#: calendar/qml/MonthViewHeader.qml:229
+#: calendar/qml/MonthViewHeader.qml:244
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Данас"
 
-#: calendar/qml/MonthViewHeader.qml:230
+#: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Ресетуј календар на данас"
 
-#: calendar/qml/MonthViewHeader.qml:243
+#: calendar/qml/MonthViewHeader.qml:258
 #, kde-format
 msgid "Next Month"
 msgstr "Наредни мјесец"
 
-#: calendar/qml/MonthViewHeader.qml:245
+#: calendar/qml/MonthViewHeader.qml:260
 #, kde-format
 msgid "Next Year"
 msgstr "Наредна година"
 
-#: calendar/qml/MonthViewHeader.qml:247
+#: calendar/qml/MonthViewHeader.qml:262
 #, kde-format
 msgid "Next Decade"
 msgstr "Наредна деценија"
 
-#: calendar/qml/MonthViewHeader.qml:306
+#: calendar/qml/MonthViewHeader.qml:321
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
@@ -234,7 +234,7 @@ msgstr "Нова сесија"
 msgid "Filters"
 msgstr "Филтери"
 
-#: shellprivate/plasmaappletitemmodel.cpp:199
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
@@ -244,7 +244,7 @@ msgstr ""
 "Овај виџет је написан за непознато старије издање Плазме и није сагласан са "
 "Плазмом %1. Затражите ажурирано издање од аутора виџета."
 
-#: shellprivate/plasmaappletitemmodel.cpp:203
+#: shellprivate/plasmaappletitemmodel.cpp:181
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -253,7 +253,7 @@ msgstr ""
 "Овај виџет је написан за Плазму %1 и није сагласан са Плазмом %2. Затражите "
 "ажурирано издање од аутора виџета."
 
-#: shellprivate/plasmaappletitemmodel.cpp:207
+#: shellprivate/plasmaappletitemmodel.cpp:185
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -262,7 +262,7 @@ msgstr ""
 "Овај виџет је написан за Плазму %1 и није сагласан са Плазмом %2. Ажурирајте "
 "Плазму да бисте користили виџет."
 
-#: shellprivate/plasmaappletitemmodel.cpp:212
+#: shellprivate/plasmaappletitemmodel.cpp:190
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "

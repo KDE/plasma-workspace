@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 01:04+0000\n"
-"PO-Revision-Date: 2026-09-14 15:09+0300\n"
+"POT-Creation-Date: 2026-11-13 01:01+0000\n"
+"PO-Revision-Date: 2026-11-12 15:25+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,44 +46,43 @@ msgstr "Akumuliatorius"
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Ion"
-msgstr ""
+msgstr "Ličio jonų"
 
 #: batterycontrol/upowerbattery_p.cpp:61
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Polymer"
-msgstr ""
+msgstr "Ličio polimerų"
 
 #: batterycontrol/upowerbattery_p.cpp:63
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Iron Phosphate"
-msgstr ""
+msgstr "Ličio geležies fosfatų"
 
 #: batterycontrol/upowerbattery_p.cpp:65
 #, kde-format
 msgctxt "battery technology"
 msgid "Lead Acid"
-msgstr ""
+msgstr "Švino rūgšties"
 
 #: batterycontrol/upowerbattery_p.cpp:67
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Cadmium"
-msgstr ""
+msgstr "Nikelio kadmio"
 
 #: batterycontrol/upowerbattery_p.cpp:69
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Metal Hydride"
-msgstr ""
+msgstr "Nikelio metalo hidrido"
 
 #: batterycontrol/upowerbattery_p.cpp:163
-#, fuzzy, kde-format
-#| msgid "Battery"
+#, kde-format
 msgctxt "%1 is battery technology"
 msgid "%1 Battery"
-msgstr "Akumuliatorius"
+msgstr "%1 akumuliatorius"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -123,69 +122,69 @@ msgstr[3] "%1 įvykis"
 msgid "No events"
 msgstr "Nėra įvykių"
 
-#: calendar/qml/MonthViewHeader.qml:74
+#: calendar/qml/MonthViewHeader.qml:76
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: calendar/qml/MonthViewHeader.qml:145
+#: calendar/qml/MonthViewHeader.qml:160
 #, kde-format
 msgid "Days"
 msgstr "Dienos"
 
-#: calendar/qml/MonthViewHeader.qml:153
+#: calendar/qml/MonthViewHeader.qml:168
 #, kde-format
 msgid "Months"
 msgstr "Mėnesiai"
 
-#: calendar/qml/MonthViewHeader.qml:162
+#: calendar/qml/MonthViewHeader.qml:177
 #, kde-format
 msgid "Years"
 msgstr "Metai"
 
-#: calendar/qml/MonthViewHeader.qml:206
+#: calendar/qml/MonthViewHeader.qml:221
 #, kde-format
 msgid "Previous Month"
 msgstr "Ankstesnis mėnuo"
 
-#: calendar/qml/MonthViewHeader.qml:208
+#: calendar/qml/MonthViewHeader.qml:223
 #, kde-format
 msgid "Previous Year"
 msgstr "Ankstesni metai"
 
-#: calendar/qml/MonthViewHeader.qml:210
+#: calendar/qml/MonthViewHeader.qml:225
 #, kde-format
 msgid "Previous Decade"
 msgstr "Ankstesnis dešimtmetis"
 
-#: calendar/qml/MonthViewHeader.qml:229
+#: calendar/qml/MonthViewHeader.qml:244
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Šiandien"
 
-#: calendar/qml/MonthViewHeader.qml:230
+#: calendar/qml/MonthViewHeader.qml:245
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Atstatyti kalendorių į šiandieną"
 
-#: calendar/qml/MonthViewHeader.qml:243
+#: calendar/qml/MonthViewHeader.qml:258
 #, kde-format
 msgid "Next Month"
 msgstr "Kitas mėnuo"
 
-#: calendar/qml/MonthViewHeader.qml:245
+#: calendar/qml/MonthViewHeader.qml:260
 #, kde-format
 msgid "Next Year"
 msgstr "Kiti metai"
 
-#: calendar/qml/MonthViewHeader.qml:247
+#: calendar/qml/MonthViewHeader.qml:262
 #, kde-format
 msgid "Next Decade"
 msgstr "Kitas dešimtmetis"
 
-#: calendar/qml/MonthViewHeader.qml:306
+#: calendar/qml/MonthViewHeader.qml:321
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
@@ -236,7 +235,7 @@ msgstr "Naujas seansas"
 msgid "Filters"
 msgstr "Filtrai"
 
-#: shellprivate/plasmaappletitemmodel.cpp:199
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This widget was written for an unknown older version of Plasma and is not "
@@ -247,7 +246,7 @@ msgstr ""
 "suderinamas su Plasma %1. Norėdami gauti atnaujintą valdiklio versiją, "
 "susisiekite su valdiklio kūrėju."
 
-#: shellprivate/plasmaappletitemmodel.cpp:203
+#: shellprivate/plasmaappletitemmodel.cpp:181
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -257,7 +256,7 @@ msgstr ""
 "%2. Norėdami gauti atnaujintą valdiklio versiją, susisiekite su valdiklio "
 "kūrėju."
 
-#: shellprivate/plasmaappletitemmodel.cpp:207
+#: shellprivate/plasmaappletitemmodel.cpp:185
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -266,7 +265,7 @@ msgstr ""
 "Šis valdiklis buvo sukurtas Plasma %1 versijai ir nėra suderinamas su Plasma "
 "%2. Norėdami naudoti valdiklį, atnaujinkite Plasma versiją."
 
-#: shellprivate/plasmaappletitemmodel.cpp:212
+#: shellprivate/plasmaappletitemmodel.cpp:190
 #, kde-format
 msgid ""
 "This widget was written for Plasma %1 and is not compatible with the older "

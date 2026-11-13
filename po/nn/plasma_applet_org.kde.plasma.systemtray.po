@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-15 00:48+0000\n"
-"PO-Revision-Date: 2026-07-02 20:36+0200\n"
+"PO-Revision-Date: 2026-11-12 22:01+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "Liten"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "Ørliten"
 
 #: qml/ConfigGeneral.qml:264
 #, kde-format
