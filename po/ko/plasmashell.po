@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:59+0000\n"
+"POT-Creation-Date: 2026-11-14 01:06+0000\n"
 "PO-Revision-Date: 2026-09-28 23:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -147,12 +147,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "미리 보기 배너 숨기기?"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:523 desktopview.cpp:539
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "편집 모드 들어가기"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:537
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "편집 모드 끝내기"

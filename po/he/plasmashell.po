@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:59+0000\n"
+"POT-Creation-Date: 2026-11-14 01:06+0000\n"
 "PO-Revision-Date: 2026-07-02 08:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -150,12 +150,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "להסתיר את כרזת התצוגה המקדימה?"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:523 desktopview.cpp:539
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "כניסה למצב עריכה"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:537
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "יציאה ממצב עריכה"

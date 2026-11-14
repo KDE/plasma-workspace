@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:59+0000\n"
+"POT-Creation-Date: 2026-11-14 01:06+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -148,12 +148,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "隐藏预览横幅？"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:523 desktopview.cpp:539
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "进入编辑模式"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:537
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "退出编辑模式"

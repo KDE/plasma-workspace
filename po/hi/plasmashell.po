@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:59+0000\n"
+"POT-Creation-Date: 2026-11-14 01:06+0000\n"
 "PO-Revision-Date: 2023-02-28 21:23+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -153,12 +153,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr ""
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:523 desktopview.cpp:539
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr ""
 
-#: desktopview.cpp:534
+#: desktopview.cpp:537
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr ""

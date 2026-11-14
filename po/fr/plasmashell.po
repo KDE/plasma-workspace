@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-10 00:59+0000\n"
+"POT-Creation-Date: 2026-11-14 01:06+0000\n"
 "PO-Revision-Date: 2026-07-03 10:40+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
@@ -155,12 +155,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Voulez-vous masquer la bannière d'aperçu ?"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:523 desktopview.cpp:539
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Entrer en mode « Édition »"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:537
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Sortir du mode « Édition »"
