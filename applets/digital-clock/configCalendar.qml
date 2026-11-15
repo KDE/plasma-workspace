@@ -37,7 +37,7 @@ KCMUtils.ScrollViewKCM {
             calendarPage.unsavedChanges = !(Plasmoid.configuration.enabledCalendarPlugins.every(entry => eventPluginsManager.enabledPlugins.includes(entry)) &&  eventPluginsManager.enabledPlugins.every(entry =>  Plasmoid.configuration.enabledCalendarPlugins.includes(entry)))
     }
 
-    header: Kirigami.FormLayout {
+    header: Kirigami.Form {
         PlasmaCalendar.EventPluginsManager {
             id: eventPluginsManager
             Component.onCompleted: {
@@ -45,32 +45,33 @@ KCMUtils.ScrollViewKCM {
             }
         }
 
-        QQC2.CheckBox {
-            id: showWeekNumbers
-            Kirigami.FormData.label: i18nc("@option:check formdata label", "General:")
-            text: i18nc("@option:check", "Show week numbers")
-        }
-
-
-        QQC2.ComboBox {
-            id: firstDayOfWeekCombo
-
-            Kirigami.FormData.label: i18nc("@label:listbox", "First day of week:")
-            Layout.fillWidth: true
-
-            textRole: "text"
-            model: [-1, 0, 1, 5, 6].map(day => ({
-                day,
-                text: day === -1 ? i18nc("@item:inlistbox first day of week option", "Use region defaults") : Qt.locale().dayName(day),
-            }))
-            onActivated: index => {
-                cfg_firstDayOfWeek = model[index].day;
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@option:check formdata label", "General:")
+                contentItem: QQC2.CheckBox {
+                    id: showWeekNumbers
+                    text: i18nc("@option:check", "Show week numbers")
+                }
             }
-            currentIndex: model.findIndex(item => item.day === calendarPage.cfg_firstDayOfWeek)
-        }
 
-        Item {
-            Kirigami.FormData.isSection: true
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox", "First day of week:")
+                contentItem: QQC2.ComboBox {
+                    id: firstDayOfWeekCombo
+
+                    Layout.fillWidth: true
+
+                    textRole: "text"
+                    model: [-1, 0, 1, 5, 6].map(day => ({
+                        day,
+                        text: day === -1 ? i18nc("@item:inlistbox first day of week option", "Use region defaults") : Qt.locale().dayName(day),
+                    }))
+                    onActivated: index => {
+                        calendarPage.cfg_firstDayOfWeek = model[index].day;
+                    }
+                    currentIndex: model.findIndex(item => item.day === calendarPage.cfg_firstDayOfWeek)
+                }
+            }
         }
     }
 

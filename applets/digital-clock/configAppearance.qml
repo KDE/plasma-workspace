@@ -52,290 +52,235 @@ KCMUtils.SimpleKCM {
                                           dateFormat.implicitWidth)
 
 
-    Kirigami.FormLayout {
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                contentItem: RowLayout {
+                    Kirigami.FormData.label: i18nc("@option:check also @label:listbox", "Show date:")
+                    spacing: Kirigami.Units.smallSpacing
 
-        RowLayout {
-            Kirigami.FormData.label: i18n("Information:")
-            spacing: Kirigami.Units.smallSpacing
+                    QQC2.CheckBox {
+                        id: showDate
+                        text: !dateDisplayFormat.visible ? i18nc("@option:check completes Show date …", "Below time") : ""
+                    }
 
-            QQC2.CheckBox {
-                id: showDate
-                text: i18n("Show date")
-            }
-
-            QQC2.ComboBox {
-                id: dateDisplayFormat
-                enabled: showDate.checked
-                visible: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
-                Layout.preferredWidth: appearancePage.comboBoxWidth
-                model: [
-                    i18n("Adaptive location"),
-                    i18n("Always beside time"),
-                    i18n("Always below time"),
-                ]
-                onActivated: appearancePage.cfg_dateDisplayFormat = currentIndex
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        QQC2.ComboBox {
-            id: showSecondsComboBox
-            Layout.preferredWidth: appearancePage.comboBoxWidth
-            Kirigami.FormData.label: i18n("Show seconds:")
-            model: [
-                i18nc("@option:check", "Never"),
-                i18nc("@option:check", "Only in the tooltip"),
-                i18n("Always"),
-            ]
-            onActivated: appearancePage.cfg_showSeconds = currentIndex;
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        ColumnLayout {
-            Kirigami.FormData.label: i18n("Show time zone:")
-            Kirigami.FormData.buddyFor: showLocalTimeZoneWhenDifferent
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.RadioButton {
-                id: showLocalTimeZoneWhenDifferent
-                text: i18n("Only when different from local time zone")
-            }
-
-            QQC2.RadioButton {
-                id: showLocalTimeZone
-                text: i18n("Always")
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18n("Display time zone as:")
-            Kirigami.FormData.buddyFor: displayTimeZoneFormat
-            Layout.fillWidth: true
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.ComboBox {
-                id: displayTimeZoneFormat
-
-                Layout.preferredWidth: appearancePage.comboBoxWidth
-                model: [
-                    i18n("Code"),
-                    i18n("City"),
-                    i18n("Offset from UTC time"),
-                ]
-                onActivated: appearancePage.cfg_displayTimezoneFormat = currentIndex
-            }
-            QQC2.Button {
-                id: switchTimeZoneButton
-                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
-                visible: KConfig.KAuthorized.authorizeControlModule("kcm_clock")
-                text: i18nc("@action:button opens kcm", "Switch Time Zone…")
-                icon.name: "preferences-system-time"
-                onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        RowLayout {
-            Layout.fillWidth: true
-            Kirigami.FormData.label: i18nc("@label:listbox", "Time display:")
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.ComboBox {
-                id: use24hFormat
-                Layout.preferredWidth: appearancePage.comboBoxWidth
-                model: [
-                    i18nc("@item:inlistbox time display option", "12-Hour"),
-                    i18nc("@item:inlistbox time display option", "Use region defaults"),
-                    i18nc("@item:inlistbox time display option", "24-Hour")
-                ]
-                onActivated: appearancePage.cfg_use24hFormat = currentIndex
-            }
-
-            QQC2.Button {
-                id: changeRegionalSettingsButton
-                visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
-                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
-                text: i18nc("@action:button opens kcm", "Change Regional Settings…")
-                icon.name: "preferences-desktop-locale"
-                onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
-            }
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        RowLayout {
-            Kirigami.FormData.label: i18nc("@label:listbox", "Date format:")
-            enabled: showDate.checked
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.ComboBox {
-                id: dateFormat
-                Layout.preferredWidth: appearancePage.comboBoxWidth
-                textRole: "label"
-                model: [
-                    {
-                        label: i18nc("@item:inlistbox date display option, includes e.g. day of week and month as word", "Long date"),
-                        name: "longDate",
-                        formatter(d) {
-                            return Qt.formatDate(d, Qt.locale(), Locale.LongFormat);
-                        },
-                    },
-                    {
-                        label: i18nc("@item:inlistbox date display option, e.g. all numeric", "Short date"),
-                        name: "shortDate",
-                        formatter(d) {
-                            return Qt.formatDate(d, Qt.locale(), Locale.ShortFormat);
-                        },
-                    },
-                    {
-                        label: i18nc("@item:inlistbox date display option, yyyy-mm-dd", "ISO date"),
-                        name: "isoDate",
-                        formatter(d) {
-                            return Qt.formatDate(d, Qt.ISODate);
-                        },
-                    },
-                    {
-                        label: i18nc("@item:inlistbox custom date format", "Custom"),
-                        name: "custom",
-                        formatter(d) {
-                            return Qt.locale().toString(d, customDateFormat.text);
-                        },
-                    },
-                ]
-                onActivated: appearancePage.cfg_dateFormat = model[currentIndex]["name"];
-
-                Component.onCompleted: {
-                    const isConfiguredDateFormat = item => item["name"] === Plasmoid.configuration.dateFormat;
-                    currentIndex = model.findIndex(isConfiguredDateFormat);
-                }
-            }
-
-            QQC2.Label {
-                id: dateExampleLabel
-                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
-                elide: Text.ElideRight
-                horizontalAlignment: Text.AlignHCenter
-                textFormat: Text.PlainText
-                text: dateFormat.model[dateFormat.currentIndex].formatter(new Date());
-                QQC2.ToolTip.text: text
-                QQC2.ToolTip.visible: (exampleHoverHandler.hovered || activeFocus) && implicitWidth > width
-                // no ToolTip.delay, this is an edge case and we might as well show it immediately if it applies
-
-                HoverHandler {
-                    id: exampleHoverHandler
-                }
-            }
-        }
-
-        QQC2.TextField {
-            id: customDateFormat
-            Layout.fillWidth: true
-            enabled: showDate.checked
-            visible: appearancePage.cfg_dateFormat === "custom"
-        }
-
-        QQC2.Label {
-            text: i18n("<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
-            enabled: showDate.checked
-            visible: appearancePage.cfg_dateFormat === "custom"
-            wrapMode: Text.Wrap
-
-            Layout.preferredWidth: Layout.maximumWidth
-            Layout.maximumWidth: Kirigami.Units.gridUnit * 16
-
-            HoverHandler {
-                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : undefined
-            }
-
-            onLinkActivated: link => Qt.openUrlExternally(link)
-            textFormat: Text.StyledText
-        }
-
-        Item {
-            Kirigami.FormData.isSection: true
-        }
-
-        QQC2.ButtonGroup {
-            buttons: [autoFontAndSizeRadioButton, manualFontAndSizeRadioButton]
-        }
-
-        ColumnLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Kirigami.FormData.label: i18nc("@label:group", "Text display:")
-            Kirigami.FormData.buddyFor: autoFontAndSizeRadioButton
-
-            QQC2.RadioButton {
-                id: autoFontAndSizeRadioButton
-                text: i18nc("@option:radio", "Automatic")
-            }
-
-            QQC2.Label {
-                text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
-                Layout.leftMargin: autoFontAndSizeRadioButton.indicator.width + autoFontAndSizeRadioButton.spacing
-                textFormat: Text.PlainText
-                Layout.fillWidth: true
-                wrapMode: Text.Wrap
-                font: Kirigami.Theme.smallFont
-            }
-        }
-
-        RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-
-            QQC2.RadioButton {
-                id: manualFontAndSizeRadioButton
-                text: i18nc("@option:radio setting for manually configuring the font settings", "Manual")
-                checked: !appearancePage.cfg_autoFontAndSize
-                onClicked: {
-                    if (appearancePage.cfg_fontFamily === "") {
-                        fontDialog.fontChosen = Kirigami.Theme.defaultFont
+                    QQC2.ComboBox {
+                        id: dateDisplayFormat
+                        enabled: showDate.checked
+                        visible: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
+                        Layout.preferredWidth: appearancePage.comboBoxWidth
+                        model: [
+                            i18nc("@item:inlistbox for Show date", "Adaptive location"),
+                            i18nc("@item:inlistbox for Show date", "Always beside time"),
+                            i18nc("@item:inlistbox for Show date", "Always below time"),
+                        ]
+                        onActivated: appearancePage.cfg_dateDisplayFormat = currentIndex
                     }
                 }
             }
-
-            QQC2.Button {
-                text: i18nc("@action:button", "Choose Style…")
-                icon.name: "settings-configure"
-                enabled: manualFontAndSizeRadioButton.checked
-                onClicked: {
-                    fontDialog.open()
-                    fontDialog.currentFont = fontDialog.fontChosen
+            Kirigami.FormEntry {
+                contentItem: QQC2.ComboBox {
+                    id: showSecondsComboBox
+                    Layout.preferredWidth: appearancePage.comboBoxWidth
+                    Kirigami.FormData.label: i18n("Show seconds:")
+                    model: [
+                        i18nc("@item:inlistbox Show Seconds", "Never"),
+                        i18nc("@item:inlistbox Show Seconds", "Only in the tooltip"),
+                        i18nc("@item:inlistbox Show Seconds", "Always"),
+                    ]
+                    onActivated: appearancePage.cfg_showSeconds = currentIndex;
                 }
             }
-
+            QQC2.ButtonGroup { id: timeZoneButtonGroup }
+            Kirigami.FormEntry {
+                title: i18nc("@title:group prefix for group of radio buttons, e.g. Always", "Show time zone:")
+                contentItem: QQC2.RadioButton {
+                    id: showLocalTimeZoneWhenDifferent
+                    QQC2.ButtonGroup.group: timeZoneButtonGroup
+                    text: i18nc("@option:radio Show time zone", "Only when different from local time zone")
+                    checked: !showLocalTimeZone.checked
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    QQC2.ButtonGroup.group: timeZoneButtonGroup
+                    id: showLocalTimeZone
+                    text: i18nc("@option:radio Show time zone", "Always")
+                }
+            }
         }
 
-        ColumnLayout {
-            spacing: Kirigami.Units.smallSpacing
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox e.g. City", "Display time zone as:")
+                contentItem: QQC2.ComboBox {
+                    id: displayTimeZoneFormat
 
-            QQC2.Label {
-                visible: manualFontAndSizeRadioButton.checked
-                Layout.leftMargin: manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing
-                text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
-                textFormat: Text.PlainText
-                font: fontDialog.fontChosen
+                    Layout.preferredWidth: appearancePage.comboBoxWidth
+                    model: [
+                        i18nc("@item:inlistbox Display time zone as", "Code"),
+                        i18nc("@item:inlistbox Display time zone as", "City"),
+                        i18nc("@item:inlistbox Display time zone as", "Offset from UTC time"),
+                    ]
+                    onActivated: appearancePage.cfg_displayTimezoneFormat = currentIndex
+                }
+                trailingItems: [
+                    QQC2.Button {
+                        id: switchTimeZoneButton
+                        Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
+                        visible: KConfig.KAuthorized.authorizeControlModule("kcm_clock")
+                        text: i18nc("@action:button opens kcm", "Switch Time Zone…")
+                        icon.name: "preferences-system-time"
+                        onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
+                    }
+                ]
             }
-            QQC2.Label {
-                visible: manualFontAndSizeRadioButton.checked
-                Layout.leftMargin: manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing
-                text: i18nc("@info", "Note: size may be reduced if the panel is not thick enough.")
-                textFormat: Text.PlainText
-                font: Kirigami.Theme.smallFont
+
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox", "Time display:")
+                contentItem: QQC2.ComboBox {
+                    id: use24hFormat
+                    Layout.preferredWidth: appearancePage.comboBoxWidth
+                    model: [
+                        i18nc("@item:inlistbox time display option", "12-Hour"),
+                        i18nc("@item:inlistbox time display option", "Use region defaults"),
+                        i18nc("@item:inlistbox time display option", "24-Hour")
+                    ]
+                    onActivated: appearancePage.cfg_use24hFormat = currentIndex
+                }
+                trailingItems: [
+                    QQC2.Button {
+                        id: changeRegionalSettingsButton
+                        visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
+                        Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
+                        text: i18nc("@action:button opens kcm", "Change Regional Settings…")
+                        icon.name: "preferences-desktop-locale"
+                        onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
+                    }
+                ]
+            }
+
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox", "Date format:")
+                enabled: appearancePage.cfg_showDate
+                contentItem: QQC2.ComboBox {
+                    id: dateFormat
+                    Layout.preferredWidth: appearancePage.comboBoxWidth
+                    textRole: "label"
+                    model: [
+                        {
+                            label: i18nc("@item:inlistbox date display option, includes e.g. day of week and month as word", "Long date"),
+                            name: "longDate",
+                            formatter(d) {
+                                return Qt.formatDate(d, Qt.locale(), Locale.LongFormat);
+                            },
+                        },
+                        {
+                            label: i18nc("@item:inlistbox date display option, e.g. all numeric", "Short date"),
+                            name: "shortDate",
+                            formatter(d) {
+                                return Qt.formatDate(d, Qt.locale(), Locale.ShortFormat);
+                            },
+                        },
+                        {
+                            label: i18nc("@item:inlistbox date display option, yyyy-mm-dd", "ISO date"),
+                            name: "isoDate",
+                            formatter(d) {
+                                return Qt.formatDate(d, Qt.ISODate);
+                            },
+                        },
+                        {
+                            label: i18nc("@item:inlistbox custom date format", "Custom"),
+                            name: "custom",
+                            formatter(d) {
+                                return Qt.locale().toString(d, customDateFormat.text);
+                            },
+                        },
+                    ]
+                    onActivated: appearancePage.cfg_dateFormat = model[currentIndex]["name"];
+
+                    Component.onCompleted: {
+                        const isConfiguredDateFormat = item => item["name"] === Plasmoid.configuration.dateFormat;
+                        currentIndex = model.findIndex(isConfiguredDateFormat);
+                    }
+                }
+                trailingItems: [
+                    QQC2.Label {
+                        id: dateExampleLabel
+                        Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
+                        elide: Text.ElideRight
+                        horizontalAlignment: Text.AlignHCenter
+                        textFormat: Text.PlainText
+                        text: dateFormat.model[dateFormat.currentIndex].formatter(new Date());
+                        QQC2.ToolTip.text: text
+                        QQC2.ToolTip.visible: (exampleHoverHandler.hovered || activeFocus) && implicitWidth > width
+                        // no ToolTip.delay, this is an edge case and we might as well show it immediately if it applies
+
+                        HoverHandler {
+                            id: exampleHoverHandler
+                        }
+                    }
+                ]
+            }
+
+            Kirigami.FormEntry {
+                visible: appearancePage.cfg_dateFormat === "custom"
+                enabled: appearancePage.cfg_showDate
+                contentItem: QQC2.TextField {
+                    id: customDateFormat
+                    Layout.fillWidth: true
+                    enabled: showDate.checked
+                }
+                subtitle: i18nc("@info:usagetip", "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
+            }
+        }
+
+        Kirigami.FormGroup {
+            QQC2.ButtonGroup {
+                buttons: [autoFontAndSizeRadioButton, manualFontAndSizeRadioButton]
+            }
+
+            Kirigami.FormEntry {
+                title: i18nc("@label:group", "Text display:")
+                contentItem: QQC2.RadioButton {
+                    id: autoFontAndSizeRadioButton
+                    text: i18nc("@option:radio", "Automatic")
+                }
+                subtitle: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
+            }
+
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    id: manualFontAndSizeRadioButton
+                    text: i18nc("@option:radio setting for manually configuring the font settings", "Manual")
+                    checked: !appearancePage.cfg_autoFontAndSize
+                    onClicked: {
+                        if (appearancePage.cfg_fontFamily === "") {
+                            fontDialog.fontChosen = Kirigami.Theme.defaultFont
+                        }
+                    }
+                }
+                trailingItems: [
+                    QQC2.Button {
+                        text: i18nc("@action:button", "Choose Style…")
+                        icon.name: "settings-configure"
+                        enabled: manualFontAndSizeRadioButton.checked
+                        onClicked: {
+                            fontDialog.open()
+                            fontDialog.currentFont = fontDialog.fontChosen
+                        }
+                    }
+                ]
+                subtitle: manualFontAndSizeRadioButton.checked ? i18nc("@info", "Note: size may be reduced if the panel is not thick enough.") : ""
+            }
+            Kirigami.FormEntry {
+                contentItem: QQC2.Label {
+                    visible: manualFontAndSizeRadioButton.checked
+                    leftPadding: manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing
+                    text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", appearancePage.cfg_fontSize, fontDialog.fontChosen.family)
+                    textFormat: Text.PlainText
+                    font: fontDialog.fontChosen
+                }
             }
         }
     }
@@ -355,12 +300,6 @@ KCMUtils.SimpleKCM {
 
         onAccepted: {
             fontChosen = font
-        }
-    }
-
-    Component.onCompleted: {
-        if (!Plasmoid.configuration.showLocalTimeZone) {
-            showLocalTimeZoneWhenDifferent.checked = true;
         }
     }
 }
