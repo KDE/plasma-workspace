@@ -126,16 +126,16 @@ KCMUtils.ScrollViewKCM {
     function categoryName(category) {
         switch (category) {
         case "ApplicationStatus":
-            return i18n("Application Status");
+            return i18nc("@title:group section title", "Application Status");
         case "Communications":
-            return i18n("Communications");
+            return i18nc("@title:group section title", "Communications");
         case "SystemServices":
-            return i18n("System Services");
+            return i18nc("@title:group section title", "System Services");
         case "Hardware":
-            return i18n("Hardware Control");
+            return i18nc("@title:group section title", "Hardware Control");
         case "UnknownCategory":
         default:
-            return i18n("Miscellaneous");
+            return i18nc("@title:group section title", "Miscellaneous");
         }
     }
 
@@ -199,141 +199,142 @@ KCMUtils.ScrollViewKCM {
             text: xi18nc("@info:usagetip", "Disabling the Notifications widget is not recommended, as notifications sent by apps will no longer be shown.<nl/><nl/>Only do this if you’ve manually added a standalone Notifications widget somewhere else, or are intentionally using a 3rd-party notification manager to handle notifications.")
         }
 
-        Kirigami.FormLayout {
+        Kirigami.Form {
             id: formLayout
 
             readonly property int maxComboboxWidth: Math.max(sizeChooser.implicitWidth, spacingChooser.implicitWidth, layoutChooser.implicitWidth)
 
-            QQC2.ComboBox {
-                id: sizeChooser
+            Layout.fillWidth: true
+            Kirigami.FormGroup {
+                Kirigami.FormEntry {
+                    contentItem: QQC2.ComboBox {
+                        id: sizeChooser
 
-                readonly property string scaleString: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
-                    ? i18nc("@item:inlistbox Icon size", "Scale with Panel height")
-                    : i18nc("@item:inlistbox Icon size", "Scale with Panel width")
+                        readonly property string scaleString: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                        ? i18nc("@item:inlistbox Icon size", "Scale with Panel height")
+                        : i18nc("@item:inlistbox Icon size", "Scale with Panel width")
 
-                Kirigami.FormData.label: i18nc("@label:listbox Whether the system tray icons in the Panel always stay small or scale with the Panel's size", "Panel icon size:")
-                Layout.preferredWidth: formLayout.maxComboboxWidth
-                model: [
-                    {
-                        "label": scaleString,
-                        "size": "scale"
-                    },
-                    {
-                        "label": i18nc("@item:inlistbox Icon size", "Small"),
-                        "size": "smallMedium"
-                    },
-                    {
-                        "label": i18nc("@item:inlistbox Icon size", "Tiny"),
-                        "size": "small"
-                    }
-                ]
-                textRole: "label"
+                        Kirigami.FormData.label: i18nc("@label:listbox Whether the system tray icons in the Panel always stay small or scale with the Panel's size", "Panel icon size:")
+                        Layout.preferredWidth: formLayout.maxComboboxWidth
+                        model: [
+                            {
+                                "label": scaleString,
+                                "size": "scale"
+                            },
+                            {
+                                "label": i18nc("@item:inlistbox Icon size", "Small"),
+                                "size": "smallMedium"
+                            },
+                            {
+                                "label": i18nc("@item:inlistbox Icon size", "Tiny"),
+                                "size": "small"
+                            }
+                        ]
+                        textRole: "label"
 
-                currentIndex: {
-                    if (iconsPage.cfg_scaleIconsToFit) {
-                        return 0;
-                    } else {
-                        switch (iconsPage.cfg_iconSize) {
-                            case 0: return 2; // Small
-                            case 1: return 1; // SmallMedium
+                        currentIndex: {
+                            if (iconsPage.cfg_scaleIconsToFit) {
+                                return 0;
+                            } else {
+                                switch (iconsPage.cfg_iconSize) {
+                                    case 0: return 2; // Small
+                                    case 1: return 1; // SmallMedium
+                                }
+                            }
+                        }
+
+                        onActivated: index => {
+                            switch (model[currentIndex]["size"]) {
+                                case "scale":
+                                    iconsPage.cfg_scaleIconsToFit = true;
+                                    iconsPage.cfg_iconSize = 1; // Reset to default when scaling is enabled
+                                    break;
+                                case "smallMedium":
+                                    iconsPage.cfg_scaleIconsToFit = false;
+                                    iconsPage.cfg_iconSize = 1;
+                                    break;
+                                case "small":
+                                    iconsPage.cfg_scaleIconsToFit = false;
+                                    iconsPage.cfg_iconSize = 0;
+                                    break;
+                            }
                         }
                     }
                 }
+                Kirigami.FormEntry {
+                    contentItem: QQC2.ComboBox {
+                        id: spacingChooser
 
-                onActivated: index => {
-                    switch (model[currentIndex]["size"]) {
-                        case "scale":
-                            iconsPage.cfg_scaleIconsToFit = true;
-                            iconsPage.cfg_iconSize = 1; // Reset to default when scaling is enabled
-                            break;
-                        case "smallMedium":
-                            iconsPage.cfg_scaleIconsToFit = false;
-                            iconsPage.cfg_iconSize = 1;
-                            break;
-                        case "small":
-                            iconsPage.cfg_scaleIconsToFit = false;
-                            iconsPage.cfg_iconSize = 0; 
-                            break;
+                        Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Spacing:")
+                        Layout.preferredWidth: formLayout.maxComboboxWidth
+                        model: [
+                            {
+                                "label": i18nc("@item:inlistbox Icon spacing", "Small"),
+                                "spacing": 1
+                            },
+                            {
+                                "label": i18nc("@item:inlistbox Icon spacing", "Normal"),
+                                "spacing": 2
+                            },
+                            {
+                                "label": i18nc("@item:inlistbox Icon spacing", "Large"),
+                                "spacing": 6
+                            }
+                        ]
+                        textRole: "label"
+
+                        currentIndex: switch (iconsPage.cfg_iconSpacing) {
+                                case 1: return 0; // Small
+                                case 2: return 1; // Normal
+                                case 6: return 2; // Large
+                        }
+
+                        onActivated: index => {
+                            iconsPage.cfg_iconSpacing = model[currentIndex]["spacing"];
+                        }
                     }
                 }
-            }
+                Kirigami.FormEntry {
+                    contentItem: QQC2.ComboBox {
+                        id: layoutChooser
 
-            QQC2.ComboBox {
-                id: spacingChooser
+                        Kirigami.FormData.label: i18nc("@label:listbox Which direction system tray icons in the Panel emerge from the expander arrow", "Direction:")
+                        Layout.preferredWidth: formLayout.maxComboboxWidth
 
-                Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Spacing:")
-                Layout.preferredWidth: formLayout.maxComboboxWidth
-                model: [
-                    {
-                        "label": i18nc("@item:inlistbox Icon spacing", "Small"),
-                        "spacing": 1
-                    },
-                    {
-                        "label": i18nc("@item:inlistbox Icon spacing", "Normal"),
-                        "spacing": 2
-                    },
-                    {
-                        "label": i18nc("@item:inlistbox Icon spacing", "Large"),
-                        "spacing": 6
+                        textRole: "text"
+                        valueRole: "value"
+
+                        // Evaluate current system state for dynamic labels
+                        readonly property bool isRtl: Qt.application.layoutDirection === Qt.RightToLeft
+                        readonly property bool isVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
+
+                        model: {
+                            if (isVertical) {
+                                // Vertical default is arrow at bottom, expanding upwards
+                                return [
+                                    { "text": i18nc("@option:inlistbox tray orientation", "Bottom-to-top"), "value": false },
+                                    { "text": i18nc("@option:inlistbox tray orientation", "Top-to-bottom"), "value": true }
+                                ];
+                            } else if (isRtl) {
+                                // RTL default is arrow on left, expanding to the right
+                                return [
+                                    { "text": i18nc("@option:inlistbox tray orientation", "Left-to-right"), "value": false },
+                                    { "text": i18nc("@option:inlistbox tray orientation", "Right-to-left"), "value": true }
+                                ];
+                            } else {
+                                // Standard LTR default is arrow on right, expanding to the left
+                                return [
+                                    { "text": i18nc("@option:inlistbox tray orientation", "Right-to-left"), "value": false },
+                                    { "text": i18nc("@option:inlistbox tray orientation", "Left-to-right"), "value": true }
+                                ];
+                            }
+                        }
+
+                        currentIndex: iconsPage.cfg_reverseIconOrder ? 1 : 0
+                        onActivated: iconsPage.cfg_reverseIconOrder = currentValue;
                     }
-                ]
-                textRole: "label"
-
-                currentIndex: switch (iconsPage.cfg_iconSpacing) {
-                    case 1: return 0; // Small
-                    case 2: return 1; // Normal
-                    case 6: return 2; // Large
+                    subtitle: Kirigami.Settings.tabletMode ? i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode") : ""
                 }
-
-                onActivated: index => {
-                    iconsPage.cfg_iconSpacing = model[currentIndex]["spacing"];
-                }
-            }
-
-            QQC2.ComboBox {
-                id: layoutChooser
-
-                Kirigami.FormData.label: i18nc("@label:listbox Which direction system tray icons in the Panel emerge from the expander arrow", "Direction:")
-                Layout.preferredWidth: formLayout.maxComboboxWidth
-
-                textRole: "text"
-                valueRole: "value"
-
-                // Evaluate current system state for dynamic labels
-                readonly property bool isRtl: Qt.application.layoutDirection === Qt.RightToLeft
-                readonly property bool isVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
-
-                model: {
-                    if (isVertical) {
-                        // Vertical default is arrow at bottom, expanding upwards
-                        return [
-                            { "text": i18n("Bottom-to-top"), "value": false },
-                            { "text": i18n("Top-to-bottom"), "value": true }
-                        ];
-                    } else if (isRtl) {
-                        // RTL default is arrow on left, expanding to the right
-                        return [
-                            { "text": i18n("Left-to-right"), "value": false },
-                            { "text": i18n("Right-to-left"), "value": true }
-                        ];
-                    } else {
-                        // Standard LTR default is arrow on right, expanding to the left
-                        return [
-                            { "text": i18n("Right-to-left"), "value": false },
-                            { "text": i18n("Left-to-right"), "value": true }
-                        ];
-                    }
-                }
-
-                currentIndex: iconsPage.cfg_reverseIconOrder ? 1 : 0
-                onActivated: iconsPage.cfg_reverseIconOrder = currentValue;
-            }
-
-            QQC2.Label {
-                visible: Kirigami.Settings.tabletMode
-                text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
-                textFormat: Text.PlainText
-                font: Kirigami.Theme.smallFont
             }
         }
     }
