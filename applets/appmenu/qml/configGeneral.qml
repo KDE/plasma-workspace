@@ -5,31 +5,43 @@
 */
 
 import QtQuick
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.plasmoid
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
     property alias cfg_compactView: compactViewRadioButton.checked
     property alias cfg_allScreens: allScreensCheckBox.checked
 
-    Kirigami.FormLayout {
-        RadioButton {
-            id: compactViewRadioButton
-            text: i18n("Use single button for application menu")
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            QQC2.ButtonGroup { id: buttonGroup }
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    id: compactViewRadioButton
+                    QQC2.ButtonGroup.group: buttonGroup
+                    text: i18nc("@option:radio", "Use single button for application menu")
+                }
+            }
+
+            Kirigami.FormEntry {
+                contentItem: QQC2.RadioButton {
+                    id: fullViewRadioButton
+                    QQC2.ButtonGroup.group: buttonGroup
+                    checked: !compactViewRadioButton.checked
+                    text: i18nc("@option:radio", "Show full application menu")
+                }
+            }
         }
 
-        RadioButton {
-            id: fullViewRadioButton
-            checked: !compactViewRadioButton.checked
-            text: i18n("Show full application menu")
-        }
-
-        CheckBox {
-            id: allScreensCheckBox
-            text: i18n("Show menus for apps on different screens")
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                contentItem: QQC2.CheckBox {
+                    id: allScreensCheckBox
+                    text: i18nc("@option:check", "Show menus for apps on different screens")
+                }
+            }
         }
     }
 }
