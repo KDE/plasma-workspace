@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-13 01:01+0000\n"
-"PO-Revision-Date: 2026-09-13 08:56+0200\n"
+"PO-Revision-Date: 2026-11-12 09:39+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 26.08.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -49,44 +49,43 @@ msgstr "Batterie"
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Ion"
-msgstr ""
+msgstr "Lithium Ion"
 
 #: batterycontrol/upowerbattery_p.cpp:61
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Polymer"
-msgstr ""
+msgstr "Lithium Polymère"
 
 #: batterycontrol/upowerbattery_p.cpp:63
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Iron Phosphate"
-msgstr ""
+msgstr "Lithium Phosphate de fer"
 
 #: batterycontrol/upowerbattery_p.cpp:65
 #, kde-format
 msgctxt "battery technology"
 msgid "Lead Acid"
-msgstr ""
+msgstr "Acide Plomb"
 
 #: batterycontrol/upowerbattery_p.cpp:67
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Cadmium"
-msgstr ""
+msgstr "Nickel Cadmium"
 
 #: batterycontrol/upowerbattery_p.cpp:69
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Metal Hydride"
-msgstr ""
+msgstr "Hydrure métallique de nickel"
 
 #: batterycontrol/upowerbattery_p.cpp:163
-#, fuzzy, kde-format
-#| msgid "Battery"
+#, kde-format
 msgctxt "%1 is battery technology"
 msgid "%1 Battery"
-msgstr "Batterie"
+msgstr "Batterie %1"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format

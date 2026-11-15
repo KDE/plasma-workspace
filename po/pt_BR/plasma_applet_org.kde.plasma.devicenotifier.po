@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-24 00:46+0000\n"
-"PO-Revision-Date: 2026-02-20 09:09-0300\n"
+"PO-Revision-Date: 2026-11-14 17:19-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: actions/checkaction.cpp:71
 #, kde-format
@@ -222,7 +222,7 @@ msgstr "Clique para remover todos os dispositivos com segurança."
 #: qml/FullRepresentation.qml:163
 #, kde-format
 msgid "No removable devices attached"
-msgstr "Nenhum dispositivo não-removível anexado"
+msgstr "Nenhum dispositivo removível anexado"
 
 #: qml/FullRepresentation.qml:163
 #, kde-format

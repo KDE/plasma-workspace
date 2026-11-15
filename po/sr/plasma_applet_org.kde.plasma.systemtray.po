@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-15 00:48+0000\n"
-"PO-Revision-Date: 2017-01-14 19:23+0100\n"
-"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -167,7 +167,7 @@ msgstr "мала"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "сићушна"
 
 #: qml/ConfigGeneral.qml:264
 #, kde-format

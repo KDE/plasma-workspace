@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-02 16:27+0200\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -45,31 +45,31 @@ msgstr "Filter plave svetlosti čini boje na ekranu toplijim."
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily activated until %1."
-msgstr ""
+msgstr "Noćno svetlo je privremeno uključeno do %1."
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily activated until it is manually turned off."
-msgstr ""
+msgstr "Noćno svetlo je privremeno uključeno dok se ručno ne isključi."
 
 #: ui/main.qml:121
 #, kde-format
 msgctxt "@info Placeholder is for time"
 msgid "Night Light is temporarily suspended until %1."
-msgstr ""
+msgstr "Noćno svetlo je privremeno suspendovano do %1."
 
 #: ui/main.qml:123
 #, kde-format
 msgctxt "@info"
 msgid "Night Light is temporarily suspended until it is manually resumed."
-msgstr ""
+msgstr "Noćno svetlo je privremeno suspendovano dok se ručno ne nastavi."
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@action:button turn off Night Light feature"
 msgid "Turn Off"
-msgstr ""
+msgstr "Isključi"
 
 #: ui/main.qml:141
 #, kde-format
@@ -77,7 +77,7 @@ msgctxt ""
 "@action:button resume Light Light feature, which had been temporarily "
 "disabled"
 msgid "Resume"
-msgstr ""
+msgstr "Nastavi"
 
 #: ui/main.qml:159
 #, kde-format

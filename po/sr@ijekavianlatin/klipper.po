@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-10-07 11:45+0200\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -129,6 +129,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"Na stranici <interface>Podešavanje radnji</interface> uključite postavku "
+"<interface>Ponudi programe za kopirane veze i fajlove</interface> ili "
+"uključite bar jednu radnju da bi postavke na ovoj stranici imale ikakvog "
+"dejstva."
 
 #: configdialog.cpp:194
 #, kde-format
@@ -136,14 +140,7 @@ msgid "Show action popup menu:"
 msgstr "Prikaži iskačući meni radnji:"
 
 #: configdialog.cpp:211
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -153,10 +150,12 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Kada se izabere tekst koji se poklapa sa obrascem radnje, ili se izabere iz "
-"istorijata klipborda, automatski se prikazuje iskačući meni sa primjenljivim "
-"radnjama. Ako je automatski meni ovdje isključen, ili se ne prikazuje za "
-"izuzeti prozor, može se prikazati prečicom <shortcut>%1</shortcut>."
+"Kada se kopira ili izabere tekst koji se poklapa sa obrascem radnje, ili se "
+"takav tekst izabere iz istorijata klipborda, automatski se prikazuje "
+"iskačući meni sa primjenljivim radnjama. Za fajlove ovo važi samo kada se "
+"kopiraju ili izaberu iz istorijata.<nl/><nl/>Meni se može otvoriti i "
+"prečicom <shortcut>%1</shortcut> ili dugmetom pored svake odgovarajuće "
+"stavke u istorijatu."
 
 #: configdialog.cpp:228
 #, kde-format
@@ -193,16 +192,14 @@ msgid "Description"
 msgstr "opis"
 
 #: configdialog.cpp:276
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
-msgstr "Dodaj radnju..."
+msgstr "Dodaj radnju…"
 
 #: configdialog.cpp:280
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "Uredi radnju..."
+msgstr "Uredi radnju…"
 
 #: configdialog.cpp:285
 #, kde-format
@@ -329,7 +326,7 @@ msgstr "Očisti istorijat"
 #: declarative/qml/ClipboardMenu.qml:316
 #, kde-format
 msgid "Configure Clipboard…"
-msgstr ""
+msgstr "Podesi klipbord…"
 
 #: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
@@ -342,25 +339,17 @@ msgid "Starred Only"
 msgstr "Samo sa zvjezdicom"
 
 #: declarative/qml/ClipboardMenu.qml:381
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
-"Klipbord trenutno sadrži osjetljiv podatak koji neće biti sačuvan u "
+"Klipbord i izbor trenutno sadrže osjetljiv podatak koji neće biti sačuvan u "
 "istorijatu."
 
 #: declarative/qml/ClipboardMenu.qml:383
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
@@ -370,18 +359,13 @@ msgstr ""
 "istorijatu."
 
 #: declarative/qml/ClipboardMenu.qml:385
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "The clipboard currently holds a sensitive piece of data that will not be "
-#| "stored in the history."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
 msgstr ""
-"Klipbord trenutno sadrži osjetljiv podatak koji neće biti sačuvan u "
-"istorijatu."
+"Izbor trenutno sadrži osjetljiv podatak koji neće biti sačuvan u istorijatu."
 
 #: declarative/qml/ClipboardMenu.qml:397
 #, kde-format
@@ -563,16 +547,14 @@ msgstr ""
 "prečicom <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
-msgstr "Dodaj naredbu..."
+msgstr "Dodaj naredbu…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
-msgstr "Uredi naredbu..."
+msgstr "Uredi naredbu…"
 
 #: editactiondialog.cpp:280
 #, kde-format
@@ -690,11 +672,10 @@ msgid "Remove Starred Item"
 msgstr "Uklanjanje stavke sa zvjezdicom"
 
 #: klipper.cpp:69
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "Iskačući prozor klipborda"
+msgstr "Klipbord"
 
 #: klipper.cpp:73
 #, kde-format
@@ -731,14 +712,13 @@ msgstr "&Prikaži bar‑kod…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Rotiraj istorijat nadolje"
 
 #: klipper.cpp:133
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Očisti istorijat"
+msgstr "Rotiraj istorijat nagore"
 
 #: klipper.cpp:140
 #, kde-format
@@ -754,18 +734,17 @@ msgstr "Istorijat klipborda"
 #: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Novije: "
 
 #: klipper.cpp:435
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "tekuće"
+msgstr "Trenutno: "
 
 #: klipper.cpp:442
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Starije: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -854,21 +833,19 @@ msgstr "Smiješta slike u istorijat klipborda."
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Kada se kopira tekst ili fajl"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr "Prikaži iskačući meni primjenljivih radnji čim se nešto izabere."
+msgstr "Prikaži iskačući meni čim se kopira tekst ili fajl."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
 #, kde-format
 msgid "When text is selected"
-msgstr ""
+msgstr "Kada se izabere tekst"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -876,7 +853,7 @@ msgstr ""
 msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
-msgstr ""
+msgstr "Prikaži iskačući meni čim se izabere tekst, bez čekanja da se kopira."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -929,10 +906,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Za stavku izabranu iz istorijata"
+msgstr "Kada se stavka izabere iz istorijata"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -971,20 +947,3 @@ msgstr "Iskačući prozor klipborda"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Odustani"
-
-#~ msgid "Immediately on selection"
-#~ msgstr "Odmah pri izboru"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Next History Item"
-#~ msgstr "Sljedeća stavka istorijata"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Previous History Item"
-#~ msgstr "Prethodna stavka istorijata"
-
-#~ msgid "up"
-#~ msgstr "gore"
-
-#~ msgid "down"
-#~ msgstr "dolje"

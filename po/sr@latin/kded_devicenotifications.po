@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-16 00:50+0000\n"
-"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -24,18 +24,16 @@ msgid "Display Detected"
 msgstr "Otkriven ekran"
 
 #: devicenotifications.cpp:511
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been connected."
 msgstr "Priključeno: %1."
 
 #: devicenotifications.cpp:514
-#, fuzzy, kde-format
-#| msgid "%1 has been connected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been connected."
-msgstr "Priključeno: %1."
+msgstr "Priključeno: %1 %2 (%3)."
 
 #: devicenotifications.cpp:549
 #, kde-format
@@ -44,18 +42,16 @@ msgid "Display Removed"
 msgstr "Uklonjen ekran"
 
 #: devicenotifications.cpp:551
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display connector (e.g. HDMI-1)"
 msgid "%1 has been disconnected."
 msgstr "Isključeno: %1."
 
 #: devicenotifications.cpp:554
-#, fuzzy, kde-format
-#| msgid "%1 has been disconnected."
+#, kde-format
 msgctxt "Display manufacturer, model (connector name)"
 msgid "%1 %2 (%3) has been disconnected."
-msgstr "Isključeno: %1."
+msgstr "Isključeno: %1 %2 (%3)."
 
 #: devicenotifications.cpp:602
 #, kde-format
@@ -88,9 +84,3 @@ msgstr "USB uređaj je isključen."
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "Uklonjen USB uređaj"
-
-#~ msgid "A display has been connected."
-#~ msgstr "Ekran je priključen."
-
-#~ msgid "A display has been disconnected."
-#~ msgstr "Ekran je isključen."

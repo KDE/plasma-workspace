@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-13 01:01+0000\n"
-"PO-Revision-Date: 2026-10-02 15:10+0200\n"
+"PO-Revision-Date: 2026-11-14 16:15+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@ijekavianlatin\n"
@@ -44,44 +44,43 @@ msgstr "Baterija"
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Ion"
-msgstr ""
+msgstr "Litijum-jonska"
 
 #: batterycontrol/upowerbattery_p.cpp:61
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Polymer"
-msgstr ""
+msgstr "Litijum-polimerska"
 
 #: batterycontrol/upowerbattery_p.cpp:63
 #, kde-format
 msgctxt "battery technology"
 msgid "Lithium Iron Phosphate"
-msgstr ""
+msgstr "Litijum-gvožđe-fosfatna"
 
 #: batterycontrol/upowerbattery_p.cpp:65
 #, kde-format
 msgctxt "battery technology"
 msgid "Lead Acid"
-msgstr ""
+msgstr "Olovo-kiselinska"
 
 #: batterycontrol/upowerbattery_p.cpp:67
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Cadmium"
-msgstr ""
+msgstr "Nikl‑kadmijumska"
 
 #: batterycontrol/upowerbattery_p.cpp:69
 #, kde-format
 msgctxt "battery technology"
 msgid "Nickel Metal Hydride"
-msgstr ""
+msgstr "Nikl‑metalhidridna"
 
 #: batterycontrol/upowerbattery_p.cpp:163
-#, fuzzy, kde-format
-#| msgid "Battery"
+#, kde-format
 msgctxt "%1 is battery technology"
 msgid "%1 Battery"
-msgstr "Baterija"
+msgstr "%1 baterija"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
