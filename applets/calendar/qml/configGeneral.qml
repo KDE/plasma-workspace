@@ -14,33 +14,35 @@ KCM.SimpleKCM {
     property alias cfg_showWeekNumbers: showWeekNumbers.checked
     property string cfg_compactDisplay
 
-    Kirigami.FormLayout {
-        QtControls.CheckBox {
-            id: showWeekNumbers
-
-            Kirigami.FormData.label: i18n("Calendar version:")
-
-            text: i18n("Show week numbers")
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@option:check prefix", "Full calendar:")
+                contentItem: QtControls.CheckBox {
+                    id: showWeekNumbers
+                    text: i18nc("@option:check", "Show week numbers")
+                }
+            }
         }
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@title group radio button prefix What information is shown in the calendar icon", "Icon:")
+                contentItem: QtControls.RadioButton {
 
-        Item {
-            Kirigami.FormData.isSection: true
-        }
+                    text: i18nc("@option: radio Show the number of the day (eg. 31) in the icon", "Show day of the month")
 
+                    checked: root.cfg_compactDisplay == "d"
+                    onCheckedChanged: if (checked) root.cfg_compactDisplay = "d"
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QtControls.RadioButton {
+                    text: i18nc("option:radio Show the week number (eg. 50) in the icon", "Show week number")
 
-        QtControls.RadioButton {
-            Kirigami.FormData.label: i18nc("What information is shown in the calendar icon", "Compact version:")
-
-            text: i18nc("Show the number of the day (eg. 31) in the icon", "Show day of the month")
-
-            checked: root.cfg_compactDisplay == "d"
-            onCheckedChanged: if (checked) root.cfg_compactDisplay = "d"
-        }
-        QtControls.RadioButton {
-            text: i18nc("Show the week number (eg. 50) in the icon", "Show week number")
-
-            checked: root.cfg_compactDisplay == "w"
-            onCheckedChanged: if (checked) root.cfg_compactDisplay = "w"
+                    checked: root.cfg_compactDisplay == "w"
+                    onCheckedChanged: if (checked) root.cfg_compactDisplay = "w"
+                }
+            }
         }
     }
 }
