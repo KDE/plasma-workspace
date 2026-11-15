@@ -13,15 +13,21 @@ KCM.SimpleKCM {
     property alias cfg_showSecondHand: showSecondHandCheckBox.checked
     property alias cfg_showTimezoneString: showTimezoneCheckBox.checked
 
-    Kirigami.FormLayout {
-        CheckBox {
-            id: showSecondHandCheckBox
-            text: i18n("Show seconds hand")
-            Kirigami.FormData.label: i18n("General:")
-        }
-        CheckBox {
-            id: showTimezoneCheckBox
-            text: i18n("Show time zone")
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@title:group", "General:")
+                contentItem: CheckBox {
+                    id: showSecondHandCheckBox
+                    text: i18nc("@option:check", "Show seconds hand")
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: CheckBox {
+                    id: showTimezoneCheckBox
+                    text: i18nc("@option:check", "Show time zone")
+                }
+            }
         }
     }
 }
