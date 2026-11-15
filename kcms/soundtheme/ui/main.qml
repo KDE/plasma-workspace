@@ -125,9 +125,12 @@ KCM.GridViewKCM {
                 textFormat: Text.PlainText
                 opacity: 0.75
                 wrapMode: Text.WordWrap
+                maximumLineCount: 3 - basedOn.visible
+                elide: Text.ElideRight
                 Layout.fillWidth: true
             }
             QQC2.Label {
+                id: basedOn
                 visible: theme.inherits.length > 0
                 // We add a plural translation in case some language requires different strings
                 text: i18ncp("%2 is a theme name or a list of theme names that the current theme inherits from",
