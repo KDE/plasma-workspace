@@ -12,6 +12,7 @@
         "Description[ka]": "გადაატარებს გარეგნობის პარამეტრებს, მაგ: კურსორის თემას, X11 აპლიკაციებზე",
         "Description[lt]": "Taiko X11 programoms išvaizdos nuostatas, pvz., žymeklio apipavidalinimą",
         "Description[nl]": "Past instellingen voor uiterlijk aan, zoals het cursorthema op X11-toepassingen",
+        "Description[nn]": "Tek i bruk utsjånad-innstillingar, for eksempel peikartema, i X11-program",
         "Description[pl]": "Nakłada ustawienia wyglądu, np. zestaw wskaźników, na aplikacje X11",
         "Description[pt_BR]": "Aplica configurações de aparência, como o tema do cursor, a aplicativos X11",
         "Description[ru]": "Применение параметров внешнего вида, например темы курсоров, к приложениям X11",
