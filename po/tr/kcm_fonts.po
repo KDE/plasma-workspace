@@ -11,13 +11,13 @@
 # Serdar Soytetir <tulliana@gmail.com>, 2008, 2012.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2014, 2015, 2017, 2021, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-13 00:48+0000\n"
-"PO-Revision-Date: 2026-04-24 16:21+0300\n"
+"PO-Revision-Date: 2026-11-15 20:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -25,43 +25,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
 #, kde-format
 msgid "General font"
-msgstr "Genel yazıtipi"
+msgstr "Genel yazı tipi"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:17
 #, kde-format
 msgid "Fixed width font"
-msgstr "Eş aralıklı yazıtipi"
+msgstr "Eş aralıklı yazı tipi"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:25
 #, kde-format
 msgid "Small font"
-msgstr "Küçük yazıtipi"
+msgstr "Küçük yazı tipi"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:33
 #, kde-format
 msgid "Tool bar font"
-msgstr "Araç çubuğu yazıtipi"
+msgstr "Araç çubuğu yazı tipi"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
-msgstr "Menü yazıtipi"
+msgstr "Menü yazı tipi"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:51
 #, kde-format
 msgid "Window title font"
-msgstr "Pencere başlığı yazıtipi"
+msgstr "Pencere başlığı yazı tipi"
 
 #: kxftconfig.cpp:453
 #, kde-format
@@ -152,8 +152,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
-"Çok büyük yazıtipleri tuhaf görünen sonuçlar üretebilir. Çok büyük bir "
-"yazıtipi puntosu kullanmak yerine global ekran ölçeğini ayarlamayı düşünün."
+"Çok büyük yazı tipleri tuhaf görünen sonuçlar üretebilir. Çok büyük bir yazı "
+"tipi puntosu kullanmak yerine global ekran ölçeğini ayarlamayı düşünün."
 
 #: ui/main.qml:77
 #, kde-kuit-format
@@ -163,9 +163,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
-"“Tabela” yazıtipleri <link url='https://wikipedia.org/wiki/"
+"“Tabela” (Display) yazı tipleri <link url='https://wikipedia.org/wiki/"
 "Display_typeface'>bilgisayar ekranlarında kullanım için değildir</link> ve "
-"garip sonuçlar verebilirler. Başka bir yazıtipi kullanmayı düşünün."
+"garip sonuçlar verebilirler. Başka bir yazı tipi kullanmayı düşünün."
 
 #: ui/main.qml:95
 #, kde-format
@@ -174,7 +174,7 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
-"Plasma, 4 puntodan daha küçük yazıtipleriyle çalışmak üzere "
+"Plasma, 4 puntodan daha küçük yazı tipleriyle çalışmak üzere "
 "tasarlanmamıştır. Boyut, 4 punto olarak geri değiştirildi."
 
 #: ui/main.qml:111
@@ -184,13 +184,13 @@ msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Çok küçük yazıtipleri tuhaf görünen sonuçlar üretebilir. Çok küçük bir punto "
-"kullanmak yerine global ekran ölçeğini ayarlamayı düşünün."
+"Çok küçük yazı tipleri tuhaf görünen sonuçlar üretebilir. Çok küçük bir "
+"punto kullanmak yerine global ekran ölçeğini ayarlamayı düşünün."
 
 #: ui/main.qml:137
 #, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "&Tüm Yazıtiplerini Ayarla…"
+msgstr "&Tüm Yazı Tiplerini Ayarla…"
 
 #: ui/main.qml:150
 #, kde-format
@@ -200,7 +200,7 @@ msgstr "Genel:"
 #: ui/main.qml:151
 #, kde-format
 msgid "Select general font"
-msgstr "Genel yazıtipini seç"
+msgstr "Genel yazı tipini seç"
 
 #: ui/main.qml:162
 #, kde-format
@@ -210,7 +210,7 @@ msgstr "Eş aralıklı:"
 #: ui/main.qml:163
 #, kde-format
 msgid "Select fixed width font"
-msgstr "Eş aralıklı yazıtipi seç"
+msgstr "Eş aralıklı yazı tipi seç"
 
 #: ui/main.qml:174
 #, kde-format
@@ -220,7 +220,7 @@ msgstr "Küçük:"
 #: ui/main.qml:175
 #, kde-format
 msgid "Select small font"
-msgstr "Küçük yazıtipi seç"
+msgstr "Küçük yazı tipi seç"
 
 #: ui/main.qml:186
 #, kde-format
@@ -230,7 +230,7 @@ msgstr "Araç çubuğu:"
 #: ui/main.qml:187
 #, kde-format
 msgid "Select toolbar font"
-msgstr "Araç çubuğu yazıtipini seç"
+msgstr "Araç çubuğu yazı tipini seç"
 
 #: ui/main.qml:198
 #, kde-format
@@ -240,7 +240,7 @@ msgstr "Menü:"
 #: ui/main.qml:199
 #, kde-format
 msgid "Select menu font"
-msgstr "Menü yazıtipini seçin"
+msgstr "Menü yazı tipini seçin"
 
 #: ui/main.qml:209
 #, kde-format
@@ -250,7 +250,7 @@ msgstr "Pencere başlığı:"
 #: ui/main.qml:210
 #, kde-format
 msgid "Select window title font"
-msgstr "Pencere başlığı yazıtipini seç"
+msgstr "Pencere başlığı yazı tipini seç"
 
 #: ui/main.qml:225
 #, kde-format
@@ -274,7 +274,7 @@ msgid ""
 msgstr ""
 "Görüntülerdeki pikseller genellikle bir ızgarada hizalanır. Bu nedenle, bu "
 "etkiyi azaltmak için <emphasis>kenar yumuşatma (anti-aliasing)</emphasis> "
-"teknikleri kullanılmadığı sürece, bu ızgarayla hizalanmayan yazıtiplerinin "
+"teknikleri kullanılmadığı sürece, bu ızgarayla hizalanmayan yazı tiplerinin "
 "şekilleri bloklu ve yanlış görünecektir. Sorunlara neden olmadıkça "
 "genellikle bu seçeneği etkin tutmak istersiniz."
 
@@ -314,7 +314,7 @@ msgid ""
 msgstr ""
 "<para>TFT veya LCD ekranlarda her bir piksel aslında üç veya dört küçük "
 "monokrom ışıktan oluşur. Bu <emphasis>alt pikseller</emphasis>, görüntülenen "
-"yazıtiplerinin kalitesini daha da iyileştirmek için bağımsız olarak "
+"yazı tiplerinin kalitesini daha da iyileştirmek için bağımsız olarak "
 "değiştirilebilir.</para><para>Sunum kalitesi, yalnızca seçim, alt "
 "piksellerin biçimiyle eşleşirse iyileştirilir, ekranınız hizalanır. Çoğu "
 "ekranın <emphasis>RGB</emphasis> alt piksellerinin doğrusal sıralaması "
@@ -337,7 +337,7 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
-"Piksel hizalaması; bir yazıtipine gömülü gölgelerin, özellikle küçük "
+"Piksel hizalaması; bir yazı tipine gömülü gölgelerin, özellikle küçük "
 "boyutlarda sunum kalitesini artırmak için kullanıldığı bir tekniktir. Daha "
 "güçlü gölgeler genellikle daha keskin kenarlara yol açar, ancak küçük "
 "harfler büyük boyutlarda şekillerine daha az benzeyecektir."

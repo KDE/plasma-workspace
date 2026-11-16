@@ -4,14 +4,14 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
-# SPDX-FileCopyrightText: 2026 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2026 Marcus Gama <marcus.gama@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-11-15 20:58+0000\n"
 "PO-Revision-Date: 2026-03-11 08:51-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Last-Translator: Marcus Gama <marcus.gama@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -75,7 +75,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Ativar sons de notificação"
 
-#: ui/main.qml:134
+#: ui/main.qml:137
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -85,7 +85,7 @@ msgid_plural "Based on: %2"
 msgstr[0] "Baseado em: %2"
 msgstr[1] "Baseado em: %2"
 
-#: ui/main.qml:147
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -93,36 +93,36 @@ msgctxt ""
 msgid "Preview:"
 msgstr "Prévia:"
 
-#: ui/main.qml:166
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Prévia do som \"%1\""
 
-#: ui/main.qml:188
+#: ui/main.qml:191
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Ouvir prévia do som de demonstração do tema \"%1\""
 
-#: ui/main.qml:225
+#: ui/main.qml:228
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "O tema %1 não inclui o som '%2'"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Falha ao reproduzir prévia do som: %1"
 
-#: ui/main.qml:246
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
 msgstr "Escolher tema de som"
 
-#: ui/main.qml:248
+#: ui/main.qml:251
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
 msgstr "Arquivos de tema (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

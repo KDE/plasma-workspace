@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-12 22:21+0000\n"
-"PO-Revision-Date: 2026-11-10 21:36+0300\n"
+"PO-Revision-Date: 2026-11-15 19:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -242,7 +242,7 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
-"Metin, sistem yazıtipini izler ve kullanılabilir alanı dolduracak biçimde "
+"Metin, sistem yazı tipini izler ve kullanılabilir alanı dolduracak biçimde "
 "genişler."
 
 #: configAppearance.qml:302
@@ -273,7 +273,7 @@ msgstr "Not: Panel yeterince kalın değilse boyut azaltılabilir."
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr "Bir Yazıtipi Seç"
+msgstr "Bir Yazı Tipi Seç"
 
 #: configCalendar.qml:50
 #, kde-format

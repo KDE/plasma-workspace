@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-11-15 20:58+0000\n"
 "PO-Revision-Date: 2026-07-07 22:10+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -72,7 +72,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Aktivera underrättelseljud"
 
-#: ui/main.qml:134
+#: ui/main.qml:137
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -82,7 +82,7 @@ msgid_plural "Based on: %2"
 msgstr[0] "Baserat på: %2"
 msgstr[1] "Baserade på: %2"
 
-#: ui/main.qml:147
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -90,36 +90,36 @@ msgctxt ""
 msgid "Preview:"
 msgstr "Lyssna:"
 
-#: ui/main.qml:166
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Lyssna på ljudet \"%1\""
 
-#: ui/main.qml:188
+#: ui/main.qml:191
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Lyssna på demonstrationsljudet för temat \"%1\""
 
-#: ui/main.qml:225
+#: ui/main.qml:228
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "Temat %1 innehåller inte ljudet '%2'"
 
-#: ui/main.qml:230
+#: ui/main.qml:233
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Misslyckades lyssna på ljudet: %1"
 
-#: ui/main.qml:246
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
 msgstr "Välj ljudtema"
 
-#: ui/main.qml:248
+#: ui/main.qml:251
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
 msgstr "Temafiler (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
