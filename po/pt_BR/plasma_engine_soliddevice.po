@@ -4,7 +4,7 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2011, 2018, 2019, 2020, 2021.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2010, 2011, 2013, 2014, 2015, 2018, 2019.
-# Marcus Gama <marcus.gama@gmail.com>, 2012.
+# Marcus Gama <marcus.gama@kde.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"

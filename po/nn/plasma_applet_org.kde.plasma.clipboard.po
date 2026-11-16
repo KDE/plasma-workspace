@@ -18,7 +18,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.07.70\n"
+"X-Generator: Lokalize 27.03.70\n"
 
 #: contents/ui/BarcodePage.qml:36
 #, kde-format
@@ -130,7 +130,6 @@ msgstr "Ingen treff"
 
 #: contents/ui/UrlItemDelegate.qml:99
 #, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
+msgctxt "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
 msgstr "+%1"

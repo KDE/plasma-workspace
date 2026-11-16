@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 27.03.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -57,9 +57,7 @@ msgstr "Set opp hendingar …"
 
 #: package/contents/ui/ApplicationConfiguration.qml:130
 #, kde-format
-msgid ""
-"This application does not support configuring notifications on a per-event "
-"basis."
+msgid "This application does not support configuring notifications on a per-event basis."
 msgstr "Programmet støttar ikkje oppsett av varslingar på hendingsbasis."
 
 #: package/contents/ui/main.qml:18
@@ -69,14 +67,8 @@ msgstr "Med denne modulen kan du setja opp program- og systemvarslingar."
 
 #: package/contents/ui/main.qml:42
 #, kde-format
-msgid ""
-"Could not find a 'Notifications' widget, which is required for displaying "
-"notifications. Make sure that it is enabled either in your System Tray or as "
-"a standalone widget."
-msgstr ""
-"Fann ikkje noko varslingselement, som trengst for vising av varslingar. Sjå "
-"til at eit slikt element er tilgjengeleg anten i systemtrauet eller som eit "
-"frittståande skjermelement."
+msgid "Could not find a 'Notifications' widget, which is required for displaying notifications. Make sure that it is enabled either in your System Tray or as a standalone widget."
+msgstr "Fann ikkje noko varslingselement, som trengst for vising av varslingar. Sjå til at eit slikt element er tilgjengeleg anten i systemtrauet eller som eit frittståande skjermelement."
 
 #: package/contents/ui/main.qml:53
 #, kde-format
@@ -262,9 +254,7 @@ msgstr "Fann ikkje program eller hendingar i samsvar med søkjeteksten"
 
 #: package/contents/ui/SourcesPage.qml:152
 #, kde-format
-msgid ""
-"Select an application from the list to configure its notification settings "
-"and behavior."
+msgid "Select an application from the list to configure its notification settings and behavior."
 msgstr "Vel eit program frå lista for å velja varslingsinnstillingar"
 
 #: sourcesmodel.cpp:363

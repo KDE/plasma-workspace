@@ -16,7 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 27.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -31,27 +31,17 @@ msgstr "Utval og utklippstavle:"
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
-"When text or an area of the screen is highlighted with the mouse or "
-"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
-"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
-"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
-"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
-"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
-"keeps the selection and the clipboard the same, so that any selection is "
-"immediately available to paste by any means. If it is turned off, the "
-"selection may still be saved in the clipboard history (subject to the "
-"options below), but it can only be pasted using the middle mouse button."
+"When text or an area of the screen is highlighted with the mouse or keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using the middle mouse button.<nl/>"
+"<nl/>"
+"If the selection is explicitly copied using a <interface>Copy</interface> or <interface>Cut</interface> action, it is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a <interface>Paste</interface> action. <nl/>"
+"<nl/>"
+"When turned on this option keeps the selection and the clipboard the same, so that any selection is immediately available to paste by any means. If it is turned off, the selection may still be saved in the clipboard history (subject to the options below), but it can only be pasted using the middle mouse button."
 msgstr ""
-"Tekst eller skjermområde merkt med musa eller tastaturet vert kalla "
-"<emphasis>utvalet</emphasis>. Du kan lima det inn med midtknappen på musa."
-"<nl/><nl/>Viss utvalet vert kopiert med ei <interface>Kopier</interface> "
-"eller <interface>Klipp ut</interface>-handling, vert det lagra til "
-"<emphasis>utklippstavla</emphasis>. Du kan lima det inn att med ei "
-"<interface>Lim inn</interface>-handling. <nl/><nl/>Når det er kryssa av her, "
-"vert utklippstavla og utvalet automatisk synkroniserte, slik at dei alltid "
-"inneheld det same, og dette innhaldet kan limast inn på valfri måte. Viss "
-"det ikkje er kryssa av her, kan likevel utvalet lagrast i utklippstavla "
-"(avhengig av vala nedanfor), men det kan berre limast inn med midtknappen."
+"Tekst eller skjermområde merkt med musa eller tastaturet vert kalla <emphasis>utvalet</emphasis>. Du kan lima det inn med midtknappen på musa.<nl/>"
+"<nl/>"
+"Viss utvalet vert kopiert med ei <interface>Kopier</interface> eller <interface>Klipp ut</interface>-handling, vert det lagra til <emphasis>utklippstavla</emphasis>. Du kan lima det inn att med ei <interface>Lim inn</interface>-handling. <nl/>"
+"<nl/>"
+"Når det er kryssa av her, vert utklippstavla og utvalet automatisk synkroniserte, slik at dei alltid inneheld det same, og dette innhaldet kan limast inn på valfri måte. Viss det ikkje er kryssa av her, kan likevel utvalet lagrast i utklippstavla (avhengig av vala nedanfor), men det kan berre limast inn med midtknappen."
 
 #: configdialog.cpp:106
 #, kde-format
@@ -98,11 +88,8 @@ msgstr "Lagra aldri i historikken"
 
 #: configdialog.cpp:185
 #, kde-format
-msgid ""
-"Whether non-text selections (such as images) are saved in the clipboard "
-"history."
-msgstr ""
-"Om merkt ikkje-tekst (eksempelvis bilete) skal lagrast på utklippstavla."
+msgid "Whether non-text selections (such as images) are saved in the clipboard history."
+msgstr "Om merkt ikkje-tekst (eksempelvis bilete) skal lagrast på utklippstavla."
 
 #: configdialog.cpp:259
 #, kde-format
@@ -112,18 +99,8 @@ msgstr "Vis handlingsmeny som sprettopp:"
 #: configdialog.cpp:269
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"When text that matches an action pattern is selected or is chosen from the "
-"clipboard history, automatically show the popup menu with applicable "
-"actions. If the automatic menu is turned off here, or it is not shown for an "
-"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
-"key shortcut."
-msgstr ""
-"Viss det er kryssa av her og tekst som passar til eit handlings­mønster vert "
-"merkt eller valt frå utklipps­historikken, vert det automatisk vist ein "
-"sprettopp­meny med moglege handlingar. Viss det ikkje er kryssa av, eller "
-"viss eit vindauge er ekskludert, kan du likevel visa menyen via snøggtasten "
-"<shortcut>%1</shortcut>."
+msgid "When text that matches an action pattern is selected or is chosen from the clipboard history, automatically show the popup menu with applicable actions. If the automatic menu is turned off here, or it is not shown for an excluded window, then it can be shown by using the <shortcut>%1</shortcut> key shortcut."
+msgstr "Viss det er kryssa av her og tekst som passar til eit handlings­mønster vert merkt eller valt frå utklipps­historikken, vert det automatisk vist ein sprettopp­meny med moglege handlingar. Viss det ikkje er kryssa av, eller viss eit vindauge er ekskludert, kan du likevel visa menyen via snøggtasten <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:278
 #, kde-format
@@ -157,14 +134,8 @@ msgstr "Ekskluder vindauge"
 #: configdialog.cpp:359
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"When a <interface>match pattern</interface> matches the clipboard contents, "
-"its <interface>commands</interface> appear in the Klipper popup menu and can "
-"be executed."
-msgstr ""
-"Når eit <interface>mønster</interface> er i samsvar med innhaldet på utklipps­"
-"tavla, vert tilhøyrande <interface>kommando</interface> vist i "
-"sprettoppmenyen."
+msgid "When a <interface>match pattern</interface> matches the clipboard contents, its <interface>commands</interface> appear in the Klipper popup menu and can be executed."
+msgstr "Når eit <interface>mønster</interface> er i samsvar med innhaldet på utklipps­tavla, vert tilhøyrande <interface>kommando</interface> vist i sprettoppmenyen."
 
 #: configdialog.cpp:368
 #, kde-format
@@ -196,22 +167,18 @@ msgstr "Slett handling"
 #: configdialog.cpp:390
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"These actions appear in the popup menu which can be configured on the "
-"<interface>Action Menu</interface> page."
-msgstr ""
-"Desse handlingane vert viste i sprettopp­menyen, som du kan endra "
-"innstillingane for på sida <interface>Handlingsmeny</interface>."
+msgid "These actions appear in the popup menu which can be configured on the <interface>Action Menu</interface> page."
+msgstr "Desse handlingane vert viste i sprettopp­menyen, som du kan endra innstillingane for på sida <interface>Handlingsmeny</interface>."
 
 #: configdialog.cpp:574
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"Delete the selected action <resource>%1</resource><nl/>and all of its "
-"commands?"
+"Delete the selected action <resource>%1</resource><nl/>"
+"and all of its commands?"
 msgstr ""
-"Vil du sletta handlinga <resource>%1</resource><nl/>og alle tilhøyrande "
-"kommandoar?"
+"Vil du sletta handlinga <resource>%1</resource><nl/>"
+"og alle tilhøyrande kommandoar?"
 
 #: configdialog.cpp:575
 #, kde-format
@@ -266,36 +233,29 @@ msgstr "Snøggtastoppsett"
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
+"The action popup will not be shown automatically for these windows, even if it is enabled. This is because, for example, a web browser may highlight a URL in the address bar while typing, so the menu would show for every keystroke.<nl/>"
+"<nl/>"
+"If the action menu appears unexpectedly when using a particular application, then add it to this list. <link>How to find the name to enter</link>."
 msgstr ""
-"Sjølv om sprettoppmenyen med handlingar er slått på, vert han ikkje vist "
-"automatisk for desse vindauga. Dette kan for eksempel vera nyttig for "
-"nettlesarar, der nettadresser i adresse­linja kan verta markert mens du skriv "
-"dei inn, noko som ville ført til at menyen vart vist ved alle tastetrykk.<nl/"
-"><nl/>Viss handlingsmenyen dukkar opp i eit program når du ikkje ønskjer "
-"det, kan du registrera programmet her. <link>Korleis finn rett namn å "
-"registrera</link>."
+"Sjølv om sprettoppmenyen med handlingar er slått på, vert han ikkje vist automatisk for desse vindauga. Dette kan for eksempel vera nyttig for nettlesarar, der nettadresser i adresse­linja kan verta markert mens du skriv dei inn, noko som ville ført til at menyen vart vist ved alle tastetrykk.<nl/>"
+"<nl/>"
+"Viss handlingsmenyen dukkar opp i eit program når du ikkje ønskjer det, kan du registrera programmet her. <link>Korleis finn rett namn å registrera</link>."
 
 #: configdialog.cpp:703
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
+"The name that needs to be entered here is the WM_CLASS name of the window to be excluded. To find the WM_CLASS name for a window, in another terminal window enter the command:<nl/>"
+"<nl/>"
+"&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/>"
+"<nl/>"
+"and click on the window that you want to exclude. The first name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
-"Namnet du skal skriva inn her, er WM_CLASS-namnet til vindauget du vil "
-"ekskludera. Du finn det ved å skriva inn følgjande kommando i eit "
-"terminalvindauge.<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>Trykk så på vindauget du vil ekskludera. Namnet du skal "
-"bruka, er det første namnet etter likskaps­teiknet i teksten som kjem opp."
+"Namnet du skal skriva inn her, er WM_CLASS-namnet til vindauget du vil ekskludera. Du finn det ved å skriva inn følgjande kommando i eit terminalvindauge.<nl/>"
+"<nl/>"
+"&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/>"
+"<nl/>"
+"Trykk så på vindauget du vil ekskludera. Namnet du skal bruka, er det første namnet etter likskaps­teiknet i teksten som kjem opp."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -335,15 +295,8 @@ msgstr "Handlingseigenskapar"
 #: editactiondialog.cpp:191
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"An action takes effect when its <interface>match pattern</interface> matches "
-"the clipboard contents. When this happens, the action's <interface>commands</"
-"interface> appear in the Klipper popup menu; if one of them is chosen, the "
-"command is executed."
-msgstr ""
-"Handling trer i kraft når <interface>mønsteret</interface> er i samsvar med "
-"innhaldet på utklippstavla. Då vil <interface>kommandoane</interface> til "
-"handlinga visast i sprettopp­menyen. Trykk på ein kommando for å køyra han."
+msgid "An action takes effect when its <interface>match pattern</interface> matches the clipboard contents. When this happens, the action's <interface>commands</interface> appear in the Klipper popup menu; if one of them is chosen, the command is executed."
+msgstr "Handling trer i kraft når <interface>mønsteret</interface> er i samsvar med innhaldet på utklippstavla. Då vil <interface>kommandoane</interface> til handlinga visast i sprettopp­menyen. Trykk på ein kommando for å køyra han."
 
 #: editactiondialog.cpp:203
 #, kde-format
@@ -359,14 +312,8 @@ msgstr "Mønster:"
 #: editactiondialog.cpp:208
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"The match pattern is a regular expression. For more information see the "
-"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
-"entry</link> for this topic."
-msgstr ""
-"Mønsteret er eit regulært uttrykk. Sjå <link url=\"https://en.wikipedia.org/"
-"wiki/Regular_expression\">Wikipedia-artikkelen om regulære uttrykk</link> "
-"for meir informasjon."
+msgid "The match pattern is a regular expression. For more information see the <link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry</link> for this topic."
+msgstr "Mønsteret er eit regulært uttrykk. Sjå <link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia-artikkelen om regulære uttrykk</link> for meir informasjon."
 
 #: editactiondialog.cpp:219
 #, kde-format
@@ -386,17 +333,8 @@ msgstr "Ta med i automatisk sprettopp"
 #: editactiondialog.cpp:227
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"The commands for this match will be included in the automatic action popup, "
-"if it is enabled in the <interface>Action Menu</interface> page. If this "
-"option is turned off, the commands for this match will not be included in "
-"the automatic popup but they will be included if the popup is activated "
-"manually with the <shortcut>%1</shortcut> key shortcut."
-msgstr ""
-"Viss det er kryssa av her, vil kommandoane takast med i den automatiske "
-"sprettopp­menyen (dersom han er slått på på sida <interface>Handlingsmeny</"
-"interface>). Viss ikkje, vert dei ikkje med der, men dei vert med når du "
-"hentar fram menyen via snøggtasten <shortcut>%1</shortcut>."
+msgid "The commands for this match will be included in the automatic action popup, if it is enabled in the <interface>Action Menu</interface> page. If this option is turned off, the commands for this match will not be included in the automatic popup but they will be included if the popup is activated manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr "Viss det er kryssa av her, vil kommandoane takast med i den automatiske sprettopp­menyen (dersom han er slått på på sida <interface>Handlingsmeny</interface>). Viss ikkje, vert dei ikkje med der, men dei vert med når du hentar fram menyen via snøggtasten <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
 #, kde-format
@@ -442,16 +380,8 @@ msgstr "Kommando:"
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
-"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
-"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
-"captured texts from the match pattern."
-msgstr ""
-"Plasshaldaren <placeholder>&#37;s</placeholder> i kommandoen vert bytt ut "
-"med innhaldet på utklipps­tavla. Plasshaldarane <placeholder>&#37;0</"
-"placeholder> til <placeholder>&#37;9</placeholder> vert bytte ut med "
-"tilhøyrande tekst frå det regulære uttrykket."
+msgid "A <placeholder>&#37;s</placeholder> in the command will be replaced by the complete clipboard contents. <placeholder>&#37;0</placeholder> through <placeholder>&#37;9</placeholder> will be replaced by the corresponding captured texts from the match pattern."
+msgstr "Plasshaldaren <placeholder>&#37;s</placeholder> i kommandoen vert bytt ut med innhaldet på utklipps­tavla. Plasshaldarane <placeholder>&#37;0</placeholder> til <placeholder>&#37;9</placeholder> vert bytte ut med tilhøyrande tekst frå det regulære uttrykket."
 
 #: editcommanddialog.cpp:81
 #, kde-format
@@ -562,12 +492,8 @@ msgstr "%1 – utklippstavleverktøy"
 #: klipper.cpp:567
 #, kde-kuit-format
 msgctxt "@info"
-msgid ""
-"You can enable URL actions later in the <interface>Actions</interface> page "
-"of the Clipboard applet's configuration window"
-msgstr ""
-"Du kan setja opp nettadresse­handlingar seinare på sida "
-"<interface>Handlingar</interface> i innstillings­vindauget til utklippstavla."
+msgid "You can enable URL actions later in the <interface>Actions</interface> page of the Clipboard applet's configuration window"
+msgstr "Du kan setja opp nettadresse­handlingar seinare på sida <interface>Handlingar</interface> i innstillings­vindauget til utklippstavla."
 
 #: klipper.cpp:606
 #, kde-format
@@ -644,12 +570,8 @@ msgstr "Lagra historikk på tvers av skrivebordsøkter"
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
 #, kde-format
-msgid ""
-"Retain the clipboard history, so it will be available the next time you log "
-"in."
-msgstr ""
-"Ta vare på utklippshistorikken, slik at han òg er tilgjengeleg neste gongar "
-"du loggar inn."
+msgid "Retain the clipboard history, so it will be available the next time you log in."
+msgstr "Ta vare på utklippshistorikken, slik at han òg er tilgjengeleg neste gongar du loggar inn."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
@@ -660,12 +582,8 @@ msgstr "Hindra tømming av utklippstavla"
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
 #, kde-format
-msgid ""
-"Do not allow the clipboard to be cleared, for example when an application "
-"exits."
-msgstr ""
-"Ikkje tillat at utklippstavla vert automatisk tømt, for eksempel når eit "
-"program vert lukka."
+msgid "Do not allow the clipboard to be cleared, for example when an application exits."
+msgstr "Ikkje tillat at utklippstavla vert automatisk tømt, for eksempel når eit program vert lukka."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
@@ -677,14 +595,11 @@ msgstr "Hald utvalet og utklippstavla like"
 #: klipper.kcfg:29
 #, kde-format
 msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
+"Content selected with the cursor is automatically copied to the clipboard so that it can be pasted with either a Paste action or a middle-click.<br/>"
+"<a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Viss det er kryssa av her, vert innhald merkt med muse­peikaren automatisk "
-"kopiert til utklipps­tavla, slik at du kan lima det inn både med ei «Lim inn»-"
-"handling og ved å midtklikka.<br/><a href=\"1\">Les meir om utvalet og "
-"utklippstavla</a>."
+"Viss det er kryssa av her, vert innhald merkt med muse­peikaren automatisk kopiert til utklipps­tavla, slik at du kan lima det inn både med ei «Lim inn»-handling og ved å midtklikka.<br/>"
+"<a href=\"1\">Les meir om utvalet og utklippstavla</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -695,14 +610,8 @@ msgstr "Ignorer utvalet"
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
 #, kde-format
-msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
-msgstr ""
-"Innhald merkt via musepeikaren, men ikkje manuelt kopiert til utklippstavla, "
-"vert ikkje automatisk lagra i utklippshistorikken. Det kan då berre limast "
-"inn att med eit midtklikk."
+msgid "Content selected with the cursor but not explicitly copied to the clipboard is not automatically stored in the clipboard history, and can only be pasted using a middle-click."
+msgstr "Innhald merkt via musepeikaren, men ikkje manuelt kopiert til utklippstavla, vert ikkje automatisk lagra i utklippshistorikken. Det kan då berre limast inn att med eit midtklikk."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -713,11 +622,8 @@ msgstr "Berre tekstutval"
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:39
 #, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
-msgstr ""
-"Berre lagra tekstutval i historikken, ikkje bilete eller andre typar data."
+msgid "Only store text selections in the clipboard history, not images or any other type of data."
+msgstr "Berre lagra tekstutval i historikken, ikkje bilete eller andre typar data."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -728,11 +634,8 @@ msgstr "Ignorer alltid bilete"
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
 #, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
-"Ikkje lagra bilete i utklipps­historikken, heller ikkje om dei vert manuelt "
-"kopierte."
+msgid "Do not store images in the clipboard history, even if explicitly copied."
+msgstr "Ikkje lagra bilete i utklipps­historikken, heller ikkje om dei vert manuelt kopierte."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -749,8 +652,7 @@ msgstr "Med ein gong ved val"
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
 #, kde-format
-msgid ""
-"Show the popup menu of applicable actions as soon as a selection is made."
+msgid "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "Vis sprettoppmenyen så snart teksten vert merkt."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
@@ -798,16 +700,8 @@ msgstr "Fjern blankteikn på begge sider av teksten"
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
 #, kde-format
-msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
-msgstr ""
-"Fjern eventuelle blankteikn (mellomrom, linjeskift og liknande) frå starten "
-"og slutten av merkt tekst før køyring av kommandoen. Dette sikrar at for "
-"eksempel nettadresser sende til nettlesarar vil fungera skikkeleg. Teksten "
-"lagra på utklippstavla vert ikkje påverka."
+msgid "Remove any whitespace from the start and end of selected text, before performing an action. For example, this ensures that a URL pasted in a browser is interpreted as expected. The text saved on the clipboard is not affected."
+msgstr "Fjern eventuelle blankteikn (mellomrom, linjeskift og liknande) frå starten og slutten av merkt tekst før køyring av kommandoen. Dette sikrar at for eksempel nettadresser sende til nettlesarar vil fungera skikkeleg. Teksten lagra på utklippstavla vert ikkje påverka."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
@@ -818,12 +712,8 @@ msgstr "For ei oppføring valt i historikken"
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
 #, kde-format
-msgid ""
-"Show the popup menu of applicable actions if an entry is chosen from the "
-"clipboard history."
-msgstr ""
-"Vis ein sprettoppmeny med moglege handlingar når ei oppføring vert valt frå "
-"utklippshistorikken."
+msgid "Show the popup menu of applicable actions if an entry is chosen from the clipboard history."
+msgstr "Vis ein sprettoppmeny med moglege handlingar når ei oppføring vert valt frå utklippshistorikken."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
@@ -834,12 +724,8 @@ msgstr "Ta med MIME-handlingar"
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
 #, kde-format
-msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
-msgstr ""
-"Viss eit filnamn eller ei nettadresse vert valt, ta òg med i menyen alle "
-"program som støttar tilhøyrande MIME-type."
+msgid "If a file name or URL is selected, include applications that can accept its MIME type in the popup menu."
+msgstr "Viss eit filnamn eller ei nettadresse vert valt, ta òg med i menyen alle program som støttar tilhøyrande MIME-type."
 
 #: klipperpopup.cpp:105
 #, kde-format
