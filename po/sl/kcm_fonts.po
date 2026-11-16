@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1741297 2026-07-14 01:28:26Z scripty $
+# $Id$
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.

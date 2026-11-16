@@ -2,7 +2,7 @@
 # translation of kcmstyle.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001,2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_style.po 1746159 2026-09-11 03:23:36Z scripty $
+# $Id$
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.

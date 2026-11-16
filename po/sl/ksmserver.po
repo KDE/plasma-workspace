@@ -1,7 +1,7 @@
 # Translation of ksmserver.po to Slovenian
 # SLOVENIAN TRANSLATION OF KSMSERVER.
 # Copyright (C) 2000, 2003, 2004 Free Software Foundation, Inc.
-# $Id: ksmserver.po 1739467 2026-06-20 01:27:58Z scripty $
+# $Id$
 # $Source$
 #
 # Roman Maurer <roman.maurer@hermes.si>, 2000.

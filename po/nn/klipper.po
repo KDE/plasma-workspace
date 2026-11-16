@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-05 03:00+0000\n"
-"PO-Revision-Date: 2026-09-25 18:28+0200\n"
+"PO-Revision-Date: 2026-11-15 10:11+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 27.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -325,7 +325,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Fjern hemmelege data"
 
 #: declarative/qml/ClipboardMenu.qml:519
 #, kde-format
@@ -602,7 +602,7 @@ msgstr "Tøm utklippshistorikken"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Ikkje spør igjen"
 
 #: historymodel.cpp:403
 #, kde-format
@@ -737,20 +737,16 @@ msgstr "Hald utvalet og utklippstavla like"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 "Viss det er kryssa av her, vert innhald merkt med muse­peikaren automatisk "
-"kopiert til utklipps­tavla, slik at du kan lima det inn både med ei «Lim inn»-"
-"handling og ved å midtklikka.<br/><a href=\"1\">Les meir om utvalet og "
-"utklippstavla</a>."
+"kopiert til utklipps­tavla, slik at du kan lima det inn både med ei <i>Lim "
+"inn</i>-handling og ved å midtklikka.<br/><a href=\"1\">Les meir om utvalet "
+"og utklippstavla</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:32

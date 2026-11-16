@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-07 00:45+0000\n"
+"POT-Creation-Date: 2026-11-15 21:04+0000\n"
 "PO-Revision-Date: 2026-03-13 14:13+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -73,7 +73,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Povolit zvuky upozornění"
 
-#: ui/main.qml:134
+#: ui/main.qml:137
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -84,7 +84,7 @@ msgstr[0] "Založen na: %2"
 msgstr[1] "Založen na: %2"
 msgstr[2] "Založen na: %2"
 
-#: ui/main.qml:147
+#: ui/main.qml:150
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -92,36 +92,36 @@ msgctxt ""
 msgid "Preview:"
 msgstr "Náhled:"
 
-#: ui/main.qml:166
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Náhled zvuku \"%1\""
 
-#: ui/main.qml:188
+#: ui/main.qml:191
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Poslechněte si ukázku zvuku pro motiv \"%1\""
 
-#: ui/main.qml:225
+#: ui/main.qml:228
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "Motiv %1 neobsahuje zvuk '%2'."
 
-#: ui/main.qml:230
+#: ui/main.qml:233
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Náhled zvuku selhal: %1"
 
-#: ui/main.qml:246
+#: ui/main.qml:249
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
 msgstr "Vyberte zvukový motiv"
 
-#: ui/main.qml:248
+#: ui/main.qml:251
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
 msgstr "Soubory motivů (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
