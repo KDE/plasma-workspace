@@ -86,6 +86,7 @@ Q_SIGNALS:
 
 protected:
     void showEvent(QShowEvent *event) override;
+    void focusInEvent(QFocusEvent *event) override;
 
 public Q_SLOTS:
     void display();

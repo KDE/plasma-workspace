@@ -20,6 +20,7 @@
 #include <KCrash>
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
+#include <KRunner/RunnerManager>
 #include <KService>
 #include <KWindowEffects>
 #include <KWindowSystem>
@@ -153,6 +154,17 @@ void View::showEvent(QShowEvent *event)
 {
     QQuickWindow::showEvent(event);
     requestActivate();
+}
+
+void View::focusInEvent(QFocusEvent *event)
+{
+    QQuickWindow::focusInEvent(event);
+
+    // Initialize the runners as soon as the window has focus.
+    // This way on startup the user can already start typing
+    // while we load the runners which can take a beat.
+    auto *runnerManager = mainItem()->property("runnerManager").value<KRunner::RunnerManager *>();
+    runnerManager->runners();
 }
 
 void View::positionOnScreen()
