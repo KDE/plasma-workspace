@@ -289,24 +289,7 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
     }
 }
 
-static void addEnableActions(CJobRunner::ItemList &urls)
-{
-    CJobRunner::ItemList modified;
-    CJobRunner::ItemList::ConstIterator it(urls.constBegin()), end(urls.constEnd());
-
-    for (; it != end; ++it) {
-        if ((*it).isDisabled) {
-            CJobRunner::Item item(*it);
-            item.fileName = QLatin1String("--");
-            modified.append(item);
-        }
-        modified.append(*it);
-    }
-
-    urls = modified;
-}
-
-int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
+int CJobRunner::exec(ECommand cmd, const ItemList &urls)
 {
     m_autoSkip = m_cancelClicked = m_modified = false;
 
@@ -320,9 +303,6 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
     case CMD_ENABLE:
         setWindowTitle(i18n("Enabling"));
         break;
-    case CMD_MOVE:
-        setWindowTitle(i18n("Moving"));
-        break;
     case CMD_UPDATE:
         setWindowTitle(i18n("Updating"));
         m_modified = true;
@@ -335,12 +315,9 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
         setWindowTitle(i18n("Disabling"));
     }
 
-    m_destIsSystem = destIsSystem;
     m_urls = urls;
     if (CMD_INSTALL == cmd) {
         std::ranges::sort(m_urls); // Sort list of fonts so that we have type1 fonts followed by their metrics...
-    } else if (CMD_MOVE == cmd) {
-        addEnableActions(m_urls);
     }
     m_it = m_urls.constBegin();
     m_end = m_urls.constEnd();
@@ -393,7 +370,7 @@ void CJobRunner::doNext()
                 bool createAfm =
                     Item::TYPE1_PFM == (*m_it).type && (m_prev == m_end || (*m_it).fileName != (*m_prev).fileName || Item::TYPE1_AFM != (*m_prev).type);
 
-                dbus()->install(m_currentFile, createAfm, m_destIsSystem, getpid(), false);
+                dbus()->install(m_currentFile, createAfm, getpid(), false);
             }
             break;
         }
@@ -408,20 +385,6 @@ void CJobRunner::doNext()
         case CMD_DISABLE:
             decode(*m_it, font, system);
             dbus()->disable(font.family, font.styleInfo, system, getpid(), false);
-            break;
-        case CMD_MOVE:
-            decode(*m_it, font, system);
-            // To 'Move' a disabled font, we first need to enable it. To accomplish this, JobRunner creates a 'fake' entry
-            // with the filename "--"
-            if ((*m_it).fileName == QLatin1String("--")) {
-                setWindowTitle(i18n("Enabling"));
-                dbus()->enable(font.family, font.styleInfo, system, getpid(), false);
-            } else {
-                if (m_prev != m_end && (*m_prev).fileName == QLatin1String("--")) {
-                    setWindowTitle(i18n("Moving"));
-                }
-                dbus()->move(font.family, font.styleInfo, m_destIsSystem, getpid(), false);
-            }
             break;
         case CMD_REMOVE_FILE:
             decode(*m_it, font, system);
@@ -704,7 +667,7 @@ QString CJobRunner::errorString(int value) const
     case FontInst::STATUS_NO_SYS_CONNECTION:
         return i18n("Failed to start the system daemon.<br><i>%1</i>", urlStr);
     case KIO::ERR_FILE_ALREADY_EXIST: {
-        QString name(Misc::modifyName(Misc::getFile((*m_it).fileName))), destFolder(Misc::getDestFolder(folderName(m_destIsSystem), name));
+        QString name(Misc::modifyName(Misc::getFile((*m_it).fileName))), destFolder(Misc::getDestFolder(folderName(false), name));
         return i18n("<i>%1</i> already exists.", destFolder + name);
     }
     case KIO::ERR_DOES_NOT_EXIST:

@@ -1,4 +1,3 @@
 [D-BUS Service]
 Name=org.kde.fontinst
-Exec=@KAUTH_HELPER_INSTALL_ABSOLUTE_DIR@/fontinst
-
+Exec=@CMAKE_INSTALL_FULL_LIBEXECDIR@/fontinst

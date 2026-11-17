@@ -22,7 +22,6 @@
 #include <QStandardPaths>
 #include <QStyledItemDelegate>
 #include <QTextStream>
-#include <QTimer>
 #include <algorithm>
 #include <stdlib.h>
 #include <unistd.h>
@@ -856,11 +855,6 @@ void CGroupListView::rename()
     }
 }
 
-void CGroupListView::emitMoveFonts()
-{
-    Q_EMIT moveFonts();
-}
-
 void CGroupListView::contextMenuEvent(QContextMenuEvent *ev)
 {
     if (indexAt(ev->pos()).isValid()) {
@@ -890,18 +884,14 @@ void CGroupListView::dragMoveEvent(QDragMoveEvent *event)
 
             if (dest) {
                 if (!selectedIndexes().contains(index)) {
-                    bool ok(true);
+                    bool ok(false);
 
                     if (dest->isCustom()) {
+                        ok = true;
                         Q_EMIT info(i18n("Add to \"%1\".", dest->name()));
                     } else if (CGroupListItem::CUSTOM == type && dest->isAll()) {
+                        ok = true;
                         Q_EMIT info(i18n("Remove from current group."));
-                    } else if (!Misc::root() && dest->isPersonal() && CGroupListItem::SYSTEM == type) {
-                        Q_EMIT info(i18n("Move to personal folder."));
-                    } else if (!Misc::root() && dest->isSystem() && CGroupListItem::PERSONAL == type) {
-                        Q_EMIT info(i18n("Move to system folder."));
-                    } else {
-                        ok = false;
                     }
 
                     if (ok) {
@@ -939,10 +929,11 @@ void CGroupListView::dropEvent(QDropEvent *event)
         ds >> families;
         // Are we moving/copying, removing a font from the current group?
         if (to.isValid() && from.isValid()) {
-            if (((static_cast<CGroupListItem *>(from.internalPointer()))->isSystem() && (static_cast<CGroupListItem *>(to.internalPointer()))->isPersonal())
-                || ((static_cast<CGroupListItem *>(from.internalPointer()))->isPersonal()
-                    && (static_cast<CGroupListItem *>(to.internalPointer()))->isSystem())) {
-                QTimer::singleShot(0, this, &CGroupListView::emitMoveFonts);
+            bool crossFolder =
+                (static_cast<CGroupListItem *>(from.internalPointer())->isSystem() && static_cast<CGroupListItem *>(to.internalPointer())->isPersonal())
+                || (static_cast<CGroupListItem *>(from.internalPointer())->isPersonal() && static_cast<CGroupListItem *>(to.internalPointer())->isSystem());
+            if (crossFolder) {
+                return;
             } else if ((static_cast<CGroupListItem *>(from.internalPointer()))->isCustom()
                        && !(static_cast<CGroupListItem *>(to.internalPointer()))->isCustom()) {
                 Q_EMIT removeFamilies(from, families);

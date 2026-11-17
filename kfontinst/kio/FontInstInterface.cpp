@@ -38,9 +38,9 @@ FontInstInterface::FontInstInterface()
 
 FontInstInterface::~FontInstInterface() = default;
 
-int FontInstInterface::install(const QString &file, bool toSystem)
+int FontInstInterface::install(const QString &file)
 {
-    m_interface->install(file, true, toSystem, getpid(), true);
+    m_interface->install(file, true, getpid(), true);
     return waitForResponse();
 }
 

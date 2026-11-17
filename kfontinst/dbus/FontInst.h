@@ -79,10 +79,9 @@ public Q_SLOTS:
 
     Q_NOREPLY void list(int folders, int pid);
     Q_NOREPLY void statFont(const QString &font, int folders, int pid);
-    Q_NOREPLY void install(const QString &file, bool createAfm, bool toSystem, int pid, bool checkConfig);
+    Q_NOREPLY void install(const QString &file, bool createAfm, int pid, bool checkConfig);
     Q_NOREPLY void uninstall(const QString &family, quint32 style, bool fromSystem, int pid, bool checkConfig);
     Q_NOREPLY void uninstall(const QString &name, bool fromSystem, int pid, bool checkConfig);
-    Q_NOREPLY void move(const QString &family, quint32 style, bool toSystem, int pid, bool checkConfig);
     Q_NOREPLY void enable(const QString &family, quint32 style, bool inSystem, int pid, bool checkConfig);
     Q_NOREPLY void disable(const QString &family, quint32 style, bool inSystem, int pid, bool checkConfig);
     Q_NOREPLY void removeFile(const QString &family, quint32 style, const QString &file, bool fromSystem, int pid, bool checkConfig);
@@ -106,14 +105,11 @@ private Q_SLOTS:
 private:
     void updateFontList(bool emitChanges = true);
     void toggle(bool enable, const QString &family, quint32 style, bool inSystem, int pid, bool checkConfig);
-    void addModifedSysFolders(const Family &family);
     void checkConnections();
     bool findFontReal(const QString &family, const QString &style, EFolder folder, FamilyCont::ConstIterator &fam, StyleCont::ConstIterator &st);
     bool findFont(const QString &font, EFolder folder, FamilyCont::ConstIterator &fam, StyleCont::ConstIterator &st, bool updateList = true);
     bool findFontReal(const QString &family, quint32 style, EFolder folder, FamilyCont::ConstIterator &fam, StyleCont::ConstIterator &st);
     bool findFont(const QString &family, quint32 style, EFolder folder, FamilyCont::ConstIterator &fam, StyleCont::ConstIterator &st, bool updateList = true);
-    int performAction(const QVariantMap &args);
-
     static void emergencySave(int sig);
 
 private:

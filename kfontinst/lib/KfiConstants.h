@@ -33,9 +33,6 @@ constexpr const auto KFI_KIO_FONTS_ALL = kli18n("All");
 #define KFI_STYLE_QUERY "style"
 #define KFI_MIME_QUERY "mime"
 
-#define KFI_SYS_USER "root"
-
-constexpr const auto KFI_AUTHINF_USER = kli18n("Administrator");
 inline constexpr QLatin1String KFI_UI_CFG_FILE(KFI_NAME "uirc");
 
 inline constexpr QLatin1String KFI_ROOT_CFG_DIR("/etc/fonts/");

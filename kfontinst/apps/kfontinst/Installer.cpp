@@ -12,8 +12,6 @@
 #include <KAboutData>
 #include <KDBusService>
 #include <KIO/StatJob>
-#include <KMessageBox>
-#include <KMessageDialog>
 #include <KWindowSystem>
 #include <QApplication>
 #include <QCommandLineOption>
@@ -28,29 +26,7 @@ namespace KFI
 int CInstaller::install(const QSet<QUrl> &urls)
 {
     QSet<QUrl>::ConstIterator it(urls.begin()), end(urls.end());
-    bool sysInstall(false);
-
     CJobRunner::startDbusService();
-
-    if (!Misc::root()) {
-        auto *dlg =
-            new KMessageDialog(KMessageDialog::QuestionTwoActionsCancel,
-                               i18n("Do you wish to install the font(s) for personal use (only available to you), or system-wide (available to all users)?"));
-        dlg->setCaption(i18n("Where to Install"));
-        dlg->setButtons(KGuiItem(KFI_KIO_FONTS_USER.toString()), KGuiItem(KFI_KIO_FONTS_SYS.toString()), KStandardGuiItem::cancel());
-        dlg->winId();
-        KWindowSystem::setMainWindow(dlg->windowHandle(), m_parentWindow);
-        dlg->exec();
-
-        if (dlg->result() == KMessageDialog::PrimaryAction) {
-            sysInstall = false;
-        } else if (dlg->result() == KMessageDialog::SecondaryAction) {
-            sysInstall = true;
-        } else {
-            return -1;
-            // cancelled
-        }
-    }
 
     QSet<QUrl> instUrls;
     for (; it != end; ++it) {
@@ -93,7 +69,7 @@ int CInstaller::install(const QSet<QUrl> &urls)
         jobRunner.winId();
         KWindowSystem::setMainWindow(jobRunner.windowHandle(), m_parentWindow);
 
-        return jobRunner.exec(CJobRunner::CMD_INSTALL, list, Misc::root() || sysInstall);
+        return jobRunner.exec(CJobRunner::CMD_INSTALL, list);
     } else {
         return -1;
     }

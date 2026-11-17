@@ -238,7 +238,6 @@ Q_SIGNALS:
     void enable();
     void disable();
     void zip();
-    void moveFonts();
     void info(const QString &str);
     void addFamilies(const QModelIndex &group, const QSet<QString> &);
     void removeFamilies(const QModelIndex &group, const QSet<QString> &);
@@ -249,7 +248,6 @@ private Q_SLOTS:
 
     void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected) override;
     void rename();
-    void emitMoveFonts();
 
 private:
     void contextMenuEvent(QContextMenuEvent *ev) override;

@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kio_fonts SOURCES FontInstInterface.cpp KioFonts.cpp ../dbus/FontinstIface.cpp ${KFI_FONTINST_AUTH_SRC} INSTALL_NAMESPACE "kf6/kio")
+kcoreaddons_add_plugin(kio_fonts SOURCES FontInstInterface.cpp KioFonts.cpp ../dbus/FontinstIface.cpp INSTALL_NAMESPACE "kf6/kio")
 
 ecm_qt_declare_logging_category(kio_fonts
     HEADER debug.h

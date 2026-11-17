@@ -2,7 +2,6 @@ KDE4.4
 ======
 1. Create a dbus daemon for handling font installtion, and have the kcm and ioslave
    use this.
-2. Use policykit to control installation of system-wide fonts.
 3. Merged progress, skip, cancel, and error dialogs used when installing, etc., into
    1 dialog.
 4. Simplify layout.
@@ -131,9 +130,6 @@ KDE3.1 -> KDE3.2
 
         System     Lists contents of /usr/local/share/fonts, /usr/share/fonts, and /usr/X11R6/lib/X11/fonts
                    Fonts are installed to /usr/local/share/fonts (as per FHS)
-
-    To install fonts system wide, just drop onto "System" and root's password will be asked
-    for.
 
     As root, fonts:/ will show the same as fonts:/System (but without the System part...)
 

@@ -65,11 +65,10 @@ public Q_SLOTS: // METHODS
         return asyncCallWithArgumentList(QLatin1String("folderName"), argumentList);
     }
 
-    inline Q_NOREPLY void install(const QString &file, bool createAfm, bool toSystem, int pid, bool checkConfig)
+    inline Q_NOREPLY void install(const QString &file, bool createAfm, int pid, bool checkConfig)
     {
         QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(file) << QVariant::fromValue(createAfm) << QVariant::fromValue(toSystem) << QVariant::fromValue(pid)
-                     << QVariant::fromValue(checkConfig);
+        argumentList << QVariant::fromValue(file) << QVariant::fromValue(createAfm) << QVariant::fromValue(pid) << QVariant::fromValue(checkConfig);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("install"), argumentList);
     }
 
@@ -78,14 +77,6 @@ public Q_SLOTS: // METHODS
         QList<QVariant> argumentList;
         argumentList << QVariant::fromValue(folders) << QVariant::fromValue(pid);
         callWithArgumentList(QDBus::NoBlock, QLatin1String("list"), argumentList);
-    }
-
-    inline Q_NOREPLY void move(const QString &family, uint style, bool toSystem, int pid, bool checkConfig)
-    {
-        QList<QVariant> argumentList;
-        argumentList << QVariant::fromValue(family) << QVariant::fromValue(style) << QVariant::fromValue(toSystem) << QVariant::fromValue(pid)
-                     << QVariant::fromValue(checkConfig);
-        callWithArgumentList(QDBus::NoBlock, QLatin1String("move"), argumentList);
     }
 
     inline Q_NOREPLY void reconfigure(int pid, bool force)

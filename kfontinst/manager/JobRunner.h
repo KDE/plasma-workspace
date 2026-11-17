@@ -57,7 +57,6 @@ public:
         CMD_ENABLE,
         CMD_DISABLE,
         CMD_UPDATE,
-        CMD_MOVE,
         CMD_REMOVE_FILE,
     };
 
@@ -71,7 +70,7 @@ public:
     static QUrl encode(const QString &family, quint32 style, bool system);
 
     static void getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm);
-    int exec(ECommand cmd, const ItemList &urls, bool destIsSystem);
+    int exec(ECommand cmd, const ItemList &urls);
 
 Q_SIGNALS:
 
@@ -96,7 +95,6 @@ private:
     ECommand m_cmd;
     ItemList m_urls;
     ItemList::ConstIterator m_it, m_end, m_prev;
-    bool m_destIsSystem;
     QLabel *m_statusLabel, *m_skipLabel, *m_errorLabel;
     QProgressBar *m_progress;
     bool m_autoSkip, m_cancelClicked, m_modified;

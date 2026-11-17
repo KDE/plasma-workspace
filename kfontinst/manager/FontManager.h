@@ -48,7 +48,6 @@ public Q_SLOTS:
     void groupSelected(const QModelIndex &index);
     void addFonts();
     void deleteFonts();
-    void moveFonts();
     void zipGroup();
     void enableFonts();
     void disableFonts();
@@ -76,7 +75,7 @@ private:
     void toggleFonts(bool enable, const QString &grp = QString());
     void toggleFonts(CJobRunner::ItemList &urls, const QStringList &fonts, bool enable, const QString &grp);
     void selectMainGroup();
-    void doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &urls, bool system = false);
+    void doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &urls);
 
 private:
     QSplitter *m_groupSplitter, *m_previewSplitter;

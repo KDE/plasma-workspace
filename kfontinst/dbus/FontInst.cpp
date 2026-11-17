@@ -11,10 +11,6 @@
 #include "fontinstadaptor.h"
 #include "kfontinst_debug.h"
 
-#include <KAuth/Action>
-#include <KAuth/ActionReply>
-#include <KAuth/ExecuteJob>
-#include <KAuth/HelperSupport>
 #include <QDebug>
 #include <QTimer>
 #include <fontconfig/fontconfig.h>
@@ -162,9 +158,9 @@ void FontInst::statFont(const QString &name, int folders, int pid)
     }
 }
 
-void FontInst::install(const QString &file, bool createAfm, bool toSystem, int pid, bool checkConfig)
+void FontInst::install(const QString &file, bool createAfm, int pid, bool checkConfig)
 {
-    // qDebug() << file << createAfm << toSystem << pid << checkConfig;
+    // qDebug() << file << createAfm << pid << checkConfig;
 
     m_connections.insert(pid);
 
@@ -172,15 +168,18 @@ void FontInst::install(const QString &file, bool createAfm, bool toSystem, int p
         updateFontList();
     }
 
-    EFolder folder = isSystem || toSystem ? FOLDER_SYS : FOLDER_USER;
+    EFolder folder = FOLDER_USER;
     Family font;
     Utils::EFileType type = Utils::check(file, font);
 
-    int result = Utils::FILE_BITMAP == type && !FC::bitmapsEnabled() ? STATUS_BITMAPS_DISABLED : Utils::FILE_INVALID == type ? STATUS_NOT_FONT_FILE : STATUS_OK;
+    int result = (int)KIO::ERR_UNSUPPORTED_ACTION;
+    if (!isSystem) {
+        result = Utils::FILE_BITMAP == type && !FC::bitmapsEnabled() ? STATUS_BITMAPS_DISABLED : Utils::FILE_INVALID == type ? STATUS_NOT_FONT_FILE : STATUS_OK;
+    }
 
     if (STATUS_OK == result) {
         if (Utils::FILE_AFM != type && Utils::FILE_PFM != type) {
-            for (int i = 0; i < (isSystem ? 1 : FOLDER_COUNT) && STATUS_OK == result; ++i) {
+            for (int i = 0; i < FOLDER_COUNT && STATUS_OK == result; ++i) {
                 if (theFolders[i].contains(font.name(), (*font.styles().begin()).value())) {
                     result = STATUS_ALREADY_INSTALLED;
                 }
@@ -192,30 +191,18 @@ void FontInst::install(const QString &file, bool createAfm, bool toSystem, int p
 
             result = Utils::FILE_AFM != type && Utils::FILE_PFM != type && Misc::fExists(destFolder + name) ? (int)KIO::ERR_FILE_ALREADY_EXIST : (int)STATUS_OK;
             if (STATUS_OK == result) {
-                if (toSystem && !isSystem) {
-                    // qDebug() << "Send request to system helper" << file << destFolder << name;
-                    QVariantMap args;
-                    args[u"method"_s] = u"install"_s;
-                    args[u"file"_s] = file;
-                    args[u"name"_s] = name;
-                    args[u"destFolder"_s] = destFolder;
-                    args[u"createAfm"_s] = createAfm;
-                    args[u"type"_s] = (int)type;
-                    result = performAction(args);
-                } else {
-                    if (!Misc::dExists(destFolder)) {
-                        result = Misc::createDir(destFolder) ? (int)STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED;
-                    }
+                if (!Misc::dExists(destFolder)) {
+                    result = Misc::createDir(destFolder) ? (int)STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED;
+                }
 
-                    if (STATUS_OK == result) {
-                        result = QFile::copy(file, destFolder + name) ? (int)STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED;
-                    }
+                if (STATUS_OK == result) {
+                    result = QFile::copy(file, destFolder + name) ? (int)STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED;
+                }
 
-                    if (STATUS_OK == result) {
-                        Misc::setFilePerms(QFile::encodeName(destFolder + name));
-                        if ((Utils::FILE_SCALABLE == type || Utils::FILE_PFM == type) && createAfm) {
-                            Utils::createAfm(destFolder + name, type);
-                        }
+                if (STATUS_OK == result) {
+                    Misc::setFilePerms(QFile::encodeName(destFolder + name));
+                    if ((Utils::FILE_SCALABLE == type || Utils::FILE_PFM == type) && createAfm) {
+                        Utils::createAfm(destFolder + name, type);
                     }
                 }
 
@@ -228,7 +215,7 @@ void FontInst::install(const QString &file, bool createAfm, bool toSystem, int p
                     (*st).add(df);
                     theFolders[folder].add(font);
                     theFolders[folder].addModifiedDir(destFolder);
-                    Q_EMIT fontsAdded(Families(font, FOLDER_SYS == folder));
+                    Q_EMIT fontsAdded(Families(font, false));
                 }
             }
         }
@@ -261,29 +248,7 @@ void FontInst::uninstall(const QString &family, quint32 style, bool fromSystem, 
         FileCont::ConstIterator it(files.begin()), end(files.end());
 
         if (fromSystem && !isSystem) {
-            QStringList fileList;
-            bool wasDisabled(false);
-
-            for (; it != end; ++it) {
-                fileList.append((*it).path());
-                theFolders[FOLDER_SYS].addModifiedDir(Misc::getDir((*it).path()));
-                if (!wasDisabled && Misc::isHidden(Misc::getFile((*it).path()))) {
-                    wasDisabled = true;
-                }
-            }
-            QVariantMap args;
-            args[u"method"_s] = u"uninstall"_s;
-            args[u"files"_s] = fileList;
-            result = performAction(args);
-
-            if (STATUS_OK == result) {
-                FileCont empty;
-                s.setFiles(files);
-                (*st).setFiles(empty);
-                if (wasDisabled) {
-                    theFolders[FOLDER_SYS].setDisabledDirty();
-                }
-            }
+            result = KIO::ERR_WRITE_ACCESS_DENIED;
         } else {
             for (; it != end; ++it) {
                 if (!Misc::fExists((*it).path()) || QFile::remove((*it).path())) {
@@ -338,58 +303,7 @@ void FontInst::uninstall(const QString &name, bool fromSystem, int pid, bool che
     }
 }
 
-void FontInst::move(const QString &family, quint32 style, bool toSystem, int pid, bool checkConfig)
-{
-    // qDebug() << family << style << toSystem << pid << checkConfig;
-
-    m_connections.insert(pid);
-    if (checkConfig) {
-        updateFontList();
-    }
-
-    if (isSystem) {
-        Q_EMIT status(pid, KIO::ERR_UNSUPPORTED_ACTION);
-    } else {
-        FamilyCont::ConstIterator fam;
-        StyleCont::ConstIterator st;
-        EFolder from = toSystem ? FOLDER_USER : FOLDER_SYS, to = toSystem ? FOLDER_SYS : FOLDER_USER;
-
-        if (findFont(family, style, from, fam, st)) {
-            FileCont::ConstIterator it((*st).files().begin()), end((*st).files().end());
-            QStringList files;
-
-            for (; it != end; ++it) {
-                files.append((*it).path());
-                theFolders[from].addModifiedDir(Misc::getDir((*it).path()));
-                // Actual 'to' folder does not really matter, as we only want to call fc-cache
-                // ...actual folders only matter for xreating fonts.dir, etc, and we wont be doing this...
-                theFolders[to].addModifiedDir(theFolders[to].location());
-            }
-
-            QVariantMap args;
-            args[u"method"_s] = u"move"_s;
-            args[u"files"_s] = files;
-            args[u"toSystem"_s] = toSystem;
-            args[u"dest"_s] = theFolders[to].location();
-            args[u"uid"_s] = getuid();
-            args[u"gid"_s] = getgid();
-            int result = performAction(args);
-
-            if (STATUS_OK == result) {
-                updateFontList();
-            }
-            Q_EMIT status(pid, result);
-        } else {
-            // qDebug() << "does not exist";
-            Q_EMIT status(pid, KIO::ERR_DOES_NOT_EXIST);
-        }
-    }
-
-    m_connectionsTimer->start(constConnectionsTimeout);
-    m_fontListTimer->start(constFontListTimeout);
-}
-
-static bool renameFontFile(const QString &from, const QString &to, int uid = -1, int gid = -1)
+static bool renameFontFile(const QString &from, const QString &to)
 {
     if (!QFile::rename(from, to)) {
         return false;
@@ -397,9 +311,6 @@ static bool renameFontFile(const QString &from, const QString &to, int uid = -1,
 
     QByteArray dest(QFile::encodeName(to));
     Misc::setFilePerms(dest);
-    if (-1 != uid && -1 != gid) {
-        ::chown(dest.data(), uid, gid);
-    }
     return true;
 }
 
@@ -448,10 +359,7 @@ void FontInst::removeFile(const QString &family, quint32 style, const QString &f
         if (STATUS_OK == result) {
             // OK, found folder - so can now proceed to delete the file...
             if (fromSystem && !isSystem) {
-                QVariantMap args;
-                args[u"method"_s] = u"removeFile"_s;
-                args[u"file"_s] = file;
-                result = performAction(args);
+                result = KIO::ERR_WRITE_ACCESS_DENIED;
             } else {
                 result = Misc::fExists(file) ? QFile::remove(file) ? (int)STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED : (int)KIO::ERR_DOES_NOT_EXIST;
             }
@@ -477,15 +385,8 @@ void FontInst::reconfigure(int pid, bool force)
         theFolders[FOLDER_USER].configure(force);
     }
 
-    if (sysModified) {
-        if (isSystem) {
-            theFolders[FOLDER_SYS].configure();
-        } else {
-            QVariantMap args;
-            args[u"method"_s] = u"reconfigure"_s;
-            performAction(args);
-            theFolders[FOLDER_SYS].clearModified();
-        }
+    if (sysModified && isSystem) {
+        theFolders[FOLDER_SYS].configure();
     }
 
     m_connectionsTimer->start(constConnectionsTimeout);
@@ -505,18 +406,7 @@ void FontInst::saveDisabled()
     if (isSystem) {
         theFolders[FOLDER_SYS].saveDisabled();
     } else {
-        for (int i = 0; i < (isSystem ? 1 : FOLDER_COUNT); ++i) {
-            if (FOLDER_SYS == i && !isSystem) {
-                if (theFolders[i].disabledDirty()) {
-                    QVariantMap args;
-                    args[u"method"_s] = u"saveDisabled"_s;
-                    performAction(args);
-                    theFolders[i].saveDisabled();
-                }
-            } else {
-                theFolders[i].saveDisabled();
-            }
-        }
+        theFolders[FOLDER_USER].saveDisabled();
     }
 }
 
@@ -527,12 +417,11 @@ void FontInst::connectionsTimeout()
     // qDebug() << "exiting";
     checkConnections();
 
-    for (int i = 0; i < (isSystem ? 1 : FOLDER_COUNT); ++i) {
-        if (theFolders[i].disabledDirty()) {
-            canExit = false;
-        }
-        theFolders[i].saveDisabled();
+    const EFolder folder = isSystem ? FOLDER_SYS : FOLDER_USER;
+    if (theFolders[folder].disabledDirty()) {
+        canExit = false;
     }
+    theFolders[folder].saveDisabled();
 
     if (0 == m_connections.count()) {
         if (canExit) {
@@ -679,7 +568,9 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
     EFolder folder = isSystem || inSystem ? FOLDER_SYS : FOLDER_USER;
     FamilyCont::ConstIterator fam;
     StyleCont::ConstIterator st;
-    int result = findFont(family, style, folder, fam, st) ? (int)STATUS_OK : (int)KIO::ERR_DOES_NOT_EXIST;
+    int result = inSystem && !isSystem             ? (int)KIO::ERR_WRITE_ACCESS_DENIED
+        : findFont(family, style, folder, fam, st) ? (int)STATUS_OK
+                                                   : (int)KIO::ERR_DOES_NOT_EXIST;
 
     if (STATUS_OK == result) {
         FileCont files((*st).files()), toggledFiles;
@@ -692,9 +583,7 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
             QString to = Misc::getDir((*it).path()) + QString(enable ? Misc::unhide(Misc::getFile((*it).path())) : Misc::hide(Misc::getFile((*it).path())));
             if (to != (*it).path()) {
                 // qDebug() << "MOVE:" << (*it).path() << " to " << to;
-                // If the font is a system font, and we're not root, then just go through the actions here - so
-                // that we can build the list of changes that would happen...
-                if ((inSystem && !isSystem) || renameFontFile((*it).path(), to)) {
+                if (renameFontFile((*it).path(), to)) {
                     modifiedDirs.insert(Misc::getDir(enable ? to : (*it).path()));
                     toggledFiles.insert(File(to, (*it).foundry(), (*it).index()));
                     // Now try to move an associated AFM or PFM files...
@@ -709,7 +598,7 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
                         to = Misc::getDir(*ait) + QString(enable ? Misc::unhide(Misc::getFile(*ait)) : Misc::hide(Misc::getFile(*ait)));
 
                         if (to != *ait) {
-                            if ((inSystem && !isSystem) || renameFontFile(*ait, to)) {
+                            if (renameFontFile(*ait, to)) {
                                 movedAssoc[*ait] = to;
                             } else {
                                 result = KIO::ERR_WRITE_ACCESS_DENIED;
@@ -720,20 +609,6 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
                     result = KIO::ERR_WRITE_ACCESS_DENIED;
                 }
             }
-        }
-
-        if (inSystem && !isSystem) {
-            Family toggleFam((*fam).name());
-
-            toggleFam.add(*st);
-            QVariantMap args;
-            args[u"method"_s] = u"toggle"_s;
-            QString xml;
-            QTextStream str(&xml);
-            toggleFam.toXml(false, str);
-            args[u"xml"_s] = xml;
-            args[u"enable"_s] = enable;
-            result = performAction(args);
         }
 
         if (STATUS_OK == result) {
@@ -768,19 +643,6 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
 
     m_connectionsTimer->start(constConnectionsTimeout);
     m_fontListTimer->start(constFontListTimeout);
-}
-
-void FontInst::addModifedSysFolders(const Family &family)
-{
-    StyleCont::ConstIterator style(family.styles().begin()), styleEnd(family.styles().end());
-
-    for (; style != styleEnd; ++style) {
-        FileCont::ConstIterator file((*style).files().begin()), fileEnd((*style).files().end());
-
-        for (; file != fileEnd; ++file) {
-            theFolders[FOLDER_SYS].addModifiedDir(Misc::getDir((*file).path()));
-        }
-    }
 }
 
 void FontInst::checkConnections()
@@ -858,37 +720,6 @@ bool FontInst::findFont(const QString &family, quint32 style, EFolder folder, Fa
         }
     }
     return true;
-}
-
-int FontInst::performAction(const QVariantMap &args)
-{
-    KAuth::Action action(u"org.kde.fontinst.manage"_s);
-
-    action.setHelperId(u"org.kde.fontinst"_s);
-    action.setArguments(args);
-    // qDebug() << "Call " << args["method"].toString() << " on helper";
-    m_fontListTimer->stop();
-    m_connectionsTimer->stop();
-
-    KAuth::ExecuteJob *j = action.execute();
-    j->exec();
-    if (j->error()) {
-        qCWarning(KFONTINST_DEBUG) << "kauth action failed" << j->errorString() << j->errorText();
-        // error is a KAuth::ActionReply::Error rest of this code expects KIO error codes which are extended by EStatus
-        switch (j->error()) {
-        case KAuth::ActionReply::Error::UserCancelledError:
-            return KIO::ERR_USER_CANCELED;
-        case KAuth::ActionReply::Error::AuthorizationDeniedError:
-            /*fall through*/
-        case KAuth::ActionReply::Error::NoSuchActionError:
-            return KIO::ERR_CANNOT_AUTHENTICATE;
-        default:
-            return KIO::ERR_INTERNAL;
-        }
-        return KIO::ERR_INTERNAL;
-    }
-    // qDebug() << "Success!";
-    return STATUS_OK;
 }
 
 }

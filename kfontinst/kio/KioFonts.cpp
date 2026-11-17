@@ -204,9 +204,8 @@ KIO::WorkerResult CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobF
     QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
     EFolder folder(getFolder(pathList));
 
-    if (!Misc::root() && FOLDER_ROOT == folder) {
-        return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED,
-                                       i18n("Can only install fonts to either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
+    if (FOLDER_USER != folder) {
+        return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("Fonts can only be installed to \"%1\".", KFI_KIO_FONTS_USER.toString()));
     } else if (Misc::isPackage(url.fileName())) {
         return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED,
                                        i18n("You cannot install a fonts package directly.\n"
@@ -239,9 +238,9 @@ KIO::WorkerResult CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobF
                 }
             } while (result > 0);
 
-            const int resp = m_interface->install(tempFile, Misc::root() || FOLDER_SYS == folder);
+            const int resp = m_interface->install(tempFile);
             QFile::remove(tempFile);
-            return handleResp(resp, url.fileName(), tempFile, FOLDER_SYS == folder);
+            return handleResp(resp, url.fileName(), tempFile, false);
         } else {
             return KIO::WorkerResult::fail(EACCES == errno ? KIO::ERR_WRITE_ACCESS_DENIED : KIO::ERR_CANNOT_OPEN_FOR_WRITING, dest.fileName());
         }

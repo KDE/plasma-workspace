@@ -328,7 +328,6 @@ CFontManager::CFontManager(QWidget *parent)
     connect(m_groupListView, &CGroupListView::print, this, &CFontManager::printGroup);
     connect(m_groupListView, &CGroupListView::enable, this, &CFontManager::enableGroup);
     connect(m_groupListView, &CGroupListView::disable, this, &CFontManager::disableGroup);
-    connect(m_groupListView, &CGroupListView::moveFonts, this, &CFontManager::moveFonts);
     connect(m_groupListView, &CGroupListView::zip, this, &CFontManager::zipGroup);
     connect(m_groupListView, &CGroupListView::itemSelected, this, &CFontManager::groupSelected);
     connect(m_groupListView, &CGroupListView::info, this, &CFontManager::showInfo);
@@ -621,53 +620,6 @@ void CFontManager::deleteFonts()
     }
 }
 
-void CFontManager::moveFonts()
-{
-    CJobRunner::ItemList urls;
-    QStringList fontNames;
-
-    m_deletedFonts.clear();
-    m_fontListView->getFonts(urls, fontNames, nullptr, true);
-
-    if (urls.isEmpty()) {
-        KMessageBox::information(this, i18n("You did not select anything to move."), i18n("Nothing to Move"));
-    } else {
-        bool doIt = false;
-
-        switch (fontNames.count()) {
-        case 0:
-            break;
-        case 1:
-            doIt = KMessageBox::Continue
-                == KMessageBox::warningContinueCancel(this,
-                                                      i18n("<p>Do you really want to "
-                                                           "move</p><p>\'<b>%1</b>\'</p><p>from <i>%2</i> to <i>%3</i>?</p>",
-                                                           fontNames.constFirst(),
-                                                           m_groupListView->isSystem() ? KFI_KIO_FONTS_SYS.toString() : KFI_KIO_FONTS_USER.toString(),
-                                                           m_groupListView->isSystem() ? KFI_KIO_FONTS_USER.toString() : KFI_KIO_FONTS_SYS.toString()),
-                                                      i18n("Move Font"),
-                                                      KGuiItem(i18n("Move")));
-            break;
-        default:
-            doIt = KMessageBox::Continue
-                == KMessageBox::warningContinueCancelList(this,
-                                                          i18np("<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>",
-                                                                "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>",
-                                                                fontNames.count(),
-                                                                m_groupListView->isSystem() ? KFI_KIO_FONTS_SYS.toString() : KFI_KIO_FONTS_USER.toString(),
-                                                                m_groupListView->isSystem() ? KFI_KIO_FONTS_USER.toString() : KFI_KIO_FONTS_SYS.toString()),
-                                                          fontNames,
-                                                          i18n("Move Fonts"),
-                                                          KGuiItem(i18n("Move")));
-        }
-
-        if (doIt) {
-            m_statusLabel->setText(i18n("Moving font(s)…"));
-            doCmd(CJobRunner::CMD_MOVE, urls, !m_groupListView->isSystem());
-        }
-    }
-}
-
 void CFontManager::zipGroup()
 {
     QModelIndex idx(m_groupListView->currentIndex());
@@ -905,61 +857,24 @@ void CFontManager::setStatusBar()
 
     bool isStd(CGroupListItem::CUSTOM == type);
 
-    m_addFontControl->setEnabled(CGroupListItem::ALL == type || CGroupListItem::UNCLASSIFIED == type || CGroupListItem::PERSONAL == type
-                                 || CGroupListItem::SYSTEM == type);
+    m_addFontControl->setEnabled(CGroupListItem::ALL == type || CGroupListItem::UNCLASSIFIED == type || CGroupListItem::PERSONAL == type);
+    const bool canModifyGroup = Misc::root() || CGroupListItem::SYSTEM != type;
     m_deleteGroupControl->setEnabled(isStd);
-    m_enableGroupControl->setEnabled(disabled || partial);
-    m_disableGroupControl->setEnabled(isStd && (enabled || partial));
+    m_enableGroupControl->setEnabled(canModifyGroup && (disabled || partial));
+    m_disableGroupControl->setEnabled(canModifyGroup && isStd && (enabled || partial));
 
-    m_groupListView->controlMenu(m_deleteGroupControl->isEnabled(),
+    m_groupListView->controlMenu(canModifyGroup && m_deleteGroupControl->isEnabled(),
                                  m_enableGroupControl->isEnabled(),
                                  m_disableGroupControl->isEnabled(),
                                  enabled || partial,
                                  enabled || disabled);
 
-    m_deleteFontControl->setEnabled(selectedEnabled || selectedDisabled);
+    m_deleteFontControl->setEnabled(canModifyGroup && (selectedEnabled || selectedDisabled));
 }
 
 void CFontManager::addFonts(const QSet<QUrl> &src)
 {
     if (!src.isEmpty() && !m_groupListView->isCustom()) {
-        bool system;
-
-        if (Misc::root()) {
-            system = true;
-        } else {
-            switch (m_groupListView->getType()) {
-            case CGroupListItem::ALL:
-            case CGroupListItem::UNCLASSIFIED:
-                switch (KMessageBox::questionTwoActionsCancel(this,
-                                                              i18n("Do you wish to install the font(s) for personal use "
-                                                                   "(only available to you), or "
-                                                                   "system-wide (available to all users)?"),
-                                                              i18n("Where to Install"),
-                                                              KGuiItem(KFI_KIO_FONTS_USER.toString()),
-                                                              KGuiItem(KFI_KIO_FONTS_SYS.toString()))) {
-                case KMessageBox::PrimaryAction:
-                    system = false;
-                    break;
-                case KMessageBox::SecondaryAction:
-                    system = true;
-                    break;
-                default:
-                case KMessageBox::Cancel:
-                    return;
-                }
-                break;
-            case CGroupListItem::PERSONAL:
-                system = false;
-                break;
-            case CGroupListItem::SYSTEM:
-                system = true;
-                break;
-            default:
-                return;
-            }
-        }
-
         QSet<QUrl> copy;
         QSet<QUrl>::ConstIterator it, end(src.end());
 
@@ -1014,7 +929,7 @@ void CFontManager::addFonts(const QSet<QUrl> &src)
         }
 
         m_statusLabel->setText(i18n("Installing font(s)…"));
-        doCmd(CJobRunner::CMD_INSTALL, installUrls, system);
+        doCmd(CJobRunner::CMD_INSTALL, installUrls);
     }
 }
 
@@ -1141,13 +1056,13 @@ void CFontManager::selectMainGroup()
                 CGroupListItem::ALL /* : CGroupListItem::PERSONAL*/);
 }
 
-void CFontManager::doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &urls, bool system)
+void CFontManager::doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &urls)
 {
     m_fontList->setSlowUpdates(true);
     CJobRunner runner(this);
 
     connect(&runner, &CJobRunner::configuring, m_fontList, &CFontList::unsetSlowUpdates);
-    runner.exec(cmd, urls, system);
+    runner.exec(cmd, urls);
     m_fontList->setSlowUpdates(false);
     refreshFontList();
     if (CJobRunner::CMD_DELETE == cmd) {

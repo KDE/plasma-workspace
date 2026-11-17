@@ -202,7 +202,7 @@ void CDuplicatesDialog::slotButtonClicked(QAbstractButton *button)
             CJobRunner runner(this);
 
             connect(&runner, &CJobRunner::configuring, m_fontList, &CFontList::unsetSlowUpdates);
-            runner.exec(CJobRunner::CMD_REMOVE_FILE, m_view->getMarkedItems(), false);
+            runner.exec(CJobRunner::CMD_REMOVE_FILE, m_view->getMarkedItems());
             m_fontList->setSlowUpdates(false);
             m_view->removeFiles();
             files = m_view->getMarkedFiles();

@@ -21,7 +21,7 @@ public:
     FontInstInterface();
     ~FontInstInterface() override;
 
-    int install(const QString &file, bool toSystem);
+    int install(const QString &file);
     int uninstall(const QString &name, bool fromSystem);
     int reconfigure();
     Families list(bool system);

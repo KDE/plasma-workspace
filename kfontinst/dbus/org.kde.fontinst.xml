@@ -38,7 +38,6 @@
     <method name="install">
       <arg name="file" type="s" direction="in"/>
       <arg name="createAfm" type="b" direction="in"/>
-      <arg name="toSystem" type="b" direction="in"/>
       <arg name="pid" type="i" direction="in"/>
       <arg name="checkConfig" type="b" direction="in"/>
       <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
@@ -54,14 +53,6 @@
     <method name="uninstall">
       <arg name="name" type="s" direction="in"/>
       <arg name="fromSystem" type="b" direction="in"/>
-      <arg name="pid" type="i" direction="in"/>
-      <arg name="checkConfig" type="b" direction="in"/>
-      <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
-    </method>
-    <method name="move">
-      <arg name="family" type="s" direction="in"/>
-      <arg name="style" type="u" direction="in"/>
-      <arg name="toSystem" type="b" direction="in"/>
       <arg name="pid" type="i" direction="in"/>
       <arg name="checkConfig" type="b" direction="in"/>
       <annotation name="org.freedesktop.DBus.Method.NoReply" value="true"/>
