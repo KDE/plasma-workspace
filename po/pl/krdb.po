@@ -1,6 +1,6 @@
 # translation of krdb.po to
 # translation of krdb.po to Polish
-# Version: $Revision: 1723123 $
+# Version: $Revision$
 # Copyright (C) 2003, 2005, 2009 Free Software Foundation, Inc.
 # Wojciech Milewski <Wojciech.Milewski@wp.pl>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2005, 2009, 2010.
