@@ -74,7 +74,8 @@ View::View(QWindow *)
     setMainItem(item);
 
     auto updateSize = [this]() {
-        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize().shrunkBy(margins())));
+        LayerShellQt::Window::get(this)->setDesiredSize(
+            QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize().shrunkBy(margins())));
     };
 
     connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
