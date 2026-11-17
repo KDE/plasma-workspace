@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2024-04-07 08:36+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -33,798 +33,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "fr.ivan@ukrainian-orthodox.org"
 
-#: kcmfontinst/DuplicatesDialog.cpp:49
-#, kde-format
-msgid "Duplicate Fonts"
-msgstr "Дубльовані шрифти"
-
-#: kcmfontinst/DuplicatesDialog.cpp:79
-#, kde-format
-msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Виявлення дубльованих шрифтів. Будь ласка, зачекайте…"
-
-#: kcmfontinst/DuplicatesDialog.cpp:98
-#, kde-format
-msgid "No duplicate fonts found."
-msgstr "Дублікатів шрифтів не знайдено."
-
-#: kcmfontinst/DuplicatesDialog.cpp:106
-#, kde-format
-msgid "Delete Marked Files"
-msgstr "Вилучити позначені файли"
-
-#: kcmfontinst/DuplicatesDialog.cpp:108
-#, kde-format
-msgid "%1 duplicate font found."
-msgid_plural "%1 duplicate fonts found."
-msgstr[0] "Знайдено %1 дублікат шрифту."
-msgstr[1] "Знайдено %1 дублікати шрифтів."
-msgstr[2] "Знайдено %1 дублікатів шрифтів."
-msgstr[3] "Знайдено %1 дублікат шрифту."
-
-#: kcmfontinst/DuplicatesDialog.cpp:189
-#, kde-format
-msgid ""
-"Are you sure you wish to delete:\n"
-"%1"
-msgstr ""
-"Ви дійсно хочете вилучити:\n"
-"%1"
-
-#: kcmfontinst/DuplicatesDialog.cpp:195
-#, kde-format
-msgid "Are you sure you wish to delete:"
-msgstr "Ви дійсно хочете вилучити:"
-
-#: kcmfontinst/DuplicatesDialog.cpp:223
-#, kde-format
-msgid "Cancel font scan?"
-msgstr "Скасувати пошук шрифтів?"
-
-#: kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "Скасування…"
-
-#: kcmfontinst/DuplicatesDialog.cpp:384
-#, kde-format
-msgid "Font/File"
-msgstr "Шрифт/Файл"
-
-#: kcmfontinst/DuplicatesDialog.cpp:386
-#, kde-format
-msgid "Size"
-msgstr "Розмір"
-
-#: kcmfontinst/DuplicatesDialog.cpp:387
-#, kde-format
-msgid "Date"
-msgstr "Дата"
-
-#: kcmfontinst/DuplicatesDialog.cpp:388
-#, kde-format
-msgid "Links To"
-msgstr "Посилання на"
-
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
-#, kde-format
-msgid "Open in Font Viewer"
-msgstr "Відкрити в переглядачі шрифтів"
-
-#: kcmfontinst/DuplicatesDialog.cpp:403
-#, kde-format
-msgid "Properties"
-msgstr "Властивості"
-
-#: kcmfontinst/DuplicatesDialog.cpp:405
-#, kde-format
-msgid "Unmark for Deletion"
-msgstr "Зняти позначку для вилучення"
-
-#: kcmfontinst/DuplicatesDialog.cpp:406
-#, kde-format
-msgid "Mark for Deletion"
-msgstr "Позначити для вилучення"
-
-#: kcmfontinst/DuplicatesDialog.cpp:504
-#, kde-format
-msgid "Open font in font viewer?"
-msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Відкрити %1 шрифт у програмі для перегляду шрифтів?"
-msgstr[1] "Відкрити %1 шрифти у програмі для перегляду шрифтів?"
-msgstr[2] "Відкрити %1 шрифтів у програмі для перегляду шрифтів?"
-msgstr[3] "Відкрити шрифт у програмі для перегляду шрифтів?"
-
-#: kcmfontinst/FontFilter.cpp:106
-#, kde-format
-msgid "Family"
-msgstr "Гарнітура"
-
-#: kcmfontinst/FontFilter.cpp:108
-#, kde-format
-msgid "Style"
-msgstr "Стиль"
-
-#: kcmfontinst/FontFilter.cpp:110
-#, kde-format
-msgid "Foundry"
-msgstr "Колекція"
-
-#: kcmfontinst/FontFilter.cpp:112
-#, kde-format
-msgid "FontConfig Match"
-msgstr "Відповідність FontConfig"
-
-#: kcmfontinst/FontFilter.cpp:114
-#, kde-format
-msgid "File Type"
-msgstr "Тип файла"
-
-#: kcmfontinst/FontFilter.cpp:116
-#, kde-format
-msgid "File Name"
-msgstr "Назва файла"
-
-#: kcmfontinst/FontFilter.cpp:118
-#, kde-format
-msgid "File Location"
-msgstr "Розташування файла"
-
-#: kcmfontinst/FontFilter.cpp:120
-#, kde-format
-msgid "Writing System"
-msgstr "Система запису"
-
-#: kcmfontinst/FontFilter.cpp:131
-#, kde-format
-msgid "Set Criteria"
-msgstr "Встановити критерії"
-
-#: kcmfontinst/FontFilter.cpp:190
-#, kde-format
-msgid "Symbol/Other"
-msgstr "Символ або інше"
-
-#: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
-#, kde-format
-msgid "Filter by %1…"
-msgstr "Критерій фільтрування: %1…"
-
-#: kcmfontinst/FontList.cpp:548
-#, kde-format
-msgid "Font"
-msgstr "Шрифт"
-
-#: kcmfontinst/FontList.cpp:550
-#, kde-format
-msgid "Status"
-msgstr "Стан"
-
-#: kcmfontinst/FontList.cpp:564
-#, kde-format
-msgid ""
-"This column shows the status of the font family, and of the individual font "
-"styles."
-msgstr "Цей стовпчик показує стан сім’ї та стилі окремих шрифтів."
-
-#: kcmfontinst/FontList.cpp:671
-#, kde-format
-msgid ""
-"<p>This list shows your installed fonts. The fonts are grouped by family, "
-"and the number in square brackets represents the number of styles in which "
-"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
-"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
-msgstr ""
-"<p>У цьому списку показано встановлені шрифти. Шрифти зібрано за "
-"гарнітурами, а число у квадратних дужках відповідає кількості стилів, які "
-"доступні у поточній гарнітурі. Наприклад, </p><ul><li>Times "
-"[4]<ul><li>Звичайний</li><li>Напівжирний</li><li>Напівжирний курсив</"
-"li><li>Курсив</li></ul></li></ul>"
-
-#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
-#, kde-format
-msgid "…plus %1 more"
-msgstr "…плюс ще %1"
-
-#: kcmfontinst/FontList.cpp:1001
-#, kde-format
-msgid "%1 [%2]"
-msgstr "%1 [%2]"
-
-#: kcmfontinst/FontList.cpp:1300
-#, kde-format
-msgid "Delete"
-msgstr "Вилучити"
-
-#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Enable"
-msgstr "Увімкнути"
-
-#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Disable"
-msgstr "Вимкнути"
-
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
-#, kde-format
-msgid "Print…"
-msgstr "Надрукувати…"
-
-#: kcmfontinst/FontList.cpp:1312
-#, kde-format
-msgid "Reload"
-msgstr "Перезавантажити"
-
-#: kcmfontinst/FontList.cpp:1690
-#, kde-format
-msgid "Open all %1 fonts in font viewer?"
-msgstr "Відкрити всі %1 шрифтів у програмі для перегляду шрифтів?"
-
-#: kcmfontinst/GroupList.cpp:62
-#, kde-format
-msgid "All Fonts"
-msgstr "Всі шрифти"
-
-#: kcmfontinst/GroupList.cpp:65
-#, kde-format
-msgid "Personal Fonts"
-msgstr "Особисті шрифти"
-
-#: kcmfontinst/GroupList.cpp:68
-#, kde-format
-msgid "System Fonts"
-msgstr "Системні шрифти"
-
-#: kcmfontinst/GroupList.cpp:71
-#, kde-format
-msgid "Unclassified"
-msgstr "Не класифіковано"
-
-#: kcmfontinst/GroupList.cpp:353
-#, kde-format
-msgid "Group"
-msgstr "Група"
-
-#: kcmfontinst/GroupList.cpp:538
-#, kde-format
-msgid ""
-"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
-"the group, and not the actual fonts.</i></p>"
-msgstr ""
-"<p>Ви справді бажаєте вилучити «<b>%1</b>»?</p><p><i>Буде вилучено лише "
-"групу, а не шрифти, що до неї входять.</i></p>"
-
-#: kcmfontinst/GroupList.cpp:542
-#, kde-format
-msgid "Remove Group"
-msgstr "Вилучити групу"
-
-#: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
-#, kde-format
-msgid "Remove"
-msgstr "Вилучити"
-
-#: kcmfontinst/GroupList.cpp:543
-#, kde-format
-msgid "Remove group"
-msgstr "Вилучити групу"
-
-#: kcmfontinst/GroupList.cpp:589
-#, kde-format
-msgid ""
-"<h3>Font Groups</h3><p>This list displays the font groups available on your "
-"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
-"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
-"are groups created by you. To add a font family to one of these groups "
-"simply drag it from the list of fonts, and drop onto the desired group. To "
-"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
-"li></ul></p>"
-msgstr ""
-"<h3>Групи шрифтів</h3><p>Цей список шрифтів містить групи шрифтів, доступних "
-"на вашій системі. У списку вказано дві основних групи шрифтів:"
-"<ul><li><b>Звичайні</b> — особливі групи, що використовуються менеджером "
-"шрифтів.<ul>%1</ul></li><li><b>Інші</b> — групи, створені вами. Для того, "
-"щоб додати гарнітуру шрифтів до однієї з груп, просто перетягніть її зі "
-"списку шрифтів в відпустіть його у бажаній групі. Щоб вилучити гарнітуру з "
-"групи, перетягніть цю гарнітуру у групу «Всі шрифти».</li></ul></p>"
-
-#: kcmfontinst/GroupList.cpp:597
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li>Список <i>Всі шрифти</i> містить всі шрифти, встановлені у системі.</"
-"li><li>Список <i>Не класифіковано</i> містить всі шрифти, ще не розміщені у "
-"групу «Інші».</li>"
-
-#: kcmfontinst/GroupList.cpp:600
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
-"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
-"are installed system-wide (i.e. available to all users).</"
-"li><li><i>Personal</i> contains your personal fonts.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li>Список <i>Всі шрифти</i> містить всі шрифти, встановлені у системі — як "
-"«Системні», так і «Особисті».</li><li>Список <i>Системні</i> містить всі "
-"шрифти, які було встановлено у цілій системі (тобто, які доступні для всіх "
-"користувачів).</li><li>Список <i>Особисті</i> містить ваші особисті шрифти.</"
-"li><li>Список <i>Не класифіковано</i> містить всі шрифти, ще не розміщені у "
-"групу «Інші».</li>"
-
-#: kcmfontinst/GroupList.cpp:702
-#, kde-format
-msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>Група з назвою <b>«%1»</b> вже існує.</qt>"
-
-#: kcmfontinst/GroupList.cpp:793
-#, kde-format
-msgid "Rename…"
-msgstr "Перейменувати…"
-
-#: kcmfontinst/GroupList.cpp:802
-#, kde-format
-msgid "Export…"
-msgstr "Експортувати…"
-
-#: kcmfontinst/GroupList.cpp:896
-#, kde-format
-msgid "Add to \"%1\"."
-msgstr "Додати до «%1»."
-
-#: kcmfontinst/GroupList.cpp:898
-#, kde-format
-msgid "Remove from current group."
-msgstr "Вилучити з поточної групи."
-
-#: kcmfontinst/GroupList.cpp:900
-#, kde-format
-msgid "Move to personal folder."
-msgstr "Пересунути до особистої теки."
-
-#: kcmfontinst/GroupList.cpp:902
-#, kde-format
-msgid "Move to system folder."
-msgstr "Пересунути до системної теки."
-
-#: kcmfontinst/JobRunner.cpp:139
-#, kde-format
-msgid "Skip"
-msgstr "Пропустити"
-
-#: kcmfontinst/JobRunner.cpp:142
-#, kde-format
-msgid "AutoSkip"
-msgstr "Автоматично пропускати"
-
-#: kcmfontinst/JobRunner.cpp:187
-#, kde-format
-msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
-msgstr "<h3>Скасувати?</h3><p>Ви справді бажаєте скасувати дію?</p>"
-
-#: kcmfontinst/JobRunner.cpp:199
-#, kde-format
-msgid ""
-"<h3>Finished</h3><p>Please note that any open applications will need to be "
-"restarted in order for any changes to be noticed.</p>"
-msgstr ""
-"<h3>Завершено</h3><p>Будь ласка, пам'ятайте, що будь-які відкриті програми "
-"потрібно перезапустити, перш ніж зміни набудуть чинності.</p>"
-
-#: kcmfontinst/JobRunner.cpp:207
-#, kde-format
-msgid "Do not show this message again"
-msgstr "Більше не показувати це повідомлення"
-
-#: kcmfontinst/JobRunner.cpp:315
-#, kde-format
-msgid "Installing"
-msgstr "Встановлення"
-
-#: kcmfontinst/JobRunner.cpp:318
-#, kde-format
-msgid "Uninstalling"
-msgstr "Прибирання"
-
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
-#, kde-format
-msgid "Enabling"
-msgstr "Увімкнення"
-
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
-#, kde-format
-msgid "Moving"
-msgstr "Пересування"
-
-#: kcmfontinst/JobRunner.cpp:327
-#, kde-format
-msgid "Updating"
-msgstr "Оновлення"
-
-#: kcmfontinst/JobRunner.cpp:331
-#, kde-format
-msgid "Removing"
-msgstr "Вилучення"
-
-#: kcmfontinst/JobRunner.cpp:335
-#, kde-format
-msgid "Disabling"
-msgstr "Вимкнення"
-
-#: kcmfontinst/JobRunner.cpp:372
-#, kde-format
-msgid "Updating font configuration. Please wait…"
-msgstr "Оновлення налаштування шрифтів. Будь ласка, зачекайте…"
-
-#: kcmfontinst/JobRunner.cpp:444
-#, kde-format
-msgid "Unable to start backend."
-msgstr "Не вдалося запустити сервер."
-
-#: kcmfontinst/JobRunner.cpp:453
-#, kde-format
-msgid "Backend died, but has been restarted. Please try again."
-msgstr ""
-"Сервер неочікувано завершив роботу, його було перезапущено. Будь ласка, "
-"повторіть спробу."
-
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
-#, kde-format
-msgid "<h3>Error</h3>"
-msgstr "<h3>Помилка</h3>"
-
-#: kcmfontinst/JobRunner.cpp:693
-#, kde-format
-msgid "Failed to download <i>%1</i>"
-msgstr "Спроба отримання <i>%1</i> зазнала невдачі"
-
-#: kcmfontinst/JobRunner.cpp:695
-#, kde-format
-msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr ""
-"Системний сервер неочікувано завершив роботу. Будь ласка, повторіть спробу."
-"<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:697
-#, kde-format
-msgid ""
-"<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr ""
-"Файл <i>%1</i> містить растровий шрифт, підтримку таких шрифтів у вашій "
-"системі вимкнено."
-
-#: kcmfontinst/JobRunner.cpp:699
-#, kde-format
-msgid ""
-"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
-"system."
-msgstr ""
-"У файлі <i>%1</i> міститься шрифт <b>%2</b>. Шрифт з цією назвою вже "
-"встановлено."
-
-#: kcmfontinst/JobRunner.cpp:701
-#, kde-format
-msgid "<i>%1</i> is not a font."
-msgstr "<i>%1</i> не є шрифтом."
-
-#: kcmfontinst/JobRunner.cpp:703
-#, kde-format
-msgid "Could not remove all files associated with <i>%1</i>"
-msgstr "Не вдалося вилучити всі файли, пов’язані з <i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:705
-#, kde-format
-msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "Не вдалося запустити системну фонову службу.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
-#, kde-format
-msgid "<i>%1</i> already exists."
-msgstr "<i>%1</i> вже існує."
-
-#: kcmfontinst/JobRunner.cpp:711
-#, kde-format
-msgid "<i>%1</i> does not exist."
-msgstr "<i>%1</i> не існує."
-
-#: kcmfontinst/JobRunner.cpp:713
-#, kde-format
-msgid "Permission denied.<br><i>%1</i>"
-msgstr "Відмовлено у доступі.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:715
-#, kde-format
-msgid "Unsupported action.<br><i>%1</i>"
-msgstr "Дія не підтримується.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:717
-#, kde-format
-msgid "Authentication failed.<br><i>%1</i>"
-msgstr "Спроба розпізнавання завершилася невдало.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:719
-#, kde-format
-msgid "Unexpected error while processing: <i>%1</i>"
-msgstr "Під час обробки сталася несподівана помилка: <i>%1</i>"
-
-#: kcmfontinst/KCmFontInst.cpp:211
-#, kde-format
-msgid "Create New Group…"
-msgstr "Створити нову групу…"
-
-#: kcmfontinst/KCmFontInst.cpp:214
-#, kde-format
-msgid "Remove Group…"
-msgstr "Вилучити групу…"
-
-#: kcmfontinst/KCmFontInst.cpp:217
-#, kde-format
-msgid "Enable Fonts in Group…"
-msgstr "Увімкнути шрифти у групі…"
-
-#: kcmfontinst/KCmFontInst.cpp:220
-#, kde-format
-msgid "Disable Fonts in Group…"
-msgstr "Вимкнути шрифти у групі…"
-
-#: kcmfontinst/KCmFontInst.cpp:241
-#, kde-format
-msgid "This displays a preview of the selected font."
-msgstr "Тут показано огляд символів вибраного шрифту."
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Find Duplicates…"
-msgstr "Знайти дублікати…"
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Scan for Duplicate Fonts…"
-msgstr "Виявити дубльовані шрифти…"
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install from File…"
-msgstr "Встановити з файла…"
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install fonts from a local file"
-msgstr "Встановити шрифти з локального файла"
-
-#: kcmfontinst/KCmFontInst.cpp:261
-#, kde-format
-msgid "Get New Fonts…"
-msgstr "Отримати нові шрифти…"
-
-#: kcmfontinst/KCmFontInst.cpp:262
-#, kde-format
-msgid "Download new fonts"
-msgstr "Отримати нові шрифти"
-
-#: kcmfontinst/KCmFontInst.cpp:264
-#, kde-format
-msgid "Delete Selected Fonts…"
-msgstr "Вилучити позначені шрифти…"
-
-#: kcmfontinst/KCmFontInst.cpp:329
-#, kde-format
-msgid "Change Preview Text…"
-msgstr "Змінити текст перегляду…"
-
-#: kcmfontinst/KCmFontInst.cpp:428
-#, kde-format
-msgid "Add Fonts"
-msgstr "Додати шрифти"
-
-#: kcmfontinst/KCmFontInst.cpp:552
-#, kde-format
-msgid "Failed to save list of fonts to print."
-msgstr "Не вдалося зберегти список шрифтів для друку."
-
-#: kcmfontinst/KCmFontInst.cpp:573
-#, kde-format
-msgid "Failed to start font printer."
-msgstr "Не вдалося запустити друкування шрифтів."
-
-#: kcmfontinst/KCmFontInst.cpp:580
-#, kde-format
-msgid ""
-"There are no printable fonts.\n"
-"You can only print non-bitmap and enabled fonts."
-msgstr ""
-"Немає шрифтів, які можна було б надрукувати.\n"
-"Можна друкувати лише нерастрові увімкнені шрифти."
-
-#: kcmfontinst/KCmFontInst.cpp:582
-#, kde-format
-msgid "Cannot Print"
-msgstr "Не можна надрукувати"
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "You did not select anything to delete."
-msgstr "Ви не вибрали хоч щось, що можна вилучити."
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "Nothing to Delete"
-msgstr "Нічого вилучати"
-
-#: kcmfontinst/KCmFontInst.cpp:612
-#, kde-format
-msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Ви впевнені, що хочете вилучити </p><p>«<b>%1</b>»?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:615
-#, kde-format
-msgid "Delete Font"
-msgstr "Вилучити шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:622
-#, kde-format
-msgid "Do you really want to delete this font?"
-msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "Ви дійсно хочете вилучити цей %1 шрифт?"
-msgstr[1] "Ви дійсно хочете вилучити ці %1 шрифти?"
-msgstr[2] "Ви дійсно хочете вилучити ці %1 шрифтів?"
-msgstr[3] "Ви дійсно хочете вилучити цей %1 шрифт?"
-
-#: kcmfontinst/KCmFontInst.cpp:624
-#, kde-format
-msgid "Delete Fonts"
-msgstr "Вилучити шрифти"
-
-#: kcmfontinst/KCmFontInst.cpp:629
-#, kde-format
-msgid "Deleting font(s)…"
-msgstr "Вилучення шрифтів…"
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "You did not select anything to move."
-msgstr "Ви не вибрали хоч щось, що можна пересунути."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "Nothing to Move"
-msgstr "Нічого пересувати"
-
-#: kcmfontinst/KCmFontInst.cpp:654
-#, kde-format
-msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
-msgstr ""
-"<p>Ви справді бажаєте пересунути</p><p>«<b>%1</b>»</p><p>з <i>%2</i> до <i>"
-"%3</i>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:659
-#, kde-format
-msgid "Move Font"
-msgstr "Пересунути шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
-#, kde-format
-msgid "Move"
-msgstr "Пересунути"
-
-#: kcmfontinst/KCmFontInst.cpp:665
-#, kde-format
-msgid ""
-"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
-msgid_plural ""
-"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] ""
-"<p>Ви справді бажаєте пересунути цей %1 шрифт з <i>%2</i> до <i>%3</i>?</p>"
-msgstr[1] ""
-"<p>Ви справді бажаєте пересунути ці %1 шрифти з <i>%2</i> до <i>%3</i>?</p>"
-msgstr[2] ""
-"<p>Ви справді бажаєте пересунути ці %1 шрифтів з <i>%2</i> до <i>%3</i>?</p>"
-msgstr[3] ""
-"<p>Ви справді бажаєте пересунути цей шрифт з <i>%2</i> до <i>%3</i>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:671
-#, kde-format
-msgid "Move Fonts"
-msgstr "Пересунути шрифти"
-
-#: kcmfontinst/KCmFontInst.cpp:676
-#, kde-format
-msgid "Moving font(s)…"
-msgstr "Пересування шрифтів…"
-
-#: kcmfontinst/KCmFontInst.cpp:690
-#, kde-format
-msgid "Export Group"
-msgstr "Експортувати групу"
-
-#: kcmfontinst/KCmFontInst.cpp:716
-#, kde-format
-msgid "No files?"
-msgstr "Немає файлів?"
-
-#: kcmfontinst/KCmFontInst.cpp:719
-#, kde-format
-msgid "Failed to open %1 for writing"
-msgstr "Не вдалося відкрити %1 для читання"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Create New Group"
-msgstr "Створити нову групу"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Name of new group:"
-msgstr "Назва нової групи:"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "New Group"
-msgstr "Нова група"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Preview Text"
-msgstr "Текст для перегляду"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Please enter new text:"
-msgstr "Будь ласка, введіть новий текст:"
-
-#: kcmfontinst/KCmFontInst.cpp:819
-#, kde-format
-msgid "Scanning font list…"
-msgstr "Перегляд списку шрифтів…"
-
-#: kcmfontinst/KCmFontInst.cpp:878
-#, kde-format
-msgid "No fonts"
-msgstr "Немає шрифтів"
-
-#: kcmfontinst/KCmFontInst.cpp:883
-#, kde-format
-msgid "1 Font"
-msgid_plural "%1 Fonts"
-msgstr[0] "%1 шрифт"
-msgstr[1] "%1 шрифти"
-msgstr[2] "%1 шрифтів"
-msgstr[3] "%1 шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:892
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">Увімкнено:</td><td>%1</td></tr><tr><td align="
-"\"right\">Вимкнено:</td><td>%2</td></tr><tr><td align=\"right\">Частково "
-"увімкнено:</td><td>%3</td></tr><tr><td align=\"right\">Загалом:</td><td>%4</"
-"td></tr></table>"
-
-#: kcmfontinst/KCmFontInst.cpp:902
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">Увімкнено:</td><td>%1</td></tr><tr><td align="
-"\"right\">Вимкнено:</td><td>%2</td></tr><tr><td align=\"right\">Загалом:</"
-"td><td>%3</td></tr></table>"
-
-#: kcmfontinst/KCmFontInst.cpp:946
+#: apps/kfontinst/Installer.cpp:38 manager/FontManager.cpp:935
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -833,213 +42,122 @@ msgstr ""
 "Ви бажаєте встановити шрифти для особистого використання (для використання "
 "лише вами) чи загалом у системі (для всіх користувачів)?"
 
-#: kcmfontinst/KCmFontInst.cpp:949
+#: apps/kfontinst/Installer.cpp:39 manager/FontManager.cpp:938
 #, kde-format
 msgid "Where to Install"
 msgstr "Адреса встановлення"
 
-#: kcmfontinst/KCmFontInst.cpp:979
-#, kde-format
-msgid "Looking for any associated files…"
-msgstr "Пошук будь-яких пов’язаних файлів…"
+#: apps/kfontinst/Installer.cpp:115
+#, fuzzy, kde-format
+#| msgid "Font Management"
+msgctxt "@title application name"
+msgid "Font Management"
+msgstr "Керування шрифтами"
 
-#: kcmfontinst/KCmFontInst.cpp:983
+#: apps/kfontinst/Installer.cpp:117
 #, kde-format
-msgid "Scanning Files…"
-msgstr "Сканування файлів…"
-
-#: kcmfontinst/KCmFontInst.cpp:984
-#, kde-format
-msgid "Looking for additional files to install…"
-msgstr "Пошук додаткових файлів для встановлення…"
-
-#: kcmfontinst/KCmFontInst.cpp:999
-#, kde-format
-msgid "Looking for files associated with %1"
-msgstr "Пошук файлів пов’язаних з %1"
-
-#: kcmfontinst/KCmFontInst.cpp:1027
-#, kde-format
-msgid "Installing font(s)…"
-msgstr "Встановлення шрифтів…"
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to enable."
-msgstr "Ви не вибрали хоч щось, що можна увімкнути."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to disable."
-msgstr "Ви не вибрали хоч щось, що можна вимкнути."
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Enable"
-msgstr "Нічого вмикати"
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Disable"
-msgstr "Нічого вимикати"
-
-#: kcmfontinst/KCmFontInst.cpp:1107
-#, kde-format
-msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Ви дійсно хочете увімкнути</p><p>«<b>%1</b>»?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1108
-#, kde-format
-msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Ви дійсно хочете вимкнути</p><p>«<b>%1</b>»?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1109
-#, kde-format
-msgid ""
-"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+msgctxt "@info application description"
+msgid "Install, manage, and preview fonts"
 msgstr ""
-"<p>Ви справді бажаєте увімкнути</p><p>«<b>%1</b>», що міститься у групі «<b>"
-"%2</b>»?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "© Craig Drummond, 2007"
+
+#: apps/kfontinst/Installer.cpp:128
+#, kde-format
+msgid "Makes the dialog transient for a window specified by windowHandle"
+msgstr "Робить вікно перехідним для вікна, яке вказано windowHandle"
+
+#: apps/kfontinst/Installer.cpp:131
+#, kde-format
+msgid "URL to install"
+msgstr "Адреса встановлення"
+
+#: apps/kfontprint/Printer.cpp:239
+#, kde-format
+msgid "Print"
+msgstr "Друк"
+
+#: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr "Скасування…"
+
+#: apps/kfontprint/Printer.cpp:323
+#, kde-format
+msgid "Font Printer"
+msgstr "Друк шрифтів шрифтів"
+
+#: apps/kfontprint/Printer.cpp:325
+#, kde-format
+msgid "Simple font printer"
+msgstr "Проста програма для друку шрифтів"
+
+#: apps/kfontprint/Printer.cpp:333
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "Робить вікно прозорим для програми X з вказаним winid"
+
+#: apps/kfontprint/Printer.cpp:335
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "Розмір шрифту для друку шрифтів"
+
+#: apps/kfontprint/Printer.cpp:339
 #, kde-format
 msgid ""
-"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
 msgstr ""
-"<p>Ви справді бажаєте вимкнути</p><p>«<b>%1</b>», що міститься у групі «<b>"
-"%2</b>»?</p>"
+"Шрифт для друку, вказаний як «Гарнітура,Стиль», де «Стиль» — це 24-бітове "
+"десяткове число, утворене у вигляді: <жирність><ширина><нахил>"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
+#: apps/kfontprint/Printer.cpp:342
 #, kde-format
-msgid "Enable Font"
-msgstr "Увімкнути шрифт"
+msgid "File containing list of fonts to print"
+msgstr "Файл, що містить список шрифтів для друку"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
+#: apps/kfontprint/Printer.cpp:344
 #, kde-format
-msgid "Disable Font"
-msgstr "Вимкнути шрифт"
+msgid "Remove file containing list of fonts to print"
+msgstr "Вилучити файл, що містить список шрифтів для друку"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: apps/kfontview/Viewer.cpp:50
 #, kde-format
-msgid "Do you really want to enable this font?"
-msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "Ви дійсно хочете увімкнути цей %1 шрифт?"
-msgstr[1] "Ви дійсно хочете увімкнути ці %1 шрифти?"
-msgstr[2] "Ви дійсно хочете увімкнути ці %1 шрифтів?"
-msgstr[3] "Ви дійсно хочете увімкнути цей %1 шрифт?"
+msgid "Open an existing font file"
+msgstr "Відкрити наявний файл шрифту"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: apps/kfontview/Viewer.cpp:51
 #, kde-format
-msgid "Do you really want to disable this font?"
-msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "Ви дійсно хочете вимкнути цей %1 шрифт?"
-msgstr[1] "Ви дійсно хочете вимкнути ці %1 шрифти?"
-msgstr[2] "Ви дійсно хочете вимкнути ці %1 шрифтів?"
-msgstr[3] "Ви дійсно хочете вимкнути цей %1 шрифт?"
+msgid "Print font preview"
+msgstr "Надрукувати зразок шрифту"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: apps/kfontview/Viewer.cpp:68
 #, kde-format
-msgid ""
-"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
-"</p>"
-msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<p>Ви впевнені, що хочете увімкнути цей %1 шрифт, що міститься у групі «<b>"
-"%2</b>»?</p>"
-msgstr[1] ""
-"<p>Ви впевнені, що хочете увімкнути ці %1 шрифти, що міститься у групі «<b>"
-"%2</b>»?</p>"
-msgstr[2] ""
-"<p>Ви впевнені, що хочете увімкнути ці %1 шрифтів, що міститься у групі «<b>"
-"%2</b>»?</p>"
-msgstr[3] ""
-"<p>Ви впевнені, що хочете увімкнути цей %1 шрифт, що міститься у групі «<b>"
-"%2</b>»?</p>"
+msgid "Select Font to View"
+msgstr "Виберіть шрифт для перегляду"
 
-#: kcmfontinst/KCmFontInst.cpp:1126
+#: apps/kfontview/Viewer.cpp:108
 #, kde-format
-msgid ""
-"<p>Do you really want to disable this font contained within group '<b>%2</"
-"b>'?</p>"
-msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<p>Ви впевнені, що хочете вимкнути цей %1 шрифт, що міститься у групі «<b>"
-"%2</b>»?</p>"
-msgstr[1] ""
-"<p>Ви впевнені, що хочете вимкнути ці %1 шрифти, що міститься у групі «<b>"
-"%2</b>»?</p>"
-msgstr[2] ""
-"<p>Ви впевнені, що хочете вимкнути ці %1 шрифтів, що міститься у групі «<b>"
-"%2</b>»?</p>"
-msgstr[3] ""
-"<p>Ви впевнені, що хочете вимкнути цей %1 шрифт, що міститься у групі «<b>"
-"%2</b>»?</p>"
+msgid "URL to open"
+msgstr "Відкрити URL"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontview/Viewer.cpp:150
 #, kde-format
-msgid "Enable Fonts"
-msgstr "Увімкнути шрифти"
+msgid "Font Viewer"
+msgstr "Переглядач шрифтів"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontview/Viewer.cpp:152
 #, kde-format
-msgid "Disable Fonts"
-msgstr "Вимкнути шрифти"
+msgid "Simple font viewer"
+msgstr "Простий переглядач шрифтів"
 
-#: kcmfontinst/KCmFontInst.cpp:1139
+#: apps/kfontview/Viewer.cpp:154
 #, kde-format
-msgid "Enabling font(s)…"
-msgstr "Увімкнення шрифтів…"
-
-#: kcmfontinst/KCmFontInst.cpp:1141
-#, kde-format
-msgid "Disabling font(s)…"
-msgstr "Вимикання шрифтів…"
-
-#: kcmfontinst/PrintDialog.cpp:21
-#, kde-format
-msgid "Print Font Samples"
-msgstr "Друк зразків шрифтів"
-
-#: kcmfontinst/PrintDialog.cpp:37
-#, kde-format
-msgid "Select size to print font:"
-msgstr "Оберіть розмір шрифту для друку:"
-
-#: kcmfontinst/PrintDialog.cpp:41
-#, kde-format
-msgid "Waterfall"
-msgstr "Різні розміри"
-
-#: kcmfontinst/PrintDialog.cpp:42
-#, kde-format
-msgid "12pt"
-msgstr "12pt"
-
-#: kcmfontinst/PrintDialog.cpp:43
-#, kde-format
-msgid "18pt"
-msgstr "18pt"
-
-#: kcmfontinst/PrintDialog.cpp:44
-#, kde-format
-msgid "24pt"
-msgstr "24pt"
-
-#: kcmfontinst/PrintDialog.cpp:45
-#, kde-format
-msgid "36pt"
-msgstr "36pt"
-
-#: kcmfontinst/PrintDialog.cpp:46
-#, kde-format
-msgid "48pt"
-msgstr "48pt"
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "© Craig Drummond, 2004-2007"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1123,6 +241,11 @@ msgstr "%1 не є шрифтом."
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Не вдалося вилучити всі файли, пов’язані з %1"
+
+#: kio/KioFonts.cpp:719 manager/JobRunner.cpp:708
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> вже існує."
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:108
 #, kde-format
@@ -1312,6 +435,990 @@ msgstr "З коміркою символу"
 #: lib/KfiConstants.h:106
 msgid "Proportional"
 msgstr "Пропорційний"
+
+#: manager/DuplicatesDialog.cpp:49
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "Дубльовані шрифти"
+
+#: manager/DuplicatesDialog.cpp:79
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "Виявлення дубльованих шрифтів. Будь ласка, зачекайте…"
+
+#: manager/DuplicatesDialog.cpp:98
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "Дублікатів шрифтів не знайдено."
+
+#: manager/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "Вилучити позначені файли"
+
+#: manager/DuplicatesDialog.cpp:108
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "Знайдено %1 дублікат шрифту."
+msgstr[1] "Знайдено %1 дублікати шрифтів."
+msgstr[2] "Знайдено %1 дублікатів шрифтів."
+msgstr[3] "Знайдено %1 дублікат шрифту."
+
+#: manager/DuplicatesDialog.cpp:189
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"Ви дійсно хочете вилучити:\n"
+"%1"
+
+#: manager/DuplicatesDialog.cpp:195
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "Ви дійсно хочете вилучити:"
+
+#: manager/DuplicatesDialog.cpp:223
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "Скасувати пошук шрифтів?"
+
+#: manager/DuplicatesDialog.cpp:384
+#, kde-format
+msgid "Font/File"
+msgstr "Шрифт/Файл"
+
+#: manager/DuplicatesDialog.cpp:386
+#, kde-format
+msgid "Size"
+msgstr "Розмір"
+
+#: manager/DuplicatesDialog.cpp:387
+#, kde-format
+msgid "Date"
+msgstr "Дата"
+
+#: manager/DuplicatesDialog.cpp:388
+#, kde-format
+msgid "Links To"
+msgstr "Посилання на"
+
+#: manager/DuplicatesDialog.cpp:401 manager/FontList.cpp:1310
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "Відкрити в переглядачі шрифтів"
+
+#: manager/DuplicatesDialog.cpp:403
+#, kde-format
+msgid "Properties"
+msgstr "Властивості"
+
+#: manager/DuplicatesDialog.cpp:405
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "Зняти позначку для вилучення"
+
+#: manager/DuplicatesDialog.cpp:406
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "Позначити для вилучення"
+
+#: manager/DuplicatesDialog.cpp:504
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Відкрити %1 шрифт у програмі для перегляду шрифтів?"
+msgstr[1] "Відкрити %1 шрифти у програмі для перегляду шрифтів?"
+msgstr[2] "Відкрити %1 шрифтів у програмі для перегляду шрифтів?"
+msgstr[3] "Відкрити шрифт у програмі для перегляду шрифтів?"
+
+#: manager/FontFilter.cpp:106
+#, kde-format
+msgid "Family"
+msgstr "Гарнітура"
+
+#: manager/FontFilter.cpp:108
+#, kde-format
+msgid "Style"
+msgstr "Стиль"
+
+#: manager/FontFilter.cpp:110
+#, kde-format
+msgid "Foundry"
+msgstr "Колекція"
+
+#: manager/FontFilter.cpp:112
+#, kde-format
+msgid "FontConfig Match"
+msgstr "Відповідність FontConfig"
+
+#: manager/FontFilter.cpp:114
+#, kde-format
+msgid "File Type"
+msgstr "Тип файла"
+
+#: manager/FontFilter.cpp:116
+#, kde-format
+msgid "File Name"
+msgstr "Назва файла"
+
+#: manager/FontFilter.cpp:118
+#, kde-format
+msgid "File Location"
+msgstr "Розташування файла"
+
+#: manager/FontFilter.cpp:120
+#, kde-format
+msgid "Writing System"
+msgstr "Система запису"
+
+#: manager/FontFilter.cpp:131
+#, kde-format
+msgid "Set Criteria"
+msgstr "Встановити критерії"
+
+#: manager/FontFilter.cpp:190
+#, kde-format
+msgid "Symbol/Other"
+msgstr "Символ або інше"
+
+#: manager/FontFilter.cpp:268 manager/FontFilter.cpp:336
+#, kde-format
+msgid "Filter by %1…"
+msgstr "Критерій фільтрування: %1…"
+
+#: manager/FontList.cpp:548
+#, kde-format
+msgid "Font"
+msgstr "Шрифт"
+
+#: manager/FontList.cpp:550
+#, kde-format
+msgid "Status"
+msgstr "Стан"
+
+#: manager/FontList.cpp:564
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "Цей стовпчик показує стан сім’ї та стилі окремих шрифтів."
+
+#: manager/FontList.cpp:671
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>У цьому списку показано встановлені шрифти. Шрифти зібрано за "
+"гарнітурами, а число у квадратних дужках відповідає кількості стилів, які "
+"доступні у поточній гарнітурі. Наприклад, </p><ul><li>Times "
+"[4]<ul><li>Звичайний</li><li>Напівжирний</li><li>Напівжирний курсив</"
+"li><li>Курсив</li></ul></li></ul>"
+
+#: manager/FontList.cpp:950 manager/FontList.cpp:974
+#, kde-format
+msgid "…plus %1 more"
+msgstr "…плюс ще %1"
+
+#: manager/FontList.cpp:1001
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: manager/FontList.cpp:1300
+#, kde-format
+msgid "Delete"
+msgstr "Вилучити"
+
+#: manager/FontList.cpp:1302 manager/FontManager.cpp:1101
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:790
+#, kde-format
+msgid "Enable"
+msgstr "Увімкнути"
+
+#: manager/FontList.cpp:1303 manager/FontManager.cpp:1102
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:791
+#, kde-format
+msgid "Disable"
+msgstr "Вимкнути"
+
+#: manager/FontList.cpp:1308 manager/GroupList.cpp:797
+#, kde-format
+msgid "Print…"
+msgstr "Надрукувати…"
+
+#: manager/FontList.cpp:1312
+#, kde-format
+msgid "Reload"
+msgstr "Перезавантажити"
+
+#: manager/FontList.cpp:1690
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "Відкрити всі %1 шрифтів у програмі для перегляду шрифтів?"
+
+#: manager/FontManager.cpp:196
+#, kde-format
+msgid "Create New Group…"
+msgstr "Створити нову групу…"
+
+#: manager/FontManager.cpp:199
+#, kde-format
+msgid "Remove Group…"
+msgstr "Вилучити групу…"
+
+#: manager/FontManager.cpp:202
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "Увімкнути шрифти у групі…"
+
+#: manager/FontManager.cpp:205
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "Вимкнути шрифти у групі…"
+
+#: manager/FontManager.cpp:226
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "Тут показано огляд символів вибраного шрифту."
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "Знайти дублікати…"
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "Виявити дубльовані шрифти…"
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install from File…"
+msgstr "Встановити з файла…"
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "Встановити шрифти з локального файла"
+
+#: manager/FontManager.cpp:246
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "Отримати нові шрифти…"
+
+#: manager/FontManager.cpp:247
+#, kde-format
+msgid "Download new fonts"
+msgstr "Отримати нові шрифти"
+
+#: manager/FontManager.cpp:249
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "Вилучити позначені шрифти…"
+
+#: manager/FontManager.cpp:314
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "Змінити текст перегляду…"
+
+#: manager/FontManager.cpp:417
+#, kde-format
+msgid "Add Fonts"
+msgstr "Додати шрифти"
+
+#: manager/FontManager.cpp:541
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "Не вдалося зберегти список шрифтів для друку."
+
+#: manager/FontManager.cpp:562
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "Не вдалося запустити друкування шрифтів."
+
+#: manager/FontManager.cpp:569
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"Немає шрифтів, які можна було б надрукувати.\n"
+"Можна друкувати лише нерастрові увімкнені шрифти."
+
+#: manager/FontManager.cpp:571
+#, kde-format
+msgid "Cannot Print"
+msgstr "Не можна надрукувати"
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Ви не вибрали хоч щось, що можна вилучити."
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Нічого вилучати"
+
+#: manager/FontManager.cpp:601
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Ви впевнені, що хочете вилучити </p><p>«<b>%1</b>»?</p>"
+
+#: manager/FontManager.cpp:604
+#, kde-format
+msgid "Delete Font"
+msgstr "Вилучити шрифт"
+
+#: manager/FontManager.cpp:611
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Ви дійсно хочете вилучити цей %1 шрифт?"
+msgstr[1] "Ви дійсно хочете вилучити ці %1 шрифти?"
+msgstr[2] "Ви дійсно хочете вилучити ці %1 шрифтів?"
+msgstr[3] "Ви дійсно хочете вилучити цей %1 шрифт?"
+
+#: manager/FontManager.cpp:613
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Вилучити шрифти"
+
+#: manager/FontManager.cpp:618
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "Вилучення шрифтів…"
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "Ви не вибрали хоч щось, що можна пересунути."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "Nothing to Move"
+msgstr "Нічого пересувати"
+
+#: manager/FontManager.cpp:643
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>Ви справді бажаєте пересунути</p><p>«<b>%1</b>»</p><p>з <i>%2</i> до <i>"
+"%3</i>?</p>"
+
+#: manager/FontManager.cpp:648
+#, kde-format
+msgid "Move Font"
+msgstr "Пересунути шрифт"
+
+#: manager/FontManager.cpp:649 manager/FontManager.cpp:661
+#, kde-format
+msgid "Move"
+msgstr "Пересунути"
+
+#: manager/FontManager.cpp:654
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] ""
+"<p>Ви справді бажаєте пересунути цей %1 шрифт з <i>%2</i> до <i>%3</i>?</p>"
+msgstr[1] ""
+"<p>Ви справді бажаєте пересунути ці %1 шрифти з <i>%2</i> до <i>%3</i>?</p>"
+msgstr[2] ""
+"<p>Ви справді бажаєте пересунути ці %1 шрифтів з <i>%2</i> до <i>%3</i>?</p>"
+msgstr[3] ""
+"<p>Ви справді бажаєте пересунути цей шрифт з <i>%2</i> до <i>%3</i>?</p>"
+
+#: manager/FontManager.cpp:660
+#, kde-format
+msgid "Move Fonts"
+msgstr "Пересунути шрифти"
+
+#: manager/FontManager.cpp:665
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "Пересування шрифтів…"
+
+#: manager/FontManager.cpp:679
+#, kde-format
+msgid "Export Group"
+msgstr "Експортувати групу"
+
+#: manager/FontManager.cpp:705
+#, kde-format
+msgid "No files?"
+msgstr "Немає файлів?"
+
+#: manager/FontManager.cpp:708
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "Не вдалося відкрити %1 для читання"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Create New Group"
+msgstr "Створити нову групу"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Name of new group:"
+msgstr "Назва нової групи:"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "New Group"
+msgstr "Нова група"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Preview Text"
+msgstr "Текст для перегляду"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Please enter new text:"
+msgstr "Будь ласка, введіть новий текст:"
+
+#: manager/FontManager.cpp:808
+#, kde-format
+msgid "Scanning font list…"
+msgstr "Перегляд списку шрифтів…"
+
+#: manager/FontManager.cpp:867
+#, kde-format
+msgid "No fonts"
+msgstr "Немає шрифтів"
+
+#: manager/FontManager.cpp:872
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "%1 шрифт"
+msgstr[1] "%1 шрифти"
+msgstr[2] "%1 шрифтів"
+msgstr[3] "%1 шрифт"
+
+#: manager/FontManager.cpp:881
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Увімкнено:</td><td>%1</td></tr><tr><td align="
+"\"right\">Вимкнено:</td><td>%2</td></tr><tr><td align=\"right\">Частково "
+"увімкнено:</td><td>%3</td></tr><tr><td align=\"right\">Загалом:</td><td>%4</"
+"td></tr></table>"
+
+#: manager/FontManager.cpp:891
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Увімкнено:</td><td>%1</td></tr><tr><td align="
+"\"right\">Вимкнено:</td><td>%2</td></tr><tr><td align=\"right\">Загалом:</"
+"td><td>%3</td></tr></table>"
+
+#: manager/FontManager.cpp:968
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "Пошук будь-яких пов’язаних файлів…"
+
+#: manager/FontManager.cpp:972
+#, kde-format
+msgid "Scanning Files…"
+msgstr "Сканування файлів…"
+
+#: manager/FontManager.cpp:973
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "Пошук додаткових файлів для встановлення…"
+
+#: manager/FontManager.cpp:988
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "Пошук файлів пов’язаних з %1"
+
+#: manager/FontManager.cpp:1016
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "Встановлення шрифтів…"
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "Ви не вибрали хоч щось, що можна увімкнути."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "Ви не вибрали хоч щось, що можна вимкнути."
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "Нічого вмикати"
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "Нічого вимикати"
+
+#: manager/FontManager.cpp:1096
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Ви дійсно хочете увімкнути</p><p>«<b>%1</b>»?</p>"
+
+#: manager/FontManager.cpp:1097
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Ви дійсно хочете вимкнути</p><p>«<b>%1</b>»?</p>"
+
+#: manager/FontManager.cpp:1098
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Ви справді бажаєте увімкнути</p><p>«<b>%1</b>», що міститься у групі «<b>"
+"%2</b>»?</p>"
+
+#: manager/FontManager.cpp:1099
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Ви справді бажаєте вимкнути</p><p>«<b>%1</b>», що міститься у групі «<b>"
+"%2</b>»?</p>"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1101
+#, kde-format
+msgid "Enable Font"
+msgstr "Увімкнути шрифт"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1102
+#, kde-format
+msgid "Disable Font"
+msgstr "Вимкнути шрифт"
+
+#: manager/FontManager.cpp:1108
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Ви дійсно хочете увімкнути цей %1 шрифт?"
+msgstr[1] "Ви дійсно хочете увімкнути ці %1 шрифти?"
+msgstr[2] "Ви дійсно хочете увімкнути ці %1 шрифтів?"
+msgstr[3] "Ви дійсно хочете увімкнути цей %1 шрифт?"
+
+#: manager/FontManager.cpp:1109
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Ви дійсно хочете вимкнути цей %1 шрифт?"
+msgstr[1] "Ви дійсно хочете вимкнути ці %1 шрифти?"
+msgstr[2] "Ви дійсно хочете вимкнути ці %1 шрифтів?"
+msgstr[3] "Ви дійсно хочете вимкнути цей %1 шрифт?"
+
+#: manager/FontManager.cpp:1111
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Ви впевнені, що хочете увімкнути цей %1 шрифт, що міститься у групі «<b>"
+"%2</b>»?</p>"
+msgstr[1] ""
+"<p>Ви впевнені, що хочете увімкнути ці %1 шрифти, що міститься у групі «<b>"
+"%2</b>»?</p>"
+msgstr[2] ""
+"<p>Ви впевнені, що хочете увімкнути ці %1 шрифтів, що міститься у групі «<b>"
+"%2</b>»?</p>"
+msgstr[3] ""
+"<p>Ви впевнені, що хочете увімкнути цей %1 шрифт, що міститься у групі «<b>"
+"%2</b>»?</p>"
+
+#: manager/FontManager.cpp:1115
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Ви впевнені, що хочете вимкнути цей %1 шрифт, що міститься у групі «<b>"
+"%2</b>»?</p>"
+msgstr[1] ""
+"<p>Ви впевнені, що хочете вимкнути ці %1 шрифти, що міститься у групі «<b>"
+"%2</b>»?</p>"
+msgstr[2] ""
+"<p>Ви впевнені, що хочете вимкнути ці %1 шрифтів, що міститься у групі «<b>"
+"%2</b>»?</p>"
+msgstr[3] ""
+"<p>Ви впевнені, що хочете вимкнути цей %1 шрифт, що міститься у групі «<b>"
+"%2</b>»?</p>"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Enable Fonts"
+msgstr "Увімкнути шрифти"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Disable Fonts"
+msgstr "Вимкнути шрифти"
+
+#: manager/FontManager.cpp:1128
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "Увімкнення шрифтів…"
+
+#: manager/FontManager.cpp:1130
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "Вимикання шрифтів…"
+
+#: manager/GroupList.cpp:62
+#, kde-format
+msgid "All Fonts"
+msgstr "Всі шрифти"
+
+#: manager/GroupList.cpp:65
+#, kde-format
+msgid "Personal Fonts"
+msgstr "Особисті шрифти"
+
+#: manager/GroupList.cpp:68
+#, kde-format
+msgid "System Fonts"
+msgstr "Системні шрифти"
+
+#: manager/GroupList.cpp:71
+#, kde-format
+msgid "Unclassified"
+msgstr "Не класифіковано"
+
+#: manager/GroupList.cpp:353
+#, kde-format
+msgid "Group"
+msgstr "Група"
+
+#: manager/GroupList.cpp:538
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>Ви справді бажаєте вилучити «<b>%1</b>»?</p><p><i>Буде вилучено лише "
+"групу, а не шрифти, що до неї входять.</i></p>"
+
+#: manager/GroupList.cpp:542
+#, kde-format
+msgid "Remove Group"
+msgstr "Вилучити групу"
+
+#: manager/GroupList.cpp:543 manager/GroupList.cpp:788
+#, kde-format
+msgid "Remove"
+msgstr "Вилучити"
+
+#: manager/GroupList.cpp:543
+#, kde-format
+msgid "Remove group"
+msgstr "Вилучити групу"
+
+#: manager/GroupList.cpp:589
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>Групи шрифтів</h3><p>Цей список шрифтів містить групи шрифтів, доступних "
+"на вашій системі. У списку вказано дві основних групи шрифтів:"
+"<ul><li><b>Звичайні</b> — особливі групи, що використовуються менеджером "
+"шрифтів.<ul>%1</ul></li><li><b>Інші</b> — групи, створені вами. Для того, "
+"щоб додати гарнітуру шрифтів до однієї з груп, просто перетягніть її зі "
+"списку шрифтів в відпустіть його у бажаній групі. Щоб вилучити гарнітуру з "
+"групи, перетягніть цю гарнітуру у групу «Всі шрифти».</li></ul></p>"
+
+#: manager/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li>Список <i>Всі шрифти</i> містить всі шрифти, встановлені у системі.</"
+"li><li>Список <i>Не класифіковано</i> містить всі шрифти, ще не розміщені у "
+"групу «Інші».</li>"
+
+#: manager/GroupList.cpp:600
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li>Список <i>Всі шрифти</i> містить всі шрифти, встановлені у системі — як "
+"«Системні», так і «Особисті».</li><li>Список <i>Системні</i> містить всі "
+"шрифти, які було встановлено у цілій системі (тобто, які доступні для всіх "
+"користувачів).</li><li>Список <i>Особисті</i> містить ваші особисті шрифти.</"
+"li><li>Список <i>Не класифіковано</i> містить всі шрифти, ще не розміщені у "
+"групу «Інші».</li>"
+
+#: manager/GroupList.cpp:702
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>Група з назвою <b>«%1»</b> вже існує.</qt>"
+
+#: manager/GroupList.cpp:793
+#, kde-format
+msgid "Rename…"
+msgstr "Перейменувати…"
+
+#: manager/GroupList.cpp:802
+#, kde-format
+msgid "Export…"
+msgstr "Експортувати…"
+
+#: manager/GroupList.cpp:896
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "Додати до «%1»."
+
+#: manager/GroupList.cpp:898
+#, kde-format
+msgid "Remove from current group."
+msgstr "Вилучити з поточної групи."
+
+#: manager/GroupList.cpp:900
+#, kde-format
+msgid "Move to personal folder."
+msgstr "Пересунути до особистої теки."
+
+#: manager/GroupList.cpp:902
+#, kde-format
+msgid "Move to system folder."
+msgstr "Пересунути до системної теки."
+
+#: manager/JobRunner.cpp:139
+#, kde-format
+msgid "Skip"
+msgstr "Пропустити"
+
+#: manager/JobRunner.cpp:142
+#, kde-format
+msgid "AutoSkip"
+msgstr "Автоматично пропускати"
+
+#: manager/JobRunner.cpp:187
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>Скасувати?</h3><p>Ви справді бажаєте скасувати дію?</p>"
+
+#: manager/JobRunner.cpp:199
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>Завершено</h3><p>Будь ласка, пам'ятайте, що будь-які відкриті програми "
+"потрібно перезапустити, перш ніж зміни набудуть чинності.</p>"
+
+#: manager/JobRunner.cpp:207
+#, kde-format
+msgid "Do not show this message again"
+msgstr "Більше не показувати це повідомлення"
+
+#: manager/JobRunner.cpp:315
+#, kde-format
+msgid "Installing"
+msgstr "Встановлення"
+
+#: manager/JobRunner.cpp:318
+#, kde-format
+msgid "Uninstalling"
+msgstr "Прибирання"
+
+#: manager/JobRunner.cpp:321 manager/JobRunner.cpp:417
+#, kde-format
+msgid "Enabling"
+msgstr "Увімкнення"
+
+#: manager/JobRunner.cpp:324 manager/JobRunner.cpp:421
+#, kde-format
+msgid "Moving"
+msgstr "Пересування"
+
+#: manager/JobRunner.cpp:327
+#, kde-format
+msgid "Updating"
+msgstr "Оновлення"
+
+#: manager/JobRunner.cpp:331
+#, kde-format
+msgid "Removing"
+msgstr "Вилучення"
+
+#: manager/JobRunner.cpp:335
+#, kde-format
+msgid "Disabling"
+msgstr "Вимкнення"
+
+#: manager/JobRunner.cpp:372
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "Оновлення налаштування шрифтів. Будь ласка, зачекайте…"
+
+#: manager/JobRunner.cpp:444
+#, kde-format
+msgid "Unable to start backend."
+msgstr "Не вдалося запустити сервер."
+
+#: manager/JobRunner.cpp:453
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr ""
+"Сервер неочікувано завершив роботу, його було перезапущено. Будь ласка, "
+"повторіть спробу."
+
+#: manager/JobRunner.cpp:618 manager/JobRunner.cpp:625
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>Помилка</h3>"
+
+#: manager/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "Спроба отримання <i>%1</i> зазнала невдачі"
+
+#: manager/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr ""
+"Системний сервер неочікувано завершив роботу. Будь ласка, повторіть спробу."
+"<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr ""
+"Файл <i>%1</i> містить растровий шрифт, підтримку таких шрифтів у вашій "
+"системі вимкнено."
+
+#: manager/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+"У файлі <i>%1</i> міститься шрифт <b>%2</b>. Шрифт з цією назвою вже "
+"встановлено."
+
+#: manager/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> не є шрифтом."
+
+#: manager/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "Не вдалося вилучити всі файли, пов’язані з <i>%1</i>"
+
+#: manager/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "Не вдалося запустити системну фонову службу.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> не існує."
+
+#: manager/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "Відмовлено у доступі.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "Дія не підтримується.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "Спроба розпізнавання завершилася невдало.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "Під час обробки сталася несподівана помилка: <i>%1</i>"
+
+#: manager/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "Друк зразків шрифтів"
+
+#: manager/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "Оберіть розмір шрифту для друку:"
+
+#: manager/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "Різні розміри"
+
+#: manager/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12pt"
+
+#: manager/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18pt"
+
+#: manager/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24pt"
+
+#: manager/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36pt"
+
+#: manager/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48pt"
 
 #: viewpart/CharTip.cpp:44
 #, kde-format
@@ -2222,67 +2329,6 @@ msgstr "Ї"
 
 #~ msgid "Simple font installer"
 #~ msgstr "Програма встановлення шрифтів"
-
-#~ msgid "(C) Craig Drummond, 2007"
-#~ msgstr "© Craig Drummond, 2007"
-
-#~ msgid "Makes the dialog transient for a window specified by windowHandle"
-#~ msgstr "Робить вікно перехідним для вікна, яке вказано windowHandle"
-
-#~ msgid "URL to install"
-#~ msgstr "Адреса встановлення"
-
-#~ msgid "Print"
-#~ msgstr "Друк"
-
-#~ msgid "Font Printer"
-#~ msgstr "Друк шрифтів шрифтів"
-
-#~ msgid "Simple font printer"
-#~ msgstr "Проста програма для друку шрифтів"
-
-#~ msgid "Makes the dialog transient for an X app specified by winid"
-#~ msgstr "Робить вікно прозорим для програми X з вказаним winid"
-
-#~ msgid "Size index to print fonts"
-#~ msgstr "Розмір шрифту для друку шрифтів"
-
-#~ msgid ""
-#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
-#~ "decimal number composed as: <weight><width><slant>"
-#~ msgstr ""
-#~ "Шрифт для друку, вказаний як «Гарнітура,Стиль», де «Стиль» — це 24-бітове "
-#~ "десяткове число, утворене у вигляді: <жирність><ширина><нахил>"
-
-#~ msgid "File containing list of fonts to print"
-#~ msgstr "Файл, що містить список шрифтів для друку"
-
-#~ msgid "Remove file containing list of fonts to print"
-#~ msgstr "Вилучити файл, що містить список шрифтів для друку"
-
-#~ msgid "Open an existing font file"
-#~ msgstr "Відкрити наявний файл шрифту"
-
-#~ msgid "Print font preview"
-#~ msgstr "Надрукувати зразок шрифту"
-
-#~ msgid "Select Font to View"
-#~ msgstr "Виберіть шрифт для перегляду"
-
-#~ msgid "URL to open"
-#~ msgstr "Відкрити URL"
-
-#~ msgid "Font Viewer"
-#~ msgstr "Переглядач шрифтів"
-
-#~ msgid "Simple font viewer"
-#~ msgstr "Простий переглядач шрифтів"
-
-#~ msgid "(C) Craig Drummond, 2004-2007"
-#~ msgstr "© Craig Drummond, 2004-2007"
-
-#~ msgid "Font Management"
-#~ msgstr "Керування шрифтами"
 
 #~ msgid "(C) Craig Drummond, 2000 - 2009"
 #~ msgstr "© Craig Drummond, 2000-2009"

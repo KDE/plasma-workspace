@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2025-08-14 11:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,788 +34,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com,metehyi@free.fr"
 
-#: kcmfontinst/DuplicatesDialog.cpp:49
-#, kde-format
-msgid "Duplicate Fonts"
-msgstr "خطوط مكررة"
-
-#: kcmfontinst/DuplicatesDialog.cpp:79
-#, kde-format
-msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "جاري المسح عن الخطوط المكررة. من فضلك انتظر..."
-
-#: kcmfontinst/DuplicatesDialog.cpp:98
-#, kde-format
-msgid "No duplicate fonts found."
-msgstr "لا توجد خطوط مكررة."
-
-#: kcmfontinst/DuplicatesDialog.cpp:106
-#, kde-format
-msgid "Delete Marked Files"
-msgstr "احذف الملفات المعلمة"
-
-#: kcmfontinst/DuplicatesDialog.cpp:108
-#, kde-format
-msgid "%1 duplicate font found."
-msgid_plural "%1 duplicate fonts found."
-msgstr[0] "لا توجد خطوط مكررة"
-msgstr[1] "خط واحد مكرر."
-msgstr[2] "يوجد خطان مكرران."
-msgstr[3] "يوجد %1 خطوط مكررة ."
-msgstr[4] "يوجد %1 خطا مكررة ."
-msgstr[5] "يوجد %1 خط مكررة."
-
-#: kcmfontinst/DuplicatesDialog.cpp:189
-#, kde-format
-msgid ""
-"Are you sure you wish to delete:\n"
-"%1"
-msgstr ""
-"هل أنت متأكد من حذف:\n"
-"%1"
-
-#: kcmfontinst/DuplicatesDialog.cpp:195
-#, kde-format
-msgid "Are you sure you wish to delete:"
-msgstr "هل أنت متأكد من حذف:"
-
-#: kcmfontinst/DuplicatesDialog.cpp:223
-#, kde-format
-msgid "Cancel font scan?"
-msgstr "إجهاض مسح الخطوط؟"
-
-#: kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "يلغي..."
-
-#: kcmfontinst/DuplicatesDialog.cpp:384
-#, kde-format
-msgid "Font/File"
-msgstr "الخط/الملف"
-
-#: kcmfontinst/DuplicatesDialog.cpp:386
-#, kde-format
-msgid "Size"
-msgstr "الحجم"
-
-#: kcmfontinst/DuplicatesDialog.cpp:387
-#, kde-format
-msgid "Date"
-msgstr "التاريخ"
-
-#: kcmfontinst/DuplicatesDialog.cpp:388
-#, kde-format
-msgid "Links To"
-msgstr "وصلات إلى"
-
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
-#, kde-format
-msgid "Open in Font Viewer"
-msgstr "افتح في عارض الخطوط..."
-
-#: kcmfontinst/DuplicatesDialog.cpp:403
-#, kde-format
-msgid "Properties"
-msgstr "الخصائص..."
-
-#: kcmfontinst/DuplicatesDialog.cpp:405
-#, kde-format
-msgid "Unmark for Deletion"
-msgstr "أزل علامة الحذف"
-
-#: kcmfontinst/DuplicatesDialog.cpp:406
-#, kde-format
-msgid "Mark for Deletion"
-msgstr "معلم للحذف"
-
-#: kcmfontinst/DuplicatesDialog.cpp:504
-#, kde-format
-msgid "Open font in font viewer?"
-msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "هل افتح الخط في عارض الخطوط؟"
-msgstr[1] "هل افتح الخط في عارض الخطوط؟"
-msgstr[2] "هل افتح  كل %1 الخطوط في عارض الخطوط؟"
-msgstr[3] "هل افتح  كل %1 الخطوط في عارض الخطوط؟"
-msgstr[4] "هل افتح  كل %1 خطا في عارض الخطوط؟"
-msgstr[5] "هل افتح  كل %1 خط في عارض الخطوط؟"
-
-#: kcmfontinst/FontFilter.cpp:106
-#, kde-format
-msgid "Family"
-msgstr "العائلة"
-
-#: kcmfontinst/FontFilter.cpp:108
-#, kde-format
-msgid "Style"
-msgstr "الأسلوب"
-
-#: kcmfontinst/FontFilter.cpp:110
-#, kde-format
-msgid "Foundry"
-msgstr "المسبك"
-
-#: kcmfontinst/FontFilter.cpp:112
-#, kde-format
-msgid "FontConfig Match"
-msgstr "تطابق ضبط الخط"
-
-#: kcmfontinst/FontFilter.cpp:114
-#, kde-format
-msgid "File Type"
-msgstr "نوع الملف"
-
-#: kcmfontinst/FontFilter.cpp:116
-#, kde-format
-msgid "File Name"
-msgstr "اسم الملف"
-
-#: kcmfontinst/FontFilter.cpp:118
-#, kde-format
-msgid "File Location"
-msgstr "موقع الملف"
-
-#: kcmfontinst/FontFilter.cpp:120
-#, kde-format
-msgid "Writing System"
-msgstr "نظام الكتابة"
-
-#: kcmfontinst/FontFilter.cpp:131
-#, kde-format
-msgid "Set Criteria"
-msgstr "عيّن المعايير"
-
-#: kcmfontinst/FontFilter.cpp:190
-#, kde-format
-msgid "Symbol/Other"
-msgstr "الرمز/آخر"
-
-#: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
-#, kde-format
-msgid "Filter by %1…"
-msgstr "رشّح حسب %1…"
-
-#: kcmfontinst/FontList.cpp:548
-#, kde-format
-msgid "Font"
-msgstr "الخط"
-
-#: kcmfontinst/FontList.cpp:550
-#, kde-format
-msgid "Status"
-msgstr "الحالة"
-
-#: kcmfontinst/FontList.cpp:564
-#, kde-format
-msgid ""
-"This column shows the status of the font family, and of the individual font "
-"styles."
-msgstr "هذا العمود يظهر حالة عائلة الخطوط, وأساليب الخطوط الفردية."
-
-#: kcmfontinst/FontList.cpp:671
-#, kde-format
-msgid ""
-"<p>This list shows your installed fonts. The fonts are grouped by family, "
-"and the number in square brackets represents the number of styles in which "
-"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
-"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
-msgstr ""
-"<p> هذه القائمة تظهر خطوطك المثبتة. الخطوط مرتبة حسب العائلة، الرقم داخل "
-"الأقواس يمثل  رقم الأساليب المتاحة مثلا في </p><ul><li>Times [4]<ul><li> "
-"عادي</li><li>عريض</li><li>عريض مائل</li><li>مائل</li></ul></li></ul>"
-
-#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
-#, kde-format
-msgid "…plus %1 more"
-msgstr "...بالإضافة %1 زيادة"
-
-#: kcmfontinst/FontList.cpp:1001
-#, kde-format
-msgid "%1 [%2]"
-msgstr "%1 [%2]"
-
-#: kcmfontinst/FontList.cpp:1300
-#, kde-format
-msgid "Delete"
-msgstr "احذف"
-
-#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Enable"
-msgstr "مكّن"
-
-#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Disable"
-msgstr "عطّل"
-
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
-#, kde-format
-msgid "Print…"
-msgstr "اطبع…"
-
-#: kcmfontinst/FontList.cpp:1312
-#, kde-format
-msgid "Reload"
-msgstr "أعد تحميل"
-
-#: kcmfontinst/FontList.cpp:1690
-#, kde-format
-msgid "Open all %1 fonts in font viewer?"
-msgstr "هل افتح كل الخطوط  %1  في عارض الخطوط؟"
-
-#: kcmfontinst/GroupList.cpp:62
-#, kde-format
-msgid "All Fonts"
-msgstr "كلّ الخطوط"
-
-#: kcmfontinst/GroupList.cpp:65
-#, kde-format
-msgid "Personal Fonts"
-msgstr "خطوط شخصية"
-
-#: kcmfontinst/GroupList.cpp:68
-#, kde-format
-msgid "System Fonts"
-msgstr "خطوط النظام"
-
-#: kcmfontinst/GroupList.cpp:71
-#, kde-format
-msgid "Unclassified"
-msgstr "غير مصنف"
-
-#: kcmfontinst/GroupList.cpp:353
-#, kde-format
-msgid "Group"
-msgstr "المجموعة"
-
-#: kcmfontinst/GroupList.cpp:538
-#, kde-format
-msgid ""
-"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
-"the group, and not the actual fonts.</i></p>"
-msgstr ""
-"<p>هل تريد إزالة '<b>%1</b>'?</p><p><i>هذه ستزيل المجموعة فقط, وليس الخطوط "
-"الفعلية.</i></p>"
-
-#: kcmfontinst/GroupList.cpp:542
-#, kde-format
-msgid "Remove Group"
-msgstr "أزل المجموعة"
-
-#: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
-#, kde-format
-msgid "Remove"
-msgstr "أزل"
-
-#: kcmfontinst/GroupList.cpp:543
-#, kde-format
-msgid "Remove group"
-msgstr "أزل المجموعة"
-
-#: kcmfontinst/GroupList.cpp:589
-#, kde-format
-msgid ""
-"<h3>Font Groups</h3><p>This list displays the font groups available on your "
-"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
-"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
-"are groups created by you. To add a font family to one of these groups "
-"simply drag it from the list of fonts, and drop onto the desired group. To "
-"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
-"li></ul></p>"
-msgstr ""
-"<h3>مجموعات الخطوط</h3><p>تعرض هذه القائمة مجموعات الخطوط الموجودة على نظام، "
-"توجد مجموعتين من الخطوط:<ul><li><b>قياسية</b>  وهي مجموعات خاصة تستخدم "
-"بواسطة مدير الخطوط.<ul>%1</ul></li><li><b>مخصصة</b> وهي المجموعات التي "
-"أنشأتها . لتضيف عائلة خطوط إلى إحدى هاتين المجموعتين اسحبها من قائمة الخطوط "
-"و أفلتها إلى المجموعة التي تريدها. ولتزيل عائلة خطوط من مجموعة ما، اسحبها "
-"إلى مجموعة \"كل الخطوط\" .</li></ul></p>"
-
-#: kcmfontinst/GroupList.cpp:597
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>كلّ الخطوط</i> تحتوي على كلّ الخطوط المثبتة على نظامك.</li><li><i>غير "
-"مصنف</i> يحتوي كلّ الخطوط التي لم توضع مع مجموعة \"مخصصة\" .</li>"
-
-#: kcmfontinst/GroupList.cpp:600
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
-"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
-"are installed system-wide (i.e. available to all users).</"
-"li><li><i>Personal</i> contains your personal fonts.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>كل خطوط</i> يحتوي كل الخطوط المثبتة في نظامك كلا \"النظام\" و "
-"\"الشخصية\".</li><li><i>النظام</i> يحتوي كافة الخطوط المثبتة على النظام "
-"(متاحة لكافة المستخدمين)</li><li><i>الشخصية</i> يحتوي على خطوطك الخاصة يحتوي "
-"</li><li><i>غير مصنف</i> كافة الخطوط التي لم تصنف في النظام أو الشخصية.</li>"
-
-#: kcmfontinst/GroupList.cpp:702
-#, kde-format
-msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>المجموعة المسماة <b>'%1'</b> موجودة مسبقًا.</qt>"
-
-#: kcmfontinst/GroupList.cpp:793
-#, kde-format
-msgid "Rename…"
-msgstr "أعد التسمية..."
-
-#: kcmfontinst/GroupList.cpp:802
-#, kde-format
-msgid "Export…"
-msgstr "صدر..."
-
-#: kcmfontinst/GroupList.cpp:896
-#, kde-format
-msgid "Add to \"%1\"."
-msgstr "أضف إلى \"%1\"."
-
-#: kcmfontinst/GroupList.cpp:898
-#, kde-format
-msgid "Remove from current group."
-msgstr "أزل من المجموعة الحالية"
-
-#: kcmfontinst/GroupList.cpp:900
-#, kde-format
-msgid "Move to personal folder."
-msgstr "انقل إلى المجلد الشخصي."
-
-#: kcmfontinst/GroupList.cpp:902
-#, kde-format
-msgid "Move to system folder."
-msgstr "انقل إلى مجلد النظام."
-
-#: kcmfontinst/JobRunner.cpp:139
-#, kde-format
-msgid "Skip"
-msgstr "تخطّى"
-
-#: kcmfontinst/JobRunner.cpp:142
-#, kde-format
-msgid "AutoSkip"
-msgstr "تخطى آليّا"
-
-#: kcmfontinst/JobRunner.cpp:187
-#, kde-format
-msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
-msgstr "<h3>أألغ?</h3><p>هل أنت متأكد من الإلغاء؟</p>"
-
-#: kcmfontinst/JobRunner.cpp:199
-#, kde-format
-msgid ""
-"<h3>Finished</h3><p>Please note that any open applications will need to be "
-"restarted in order for any changes to be noticed.</p>"
-msgstr ""
-"<h3>انتهى</h3><p>من فضلك لاحظ أنك بحاجة إلى إعادة تشغيل أي تطبيقات مفتوحة "
-"حاليًا كي تستطيع رؤية التغييرات.</p>"
-
-#: kcmfontinst/JobRunner.cpp:207
-#, kde-format
-msgid "Do not show this message again"
-msgstr "لا تظهر هذه الرسالة مجددا"
-
-#: kcmfontinst/JobRunner.cpp:315
-#, kde-format
-msgid "Installing"
-msgstr "جاري التثبيت"
-
-#: kcmfontinst/JobRunner.cpp:318
-#, kde-format
-msgid "Uninstalling"
-msgstr "جاري إلغاء التثبيت"
-
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
-#, kde-format
-msgid "Enabling"
-msgstr "تمكين"
-
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
-#, kde-format
-msgid "Moving"
-msgstr "يحرك"
-
-#: kcmfontinst/JobRunner.cpp:327
-#, kde-format
-msgid "Updating"
-msgstr "يحدث"
-
-#: kcmfontinst/JobRunner.cpp:331
-#, kde-format
-msgid "Removing"
-msgstr "يزيل"
-
-#: kcmfontinst/JobRunner.cpp:335
-#, kde-format
-msgid "Disabling"
-msgstr "يعطل"
-
-#: kcmfontinst/JobRunner.cpp:372
-#, kde-format
-msgid "Updating font configuration. Please wait…"
-msgstr "يحدث ضبط الخط، من فضلك انتظر..."
-
-#: kcmfontinst/JobRunner.cpp:444
-#, kde-format
-msgid "Unable to start backend."
-msgstr "غير قادر على بدء الخلفية."
-
-#: kcmfontinst/JobRunner.cpp:453
-#, kde-format
-msgid "Backend died, but has been restarted. Please try again."
-msgstr "ماتت الخلفية، ولكن أعيد تشغيلها. حاول مرة أخرى."
-
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
-#, kde-format
-msgid "<h3>Error</h3>"
-msgstr "<h3>خطأ</h3>"
-
-#: kcmfontinst/JobRunner.cpp:693
-#, kde-format
-msgid "Failed to download <i>%1</i>"
-msgstr "فشل تنزيل <i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:695
-#, kde-format
-msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr "ماتت خلفية النظام. حاول مرة أخرى. <br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:697
-#, kde-format
-msgid ""
-"<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr "<i>%1</i>خط بتماب،وهي معطلة على نظامك."
-
-#: kcmfontinst/JobRunner.cpp:699
-#, kde-format
-msgid ""
-"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
-"system."
-msgstr "الملف <i>%1</i> يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقًا على نظامك."
-
-#: kcmfontinst/JobRunner.cpp:701
-#, kde-format
-msgid "<i>%1</i> is not a font."
-msgstr "<i>%1</i> ليس بخط."
-
-#: kcmfontinst/JobRunner.cpp:703
-#, kde-format
-msgid "Could not remove all files associated with <i>%1</i>"
-msgstr "لا يمكن إزالة جميع الملفات المرتبطة بـ<i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:705
-#, kde-format
-msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "فشل بدء عفريت النظام.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
-#, kde-format
-msgid "<i>%1</i> already exists."
-msgstr "<i>%1</i> موجود فعلًا."
-
-#: kcmfontinst/JobRunner.cpp:711
-#, kde-format
-msgid "<i>%1</i> does not exist."
-msgstr "<i>%1</i> ليس موجودًا."
-
-#: kcmfontinst/JobRunner.cpp:713
-#, kde-format
-msgid "Permission denied.<br><i>%1</i>"
-msgstr "طلب الإذن مرفوض.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:715
-#, kde-format
-msgid "Unsupported action.<br><i>%1</i>"
-msgstr "إجراء غير مدعوم.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:717
-#, kde-format
-msgid "Authentication failed.<br><i>%1</i>"
-msgstr "فشل الاستيثاق.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:719
-#, kde-format
-msgid "Unexpected error while processing: <i>%1</i>"
-msgstr "خطأ غير متوقّع عند معالجة: <i>%1</i>"
-
-#: kcmfontinst/KCmFontInst.cpp:211
-#, kde-format
-msgid "Create New Group…"
-msgstr "أنشئ مجموعة جديدة..."
-
-#: kcmfontinst/KCmFontInst.cpp:214
-#, kde-format
-msgid "Remove Group…"
-msgstr "أزل المجموعة…"
-
-#: kcmfontinst/KCmFontInst.cpp:217
-#, kde-format
-msgid "Enable Fonts in Group…"
-msgstr "مكّن الخطوط في المجموعة..."
-
-#: kcmfontinst/KCmFontInst.cpp:220
-#, kde-format
-msgid "Disable Fonts in Group…"
-msgstr "عطّل الخطوط في المجموعة..."
-
-#: kcmfontinst/KCmFontInst.cpp:241
-#, kde-format
-msgid "This displays a preview of the selected font."
-msgstr "هذا يعرض معاينة للخط المنتقى."
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Find Duplicates…"
-msgstr "ابحث عن المتكرّر…"
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Scan for Duplicate Fonts…"
-msgstr "امحُ عن الخطوط المكررة..."
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install from File…"
-msgstr "ثبت من ملف..."
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install fonts from a local file"
-msgstr "ثبّت الخطوط من ملفّ محليّ"
-
-#: kcmfontinst/KCmFontInst.cpp:261
-#, kde-format
-msgid "Get New Fonts…"
-msgstr "احصل على خطوط جديدة…"
-
-#: kcmfontinst/KCmFontInst.cpp:262
-#, kde-format
-msgid "Download new fonts"
-msgstr "نزل خطوط جديدة"
-
-#: kcmfontinst/KCmFontInst.cpp:264
-#, kde-format
-msgid "Delete Selected Fonts…"
-msgstr "احذف الخطوط المحددة..."
-
-#: kcmfontinst/KCmFontInst.cpp:329
-#, kde-format
-msgid "Change Preview Text…"
-msgstr "غيّر نص المعاينة..."
-
-#: kcmfontinst/KCmFontInst.cpp:428
-#, kde-format
-msgid "Add Fonts"
-msgstr "أضف خطوط"
-
-#: kcmfontinst/KCmFontInst.cpp:552
-#, kde-format
-msgid "Failed to save list of fonts to print."
-msgstr "فشل في حفظ قائمة الخطوط لطباعتها."
-
-#: kcmfontinst/KCmFontInst.cpp:573
-#, kde-format
-msgid "Failed to start font printer."
-msgstr "فشل في بدء طابعة الخطوط."
-
-#: kcmfontinst/KCmFontInst.cpp:580
-#, kde-format
-msgid ""
-"There are no printable fonts.\n"
-"You can only print non-bitmap and enabled fonts."
-msgstr ""
-"ليست هناك خطوط قابلة للطباعة.\n"
-"يمكنك طباعة فقط الخطوط غير الـ bitmap."
-
-#: kcmfontinst/KCmFontInst.cpp:582
-#, kde-format
-msgid "Cannot Print"
-msgstr "لا يمكن الطباعة"
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "You did not select anything to delete."
-msgstr "لم تختر أي شيء للحذف."
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "Nothing to Delete"
-msgstr "لا شيء للحذف"
-
-#: kcmfontinst/KCmFontInst.cpp:612
-#, kde-format
-msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>هل تريد حذف</p><p>'<b>%1</b>'؟</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:615
-#, kde-format
-msgid "Delete Font"
-msgstr "احذف الخط"
-
-#: kcmfontinst/KCmFontInst.cpp:622
-#, kde-format
-msgid "Do you really want to delete this font?"
-msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "هل تريد حذف هذا الخط؟"
-msgstr[1] "هل تريد حذف هذا الخط؟"
-msgstr[2] "هل تريد حذف هذان الخطين؟"
-msgstr[3] "هل تريد حذف هذه الخطوط ال‍ %1؟"
-msgstr[4] "هل تريد حذف هذه الخطوط ال‍ %1؟"
-msgstr[5] "هل تريد حذف هذه الخطوط ال‍ %1؟"
-
-#: kcmfontinst/KCmFontInst.cpp:624
-#, kde-format
-msgid "Delete Fonts"
-msgstr "احذف الخطوط"
-
-#: kcmfontinst/KCmFontInst.cpp:629
-#, kde-format
-msgid "Deleting font(s)…"
-msgstr "يحذف الخطوط..."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "You did not select anything to move."
-msgstr "لم تنتقي شيء لنقله."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "Nothing to Move"
-msgstr "لا يوجد شيء لنقله"
-
-#: kcmfontinst/KCmFontInst.cpp:654
-#, kde-format
-msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
-msgstr "<p>هل تريد نقل</p><p>'<b>%1</b>'</p><p>من <i>%2</i> إلى <i>%3</i>؟</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:659
-#, kde-format
-msgid "Move Font"
-msgstr "انقل الخط"
-
-#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
-#, kde-format
-msgid "Move"
-msgstr "انقل"
-
-#: kcmfontinst/KCmFontInst.cpp:665
-#, kde-format
-msgid ""
-"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
-msgid_plural ""
-"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] "<p>أمتأكد أنك تريد نقل هذا الخط من  <i>%2</i> إلى <i>%3</i>؟</p>"
-msgstr[1] "<p>أمتأكد أنك تريد نقل هذا الخط من  <i>%2</i> إلى <i>%3</i>؟</p>"
-msgstr[2] "<p>أمتأكد أنك تريد نقل هذين الخطين من  <i>%2</i> إلى <i>%3</i>؟</p>"
-msgstr[3] "<p>أمتأكد أنك تريد نقل هذه %1 خطوط من  <i>%2</i> إلى <i>%3</i>؟</p>"
-msgstr[4] "<p>أمتأكد أنك تريد نقل هذه %1 خطا من  <i>%2</i> إلى <i>%3</i>؟</p>"
-msgstr[5] "<p>أمتأكد أنك تريد نقل هذه %1 خطا من  <i>%2</i> إلى <i>%3</i>؟</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:671
-#, kde-format
-msgid "Move Fonts"
-msgstr "انقل الخطوط"
-
-#: kcmfontinst/KCmFontInst.cpp:676
-#, kde-format
-msgid "Moving font(s)…"
-msgstr "ينقل الخط(وط)..."
-
-#: kcmfontinst/KCmFontInst.cpp:690
-#, kde-format
-msgid "Export Group"
-msgstr "صدر المجموعة"
-
-#: kcmfontinst/KCmFontInst.cpp:716
-#, kde-format
-msgid "No files?"
-msgstr "ألا توجد ملفات؟"
-
-#: kcmfontinst/KCmFontInst.cpp:719
-#, kde-format
-msgid "Failed to open %1 for writing"
-msgstr "فشل في فتح %1 للكتابة"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Create New Group"
-msgstr "أنشئ مجموعة جديدة"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Name of new group:"
-msgstr "اسم المجموعة الجديدة:"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "New Group"
-msgstr "مجموعة جديدة"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Preview Text"
-msgstr "عاين نص"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Please enter new text:"
-msgstr "من فضلك أدخل نص جديد:"
-
-#: kcmfontinst/KCmFontInst.cpp:819
-#, kde-format
-msgid "Scanning font list…"
-msgstr "يمسح قائمة الخطوط..."
-
-#: kcmfontinst/KCmFontInst.cpp:878
-#, kde-format
-msgid "No fonts"
-msgstr "لا توجد خطوط"
-
-#: kcmfontinst/KCmFontInst.cpp:883
-#, kde-format
-msgid "1 Font"
-msgid_plural "%1 Fonts"
-msgstr[0] "لا خط"
-msgstr[1] "خط واحد"
-msgstr[2] "خطان"
-msgstr[3] "%1 خطوط"
-msgstr[4] "%1 خطًا"
-msgstr[5] "%1 خط"
-
-#: kcmfontinst/KCmFontInst.cpp:892
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">ممكن:</td><td>%1</td></tr><tr><td align="
-"\"right\">معطل:</td><td>%2</td></tr><tr><td align=\"right\">ممكن جزئي:</"
-"td><td>%3</td></tr><tr><td align=\"right\">المجموع:</td><td>%4</td></tr></"
-"table>"
-
-#: kcmfontinst/KCmFontInst.cpp:902
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">ممكن:</td><td>%1</td></tr><tr><td align="
-"\"right\">معطل:</td><td>%2</td></tr><tr><td align=\"right\">المجموع:</td><td>"
-"%3</td></tr></table>"
-
-#: kcmfontinst/KCmFontInst.cpp:946
+#: apps/kfontinst/Installer.cpp:38 manager/FontManager.cpp:935
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -824,210 +43,122 @@ msgstr ""
 "هل تريد تثبيت الخط (الخطوط) لاستخدامك الشخصي (ستكون متوفرة لحسابك فقط)، أم "
 "تريد لكل النظام (متوفرة لك الحسابات و المستخدمين)؟"
 
-#: kcmfontinst/KCmFontInst.cpp:949
+#: apps/kfontinst/Installer.cpp:39 manager/FontManager.cpp:938
 #, kde-format
 msgid "Where to Install"
 msgstr "مكان التثبيت"
 
-#: kcmfontinst/KCmFontInst.cpp:979
-#, kde-format
-msgid "Looking for any associated files…"
-msgstr "يبحث عن أي ملفات مرتبطة..."
+#: apps/kfontinst/Installer.cpp:115
+#, fuzzy, kde-format
+#| msgid "Font Management"
+msgctxt "@title application name"
+msgid "Font Management"
+msgstr "إدارة الخطوط"
 
-#: kcmfontinst/KCmFontInst.cpp:983
+#: apps/kfontinst/Installer.cpp:117
 #, kde-format
-msgid "Scanning Files…"
-msgstr "مسح الملفات..."
-
-#: kcmfontinst/KCmFontInst.cpp:984
-#, kde-format
-msgid "Looking for additional files to install…"
-msgstr "يبحث عن ملفات إضافية للتثبيت..."
-
-#: kcmfontinst/KCmFontInst.cpp:999
-#, kde-format
-msgid "Looking for files associated with %1"
-msgstr "جاري البحث عن ملفات مرتبطة بواسطة %1"
-
-#: kcmfontinst/KCmFontInst.cpp:1027
-#, kde-format
-msgid "Installing font(s)…"
-msgstr "يثبت الخطوط..."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to enable."
-msgstr "لم تحدد أي شيء لتمكينه."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to disable."
-msgstr "لم تحدد أي شيء لتعطيله."
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Enable"
-msgstr "لا شيء لتمكينه"
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Disable"
-msgstr "لا شيء لتعطيله"
-
-#: kcmfontinst/KCmFontInst.cpp:1107
-#, kde-format
-msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>هل تريد تمكين</p><p>'<b>%1</b>'؟</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1108
-#, kde-format
-msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>هل تريد تعطيل</p><p>'<b>%1</b>'؟</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1109
-#, kde-format
-msgid ""
-"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+msgctxt "@info application description"
+msgid "Install, manage, and preview fonts"
 msgstr ""
-"<p>هل تريد تمكين</p><p>'<b>%1</b>'، المتضمن داخل مجموعة '<b>%2</b>'؟</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) Craig Drummond, 2007"
+
+#: apps/kfontinst/Installer.cpp:128
+#, kde-format
+msgid "Makes the dialog transient for a window specified by windowHandle"
+msgstr "يجعل مربع الحوار عابرًا لنافذة محددة بواسطة windowHandle"
+
+#: apps/kfontinst/Installer.cpp:131
+#, kde-format
+msgid "URL to install"
+msgstr "العنوان للتثبيت"
+
+#: apps/kfontprint/Printer.cpp:239
+#, kde-format
+msgid "Print"
+msgstr "اطبع"
+
+#: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
+#, kde-format
+msgid "Canceling…"
+msgstr "يلغي..."
+
+#: apps/kfontprint/Printer.cpp:323
+#, kde-format
+msgid "Font Printer"
+msgstr "طابعة الخطوط"
+
+#: apps/kfontprint/Printer.cpp:325
+#, kde-format
+msgid "Simple font printer"
+msgstr "طابعة الخطوط البسيطة"
+
+#: apps/kfontprint/Printer.cpp:333
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "اجعل مربع الحوار وكأنه ينتمي للتطبيق X المحدد بـ winid"
+
+#: apps/kfontprint/Printer.cpp:335
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "فهرس الحجم لخطوط الطباعة "
+
+#: apps/kfontprint/Printer.cpp:339
 #, kde-format
 msgid ""
-"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
 msgstr ""
-"<p>هل تريد تعطيل</p><p>'<b>%1</b>', المتضمن داخل مجموعة '<b>%2</b>'؟</p>"
+"حدد خط  الطباعة كـ \"العائلة، الأسلوب\" حيث الأسلوب هو\n"
+" رقم عشري 24-بت مكون كـ <weight><width><slant>"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
+#: apps/kfontprint/Printer.cpp:342
 #, kde-format
-msgid "Enable Font"
-msgstr "مكّن الخط"
+msgid "File containing list of fonts to print"
+msgstr "ملف يحتوي قائمة من الخطوط للطباعة"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
+#: apps/kfontprint/Printer.cpp:344
 #, kde-format
-msgid "Disable Font"
-msgstr "عطّل الخط"
+msgid "Remove file containing list of fonts to print"
+msgstr "أزل ملف يحتوي قائمة من الخطوط للطباعة"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: apps/kfontview/Viewer.cpp:50
 #, kde-format
-msgid "Do you really want to enable this font?"
-msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "هل تريد تمكين هذا الخط؟"
-msgstr[1] "هل تريد تمكين هذا الخط؟"
-msgstr[2] "هل تريد تمكين هذان الخطين؟"
-msgstr[3] "هل تريد تمكين هذه الخطوط ال‍ %1؟"
-msgstr[4] "هل تريد تمكين هذه الخطوط ال‍ %1؟"
-msgstr[5] "هل تريد تمكين هذه الخطوط ال‍ %1؟"
+msgid "Open an existing font file"
+msgstr "افتح ملف خط موجود"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: apps/kfontview/Viewer.cpp:51
 #, kde-format
-msgid "Do you really want to disable this font?"
-msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "هل تريد تعطيل هذا الخط؟"
-msgstr[1] "هل تريد تعطيل هذا الخط؟"
-msgstr[2] "هل تريد تعطيل هذين الخطين؟"
-msgstr[3] "هل تريد تعطيل هذه %1 الخطوط؟"
-msgstr[4] "هل تريد تعطيل هذه %1 خطا؟"
-msgstr[5] "هل تريد تعطيل هذه %1 خط؟"
+msgid "Print font preview"
+msgstr "اطبع عينات الخط"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: apps/kfontview/Viewer.cpp:68
 #, kde-format
-msgid ""
-"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
-"</p>"
-msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] "<p>هل ترغب فعلًا بتمكين الخط الذي في المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[1] "<p>هل ترغب فعلًا بتمكين هذا خط الذي في المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[2] ""
-"<p>هل ترغب فعلًا بتمكين هذين الخطين المنتميين إلى المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[3] ""
-"<p>هل ترغب فعلًا بتمكين %1 خطوط المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[4] "<p>هل ترغب فعلًا بتمكين %1 خطا المنتمية المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[5] ""
-"<p>هل ترغب فعلًا بتمكين %1 خط  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
+msgid "Select Font to View"
+msgstr "اختر الخط للعرض"
 
-#: kcmfontinst/KCmFontInst.cpp:1126
+#: apps/kfontview/Viewer.cpp:108
 #, kde-format
-msgid ""
-"<p>Do you really want to disable this font contained within group '<b>%2</"
-"b>'?</p>"
-msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] "<p>هل ترغب فعلًا بتعطيل الخط الذي في المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[1] "<p>هل ترغب فعلًا بتعطيل هذا خط الذي في المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[2] ""
-"<p>هل ترغب فعلًا بتعطيل هذين الخطين المنتميين إلى المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[3] ""
-"<p>هل ترغب فعلًا بتعطيل %1 خطوط  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[4] ""
-"<p>هل ترغب فعلًا بتعطيل %1 خطا  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
-msgstr[5] ""
-"<p>هل ترغب فعلًا بتعطيل %1 خط  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
+msgid "URL to open"
+msgstr "العنوان لفتحه"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontview/Viewer.cpp:150
 #, kde-format
-msgid "Enable Fonts"
-msgstr "مكّن الخطوط"
+msgid "Font Viewer"
+msgstr "عارض الخطوط"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontview/Viewer.cpp:152
 #, kde-format
-msgid "Disable Fonts"
-msgstr "عطّل الخطوط"
+msgid "Simple font viewer"
+msgstr "عارض الخطوط البسيط"
 
-#: kcmfontinst/KCmFontInst.cpp:1139
+#: apps/kfontview/Viewer.cpp:154
 #, kde-format
-msgid "Enabling font(s)…"
-msgstr "تمكين الخطوط..."
-
-#: kcmfontinst/KCmFontInst.cpp:1141
-#, kde-format
-msgid "Disabling font(s)…"
-msgstr "تعطيل الخطوط..."
-
-#: kcmfontinst/PrintDialog.cpp:21
-#, kde-format
-msgid "Print Font Samples"
-msgstr "اطبع عينات من الخط"
-
-#: kcmfontinst/PrintDialog.cpp:37
-#, kde-format
-msgid "Select size to print font:"
-msgstr "اختر الحجم لطباعة الخط:"
-
-#: kcmfontinst/PrintDialog.cpp:41
-#, kde-format
-msgid "Waterfall"
-msgstr "الشَلال"
-
-#: kcmfontinst/PrintDialog.cpp:42
-#, kde-format
-msgid "12pt"
-msgstr "12 نقطة"
-
-#: kcmfontinst/PrintDialog.cpp:43
-#, kde-format
-msgid "18pt"
-msgstr "18 نقطة"
-
-#: kcmfontinst/PrintDialog.cpp:44
-#, kde-format
-msgid "24pt"
-msgstr "24 نقطة"
-
-#: kcmfontinst/PrintDialog.cpp:45
-#, kde-format
-msgid "36pt"
-msgstr "36 نقطة"
-
-#: kcmfontinst/PrintDialog.cpp:46
-#, kde-format
-msgid "48pt"
-msgstr "48 نقطة"
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1108,6 +239,11 @@ msgstr "%1 ليس بخط."
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "لا يمكن إزالة جميع الملفات المرتبطة بـ%1"
+
+#: kio/KioFonts.cpp:719 manager/JobRunner.cpp:708
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> موجود فعلًا."
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:108
 #, kde-format
@@ -1299,6 +435,977 @@ msgstr "خلية الحرف"
 #: lib/KfiConstants.h:106
 msgid "Proportional"
 msgstr "تناسبي"
+
+#: manager/DuplicatesDialog.cpp:49
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "خطوط مكررة"
+
+#: manager/DuplicatesDialog.cpp:79
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "جاري المسح عن الخطوط المكررة. من فضلك انتظر..."
+
+#: manager/DuplicatesDialog.cpp:98
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "لا توجد خطوط مكررة."
+
+#: manager/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "احذف الملفات المعلمة"
+
+#: manager/DuplicatesDialog.cpp:108
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "لا توجد خطوط مكررة"
+msgstr[1] "خط واحد مكرر."
+msgstr[2] "يوجد خطان مكرران."
+msgstr[3] "يوجد %1 خطوط مكررة ."
+msgstr[4] "يوجد %1 خطا مكررة ."
+msgstr[5] "يوجد %1 خط مكررة."
+
+#: manager/DuplicatesDialog.cpp:189
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"هل أنت متأكد من حذف:\n"
+"%1"
+
+#: manager/DuplicatesDialog.cpp:195
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "هل أنت متأكد من حذف:"
+
+#: manager/DuplicatesDialog.cpp:223
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "إجهاض مسح الخطوط؟"
+
+#: manager/DuplicatesDialog.cpp:384
+#, kde-format
+msgid "Font/File"
+msgstr "الخط/الملف"
+
+#: manager/DuplicatesDialog.cpp:386
+#, kde-format
+msgid "Size"
+msgstr "الحجم"
+
+#: manager/DuplicatesDialog.cpp:387
+#, kde-format
+msgid "Date"
+msgstr "التاريخ"
+
+#: manager/DuplicatesDialog.cpp:388
+#, kde-format
+msgid "Links To"
+msgstr "وصلات إلى"
+
+#: manager/DuplicatesDialog.cpp:401 manager/FontList.cpp:1310
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "افتح في عارض الخطوط..."
+
+#: manager/DuplicatesDialog.cpp:403
+#, kde-format
+msgid "Properties"
+msgstr "الخصائص..."
+
+#: manager/DuplicatesDialog.cpp:405
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "أزل علامة الحذف"
+
+#: manager/DuplicatesDialog.cpp:406
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "معلم للحذف"
+
+#: manager/DuplicatesDialog.cpp:504
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "هل افتح الخط في عارض الخطوط؟"
+msgstr[1] "هل افتح الخط في عارض الخطوط؟"
+msgstr[2] "هل افتح  كل %1 الخطوط في عارض الخطوط؟"
+msgstr[3] "هل افتح  كل %1 الخطوط في عارض الخطوط؟"
+msgstr[4] "هل افتح  كل %1 خطا في عارض الخطوط؟"
+msgstr[5] "هل افتح  كل %1 خط في عارض الخطوط؟"
+
+#: manager/FontFilter.cpp:106
+#, kde-format
+msgid "Family"
+msgstr "العائلة"
+
+#: manager/FontFilter.cpp:108
+#, kde-format
+msgid "Style"
+msgstr "الأسلوب"
+
+#: manager/FontFilter.cpp:110
+#, kde-format
+msgid "Foundry"
+msgstr "المسبك"
+
+#: manager/FontFilter.cpp:112
+#, kde-format
+msgid "FontConfig Match"
+msgstr "تطابق ضبط الخط"
+
+#: manager/FontFilter.cpp:114
+#, kde-format
+msgid "File Type"
+msgstr "نوع الملف"
+
+#: manager/FontFilter.cpp:116
+#, kde-format
+msgid "File Name"
+msgstr "اسم الملف"
+
+#: manager/FontFilter.cpp:118
+#, kde-format
+msgid "File Location"
+msgstr "موقع الملف"
+
+#: manager/FontFilter.cpp:120
+#, kde-format
+msgid "Writing System"
+msgstr "نظام الكتابة"
+
+#: manager/FontFilter.cpp:131
+#, kde-format
+msgid "Set Criteria"
+msgstr "عيّن المعايير"
+
+#: manager/FontFilter.cpp:190
+#, kde-format
+msgid "Symbol/Other"
+msgstr "الرمز/آخر"
+
+#: manager/FontFilter.cpp:268 manager/FontFilter.cpp:336
+#, kde-format
+msgid "Filter by %1…"
+msgstr "رشّح حسب %1…"
+
+#: manager/FontList.cpp:548
+#, kde-format
+msgid "Font"
+msgstr "الخط"
+
+#: manager/FontList.cpp:550
+#, kde-format
+msgid "Status"
+msgstr "الحالة"
+
+#: manager/FontList.cpp:564
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "هذا العمود يظهر حالة عائلة الخطوط, وأساليب الخطوط الفردية."
+
+#: manager/FontList.cpp:671
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p> هذه القائمة تظهر خطوطك المثبتة. الخطوط مرتبة حسب العائلة، الرقم داخل "
+"الأقواس يمثل  رقم الأساليب المتاحة مثلا في </p><ul><li>Times [4]<ul><li> "
+"عادي</li><li>عريض</li><li>عريض مائل</li><li>مائل</li></ul></li></ul>"
+
+#: manager/FontList.cpp:950 manager/FontList.cpp:974
+#, kde-format
+msgid "…plus %1 more"
+msgstr "...بالإضافة %1 زيادة"
+
+#: manager/FontList.cpp:1001
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: manager/FontList.cpp:1300
+#, kde-format
+msgid "Delete"
+msgstr "احذف"
+
+#: manager/FontList.cpp:1302 manager/FontManager.cpp:1101
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:790
+#, kde-format
+msgid "Enable"
+msgstr "مكّن"
+
+#: manager/FontList.cpp:1303 manager/FontManager.cpp:1102
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:791
+#, kde-format
+msgid "Disable"
+msgstr "عطّل"
+
+#: manager/FontList.cpp:1308 manager/GroupList.cpp:797
+#, kde-format
+msgid "Print…"
+msgstr "اطبع…"
+
+#: manager/FontList.cpp:1312
+#, kde-format
+msgid "Reload"
+msgstr "أعد تحميل"
+
+#: manager/FontList.cpp:1690
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "هل افتح كل الخطوط  %1  في عارض الخطوط؟"
+
+#: manager/FontManager.cpp:196
+#, kde-format
+msgid "Create New Group…"
+msgstr "أنشئ مجموعة جديدة..."
+
+#: manager/FontManager.cpp:199
+#, kde-format
+msgid "Remove Group…"
+msgstr "أزل المجموعة…"
+
+#: manager/FontManager.cpp:202
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "مكّن الخطوط في المجموعة..."
+
+#: manager/FontManager.cpp:205
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "عطّل الخطوط في المجموعة..."
+
+#: manager/FontManager.cpp:226
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "هذا يعرض معاينة للخط المنتقى."
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "ابحث عن المتكرّر…"
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "امحُ عن الخطوط المكررة..."
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install from File…"
+msgstr "ثبت من ملف..."
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "ثبّت الخطوط من ملفّ محليّ"
+
+#: manager/FontManager.cpp:246
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "احصل على خطوط جديدة…"
+
+#: manager/FontManager.cpp:247
+#, kde-format
+msgid "Download new fonts"
+msgstr "نزل خطوط جديدة"
+
+#: manager/FontManager.cpp:249
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "احذف الخطوط المحددة..."
+
+#: manager/FontManager.cpp:314
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "غيّر نص المعاينة..."
+
+#: manager/FontManager.cpp:417
+#, kde-format
+msgid "Add Fonts"
+msgstr "أضف خطوط"
+
+#: manager/FontManager.cpp:541
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "فشل في حفظ قائمة الخطوط لطباعتها."
+
+#: manager/FontManager.cpp:562
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "فشل في بدء طابعة الخطوط."
+
+#: manager/FontManager.cpp:569
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"ليست هناك خطوط قابلة للطباعة.\n"
+"يمكنك طباعة فقط الخطوط غير الـ bitmap."
+
+#: manager/FontManager.cpp:571
+#, kde-format
+msgid "Cannot Print"
+msgstr "لا يمكن الطباعة"
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "لم تختر أي شيء للحذف."
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "لا شيء للحذف"
+
+#: manager/FontManager.cpp:601
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>هل تريد حذف</p><p>'<b>%1</b>'؟</p>"
+
+#: manager/FontManager.cpp:604
+#, kde-format
+msgid "Delete Font"
+msgstr "احذف الخط"
+
+#: manager/FontManager.cpp:611
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "هل تريد حذف هذا الخط؟"
+msgstr[1] "هل تريد حذف هذا الخط؟"
+msgstr[2] "هل تريد حذف هذان الخطين؟"
+msgstr[3] "هل تريد حذف هذه الخطوط ال‍ %1؟"
+msgstr[4] "هل تريد حذف هذه الخطوط ال‍ %1؟"
+msgstr[5] "هل تريد حذف هذه الخطوط ال‍ %1؟"
+
+#: manager/FontManager.cpp:613
+#, kde-format
+msgid "Delete Fonts"
+msgstr "احذف الخطوط"
+
+#: manager/FontManager.cpp:618
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "يحذف الخطوط..."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "لم تنتقي شيء لنقله."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "Nothing to Move"
+msgstr "لا يوجد شيء لنقله"
+
+#: manager/FontManager.cpp:643
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr "<p>هل تريد نقل</p><p>'<b>%1</b>'</p><p>من <i>%2</i> إلى <i>%3</i>؟</p>"
+
+#: manager/FontManager.cpp:648
+#, kde-format
+msgid "Move Font"
+msgstr "انقل الخط"
+
+#: manager/FontManager.cpp:649 manager/FontManager.cpp:661
+#, kde-format
+msgid "Move"
+msgstr "انقل"
+
+#: manager/FontManager.cpp:654
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] "<p>أمتأكد أنك تريد نقل هذا الخط من  <i>%2</i> إلى <i>%3</i>؟</p>"
+msgstr[1] "<p>أمتأكد أنك تريد نقل هذا الخط من  <i>%2</i> إلى <i>%3</i>؟</p>"
+msgstr[2] "<p>أمتأكد أنك تريد نقل هذين الخطين من  <i>%2</i> إلى <i>%3</i>؟</p>"
+msgstr[3] "<p>أمتأكد أنك تريد نقل هذه %1 خطوط من  <i>%2</i> إلى <i>%3</i>؟</p>"
+msgstr[4] "<p>أمتأكد أنك تريد نقل هذه %1 خطا من  <i>%2</i> إلى <i>%3</i>؟</p>"
+msgstr[5] "<p>أمتأكد أنك تريد نقل هذه %1 خطا من  <i>%2</i> إلى <i>%3</i>؟</p>"
+
+#: manager/FontManager.cpp:660
+#, kde-format
+msgid "Move Fonts"
+msgstr "انقل الخطوط"
+
+#: manager/FontManager.cpp:665
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "ينقل الخط(وط)..."
+
+#: manager/FontManager.cpp:679
+#, kde-format
+msgid "Export Group"
+msgstr "صدر المجموعة"
+
+#: manager/FontManager.cpp:705
+#, kde-format
+msgid "No files?"
+msgstr "ألا توجد ملفات؟"
+
+#: manager/FontManager.cpp:708
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "فشل في فتح %1 للكتابة"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Create New Group"
+msgstr "أنشئ مجموعة جديدة"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Name of new group:"
+msgstr "اسم المجموعة الجديدة:"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "New Group"
+msgstr "مجموعة جديدة"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Preview Text"
+msgstr "عاين نص"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Please enter new text:"
+msgstr "من فضلك أدخل نص جديد:"
+
+#: manager/FontManager.cpp:808
+#, kde-format
+msgid "Scanning font list…"
+msgstr "يمسح قائمة الخطوط..."
+
+#: manager/FontManager.cpp:867
+#, kde-format
+msgid "No fonts"
+msgstr "لا توجد خطوط"
+
+#: manager/FontManager.cpp:872
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "لا خط"
+msgstr[1] "خط واحد"
+msgstr[2] "خطان"
+msgstr[3] "%1 خطوط"
+msgstr[4] "%1 خطًا"
+msgstr[5] "%1 خط"
+
+#: manager/FontManager.cpp:881
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">ممكن:</td><td>%1</td></tr><tr><td align="
+"\"right\">معطل:</td><td>%2</td></tr><tr><td align=\"right\">ممكن جزئي:</"
+"td><td>%3</td></tr><tr><td align=\"right\">المجموع:</td><td>%4</td></tr></"
+"table>"
+
+#: manager/FontManager.cpp:891
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">ممكن:</td><td>%1</td></tr><tr><td align="
+"\"right\">معطل:</td><td>%2</td></tr><tr><td align=\"right\">المجموع:</td><td>"
+"%3</td></tr></table>"
+
+#: manager/FontManager.cpp:968
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "يبحث عن أي ملفات مرتبطة..."
+
+#: manager/FontManager.cpp:972
+#, kde-format
+msgid "Scanning Files…"
+msgstr "مسح الملفات..."
+
+#: manager/FontManager.cpp:973
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "يبحث عن ملفات إضافية للتثبيت..."
+
+#: manager/FontManager.cpp:988
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "جاري البحث عن ملفات مرتبطة بواسطة %1"
+
+#: manager/FontManager.cpp:1016
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "يثبت الخطوط..."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "لم تحدد أي شيء لتمكينه."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "لم تحدد أي شيء لتعطيله."
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "لا شيء لتمكينه"
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "لا شيء لتعطيله"
+
+#: manager/FontManager.cpp:1096
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>هل تريد تمكين</p><p>'<b>%1</b>'؟</p>"
+
+#: manager/FontManager.cpp:1097
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>هل تريد تعطيل</p><p>'<b>%1</b>'؟</p>"
+
+#: manager/FontManager.cpp:1098
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>هل تريد تمكين</p><p>'<b>%1</b>'، المتضمن داخل مجموعة '<b>%2</b>'؟</p>"
+
+#: manager/FontManager.cpp:1099
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>هل تريد تعطيل</p><p>'<b>%1</b>', المتضمن داخل مجموعة '<b>%2</b>'؟</p>"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1101
+#, kde-format
+msgid "Enable Font"
+msgstr "مكّن الخط"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1102
+#, kde-format
+msgid "Disable Font"
+msgstr "عطّل الخط"
+
+#: manager/FontManager.cpp:1108
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "هل تريد تمكين هذا الخط؟"
+msgstr[1] "هل تريد تمكين هذا الخط؟"
+msgstr[2] "هل تريد تمكين هذان الخطين؟"
+msgstr[3] "هل تريد تمكين هذه الخطوط ال‍ %1؟"
+msgstr[4] "هل تريد تمكين هذه الخطوط ال‍ %1؟"
+msgstr[5] "هل تريد تمكين هذه الخطوط ال‍ %1؟"
+
+#: manager/FontManager.cpp:1109
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "هل تريد تعطيل هذا الخط؟"
+msgstr[1] "هل تريد تعطيل هذا الخط؟"
+msgstr[2] "هل تريد تعطيل هذين الخطين؟"
+msgstr[3] "هل تريد تعطيل هذه %1 الخطوط؟"
+msgstr[4] "هل تريد تعطيل هذه %1 خطا؟"
+msgstr[5] "هل تريد تعطيل هذه %1 خط؟"
+
+#: manager/FontManager.cpp:1111
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] "<p>هل ترغب فعلًا بتمكين الخط الذي في المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[1] "<p>هل ترغب فعلًا بتمكين هذا خط الذي في المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[2] ""
+"<p>هل ترغب فعلًا بتمكين هذين الخطين المنتميين إلى المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[3] ""
+"<p>هل ترغب فعلًا بتمكين %1 خطوط المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[4] "<p>هل ترغب فعلًا بتمكين %1 خطا المنتمية المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[5] ""
+"<p>هل ترغب فعلًا بتمكين %1 خط  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
+
+#: manager/FontManager.cpp:1115
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] "<p>هل ترغب فعلًا بتعطيل الخط الذي في المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[1] "<p>هل ترغب فعلًا بتعطيل هذا خط الذي في المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[2] ""
+"<p>هل ترغب فعلًا بتعطيل هذين الخطين المنتميين إلى المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[3] ""
+"<p>هل ترغب فعلًا بتعطيل %1 خطوط  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[4] ""
+"<p>هل ترغب فعلًا بتعطيل %1 خطا  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
+msgstr[5] ""
+"<p>هل ترغب فعلًا بتعطيل %1 خط  المنتمية إلى المجموعة'<b>%2</b>' ؟ </p>"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Enable Fonts"
+msgstr "مكّن الخطوط"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Disable Fonts"
+msgstr "عطّل الخطوط"
+
+#: manager/FontManager.cpp:1128
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "تمكين الخطوط..."
+
+#: manager/FontManager.cpp:1130
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "تعطيل الخطوط..."
+
+#: manager/GroupList.cpp:62
+#, kde-format
+msgid "All Fonts"
+msgstr "كلّ الخطوط"
+
+#: manager/GroupList.cpp:65
+#, kde-format
+msgid "Personal Fonts"
+msgstr "خطوط شخصية"
+
+#: manager/GroupList.cpp:68
+#, kde-format
+msgid "System Fonts"
+msgstr "خطوط النظام"
+
+#: manager/GroupList.cpp:71
+#, kde-format
+msgid "Unclassified"
+msgstr "غير مصنف"
+
+#: manager/GroupList.cpp:353
+#, kde-format
+msgid "Group"
+msgstr "المجموعة"
+
+#: manager/GroupList.cpp:538
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>هل تريد إزالة '<b>%1</b>'?</p><p><i>هذه ستزيل المجموعة فقط, وليس الخطوط "
+"الفعلية.</i></p>"
+
+#: manager/GroupList.cpp:542
+#, kde-format
+msgid "Remove Group"
+msgstr "أزل المجموعة"
+
+#: manager/GroupList.cpp:543 manager/GroupList.cpp:788
+#, kde-format
+msgid "Remove"
+msgstr "أزل"
+
+#: manager/GroupList.cpp:543
+#, kde-format
+msgid "Remove group"
+msgstr "أزل المجموعة"
+
+#: manager/GroupList.cpp:589
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>مجموعات الخطوط</h3><p>تعرض هذه القائمة مجموعات الخطوط الموجودة على نظام، "
+"توجد مجموعتين من الخطوط:<ul><li><b>قياسية</b>  وهي مجموعات خاصة تستخدم "
+"بواسطة مدير الخطوط.<ul>%1</ul></li><li><b>مخصصة</b> وهي المجموعات التي "
+"أنشأتها . لتضيف عائلة خطوط إلى إحدى هاتين المجموعتين اسحبها من قائمة الخطوط "
+"و أفلتها إلى المجموعة التي تريدها. ولتزيل عائلة خطوط من مجموعة ما، اسحبها "
+"إلى مجموعة \"كل الخطوط\" .</li></ul></p>"
+
+#: manager/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>كلّ الخطوط</i> تحتوي على كلّ الخطوط المثبتة على نظامك.</li><li><i>غير "
+"مصنف</i> يحتوي كلّ الخطوط التي لم توضع مع مجموعة \"مخصصة\" .</li>"
+
+#: manager/GroupList.cpp:600
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>كل خطوط</i> يحتوي كل الخطوط المثبتة في نظامك كلا \"النظام\" و "
+"\"الشخصية\".</li><li><i>النظام</i> يحتوي كافة الخطوط المثبتة على النظام "
+"(متاحة لكافة المستخدمين)</li><li><i>الشخصية</i> يحتوي على خطوطك الخاصة يحتوي "
+"</li><li><i>غير مصنف</i> كافة الخطوط التي لم تصنف في النظام أو الشخصية.</li>"
+
+#: manager/GroupList.cpp:702
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>المجموعة المسماة <b>'%1'</b> موجودة مسبقًا.</qt>"
+
+#: manager/GroupList.cpp:793
+#, kde-format
+msgid "Rename…"
+msgstr "أعد التسمية..."
+
+#: manager/GroupList.cpp:802
+#, kde-format
+msgid "Export…"
+msgstr "صدر..."
+
+#: manager/GroupList.cpp:896
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "أضف إلى \"%1\"."
+
+#: manager/GroupList.cpp:898
+#, kde-format
+msgid "Remove from current group."
+msgstr "أزل من المجموعة الحالية"
+
+#: manager/GroupList.cpp:900
+#, kde-format
+msgid "Move to personal folder."
+msgstr "انقل إلى المجلد الشخصي."
+
+#: manager/GroupList.cpp:902
+#, kde-format
+msgid "Move to system folder."
+msgstr "انقل إلى مجلد النظام."
+
+#: manager/JobRunner.cpp:139
+#, kde-format
+msgid "Skip"
+msgstr "تخطّى"
+
+#: manager/JobRunner.cpp:142
+#, kde-format
+msgid "AutoSkip"
+msgstr "تخطى آليّا"
+
+#: manager/JobRunner.cpp:187
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>أألغ?</h3><p>هل أنت متأكد من الإلغاء؟</p>"
+
+#: manager/JobRunner.cpp:199
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>انتهى</h3><p>من فضلك لاحظ أنك بحاجة إلى إعادة تشغيل أي تطبيقات مفتوحة "
+"حاليًا كي تستطيع رؤية التغييرات.</p>"
+
+#: manager/JobRunner.cpp:207
+#, kde-format
+msgid "Do not show this message again"
+msgstr "لا تظهر هذه الرسالة مجددا"
+
+#: manager/JobRunner.cpp:315
+#, kde-format
+msgid "Installing"
+msgstr "جاري التثبيت"
+
+#: manager/JobRunner.cpp:318
+#, kde-format
+msgid "Uninstalling"
+msgstr "جاري إلغاء التثبيت"
+
+#: manager/JobRunner.cpp:321 manager/JobRunner.cpp:417
+#, kde-format
+msgid "Enabling"
+msgstr "تمكين"
+
+#: manager/JobRunner.cpp:324 manager/JobRunner.cpp:421
+#, kde-format
+msgid "Moving"
+msgstr "يحرك"
+
+#: manager/JobRunner.cpp:327
+#, kde-format
+msgid "Updating"
+msgstr "يحدث"
+
+#: manager/JobRunner.cpp:331
+#, kde-format
+msgid "Removing"
+msgstr "يزيل"
+
+#: manager/JobRunner.cpp:335
+#, kde-format
+msgid "Disabling"
+msgstr "يعطل"
+
+#: manager/JobRunner.cpp:372
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "يحدث ضبط الخط، من فضلك انتظر..."
+
+#: manager/JobRunner.cpp:444
+#, kde-format
+msgid "Unable to start backend."
+msgstr "غير قادر على بدء الخلفية."
+
+#: manager/JobRunner.cpp:453
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "ماتت الخلفية، ولكن أعيد تشغيلها. حاول مرة أخرى."
+
+#: manager/JobRunner.cpp:618 manager/JobRunner.cpp:625
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>خطأ</h3>"
+
+#: manager/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "فشل تنزيل <i>%1</i>"
+
+#: manager/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr "ماتت خلفية النظام. حاول مرة أخرى. <br><i>%1</i>"
+
+#: manager/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr "<i>%1</i>خط بتماب،وهي معطلة على نظامك."
+
+#: manager/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr "الملف <i>%1</i> يحتوي الخط <b>%2</b>هذا الخط مثبّت مسبقًا على نظامك."
+
+#: manager/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> ليس بخط."
+
+#: manager/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "لا يمكن إزالة جميع الملفات المرتبطة بـ<i>%1</i>"
+
+#: manager/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "فشل بدء عفريت النظام.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> ليس موجودًا."
+
+#: manager/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "طلب الإذن مرفوض.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "إجراء غير مدعوم.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "فشل الاستيثاق.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "خطأ غير متوقّع عند معالجة: <i>%1</i>"
+
+#: manager/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "اطبع عينات من الخط"
+
+#: manager/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "اختر الحجم لطباعة الخط:"
+
+#: manager/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "الشَلال"
+
+#: manager/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12 نقطة"
+
+#: manager/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18 نقطة"
+
+#: manager/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24 نقطة"
+
+#: manager/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36 نقطة"
+
+#: manager/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48 نقطة"
 
 #: viewpart/CharTip.cpp:44
 #, kde-format
@@ -2209,67 +2316,6 @@ msgstr "يي"
 
 #~ msgid "Simple font installer"
 #~ msgstr "مثّبت الخطوط البسيط"
-
-#~ msgid "(C) Craig Drummond, 2007"
-#~ msgstr "(C) Craig Drummond, 2007"
-
-#~ msgid "Makes the dialog transient for a window specified by windowHandle"
-#~ msgstr "يجعل مربع الحوار عابرًا لنافذة محددة بواسطة windowHandle"
-
-#~ msgid "URL to install"
-#~ msgstr "العنوان للتثبيت"
-
-#~ msgid "Print"
-#~ msgstr "اطبع"
-
-#~ msgid "Font Printer"
-#~ msgstr "طابعة الخطوط"
-
-#~ msgid "Simple font printer"
-#~ msgstr "طابعة الخطوط البسيطة"
-
-#~ msgid "Makes the dialog transient for an X app specified by winid"
-#~ msgstr "اجعل مربع الحوار وكأنه ينتمي للتطبيق X المحدد بـ winid"
-
-#~ msgid "Size index to print fonts"
-#~ msgstr "فهرس الحجم لخطوط الطباعة "
-
-#~ msgid ""
-#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
-#~ "decimal number composed as: <weight><width><slant>"
-#~ msgstr ""
-#~ "حدد خط  الطباعة كـ \"العائلة، الأسلوب\" حيث الأسلوب هو\n"
-#~ " رقم عشري 24-بت مكون كـ <weight><width><slant>"
-
-#~ msgid "File containing list of fonts to print"
-#~ msgstr "ملف يحتوي قائمة من الخطوط للطباعة"
-
-#~ msgid "Remove file containing list of fonts to print"
-#~ msgstr "أزل ملف يحتوي قائمة من الخطوط للطباعة"
-
-#~ msgid "Open an existing font file"
-#~ msgstr "افتح ملف خط موجود"
-
-#~ msgid "Print font preview"
-#~ msgstr "اطبع عينات الخط"
-
-#~ msgid "Select Font to View"
-#~ msgstr "اختر الخط للعرض"
-
-#~ msgid "URL to open"
-#~ msgstr "العنوان لفتحه"
-
-#~ msgid "Font Viewer"
-#~ msgstr "عارض الخطوط"
-
-#~ msgid "Simple font viewer"
-#~ msgstr "عارض الخطوط البسيط"
-
-#~ msgid "(C) Craig Drummond, 2004-2007"
-#~ msgstr "(C) Craig Drummond, 2004-2007"
-
-#~ msgid "Font Management"
-#~ msgstr "إدارة الخطوط"
 
 #~ msgid "(C) Craig Drummond, 2000 - 2009"
 #~ msgstr "(C) Craig Drummond, 2000 - 2009"

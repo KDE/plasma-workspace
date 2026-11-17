@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2025-12-02 13:29+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -33,782 +33,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ra@ra.is, svanur@tern.is, sv1@fellsnet.is, gudmundure@gmail.com"
 
-#: kcmfontinst/DuplicatesDialog.cpp:49
-#, kde-format
-msgid "Duplicate Fonts"
-msgstr "Tvítekið letur"
-
-#: kcmfontinst/DuplicatesDialog.cpp:79
-#, kde-format
-msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Leita að tvíteknu letri. Bíddu aðeins..."
-
-#: kcmfontinst/DuplicatesDialog.cpp:98
-#, kde-format
-msgid "No duplicate fonts found."
-msgstr "Fann engar tvíteknar leturgerðir."
-
-#: kcmfontinst/DuplicatesDialog.cpp:106
-#, kde-format
-msgid "Delete Marked Files"
-msgstr "Eyða merktum skrám"
-
-#: kcmfontinst/DuplicatesDialog.cpp:108
-#, kde-format
-msgid "%1 duplicate font found."
-msgid_plural "%1 duplicate fonts found."
-msgstr[0] "%1 tvítekin leturgerð fannst."
-msgstr[1] "%1 tvíteknar leturgerðir fundust."
-
-#: kcmfontinst/DuplicatesDialog.cpp:189
-#, kde-format
-msgid ""
-"Are you sure you wish to delete:\n"
-"%1"
-msgstr ""
-"Ertu viss um að þú viljir eyða:\n"
-"%1"
-
-#: kcmfontinst/DuplicatesDialog.cpp:195
-#, kde-format
-msgid "Are you sure you wish to delete:"
-msgstr "Ertu viss um að þú viljir eyða:"
-
-#: kcmfontinst/DuplicatesDialog.cpp:223
-#, kde-format
-msgid "Cancel font scan?"
-msgstr "Hætta við leturskönnun?"
-
-#: kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "Hætti við…"
-
-#: kcmfontinst/DuplicatesDialog.cpp:384
-#, kde-format
-msgid "Font/File"
-msgstr "Letur/skrá"
-
-#: kcmfontinst/DuplicatesDialog.cpp:386
-#, kde-format
-msgid "Size"
-msgstr "Stærð"
-
-#: kcmfontinst/DuplicatesDialog.cpp:387
-#, kde-format
-msgid "Date"
-msgstr "Dagsetning"
-
-#: kcmfontinst/DuplicatesDialog.cpp:388
-#, kde-format
-msgid "Links To"
-msgstr "Tengir við"
-
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
-#, kde-format
-msgid "Open in Font Viewer"
-msgstr "Opna í leturskoðara"
-
-#: kcmfontinst/DuplicatesDialog.cpp:403
-#, kde-format
-msgid "Properties"
-msgstr "Eiginleikar"
-
-#: kcmfontinst/DuplicatesDialog.cpp:405
-#, kde-format
-msgid "Unmark for Deletion"
-msgstr "Afmerkja til eyðingar"
-
-#: kcmfontinst/DuplicatesDialog.cpp:406
-#, kde-format
-msgid "Mark for Deletion"
-msgstr "Merkja til eyðingar"
-
-#: kcmfontinst/DuplicatesDialog.cpp:504
-#, kde-format
-msgid "Open font in font viewer?"
-msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Opna letur í leturskoðara?"
-msgstr[1] "Opna öll %1 letur í leturskoðara?"
-
-#: kcmfontinst/FontFilter.cpp:106
-#, kde-format
-msgid "Family"
-msgstr "Leturfjölskylda"
-
-#: kcmfontinst/FontFilter.cpp:108
-#, kde-format
-msgid "Style"
-msgstr "Stíll"
-
-#: kcmfontinst/FontFilter.cpp:110
-#, kde-format
-msgid "Foundry"
-msgstr "Smíði"
-
-#: kcmfontinst/FontFilter.cpp:112
-#, kde-format
-msgid "FontConfig Match"
-msgstr "FontConfig samsvörun"
-
-#: kcmfontinst/FontFilter.cpp:114
-#, kde-format
-msgid "File Type"
-msgstr "Skráartegund"
-
-#: kcmfontinst/FontFilter.cpp:116
-#, kde-format
-msgid "File Name"
-msgstr "Skráarheiti"
-
-#: kcmfontinst/FontFilter.cpp:118
-#, kde-format
-msgid "File Location"
-msgstr "Staðsetning skrár"
-
-#: kcmfontinst/FontFilter.cpp:120
-#, kde-format
-msgid "Writing System"
-msgstr "Skrifkerfi"
-
-#: kcmfontinst/FontFilter.cpp:131
-#, kde-format
-msgid "Set Criteria"
-msgstr "Velja forsendur"
-
-#: kcmfontinst/FontFilter.cpp:190
-#, kde-format
-msgid "Symbol/Other"
-msgstr "Tákn/annað"
-
-#: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
-#, kde-format
-msgid "Filter by %1…"
-msgstr "Sía eftir %1…"
-
-#: kcmfontinst/FontList.cpp:548
-#, kde-format
-msgid "Font"
-msgstr "Letur"
-
-#: kcmfontinst/FontList.cpp:550
-#, kde-format
-msgid "Status"
-msgstr "Staða"
-
-#: kcmfontinst/FontList.cpp:564
-#, kde-format
-msgid ""
-"This column shows the status of the font family, and of the individual font "
-"styles."
-msgstr "Þessi dálkur sýnir stöðu leturfjölskyldunnar, auk stakra leturstíla."
-
-#: kcmfontinst/FontList.cpp:671
-#, kde-format
-msgid ""
-"<p>This list shows your installed fonts. The fonts are grouped by family, "
-"and the number in square brackets represents the number of styles in which "
-"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
-"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
-msgstr ""
-"<p>Þessi listi sýnir uppsett letur. Letrið er flokkað eftir leturfjölskyldum "
-"og sýnir talan sem er innan hornklofa fjölda tiltækra stíla, t.d. </"
-"p><ul><li>Times [4]<ul><li>Venjulegt</li><li>Feitletur</"
-"li><li>Feittskáletur</li><li>Skáletur</li></ul></li></ul>"
-
-#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
-#, kde-format
-msgid "…plus %1 more"
-msgstr "...og %1 að auki"
-
-#: kcmfontinst/FontList.cpp:1001
-#, kde-format
-msgid "%1 [%2]"
-msgstr "%1 [%2]"
-
-#: kcmfontinst/FontList.cpp:1300
-#, kde-format
-msgid "Delete"
-msgstr "Eyða"
-
-#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Enable"
-msgstr "Virkja"
-
-#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Disable"
-msgstr "Afvirkja"
-
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
-#, kde-format
-msgid "Print…"
-msgstr "Prenta…"
-
-#: kcmfontinst/FontList.cpp:1312
-#, kde-format
-msgid "Reload"
-msgstr "Endurlesa"
-
-#: kcmfontinst/FontList.cpp:1690
-#, kde-format
-msgid "Open all %1 fonts in font viewer?"
-msgstr "Opna öll %1 letrin í leturskoðara?"
-
-#: kcmfontinst/GroupList.cpp:62
-#, kde-format
-msgid "All Fonts"
-msgstr "Allar leturgerðir"
-
-#: kcmfontinst/GroupList.cpp:65
-#, kde-format
-msgid "Personal Fonts"
-msgstr "Eigin letur"
-
-#: kcmfontinst/GroupList.cpp:68
-#, kde-format
-msgid "System Fonts"
-msgstr "Kerfisletur"
-
-#: kcmfontinst/GroupList.cpp:71
-#, kde-format
-msgid "Unclassified"
-msgstr "Óflokkað"
-
-#: kcmfontinst/GroupList.cpp:353
-#, kde-format
-msgid "Group"
-msgstr "Flokkur"
-
-#: kcmfontinst/GroupList.cpp:538
-#, kde-format
-msgid ""
-"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
-"the group, and not the actual fonts.</i></p>"
-msgstr ""
-"<p>Viltu í alvörunni fjarlægja '<b>%1</b>'?</p><p><i>Þetta fjarlægir "
-"einungis flokkinn, en ekki sjálft letrið.</i></p>"
-
-#: kcmfontinst/GroupList.cpp:542
-#, kde-format
-msgid "Remove Group"
-msgstr "Fjarlægja flokk"
-
-#: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
-#, kde-format
-msgid "Remove"
-msgstr "Fjarlægja"
-
-#: kcmfontinst/GroupList.cpp:543
-#, kde-format
-msgid "Remove group"
-msgstr "Fjarlægja flokk"
-
-#: kcmfontinst/GroupList.cpp:589
-#, kde-format
-msgid ""
-"<h3>Font Groups</h3><p>This list displays the font groups available on your "
-"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
-"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
-"are groups created by you. To add a font family to one of these groups "
-"simply drag it from the list of fonts, and drop onto the desired group. To "
-"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
-"li></ul></p>"
-msgstr ""
-"<h3>Leturflokkar</h3><p>Þessi listi sýnir leturflokkana sem eru tiltækir á "
-"kerfinu þínu. Til eru 2 megingerðir leturflokka:<ul><li><b>Staðlað</b> eru "
-"sérstakir flokkar sem notaðir eru af leturstýringunni.<ul>%1</ul></"
-"li><li><b>Sérsniðið</b> eru flokkar sem þú hefur búið til. Til að bæta letri "
-"í einhvern þeirra flokka er letrið einfaldlega dregið úr listanum og sleppt "
-"á flokkinn. Til að fjarlægja leturfjölskyldu úr flokki er hún dregin og "
-"sleppt á flokkinn \"Allt letur\".</li></ul></p>"
-
-#: kcmfontinst/GroupList.cpp:597
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>Allt letur</i> inniheldur allt uppsett letur á kerfinu.</"
-"li><li><i>Óflokkað</i> inniheldur allt letur sem ekki hefur verið sett í "
-"\"sérsniðinn\" flokk.</li>"
-
-#: kcmfontinst/GroupList.cpp:600
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
-"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
-"are installed system-wide (i.e. available to all users).</"
-"li><li><i>Personal</i> contains your personal fonts.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>Allt letur</i> inniheldur allt uppsett letur á kerfinu - bæði "
-"\"Kerfisletur\" og \"Eigið letur\".</li> <li><i>Kerfisletur</i> inniheldur "
-"allt letur sem hefur verið sett upp kerfislægt (þ.e. tiltækt öllum notendum)."
-"</li> <li><i>Eigið letur</i> inniheldur leturgerðirna þínar.</li> "
-"<li><i>Óflokkað</i> inniheldur allt letur sem ekki hefur verið sett í "
-"\"sérsniðinn\" flokk.</li>"
-
-#: kcmfontinst/GroupList.cpp:702
-#, kde-format
-msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>Leturflokkur sem heitir <b>'%1'</b> er þegar til.</qt>"
-
-#: kcmfontinst/GroupList.cpp:793
-#, kde-format
-msgid "Rename…"
-msgstr "Endurnefna…"
-
-#: kcmfontinst/GroupList.cpp:802
-#, kde-format
-msgid "Export…"
-msgstr "Flytja út…"
-
-#: kcmfontinst/GroupList.cpp:896
-#, kde-format
-msgid "Add to \"%1\"."
-msgstr "Bæta við \"%1\"."
-
-#: kcmfontinst/GroupList.cpp:898
-#, kde-format
-msgid "Remove from current group."
-msgstr "Fjarlægja úr núverandi flokki."
-
-#: kcmfontinst/GroupList.cpp:900
-#, kde-format
-msgid "Move to personal folder."
-msgstr "Færa í einkamöppu."
-
-#: kcmfontinst/GroupList.cpp:902
-#, kde-format
-msgid "Move to system folder."
-msgstr "Færa í kerfismöppu."
-
-#: kcmfontinst/JobRunner.cpp:139
-#, kde-format
-msgid "Skip"
-msgstr "Sleppa"
-
-#: kcmfontinst/JobRunner.cpp:142
-#, kde-format
-msgid "AutoSkip"
-msgstr "Sleppa sjálfkrafa"
-
-#: kcmfontinst/JobRunner.cpp:187
-#, kde-format
-msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
-msgstr "<h3>Hætta við?</h3><p>Ertu viss um að þú viljir hætta við?</p>"
-
-#: kcmfontinst/JobRunner.cpp:199
-#, kde-format
-msgid ""
-"<h3>Finished</h3><p>Please note that any open applications will need to be "
-"restarted in order for any changes to be noticed.</p>"
-msgstr ""
-"<h3>Lokið</h3><p>Vinsamlegast athugaðu að það þarf að endurræsa forrit sem "
-"eru opin svo breytingarnar verði virkar í þeim.</p>"
-
-#: kcmfontinst/JobRunner.cpp:207
-#, kde-format
-msgid "Do not show this message again"
-msgstr "Ekki sýna þessi skilaboð aftur"
-
-#: kcmfontinst/JobRunner.cpp:315
-#, kde-format
-msgid "Installing"
-msgstr "Set upp"
-
-#: kcmfontinst/JobRunner.cpp:318
-#, kde-format
-msgid "Uninstalling"
-msgstr "Tek út"
-
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
-#, kde-format
-msgid "Enabling"
-msgstr "Virkja"
-
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
-#, kde-format
-msgid "Moving"
-msgstr "Færi"
-
-#: kcmfontinst/JobRunner.cpp:327
-#, kde-format
-msgid "Updating"
-msgstr "Uppfæri"
-
-#: kcmfontinst/JobRunner.cpp:331
-#, kde-format
-msgid "Removing"
-msgstr "Fjarlægi"
-
-#: kcmfontinst/JobRunner.cpp:335
-#, kde-format
-msgid "Disabling"
-msgstr "Afvirkja"
-
-#: kcmfontinst/JobRunner.cpp:372
-#, kde-format
-msgid "Updating font configuration. Please wait…"
-msgstr "Uppfæri leturstillingar. Bíddu aðeins..."
-
-#: kcmfontinst/JobRunner.cpp:444
-#, kde-format
-msgid "Unable to start backend."
-msgstr "Tókst ekki að ræsa bakenda."
-
-#: kcmfontinst/JobRunner.cpp:453
-#, kde-format
-msgid "Backend died, but has been restarted. Please try again."
-msgstr "Bakendinn dó en hefur verið endurræstur. Reyndu aftur."
-
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
-#, kde-format
-msgid "<h3>Error</h3>"
-msgstr "<h3>Villa</h3>"
-
-#: kcmfontinst/JobRunner.cpp:693
-#, kde-format
-msgid "Failed to download <i>%1</i>"
-msgstr "Tókst ekki að sækja <i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:695
-#, kde-format
-msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr ""
-"Kerfisbakendinn dó en hefur verið endurræstur. Reyndu aftur.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:697
-#, kde-format
-msgid ""
-"<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr ""
-"<i>%1</i> er bitamyndaletur (bitmap font), en það hefur verið gert óvirkt á "
-"kerfinu þínu."
-
-#: kcmfontinst/JobRunner.cpp:699
-#, kde-format
-msgid ""
-"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
-"system."
-msgstr ""
-"<i>%1</i> inniheldur leturgerðina <i>%2</i>, sem er nú þegar uppsett á "
-"kerfinu þínu."
-
-#: kcmfontinst/JobRunner.cpp:701
-#, kde-format
-msgid "<i>%1</i> is not a font."
-msgstr "<i>%1</i> er ekki leturgerð."
-
-#: kcmfontinst/JobRunner.cpp:703
-#, kde-format
-msgid "Could not remove all files associated with <i>%1</i>"
-msgstr "Gat ekki fjarlægt allar skrár tengdar <i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:705
-#, kde-format
-msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "Tókst ekki að ræsa kerfismiðlarann.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
-#, kde-format
-msgid "<i>%1</i> already exists."
-msgstr "<i>%1</i> er þegar til."
-
-#: kcmfontinst/JobRunner.cpp:711
-#, kde-format
-msgid "<i>%1</i> does not exist."
-msgstr "<i>%1</i> er ekki til."
-
-#: kcmfontinst/JobRunner.cpp:713
-#, kde-format
-msgid "Permission denied.<br><i>%1</i>"
-msgstr "Aðgangi hafnað.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:715
-#, kde-format
-msgid "Unsupported action.<br><i>%1</i>"
-msgstr "Óstudd aðgerð.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:717
-#, kde-format
-msgid "Authentication failed.<br><i>%1</i>"
-msgstr "Auðkenning brást.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:719
-#, kde-format
-msgid "Unexpected error while processing: <i>%1</i>"
-msgstr "Óvænt villa við vinnslu: <i>%1</i>"
-
-#: kcmfontinst/KCmFontInst.cpp:211
-#, kde-format
-msgid "Create New Group…"
-msgstr "Búa til nýjan flokk…"
-
-#: kcmfontinst/KCmFontInst.cpp:214
-#, kde-format
-msgid "Remove Group…"
-msgstr "Fjarlægja flokk…"
-
-#: kcmfontinst/KCmFontInst.cpp:217
-#, kde-format
-msgid "Enable Fonts in Group…"
-msgstr "Virkja leturgerðir í flokki…"
-
-#: kcmfontinst/KCmFontInst.cpp:220
-#, kde-format
-msgid "Disable Fonts in Group…"
-msgstr "Afvirkja leturgerðir í flokki…"
-
-#: kcmfontinst/KCmFontInst.cpp:241
-#, kde-format
-msgid "This displays a preview of the selected font."
-msgstr "Þetta birtir forskoðun af völdu leturgerðinni."
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Find Duplicates…"
-msgstr "Finna tvítekningar…"
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Scan for Duplicate Fonts…"
-msgstr "Leita að tvíteknum leturgerðum..."
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install from File…"
-msgstr "Setja upp úr skrá…"
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install fonts from a local file"
-msgstr "Setja upp úr skrá á tölvunni"
-
-#: kcmfontinst/KCmFontInst.cpp:261
-#, kde-format
-msgid "Get New Fonts…"
-msgstr "Sækja nýjar leturgerðir…"
-
-#: kcmfontinst/KCmFontInst.cpp:262
-#, kde-format
-msgid "Download new fonts"
-msgstr "Sækja nýjar leturgerðir"
-
-#: kcmfontinst/KCmFontInst.cpp:264
-#, kde-format
-msgid "Delete Selected Fonts…"
-msgstr "Eyða völdum leturgerðum…"
-
-#: kcmfontinst/KCmFontInst.cpp:329
-#, kde-format
-msgid "Change Preview Text…"
-msgstr "Breyta forskoðunartexta..."
-
-#: kcmfontinst/KCmFontInst.cpp:428
-#, kde-format
-msgid "Add Fonts"
-msgstr "Bæta við leturgerðum"
-
-#: kcmfontinst/KCmFontInst.cpp:552
-#, kde-format
-msgid "Failed to save list of fonts to print."
-msgstr "Tókst ekki að vista lista með letri sem á að prenta."
-
-#: kcmfontinst/KCmFontInst.cpp:573
-#, kde-format
-msgid "Failed to start font printer."
-msgstr "Tókst ekki að ræsa leturprentara."
-
-#: kcmfontinst/KCmFontInst.cpp:580
-#, kde-format
-msgid ""
-"There are no printable fonts.\n"
-"You can only print non-bitmap and enabled fonts."
-msgstr ""
-"Það er ekkert prenthæft letur.\n"
-"Þú getur bara prentað letur sem er virkt og ekki er bitamyndaletur (bitmap)."
-
-#: kcmfontinst/KCmFontInst.cpp:582
-#, kde-format
-msgid "Cannot Print"
-msgstr "Get ekki prentað"
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "You did not select anything to delete."
-msgstr "Þú valdir ekkert til að eyða."
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "Nothing to Delete"
-msgstr "Ekkert til að eyða"
-
-#: kcmfontinst/KCmFontInst.cpp:612
-#, kde-format
-msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Viltu virkilega eyða</p><p>'<b>%1</b>'?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:615
-#, kde-format
-msgid "Delete Font"
-msgstr "Eyða letri"
-
-#: kcmfontinst/KCmFontInst.cpp:622
-#, kde-format
-msgid "Do you really want to delete this font?"
-msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "Viltu örugglega eyða þessu letri?"
-msgstr[1] "Viltu örugglega eyða þessu %1 letri?"
-
-#: kcmfontinst/KCmFontInst.cpp:624
-#, kde-format
-msgid "Delete Fonts"
-msgstr "Eyða letri"
-
-#: kcmfontinst/KCmFontInst.cpp:629
-#, kde-format
-msgid "Deleting font(s)…"
-msgstr "Eyði letri..."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "You did not select anything to move."
-msgstr "Þú valdir ekkert til að færa."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "Nothing to Move"
-msgstr "Ekkert til að færa"
-
-#: kcmfontinst/KCmFontInst.cpp:654
-#, kde-format
-msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
-msgstr ""
-"<p>Viltu örugglega færa</p><p>'<b>%1</b>'</p><p>úr <i>%2</i> yfir í <i>%3</"
-"i>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:659
-#, kde-format
-msgid "Move Font"
-msgstr "Færa letur"
-
-#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
-#, kde-format
-msgid "Move"
-msgstr "Færa"
-
-#: kcmfontinst/KCmFontInst.cpp:665
-#, kde-format
-msgid ""
-"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
-msgid_plural ""
-"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] ""
-"<p>Viltu örugglega færa þetta letur úr <i>%2</i> yfir í <i>%3</i>?</p>"
-msgstr[1] ""
-"<p>Viltu örugglega færa þessi %1 letur úr <i>%2</i> yfir í <i>%3</i>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:671
-#, kde-format
-msgid "Move Fonts"
-msgstr "Færa letur"
-
-#: kcmfontinst/KCmFontInst.cpp:676
-#, kde-format
-msgid "Moving font(s)…"
-msgstr "Færi letur…"
-
-#: kcmfontinst/KCmFontInst.cpp:690
-#, kde-format
-msgid "Export Group"
-msgstr "Flytja út flokk"
-
-#: kcmfontinst/KCmFontInst.cpp:716
-#, kde-format
-msgid "No files?"
-msgstr "Engar skrár?"
-
-#: kcmfontinst/KCmFontInst.cpp:719
-#, kde-format
-msgid "Failed to open %1 for writing"
-msgstr "Mistókst að opna %1 til að skrifa í"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Create New Group"
-msgstr "Búa til nýjan flokk"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Name of new group:"
-msgstr "Nafn nýja flokksins:"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "New Group"
-msgstr "Nýr flokkur"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Preview Text"
-msgstr "Forskoða texta"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Please enter new text:"
-msgstr "Sláðu inn nýjan texta:"
-
-#: kcmfontinst/KCmFontInst.cpp:819
-#, kde-format
-msgid "Scanning font list…"
-msgstr "Skanna leturlista..."
-
-#: kcmfontinst/KCmFontInst.cpp:878
-#, kde-format
-msgid "No fonts"
-msgstr "Ekkert letur"
-
-#: kcmfontinst/KCmFontInst.cpp:883
-#, kde-format
-msgid "1 Font"
-msgid_plural "%1 Fonts"
-msgstr[0] "Ein leturgerð"
-msgstr[1] "%1 leturgerðir"
-
-#: kcmfontinst/KCmFontInst.cpp:892
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">Virkt:</td><td>%1</td></tr><tr><td align="
-"\"right\">Óvirkt:</td><td>%2</td></tr><tr><td align=\"right\">Virkt að hluta:"
-"</td><td>%3</td></tr><tr><td align=\"right\">Alls:</td><td>%4</td></tr></"
-"table>"
-
-#: kcmfontinst/KCmFontInst.cpp:902
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">Virkt:</td><td>%1</td></tr><tr><td align="
-"\"right\">Óvirkt:</td><td>%2</td></tr><tr><td align=\"right\">Alls:</td><td>"
-"%3</td></tr></table>"
-
-#: kcmfontinst/KCmFontInst.cpp:946
+#: apps/kfontinst/Installer.cpp:38 manager/FontManager.cpp:935
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -817,195 +42,124 @@ msgstr ""
 "Viltu setja letrið upp til einkanota (einungis aðgengilegt hjá þér), eða "
 "kerfislægt (tiltækt öllum notendum tölvunnar)?"
 
-#: kcmfontinst/KCmFontInst.cpp:949
+#: apps/kfontinst/Installer.cpp:39 manager/FontManager.cpp:938
 #, kde-format
 msgid "Where to Install"
 msgstr "Hvar á að setja inn"
 
-#: kcmfontinst/KCmFontInst.cpp:979
-#, kde-format
-msgid "Looking for any associated files…"
-msgstr "Leita að öllum tengdum skrám..."
+#: apps/kfontinst/Installer.cpp:115
+#, fuzzy, kde-format
+#| msgid "Font Management"
+msgctxt "@title application name"
+msgid "Font Management"
+msgstr "Umsjón með leturgerðum"
 
-#: kcmfontinst/KCmFontInst.cpp:983
+#: apps/kfontinst/Installer.cpp:117
 #, kde-format
-msgid "Scanning Files…"
-msgstr "Skanna skrár..."
-
-#: kcmfontinst/KCmFontInst.cpp:984
-#, kde-format
-msgid "Looking for additional files to install…"
-msgstr "Leita að viðbótarskrám til uppsetningar…"
-
-#: kcmfontinst/KCmFontInst.cpp:999
-#, kde-format
-msgid "Looking for files associated with %1"
-msgstr "Leita að öllum skrám tengdum %1"
-
-#: kcmfontinst/KCmFontInst.cpp:1027
-#, kde-format
-msgid "Installing font(s)…"
-msgstr "Set upp letur..."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to enable."
-msgstr "Þú valdir ekkert til að virkja."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to disable."
-msgstr "Þú valdir ekkert til að afvirkja."
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Enable"
-msgstr "Ekkert til að virkja"
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Disable"
-msgstr "Ekkert til að afvirkja"
-
-#: kcmfontinst/KCmFontInst.cpp:1107
-#, kde-format
-msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Viltu örugglega virkja</p><p>'<b>%1</b>'?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1108
-#, kde-format
-msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Viltu örugglega afvirkja</p><p>'<b>%1</b>'?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1109
-#, kde-format
-msgid ""
-"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+msgctxt "@info application description"
+msgid "Install, manage, and preview fonts"
 msgstr ""
-"<p>Viltu örugglega virkja</p><p>'<b>%1</b>', sem er í flokknum '<b>%2</b>'?</"
-"p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format
-msgid ""
-"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) Craig Drummond, 2007"
+
+#: apps/kfontinst/Installer.cpp:128
+#, kde-format
+msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"<p>Viltu örugglega afvirkja</p><p>'<b>%1</b>', sem er í flokknum '<b>%2</b>'?"
-"</p>"
+"Gerir svargluggann skammvinnan fyrir glugga sem windowHandle skilgreinir"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
+#: apps/kfontinst/Installer.cpp:131
 #, kde-format
-msgid "Enable Font"
-msgstr "Virkja letur"
+msgid "URL to install"
+msgstr "Slóð sem á að setja upp"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
+#: apps/kfontprint/Printer.cpp:239
 #, kde-format
-msgid "Disable Font"
-msgstr "Afvirkja letur"
+msgid "Print"
+msgstr "Prenta"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
 #, kde-format
-msgid "Do you really want to enable this font?"
-msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "Viltu örugglega virkja þetta letur?"
-msgstr[1] "Viltu örugglega virkja þessar %1 leturgerðir?"
+msgid "Canceling…"
+msgstr "Hætti við…"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: apps/kfontprint/Printer.cpp:323
 #, kde-format
-msgid "Do you really want to disable this font?"
-msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "Viltu örugglega afvirkja þetta letur?"
-msgstr[1] "Viltu örugglega afvirkja þessar %1 leturgerðir?"
+msgid "Font Printer"
+msgstr "Leturprentari"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: apps/kfontprint/Printer.cpp:325
 #, kde-format
-msgid ""
-"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
-"</p>"
-msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<p>Viltu örugglega virkja þetta letur sem er í flokknum '<b>%2</b>'?</p>"
-msgstr[1] ""
-"<p>Viltu örugglega virkja þessar %1 leturgerðir sem er í flokknum '<b>%2</"
-"b>'?</p>"
+msgid "Simple font printer"
+msgstr "Einfaldur leturprentari"
 
-#: kcmfontinst/KCmFontInst.cpp:1126
+#: apps/kfontprint/Printer.cpp:333
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "Gerir gluggann skammvinnan fyrir X forrit sem winid skilgreinir"
+
+#: apps/kfontprint/Printer.cpp:335
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "Stærðarvísir til prentunar á letri"
+
+#: apps/kfontprint/Printer.cpp:339
 #, kde-format
 msgid ""
-"<p>Do you really want to disable this font contained within group '<b>%2</"
-"b>'?</p>"
-msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<p>Viltu örugglega afvirkja þetta letur sem er í flokknum '<b>%2</b>'?</p>"
-msgstr[1] ""
-"<p>Viltu örugglega afvirkja þessar %1 leturgerðir sem eru í flokknum '<b>%2</"
-"b>'?</p>"
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"Letur sem á að prenta, tiltekið sem \"Leturfjölskylda,Stíll\" þar sem \"Stíll"
+"\" er 24-bita tugakerfistala sem aftur er skilgreind eftir: "
+"<þykkt><breidd><halli> (e. <weight><width><slant>)"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontprint/Printer.cpp:342
 #, kde-format
-msgid "Enable Fonts"
-msgstr "Virkja letur"
+msgid "File containing list of fonts to print"
+msgstr "Skrá sem inniheldur lista leturgerða sem á að prenta"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontprint/Printer.cpp:344
 #, kde-format
-msgid "Disable Fonts"
-msgstr "Afvirkja letur"
+msgid "Remove file containing list of fonts to print"
+msgstr "Fjarlægja skrá með leturgerðum sem á að prenta"
 
-#: kcmfontinst/KCmFontInst.cpp:1139
+#: apps/kfontview/Viewer.cpp:50
 #, kde-format
-msgid "Enabling font(s)…"
-msgstr "Virkja letur..."
+msgid "Open an existing font file"
+msgstr "Opna fyrirliggjandi leturskrá"
 
-#: kcmfontinst/KCmFontInst.cpp:1141
+#: apps/kfontview/Viewer.cpp:51
 #, kde-format
-msgid "Disabling font(s)…"
-msgstr "Afvirkja letur..."
+msgid "Print font preview"
+msgstr "Prenta forskoðun leturs"
 
-#: kcmfontinst/PrintDialog.cpp:21
+#: apps/kfontview/Viewer.cpp:68
 #, kde-format
-msgid "Print Font Samples"
-msgstr "Sýnishorn af útprentun"
+msgid "Select Font to View"
+msgstr "Veldu letur sem þú vilt skoða"
 
-#: kcmfontinst/PrintDialog.cpp:37
+#: apps/kfontview/Viewer.cpp:108
 #, kde-format
-msgid "Select size to print font:"
-msgstr "Veldu stærð til að prenta letur:"
+msgid "URL to open"
+msgstr "Slóð til að opna"
 
-#: kcmfontinst/PrintDialog.cpp:41
+#: apps/kfontview/Viewer.cpp:150
 #, kde-format
-msgid "Waterfall"
-msgstr "Foss"
+msgid "Font Viewer"
+msgstr "Leturskoðari"
 
-#: kcmfontinst/PrintDialog.cpp:42
+#: apps/kfontview/Viewer.cpp:152
 #, kde-format
-msgid "12pt"
-msgstr "12pt"
+msgid "Simple font viewer"
+msgstr "Einfaldur leturskoðari"
 
-#: kcmfontinst/PrintDialog.cpp:43
+#: apps/kfontview/Viewer.cpp:154
 #, kde-format
-msgid "18pt"
-msgstr "18pt"
-
-#: kcmfontinst/PrintDialog.cpp:44
-#, kde-format
-msgid "24pt"
-msgstr "24pt"
-
-#: kcmfontinst/PrintDialog.cpp:45
-#, kde-format
-msgid "36pt"
-msgstr "36pt"
-
-#: kcmfontinst/PrintDialog.cpp:46
-#, kde-format
-msgid "48pt"
-msgstr "48pt"
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1087,6 +241,11 @@ msgstr "%1 er ekki letur."
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Gat ekki fjarlægt allar skrár tengdar %1"
+
+#: kio/KioFonts.cpp:719 manager/JobRunner.cpp:708
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> er þegar til."
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:108
 #, kde-format
@@ -1274,6 +433,956 @@ msgstr "Stafareitur"
 #: lib/KfiConstants.h:106
 msgid "Proportional"
 msgstr "Hlutfallslegt"
+
+#: manager/DuplicatesDialog.cpp:49
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "Tvítekið letur"
+
+#: manager/DuplicatesDialog.cpp:79
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "Leita að tvíteknu letri. Bíddu aðeins..."
+
+#: manager/DuplicatesDialog.cpp:98
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "Fann engar tvíteknar leturgerðir."
+
+#: manager/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "Eyða merktum skrám"
+
+#: manager/DuplicatesDialog.cpp:108
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "%1 tvítekin leturgerð fannst."
+msgstr[1] "%1 tvíteknar leturgerðir fundust."
+
+#: manager/DuplicatesDialog.cpp:189
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"Ertu viss um að þú viljir eyða:\n"
+"%1"
+
+#: manager/DuplicatesDialog.cpp:195
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "Ertu viss um að þú viljir eyða:"
+
+#: manager/DuplicatesDialog.cpp:223
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "Hætta við leturskönnun?"
+
+#: manager/DuplicatesDialog.cpp:384
+#, kde-format
+msgid "Font/File"
+msgstr "Letur/skrá"
+
+#: manager/DuplicatesDialog.cpp:386
+#, kde-format
+msgid "Size"
+msgstr "Stærð"
+
+#: manager/DuplicatesDialog.cpp:387
+#, kde-format
+msgid "Date"
+msgstr "Dagsetning"
+
+#: manager/DuplicatesDialog.cpp:388
+#, kde-format
+msgid "Links To"
+msgstr "Tengir við"
+
+#: manager/DuplicatesDialog.cpp:401 manager/FontList.cpp:1310
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "Opna í leturskoðara"
+
+#: manager/DuplicatesDialog.cpp:403
+#, kde-format
+msgid "Properties"
+msgstr "Eiginleikar"
+
+#: manager/DuplicatesDialog.cpp:405
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "Afmerkja til eyðingar"
+
+#: manager/DuplicatesDialog.cpp:406
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "Merkja til eyðingar"
+
+#: manager/DuplicatesDialog.cpp:504
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Opna letur í leturskoðara?"
+msgstr[1] "Opna öll %1 letur í leturskoðara?"
+
+#: manager/FontFilter.cpp:106
+#, kde-format
+msgid "Family"
+msgstr "Leturfjölskylda"
+
+#: manager/FontFilter.cpp:108
+#, kde-format
+msgid "Style"
+msgstr "Stíll"
+
+#: manager/FontFilter.cpp:110
+#, kde-format
+msgid "Foundry"
+msgstr "Smíði"
+
+#: manager/FontFilter.cpp:112
+#, kde-format
+msgid "FontConfig Match"
+msgstr "FontConfig samsvörun"
+
+#: manager/FontFilter.cpp:114
+#, kde-format
+msgid "File Type"
+msgstr "Skráartegund"
+
+#: manager/FontFilter.cpp:116
+#, kde-format
+msgid "File Name"
+msgstr "Skráarheiti"
+
+#: manager/FontFilter.cpp:118
+#, kde-format
+msgid "File Location"
+msgstr "Staðsetning skrár"
+
+#: manager/FontFilter.cpp:120
+#, kde-format
+msgid "Writing System"
+msgstr "Skrifkerfi"
+
+#: manager/FontFilter.cpp:131
+#, kde-format
+msgid "Set Criteria"
+msgstr "Velja forsendur"
+
+#: manager/FontFilter.cpp:190
+#, kde-format
+msgid "Symbol/Other"
+msgstr "Tákn/annað"
+
+#: manager/FontFilter.cpp:268 manager/FontFilter.cpp:336
+#, kde-format
+msgid "Filter by %1…"
+msgstr "Sía eftir %1…"
+
+#: manager/FontList.cpp:548
+#, kde-format
+msgid "Font"
+msgstr "Letur"
+
+#: manager/FontList.cpp:550
+#, kde-format
+msgid "Status"
+msgstr "Staða"
+
+#: manager/FontList.cpp:564
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "Þessi dálkur sýnir stöðu leturfjölskyldunnar, auk stakra leturstíla."
+
+#: manager/FontList.cpp:671
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>Þessi listi sýnir uppsett letur. Letrið er flokkað eftir leturfjölskyldum "
+"og sýnir talan sem er innan hornklofa fjölda tiltækra stíla, t.d. </"
+"p><ul><li>Times [4]<ul><li>Venjulegt</li><li>Feitletur</"
+"li><li>Feittskáletur</li><li>Skáletur</li></ul></li></ul>"
+
+#: manager/FontList.cpp:950 manager/FontList.cpp:974
+#, kde-format
+msgid "…plus %1 more"
+msgstr "...og %1 að auki"
+
+#: manager/FontList.cpp:1001
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: manager/FontList.cpp:1300
+#, kde-format
+msgid "Delete"
+msgstr "Eyða"
+
+#: manager/FontList.cpp:1302 manager/FontManager.cpp:1101
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:790
+#, kde-format
+msgid "Enable"
+msgstr "Virkja"
+
+#: manager/FontList.cpp:1303 manager/FontManager.cpp:1102
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:791
+#, kde-format
+msgid "Disable"
+msgstr "Afvirkja"
+
+#: manager/FontList.cpp:1308 manager/GroupList.cpp:797
+#, kde-format
+msgid "Print…"
+msgstr "Prenta…"
+
+#: manager/FontList.cpp:1312
+#, kde-format
+msgid "Reload"
+msgstr "Endurlesa"
+
+#: manager/FontList.cpp:1690
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "Opna öll %1 letrin í leturskoðara?"
+
+#: manager/FontManager.cpp:196
+#, kde-format
+msgid "Create New Group…"
+msgstr "Búa til nýjan flokk…"
+
+#: manager/FontManager.cpp:199
+#, kde-format
+msgid "Remove Group…"
+msgstr "Fjarlægja flokk…"
+
+#: manager/FontManager.cpp:202
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "Virkja leturgerðir í flokki…"
+
+#: manager/FontManager.cpp:205
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "Afvirkja leturgerðir í flokki…"
+
+#: manager/FontManager.cpp:226
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "Þetta birtir forskoðun af völdu leturgerðinni."
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "Finna tvítekningar…"
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "Leita að tvíteknum leturgerðum..."
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install from File…"
+msgstr "Setja upp úr skrá…"
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "Setja upp úr skrá á tölvunni"
+
+#: manager/FontManager.cpp:246
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "Sækja nýjar leturgerðir…"
+
+#: manager/FontManager.cpp:247
+#, kde-format
+msgid "Download new fonts"
+msgstr "Sækja nýjar leturgerðir"
+
+#: manager/FontManager.cpp:249
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "Eyða völdum leturgerðum…"
+
+#: manager/FontManager.cpp:314
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "Breyta forskoðunartexta..."
+
+#: manager/FontManager.cpp:417
+#, kde-format
+msgid "Add Fonts"
+msgstr "Bæta við leturgerðum"
+
+#: manager/FontManager.cpp:541
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "Tókst ekki að vista lista með letri sem á að prenta."
+
+#: manager/FontManager.cpp:562
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "Tókst ekki að ræsa leturprentara."
+
+#: manager/FontManager.cpp:569
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"Það er ekkert prenthæft letur.\n"
+"Þú getur bara prentað letur sem er virkt og ekki er bitamyndaletur (bitmap)."
+
+#: manager/FontManager.cpp:571
+#, kde-format
+msgid "Cannot Print"
+msgstr "Get ekki prentað"
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Þú valdir ekkert til að eyða."
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Ekkert til að eyða"
+
+#: manager/FontManager.cpp:601
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Viltu virkilega eyða</p><p>'<b>%1</b>'?</p>"
+
+#: manager/FontManager.cpp:604
+#, kde-format
+msgid "Delete Font"
+msgstr "Eyða letri"
+
+#: manager/FontManager.cpp:611
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Viltu örugglega eyða þessu letri?"
+msgstr[1] "Viltu örugglega eyða þessu %1 letri?"
+
+#: manager/FontManager.cpp:613
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Eyða letri"
+
+#: manager/FontManager.cpp:618
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "Eyði letri..."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "Þú valdir ekkert til að færa."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "Nothing to Move"
+msgstr "Ekkert til að færa"
+
+#: manager/FontManager.cpp:643
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>Viltu örugglega færa</p><p>'<b>%1</b>'</p><p>úr <i>%2</i> yfir í <i>%3</"
+"i>?</p>"
+
+#: manager/FontManager.cpp:648
+#, kde-format
+msgid "Move Font"
+msgstr "Færa letur"
+
+#: manager/FontManager.cpp:649 manager/FontManager.cpp:661
+#, kde-format
+msgid "Move"
+msgstr "Færa"
+
+#: manager/FontManager.cpp:654
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] ""
+"<p>Viltu örugglega færa þetta letur úr <i>%2</i> yfir í <i>%3</i>?</p>"
+msgstr[1] ""
+"<p>Viltu örugglega færa þessi %1 letur úr <i>%2</i> yfir í <i>%3</i>?</p>"
+
+#: manager/FontManager.cpp:660
+#, kde-format
+msgid "Move Fonts"
+msgstr "Færa letur"
+
+#: manager/FontManager.cpp:665
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "Færi letur…"
+
+#: manager/FontManager.cpp:679
+#, kde-format
+msgid "Export Group"
+msgstr "Flytja út flokk"
+
+#: manager/FontManager.cpp:705
+#, kde-format
+msgid "No files?"
+msgstr "Engar skrár?"
+
+#: manager/FontManager.cpp:708
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "Mistókst að opna %1 til að skrifa í"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Create New Group"
+msgstr "Búa til nýjan flokk"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Name of new group:"
+msgstr "Nafn nýja flokksins:"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "New Group"
+msgstr "Nýr flokkur"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Preview Text"
+msgstr "Forskoða texta"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Please enter new text:"
+msgstr "Sláðu inn nýjan texta:"
+
+#: manager/FontManager.cpp:808
+#, kde-format
+msgid "Scanning font list…"
+msgstr "Skanna leturlista..."
+
+#: manager/FontManager.cpp:867
+#, kde-format
+msgid "No fonts"
+msgstr "Ekkert letur"
+
+#: manager/FontManager.cpp:872
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "Ein leturgerð"
+msgstr[1] "%1 leturgerðir"
+
+#: manager/FontManager.cpp:881
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Virkt:</td><td>%1</td></tr><tr><td align="
+"\"right\">Óvirkt:</td><td>%2</td></tr><tr><td align=\"right\">Virkt að hluta:"
+"</td><td>%3</td></tr><tr><td align=\"right\">Alls:</td><td>%4</td></tr></"
+"table>"
+
+#: manager/FontManager.cpp:891
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Virkt:</td><td>%1</td></tr><tr><td align="
+"\"right\">Óvirkt:</td><td>%2</td></tr><tr><td align=\"right\">Alls:</td><td>"
+"%3</td></tr></table>"
+
+#: manager/FontManager.cpp:968
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "Leita að öllum tengdum skrám..."
+
+#: manager/FontManager.cpp:972
+#, kde-format
+msgid "Scanning Files…"
+msgstr "Skanna skrár..."
+
+#: manager/FontManager.cpp:973
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "Leita að viðbótarskrám til uppsetningar…"
+
+#: manager/FontManager.cpp:988
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "Leita að öllum skrám tengdum %1"
+
+#: manager/FontManager.cpp:1016
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "Set upp letur..."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "Þú valdir ekkert til að virkja."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "Þú valdir ekkert til að afvirkja."
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "Ekkert til að virkja"
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "Ekkert til að afvirkja"
+
+#: manager/FontManager.cpp:1096
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Viltu örugglega virkja</p><p>'<b>%1</b>'?</p>"
+
+#: manager/FontManager.cpp:1097
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Viltu örugglega afvirkja</p><p>'<b>%1</b>'?</p>"
+
+#: manager/FontManager.cpp:1098
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Viltu örugglega virkja</p><p>'<b>%1</b>', sem er í flokknum '<b>%2</b>'?</"
+"p>"
+
+#: manager/FontManager.cpp:1099
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Viltu örugglega afvirkja</p><p>'<b>%1</b>', sem er í flokknum '<b>%2</b>'?"
+"</p>"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1101
+#, kde-format
+msgid "Enable Font"
+msgstr "Virkja letur"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1102
+#, kde-format
+msgid "Disable Font"
+msgstr "Afvirkja letur"
+
+#: manager/FontManager.cpp:1108
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Viltu örugglega virkja þetta letur?"
+msgstr[1] "Viltu örugglega virkja þessar %1 leturgerðir?"
+
+#: manager/FontManager.cpp:1109
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Viltu örugglega afvirkja þetta letur?"
+msgstr[1] "Viltu örugglega afvirkja þessar %1 leturgerðir?"
+
+#: manager/FontManager.cpp:1111
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Viltu örugglega virkja þetta letur sem er í flokknum '<b>%2</b>'?</p>"
+msgstr[1] ""
+"<p>Viltu örugglega virkja þessar %1 leturgerðir sem er í flokknum '<b>%2</"
+"b>'?</p>"
+
+#: manager/FontManager.cpp:1115
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Viltu örugglega afvirkja þetta letur sem er í flokknum '<b>%2</b>'?</p>"
+msgstr[1] ""
+"<p>Viltu örugglega afvirkja þessar %1 leturgerðir sem eru í flokknum '<b>%2</"
+"b>'?</p>"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Enable Fonts"
+msgstr "Virkja letur"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Disable Fonts"
+msgstr "Afvirkja letur"
+
+#: manager/FontManager.cpp:1128
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "Virkja letur..."
+
+#: manager/FontManager.cpp:1130
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "Afvirkja letur..."
+
+#: manager/GroupList.cpp:62
+#, kde-format
+msgid "All Fonts"
+msgstr "Allar leturgerðir"
+
+#: manager/GroupList.cpp:65
+#, kde-format
+msgid "Personal Fonts"
+msgstr "Eigin letur"
+
+#: manager/GroupList.cpp:68
+#, kde-format
+msgid "System Fonts"
+msgstr "Kerfisletur"
+
+#: manager/GroupList.cpp:71
+#, kde-format
+msgid "Unclassified"
+msgstr "Óflokkað"
+
+#: manager/GroupList.cpp:353
+#, kde-format
+msgid "Group"
+msgstr "Flokkur"
+
+#: manager/GroupList.cpp:538
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>Viltu í alvörunni fjarlægja '<b>%1</b>'?</p><p><i>Þetta fjarlægir "
+"einungis flokkinn, en ekki sjálft letrið.</i></p>"
+
+#: manager/GroupList.cpp:542
+#, kde-format
+msgid "Remove Group"
+msgstr "Fjarlægja flokk"
+
+#: manager/GroupList.cpp:543 manager/GroupList.cpp:788
+#, kde-format
+msgid "Remove"
+msgstr "Fjarlægja"
+
+#: manager/GroupList.cpp:543
+#, kde-format
+msgid "Remove group"
+msgstr "Fjarlægja flokk"
+
+#: manager/GroupList.cpp:589
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>Leturflokkar</h3><p>Þessi listi sýnir leturflokkana sem eru tiltækir á "
+"kerfinu þínu. Til eru 2 megingerðir leturflokka:<ul><li><b>Staðlað</b> eru "
+"sérstakir flokkar sem notaðir eru af leturstýringunni.<ul>%1</ul></"
+"li><li><b>Sérsniðið</b> eru flokkar sem þú hefur búið til. Til að bæta letri "
+"í einhvern þeirra flokka er letrið einfaldlega dregið úr listanum og sleppt "
+"á flokkinn. Til að fjarlægja leturfjölskyldu úr flokki er hún dregin og "
+"sleppt á flokkinn \"Allt letur\".</li></ul></p>"
+
+#: manager/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Allt letur</i> inniheldur allt uppsett letur á kerfinu.</"
+"li><li><i>Óflokkað</i> inniheldur allt letur sem ekki hefur verið sett í "
+"\"sérsniðinn\" flokk.</li>"
+
+#: manager/GroupList.cpp:600
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Allt letur</i> inniheldur allt uppsett letur á kerfinu - bæði "
+"\"Kerfisletur\" og \"Eigið letur\".</li> <li><i>Kerfisletur</i> inniheldur "
+"allt letur sem hefur verið sett upp kerfislægt (þ.e. tiltækt öllum notendum)."
+"</li> <li><i>Eigið letur</i> inniheldur leturgerðirna þínar.</li> "
+"<li><i>Óflokkað</i> inniheldur allt letur sem ekki hefur verið sett í "
+"\"sérsniðinn\" flokk.</li>"
+
+#: manager/GroupList.cpp:702
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>Leturflokkur sem heitir <b>'%1'</b> er þegar til.</qt>"
+
+#: manager/GroupList.cpp:793
+#, kde-format
+msgid "Rename…"
+msgstr "Endurnefna…"
+
+#: manager/GroupList.cpp:802
+#, kde-format
+msgid "Export…"
+msgstr "Flytja út…"
+
+#: manager/GroupList.cpp:896
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "Bæta við \"%1\"."
+
+#: manager/GroupList.cpp:898
+#, kde-format
+msgid "Remove from current group."
+msgstr "Fjarlægja úr núverandi flokki."
+
+#: manager/GroupList.cpp:900
+#, kde-format
+msgid "Move to personal folder."
+msgstr "Færa í einkamöppu."
+
+#: manager/GroupList.cpp:902
+#, kde-format
+msgid "Move to system folder."
+msgstr "Færa í kerfismöppu."
+
+#: manager/JobRunner.cpp:139
+#, kde-format
+msgid "Skip"
+msgstr "Sleppa"
+
+#: manager/JobRunner.cpp:142
+#, kde-format
+msgid "AutoSkip"
+msgstr "Sleppa sjálfkrafa"
+
+#: manager/JobRunner.cpp:187
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>Hætta við?</h3><p>Ertu viss um að þú viljir hætta við?</p>"
+
+#: manager/JobRunner.cpp:199
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>Lokið</h3><p>Vinsamlegast athugaðu að það þarf að endurræsa forrit sem "
+"eru opin svo breytingarnar verði virkar í þeim.</p>"
+
+#: manager/JobRunner.cpp:207
+#, kde-format
+msgid "Do not show this message again"
+msgstr "Ekki sýna þessi skilaboð aftur"
+
+#: manager/JobRunner.cpp:315
+#, kde-format
+msgid "Installing"
+msgstr "Set upp"
+
+#: manager/JobRunner.cpp:318
+#, kde-format
+msgid "Uninstalling"
+msgstr "Tek út"
+
+#: manager/JobRunner.cpp:321 manager/JobRunner.cpp:417
+#, kde-format
+msgid "Enabling"
+msgstr "Virkja"
+
+#: manager/JobRunner.cpp:324 manager/JobRunner.cpp:421
+#, kde-format
+msgid "Moving"
+msgstr "Færi"
+
+#: manager/JobRunner.cpp:327
+#, kde-format
+msgid "Updating"
+msgstr "Uppfæri"
+
+#: manager/JobRunner.cpp:331
+#, kde-format
+msgid "Removing"
+msgstr "Fjarlægi"
+
+#: manager/JobRunner.cpp:335
+#, kde-format
+msgid "Disabling"
+msgstr "Afvirkja"
+
+#: manager/JobRunner.cpp:372
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "Uppfæri leturstillingar. Bíddu aðeins..."
+
+#: manager/JobRunner.cpp:444
+#, kde-format
+msgid "Unable to start backend."
+msgstr "Tókst ekki að ræsa bakenda."
+
+#: manager/JobRunner.cpp:453
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "Bakendinn dó en hefur verið endurræstur. Reyndu aftur."
+
+#: manager/JobRunner.cpp:618 manager/JobRunner.cpp:625
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>Villa</h3>"
+
+#: manager/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "Tókst ekki að sækja <i>%1</i>"
+
+#: manager/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr ""
+"Kerfisbakendinn dó en hefur verið endurræstur. Reyndu aftur.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr ""
+"<i>%1</i> er bitamyndaletur (bitmap font), en það hefur verið gert óvirkt á "
+"kerfinu þínu."
+
+#: manager/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+"<i>%1</i> inniheldur leturgerðina <i>%2</i>, sem er nú þegar uppsett á "
+"kerfinu þínu."
+
+#: manager/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> er ekki leturgerð."
+
+#: manager/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "Gat ekki fjarlægt allar skrár tengdar <i>%1</i>"
+
+#: manager/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "Tókst ekki að ræsa kerfismiðlarann.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> er ekki til."
+
+#: manager/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "Aðgangi hafnað.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "Óstudd aðgerð.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "Auðkenning brást.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "Óvænt villa við vinnslu: <i>%1</i>"
+
+#: manager/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "Sýnishorn af útprentun"
+
+#: manager/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "Veldu stærð til að prenta letur:"
+
+#: manager/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "Foss"
+
+#: manager/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12pt"
+
+#: manager/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18pt"
+
+#: manager/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24pt"
+
+#: manager/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36pt"
+
+#: manager/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48pt"
 
 #: viewpart/CharTip.cpp:44
 #, kde-format
@@ -2184,69 +2293,6 @@ msgstr "Yi"
 
 #~ msgid "Simple font installer"
 #~ msgstr "Einfalt uppsetningarforrit fyrir letur"
-
-#~ msgid "(C) Craig Drummond, 2007"
-#~ msgstr "(C) Craig Drummond, 2007"
-
-#~ msgid "Makes the dialog transient for a window specified by windowHandle"
-#~ msgstr ""
-#~ "Gerir svargluggann skammvinnan fyrir glugga sem windowHandle skilgreinir"
-
-#~ msgid "URL to install"
-#~ msgstr "Slóð sem á að setja upp"
-
-#~ msgid "Print"
-#~ msgstr "Prenta"
-
-#~ msgid "Font Printer"
-#~ msgstr "Leturprentari"
-
-#~ msgid "Simple font printer"
-#~ msgstr "Einfaldur leturprentari"
-
-#~ msgid "Makes the dialog transient for an X app specified by winid"
-#~ msgstr "Gerir gluggann skammvinnan fyrir X forrit sem winid skilgreinir"
-
-#~ msgid "Size index to print fonts"
-#~ msgstr "Stærðarvísir til prentunar á letri"
-
-#~ msgid ""
-#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
-#~ "decimal number composed as: <weight><width><slant>"
-#~ msgstr ""
-#~ "Letur sem á að prenta, tiltekið sem \"Leturfjölskylda,Stíll\" þar sem "
-#~ "\"Stíll\" er 24-bita tugakerfistala sem aftur er skilgreind eftir: "
-#~ "<þykkt><breidd><halli> (e. <weight><width><slant>)"
-
-#~ msgid "File containing list of fonts to print"
-#~ msgstr "Skrá sem inniheldur lista leturgerða sem á að prenta"
-
-#~ msgid "Remove file containing list of fonts to print"
-#~ msgstr "Fjarlægja skrá með leturgerðum sem á að prenta"
-
-#~ msgid "Open an existing font file"
-#~ msgstr "Opna fyrirliggjandi leturskrá"
-
-#~ msgid "Print font preview"
-#~ msgstr "Prenta forskoðun leturs"
-
-#~ msgid "Select Font to View"
-#~ msgstr "Veldu letur sem þú vilt skoða"
-
-#~ msgid "URL to open"
-#~ msgstr "Slóð til að opna"
-
-#~ msgid "Font Viewer"
-#~ msgstr "Leturskoðari"
-
-#~ msgid "Simple font viewer"
-#~ msgstr "Einfaldur leturskoðari"
-
-#~ msgid "(C) Craig Drummond, 2004-2007"
-#~ msgstr "(C) Craig Drummond, 2004-2007"
-
-#~ msgid "Font Management"
-#~ msgstr "Umsjón með leturgerðum"
 
 #~ msgid "(C) Craig Drummond, 2000 - 2009"
 #~ msgstr "(C) Craig Drummond, 2000 - 2009"

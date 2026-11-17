@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2025-01-24 09:27+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -37,780 +37,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org,ttv200@gmail.com"
 
-#: kcmfontinst/DuplicatesDialog.cpp:49
-#, kde-format
-msgid "Duplicate Fonts"
-msgstr "גופן כפול"
-
-#: kcmfontinst/DuplicatesDialog.cpp:79
-#, kde-format
-msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "מתבצע חיפוש גופנים כפולים. נא להמתין…"
-
-#: kcmfontinst/DuplicatesDialog.cpp:98
-#, kde-format
-msgid "No duplicate fonts found."
-msgstr "לא נמצאו גופנים כפולים."
-
-#: kcmfontinst/DuplicatesDialog.cpp:106
-#, kde-format
-msgid "Delete Marked Files"
-msgstr "מחיקת קבצים מסומנים"
-
-#: kcmfontinst/DuplicatesDialog.cpp:108
-#, kde-format
-msgid "%1 duplicate font found."
-msgid_plural "%1 duplicate fonts found."
-msgstr[0] "נמצא גופן כפול %1."
-msgstr[1] "נמצאו שני גופנים כפולים."
-msgstr[2] "נמצאו %1 גופנים כפולים."
-msgstr[3] "נמצאו %1 גופנים כפולים."
-
-#: kcmfontinst/DuplicatesDialog.cpp:189
-#, kde-format
-msgid ""
-"Are you sure you wish to delete:\n"
-"%1"
-msgstr ""
-"למחוק את\n"
-"%1"
-
-#: kcmfontinst/DuplicatesDialog.cpp:195
-#, kde-format
-msgid "Are you sure you wish to delete:"
-msgstr "למחוק את:"
-
-#: kcmfontinst/DuplicatesDialog.cpp:223
-#, kde-format
-msgid "Cancel font scan?"
-msgstr "לבטל את סריקת הגופנים?"
-
-#: kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr "הפעולה מבוטלת…"
-
-#: kcmfontinst/DuplicatesDialog.cpp:384
-#, kde-format
-msgid "Font/File"
-msgstr "גופן/קובץ"
-
-#: kcmfontinst/DuplicatesDialog.cpp:386
-#, kde-format
-msgid "Size"
-msgstr "גודל"
-
-#: kcmfontinst/DuplicatesDialog.cpp:387
-#, kde-format
-msgid "Date"
-msgstr "תאריך"
-
-#: kcmfontinst/DuplicatesDialog.cpp:388
-#, kde-format
-msgid "Links To"
-msgstr "מקשר אל"
-
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
-#, kde-format
-msgid "Open in Font Viewer"
-msgstr "פתיחה במציג הגופנים"
-
-#: kcmfontinst/DuplicatesDialog.cpp:403
-#, kde-format
-msgid "Properties"
-msgstr "מאפיינים"
-
-#: kcmfontinst/DuplicatesDialog.cpp:405
-#, kde-format
-msgid "Unmark for Deletion"
-msgstr "הסרת סימון למחיקה"
-
-#: kcmfontinst/DuplicatesDialog.cpp:406
-#, kde-format
-msgid "Mark for Deletion"
-msgstr "סימון למחיקה"
-
-#: kcmfontinst/DuplicatesDialog.cpp:504
-#, kde-format
-msgid "Open font in font viewer?"
-msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "לפתוח את הגופן במציג הגופנים?"
-msgstr[1] "לפתוח את שני הגופנים במציג הגופנים?"
-msgstr[2] "לפתוח את %1 הגופנים במציג הגופנים?"
-msgstr[3] "לפתוח את %1 הגופנים במציג הגופנים?"
-
-#: kcmfontinst/FontFilter.cpp:106
-#, kde-format
-msgid "Family"
-msgstr "משפחה"
-
-#: kcmfontinst/FontFilter.cpp:108
-#, kde-format
-msgid "Style"
-msgstr "סגנון"
-
-#: kcmfontinst/FontFilter.cpp:110
-#, kde-format
-msgid "Foundry"
-msgstr "חברה"
-
-#: kcmfontinst/FontFilter.cpp:112
-#, kde-format
-msgid "FontConfig Match"
-msgstr "התאמת FontConfig"
-
-#: kcmfontinst/FontFilter.cpp:114
-#, kde-format
-msgid "File Type"
-msgstr "סוג קובץ"
-
-#: kcmfontinst/FontFilter.cpp:116
-#, kde-format
-msgid "File Name"
-msgstr "שם קובץ"
-
-#: kcmfontinst/FontFilter.cpp:118
-#, kde-format
-msgid "File Location"
-msgstr "מיקום הקובץ"
-
-#: kcmfontinst/FontFilter.cpp:120
-#, kde-format
-msgid "Writing System"
-msgstr "מערכת כתב"
-
-#: kcmfontinst/FontFilter.cpp:131
-#, kde-format
-msgid "Set Criteria"
-msgstr "הגדרת אילוץ"
-
-#: kcmfontinst/FontFilter.cpp:190
-#, kde-format
-msgid "Symbol/Other"
-msgstr "סמל/אחר"
-
-#: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
-#, kde-format
-msgid "Filter by %1…"
-msgstr "סינון לפי %1…"
-
-#: kcmfontinst/FontList.cpp:548
-#, kde-format
-msgid "Font"
-msgstr "גופן"
-
-#: kcmfontinst/FontList.cpp:550
-#, kde-format
-msgid "Status"
-msgstr "מצב"
-
-#: kcmfontinst/FontList.cpp:564
-#, kde-format
-msgid ""
-"This column shows the status of the font family, and of the individual font "
-"styles."
-msgstr "עמודה זו מציגה את המצב של משפחת הגופן, וסגנונות הגופן הייחודיים."
-
-#: kcmfontinst/FontList.cpp:671
-#, kde-format
-msgid ""
-"<p>This list shows your installed fonts. The fonts are grouped by family, "
-"and the number in square brackets represents the number of styles in which "
-"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
-"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
-msgstr ""
-"<p>רשימה זו מציגה את הגופנים המותקנים שלך. הגופנים מקובצים לפי משפחה והמספר "
-"בסוגריים המרובעים מייצג את מספר הסגנונות הזמינים למשפחה. למשל:</"
-"p><ul><li>Times [4]<ul><li>רגיל</li><li>מודגש</li><li>מודגש נטוי</"
-"li><li>נטוי</li></ul></li></ul>"
-
-#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
-#, kde-format
-msgid "…plus %1 more"
-msgstr "…ועוד %1"
-
-#: kcmfontinst/FontList.cpp:1001
-#, kde-format
-msgid "%1 [%2]"
-msgstr "%1 [%2]"
-
-#: kcmfontinst/FontList.cpp:1300
-#, kde-format
-msgid "Delete"
-msgstr "מחיקה"
-
-#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Enable"
-msgstr "הפעלה"
-
-#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Disable"
-msgstr "ביטול"
-
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
-#, kde-format
-msgid "Print…"
-msgstr "הדפסה…"
-
-#: kcmfontinst/FontList.cpp:1312
-#, kde-format
-msgid "Reload"
-msgstr "ריענון"
-
-#: kcmfontinst/FontList.cpp:1690
-#, kde-format
-msgid "Open all %1 fonts in font viewer?"
-msgstr "לפתוח את %1 הגופנים במציג הגופנים?"
-
-#: kcmfontinst/GroupList.cpp:62
-#, kde-format
-msgid "All Fonts"
-msgstr "כל הגופנים"
-
-#: kcmfontinst/GroupList.cpp:65
-#, kde-format
-msgid "Personal Fonts"
-msgstr "גופנים אישיים"
-
-#: kcmfontinst/GroupList.cpp:68
-#, kde-format
-msgid "System Fonts"
-msgstr "גופני מערכת"
-
-#: kcmfontinst/GroupList.cpp:71
-#, kde-format
-msgid "Unclassified"
-msgstr "לא מסווגים"
-
-#: kcmfontinst/GroupList.cpp:353
-#, kde-format
-msgid "Group"
-msgstr "קבוצה"
-
-#: kcmfontinst/GroupList.cpp:538
-#, kde-format
-msgid ""
-"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
-"the group, and not the actual fonts.</i></p>"
-msgstr ""
-"<p>להסיר את „<b>%1</b>”?</p><p><i>זה יסיר רק את הקבוצה ולא את הגופנים עצמם.</"
-"i></p>"
-
-#: kcmfontinst/GroupList.cpp:542
-#, kde-format
-msgid "Remove Group"
-msgstr "הסרת קבוצה"
-
-#: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
-#, kde-format
-msgid "Remove"
-msgstr "הסרה"
-
-#: kcmfontinst/GroupList.cpp:543
-#, kde-format
-msgid "Remove group"
-msgstr "הסרת קבוצה"
-
-#: kcmfontinst/GroupList.cpp:589
-#, kde-format
-msgid ""
-"<h3>Font Groups</h3><p>This list displays the font groups available on your "
-"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
-"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
-"are groups created by you. To add a font family to one of these groups "
-"simply drag it from the list of fonts, and drop onto the desired group. To "
-"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
-"li></ul></p>"
-msgstr ""
-"<h3>קבוצות גופנים</h3><p>רשימה זו מציגה קבוצות גופנים שזמינות במערכת שלך. יש "
-"שתי קבוצות עיקריות של גופנים:<ul><li><b>רגילים</b> אלו קבוצות מיוחדות "
-"שמיועדות למנהל הגופנים.<ul>%1</ul></li><li><b>מותאמים אישית</b> אלו קבוצות "
-"שנוצרו על ידיך. כדי להוסיף קבוצת גופנים לאחר מהקבוצות האלה צריך רק לגרור "
-"אותו מהרשימת הגופנים ולשחרר לתוך הקבוצה הרצוי. כדי להסיר משפחה מהרשימה, יש "
-"לגרור אותה לקבוצה „כל הגופנים”.</li></ul></p>"
-
-#: kcmfontinst/GroupList.cpp:597
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>כל הגופנים</i> מכילה את כל הגופנים שמותקנים במערכת שלך.</li><li><i>לא "
-"מסווגים</i> מכילה את כל הגופנים שעדיין לא הוצבו בקבוצה „מותאמת”.</li>"
-
-#: kcmfontinst/GroupList.cpp:600
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
-"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
-"are installed system-wide (i.e. available to all users).</"
-"li><li><i>Personal</i> contains your personal fonts.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>כל הגופנים</i> מכילה את כל הגופנים שמותקנים במערכת שלך - גם את "
-"„מערכתי„ וגם את „אישי”.</li><li><i>מערכתי</i> מכילה את הגופנים שמותקנים לכלל "
-"המערכת (כלומר זמין לכל המשתמשים).</li><li><i>אישי</i> מכילה את הגופנים "
-"האישיים שלך.</li><li><i>לא מסווג</i> מכילה את כל הגופנים שעדיין לא הוצבו "
-"בקבוצה „מותאמת אישית”.</li>"
-
-#: kcmfontinst/GroupList.cpp:702
-#, kde-format
-msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>כבר קיימת קבוצה בשם <b>‏‚%1’</b>‏.</qt>"
-
-#: kcmfontinst/GroupList.cpp:793
-#, kde-format
-msgid "Rename…"
-msgstr "שינוי שם…"
-
-#: kcmfontinst/GroupList.cpp:802
-#, kde-format
-msgid "Export…"
-msgstr "ייצוא…"
-
-#: kcmfontinst/GroupList.cpp:896
-#, kde-format
-msgid "Add to \"%1\"."
-msgstr "הוספה אל „%1”."
-
-#: kcmfontinst/GroupList.cpp:898
-#, kde-format
-msgid "Remove from current group."
-msgstr "הסרה מהקבוצה הנוכחית."
-
-#: kcmfontinst/GroupList.cpp:900
-#, kde-format
-msgid "Move to personal folder."
-msgstr "הוספה לתיקייה אישית."
-
-#: kcmfontinst/GroupList.cpp:902
-#, kde-format
-msgid "Move to system folder."
-msgstr "העברה לתיקיית מערכת."
-
-#: kcmfontinst/JobRunner.cpp:139
-#, kde-format
-msgid "Skip"
-msgstr "דילוג"
-
-#: kcmfontinst/JobRunner.cpp:142
-#, kde-format
-msgid "AutoSkip"
-msgstr "דילוג אוטומטי"
-
-#: kcmfontinst/JobRunner.cpp:187
-#, kde-format
-msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
-msgstr "<h3>לבטל?</h3><p>אכן לבטל?</p>"
-
-#: kcmfontinst/JobRunner.cpp:199
-#, kde-format
-msgid ""
-"<h3>Finished</h3><p>Please note that any open applications will need to be "
-"restarted in order for any changes to be noticed.</p>"
-msgstr ""
-"<h3>הפעולה הסתיימה</h3><p>נא לשים לב שיש להפעיל יישומים פתוחים מחדש כדי "
-"שהשינויים יופיעו.</p>"
-
-#: kcmfontinst/JobRunner.cpp:207
-#, kde-format
-msgid "Do not show this message again"
-msgstr "לא להציג הודעה זו שוב"
-
-#: kcmfontinst/JobRunner.cpp:315
-#, kde-format
-msgid "Installing"
-msgstr "מתקין"
-
-#: kcmfontinst/JobRunner.cpp:318
-#, kde-format
-msgid "Uninstalling"
-msgstr "מסיר"
-
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
-#, kde-format
-msgid "Enabling"
-msgstr "מאפשר"
-
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
-#, kde-format
-msgid "Moving"
-msgstr "מעביר"
-
-#: kcmfontinst/JobRunner.cpp:327
-#, kde-format
-msgid "Updating"
-msgstr "מעדכן"
-
-#: kcmfontinst/JobRunner.cpp:331
-#, kde-format
-msgid "Removing"
-msgstr "מסיר"
-
-#: kcmfontinst/JobRunner.cpp:335
-#, kde-format
-msgid "Disabling"
-msgstr "מבטל"
-
-#: kcmfontinst/JobRunner.cpp:372
-#, kde-format
-msgid "Updating font configuration. Please wait…"
-msgstr "הגדרות הגופנים מתעדכנות. נא להמתין…"
-
-#: kcmfontinst/JobRunner.cpp:444
-#, kde-format
-msgid "Unable to start backend."
-msgstr "אין אפשרות להפעיל את המנגנון."
-
-#: kcmfontinst/JobRunner.cpp:453
-#, kde-format
-msgid "Backend died, but has been restarted. Please try again."
-msgstr "המנגנון קיפח את חייו אך הופעל מחדש. נא לנסות שוב."
-
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
-#, kde-format
-msgid "<h3>Error</h3>"
-msgstr "<h3>שגיאה</h3>"
-
-#: kcmfontinst/JobRunner.cpp:693
-#, kde-format
-msgid "Failed to download <i>%1</i>"
-msgstr "אין אפשרות להוריד <i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:695
-#, kde-format
-msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr "מנגנון המערכת קיפח את חייו. נא לנסות שוב.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:697
-#, kde-format
-msgid ""
-"<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr "<i>%1</i> הוא גופן תמונה (bitmap) ואלו הושבתו במערכת שלך."
-
-#: kcmfontinst/JobRunner.cpp:699
-#, kde-format
-msgid ""
-"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
-"system."
-msgstr "<i>%1</i> מכיל את הגופן <b>%2</b>, שכבר מותקן במערכת שלך."
-
-#: kcmfontinst/JobRunner.cpp:701
-#, kde-format
-msgid "<i>%1</i> is not a font."
-msgstr "<i>%1</i> אינו גופן."
-
-#: kcmfontinst/JobRunner.cpp:703
-#, kde-format
-msgid "Could not remove all files associated with <i>%1</i>"
-msgstr "לא יכול להסיר את כל הקבצים הקשורים ל־<i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:705
-#, kde-format
-msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "הפעלת סוכן המערכת נכשלה.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
-#, kde-format
-msgid "<i>%1</i> already exists."
-msgstr "<i>%1</i> כבר קיים."
-
-#: kcmfontinst/JobRunner.cpp:711
-#, kde-format
-msgid "<i>%1</i> does not exist."
-msgstr "<i>%1</i> אינו קיים."
-
-#: kcmfontinst/JobRunner.cpp:713
-#, kde-format
-msgid "Permission denied.<br><i>%1</i>"
-msgstr "הגישה נדחתה.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:715
-#, kde-format
-msgid "Unsupported action.<br><i>%1</i>"
-msgstr "פעולה לא נתמכת.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:717
-#, kde-format
-msgid "Authentication failed.<br><i>%1</i>"
-msgstr "אימות נכשל.<br><i>%1</i>"
-
-#: kcmfontinst/JobRunner.cpp:719
-#, kde-format
-msgid "Unexpected error while processing: <i>%1</i>"
-msgstr "שגיאה לא צפויה תוך כדי העיבוד: <i>%1</i>"
-
-#: kcmfontinst/KCmFontInst.cpp:211
-#, kde-format
-msgid "Create New Group…"
-msgstr "יצירת קבוצה חדשה…"
-
-#: kcmfontinst/KCmFontInst.cpp:214
-#, kde-format
-msgid "Remove Group…"
-msgstr "הסרת קבוצה…"
-
-#: kcmfontinst/KCmFontInst.cpp:217
-#, kde-format
-msgid "Enable Fonts in Group…"
-msgstr "הפעלת גופנים בקבוצה…"
-
-#: kcmfontinst/KCmFontInst.cpp:220
-#, kde-format
-msgid "Disable Fonts in Group…"
-msgstr "השבתת גופנים בקבוצה…"
-
-#: kcmfontinst/KCmFontInst.cpp:241
-#, kde-format
-msgid "This displays a preview of the selected font."
-msgstr "מציג תצוגה מקדימה לגופן הנבחר."
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Find Duplicates…"
-msgstr "איתור כפילויות…"
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, kde-format
-msgid "Scan for Duplicate Fonts…"
-msgstr "חיפוש גופנים כפולים…"
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install from File…"
-msgstr "התקנה מקובץ…"
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install fonts from a local file"
-msgstr "התקנת גופנים מקובץ מקומי"
-
-#: kcmfontinst/KCmFontInst.cpp:261
-#, kde-format
-msgid "Get New Fonts…"
-msgstr "הורדת גופנים חדשים…"
-
-#: kcmfontinst/KCmFontInst.cpp:262
-#, kde-format
-msgid "Download new fonts"
-msgstr "הורדת גופנים חדשים"
-
-#: kcmfontinst/KCmFontInst.cpp:264
-#, kde-format
-msgid "Delete Selected Fonts…"
-msgstr "מחיקת הגופנים הנבחרים…"
-
-#: kcmfontinst/KCmFontInst.cpp:329
-#, kde-format
-msgid "Change Preview Text…"
-msgstr "עריכת טקסט תצוגה מקדימה…"
-
-#: kcmfontinst/KCmFontInst.cpp:428
-#, kde-format
-msgid "Add Fonts"
-msgstr "הוספת גופנים"
-
-#: kcmfontinst/KCmFontInst.cpp:552
-#, kde-format
-msgid "Failed to save list of fonts to print."
-msgstr "שמירת רשימת גופנים להדפסה נכשלה."
-
-#: kcmfontinst/KCmFontInst.cpp:573
-#, kde-format
-msgid "Failed to start font printer."
-msgstr "הפעלת מדפיס גופנים נכשלה."
-
-#: kcmfontinst/KCmFontInst.cpp:580
-#, kde-format
-msgid ""
-"There are no printable fonts.\n"
-"You can only print non-bitmap and enabled fonts."
-msgstr ""
-"אין גופנים שאפשר להדפיס.\n"
-"אפשר להדפיס רק עם גופנים שאינם תמונה (bitmap) וגופנים פעילים."
-
-#: kcmfontinst/KCmFontInst.cpp:582
-#, kde-format
-msgid "Cannot Print"
-msgstr "אין אפשרות להדפיס"
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "You did not select anything to delete."
-msgstr "לא נבחרו פריטים למחיקה."
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "Nothing to Delete"
-msgstr "אין שום דבר למחיקה"
-
-#: kcmfontinst/KCmFontInst.cpp:612
-#, kde-format
-msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>למחוק את </p><p> <b>„%1”</b>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:615
-#, kde-format
-msgid "Delete Font"
-msgstr "מחיקת גופן"
-
-#: kcmfontinst/KCmFontInst.cpp:622
-#, kde-format
-msgid "Do you really want to delete this font?"
-msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "למחוק את הגופן הזה?"
-msgstr[1] "למחוק את שני הגופנים האלו?"
-msgstr[2] "למחוק את %1 הגופנים האלו?"
-msgstr[3] "למחוק את %1 הגופנים האלו?"
-
-#: kcmfontinst/KCmFontInst.cpp:624
-#, kde-format
-msgid "Delete Fonts"
-msgstr "מחיקת גופנים"
-
-#: kcmfontinst/KCmFontInst.cpp:629
-#, kde-format
-msgid "Deleting font(s)…"
-msgstr "גופנים נמחקים…"
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "You did not select anything to move."
-msgstr "לא בחרת שום דבר להעברה."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "Nothing to Move"
-msgstr "שום דבר להעברה"
-
-#: kcmfontinst/KCmFontInst.cpp:654
-#, kde-format
-msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
-msgstr "<p>להעביר את</p><p>‚<b>%1</b>’</p><p> מ־<i>%2</i> ל־<i>%3</i>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:659
-#, kde-format
-msgid "Move Font"
-msgstr "העברת גופן"
-
-#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
-#, kde-format
-msgid "Move"
-msgstr "העברה"
-
-#: kcmfontinst/KCmFontInst.cpp:665
-#, kde-format
-msgid ""
-"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
-msgid_plural ""
-"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] "<p>להעביר את הגופן מ־<i>%2</i> ל־<i>%3</i>?</p>"
-msgstr[1] "<p>להעביר שני גופנים מ־<i>%2</i> ל־<i>%3</i>?</p>"
-msgstr[2] "<p>להעביר %1 גופנים מ־<i>%2</i> ל־<i>%3</i>?</p>"
-msgstr[3] "<p>להעביר %1 גופנים מ־<i>%2</i> ל־<i>%3</i>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:671
-#, kde-format
-msgid "Move Fonts"
-msgstr "העברת גופנים"
-
-#: kcmfontinst/KCmFontInst.cpp:676
-#, kde-format
-msgid "Moving font(s)…"
-msgstr "גופנים מועברים…"
-
-#: kcmfontinst/KCmFontInst.cpp:690
-#, kde-format
-msgid "Export Group"
-msgstr "ייצוא קבוצה"
-
-#: kcmfontinst/KCmFontInst.cpp:716
-#, kde-format
-msgid "No files?"
-msgstr "אין קבצים?"
-
-#: kcmfontinst/KCmFontInst.cpp:719
-#, kde-format
-msgid "Failed to open %1 for writing"
-msgstr "כתיבת %1 לכתיבה נכשלה"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Create New Group"
-msgstr "יצירת קבוצה חדשה"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Name of new group:"
-msgstr "שם הקבוצה החדשה:"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "New Group"
-msgstr "קבוצה חדשה"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Preview Text"
-msgstr "טקסט תצוגה מקדימה"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Please enter new text:"
-msgstr "נא להקליד טקסט חדש:"
-
-#: kcmfontinst/KCmFontInst.cpp:819
-#, kde-format
-msgid "Scanning font list…"
-msgstr "רשימת הגופנים נסרקת…"
-
-#: kcmfontinst/KCmFontInst.cpp:878
-#, kde-format
-msgid "No fonts"
-msgstr "אין גופנים"
-
-#: kcmfontinst/KCmFontInst.cpp:883
-#, kde-format
-msgid "1 Font"
-msgid_plural "%1 Fonts"
-msgstr[0] "גופן אחד"
-msgstr[1] "שני גופנים"
-msgstr[2] "%1 גופנים"
-msgstr[3] "%1 גופנים"
-
-#: kcmfontinst/KCmFontInst.cpp:892
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
-msgstr ""
-"<table><tr><td align=\"left\">פעילים:</td><td>%1</td></tr><tr><td align="
-"\"left\">מושבתים:</td><td>%2</td></tr><tr><td align=\"left\">פעילים חלקית:</"
-"td><td>%3</td></tr><tr><td align=\"left\">סך הכול:</td><td>%4</td></tr></"
-"table>"
-
-#: kcmfontinst/KCmFontInst.cpp:902
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-msgstr ""
-"<table><tr><td align=\"left\">פעילים:</td><td>%1</td></tr><tr><td align="
-"\"left\">מושבתים:</td><td>%2</td></tr><tr><td align=\"left\">סך הכול:</"
-"td><td>%3</td></tr></table>"
-
-#: kcmfontinst/KCmFontInst.cpp:946
+#: apps/kfontinst/Installer.cpp:38 manager/FontManager.cpp:935
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -819,193 +46,123 @@ msgstr ""
 "להתקין את הגופן/גופנים לשימוש אישי (זמינים רק לך), או לשימוש מערכתי (זמין "
 "לכל המשתמשים)?"
 
-#: kcmfontinst/KCmFontInst.cpp:949
+#: apps/kfontinst/Installer.cpp:39 manager/FontManager.cpp:938
 #, kde-format
 msgid "Where to Install"
 msgstr "היכן להתקין"
 
-#: kcmfontinst/KCmFontInst.cpp:979
-#, kde-format
-msgid "Looking for any associated files…"
-msgstr "מתבצע חיפוש אחר קבצים משויכים…"
+#: apps/kfontinst/Installer.cpp:115
+#, fuzzy, kde-format
+#| msgid "KDE Font Manager"
+msgctxt "@title application name"
+msgid "Font Management"
+msgstr "מנהל הגופנים של KDE"
 
-#: kcmfontinst/KCmFontInst.cpp:983
+#: apps/kfontinst/Installer.cpp:117
 #, kde-format
-msgid "Scanning Files…"
-msgstr "הקבצים נסרקים…"
+msgctxt "@info application description"
+msgid "Install, manage, and preview fonts"
+msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:984
+#: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format
-msgid "Looking for additional files to install…"
-msgstr "מתבצע חיפוש אחר קבצים נוספים להתקנה…"
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) קרייג דרומונד, 2007"
 
-#: kcmfontinst/KCmFontInst.cpp:999
+#: apps/kfontinst/Installer.cpp:128
 #, kde-format
-msgid "Looking for files associated with %1"
-msgstr "מחפש את הקבצים המשויכים ל־%1"
+msgid "Makes the dialog transient for a window specified by windowHandle"
+msgstr "הופך את החלונית לחולפת לחלון שצוין על ידי windowHandle"
 
-#: kcmfontinst/KCmFontInst.cpp:1027
+#: apps/kfontinst/Installer.cpp:131
 #, kde-format
-msgid "Installing font(s)…"
-msgstr "גופנים מותקנים…"
+msgid "URL to install"
+msgstr "כתובת אתר להתקנה"
 
-#: kcmfontinst/KCmFontInst.cpp:1092
+#: apps/kfontprint/Printer.cpp:239
 #, kde-format
-msgid "You did not select anything to enable."
-msgstr "לא בחרת מה לאפשר."
+msgid "Print"
+msgstr "הדפסה"
 
-#: kcmfontinst/KCmFontInst.cpp:1092
+#: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
 #, kde-format
-msgid "You did not select anything to disable."
-msgstr "לא בחרת מה להשבית."
+msgid "Canceling…"
+msgstr "הפעולה מבוטלת…"
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: apps/kfontprint/Printer.cpp:323
 #, kde-format
-msgid "Nothing to Enable"
-msgstr "אין שום דבר להפעלה"
+msgid "Font Printer"
+msgstr "הדפסת גופנים"
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: apps/kfontprint/Printer.cpp:325
 #, kde-format
-msgid "Nothing to Disable"
-msgstr "אין שום דבר להשבתה"
+msgid "Simple font printer"
+msgstr "מדפיס גופנים פשוט"
 
-#: kcmfontinst/KCmFontInst.cpp:1107
+#: apps/kfontprint/Printer.cpp:333
 #, kde-format
-msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>להפעיל את</p><p>‚<b>%1</b>’?</p>"
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "הופך את החלונית לחולפת ליישום X שצוין על ידי winid"
 
-#: kcmfontinst/KCmFontInst.cpp:1108
+#: apps/kfontprint/Printer.cpp:335
 #, kde-format
-msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>להשבית את</p><p>‚<b>%1</b>’?</p>"
+msgid "Size index to print fonts"
+msgstr "גודל להדפסת הגופן"
 
-#: kcmfontinst/KCmFontInst.cpp:1109
+#: apps/kfontprint/Printer.cpp:339
 #, kde-format
 msgid ""
-"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
-msgstr "<p>להפעיל את</p><p>‚<b>%1</b>’, שנמצא בקבוצה '<b>%2</b>'?</p>"
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"גופן להדפסה, מיוצג בצורה „משפחה,סגנון” כשסגנון הוא מספר עשרוני באורך 24 "
+"סיביות בהרכב:\n"
+"<weight><width><slant>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: apps/kfontprint/Printer.cpp:342
 #, kde-format
-msgid ""
-"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
-msgstr "<p>להשבית את</p><p>‚<b>%1</b>’, שנמצא בקבוצה '<b>%2</b>'?</p>"
+msgid "File containing list of fonts to print"
+msgstr "קובץ המכיל את רשימת הגופנים להדפסה"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
+#: apps/kfontprint/Printer.cpp:344
 #, kde-format
-msgid "Enable Font"
-msgstr "הפעלת גופן"
+msgid "Remove file containing list of fonts to print"
+msgstr "הסרת קובץ המכיל רשימה של גופנים להדפסה"
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
+#: apps/kfontview/Viewer.cpp:50
 #, kde-format
-msgid "Disable Font"
-msgstr "השבתת גופן"
+msgid "Open an existing font file"
+msgstr "פתיחת קובץ גופן קיים"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: apps/kfontview/Viewer.cpp:51
 #, kde-format
-msgid "Do you really want to enable this font?"
-msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "להפעיל את הגופן הזה?"
-msgstr[1] "להפעיל את שני הגופנים האלו?"
-msgstr[2] "להפעיל את %1 הגופנים האלו?"
-msgstr[3] "להפעיל את %1 הגופנים האלו?"
+msgid "Print font preview"
+msgstr "הדפסת תצוגה מקדימה של הגופן"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: apps/kfontview/Viewer.cpp:68
 #, kde-format
-msgid "Do you really want to disable this font?"
-msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "להשבית את הגופן הזה?"
-msgstr[1] "להשבית את שני הגופנים האלו?"
-msgstr[2] "להשבית את %1 הגופנים האלו?"
-msgstr[3] "להשבית את %1 הגופנים האלו?"
+msgid "Select Font to View"
+msgstr "בחירת גופן לתצוגה"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: apps/kfontview/Viewer.cpp:108
 #, kde-format
-msgid ""
-"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
-"</p>"
-msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] "<p>להפעיל את הגופן הזה שהוא חלק מהקבוצה ‚<b>%2</b>’?</p>"
-msgstr[1] "<p>להפעיל את שני הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
-msgstr[2] "<p>להפעיל את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
-msgstr[3] "<p>להפעיל את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgid "URL to open"
+msgstr "כתובת לפתיחה"
 
-#: kcmfontinst/KCmFontInst.cpp:1126
+#: apps/kfontview/Viewer.cpp:150
 #, kde-format
-msgid ""
-"<p>Do you really want to disable this font contained within group '<b>%2</"
-"b>'?</p>"
-msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] "<p>להשבית את הגופן הזה שהוא חלק מהקבוצה ‚<b>%2</b>’?</p>"
-msgstr[1] "<p>להשבית את שני הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
-msgstr[2] "<p>להשבית את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
-msgstr[3] "<p>להשבית את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgid "Font Viewer"
+msgstr "מציג גופנים"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontview/Viewer.cpp:152
 #, kde-format
-msgid "Enable Fonts"
-msgstr "הפעלת גופנים"
+msgid "Simple font viewer"
+msgstr "מציג גופנים פשוט"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: apps/kfontview/Viewer.cpp:154
 #, kde-format
-msgid "Disable Fonts"
-msgstr "השבתת גופנים"
-
-#: kcmfontinst/KCmFontInst.cpp:1139
-#, kde-format
-msgid "Enabling font(s)…"
-msgstr "גופנים מופעלים…"
-
-#: kcmfontinst/KCmFontInst.cpp:1141
-#, kde-format
-msgid "Disabling font(s)…"
-msgstr "גופנים מושבתים…"
-
-#: kcmfontinst/PrintDialog.cpp:21
-#, kde-format
-msgid "Print Font Samples"
-msgstr "הדפסת דוגמאות גופן"
-
-#: kcmfontinst/PrintDialog.cpp:37
-#, kde-format
-msgid "Select size to print font:"
-msgstr "בחירת גודל להדפסת גופן:"
-
-#: kcmfontinst/PrintDialog.cpp:41
-#, kde-format
-msgid "Waterfall"
-msgstr "מפל"
-
-#: kcmfontinst/PrintDialog.cpp:42
-#, kde-format
-msgid "12pt"
-msgstr "12 נק׳"
-
-#: kcmfontinst/PrintDialog.cpp:43
-#, kde-format
-msgid "18pt"
-msgstr "18 נק׳"
-
-#: kcmfontinst/PrintDialog.cpp:44
-#, kde-format
-msgid "24pt"
-msgstr "24 נק׳"
-
-#: kcmfontinst/PrintDialog.cpp:45
-#, kde-format
-msgid "36pt"
-msgstr "36 נק׳"
-
-#: kcmfontinst/PrintDialog.cpp:46
-#, kde-format
-msgid "48pt"
-msgstr "48 נק׳"
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "‎(C) קרייג דרומונד, 2004‏-2007"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1086,6 +243,11 @@ msgstr "%1 אינו גופן."
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "לא ניתן להסיר את הקבצים המשויכים ל־%1"
+
+#: kio/KioFonts.cpp:719 manager/JobRunner.cpp:708
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> כבר קיים."
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:108
 #, kde-format
@@ -1275,6 +437,952 @@ msgstr "רוחב אחיד (Charcell)"
 #: lib/KfiConstants.h:106
 msgid "Proportional"
 msgstr "יחסי"
+
+#: manager/DuplicatesDialog.cpp:49
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "גופן כפול"
+
+#: manager/DuplicatesDialog.cpp:79
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "מתבצע חיפוש גופנים כפולים. נא להמתין…"
+
+#: manager/DuplicatesDialog.cpp:98
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "לא נמצאו גופנים כפולים."
+
+#: manager/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "מחיקת קבצים מסומנים"
+
+#: manager/DuplicatesDialog.cpp:108
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "נמצא גופן כפול %1."
+msgstr[1] "נמצאו שני גופנים כפולים."
+msgstr[2] "נמצאו %1 גופנים כפולים."
+msgstr[3] "נמצאו %1 גופנים כפולים."
+
+#: manager/DuplicatesDialog.cpp:189
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"למחוק את\n"
+"%1"
+
+#: manager/DuplicatesDialog.cpp:195
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "למחוק את:"
+
+#: manager/DuplicatesDialog.cpp:223
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "לבטל את סריקת הגופנים?"
+
+#: manager/DuplicatesDialog.cpp:384
+#, kde-format
+msgid "Font/File"
+msgstr "גופן/קובץ"
+
+#: manager/DuplicatesDialog.cpp:386
+#, kde-format
+msgid "Size"
+msgstr "גודל"
+
+#: manager/DuplicatesDialog.cpp:387
+#, kde-format
+msgid "Date"
+msgstr "תאריך"
+
+#: manager/DuplicatesDialog.cpp:388
+#, kde-format
+msgid "Links To"
+msgstr "מקשר אל"
+
+#: manager/DuplicatesDialog.cpp:401 manager/FontList.cpp:1310
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "פתיחה במציג הגופנים"
+
+#: manager/DuplicatesDialog.cpp:403
+#, kde-format
+msgid "Properties"
+msgstr "מאפיינים"
+
+#: manager/DuplicatesDialog.cpp:405
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "הסרת סימון למחיקה"
+
+#: manager/DuplicatesDialog.cpp:406
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "סימון למחיקה"
+
+#: manager/DuplicatesDialog.cpp:504
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "לפתוח את הגופן במציג הגופנים?"
+msgstr[1] "לפתוח את שני הגופנים במציג הגופנים?"
+msgstr[2] "לפתוח את %1 הגופנים במציג הגופנים?"
+msgstr[3] "לפתוח את %1 הגופנים במציג הגופנים?"
+
+#: manager/FontFilter.cpp:106
+#, kde-format
+msgid "Family"
+msgstr "משפחה"
+
+#: manager/FontFilter.cpp:108
+#, kde-format
+msgid "Style"
+msgstr "סגנון"
+
+#: manager/FontFilter.cpp:110
+#, kde-format
+msgid "Foundry"
+msgstr "חברה"
+
+#: manager/FontFilter.cpp:112
+#, kde-format
+msgid "FontConfig Match"
+msgstr "התאמת FontConfig"
+
+#: manager/FontFilter.cpp:114
+#, kde-format
+msgid "File Type"
+msgstr "סוג קובץ"
+
+#: manager/FontFilter.cpp:116
+#, kde-format
+msgid "File Name"
+msgstr "שם קובץ"
+
+#: manager/FontFilter.cpp:118
+#, kde-format
+msgid "File Location"
+msgstr "מיקום הקובץ"
+
+#: manager/FontFilter.cpp:120
+#, kde-format
+msgid "Writing System"
+msgstr "מערכת כתב"
+
+#: manager/FontFilter.cpp:131
+#, kde-format
+msgid "Set Criteria"
+msgstr "הגדרת אילוץ"
+
+#: manager/FontFilter.cpp:190
+#, kde-format
+msgid "Symbol/Other"
+msgstr "סמל/אחר"
+
+#: manager/FontFilter.cpp:268 manager/FontFilter.cpp:336
+#, kde-format
+msgid "Filter by %1…"
+msgstr "סינון לפי %1…"
+
+#: manager/FontList.cpp:548
+#, kde-format
+msgid "Font"
+msgstr "גופן"
+
+#: manager/FontList.cpp:550
+#, kde-format
+msgid "Status"
+msgstr "מצב"
+
+#: manager/FontList.cpp:564
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "עמודה זו מציגה את המצב של משפחת הגופן, וסגנונות הגופן הייחודיים."
+
+#: manager/FontList.cpp:671
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>רשימה זו מציגה את הגופנים המותקנים שלך. הגופנים מקובצים לפי משפחה והמספר "
+"בסוגריים המרובעים מייצג את מספר הסגנונות הזמינים למשפחה. למשל:</"
+"p><ul><li>Times [4]<ul><li>רגיל</li><li>מודגש</li><li>מודגש נטוי</"
+"li><li>נטוי</li></ul></li></ul>"
+
+#: manager/FontList.cpp:950 manager/FontList.cpp:974
+#, kde-format
+msgid "…plus %1 more"
+msgstr "…ועוד %1"
+
+#: manager/FontList.cpp:1001
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: manager/FontList.cpp:1300
+#, kde-format
+msgid "Delete"
+msgstr "מחיקה"
+
+#: manager/FontList.cpp:1302 manager/FontManager.cpp:1101
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:790
+#, kde-format
+msgid "Enable"
+msgstr "הפעלה"
+
+#: manager/FontList.cpp:1303 manager/FontManager.cpp:1102
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:791
+#, kde-format
+msgid "Disable"
+msgstr "ביטול"
+
+#: manager/FontList.cpp:1308 manager/GroupList.cpp:797
+#, kde-format
+msgid "Print…"
+msgstr "הדפסה…"
+
+#: manager/FontList.cpp:1312
+#, kde-format
+msgid "Reload"
+msgstr "ריענון"
+
+#: manager/FontList.cpp:1690
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "לפתוח את %1 הגופנים במציג הגופנים?"
+
+#: manager/FontManager.cpp:196
+#, kde-format
+msgid "Create New Group…"
+msgstr "יצירת קבוצה חדשה…"
+
+#: manager/FontManager.cpp:199
+#, kde-format
+msgid "Remove Group…"
+msgstr "הסרת קבוצה…"
+
+#: manager/FontManager.cpp:202
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "הפעלת גופנים בקבוצה…"
+
+#: manager/FontManager.cpp:205
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "השבתת גופנים בקבוצה…"
+
+#: manager/FontManager.cpp:226
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "מציג תצוגה מקדימה לגופן הנבחר."
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "איתור כפילויות…"
+
+#: manager/FontManager.cpp:243
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "חיפוש גופנים כפולים…"
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install from File…"
+msgstr "התקנה מקובץ…"
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "התקנת גופנים מקובץ מקומי"
+
+#: manager/FontManager.cpp:246
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "הורדת גופנים חדשים…"
+
+#: manager/FontManager.cpp:247
+#, kde-format
+msgid "Download new fonts"
+msgstr "הורדת גופנים חדשים"
+
+#: manager/FontManager.cpp:249
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "מחיקת הגופנים הנבחרים…"
+
+#: manager/FontManager.cpp:314
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "עריכת טקסט תצוגה מקדימה…"
+
+#: manager/FontManager.cpp:417
+#, kde-format
+msgid "Add Fonts"
+msgstr "הוספת גופנים"
+
+#: manager/FontManager.cpp:541
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "שמירת רשימת גופנים להדפסה נכשלה."
+
+#: manager/FontManager.cpp:562
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "הפעלת מדפיס גופנים נכשלה."
+
+#: manager/FontManager.cpp:569
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"אין גופנים שאפשר להדפיס.\n"
+"אפשר להדפיס רק עם גופנים שאינם תמונה (bitmap) וגופנים פעילים."
+
+#: manager/FontManager.cpp:571
+#, kde-format
+msgid "Cannot Print"
+msgstr "אין אפשרות להדפיס"
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "לא נבחרו פריטים למחיקה."
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "אין שום דבר למחיקה"
+
+#: manager/FontManager.cpp:601
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>למחוק את </p><p> <b>„%1”</b>?</p>"
+
+#: manager/FontManager.cpp:604
+#, kde-format
+msgid "Delete Font"
+msgstr "מחיקת גופן"
+
+#: manager/FontManager.cpp:611
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "למחוק את הגופן הזה?"
+msgstr[1] "למחוק את שני הגופנים האלו?"
+msgstr[2] "למחוק את %1 הגופנים האלו?"
+msgstr[3] "למחוק את %1 הגופנים האלו?"
+
+#: manager/FontManager.cpp:613
+#, kde-format
+msgid "Delete Fonts"
+msgstr "מחיקת גופנים"
+
+#: manager/FontManager.cpp:618
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "גופנים נמחקים…"
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "לא בחרת שום דבר להעברה."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "Nothing to Move"
+msgstr "שום דבר להעברה"
+
+#: manager/FontManager.cpp:643
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr "<p>להעביר את</p><p>‚<b>%1</b>’</p><p> מ־<i>%2</i> ל־<i>%3</i>?</p>"
+
+#: manager/FontManager.cpp:648
+#, kde-format
+msgid "Move Font"
+msgstr "העברת גופן"
+
+#: manager/FontManager.cpp:649 manager/FontManager.cpp:661
+#, kde-format
+msgid "Move"
+msgstr "העברה"
+
+#: manager/FontManager.cpp:654
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] "<p>להעביר את הגופן מ־<i>%2</i> ל־<i>%3</i>?</p>"
+msgstr[1] "<p>להעביר שני גופנים מ־<i>%2</i> ל־<i>%3</i>?</p>"
+msgstr[2] "<p>להעביר %1 גופנים מ־<i>%2</i> ל־<i>%3</i>?</p>"
+msgstr[3] "<p>להעביר %1 גופנים מ־<i>%2</i> ל־<i>%3</i>?</p>"
+
+#: manager/FontManager.cpp:660
+#, kde-format
+msgid "Move Fonts"
+msgstr "העברת גופנים"
+
+#: manager/FontManager.cpp:665
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "גופנים מועברים…"
+
+#: manager/FontManager.cpp:679
+#, kde-format
+msgid "Export Group"
+msgstr "ייצוא קבוצה"
+
+#: manager/FontManager.cpp:705
+#, kde-format
+msgid "No files?"
+msgstr "אין קבצים?"
+
+#: manager/FontManager.cpp:708
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "כתיבת %1 לכתיבה נכשלה"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Create New Group"
+msgstr "יצירת קבוצה חדשה"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Name of new group:"
+msgstr "שם הקבוצה החדשה:"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "New Group"
+msgstr "קבוצה חדשה"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Preview Text"
+msgstr "טקסט תצוגה מקדימה"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Please enter new text:"
+msgstr "נא להקליד טקסט חדש:"
+
+#: manager/FontManager.cpp:808
+#, kde-format
+msgid "Scanning font list…"
+msgstr "רשימת הגופנים נסרקת…"
+
+#: manager/FontManager.cpp:867
+#, kde-format
+msgid "No fonts"
+msgstr "אין גופנים"
+
+#: manager/FontManager.cpp:872
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "גופן אחד"
+msgstr[1] "שני גופנים"
+msgstr[2] "%1 גופנים"
+msgstr[3] "%1 גופנים"
+
+#: manager/FontManager.cpp:881
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"left\">פעילים:</td><td>%1</td></tr><tr><td align="
+"\"left\">מושבתים:</td><td>%2</td></tr><tr><td align=\"left\">פעילים חלקית:</"
+"td><td>%3</td></tr><tr><td align=\"left\">סך הכול:</td><td>%4</td></tr></"
+"table>"
+
+#: manager/FontManager.cpp:891
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"left\">פעילים:</td><td>%1</td></tr><tr><td align="
+"\"left\">מושבתים:</td><td>%2</td></tr><tr><td align=\"left\">סך הכול:</"
+"td><td>%3</td></tr></table>"
+
+#: manager/FontManager.cpp:968
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "מתבצע חיפוש אחר קבצים משויכים…"
+
+#: manager/FontManager.cpp:972
+#, kde-format
+msgid "Scanning Files…"
+msgstr "הקבצים נסרקים…"
+
+#: manager/FontManager.cpp:973
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "מתבצע חיפוש אחר קבצים נוספים להתקנה…"
+
+#: manager/FontManager.cpp:988
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "מחפש את הקבצים המשויכים ל־%1"
+
+#: manager/FontManager.cpp:1016
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "גופנים מותקנים…"
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "לא בחרת מה לאפשר."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "לא בחרת מה להשבית."
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "אין שום דבר להפעלה"
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "אין שום דבר להשבתה"
+
+#: manager/FontManager.cpp:1096
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>להפעיל את</p><p>‚<b>%1</b>’?</p>"
+
+#: manager/FontManager.cpp:1097
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>להשבית את</p><p>‚<b>%1</b>’?</p>"
+
+#: manager/FontManager.cpp:1098
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr "<p>להפעיל את</p><p>‚<b>%1</b>’, שנמצא בקבוצה '<b>%2</b>'?</p>"
+
+#: manager/FontManager.cpp:1099
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr "<p>להשבית את</p><p>‚<b>%1</b>’, שנמצא בקבוצה '<b>%2</b>'?</p>"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1101
+#, kde-format
+msgid "Enable Font"
+msgstr "הפעלת גופן"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1102
+#, kde-format
+msgid "Disable Font"
+msgstr "השבתת גופן"
+
+#: manager/FontManager.cpp:1108
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "להפעיל את הגופן הזה?"
+msgstr[1] "להפעיל את שני הגופנים האלו?"
+msgstr[2] "להפעיל את %1 הגופנים האלו?"
+msgstr[3] "להפעיל את %1 הגופנים האלו?"
+
+#: manager/FontManager.cpp:1109
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "להשבית את הגופן הזה?"
+msgstr[1] "להשבית את שני הגופנים האלו?"
+msgstr[2] "להשבית את %1 הגופנים האלו?"
+msgstr[3] "להשבית את %1 הגופנים האלו?"
+
+#: manager/FontManager.cpp:1111
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] "<p>להפעיל את הגופן הזה שהוא חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[1] "<p>להפעיל את שני הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[2] "<p>להפעיל את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[3] "<p>להפעיל את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+
+#: manager/FontManager.cpp:1115
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] "<p>להשבית את הגופן הזה שהוא חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[1] "<p>להשבית את שני הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[2] "<p>להשבית את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+msgstr[3] "<p>להשבית את %1 הגופנים האלה שהם חלק מהקבוצה ‚<b>%2</b>’?</p>"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Enable Fonts"
+msgstr "הפעלת גופנים"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Disable Fonts"
+msgstr "השבתת גופנים"
+
+#: manager/FontManager.cpp:1128
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "גופנים מופעלים…"
+
+#: manager/FontManager.cpp:1130
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "גופנים מושבתים…"
+
+#: manager/GroupList.cpp:62
+#, kde-format
+msgid "All Fonts"
+msgstr "כל הגופנים"
+
+#: manager/GroupList.cpp:65
+#, kde-format
+msgid "Personal Fonts"
+msgstr "גופנים אישיים"
+
+#: manager/GroupList.cpp:68
+#, kde-format
+msgid "System Fonts"
+msgstr "גופני מערכת"
+
+#: manager/GroupList.cpp:71
+#, kde-format
+msgid "Unclassified"
+msgstr "לא מסווגים"
+
+#: manager/GroupList.cpp:353
+#, kde-format
+msgid "Group"
+msgstr "קבוצה"
+
+#: manager/GroupList.cpp:538
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>להסיר את „<b>%1</b>”?</p><p><i>זה יסיר רק את הקבוצה ולא את הגופנים עצמם.</"
+"i></p>"
+
+#: manager/GroupList.cpp:542
+#, kde-format
+msgid "Remove Group"
+msgstr "הסרת קבוצה"
+
+#: manager/GroupList.cpp:543 manager/GroupList.cpp:788
+#, kde-format
+msgid "Remove"
+msgstr "הסרה"
+
+#: manager/GroupList.cpp:543
+#, kde-format
+msgid "Remove group"
+msgstr "הסרת קבוצה"
+
+#: manager/GroupList.cpp:589
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>קבוצות גופנים</h3><p>רשימה זו מציגה קבוצות גופנים שזמינות במערכת שלך. יש "
+"שתי קבוצות עיקריות של גופנים:<ul><li><b>רגילים</b> אלו קבוצות מיוחדות "
+"שמיועדות למנהל הגופנים.<ul>%1</ul></li><li><b>מותאמים אישית</b> אלו קבוצות "
+"שנוצרו על ידיך. כדי להוסיף קבוצת גופנים לאחר מהקבוצות האלה צריך רק לגרור "
+"אותו מהרשימת הגופנים ולשחרר לתוך הקבוצה הרצוי. כדי להסיר משפחה מהרשימה, יש "
+"לגרור אותה לקבוצה „כל הגופנים”.</li></ul></p>"
+
+#: manager/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>כל הגופנים</i> מכילה את כל הגופנים שמותקנים במערכת שלך.</li><li><i>לא "
+"מסווגים</i> מכילה את כל הגופנים שעדיין לא הוצבו בקבוצה „מותאמת”.</li>"
+
+#: manager/GroupList.cpp:600
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>כל הגופנים</i> מכילה את כל הגופנים שמותקנים במערכת שלך - גם את "
+"„מערכתי„ וגם את „אישי”.</li><li><i>מערכתי</i> מכילה את הגופנים שמותקנים לכלל "
+"המערכת (כלומר זמין לכל המשתמשים).</li><li><i>אישי</i> מכילה את הגופנים "
+"האישיים שלך.</li><li><i>לא מסווג</i> מכילה את כל הגופנים שעדיין לא הוצבו "
+"בקבוצה „מותאמת אישית”.</li>"
+
+#: manager/GroupList.cpp:702
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>כבר קיימת קבוצה בשם <b>‏‚%1’</b>‏.</qt>"
+
+#: manager/GroupList.cpp:793
+#, kde-format
+msgid "Rename…"
+msgstr "שינוי שם…"
+
+#: manager/GroupList.cpp:802
+#, kde-format
+msgid "Export…"
+msgstr "ייצוא…"
+
+#: manager/GroupList.cpp:896
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "הוספה אל „%1”."
+
+#: manager/GroupList.cpp:898
+#, kde-format
+msgid "Remove from current group."
+msgstr "הסרה מהקבוצה הנוכחית."
+
+#: manager/GroupList.cpp:900
+#, kde-format
+msgid "Move to personal folder."
+msgstr "הוספה לתיקייה אישית."
+
+#: manager/GroupList.cpp:902
+#, kde-format
+msgid "Move to system folder."
+msgstr "העברה לתיקיית מערכת."
+
+#: manager/JobRunner.cpp:139
+#, kde-format
+msgid "Skip"
+msgstr "דילוג"
+
+#: manager/JobRunner.cpp:142
+#, kde-format
+msgid "AutoSkip"
+msgstr "דילוג אוטומטי"
+
+#: manager/JobRunner.cpp:187
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>לבטל?</h3><p>אכן לבטל?</p>"
+
+#: manager/JobRunner.cpp:199
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>הפעולה הסתיימה</h3><p>נא לשים לב שיש להפעיל יישומים פתוחים מחדש כדי "
+"שהשינויים יופיעו.</p>"
+
+#: manager/JobRunner.cpp:207
+#, kde-format
+msgid "Do not show this message again"
+msgstr "לא להציג הודעה זו שוב"
+
+#: manager/JobRunner.cpp:315
+#, kde-format
+msgid "Installing"
+msgstr "מתקין"
+
+#: manager/JobRunner.cpp:318
+#, kde-format
+msgid "Uninstalling"
+msgstr "מסיר"
+
+#: manager/JobRunner.cpp:321 manager/JobRunner.cpp:417
+#, kde-format
+msgid "Enabling"
+msgstr "מאפשר"
+
+#: manager/JobRunner.cpp:324 manager/JobRunner.cpp:421
+#, kde-format
+msgid "Moving"
+msgstr "מעביר"
+
+#: manager/JobRunner.cpp:327
+#, kde-format
+msgid "Updating"
+msgstr "מעדכן"
+
+#: manager/JobRunner.cpp:331
+#, kde-format
+msgid "Removing"
+msgstr "מסיר"
+
+#: manager/JobRunner.cpp:335
+#, kde-format
+msgid "Disabling"
+msgstr "מבטל"
+
+#: manager/JobRunner.cpp:372
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "הגדרות הגופנים מתעדכנות. נא להמתין…"
+
+#: manager/JobRunner.cpp:444
+#, kde-format
+msgid "Unable to start backend."
+msgstr "אין אפשרות להפעיל את המנגנון."
+
+#: manager/JobRunner.cpp:453
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "המנגנון קיפח את חייו אך הופעל מחדש. נא לנסות שוב."
+
+#: manager/JobRunner.cpp:618 manager/JobRunner.cpp:625
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>שגיאה</h3>"
+
+#: manager/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "אין אפשרות להוריד <i>%1</i>"
+
+#: manager/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr "מנגנון המערכת קיפח את חייו. נא לנסות שוב.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr "<i>%1</i> הוא גופן תמונה (bitmap) ואלו הושבתו במערכת שלך."
+
+#: manager/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr "<i>%1</i> מכיל את הגופן <b>%2</b>, שכבר מותקן במערכת שלך."
+
+#: manager/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> אינו גופן."
+
+#: manager/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "לא יכול להסיר את כל הקבצים הקשורים ל־<i>%1</i>"
+
+#: manager/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "הפעלת סוכן המערכת נכשלה.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> אינו קיים."
+
+#: manager/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "הגישה נדחתה.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "פעולה לא נתמכת.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "אימות נכשל.<br><i>%1</i>"
+
+#: manager/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "שגיאה לא צפויה תוך כדי העיבוד: <i>%1</i>"
+
+#: manager/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "הדפסת דוגמאות גופן"
+
+#: manager/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "בחירת גודל להדפסת גופן:"
+
+#: manager/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "מפל"
+
+#: manager/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12 נק׳"
+
+#: manager/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18 נק׳"
+
+#: manager/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24 נק׳"
+
+#: manager/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36 נק׳"
+
+#: manager/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48 נק׳"
 
 #: viewpart/CharTip.cpp:44
 #, kde-format
@@ -2185,70 +2293,6 @@ msgstr "יי"
 
 #~ msgid "Simple font installer"
 #~ msgstr "מתקין גופנים פשוט"
-
-#~ msgid "(C) Craig Drummond, 2007"
-#~ msgstr "(C) קרייג דרומונד, 2007"
-
-#~ msgid "Makes the dialog transient for a window specified by windowHandle"
-#~ msgstr "הופך את החלונית לחולפת לחלון שצוין על ידי windowHandle"
-
-#~ msgid "URL to install"
-#~ msgstr "כתובת אתר להתקנה"
-
-#~ msgid "Print"
-#~ msgstr "הדפסה"
-
-#~ msgid "Font Printer"
-#~ msgstr "הדפסת גופנים"
-
-#~ msgid "Simple font printer"
-#~ msgstr "מדפיס גופנים פשוט"
-
-#~ msgid "Makes the dialog transient for an X app specified by winid"
-#~ msgstr "הופך את החלונית לחולפת ליישום X שצוין על ידי winid"
-
-#~ msgid "Size index to print fonts"
-#~ msgstr "גודל להדפסת הגופן"
-
-#~ msgid ""
-#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
-#~ "decimal number composed as: <weight><width><slant>"
-#~ msgstr ""
-#~ "גופן להדפסה, מיוצג בצורה „משפחה,סגנון” כשסגנון הוא מספר עשרוני באורך 24 "
-#~ "סיביות בהרכב:\n"
-#~ "<weight><width><slant>"
-
-#~ msgid "File containing list of fonts to print"
-#~ msgstr "קובץ המכיל את רשימת הגופנים להדפסה"
-
-#~ msgid "Remove file containing list of fonts to print"
-#~ msgstr "הסרת קובץ המכיל רשימה של גופנים להדפסה"
-
-#~ msgid "Open an existing font file"
-#~ msgstr "פתיחת קובץ גופן קיים"
-
-#~ msgid "Print font preview"
-#~ msgstr "הדפסת תצוגה מקדימה של הגופן"
-
-#~ msgid "Select Font to View"
-#~ msgstr "בחירת גופן לתצוגה"
-
-#~ msgid "URL to open"
-#~ msgstr "כתובת לפתיחה"
-
-#~ msgid "Font Viewer"
-#~ msgstr "מציג גופנים"
-
-#~ msgid "Simple font viewer"
-#~ msgstr "מציג גופנים פשוט"
-
-#~ msgid "(C) Craig Drummond, 2004-2007"
-#~ msgstr "‎(C) קרייג דרומונד, 2004‏-2007"
-
-#, fuzzy
-#~| msgid "KDE Font Manager"
-#~ msgid "Font Management"
-#~ msgstr "מנהל הגופנים של KDE"
 
 #~ msgid "(C) Craig Drummond, 2000 - 2009"
 #~ msgstr "(C) Craig Drummond, 2000 - 2009"

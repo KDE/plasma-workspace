@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2013-10-18 20:14+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -32,849 +32,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "samir.ribic@etf.unsa.ba"
 
-# >> @title:window
-#: kcmfontinst/DuplicatesDialog.cpp:49
-#, kde-format
-msgid "Duplicate Fonts"
-msgstr "Fontovi duplikati"
-
-#: kcmfontinst/DuplicatesDialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "Scanning for duplicate fonts. Please wait..."
-msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Tražim fontove duplikate. Sačekajte..."
-
-#: kcmfontinst/DuplicatesDialog.cpp:98
-#, kde-format
-msgid "No duplicate fonts found."
-msgstr "Nema fontova duplikata."
-
-#: kcmfontinst/DuplicatesDialog.cpp:106
-#, kde-format
-msgid "Delete Marked Files"
-msgstr "Obriši obilježene datoteke"
-
-#: kcmfontinst/DuplicatesDialog.cpp:108
-#, kde-format
-msgid "%1 duplicate font found."
-msgid_plural "%1 duplicate fonts found."
-msgstr[0] "Nađen %1 font duplikat."
-msgstr[1] "Nađena %1 fonta duplikata."
-msgstr[2] "Nađeno %1 fontova duplikata."
-
-#: kcmfontinst/DuplicatesDialog.cpp:189
-#, kde-format
-msgid ""
-"Are you sure you wish to delete:\n"
-"%1"
-msgstr ""
-"Želite li zaista da obrišete:\n"
-"%1"
-
-#: kcmfontinst/DuplicatesDialog.cpp:195
-#, kde-format
-msgid "Are you sure you wish to delete:"
-msgstr "Želite li zaista da obrišete:"
-
-#: kcmfontinst/DuplicatesDialog.cpp:223
-#, kde-format
-msgid "Cancel font scan?"
-msgstr "Otkazati traženje fontova?"
-
-#: kcmfontinst/DuplicatesDialog.cpp:224
-#, fuzzy, kde-format
-#| msgid "Canceling..."
-msgid "Canceling…"
-msgstr "Otkazujem..."
-
-#: kcmfontinst/DuplicatesDialog.cpp:384
-#, kde-format
-msgid "Font/File"
-msgstr "Font/datoteka"
-
-# >> @title:column
-#: kcmfontinst/DuplicatesDialog.cpp:386
-#, kde-format
-msgid "Size"
-msgstr "Veličina"
-
-# >> @title:column
-#: kcmfontinst/DuplicatesDialog.cpp:387
-#, kde-format
-msgid "Date"
-msgstr "Datum"
-
-# >> @title:column
-#: kcmfontinst/DuplicatesDialog.cpp:388
-#, kde-format
-msgid "Links To"
-msgstr "Veza ka"
-
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
-#, kde-format
-msgid "Open in Font Viewer"
-msgstr "Otvori u prikazivaču fontova"
-
-#: kcmfontinst/DuplicatesDialog.cpp:403
-#, kde-format
-msgid "Properties"
-msgstr "Svojstva"
-
-#: kcmfontinst/DuplicatesDialog.cpp:405
-#, kde-format
-msgid "Unmark for Deletion"
-msgstr "Poništi za brisanje"
-
-#: kcmfontinst/DuplicatesDialog.cpp:406
-#, kde-format
-msgid "Mark for Deletion"
-msgstr "Obilježi za brisanje"
-
-# >! Needs plural call, regardless whether used for n=1 or not.
-#: kcmfontinst/DuplicatesDialog.cpp:504
-#, kde-format
-msgid "Open font in font viewer?"
-msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Otvoriti %1 font u prikazivaču?"
-msgstr[1] "Otvoriti %1 fonta u prikazivaču?"
-msgstr[2] "Otvoriti svih %1 fontova u prikazivaču?"
-
-#: kcmfontinst/FontFilter.cpp:106
-#, kde-format
-msgid "Family"
-msgstr "Porodica"
-
-#: kcmfontinst/FontFilter.cpp:108
-#, kde-format
-msgid "Style"
-msgstr "Stil"
-
-#: kcmfontinst/FontFilter.cpp:110
-#, kde-format
-msgid "Foundry"
-msgstr "Livnica"
-
-#: kcmfontinst/FontFilter.cpp:112
-#, kde-format
-msgid "FontConfig Match"
-msgstr "Po FontConfigu"
-
-#: kcmfontinst/FontFilter.cpp:114
-#, kde-format
-msgid "File Type"
-msgstr "Tip datoteke"
-
-#: kcmfontinst/FontFilter.cpp:116
-#, kde-format
-msgid "File Name"
-msgstr "Ime datoteke"
-
-#: kcmfontinst/FontFilter.cpp:118
-#, kde-format
-msgid "File Location"
-msgstr "Lokacija datoteke"
-
-#: kcmfontinst/FontFilter.cpp:120
-#, kde-format
-msgid "Writing System"
-msgstr "Pismo"
-
-#: kcmfontinst/FontFilter.cpp:131
-#, kde-format
-msgid "Set Criteria"
-msgstr "Zadaj mjerila"
-
-# >> @item Writing system
-#: kcmfontinst/FontFilter.cpp:190
-#, kde-format
-msgid "Symbol/Other"
-msgstr "Simboli/ostalo"
-
-#: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
-#, kde-format
-msgid "Filter by %1…"
-msgstr ""
-
-# >> @title:column
-#: kcmfontinst/FontList.cpp:548
-#, kde-format
-msgid "Font"
-msgstr "Font"
-
-#: kcmfontinst/FontList.cpp:550
-#, kde-format
-msgid "Status"
-msgstr "Stanje"
-
-#: kcmfontinst/FontList.cpp:564
-#, kde-format
-msgid ""
-"This column shows the status of the font family, and of the individual font "
-"styles."
-msgstr "Ova kolona daje stanje porodice fontova i njenih pojedinih stilova."
-
-#: kcmfontinst/FontList.cpp:671
-#, kde-format
-msgid ""
-"<p>This list shows your installed fonts. The fonts are grouped by family, "
-"and the number in square brackets represents the number of styles in which "
-"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
-"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
-msgstr ""
-"<p>Ovaj spisak pokazuje instalirane fontove. Grupisani su po porodici, a "
-"broj u uglastim zagradama predstavlja broj stilova u kojima je porodica "
-"dostupna. Na primjer:</p><ul><li>Times [4]<ul><li>osnovni</"
-"li><li>podebljani</li><li>podebljani kurzivni</li><li>kurzivni</li></ul></"
-"li></ul>"
-
-# >! Needs plural call, regardless whether used for n=1 or not.
-#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
-#, fuzzy, kde-format
-#| msgid "...plus %1 more"
-msgid "…plus %1 more"
-msgstr "...i još %1"
-
-# >> @item %1 font family nami, %2 number of styles
-#: kcmfontinst/FontList.cpp:1001
-#, kde-format
-msgid "%1 [%2]"
-msgstr "%1 [%2]"
-
-#: kcmfontinst/FontList.cpp:1300
-#, kde-format
-msgid "Delete"
-msgstr "Obriši"
-
-#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Enable"
-msgstr "Uključi"
-
-#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Disable"
-msgstr "Isključi"
-
-# >> @title:window
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
-#, fuzzy, kde-format
-#| msgid "Print"
-msgid "Print…"
-msgstr "Štampanje"
-
-#: kcmfontinst/FontList.cpp:1312
-#, kde-format
-msgid "Reload"
-msgstr "Učitaj ponovo"
-
-# >! Needs plural call, regardless whether used for n=1 or not.
-#: kcmfontinst/FontList.cpp:1690
-#, kde-format
-msgid "Open all %1 fonts in font viewer?"
-msgstr "Otvoriti svih %1 fontova u prikazivaču?"
-
-#: kcmfontinst/GroupList.cpp:62
-#, kde-format
-msgid "All Fonts"
-msgstr "Svi fontovi"
-
-#: kcmfontinst/GroupList.cpp:65
-#, kde-format
-msgid "Personal Fonts"
-msgstr "Lični fontovi"
-
-#: kcmfontinst/GroupList.cpp:68
-#, kde-format
-msgid "System Fonts"
-msgstr "Sistemski fontovi"
-
-#: kcmfontinst/GroupList.cpp:71
-#, kde-format
-msgid "Unclassified"
-msgstr "Nesvrstani"
-
-# >> @title:column
-#: kcmfontinst/GroupList.cpp:353
-#, kde-format
-msgid "Group"
-msgstr "Grupa"
-
-#: kcmfontinst/GroupList.cpp:538
-#, kde-format
-msgid ""
-"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
-"the group, and not the actual fonts.</i></p>"
-msgstr ""
-"<p>Želite li zaista da uklonite grupu <b>%1</b>?</p><p><i>Biće uklonjena "
-"samo grupa, ne i fontovi u njoj.</i></p>"
-
-# >> @title:window
-#: kcmfontinst/GroupList.cpp:542
-#, kde-format
-msgid "Remove Group"
-msgstr "Uklanjanje grupe"
-
-#: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
-#, kde-format
-msgid "Remove"
-msgstr "Ukloni"
-
-#: kcmfontinst/GroupList.cpp:543
-#, kde-format
-msgid "Remove group"
-msgstr "Ukloni grupu"
-
-#: kcmfontinst/GroupList.cpp:589
-#, kde-format
-msgid ""
-"<h3>Font Groups</h3><p>This list displays the font groups available on your "
-"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
-"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
-"are groups created by you. To add a font family to one of these groups "
-"simply drag it from the list of fonts, and drop onto the desired group. To "
-"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
-"li></ul></p>"
-msgstr ""
-"<h3>Grupe fontova</h3><p>Ovaj spisak daje raspoložive grupe fontova na "
-"sistemu. Grupe se dijele na dva glavna tipa:</p><ul><li><b>Standardne</b> su "
-"one grupe koje koristi menadžer fontova.<ul>%1</ul></li><li><b>Posebne</b> "
-"su grupe koje ste sami stvorili. Porodicu fontova dodajete u grupu tako što "
-"je jednostavno prevučete sa spiska fontova na željenu grupu. Porodicu "
-"uklanjate iz određene grupe tako što je prevučete na grupu „svih fontova“.</"
-"li></ul>"
-
-#: kcmfontinst/GroupList.cpp:597
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>Svi fontovi</i> sadrže sve fontove instalirane na sistemu.</"
-"li><li><i>Nesvrstani</i> su oni fontovi koji još uvijek nisu smješteni u "
-"neku „posebnu“ grupu.</li>"
-
-#: kcmfontinst/GroupList.cpp:600
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
-"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
-"are installed system-wide (i.e. available to all users).</"
-"li><li><i>Personal</i> contains your personal fonts.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-"<li><i>Svi fontovi</i> sadrže sve fontove instalirane na sistemu - i "
-"sistemske i lične.</li><li><i>Sistemski</i> su oni fontovi koji su vidljivi "
-"širom sistema (tj. dostupni svim korisnicima).</li><li><i>Lični</i> sadrže "
-"vaše lične fontove.</li><li><i>Nesvrstani</i> sadrže fontove koji još uvijek "
-"nisu smješteni u neku „posebnu“ grupu.</li>"
-
-#: kcmfontinst/GroupList.cpp:702
-#, kde-format
-msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>Grupa po imenu <b>%1</b> već postoji.</qt>"
-
-#: kcmfontinst/GroupList.cpp:793
-#, fuzzy, kde-format
-#| msgid "Rename..."
-msgid "Rename…"
-msgstr "Preimenuj..."
-
-#: kcmfontinst/GroupList.cpp:802
-#, fuzzy, kde-format
-#| msgid "Export..."
-msgid "Export…"
-msgstr "Izvezi..."
-
-#: kcmfontinst/GroupList.cpp:896
-#, kde-format
-msgid "Add to \"%1\"."
-msgstr "Dodaj u „%1“."
-
-#: kcmfontinst/GroupList.cpp:898
-#, kde-format
-msgid "Remove from current group."
-msgstr "Ukloni iz tekuće grupe."
-
-#: kcmfontinst/GroupList.cpp:900
-#, kde-format
-msgid "Move to personal folder."
-msgstr "Premjesti u lični direktorij."
-
-#: kcmfontinst/GroupList.cpp:902
-#, kde-format
-msgid "Move to system folder."
-msgstr "Premjesti u sistemski direktorij."
-
-#: kcmfontinst/JobRunner.cpp:139
-#, kde-format
-msgid "Skip"
-msgstr "Preskoči"
-
-#: kcmfontinst/JobRunner.cpp:142
-#, kde-format
-msgid "AutoSkip"
-msgstr "Automatski preskači"
-
-#: kcmfontinst/JobRunner.cpp:187
-#, kde-format
-msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
-msgstr "<h3>Odustati?</h3><p>Želite li zaista da odustanite?</p>"
-
-#: kcmfontinst/JobRunner.cpp:199
-#, kde-format
-msgid ""
-"<h3>Finished</h3><p>Please note that any open applications will need to be "
-"restarted in order for any changes to be noticed.</p>"
-msgstr ""
-"<h3>Gotovo</h3><p>Ako želite da vidite načinjene izmjene u programima koji "
-"trenutno rade, moraćete ponovo da ih pokrenete.</p>"
-
-#: kcmfontinst/JobRunner.cpp:207
-#, kde-format
-msgid "Do not show this message again"
-msgstr "Ne prikazuj više ovu poruku"
-
-# >> @title:window
-#: kcmfontinst/JobRunner.cpp:315
-#, kde-format
-msgid "Installing"
-msgstr "Instaliranje"
-
-# >> @title:window
-#: kcmfontinst/JobRunner.cpp:318
-#, kde-format
-msgid "Uninstalling"
-msgstr "Deinstaliranje"
-
-# >> @title:window
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
-#, kde-format
-msgid "Enabling"
-msgstr "Uključivanje"
-
-# >> @title:window
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
-#, kde-format
-msgid "Moving"
-msgstr "Premiještanje"
-
-# >> @title:window
-#: kcmfontinst/JobRunner.cpp:327
-#, kde-format
-msgid "Updating"
-msgstr "Ažuriranje"
-
-# >> @title:window
-#: kcmfontinst/JobRunner.cpp:331
-#, kde-format
-msgid "Removing"
-msgstr "Uklanjanje"
-
-# >> @title:window
-#: kcmfontinst/JobRunner.cpp:335
-#, kde-format
-msgid "Disabling"
-msgstr "Isključivanje"
-
-# >> @info:progress
-#: kcmfontinst/JobRunner.cpp:372
-#, fuzzy, kde-format
-#| msgid "Updating font configuration. Please wait..."
-msgid "Updating font configuration. Please wait…"
-msgstr "Ažuriram postavu fontova. Sačekajte..."
-
-#: kcmfontinst/JobRunner.cpp:444
-#, kde-format
-msgid "Unable to start backend."
-msgstr "Ne mogu da pokrenem pozadinu."
-
-#: kcmfontinst/JobRunner.cpp:453
-#, kde-format
-msgid "Backend died, but has been restarted. Please try again."
-msgstr "Pozadina se srušila, ali je ponovo pokrenuta. Pokušajte opet."
-
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
-#, kde-format
-msgid "<h3>Error</h3>"
-msgstr "<h3>Greška</h3>"
-
-#: kcmfontinst/JobRunner.cpp:693
-#, kde-format
-msgid "Failed to download <i>%1</i>"
-msgstr "<html>Ne mogu da preuzmem <filename>%1</filename></html>"
-
-#: kcmfontinst/JobRunner.cpp:695
-#, kde-format
-msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr ""
-"<html>Sistemska pozadina se srušila. Pokušajte opet.<br/><filename>%1</"
-"filename></html>"
-
-#: kcmfontinst/JobRunner.cpp:697
-#, kde-format
-msgid ""
-"<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr ""
-"<html><filename>%1</filename> je bitmapski font, a oni su isključeni na "
-"sistemu.</html>."
-
-#: kcmfontinst/JobRunner.cpp:699
-#, kde-format
-msgid ""
-"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
-"system."
-msgstr ""
-"<html><filename>%1</filename> sadrži font <b>%2</b>, koji je već instaliran "
-"na sistemu.</html>|/|<html><filename>%1</filename> sadrži font <b>"
-"$[glavorepi nom %2]</b>, koji je već instaliran na sistemu.</html>."
-
-#: kcmfontinst/JobRunner.cpp:701
-#, kde-format
-msgid "<i>%1</i> is not a font."
-msgstr "<html><filename>%1</filename> nije font.</html>."
-
-#: kcmfontinst/JobRunner.cpp:703
-#, kde-format
-msgid "Could not remove all files associated with <i>%1</i>"
-msgstr ""
-"<html>Ne mogu da uklonim sve datoteke vezane za <filename>%1</filename>.</"
-"html>"
-
-#: kcmfontinst/JobRunner.cpp:705
-#, kde-format
-msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr ""
-"<html>Ne mogu da pokrenem sistemski demon.<br/><filename>%1</filename></html>"
-
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
-#, kde-format
-msgid "<i>%1</i> already exists."
-msgstr "<html><filename>%1</filename> već postoji.</html>."
-
-#: kcmfontinst/JobRunner.cpp:711
-#, kde-format
-msgid "<i>%1</i> does not exist."
-msgstr "<html><filename>%1</filename> ne postoji.</html>."
-
-#: kcmfontinst/JobRunner.cpp:713
-#, kde-format
-msgid "Permission denied.<br><i>%1</i>"
-msgstr "<html>Dozvola odbijena.<br/><filename>%1</filename></html>"
-
-#: kcmfontinst/JobRunner.cpp:715
-#, kde-format
-msgid "Unsupported action.<br><i>%1</i>"
-msgstr "<html>Nepodržana radnja.<br/><filename>%1</filename></html>"
-
-#: kcmfontinst/JobRunner.cpp:717
-#, kde-format
-msgid "Authentication failed.<br><i>%1</i>"
-msgstr "<html>Neuspjela autentifikacija.<br/><filename>%1</filename></html>"
-
-#: kcmfontinst/JobRunner.cpp:719
-#, kde-format
-msgid "Unexpected error while processing: <i>%1</i>"
-msgstr "Nočekivana greška prilikom obrade: <i>%1</i>"
-
-#: kcmfontinst/KCmFontInst.cpp:211
-#, fuzzy, kde-format
-#| msgid "Create New Group"
-msgid "Create New Group…"
-msgstr "Stvaranje nove grupe"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:214
-#, fuzzy, kde-format
-#| msgid "Remove Group"
-msgid "Remove Group…"
-msgstr "Uklanjanje grupe"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:217
-#, fuzzy, kde-format
-#| msgid "Enable Fonts"
-msgid "Enable Fonts in Group…"
-msgstr "Uključivanje fontova"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:220
-#, fuzzy, kde-format
-#| msgid "Disable Fonts"
-msgid "Disable Fonts in Group…"
-msgstr "Isključivanje fontova"
-
-#: kcmfontinst/KCmFontInst.cpp:241
-#, kde-format
-msgid "This displays a preview of the selected font."
-msgstr "Daje pregled izabranog fonta."
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
-msgid "Find Duplicates…"
-msgstr "Potraži fontove duplikate..."
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
-msgid "Scan for Duplicate Fonts…"
-msgstr "Potraži fontove duplikate..."
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, fuzzy, kde-format
-#| msgid "Install..."
-msgid "Install from File…"
-msgstr "Instaliraj..."
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install fonts from a local file"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:261
-#, fuzzy, kde-format
-#| msgid "Get New Fonts..."
-msgid "Get New Fonts…"
-msgstr "Dobavi nove fontove..."
-
-#: kcmfontinst/KCmFontInst.cpp:262
-#, kde-format
-msgid "Download new fonts"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:264
-#, fuzzy, kde-format
-#| msgid "Delete all selected fonts"
-msgid "Delete Selected Fonts…"
-msgstr "Obriši izabrane fontove"
-
-#: kcmfontinst/KCmFontInst.cpp:329
-#, fuzzy, kde-format
-#| msgid "Change Preview Text..."
-msgid "Change Preview Text…"
-msgstr "Promijeni primjer teksta..."
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:428
-#, kde-format
-msgid "Add Fonts"
-msgstr "Dodavanje fontova"
-
-#: kcmfontinst/KCmFontInst.cpp:552
-#, kde-format
-msgid "Failed to save list of fonts to print."
-msgstr "Ne mogu da sačuvam spisak fontova za štampanje."
-
-#: kcmfontinst/KCmFontInst.cpp:573
-#, kde-format
-msgid "Failed to start font printer."
-msgstr "Ne mogu da pokrenem štampač fontova."
-
-#: kcmfontinst/KCmFontInst.cpp:580
-#, kde-format
-msgid ""
-"There are no printable fonts.\n"
-"You can only print non-bitmap and enabled fonts."
-msgstr ""
-"Nema fontova koji se mogu štampati.\n"
-"Možete štampati samo nebitmapske i uključene fontove."
-
-#: kcmfontinst/KCmFontInst.cpp:582
-#, kde-format
-msgid "Cannot Print"
-msgstr "Ne mogu da štampam"
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "You did not select anything to delete."
-msgstr "Niste izabrali ništa za brisanje."
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "Nothing to Delete"
-msgstr "Ničijeg za brisanje"
-
-#: kcmfontinst/KCmFontInst.cpp:612
-#, kde-format
-msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Želite li zaista da obrišete<br/><b>%1</b>?</p>"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:615
-#, kde-format
-msgid "Delete Font"
-msgstr "Brisanje fonta"
-
-#: kcmfontinst/KCmFontInst.cpp:622
-#, kde-format
-msgid "Do you really want to delete this font?"
-msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "Želite li zaista da obrišete ovaj %1 font?"
-msgstr[1] "Želite li zaista da obrišete ova %1 fonta?"
-msgstr[2] "Želite li zaista da obrišete ovih %1 fontova?"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:624
-#, kde-format
-msgid "Delete Fonts"
-msgstr "Brisanje fontova"
-
-# >> @info:progress
-#: kcmfontinst/KCmFontInst.cpp:629
-#, fuzzy, kde-format
-#| msgid "Deleting font(s)..."
-msgid "Deleting font(s)…"
-msgstr "Brišem fontove..."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "You did not select anything to move."
-msgstr "Niste izabrali ništa za premiještanje."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, kde-format
-msgid "Nothing to Move"
-msgstr "Ničijeg za premiještanje"
-
-#: kcmfontinst/KCmFontInst.cpp:654
-#, kde-format
-msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
-msgstr ""
-"<p>Da li zaista želite premjestiti</p><p>'<b>%1</b>'</p><p>sa <i>%2</i> na "
-"<i>%3</i>?</p>"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:659
-#, kde-format
-msgid "Move Font"
-msgstr "Premiještanje fonta"
-
-#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
-#, kde-format
-msgid "Move"
-msgstr "Premjesti"
-
-#: kcmfontinst/KCmFontInst.cpp:665
-#, kde-format
-msgid ""
-"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
-msgid_plural ""
-"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] ""
-"<p>Da li zaista želite premjestiti ovaj %1 font sa <i>%2</i>na <i>%3</i>?</p>"
-msgstr[1] ""
-"<p>Da li zaista želite premjestiti ova %1 fonta sa <i>%2</i> na <i>%3</i>?</"
-"p>"
-msgstr[2] ""
-"<p>Da li zaista želite premjestiti ovih %1 fontova sa <i>%2</i> na<i>%3</i>?"
-"</p>"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:671
-#, kde-format
-msgid "Move Fonts"
-msgstr "Premiještanje fontova"
-
-# >> @info:progress
-#: kcmfontinst/KCmFontInst.cpp:676
-#, fuzzy, kde-format
-#| msgid "Moving font(s)..."
-msgid "Moving font(s)…"
-msgstr "Premiještam fontove..."
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:690
-#, kde-format
-msgid "Export Group"
-msgstr "Izvoz grupe"
-
-#: kcmfontinst/KCmFontInst.cpp:716
-#, kde-format
-msgid "No files?"
-msgstr "Nema fajlova?"
-
-#: kcmfontinst/KCmFontInst.cpp:719
-#, kde-format
-msgid "Failed to open %1 for writing"
-msgstr "<html>Ne mogu da otvorim <filename>%1</filename> za pisanje.</html>"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Create New Group"
-msgstr "Stvaranje nove grupe"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, fuzzy, kde-format
-#| msgid "Create New Group"
-msgid "Name of new group:"
-msgstr "Stvaranje nove grupe"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "New Group"
-msgstr "Nova grupa"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Preview Text"
-msgstr "Probni tekst"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, kde-format
-msgid "Please enter new text:"
-msgstr "Unesite novi tekst:"
-
-#: kcmfontinst/KCmFontInst.cpp:819
-#, fuzzy, kde-format
-#| msgid "Scanning font list..."
-msgid "Scanning font list…"
-msgstr "Pregledam spisak fontova..."
-
-#: kcmfontinst/KCmFontInst.cpp:878
-#, kde-format
-msgid "No fonts"
-msgstr "Nema fontova"
-
-#: kcmfontinst/KCmFontInst.cpp:883
-#, kde-format
-msgid "1 Font"
-msgid_plural "%1 Fonts"
-msgstr[0] "%1 font"
-msgstr[1] "%1 fonta"
-msgstr[2] "%1 fontova"
-
-#: kcmfontinst/KCmFontInst.cpp:892
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">Omogućeno:</td><td>%1</td></tr><tr><td align="
-"\"right\">Onemogućeno:</td><td>%2</td></tr><tr><td align=\"right"
-"\">Parcijalno omogućeno:</td><td>%3</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%4</td></tr></table>"
-
-#: kcmfontinst/KCmFontInst.cpp:902
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-msgstr ""
-"<table><tr><td align=\"right\">Omogućeno:</td><td>%1</td></tr><tr><td align="
-"\"right\">Onemogućeno:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-
-#: kcmfontinst/KCmFontInst.cpp:946
+#: apps/kfontinst/Installer.cpp:38 manager/FontManager.cpp:935
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -883,215 +41,131 @@ msgstr ""
 "Želite li da instalirate fontove za lične potrebe (samo ih vi možete "
 "koristiti), ili širom sistema (za sve korisnike)?"
 
-#: kcmfontinst/KCmFontInst.cpp:949
+#: apps/kfontinst/Installer.cpp:39 manager/FontManager.cpp:938
 #, kde-format
 msgid "Where to Install"
 msgstr "Gdje instalirati?"
 
-#: kcmfontinst/KCmFontInst.cpp:979
+#: apps/kfontinst/Installer.cpp:115
 #, fuzzy, kde-format
-#| msgid "Looking for any associated files..."
-msgid "Looking for any associated files…"
-msgstr "Tražim pridružene datoteke..."
+#| msgid "KDE Font Manager"
+msgctxt "@title application name"
+msgid "Font Management"
+msgstr "KDE Font Menadžer"
 
-#: kcmfontinst/KCmFontInst.cpp:983
-#, fuzzy, kde-format
-#| msgid "Scanning Files..."
-msgid "Scanning Files…"
-msgstr "Ispitujem datoteke..."
-
-#: kcmfontinst/KCmFontInst.cpp:984
-#, fuzzy, kde-format
-#| msgid "Looking for additional files to install..."
-msgid "Looking for additional files to install…"
-msgstr "Tražim dodatne datoteke za instaliranje..."
-
-#: kcmfontinst/KCmFontInst.cpp:999
+#: apps/kfontinst/Installer.cpp:117
 #, kde-format
-msgid "Looking for files associated with %1"
-msgstr "Tražim datoteke pridružene uz <filename>%1</filename>"
-
-#: kcmfontinst/KCmFontInst.cpp:1027
-#, fuzzy, kde-format
-#| msgid "Installing font(s)..."
-msgid "Installing font(s)…"
-msgstr "Instaliram fontove..."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to enable."
-msgstr "Niste izabrali ništa za uključivanje."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, kde-format
-msgid "You did not select anything to disable."
-msgstr "Niste izabrali ništa za isključivanje."
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Enable"
-msgstr "Ništa za uključivanje"
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, kde-format
-msgid "Nothing to Disable"
-msgstr "Ništa za brisanje"
-
-#: kcmfontinst/KCmFontInst.cpp:1107
-#, kde-format
-msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Želite li zaista da uključite<br/><b>%1</b>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1108
-#, kde-format
-msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Želite li zaista da isključite<br/><b>%1</b>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1109
-#, kde-format
-msgid ""
-"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+msgctxt "@info application description"
+msgid "Install, manage, and preview fonts"
 msgstr ""
-"<p>Želite li zaista da uključite<br/><b>%1</b><br/>(u grupi <b>%2</b>)?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "© 2007, Krejg Dramond"
+
+#: apps/kfontinst/Installer.cpp:128
+#, fuzzy, kde-format
+#| msgid "Makes the dialog transient for an X app specified by winid"
+msgid "Makes the dialog transient for a window specified by windowHandle"
+msgstr "Prolazni dijalog za X program prema ID‑u prozora"
+
+#: apps/kfontinst/Installer.cpp:131
+#, kde-format
+msgid "URL to install"
+msgstr "URL gdje treba instalirati"
+
+# >> @title:window
+#: apps/kfontprint/Printer.cpp:239
+#, kde-format
+msgid "Print"
+msgstr "Štampanje"
+
+#: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
+#, fuzzy, kde-format
+#| msgid "Canceling..."
+msgid "Canceling…"
+msgstr "Otkazujem..."
+
+#: apps/kfontprint/Printer.cpp:323
+#, kde-format
+msgid "Font Printer"
+msgstr "Štampač fontova"
+
+#: apps/kfontprint/Printer.cpp:325
+#, kde-format
+msgid "Simple font printer"
+msgstr "Jednostavan štampač fontova"
+
+#: apps/kfontprint/Printer.cpp:333
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "Prolazni dijalog za X program prema ID‑u prozora"
+
+#: apps/kfontprint/Printer.cpp:335
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "Indeks veličine za štampanje fontova"
+
+#: apps/kfontprint/Printer.cpp:339
 #, kde-format
 msgid ""
-"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
 msgstr ""
-"<p>Želite li zaista da isključite<br/><b>%1</b><br/>(u grupi <b>%2</b>)?</p>"
+"Font za štampanje, zadat kao „porodica,stil“, gdje je stil 24‑bitni dekadni "
+"broj sastavljen kao: <placeholder>debljina</placeholder><placeholder>širina</"
+"placeholder><placeholder>nagib</placeholder>"
 
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
+#: apps/kfontprint/Printer.cpp:342
 #, kde-format
-msgid "Enable Font"
-msgstr "Uključivanje fonta"
+msgid "File containing list of fonts to print"
+msgstr "Datoteka sa spiskom fontova za štampanje"
 
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
+#: apps/kfontprint/Printer.cpp:344
 #, kde-format
-msgid "Disable Font"
-msgstr "Isključivanje fonta"
+msgid "Remove file containing list of fonts to print"
+msgstr "Ukloni datoteku sa spiskom fontova za štampanje"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
-#, kde-format
-msgid "Do you really want to enable this font?"
-msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "Želite li zaista da uključite ovaj %1 font?"
-msgstr[1] "Želite li zaista da uključite ova %1 fonta?"
-msgstr[2] "Želite li zaista da uključite ovih %1 fontova?"
-
-#: kcmfontinst/KCmFontInst.cpp:1120
-#, kde-format
-msgid "Do you really want to disable this font?"
-msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "Želite li zaista da isključite ovaj %1 font?"
-msgstr[1] "Želite li zaista da isključite ova %1 fonta?"
-msgstr[2] "Želite li zaista da isključite ovih %1 fontova?"
-
-#: kcmfontinst/KCmFontInst.cpp:1122
-#, kde-format
-msgid ""
-"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
-"</p>"
-msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<p>Želite li zaista da uključite ovaj %1 font u grupi <b>%2</b>?</p>"
-msgstr[1] ""
-"<p>Želite li zaista da uključite ova %1 fonta u grupi <b>%2</b>?</p>"
-msgstr[2] ""
-"<p>Želite li zaista da uključite ovih %1 fontova u grupi <b>%2</b>?</p>"
-
-#: kcmfontinst/KCmFontInst.cpp:1126
-#, kde-format
-msgid ""
-"<p>Do you really want to disable this font contained within group '<b>%2</"
-"b>'?</p>"
-msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<p>Želite li zaista da isključite ovaj %1 font u grupi <b>%2</b>?</p>"
-msgstr[1] ""
-"<p>Želite li zaista da isključite ova %1 fonta u grupi <b>%2</b>?</p>|/|"
-"<p>Želite li zaista da isključite ova %1 fonta u grupi <b>$[gen %2]</b>?</p>"
-msgstr[2] ""
-"<p>Želite li zaista da isključite ovih %1 fontova u grupi <b>%2</b>?</p>"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Enable Fonts"
-msgstr "Uključivanje fontova"
-
-# >> @title:window
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Disable Fonts"
-msgstr "Isključivanje fontova"
-
-#: kcmfontinst/KCmFontInst.cpp:1139
+# >! Needs plural call, regardless whether used for n=1 or not.
+#: apps/kfontview/Viewer.cpp:50
 #, fuzzy, kde-format
-#| msgid "Enabling font(s)..."
-msgid "Enabling font(s)…"
-msgstr "Uključujem fontove..."
-
-#: kcmfontinst/KCmFontInst.cpp:1141
-#, fuzzy, kde-format
-#| msgid "Disabling font(s)..."
-msgid "Disabling font(s)…"
-msgstr "Isključujem fontove..."
+#| msgid "Open font in font viewer?"
+#| msgid_plural "Open all %1 fonts in font viewer?"
+msgid "Open an existing font file"
+msgstr "Otvoriti %1 font u prikazivaču?"
 
 # >> @title:window
-#: kcmfontinst/PrintDialog.cpp:21
-#, kde-format
-msgid "Print Font Samples"
+#: apps/kfontview/Viewer.cpp:51
+#, fuzzy, kde-format
+#| msgid "Print Font Samples"
+msgid "Print font preview"
 msgstr "Štampanje uzoraka fonta"
 
-#: kcmfontinst/PrintDialog.cpp:37
+#: apps/kfontview/Viewer.cpp:68
 #, kde-format
-msgid "Select size to print font:"
-msgstr "Veličina za štampanje fonta:"
+msgid "Select Font to View"
+msgstr "Izaberite font za prikaz"
 
-# >> @item:inlistbox Select size to print font
-#: kcmfontinst/PrintDialog.cpp:41
+#: apps/kfontview/Viewer.cpp:108
 #, kde-format
-msgid "Waterfall"
-msgstr "Vodopadski"
+msgid "URL to open"
+msgstr "URL za otvaranje"
 
-# >> @item:inlistbox Select size to print font
-#: kcmfontinst/PrintDialog.cpp:42
+#: apps/kfontview/Viewer.cpp:150
 #, kde-format
-msgid "12pt"
-msgstr "12tač"
+msgid "Font Viewer"
+msgstr "Prikazivač fontova"
 
-# >> @item:inlistbox Select size to print font
-#: kcmfontinst/PrintDialog.cpp:43
+#: apps/kfontview/Viewer.cpp:152
 #, kde-format
-msgid "18pt"
-msgstr "18tač"
+msgid "Simple font viewer"
+msgstr "Jednostavan prikazivač fontova"
 
-# >> @item:inlistbox Select size to print font
-#: kcmfontinst/PrintDialog.cpp:44
+#: apps/kfontview/Viewer.cpp:154
 #, kde-format
-msgid "24pt"
-msgstr "24tač"
-
-# >> @item:inlistbox Select size to print font
-#: kcmfontinst/PrintDialog.cpp:45
-#, kde-format
-msgid "36pt"
-msgstr "36tač"
-
-# >> @item:inlistbox Select size to print font
-#: kcmfontinst/PrintDialog.cpp:46
-#, kde-format
-msgid "48pt"
-msgstr "48tač"
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "© 2004-2007, Krejg Dramond"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1175,6 +249,11 @@ msgstr "<filename>%1</filename> nije font."
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "Ne mogu da uklonim sve datoteke vezane za <filename>%1</filename>."
+
+#: kio/KioFonts.cpp:719 manager/JobRunner.cpp:708
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<html><filename>%1</filename> već postoji.</html>."
 
 # >> @item Unknown foundry
 #: lib/Fc.cpp:407 lib/KfiConstants.h:108
@@ -1396,6 +475,1042 @@ msgstr "Jednoćelijski"
 #: lib/KfiConstants.h:106
 msgid "Proportional"
 msgstr "Proporcionalni"
+
+# >> @title:window
+#: manager/DuplicatesDialog.cpp:49
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "Fontovi duplikati"
+
+#: manager/DuplicatesDialog.cpp:79
+#, fuzzy, kde-format
+#| msgid "Scanning for duplicate fonts. Please wait..."
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "Tražim fontove duplikate. Sačekajte..."
+
+#: manager/DuplicatesDialog.cpp:98
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "Nema fontova duplikata."
+
+#: manager/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "Obriši obilježene datoteke"
+
+#: manager/DuplicatesDialog.cpp:108
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "Nađen %1 font duplikat."
+msgstr[1] "Nađena %1 fonta duplikata."
+msgstr[2] "Nađeno %1 fontova duplikata."
+
+#: manager/DuplicatesDialog.cpp:189
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"Želite li zaista da obrišete:\n"
+"%1"
+
+#: manager/DuplicatesDialog.cpp:195
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "Želite li zaista da obrišete:"
+
+#: manager/DuplicatesDialog.cpp:223
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "Otkazati traženje fontova?"
+
+#: manager/DuplicatesDialog.cpp:384
+#, kde-format
+msgid "Font/File"
+msgstr "Font/datoteka"
+
+# >> @title:column
+#: manager/DuplicatesDialog.cpp:386
+#, kde-format
+msgid "Size"
+msgstr "Veličina"
+
+# >> @title:column
+#: manager/DuplicatesDialog.cpp:387
+#, kde-format
+msgid "Date"
+msgstr "Datum"
+
+# >> @title:column
+#: manager/DuplicatesDialog.cpp:388
+#, kde-format
+msgid "Links To"
+msgstr "Veza ka"
+
+#: manager/DuplicatesDialog.cpp:401 manager/FontList.cpp:1310
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "Otvori u prikazivaču fontova"
+
+#: manager/DuplicatesDialog.cpp:403
+#, kde-format
+msgid "Properties"
+msgstr "Svojstva"
+
+#: manager/DuplicatesDialog.cpp:405
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "Poništi za brisanje"
+
+#: manager/DuplicatesDialog.cpp:406
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "Obilježi za brisanje"
+
+# >! Needs plural call, regardless whether used for n=1 or not.
+#: manager/DuplicatesDialog.cpp:504
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Otvoriti %1 font u prikazivaču?"
+msgstr[1] "Otvoriti %1 fonta u prikazivaču?"
+msgstr[2] "Otvoriti svih %1 fontova u prikazivaču?"
+
+#: manager/FontFilter.cpp:106
+#, kde-format
+msgid "Family"
+msgstr "Porodica"
+
+#: manager/FontFilter.cpp:108
+#, kde-format
+msgid "Style"
+msgstr "Stil"
+
+#: manager/FontFilter.cpp:110
+#, kde-format
+msgid "Foundry"
+msgstr "Livnica"
+
+#: manager/FontFilter.cpp:112
+#, kde-format
+msgid "FontConfig Match"
+msgstr "Po FontConfigu"
+
+#: manager/FontFilter.cpp:114
+#, kde-format
+msgid "File Type"
+msgstr "Tip datoteke"
+
+#: manager/FontFilter.cpp:116
+#, kde-format
+msgid "File Name"
+msgstr "Ime datoteke"
+
+#: manager/FontFilter.cpp:118
+#, kde-format
+msgid "File Location"
+msgstr "Lokacija datoteke"
+
+#: manager/FontFilter.cpp:120
+#, kde-format
+msgid "Writing System"
+msgstr "Pismo"
+
+#: manager/FontFilter.cpp:131
+#, kde-format
+msgid "Set Criteria"
+msgstr "Zadaj mjerila"
+
+# >> @item Writing system
+#: manager/FontFilter.cpp:190
+#, kde-format
+msgid "Symbol/Other"
+msgstr "Simboli/ostalo"
+
+#: manager/FontFilter.cpp:268 manager/FontFilter.cpp:336
+#, kde-format
+msgid "Filter by %1…"
+msgstr ""
+
+# >> @title:column
+#: manager/FontList.cpp:548
+#, kde-format
+msgid "Font"
+msgstr "Font"
+
+#: manager/FontList.cpp:550
+#, kde-format
+msgid "Status"
+msgstr "Stanje"
+
+#: manager/FontList.cpp:564
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "Ova kolona daje stanje porodice fontova i njenih pojedinih stilova."
+
+#: manager/FontList.cpp:671
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>Ovaj spisak pokazuje instalirane fontove. Grupisani su po porodici, a "
+"broj u uglastim zagradama predstavlja broj stilova u kojima je porodica "
+"dostupna. Na primjer:</p><ul><li>Times [4]<ul><li>osnovni</"
+"li><li>podebljani</li><li>podebljani kurzivni</li><li>kurzivni</li></ul></"
+"li></ul>"
+
+# >! Needs plural call, regardless whether used for n=1 or not.
+#: manager/FontList.cpp:950 manager/FontList.cpp:974
+#, fuzzy, kde-format
+#| msgid "...plus %1 more"
+msgid "…plus %1 more"
+msgstr "...i još %1"
+
+# >> @item %1 font family nami, %2 number of styles
+#: manager/FontList.cpp:1001
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: manager/FontList.cpp:1300
+#, kde-format
+msgid "Delete"
+msgstr "Obriši"
+
+#: manager/FontList.cpp:1302 manager/FontManager.cpp:1101
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:790
+#, kde-format
+msgid "Enable"
+msgstr "Uključi"
+
+#: manager/FontList.cpp:1303 manager/FontManager.cpp:1102
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:791
+#, kde-format
+msgid "Disable"
+msgstr "Isključi"
+
+# >> @title:window
+#: manager/FontList.cpp:1308 manager/GroupList.cpp:797
+#, fuzzy, kde-format
+#| msgid "Print"
+msgid "Print…"
+msgstr "Štampanje"
+
+#: manager/FontList.cpp:1312
+#, kde-format
+msgid "Reload"
+msgstr "Učitaj ponovo"
+
+# >! Needs plural call, regardless whether used for n=1 or not.
+#: manager/FontList.cpp:1690
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "Otvoriti svih %1 fontova u prikazivaču?"
+
+#: manager/FontManager.cpp:196
+#, fuzzy, kde-format
+#| msgid "Create New Group"
+msgid "Create New Group…"
+msgstr "Stvaranje nove grupe"
+
+# >> @title:window
+#: manager/FontManager.cpp:199
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgid "Remove Group…"
+msgstr "Uklanjanje grupe"
+
+# >> @title:window
+#: manager/FontManager.cpp:202
+#, fuzzy, kde-format
+#| msgid "Enable Fonts"
+msgid "Enable Fonts in Group…"
+msgstr "Uključivanje fontova"
+
+# >> @title:window
+#: manager/FontManager.cpp:205
+#, fuzzy, kde-format
+#| msgid "Disable Fonts"
+msgid "Disable Fonts in Group…"
+msgstr "Isključivanje fontova"
+
+#: manager/FontManager.cpp:226
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "Daje pregled izabranog fonta."
+
+#: manager/FontManager.cpp:243
+#, fuzzy, kde-format
+#| msgid "Scan for Duplicate Fonts..."
+msgid "Find Duplicates…"
+msgstr "Potraži fontove duplikate..."
+
+#: manager/FontManager.cpp:243
+#, fuzzy, kde-format
+#| msgid "Scan for Duplicate Fonts..."
+msgid "Scan for Duplicate Fonts…"
+msgstr "Potraži fontove duplikate..."
+
+#: manager/FontManager.cpp:245
+#, fuzzy, kde-format
+#| msgid "Install..."
+msgid "Install from File…"
+msgstr "Instaliraj..."
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr ""
+
+#: manager/FontManager.cpp:246
+#, fuzzy, kde-format
+#| msgid "Get New Fonts..."
+msgid "Get New Fonts…"
+msgstr "Dobavi nove fontove..."
+
+#: manager/FontManager.cpp:247
+#, kde-format
+msgid "Download new fonts"
+msgstr ""
+
+#: manager/FontManager.cpp:249
+#, fuzzy, kde-format
+#| msgid "Delete all selected fonts"
+msgid "Delete Selected Fonts…"
+msgstr "Obriši izabrane fontove"
+
+#: manager/FontManager.cpp:314
+#, fuzzy, kde-format
+#| msgid "Change Preview Text..."
+msgid "Change Preview Text…"
+msgstr "Promijeni primjer teksta..."
+
+# >> @title:window
+#: manager/FontManager.cpp:417
+#, kde-format
+msgid "Add Fonts"
+msgstr "Dodavanje fontova"
+
+#: manager/FontManager.cpp:541
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "Ne mogu da sačuvam spisak fontova za štampanje."
+
+#: manager/FontManager.cpp:562
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "Ne mogu da pokrenem štampač fontova."
+
+#: manager/FontManager.cpp:569
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"Nema fontova koji se mogu štampati.\n"
+"Možete štampati samo nebitmapske i uključene fontove."
+
+#: manager/FontManager.cpp:571
+#, kde-format
+msgid "Cannot Print"
+msgstr "Ne mogu da štampam"
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Niste izabrali ništa za brisanje."
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Ničijeg za brisanje"
+
+#: manager/FontManager.cpp:601
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Želite li zaista da obrišete<br/><b>%1</b>?</p>"
+
+# >> @title:window
+#: manager/FontManager.cpp:604
+#, kde-format
+msgid "Delete Font"
+msgstr "Brisanje fonta"
+
+#: manager/FontManager.cpp:611
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Želite li zaista da obrišete ovaj %1 font?"
+msgstr[1] "Želite li zaista da obrišete ova %1 fonta?"
+msgstr[2] "Želite li zaista da obrišete ovih %1 fontova?"
+
+# >> @title:window
+#: manager/FontManager.cpp:613
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Brisanje fontova"
+
+# >> @info:progress
+#: manager/FontManager.cpp:618
+#, fuzzy, kde-format
+#| msgid "Deleting font(s)..."
+msgid "Deleting font(s)…"
+msgstr "Brišem fontove..."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "Niste izabrali ništa za premiještanje."
+
+#: manager/FontManager.cpp:633
+#, kde-format
+msgid "Nothing to Move"
+msgstr "Ničijeg za premiještanje"
+
+#: manager/FontManager.cpp:643
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>Da li zaista želite premjestiti</p><p>'<b>%1</b>'</p><p>sa <i>%2</i> na "
+"<i>%3</i>?</p>"
+
+# >> @title:window
+#: manager/FontManager.cpp:648
+#, kde-format
+msgid "Move Font"
+msgstr "Premiještanje fonta"
+
+#: manager/FontManager.cpp:649 manager/FontManager.cpp:661
+#, kde-format
+msgid "Move"
+msgstr "Premjesti"
+
+#: manager/FontManager.cpp:654
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] ""
+"<p>Da li zaista želite premjestiti ovaj %1 font sa <i>%2</i>na <i>%3</i>?</p>"
+msgstr[1] ""
+"<p>Da li zaista želite premjestiti ova %1 fonta sa <i>%2</i> na <i>%3</i>?</"
+"p>"
+msgstr[2] ""
+"<p>Da li zaista želite premjestiti ovih %1 fontova sa <i>%2</i> na<i>%3</i>?"
+"</p>"
+
+# >> @title:window
+#: manager/FontManager.cpp:660
+#, kde-format
+msgid "Move Fonts"
+msgstr "Premiještanje fontova"
+
+# >> @info:progress
+#: manager/FontManager.cpp:665
+#, fuzzy, kde-format
+#| msgid "Moving font(s)..."
+msgid "Moving font(s)…"
+msgstr "Premiještam fontove..."
+
+# >> @title:window
+#: manager/FontManager.cpp:679
+#, kde-format
+msgid "Export Group"
+msgstr "Izvoz grupe"
+
+#: manager/FontManager.cpp:705
+#, kde-format
+msgid "No files?"
+msgstr "Nema fajlova?"
+
+#: manager/FontManager.cpp:708
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "<html>Ne mogu da otvorim <filename>%1</filename> za pisanje.</html>"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Create New Group"
+msgstr "Stvaranje nove grupe"
+
+#: manager/FontManager.cpp:728
+#, fuzzy, kde-format
+#| msgid "Create New Group"
+msgid "Name of new group:"
+msgstr "Stvaranje nove grupe"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "New Group"
+msgstr "Nova grupa"
+
+# >> @title:window
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Preview Text"
+msgstr "Probni tekst"
+
+#: manager/FontManager.cpp:756
+#, kde-format
+msgid "Please enter new text:"
+msgstr "Unesite novi tekst:"
+
+#: manager/FontManager.cpp:808
+#, fuzzy, kde-format
+#| msgid "Scanning font list..."
+msgid "Scanning font list…"
+msgstr "Pregledam spisak fontova..."
+
+#: manager/FontManager.cpp:867
+#, kde-format
+msgid "No fonts"
+msgstr "Nema fontova"
+
+#: manager/FontManager.cpp:872
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "%1 font"
+msgstr[1] "%1 fonta"
+msgstr[2] "%1 fontova"
+
+#: manager/FontManager.cpp:881
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Omogućeno:</td><td>%1</td></tr><tr><td align="
+"\"right\">Onemogućeno:</td><td>%2</td></tr><tr><td align=\"right"
+"\">Parcijalno omogućeno:</td><td>%3</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%4</td></tr></table>"
+
+#: manager/FontManager.cpp:891
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Omogućeno:</td><td>%1</td></tr><tr><td align="
+"\"right\">Onemogućeno:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+
+#: manager/FontManager.cpp:968
+#, fuzzy, kde-format
+#| msgid "Looking for any associated files..."
+msgid "Looking for any associated files…"
+msgstr "Tražim pridružene datoteke..."
+
+#: manager/FontManager.cpp:972
+#, fuzzy, kde-format
+#| msgid "Scanning Files..."
+msgid "Scanning Files…"
+msgstr "Ispitujem datoteke..."
+
+#: manager/FontManager.cpp:973
+#, fuzzy, kde-format
+#| msgid "Looking for additional files to install..."
+msgid "Looking for additional files to install…"
+msgstr "Tražim dodatne datoteke za instaliranje..."
+
+#: manager/FontManager.cpp:988
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "Tražim datoteke pridružene uz <filename>%1</filename>"
+
+#: manager/FontManager.cpp:1016
+#, fuzzy, kde-format
+#| msgid "Installing font(s)..."
+msgid "Installing font(s)…"
+msgstr "Instaliram fontove..."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "Niste izabrali ništa za uključivanje."
+
+#: manager/FontManager.cpp:1081
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "Niste izabrali ništa za isključivanje."
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "Ništa za uključivanje"
+
+#: manager/FontManager.cpp:1082
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "Ništa za brisanje"
+
+#: manager/FontManager.cpp:1096
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Želite li zaista da uključite<br/><b>%1</b>?</p>"
+
+#: manager/FontManager.cpp:1097
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Želite li zaista da isključite<br/><b>%1</b>?</p>"
+
+#: manager/FontManager.cpp:1098
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Želite li zaista da uključite<br/><b>%1</b><br/>(u grupi <b>%2</b>)?</p>"
+
+#: manager/FontManager.cpp:1099
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Želite li zaista da isključite<br/><b>%1</b><br/>(u grupi <b>%2</b>)?</p>"
+
+# >> @title:window
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1101
+#, kde-format
+msgid "Enable Font"
+msgstr "Uključivanje fonta"
+
+# >> @title:window
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1102
+#, kde-format
+msgid "Disable Font"
+msgstr "Isključivanje fonta"
+
+#: manager/FontManager.cpp:1108
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Želite li zaista da uključite ovaj %1 font?"
+msgstr[1] "Želite li zaista da uključite ova %1 fonta?"
+msgstr[2] "Želite li zaista da uključite ovih %1 fontova?"
+
+#: manager/FontManager.cpp:1109
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Želite li zaista da isključite ovaj %1 font?"
+msgstr[1] "Želite li zaista da isključite ova %1 fonta?"
+msgstr[2] "Želite li zaista da isključite ovih %1 fontova?"
+
+#: manager/FontManager.cpp:1111
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Želite li zaista da uključite ovaj %1 font u grupi <b>%2</b>?</p>"
+msgstr[1] ""
+"<p>Želite li zaista da uključite ova %1 fonta u grupi <b>%2</b>?</p>"
+msgstr[2] ""
+"<p>Želite li zaista da uključite ovih %1 fontova u grupi <b>%2</b>?</p>"
+
+#: manager/FontManager.cpp:1115
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Želite li zaista da isključite ovaj %1 font u grupi <b>%2</b>?</p>"
+msgstr[1] ""
+"<p>Želite li zaista da isključite ova %1 fonta u grupi <b>%2</b>?</p>|/|"
+"<p>Želite li zaista da isključite ova %1 fonta u grupi <b>$[gen %2]</b>?</p>"
+msgstr[2] ""
+"<p>Želite li zaista da isključite ovih %1 fontova u grupi <b>%2</b>?</p>"
+
+# >> @title:window
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Enable Fonts"
+msgstr "Uključivanje fontova"
+
+# >> @title:window
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, kde-format
+msgid "Disable Fonts"
+msgstr "Isključivanje fontova"
+
+#: manager/FontManager.cpp:1128
+#, fuzzy, kde-format
+#| msgid "Enabling font(s)..."
+msgid "Enabling font(s)…"
+msgstr "Uključujem fontove..."
+
+#: manager/FontManager.cpp:1130
+#, fuzzy, kde-format
+#| msgid "Disabling font(s)..."
+msgid "Disabling font(s)…"
+msgstr "Isključujem fontove..."
+
+#: manager/GroupList.cpp:62
+#, kde-format
+msgid "All Fonts"
+msgstr "Svi fontovi"
+
+#: manager/GroupList.cpp:65
+#, kde-format
+msgid "Personal Fonts"
+msgstr "Lični fontovi"
+
+#: manager/GroupList.cpp:68
+#, kde-format
+msgid "System Fonts"
+msgstr "Sistemski fontovi"
+
+#: manager/GroupList.cpp:71
+#, kde-format
+msgid "Unclassified"
+msgstr "Nesvrstani"
+
+# >> @title:column
+#: manager/GroupList.cpp:353
+#, kde-format
+msgid "Group"
+msgstr "Grupa"
+
+#: manager/GroupList.cpp:538
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>Želite li zaista da uklonite grupu <b>%1</b>?</p><p><i>Biće uklonjena "
+"samo grupa, ne i fontovi u njoj.</i></p>"
+
+# >> @title:window
+#: manager/GroupList.cpp:542
+#, kde-format
+msgid "Remove Group"
+msgstr "Uklanjanje grupe"
+
+#: manager/GroupList.cpp:543 manager/GroupList.cpp:788
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
+
+#: manager/GroupList.cpp:543
+#, kde-format
+msgid "Remove group"
+msgstr "Ukloni grupu"
+
+#: manager/GroupList.cpp:589
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>Grupe fontova</h3><p>Ovaj spisak daje raspoložive grupe fontova na "
+"sistemu. Grupe se dijele na dva glavna tipa:</p><ul><li><b>Standardne</b> su "
+"one grupe koje koristi menadžer fontova.<ul>%1</ul></li><li><b>Posebne</b> "
+"su grupe koje ste sami stvorili. Porodicu fontova dodajete u grupu tako što "
+"je jednostavno prevučete sa spiska fontova na željenu grupu. Porodicu "
+"uklanjate iz određene grupe tako što je prevučete na grupu „svih fontova“.</"
+"li></ul>"
+
+#: manager/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Svi fontovi</i> sadrže sve fontove instalirane na sistemu.</"
+"li><li><i>Nesvrstani</i> su oni fontovi koji još uvijek nisu smješteni u "
+"neku „posebnu“ grupu.</li>"
+
+#: manager/GroupList.cpp:600
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Svi fontovi</i> sadrže sve fontove instalirane na sistemu - i "
+"sistemske i lične.</li><li><i>Sistemski</i> su oni fontovi koji su vidljivi "
+"širom sistema (tj. dostupni svim korisnicima).</li><li><i>Lični</i> sadrže "
+"vaše lične fontove.</li><li><i>Nesvrstani</i> sadrže fontove koji još uvijek "
+"nisu smješteni u neku „posebnu“ grupu.</li>"
+
+#: manager/GroupList.cpp:702
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>Grupa po imenu <b>%1</b> već postoji.</qt>"
+
+#: manager/GroupList.cpp:793
+#, fuzzy, kde-format
+#| msgid "Rename..."
+msgid "Rename…"
+msgstr "Preimenuj..."
+
+#: manager/GroupList.cpp:802
+#, fuzzy, kde-format
+#| msgid "Export..."
+msgid "Export…"
+msgstr "Izvezi..."
+
+#: manager/GroupList.cpp:896
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "Dodaj u „%1“."
+
+#: manager/GroupList.cpp:898
+#, kde-format
+msgid "Remove from current group."
+msgstr "Ukloni iz tekuće grupe."
+
+#: manager/GroupList.cpp:900
+#, kde-format
+msgid "Move to personal folder."
+msgstr "Premjesti u lični direktorij."
+
+#: manager/GroupList.cpp:902
+#, kde-format
+msgid "Move to system folder."
+msgstr "Premjesti u sistemski direktorij."
+
+#: manager/JobRunner.cpp:139
+#, kde-format
+msgid "Skip"
+msgstr "Preskoči"
+
+#: manager/JobRunner.cpp:142
+#, kde-format
+msgid "AutoSkip"
+msgstr "Automatski preskači"
+
+#: manager/JobRunner.cpp:187
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>Odustati?</h3><p>Želite li zaista da odustanite?</p>"
+
+#: manager/JobRunner.cpp:199
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>Gotovo</h3><p>Ako želite da vidite načinjene izmjene u programima koji "
+"trenutno rade, moraćete ponovo da ih pokrenete.</p>"
+
+#: manager/JobRunner.cpp:207
+#, kde-format
+msgid "Do not show this message again"
+msgstr "Ne prikazuj više ovu poruku"
+
+# >> @title:window
+#: manager/JobRunner.cpp:315
+#, kde-format
+msgid "Installing"
+msgstr "Instaliranje"
+
+# >> @title:window
+#: manager/JobRunner.cpp:318
+#, kde-format
+msgid "Uninstalling"
+msgstr "Deinstaliranje"
+
+# >> @title:window
+#: manager/JobRunner.cpp:321 manager/JobRunner.cpp:417
+#, kde-format
+msgid "Enabling"
+msgstr "Uključivanje"
+
+# >> @title:window
+#: manager/JobRunner.cpp:324 manager/JobRunner.cpp:421
+#, kde-format
+msgid "Moving"
+msgstr "Premiještanje"
+
+# >> @title:window
+#: manager/JobRunner.cpp:327
+#, kde-format
+msgid "Updating"
+msgstr "Ažuriranje"
+
+# >> @title:window
+#: manager/JobRunner.cpp:331
+#, kde-format
+msgid "Removing"
+msgstr "Uklanjanje"
+
+# >> @title:window
+#: manager/JobRunner.cpp:335
+#, kde-format
+msgid "Disabling"
+msgstr "Isključivanje"
+
+# >> @info:progress
+#: manager/JobRunner.cpp:372
+#, fuzzy, kde-format
+#| msgid "Updating font configuration. Please wait..."
+msgid "Updating font configuration. Please wait…"
+msgstr "Ažuriram postavu fontova. Sačekajte..."
+
+#: manager/JobRunner.cpp:444
+#, kde-format
+msgid "Unable to start backend."
+msgstr "Ne mogu da pokrenem pozadinu."
+
+#: manager/JobRunner.cpp:453
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "Pozadina se srušila, ali je ponovo pokrenuta. Pokušajte opet."
+
+#: manager/JobRunner.cpp:618 manager/JobRunner.cpp:625
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>Greška</h3>"
+
+#: manager/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "<html>Ne mogu da preuzmem <filename>%1</filename></html>"
+
+#: manager/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr ""
+"<html>Sistemska pozadina se srušila. Pokušajte opet.<br/><filename>%1</"
+"filename></html>"
+
+#: manager/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr ""
+"<html><filename>%1</filename> je bitmapski font, a oni su isključeni na "
+"sistemu.</html>."
+
+#: manager/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+"<html><filename>%1</filename> sadrži font <b>%2</b>, koji je već instaliran "
+"na sistemu.</html>|/|<html><filename>%1</filename> sadrži font <b>"
+"$[glavorepi nom %2]</b>, koji je već instaliran na sistemu.</html>."
+
+#: manager/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<html><filename>%1</filename> nije font.</html>."
+
+#: manager/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr ""
+"<html>Ne mogu da uklonim sve datoteke vezane za <filename>%1</filename>.</"
+"html>"
+
+#: manager/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr ""
+"<html>Ne mogu da pokrenem sistemski demon.<br/><filename>%1</filename></html>"
+
+#: manager/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<html><filename>%1</filename> ne postoji.</html>."
+
+#: manager/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "<html>Dozvola odbijena.<br/><filename>%1</filename></html>"
+
+#: manager/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "<html>Nepodržana radnja.<br/><filename>%1</filename></html>"
+
+#: manager/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "<html>Neuspjela autentifikacija.<br/><filename>%1</filename></html>"
+
+#: manager/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "Nočekivana greška prilikom obrade: <i>%1</i>"
+
+# >> @title:window
+#: manager/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "Štampanje uzoraka fonta"
+
+#: manager/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "Veličina za štampanje fonta:"
+
+# >> @item:inlistbox Select size to print font
+#: manager/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "Vodopadski"
+
+# >> @item:inlistbox Select size to print font
+#: manager/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12tač"
+
+# >> @item:inlistbox Select size to print font
+#: manager/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18tač"
+
+# >> @item:inlistbox Select size to print font
+#: manager/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24tač"
+
+# >> @item:inlistbox Select size to print font
+#: manager/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36tač"
+
+# >> @item:inlistbox Select size to print font
+#: manager/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48tač"
 
 # >> @item Unicode character category
 #: viewpart/CharTip.cpp:44
@@ -2329,81 +2444,6 @@ msgstr "Ji"
 
 #~ msgid "Simple font installer"
 #~ msgstr "Jednostavan instalater fontova"
-
-#~ msgid "(C) Craig Drummond, 2007"
-#~ msgstr "© 2007, Krejg Dramond"
-
-#, fuzzy
-#~| msgid "Makes the dialog transient for an X app specified by winid"
-#~ msgid "Makes the dialog transient for a window specified by windowHandle"
-#~ msgstr "Prolazni dijalog za X program prema ID‑u prozora"
-
-#~ msgid "URL to install"
-#~ msgstr "URL gdje treba instalirati"
-
-# >> @title:window
-#~ msgid "Print"
-#~ msgstr "Štampanje"
-
-#~ msgid "Font Printer"
-#~ msgstr "Štampač fontova"
-
-#~ msgid "Simple font printer"
-#~ msgstr "Jednostavan štampač fontova"
-
-#~ msgid "Makes the dialog transient for an X app specified by winid"
-#~ msgstr "Prolazni dijalog za X program prema ID‑u prozora"
-
-#~ msgid "Size index to print fonts"
-#~ msgstr "Indeks veličine za štampanje fontova"
-
-#~ msgid ""
-#~ "Font to print, specified as \"Family,Style\" where Style is a 24-bit "
-#~ "decimal number composed as: <weight><width><slant>"
-#~ msgstr ""
-#~ "Font za štampanje, zadat kao „porodica,stil“, gdje je stil 24‑bitni "
-#~ "dekadni broj sastavljen kao: <placeholder>debljina</"
-#~ "placeholder><placeholder>širina</placeholder><placeholder>nagib</"
-#~ "placeholder>"
-
-#~ msgid "File containing list of fonts to print"
-#~ msgstr "Datoteka sa spiskom fontova za štampanje"
-
-#~ msgid "Remove file containing list of fonts to print"
-#~ msgstr "Ukloni datoteku sa spiskom fontova za štampanje"
-
-# >! Needs plural call, regardless whether used for n=1 or not.
-#, fuzzy
-#~| msgid "Open font in font viewer?"
-#~| msgid_plural "Open all %1 fonts in font viewer?"
-#~ msgid "Open an existing font file"
-#~ msgstr "Otvoriti %1 font u prikazivaču?"
-
-# >> @title:window
-#, fuzzy
-#~| msgid "Print Font Samples"
-#~ msgid "Print font preview"
-#~ msgstr "Štampanje uzoraka fonta"
-
-#~ msgid "Select Font to View"
-#~ msgstr "Izaberite font za prikaz"
-
-#~ msgid "URL to open"
-#~ msgstr "URL za otvaranje"
-
-#~ msgid "Font Viewer"
-#~ msgstr "Prikazivač fontova"
-
-#~ msgid "Simple font viewer"
-#~ msgstr "Jednostavan prikazivač fontova"
-
-#~ msgid "(C) Craig Drummond, 2004-2007"
-#~ msgstr "© 2004-2007, Krejg Dramond"
-
-#, fuzzy
-#~| msgid "KDE Font Manager"
-#~ msgid "Font Management"
-#~ msgstr "KDE Font Menadžer"
 
 #~ msgid "(C) Craig Drummond, 2000 - 2009"
 #~ msgstr "© Krejg Dramond, 2004–2009"

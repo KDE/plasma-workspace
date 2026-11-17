@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-10 00:48+0000\n"
-"PO-Revision-Date: 2026-11-15 20:10+0300\n"
+"PO-Revision-Date: 2026-11-16 19:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -217,7 +217,7 @@ msgstr "Koyu Global Tema Seç"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
-msgstr "Temayı önizle"
+msgstr "Temayı ön izle"
 
 #: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, kde-format
@@ -257,7 +257,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr "Önizleme görseli ekle…"
+msgstr "Ön izleme görseli ekle…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
@@ -295,7 +295,7 @@ msgstr "Bu adda veya aynı kimliğe sahip bir global tema hâlihazırda var."
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr "Önizleme Görseli Seç"
+msgstr "Ön İzleme Görseli Seç"
 
 #: ui/main.qml:22
 #, kde-format

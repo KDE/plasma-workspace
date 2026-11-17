@@ -1,21 +1,21 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2025-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-14 14:49+0000\n"
-"PO-Revision-Date: 2025-11-02 22:55+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2026-11-16 22:21+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -34,7 +34,7 @@ msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
 "[based on]'"
 msgid "Determine sunrise and sunset times:"
-msgstr "Günbatımı ve gündoğumu zamanlarını algıla:"
+msgstr "Gün doğumu ve gün batımı zamanlarını algıla:"
 
 #: ui/main.qml:68
 #, kde-format
@@ -54,13 +54,13 @@ msgstr "Özel zamanlar kullanarak"
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise:"
-msgstr "Gündoğumu:"
+msgstr "Gün doğumu:"
 
 #: ui/main.qml:101
 #, kde-format
 msgctxt "@label"
 msgid "Sunset:"
-msgstr "Günbatımı:"
+msgstr "Gün batımı:"
 
 #: ui/main.qml:117
 #, kde-format
@@ -133,25 +133,25 @@ msgstr "Boylam:"
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr "Gündoğumu %1 saatinde başlar ve %2 saatinde biter"
+msgstr "Gün doğumu %1 saatinde başlar ve %2 saatinde biter"
 
 #: ui/SunPath.qml:57
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise"
-msgstr "Gündoğumu"
+msgstr "Gün doğumu"
 
 #: ui/SunPath.qml:77
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
-msgstr "Günbatımı %1 saatinde başlar ve %2 saatinde biter"
+msgstr "Gün batımı %1 saatinde başlar ve %2 saatinde biter"
 
 #: ui/SunPath.qml:82
 #, kde-format
 msgctxt "@label"
 msgid "Sunset"
-msgstr "Günbatımı"
+msgstr "Gün batımı"
 
 #: ui/SunPath.qml:107
 #, kde-format
@@ -160,7 +160,7 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "day. Choose custom times instead."
 msgstr ""
-"Kutup gündüzü dolayısıyla, konumunuzda gündoğumu ve günbatımı zamanları "
+"Kutup gündüzü dolayısıyla, konumunuzda gün doğumu ve gün batımı zamanları "
 "algılanamıyor. Lütfen kendiniz zamanlar seçin."
 
 #: ui/SunPath.qml:109
@@ -170,7 +170,7 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "night. Choose custom times instead."
 msgstr ""
-"Kutup gecesi dolayısıyla, konumunuzda gündoğumu ve günbatımı zamanları "
+"Kutup gecesi dolayısıyla, konumunuzda gün doğumu ve gün batımı zamanları "
 "algılanamıyor. Lütfen kendiniz zamanlar seçin."
 
 #: ui/SunPath.qml:111
@@ -180,7 +180,7 @@ msgid ""
 "Sunrise and sunset times cannot be reliably determined at your location. "
 "Choose custom times instead."
 msgstr ""
-"Gündoğumu ve günbatımı zamanları, şu anki konumunuzda doğru olarak "
+"Gün doğumu ve gün batımı zamanları, şu anki konumunuzda doğru olarak "
 "algılanamıyor. Lütfen kendiniz zamanlar seçin."
 
 #: ui/TimeField.qml:31

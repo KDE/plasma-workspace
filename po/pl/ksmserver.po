@@ -1,6 +1,6 @@
 # translation of ksmserver.po to Polish
 # translation of ksmserver.po to
-# Version: $Revision: 1750425 $
+# Version: $Revision$
 # SPDX-FileCopyrightText: 2012, 2014, 2015, 2018, 2020, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2004, 2005, 2008, 2009.

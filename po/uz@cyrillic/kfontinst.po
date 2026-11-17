@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-08 03:00+0000\n"
+"POT-Creation-Date: 2026-11-17 01:10+0000\n"
 "PO-Revision-Date: 2006-12-17 12:18+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -27,940 +27,134 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kmashrab@uni-bremen.de"
 
-#: kcmfontinst/DuplicatesDialog.cpp:49
-#, fuzzy, kde-format
-msgid "Duplicate Fonts"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/DuplicatesDialog.cpp:79
-#, fuzzy, kde-format
-msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/DuplicatesDialog.cpp:98
-#, kde-format
-msgid "No duplicate fonts found."
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:106
-#, kde-format
-msgid "Delete Marked Files"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:108
-#, fuzzy, kde-format
-msgid "%1 duplicate font found."
-msgid_plural "%1 duplicate fonts found."
-msgstr[0] "Шрифтни ўчириш"
-
-#: kcmfontinst/DuplicatesDialog.cpp:189
-#, kde-format
-msgid ""
-"Are you sure you wish to delete:\n"
-"%1"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:195
-#, kde-format
-msgid "Are you sure you wish to delete:"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:223
-#, kde-format
-msgid "Cancel font scan?"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:224
-#, kde-format
-msgid "Canceling…"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:384
-#, fuzzy, kde-format
-msgid "Font/File"
-msgstr "Шрифтнинг ўлчами:"
-
-#: kcmfontinst/DuplicatesDialog.cpp:386
-#, kde-format
-msgid "Size"
-msgstr "Ўлчами"
-
-#: kcmfontinst/DuplicatesDialog.cpp:387
-#, fuzzy, kde-format
-msgid "Date"
-msgstr "Янгилаш"
-
-#: kcmfontinst/DuplicatesDialog.cpp:388
-#, kde-format
-msgid "Links To"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
-#, fuzzy, kde-format
-msgid "Open in Font Viewer"
-msgstr "Шрифт кўрувчи"
-
-#: kcmfontinst/DuplicatesDialog.cpp:403
-#, kde-format
-msgid "Properties"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:405
-#, kde-format
-msgid "Unmark for Deletion"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:406
-#, kde-format
-msgid "Mark for Deletion"
-msgstr ""
-
-#: kcmfontinst/DuplicatesDialog.cpp:504
-#, fuzzy, kde-format
-msgid "Open font in font viewer?"
-msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] "Шрифт кўрувчи"
-
-#: kcmfontinst/FontFilter.cpp:106
-#, kde-format
-msgid "Family"
-msgstr "Оиласи"
-
-#: kcmfontinst/FontFilter.cpp:108
-#, kde-format
-msgid "Style"
-msgstr ""
-
-#: kcmfontinst/FontFilter.cpp:110
-#, kde-format
-msgid "Foundry"
-msgstr "Ишлаб чиқарувчи"
-
-#: kcmfontinst/FontFilter.cpp:112
-#, kde-format
-msgid "FontConfig Match"
-msgstr ""
-
-#: kcmfontinst/FontFilter.cpp:114
-#, fuzzy, kde-format
-msgid "File Type"
-msgstr "Кўриб чиқиш матни"
-
-#: kcmfontinst/FontFilter.cpp:116
-#, fuzzy, kde-format
-#| msgid "Full Name"
-msgid "File Name"
-msgstr "Тўлиқ номи"
-
-#: kcmfontinst/FontFilter.cpp:118
-#, kde-format
-msgid "File Location"
-msgstr ""
-
-#: kcmfontinst/FontFilter.cpp:120
-#, kde-format
-msgid "Writing System"
-msgstr ""
-
-#: kcmfontinst/FontFilter.cpp:131
-#, kde-format
-msgid "Set Criteria"
-msgstr ""
-
-#: kcmfontinst/FontFilter.cpp:190
-#, kde-format
-msgid "Symbol/Other"
-msgstr ""
-
-#: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
-#, kde-format
-msgid "Filter by %1…"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:548
-#, fuzzy, kde-format
-msgid "Font"
-msgstr "Битта шрифт"
-
-#: kcmfontinst/FontList.cpp:550
-#, kde-format
-msgid "Status"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:564
-#, kde-format
-msgid ""
-"This column shows the status of the font family, and of the individual font "
-"styles."
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:671
-#, kde-format
-msgid ""
-"<p>This list shows your installed fonts. The fonts are grouped by family, "
-"and the number in square brackets represents the number of styles in which "
-"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
-"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
-#, kde-format
-msgid "…plus %1 more"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:1001
-#, kde-format
-msgid "%1 [%2]"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:1300
-#, fuzzy, kde-format
-msgid "Delete"
-msgstr "Шрифтни ўчириш"
-
-#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Enable"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
-#, kde-format
-msgid "Disable"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
-#, fuzzy, kde-format
-#| msgid "Print..."
-msgid "Print…"
-msgstr "Босиб чиқариш"
-
-#: kcmfontinst/FontList.cpp:1312
-#, kde-format
-msgid "Reload"
-msgstr ""
-
-#: kcmfontinst/FontList.cpp:1690
-#, kde-format
-msgid "Open all %1 fonts in font viewer?"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:62
-#, kde-format
-msgid "All Fonts"
-msgstr "Ҳамма шрифтлар"
-
-#: kcmfontinst/GroupList.cpp:65
-#, fuzzy, kde-format
-msgid "Personal Fonts"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/GroupList.cpp:68
-#, fuzzy, kde-format
-msgid "System Fonts"
-msgstr "Танланган шрифтлар"
-
-#: kcmfontinst/GroupList.cpp:71
-#, kde-format
-msgid "Unclassified"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:353
-#, kde-format
-msgid "Group"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:538
-#, kde-format
-msgid ""
-"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
-"the group, and not the actual fonts.</i></p>"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:542
-#, kde-format
-msgid "Remove Group"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
-#, kde-format
-msgid "Remove"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:543
-#, kde-format
-msgid "Remove group"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:589
-#, kde-format
-msgid ""
-"<h3>Font Groups</h3><p>This list displays the font groups available on your "
-"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
-"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
-"are groups created by you. To add a font family to one of these groups "
-"simply drag it from the list of fonts, and drop onto the desired group. To "
-"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
-"li></ul></p>"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:597
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:600
-#, kde-format
-msgid ""
-"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
-"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
-"are installed system-wide (i.e. available to all users).</"
-"li><li><i>Personal</i> contains your personal fonts.</"
-"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
-"within a \"Custom\" group.</li>"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:702
-#, kde-format
-msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:793
-#, kde-format
-msgid "Rename…"
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:802
-#, fuzzy, kde-format
-#| msgid "Print..."
-msgid "Export…"
-msgstr "Босиб чиқариш"
-
-#: kcmfontinst/GroupList.cpp:896
-#, kde-format
-msgid "Add to \"%1\"."
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:898
-#, kde-format
-msgid "Remove from current group."
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:900
-#, kde-format
-msgid "Move to personal folder."
-msgstr ""
-
-#: kcmfontinst/GroupList.cpp:902
-#, kde-format
-msgid "Move to system folder."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:139
-#, kde-format
-msgid "Skip"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:142
-#, kde-format
-msgid "AutoSkip"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:187
-#, kde-format
-msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:199
-#, kde-format
-msgid ""
-"<h3>Finished</h3><p>Please note that any open applications will need to be "
-"restarted in order for any changes to be noticed.</p>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:207
-#, kde-format
-msgid "Do not show this message again"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:315
-#, fuzzy, kde-format
-msgid "Installing"
-msgstr "Ўрнатиш"
-
-#: kcmfontinst/JobRunner.cpp:318
-#, fuzzy, kde-format
-msgid "Uninstalling"
-msgstr "Ўрнатиш"
-
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
-#, kde-format
-msgid "Enabling"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
-#, kde-format
-msgid "Moving"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:327
-#, kde-format
-msgid "Updating"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:331
-#, kde-format
-msgid "Removing"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:335
-#, kde-format
-msgid "Disabling"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:372
-#, kde-format
-msgid "Updating font configuration. Please wait…"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:444
-#, kde-format
-msgid "Unable to start backend."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:453
-#, kde-format
-msgid "Backend died, but has been restarted. Please try again."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
-#, kde-format
-msgid "<h3>Error</h3>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:693
-#, kde-format
-msgid "Failed to download <i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:695
-#, kde-format
-msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:697
-#, kde-format
-msgid ""
-"<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:699
-#, kde-format
-msgid ""
-"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
-"system."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:701
-#, kde-format
-msgid "<i>%1</i> is not a font."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:703
-#, kde-format
-msgid "Could not remove all files associated with <i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:705
-#, kde-format
-msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:719
-#, kde-format
-msgid "<i>%1</i> already exists."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:711
-#, kde-format
-msgid "<i>%1</i> does not exist."
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:713
-#, kde-format
-msgid "Permission denied.<br><i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:715
-#, kde-format
-msgid "Unsupported action.<br><i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:717
-#, kde-format
-msgid "Authentication failed.<br><i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/JobRunner.cpp:719
-#, kde-format
-msgid "Unexpected error while processing: <i>%1</i>"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:211
-#, fuzzy, kde-format
-#| msgid "Delete Fonts"
-msgid "Create New Group…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:214
-#, kde-format
-msgid "Remove Group…"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:217
-#, fuzzy, kde-format
-msgid "Enable Fonts in Group…"
-msgstr "Битта шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:220
-#, fuzzy, kde-format
-msgid "Disable Fonts in Group…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:241
-#, kde-format
-msgid "This displays a preview of the selected font."
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, fuzzy, kde-format
-msgid "Find Duplicates…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:258
-#, fuzzy, kde-format
-msgid "Scan for Duplicate Fonts…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, fuzzy, kde-format
-#| msgid "Install..."
-msgid "Install from File…"
-msgstr "Ўрнатиш"
-
-#: kcmfontinst/KCmFontInst.cpp:260
-#, kde-format
-msgid "Install fonts from a local file"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:261
-#, fuzzy, kde-format
-#| msgid "Delete Fonts"
-msgid "Get New Fonts…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:262
-#, fuzzy, kde-format
-msgid "Download new fonts"
-msgstr "Битта шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:264
-#, fuzzy, kde-format
-msgid "Delete Selected Fonts…"
-msgstr "Танланган шрифтлар"
-
-#: kcmfontinst/KCmFontInst.cpp:329
-#, fuzzy, kde-format
-msgid "Change Preview Text…"
-msgstr "Матнни ўзгартириш"
-
-#: kcmfontinst/KCmFontInst.cpp:428
-#, kde-format
-msgid "Add Fonts"
-msgstr "Шрифтларни қўшиш"
-
-#: kcmfontinst/KCmFontInst.cpp:552
-#, kde-format
-msgid "Failed to save list of fonts to print."
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:573
-#, kde-format
-msgid "Failed to start font printer."
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:580
-#, kde-format
-msgid ""
-"There are no printable fonts.\n"
-"You can only print non-bitmap and enabled fonts."
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:582
-#, kde-format
-msgid "Cannot Print"
-msgstr "Босиб чиқиб бўлмади"
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "You did not select anything to delete."
-msgstr "Ўчириш учун ҳеч нарса танланмаган."
-
-#: kcmfontinst/KCmFontInst.cpp:597
-#, kde-format
-msgid "Nothing to Delete"
-msgstr "Ўчириш учун ҳеч нарса йўқ"
-
-#: kcmfontinst/KCmFontInst.cpp:612
-#, fuzzy, kde-format
-msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
-msgstr ""
-"<qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt>"
-
-#: kcmfontinst/KCmFontInst.cpp:615
-#, kde-format
-msgid "Delete Font"
-msgstr "Шрифтни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:622
-#, fuzzy, kde-format
-msgid "Do you really want to delete this font?"
-msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] "Ростдан бу шрифтни ўчирмоқчимисиз?"
-
-#: kcmfontinst/KCmFontInst.cpp:624
-#, kde-format
-msgid "Delete Fonts"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:629
-#, fuzzy, kde-format
-msgid "Deleting font(s)…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, fuzzy, kde-format
-#| msgid "You did not select anything to delete."
-msgid "You did not select anything to move."
-msgstr "Ўчириш учун ҳеч нарса танланмаган."
-
-#: kcmfontinst/KCmFontInst.cpp:644
-#, fuzzy, kde-format
-#| msgid "Nothing to Delete"
-msgid "Nothing to Move"
-msgstr "Ўчириш учун ҳеч нарса йўқ"
-
-#: kcmfontinst/KCmFontInst.cpp:654
-#, fuzzy, kde-format
-msgid ""
-"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
-"%3</i>?</p>"
-msgstr ""
-"<qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt>"
-
-#: kcmfontinst/KCmFontInst.cpp:659
-#, fuzzy, kde-format
-msgid "Move Font"
-msgstr "Битта шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
-#, kde-format
-msgid "Move"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:665
-#, fuzzy, kde-format
-msgid ""
-"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
-msgid_plural ""
-"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
-msgstr[0] ""
-"<qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt>"
-
-#: kcmfontinst/KCmFontInst.cpp:671
-#, fuzzy, kde-format
-msgid "Move Fonts"
-msgstr "Шрифтларни қўшиш"
-
-#: kcmfontinst/KCmFontInst.cpp:676
-#, fuzzy, kde-format
-msgid "Moving font(s)…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:690
-#, kde-format
-msgid "Export Group"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:716
-#, kde-format
-msgid "No files?"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:719
-#, fuzzy, kde-format
-#| msgid "Simple font viewer"
-msgid "Failed to open %1 for writing"
-msgstr "Оддий шрифт кўрувчи"
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Create New Group"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "Name of new group:"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:739
-#, kde-format
-msgid "New Group"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, fuzzy, kde-format
-msgid "Preview Text"
-msgstr "Кўриб чиқиш матни"
-
-#: kcmfontinst/KCmFontInst.cpp:767
-#, fuzzy, kde-format
-#| msgid "Please enter new string:"
-msgid "Please enter new text:"
-msgstr "Янги матнни киритинг:"
-
-#: kcmfontinst/KCmFontInst.cpp:819
-#, kde-format
-msgid "Scanning font list…"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:878
-#, kde-format
-msgid "No fonts"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:883
-#, fuzzy, kde-format
-msgid "1 Font"
-msgid_plural "%1 Fonts"
-msgstr[0] "Битта шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:892
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
-"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
-"tr></table>"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:902
-#, kde-format
-msgid ""
-"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
-"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
-"td><td>%3</td></tr></table>"
-msgstr ""
-
-#: kcmfontinst/KCmFontInst.cpp:946
+#: apps/kfontinst/Installer.cpp:38 manager/FontManager.cpp:935
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:949
+#: apps/kfontinst/Installer.cpp:39 manager/FontManager.cpp:938
 #, kde-format
 msgid "Where to Install"
 msgstr "Қаерга ўрнатиш"
 
-#: kcmfontinst/KCmFontInst.cpp:979
+#: apps/kfontinst/Installer.cpp:115
+#, fuzzy, kde-format
+#| msgid "KDE Font Installer"
+msgctxt "@title application name"
+msgid "Font Management"
+msgstr "KDE шрифт ўрнатгич"
+
+#: apps/kfontinst/Installer.cpp:117
 #, kde-format
-msgid "Looking for any associated files…"
+msgctxt "@info application description"
+msgid "Install, manage, and preview fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:983
+#: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
+#, fuzzy, kde-format
+#| msgid "(c) Craig Drummond, 2004"
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) 2004, Крег Друммонд (Craig Drummond)"
+
+#: apps/kfontinst/Installer.cpp:128
 #, kde-format
-msgid "Scanning Files…"
+msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:984
+#: apps/kfontinst/Installer.cpp:131
+#, fuzzy, kde-format
+#| msgid "Where to Install"
+msgid "URL to install"
+msgstr "Қаерга ўрнатиш"
+
+#: apps/kfontprint/Printer.cpp:239
+#, fuzzy, kde-format
+#| msgid "Print..."
+msgid "Print"
+msgstr "Босиб чиқариш"
+
+#: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
 #, kde-format
-msgid "Looking for additional files to install…"
+msgid "Canceling…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:999
+#: apps/kfontprint/Printer.cpp:323
+#, fuzzy, kde-format
+msgid "Font Printer"
+msgstr "Шрифт кўрувчи"
+
+#: apps/kfontprint/Printer.cpp:325
+#, fuzzy, kde-format
+#| msgid "Simple font viewer"
+msgid "Simple font printer"
+msgstr "Оддий шрифт кўрувчи"
+
+#: apps/kfontprint/Printer.cpp:333
 #, kde-format
-msgid "Looking for files associated with %1"
+msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1027
-#, fuzzy, kde-format
-msgid "Installing font(s)…"
-msgstr "Ўрнатиш"
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, fuzzy, kde-format
-msgid "You did not select anything to enable."
-msgstr "Ўчириш учун ҳеч нарса танланмаган."
-
-#: kcmfontinst/KCmFontInst.cpp:1092
-#, fuzzy, kde-format
-msgid "You did not select anything to disable."
-msgstr "Ўчириш учун ҳеч нарса танланмаган."
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, fuzzy, kde-format
-msgid "Nothing to Enable"
-msgstr "Ўчириш учун ҳеч нарса йўқ"
-
-#: kcmfontinst/KCmFontInst.cpp:1093
-#, fuzzy, kde-format
-msgid "Nothing to Disable"
-msgstr "Ўчириш учун ҳеч нарса йўқ"
-
-#: kcmfontinst/KCmFontInst.cpp:1107
-#, fuzzy, kde-format
-msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr ""
-"<qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt>"
-
-#: kcmfontinst/KCmFontInst.cpp:1108
-#, fuzzy, kde-format
-msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr ""
-"<qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt>"
-
-#: kcmfontinst/KCmFontInst.cpp:1109
+#: apps/kfontprint/Printer.cpp:335
 #, kde-format
-msgid ""
-"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+msgid "Size index to print fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: apps/kfontprint/Printer.cpp:339
 #, kde-format
 msgid ""
-"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
-"'<b>%2</b>'?</p>"
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
-#, fuzzy, kde-format
-msgid "Enable Font"
-msgstr "Битта шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
-#, fuzzy, kde-format
-msgid "Disable Font"
-msgstr "Шрифтни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:1119
-#, fuzzy, kde-format
-msgid "Do you really want to enable this font?"
-msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] "Ростдан бу шрифтни ўчирмоқчимисиз?"
-
-#: kcmfontinst/KCmFontInst.cpp:1120
-#, fuzzy, kde-format
-msgid "Do you really want to disable this font?"
-msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] "Ростдан бу шрифтни ўчирмоқчимисиз?"
-
-#: kcmfontinst/KCmFontInst.cpp:1122
-#, fuzzy, kde-format
-msgid ""
-"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
-"</p>"
-msgid_plural ""
-"<p>Do you really want to enable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt><qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt>"
-
-#: kcmfontinst/KCmFontInst.cpp:1126
-#, fuzzy, kde-format
-msgid ""
-"<p>Do you really want to disable this font contained within group '<b>%2</"
-"b>'?</p>"
-msgid_plural ""
-"<p>Do you really want to disable these %1 fonts contained within group '<b>"
-"%2</b>'?</p>"
-msgstr[0] ""
-"<qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt><qt>\"<b>%1</b>\"ни\n"
-"ростдан ўчирмоқчимисиз?</qt>"
-
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
-#, fuzzy, kde-format
-msgid "Enable Fonts"
-msgstr "Битта шрифт"
-
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
-#, fuzzy, kde-format
-msgid "Disable Fonts"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/KCmFontInst.cpp:1139
-#, fuzzy, kde-format
-msgid "Enabling font(s)…"
-msgstr "Ўрнатиш"
-
-#: kcmfontinst/KCmFontInst.cpp:1141
-#, fuzzy, kde-format
-msgid "Disabling font(s)…"
-msgstr "Шрифтларни ўчириш"
-
-#: kcmfontinst/PrintDialog.cpp:21
+#: apps/kfontprint/Printer.cpp:342
 #, kde-format
-msgid "Print Font Samples"
+msgid "File containing list of fonts to print"
 msgstr ""
 
-#: kcmfontinst/PrintDialog.cpp:37
+#: apps/kfontprint/Printer.cpp:344
 #, kde-format
-msgid "Select size to print font:"
+msgid "Remove file containing list of fonts to print"
 msgstr ""
 
-#: kcmfontinst/PrintDialog.cpp:41
-#, kde-format
-msgid "Waterfall"
-msgstr ""
+#: apps/kfontview/Viewer.cpp:50
+#, fuzzy, kde-format
+msgid "Open an existing font file"
+msgstr "Шрифт кўрувчи"
 
-#: kcmfontinst/PrintDialog.cpp:42
-#, kde-format
-msgid "12pt"
-msgstr ""
+#: apps/kfontview/Viewer.cpp:51
+#, fuzzy, kde-format
+#| msgid "Simple font viewer"
+msgid "Print font preview"
+msgstr "Оддий шрифт кўрувчи"
 
-#: kcmfontinst/PrintDialog.cpp:43
+#: apps/kfontview/Viewer.cpp:68
 #, kde-format
-msgid "18pt"
-msgstr ""
+msgid "Select Font to View"
+msgstr "Кўриб чиқиш учун шрифтни танланг"
 
-#: kcmfontinst/PrintDialog.cpp:44
-#, kde-format
-msgid "24pt"
-msgstr ""
+#: apps/kfontview/Viewer.cpp:108
+#, fuzzy, kde-format
+#| msgid "Where to Install"
+msgid "URL to open"
+msgstr "Қаерга ўрнатиш"
 
-#: kcmfontinst/PrintDialog.cpp:45
+#: apps/kfontview/Viewer.cpp:150
 #, kde-format
-msgid "36pt"
-msgstr ""
+msgid "Font Viewer"
+msgstr "Шрифт кўрувчи"
 
-#: kcmfontinst/PrintDialog.cpp:46
+#: apps/kfontview/Viewer.cpp:152
 #, kde-format
-msgid "48pt"
-msgstr ""
+msgid "Simple font viewer"
+msgstr "Оддий шрифт кўрувчи"
+
+#: apps/kfontview/Viewer.cpp:154
+#, fuzzy, kde-format
+#| msgid "(c) Craig Drummond, 2004"
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) 2004, Крег Друммонд (Craig Drummond)"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
@@ -1039,6 +233,11 @@ msgstr "%1:%2 ўрнатиб бўлмади!"
 #: kio/KioFonts.cpp:716
 #, kde-format
 msgid "Could not remove all files associated with %1"
+msgstr ""
+
+#: kio/KioFonts.cpp:719 manager/JobRunner.cpp:708
+#, kde-format
+msgid "<i>%1</i> already exists."
 msgstr ""
 
 #: lib/Fc.cpp:407 lib/KfiConstants.h:108
@@ -1226,6 +425,919 @@ msgstr ""
 
 #: lib/KfiConstants.h:106
 msgid "Proportional"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:49
+#, fuzzy, kde-format
+msgid "Duplicate Fonts"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/DuplicatesDialog.cpp:79
+#, fuzzy, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/DuplicatesDialog.cpp:98
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "Delete Marked Files"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:108
+#, fuzzy, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "Шрифтни ўчириш"
+
+#: manager/DuplicatesDialog.cpp:189
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:195
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:223
+#, kde-format
+msgid "Cancel font scan?"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:384
+#, fuzzy, kde-format
+msgid "Font/File"
+msgstr "Шрифтнинг ўлчами:"
+
+#: manager/DuplicatesDialog.cpp:386
+#, kde-format
+msgid "Size"
+msgstr "Ўлчами"
+
+#: manager/DuplicatesDialog.cpp:387
+#, fuzzy, kde-format
+msgid "Date"
+msgstr "Янгилаш"
+
+#: manager/DuplicatesDialog.cpp:388
+#, kde-format
+msgid "Links To"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:401 manager/FontList.cpp:1310
+#, fuzzy, kde-format
+msgid "Open in Font Viewer"
+msgstr "Шрифт кўрувчи"
+
+#: manager/DuplicatesDialog.cpp:403
+#, kde-format
+msgid "Properties"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:405
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:406
+#, kde-format
+msgid "Mark for Deletion"
+msgstr ""
+
+#: manager/DuplicatesDialog.cpp:504
+#, fuzzy, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Шрифт кўрувчи"
+
+#: manager/FontFilter.cpp:106
+#, kde-format
+msgid "Family"
+msgstr "Оиласи"
+
+#: manager/FontFilter.cpp:108
+#, kde-format
+msgid "Style"
+msgstr ""
+
+#: manager/FontFilter.cpp:110
+#, kde-format
+msgid "Foundry"
+msgstr "Ишлаб чиқарувчи"
+
+#: manager/FontFilter.cpp:112
+#, kde-format
+msgid "FontConfig Match"
+msgstr ""
+
+#: manager/FontFilter.cpp:114
+#, fuzzy, kde-format
+msgid "File Type"
+msgstr "Кўриб чиқиш матни"
+
+#: manager/FontFilter.cpp:116
+#, fuzzy, kde-format
+#| msgid "Full Name"
+msgid "File Name"
+msgstr "Тўлиқ номи"
+
+#: manager/FontFilter.cpp:118
+#, kde-format
+msgid "File Location"
+msgstr ""
+
+#: manager/FontFilter.cpp:120
+#, kde-format
+msgid "Writing System"
+msgstr ""
+
+#: manager/FontFilter.cpp:131
+#, kde-format
+msgid "Set Criteria"
+msgstr ""
+
+#: manager/FontFilter.cpp:190
+#, kde-format
+msgid "Symbol/Other"
+msgstr ""
+
+#: manager/FontFilter.cpp:268 manager/FontFilter.cpp:336
+#, kde-format
+msgid "Filter by %1…"
+msgstr ""
+
+#: manager/FontList.cpp:548
+#, fuzzy, kde-format
+msgid "Font"
+msgstr "Битта шрифт"
+
+#: manager/FontList.cpp:550
+#, kde-format
+msgid "Status"
+msgstr ""
+
+#: manager/FontList.cpp:564
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr ""
+
+#: manager/FontList.cpp:671
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+
+#: manager/FontList.cpp:950 manager/FontList.cpp:974
+#, kde-format
+msgid "…plus %1 more"
+msgstr ""
+
+#: manager/FontList.cpp:1001
+#, kde-format
+msgid "%1 [%2]"
+msgstr ""
+
+#: manager/FontList.cpp:1300
+#, fuzzy, kde-format
+msgid "Delete"
+msgstr "Шрифтни ўчириш"
+
+#: manager/FontList.cpp:1302 manager/FontManager.cpp:1101
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:790
+#, kde-format
+msgid "Enable"
+msgstr ""
+
+#: manager/FontList.cpp:1303 manager/FontManager.cpp:1102
+#: manager/FontManager.cpp:1121 manager/GroupList.cpp:791
+#, kde-format
+msgid "Disable"
+msgstr ""
+
+#: manager/FontList.cpp:1308 manager/GroupList.cpp:797
+#, fuzzy, kde-format
+#| msgid "Print..."
+msgid "Print…"
+msgstr "Босиб чиқариш"
+
+#: manager/FontList.cpp:1312
+#, kde-format
+msgid "Reload"
+msgstr ""
+
+#: manager/FontList.cpp:1690
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr ""
+
+#: manager/FontManager.cpp:196
+#, fuzzy, kde-format
+#| msgid "Delete Fonts"
+msgid "Create New Group…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:199
+#, kde-format
+msgid "Remove Group…"
+msgstr ""
+
+#: manager/FontManager.cpp:202
+#, fuzzy, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "Битта шрифт"
+
+#: manager/FontManager.cpp:205
+#, fuzzy, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:226
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr ""
+
+#: manager/FontManager.cpp:243
+#, fuzzy, kde-format
+msgid "Find Duplicates…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:243
+#, fuzzy, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:245
+#, fuzzy, kde-format
+#| msgid "Install..."
+msgid "Install from File…"
+msgstr "Ўрнатиш"
+
+#: manager/FontManager.cpp:245
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr ""
+
+#: manager/FontManager.cpp:246
+#, fuzzy, kde-format
+#| msgid "Delete Fonts"
+msgid "Get New Fonts…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:247
+#, fuzzy, kde-format
+msgid "Download new fonts"
+msgstr "Битта шрифт"
+
+#: manager/FontManager.cpp:249
+#, fuzzy, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "Танланган шрифтлар"
+
+#: manager/FontManager.cpp:314
+#, fuzzy, kde-format
+msgid "Change Preview Text…"
+msgstr "Матнни ўзгартириш"
+
+#: manager/FontManager.cpp:417
+#, kde-format
+msgid "Add Fonts"
+msgstr "Шрифтларни қўшиш"
+
+#: manager/FontManager.cpp:541
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr ""
+
+#: manager/FontManager.cpp:562
+#, kde-format
+msgid "Failed to start font printer."
+msgstr ""
+
+#: manager/FontManager.cpp:569
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+
+#: manager/FontManager.cpp:571
+#, kde-format
+msgid "Cannot Print"
+msgstr "Босиб чиқиб бўлмади"
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Ўчириш учун ҳеч нарса танланмаган."
+
+#: manager/FontManager.cpp:586
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Ўчириш учун ҳеч нарса йўқ"
+
+#: manager/FontManager.cpp:601
+#, fuzzy, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt>"
+
+#: manager/FontManager.cpp:604
+#, kde-format
+msgid "Delete Font"
+msgstr "Шрифтни ўчириш"
+
+#: manager/FontManager.cpp:611
+#, fuzzy, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Ростдан бу шрифтни ўчирмоқчимисиз?"
+
+#: manager/FontManager.cpp:613
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:618
+#, fuzzy, kde-format
+msgid "Deleting font(s)…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:633
+#, fuzzy, kde-format
+#| msgid "You did not select anything to delete."
+msgid "You did not select anything to move."
+msgstr "Ўчириш учун ҳеч нарса танланмаган."
+
+#: manager/FontManager.cpp:633
+#, fuzzy, kde-format
+#| msgid "Nothing to Delete"
+msgid "Nothing to Move"
+msgstr "Ўчириш учун ҳеч нарса йўқ"
+
+#: manager/FontManager.cpp:643
+#, fuzzy, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt>"
+
+#: manager/FontManager.cpp:648
+#, fuzzy, kde-format
+msgid "Move Font"
+msgstr "Битта шрифт"
+
+#: manager/FontManager.cpp:649 manager/FontManager.cpp:661
+#, kde-format
+msgid "Move"
+msgstr ""
+
+#: manager/FontManager.cpp:654
+#, fuzzy, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] ""
+"<qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt>"
+
+#: manager/FontManager.cpp:660
+#, fuzzy, kde-format
+msgid "Move Fonts"
+msgstr "Шрифтларни қўшиш"
+
+#: manager/FontManager.cpp:665
+#, fuzzy, kde-format
+msgid "Moving font(s)…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:679
+#, kde-format
+msgid "Export Group"
+msgstr ""
+
+#: manager/FontManager.cpp:705
+#, kde-format
+msgid "No files?"
+msgstr ""
+
+#: manager/FontManager.cpp:708
+#, fuzzy, kde-format
+#| msgid "Simple font viewer"
+msgid "Failed to open %1 for writing"
+msgstr "Оддий шрифт кўрувчи"
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Create New Group"
+msgstr ""
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "Name of new group:"
+msgstr ""
+
+#: manager/FontManager.cpp:728
+#, kde-format
+msgid "New Group"
+msgstr ""
+
+#: manager/FontManager.cpp:756
+#, fuzzy, kde-format
+msgid "Preview Text"
+msgstr "Кўриб чиқиш матни"
+
+#: manager/FontManager.cpp:756
+#, fuzzy, kde-format
+#| msgid "Please enter new string:"
+msgid "Please enter new text:"
+msgstr "Янги матнни киритинг:"
+
+#: manager/FontManager.cpp:808
+#, kde-format
+msgid "Scanning font list…"
+msgstr ""
+
+#: manager/FontManager.cpp:867
+#, kde-format
+msgid "No fonts"
+msgstr ""
+
+#: manager/FontManager.cpp:872
+#, fuzzy, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "Битта шрифт"
+
+#: manager/FontManager.cpp:881
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+
+#: manager/FontManager.cpp:891
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+
+#: manager/FontManager.cpp:968
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr ""
+
+#: manager/FontManager.cpp:972
+#, kde-format
+msgid "Scanning Files…"
+msgstr ""
+
+#: manager/FontManager.cpp:973
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr ""
+
+#: manager/FontManager.cpp:988
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr ""
+
+#: manager/FontManager.cpp:1016
+#, fuzzy, kde-format
+msgid "Installing font(s)…"
+msgstr "Ўрнатиш"
+
+#: manager/FontManager.cpp:1081
+#, fuzzy, kde-format
+msgid "You did not select anything to enable."
+msgstr "Ўчириш учун ҳеч нарса танланмаган."
+
+#: manager/FontManager.cpp:1081
+#, fuzzy, kde-format
+msgid "You did not select anything to disable."
+msgstr "Ўчириш учун ҳеч нарса танланмаган."
+
+#: manager/FontManager.cpp:1082
+#, fuzzy, kde-format
+msgid "Nothing to Enable"
+msgstr "Ўчириш учун ҳеч нарса йўқ"
+
+#: manager/FontManager.cpp:1082
+#, fuzzy, kde-format
+msgid "Nothing to Disable"
+msgstr "Ўчириш учун ҳеч нарса йўқ"
+
+#: manager/FontManager.cpp:1096
+#, fuzzy, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt>"
+
+#: manager/FontManager.cpp:1097
+#, fuzzy, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt>"
+
+#: manager/FontManager.cpp:1098
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+
+#: manager/FontManager.cpp:1099
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1101
+#, fuzzy, kde-format
+msgid "Enable Font"
+msgstr "Битта шрифт"
+
+#: manager/FontManager.cpp:1100 manager/FontManager.cpp:1102
+#, fuzzy, kde-format
+msgid "Disable Font"
+msgstr "Шрифтни ўчириш"
+
+#: manager/FontManager.cpp:1108
+#, fuzzy, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Ростдан бу шрифтни ўчирмоқчимисиз?"
+
+#: manager/FontManager.cpp:1109
+#, fuzzy, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Ростдан бу шрифтни ўчирмоқчимисиз?"
+
+#: manager/FontManager.cpp:1111
+#, fuzzy, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt><qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt>"
+
+#: manager/FontManager.cpp:1115
+#, fuzzy, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt><qt>\"<b>%1</b>\"ни\n"
+"ростдан ўчирмоқчимисиз?</qt>"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, fuzzy, kde-format
+msgid "Enable Fonts"
+msgstr "Битта шрифт"
+
+#: manager/FontManager.cpp:1119 manager/FontManager.cpp:1121
+#, fuzzy, kde-format
+msgid "Disable Fonts"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/FontManager.cpp:1128
+#, fuzzy, kde-format
+msgid "Enabling font(s)…"
+msgstr "Ўрнатиш"
+
+#: manager/FontManager.cpp:1130
+#, fuzzy, kde-format
+msgid "Disabling font(s)…"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/GroupList.cpp:62
+#, kde-format
+msgid "All Fonts"
+msgstr "Ҳамма шрифтлар"
+
+#: manager/GroupList.cpp:65
+#, fuzzy, kde-format
+msgid "Personal Fonts"
+msgstr "Шрифтларни ўчириш"
+
+#: manager/GroupList.cpp:68
+#, fuzzy, kde-format
+msgid "System Fonts"
+msgstr "Танланган шрифтлар"
+
+#: manager/GroupList.cpp:71
+#, kde-format
+msgid "Unclassified"
+msgstr ""
+
+#: manager/GroupList.cpp:353
+#, kde-format
+msgid "Group"
+msgstr ""
+
+#: manager/GroupList.cpp:538
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+
+#: manager/GroupList.cpp:542
+#, kde-format
+msgid "Remove Group"
+msgstr ""
+
+#: manager/GroupList.cpp:543 manager/GroupList.cpp:788
+#, kde-format
+msgid "Remove"
+msgstr ""
+
+#: manager/GroupList.cpp:543
+#, kde-format
+msgid "Remove group"
+msgstr ""
+
+#: manager/GroupList.cpp:589
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+
+#: manager/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+
+#: manager/GroupList.cpp:600
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+
+#: manager/GroupList.cpp:702
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr ""
+
+#: manager/GroupList.cpp:793
+#, kde-format
+msgid "Rename…"
+msgstr ""
+
+#: manager/GroupList.cpp:802
+#, fuzzy, kde-format
+#| msgid "Print..."
+msgid "Export…"
+msgstr "Босиб чиқариш"
+
+#: manager/GroupList.cpp:896
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr ""
+
+#: manager/GroupList.cpp:898
+#, kde-format
+msgid "Remove from current group."
+msgstr ""
+
+#: manager/GroupList.cpp:900
+#, kde-format
+msgid "Move to personal folder."
+msgstr ""
+
+#: manager/GroupList.cpp:902
+#, kde-format
+msgid "Move to system folder."
+msgstr ""
+
+#: manager/JobRunner.cpp:139
+#, kde-format
+msgid "Skip"
+msgstr ""
+
+#: manager/JobRunner.cpp:142
+#, kde-format
+msgid "AutoSkip"
+msgstr ""
+
+#: manager/JobRunner.cpp:187
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr ""
+
+#: manager/JobRunner.cpp:199
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+
+#: manager/JobRunner.cpp:207
+#, kde-format
+msgid "Do not show this message again"
+msgstr ""
+
+#: manager/JobRunner.cpp:315
+#, fuzzy, kde-format
+msgid "Installing"
+msgstr "Ўрнатиш"
+
+#: manager/JobRunner.cpp:318
+#, fuzzy, kde-format
+msgid "Uninstalling"
+msgstr "Ўрнатиш"
+
+#: manager/JobRunner.cpp:321 manager/JobRunner.cpp:417
+#, kde-format
+msgid "Enabling"
+msgstr ""
+
+#: manager/JobRunner.cpp:324 manager/JobRunner.cpp:421
+#, kde-format
+msgid "Moving"
+msgstr ""
+
+#: manager/JobRunner.cpp:327
+#, kde-format
+msgid "Updating"
+msgstr ""
+
+#: manager/JobRunner.cpp:331
+#, kde-format
+msgid "Removing"
+msgstr ""
+
+#: manager/JobRunner.cpp:335
+#, kde-format
+msgid "Disabling"
+msgstr ""
+
+#: manager/JobRunner.cpp:372
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr ""
+
+#: manager/JobRunner.cpp:444
+#, kde-format
+msgid "Unable to start backend."
+msgstr ""
+
+#: manager/JobRunner.cpp:453
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr ""
+
+#: manager/JobRunner.cpp:618 manager/JobRunner.cpp:625
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr ""
+
+#: manager/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr ""
+
+#: manager/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr ""
+
+#: manager/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr ""
+
+#: manager/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+
+#: manager/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr ""
+
+#: manager/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr ""
+
+#: manager/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr ""
+
+#: manager/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr ""
+
+#: manager/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr ""
+
+#: manager/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr ""
+
+#: manager/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr ""
+
+#: manager/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr ""
+
+#: manager/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr ""
+
+#: manager/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr ""
+
+#: manager/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr ""
+
+#: manager/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr ""
+
+#: manager/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr ""
+
+#: manager/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr ""
+
+#: manager/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr ""
+
+#: manager/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
 msgstr ""
 
 #: viewpart/CharTip.cpp:44
@@ -2142,58 +2254,6 @@ msgstr ""
 #~| msgid "Simple font viewer"
 #~ msgid "Simple font installer"
 #~ msgstr "Оддий шрифт кўрувчи"
-
-#, fuzzy
-#~| msgid "(c) Craig Drummond, 2004"
-#~ msgid "(C) Craig Drummond, 2007"
-#~ msgstr "(C) 2004, Крег Друммонд (Craig Drummond)"
-
-#, fuzzy
-#~| msgid "Where to Install"
-#~ msgid "URL to install"
-#~ msgstr "Қаерга ўрнатиш"
-
-#, fuzzy
-#~| msgid "Print..."
-#~ msgid "Print"
-#~ msgstr "Босиб чиқариш"
-
-#, fuzzy
-#~ msgid "Font Printer"
-#~ msgstr "Шрифт кўрувчи"
-
-#, fuzzy
-#~| msgid "Simple font viewer"
-#~ msgid "Simple font printer"
-#~ msgstr "Оддий шрифт кўрувчи"
-
-#, fuzzy
-#~ msgid "Open an existing font file"
-#~ msgstr "Шрифт кўрувчи"
-
-#, fuzzy
-#~| msgid "Simple font viewer"
-#~ msgid "Print font preview"
-#~ msgstr "Оддий шрифт кўрувчи"
-
-#~ msgid "Select Font to View"
-#~ msgstr "Кўриб чиқиш учун шрифтни танланг"
-
-#~ msgid "Font Viewer"
-#~ msgstr "Шрифт кўрувчи"
-
-#~ msgid "Simple font viewer"
-#~ msgstr "Оддий шрифт кўрувчи"
-
-#, fuzzy
-#~| msgid "(c) Craig Drummond, 2004"
-#~ msgid "(C) Craig Drummond, 2004-2007"
-#~ msgstr "(C) 2004, Крег Друммонд (Craig Drummond)"
-
-#, fuzzy
-#~| msgid "KDE Font Installer"
-#~ msgid "Font Management"
-#~ msgstr "KDE шрифт ўрнатгич"
 
 #, fuzzy
 #~| msgid "(c) Craig Drummond, 2004"
