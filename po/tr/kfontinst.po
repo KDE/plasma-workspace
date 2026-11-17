@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 00:16+0000\n"
-"PO-Revision-Date: 2026-11-15 19:54+0300\n"
+"PO-Revision-Date: 2026-11-16 19:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -733,7 +733,7 @@ msgstr "Seçili Yazı Tiplerini Sil…"
 #: kcmfontinst/KCmFontInst.cpp:329
 #, kde-format
 msgid "Change Preview Text…"
-msgstr "Önizleme Metnini Değiştir…"
+msgstr "Ön İzleme Metnini Değiştir…"
 
 #: kcmfontinst/KCmFontInst.cpp:428
 #, kde-format
@@ -887,7 +887,7 @@ msgstr "Yeni Grup"
 #: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
 msgid "Preview Text"
-msgstr "Metni Önizle"
+msgstr "Metni Ön İzle"
 
 #: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
@@ -1592,7 +1592,7 @@ msgstr "Yazı tipi okunamadı."
 #: viewpart/FontViewPart.cpp:395
 #, kde-format
 msgid "Preview String"
-msgstr "Diziyi Önizle"
+msgstr "Diziyi Ön İzle"
 
 #: viewpart/FontViewPart.cpp:395
 #, kde-format
@@ -1608,7 +1608,7 @@ msgstr "Ana Araç Çubuğu"
 #: viewpart/PreviewSelectAction.cpp:15
 #, kde-format
 msgid "Preview Type"
-msgstr "Önizleme Tipi"
+msgstr "Ön İzleme Türü"
 
 #: viewpart/PreviewSelectAction.cpp:33
 #, kde-format
