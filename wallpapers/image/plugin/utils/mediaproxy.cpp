@@ -8,7 +8,6 @@
 
 #include "defaultwallpaper.h"
 
-#include <QBuffer>
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QMimeDatabase>
@@ -299,10 +298,14 @@ void MediaProxy::determineBackgroundType(KPackage::Package *package)
         QMimeDatabase db;
         const QString type = db.mimeTypeForFile(filePath).name();
 
-        QBuffer dummyBuffer;
-        dummyBuffer.open(QIODevice::ReadOnly);
-        // Don't use QMovie::supportedFormats() as it loads all available image plugins
-        const bool isAnimated = QImageReader(&dummyBuffer, QFileInfo(filePath).suffix().toLower().toLatin1()).supportsOption(QImageIOHandler::Animation);
+        // Don't use QMovie::supportedFormats() as it loads all available image plugins. Pass the format
+        // explicitly so only the plugin for this suffix is loaded.
+        //
+        // Formats such as AVIF, JPEG XL and WebP support animation, but most files in them are still
+        // images. Treat a file as animated only if it has more than one frame, so still images use the
+        // static image path. An unknown frame count (0) keeps the old behaviour.
+        QImageReader reader(filePath, QFileInfo(filePath).suffix().toLower().toLatin1());
+        const bool isAnimated = reader.supportsOption(QImageIOHandler::Animation) && reader.imageCount() != 1;
 
         if (type.startsWith(QLatin1String("image/svg"))) {
             m_backgroundType = BackgroundType::Type::VectorImage;
