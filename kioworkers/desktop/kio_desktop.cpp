@@ -16,8 +16,7 @@
 #include <QFile>
 #include <QStandardPaths>
 #include <QStorageInfo>
-
-#include "kded_interface.h"
+#include <QUrl>
 
 using namespace Qt::StringLiterals;
 
@@ -46,10 +45,6 @@ DesktopProtocol::DesktopProtocol(const QByteArray &protocol, const QByteArray &p
     : KIO::ForwardingWorkerBase(protocol, pool, app)
 {
     checkLocalInstall();
-
-    org::kde::kded6 kded(QStringLiteral("org.kde.kded6"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
-    auto pending = kded.loadModule(u"desktopnotifier"_s);
-    pending.waitForFinished();
 }
 
 DesktopProtocol::~DesktopProtocol() = default;
