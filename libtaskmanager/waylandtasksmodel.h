@@ -198,13 +198,11 @@ public:
      * agnostic.
      *
      * @param index An index in this window tasks model.
-     * @param geometry Visual delegate geometry in screen coordinates. Unused
-     * in this implementation.
      * @param delegate The delegate. This implementation will attempt to cast
      * it to QQuickItem, map its coordinates to its window and find the Wayland
      * Surface for the window.
      **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
+    void requestPublishDelegateGeometry(const QModelIndex &index, QObject *delegate = nullptr) override;
 
     /**
      * Request sending the task at the given index to the specified output.

@@ -1598,12 +1598,12 @@ void TasksModel::requestActivities(const QModelIndex &index, const QStringList &
     }
 }
 
-void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
+void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, QObject *delegate)
 {
     if (!index.isValid() || index.model() != this || !index.data(AbstractTasksModel::IsWindow).toBool()) {
         return;
     }
-    d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index), geometry, delegate);
+    d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index), delegate);
 }
 
 void TasksModel::requestSendToOutput(const QModelIndex &index, QScreen *output)
