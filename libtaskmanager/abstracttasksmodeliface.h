@@ -181,12 +181,11 @@ public:
      * delegates in multiple applets.
      *
      * @param index An index in this tasks model.
-     * @param geometry Visual delegate geometry in screen coordinates.
      * @param delegate The delegate. Implementations are on their own with
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    virtual void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) = 0;
+    virtual void requestPublishDelegateGeometry(const QModelIndex &index, QObject *delegate = nullptr) = 0;
 
     /**
      * Request toggling the no border state of the task at given index.

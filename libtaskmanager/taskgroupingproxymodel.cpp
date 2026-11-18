@@ -1238,17 +1238,17 @@ void TaskGroupingProxyModel::requestActivities(const QModelIndex &index, const Q
     }
 }
 
-void TaskGroupingProxyModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
+void TaskGroupingProxyModel::requestPublishDelegateGeometry(const QModelIndex &index, QObject *delegate)
 {
     if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
         return;
     }
 
     if (index.parent().isValid() || !d->isGroup(index.row())) {
-        d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index), geometry, delegate);
+        d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(index), delegate);
     } else {
         for (int i = 0; i < rowCount(index); ++i) {
-            d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(this->index(i, 0, index)), geometry, delegate);
+            d->abstractTasksSourceModel->requestPublishDelegateGeometry(mapToSource(this->index(i, 0, index)), delegate);
         }
     }
 }

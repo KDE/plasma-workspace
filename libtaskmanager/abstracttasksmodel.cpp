@@ -199,10 +199,9 @@ void AbstractTasksModel::requestActivities(const QModelIndex &index, const QStri
     Q_UNUSED(activities)
 }
 
-void AbstractTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
+void AbstractTasksModel::requestPublishDelegateGeometry(const QModelIndex &index, QObject *delegate)
 {
     Q_UNUSED(index)
-    Q_UNUSED(geometry)
     Q_UNUSED(delegate)
 }
 

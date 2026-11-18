@@ -234,7 +234,7 @@ void AbstractTasksProxyModelIface::requestActivities(const QModelIndex &index, c
     }
 }
 
-void AbstractTasksProxyModelIface::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
+void AbstractTasksProxyModelIface::requestPublishDelegateGeometry(const QModelIndex &index, QObject *delegate)
 {
     if (!index.isValid()) {
         return;
@@ -244,7 +244,7 @@ void AbstractTasksProxyModelIface::requestPublishDelegateGeometry(const QModelIn
     const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
-        const_cast<AbstractTasksModelIface *>(m)->requestPublishDelegateGeometry(sourceIndex, geometry, delegate);
+        const_cast<AbstractTasksModelIface *>(m)->requestPublishDelegateGeometry(sourceIndex, delegate);
     }
 }
 

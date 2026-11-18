@@ -307,12 +307,11 @@ public:
      * This base implementation does nothing.
      *
      * @param index An index in this tasks model.
-     * @param geometry Visual delegate geometry in screen coordinates.
      * @param delegate The delegate. Implementations are on their own with
      * regard to extracting information from this, and should take care to
      * reject invalid objects.
      **/
-    void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) override;
+    void requestPublishDelegateGeometry(const QModelIndex &index, QObject *delegate = nullptr) override;
 
     /**
      * Request sending the task at the given index to the specified output.
