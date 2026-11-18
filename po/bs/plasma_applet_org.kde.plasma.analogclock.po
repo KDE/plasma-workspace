@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2015-02-15 12:27+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -27,16 +27,21 @@ msgstr "Izgled"
 
 #: qml/configGeneral.qml:19
 #, kde-format
-msgid "Show seconds hand"
-msgstr "Prikaži sekundaru"
-
-#: qml/configGeneral.qml:20
-#, kde-format
+msgctxt "@title:group"
 msgid "General:"
 msgstr ""
 
-#: qml/configGeneral.qml:24
-#, kde-format
+#: qml/configGeneral.qml:22
+#, fuzzy, kde-format
+#| msgid "Show seconds hand"
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr "Prikaži sekundaru"
+
+#: qml/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show time zone"
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Prikaži vremensku zonu"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2025-03-04 14:43+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -31,18 +31,23 @@ msgstr "ค้นหา..."
 msgid "Appearance"
 msgstr "รูปลักษณ์"
 
-#: qml/configGeneral.qml:21
-#, kde-format
+#: qml/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "Use single button for application menu"
+msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "ใช้ปุ่มเดียวสําหรับเมนูแอปพลิเคชัน"
 
-#: qml/configGeneral.qml:27
-#, kde-format
+#: qml/configGeneral.qml:33
+#, fuzzy, kde-format
+#| msgid "Show full application menu"
+msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "แสดงเมนูแอปพลิเคชันแบบเต็ม"
 
-#: qml/configGeneral.qml:32
+#: qml/configGeneral.qml:42
 #, kde-format
+msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr ""
 

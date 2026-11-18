@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2026-03-14 12:04+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -34,18 +34,24 @@ msgstr "Buscar…"
 msgid "Appearance"
 msgstr "Aspecto visual"
 
-#: qml/configGeneral.qml:21
-#, kde-format
+#: qml/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "Use single button for application menu"
+msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Usar botón único para el menú de la aplicación"
 
-#: qml/configGeneral.qml:27
-#, kde-format
+#: qml/configGeneral.qml:33
+#, fuzzy, kde-format
+#| msgid "Show full application menu"
+msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Mostrar el menú completo de la aplicación"
 
-#: qml/configGeneral.qml:32
-#, kde-format
+#: qml/configGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show menus for apps on different screens"
+msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Mostrar menús de aplicaciones en distintas pantallas"
 

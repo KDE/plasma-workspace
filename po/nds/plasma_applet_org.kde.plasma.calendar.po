@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2014-08-11 12:31+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -22,31 +22,35 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: qml/configGeneral.qml:21
+#: qml/configGeneral.qml:20
 #, kde-format
-msgid "Calendar version:"
+msgctxt "@option:check prefix"
+msgid "Full calendar:"
 msgstr ""
 
 #: qml/configGeneral.qml:23
 #, kde-format
+msgctxt "@option:check"
 msgid "Show week numbers"
+msgstr ""
+
+#: qml/configGeneral.qml:29
+#, kde-format
+msgctxt ""
+"@title group radio button prefix What information is shown in the calendar "
+"icon"
+msgid "Icon:"
 msgstr ""
 
 #: qml/configGeneral.qml:32
 #, kde-format
-msgctxt "What information is shown in the calendar icon"
-msgid "Compact version:"
-msgstr ""
-
-#: qml/configGeneral.qml:34
-#, kde-format
-msgctxt "Show the number of the day (eg. 31) in the icon"
+msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr ""
 
 #: qml/configGeneral.qml:40
 #, kde-format
-msgctxt "Show the week number (eg. 50) in the icon"
+msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr ""
 

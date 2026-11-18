@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2022-07-25 12:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -27,17 +27,23 @@ msgid "Appearance"
 msgstr "Görünüş"
 
 #: qml/configGeneral.qml:19
-#, kde-format
-msgid "Show seconds hand"
-msgstr "Saniyeleri göster"
-
-#: qml/configGeneral.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Genel:"
 
-#: qml/configGeneral.qml:24
-#, kde-format
+#: qml/configGeneral.qml:22
+#, fuzzy, kde-format
+#| msgid "Show seconds hand"
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr "Saniyeleri göster"
+
+#: qml/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show time zone"
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Zaman dilimini göster"
 

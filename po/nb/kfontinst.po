@@ -66,24 +66,23 @@ msgstr ""
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
-msgstr ""
+msgstr "© 2007 Craig Drummond"
 
 #: apps/kfontinst/Installer.cpp:128
 #, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
+"Gjør dialogvinduet forbigående for et vindu som windowHandle-en hører til"
 
 #: apps/kfontinst/Installer.cpp:131
-#, fuzzy, kde-format
-#| msgid "Where to Install"
+#, kde-format
 msgid "URL to install"
-msgstr "Installeringssted"
+msgstr "URL som skal installeres"
 
 #: apps/kfontprint/Printer.cpp:239
-#, fuzzy, kde-format
-#| msgid "Print…"
+#, kde-format
 msgid "Print"
-msgstr "Skriv ut …"
+msgstr "Skriv ut"
 
 #: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
 #, kde-format
@@ -91,27 +90,24 @@ msgid "Canceling…"
 msgstr "Avbryter …"
 
 #: apps/kfontprint/Printer.cpp:323
-#, fuzzy, kde-format
-#| msgid "Cannot Print"
+#, kde-format
 msgid "Font Printer"
-msgstr "Kan ikke skrive ut"
+msgstr "Utskrift av skriftprøve"
 
 #: apps/kfontprint/Printer.cpp:325
-#, fuzzy, kde-format
-#| msgid "Failed to start font printer."
+#, kde-format
 msgid "Simple font printer"
-msgstr "Klarte ikke starte utskrift av skriftprøve."
+msgstr "Enkel utskrift av skriftprøve"
 
 #: apps/kfontprint/Printer.cpp:333
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
-msgstr ""
+msgstr "Gjør dialogvinduet forbigående for et X-program oppgitt ved winId"
 
 #: apps/kfontprint/Printer.cpp:335
-#, fuzzy, kde-format
-#| msgid "Select size to print font:"
+#, kde-format
 msgid "Size index to print fonts"
-msgstr "Velg størrelse for utskrift:"
+msgstr "Størrelsesindeks for utskrift"
 
 #: apps/kfontprint/Printer.cpp:339
 #, kde-format
@@ -119,60 +115,53 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
+"Skrift som skal skrives ut, oppgitt som «familie, stil» der «stil» er et 24-"
+"bits desimalt tall satt sammen som <vekt><bredde><skråstilt>"
 
 #: apps/kfontprint/Printer.cpp:342
-#, fuzzy, kde-format
-#| msgid "Failed to save list of fonts to print."
+#, kde-format
 msgid "File containing list of fonts to print"
-msgstr "Klarte ikke å lagre liste over skrifter som skal skrives ut."
+msgstr "Fil med liste over skrifter som skal skrives ut"
 
 #: apps/kfontprint/Printer.cpp:344
-#, fuzzy, kde-format
-#| msgid "Failed to save list of fonts to print."
+#, kde-format
 msgid "Remove file containing list of fonts to print"
-msgstr "Klarte ikke å lagre liste over skrifter som skal skrives ut."
+msgstr "Fjern fil med liste over skrifter som skal skrives ut"
 
 #: apps/kfontview/Viewer.cpp:50
-#, fuzzy, kde-format
-#| msgid "Open font in font viewer?"
-#| msgid_plural "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open an existing font file"
-msgstr "Åpne skrift i skriftviseren?"
+msgstr "Åpne en skriftfil som finnes fra før"
 
 #: apps/kfontview/Viewer.cpp:51
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
+#, kde-format
 msgid "Print font preview"
-msgstr "Skriv ut skriftprøver"
+msgstr "Forhåndsvisning av utskrift av skrifter"
 
 #: apps/kfontview/Viewer.cpp:68
-#, fuzzy, kde-format
-#| msgid "Delete Font"
+#, kde-format
 msgid "Select Font to View"
-msgstr "Slett skrift"
+msgstr "Velg skrift for visning"
 
 #: apps/kfontview/Viewer.cpp:108
 #, kde-format
 msgid "URL to open"
-msgstr ""
+msgstr "URL som skal åpnes"
 
 #: apps/kfontview/Viewer.cpp:150
-#, fuzzy, kde-format
-#| msgid "Open in Font Viewer"
+#, kde-format
 msgid "Font Viewer"
-msgstr "Åpne i skriftviser"
+msgstr "Skriftviser"
 
 #: apps/kfontview/Viewer.cpp:152
-#, fuzzy, kde-format
-#| msgid "Open font in font viewer?"
-#| msgid_plural "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Simple font viewer"
-msgstr "Åpne skrift i skriftviseren?"
+msgstr "Enkel skriftviser"
 
 #: apps/kfontview/Viewer.cpp:154
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr ""
+msgstr "© 2004–2007 Craig Drummond"
 
 #: kio/KioFonts.cpp:209
 #, kde-format

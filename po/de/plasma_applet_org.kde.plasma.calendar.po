@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2019-05-22 07:38+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,33 +19,51 @@ msgstr ""
 msgid "General"
 msgstr "Allgemein"
 
-#: qml/configGeneral.qml:21
+#: qml/configGeneral.qml:20
 #, kde-format
-msgid "Calendar version:"
-msgstr "Kalenderversion:"
+msgctxt "@option:check prefix"
+msgid "Full calendar:"
+msgstr ""
 
 #: qml/configGeneral.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show week numbers"
+msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Kalenderwoche anzeigen"
 
-#: qml/configGeneral.qml:32
-#, kde-format
-msgctxt "What information is shown in the calendar icon"
-msgid "Compact version:"
-msgstr "Kompakte Version:"
+#: qml/configGeneral.qml:29
+#, fuzzy, kde-format
+#| msgctxt "What information is shown in the calendar icon"
+#| msgid "Icon:"
+msgctxt ""
+"@title group radio button prefix What information is shown in the calendar "
+"icon"
+msgid "Icon:"
+msgstr "Symbol:"
 
-#: qml/configGeneral.qml:34
-#, kde-format
-msgctxt "Show the number of the day (eg. 31) in the icon"
+#: qml/configGeneral.qml:32
+#, fuzzy, kde-format
+#| msgctxt "Show the number of the day (eg. 31) in the icon"
+#| msgid "Show day of the month"
+msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Monatstag anzeigen"
 
 #: qml/configGeneral.qml:40
-#, kde-format
-msgctxt "Show the week number (eg. 50) in the icon"
+#, fuzzy, kde-format
+#| msgctxt "Show the week number (eg. 50) in the icon"
+#| msgid "Show week number"
+msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Kalenderwoche anzeigen"
+
+#~ msgid "Calendar version:"
+#~ msgstr "Kalenderversion:"
+
+#~ msgctxt "What information is shown in the calendar icon"
+#~ msgid "Compact version:"
+#~ msgstr "Kompakte Version:"
 
 #~ msgid "Working Day"
 #~ msgstr "Arbeitstag"
@@ -55,10 +73,6 @@ msgstr "Kalenderwoche anzeigen"
 
 #~ msgid "Ends at 5"
 #~ msgstr "Endet um 5"
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Icon:"
-#~ msgstr "Symbol:"
 
 #~ msgctxt "Show the number of the day (eg. 31) in the icon"
 #~ msgid "Day in month"

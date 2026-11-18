@@ -37,7 +37,7 @@
 >Gestió de les fonts de lletres</title>
 
 <para
->Aquest mòdul és el responsable de la instal·lació, desinstal·lació, vista prèvia i la gestió de les fonts de lletres.</para>
+>Aquesta aplicació és la responsable de la instal·lació, desinstal·lació, vista prèvia i la gestió de les fonts de lletres.</para>
 
 <sect2 id="font-groups">
 <title

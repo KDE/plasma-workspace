@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 22:21+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2023-01-08 09:41+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -70,134 +70,165 @@ msgstr "Diện mạo"
 msgid "Calendar"
 msgstr "Lịch"
 
-#: configAppearance.qml:58
-#, kde-format
-msgid "Information:"
-msgstr "Thông tin:"
-
-#: configAppearance.qml:63
-#, kde-format
-msgid "Show date"
+#: configAppearance.qml:59
+#, fuzzy, kde-format
+#| msgid "Show date"
+msgctxt "@option:check also @label:listbox"
+msgid "Show date:"
 msgstr "Hiện ngày"
 
-#: configAppearance.qml:72
-#, kde-format
+#: configAppearance.qml:64
+#, fuzzy, kde-format
+#| msgid "Always below time"
+msgctxt "@option:check completes Show date …"
+msgid "Below time"
+msgstr "Luôn ở dưới thời gian"
+
+#: configAppearance.qml:73
+#, fuzzy, kde-format
+#| msgid "Adaptive location"
+msgctxt "@item:inlistbox for Show date"
 msgid "Adaptive location"
 msgstr "Vị trí thích ứng"
 
-#: configAppearance.qml:73
-#, kde-format
+#: configAppearance.qml:74
+#, fuzzy, kde-format
+#| msgid "Always beside time"
+msgctxt "@item:inlistbox for Show date"
 msgid "Always beside time"
 msgstr "Luôn ở cạnh thời gian"
 
-#: configAppearance.qml:74
-#, kde-format
+#: configAppearance.qml:75
+#, fuzzy, kde-format
+#| msgid "Always below time"
+msgctxt "@item:inlistbox for Show date"
 msgid "Always below time"
 msgstr "Luôn ở dưới thời gian"
 
-#: configAppearance.qml:87
+#: configAppearance.qml:85
 #, fuzzy, kde-format
 #| msgid "Show seconds"
 msgid "Show seconds:"
 msgstr "Hiện giây"
 
-#: configAppearance.qml:89
+#: configAppearance.qml:87
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Never"
 msgstr ""
 
-#: configAppearance.qml:90
+#: configAppearance.qml:88
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: configAppearance.qml:91 configAppearance.qml:112
-#, kde-format
+#: configAppearance.qml:89
+#, fuzzy, kde-format
+#| msgid "Always"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Always"
 msgstr "Luôn luôn"
 
-#: configAppearance.qml:101
-#, kde-format
+#: configAppearance.qml:96
+#, fuzzy, kde-format
+#| msgid "Show time zone:"
+msgctxt "@title:group prefix for group of radio buttons, e.g. Always"
 msgid "Show time zone:"
 msgstr "Hiện múi giờ:"
 
-#: configAppearance.qml:107
-#, kde-format
+#: configAppearance.qml:100
+#, fuzzy, kde-format
+#| msgid "Only when different from local time zone"
+msgctxt "@option:radio Show time zone"
 msgid "Only when different from local time zone"
 msgstr "Chỉ khi nào khác với múi giờ địa phương"
 
-#: configAppearance.qml:121
-#, kde-format
+#: configAppearance.qml:108
+#, fuzzy, kde-format
+#| msgid "Always"
+msgctxt "@option:radio Show time zone"
+msgid "Always"
+msgstr "Luôn luôn"
+
+#: configAppearance.qml:115
+#, fuzzy, kde-format
+#| msgid "Display time zone as:"
+msgctxt "@label:listbox e.g. City"
 msgid "Display time zone as:"
 msgstr "Cách hiện múi giờ:"
 
-#: configAppearance.qml:131
-#, kde-format
+#: configAppearance.qml:121
+#, fuzzy, kde-format
+#| msgid "Code"
+msgctxt "@item:inlistbox Display time zone as"
 msgid "Code"
 msgstr "Mã"
 
-#: configAppearance.qml:132
-#, kde-format
+#: configAppearance.qml:122
+#, fuzzy, kde-format
+#| msgid "City"
+msgctxt "@item:inlistbox Display time zone as"
 msgid "City"
 msgstr "Thành phố"
 
-#: configAppearance.qml:133
-#, kde-format
+#: configAppearance.qml:123
+#, fuzzy, kde-format
+#| msgid "Offset from UTC time"
+msgctxt "@item:inlistbox Display time zone as"
 msgid "Offset from UTC time"
 msgstr "Chênh lệch so với giờ UTC"
 
-#: configAppearance.qml:141
+#: configAppearance.qml:132
 #, fuzzy, kde-format
 #| msgid "Switch Systemwide Time Zone…"
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
 msgstr "Chuyển múi giờ toàn hệ thống…"
 
-#: configAppearance.qml:153
+#: configAppearance.qml:140
 #, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Hiển thị giờ:"
 
-#: configAppearance.qml:160
+#: configAppearance.qml:145
 #, fuzzy, kde-format
 #| msgid "12-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 tiếng"
 
-#: configAppearance.qml:161
+#: configAppearance.qml:146
 #, fuzzy, kde-format
 #| msgid "Use Region Defaults"
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Dùng thiết lập mặc định của vùng"
 
-#: configAppearance.qml:162
+#: configAppearance.qml:147
 #, fuzzy, kde-format
 #| msgid "24-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 tiếng"
 
-#: configAppearance.qml:171
+#: configAppearance.qml:156
 #, fuzzy, kde-format
 #| msgid "Change Regional Settings…"
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Thay đổi thiết lập vùng…"
 
-#: configAppearance.qml:182
+#: configAppearance.qml:164
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Định dạng ngày:"
 
-#: configAppearance.qml:192
+#: configAppearance.qml:172
 #, fuzzy, kde-format
 #| msgid "Long Date"
 msgctxt ""
@@ -206,21 +237,21 @@ msgctxt ""
 msgid "Long date"
 msgstr "Dạng dài"
 
-#: configAppearance.qml:199
+#: configAppearance.qml:179
 #, fuzzy, kde-format
 #| msgid "Short Date"
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Dạng ngắn"
 
-#: configAppearance.qml:206
+#: configAppearance.qml:186
 #, fuzzy, kde-format
 #| msgid "ISO Date"
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "Dạng ISO"
 
-#: configAppearance.qml:213
+#: configAppearance.qml:193
 #, fuzzy, kde-format
 #| msgctxt "custom date format"
 #| msgid "Custom"
@@ -228,11 +259,12 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Dạng riêng"
 
-#: configAppearance.qml:253
+#: configAppearance.qml:234
 #, fuzzy, kde-format
 #| msgid ""
 #| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 #| "\">Time Format Documentation</a>"
+msgctxt "@info:usagetip"
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
@@ -240,19 +272,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Tài liệu về định dạng thời gian</a>"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:244
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Hiển thị chữ:"
 
-#: configAppearance.qml:284
+#: configAppearance.qml:247
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Tự động"
 
-#: configAppearance.qml:288
+#: configAppearance.qml:249
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -260,31 +292,31 @@ msgid ""
 msgstr ""
 "Văn bản sẽ sử dụng phông chữ hệ thống và giãn rộng ra để lấp đầy chỗ trống."
 
-#: configAppearance.qml:302
+#: configAppearance.qml:255
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Thủ công"
 
-#: configAppearance.qml:312
+#: configAppearance.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Chọn kiểu cách…"
 
-#: configAppearance.qml:329
-#, kde-format
-msgctxt "@info %1 is the font size, %2 is the font family"
-msgid "%1pt %2"
-msgstr "%1pt %2"
-
-#: configAppearance.qml:336
+#: configAppearance.qml:274
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: configAppearance.qml:350
+#: configAppearance.qml:280
+#, kde-format
+msgctxt "@info %1 is the font size, %2 is the font family"
+msgid "%1pt %2"
+msgstr "%1pt %2"
+
+#: configAppearance.qml:295
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -297,7 +329,7 @@ msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Chung:"
 
-#: configCalendar.qml:51
+#: configCalendar.qml:53
 #, fuzzy, kde-format
 #| msgid "Show week numbers"
 msgctxt "@option:check"
@@ -311,14 +343,14 @@ msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Ngày đầu tuần:"
 
-#: configCalendar.qml:64
+#: configCalendar.qml:67
 #, fuzzy, kde-format
 #| msgid "Use Region Defaults"
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Dùng thiết lập mặc định của vùng"
 
-#: configCalendar.qml:82
+#: configCalendar.qml:83
 #, fuzzy, kde-format
 #| msgid "Available Plugins:"
 msgctxt "@title:column"
@@ -519,6 +551,9 @@ msgstr "%1:"
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
 msgstr ""
+
+#~ msgid "Information:"
+#~ msgstr "Thông tin:"
 
 #, fuzzy
 #~| msgid ""

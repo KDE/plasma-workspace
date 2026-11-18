@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 22:21+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2026-10-16 21:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese <zh-l10n@lists.slat.org>\n"
@@ -69,126 +69,144 @@ msgstr ""
 msgid "Calendar"
 msgstr ""
 
-#: configAppearance.qml:58
+#: configAppearance.qml:59
 #, kde-format
-msgid "Information:"
+msgctxt "@option:check also @label:listbox"
+msgid "Show date:"
 msgstr ""
 
-#: configAppearance.qml:63
+#: configAppearance.qml:64
 #, kde-format
-msgid "Show date"
-msgstr ""
-
-#: configAppearance.qml:72
-#, kde-format
-msgid "Adaptive location"
+msgctxt "@option:check completes Show date …"
+msgid "Below time"
 msgstr ""
 
 #: configAppearance.qml:73
 #, kde-format
-msgid "Always beside time"
+msgctxt "@item:inlistbox for Show date"
+msgid "Adaptive location"
 msgstr ""
 
 #: configAppearance.qml:74
 #, kde-format
+msgctxt "@item:inlistbox for Show date"
+msgid "Always beside time"
+msgstr ""
+
+#: configAppearance.qml:75
+#, kde-format
+msgctxt "@item:inlistbox for Show date"
 msgid "Always below time"
 msgstr ""
 
-#: configAppearance.qml:87
+#: configAppearance.qml:85
 #, kde-format
 msgid "Show seconds:"
 msgstr ""
 
-#: configAppearance.qml:89
+#: configAppearance.qml:87
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Never"
 msgstr ""
 
-#: configAppearance.qml:90
+#: configAppearance.qml:88
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: configAppearance.qml:91 configAppearance.qml:112
+#: configAppearance.qml:89
 #, kde-format
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Always"
 msgstr ""
 
-#: configAppearance.qml:101
+#: configAppearance.qml:96
 #, kde-format
+msgctxt "@title:group prefix for group of radio buttons, e.g. Always"
 msgid "Show time zone:"
 msgstr ""
 
-#: configAppearance.qml:107
+#: configAppearance.qml:100
 #, kde-format
+msgctxt "@option:radio Show time zone"
 msgid "Only when different from local time zone"
+msgstr ""
+
+#: configAppearance.qml:108
+#, kde-format
+msgctxt "@option:radio Show time zone"
+msgid "Always"
+msgstr ""
+
+#: configAppearance.qml:115
+#, kde-format
+msgctxt "@label:listbox e.g. City"
+msgid "Display time zone as:"
 msgstr ""
 
 #: configAppearance.qml:121
 #, kde-format
-msgid "Display time zone as:"
-msgstr ""
-
-#: configAppearance.qml:131
-#, kde-format
+msgctxt "@item:inlistbox Display time zone as"
 msgid "Code"
 msgstr ""
 
-#: configAppearance.qml:132
+#: configAppearance.qml:122
 #, kde-format
+msgctxt "@item:inlistbox Display time zone as"
 msgid "City"
 msgstr ""
 
-#: configAppearance.qml:133
+#: configAppearance.qml:123
 #, kde-format
+msgctxt "@item:inlistbox Display time zone as"
 msgid "Offset from UTC time"
 msgstr ""
 
-#: configAppearance.qml:141
+#: configAppearance.qml:132
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
 msgstr ""
 
-#: configAppearance.qml:153
+#: configAppearance.qml:140
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr ""
 
-#: configAppearance.qml:160
+#: configAppearance.qml:145
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr ""
 
-#: configAppearance.qml:161
+#: configAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr ""
 
-#: configAppearance.qml:162
+#: configAppearance.qml:147
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr ""
 
-#: configAppearance.qml:171
+#: configAppearance.qml:156
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr ""
 
-#: configAppearance.qml:182
+#: configAppearance.qml:164
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr ""
 
-#: configAppearance.qml:192
+#: configAppearance.qml:172
 #, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
@@ -196,75 +214,76 @@ msgctxt ""
 msgid "Long date"
 msgstr ""
 
-#: configAppearance.qml:199
+#: configAppearance.qml:179
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr ""
 
-#: configAppearance.qml:206
+#: configAppearance.qml:186
 #, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr ""
 
-#: configAppearance.qml:213
+#: configAppearance.qml:193
 #, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr ""
 
-#: configAppearance.qml:253
+#: configAppearance.qml:234
 #, kde-format
+msgctxt "@info:usagetip"
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
 
-#: configAppearance.qml:279
+#: configAppearance.qml:244
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr ""
 
-#: configAppearance.qml:284
+#: configAppearance.qml:247
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: configAppearance.qml:288
+#: configAppearance.qml:249
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: configAppearance.qml:302
+#: configAppearance.qml:255
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: configAppearance.qml:312
+#: configAppearance.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: configAppearance.qml:329
-#, kde-format
-msgctxt "@info %1 is the font size, %2 is the font family"
-msgid "%1pt %2"
-msgstr ""
-
-#: configAppearance.qml:336
+#: configAppearance.qml:274
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: configAppearance.qml:350
+#: configAppearance.qml:280
+#, kde-format
+msgctxt "@info %1 is the font size, %2 is the font family"
+msgid "%1pt %2"
+msgstr ""
+
+#: configAppearance.qml:295
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -276,7 +295,7 @@ msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr ""
 
-#: configCalendar.qml:51
+#: configCalendar.qml:53
 #, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
@@ -288,13 +307,13 @@ msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr ""
 
-#: configCalendar.qml:64
+#: configCalendar.qml:67
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr ""
 
-#: configCalendar.qml:82
+#: configCalendar.qml:83
 #, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"

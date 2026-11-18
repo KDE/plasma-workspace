@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2010-07-20 13:53+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -25,18 +25,21 @@ msgstr "Uterlik"
 
 #: qml/configGeneral.qml:19
 #, fuzzy, kde-format
-#| msgid "Show &seconds hand"
-msgid "Show seconds hand"
-msgstr "&Sekondewizer sjen litte"
-
-#: qml/configGeneral.qml:20
-#, fuzzy, kde-format
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Algemien"
 
-#: qml/configGeneral.qml:24
+#: qml/configGeneral.qml:22
+#, fuzzy, kde-format
+#| msgid "Show &seconds hand"
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr "&Sekondewizer sjen litte"
+
+#: qml/configGeneral.qml:28
 #, fuzzy, kde-format
 #| msgid "Show &time zone"
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "&Tiidsône sjen litte"
 

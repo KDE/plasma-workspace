@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_clock.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2007-08-06 00:31-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -24,16 +24,19 @@ msgstr "Cuma"
 
 #: qml/configGeneral.qml:19
 #, kde-format
-msgid "Show seconds hand"
-msgstr ""
-
-#: qml/configGeneral.qml:20
-#, kde-format
+msgctxt "@title:group"
 msgid "General:"
 msgstr ""
 
-#: qml/configGeneral.qml:24
+#: qml/configGeneral.qml:22
 #, kde-format
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr ""
+
+#: qml/configGeneral.qml:28
+#, kde-format
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2024-07-24 23:19-0400\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: sq\n"
@@ -26,17 +26,23 @@ msgid "Appearance"
 msgstr "Paraqitja"
 
 #: qml/configGeneral.qml:19
-#, kde-format
-msgid "Show seconds hand"
-msgstr "Shfaq dorën e sekondave"
-
-#: qml/configGeneral.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Të Përgjithshme:"
 
-#: qml/configGeneral.qml:24
-#, kde-format
+#: qml/configGeneral.qml:22
+#, fuzzy, kde-format
+#| msgid "Show seconds hand"
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr "Shfaq dorën e sekondave"
+
+#: qml/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show time zone"
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Shfaq zonën kohore"
 

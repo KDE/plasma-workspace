@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2019-06-04 22:15+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -27,33 +27,51 @@ msgstr ""
 msgid "General"
 msgstr "Bendra"
 
-#: qml/configGeneral.qml:21
+#: qml/configGeneral.qml:20
 #, kde-format
-msgid "Calendar version:"
-msgstr "Kalendoriaus versija:"
+msgctxt "@option:check prefix"
+msgid "Full calendar:"
+msgstr ""
 
 #: qml/configGeneral.qml:23
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show week numbers"
+msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Rodyti savaitės numerius"
 
-#: qml/configGeneral.qml:32
-#, kde-format
-msgctxt "What information is shown in the calendar icon"
-msgid "Compact version:"
-msgstr "Kompaktiška versija:"
+#: qml/configGeneral.qml:29
+#, fuzzy, kde-format
+#| msgctxt "What information is shown in the calendar icon"
+#| msgid "Icon:"
+msgctxt ""
+"@title group radio button prefix What information is shown in the calendar "
+"icon"
+msgid "Icon:"
+msgstr "Ženkliukas:"
 
-#: qml/configGeneral.qml:34
-#, kde-format
-msgctxt "Show the number of the day (eg. 31) in the icon"
+#: qml/configGeneral.qml:32
+#, fuzzy, kde-format
+#| msgctxt "Show the number of the day (eg. 31) in the icon"
+#| msgid "Show day of the month"
+msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Rodyti mėnesio dieną"
 
 #: qml/configGeneral.qml:40
-#, kde-format
-msgctxt "Show the week number (eg. 50) in the icon"
+#, fuzzy, kde-format
+#| msgctxt "Show the week number (eg. 50) in the icon"
+#| msgid "Show week number"
+msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Rodyti savaitės numerį"
+
+#~ msgid "Calendar version:"
+#~ msgstr "Kalendoriaus versija:"
+
+#~ msgctxt "What information is shown in the calendar icon"
+#~ msgid "Compact version:"
+#~ msgstr "Kompaktiška versija:"
 
 #~ msgid "Working Day"
 #~ msgstr "Darbo diena"
@@ -63,10 +81,6 @@ msgstr "Rodyti savaitės numerį"
 
 #~ msgid "Ends at 5"
 #~ msgstr "Baigiasi 17"
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Icon:"
-#~ msgstr "Ženkliukas:"
 
 #~ msgctxt "Show the number of the day (eg. 31) in the icon"
 #~ msgid "Day in month"

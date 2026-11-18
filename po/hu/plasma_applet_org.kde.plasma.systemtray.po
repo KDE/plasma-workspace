@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-15 00:48+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2026-06-07 21:59+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -55,27 +55,37 @@ msgid "Never show (disabled)"
 msgstr "Soha ne jelenjen meg (kikapcsolva)"
 
 #: qml/ConfigGeneral.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Status"
+msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "Alkalmazásállapot"
 
 #: qml/ConfigGeneral.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Communications"
+msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "Kommunikáció"
 
 #: qml/ConfigGeneral.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "Rendszerszolgáltatások"
 
 #: qml/ConfigGeneral.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hardware Control"
+msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "Hardvervezérlés"
 
 #: qml/ConfigGeneral.qml:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Miscellaneous"
+msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "Egyéb"
 
@@ -135,19 +145,19 @@ msgstr ""
 "szándékosan egy harmadik féltől származó értesítéskezelőt használ az "
 "értesítések kezelésére."
 
-#: qml/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Méretezés a panelmagassággal"
 
-#: qml/ConfigGeneral.qml:212
+#: qml/ConfigGeneral.qml:215
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Méretezés a panelszélességgel"
 
-#: qml/ConfigGeneral.qml:214
+#: qml/ConfigGeneral.qml:217
 #, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
@@ -155,43 +165,43 @@ msgctxt ""
 msgid "Panel icon size:"
 msgstr "Panelikonok mérete:"
 
-#: qml/ConfigGeneral.qml:222
+#: qml/ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Kicsi"
 
-#: qml/ConfigGeneral.qml:226
+#: qml/ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr "Térköz:"
 
-#: qml/ConfigGeneral.qml:268
+#: qml/ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Kicsi"
 
-#: qml/ConfigGeneral.qml:272
+#: qml/ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normál"
 
-#: qml/ConfigGeneral.qml:276
+#: qml/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Nagy"
 
-#: qml/ConfigGeneral.qml:296
+#: qml/ConfigGeneral.qml:301
 #, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
@@ -199,39 +209,47 @@ msgctxt ""
 msgid "Direction:"
 msgstr "Irány:"
 
-#: qml/ConfigGeneral.qml:310
-#, kde-format
+#: qml/ConfigGeneral.qml:315
+#, fuzzy, kde-format
+#| msgid "Bottom-to-top"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "Lentről fel"
 
-#: qml/ConfigGeneral.qml:311
-#, kde-format
+#: qml/ConfigGeneral.qml:316
+#, fuzzy, kde-format
+#| msgid "Top-to-bottom"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "Fentről le"
 
-#: qml/ConfigGeneral.qml:316 qml/ConfigGeneral.qml:323
-#, kde-format
+#: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
+#, fuzzy, kde-format
+#| msgid "Left-to-right"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "Balról jobbra"
 
-#: qml/ConfigGeneral.qml:317 qml/ConfigGeneral.qml:322
-#, kde-format
+#: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
+#, fuzzy, kde-format
+#| msgid "Right-to-left"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "Jobbról balra"
 
-#: qml/ConfigGeneral.qml:334
+#: qml/ConfigGeneral.qml:336
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatikus nagyra állítás Érintés módban"
 
-#: qml/ConfigGeneral.qml:359
+#: qml/ConfigGeneral.qml:360
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Bejegyzések"
 
-#: qml/ConfigGeneral.qml:363
+#: qml/ConfigGeneral.qml:364
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"

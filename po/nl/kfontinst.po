@@ -1,26 +1,26 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2020-2021, 2024-2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2025-02-21 11:46+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2026-11-17 13:14+0100\n"
+"Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2020 t/m 2024"
+msgstr "Freek de Kruijf - 2020 t/m 2026"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -42,8 +42,7 @@ msgid "Where to Install"
 msgstr "Waar installeren"
 
 #: apps/kfontinst/Installer.cpp:115
-#, fuzzy, kde-format
-#| msgid "Font Management"
+#, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
 msgstr "Lettertypenbeheer"
@@ -52,7 +51,7 @@ msgstr "Lettertypenbeheer"
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "Lettertypen installeren, beheren en bekijken"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format

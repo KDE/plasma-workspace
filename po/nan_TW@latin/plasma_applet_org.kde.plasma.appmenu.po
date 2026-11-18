@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2026-10-06 00:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
@@ -32,18 +32,24 @@ msgstr "Tshiau-tshuē…"
 msgid "Appearance"
 msgstr "Guā-kuan"
 
-#: qml/configGeneral.qml:21
-#, kde-format
+#: qml/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "Use single button for application menu"
+msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Uī ìng-iōng-tîng-sik suán-tuann iōng kan-na tsi̍t-ê tshi̍h-liú"
 
-#: qml/configGeneral.qml:27
-#, kde-format
+#: qml/configGeneral.qml:33
+#, fuzzy, kde-format
+#| msgid "Show full application menu"
+msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Hián-sī uân-tsíng ê ìng-iōng-tîng-sik suán-tuann"
 
-#: qml/configGeneral.qml:32
-#, kde-format
+#: qml/configGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show menus for apps on different screens"
+msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Hián-sī tī pa̍t-ê îng-bōo tíng-kuân ê tîng-sik ê suán-tuann"
 

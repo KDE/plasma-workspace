@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2022-08-13 15:53+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -31,17 +31,23 @@ msgid "Appearance"
 msgstr "Внешний вид"
 
 #: qml/configGeneral.qml:19
-#, kde-format
-msgid "Show seconds hand"
-msgstr "Показывать секундную стрелку"
-
-#: qml/configGeneral.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Параметры:"
 
-#: qml/configGeneral.qml:24
-#, kde-format
+#: qml/configGeneral.qml:22
+#, fuzzy, kde-format
+#| msgid "Show seconds hand"
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr "Показывать секундную стрелку"
+
+#: qml/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show time zone"
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Показывать часовой пояс"
 

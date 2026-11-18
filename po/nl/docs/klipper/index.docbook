@@ -135,8 +135,8 @@
 > (in te stellen op de pagina <guilabel
 >Sneltoetsen</guilabel
 >) of door de optie <guilabel
->Direct bij selectie</guilabel
-> aan te vinken onder <guilabel
+>Wanner tekst of een bestand wordt gekopieerd</guilabel
+> te activeren onder <guilabel
 >Pop-upactiemenu tonen</guilabel
 > op de pagina <guilabel
 >Actiemenu</guilabel
@@ -309,7 +309,7 @@
 ></term>
 <listitem
 ><para
->Indien geactiveerd zal, wanneer er een item uit de geschiedenis van &klipper; geselecteerd wordt, nogmaals de actie-pop-up op dat item getoond worden, indien van toepassing.</para>
+>Indien geactiveerd zal, wanneer er een item uit de geschiedenis, of een item in de geschiedenis wordt bewerkt of deze omwisselt met een sneltoets, zorgt &klipper; dat de actie-pop-up op dat item getoond worden, indien van toepassing.</para>
 </listitem>
 </varlistentry>
 

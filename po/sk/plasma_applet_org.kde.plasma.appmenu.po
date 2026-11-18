@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2023-01-11 21:31+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -31,18 +31,24 @@ msgstr "Hľadať..."
 msgid "Appearance"
 msgstr "Vzhľad"
 
-#: qml/configGeneral.qml:21
-#, kde-format
+#: qml/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "Use single button for application menu"
+msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Použiť jedno tlačidlo pre ponuku aplikácie"
 
-#: qml/configGeneral.qml:27
-#, kde-format
+#: qml/configGeneral.qml:33
+#, fuzzy, kde-format
+#| msgid "Show full application menu"
+msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Zobraziť plnú ponuku aplikácie"
 
-#: qml/configGeneral.qml:32
-#, kde-format
+#: qml/configGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show menus for apps on different screens"
+msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Zobraziť ponuky pre aplikácie na rôznych obrazovkách"
 

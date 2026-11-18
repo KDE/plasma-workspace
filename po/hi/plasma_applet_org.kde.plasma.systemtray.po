@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-15 00:48+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2021-08-13 02:11+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -55,27 +55,37 @@ msgid "Never show (disabled)"
 msgstr ""
 
 #: qml/ConfigGeneral.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Status"
+msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "अनुप्रयोग स्थिती"
 
 #: qml/ConfigGeneral.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Communications"
+msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "संचार"
 
 #: qml/ConfigGeneral.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "तंत्र सेवाएँ"
 
 #: qml/ConfigGeneral.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hardware Control"
+msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "हार्डवेयर नियंत्रण"
 
 #: qml/ConfigGeneral.qml:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Miscellaneous"
+msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "विविध"
 
@@ -118,21 +128,21 @@ msgid ""
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
 
-#: qml/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:214
 #, fuzzy, kde-format
 #| msgid "Scale with Panel height"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "पैनल की ऊंचाई के साथ अनुमापित करें"
 
-#: qml/ConfigGeneral.qml:212
+#: qml/ConfigGeneral.qml:215
 #, fuzzy, kde-format
 #| msgid "Scale with Panel width"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "पैनल की चौडाई के साथ अनुमापित करें"
 
-#: qml/ConfigGeneral.qml:214
+#: qml/ConfigGeneral.qml:217
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of system tray icons in the Panel"
 #| msgid "Panel icon size:"
@@ -142,45 +152,45 @@ msgctxt ""
 msgid "Panel icon size:"
 msgstr "पैनल प्रतीक आकार :"
 
-#: qml/ConfigGeneral.qml:222
+#: qml/ConfigGeneral.qml:225
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "छोटा"
 
-#: qml/ConfigGeneral.qml:226
+#: qml/ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:268
+#: qml/ConfigGeneral.qml:272
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "छोटा"
 
-#: qml/ConfigGeneral.qml:272
+#: qml/ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:276
+#: qml/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:296
+#: qml/ConfigGeneral.qml:301
 #, fuzzy, kde-format
 #| msgid "More actions"
 msgctxt ""
@@ -189,41 +199,45 @@ msgctxt ""
 msgid "Direction:"
 msgstr "अधिक क्रियाएँ"
 
-#: qml/ConfigGeneral.qml:310
+#: qml/ConfigGeneral.qml:315
 #, kde-format
+msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:311
+#: qml/ConfigGeneral.qml:316
 #, kde-format
+msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:316 qml/ConfigGeneral.qml:323
+#: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
 #, kde-format
+msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:317 qml/ConfigGeneral.qml:322
+#: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
 #, kde-format
+msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:334
+#: qml/ConfigGeneral.qml:336
 #, fuzzy, kde-format
 #| msgid "Automatically enabled when in tablet mode"
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "टेबलेट मोड में होने पर स्वचालित रूप से सक्षम"
 
-#: qml/ConfigGeneral.qml:359
+#: qml/ConfigGeneral.qml:360
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "प्रविष्टियाँ"
 
-#: qml/ConfigGeneral.qml:363
+#: qml/ConfigGeneral.qml:364
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@option:check, This is referring to system tray entries"

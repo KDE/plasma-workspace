@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -35,18 +35,24 @@ msgstr "Тражи…"
 msgid "Appearance"
 msgstr "Изглед"
 
-#: qml/configGeneral.qml:21
-#, kde-format
+#: qml/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "Use single button for application menu"
+msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Користи једно дугме за мени програма"
 
-#: qml/configGeneral.qml:27
-#, kde-format
+#: qml/configGeneral.qml:33
+#, fuzzy, kde-format
+#| msgid "Show full application menu"
+msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Прикажи потпуни мени програма"
 
-#: qml/configGeneral.qml:32
-#, kde-format
+#: qml/configGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show menus for apps on different screens"
+msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Прикажи меније програма на другим екранима"
 

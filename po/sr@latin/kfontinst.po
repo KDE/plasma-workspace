@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-10-02 16:27+0200\n"
+"PO-Revision-Date: 2026-11-17 23:51+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -49,13 +49,13 @@ msgstr "Gde instalirati?"
 #, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
-msgstr ""
+msgstr "Upravljanje fontovima|/|$[svojstva dat 'Upravljanju fontovima']"
 
 #: apps/kfontinst/Installer.cpp:117
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "Instalirajte fontove, upravljajte njima i pregledajte ih"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format
@@ -2457,9 +2457,3 @@ msgstr "fags‑pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "ji"
-
-#~ msgid "Font Installer"
-#~ msgstr "Instalater fontova"
-
-#~ msgid "Simple font installer"
-#~ msgstr "Jednostavan instalater fontova"

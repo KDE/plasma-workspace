@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2008-12-25 02:25+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ubuntu-l10n-kur@lists.ubuntu.com>\n"
@@ -27,19 +27,22 @@ msgstr ""
 
 #: qml/configGeneral.qml:19
 #, fuzzy, kde-format
-#| msgid "Show &seconds hand"
-msgid "Show seconds hand"
-msgstr "Jimêra &çirkeyan nîşan bide"
-
-#: qml/configGeneral.qml:20
-#, fuzzy, kde-format
 #| msgid "General"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Giştî"
 
-#: qml/configGeneral.qml:24
+#: qml/configGeneral.qml:22
+#, fuzzy, kde-format
+#| msgid "Show &seconds hand"
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr "Jimêra &çirkeyan nîşan bide"
+
+#: qml/configGeneral.qml:28
 #, fuzzy, kde-format
 #| msgid "Show &time zone"
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Herêma &demê nîşan bide"
 

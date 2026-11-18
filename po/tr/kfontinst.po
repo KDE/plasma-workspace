@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-11-16 19:27+0300\n"
+"PO-Revision-Date: 2026-11-17 18:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -56,13 +56,13 @@ msgstr "Kurulacak Yer"
 #, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
-msgstr ""
+msgstr "Yazı Tipi Yönetimi"
 
 #: apps/kfontinst/Installer.cpp:117
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "Yazı tipleri kurun, onları yönetin ve ön izleyin"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format

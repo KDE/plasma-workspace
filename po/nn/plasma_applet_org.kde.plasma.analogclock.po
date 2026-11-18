@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2023-01-15 12:53+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -27,17 +27,23 @@ msgid "Appearance"
 msgstr "Utsjånad"
 
 #: qml/configGeneral.qml:19
-#, kde-format
-msgid "Show seconds hand"
-msgstr "Vis sekundvisar"
-
-#: qml/configGeneral.qml:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@title:group"
 msgid "General:"
 msgstr "Generelt:"
 
-#: qml/configGeneral.qml:24
-#, kde-format
+#: qml/configGeneral.qml:22
+#, fuzzy, kde-format
+#| msgid "Show seconds hand"
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr "Vis sekundvisar"
+
+#: qml/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show time zone"
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Vis tidssone"
 

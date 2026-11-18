@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -23,16 +23,19 @@ msgstr ""
 
 #: qml/configGeneral.qml:19
 #, kde-format
-msgid "Show seconds hand"
-msgstr ""
-
-#: qml/configGeneral.qml:20
-#, kde-format
+msgctxt "@title:group"
 msgid "General:"
 msgstr ""
 
-#: qml/configGeneral.qml:24
+#: qml/configGeneral.qml:22
 #, kde-format
+msgctxt "@option:check"
+msgid "Show seconds hand"
+msgstr ""
+
+#: qml/configGeneral.qml:28
+#, kde-format
+msgctxt "@option:check"
 msgid "Show time zone"
 msgstr ""
 

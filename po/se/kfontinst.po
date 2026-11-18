@@ -56,7 +56,7 @@ msgstr ""
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
-msgstr ""
+msgstr "© Craig Drummond, 2007"
 
 #: apps/kfontinst/Installer.cpp:128
 #, kde-format
@@ -64,15 +64,14 @@ msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
 
 #: apps/kfontinst/Installer.cpp:131
-#, fuzzy, kde-format
-#| msgid "Where to Install"
+#, kde-format
 msgid "URL to install"
-msgstr "Sajáiduhttinbáiki"
+msgstr "URL maid sajáiduhttit"
 
 #: apps/kfontprint/Printer.cpp:239
 #, kde-format
 msgid "Print"
-msgstr ""
+msgstr "Čálit"
 
 #: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
 #, kde-format
@@ -82,12 +81,12 @@ msgstr ""
 #: apps/kfontprint/Printer.cpp:323
 #, kde-format
 msgid "Font Printer"
-msgstr ""
+msgstr "Fontačálán"
 
 #: apps/kfontprint/Printer.cpp:325
 #, kde-format
 msgid "Simple font printer"
-msgstr ""
+msgstr "Oktageardánis fontačálán"
 
 #: apps/kfontprint/Printer.cpp:333
 #, kde-format
@@ -127,31 +126,29 @@ msgid "Print font preview"
 msgstr ""
 
 #: apps/kfontview/Viewer.cpp:68
-#, fuzzy, kde-format
-#| msgid "Delete Font"
+#, kde-format
 msgid "Select Font to View"
-msgstr "Sihko fontta"
+msgstr "Vállje fontta maid čájehit"
 
 #: apps/kfontview/Viewer.cpp:108
 #, kde-format
 msgid "URL to open"
-msgstr ""
+msgstr "Fierpmádatčujuhus maid rahpat"
 
 #: apps/kfontview/Viewer.cpp:150
-#, fuzzy, kde-format
-#| msgid "Font/File"
+#, kde-format
 msgid "Font Viewer"
-msgstr "Fonta/fiila"
+msgstr "Fontačájeheaddji"
 
 #: apps/kfontview/Viewer.cpp:152
 #, kde-format
 msgid "Simple font viewer"
-msgstr ""
+msgstr "Oktageardánis fontačájeheaddji"
 
 #: apps/kfontview/Viewer.cpp:154
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr ""
+msgstr "© Craig Drummond, 2004-2007"
 
 #: kio/KioFonts.cpp:209
 #, kde-format

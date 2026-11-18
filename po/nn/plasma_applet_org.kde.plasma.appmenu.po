@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-20 00:54+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2026-06-28 11:06+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@nuug.no>\n"
@@ -35,21 +35,27 @@ msgstr "Søk …"
 msgid "Appearance"
 msgstr "Utsjånad"
 
-#: qml/configGeneral.qml:21
-#, kde-format
+#: qml/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "Use single button for application menu"
+msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Vis einskildknapp for programmeny"
 
-#: qml/configGeneral.qml:27
-#, kde-format
+#: qml/configGeneral.qml:33
+#, fuzzy, kde-format
+#| msgid "Show full application menu"
+msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Vis full programmeny"
 
 # Forklaring her:
 # https://invent.kde.org/plasma/plasma-workspace/-/commit/d53cf03bcee0bb3ee7e86b9240d7f47dbc12ab00
 # Og her: https://bugs.kde.org/show_bug.cgi?id=420418
-#: qml/configGeneral.qml:32
-#, kde-format
+#: qml/configGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show menus for apps on different screens"
+msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Vis òg menyar for program på andre skjermar"
 

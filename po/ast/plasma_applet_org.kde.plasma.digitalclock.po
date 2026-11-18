@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-12 22:21+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2023-10-29 21:58+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -70,131 +70,159 @@ msgstr "Aspeutu"
 msgid "Calendar"
 msgstr "Calendariu"
 
-#: configAppearance.qml:58
-#, kde-format
-msgid "Information:"
-msgstr "Información:"
+#: configAppearance.qml:59
+#, fuzzy, kde-format
+#| msgid "ISO Date"
+msgctxt "@option:check also @label:listbox"
+msgid "Show date:"
+msgstr "Data ISO"
 
-#: configAppearance.qml:63
+#: configAppearance.qml:64
 #, kde-format
-msgid "Show date"
+msgctxt "@option:check completes Show date …"
+msgid "Below time"
 msgstr ""
 
-#: configAppearance.qml:72
-#, kde-format
+#: configAppearance.qml:73
+#, fuzzy, kde-format
+#| msgid "Adaptive location"
+msgctxt "@item:inlistbox for Show date"
 msgid "Adaptive location"
 msgstr "Llocalización adautable"
 
-#: configAppearance.qml:73
+#: configAppearance.qml:74
 #, kde-format
+msgctxt "@item:inlistbox for Show date"
 msgid "Always beside time"
 msgstr ""
 
-#: configAppearance.qml:74
+#: configAppearance.qml:75
 #, kde-format
+msgctxt "@item:inlistbox for Show date"
 msgid "Always below time"
 msgstr ""
 
-#: configAppearance.qml:87
+#: configAppearance.qml:85
 #, kde-format
 msgid "Show seconds:"
 msgstr "Amosar los segundos:"
 
-#: configAppearance.qml:89
-#, kde-format
-msgctxt "@option:check"
+#: configAppearance.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Never"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Never"
 msgstr "Enxamás"
 
-#: configAppearance.qml:90
+#: configAppearance.qml:88
 #, kde-format
-msgctxt "@option:check"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: configAppearance.qml:91 configAppearance.qml:112
-#, kde-format
+#: configAppearance.qml:89
+#, fuzzy, kde-format
+#| msgid "Always"
+msgctxt "@item:inlistbox Show Seconds"
 msgid "Always"
 msgstr "Siempres"
 
-#: configAppearance.qml:101
-#, kde-format
+#: configAppearance.qml:96
+#, fuzzy, kde-format
+#| msgid "Show time zone:"
+msgctxt "@title:group prefix for group of radio buttons, e.g. Always"
 msgid "Show time zone:"
 msgstr "Amosar el fusu horariu:"
 
-#: configAppearance.qml:107
+#: configAppearance.qml:100
 #, kde-format
+msgctxt "@option:radio Show time zone"
 msgid "Only when different from local time zone"
 msgstr ""
 
-#: configAppearance.qml:121
-#, kde-format
-msgid "Display time zone as:"
-msgstr ""
+#: configAppearance.qml:108
+#, fuzzy, kde-format
+#| msgid "Always"
+msgctxt "@option:radio Show time zone"
+msgid "Always"
+msgstr "Siempres"
 
-#: configAppearance.qml:131
-#, kde-format
+#: configAppearance.qml:115
+#, fuzzy, kde-format
+#| msgid "Show time zone:"
+msgctxt "@label:listbox e.g. City"
+msgid "Display time zone as:"
+msgstr "Amosar el fusu horariu:"
+
+#: configAppearance.qml:121
+#, fuzzy, kde-format
+#| msgid "Code"
+msgctxt "@item:inlistbox Display time zone as"
 msgid "Code"
 msgstr "Códigu"
 
-#: configAppearance.qml:132
-#, kde-format
+#: configAppearance.qml:122
+#, fuzzy, kde-format
+#| msgid "City"
+msgctxt "@item:inlistbox Display time zone as"
 msgid "City"
 msgstr "Ciudá"
 
-#: configAppearance.qml:133
+#: configAppearance.qml:123
 #, kde-format
+msgctxt "@item:inlistbox Display time zone as"
 msgid "Offset from UTC time"
 msgstr ""
 
-#: configAppearance.qml:141
+#: configAppearance.qml:132
 #, fuzzy, kde-format
 #| msgid "Additional Time Zones"
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
 msgstr "Fusos horarios adicionales"
 
-#: configAppearance.qml:153
+#: configAppearance.qml:140
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr ""
 
-#: configAppearance.qml:160
+#: configAppearance.qml:145
 #, fuzzy, kde-format
 #| msgid "12-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 hores"
 
-#: configAppearance.qml:161
+#: configAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr ""
 
-#: configAppearance.qml:162
+#: configAppearance.qml:147
 #, fuzzy, kde-format
 #| msgid "24-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 hores"
 
-#: configAppearance.qml:171
+#: configAppearance.qml:156
 #, fuzzy, kde-format
 #| msgid "Change Regional Settings…"
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Camudar la configuración rexonal…"
 
-#: configAppearance.qml:182
+#: configAppearance.qml:164
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Formatu de la data:"
 
-#: configAppearance.qml:192
+#: configAppearance.qml:172
 #, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
@@ -202,20 +230,20 @@ msgctxt ""
 msgid "Long date"
 msgstr ""
 
-#: configAppearance.qml:199
+#: configAppearance.qml:179
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr ""
 
-#: configAppearance.qml:206
+#: configAppearance.qml:186
 #, fuzzy, kde-format
 #| msgid "ISO Date"
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "Data ISO"
 
-#: configAppearance.qml:213
+#: configAppearance.qml:193
 #, fuzzy, kde-format
 #| msgctxt "custom date format"
 #| msgid "Custom"
@@ -223,8 +251,12 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Personalizada"
 
-#: configAppearance.qml:253
-#, kde-format
+#: configAppearance.qml:234
+#, fuzzy, kde-format
+#| msgid ""
+#| "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
+#| "\">Time Format Documentation</a>"
+msgctxt "@info:usagetip"
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
@@ -232,50 +264,50 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentación del formatu horariu</a>"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:244
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr ""
 
-#: configAppearance.qml:284
+#: configAppearance.qml:247
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: configAppearance.qml:288
+#: configAppearance.qml:249
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: configAppearance.qml:302
+#: configAppearance.qml:255
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manual"
 
-#: configAppearance.qml:312
+#: configAppearance.qml:265
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Escoyer l'estilu…"
 
-#: configAppearance.qml:329
-#, kde-format
-msgctxt "@info %1 is the font size, %2 is the font family"
-msgid "%1pt %2"
-msgstr ""
-
-#: configAppearance.qml:336
+#: configAppearance.qml:274
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: configAppearance.qml:350
+#: configAppearance.qml:280
+#, kde-format
+msgctxt "@info %1 is the font size, %2 is the font family"
+msgid "%1pt %2"
+msgstr ""
+
+#: configAppearance.qml:295
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -288,7 +320,7 @@ msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Xeneral:"
 
-#: configCalendar.qml:51
+#: configCalendar.qml:53
 #, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
@@ -301,13 +333,13 @@ msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Primer día de la selmana:"
 
-#: configCalendar.qml:64
+#: configCalendar.qml:67
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr ""
 
-#: configCalendar.qml:82
+#: configCalendar.qml:83
 #, fuzzy, kde-format
 #| msgid "Available Plugins:"
 msgctxt "@title:column"
@@ -498,3 +530,6 @@ msgstr "%1:"
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
 msgstr ""
+
+#~ msgid "Information:"
+#~ msgstr "Información:"

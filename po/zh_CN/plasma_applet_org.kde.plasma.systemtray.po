@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-15 00:48+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -54,27 +54,37 @@ msgid "Never show (disabled)"
 msgstr "不显示 (禁用)"
 
 #: qml/ConfigGeneral.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Status"
+msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "应用程序状态"
 
 #: qml/ConfigGeneral.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Communications"
+msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "通信"
 
 #: qml/ConfigGeneral.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "系统服务"
 
 #: qml/ConfigGeneral.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hardware Control"
+msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "硬件控制"
 
 #: qml/ConfigGeneral.qml:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Miscellaneous"
+msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "其他"
 
@@ -127,19 +137,19 @@ msgstr ""
 "不建议禁用通知小部件，因为应用发送的通知将不再显示。<nl/><nl/>请仅在您已经手"
 "动添加了一个独立的通知小部件或使用第三方通知管理器时禁用系统通知。"
 
-#: qml/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "按面板高度缩放"
 
-#: qml/ConfigGeneral.qml:212
+#: qml/ConfigGeneral.qml:215
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "按面板宽度缩放"
 
-#: qml/ConfigGeneral.qml:214
+#: qml/ConfigGeneral.qml:217
 #, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
@@ -147,43 +157,43 @@ msgctxt ""
 msgid "Panel icon size:"
 msgstr "面板图标大小："
 
-#: qml/ConfigGeneral.qml:222
+#: qml/ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "小"
 
-#: qml/ConfigGeneral.qml:226
+#: qml/ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
 msgstr ""
 
-#: qml/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr "间距："
 
-#: qml/ConfigGeneral.qml:268
+#: qml/ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "小"
 
-#: qml/ConfigGeneral.qml:272
+#: qml/ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "标准"
 
-#: qml/ConfigGeneral.qml:276
+#: qml/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "大"
 
-#: qml/ConfigGeneral.qml:296
+#: qml/ConfigGeneral.qml:301
 #, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
@@ -191,39 +201,47 @@ msgctxt ""
 msgid "Direction:"
 msgstr "方向："
 
-#: qml/ConfigGeneral.qml:310
-#, kde-format
+#: qml/ConfigGeneral.qml:315
+#, fuzzy, kde-format
+#| msgid "Bottom-to-top"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "从下到上"
 
-#: qml/ConfigGeneral.qml:311
-#, kde-format
+#: qml/ConfigGeneral.qml:316
+#, fuzzy, kde-format
+#| msgid "Top-to-bottom"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "从上到下"
 
-#: qml/ConfigGeneral.qml:316 qml/ConfigGeneral.qml:323
-#, kde-format
+#: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
+#, fuzzy, kde-format
+#| msgid "Left-to-right"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "从左到右"
 
-#: qml/ConfigGeneral.qml:317 qml/ConfigGeneral.qml:322
-#, kde-format
+#: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
+#, fuzzy, kde-format
+#| msgid "Right-to-left"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "从右到左"
 
-#: qml/ConfigGeneral.qml:334
+#: qml/ConfigGeneral.qml:336
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "在触摸模式下自动设置为大间距"
 
-#: qml/ConfigGeneral.qml:359
+#: qml/ConfigGeneral.qml:360
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "项目"
 
-#: qml/ConfigGeneral.qml:363
+#: qml/ConfigGeneral.qml:364
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"

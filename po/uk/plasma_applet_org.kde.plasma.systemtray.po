@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-15 00:48+0000\n"
+"POT-Creation-Date: 2026-11-17 13:09+0000\n"
 "PO-Revision-Date: 2026-10-15 18:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -54,27 +54,37 @@ msgid "Never show (disabled)"
 msgstr "Ніколи не показувати (вимкнути)"
 
 #: qml/ConfigGeneral.qml:129
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Status"
+msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "Стан програм"
 
 #: qml/ConfigGeneral.qml:131
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Communications"
+msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "Обмін даними"
 
 #: qml/ConfigGeneral.qml:133
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "System Services"
+msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "Служби системи"
 
 #: qml/ConfigGeneral.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hardware Control"
+msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "Керування обладнанням"
 
 #: qml/ConfigGeneral.qml:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Miscellaneous"
+msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "Різне"
 
@@ -132,19 +142,19 @@ msgstr ""
 "якщо вами вручну додано окремий віджет сповіщень в іншому місці, або ви "
 "навмисне використовуєте сторонню програму для керування сповіщеннями."
 
-#: qml/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:214
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Масштабувати за висотою панелі"
 
-#: qml/ConfigGeneral.qml:212
+#: qml/ConfigGeneral.qml:215
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Масштабувати за шириною панелі"
 
-#: qml/ConfigGeneral.qml:214
+#: qml/ConfigGeneral.qml:217
 #, kde-format
 msgctxt ""
 "@label:listbox Whether the system tray icons in the Panel always stay small "
@@ -152,43 +162,43 @@ msgctxt ""
 msgid "Panel icon size:"
 msgstr "Розмір піктограм на панелі:"
 
-#: qml/ConfigGeneral.qml:222
+#: qml/ConfigGeneral.qml:225
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Small"
 msgstr "Малий"
 
-#: qml/ConfigGeneral.qml:226
+#: qml/ConfigGeneral.qml:229
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
 msgstr "Крихітний"
 
-#: qml/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:268
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Spacing:"
 msgstr "Інтервал:"
 
-#: qml/ConfigGeneral.qml:268
+#: qml/ConfigGeneral.qml:272
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Малий"
 
-#: qml/ConfigGeneral.qml:272
+#: qml/ConfigGeneral.qml:276
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Звичайний"
 
-#: qml/ConfigGeneral.qml:276
+#: qml/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Великий"
 
-#: qml/ConfigGeneral.qml:296
+#: qml/ConfigGeneral.qml:301
 #, kde-format
 msgctxt ""
 "@label:listbox Which direction system tray icons in the Panel emerge from "
@@ -196,39 +206,47 @@ msgctxt ""
 msgid "Direction:"
 msgstr "Напрямок:"
 
-#: qml/ConfigGeneral.qml:310
-#, kde-format
+#: qml/ConfigGeneral.qml:315
+#, fuzzy, kde-format
+#| msgid "Bottom-to-top"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "Знизу догори"
 
-#: qml/ConfigGeneral.qml:311
-#, kde-format
+#: qml/ConfigGeneral.qml:316
+#, fuzzy, kde-format
+#| msgid "Top-to-bottom"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "Згори вниз"
 
-#: qml/ConfigGeneral.qml:316 qml/ConfigGeneral.qml:323
-#, kde-format
+#: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
+#, fuzzy, kde-format
+#| msgid "Left-to-right"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "Зліва праворуч"
 
-#: qml/ConfigGeneral.qml:317 qml/ConfigGeneral.qml:322
-#, kde-format
+#: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
+#, fuzzy, kde-format
+#| msgid "Right-to-left"
+msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "Справа ліворуч"
 
-#: qml/ConfigGeneral.qml:334
+#: qml/ConfigGeneral.qml:336
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "У режимі сенсорного керування буде автоматично встановлено «Великий»"
 
-#: qml/ConfigGeneral.qml:359
+#: qml/ConfigGeneral.qml:360
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Записи"
 
-#: qml/ConfigGeneral.qml:363
+#: qml/ConfigGeneral.qml:364
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
