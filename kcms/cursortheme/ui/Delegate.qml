@@ -24,6 +24,9 @@ KCM.GridDelegate {
     toolTip: model.description
 
     opacity: model.pendingDeletion ? 0.3 : 1
+    Behavior on opacity {
+        NumberAnimation { duration: Kirigami.Units.longDuration }
+    }
 
     thumbnailAvailable: true
     thumbnail: PreviewWidget {
