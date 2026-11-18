@@ -17,12 +17,5 @@ public:
 
 protected:
     void checkLocalInstall();
-    QString desktopFile(KIO::UDSEntry &) const;
     bool rewriteUrl(const QUrl &url, QUrl &newUrl) override;
-    KIO::WorkerResult listDir(const QUrl &url) override;
-    void adjustUDSEntry(KIO::UDSEntry &entry, UDSEntryCreationMode creationMode) const override;
-    KIO::WorkerResult rename(const QUrl &, const QUrl &, KIO::JobFlags flags) override;
-
-private:
-    KIO::WorkerResult fileSystemFreeSpace(const QUrl &url) override;
 };
