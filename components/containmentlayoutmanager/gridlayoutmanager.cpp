@@ -400,14 +400,10 @@ QPair<int, int> GridLayoutManager::nextAvailableCell(const QPair<int, int> &cell
         if (isOutOfBounds(nCell)) {
             switch (direction) {
             case AppletsLayout::AppletsLayout::BottomToTop:
-                --nCell.second;
-                break;
             case AppletsLayout::AppletsLayout::TopToBottom:
                 ++nCell.second;
                 break;
             case AppletsLayout::AppletsLayout::RightToLeft:
-                --nCell.first;
-                break;
             case AppletsLayout::AppletsLayout::LeftToRight:
             default:
                 ++nCell.first;
