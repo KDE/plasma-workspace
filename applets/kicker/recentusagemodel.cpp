@@ -300,7 +300,10 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
         if (index.isValid()) {
             return m_placesModel->text(index);
         }
-        return fileItem.text();
+        if (const QString text = fileItem.text(); !text.isEmpty()) {
+            return text;
+        }
+        return url.host().isEmpty() ? url.toDisplayString(QUrl::PreferLocalFile) : url.host();
     } else if (role == Qt::DecorationRole) {
         auto fileItem = getFileItem();
         const auto index = findPlaceForKFileItem(fileItem);
