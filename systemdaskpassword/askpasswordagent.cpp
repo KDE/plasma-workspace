@@ -33,7 +33,15 @@
 
 // glibc 2.44 omits C++ linkage guards from <sys/pidfd.h>.
 extern "C" {
+#ifdef __GLIBC__
 #include <sys/pidfd.h>
+#else
+#include <sys/syscall.h>
+#include <sys/types.h>
+static int pidfd_open(pid_t pid, unsigned int flags) {
+    return syscall(SYS_pidfd_open, pid, flags);
+}
+#endif
 }
 
 using namespace std::chrono_literals;
