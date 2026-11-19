@@ -1701,6 +1701,9 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
         if (view) {
             view->disconnect(this);
             delete view;
+            if (!m_closingDown && !m_screenReorderInProgress) {
+                Q_EMIT availableScreenRectChanged(c->screen());
+            }
         }
         const QString snapshotPath = containmentPreviewPath(c);
         if (!snapshotPath.isEmpty()) {
