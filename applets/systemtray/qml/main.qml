@@ -49,7 +49,8 @@ ContainmentItem {
     Connections {
         target: Plasmoid
         function onActivated() {
-            systemTrayState.expanded = !systemTrayState.expanded;
+            Containment.containment.status = PlasmaCore.Types.AcceptingInputStatus
+            tasksGrid.itemAtIndex(0).forceActiveFocus(Qt.ShortcutFocusReason)
         }
     }
 
