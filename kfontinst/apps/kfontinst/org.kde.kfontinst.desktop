@@ -3,10 +3,10 @@
 
 [Desktop Entry]
 Name=Font Management
-Name[ar]=إدارة الخطوط
 Name[az]=Şrift İdarəeetməsi
 Name[ca]=Gestió de les fonts de lletres
 Name[ca@valencia]=Gestioneu les fonts de lletres
+Name[cs]=Správa písem
 Name[da]=Håndtering af skrifttyper
 Name[de]=Schriftarten-Verwaltung
 Name[en_GB]=Font Management
@@ -104,7 +104,6 @@ GenericName[uk]=Встановлення шрифтів
 GenericName[zh_CN]=字体安装程序
 GenericName[zh_TW]=字型安裝器
 Comment=Install, manage and preview fonts
-Comment[ar]=ثبت وأدر واستعرض الخطوط
 Comment[az]=Şriftləri quraşdırmaq, idarə etmək və onlara baxış
 Comment[ca]=Instal·la, gestiona i previsualitza les fonts
 Comment[ca@valencia]=Instal·la, gestiona i previsualitza les fonts
@@ -150,6 +149,7 @@ Keywords[ca@valencia]=font;fonts;lletra;lletres;instal·lador;truetype;type1;map
 Keywords[es]=tipo de letra;tipos de letra;instalador;truetype;type1;bitmap;mapa de bits;
 Keywords[nl]=lettertype;lettertypen;installatieprogramma;truetype;type1;bitmap;
 Keywords[pt_BR]=fonte;fontes;instalador;truetype;type1;bitmap;
+Keywords[ru]=font;fonts;installer;truetype;type1;bitmap;шрифт;шрифты;установка шрифтов;установщик;битовая карта;растровое изображение;удаление шрифтов;
 Keywords[sr]=font;fonts;installer;truetype;type1;bitmap;фонт;фонтови;инсталатер;трутајп;тип‑1;битмапски;
 Keywords[sr@ijekavian]=font;fonts;installer;truetype;type1;bitmap;фонт;фонтови;инсталатер;трутајп;тип‑1;битмапски;
 Keywords[sr@ijekavianlatin]=font;fonts;installer;truetype;type1;bitmap;font;fontovi;instalater;Truetype;Type1;bitmapski;
