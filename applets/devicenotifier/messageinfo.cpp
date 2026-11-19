@@ -40,12 +40,12 @@ QString MessageInfo::getMessage() const
 
 void MessageInfo::queryBlockingApps(const QString &devicePath)
 {
-    auto p = new QProcess;
-    connect(p, &QProcess::errorOccurred, [p, this](QProcess::ProcessError) {
+    auto p = new QProcess(this);
+    connect(p, &QProcess::errorOccurred, this, [p, this](QProcess::ProcessError) {
         Q_EMIT blockingAppsReady({});
         p->deleteLater();
     });
-    connect(p, &QProcess::finished, [p, this](int, QProcess::ExitStatus) {
+    connect(p, &QProcess::finished, this, [p, this](int, QProcess::ExitStatus) {
         QStringList blockApps;
         const QString out = QString::fromLatin1(p->readAll());
         const auto pidList = QStringView(out).split(QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts);
