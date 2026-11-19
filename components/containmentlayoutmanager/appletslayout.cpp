@@ -432,6 +432,7 @@ void AppletsLayout::showPlaceHolderForItem(ItemContainer *item)
     }
 
     m_placeHolder->setPreferredLayoutDirection(item->preferredLayoutDirection());
+    m_placeHolder->setWrapDirection(item->wrapDirection());
     m_placeHolder->setPosition(item->position());
     m_placeHolder->setSize(item->size());
 

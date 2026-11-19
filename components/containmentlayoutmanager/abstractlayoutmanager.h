@@ -117,8 +117,12 @@ protected:
      * @param item the item container we want to place an item in
      * @param minimumSize the minimum size we need to make sure is available
      * @param direction the preferred item layout direction, can be Closest, LeftToRight, RightToLeft, TopToBottom, and BottomToTop
+     * @param wrap what to do when a row/column is full: WrapForward (next row/column) or WrapBackward (previous row/column)
      */
-    virtual QRectF nextAvailableSpace(ItemContainer *item, const QSizeF &minimumSize, AppletsLayout::PreferredLayoutDirection direction) const = 0;
+    virtual QRectF nextAvailableSpace(ItemContainer *item,
+                                      const QSizeF &minimumSize,
+                                      AppletsLayout::PreferredLayoutDirection direction,
+                                      AppletsLayout::WrapDirection wrap) const = 0;
 
 private:
     QRectF candidateGeometry(ItemContainer *item) const;

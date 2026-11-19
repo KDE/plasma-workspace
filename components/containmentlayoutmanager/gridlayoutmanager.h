@@ -44,7 +44,10 @@ public:
 
 protected:
     // The rectangle as near as possible to the current item geometry which can fit it
-    QRectF nextAvailableSpace(ItemContainer *item, const QSizeF &minimumSize, AppletsLayout::PreferredLayoutDirection direction) const override;
+    QRectF nextAvailableSpace(ItemContainer *item,
+                              const QSizeF &minimumSize,
+                              AppletsLayout::PreferredLayoutDirection direction,
+                              AppletsLayout::WrapDirection wrap) const override;
 
     bool assignSpaceImpl(ItemContainer *item, QRectF geometry) override;
     void releaseSpaceImpl(ItemContainer *item) override;
@@ -73,16 +76,19 @@ private:
     inline QRectF itemGeometry(QQuickItem *item) const;
 
     // The next cell given the direction
-    QPair<int, int> nextCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
+    QPair<int, int> nextCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction, AppletsLayout::WrapDirection wrap) const;
 
     // The next cell that is available given the direction
-    QPair<int, int> nextAvailableCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
+    QPair<int, int> nextAvailableCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction, AppletsLayout::WrapDirection wrap) const;
 
     // The next cell that is has something in it given the direction
-    QPair<int, int> nextTakenCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
+    QPair<int, int> nextTakenCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction, AppletsLayout::WrapDirection wrap) const;
 
     // How many cells are available in the row starting from the given cell and direction
-    int freeSpaceInDirection(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction, int maxCellsNeeded) const;
+    int freeSpaceInDirection(const QPair<int, int> &cell,
+                             AppletsLayout::PreferredLayoutDirection direction,
+                             AppletsLayout::WrapDirection wrap,
+                             int maxCellsNeeded) const;
 
     /**
      * This reacts to changes in size hints by an item

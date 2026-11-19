@@ -186,6 +186,22 @@ void ItemContainer::setPreferredLayoutDirection(AppletsLayout::PreferredLayoutDi
     Q_EMIT preferredLayoutDirectionChanged();
 }
 
+AppletsLayout::WrapDirection ItemContainer::wrapDirection() const
+{
+    return m_wrapDirection;
+}
+
+void ItemContainer::setWrapDirection(AppletsLayout::WrapDirection wrap)
+{
+    if (wrap == m_wrapDirection) {
+        return;
+    }
+
+    m_wrapDirection = wrap;
+
+    Q_EMIT wrapDirectionChanged();
+}
+
 void ItemContainer::setLayout(AppletsLayout *layout)
 {
     if (m_layout == layout) {

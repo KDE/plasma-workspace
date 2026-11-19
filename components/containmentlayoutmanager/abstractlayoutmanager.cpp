@@ -48,10 +48,10 @@ QRectF AbstractLayoutManager::candidateGeometry(ItemContainer *item) const
                              qMax(minimumSize.height(), item->layoutAttached()->property("minimumHeight").toReal()));
     }
 
-    const QRectF ltrRect = nextAvailableSpace(item, minimumSize, AppletsLayout::LeftToRight);
-    const QRectF rtlRect = nextAvailableSpace(item, minimumSize, AppletsLayout::RightToLeft);
-    const QRectF ttbRect = nextAvailableSpace(item, minimumSize, AppletsLayout::TopToBottom);
-    const QRectF bttRect = nextAvailableSpace(item, minimumSize, AppletsLayout::BottomToTop);
+    const QRectF ltrRect = nextAvailableSpace(item, minimumSize, AppletsLayout::LeftToRight, item->wrapDirection());
+    const QRectF rtlRect = nextAvailableSpace(item, minimumSize, AppletsLayout::RightToLeft, item->wrapDirection());
+    const QRectF ttbRect = nextAvailableSpace(item, minimumSize, AppletsLayout::TopToBottom, item->wrapDirection());
+    const QRectF bttRect = nextAvailableSpace(item, minimumSize, AppletsLayout::BottomToTop, item->wrapDirection());
 
     auto score = [originalItemRect](QRectF target) {
         auto dist = QPointF(originalItemRect.center() - target.center()).manhattanLength();
