@@ -30,6 +30,7 @@ class ItemContainer : public QQuickItem
     Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
     Q_PROPERTY(AppletsLayout::PreferredLayoutDirection preferredLayoutDirection READ preferredLayoutDirection WRITE setPreferredLayoutDirection NOTIFY
                    preferredLayoutDirectionChanged)
+    Q_PROPERTY(AppletsLayout::WrapDirection wrapDirection READ wrapDirection WRITE setWrapDirection NOTIFY wrapDirectionChanged)
 
     Q_PROPERTY(QUrl configOverlaySource READ configOverlaySource WRITE setConfigOverlaySource NOTIFY configOverlaySourceChanged)
     Q_PROPERTY(bool configOverlayVisible READ configOverlayVisible WRITE setConfigOverlayVisible NOTIFY configOverlayVisibleChanged)
@@ -93,6 +94,9 @@ public:
 
     AppletsLayout::PreferredLayoutDirection preferredLayoutDirection() const;
     void setPreferredLayoutDirection(AppletsLayout::PreferredLayoutDirection direction);
+
+    AppletsLayout::WrapDirection wrapDirection() const;
+    void setWrapDirection(AppletsLayout::WrapDirection wrap);
 
     QUrl configOverlaySource() const;
     void setConfigOverlaySource(const QUrl &url);
@@ -175,6 +179,7 @@ Q_SIGNALS:
     void editModeConditionChanged();
     void editModeChanged(bool editMode);
     void preferredLayoutDirectionChanged();
+    void wrapDirectionChanged();
     void configOverlaySourceChanged();
     void configOverlayItemChanged();
     void initialSizeChanged();
@@ -239,6 +244,7 @@ private:
     QPointF m_lastMousePositionOnGrid = QPoint(-1, -1);
 
     AppletsLayout::PreferredLayoutDirection m_preferredLayoutDirection = AppletsLayout::Closest;
+    AppletsLayout::WrapDirection m_wrapDirection = AppletsLayout::WrapForward;
     bool m_editMode = false;
     bool m_mouseDown = false;
     bool m_mouseSynthetizedFromTouch = false;

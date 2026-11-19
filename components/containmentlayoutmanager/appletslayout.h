@@ -85,6 +85,17 @@ public:
     };
     Q_ENUM(PreferredLayoutDirection)
 
+    /**
+     * What to do when a row/column is full while flowing in a PreferredLayoutDirection:
+     * continue on the next line (row+1 for horizontal flows, column+1 for vertical ones)
+     * or on the previous one (row-1 / column-1)
+     */
+    enum WrapDirection {
+        WrapForward = 0,
+        WrapBackward,
+    };
+    Q_ENUM(WrapDirection)
+
     enum EditModeCondition {
         Locked = 0,
         Manual,
