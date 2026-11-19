@@ -48,42 +48,87 @@ QRectF AbstractLayoutManager::candidateGeometry(ItemContainer *item) const
                              qMax(minimumSize.height(), item->layoutAttached()->property("minimumHeight").toReal()));
     }
 
-    const QRectF ltrRect = nextAvailableSpace(item, minimumSize, AppletsLayout::LeftToRight, item->wrapDirection());
-    const QRectF rtlRect = nextAvailableSpace(item, minimumSize, AppletsLayout::RightToLeft, item->wrapDirection());
-    const QRectF ttbRect = nextAvailableSpace(item, minimumSize, AppletsLayout::TopToBottom, item->wrapDirection());
-    const QRectF bttRect = nextAvailableSpace(item, minimumSize, AppletsLayout::BottomToTop, item->wrapDirection());
+    const AppletsLayout::PreferredLayoutDirection direction = item->preferredLayoutDirection();
+    AppletsLayout::PreferredLayoutDirection oppositeDirection;
+    switch (direction) {
+    case AppletsLayout::RightToLeft:
+        oppositeDirection = AppletsLayout::LeftToRight;
+        break;
+    case AppletsLayout::TopToBottom:
+        oppositeDirection = AppletsLayout::BottomToTop;
+        break;
+    case AppletsLayout::BottomToTop:
+        oppositeDirection = AppletsLayout::TopToBottom;
+        break;
+    case AppletsLayout::LeftToRight:
+    default:
+        oppositeDirection = AppletsLayout::RightToLeft;
+        break;
+    }
+    const AppletsLayout::WrapDirection wrap = item->wrapDirection();
+    const AppletsLayout::WrapDirection oppositeWrap = wrap == AppletsLayout::WrapForward ? AppletsLayout::WrapBackward : AppletsLayout::WrapForward;
 
-    auto score = [originalItemRect](QRectF target) {
-        auto dist = QPointF(originalItemRect.center() - target.center()).manhattanLength();
-        auto size = QPointF(originalItemRect.width() - target.width(), originalItemRect.height() - target.height()).manhattanLength();
-        return dist + size;
-    };
+    // When layout mode is closest, it's a bit more expensive, we have to try to layout in all the
+    // 8 possible directions then take the closest to the desired position
+    if (direction == AppletsLayout::Closest) {
+        QRectF ltrRect = nextAvailableSpace(item, minimumSize, AppletsLayout::LeftToRight, wrap);
+        QRectF rtlRect = nextAvailableSpace(item, minimumSize, AppletsLayout::RightToLeft, wrap);
+        QRectF ttbRect = nextAvailableSpace(item, minimumSize, AppletsLayout::TopToBottom, wrap);
+        QRectF bttRect = nextAvailableSpace(item, minimumSize, AppletsLayout::BottomToTop, wrap);
 
-    // Take the closest rect, unless the item prefers a particular positioning strategy
-    QMap<int, QRectF> distances;
-    if (!ltrRect.isEmpty()) {
-        const int dist = item->preferredLayoutDirection() == AppletsLayout::LeftToRight ? 0 : score(ltrRect);
-        distances[dist] = ltrRect;
-    }
-    if (!rtlRect.isEmpty()) {
-        const int dist = item->preferredLayoutDirection() == AppletsLayout::RightToLeft ? 0 : score(rtlRect);
-        distances[dist] = rtlRect;
-    }
-    if (!ttbRect.isEmpty()) {
-        const int dist = item->preferredLayoutDirection() == AppletsLayout::TopToBottom ? 0 : score(ttbRect);
-        distances[dist] = ttbRect;
-    }
-    if (!bttRect.isEmpty()) {
-        const int dist = item->preferredLayoutDirection() == AppletsLayout::BottomToTop ? 0 : score(bttRect);
-        distances[dist] = bttRect;
-    }
+        if (ltrRect.isEmpty()) {
+            ltrRect = nextAvailableSpace(item, minimumSize, AppletsLayout::LeftToRight, oppositeWrap);
+        }
+        if (rtlRect.isEmpty()) {
+            rtlRect = nextAvailableSpace(item, minimumSize, AppletsLayout::RightToLeft, oppositeWrap);
+        }
+        if (ttbRect.isEmpty()) {
+            ttbRect = nextAvailableSpace(item, minimumSize, AppletsLayout::TopToBottom, oppositeWrap);
+        }
+        if (bttRect.isEmpty()) {
+            bttRect = nextAvailableSpace(item, minimumSize, AppletsLayout::BottomToTop, oppositeWrap);
+        }
 
-    if (distances.isEmpty()) {
-        // Failure to layout, completely full
-        return originalItemRect;
-    } else {
+        auto score = [originalItemRect](QRectF target) {
+            auto dist = QPointF(originalItemRect.center() - target.center()).manhattanLength();
+            auto size = QPointF(originalItemRect.width() - target.width(), originalItemRect.height() - target.height()).manhattanLength();
+            return dist + size;
+        };
+
+        // Take the closest rect, unless the item prefers a particular positioning strategy
+        QMap<int, QRectF> distances;
+        if (!ltrRect.isEmpty()) {
+            distances[score(ltrRect)] = ltrRect;
+        }
+        if (!rtlRect.isEmpty()) {
+            distances[score(rtlRect)] = rtlRect;
+        }
+        if (!ttbRect.isEmpty()) {
+            distances[score(ttbRect)] = ttbRect;
+        }
+        if (!bttRect.isEmpty()) {
+            distances[score(bttRect)] = bttRect;
+        }
+
+        if (distances.isEmpty()) {
+            // Failure to layout, completely full
+            return originalItemRect;
+        }
+
         return std::as_const(distances).first();
     }
+
+    // For all the other directions, first try the desired direction,
+    // if we don't find any space that fits, go backwards, opposite direction and wrap
+    QRectF rect = nextAvailableSpace(item, minimumSize, direction, wrap);
+    if (rect.isEmpty()) {
+        rect = nextAvailableSpace(item, minimumSize, oppositeDirection, oppositeWrap);
+    }
+    if (rect.isEmpty()) {
+        // Failure to layout, completely full
+        return originalItemRect;
+    }
+    return rect;
 }
 
 QRectF AbstractLayoutManager::positionItem(ItemContainer *item)
