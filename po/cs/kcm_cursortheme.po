@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-06-13 12:03+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -159,25 +159,25 @@ msgstr "Ve vašem systému jsou dostupné následující motivy ukazatelů:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Současný motiv pro toto sezení Plasma)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "Odstranit motiv ukazatelů"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "Nelze smazat aktivní motiv ukazatele"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "Nelze smazat motivy ukazatelů nainstalovaných v systému"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "Nelze smazat tento motiv ukazatele"

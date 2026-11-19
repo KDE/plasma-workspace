@@ -24,8 +24,7 @@ msgid "Appearance"
 msgstr "Vzhled"
 
 #: qml/configGeneral.qml:19
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Obecné:"

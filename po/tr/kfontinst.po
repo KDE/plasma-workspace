@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-11-17 18:51+0300\n"
+"PO-Revision-Date: 2026-11-18 19:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -93,12 +93,12 @@ msgstr "İptal ediliyor…"
 #: apps/kfontprint/Printer.cpp:323
 #, kde-format
 msgid "Font Printer"
-msgstr "Yazıtipi Yazıcısı"
+msgstr "Yazı Tipi Yazıcısı"
 
 #: apps/kfontprint/Printer.cpp:325
 #, kde-format
 msgid "Simple font printer"
-msgstr "Basit yazıtipi yazıcı"
+msgstr "Basit yazı tipi yazıcısı"
 
 #: apps/kfontprint/Printer.cpp:333
 #, kde-format
@@ -108,7 +108,7 @@ msgstr "Pencereyi, pencere numarası belirtilen X uygulaması için geçici yapa
 #: apps/kfontprint/Printer.cpp:335
 #, kde-format
 msgid "Size index to print fonts"
-msgstr "Yazıtiplerini yazdırmak için boyut dizini"
+msgstr "Yazı tiplerini yazdırmak için boyut indeksi"
 
 #: apps/kfontprint/Printer.cpp:339
 #, kde-format
@@ -116,33 +116,33 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
-"Basılacak yazıtipi, “Aile, Biçem” şeklinde tanımlanır, burada Biçem, 24 bit "
+"Basılacak yazı tipi, “Aile, Biçem” şeklinde tanımlanır, burada Biçem, 24 bit "
 "onluk sayı olarak şöyle tanımlanmıştır: <kalınlık><genişlik><eğim>"
 
 #: apps/kfontprint/Printer.cpp:342
 #, kde-format
 msgid "File containing list of fonts to print"
-msgstr "Yazıtiplerinin listesini içeren yazdırılacak dosya"
+msgstr "Yazı tiplerinin listesini içeren yazdırılacak dosya"
 
 #: apps/kfontprint/Printer.cpp:344
 #, kde-format
 msgid "Remove file containing list of fonts to print"
-msgstr "Yazıtiplerinin listesini içeren yazdırılacak dosyayı kaldır"
+msgstr "Yazı tiplerinin listesini içeren yazdırılacak dosyayı kaldır"
 
 #: apps/kfontview/Viewer.cpp:50
 #, kde-format
 msgid "Open an existing font file"
-msgstr "Var olan bir yazıtipi dosyasını aç"
+msgstr "Var olan bir yazı tipi dosyasını aç"
 
 #: apps/kfontview/Viewer.cpp:51
 #, kde-format
 msgid "Print font preview"
-msgstr "Yazıtipi önizlemesini yazdır"
+msgstr "Yazı tipi ön izlemesini yazdır"
 
 #: apps/kfontview/Viewer.cpp:68
 #, kde-format
 msgid "Select Font to View"
-msgstr "Görüntülenecek Yazıtipini Seç"
+msgstr "Görüntülenecek Yazı Tipi Seç"
 
 #: apps/kfontview/Viewer.cpp:108
 #, kde-format
@@ -152,12 +152,12 @@ msgstr "Açılacak URL"
 #: apps/kfontview/Viewer.cpp:150
 #, kde-format
 msgid "Font Viewer"
-msgstr "Yazıtipi Görüntüleyicisi"
+msgstr "Yazı Tipi Görüntüleyicisi"
 
 #: apps/kfontview/Viewer.cpp:152
 #, kde-format
 msgid "Simple font viewer"
-msgstr "Basit yazıtipi görüntüleyicisi"
+msgstr "Basit yazı tipi görüntüleyicisi"
 
 #: apps/kfontview/Viewer.cpp:154
 #, kde-format
@@ -216,7 +216,7 @@ msgstr "Yazı Tipleri"
 #: kio/KioFonts.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon"
-msgstr "Sistem ardalan süreci başlatılamadı"
+msgstr "Sistem art alan süreci başlatılamadı"
 
 #: kio/KioFonts.cpp:707
 #, kde-format
@@ -1330,7 +1330,7 @@ msgstr "<i>%1</i> ile ilgili ek dosyalar kaldırılamadı"
 #: manager/JobRunner.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "Sistem ardalan süreci başlatılamadı.<br><i>%1</i>"
+msgstr "Sistem art alan süreci başlatılamadı.<br><i>%1</i>"
 
 #: manager/JobRunner.cpp:711
 #, kde-format

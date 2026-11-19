@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-04-14 09:34+0200\n"
+"PO-Revision-Date: 2026-11-18 14:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -74,36 +74,31 @@ msgid "Calendar"
 msgstr "Calendari"
 
 #: configAppearance.qml:59
-#, fuzzy, kde-format
-#| msgid "Show date"
+#, kde-format
 msgctxt "@option:check also @label:listbox"
 msgid "Show date:"
-msgstr "Mostra la data"
+msgstr "Mostra la data:"
 
 #: configAppearance.qml:64
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@option:check completes Show date …"
 msgid "Below time"
-msgstr "Sempre davall de l'hora"
+msgstr "Davall de l'hora"
 
 #: configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Adaptive location"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Adaptive location"
 msgstr "Ubicació adaptativa"
 
 #: configAppearance.qml:74
-#, fuzzy, kde-format
-#| msgid "Always beside time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always beside time"
 msgstr "Sempre al costat de l'hora"
 
 #: configAppearance.qml:75
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always below time"
 msgstr "Sempre davall de l'hora"
@@ -114,76 +109,64 @@ msgid "Show seconds:"
 msgstr "Mostra els segons:"
 
 #: configAppearance.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Never"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Never"
 msgstr "Mai"
 
 #: configAppearance.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Only in the tooltip"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Only in the tooltip"
 msgstr "Només en el consell d'eina"
 
 #: configAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Always"
 msgstr "Sempre"
 
 #: configAppearance.qml:96
-#, fuzzy, kde-format
-#| msgid "Show time zone:"
+#, kde-format
 msgctxt "@title:group prefix for group of radio buttons, e.g. Always"
 msgid "Show time zone:"
 msgstr "Mostra el fus horari:"
 
 #: configAppearance.qml:100
-#, fuzzy, kde-format
-#| msgid "Only when different from local time zone"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Only when different from local time zone"
 msgstr "Només si és diferent del fus horari local"
 
 #: configAppearance.qml:108
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Always"
 msgstr "Sempre"
 
 #: configAppearance.qml:115
-#, fuzzy, kde-format
-#| msgid "Display time zone as:"
+#, kde-format
 msgctxt "@label:listbox e.g. City"
 msgid "Display time zone as:"
 msgstr "Mostra el fus horari com:"
 
 #: configAppearance.qml:121
-#, fuzzy, kde-format
-#| msgid "Code"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Code"
 msgstr "Codi"
 
 #: configAppearance.qml:122
-#, fuzzy, kde-format
-#| msgid "City"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "City"
 msgstr "Ciutat"
 
 #: configAppearance.qml:123
-#, fuzzy, kde-format
-#| msgid "Offset from UTC time"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Offset from UTC time"
-msgstr "Diferència amb l'hora UTC"
+msgstr "Decalatge amb l'hora UTC"
 
 #: configAppearance.qml:132
 #, kde-format
@@ -254,10 +237,7 @@ msgid "Custom"
 msgstr "Personalitzat"
 
 #: configAppearance.qml:234
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -539,6 +519,3 @@ msgstr "%1:"
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
 msgstr "Clic del mig per a obrir %1"
-
-#~ msgid "Information:"
-#~ msgstr "Informació:"

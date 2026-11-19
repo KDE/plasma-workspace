@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.plasma.calendar.po to Catalan (Valencian)
-# Copyright (C) 2014-2019 This_file_is_part_of_KDE
+# Copyright (C) 2014-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2014 Antoni Bella Pérez <antonibella5@yahoo.com>
-# SPDX-FileCopyrightText: 2015-2016, 2019 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2015-2016, 2019, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2019-04-26 19:04+0100\n"
+"PO-Revision-Date: 2026-11-18 10:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -30,11 +30,10 @@ msgstr "General"
 #, kde-format
 msgctxt "@option:check prefix"
 msgid "Full calendar:"
-msgstr ""
+msgstr "Calendari complet:"
 
 #: qml/configGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Mostra els números de les setmanes"
@@ -45,27 +44,16 @@ msgctxt ""
 "@title group radio button prefix What information is shown in the calendar "
 "icon"
 msgid "Icon:"
-msgstr ""
+msgstr "Icona:"
 
 #: qml/configGeneral.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Show the number of the day (eg. 31) in the icon"
-#| msgid "Show day of the month"
+#, kde-format
 msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Mostra el dia del mes"
 
 #: qml/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgctxt "Show the week number (eg. 50) in the icon"
-#| msgid "Show week number"
+#, kde-format
 msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Mostra el número de la setmana"
-
-#~ msgid "Calendar version:"
-#~ msgstr "Versió del calendari:"
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Compact version:"
-#~ msgstr "Versió compacta:"

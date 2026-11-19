@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-08-01 17:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -155,25 +155,25 @@ msgstr "உங்கள் கணினியில் கீழ்காணு�
 msgid "(Current theme for this Plasma session)"
 msgstr "(தற்போதைய அமர்வுக்கான தோற்றத்திட்டம்)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "சுட்டிக்குறி தோற்றத்திட்டத்தை நீக்கு"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "செயலிலுள்ள தோற்றத்திட்டத்தை நீக்க முடியாது"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "கணினி முழுவதற்கும் நிறுவப்பட்டுள்ள தோற்றத்திட்டத்தை நீக்க முடியாது"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "இதை நீக்க வேண்டாம்"

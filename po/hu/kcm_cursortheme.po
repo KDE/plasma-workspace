@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-06-02 22:26+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -162,25 +162,25 @@ msgstr "Az alábbi mutatótémák találhatók meg a rendszeren:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(A Plasma munkamenet aktuális témája)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "Mutatótéma eltávolítása"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "Az aktív mutatótéma nem törölhető"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "A rendszer által telepített mutatótémák nem törölhetők"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "Ne törölje ezt a mutatótémát"

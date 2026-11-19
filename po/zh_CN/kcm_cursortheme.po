@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -147,25 +147,25 @@ msgstr "您的系统已安装以下鼠标指针主题："
 msgid "(Current theme for this Plasma session)"
 msgstr "(此 Plasma 会话的当前主题)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "移除指针主题"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "无法删除已激活的指针主题"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "无法删除系统安装的指针主题"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "不要删除此指针主题"

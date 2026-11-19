@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-06-13 16:25+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -165,25 +165,25 @@ msgstr "ערכות הסמנים הבאות נמצאות במערכת שלך:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(ערכת סמלים נוכחית להפעלת פלזמה זו)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "הסרת ערכת סמנים"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "לא ניתן למחוק את ערכת הסמנים הפעילה"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "לא ניתן למחוק ערכות סמנים מערכתיות"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "לא למחוק את ערכת הסמנים הזאת"

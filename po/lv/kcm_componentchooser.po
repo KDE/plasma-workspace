@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcomponentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-07 00:46+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-08-14 22:39+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -135,7 +135,7 @@ msgstr "Piespiest visiem atvērties „%1“"
 msgid "Configure Manually…"
 msgstr "Konfigurēt manuāli…"
 
-#: ui/main.qml:17
+#: ui/main.qml:19
 #, kde-format
 msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
@@ -144,105 +144,105 @@ msgstr ""
 "Izskatās, ka „%1“ neatbalsta šos MIME tipus, kas ir saistīti ar šāda veida "
 "programmu: %2"
 
-#: ui/main.qml:34
+#: ui/main.qml:55
 #, kde-format
 msgctxt "@info:status"
 msgid "This application may not be able to open all file types."
 msgstr "Šī programma var nespēt atvērt visus datņu tipus."
 
-#: ui/main.qml:36
+#: ui/main.qml:57
 #, kde-format
 msgctxt "@action:button"
 msgid "View Details"
 msgstr "Skatīt informāciju"
 
-#: ui/main.qml:63
+#: ui/main.qml:71
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
 msgstr "Internets"
 
-#: ui/main.qml:69
+#: ui/main.qml:74
 #, kde-format
 msgid "Web browser:"
 msgstr "Tīmekļa pārlūkprogramma:"
 
-#: ui/main.qml:83
+#: ui/main.qml:79
 #, kde-format
 msgid "Email client:"
 msgstr "E-pasta klients:"
 
-#: ui/main.qml:97
+#: ui/main.qml:84
 #, kde-format
 msgctxt "Default calendar application"
 msgid "Calendar:"
 msgstr "Kalendārs:"
 
-#: ui/main.qml:111
+#: ui/main.qml:89
 #, kde-format
 msgctxt "Default phone app"
 msgid "Phone Numbers:"
 msgstr "Tālruņa numuri"
 
-#: ui/main.qml:125
+#: ui/main.qml:95
 #, kde-format
 msgctxt "Multimedia related application’s category’s name"
 msgid "Multimedia"
 msgstr "Multivide"
 
-#: ui/main.qml:131
+#: ui/main.qml:98
 #, kde-format
 msgid "Image viewer:"
 msgstr "Attēlu skatītājs:"
 
-#: ui/main.qml:145
+#: ui/main.qml:103
 #, kde-format
 msgid "Music player:"
 msgstr "Mūzikas atskaņotājs:"
 
-#: ui/main.qml:159
+#: ui/main.qml:108
 #, kde-format
 msgid "Video player:"
 msgstr "Video atskaņotājs:"
 
-#: ui/main.qml:173
+#: ui/main.qml:114
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
 msgstr "Dokumenti"
 
-#: ui/main.qml:179
+#: ui/main.qml:117
 #, kde-format
 msgid "Text editor:"
 msgstr "Teksta redaktors:"
 
-#: ui/main.qml:194
+#: ui/main.qml:123
 #, kde-format
 msgid "PDF viewer:"
 msgstr "PDF skatītājs:"
 
-#: ui/main.qml:208
+#: ui/main.qml:129
 #, kde-format
 msgctxt "Utilities related application’s category’s name"
 msgid "Utilities"
 msgstr "Utilītprogrammas:"
 
-#: ui/main.qml:214
+#: ui/main.qml:132
 #, kde-format
 msgid "File manager:"
 msgstr "Datņu pārvaldnieks:"
 
-#: ui/main.qml:228
+#: ui/main.qml:137
 #, kde-format
 msgid "Terminal emulator:"
 msgstr "Termināļa emulators:"
 
-#: ui/main.qml:242
+#: ui/main.qml:142
 #, kde-format
 msgid "Archive manager:"
 msgstr "Arhīvu pārvaldnieks:"
 
-#: ui/main.qml:256
+#: ui/main.qml:147
 #, kde-format
 msgctxt "Map related application’s category’s name"
 msgid "Map:"

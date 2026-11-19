@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2019-10-10 09:00+0300\n"
+"PO-Revision-Date: 2026-11-18 08:57+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -28,19 +28,16 @@ msgstr "Основное"
 #, kde-format
 msgctxt "@option:check prefix"
 msgid "Full calendar:"
-msgstr ""
+msgstr "Полный календарь:"
 
 #: qml/configGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Показывать номера недель"
 
 #: qml/configGeneral.qml:29
-#, fuzzy, kde-format
-#| msgctxt "What information is shown in the calendar icon"
-#| msgid "Icon:"
+#, kde-format
 msgctxt ""
 "@title group radio button prefix What information is shown in the calendar "
 "icon"
@@ -48,17 +45,13 @@ msgid "Icon:"
 msgstr "На значке показывать:"
 
 #: qml/configGeneral.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Show the number of the day (eg. 31) in the icon"
-#| msgid "Show day of the month"
+#, kde-format
 msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Показывать число"
 
 #: qml/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgctxt "Show the week number (eg. 50) in the icon"
-#| msgid "Show week number"
+#, kde-format
 msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Показывать номер недели"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-10-12 11:18+0300\n"
 "Last-Translator: Petros Vidalis <pvidalis@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -172,19 +172,19 @@ msgstr "Στο σύστημά σας υπάρχουν τα ακόλουθα θέ
 msgid "(Current theme for this Plasma session)"
 msgstr "(Τρέχον θέμα αυτής της συνεδρίας Plasma)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "Αφαίρεση θέματος δείκτη"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "Δεν είναι δυνατή η διαγραφή του ενεργού θέματος δείκτη"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
@@ -192,7 +192,7 @@ msgstr ""
 "Δεν είναι δυνατή η διαγραφή θεμάτων δείκτη που έχουν εγκατασταθεί από το "
 "σύστημα"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "Να μη διαγραφεί αυτό το θέμα δείκτη"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-03-29 13:17+0200\n"
+"PO-Revision-Date: 2026-11-18 10:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -27,22 +27,19 @@ msgid "Appearance"
 msgstr "Aparença"
 
 #: qml/configGeneral.qml:19
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "General:"
 
 #: qml/configGeneral.qml:22
-#, fuzzy, kde-format
-#| msgid "Show seconds hand"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show seconds hand"
 msgstr "Mostra la busca dels segons"
 
 #: qml/configGeneral.qml:28
-#, fuzzy, kde-format
-#| msgid "Show time zone"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Mostra el fus horari"

@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-04-03 22:04+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-18 08:57+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -39,22 +39,19 @@ msgid "Appearance"
 msgstr "Внешний вид"
 
 #: qml/configGeneral.qml:24
-#, fuzzy, kde-format
-#| msgid "Use single button for application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Использовать одну кнопку для меню приложения"
 
 #: qml/configGeneral.qml:33
-#, fuzzy, kde-format
-#| msgid "Show full application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Показывать полную строку меню приложения"
 
 #: qml/configGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show menus for apps on different screens"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Показывать меню приложений на разных экранах"

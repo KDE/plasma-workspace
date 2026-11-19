@@ -6,20 +6,20 @@
 # Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
 # Einars Sprugis <einars8@gmail.com>, 2010.
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-01-19 16:56+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-11-17 15:31+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -43,20 +43,7 @@ msgid "Selection and Clipboard:"
 msgstr "Atlasīšana un starpliktuve:"
 
 #: configdialog.cpp:108
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:tooltip"
-#| msgid ""
-#| "When text or an area of the screen is highlighted with the mouse or "
-#| "keyboard, this is the <emphasis>selection</emphasis>. It can be pasted "
-#| "using the middle mouse button.<nl/><nl/>If the selection is explicitly "
-#| "copied using a <interface>Copy</interface> or <interface>Cut</interface> "
-#| "action, it is saved to the <emphasis>clipboard</emphasis>. It can be "
-#| "pasted using a <interface>Paste</interface> action. <nl/><nl/>When turned "
-#| "on this option keeps the selection and the clipboard the same, so that "
-#| "any selection is immediately available to paste by any means. If it is "
-#| "turned off, the selection may still be saved in the clipboard history "
-#| "(subject to the options below), but it can only be pasted using the "
-#| "middle mouse button."
+#, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
 "When text or an area of the screen is highlighted with the mouse or "
@@ -79,32 +66,33 @@ msgstr ""
 "><nl/>Ieslēdzot šo iespēju, atlase un starpliktuve kļūst par vienu vienību, "
 "tāpēc atlase kļūst uzreiz pieejama ielīmēšanai jebkādā veidā. Ja šī iespēja "
 "ir izslēgta, atlase joprojām var tikt saglabāta starpliktuves vēsturē (ņemot "
-"vērā apstiprinātās opcijas), bet to ielīmēt var tikai ar peles vidējo pogu."
+"vērā apstiprināto opciju), bet to ielīmēt var tikai ar peles vidējo pogu."
 
 #: configdialog.cpp:127
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Text selected with the pointer or keyboard"
-msgstr ""
+msgstr "Ar rādītāju vai tastatūru atlasīts teksts"
 
 #: configdialog.cpp:129
-#, fuzzy, kde-format
-#| msgid "Always save in history"
+#, kde-format
 msgctxt "Followed e.g. by 'Text selected with the pointer or keyboard'"
 msgid "Include in history:"
-msgstr "Vienmēr saglabāt vēsturē"
+msgstr "Iekļaut vēsturē:"
 
 #: configdialog.cpp:131
 #, kde-format
 msgid ""
 "Text copied explicitly is always saved unless it is marked as a password."
 msgstr ""
+"Tekstu, kas ir nokopēts ar speciālu darbību, tiek vienmēr saglabāts, "
+"izņemot, ja tas ir atzīmēts kā parole."
 
 #: configdialog.cpp:136
 #, kde-format
 msgctxt "@option:check Part of the setting 'Include in history:'"
 msgid "Image data copied explicitly"
-msgstr ""
+msgstr "Speciāli nokopēti attēlu dati"
 
 #: configdialog.cpp:140
 #, kde-format
@@ -112,6 +100,8 @@ msgid ""
 "For example, layers and selections copied in image editors like Krita or "
 "GIMP.<br/><a href=\"1\">More about images in the clipboard.</a>"
 msgstr ""
+"Piemēram, slāņi un atlases, kas ir kopētas attēlu redaktoros „Krita“, GIMP u."
+"c.<br/><a href=\"1\">Vairāk par attēliem starpliktuvē.</a>"
 
 #: configdialog.cpp:149
 #, kde-kuit-format
@@ -125,6 +115,13 @@ msgid ""
 "clipboard. Any application that sends both text and image will also ignore "
 "it."
 msgstr ""
+"Starpliktuve vienmēr ļaus kopēt attēlu datnes kā datņu nosaukumus un parādīs "
+"to sīktēlus.  Šis iestatījums apskata gadījumus, kuros attēli tiek glabāti "
+"tiešā veidā kā dati.  Dažas lietojumprogrammas atbalsta abus gadījumus, bet "
+"citas attēlus pieņemt tikai kā datus.<nl/><nl/>Tāpat arī ievērojiet, ka "
+"„Spectacle“ ekrānattēlu uzņemšanas rīks ignorēs šo iestatījumu, ja tas tiks "
+"konfigurēts, lai ekrānattēlus saglabātu starpliktuvē. To ignorē arī visas "
+"lietojumprogrammas, kas nosūta tekstu kopā ar attēliem."
 
 #: configdialog.cpp:173
 #, kde-kuit-format
@@ -134,6 +131,10 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"Lai iestatījumiem šajā lapā būtu kāds efekts, <interface>Darbību "
+"konfigurācija</interface> lapā ieslēdziet <interface>Piedāvāt "
+"lietojumprogrammas kopētām saitēm un datnēm</interface> vai ieslēdziet "
+"vismaz vienu darbību."
 
 #: configdialog.cpp:194
 #, kde-format
@@ -141,14 +142,7 @@ msgid "Show action popup menu:"
 msgstr "Parādīt uznirstošo darbību izvēlni:"
 
 #: configdialog.cpp:211
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "When text that matches an action pattern is selected or is chosen from "
-#| "the clipboard history, automatically show the popup menu with applicable "
-#| "actions. If the automatic menu is turned off here, or it is not shown for "
-#| "an excluded window, then it can be shown by using the <shortcut>%1</"
-#| "shortcut> key shortcut."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "When text that matches an action pattern is copied, selected or chosen from "
@@ -158,10 +152,12 @@ msgid ""
 "shortcut> key shortcut or with a button for each matching entry in the "
 "history."
 msgstr ""
-"Kad ir atlasīts vai starpliktuvē izvēlēts teksts, ka atbilst noteiktam "
-"modelim, automātiski parādās uznirstošā izvēlne ar piedāvātām darbībām. Ja "
-"automātiskā izvēlne te ir izslēgta vai netiek parādīta attiecīgajā logā, to "
-"iespējams atvērt, izmantojot tastatūras saīsni <shortcut>%1</shortcut>."
+"Kad tiek nokopēts, atlasīts vai starpliktuves vēsturē izvēlēts teksts, kas "
+"atbilst kādas darbības modelim, automātiski parādīt uznirstošo paziņojumu ar "
+"piedāvātām darbībām. Datņu gadījumā tas ir piemērojams tikai tad, ja tās "
+"tiek kopētas vai izvēlētas no vēstures.<nl/><nl/>Šo izvēlni iespējams atvērt "
+"arī lietojot <shortcut>%1</shortcut> taustiņu kombināciju vai ar pogu katram "
+"atbilstošajam vienumam vēsturē."
 
 #: configdialog.cpp:228
 #, kde-format
@@ -196,16 +192,14 @@ msgid "Description"
 msgstr "Apraksts"
 
 #: configdialog.cpp:276
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Add Action…"
-msgstr "Pievienot darbību..."
+msgstr "Pievienot darbību…"
 
 #: configdialog.cpp:280
-#, fuzzy, kde-format
-#| msgid "Edit Action..."
+#, kde-format
 msgid "Edit Action…"
-msgstr "Rediģēt darbību..."
+msgstr "Rediģēt darbību…"
 
 #: configdialog.cpp:285
 #, kde-format
@@ -327,11 +321,9 @@ msgid "Clear History"
 msgstr "Notīrīt vēsturi"
 
 #: declarative/qml/ClipboardMenu.qml:316
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Configure Klipper…"
+#, kde-format
 msgid "Configure Clipboard…"
-msgstr "&Konfigurēt „Klipper“…"
+msgstr "Konfigurēt starpliktuvi…"
 
 #: declarative/qml/ClipboardMenu.qml:367
 #, kde-format
@@ -350,6 +342,8 @@ msgid ""
 "The clipboard and the selection currently hold a sensitive piece of data "
 "that will not be stored in history."
 msgstr ""
+"Starpliktuve un atlase šobrīd tur sensitīvus datus, kas netiks glabāti "
+"vēsturē."
 
 #: declarative/qml/ClipboardMenu.qml:383
 #, kde-format
@@ -357,7 +351,7 @@ msgctxt "@info"
 msgid ""
 "The clipboard currently holds a sensitive piece of data that will not be "
 "stored in history."
-msgstr ""
+msgstr "Starpliktuve satur sensitīvus datus, kas netiks glabāti vēsturē."
 
 #: declarative/qml/ClipboardMenu.qml:385
 #, kde-format
@@ -365,13 +359,13 @@ msgctxt "@info"
 msgid ""
 "The selection currently holds a sensitive piece of data that will not be "
 "stored in history."
-msgstr ""
+msgstr "Atlase satur sensitīvus datus, kas netiks glabāti vēsturē."
 
 #: declarative/qml/ClipboardMenu.qml:397
 #, kde-format
 msgctxt "@action:button"
 msgid "Clear Secret Data"
-msgstr ""
+msgstr "Notīrīt slepenos datus"
 
 #: declarative/qml/ClipboardMenu.qml:532
 #, kde-format
@@ -541,16 +535,14 @@ msgstr ""
 "aktivēt manuāli, izmantojot <shortcut>%1</shortcut> taustiņu kombināciju."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command..."
+#, kde-format
 msgid "Add Command…"
-msgstr "Pievienot komandu..."
+msgstr "Pievienot komandu…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Edit Command..."
+#, kde-format
 msgid "Edit Command…"
-msgstr "Rediģēt komandu..."
+msgstr "Rediģēt komandu…"
 
 #: editactiondialog.cpp:280
 #, kde-format
@@ -584,22 +576,16 @@ msgid "Command:"
 msgstr "Komanda:"
 
 #: editcommanddialog.cpp:73
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info"
-#| msgid ""
-#| "A <placeholder>&#37;s</placeholder> in the command will be replaced by "
-#| "the complete clipboard contents. <placeholder>&#37;0</placeholder> "
-#| "through <placeholder>&#37;9</placeholder> will be replaced by the "
-#| "corresponding captured texts from the match pattern."
+#, kde-kuit-format
 msgctxt "@info"
 msgid ""
 "A <b>&#37;s</b> in the command will be replaced by the complete clipboard "
 "contents. <b>&#37;0</b> through <b>&#37;9</b> will be replaced by the "
 "corresponding captured texts from the match pattern."
 msgstr ""
-"<placeholder>&#37;s</placeholder> zīmi komandā aizvietos viss starpliktuves "
-"saturs. No <placeholder>&#37;0</placeholder> līdz <placeholder>&#37;9</"
-"placeholder> aizvietos attiecīgais teksts no atbilsmes parauga."
+"<b>&#37;s</b> zīmi komandā aizvietos viss starpliktuves saturs. No "
+"<b>&#37;0</b> līdz <b>&#37;9</b> aizvietos attiecīgais teksts no atbilsmes "
+"parauga."
 
 #: editcommanddialog.cpp:83
 #, kde-format
@@ -650,7 +636,7 @@ msgstr "&Tīrīt starpliktuves vēsturi"
 #, kde-format
 msgctxt "@option:check"
 msgid "Do not ask again"
-msgstr ""
+msgstr "Vairs nejautāt"
 
 #: historymodel.cpp:500
 #, kde-format
@@ -671,19 +657,16 @@ msgid "Remove Starred Item"
 msgstr "Noņemt atzīmēto vienumu"
 
 #: klipper.cpp:69
-#, fuzzy, kde-format
-#| msgid "Clipboard Popup"
+#, kde-format
 msgctxt "@title shortcut group"
 msgid "Clipboard"
-msgstr "Starpliktuves uznirstošais lodziņš"
+msgstr "Starpliktuve"
 
 #: klipper.cpp:73
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu Toggle automatic action"
-#| msgid "Automatic Action Popup Menu"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Toggle Automatic Popping Up of Action Menu"
-msgstr "Automātiskās darbības uznirstošā izvēlne"
+msgstr "Pārslēgt darbības izvēlnes automātisku uznirstošo lodziņu"
 
 #: klipper.cpp:96
 #, kde-format
@@ -713,14 +696,13 @@ msgstr "&Rādīt svītrkodu…"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Down"
-msgstr ""
+msgstr "Rotēt vēsturi lejup"
 
 #: klipper.cpp:133
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rotate History Up"
-msgstr "Notīrīt vēsturi"
+msgstr "Rotēt vēsturi augšup"
 
 #: klipper.cpp:140
 #, kde-format
@@ -736,18 +718,17 @@ msgstr "Starpliktuves vēsture"
 #: klipper.cpp:428
 #, kde-format
 msgid "Newer: "
-msgstr ""
+msgstr "Jaunākais: "
 
 #: klipper.cpp:435
-#, fuzzy, kde-format
-#| msgid "current"
+#, kde-format
 msgid "Current: "
-msgstr "aktīvais"
+msgstr "Pašreizējais: "
 
 #: klipper.cpp:442
 #, kde-format
 msgid "Older: "
-msgstr ""
+msgstr "Vecākais: "
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
@@ -794,75 +775,61 @@ msgstr "Vienādot atlasi un starpliktuvi"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:25
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor is automatically copied to the clipboard "
-#| "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#| "><a href=\"1\">More about the selection and clipboard</a>."
+#, kde-format
 msgid ""
 "Content selected with the pointer is automatically copied to the clipboard "
 "so that it can be pasted with either a <i>Paste</i> action or a middle-click."
 "<br/><a href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"Ar kursoru atlasītais saturs tiek automātiski iekopēts starpliktuvē, lai to "
-"varētu ievietot ar Ielīmēšanu vai peles vidējo pogu.<br/><a href="
+"Ar rādītāju atlasītais saturs tiek automātiski iekopēts starpliktuvē, lai to "
+"varētu ievietot ar <i>ielīmēšanu</i> vai peles vidējo pogu.<br/><a href="
 "\"1\">Vairāk ar atlasi un starpliktuvi</a>."
 
 #. i18n: ectx: label, entry (SaveSelection), group (General)
 #: klipper.kcfg:28
-#, fuzzy, kde-format
-#| msgid "Ignore the selection"
+#, kde-format
 msgid "Save the selection"
-msgstr "Ignorēt atlasi"
+msgstr "Saglabāt atlasi"
 
 #. i18n: ectx: whatsthis, entry (SaveSelection), group (General)
 #: klipper.kcfg:30
-#, fuzzy, kde-format
-#| msgid ""
-#| "Content selected with the cursor but not explicitly copied to the "
-#| "clipboard is not automatically stored in the clipboard history, and can "
-#| "only be pasted using a middle-click."
+#, kde-format
 msgid ""
 "Content selected with the pointer but not explicitly copied to the clipboard "
 "is automatically stored in the clipboard history."
 msgstr ""
-"Ar kursoru atlasītais saturs netiks pats no sevis iekopēts starpliktuvē un "
-"uzglabāts tās vēsturē, bet ir tālāk ielīmējams tikai ar peles vidējo klikšķi."
+"Ar rādītāju atlasītais saturs, kas nav īpaši nokopēts uz starpliktuvi, tiek "
+"automātiski saglabāts starpliktuves vēsturē."
 
 #. i18n: ectx: label, entry (SaveImages), group (General)
 #: klipper.kcfg:33
 #, kde-format
 msgid "Save images"
-msgstr ""
+msgstr "Saglabāt attēlus"
 
 #. i18n: ectx: whatsthis, entry (SaveImages), group (General)
 #: klipper.kcfg:35
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid "Store images in the clipboard history."
-msgstr "Vai teksta atlases saglabāt starpliktuves vēsturē."
+msgstr "Glabāt attēlus starpliktuves vēsturē."
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:38
 #, kde-format
 msgid "When text or a file is copied"
-msgstr ""
+msgstr "Kad tiek kopēts teksts vai datne"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:39
-#, fuzzy, kde-format
-#| msgid ""
-#| "Show the popup menu of applicable actions as soon as a selection is made."
+#, kde-format
 msgid "Show the popup menu as soon as text or file is copied."
-msgstr ""
-"Rādīt uznirstošo izvēli ar pieejamajām darbībām uzreiz pēc atlasīšanas."
+msgstr "Rādīt uznirstošo izvēli uzreiz pēc teksta vai datnes nokopēšanas."
 
 #. i18n: ectx: label, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:43
-#, fuzzy, kde-format
-#| msgid "Non-text selection:"
+#, kde-format
 msgid "When text is selected"
-msgstr "Atlases, kas nav teksts:"
+msgstr "Kad tiek atlasīts teksts"
 
 #. i18n: ectx: tooltip, entry (ActionOnSelection), group (General)
 #: klipper.kcfg:44
@@ -871,6 +838,8 @@ msgid ""
 "Show the popup menu as soon as text is selected, without waiting for it to "
 "be copied."
 msgstr ""
+"Tiklīdz teksts ir atlasīt, parādīt uznirstošo izvēli, negaidot, kad tas tiks "
+"nokopēts."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:48
@@ -892,47 +861,39 @@ msgstr "Vēstures izmērs:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:59
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid ""
 "The clipboard history will store up to this many items. Maximum is 2048."
-msgstr "Starpliktuves vēsturē būs atrodams šāds vienumu skaits."
+msgstr ""
+"Starpliktuves vēsturē tiks glabāts šāds vienumu skaits. Maksimums ir 2048."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:62
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
-msgstr "Testa ieraksts, lai parādītu izmaiņas darbību koka logdaļā"
+msgstr "Pārbaudes ieraksts, lai parādītu izmaiņas darbību koka logdaļā"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:69
-#, fuzzy, kde-format
-#| msgid "Trim whitespace from selection"
+#, kde-format
 msgid "Trim whitespace"
-msgstr "No atlases izdzēst liekās atstarpes"
+msgstr "Noņemt atstarpes"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:71
-#, fuzzy, kde-format
-#| msgid ""
-#| "Remove any whitespace from the start and end of selected text, before "
-#| "performing an action. For example, this ensures that a URL pasted in a "
-#| "browser is interpreted as expected. The text saved on the clipboard is "
-#| "not affected."
+#, kde-format
 msgid ""
 "Remove any whitespace from the start and end of the text passed to an "
 "action. The text saved in history is not affected."
 msgstr ""
-"Pirms darbību veikšanas no atlasītā teksta sākuma un beigām noņemt jebkādas "
-"atstarpes. Piemēram, tas nodrošina, ka pārlūkā ielīmētās URL adreses tiek "
-"pareizi saprastas. Starpliktuvē saglabātais teksts netiek ietekmēts."
+"Noņemt atstarpes no apstrādājamā teksta sākuma un beigām. Vēsturē "
+"saglabātais teksts netiek mainīts."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:74
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "When an item is chosen from history"
-msgstr "Attiecībā uz vienumu, kas ņemts no vēstures"
+msgstr "Kad vēsturē tiek izvēlēts vienums"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:76
@@ -948,7 +909,7 @@ msgstr ""
 #: klipper.kcfg:79
 #, kde-format
 msgid "Offer applications for copied links and files"
-msgstr ""
+msgstr "Piedāvāt lietotnes kopētām saitēm un datnēm"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:81
@@ -958,6 +919,9 @@ msgid ""
 "applications that can open them will be offered alongside your matching "
 "actions, if any."
 msgstr ""
+"Attiecībā uz saiti, kas sākas ar <i>http://</i> vai <i>https://</i> vai "
+"datnēm, līdz ar attiecīgām darbībām tiks piedāvātas atbilstošas "
+"lietojumprogrammas, kas tās atver kas tās atver."
 
 #: klipperpopup.cpp:36
 #, kde-format

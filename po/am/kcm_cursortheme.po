@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-11-03 06:10+0300\n"
 "Last-Translator: Abenezer Wesenseged <wseged@proton.me>\n"
 "Language-Team: Amharic <kde-l10n-am@kde.org>\n"
@@ -149,25 +149,25 @@ msgstr "በስርዓትዎ ላይ የሚከተሉት የመዳፊት(mouse) ጠ�
 msgid "(Current theme for this Plasma session)"
 msgstr "(ለዚህ የPlasma ክፍለ ጊዜ የአሁኑ ገጽታ)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "የጠቋሚ ገጽታን ያስወግዱ"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "በአሁኑ ጊዜ ጥቅም ላይ እየዋለ ያለውን የጠቋሚ ገጽታ (pointer theme) መሰረዝ አይቻልም"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "በስርዓቱ የተጫኑ የጠቋሚ ገጽታዎችን መሰረዝ አይቻልም"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "ይህን የጠቋሚ ገጽታ አትሰርዝ"

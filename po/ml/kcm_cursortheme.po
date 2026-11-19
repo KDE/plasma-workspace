@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -181,28 +181,28 @@ msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇന�
 msgid "(Current theme for this Plasma session)"
 msgstr ""
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, fuzzy, kde-format
 #| msgid "Restore Cursor Theme"
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "ചൂണ്ടുവിരൽ പ്രമേയം പുനഃസ്ഥാപിക്കുക"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, fuzzy, kde-format
 #| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, fuzzy, kde-format
 #| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, fuzzy, kde-format
 #| msgid "Name of the current cursor theme"
 msgid "Don’t delete this pointer theme"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-14 01:06+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2024-07-07 20:22-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -156,12 +156,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "o len e ni?"
 
-#: desktopview.cpp:523 desktopview.cpp:539
+#: desktopview.cpp:522 desktopview.cpp:538
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "o nasin ante"
 
-#: desktopview.cpp:537
+#: desktopview.cpp:536
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "o nasin ante ala"
@@ -330,13 +330,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "nasin wawa pi pali mute"
 
-#: panelview.cpp:1076
+#: panelview.cpp:1075
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "o len a ilo lawa pi palisa ni"
 
-#: panelview.cpp:1078
+#: panelview.cpp:1077
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

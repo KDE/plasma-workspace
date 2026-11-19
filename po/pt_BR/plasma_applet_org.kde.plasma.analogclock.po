@@ -4,20 +4,21 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2013, 2014, 2019.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2022.
+# SPDX-FileCopyrightText: 2026 Marcus Gama <marcus.gama@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.analogclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2022-08-19 15:31-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2026-11-18 05:34-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -25,22 +26,19 @@ msgid "Appearance"
 msgstr "Aparência"
 
 #: qml/configGeneral.qml:19
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "Geral:"
 
 #: qml/configGeneral.qml:22
-#, fuzzy, kde-format
-#| msgid "Show seconds hand"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show seconds hand"
 msgstr "Mostrar ponteiro dos segundos"
 
 #: qml/configGeneral.qml:28
-#, fuzzy, kde-format
-#| msgid "Show time zone"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "Mostrar fuso horário"

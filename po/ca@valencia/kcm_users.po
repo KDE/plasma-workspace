@@ -50,7 +50,7 @@ msgstr "Retireu el dit del lector, i torneu-ho a provar."
 #: src/fingerprintmodel.cpp:315
 #, kde-format
 msgid "Fingerprint enrollment has failed."
-msgstr "No s'ha pogut fer el registre de l'empremta dactilar."
+msgstr "No s'ha pogut llegir el registre de l'empremta dactilar."
 
 #: src/fingerprintmodel.cpp:318
 #, kde-format

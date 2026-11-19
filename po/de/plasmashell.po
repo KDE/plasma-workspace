@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-14 01:06+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-08-29 14:09+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -151,12 +151,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Vorschaubanner ausblenden?"
 
-#: desktopview.cpp:523 desktopview.cpp:539
+#: desktopview.cpp:522 desktopview.cpp:538
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Bearbeitungsmodus starten"
 
-#: desktopview.cpp:537
+#: desktopview.cpp:536
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Bearbeitungsmodus beenden"
@@ -325,13 +325,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Leistungsmodus"
 
-#: panelview.cpp:1076
+#: panelview.cpp:1075
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Kontrollleisteneinstellungen ausblenden"
 
-#: panelview.cpp:1078
+#: panelview.cpp:1077
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

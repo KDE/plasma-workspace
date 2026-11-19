@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-10-15 15:38+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2026-11-18 13:46+0100\n"
+"Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.2\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -53,36 +53,31 @@ msgid "Never show (disabled)"
 msgstr "Nooit tonen (uitgeschakeld)"
 
 #: qml/ConfigGeneral.qml:129
-#, fuzzy, kde-format
-#| msgid "Application Status"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "Programmastatus"
 
 #: qml/ConfigGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Communications"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "Communicaties"
 
 #: qml/ConfigGeneral.qml:133
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "Systeemservices"
 
 #: qml/ConfigGeneral.qml:135
-#, fuzzy, kde-format
-#| msgid "Hardware Control"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "Hardwarebesturing"
 
 #: qml/ConfigGeneral.qml:138
-#, fuzzy, kde-format
-#| msgid "Miscellaneous"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "Diversen"
@@ -209,29 +204,25 @@ msgid "Direction:"
 msgstr "Richting:"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Bottom-to-top"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "Beneden-naar-boven"
 
 #: qml/ConfigGeneral.qml:316
-#, fuzzy, kde-format
-#| msgid "Top-to-bottom"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "Boven-naar-beneden"
 
 #: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
-#, fuzzy, kde-format
-#| msgid "Left-to-right"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "Links-naar-rechts"
 
 #: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
-#, fuzzy, kde-format
-#| msgid "Right-to-left"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "Rechts-naar-links"

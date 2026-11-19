@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-11 01:04+0000\n"
+"POT-Creation-Date: 2026-11-19 01:10+0000\n"
 "PO-Revision-Date: 2026-10-01 11:15+0330\n"
 "Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -156,25 +156,25 @@ msgstr "پوسته‌های اشاره‌گر موشی زیر در سامانه�
 msgid "(Current theme for this Plasma session)"
 msgstr "(پوستهٔ فعلی برای این نشست پلاسما)"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:51
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove pointer theme"
 msgstr "حذف پوستهٔ اشاره‌گر"
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:53
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active pointer theme"
 msgstr "نمی‌توان پوستهٔ اشاره‌گر فعال را حذف کرد"
 
-#: ui/Delegate.qml:52
+#: ui/Delegate.qml:55
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed pointer themes"
 msgstr "نمی‌توان پوسته‌های اشاره‌گر نصب‌شده در سامانه را حذف کرد"
 
-#: ui/Delegate.qml:60
+#: ui/Delegate.qml:63
 #, kde-format
 msgid "Don’t delete this pointer theme"
 msgstr "این پوستهٔ اشاره‌گر حذف نشود"

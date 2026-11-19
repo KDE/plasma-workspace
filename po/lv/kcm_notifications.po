@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024-2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-02 00:47+0000\n"
-"PO-Revision-Date: 2026-01-19 16:47+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2026-11-13 11:03+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "Citas programmas"
 #: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
-msgstr "Rādīt uzlecošos paziņojumus"
+msgstr "Rādīt uznirstošos paziņojumus"
 
 #: ui/ApplicationConfiguration.qml:119
 #, kde-format
@@ -66,30 +66,30 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "Šis paziņojums tiks parādīts kā uznirstošais paziņojums"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "Šis paziņojums tiks parādīts kā uznirstošais paziņojums"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "Šis paziņojums atskaņos skaņu"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "Šis paziņojums neatskaņos skaņu"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr "Ziņojumu rādīt uzlecošā paziņojumā"
+msgstr "Ziņojumu rādīt uznirstošā paziņojumā"
 
 #: ui/ApplicationConfiguration.qml:315
 #, kde-format
@@ -209,13 +209,13 @@ msgstr "Zemas prioritātes paziņojumi:"
 #: ui/main.qml:196
 #, kde-format
 msgid "Show popup"
-msgstr "Rādīt uzlecošo paziņojumu"
+msgstr "Rādīt uznirstošo paziņojumu"
 
 #: ui/main.qml:225
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Uzlecošie paziņojumi"
+msgstr "Uznirstošie paziņojumi"
 
 #: ui/main.qml:231
 #, kde-format
@@ -277,7 +277,7 @@ msgstr "Programmas progress:"
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
-msgstr "Progresa laikā uzlecošo logu nepaslēpt"
+msgstr "Progresa laikā uznirstošo paziņojumu nepaslēpt"
 
 #: ui/main.qml:352
 #, kde-format
@@ -292,7 +292,7 @@ msgstr "Rādīt uzdevumu pārvaldniekā"
 #: ui/PopupPositionDialog.qml:15
 #, kde-format
 msgid "Popup Position"
-msgstr "Uzlecošā paziņojuma vieta"
+msgstr "Uznirstošā paziņojuma vieta"
 
 #: ui/SourcesPage.qml:20
 #, kde-format

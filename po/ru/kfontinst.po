@@ -22,8 +22,8 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2026-11-12 17:05+0300\n"
-"Last-Translator: Mariya Shikunova <maremarie@altlinux.org>\n"
+"PO-Revision-Date: 2026-11-18 07:57+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -60,8 +60,7 @@ msgid "Where to Install"
 msgstr "Куда устанавливать"
 
 #: apps/kfontinst/Installer.cpp:115
-#, fuzzy, kde-format
-#| msgid "Font Management"
+#, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
 msgstr "Управление шрифтами"
@@ -70,7 +69,7 @@ msgstr "Управление шрифтами"
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "Установка, управление и предварительный просмотр шрифтов"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format

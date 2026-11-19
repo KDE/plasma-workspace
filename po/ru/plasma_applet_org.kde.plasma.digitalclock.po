@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_dig_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-10-04 08:54+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-11-18 08:57+0200\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -84,36 +84,31 @@ msgid "Calendar"
 msgstr "Календарь"
 
 #: configAppearance.qml:59
-#, fuzzy, kde-format
-#| msgid "Show date"
+#, kde-format
 msgctxt "@option:check also @label:listbox"
 msgid "Show date:"
 msgstr "Показывать дату"
 
 #: configAppearance.qml:64
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@option:check completes Show date …"
 msgid "Below time"
 msgstr "Всегда ниже времени"
 
 #: configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Adaptive location"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Adaptive location"
 msgstr "Адаптивное расположение"
 
 #: configAppearance.qml:74
-#, fuzzy, kde-format
-#| msgid "Always beside time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always beside time"
 msgstr "Всегда сбоку от времени"
 
 #: configAppearance.qml:75
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always below time"
 msgstr "Всегда ниже времени"
@@ -124,73 +119,61 @@ msgid "Show seconds:"
 msgstr "Показывать секунды:"
 
 #: configAppearance.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Never"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Never"
 msgstr "Не показывать"
 
 #: configAppearance.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Only in the tooltip"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Only in the tooltip"
 msgstr "Во всплывающей подсказке"
 
 #: configAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Always"
 msgstr "Всегда"
 
 #: configAppearance.qml:96
-#, fuzzy, kde-format
-#| msgid "Show time zone:"
+#, kde-format
 msgctxt "@title:group prefix for group of radio buttons, e.g. Always"
 msgid "Show time zone:"
 msgstr "Показывать часовой пояс:"
 
 #: configAppearance.qml:100
-#, fuzzy, kde-format
-#| msgid "Only when different from local time zone"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Only when different from local time zone"
 msgstr "Только если отличается от местного"
 
 #: configAppearance.qml:108
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Always"
 msgstr "Всегда"
 
 #: configAppearance.qml:115
-#, fuzzy, kde-format
-#| msgid "Display time zone as:"
+#, kde-format
 msgctxt "@label:listbox e.g. City"
 msgid "Display time zone as:"
 msgstr "Называть часовые пояса:"
 
 #: configAppearance.qml:121
-#, fuzzy, kde-format
-#| msgid "Code"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Code"
 msgstr "Код"
 
 #: configAppearance.qml:122
-#, fuzzy, kde-format
-#| msgid "City"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "City"
 msgstr "Город"
 
 #: configAppearance.qml:123
-#, fuzzy, kde-format
-#| msgid "Offset from UTC time"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Offset from UTC time"
 msgstr "Смещение относительно UTC"
@@ -264,10 +247,7 @@ msgid "Custom"
 msgstr "Пользовательский"
 
 #: configAppearance.qml:234
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
