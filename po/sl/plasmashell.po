@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 03:01+0000\n"
+"POT-Creation-Date: 2026-11-19 03:23+0000\n"
 "PO-Revision-Date: 2026-07-02 06:59+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -152,12 +152,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Naj skrijem predogled pasice?"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:519 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Vstopi v način urejanja"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:533
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Izstopi iz načina urejanja"
@@ -326,13 +326,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Zmogljivostni način"
 
-#: panelview.cpp:1066
+#: panelview.cpp:1065
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Skrij nastavitve pulta"
 
-#: panelview.cpp:1068
+#: panelview.cpp:1067
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

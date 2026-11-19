@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 03:01+0000\n"
+"POT-Creation-Date: 2026-11-19 03:23+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -153,12 +153,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Схаваць банер папярэдняга прагляду?"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:519 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Увайсці ў рэжым рэдагавання"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:533
 #, fuzzy, kde-format
 #| msgid "Enter Edit Mode"
 msgid "Exit Edit Mode"
@@ -328,13 +328,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Прадукцыйны рэжым"
 
-#: panelview.cpp:1066
+#: panelview.cpp:1065
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Схаваць панэль канфігурацыі"
 
-#: panelview.cpp:1068
+#: panelview.cpp:1067
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

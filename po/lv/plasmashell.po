@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 03:01+0000\n"
+"POT-Creation-Date: 2026-11-19 03:23+0000\n"
 "PO-Revision-Date: 2026-08-14 23:30+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -149,12 +149,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Vai paslēpt priekšskatījuma baneri?"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:519 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Ieslēgt rediģēšanas režīmu"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:533
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Iziet no rediģēšanas režīma"
@@ -323,13 +323,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Jaudas režīms"
 
-#: panelview.cpp:1066
+#: panelview.cpp:1065
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Slēpt paneļa konfigurāciju"
 
-#: panelview.cpp:1068
+#: panelview.cpp:1067
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

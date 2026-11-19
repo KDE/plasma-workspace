@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-03 03:01+0000\n"
+"POT-Creation-Date: 2026-11-19 03:23+0000\n"
 "PO-Revision-Date: 2026-11-11 22:58+0200\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -164,12 +164,12 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Скрыть баннер?"
 
-#: desktopview.cpp:520 desktopview.cpp:536
+#: desktopview.cpp:519 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Перейти в режим редактирования"
 
-#: desktopview.cpp:534
+#: desktopview.cpp:533
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Выйти из режима редактирования"
@@ -338,13 +338,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Производительный режим"
 
-#: panelview.cpp:1066
+#: panelview.cpp:1065
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Скрыть окно настройки панели"
 
-#: panelview.cpp:1068
+#: panelview.cpp:1067
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
