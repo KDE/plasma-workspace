@@ -98,6 +98,24 @@ PlasmoidItem {
         }
 
         Connections {
+            target: Plasmoid
+            function onActivated() {
+                let visibleButtons = 0
+                let firstVisibleButton = null
+                for (let i = 0; i < items.count; i++) {
+                    visibleButtons += items.itemAt(i).visible
+                    firstVisibleButton = firstVisibleButton || (items.itemAt(i).visible ? items.itemAt(i) as LockLogoutDelegate: null)
+                }
+                if (visibleButtons == 1) { // there should always be one
+                    lockout.performOperation(firstVisibleButton.operation)
+                } else {
+                    Plasmoid.containment.status = PlasmaCore.Types.AcceptingInputStatus
+                    firstVisibleButton.forceActiveFocus(Qt.ShortcutFocusReason)
+                }
+            }
+        }
+
+        Connections {
             target: Plasmoid.configuration
 
             function onActionsOrderChanged() {
@@ -125,15 +143,17 @@ PlasmoidItem {
                 id: orderedActionsModel
             }
 
-            delegate: PlasmaCore.ToolTipArea {
-                id: iconDelegate
-
+            component LockLogoutDelegate: PlasmaCore.ToolTipArea {
                 required property string configKey
                 required property string requires
                 required property string tooltip_mainText
                 required property string tooltip_subText
                 required property string operation
                 required property var model // used to access icon because ToopTipArea already has icon property
+            }
+
+            delegate: LockLogoutDelegate {
+                id: iconDelegate
 
                 visible: Plasmoid.configuration["show_" + configKey] && (requires !== ""|| session["can" + requires])
                 width: items.itemWidth
