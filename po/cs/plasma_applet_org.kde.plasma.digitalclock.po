@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-04-14 18:39+0200\n"
-"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-11-19 03:40+0100\n"
+"Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.08.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -74,36 +74,31 @@ msgid "Calendar"
 msgstr "Kalendář"
 
 #: configAppearance.qml:59
-#, fuzzy, kde-format
-#| msgid "Show date"
+#, kde-format
 msgctxt "@option:check also @label:listbox"
 msgid "Show date:"
-msgstr "Zobrazit datum"
+msgstr "Zobrazit datum:"
 
 #: configAppearance.qml:64
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@option:check completes Show date …"
 msgid "Below time"
-msgstr "Vždy pod časem"
+msgstr "Pod časem"
 
 #: configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Adaptive location"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Adaptive location"
 msgstr "Adaptivní místo"
 
 #: configAppearance.qml:74
-#, fuzzy, kde-format
-#| msgid "Always beside time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always beside time"
 msgstr "Vždy vedle času"
 
 #: configAppearance.qml:75
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always below time"
 msgstr "Vždy pod časem"
@@ -114,73 +109,61 @@ msgid "Show seconds:"
 msgstr "Zobrazit sekundy:"
 
 #: configAppearance.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Never"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Never"
 msgstr "Nikdy"
 
 #: configAppearance.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Only in the tooltip"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Only in the tooltip"
 msgstr "Pouze v nástrojovém tipu"
 
 #: configAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Always"
 msgstr "Vždy"
 
 #: configAppearance.qml:96
-#, fuzzy, kde-format
-#| msgid "Show time zone:"
+#, kde-format
 msgctxt "@title:group prefix for group of radio buttons, e.g. Always"
 msgid "Show time zone:"
 msgstr "Zobrazit časové pásmo:"
 
 #: configAppearance.qml:100
-#, fuzzy, kde-format
-#| msgid "Only when different from local time zone"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Only when different from local time zone"
 msgstr "Pouze pokud je odlišné od současného časového pásma"
 
 #: configAppearance.qml:108
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Always"
 msgstr "Vždy"
 
 #: configAppearance.qml:115
-#, fuzzy, kde-format
-#| msgid "Display time zone as:"
+#, kde-format
 msgctxt "@label:listbox e.g. City"
 msgid "Display time zone as:"
 msgstr "Zobrazovat časové pásmo jako:"
 
 #: configAppearance.qml:121
-#, fuzzy, kde-format
-#| msgid "Code"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Code"
 msgstr "Kód"
 
 #: configAppearance.qml:122
-#, fuzzy, kde-format
-#| msgid "City"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "City"
 msgstr "Město"
 
 #: configAppearance.qml:123
-#, fuzzy, kde-format
-#| msgid "Offset from UTC time"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Offset from UTC time"
 msgstr "Posun od času UTC"
@@ -254,10 +237,7 @@ msgid "Custom"
 msgstr "Vlastní"
 
 #: configAppearance.qml:234
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"

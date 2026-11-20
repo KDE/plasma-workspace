@@ -45,8 +45,7 @@ msgid "Where to Install"
 msgstr "Kam inštalovať"
 
 #: apps/kfontinst/Installer.cpp:115
-#, fuzzy, kde-format
-#| msgid "Font Management"
+#, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
 msgstr "Správa písma"
@@ -55,7 +54,7 @@ msgstr "Správa písma"
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "Inštalujte, spravujte a prezerajte písma"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format

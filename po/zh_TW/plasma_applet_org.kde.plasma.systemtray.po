@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-11-03 20:55+0900\n"
+"PO-Revision-Date: 2026-11-19 22:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.11.70\n"
+"X-Generator: Lokalize 27.03.70\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -56,36 +56,31 @@ msgid "Never show (disabled)"
 msgstr "永不顯示（停用）"
 
 #: qml/ConfigGeneral.qml:129
-#, fuzzy, kde-format
-#| msgid "Application Status"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "應用程式狀態"
 
 #: qml/ConfigGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Communications"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "通訊"
 
 #: qml/ConfigGeneral.qml:133
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "系統服務"
 
 #: qml/ConfigGeneral.qml:135
-#, fuzzy, kde-format
-#| msgid "Hardware Control"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "硬體控制"
 
 #: qml/ConfigGeneral.qml:138
-#, fuzzy, kde-format
-#| msgid "Miscellaneous"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "雜項"
@@ -206,29 +201,25 @@ msgid "Direction:"
 msgstr "方向："
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Bottom-to-top"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "下到上"
 
 #: qml/ConfigGeneral.qml:316
-#, fuzzy, kde-format
-#| msgid "Top-to-bottom"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "上到下"
 
 #: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
-#, fuzzy, kde-format
-#| msgid "Left-to-right"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "左到右"
 
 #: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
-#, fuzzy, kde-format
-#| msgid "Right-to-left"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "右到左"

@@ -7,21 +7,21 @@
 # Franklin Weng <franklin@mail.everfocus.com.tw>, 2007.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2013.
 # pan93412 <pan93412@gmail.com>, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2023-02-09 01:14+0900\n"
+"PO-Revision-Date: 2026-11-19 22:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 27.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: qml/config.qml:13
@@ -30,22 +30,19 @@ msgid "Appearance"
 msgstr "外觀"
 
 #: qml/configGeneral.qml:19
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@title:group"
 msgid "General:"
 msgstr "一般："
 
 #: qml/configGeneral.qml:22
-#, fuzzy, kde-format
-#| msgid "Show seconds hand"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show seconds hand"
 msgstr "顯示秒針"
 
 #: qml/configGeneral.qml:28
-#, fuzzy, kde-format
-#| msgid "Show time zone"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show time zone"
 msgstr "顯示時區"

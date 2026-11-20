@@ -4,20 +4,21 @@
 # Franklin, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2019-05-11 14:53+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2026-11-19 22:14+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 27.03.70\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -28,11 +29,10 @@ msgstr "一般"
 #, kde-format
 msgctxt "@option:check prefix"
 msgid "Full calendar:"
-msgstr ""
+msgstr "完整行事曆："
 
 #: qml/configGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "顯示週數"
@@ -43,20 +43,16 @@ msgctxt ""
 "@title group radio button prefix What information is shown in the calendar "
 "icon"
 msgid "Icon:"
-msgstr ""
+msgstr "圖示："
 
 #: qml/configGeneral.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Show the number of the day (eg. 31) in the icon"
-#| msgid "Show day of the month"
+#, kde-format
 msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
-msgstr "顯示月天數"
+msgstr "顯示今天幾號"
 
 #: qml/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgctxt "Show the week number (eg. 50) in the icon"
-#| msgid "Show week number"
+#, kde-format
 msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "顯示週數"

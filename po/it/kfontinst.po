@@ -2,14 +2,14 @@
 # Copyright (C) 2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
 # Luciano Montanaro <mikelima@cirulla.net>, 2003, 2007, 2008, 2010, 2011, 2012, 2016.
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
-# SPDX-FileCopyrightText: 2019, 2021, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2021, 2024, 2026 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2024-04-11 12:57+0200\n"
+"PO-Revision-Date: 2026-11-18 10:14+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -44,8 +44,7 @@ msgid "Where to Install"
 msgstr "Dove installare"
 
 #: apps/kfontinst/Installer.cpp:115
-#, fuzzy, kde-format
-#| msgid "Font Management"
+#, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
 msgstr "Gestione dei caratteri"
@@ -54,7 +53,7 @@ msgstr "Gestione dei caratteri"
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "Installa, gestisce e genera l'anteprima dei caratteri"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format

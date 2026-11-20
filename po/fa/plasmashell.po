@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-19 01:10+0000\n"
+"POT-Creation-Date: 2026-11-20 01:14+0000\n"
 "PO-Revision-Date: 2026-10-01 10:45+0330\n"
 "Last-Translator: سهراب بهدانی <behdanisohrab@proton.me>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -393,12 +393,12 @@ msgstr "مدیریت میزکارها و تابلوها…"
 msgid "Move keyboard focus between panels"
 msgstr "جابه‌جایی تمرکز صفحه‌کلید بین تابلوها"
 
-#: shellcorona.cpp:2296
+#: shellcorona.cpp:2299
 #, kde-format
 msgid "Add Panel"
 msgstr "افزودن تابلو"
 
-#: shellcorona.cpp:2383
+#: shellcorona.cpp:2386
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

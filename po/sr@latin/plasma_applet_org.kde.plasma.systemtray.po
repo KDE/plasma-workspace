@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-11-14 16:15+0100\n"
+"PO-Revision-Date: 2026-11-19 09:26+0100\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
 "Language: sr@latin\n"
@@ -56,40 +56,35 @@ msgstr "nikad ne prikazuj (isključeno)"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:129
-#, fuzzy, kde-format
-#| msgid "Application Status"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "Stanje programa"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Communications"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "Komunikacija"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:133
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "Sistemski servisi"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:135
-#, fuzzy, kde-format
-#| msgid "Hardware Control"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "Upravljanje hardverom"
 
 # >> @item category
 #: qml/ConfigGeneral.qml:138
-#, fuzzy, kde-format
-#| msgid "Miscellaneous"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "Razno"
@@ -213,29 +208,25 @@ msgid "Direction:"
 msgstr "Smer:"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Bottom-to-top"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "odozdo nagore"
 
 #: qml/ConfigGeneral.qml:316
-#, fuzzy, kde-format
-#| msgid "Top-to-bottom"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "odozgo nadole"
 
 #: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
-#, fuzzy, kde-format
-#| msgid "Left-to-right"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "sleva udesno"
 
 #: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
-#, fuzzy, kde-format
-#| msgid "Right-to-left"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "zdesna ulevo"

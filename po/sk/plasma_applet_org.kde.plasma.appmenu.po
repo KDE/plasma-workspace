@@ -32,22 +32,19 @@ msgid "Appearance"
 msgstr "Vzhľad"
 
 #: qml/configGeneral.qml:24
-#, fuzzy, kde-format
-#| msgid "Use single button for application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Použiť jedno tlačidlo pre ponuku aplikácie"
 
 #: qml/configGeneral.qml:33
-#, fuzzy, kde-format
-#| msgid "Show full application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Zobraziť plnú ponuku aplikácie"
 
 #: qml/configGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show menus for apps on different screens"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Zobraziť ponuky pre aplikácie na rôznych obrazovkách"

@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2017, 2021, 2022, 2026.
+# SPDX-FileCopyrightText: 2017, 2021, 2022, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-03-14 13:34+0200\n"
+"PO-Revision-Date: 2026-11-19 09:29+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: appmenumodel.cpp:86
 #, kde-format
@@ -36,22 +36,19 @@ msgid "Appearance"
 msgstr "Вигляд"
 
 #: qml/configGeneral.qml:24
-#, fuzzy, kde-format
-#| msgid "Use single button for application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Використовувати одну кнопку для меню програми"
 
 #: qml/configGeneral.qml:33
-#, fuzzy, kde-format
-#| msgid "Show full application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Показувати меню програми повністю"
 
 #: qml/configGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show menus for apps on different screens"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Показ меню для програм на різних екранах"

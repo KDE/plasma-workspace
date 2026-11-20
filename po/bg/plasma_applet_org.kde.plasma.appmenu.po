@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-04-03 01:54+0200\n"
+"PO-Revision-Date: 2026-11-19 22:00+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: appmenumodel.cpp:86
 #, kde-format
@@ -33,22 +33,19 @@ msgid "Appearance"
 msgstr "Външен вид"
 
 #: qml/configGeneral.qml:24
-#, fuzzy, kde-format
-#| msgid "Use single button for application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "Използване на един бутон за меню на приложения"
 
 #: qml/configGeneral.qml:33
-#, fuzzy, kde-format
-#| msgid "Show full application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "Показване на цялото меню на приложения"
 
 #: qml/configGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show menus for apps on different screens"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "Показване на менюта за приложения на различни екрани"

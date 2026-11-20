@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2014, 2019.
+# SPDX-FileCopyrightText: 2014, 2019, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2019-04-30 23:05+0200\n"
-"Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
+"PO-Revision-Date: 2026-11-18 14:56+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.04.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -26,19 +26,16 @@ msgstr "Generale"
 #, kde-format
 msgctxt "@option:check prefix"
 msgid "Full calendar:"
-msgstr ""
+msgstr "Calendario completo:"
 
 #: qml/configGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
-msgstr "Mostra numeri di settimana"
+msgstr "Mostra i numeri di settimana"
 
 #: qml/configGeneral.qml:29
-#, fuzzy, kde-format
-#| msgctxt "What information is shown in the calendar icon"
-#| msgid "Icon:"
+#, kde-format
 msgctxt ""
 "@title group radio button prefix What information is shown in the calendar "
 "icon"
@@ -46,17 +43,13 @@ msgid "Icon:"
 msgstr "Icona:"
 
 #: qml/configGeneral.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Show the number of the day (eg. 31) in the icon"
-#| msgid "Show day of the month"
+#, kde-format
 msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Mostra il giorno del mese"
 
 #: qml/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgctxt "Show the week number (eg. 50) in the icon"
-#| msgid "Show week number"
+#, kde-format
 msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Mostra il numero della settimana"

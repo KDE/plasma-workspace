@@ -1,21 +1,21 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2022-01-02 14:17+0100\n"
-"Last-Translator: mkkDr2010 <mkondarev@yahoo.de>\n"
+"PO-Revision-Date: 2026-11-19 22:01+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -26,11 +26,10 @@ msgstr "Общи"
 #, kde-format
 msgctxt "@option:check prefix"
 msgid "Full calendar:"
-msgstr ""
+msgstr "Пълен календар:"
 
 #: qml/configGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Показване на номера на седмицата"
@@ -41,27 +40,16 @@ msgctxt ""
 "@title group radio button prefix What information is shown in the calendar "
 "icon"
 msgid "Icon:"
-msgstr ""
+msgstr "Икона:"
 
 #: qml/configGeneral.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Show the number of the day (eg. 31) in the icon"
-#| msgid "Show day of the month"
+#, kde-format
 msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Показване деня от месеца"
 
 #: qml/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgctxt "Show the week number (eg. 50) in the icon"
-#| msgid "Show week number"
+#, kde-format
 msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Показване на номера на седмицата"
-
-#~ msgid "Calendar version:"
-#~ msgstr "Версия на календара:"
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Compact version:"
-#~ msgstr "Компактна версия:"

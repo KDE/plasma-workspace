@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2017.
-# SPDX-FileCopyrightText: 2021, 2022, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021-2022, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-03-15 09:19+0400\n"
+"PO-Revision-Date: 2026-11-19 16:53+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 26.08.1\n"
 
 #: appmenumodel.cpp:86
 #, kde-format
@@ -35,22 +35,19 @@ msgid "Appearance"
 msgstr "المظهر"
 
 #: qml/configGeneral.qml:24
-#, fuzzy, kde-format
-#| msgid "Use single button for application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use single button for application menu"
 msgstr "استخدم زرًّا واحدًا لقائمة التّطبيق"
 
 #: qml/configGeneral.qml:33
-#, fuzzy, kde-format
-#| msgid "Show full application menu"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Show full application menu"
 msgstr "أظهر كامل قائمة التّطبيق"
 
 #: qml/configGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show menus for apps on different screens"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show menus for apps on different screens"
 msgstr "اعرض قوائم التطبيقات على شاشات مختلفة"

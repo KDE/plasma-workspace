@@ -3,13 +3,13 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2011.
-# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2024, 2026 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2024-11-10 15:01+0100\n"
+"PO-Revision-Date: 2026-11-19 21:57+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,35 +47,34 @@ msgstr "Инсталиране в"
 #, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
-msgstr ""
+msgstr "Управление на шрифтове"
 
 #: apps/kfontinst/Installer.cpp:117
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "Инсталиране, управление и предварителен преглед на шрифтове"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
-msgstr ""
+msgstr "(C) Craig Drummond, 2007"
 
 #: apps/kfontinst/Installer.cpp:128
 #, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
+"Настройване на диалога като преходен за прозореца, указан от windowHandle"
 
 #: apps/kfontinst/Installer.cpp:131
-#, fuzzy, kde-format
-#| msgid "Where to Install"
+#, kde-format
 msgid "URL to install"
-msgstr "Инсталиране в"
+msgstr "URL за инсталиране"
 
 #: apps/kfontprint/Printer.cpp:239
-#, fuzzy, kde-format
-#| msgid "Print…"
+#, kde-format
 msgid "Print"
-msgstr "Печат…"
+msgstr "Печат"
 
 #: apps/kfontprint/Printer.cpp:307 manager/DuplicatesDialog.cpp:224
 #, kde-format
@@ -83,27 +82,25 @@ msgid "Canceling…"
 msgstr "Отменяне…"
 
 #: apps/kfontprint/Printer.cpp:323
-#, fuzzy, kde-format
-#| msgid "Cannot Print"
+#, kde-format
 msgid "Font Printer"
-msgstr "Грешка при печат"
+msgstr "Печат на шрифтове"
 
 #: apps/kfontprint/Printer.cpp:325
-#, fuzzy, kde-format
-#| msgid "Failed to start font printer."
+#, kde-format
 msgid "Simple font printer"
-msgstr "Печатът на шрифтовете беше неуспешен."
+msgstr "Опростен принтер на шрифтове"
 
 #: apps/kfontprint/Printer.cpp:333
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
+"Настройване на диалога като преходен за X приложение, зададено от winid"
 
 #: apps/kfontprint/Printer.cpp:335
-#, fuzzy, kde-format
-#| msgid "Select size to print font:"
+#, kde-format
 msgid "Size index to print fonts"
-msgstr "Изберете размер за отпечатване на шрифт:"
+msgstr "Индекс на размера за отпечатване на шрифтове"
 
 #: apps/kfontprint/Printer.cpp:339
 #, kde-format
@@ -111,60 +108,53 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
+"Шрифт за печат, зададен като „Семейство,Стил“, където Стил е 24-битово "
+"десетично число, съставено от: <weight><width><slant>"
 
 #: apps/kfontprint/Printer.cpp:342
-#, fuzzy, kde-format
-#| msgid "Failed to save list of fonts to print."
+#, kde-format
 msgid "File containing list of fonts to print"
-msgstr "Списъкът със шрифтовете не беше намерен."
+msgstr "Файл със списъка с шрифтове за печат"
 
 #: apps/kfontprint/Printer.cpp:344
-#, fuzzy, kde-format
-#| msgid "Failed to save list of fonts to print."
+#, kde-format
 msgid "Remove file containing list of fonts to print"
-msgstr "Списъкът със шрифтовете не беше намерен."
+msgstr "Премахване на файла със списъка за печат на шрифтове"
 
 #: apps/kfontview/Viewer.cpp:50
-#, fuzzy, kde-format
-#| msgid "Open font in font viewer?"
-#| msgid_plural "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open an existing font file"
-msgstr "Отваряне на шрифт във визуализатора на шрифтове?"
+msgstr "Отваряне на съществуващ файл за шрифт"
 
 #: apps/kfontview/Viewer.cpp:51
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
+#, kde-format
 msgid "Print font preview"
-msgstr "Печат на пример"
+msgstr "Отпечатване на предварителен преглед на шрифта"
 
 #: apps/kfontview/Viewer.cpp:68
-#, fuzzy, kde-format
-#| msgid "Delete Font"
+#, kde-format
 msgid "Select Font to View"
-msgstr "Изтриване на шрифт"
+msgstr "Избор на шрифт за преглед"
 
 #: apps/kfontview/Viewer.cpp:108
 #, kde-format
 msgid "URL to open"
-msgstr ""
+msgstr "URL за отваряне"
 
 #: apps/kfontview/Viewer.cpp:150
-#, fuzzy, kde-format
-#| msgid "Open in Font Viewer"
+#, kde-format
 msgid "Font Viewer"
 msgstr "Преглед на шрифтове"
 
 #: apps/kfontview/Viewer.cpp:152
-#, fuzzy, kde-format
-#| msgid "Open font in font viewer?"
-#| msgid_plural "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Simple font viewer"
-msgstr "Отваряне на шрифт във визуализатора на шрифтове?"
+msgstr "Опростен визуализатор на шрифтове"
 
 #: apps/kfontview/Viewer.cpp:154
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr ""
+msgstr "(C) Craig Drummond, 2004-2007"
 
 #: kio/KioFonts.cpp:209
 #, kde-format
