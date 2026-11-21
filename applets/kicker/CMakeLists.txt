@@ -47,8 +47,13 @@ ecm_add_qml_module(kickerplugin
     URI "org.kde.plasma.private.kicker"
     VERSION 0.1
     SOURCES ${kickerplugin_SRCS}
+    QML_FILES qml/IconButton.qml qml/code/Tools.js
     DEPENDENCIES QtCore QtQuick org.kde.plasma.core
     GENERATE_PLUGIN_SOURCE
+)
+
+ecm_target_qml_sources(kickerplugin SOURCES
+    qml/code/Tools.js PATH code
 )
 
 if (BUILD_TESTING)
