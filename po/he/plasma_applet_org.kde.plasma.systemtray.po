@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-10-15 17:26+0300\n"
+"PO-Revision-Date: 2026-11-19 10:01+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -54,36 +54,31 @@ msgid "Never show (disabled)"
 msgstr "לא להציג לעולם (מושבת)"
 
 #: qml/ConfigGeneral.qml:129
-#, fuzzy, kde-format
-#| msgid "Application Status"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "מצב יישום"
 
 #: qml/ConfigGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Communications"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "צורות תקשורת"
 
 #: qml/ConfigGeneral.qml:133
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "שירותי מערכת"
 
 #: qml/ConfigGeneral.qml:135
-#, fuzzy, kde-format
-#| msgid "Hardware Control"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "בקרת חומרה"
 
 #: qml/ConfigGeneral.qml:138
-#, fuzzy, kde-format
-#| msgid "Miscellaneous"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "שונות"
@@ -205,29 +200,25 @@ msgid "Direction:"
 msgstr "כיוון:"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Bottom-to-top"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "מלמטה למעלה"
 
 #: qml/ConfigGeneral.qml:316
-#, fuzzy, kde-format
-#| msgid "Top-to-bottom"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "מלמעלה למטה"
 
 #: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
-#, fuzzy, kde-format
-#| msgid "Left-to-right"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "משמאל לימין"
 
 #: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
-#, fuzzy, kde-format
-#| msgid "Right-to-left"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "מימין לשמאל"
