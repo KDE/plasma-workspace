@@ -148,6 +148,10 @@ KService::Ptr serviceFromMetadata(const QString &appId, quint32 pid, const QStri
     };
 
     if (!appId.isEmpty()) {
+        if (auto service = KService::serviceByDesktopName(appId); service && service->menuId().startsWith(appId)) {
+            return service;
+        }
+
         auto services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
             return service->desktopEntryName().compare(appId, Qt::CaseInsensitive) == 0;
         });
