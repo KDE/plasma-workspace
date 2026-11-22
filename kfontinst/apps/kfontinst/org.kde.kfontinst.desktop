@@ -161,6 +161,7 @@ Keywords[es]=tipo de letra;tipos de letra;instalador;truetype;type1;bitmap;mapa 
 Keywords[fr]=police ; polices ; installateur ; TrueType ; type1 ; bitmap ;
 Keywords[he]=גופן;גופנים;פונט;פונטים;מתקין;התקנה;סוג1;מפת סיביות;
 Keywords[it]=carattere;caratteri;installatore;truetype;type1;bitmap;
+Keywords[ko]=글꼴;폰트;서체;설치;트루타입;타입1;비트맵;
 Keywords[nl]=lettertype;lettertypen;installatieprogramma;truetype;type1;bitmap;
 Keywords[pt_BR]=fonte;fontes;instalador;truetype;type1;bitmap;
 Keywords[ru]=font;fonts;installer;truetype;type1;bitmap;шрифт;шрифты;установка шрифтов;установщик;битовая карта;растровое изображение;удаление шрифтов;
