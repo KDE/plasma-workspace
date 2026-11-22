@@ -3,7 +3,7 @@
     SPDX-FileCopyrightText: 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
-*/
+ */
 
 import QtQuick
 import QtQuick.Layouts
@@ -11,16 +11,12 @@ import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.userfeedback as UserFeedback
 import org.kde.userfeedback.kcm
-import org.kde.kcmutils
-import org.kde.kcmutils as KCMUtils
+import org.kde.kcmutils as KCM
 
-SimpleKCM {
+KCM.SimpleKCM {
     id: root
 
-    KCMUtils.ConfigModule.buttons: KCMUtils.ConfigModule.Default | KCMUtils.ConfigModule.Apply
-
-    implicitWidth: Kirigami.Units.gridUnit * 38
-    implicitHeight: Kirigami.Units.gridUnit * 35
+    KCM.ConfigModule.buttons: KCM.ConfigModule.Default | KCM.ConfigModule.Apply
 
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: Kirigami.InlineMessage {
@@ -32,126 +28,125 @@ SimpleKCM {
         text: i18n("User Feedback has been disabled centrally. Please contact your distributor.")
     }
 
+    UserFeedback.FeedbackConfigUiController {
+        id: feedbackController
+        applicationName: i18n("Plasma")
+    }
+
     ColumnLayout {
-        spacing: 0
+    QQC2.Label {
+        Layout.fillWidth: true
+        Layout.topMargin: Kirigami.Units.gridUnit
+        Layout.leftMargin: Kirigami.Units.gridUnit
+        Layout.rightMargin: Kirigami.Units.gridUnit
+        Layout.maximumWidth: form.implicitWidth
+        Layout.alignment: Qt.AlignCenter
 
-        QQC2.Label {
-            Layout.fillWidth: true
-            Layout.topMargin: Kirigami.Units.gridUnit
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            Layout.rightMargin: Kirigami.Units.gridUnit
-            wrapMode: Text.Wrap
-            text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/>")
-        }
+        text: i18nc("@info", "Help KDE improve Plasma by sending system and usage information. This is optional and entirely anonymous—we never collect your personal data, files you use, websites you visit, or information that could identify you.")
+        wrapMode: Text.WordWrap
+        horizontalAlignment: Text.AlignHCenter
+    }
 
-        Kirigami.UrlButton {
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            Layout.rightMargin: Kirigami.Units.gridUnit
-            url: "https://kde.org/privacypolicy-apps.php"
-            text: i18nc("@info", "Read more about our privacy policy")
-        }
+    Kirigami.UrlButton {
+        Layout.alignment: Qt.AlignHCenter
+        Layout.bottomMargin: Kirigami.Units.gridUnit
+        url: "https://kde.org/privacypolicy-apps.php"
+        text: i18nc("@info", "Read more about our privacy policy")
+    }
 
-        Kirigami.Separator {
-            Layout.fillWidth: true
-            Layout.margins: Kirigami.Units.gridUnit
-        }
+    Kirigami.Form {
+        id: form
+        Layout.fillWidth: true
+        enabled: kcm.feedbackEnabled
 
-        Kirigami.FormLayout {
-            id: form
-            enabled: kcm.feedbackEnabled
-            QQC2.Slider {
-                id: statisticsModeSlider
-                Kirigami.FormData.label: i18n("Plasma:")
-                readonly property var currentMode: modeOptions[value]
-                Layout.fillWidth: true
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 22
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18n("Plasma:")
 
-                readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics,
-                                                    UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
-                from: 0
-                to: modeOptions.length - 1
-                stepSize: 1
-                snapMode: QQC2.Slider.SnapAlways
+                contentItem: QQC2.Slider {
+                    id: statisticsModeSlider
+                    Layout.fillWidth: true
 
-                Kirigami.StyleHints.tickMarkStepSize: 1
+                    readonly property var currentMode: modeOptions[value]
+                    readonly property var modeOptions: [
+                        UserFeedback.Provider.NoTelemetry,
+                        UserFeedback.Provider.BasicSystemInformation,
+                        UserFeedback.Provider.BasicUsageStatistics,
+                        UserFeedback.Provider.DetailedSystemInformation,
+                        UserFeedback.Provider.DetailedUsageStatistics
+                    ]
 
-                function findIndex(array, what, defaultValue) {
-                    for (var v in array) {
-                        if (array[v] == what)
-                            return v;
+                    from: 0
+                    to: modeOptions.length - 1
+                    stepSize: 1
+                    snapMode: QQC2.Slider.SnapAlways
+
+                    Kirigami.StyleHints.tickMarkStepSize: 1
+
+                    value: {
+                        const index = modeOptions.indexOf(kcm.feedbackSettings.feedbackLevel);
+                        return index === -1 ? 0 : index;
                     }
-                    return defaultValue;
-                }
 
-                value: findIndex(modeOptions, kcm.feedbackSettings.feedbackLevel, 0)
+                    onMoved: {
+                        kcm.feedbackSettings.feedbackLevel = modeOptions[value]
+                    }
 
-                onMoved: {
-                    kcm.feedbackSettings.feedbackLevel = modeOptions[value]
-                }
-
-                SettingStateBinding {
-                    configObject: kcm.feedbackSettings
-                    settingName: "feedbackLevel"
-                    extraEnabledConditions: kcm.feedbackEnabled
+                    KCM.SettingStateBinding {
+                        configObject: kcm.feedbackSettings
+                        settingName: "feedbackLevel"
+                        extraEnabledConditions: kcm.feedbackEnabled
+                    }
                 }
             }
 
-            UserFeedback.FeedbackConfigUiController {
-                id: feedbackController
-                applicationName: i18n("Plasma")
+            Kirigami.FormEntry {
+                contentItem: QQC2.Label {
+                    text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
+                    textFormat: Text.PlainText
+                    wrapMode: Text.WordWrap
+                }
+            }
+        }
+
+        Kirigami.FormGroup {
+            visible: statisticsModeSlider.value !== 0 // This is "disabled"
+
+            Kirigami.FormEntry {
+                contentItem: QQC2.Label {
+                    text: i18n("The following information will be sent:")
+                    textFormat: Text.PlainText
+                    wrapMode: Text.WordWrap
+                }
             }
 
-            Kirigami.Heading {
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 22
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 29
-                wrapMode: Text.WordWrap
-                level: 3
-                text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
-                textFormat: Text.PlainText
-            }
-            Item {
-                Kirigami.FormData.isSection: true
-            }
-            QQC2.Label {
-                Layout.fillWidth: true
-                Layout.alignment: Qt.AlignHCenter
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 22
-                wrapMode: Text.WordWrap
-
-                text: i18n("The following information will be sent:")
-                textFormat: Text.PlainText
-                visible: statisticsModeSlider.value != 0 // This is "disabled"
-            }
-            ColumnLayout {
-                Layout.maximumWidth: parent.width * 0.5
-                Repeater {
-                    model: kcm.feedbackSources
-                    delegate: QQC2.Label {
-                        visible: modelData.mode <= statisticsModeSlider.currentMode
+            Repeater {
+                model: kcm.feedbackSources
+                delegate: Kirigami.FormEntry {
+                    visible: modelData.mode <= statisticsModeSlider.currentMode
+                    contentItem: QQC2.Label {
                         text: "· " + modelData.description
                         textFormat: Text.PlainText
-                        Layout.fillWidth: true
+                        wrapMode: Text.WordWrap
                     }
                 }
             }
+        }
 
-            Item {
-                implicitHeight: Kirigami.Units.largeSpacing
-                Layout.fillWidth: true
-            }
+        Kirigami.FormGroup {
+            visible: kcm.audits.length > 0
             Repeater {
                 model: kcm.audits
-                delegate: Kirigami.LinkButton {
-                    Layout.fillWidth: true
-                    horizontalAlignment: Text.AlignLeft
-                    Kirigami.FormData.label: model.index === 0 ? i18n("View sent data:") : ""
-                    text: modelData.program
-                    onClicked: Qt.openUrlExternally("file://" + modelData.audits)
+                delegate: Kirigami.FormEntry {
+                    title: index === 0 ? i18n("View sent data:") : ""
+                    contentItem: Kirigami.LinkButton {
+                        horizontalAlignment: Text.AlignLeft
+                        text: modelData.program
+                        onClicked: Qt.openUrlExternally("file://" + modelData.audits)
+                    }
                 }
             }
         }
     }
+    }
 }
-
