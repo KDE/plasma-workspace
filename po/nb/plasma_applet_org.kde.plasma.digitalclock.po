@@ -537,6 +537,3 @@ msgstr "%1:"
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
 msgstr ""
-
-#~ msgid "Information:"
-#~ msgstr "Informasjon:"

@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-10 00:59+0000\n"
-"PO-Revision-Date: 2026-11-17 08:47+0200\n"
+"PO-Revision-Date: 2026-11-20 11:34+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
 "Language: he\n"
@@ -134,6 +134,9 @@ msgid ""
 "<interface>Offer applications for copied links and files</interface> setting "
 "or enable at least one action to make settings on this page have any effect."
 msgstr ""
+"בעמוד<interface>הגדרת פעולות</interface> יש להפעיל את ההגדרה<interface>הצעת "
+"יישומים לקישורים וקבצים שהועתקו</interface> או להפעיל לפחות פעולה אחת כדי "
+"שההגדרות בעמוד הזה ייכנסו לתוקף."
 
 #: configdialog.cpp:194
 #, kde-format

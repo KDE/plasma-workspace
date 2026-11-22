@@ -60,10 +60,3 @@ msgstr "Vis dagen i månaden"
 msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Vis vekenummer"
-
-#~ msgid "Calendar version:"
-#~ msgstr "Kalenderversjon:"
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Compact version:"
-#~ msgstr "Kompakt versjon:"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-14 00:50+0000\n"
-"PO-Revision-Date: 2026-09-28 23:27+0200\n"
+"PO-Revision-Date: 2026-11-21 22:08+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -28,12 +28,10 @@ msgid "Clipboard is empty"
 msgstr "클립보드가 비었습니다"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "클립보드에서 현재 민감한 데이터를 저장하는 중"
+msgstr "클립보드와 선택 영역에서 현재 민감한 데이터를 저장하는 중"
 
 #: qml/main.qml:46
 #, kde-format
@@ -42,12 +40,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "클립보드에서 현재 민감한 데이터를 저장하는 중"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "클립보드에서 현재 민감한 데이터를 저장하는 중"
+msgstr "선택 영역에서 민감한 데이터를 저장하는 중"
 
 #: qml/main.qml:85
 #, kde-format
