@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-11-22 21:11+0000\n"
 "PO-Revision-Date: 2026-04-10 09:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: ui/main.qml:32
+#: ui/main.qml:28
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -29,16 +29,26 @@ msgstr ""
 "Els Comentaris de l'usuari s'han desactivat centralitzadament. Contacteu amb "
 "la vostra distribució."
 
+#: ui/main.qml:33
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
 # skip-rule: punctuation-period-no
-#: ui/main.qml:44
-#, kde-kuit-format
+#: ui/main.qml:45
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/>"
 msgctxt "@info"
 msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/>"
+"Help KDE improve Plasma by sending system and usage information. This is "
+"optional and entirely anonymous—we never collect your personal data, files "
+"you use, websites you visit, or information that could identify you."
 msgstr ""
 "Podeu ajudar KDE a millorar Plasma col·laborant amb informació referent a "
 "com l'utilitzeu. Açò permet enfocar-nos en les coses que vos importen.<nl/"
@@ -46,7 +56,7 @@ msgstr ""
 "Mai s'arreplegaran les dades personals, els fitxers que utilitzeu, els llocs "
 "web que visiteu, o informació que vos puga identificar.<nl/>"
 
-#: ui/main.qml:51
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
@@ -57,17 +67,12 @@ msgstr "Llegiu més quant a la nostra política de privadesa"
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "S'enviarà la informació següent:"
 
-#: ui/main.qml:149
+#: ui/main.qml:141
 #, kde-format
 msgid "View sent data:"
 msgstr "Visualitza les dades enviades:"

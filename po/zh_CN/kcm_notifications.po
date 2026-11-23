@@ -64,25 +64,25 @@ msgstr "此应用程序不支持按事件配置通知"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will be shown as a popup"
-msgstr ""
+msgstr "此通知将显示为弹出窗口"
 
 #: ui/ApplicationConfiguration.qml:250
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not be shown as a popup"
-msgstr ""
+msgstr "此通知将不会显示为弹出窗口"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will play a sound"
-msgstr ""
+msgstr "此通知将播放声音"
 
 #: ui/ApplicationConfiguration.qml:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This notification will not play a sound"
-msgstr ""
+msgstr "此通知将不会播放声音"
 
 #: ui/ApplicationConfiguration.qml:306
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "当屏幕处于镜像状态时"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "在屏幕分享时"
+msgstr "当屏幕共享时"
 
 #: ui/main.qml:158
 #, kde-format

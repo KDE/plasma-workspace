@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-11-22 21:11+0000\n"
 "PO-Revision-Date: 2026-10-02 15:10+0200\n"
 "Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: ui/main.qml:32
+#: ui/main.qml:28
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -25,15 +25,25 @@ msgstr ""
 "Повратне информације корисника су централно искључене. Обратите се свом "
 "дистрибутеру."
 
-#: ui/main.qml:44
-#, kde-kuit-format
+#: ui/main.qml:33
+#, kde-format
+msgid "Plasma"
+msgstr "Плазма"
+
+#: ui/main.qml:45
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/>"
 msgctxt "@info"
 msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/>"
+"Help KDE improve Plasma by sending system and usage information. This is "
+"optional and entirely anonymous—we never collect your personal data, files "
+"you use, websites you visit, or information that could identify you."
 msgstr ""
 "Можете помоћи КДЕ‑у да побољша Плазму тако што ћете слати податке о томе "
 "како је користите, да бисмо се усредсредили на оно што вам је важно.<nl/><nl/"
@@ -41,7 +51,7 @@ msgstr ""
 "ваше личне податке, фајлове које користите, веб сајтове које посећујете ни "
 "било шта по чему бисте могли бити препознати.<nl/>"
 
-#: ui/main.qml:51
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
@@ -52,17 +62,12 @@ msgstr "Прочитајте више о нашој политици прива�
 msgid "Plasma:"
 msgstr "Плазма:"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Plasma"
-msgstr "Плазма"
-
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Биће послати следећи подаци:"
 
-#: ui/main.qml:149
+#: ui/main.qml:141
 #, kde-format
 msgid "View sent data:"
 msgstr "Преглед послатих података:"

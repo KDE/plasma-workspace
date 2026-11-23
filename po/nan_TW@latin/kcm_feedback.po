@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-11-22 21:11+0000\n"
 "PO-Revision-Date: 2026-08-14 21:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Min Nan Chinese Latin <zh-l10n@lists.slat.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 26.11.70\n"
 
-#: ui/main.qml:32
+#: ui/main.qml:28
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -25,15 +25,25 @@ msgstr ""
 "Iōng-tsiá Huê-kuī í-king hōo tiong-sim-huà ê hong-sik thîng-iōng--tiāu--ah. "
 "Tshiánn kap lí-ê huat-hîng-tsiá liân-lo̍k."
 
-#: ui/main.qml:44
-#, kde-kuit-format
+#: ui/main.qml:33
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: ui/main.qml:45
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/>"
 msgctxt "@info"
 msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/>"
+"Help KDE improve Plasma by sending system and usage information. This is "
+"optional and entirely anonymous—we never collect your personal data, files "
+"you use, websites you visit, or information that could identify you."
 msgstr ""
 "Lí ē-sái kòng-hiàn lí án-ná iōng KDE Plasma ê tsu-sìn hōo KDE, lâi pang-tsōo "
 "KDE kái-siān Plasma.<nl/><nl/>Tsit-ê tsu-sìn ê kòng-hiàn sī bô pit-iàu mā-sī "
@@ -41,7 +51,7 @@ msgstr ""
 "liáu siánn-mih tóng-àn, pài-hóng siánn-mih bāng-tsām, á-sī jīm-hô ē-sái piān-"
 "sik--tshut lí sī siáng ê tsu-sìn.<nl/>"
 
-#: ui/main.qml:51
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
@@ -52,17 +62,12 @@ msgstr "KDE ê ún-su-khuân tsìng-tshik"
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Plasma"
-msgstr "Plasma"
-
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Ē sàng-tshut í-hā tsu-sìn:"
 
-#: ui/main.qml:149
+#: ui/main.qml:141
 #, kde-format
 msgid "View sent data:"
 msgstr "Kiám-sī sàng--tshut-khì ê tsu-liāu:"

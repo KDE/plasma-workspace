@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_feedback\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-11-22 21:11+0000\n"
 "PO-Revision-Date: 2026-04-10 08:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: ui/main.qml:32
+#: ui/main.qml:28
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
@@ -28,15 +28,25 @@ msgstr ""
 "Надсилання відгуків користувачем вимкнено на рівні системи. Будь ласка, "
 "зверніться до авторів дистрибутива, щоб його увімкнути."
 
-#: ui/main.qml:44
-#, kde-kuit-format
+#: ui/main.qml:33
+#, kde-format
+msgid "Plasma"
+msgstr "Плазма"
+
+#: ui/main.qml:45
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/>"
 msgctxt "@info"
 msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/>"
+"Help KDE improve Plasma by sending system and usage information. This is "
+"optional and entirely anonymous—we never collect your personal data, files "
+"you use, websites you visit, or information that could identify you."
 msgstr ""
 "Ви можете допомогти нам поліпшити це програмне забезпечення, якщо поділитеся "
 "даними щодо того, як ви ним користуєтеся. Це надасть нам змогу зосередити "
@@ -46,7 +56,7 @@ msgstr ""
 "відвіданих вами сайтів, а також не збиратимемо жодних даних, за якими вас "
 "можна ідентифікувати."
 
-#: ui/main.qml:51
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
@@ -57,17 +67,12 @@ msgstr "Докладніше про наші правила конфіденці
 msgid "Plasma:"
 msgstr "Плазма:"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Plasma"
-msgstr "Плазма"
-
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Буде надіслано такі дані:"
 
-#: ui/main.qml:149
+#: ui/main.qml:141
 #, kde-format
 msgid "View sent data:"
 msgstr "Перегляд надісланих даних:"

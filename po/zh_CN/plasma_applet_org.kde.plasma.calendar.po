@@ -27,11 +27,10 @@ msgstr "常规"
 #, kde-format
 msgctxt "@option:check prefix"
 msgid "Full calendar:"
-msgstr ""
+msgstr "完整日历："
 
 #: qml/configGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "显示周数"
@@ -42,27 +41,16 @@ msgctxt ""
 "@title group radio button prefix What information is shown in the calendar "
 "icon"
 msgid "Icon:"
-msgstr ""
+msgstr "图标："
 
 #: qml/configGeneral.qml:32
-#, fuzzy, kde-format
-#| msgctxt "Show the number of the day (eg. 31) in the icon"
-#| msgid "Show day of the month"
+#, kde-format
 msgctxt "@option: radio Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "显示当前月份日期"
 
 #: qml/configGeneral.qml:40
-#, fuzzy, kde-format
-#| msgctxt "Show the week number (eg. 50) in the icon"
-#| msgid "Show week number"
+#, kde-format
 msgctxt "option:radio Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "显示当前全年周数"
-
-#~ msgid "Calendar version:"
-#~ msgstr "日历版本："
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Compact version:"
-#~ msgstr "紧凑版本："

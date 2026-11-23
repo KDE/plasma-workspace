@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-10 00:54+0000\n"
+"POT-Creation-Date: 2026-11-22 21:11+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -19,15 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#: ui/main.qml:32
+#: ui/main.qml:28
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr ""
 "ഉപയോക്തൃ അഭിപ്രായം കേന്ദ്രീകൃതമായി അപ്രാപ്‌തമാക്കി. നിങ്ങളുടെ വിതരണക്കാരനുമായി ബന്ധപ്പെടുക."
 
-#: ui/main.qml:44
-#, fuzzy, kde-kuit-format
+#: ui/main.qml:33
+#, kde-format
+msgid "Plasma"
+msgstr "പ്ലാസ്മ"
+
+#: ui/main.qml:45
+#, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
 #| "You can help KDE improve Plasma by contributing information on how you "
@@ -38,11 +43,9 @@ msgstr ""
 #| "policy in the following link:"
 msgctxt "@info"
 msgid ""
-"You can help KDE improve Plasma by contributing information on how you use "
-"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
-"information is optional and entirely anonymous. We never collect your "
-"personal data, files you use, websites you visit, or information that could "
-"identify you.<nl/>"
+"Help KDE improve Plasma by sending system and usage information. This is "
+"optional and entirely anonymous—we never collect your personal data, files "
+"you use, websites you visit, or information that could identify you."
 msgstr ""
 "നിങ്ങൾ എങ്ങനെ പ്ലാസ്മ ഉപയോഗിക്കുന്നുവെന്നതിനെക്കുറിച്ചുള്ള വിവരങ്ങൾ സംഭാവന ചെയ്യുന്നതിലൂടെ കെ."
 "ഡി.ഇയെ മെച്ചപ്പെടുത്താൻ നിങ്ങൾക്ക് സഹായിക്കാനാകും, അതിനാൽ നിങ്ങൾക്ക് പ്രാധാന്യമുള്ള "
@@ -52,7 +55,7 @@ msgstr ""
 "കഴിയുന്ന വിവരങ്ങൾ ഞങ്ങൾ ഒരിക്കലും ശേഖരിക്കുന്നില്ല.<nl/><nl/>ഞങ്ങളുടെ നയം ചുവടെയുള്ള "
 "ലിങ്കിലൂടെ വായിക്കാം:"
 
-#: ui/main.qml:51
+#: ui/main.qml:54
 #, kde-format
 msgctxt "@info"
 msgid "Read more about our privacy policy"
@@ -63,17 +66,12 @@ msgstr ""
 msgid "Plasma:"
 msgstr "പ്ലാസ്മ:"
 
-#: ui/main.qml:101
-#, kde-format
-msgid "Plasma"
-msgstr "പ്ലാസ്മ"
-
-#: ui/main.qml:123
+#: ui/main.qml:117
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "ഈ പറയുന്ന വിവരങ്ങൾ അയക്കും:"
 
-#: ui/main.qml:149
+#: ui/main.qml:141
 #, kde-format
 msgid "View sent data:"
 msgstr ""

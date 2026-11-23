@@ -345,7 +345,7 @@ msgstr "默认"
 #, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO C 标准"
 
 #: localelistmodel.cpp:142
 #, kde-format

@@ -34,7 +34,3 @@ msgstr "刷新已在进行中。"
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "没有收到时区或收到了无效时区。"
-
-#~ msgctxt "OSD, keep short"
-#~ msgid "Time zone changed to %1"
-#~ msgstr "时区已更改为 %1"

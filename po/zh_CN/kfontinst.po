@@ -43,13 +43,13 @@ msgstr "选择字体安装方式"
 #, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
-msgstr ""
+msgstr "字体管理"
 
 #: apps/kfontinst/Installer.cpp:117
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "安装、管理和预览字体"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format
@@ -2242,9 +2242,3 @@ msgstr "八思巴文"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "彝文"
-
-#~ msgid "Font Installer"
-#~ msgstr "字体安装管理程序"
-
-#~ msgid "Simple font installer"
-#~ msgstr "简易字体安装程序"

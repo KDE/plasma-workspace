@@ -29,12 +29,10 @@ msgid "Clipboard is empty"
 msgstr "剪贴板为空"
 
 #: qml/main.qml:44
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The clipboard and the selection currently hold sensitive data"
-msgstr "剪贴板当前包含敏感数据"
+msgstr "剪贴板和选中内容当前包含敏感数据"
 
 #: qml/main.qml:46
 #, kde-format
@@ -43,12 +41,10 @@ msgid "The clipboard currently holds sensitive data"
 msgstr "剪贴板当前包含敏感数据"
 
 #: qml/main.qml:48
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "The clipboard currently holds sensitive data"
+#, kde-format
 msgctxt "@info"
 msgid "The selection currently holds sensitive data"
-msgstr "剪贴板当前包含敏感数据"
+msgstr "选中内容当前包含敏感数据"
 
 #: qml/main.qml:85
 #, kde-format
