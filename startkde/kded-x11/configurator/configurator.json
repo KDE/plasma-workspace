@@ -27,6 +27,7 @@
         "Description[sr]": "Примењује поставке изгледа, нпр. тему показивача, на икс11 програме",
         "Description[tr]": "Görünüş ayarlarını; örneğin, imleç teması gibi, X11 uygulamalarına uygular",
         "Description[uk]": "Застосовує параметри вигляду, наприклад, тему вказівників, до програм X11",
+        "Description[zh_CN]": "应用外观设置，如光标主题到 X11 应用程序",
         "Description[zh_TW]": "套用游標主題等外觀設定到 X11 應用程式",
         "Name": "X11 system settings",
         "Name[ar]": "إعدادات نظام X11",
@@ -55,6 +56,7 @@
         "Name[sr]": "икс11 системске поставке",
         "Name[tr]": "X11 Sistem Ayarları",
         "Name[uk]": "Системні параметри X11",
+        "Name[zh_CN]": "X11 系统设置",
         "Name[zh_TW]": "X11 系統設定"
     }
 }

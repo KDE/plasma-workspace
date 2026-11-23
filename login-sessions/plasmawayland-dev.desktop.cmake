@@ -29,6 +29,7 @@ Name[sr@ijekavianlatin]=Plasma (razvojna ${CMAKE_INSTALL_FULL_BINDIR})
 Name[sr@latin]=Plasma (razvojna ${CMAKE_INSTALL_FULL_BINDIR})
 Name[tr]=Plasma (Geliştirme ${CMAKE_INSTALL_FULL_BINDIR})
 Name[uk]=Плазма (Розробка, ${CMAKE_INSTALL_FULL_BINDIR})
+Name[zh_CN]=Plasma (开发版本 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[zh_TW]=Plasma (開發版本，${CMAKE_INSTALL_FULL_BINDIR})
 Comment=Plasma by KDE
 Comment[ar]=بلازما كِيدِي

@@ -27,6 +27,7 @@
         "Description[sr]": "Обрађује старе XEmbed иконице системске касете",
         "Description[tr]": "Eski tür XEmber sistem tepsisi simgelerini işler",
         "Description[uk]": "Обробляє застарілі піктограми XEmbed системного лотка",
+        "Description[zh_CN]": "处理旧式 XEmbed 系统托盘图标",
         "Description[zh_TW]": "處理舊式 XEmbed 系統匣圖示",
         "Name": "XEmbed SNI Proxy",
         "Name[ar]": "وكيل XEmbed SNI",
@@ -55,6 +56,7 @@
         "Name[sr]": "Прокси XEmbed SNI",
         "Name[tr]": "XEmbed SNI Vekili",
         "Name[uk]": "Проксі SNI XEmbed",
+        "Name[zh_CN]": "XEmbed SNI 代理",
         "Name[zh_TW]": "XEmbed SNI 代理"
     }
 }

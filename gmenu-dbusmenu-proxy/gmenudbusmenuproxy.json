@@ -27,6 +27,7 @@
         "Description[sr]": "Преводи ГТК д‑бус меније у облик који Плазма може да прочита",
         "Description[tr]": "GTK D-Bus menülerini, Plasma tarafından okunabilir bir biçime aktarır",
         "Description[uk]": "Створює замінник меню D-Bus GTK у придатному для читання Плазмою форматі",
+        "Description[zh_CN]": "将 GTK D-Bus 菜单代理为 Plasma 可读取的格式",
         "Description[zh_TW]": "代理 GTK D-Bus 選單，轉換為 Plasma 可讀取的格式",
         "Name": "GMenu D-Bus Menu Proxy",
         "Name[ar]": "وكيل قوائم GMenu عبر D-Bus",
@@ -55,6 +56,7 @@
         "Name[sr]": "Прокси GMenu менија преко д‑буса",
         "Name[tr]": "GMenu D-Bus Menü Vekili",
         "Name[uk]": "Проксі-меню GMenu D-Bus",
+        "Name[zh_CN]": "Gmenu D-Bus 菜单代理",
         "Name[zh_TW]": "GMenu D-Bus 選單項目"
     }
 }
