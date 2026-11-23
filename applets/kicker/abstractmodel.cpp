@@ -10,6 +10,7 @@
 AbstractModel::AbstractModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    Kicker::initAppstream();
 }
 
 AbstractModel::~AbstractModel() = default;

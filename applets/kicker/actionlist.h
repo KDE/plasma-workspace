@@ -58,6 +58,8 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
 QVariantList editApplicationAction(const KService::Ptr &service);
 bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &service);
 
+// Starts loading the AppStream metadata asynchronously. Safe to call multiple times.
+void initAppstream();
 QVariantList appstreamActions(const KService::Ptr &service);
 bool handleAppstreamActions(const QString &actionId, const KService::Ptr &service);
 
