@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-13 00:48+0000\n"
-"PO-Revision-Date: 2026-11-15 20:07+0300\n"
+"PO-Revision-Date: 2026-11-23 18:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -67,7 +67,7 @@ msgstr "Pencere başlığı yazı tipi"
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "Satıcı öntanımlısı"
+msgstr "Satıcı varsayılanı"
 
 #: kxftconfig.cpp:455
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "Dikey BGR"
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "Sağlayıcı öntanımlısı"
+msgstr "Sağlayıcı varsayılanı"
 
 #: kxftconfig.cpp:493
 #, kde-format

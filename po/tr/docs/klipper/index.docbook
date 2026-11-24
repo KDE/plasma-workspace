@@ -92,7 +92,7 @@
 
 <!-- TODO: Document starred functionality -->
 <para
->Fare işaretçisi ile bir girişin üzerine gelin ve bir eylemi başlatmanıza, kare kod göstermenize, içeriği düzenlemenize veya girdiyi geçmişten kaldırmanıza olanak tanıyan dört simge görünür. Kare kodları yakalamak ve kaydetmek için &spectacle; kullanın. </para>
+>Fare işaretçisi ile bir girişin üzerine gelin ve bir eylemi başlatmanıza, barkod göstermenize, içeriği düzenlemenize veya girdiyi geçmişten kaldırmanıza olanak tanıyan dört simge görünür. Barkodları yakalamak ve kaydetmek için &spectacle; kullanın. </para>
 
 <para
 >Arama alanına sorgunuzu yazarak pano geçmişinde arama yapabilirsiniz. Siz yazdıkça sonuçlar güncellenir. Pano geçmişini temizlemek için arama alanının sağındaki simgeye tıklayın. </para>
@@ -137,7 +137,7 @@
 > kısayolunu kullanarak veya Eylem Menüsü sayfasındaki <guilabel
 >Eylem açılır menüsünü göster</guilabel
 > seçeneğinin altında bulunan <guilabel
->Seçimden hemen sonra</guilabel
+>Metin veya dosya kopyalandığında</guilabel
 > seçeneğini işaretleyerek, panoya bir eşleşme yerleştirildiği anda bir eylem menüsünün açılmasını sağlayabilirsiniz. Orada, <guilabel
 >Otomatik eylem menüsü süresi</guilabel
 > seçeneği ile, otomatik menünün üzerinde işlem yapmadığınız takdirde kapanmasının ne kadar süreceğini de değiştirebilirsiniz.</para>
@@ -147,7 +147,9 @@
 >İçeriği düzenle…</guimenuitem
 > ögesini seçin ve uygun olanı çalıştırmak için <guibutton
 >Kaydet</guibutton
-> düğmesine basmadan önce açılan iletişim kutusunda pano içeriğini uygun eylemle değiştirebilirsiniz.</para>
+> düğmesine basmadan önce açılan iletişim kutusunda pano içeriğini uygun eylemle değiştirebilirsiniz. Eğer <guilabel
+>Geçmişten bir öge seçildiğinde</guilabel
+> işaretlenirse düzenlenen içerikler için kendiliğinden eylemler açılır penceresi gösterilir.</para>
 
 <para
 ><guilabel
@@ -262,7 +264,7 @@
 ></term>
 <listitem
 ><para
->İşaretlendiğinde, örneğin bir görsel düzenleyicisinde kopyalanan katmanlar ve seçimler gibi veri olarak kopyalanan görseller pano geçmişine kaydedilir. Bir dosya yöneticisinden kopyalanan görsel dosyaları her zaman kaydedilir. Geçmişte bunlar görsel olarak görünür; ancak bunlar yalnızca önizlemedir; altlarında yalnızca dosya adları bulunur. &spectacle; tarafından kaydedilen ekran görüntüleri de orada bu şekilde ayarlandığında kaydedilecektir. </para>
+>İşaretlendiğinde, örneğin bir görsel düzenleyicisinde kopyalanan katmanlar ve seçimler gibi veri olarak kopyalanan görseller pano geçmişine kaydedilir. Bir dosya yöneticisinden kopyalanan görsel dosyaları her zaman kaydedilir. Geçmişte bunlar görsel olarak görünür; ancak bunlar yalnızca ön izlemedir; altlarında yalnızca dosya adları bulunur. &spectacle; tarafından kaydedilen ekran görüntüleri de orada bu şekilde ayarlandığında kaydedilecektir. </para>
 </listitem>
 </varlistentry>
 
@@ -279,11 +281,33 @@
 <varlistentry>
 <term
 ><guilabel
->Geçmişten seçilen bir öge için</guilabel
+>Eylem açılır menüsünü göster: Metin veya dosya kopyalandığında</guilabel
 ></term>
 <listitem
 ><para
->Bu açıksa geçmişten bir ögeyi seçmek uygunsa &klipper;’ın o öge üzerinde eylem açılır menüsünü göstermesini sağlar.</para>
+>İşaretlenirse eşleşen metin veya dosya kopyalanır kopyalanmaz açılır menü görünür. Aşağıdaki seçenek işaretlenirse bu seçeneğin tek etkisi dosyalar kopyalanırken menünün görünmesini sağlamaktır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Eylem açılır menüsünü göster: Metin seçildiğinde</guilabel
+></term>
+<listitem
+><para
+>İşaretlenirse eşleşen metin seçilir seçilmez, kopyalanmasını beklemeden açılır menü görüntülenir. Bu, seçimler pano geçmişine kaydedilmediğinde bile çalışır.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Eylem açılır menüsünü göster: Geçmişten bir öge seçildiğinde</guilabel
+></term>
+<listitem
+><para
+>İşaretlenirse geçmişten bir öge seçmek, geçmişte bir ögeyi düzenlemek veya bir klavye kısayolu ile o ögeye geçiş yapmak, &klipper;’ın uygunsa o öge üzerinde eylemler açılır penceresini görüntülemesine neden olur.</para>
 </listitem>
 </varlistentry>
 
@@ -437,11 +461,11 @@
 <varlistentry>
 <term
 ><guilabel
->Öntanımlı</guilabel
+>Varsayılan</guilabel
 ></term>
 <listitem
 ><para
->Seçili eylem, &klipper;’ın öntanımlı düğmesini kullanır. Bunlar, bu el kitabında söz edilen kısayollardır.</para
+>Seçili eylem, &klipper;’ın varsayılan düğmesini kullanır. Bunlar, bu el kitabında söz edilen kısayollardır.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -465,7 +489,7 @@
 <para
 ><guilabel
 >Fare Konumunda Ögeleri Göster</guilabel
-> için bir kısayol atarsanız &klipper; açılır menüsü, öntanımlı konumu yerine (&plasma; paneli) fare imlecinin konumunda açılacaktır. Fareyi klavyeden daha çok kullanıyorsanız yararlıdır.</para>
+> için bir kısayol atarsanız &klipper; açılır menüsü, varsayılan konumu yerine (&plasma; paneli) fare imlecinin konumunda açılacaktır. Fareyi klavyeden daha çok kullanıyorsanız yararlıdır.</para>
 
 </sect1>
 </chapter>

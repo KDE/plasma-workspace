@@ -10,7 +10,7 @@
 <articleinfo>
 
 <title
->Öntanımlı Uygulamalar</title>
+>Varsayılan Uygulamalar</title>
 <authorgroup>
 <author
 >&Burkhard.Lueck;&Burkhard.Lueck.mail;</author>
@@ -48,7 +48,7 @@
 </articleinfo>
 
 <para
->Bu modülde, &kde; tarafından kullanılan öntanımlı bileşenleri değiştirebilirsiniz.</para>
+>Bu modülde, &kde; tarafından kullanılan varsayılan bileşenleri değiştirebilirsiniz.</para>
 
 <para
 >Bileşenler; web tarayıcı, uçbirim öykünücüsü, dosya yöneticisi, e-posta istemcisi, elektronik harita ve çevirici gibi temel görevleri yerine getiren programlardır. Farklı &kde; uygulamalarının bazen bir konsol öykünücüsünü çalıştırması, bir e-posta göndermesi, dosya ve klasörleri yönetmesi, haritayı göstermesi veya telefonunuzda bir numara çevirmesi gerekir.</para

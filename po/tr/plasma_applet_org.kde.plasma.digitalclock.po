@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-11-18 18:50+0300\n"
+"PO-Revision-Date: 2026-11-23 18:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -187,7 +187,7 @@ msgstr "12 saat"
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
-msgstr "Bölge öntanımlılarını kullan"
+msgstr "Bölge varsayılanlarını kullan"
 
 #: configAppearance.qml:147
 #, kde-format
@@ -316,7 +316,7 @@ msgstr "Haftanın ilk günü:"
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
-msgstr "Bölge öntanımlılarını kullan"
+msgstr "Bölge varsayılanlarını kullan"
 
 #: configCalendar.qml:83
 #, kde-format

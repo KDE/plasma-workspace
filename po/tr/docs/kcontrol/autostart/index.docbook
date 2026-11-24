@@ -143,7 +143,7 @@
 >.desktop</filename
 > dosyasını kendi otomatik başlatma klasörünüze taşımaktır. <filename class="directory"
 >$HOME/.config/autostart</filename
-> konumundaki aynı adlı herhangi bir şey, öntanımlı paketteki <filename class="extension"
+> konumundaki aynı adlı herhangi bir şey, varsayılan paketteki <filename class="extension"
 >.desktop</filename
 > dosyasını geçersiz kılar. Kopyalanan <filename class="extension"
 >.desktop</filename
@@ -167,7 +167,7 @@
 ></term>
 <listitem>
 <para
->Bu sütun, &plasma; ile başlatmak istediğiniz programın veya betiğin simgesini gösterir. Simge, bir programın .desktop dosyasının Icon anahtarından çıkarılır ve betiğin öntanımlı simgesidir. </para>
+>Bu sütun, &plasma; ile başlatmak istediğiniz programın veya betiğin simgesini gösterir. Simge, bir programın .desktop dosyasının Icon anahtarından çıkarılır ve betiğin varsayılan simgesidir. </para>
 </listitem>
 </varlistentry>
 
@@ -195,7 +195,7 @@
 <para
 >Bu düğme yalnızca ögenin üzerine fare imleciyle geldiğinizde gösterilir. Düğme (yalnızca programlar ve oturum açma betikleri; &ie;, <filename class="extension"
 >.desktop</filename
-> dosyaları için etkindir), programın veya betiğin özelliklerini değiştirmenize olanak tanır. Genel özelliklere, izin özelliklerine, uygun olduğunda bir önizlemeye ve uygulama veya oturum açma betiğiyle ilgili özelliklere sahipsiniz. Öntanımlı komut, <filename class="extension"
+> dosyaları için etkindir), programın veya betiğin özelliklerini değiştirmenize olanak tanır. Genel özelliklere, izin özelliklerine, uygun olduğunda bir ön izlemeye ve uygulama veya oturum açma betiğiyle ilgili özelliklere sahipsiniz. Varsayılan komut, <filename class="extension"
 >.desktop</filename
 > dosyasının <literal
 >Exec</literal

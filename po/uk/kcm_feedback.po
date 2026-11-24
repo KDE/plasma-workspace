@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022, 2026.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2026 Yuri Chornoivan <yurchor@ukr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_feedback\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-22 21:11+0000\n"
-"PO-Revision-Date: 2026-04-10 08:24+0300\n"
+"PO-Revision-Date: 2026-11-23 09:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ui/main.qml:28
 #, kde-format
@@ -34,27 +34,18 @@ msgid "Plasma"
 msgstr "Плазма"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Help KDE improve Plasma by sending system and usage information. This is "
 "optional and entirely anonymous—we never collect your personal data, files "
 "you use, websites you visit, or information that could identify you."
 msgstr ""
-"Ви можете допомогти нам поліпшити це програмне забезпечення, якщо поділитеся "
-"даними щодо того, як ви ним користуєтеся. Це надасть нам змогу зосередити "
-"зусилля на речах, які важливі для вашої роботи.<nl/><nl/>Надсилання даних "
-"щодо користування є необов'язковим і цілком анонімним. Ми не збиратимемо "
-"ваших особистих даних, даних щодо документів, які ви відкривали, та "
-"відвіданих вами сайтів, а також не збиратимемо жодних даних, за якими вас "
-"можна ідентифікувати."
+"Допоможіть KDE вдосконалити Плазму, надсилаючи відомості про систему та її "
+"використання. Ця дія є необов'язковою і цілком анонімною: ми ніколи не "
+"збираємо ваші особисті дані, дані про файли, з якими ви працюєте, вебсайти, "
+"які ви відвідуєте, або будь-яку іншу інформацію, що дозволила б вас "
+"ідентифікувати."
 
 #: ui/main.qml:54
 #, kde-format

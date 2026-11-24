@@ -197,7 +197,7 @@
 <para
 >Bu seçenek etkinleştirildiğinde, yeni bir uygulama başlatılırken imlecinize kısa bir süre için eklenmiş bir simge olacaktır. <guilabel
 >Canlandırmayı şundan sonra durdur:</guilabel
-> döndürme kutusuyla bu simgenin imlecinizin yanında ne kadar süre görüntüleneceğini yapılandırabilirsiniz. Öntanımlı ayar 5 saniyedir.</para>
+> döndürme kutusuyla bu simgenin imlecinizin yanında ne kadar süre görüntüleneceğini yapılandırabilirsiniz. Varsayılan ayar 5 saniyedir.</para>
 
 <para
 >Meşgûl imlecinin birden çok çeşidi vardır: <guilabel

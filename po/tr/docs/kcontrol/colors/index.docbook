@@ -67,7 +67,7 @@
 >Şema Yönetimi</title>
 
   <para
->Bu modül, makinenizdeki renk şemalarını yönetmenizi sağlar. &plasma; ile gelen renk şemalarının bir listesini ve üstte bir önizleme gösterir. Aynı anda yalnızca bir şema etkindir; ancak şemaları düzenleyebilirsiniz. Fare işaretçisini ızgaradaki bir ögenin üzerine getirdiğinizde gösterilen <guibutton
+>Bu modül, makinenizdeki renk şemalarını yönetmenizi sağlar. &plasma; ile gelen renk şemalarının bir listesini ve üstte bir ön izleme gösterir. Aynı anda yalnızca bir şema etkindir; ancak şemaları düzenleyebilirsiniz. Fare işaretçisini ızgaradaki bir ögenin üzerine getirdiğinizde gösterilen <guibutton
 >Şemayı Kaldır</guibutton
 > düğmesini kullanarak şemaları kaldırabilirsiniz. Sistem şemalarının kaldırılamayacağını unutmayın; bu eylem için düğme devre dışıdır.</para>
 
@@ -117,7 +117,7 @@
 ><para
 ><guilabel
 >Geçerli duvar kağıdından</guilabel
->: Bu, masaüstü arka plan görselinizden kendiliğinden eşleşen bir renk çıkarır. </para
+>: Bu, birincil ekranınızdaki masaüstü arka plan görselinden eşleşen bir rengi kendiliğinden çıkaracaktır. </para
 ></listitem>
       <listitem
 ><para
@@ -191,7 +191,7 @@
 ><para
 ><guilabel
 >Karşıtlık</guilabel
-> &mdash; Bu sürgü, gölgelenen ögelerin karşıtlığını denetler; örneğin çerçeve kenarlıkları ve çoğu biçem tarafından kullanılan “3B” efektler. Düşük bir değer daha az karşıtlık verir ve daha yumuşak kenarlara neden olur; yüksekçe bir değer ise kenarların daha çok “ortaya çıkmasını” sağlar. </para
+> &mdash; Bu sürgü, gölgelenen ögelerin karşıtlığını denetler; örneğin çerçeve kenarlıkları ve çoğu stil tarafından kullanılan “3B” efektler. Düşük bir değer daha az karşıtlık verir ve daha yumuşak kenarlara neden olur; yüksekçe bir değer ise kenarların daha çok “ortaya çıkmasını” sağlar. </para
 ></listitem>
   </itemizedlist>
 
@@ -300,7 +300,7 @@
 ></listitem>
       <listitem
 ><para
->Etkin Olmayan Metin &mdash; göze batmaması gereken metinler için kullanılır; &eg;, yorumlar, “altyazılar”, önemsiz bilgiler vb. </para
+>Etkin Olmayan Metin &mdash; göze batmaması gereken metinler için kullanılır; &eg;, yorumlar, “alt yazılar”, önemsiz bilgiler vb. </para
 ></listitem>
       <listitem
 ><para
@@ -333,7 +333,7 @@
     </itemizedlist>
 
     <para
->Ayrıca Etkin Olmayan Metin dışında, metin rollerinin her biri için karşılık gelen bir arka plan rolü vardır. Şu anda (Normal ve Alternatif Arka Plan hariç), bu renkler kullanıcı tarafından seçilmez, Normal Arka Plan ve ilgili Metin rengine göre kendiliğinden belirlenir. Bu renkler, "Ana Renkler" dışındaki kümelerden biri seçilerek önizlenebilir.</para>
+>Ayrıca Etkin Olmayan Metin dışında, metin rollerinin her biri için karşılık gelen bir arka plan rolü vardır. Şu anda (Normal ve Alternatif Arka Plan hariç), bu renkler kullanıcı tarafından seçilmez, Normal Arka Plan ve ilgili Metin rengine göre kendiliğinden belirlenir. Bu renkler, "Ana Renkler" dışındaki kümelerden biri seçilerek ön izlenebilir.</para>
 
     <para
 >Renk rolünün seçimi geliştiriciye bırakılmıştır; yukarıdakiler, tipik kullanımı temsil etmesi amaçlanan yönergelerdir.</para>
