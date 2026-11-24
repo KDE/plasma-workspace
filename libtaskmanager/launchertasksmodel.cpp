@@ -593,17 +593,9 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
 
     const QUrl &url = d->launchersOrder.at(index.row());
 
-    KService::Ptr service;
+    KService::Ptr service = serviceForUrl(url);
 
-    if (url.scheme() == QLatin1String("applications")) {
-        service = KService::serviceByMenuId(url.path());
-    } else if (url.scheme() == QLatin1String("preferred")) {
-        service = KService::serviceByStorageId(defaultApplication(url));
-    } else {
-        service = KService::serviceByDesktopPath(url.toLocalFile());
-    }
-
-    if (!service || !service->isApplication()) {
+    if (!service) {
         return;
     }
 
