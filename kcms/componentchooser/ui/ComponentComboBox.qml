@@ -24,7 +24,6 @@ QQC2.ComboBox {
     onActivated: component.select(currentIndex)
 
     delegate: QQC2.ItemDelegate {
-        width: ListView.view.width
         text: model.name
         highlighted: comboBox.highlightedIndex == index
         icon.name: model.icon
