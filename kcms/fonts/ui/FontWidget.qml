@@ -9,31 +9,28 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QtControls
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils
 
-FocusScope {
+Kirigami.FormEntry {
     id: root
     property string label
-    property alias tooltipText: tooltip.text
+    property alias tooltipText: button.text
     property string category
     property font font
-    Kirigami.FormData.label: root.label
+
+    title: root.label
     activeFocusOnTab: true
 
-    implicitWidth: layout.implicitWidth
-    implicitHeight: layout.implicitHeight
+    contentItem: QtControls.TextField {
+        readOnly: true
+        Layout.fillWidth: true
+        Kirigami.Theme.inherit: true
+        text: i18nc("%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans 10pt", "%1 %2pt", root.font.family, root.font.pointSize)
+        font: root.font
+    }
 
-    RowLayout {
-        id: layout
-
-        QtControls.TextField {
-            readOnly: true
-            Kirigami.Theme.inherit: true
-            text: i18nc("%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans 10pt", "%1 %2pt", root.font.family, root.font.pointSize)
-            font: root.font
-        }
-
+    trailingItems: [
         QtControls.Button {
+            id: button
             icon.name: "document-edit"
             Layout.fillHeight: true
             display: QtControls.AbstractButton.IconOnly
@@ -43,10 +40,10 @@ FocusScope {
             onClicked: {
                 kcm.adjustFont(root.font, root.category)
             }
-            QtControls.ToolTip {
-                id: tooltip
-            }
+            QtControls.ToolTip.visible: hovered || visualFocus
+            QtControls.ToolTip.text: text
+            QtControls.ToolTip.delay: Kirigami.Units.toolTipDelay
         }
-    }
+    ]
 }
 
