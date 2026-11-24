@@ -97,57 +97,61 @@ ColumnLayout {
                 }
 
                 // Controls
-                Kirigami.FormLayout {
+                Kirigami.Form {
                     Layout.fillWidth: true
+                    Kirigami.FormGroup {
+                        Kirigami.FormEntry {
+                            contentItem: QQC2.CheckBox {
+                                id: showPopupsCheck
+                                text: i18nc("@option:check", "Show popups")
+                                checked: !!configColumn.behaviorSettings?.showPopups
+                                onClicked: configColumn.behaviorSettings.showPopups = checked
 
-                    QQC2.CheckBox {
-                        id: showPopupsCheck
-                        text: i18n("Show popups")
-                        checked: !!behaviorSettings && behaviorSettings.showPopups
-                        onClicked: behaviorSettings.showPopups = checked
-
-                        KCM.SettingStateBinding {
-                            configObject: behaviorSettings
-                            settingName: "ShowPopups"
-                        }
-                    }
-
-                    RowLayout { // just for indentation
-                        QQC2.CheckBox {
-                            Layout.leftMargin: mirrored ? 0 : indicator.width
-                            Layout.rightMargin: mirrored ? indicator.width : 0
-                            text: i18n("Show in do not disturb mode")
-                            checked: !!behaviorSettings && behaviorSettings.showPopupsInDndMode
-                            onClicked: behaviorSettings.showPopupsInDndMode = checked
-
-                            KCM.SettingStateBinding {
-                                configObject: behaviorSettings
-                                settingName: "ShowPopupsInDndMode"
-                                extraEnabledConditions: showPopupsCheck.checked
+                                KCM.SettingStateBinding {
+                                    configObject: configColumn.behaviorSettings
+                                    settingName: "ShowPopups"
+                                }
                             }
                         }
-                    }
+                        Kirigami.FormEntry {
+                            contentItem: QQC2.CheckBox {
+                                leftPadding: mirrored ? 0 : showPopupsCheck.indicator.width + showPopupsCheck.spacing
+                                rightPadding: mirrored ? showPopupsCheck.indicator.width + showPopupsCheck.spacing : 0
+                                text: i18nc("@option:check", "Show in do not disturb mode")
+                                checked: !!configColumn.behaviorSettings?.showPopupsInDndMode
+                                onClicked: configColumn.behaviorSettings.showPopupsInDndMode = checked
 
-                    QQC2.CheckBox {
-                        text: i18n("Show in history")
-                        checked: !!behaviorSettings && behaviorSettings.showInHistory
-                        onClicked: behaviorSettings.showInHistory = checked
-
-                        KCM.SettingStateBinding {
-                            configObject: behaviorSettings
-                            settingName: "ShowInHistory"
+                                KCM.SettingStateBinding {
+                                    configObject: configColumn.behaviorSettings
+                                    settingName: "ShowPopupsInDndMode"
+                                    extraEnabledConditions: showPopupsCheck.checked
+                                }
+                            }
                         }
-                    }
+                        Kirigami.FormEntry {
+                            contentItem: QQC2.CheckBox {
+                                text: i18nc("@option:check", "Show in history")
+                                checked: !!configColumn.behaviorSettings?.showInHistory
+                                onClicked: configColumn.behaviorSettings.showInHistory = checked
 
-                    QQC2.CheckBox {
-                        text: i18n("Show notification badges")
-                        checked: !!behaviorSettings && behaviorSettings.showBadges
-                        onClicked: behaviorSettings.showBadges = checked
+                                KCM.SettingStateBinding {
+                                    configObject: configColumn.behaviorSettings
+                                    settingName: "ShowInHistory"
+                                }
+                            }
+                        }
+                        Kirigami.FormEntry {
+                            contentItem: QQC2.CheckBox {
+                                text: i18nc("@option:check", "Show notification badges")
+                                checked: !!configColumn.behaviorSettings?.showBadges
+                                onClicked: configColumn.behaviorSettings.showBadges = checked
 
-                        KCM.SettingStateBinding {
-                            configObject: behaviorSettings
-                            settingName: "ShowBadges"
-                            extraEnabledConditions: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
+                                KCM.SettingStateBinding {
+                                    configObject: configColumn.behaviorSettings
+                                    settingName: "ShowBadges"
+                                    extraEnabledConditions: !!configColumn.desktopEntry && configColumn.desktopEntry !== configColumn.otherAppsId
+                                }
+                            }
                         }
                     }
                 }
@@ -185,7 +189,7 @@ ColumnLayout {
                 anchors.centerIn: parent
                 anchors.verticalCenterOffset: eventsList.headerItem.height/2
                 width: parent.width - Kirigami.Units.largeSpacing * 4
-                text: i18n("This application does not support configuring notifications on a per-event basis");
+                text: i18nc("@info PlaceholderMessage if no events are registered", "This application does not support configuring notifications on a per-event basis");
                 visible: eventsList.count === 0
             }
 
@@ -303,7 +307,7 @@ ColumnLayout {
 
                             ActionCheckBox {
                                 actionName: "Popup"
-                                text: i18n("Show a message in a pop-up")
+                                text: i18nc("option:check", "Show a message in a pop-up")
                             }
 
                             RowLayout {
@@ -312,7 +316,7 @@ ColumnLayout {
                                 ActionCheckBox {
                                     id: soundCheckBox
                                     actionName: "Sound"
-                                    text: i18n("Play a sound")
+                                    text: i18nc("@option:check", "Play a sound")
                                 }
 
                                 Item {
@@ -361,7 +365,7 @@ ColumnLayout {
                                     enabled: soundCheckBox.checked
                                     display: QQC2.AbstractButton.IconOnly
                                     icon.name: "document-open-folder"
-                                    text: i18n("Choose sound file")
+                                    text: i18nc("@action:button opens file dialog", "Choose sound file…")
 
                                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                                     QQC2.ToolTip.text: text

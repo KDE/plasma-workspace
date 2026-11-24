@@ -93,8 +93,8 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Error
-            text: i18n("Could not find a 'Notifications' widget, which is required for displaying notifications. Make sure that it is enabled either in your System Tray or as a standalone widget.");
-            visible: currentOwnerInfo.status === NotificationManager.ServerInfo.NotRunning
+            text: i18nc("@info:usagetip Inline message", "Could not find a 'Notifications' widget, which is required for displaying notifications. Make sure that it is enabled either in your System Tray or as a standalone widget.");
+            visible: root.currentOwnerInfo.status === NotificationManager.ServerInfo.NotRunning
         }
 
         Kirigami.InlineMessage {
@@ -102,16 +102,17 @@ KCM.SimpleKCM {
             position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Information
             text: {
-                if (currentOwnerInfo.vendor && currentOwnerInfo.name) {
+                if (root.currentOwnerInfo.vendor && root.currentOwnerInfo.name) {
                     return i18nc("Vendor and product name",
                                  "Notifications are currently provided by '%1 %2' instead of Plasma.",
-                                 currentOwnerInfo.vendor, currentOwnerInfo.name);
+                                 root.currentOwnerInfo.vendor, root.currentOwnerInfo.name);
                 }
 
-                return i18n("Notifications are currently not provided by Plasma.");
+                return i18nc("@info:status InlineMessage another notification provider is running but we don't have info which one",
+                             "Notifications are currently not provided by Plasma.");
             }
             visible: root.currentOwnerInfo.status === NotificationManager.ServerInfo.Running
-                && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
+                && (root.currentOwnerInfo.vendor !== root.ourServerVendor || root.currentOwnerInfo.name !== root.ourServerName)
         }
     }
 
@@ -120,243 +121,245 @@ KCM.SimpleKCM {
         parent: root
     }
 
-    Kirigami.FormLayout {
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            title: i18nc("@title:group", "Do Not Disturb mode")
+            Kirigami.FormEntry {
+                title: i18nc("Automatically enable Do Not Disturb mode when screens are mirrored", "Enable automatically:")
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("Automatically enable Do Not Disturb mode when screens are mirrored", "When screens are mirrored")
+                    checked: kcm.dndSettings.whenScreensMirrored
+                    onClicked: kcm.dndSettings.whenScreensMirrored = checked
 
-        Item {
-            Kirigami.FormData.label: i18nc("@title:group", "Do Not Disturb mode")
-            Kirigami.FormData.isSection: true
-        }
+                    KCM.SettingStateBinding {
+                        configObject: kcm.dndSettings
+                        settingName: "WhenScreensMirrored"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("Automatically enable Do Not Disturb mode during screen sharing", "During screen sharing")
+                    checked: kcm.dndSettings.whenScreenSharing
+                    onClicked: kcm.dndSettings.whenScreenSharing = checked
+                    // Only applicable to Wayland where we can control who can cast the screen
+                    visible: Qt.platform.pluginName.includes("wayland")
 
-        QtControls.CheckBox {
-            Kirigami.FormData.label: i18nc("Automatically enable Do Not Disturb mode when screens are mirrored", "Enable automatically:")
-            text: i18nc("Automatically enable Do Not Disturb mode when screens are mirrored", "When screens are mirrored")
-            checked: kcm.dndSettings.whenScreensMirrored
-            onClicked: kcm.dndSettings.whenScreensMirrored = checked
+                    KCM.SettingStateBinding {
+                        configObject: kcm.dndSettings
+                        settingName: "WhenScreenSharing"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("Automatically enable Do Not Disturb mode while a fullscreen application is focused", "While a fullscreen application is focused")
+                    checked: kcm.dndSettings.whenFullscreen
+                    onClicked: kcm.dndSettings.whenFullscreen = checked
 
-            KCM.SettingStateBinding {
-                configObject: kcm.dndSettings
-                settingName: "WhenScreensMirrored"
-                extraEnabledConditions: root.notificationsAvailable
+                    KCM.SettingStateBinding {
+                        configObject: kcm.dndSettings
+                        settingName: "WhenFullscreen"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                title: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Manually toggle with shortcut:")
+                contentItem: KQuickControls.KeySequenceItem {
+                    enabled: root.notificationsAvailable
+                    keySequence: kcm.toggleDoNotDisturbShortcut
+                    onCaptureFinished: kcm.toggleDoNotDisturbShortcut = keySequence
+                }
             }
         }
+        Kirigami.FormGroup {
+            title: i18nc("@title:group", "Visibility conditions")
+            Kirigami.FormEntry {
+                title: i18nc("@option:check prefix, completes … Show in Do Not Disturb mode", "Critical notifications:")
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("@option:check for Critical notifications", "Show in Do Not Disturb mode")
+                    checked: kcm.notificationSettings.criticalInDndMode
+                    onClicked: kcm.notificationSettings.criticalInDndMode = checked
 
-        QtControls.CheckBox {
-            text: i18nc("Automatically enable Do Not Disturb mode during screen sharing", "During screen sharing")
-            checked: kcm.dndSettings.whenScreenSharing
-            onClicked: kcm.dndSettings.whenScreenSharing = checked
-            // Only applicable to Wayland where we can control who can cast the screen
-            visible: Qt.platform.pluginName.includes("wayland")
+                    KCM.SettingStateBinding {
+                        configObject: kcm.notificationSettings
+                        settingName: "CriticalInDndMode"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                title: i18nc("@title:group", "Low priority notifications:")
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("option:check for low priority notifications", "Show popup")
+                    checked: kcm.notificationSettings.lowPriorityPopups
+                    onClicked: kcm.notificationSettings.lowPriorityPopups = checked
 
-            KCM.SettingStateBinding {
-                configObject: kcm.dndSettings
-                settingName: "WhenScreenSharing"
-                extraEnabledConditions: root.notificationsAvailable
+                    KCM.SettingStateBinding {
+                        configObject: kcm.notificationSettings
+                        settingName: "LowPriorityPopups"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("option:check for low priority notifications", "Show in history")
+                    checked: kcm.notificationSettings.lowPriorityHistory
+                    onClicked: kcm.notificationSettings.lowPriorityHistory = checked
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.notificationSettings
+                        settingName: "LowPriorityHistory"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
+                }
             }
         }
-
-        QtControls.CheckBox {
-            text: i18nc("Automatically enable Do Not Disturb mode while a fullscreen application is focused", "While a fullscreen application is focused")
-            checked: kcm.dndSettings.whenFullscreen
-            onClicked: kcm.dndSettings.whenFullscreen = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.dndSettings
-                settingName: "WhenFullscreen"
-                extraEnabledConditions: root.notificationsAvailable
+        Kirigami.FormGroup {
+            title: i18nc("@title:group As in: 'notification popups'", "Popups")
+            QtControls.ButtonGroup {
+                id: positionGroup
+                buttons: [positionCloseToWidget, positionCustomPosition]
             }
-        }
-
-        KQuickControls.KeySequenceItem {
-            Kirigami.FormData.label: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Manually toggle with shortcut:")
-            enabled: root.notificationsAvailable
-            keySequence: kcm.toggleDoNotDisturbShortcut
-            onCaptureFinished: kcm.toggleDoNotDisturbShortcut = keySequence
-        }
-
-        Item {
-            Kirigami.FormData.label: i18nc("@title:group", "Visibility conditions")
-            Kirigami.FormData.isSection: true
-        }
-
-        QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Critical notifications:")
-            text: i18n("Show in Do Not Disturb mode")
-            checked: kcm.notificationSettings.criticalInDndMode
-            onClicked: kcm.notificationSettings.criticalInDndMode = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "CriticalInDndMode"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Low priority notifications:")
-            text: i18n("Show popup")
-            checked: kcm.notificationSettings.lowPriorityPopups
-            onClicked: kcm.notificationSettings.lowPriorityPopups = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "LowPriorityPopups"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        QtControls.CheckBox {
-            text: i18n("Show in history")
-            checked: kcm.notificationSettings.lowPriorityHistory
-            onClicked: kcm.notificationSettings.lowPriorityHistory = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "LowPriorityHistory"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        QtControls.ButtonGroup {
-            id: positionGroup
-            buttons: [positionCloseToWidget, positionCustomPosition]
-        }
-
-        Item {
-            Kirigami.FormData.label: i18nc("@title:group As in: 'notification popups'", "Popups")
-            Kirigami.FormData.isSection: true
-        }
-
-        QtControls.RadioButton {
-            id: positionCloseToWidget
-            Kirigami.FormData.label: i18nc("@label", "Location:")
-            text: i18nc("Popup position near notification plasmoid", "Near notification icon") // "widget"
-            checked: kcm.notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
-                // Force binding re-evaluation when user returns from position selector
-                + kcm.currentIndex * 0
-            onClicked: kcm.notificationSettings.popupPosition = NotificationManager.Settings.CloseToWidget
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "PopupPosition"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        RowLayout {
-            spacing: 0
-            enabled: positionCloseToWidget.enabled
-
-            QtControls.RadioButton {
-                id: positionCustomPosition
-                checked: kcm.notificationSettings.popupPosition !== NotificationManager.Settings.CloseToWidget
+            Kirigami.FormEntry {
+                title: i18nc("@label", "Location:")
+                contentItem: QtControls.RadioButton {
+                    id: positionCloseToWidget
+                    text: i18nc("Popup position near notification plasmoid", "Near notification icon") // "widget"
+                    checked: kcm.notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
+                    // Force binding re-evaluation when user returns from position selector
                     + kcm.currentIndex * 0
-                activeFocusOnTab: false
+                    onClicked: kcm.notificationSettings.popupPosition = NotificationManager.Settings.CloseToWidget
 
-                MouseArea {
-                    anchors.fill: parent
-                    onClicked: positionCustomButton.clicked()
+                    KCM.SettingStateBinding {
+                        configObject: kcm.notificationSettings
+                        settingName: "PopupPosition"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
                 }
+            }
+            Kirigami.FormEntry {
+                contentItem: RowLayout {
+                    spacing: 0
+                    enabled: positionCloseToWidget.enabled
 
-                KCM.SettingStateBinding {
-                    configObject: kcm.notificationSettings
-                    settingName: "PopupPosition"
-                    extraEnabledConditions: root.notificationsAvailable
+                    QtControls.RadioButton {
+                        id: positionCustomPosition
+                        checked: kcm.notificationSettings.popupPosition !== NotificationManager.Settings.CloseToWidget
+                        + kcm.currentIndex * 0
+                        activeFocusOnTab: false
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: positionCustomButton.clicked()
+                        }
+
+                        KCM.SettingStateBinding {
+                            configObject: kcm.notificationSettings
+                            settingName: "PopupPosition"
+                            extraEnabledConditions: root.notificationsAvailable
+                        }
+
+                    }
+                    QtControls.Button {
+                        id: positionCustomButton
+                        text: i18nc("@action:button choose custom notification position", "Choose…")
+                        icon.name: "preferences-desktop-display"
+                        onClicked: popupPositionDialog.open()
+                    }
                 }
-
             }
-            QtControls.Button {
-                id: positionCustomButton
-                text: i18nc("@action:button choose custom notification position", "Choose…")
-                icon.name: "preferences-desktop-display"
-                onClicked: popupPositionDialog.open()
+            TextMetrics {
+                id: timeoutSpinnerMetrics
+                font: timeoutSpinner.font
+                text: i18np("%1 second", "%1 seconds", 888)
             }
-        }
+            Kirigami.FormEntry {
+                title: i18nc("Part of a sentence like, 'Hide popup after n seconds'", "Hide after:")
+                contentItem: QtControls.SpinBox {
+                    id: timeoutSpinner
+                    Layout.preferredWidth: timeoutSpinnerMetrics.width + leftPadding + rightPadding
+                    from: 1000 // 1 second
+                    to: 120000 // 2 minutes
+                    stepSize: 1000
+                    value: kcm.notificationSettings.popupTimeout
+                    editable: true
+                    valueFromText: function(text, locale) {
+                        return parseInt(text) * 1000;
+                    }
+                    textFromValue: function(value, locale) {
+                        return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
+                    }
+                    onValueModified: kcm.notificationSettings.popupTimeout = value
 
-        TextMetrics {
-            id: timeoutSpinnerMetrics
-            font: timeoutSpinner.font
-            text: i18np("%1 second", "%1 seconds", 888)
-        }
-
-        QtControls.SpinBox {
-            id: timeoutSpinner
-            Kirigami.FormData.label: i18nc("Part of a sentence like, 'Hide popup after n seconds'", "Hide after:")
-            Layout.preferredWidth: timeoutSpinnerMetrics.width + leftPadding + rightPadding
-            from: 1000 // 1 second
-            to: 120000 // 2 minutes
-            stepSize: 1000
-            value: kcm.notificationSettings.popupTimeout
-            editable: true
-            valueFromText: function(text, locale) {
-                return parseInt(text) * 1000;
+                    KCM.SettingStateBinding {
+                        configObject: kcm.notificationSettings
+                        settingName: "PopupTimeout"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
+                }
             }
-            textFromValue: function(value, locale) {
-                return i18np("%1 second", "%1 seconds", Math.round(value / 1000));
-            }
-            onValueModified: kcm.notificationSettings.popupTimeout = value
+            Kirigami.FormEntry {
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("@option:check Show progress bar on notifications indicating when it will hide","Show timeout indicator")
+                    checked: kcm.notificationSettings.showPopupTimeout
+                    onClicked: kcm.notificationSettings.showPopupTimeout = checked
 
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "PopupTimeout"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        QtControls.CheckBox {
-            text: i18nc("@option:check Show progress bar on notifications indicating when it will hide","Show timeout indicator")
-            checked: kcm.notificationSettings.showPopupTimeout
-            onClicked: kcm.notificationSettings.showPopupTimeout = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "ShowPopupTimeout"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        Item {
-            Kirigami.FormData.label: i18nc("@title:group", "Additional feedback")
-            Kirigami.FormData.isSection: true
-        }
-
-        QtControls.CheckBox {
-            id: applicationJobsEnabledCheck
-            text: i18nc("Show application jobs in notification widget", "Show in notifications")
-            Kirigami.FormData.label: i18n("Application progress:")
-            checked: kcm.jobSettings.inNotifications
-            onClicked: kcm.jobSettings.inNotifications = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.jobSettings
-                settingName: "InNotifications"
-            }
-        }
-
-        RowLayout { // just for indentation
-            QtControls.CheckBox {
-                Layout.leftMargin: mirrored ? 0 : indicator.width
-                Layout.rightMargin: mirrored ? indicator.width : 0
-                text: i18nc("Keep application job popup open for entire duration of job", "Keep popup open during progress")
-                checked: kcm.jobSettings.permanentPopups
-                onClicked: kcm.jobSettings.permanentPopups = checked
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.jobSettings
-                    settingName: "PermanentPopups"
-                    extraEnabledConditions: applicationJobsEnabledCheck.checked
+                    KCM.SettingStateBinding {
+                        configObject: kcm.notificationSettings
+                        settingName: "ShowPopupTimeout"
+                        extraEnabledConditions: root.notificationsAvailable
+                    }
                 }
             }
         }
+        Kirigami.FormGroup {
+            title: i18nc("@title:group", "Additional feedback")
+            Kirigami.FormEntry {
+                title: i18nc("@title:group:", "Application progress:")
+                contentItem: QtControls.CheckBox {
+                    id: applicationJobsEnabledCheck
+                    text: i18nc("@option:check Show application jobs in notification widget", "Show in notifications")
+                    checked: kcm.jobSettings.inNotifications
+                    onClicked: kcm.jobSettings.inNotifications = checked
 
-        QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Notification badges:")
-            text: i18n("Show in task manager")
-            checked: kcm.badgeSettings.inTaskManager
-            onClicked: kcm.badgeSettings.inTaskManager = checked
+                    KCM.SettingStateBinding {
+                        configObject: kcm.jobSettings
+                        settingName: "InNotifications"
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                contentItem: QtControls.CheckBox {
+                    leftPadding: mirrored ? 0 : applicationJobsEnabledCheck.indicator.width + applicationJobsEnabledCheck.spacing
+                    rightPadding: mirrored ? applicationJobsEnabledCheck.indicator.width + applicationJobsEnabledCheck.spacing : 0
+                    text: i18nc("@option:check Keep application job popup open for entire duration of job", "Keep popup open during progress")
+                    checked: kcm.jobSettings.permanentPopups
+                    onClicked: kcm.jobSettings.permanentPopups = checked
 
-            KCM.SettingStateBinding {
-                configObject: kcm.badgeSettings
-                settingName: "InTaskManager"
+                    KCM.SettingStateBinding {
+                        configObject: kcm.jobSettings
+                        settingName: "PermanentPopups"
+                        extraEnabledConditions: applicationJobsEnabledCheck.checked
+                    }
+                }
+            }
+            Kirigami.FormEntry {
+                title: i18nc("@option:check prefix, completes …Show in task manager", "Notification badges:")
+                contentItem: QtControls.CheckBox {
+                    text: i18nc("@option:check completes Notification badges: …", "Show in task manager")
+                    checked: kcm.badgeSettings.inTaskManager
+                    onClicked: kcm.badgeSettings.inTaskManager = checked
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.badgeSettings
+                        settingName: "InTaskManager"
+                    }
+                }
             }
         }
     }
