@@ -7,7 +7,7 @@
 <article id="desktopthemedetails" lang="&language;">
 <articleinfo>
 <title
->Plasma Biçemi</title>
+>Plasma Stili</title>
 <authorgroup>
 <author
 ><firstname
@@ -51,7 +51,7 @@
 <keyword
 >masaüstü</keyword>
 <keyword
->biçem</keyword>
+>stil</keyword>
 <keyword
 >tema</keyword>
 <keyword
@@ -60,19 +60,19 @@
 </articleinfo>
 
 <para
->&plasma;, birden çok biçemle birlikte gelir. &plasma; biçemi, &plasma;’nın değişik bileşenlerinin (&eg;; Plasmoid’ler, paneller, araç takımları) nasıl görüntülendiğini tanımlar. </para>
+>&plasma;, birden çok stille birlikte gelir. &plasma; stili, &plasma;’nın değişik bileşenlerinin (&eg;; Plasmoid’ler, paneller, araç takımları) nasıl görüntülendiğini tanımlar. </para>
 
 <para>
   <screenshot>
     <screeninfo
->İşte &plasma; biçem yöneticisinin bir ekran görüntüsü</screeninfo>
+>İşte &plasma; stil yöneticisinin bir ekran görüntüsü</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="main.png" format="PNG"/>
       </imageobject>
       <textobject>
         <phrase
->&plasma; biçemini özelleştirmek</phrase>
+>&plasma; stilini özelleştirmek</phrase>
       </textobject>
     </mediaobject>
   </screenshot>
@@ -83,20 +83,20 @@
 <itemizedlist>
   <listitem
 ><para
->&plasma; biçemleri kurmak ve seçmek</para
+>&plasma; stilleri kurmak ve seçmek</para
 ></listitem>
   <listitem
 ><para
->&plasma; biçemlerini düzenlemek</para
+>&plasma; stillerini düzenlemek</para
 ></listitem>
   <listitem
 ><para
->&plasma; biçemlerini kaldırmak</para
+>&plasma; stillerini kaldırmak</para
 ></listitem>
 </itemizedlist>
 
 <para
->Biçem listesini, ızgaranın üzerindeki <guilabel
+>Stil listesini, ızgaranın üzerindeki <guilabel
 >Ara…</guilabel
 > alanını kullanarak süzebilirsiniz. Dahası, bu alanın yanındaki çoklu kutuyu kullanarak yalnızca <guimenuitem
 >Açık Temalar</guimenuitem
@@ -107,7 +107,7 @@
 > temaları gösterecek biçimde ayarlayabilirsiniz. </para>
 
 <para
->Bir biçemi kaldırmak istiyorsanız biçem simgesinin sağ alt köşesindeki <inlinemediaobject
+>Bir stili kaldırmak istiyorsanız stil simgesinin sağ alt köşesindeki <inlinemediaobject
 ><imageobject
 ><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
 ></inlinemediaobject
@@ -117,10 +117,10 @@
 ></inlinemediaobject
 > simgesine tıklayın. <guibutton
 >Uygula</guibutton
-> düğmesine basarsanız kaldırılmak üzere imlenmiş biçemler gerçekten silinir ve bu işlemi geri alamazsınız. </para>
+> düğmesine basarsanız kaldırılmak üzere imlenmiş stiller gerçekten silinir ve bu işlemi geri alamazsınız. </para>
 
 <para
->Sisteminizde plasma-sdk paketi kuruluysa bir biçem önizlemesinin üzerine geldiğinizde bir düğme görünür ve <application
+>Sisteminizde plasma-sdk paketi kuruluysa bir stil ön izlemesinin üzerine geldiğinizde bir düğme görünür ve <application
 >Plasma Tema Gezgini</application
 >’ni başlatmanıza izin verir. </para>
 <para
@@ -132,26 +132,26 @@
   <varlistentry>
     <term
 ><guilabel
->Yeni Plasma Biçemleri Al…</guilabel
+>Yeni Plasma Stilleri Al…</guilabel
 ></term>
     <listitem>
     <para
->Kullanmak için internete bağlı olmanız gerekir. Bu düğmeye tıklamak, yeni bir Plasma biçemini seçebileceğiniz bir iletişim kutusu açar. <guibutton
+>Kullanmak için internete bağlı olmanız gerekir. Bu düğmeye tıklamak, yeni bir Plasma stilini seçebileceğiniz bir iletişim kutusu açar. <guibutton
 >Kur</guibutton
-> düğmesine tıklamak, seçili &plasma; biçemini kurar ve Kur ekranını <guibutton
+> düğmesine tıklamak, seçili &plasma; stilini kurar ve Kur ekranını <guibutton
 >Kapat</guibutton
->’tığınızda yeni biçemi hemen kullanabilirsiniz. </para>
+>’tığınızda yeni stili hemen kullanabilirsiniz. </para>
     <para>
     <screenshot>
     <screeninfo
->Yeni Plasma Biçemleri Al…</screeninfo>
+>Yeni Plasma Stilleri Al…</screeninfo>
       <mediaobject>
         <imageobject>
           <imagedata fileref="get-new-theme.png" format="PNG"/>
         </imageobject>
         <textobject>
           <phrase
->Yeni Plasma Biçemleri Al…</phrase>
+>Yeni Plasma Stilleri Al…</phrase>
         </textobject>
       </mediaobject>
     </screenshot>
@@ -165,12 +165,12 @@
 ></term>
     <listitem>
       <para
->İnternetten yeni biçemler indirdiyseniz bu yeni indirilen biçemlerin konumuna göz atmak için bunu kullanabilirsiniz. Bu düğmeye tıklamak, size diskinizde bulunan &plasma; biçemi arşiv paketini seçmenizi sağlayacak dosya iletişim kutusunu açar.</para>
+>İnternetten yeni stiller indirdiyseniz bu yeni indirilen stillerin konumuna göz atmak için bunu kullanabilirsiniz. Bu düğmeye tıklamak, size diskinizde bulunan &plasma; stili arşiv paketini seçmenizi sağlayacak dosya iletişim kutusunu açar.</para>
 
       <para
 >Bu iletişim kutusunda işaret ettiğiniz dosya için <guibutton
 >Aç</guibutton
-> düğmesine tıklamak biçemi kurar ve biçem listesinde kullanılabilir yapar. </para>
+> düğmesine tıklamak stili kurar ve stil listesinde kullanılabilir yapar. </para>
     </listitem>
   </varlistentry>
 </variablelist>

@@ -87,16 +87,16 @@
 
 <important
 ><para
->Lütfen bu ayarlardan bazılarının seçtiğiniz simge temasına bağlı olabileceğini unutmayın. &plasma; öntanımlı olarak Esinti, Esinti Koyu ve Oksijen olmak üzere birkaç simge temasıyla birlikte gelir.</para
+>Lütfen bu ayarlardan bazılarının seçtiğiniz simge temasına bağlı olabileceğini unutmayın. &plasma; varsayılan olarak Esinti, Esinti Koyu ve Oksijen olmak üzere birkaç simge temasıyla birlikte gelir.</para
 ></important>
 
 <para
->En üstte, geçerli tema simgelerinin bir önizlemesi bulunur. Çoğu öntanımlı kurulum, aralarında &plasma; öntanımlısı olan Esinti temasının olduğu birkaç simge teması içerir. Ayrıca <ulink url="https://store.kde.org/"
+>En üstte, geçerli tema simgelerinin bir ön izlemesi bulunur. Çoğu varsayılan kurulum, aralarında &plasma; varsayılanı olan Esinti temasının olduğu birkaç simge teması içerir. Ayrıca <ulink url="https://store.kde.org/"
 >https://store.kde.org/</ulink
 > adresinden daha fazlasını indirebilir veya yerel bir dosyadan kurabilirsiniz.</para>
 
 <para
->Fareyle üzerine gelindiğinde canlandırmalı bir önizleme; rastgele bir seçimi, ortak MIME türlerini ve ortak klasör simgelerini gösterir. </para>
+>Fareyle üzerine gelindiğinde canlandırmalı bir ön izleme; rastgele bir seçimi, ortak MIME türlerini ve ortak klasör simgelerini gösterir. </para>
 
 <para
 >Bir temayı kaldırmak için simge temasının sağ alt köşesindeki <inlinemediaobject

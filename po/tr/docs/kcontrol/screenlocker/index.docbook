@@ -52,7 +52,7 @@
 <para
 >En üstte, ekran kilidininin kendiliğinden başlatılması için <guilabel
 >Ekranı kendiliğinden kilitle</guilabel
-> seçeneği ve kilidin çalışmaya başlayacağı boşta kalma süresini ayarlamak için bir döndürme kutusu bulunur. İstediğiniz bir pozitif tamsayıyı girebilirsiniz.</para>
+> seçeneği ve kilidin çalışmaya başlayacağı boşta kalma süresini ayarlamak için bir döndürme kutusu bulunur. İstediğiniz bir pozitif tam sayıyı girebilirsiniz.</para>
 
 <para
 ><guilabel
@@ -73,7 +73,7 @@
 > alanını kullanarak ekranı kilitlemek için bir kısayol tanımlayabilirsiniz.</para>
 
 <para
->Öntanımlı kısayol olan <keycombo action="simul"
+>Varsayılan kısayol olan <keycombo action="simul"
 >&Ctrl;&Alt;<keycap
 >L</keycap
 ></keycombo

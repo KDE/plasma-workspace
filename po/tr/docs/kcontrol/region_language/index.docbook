@@ -73,14 +73,14 @@
 
 
 <para
->Her seçim çubuğunda, her bir ayarın nasıl göründüğüne ve hangi ölçü birimlerinin kullanıldığına dair örnekler görebilirsiniz. Sayılara ek olarak, para birimi değerlerinin, tarihlerin ve saatlerin uzun ve kısa biçimde nasıl görüntülendiğini görebilirsiniz. Ayarlardan herhangi birini değiştirdiğinizde, önizleme, siz uygulamadan önce değişikliklerin etkilerini gösterir. </para>
+>Her seçim çubuğunda, her bir ayarın nasıl göründüğüne ve hangi ölçü birimlerinin kullanıldığına dair örnekler görebilirsiniz. Sayılara ek olarak, para birimi değerlerinin, tarihlerin ve saatlerin uzun ve kısa biçimde nasıl görüntülendiğini görebilirsiniz. Ayarlardan herhangi birini değiştirdiğinizde, ön izleme, siz uygulamadan önce değişikliklerin etkilerini gösterir. </para>
 
 <para
 >Dil alt sayfasında <guilabel
 >Daha Fazla Ekle…</guilabel
 > düğmesine tıklamak ilk önce geçerli seçili dili ve sonrasında kullanılabilir diğer dillerin bir listesini gösterir. Eğer seçim <quote
 >Yapılandırılmış Dil Yok</quote
-> gösteriyorsa bir ülke seçmediğinizi ve sistemin öntanımlı dil değerlerine geri döndüğünü gösterir. Bu genelde C’dir. Kullanmak istediğiniz dil bu listede yoksa sisteminiz için olan normal yollarla bunu kurmalısınız. </para>
+> gösteriyorsa bir ülke seçmediğinizi ve sistemin varsayılan dil değerlerine geri döndüğünü gösterir. Bu genelde C’dir. Kullanmak istediğiniz dil bu listede yoksa sisteminiz için olan normal yollarla bunu kurmalısınız. </para>
 
 <para
 >Ana listeden bir dili, onu seçip <inlinemediaobject

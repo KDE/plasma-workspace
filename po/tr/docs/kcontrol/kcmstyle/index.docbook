@@ -10,7 +10,7 @@
 <articleinfo>
 
 <title
->Uygulama Biçemi</title>
+>Uygulama Stili</title>
 <authorgroup>
 <author
 >&Mike.McBride; &Mike.McBride.mail;</author>
@@ -42,7 +42,7 @@
 <keyword
 >sistem ayarları</keyword>
 <keyword
->biçem</keyword>
+>stil</keyword>
 <keyword
 >uygulama</keyword>
 <keyword
@@ -67,16 +67,16 @@
 
 <para
 ><guilabel
->Uygulama Biçemi</guilabel
-> etiketli üst ızgara, önceden tanımlanmış biçemlerin önizlemelerinin bir listesini içerir. Her biçemin bir adı vardır ve fare imleciyle ögenin üzerine geldiğinizde kısa bir açıklama gösterilir.</para>
+>Uygulama Stili</guilabel
+> etiketli üst ızgara, önceden tanımlanmış stillerin ön izlemelerinin bir listesini içerir. Her stilin bir adı vardır ve fare imleciyle ögenin üzerine geldiğinizde kısa bir açıklama gösterilir.</para>
 
 <para
->Bir &plasma; temasını yapılandırmak istiyorsanız ızgaradaki araç takımı biçemi simgesinin sağ alt köşesindeki <guilabel
->Biçemi Yapılandır…</guilabel
+>Bir &plasma; temasını yapılandırmak istiyorsanız ızgaradaki araç takımı stili simgesinin sağ alt köşesindeki <guilabel
+>Stili Yapılandır…</guilabel
 > kaplama simgesini kullanın.</para>
 
 <para
->Uygulanırsa biçemin hemen hemen her yönünü değiştirmek olanaklıdır: sekme çubuğu sekmelerini ortalayın, araç çubuğu öge ayırıcıları çizin, listelerde odak göstergesi çizin, sürgü onay imleri çizin, genişletilmiş yeniden boyutlandırma işleyicilerini etkinleştirin, klavye ivmelendiricisi görünürlüğünü tanımlayın, pencerelerin sürükleme kipini değiştirin, daha iyi erişilebilirlik için çerçeveler kullanın, kaydırma çubuklarındaki düğmeleri kullanın, saydam menüler kullanın.</para>
+>Uygulanırsa stilin hemen hemen her yönünü değiştirmek olanaklıdır: sekme çubuğu sekmelerini ortalayın, araç çubuğu öge ayırıcıları çizin, listelerde odak göstergesi çizin, sürgü onay imleri çizin, genişletilmiş yeniden boyutlandırma işleyicilerini etkinleştirin, klavye ivmelendiricisi görünürlüğünü tanımlayın, pencerelerin sürükleme kipini değiştirin, daha iyi erişilebilirlik için çerçeveler kullanın, kaydırma çubuklarındaki düğmeleri kullanın, saydam menüler kullanın.</para>
 
 <para
 >Genel yapılandırma, ızgaranın altındaki <guibutton
@@ -126,7 +126,7 @@
 ></term>
 <listitem>
 <para
->Bu açılır kutular, düğmenin metin adının her iki araç çubuğunda düğmenin neresinde öntanımlı olarak görüneceğini belirlemenizi sağlar. <guilabel
+>Bu açılır kutular, düğmenin metin adının her iki araç çubuğunda düğmenin neresinde varsayılan olarak görüneceğini belirlemenizi sağlar. <guilabel
 >Yok</guilabel
 > seçilirse araç çubuğu düğmelerinde metin olmaz. <guilabel
 >Yalnızca metin</guilabel
@@ -136,14 +136,14 @@
 >sağ</emphasis
 > yanına yerleştiriir. <guilabel
 >Simgenin altında</guilabel
-> seçilirse öntanımlı olarak düğmenin metni simgenin <emphasis
+> seçilirse varsayılan olarak düğmenin metni simgenin <emphasis
 >altında</emphasis
 > olur.</para>
 
 <tip
 ><para
 >Bu seçenekler yalnızca <emphasis
->öntanımlı</emphasis
+>varsayılan</emphasis
 > konumu belirtir. Her uygulama bu panelde kullanılan ayarları geçersiz kılabilir.</para
 ></tip>
 </listitem
@@ -155,11 +155,11 @@
 
 <para
 ><guibutton
->GNOME/GTK Uygulama Biçemini Yapılandır…</guibutton
+>GNOME/GTK Uygulama Stilini Yapılandır…</guibutton
 > düğmesi, <guilabel
 >GTK temasını</guilabel
 > seçebileceğiniz veya dosyadan ve/veya <guibutton
->Yeni GNOME/GTK Uygulama Biçemleri Al</guibutton
+>Yeni GNOME/GTK Uygulama Stilleri Al</guibutton
 > düğmesiyle internetten kurabileceğiniz bir yapılandırma sekmesini açar. </para>
 
 </article>

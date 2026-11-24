@@ -49,7 +49,7 @@
 <keyword
 >Global Tema</keyword>
 <keyword
->biçem</keyword>
+>stil</keyword>
 <keyword
 >tema</keyword>
 <keyword
@@ -86,11 +86,11 @@
 ></listitem>
   <listitem
 ><para
->Uygulama Biçemi: Düğmeler, menüler ve sarma çubukları gibi kullanıcı arayüzü ögeleri</para
+>Uygulama Stili: Düğmeler, menüler ve sarma çubukları gibi kullanıcı arayüzü ögeleri</para
 ></listitem>
   <listitem
 ><para
->Plasma Biçemi: Panellerin ve araç takımlarının görünüşü</para
+>Plasma Stili: Panellerin ve araç takımlarının görünüşü</para
 ></listitem>
   <listitem
 ><para
@@ -162,7 +162,7 @@
 >Global Temalar Uygulamak</title>
 
 <para
->Bir tema küçük görselinin üzerine geldiğinizde görünen görsel simgesine tıklayarak her temanın önizlemesini görebilirsiniz. </para>
+>Bir tema küçük görselinin üzerine geldiğinizde görünen görsel simgesine tıklayarak her temanın ön izlemesini görebilirsiniz. </para>
 
 <para
 >Bir Global Tema’ya tıkladığınızda, temanın hangi bileşenlerini uygulamak istediğinizi soran bir iletişim kutusu açılacaktır. Çeşitli görünüş ayarları ve masaüstü yerleşimi arasından seçim yapabilirsiniz. <screenshot>

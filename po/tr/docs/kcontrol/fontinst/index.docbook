@@ -8,7 +8,7 @@
 
 <article id="fontinst" lang="&language;">
 <title
->Yazıtipi Yönetimi</title>
+>Yazı Tipi Yönetimi</title>
 <articleinfo>
 <authorgroup>
 <author
@@ -42,74 +42,74 @@
 <keyword
 >sistem ayarları</keyword>
 <keyword
->yazıtipleri</keyword>
+>yazı tipleri</keyword>
 </keywordset>
 </articleinfo>
 
 <sect1 id="kcm_fontinst">
 <title
->Yazıtipi Yönetimi</title>
+>Yazı Tipi Yönetimi</title>
 
 <para
->Bu modül; yazıtiplerinizi kurmaktan, kaldırmaktan, önizlemekten ve yönetmekten sorumludur.</para>
+>Bu uygulama; yazı tiplerinizi kurmaktan, kaldırmaktan, ön izlemekten ve yönetmekten sorumludur.</para>
 
 <sect2 id="font-groups">
 <title
->Yazıtipi Grupları</title>
+>Yazı Tipi Grupları</title>
 <para
->Dört adet önceden tanımlı özel yazıtipi grubu vardır:</para>
+>Dört adet önceden tanımlı özel yazı tipi grubu vardır:</para>
 
 <orderedlist>
     <listitem
 ><para
 ><quote
->Tüm Yazıtipleri</quote
-> Bu, tüm yazıtiplerini görüntüler, hem kişisel hem sistem.</para
+>Tüm Yazı Tipleri</quote
+> Bu, tüm yazı tiplerini görüntüler, hem kişisel hem sistem.</para
 ></listitem>
     <listitem
 ><para
 ><quote
->Kişisel Yazıtipleri</quote
-> Gösterilen yazıtipleri, sizin kişisel yazıtipleriniz olacaktır; başka kullanıcılar bunları kullanamaz.</para
+>Kişisel Yazı Tipleri</quote
+> Gösterilen yazı tipleri, sizin kişisel yazı tipleriniz olacaktır; başka kullanıcılar bunları kullanamaz.</para
 ></listitem>
     <listitem
 ><para
 ><quote
->Sistem Yazıtipleri</quote
-> Burada gösterilen yazıtiplerini bütün kullanıcılar kullanabilir. Bir yazıtipini sistem genelinde kurmak veya sistem genelinde kurulu bir yazıtipini kaldırmak, yönetici ayrıcalıkları gerektirir.</para
+>Sistem Yazı Tipleri</quote
+> Burada gösterilen yazı tiplerini bütün kullanıcılar kullanabilir. Bir yazı tipini sistem genelinde kurmak veya sistem genelinde kurulu bir yazı tipini kaldırmak, yönetici ayrıcalıkları gerektirir.</para
 ></listitem>
     <listitem
 ><para
 ><quote
 >Sınıflandırılmamış</quote
-> Bu, kullanıcı tanımlı herhangi bir gruba yerleştirilmemiş tüm yazıtiplerini listeler. Bu grup yalnızca daha önceden kullanıcı tanımlı gruplar oluşturulmuşsa görünür.</para
+> Bu, kullanıcı tanımlı herhangi bir gruba yerleştirilmemiş tüm yazı tiplerini listeler. Bu grup yalnızca daha önceden kullanıcı tanımlı gruplar oluşturulmuşsa görünür.</para
 ></listitem>
 </orderedlist>
 <para
->Bir gruba bir yazıtipini eklemek için listeden bir grubun üzerine sürükleyin. Bir yazıtipini gruptan kaldırmak için yazıtipini <quote
->Tüm Yazıtipleri</quote
+>Bir gruba bir yazı tipini eklemek için listeden bir grubun üzerine sürükleyin. Bir yazı tipini gruptan kaldırmak için yazı tipini <quote
+>Tüm Yazı Tipleri</quote
 > grubuna sürükleyin.</para>
 <para
->Bu listenin altında yeni bir grup oluşturmak, bir grubu kaldırmak ve geçerli gruptaki yazıtiplerini etkinleştirmek veya devre dışı bırakmak için düğmeler bulacaksınız.</para>
+>Bu listenin altında yeni bir grup oluşturmak, bir grubu kaldırmak ve geçerli gruptaki yazı tiplerini etkinleştirmek veya devre dışı bırakmak için düğmeler bulacaksınız.</para>
 <para
->Bu listenin bağlam menüsünde yazıtipi örnekleri yazdırmak ve bir yazıtipini bir zip arşivine dışa aktarmak için ek menü ögeleri bulunur.</para>
+>Bu listenin bağlam menüsünde yazı tipi örnekleri yazdırmak ve bir yazı tipini bir zip arşivine dışa aktarmak için ek menü ögeleri bulunur.</para>
 
 <sect3 id="font-hiding">
 <title
 >Etkinleştirmek ve Devre Dışı Bırakmak</title>
 <para
->Çok sayıda yazıtipine sahip kullanıcılar, belirli zamanlarda yalnızca belirli yazıtiplerinin etkinleştirilmesini (veya etkin olmasını) yararlı bulabilir. Bunu kolaylaştırmak için bu modül, tek tek yazıtiplerini veya tüm yazıtipi gruplarını devre dışı bırakmanıza izin verecektir. Bir yazıtipini devre dışı bırakmak, yazıtipini sistemden kaldırmaz, yalnızca gizler, böylece artık uygulamalarda görünmez. Bir yazıtipini yeniden etkinleştirmek, artık kullanılmasına izin verir.</para>
+>Çok sayıda yazı tipine sahip kullanıcılar, belirli zamanlarda yalnızca belirli yazı tiplerinin etkinleştirilmesini (veya etkin olmasını) yararlı bulabilir. Bunu kolaylaştırmak için bu modül, tek tek yazı tiplerini veya tüm yazı tipi gruplarını devre dışı bırakmanıza izin verecektir. Bir yazı tipini devre dışı bırakmak, yazı tipini sistemden kaldırmaz, yalnızca gizler, böylece artık uygulamalarda görünmez. Bir yazı tipini yeniden etkinleştirmek, artık kullanılmasına izin verir.</para>
 </sect3>
 
 </sect2>
 
 <sect2 id="font-list">
 <title
->Yazıtipi Listesi</title>
+>Yazı Tipi Listesi</title>
 <para
->Ana görüntü, yazıtiplerinin aile adına göre gruplandırılmış kurulu yazıtiplerinin bir listesidir — köşeli parantez içindeki sayı, o aile için kurulu biçemlerin sayısını temsil eder. Örneğin, <quote
+>Ana görüntü, yazı tiplerinin aile adına göre gruplandırılmış kurulu yazı tiplerinin bir listesidir — köşeli parantez içindeki sayı, o aile için kurulu stillerin sayısını temsil eder. Örneğin, <quote
 >Times</quote
-> yazıtipi şu şekilde listelenebilir: <itemizedlist
+> yazı tipi şu şekilde listelenebilir: <itemizedlist
 > <listitem>
     <para
 >Times [4]</para>
@@ -136,11 +136,11 @@
 </para>
 
 <para
->Bir yazıtipi kurmak için <guibutton
+>Bir yazı tipi kurmak için <guibutton
 >Dosyadan Kur…</guibutton
-> düğmesine basın ve dosya iletişim kutusundan istediğiniz yazıtiplerini seçin. Seçili yazıtipi grubu, yazıtiplerinin nereye kurulacağını denetleyecektir.</para>
+> düğmesine basın ve dosya iletişim kutusundan istediğiniz yazı tiplerini seçin. Seçili yazı tipi grubu, yazı tiplerinin nereye kurulacağını denetleyecektir.</para>
 <para
->Yazıtiplerini kaldırmak için uygun yazıtiplerini listeden seçin ve <inlinemediaobject
+>Yazı tiplerini kaldırmak için uygun yazı tiplerini listeden seçin ve <inlinemediaobject
 ><imageobject
 ><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
 ></inlinemediaobject
@@ -155,7 +155,7 @@
 >Yazdır</guilabel
 >, <ulink url="help:/kfontviewer/index.html"
 ><guilabel
->Yazıtipi Görüntüleyicide Aç</guilabel
+>Yazı Tipi Görüntüleyicisinde Aç</guilabel
 ></ulink
 >ve <guilabel
 >Yeniden Yükle</guilabel
@@ -163,9 +163,9 @@
 
 <sect3 id="font-filter">
 <title
->Yazıtipi Süzmek</title>
+>Yazı Tipi Süzmek</title>
 <para
->Yazıtipi önizlemesinin üstündeki bir metin alanı, yazıtipi listesini süzebilmenizi sağlar. Yazıtiplerini farklı kategorilere göre süzebilirsiniz:</para>
+>Yazı tipi ön izlemesinin üstündeki bir metin alanı, yazı tipi listesini süzebilmenizi sağlar. Yazı tiplerini farklı kategorilere göre süzebilirsiniz:</para>
         <orderedlist>
         <listitem
 ><para
@@ -173,7 +173,7 @@
 ></listitem>
         <listitem
 ><para
->Biçem.</para
+>Stil.</para
 ></listitem>
         <listitem
 ><para
@@ -185,15 +185,15 @@
 ></listitem>
         <listitem
 ><para
->Yazıtipi dosyası türü.</para
+>Yazı tipi dosyası türü</para
 ></listitem>
         <listitem
 ><para
->Yazıtipi dosyası adı.</para
+>Yazı tipi dosyası adı</para
 ></listitem>
         <listitem
 ><para
->Yazıtipi dosyası konumu.</para
+>Yazı tipi dosyası konumu</para
 ></listitem>
         <listitem
 ><para
@@ -204,18 +204,18 @@
 
 <sect3 id="get-new-fonts">
 <title
->Yeni Yazıtipleri Al</title>
+>Yeni Yazı Tipleri Al</title>
 <para
->Yeni yazıtipleri yerel dosyalardan veya <guilabel
+>Yeni yazı tipleri, yerel dosyalardan veya <guilabel
 >Yeni Çıkanları Al</guilabel
 > yerinden indirilebilir. Araç kutusunda bulunan <guilabel
->Yeni Yazıtipleri Al…</guilabel
-> düğmesi (grup listesinin üstünde bulunur), internetten yazıtipleri kurmanıza izin verir. Böyle kurulan yazıtipleri <quote
->Kişisel Yazıtipleri</quote
+>Yeni Yazı Tipleri Al…</guilabel
+> düğmesi (grup listesinin üstünde bulunur), internetten yazı tipleri kurmanıza izin verir. Böyle kurulan yazı tipleri <quote
+>Kişisel Yazı Tipleri</quote
 > grubunuza gider. Sistem geneline kurmak için onları <quote
->Sistem Yazıtipleri</quote
-> grubuna kaldırmanız gerekir — bunu, yazıtiplerini <quote
->Sistem Yazıtipleri</quote
+>Sistem Yazı Tipleri</quote
+> grubuna kaldırmanız gerekir — bunu, yazı tiplerini <quote
+>Sistem Yazı Tipleri</quote
 > grubu girdisine sürükleyerek yapabilirsiniz; sizden yönetici parolası istenecektir.</para>
 </sect3>
 
@@ -223,12 +223,12 @@
 
 <sect2 id="font-duplicates">
 <title
->Yinelenmiş Yazıtipleri</title>
+>Aynısı Olan Yazı Tipleri</title>
 <para
->Sisteminizde çok fazla yazıtipi varsa belki aralarından birkaçı aynı olabilir.</para
+>Sisteminizde çok fazla yazı tipi varsa belki aralarından birkaçı aynı olabilir.</para
 > 
 <para
->Kendileriyle ilişkilendirilmiş birden çok dosyaya sahip yazıtiplerini aramak için sisteminizi tarayacak basit bir aracı açmak üzere <guilabel
+>Kendileriyle ilişkilendirilmiş birden çok dosyaya sahip yazı tiplerini aramak için sisteminizi tarayacak basit bir aracı açmak üzere <guilabel
 >Yinelenenleri Bul…</guilabel
 > düğmesine tıklayın. Örneğin, <quote
 >/usr/local/share/fonts</quote
@@ -236,25 +236,25 @@
 >times.ttf</quote
 > ve <quote
 >times.TTF</quote
-> kuruluysa altında yatan yazıtipi mekanizması (<quote
+> kuruluysa altında yatan yazı tipi mekanizması (<quote
 >FontConfig</quote
->), bunlardan yalnızca birini görecektir. Bu nedenle, yazıtipini kaldırırsanız dosyalardan yalnızca biri kaldırılacağı için yeniden görünecektir. Bu aracı çalıştırmak, birden çok dosyaya sahip her yazıtipini ve karşılık gelen dosya listesini listeleyen bir iletişim kutusu oluşturur. Silinecek bir dosya seçmek için çöp kutusu simgesini içeren sütuna tıklayın.</para>
+>), bunlardan yalnızca birini görecektir. Bu nedenle, yazı tipini kaldırırsanız dosyalardan yalnızca biri kaldırılacağı için yeniden görünecektir. Bu aracı çalıştırmak, birden çok dosyaya sahip her yazı tipini ve karşılık gelen dosya listesini listeleyen bir iletişim kutusu oluşturur. Silinecek bir dosya seçmek için çöp kutusu simgesini içeren sütuna tıklayın.</para>
 </sect2>
 
 <sect2 id="font-preview">
 <title
->Önizleme</title>
+>Ön İzleme</title>
 <para
->Bu, değişik yazıtipi puntolarında bir önizleme metni görüntüler.</para>
+>Bu, değişik yazı tipi puntolarında bir ön izleme metni görüntüler.</para>
 <para
->Bağlam menüsünü kullanarak yakınlaştırabilir/uzaklaştırabilir ve bir önizleme türü seçebilir (<guilabel
->Standart Önizleme</guilabel
+>Bağlam menüsünü kullanarak yakınlaştırabilir/uzaklaştırabilir ve bir ön izleme türü seçebilir (<guilabel
+>Standart Ön İzleme</guilabel
 > veya <guilabel
 >Tüm Karakterler</guilabel
->), ayrıca önizleme metnini değiştirebilirsiniz.</para>
+>), ayrıca ön izleme metnini değiştirebilirsiniz.</para>
 
 <para
->Unicode Blokları için ek önizleme türlerine gereksiniminiz varsa &kfontview; uygulamasını başlatın. </para>
+>Unicode Blokları için ek ön izleme türlerine gereksiniminiz varsa &kfontview; uygulamasını başlatın. </para>
 </sect2>
 </sect1>
 </article>
