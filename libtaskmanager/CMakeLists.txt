@@ -46,6 +46,11 @@ generate_export_header(taskmanager)
 
 target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/taskmanager>")
 
+kconfig_target_kcfg_file(taskmanager
+    FILE ${CMAKE_SOURCE_DIR}/kcms/cursortheme/launchfeedbacksettings.kcfg
+    CLASS_NAME LaunchFeedbackSettings
+)
+
 # Optionally use Qt::Test if available to find a crash
 # This can be reverted before release hopefully
 find_package(Qt6Test ${QT_MIN_VERSION} CONFIG QUIET)
@@ -63,6 +68,7 @@ target_link_libraries(taskmanager
         Qt::WaylandClient
         Plasma::Activities
         KF6::ConfigCore
+        KF6::ConfigGui
         KF6::I18n
         KF6::KIOCore
         KF6::KIOGui

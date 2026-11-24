@@ -5,10 +5,10 @@
 */
 
 #include "waylandstartuptasksmodel.h"
+#include "launchfeedbacksettings.h"
 #include "libtaskmanager_debug.h"
 #include "tasktools.h"
 
-#include <KConfigGroup>
 #include <KConfigWatcher>
 
 #include <qwayland-plasma-window-management.h>
@@ -97,6 +97,7 @@ public:
     };
 
     WaylandStartupTasksModel *const q;
+    LaunchFeedbackSettings launchFeedbackSettings;
     KConfigWatcher::Ptr configWatcher = nullptr;
     std::unique_ptr<PlasmaActivationFeedback> feedback = nullptr;
     std::vector<Startup> startups;
@@ -110,7 +111,7 @@ WaylandStartupTasksModel::Private::Private(WaylandStartupTasksModel *q)
 
 void WaylandStartupTasksModel::Private::init()
 {
-    configWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("klaunchrc"), KConfig::NoGlobals));
+    configWatcher = KConfigWatcher::create(launchFeedbackSettings.sharedConfig());
     QObject::connect(configWatcher.data(), &KConfigWatcher::configChanged, q, [this] {
         loadConfig();
     });
@@ -120,9 +121,7 @@ void WaylandStartupTasksModel::Private::init()
 
 void WaylandStartupTasksModel::Private::loadConfig()
 {
-    KConfigGroup feedbackConfig(configWatcher->config(), u"FeedbackStyle"_s);
-
-    if (!feedbackConfig.readEntry("TaskbarButton", true)) {
+    if (!launchFeedbackSettings.taskbarButton()) {
         q->beginResetModel();
         startups.clear();
         feedback.reset();
@@ -130,8 +129,7 @@ void WaylandStartupTasksModel::Private::loadConfig()
         return;
     }
 
-    const KConfigGroup taskbarButtonConfig(configWatcher->config(), u"TaskbarButtonSettings"_s);
-    startupTimeout = std::chrono::seconds(taskbarButtonConfig.readEntry("Timeout", 5));
+    startupTimeout = std::chrono::seconds(launchFeedbackSettings.taskbarTimeout());
 
     feedback = std::make_unique<PlasmaActivationFeedback>();
 
