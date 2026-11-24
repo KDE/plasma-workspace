@@ -14,7 +14,7 @@ import org.kde.newstuff as NewStuff
 
 Kirigami.Page {
     id: gtkStylePage
-    title: i18n("GNOME/GTK Application Style")
+    title: i18nc("@title:window page title", "GNOME/GTK Application Style")
 
     header: Kirigami.InlineMessage {
         id: infoLabel
@@ -50,18 +50,12 @@ Kirigami.Page {
         }
     ]
 
-    ColumnLayout {
+    Kirigami.Form {
         anchors.fill: parent
-
-        Kirigami.FormLayout {
-            wideMode: true
-
-            Row {
-                Kirigami.FormData.label: i18n("GTK theme:")
-
-                Flow {
-                    spacing: Kirigami.Units.smallSpacing
-
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18nc("@label:listbox with trailing buttons", "GTK theme:")
+                contentItem: RowLayout {
                     QtControls.ComboBox {
                         id: gtkThemeCombo
                         model: kcm.gtkPage.gtkThemesModel
@@ -79,21 +73,16 @@ Kirigami.Page {
                         icon.name: "edit-delete"
                         onClicked: gtkThemeCombo.model.removeSelectedTheme()
                     }
-
+                }
+                trailingItems: [
                     QtControls.Button {
                         icon.name: "preview"
-                        text: i18n("Preview…")
+                        text: i18nc("@action:button opens gtk preview window", "Preview…")
                         onClicked: kcm.gtkPage.showGtkPreview()
                         visible: kcm.gtkPage.gtkPreviewAvailable()
                     }
-
-                }
+                ]
             }
-
-        }
-
-        Item {
-            Layout.fillHeight: true
         }
     }
 
@@ -101,9 +90,9 @@ Kirigami.Page {
         id: fileDialogLoader
         active: false
         sourceComponent: QtDialogs.FileDialog {
-            title: i18n("Select GTK Theme Archive")
+            title: i18nc("@title:window dialog title", "Select GTK Theme Archive")
             currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
-            nameFilters: [ i18n("GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)") ]
+            nameFilters: [ i18nc("@label file type filter, don't translate extensions", "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)") ]
             Component.onCompleted: open()
             onAccepted: {
                 kcm.gtkPage.installGtkThemeFromFile(selectedFile)
