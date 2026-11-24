@@ -376,11 +376,15 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
         configurableNotifyRc = !config.groupList().filter(regexp).isEmpty();
     }
 
-    // For default events we try to show the application name from the desktop entry if possible
-    // This will have us show e.g. "Dr Konqi" instead of generic "Plasma Desktop"
-    // The application may not send an applicationName. Use the name from the desktop entry then
-    if ((isDefaultEvent || applicationName.isEmpty()) && !serviceName.isEmpty()) {
-        applicationName = serviceName;
+    // For default events we try to show the application name from the desktop entry.
+    // This will have us show e.g. "Dr Konqi" instead of generic "Plasma Desktop", however in
+    // case of a hidden service (e.g. KDED) the user cannot see on the application menu otherwise,
+    // keep the application name.
+    // The application may also not send an applicationName in the first place.
+    if (!serviceName.isEmpty()) {
+        if (applicationName.isEmpty() || (isDefaultEvent && !service->noDisplay())) {
+            applicationName = serviceName;
+        }
     }
 }
 
