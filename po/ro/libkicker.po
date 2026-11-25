@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 09:25+0000\n"
+"POT-Creation-Date: 2026-11-24 17:09+0000\n"
 "PO-Revision-Date: 2026-05-16 20:55+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -128,7 +128,7 @@ msgstr "Utilizate recent"
 msgid "Places"
 msgstr "Locuri"
 
-#: recentusagemodel.cpp:150 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:150 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr "Fișiere"
@@ -138,42 +138,42 @@ msgstr "Fișiere"
 msgid "Forget Application"
 msgstr "Uită aplicația"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr "Dosare"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:365
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
-#: recentusagemodel.cpp:367
+#: recentusagemodel.cpp:370
 #, kde-format
 msgid "Forget Folder"
 msgstr "Uită dosarul"
 
-#: recentusagemodel.cpp:367
+#: recentusagemodel.cpp:370
 #, kde-format
 msgid "Forget File"
 msgstr "Uită fișierul"
 
-#: recentusagemodel.cpp:513
+#: recentusagemodel.cpp:516
 #, kde-format
 msgid "Forget All"
 msgstr "Uită tot"
 
-#: recentusagemodel.cpp:515
+#: recentusagemodel.cpp:518
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Uită toate aplicațiile"
 
-#: recentusagemodel.cpp:517
+#: recentusagemodel.cpp:520
 #, kde-format
 msgid "Forget All Folders"
 msgstr "Uită toate dosarele"
 
-#: recentusagemodel.cpp:520
+#: recentusagemodel.cpp:523
 #, kde-format
 msgid "Forget All Files"
 msgstr "Uită toate fișierele"

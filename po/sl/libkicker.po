@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 09:25+0000\n"
+"POT-Creation-Date: 2026-11-24 17:09+0000\n"
 "PO-Revision-Date: 2026-04-23 06:55+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -130,7 +130,7 @@ msgstr "Nedavno uporabljeno"
 msgid "Places"
 msgstr "Mesta"
 
-#: recentusagemodel.cpp:150 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:150 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr "Datoteke"
@@ -140,42 +140,42 @@ msgstr "Datoteke"
 msgid "Forget Application"
 msgstr "Pozabi program"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr "Mape"
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:365
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Odpri vsebovano mapo"
 
-#: recentusagemodel.cpp:367
+#: recentusagemodel.cpp:370
 #, kde-format
 msgid "Forget Folder"
 msgstr "Pozabi mapo"
 
-#: recentusagemodel.cpp:367
+#: recentusagemodel.cpp:370
 #, kde-format
 msgid "Forget File"
 msgstr "Pozabi datoteko"
 
-#: recentusagemodel.cpp:513
+#: recentusagemodel.cpp:516
 #, kde-format
 msgid "Forget All"
 msgstr "Pozabi vse"
 
-#: recentusagemodel.cpp:515
+#: recentusagemodel.cpp:518
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Pozabi vse programe"
 
-#: recentusagemodel.cpp:517
+#: recentusagemodel.cpp:520
 #, kde-format
 msgid "Forget All Folders"
 msgstr "Pozabi vse mape"
 
-#: recentusagemodel.cpp:520
+#: recentusagemodel.cpp:523
 #, kde-format
 msgid "Forget All Files"
 msgstr "Pozabi vse datoteke"

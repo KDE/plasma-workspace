@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-07 09:25+0000\n"
+"POT-Creation-Date: 2026-11-24 17:09+0000\n"
 "PO-Revision-Date: 2015-02-04 15:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -134,7 +134,7 @@ msgstr ""
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:150 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:150 recentusagemodel.cpp:320
 #, kde-format
 msgid "Files"
 msgstr ""
@@ -144,42 +144,42 @@ msgstr ""
 msgid "Forget Application"
 msgstr "Zaboravi aplikaciju"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:318
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:362
+#: recentusagemodel.cpp:365
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: recentusagemodel.cpp:367
+#: recentusagemodel.cpp:370
 #, fuzzy, kde-format
 msgid "Forget Folder"
 msgstr "Zaboravi sve dokumente"
 
-#: recentusagemodel.cpp:367
+#: recentusagemodel.cpp:370
 #, fuzzy, kde-format
 msgid "Forget File"
 msgstr "Zaboravi sve dokumente"
 
-#: recentusagemodel.cpp:513
+#: recentusagemodel.cpp:516
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "Zaboravi sve dokumente"
 
-#: recentusagemodel.cpp:515
+#: recentusagemodel.cpp:518
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Zaboravi sve aplikacije"
 
-#: recentusagemodel.cpp:517
+#: recentusagemodel.cpp:520
 #, fuzzy, kde-format
 msgid "Forget All Folders"
 msgstr "Zaboravi sve dokumente"
 
-#: recentusagemodel.cpp:520
+#: recentusagemodel.cpp:523
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "Zaboravi sve dokumente"

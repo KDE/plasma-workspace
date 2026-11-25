@@ -1,21 +1,21 @@
 # Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2019-2022, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-22 21:11+0000\n"
-"PO-Revision-Date: 2026-04-10 11:34+0200\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"PO-Revision-Date: 2026-11-24 23:48+0100\n"
+"Last-Translator: freek <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: ui/main.qml:28
 #, kde-format
@@ -31,25 +31,17 @@ msgid "Plasma"
 msgstr "Plasma"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Help KDE improve Plasma by sending system and usage information. This is "
 "optional and entirely anonymous—we never collect your personal data, files "
 "you use, websites you visit, or information that could identify you."
 msgstr ""
-"U kunt KDE helpen Plasma te verbeteren door informatie bij te dragen over "
-"hoe u het gebruikt, zodat we kunnen focussen op dingen die belangrijk zijn "
-"voor u.<nl/><nl/>Bijdragen over gebruiksinformatie is optioneel en geheel "
-"anoniem. We verzamelen nooit uw persoonlijke gegevens, bestanden die u "
-"gebruikt, websites die u bezoekt of informatie die u identificeert.<nl/>"
+"Help KDE bij het verbeteren van Plasma door systeem- en gebruiksgegevens te "
+"versturen. Dit is optioneel en volledig anoniem; we verzamelen nooit uw "
+"persoonlijke gegevens, de bestanden die u gebruikt, de websites die u "
+"bezoekt of informatie waarmee u geïdentificeerd zou kunnen worden."
 
 #: ui/main.qml:54
 #, kde-format
