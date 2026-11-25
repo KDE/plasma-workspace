@@ -39,4 +39,6 @@ PlasmoidItem {
             elementId: root.isVertical ? "vertical-line" : "horizontal-line"
         }
     }
+
+    Component.onCompleted: Plasmoid.internalAction("configure").visible = false
 }
