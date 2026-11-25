@@ -491,7 +491,7 @@ void Notification::Private::processPortalProperties(const QVariantMap &props)
         // TODO add high urgency
     } else if (priority == "normal"_L1 || priority == "high"_L1) {
         setUrgency(Notifications::NormalUrgency);
-    } else if (priority == "high"_L1) {
+    } else if (priority == "urgent"_L1) {
         setUrgency(Notifications::CriticalUrgency);
     }
 
