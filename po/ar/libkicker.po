@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 03:19+0000\n"
+"POT-Creation-Date: 2026-11-24 17:10+0000\n"
 "PO-Revision-Date: 2026-04-30 09:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -129,7 +129,7 @@ msgstr "المستخدمة حديثًا"
 msgid "Places"
 msgstr "الأماكن"
 
-#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:333
 #, kde-format
 msgid "Files"
 msgstr "الملفات"
@@ -139,42 +139,42 @@ msgstr "الملفات"
 msgid "Forget Application"
 msgstr "انسَ التّطبيق"
 
-#: recentusagemodel.cpp:328
+#: recentusagemodel.cpp:331
 #, kde-format
 msgid "Folders"
 msgstr "المجلّدات"
 
-#: recentusagemodel.cpp:375
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "افتح المجلد الحاوي"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget Folder"
 msgstr "انسَ المجلد"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget File"
 msgstr "انسَ الملف"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:529
 #, kde-format
 msgid "Forget All"
 msgstr "انسَ الكلّ"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Applications"
 msgstr "انسَ كلّ التّطبيقات"
 
-#: recentusagemodel.cpp:530
+#: recentusagemodel.cpp:533
 #, kde-format
 msgid "Forget All Folders"
 msgstr "انسَ كل المجلدات"
 
-#: recentusagemodel.cpp:533
+#: recentusagemodel.cpp:536
 #, kde-format
 msgid "Forget All Files"
 msgstr "انسَ كلّ الملفات"

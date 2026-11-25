@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 03:19+0000\n"
+"POT-Creation-Date: 2026-11-24 17:10+0000\n"
 "PO-Revision-Date: 2026-05-07 10:25+0200\n"
 "Last-Translator: Rasmus Rosendahl-Kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -128,7 +128,7 @@ msgstr "Nyligt anvendt"
 msgid "Places"
 msgstr "Steder"
 
-#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:333
 #, kde-format
 msgid "Files"
 msgstr "Filer"
@@ -138,42 +138,42 @@ msgstr "Filer"
 msgid "Forget Application"
 msgstr "Glem program"
 
-#: recentusagemodel.cpp:328
+#: recentusagemodel.cpp:331
 #, kde-format
 msgid "Folders"
 msgstr "Mapper"
 
-#: recentusagemodel.cpp:375
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Åbn indeholdende mappe"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget Folder"
 msgstr "Glem mappe"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget File"
 msgstr "Glem fil"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:529
 #, kde-format
 msgid "Forget All"
 msgstr "Glem alt"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Glem alle programmer"
 
-#: recentusagemodel.cpp:530
+#: recentusagemodel.cpp:533
 #, kde-format
 msgid "Forget All Folders"
 msgstr "Glem alle mapper"
 
-#: recentusagemodel.cpp:533
+#: recentusagemodel.cpp:536
 #, kde-format
 msgid "Forget All Files"
 msgstr "Glem alle filer"

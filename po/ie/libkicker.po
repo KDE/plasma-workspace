@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 03:19+0000\n"
+"POT-Creation-Date: 2026-11-24 17:10+0000\n"
 "PO-Revision-Date: 2024-07-28 22:58+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <>\n"
@@ -129,7 +129,7 @@ msgstr "Recent"
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:333
 #, kde-format
 msgid "Files"
 msgstr "Files"
@@ -139,44 +139,44 @@ msgstr "Files"
 msgid "Forget Application"
 msgstr "Obliviar li application"
 
-#: recentusagemodel.cpp:328
+#: recentusagemodel.cpp:331
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:375
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Aperter li contenent fólder"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, fuzzy, kde-format
 #| msgid "Forget Recent Files"
 msgid "Forget Folder"
 msgstr "Obliviar li recent files"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget File"
 msgstr ""
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:529
 #, kde-format
 msgid "Forget All"
 msgstr ""
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Applications"
 msgstr ""
 
-#: recentusagemodel.cpp:530
+#: recentusagemodel.cpp:533
 #, fuzzy, kde-format
 #| msgid "Forget Recent Files"
 msgid "Forget All Folders"
 msgstr "Obliviar li recent files"
 
-#: recentusagemodel.cpp:533
+#: recentusagemodel.cpp:536
 #, kde-format
 msgid "Forget All Files"
 msgstr ""

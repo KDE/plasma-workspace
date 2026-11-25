@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 03:19+0000\n"
+"POT-Creation-Date: 2026-11-24 17:10+0000\n"
 "PO-Revision-Date: 2021-06-08 19:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -125,7 +125,7 @@ msgstr "Usados Recentemente"
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:333
 #, kde-format
 msgid "Files"
 msgstr "Ficheiros"
@@ -135,44 +135,44 @@ msgstr "Ficheiros"
 msgid "Forget Application"
 msgstr "Esquecer a Aplicação"
 
-#: recentusagemodel.cpp:328
+#: recentusagemodel.cpp:331
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:375
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Abrir a Pasta Respectiva"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Esquecer o Ficheiro"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget File"
 msgstr "Esquecer o Ficheiro"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:529
 #, kde-format
 msgid "Forget All"
 msgstr "Esquecer Tudo"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Esquecer Todas as Aplicações"
 
-#: recentusagemodel.cpp:530
+#: recentusagemodel.cpp:533
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Esquecer Todos os Ficheiros"
 
-#: recentusagemodel.cpp:533
+#: recentusagemodel.cpp:536
 #, kde-format
 msgid "Forget All Files"
 msgstr "Esquecer Todos os Ficheiros"

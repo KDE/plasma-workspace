@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 03:19+0000\n"
+"POT-Creation-Date: 2026-11-24 17:10+0000\n"
 "PO-Revision-Date: 2025-01-12 08:09+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -130,7 +130,7 @@ msgstr "Lastatempe Uzita"
 msgid "Places"
 msgstr ""
 
-#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:333
 #, kde-format
 msgid "Files"
 msgstr "Dosieroj"
@@ -140,44 +140,44 @@ msgstr "Dosieroj"
 msgid "Forget Application"
 msgstr "Forgesi Aplikaĵon"
 
-#: recentusagemodel.cpp:328
+#: recentusagemodel.cpp:331
 #, kde-format
 msgid "Folders"
 msgstr "Dosierujoj"
 
-#: recentusagemodel.cpp:375
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Malfermi Enhavan Dosierujon"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Forgesi Dosieron"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget File"
 msgstr "Forgesi Dosieron"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:529
 #, kde-format
 msgid "Forget All"
 msgstr "Forgesi Ĉion"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Forgesi Ĉiujn Aplikaĵojn"
 
-#: recentusagemodel.cpp:530
+#: recentusagemodel.cpp:533
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Forgesi ĉiujn dosierojn"
 
-#: recentusagemodel.cpp:533
+#: recentusagemodel.cpp:536
 #, kde-format
 msgid "Forget All Files"
 msgstr "Forgesi ĉiujn dosierojn"

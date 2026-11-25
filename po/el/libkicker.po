@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-27 03:19+0000\n"
+"POT-Creation-Date: 2026-11-24 17:10+0000\n"
 "PO-Revision-Date: 2024-08-31 14:44+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -132,7 +132,7 @@ msgstr "Πρόσφατα χρησιμοποιημένα"
 msgid "Places"
 msgstr "Τοποθεσίες"
 
-#: recentusagemodel.cpp:163 recentusagemodel.cpp:330
+#: recentusagemodel.cpp:163 recentusagemodel.cpp:333
 #, kde-format
 msgid "Files"
 msgstr "Αρχεία"
@@ -142,45 +142,45 @@ msgstr "Αρχεία"
 msgid "Forget Application"
 msgstr "Αγνόηση εφαρμογής"
 
-#: recentusagemodel.cpp:328
+#: recentusagemodel.cpp:331
 #, fuzzy, kde-format
 #| msgid "Folder"
 msgid "Folders"
 msgstr "Φάκελος"
 
-#: recentusagemodel.cpp:375
+#: recentusagemodel.cpp:378
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Άνοιγμα περιέχοντος φακέλου"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, fuzzy, kde-format
 #| msgid "Forget File"
 msgid "Forget Folder"
 msgstr "Αγνόηση αρχείου"
 
-#: recentusagemodel.cpp:380
+#: recentusagemodel.cpp:383
 #, kde-format
 msgid "Forget File"
 msgstr "Αγνόηση αρχείου"
 
-#: recentusagemodel.cpp:526
+#: recentusagemodel.cpp:529
 #, kde-format
 msgid "Forget All"
 msgstr "Αγνόηση όλων"
 
-#: recentusagemodel.cpp:528
+#: recentusagemodel.cpp:531
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Αγνόηση όλων των εφαρμογών"
 
-#: recentusagemodel.cpp:530
+#: recentusagemodel.cpp:533
 #, fuzzy, kde-format
 #| msgid "Forget All Files"
 msgid "Forget All Folders"
 msgstr "Αγνόηση όλων των αρχείων"
 
-#: recentusagemodel.cpp:533
+#: recentusagemodel.cpp:536
 #, kde-format
 msgid "Forget All Files"
 msgstr "Αγνόηση όλων των αρχείων"
