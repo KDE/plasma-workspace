@@ -21,8 +21,6 @@ KCM.ScrollViewKCM {
     sidebarMode: !Kirigami.Settings.isMobile
     LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
-    // Is create user button enabled
-    property alias createUserEnabled: createUserButton.enabled
 
     actions: Kirigami.Action {
             id: createUserButton
@@ -30,11 +28,10 @@ KCM.ScrollViewKCM {
             text: i18nc("@action:button As in, 'add new user'", "Add New…")
             Accessible.name: i18nc("@action:button", "Add New User…")
             displayHint: Kirigami.DisplayHint.KeepVisible
-            enabled: root.createUserEnabled
 
             onTriggered: {
-                root.prepareChangePage();
-                kcm.push("CreateUser.qml");
+                const component = Qt.createComponent("CreateUser.qml");
+                component.incubateObject(root.parent);
                 userList.currentIndex = -1;
             }
         }
@@ -44,8 +41,6 @@ KCM.ScrollViewKCM {
     property int avatarVersion: 0
 
     function prepareChangePage() {
-        // When changing page we may be leaving CreateUser as such ALWAYS enable button
-        root.createUserEnabled = true;
         // Only pop page in sidebar mode
         if (root.sidebarMode) {
             kcm.pop();

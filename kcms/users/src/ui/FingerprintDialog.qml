@@ -12,7 +12,7 @@ import QtQuick.Controls as QQC2
 
 import org.kde.kirigami as Kirigami
 
-QQC2.Dialog {
+Kirigami.Dialog {
     id: root
 
     property var fingerprintModel: kcm.fingerprintModel
@@ -26,14 +26,12 @@ QQC2.Dialog {
     }
 
     title: i18n("Configure Fingerprints")
-
+    padding: Kirigami.Units.largeSpacing
     visible: true
-
     onRejected: root.fingerprintModel.stopEnrolling()
-
     standardButtons: doneAction.visible ? QQC2.Dialog.NoButton : QQC2.Dialog.Cancel
 
-    property list<Kirigami.Action> customFooterActions: [
+    customFooterActions: [
         // FingerprintList State
         Kirigami.Action {
             text: i18n("Add")
@@ -100,6 +98,12 @@ QQC2.Dialog {
             clip: true
 
             initialItem: fingerPrints
+        }
+
+        QQC2.Label {
+            Layout.maximumWidth: parent.implicitWidth
+            text: xi18nc("@info", "Fingerprints can be used in place of a password when unlocking the screen and providing administrator permissions to applications and command-line programs that request them.<nl/><nl/>Logging into the system with your fingerprint is not yet supported.")
+            wrapMode: Text.WordWrap
         }
     }
 

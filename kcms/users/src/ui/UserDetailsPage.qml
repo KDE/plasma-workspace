@@ -126,84 +126,101 @@ KCM.SimpleKCM {
         }
     }
 
-    ColumnLayout {
-        Kirigami.FormLayout {
-            QQC2.Button {
-                readonly property int size: 6 * Kirigami.Units.gridUnit
+    Kirigami.Form {
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                fullWidth: true
 
-                padding: Kirigami.Units.largeSpacing
-                implicitWidth: size + padding * 2
-                implicitHeight: size + padding * 2
-                Layout.alignment: Qt.AlignHCenter
-                Layout.topMargin: Kirigami.Units.largeSpacing
+                // contentItem is wrapped to horizontally center the user avatar button
+                contentItem: Item {
+                    Layout.fillWidth: true
+                    Kirigami.FormData.buddyFor: userAvatarButton
 
-                KeyNavigation.down: realNametextField
+                    implicitHeight: userAvatarButton.height
 
-                focus: true
-                text: i18n("Change avatar")
-                QQC2.ToolTip.visible: text.length > 0 && (hovered || activeFocus)
-                QQC2.ToolTip.text: text
-                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    QQC2.Button {
+                        id: userAvatarButton
+                        anchors.centerIn: parent
 
+                        readonly property int size: 6 * Kirigami.Units.gridUnit
+                        padding: Kirigami.Units.largeSpacing
+                        implicitWidth: size + padding * 2
+                        implicitHeight: size + padding * 2
+                        Layout.alignment: Qt.AlignCenter
+                        Layout.topMargin: Kirigami.Units.largeSpacing
 
-                onClicked: {
-                    const component = Qt.createComponent("PicturesSheet.qml")
-                    const obj = component.incubateObject(usersDetailPage, {
-                        focus: true,
-                        usersDetailPage: usersDetailPage
-                    })
-                    if (obj == null) {
-                        console.log(component.errorString())
+                        focus: true
+                        text: i18n("Change avatar")
+                        QQC2.ToolTip.visible: text.length > 0 && (hovered || activeFocus)
+                        QQC2.ToolTip.text: text
+                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+                        onClicked: {
+                            const component = Qt.createComponent("PicturesSheet.qml")
+                            const obj = component.incubateObject(usersDetailPage, {
+                                focus: true,
+                                usersDetailPage: usersDetailPage
+                            })
+                            if (obj == null) {
+                                console.log(component.errorString())
+                            }
+                            component.destroy()
+                        }
+
+                        contentItem: Kirigami.Avatar {
+                            source: usersDetailPage.user.faceValid ? usersDetailPage.user.face : ""
+                            cache: false
+                            name: user.realName
+
+                            focus: true
+                        }
                     }
-                    component.destroy()
-                }
-
-                contentItem: Kirigami.Avatar {
-                    source: usersDetailPage.user.faceValid ? usersDetailPage.user.face : ""
-                    cache: false
-                    name: user.realName
-
-                    focus: true
                 }
             }
 
-            QQC2.TextField  {
-                id: realNametextField
-                text: user.realName
-                Kirigami.FormData.label: i18n("Name:")
-
-                KeyNavigation.down: userNameField
-            }
-
-            RowLayout {
-                Kirigami.FormData.label: i18n("Username:")
-                Kirigami.FormData.buddyFor: userNameField
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.TextField {
+            Kirigami.FormEntry {
+                title: i18n("Username:")
+                contentItem: QQC2.TextField {
                     id: userNameField
+                    Layout.fillWidth: true
                     text: user.name
                     enabled: !usersDetailPage.user.loggedIn
-
-                    KeyNavigation.down: usertypeBox
                 }
 
-                Kirigami.ContextualHelpButton {
+                trailingItems: Kirigami.ContextualHelpButton {
+                    id: usernameContextButton
                     toolTipText: usersDetailPage.user.isCurrentUser
-                        ? i18nc("@label:tooltip", "Cannot change your own username while logged in; log out and then log in as another user to change this account’s username.")
-                        : i18nc("@label:tooltip", "Cannot change the username of a logged-in user; wait until this user logs out first.")
-                    visible: !userNameField.shouldBeEnabled
+                    ? i18nc("@label:tooltip", "Cannot change your own username while logged in; log out and then log in as another user to change this account’s username.")
+                    : i18nc("@label:tooltip", "Cannot change the username of a logged-in user; wait until this user logs out first.")
+                    visible: !userNameField.enabled
                 }
             }
 
-            RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-                Kirigami.FormData.label: i18n("Account type:")
+            Kirigami.FormEntry {
+                title: i18n("Name:")
+                contentItem: QQC2.TextField  {
+                    id: realNametextField
+                    Layout.fillWidth: true
+                    text: user.realName
+                }
+            }
 
-                QQC2.ComboBox {
+            Kirigami.FormEntry {
+                title: i18n("Email address:")
+                contentItem: QQC2.TextField {
+                    Layout.fillWidth: true
+                    id: emailTextField
+                    text: user.email
+                }
+            }
+        }
+
+        Kirigami.FormGroup {
+            Kirigami.FormEntry {
+                title: i18n("Account type:")
+                contentItem: QQC2.ComboBox {
                     id: usertypeBox
-
-                    readonly property bool shouldBeEnabled: kcm.userModel.moreThanOneAdminUser || !user.administrator
+                    enabled: kcm.userModel.moreThanOneAdminUser || !user.administrator
 
                     textRole: "label"
                     valueRole: "type"
@@ -213,123 +230,101 @@ KCM.SimpleKCM {
                     ]
 
                     currentIndex: user.administrator ? 1 : 0
-                    enabled: shouldBeEnabled
-
-                    KeyNavigation.down: emailTextField
                 }
 
-                Kirigami.ContextualHelpButton {
+                trailingItems: Kirigami.ContextualHelpButton {
                     toolTipText: i18n("Cannot change the account type to Standard unless there is at least one other Administrator account on the system. Without one, authentication would become impossible or require the insecure use of the root password.")
-                    visible: !usertypeBox.shouldBeEnabled
+                    visible: !usertypeBox.enabled
+                }
+                clickEnabled: usertypeBox.enabled
+            }
+        }
+
+
+        Kirigami.FormGroup {
+            Kirigami.FormAction {
+                id: changePasswordAction
+                fullWidth: true
+                action: Kirigami.Action {
+                    text: i18n("Change Password")
+                    icon.name: "database-change-key" // TODO: We need a proper password icon
+                    onTriggered: {
+                        changePassword.user = user
+                        changePassword.openAndClear()
+                    }
                 }
             }
+            Kirigami.FormAction {
+                id: fingerprintAction
+                visible: true //kcm.fingerprintModel.deviceFound
+                fullWidth: true
+                action: Kirigami.Action {
+                    id: fingerprintButton
+                    text: i18n("Configure Fingerprint Authentication…")
+                    icon.name: "fingerprint-gui"
 
-            QQC2.TextField {
-                id: emailTextField
-                text: user.email
-                Kirigami.FormData.label: i18n("Email address:")
-                KeyNavigation.down: changeButton
-            }
+                    property Kirigami.Dialog dialog: null
 
-            QQC2.Button {
-                id: changeButton
-                text: i18n("Change Password")
-                KeyNavigation.down: deleteUser.enabled ? deleteUser : fingerprintButton
-                onClicked: {
-                    changePassword.user = user
-                    changePassword.openAndClear()
-                }
-            }
-
-            Item {
-                Layout.preferredHeight: deleteUser.height
-            }
-
-            RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.Button {
-                    id: deleteUser
-
-                    enabled: !usersDetailPage.user.isCurrentUser
-
-                    KeyNavigation.down: fingerprintButton
-
-                    QQC2.Menu {
-                        id: deleteMenu
-                        modal: true
-                        QQC2.MenuItem {
-                            text: i18n("Delete files")
-                            icon.name: "edit-delete-shred"
-                            onClicked: {
-                                usersDetailPage.deleteUser(usersDetailPage.user.uid, true);
-                            }
+                    onTriggered: {
+                        if (kcm.fingerprintModel.currentlyEnrolling) {
+                            kcm.fingerprintModel.stopEnrolling();
                         }
-                        QQC2.MenuItem {
-                            text: i18n("Keep files")
-                            icon.name: "document-multiple"
-                            onClicked: {
-                                usersDetailPage.deleteUser(usersDetailPage.user.uid, false);
+                        kcm.fingerprintModel.switchUser(user.name == kcm.userModel.getCurrentUser().name ? "" : user.name);
+
+                        if (fingerprintButton.dialog === null) {
+                            const component = Qt.createComponent("FingerprintDialog.qml");
+                            if (component.status == Component.Error) {
+                                console.warn(component.errorString())
                             }
+                            component.incubateObject(usersDetailPage, {
+                                                         focus: true,
+                                                     });
+                            component.destroy();
+                        } else {
+                            fingerprintButton.dialog.open()
                         }
                     }
+                }
+            }
+            Kirigami.FormSeparator {}
+            Kirigami.FormAction {
+                id: deleteUser
+                fullWidth: true
+                action: Kirigami.Action {
+                    id: deleteUserAction
+                    enabled: !usersDetailPage.user.isCurrentUser
                     text: i18n("Delete User…")
                     icon.name: "edit-delete"
-                    onClicked: deleteMenu.open()
+                    onTriggered: deleteMenu.open()
                 }
 
-                Kirigami.ContextualHelpButton {
-                    toolTipText: i18nc("@label:tooltip", "Cannot delete yourself! Log out and then log in as another user to delete this user account.")
-                    visible: !usertypeBox.shouldBeEnabled
-                }
-            }
-        }
-
-        QQC2.Button {
-            id: fingerprintButton
-            Layout.topMargin: deleteUser.height
-            Layout.alignment: Qt.AlignHCenter
-            flat: false
-            visible: kcm.fingerprintModel.deviceFound
-            text: i18n("Configure Fingerprint Authentication…")
-            icon.name: "fingerprint-gui"
-
-            property Kirigami.Dialog dialog: null
-
-            onClicked: {
-                if (kcm.fingerprintModel.currentlyEnrolling) {
-                    kcm.fingerprintModel.stopEnrolling();
-                }
-                kcm.fingerprintModel.switchUser(user.name == kcm.userModel.getCurrentUser().name ? "" : user.name);
-
-                if (fingerprintButton.dialog === null) {
-                    const component = Qt.createComponent("FingerprintDialog.qml");
-                    if (component.status == Component.Error) {
-                        console.warn(component.errorString())
+                QQC2.Menu {
+                    id: deleteMenu
+                    modal: true
+                    QQC2.MenuItem {
+                        text: i18n("Delete files")
+                        icon.name: "edit-delete-shred"
+                        onClicked: {
+                            usersDetailPage.deleteUser(usersDetailPage.user.uid, true);
+                        }
                     }
-                    component.incubateObject(usersDetailPage, {
-                        focus: true,
-                    });
-                    component.destroy();
-                } else {
-                    fingerprintButton.dialog.open()
+                    QQC2.MenuItem {
+                        text: i18n("Keep files")
+                        icon.name: "document-multiple"
+                        onClicked: {
+                            usersDetailPage.deleteUser(usersDetailPage.user.uid, false);
+                        }
+                    }
                 }
+                trailingItems: Kirigami.ContextualHelpButton {
+                    toolTipText: i18nc("@label:tooltip", "Cannot delete yourself! Log out and then log in as another user to delete this user account.")
+                    visible: !deleteUserAction.enabled
+                }
+                clickEnabled: deleteUserAction.enabled
             }
-        }
-        QQC2.Label {
-            Layout.fillWidth: true
-            Layout.leftMargin: Kirigami.Units.largeSpacing * 2
-            Layout.rightMargin: Kirigami.Units.largeSpacing * 2
-
-            visible: kcm.fingerprintModel.deviceFound
-
-            text: xi18nc("@info", "Fingerprints can be used in place of a password when unlocking the screen and providing administrator permissions to applications and command-line programs that request them.<nl/><nl/>Logging into the system with your fingerprint is not yet supported.")
-            textFormat: Text.StyledText
-
-            font: Kirigami.Theme.smallFont
-            wrapMode: Text.Wrap
         }
     }
+
 
     ChangePassword {
         id: changePassword
