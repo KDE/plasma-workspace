@@ -37,6 +37,37 @@ Kirigami.ScrollablePage {
 
     padding: 0
 
+    QQC2.ActionGroup {
+        id: wallpaperPluginGroup
+        onCheckedActionChanged: {
+            kcm.currentWallpaper = checkedAction.pluginName
+            let idx = kcm.wallpaperConfigModel.index(checkedAction.index, 0)
+            main.sourceFile = idx.data(ConfigModel.SourceRole)
+        }
+    }
+    Connections {
+        target: kcm.wallpaperConfigModel
+        function onWallpaperPluginsChanged() {
+            wallPaperTypeAction.reset()
+        }
+    }
+
+    component ModelAction: Kirigami.Action {
+        id: modelAction
+        property alias model: internal.model
+        property alias delegate: internal.delegate
+        readonly property Instantiator __instantiator: Instantiator {
+            id: internal
+            onObjectAdded: (index, action) => modelAction.children.push(action)
+            onObjectRemoved: (index, action) => modelAction.children.splice(index, 1)
+        }
+        function reset() {
+            internal.active = false
+            children = []
+            internal.active = true
+        }
+    }
+
     actions: [
         Kirigami.Action {
             id: allScreensAction
@@ -51,8 +82,50 @@ Kirigami.ScrollablePage {
                 visible: allScreensAction.visible
                 onToggled: allScreensAction.trigger()
             }
+        },
+        ModelAction {
+            id: wallPaperTypeAction
+            text: i18nc("title:group, listbox-like button menu, %1 is wallpaper plugin name",
+                        "Type: %1", wallpaperPluginGroup.checkedAction?.name ?? "")
+            model: kcm.wallpaperConfigModel
+            delegate: Kirigami.Action {
+                id: actionDelegate
+                required property string name
+                required property string pluginName
+                required property int index
+
+                QQC2.ActionGroup.group: wallpaperPluginGroup
+                text: name
+                checkable: true
+                checked: pluginName === kcm.currentWallpaper
+            }
+        },
+        NewStuff.Action {
+            configFile: "wallpaperplugin.knsrc"
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@action:button", "Get New Plugins…")
         }
     ]
+
+    KCM.SettingHighlighter {
+        id: toolBarWallpaperTypeHighlighter
+        highlight: kcm.currentWallpaper !== "org.kde.image"
+    }
+
+    onGlobalToolBarItemChanged: {
+        // HACK: I don't think we can do SettingHighlighter cleanly with the global toolbar, and can't easily
+        // set a custom display component as the default one is private and I don't want to copy it here.
+        // I hope Union semantic hints will make this cleaner.
+        let typeActionButtons = globalToolBarItem?.contentItem[1].children[4].contentItem.children.filter(
+            (entry) => entry.action == wallPaperTypeAction)
+
+        if (! typeActionButtons || typeActionButtons?.length < 1) {
+            return
+        }
+
+        toolBarWallpaperTypeHighlighter.target = typeActionButtons.pop()
+        // needs to be non-flat when necessary - flat doesn't show a highlight
+        toolBarWallpaperTypeHighlighter.target.flat = Qt.binding(() => !toolBarWallpaperTypeHighlighter.highlight)
+    }
 
     function onConfigurationChanged() {
         kcm.configuration.keys().forEach(key => {
@@ -85,36 +158,10 @@ Kirigami.ScrollablePage {
             onScreenSelected: (screenName) => { kcm.setSelectedScreen(screenName) }
         }
 
+        // only here for backward compatibility with FormLayout wallpaper plugins
+        // TODO Plasma 7: remove and document in porting guide
         Kirigami.FormLayout {
             id: parentLayout // needed for twinFormLayouts to work in wallpaper plugins
-            Layout.fillWidth: true
-            Layout.topMargin: Kirigami.Units.largeSpacing
-
-            RowLayout {
-                Layout.fillWidth: true
-                Kirigami.FormData.label: i18nc("@label:listbox", "Wallpaper type:")
-                Kirigami.FormData.buddyFor: wallpaperComboBox
-
-                QQC2.ComboBox {
-                    id: wallpaperComboBox
-                    model: kcm.wallpaperConfigModel
-                    textRole: "name"
-                    valueRole: "pluginName"
-                    onActivated: {
-                        kcm.currentWallpaper = currentValue
-                    }
-
-                    KCM.SettingHighlighter {
-                        highlight: kcm.currentWallpaper !== "org.kde.image"
-                    }
-                }
-                NewStuff.Button {
-                    configFile: "wallpaperplugin.knsrc"
-                    text: i18nc("@action:button", "Get New Plugins…")
-                    visibleWhenDisabled: true // don't hide on disabled
-                    Layout.preferredHeight: wallpaperComboBox.height
-                }
-            }
         }
 
         Item {
@@ -134,7 +181,6 @@ Kirigami.ScrollablePage {
 
             Connections {
                 target: kcm
-                function onCurrentWallpaperChanged () { main.updateSourceFile() }
                 function onSelectedScreenChanged () { main.onScreenChanged() }
 
                 function onConfigurationChanged() { main.onWallpaperConfigurationChanged() }
@@ -149,34 +195,13 @@ Kirigami.ScrollablePage {
             Connections {
                 enabled: main.currentItem != null
                 target: main.currentItem
+                ignoreUnknownSignals: true
                 function onConfigurationChanged() { kcm.needsSave = true; }
             }
-
-            Connections {
-                enabled: true
-                target: kcm.wallpaperConfigModel
-                function onWallpaperPluginsChanged() { main.updateSourceFile() }
-            }
-
-            // Assign sourceFile only to a useful value so StackView won't load emptyConfig on startup.
-            function updateSourceFile() {
-                const index = wallpaperComboBox.indexOfValue(kcm.currentWallpaper)
-                wallpaperComboBox.currentIndex = index
-
-                // An empty source means the plugin has no config page and the previous one
-                // must still go; index < 0 means the plugin isn't resolved yet and nothing
-                // should load, so that StackView stays empty on startup.
-                if (index >= 0 && kcm.configuration) {
-                    main.sourceFile = kcm.wallpaperPluginSource
-                }
-            }
-
 
             function onWallpaperConfigurationChanged() {
                 let wallpaperConfig = kcm.configuration
                 if (!main.currentItem) {
-                    // The configuration became available before any page was loaded
-                    main.updateSourceFile()
                     return
                 }
                 wallpaperConfig.keys().forEach(key => {
@@ -199,7 +224,6 @@ Kirigami.ScrollablePage {
 
             function onScreenChanged() {
                 if (!main.currentItem) {
-                    main.updateSourceFile();
                     return ;
                 }
                 main.currentItem.screen = kcm.selectedScreen;
@@ -259,5 +283,4 @@ Kirigami.ScrollablePage {
             }
         }
     }
-
 }
