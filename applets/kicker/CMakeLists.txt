@@ -13,6 +13,7 @@ set(kickerplugin_SRCS
     draghelper.cpp
     simplefavoritesmodel.cpp
     kastatsfavoritesmodel.cpp
+    launchertheme.h
     fileentry.cpp
     forwardingmodel.cpp
     placeholdermodel.cpp
@@ -71,6 +72,7 @@ target_link_libraries(kickerplugin PRIVATE
                       KF6::KIOFileWidgets
                       KF6::Notifications
                       Plasma::PlasmaQuick
+                      Plasma::Plasma
                       KF6::Runner
                       KF6::Service
                       KF6::WindowSystem
