@@ -28,13 +28,9 @@
 #include <fcntl.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
+#include <sys/syscall.h>
 #include <sys/un.h>
 #include <unistd.h>
-
-// glibc 2.44 omits C++ linkage guards from <sys/pidfd.h>.
-extern "C" {
-#include <sys/pidfd.h>
-}
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -209,7 +205,8 @@ void AskPasswordAgent::processRequest(const QString &filePath)
         qCWarning(SystemdAskPassword) << "Invalid PID= in" << filePath;
         return;
     }
-    const int pidfd = pidfd_open(pid, 0);
+    // Don't use pidfd_open to support musl libc
+    const int pidfd = static_cast<int>(syscall(SYS_pidfd_open, pid, 0));
     if (pidfd < 0) {
         if (errno != ESRCH) {
             qCWarning(SystemdAskPassword) << "Failed to monitor password requester:" << strerror(errno);
