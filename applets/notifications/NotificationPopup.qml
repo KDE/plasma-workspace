@@ -54,6 +54,16 @@ NotificationsApplet.NotificationWindow {
 
     visible: false
 
+    // Handle window closing event as a notification dismissal
+    onClosing: close => {
+        close.accepted = false;
+        if (modelInterface.closable) {
+            modelInterface.closeClicked();
+        } else {
+            modelInterface.dismissClicked();
+        }
+    }
+
     height: mainItem.implicitHeight + topPadding + bottomPadding
     width: mainItem.implicitWidth + leftPadding + rightPadding
 
