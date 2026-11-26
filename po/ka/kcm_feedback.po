@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-22 21:11+0000\n"
-"PO-Revision-Date: 2026-04-10 05:50+0200\n"
+"PO-Revision-Date: 2026-11-25 13:28+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #: ui/main.qml:28
 #, kde-format
@@ -31,26 +31,18 @@ msgid "Plasma"
 msgstr "Plasma"
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "You can help KDE improve Plasma by contributing information on how you "
-#| "use it, so we can focus on things that matter to you.<nl/><nl/"
-#| ">Contributing this information is optional and entirely anonymous. We "
-#| "never collect your personal data, files you use, websites you visit, or "
-#| "information that could identify you.<nl/>"
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Help KDE improve Plasma by sending system and usage information. This is "
 "optional and entirely anonymous—we never collect your personal data, files "
 "you use, websites you visit, or information that could identify you."
 msgstr ""
-"შეგიძლიათ, დაეხმაროთ KDE-ს Plasma-ის გაუმჯობესებაში ინფორმაციის მიწოდებით, "
-"თუ როგორ იყენებთ მას, ასე რომ, ჩვენ შეგვიძლია ფოკუსირება მოვახდინოთ "
-"თქვენთვის მნიშვნელოვან საკითხებზე.<nl/><nl/>ამ ინფორმაციის მოწოდება "
-"არასავალდებულო და სრულიად ანონიმურია. ჩვენ არასდროს ვაგროვებთ თქვენს "
-"პერსონალურ მონაცემებს, ფაილებს, რომლებსაც იყენებთ, ვებსაიტებს, რომლებსაც "
-"ეწვიეთ ან ინფორმაციას, რომელსაც შეუძლია თქვენი იდენტიფიცირება.<nl/>"
+"შეგიძლიათ, დაეხმაროთ KDE-ს Plasma-ის გაუმჯობესებაში ინფორმაციის მიწოდებით. "
+"ამ ინფორმაციის მოწოდება არასავალდებულო და სრულიად ანონიმურია — ჩვენ არასდროს "
+"ვაგროვებთ თქვენს პერსონალურ მონაცემებს, ფაილებს, რომლებსაც იყენებთ, "
+"ვებსაიტებს, რომლებსაც ეწვიეთ ან ინფორმაციას, რომელსაც შეუძლია თქვენი "
+"იდენტიფიცირება."
 
 #: ui/main.qml:54
 #, kde-format

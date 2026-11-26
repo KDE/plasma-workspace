@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2021, 2022, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014-2016, 2020-2026 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2025-10-16 12:39-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-25 11:59-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: CalendarView.qml:137
 #, kde-format
@@ -70,36 +70,31 @@ msgid "Calendar"
 msgstr "ਕੈਲੰਡਰ"
 
 #: configAppearance.qml:59
-#, fuzzy, kde-format
-#| msgid "Show date"
+#, kde-format
 msgctxt "@option:check also @label:listbox"
 msgid "Show date:"
-msgstr "ਤਾਰੀਖ ਵੇਖਾਓ"
+msgstr "ਤਾਰੀਖ ਵੇਖਾਓ:"
 
 #: configAppearance.qml:64
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@option:check completes Show date …"
 msgid "Below time"
-msgstr "ਹਮੇਸ਼ਾ ਸਮੇਂ ਦੇ ਹੇਠਾਂ"
+msgstr "ਸਮੇਂ ਦੇ ਹੇਠਾਂ"
 
 #: configAppearance.qml:73
-#, fuzzy, kde-format
-#| msgid "Adaptive location"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Adaptive location"
 msgstr "ਲੋੜ ਮੁਤਾਬਕ ਟਿਕਾਣਾ"
 
 #: configAppearance.qml:74
-#, fuzzy, kde-format
-#| msgid "Always beside time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always beside time"
 msgstr "ਹਮੇਸ਼ਾ ਸਮੇਂ ਦੇ ਨਾਲ"
 
 #: configAppearance.qml:75
-#, fuzzy, kde-format
-#| msgid "Always below time"
+#, kde-format
 msgctxt "@item:inlistbox for Show date"
 msgid "Always below time"
 msgstr "ਹਮੇਸ਼ਾ ਸਮੇਂ ਦੇ ਹੇਠਾਂ"
@@ -110,73 +105,61 @@ msgid "Show seconds:"
 msgstr "ਸਕਿੰਟ ਵੇਖਾਓ:"
 
 #: configAppearance.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Never"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Never"
 msgstr "ਕਦੇ ਨਹੀਂ"
 
 #: configAppearance.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Only in the tooltip"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Only in the tooltip"
 msgstr "ਟੂਲ-ਟਿੱਪ ਵਿੱਚ ਹੀ"
 
 #: configAppearance.qml:89
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@item:inlistbox Show Seconds"
 msgid "Always"
 msgstr "ਹਮੇਸ਼ਾ"
 
 #: configAppearance.qml:96
-#, fuzzy, kde-format
-#| msgid "Show time zone:"
+#, kde-format
 msgctxt "@title:group prefix for group of radio buttons, e.g. Always"
 msgid "Show time zone:"
 msgstr "ਸਮਾਂ ਖੇਤਰ ਵੇਖਾਓ:"
 
 #: configAppearance.qml:100
-#, fuzzy, kde-format
-#| msgid "Only when different from local time zone"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Only when different from local time zone"
 msgstr "ਜਦੋਂ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ ਤੋਂ ਵੱਖਰਾ ਹੋਵੇ ਸਿਰਫ਼ ਤਾਂ"
 
 #: configAppearance.qml:108
-#, fuzzy, kde-format
-#| msgid "Always"
+#, kde-format
 msgctxt "@option:radio Show time zone"
 msgid "Always"
 msgstr "ਹਮੇਸ਼ਾ"
 
 #: configAppearance.qml:115
-#, fuzzy, kde-format
-#| msgid "Display time zone as:"
+#, kde-format
 msgctxt "@label:listbox e.g. City"
 msgid "Display time zone as:"
-msgstr "ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਇਸ ਵਜੋਂ ਦਿਖਾਉ:"
+msgstr "ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਇਸ ਵਜੋਂ ਦਿਖਾਓ:"
 
 #: configAppearance.qml:121
-#, fuzzy, kde-format
-#| msgid "Code"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Code"
 msgstr "ਕੋਡ"
 
 #: configAppearance.qml:122
-#, fuzzy, kde-format
-#| msgid "City"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "City"
 msgstr "ਸ਼ਹਿਰ"
 
 #: configAppearance.qml:123
-#, fuzzy, kde-format
-#| msgid "Offset from UTC time"
+#, kde-format
 msgctxt "@item:inlistbox Display time zone as"
 msgid "Offset from UTC time"
 msgstr "UTC ਸਮੇਂ ਤੋਂ ਦੂਰ"
@@ -250,17 +233,14 @@ msgid "Custom"
 msgstr "ਕਸਟਮ"
 
 #: configAppearance.qml:234
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
-"\">ਸਮਾਂ ਫਾਰਮੈਟ ਦਸਤਾਵੇਜ਼</a>"
+"\">ਸਮਾਂ ਫਾਰਮੈਟ ਦਸਤਾਵੇਜ਼ (ਅੰਗਰੇਜ਼ੀ)</a>"
 
 #: configAppearance.qml:244
 #, kde-format
@@ -297,7 +277,7 @@ msgstr "…ਸਟਾਈਲ ਚੁਣੋ"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "ਯਾਦ ਰੱਖੋ: ਜੇ ਪੈਨਲ ਦੀ ਚੌੜਾਈ ਕਾਫ਼ੀ ਨਾ ਹੋਈ ਤਾਂ ਆਕਾਰ ਨੂੰ ਘਟਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।"
 
 #: configAppearance.qml:280
 #, kde-format
@@ -309,7 +289,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr "ਫ਼ੋਂਟ ਚੁਣੋ"
+msgstr "ਫ਼ੋਂਟ ਨੂੰ ਚੁਣੋ"
 
 #: configCalendar.qml:50
 #, kde-format
@@ -427,28 +407,28 @@ msgstr "ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਚੁਣੋ"
 msgctxt "@info offset from current time"
 msgid " • %1 hour later"
 msgid_plural " • %1 hours later"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " • %1 ਘੰਟਾ ਬਾਅਦ"
+msgstr[1] " • %1 ਘੰਟੇ ਬਾਅਦ"
 
 #: main.qml:85
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 later"
-msgstr ""
+msgstr " • %1:%2 ਬਾਅਦ"
 
 #: main.qml:89
 #, kde-format
 msgctxt "@info offset from current time"
 msgid " • %1 hour earlier"
 msgid_plural " • %1 hours earlier"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] " • %1 ਘੰਟਾ ਪਹਿਲਾਂ"
+msgstr[1] " • %1 ਘੰਟੇ ਪਹਿਲਾਂ"
 
 #: main.qml:91
 #, kde-format
 msgctxt "@info offset from current time in hours and minutes"
 msgid " • %1:%2 earlier"
-msgstr ""
+msgstr " • %1:%2 ਪਹਿਲਾਂ"
 
 #: main.qml:195
 #, kde-format
@@ -522,7 +502,7 @@ msgstr "%1:"
 #, kde-format
 msgctxt "@info:tooltip %1 is the name of a calendar application"
 msgid "Middle-click to open %1"
-msgstr ""
+msgstr "%1 ਨੂੰ ਖੋਲ੍ਹਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ"
 
 #~ msgid "Information:"
 #~ msgstr "ਜਾਣਕਾਰੀ:"

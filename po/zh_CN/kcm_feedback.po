@@ -36,6 +36,8 @@ msgid ""
 "optional and entirely anonymous—we never collect your personal data, files "
 "you use, websites you visit, or information that could identify you."
 msgstr ""
+"通过发送系统和使用信息帮助 KDE 改进 Plasma。此功能为可选项，且完全匿名——我们"
+"不会收集您的个人数据、使用的文件、访问的网站，或任何可能识别您身份的信息。"
 
 #: ui/main.qml:54
 #, kde-format

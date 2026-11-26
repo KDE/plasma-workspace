@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 13:09+0000\n"
-"PO-Revision-Date: 2026-10-12 20:03-0500\n"
+"PO-Revision-Date: 2026-11-25 11:46-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -54,36 +54,31 @@ msgid "Never show (disabled)"
 msgstr "ਕਦੇ ਨਾ ਵੇਖਾਓ (ਅਸਮਰੱਥ ਹੈ)"
 
 #: qml/ConfigGeneral.qml:129
-#, fuzzy, kde-format
-#| msgid "Application Status"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Application Status"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸਥਿਤੀ"
 
 #: qml/ConfigGeneral.qml:131
-#, fuzzy, kde-format
-#| msgid "Communications"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Communications"
 msgstr "ਸੰਚਾਰ"
 
 #: qml/ConfigGeneral.qml:133
-#, fuzzy, kde-format
-#| msgid "System Services"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "System Services"
 msgstr "ਸਿਸਟਮ ਸਰਵਿਸਾਂ"
 
 #: qml/ConfigGeneral.qml:135
-#, fuzzy, kde-format
-#| msgid "Hardware Control"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Hardware Control"
 msgstr "ਹਾਰਡਵੇਅਰ ਕੰਟਰੋਲ"
 
 #: qml/ConfigGeneral.qml:138
-#, fuzzy, kde-format
-#| msgid "Miscellaneous"
+#, kde-format
 msgctxt "@title:group section title"
 msgid "Miscellaneous"
 msgstr "ਫੁਟਕਲ"
@@ -157,7 +152,7 @@ msgstr "ਛੋਟਾ"
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Tiny"
-msgstr ""
+msgstr "ਨਿੰਮਾ"
 
 #: qml/ConfigGeneral.qml:268
 #, kde-format
@@ -192,29 +187,25 @@ msgid "Direction:"
 msgstr "ਦਿਸ਼ਾ:"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Bottom-to-top"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Bottom-to-top"
 msgstr "ਹੇਠੋਂ ਓਤੇ"
 
 #: qml/ConfigGeneral.qml:316
-#, fuzzy, kde-format
-#| msgid "Top-to-bottom"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Top-to-bottom"
 msgstr "ਉੱਤੋਂ ਹੇਠਾਂ"
 
 #: qml/ConfigGeneral.qml:321 qml/ConfigGeneral.qml:328
-#, fuzzy, kde-format
-#| msgid "Left-to-right"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Left-to-right"
 msgstr "ਖੱਬਿਓ ਸੱਜੇ"
 
 #: qml/ConfigGeneral.qml:322 qml/ConfigGeneral.qml:327
-#, fuzzy, kde-format
-#| msgid "Right-to-left"
+#, kde-format
 msgctxt "@option:inlistbox tray orientation"
 msgid "Right-to-left"
 msgstr "ਸੱਜਿਓ ਖੱਬੇ"

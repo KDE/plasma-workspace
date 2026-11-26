@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:10+0000\n"
-"PO-Revision-Date: 2024-04-07 03:21+0200\n"
+"PO-Revision-Date: 2026-11-25 13:29+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.10\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -43,8 +43,7 @@ msgid "Where to Install"
 msgstr "სად დავაყენო"
 
 #: apps/kfontinst/Installer.cpp:115
-#, fuzzy, kde-format
-#| msgid "Font Management"
+#, kde-format
 msgctxt "@title application name"
 msgid "Font Management"
 msgstr "ფონტების მართვა"
@@ -53,7 +52,7 @@ msgstr "ფონტების მართვა"
 #, kde-format
 msgctxt "@info application description"
 msgid "Install, manage, and preview fonts"
-msgstr ""
+msgstr "ფონტების დაყენება, მართვა და გადახედვა"
 
 #: apps/kfontinst/Installer.cpp:119 apps/kfontprint/Printer.cpp:327
 #, kde-format

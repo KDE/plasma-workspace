@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 A S Alam <aalam.yellow@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021, 2023-2026 A S Alam <aalam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-02 08:58+0000\n"
-"PO-Revision-Date: 2025-09-15 10:02-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-25 11:23-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "ਅਣਪਛਾਤੀ ਗਲਤੀ ਆਈ ਹੈ।"
 #: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:236
 #, kde-format
 msgid "Change Password"
-msgstr "ਪਾਸਵਰਡ ਬਦਲੋ"
+msgstr "ਪਾਸਵਰਡ ਨੂੰ ਬਦਲੋ"
 
 #: src/ui/ChangePassword.qml:35
 #, kde-format
@@ -82,7 +82,7 @@ msgstr "ਪਾਸਵਰਡ"
 #: src/ui/ChangePassword.qml:71
 #, kde-format
 msgid "Confirm password"
-msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ"
+msgstr "ਪਾਸਵਰਡ ਨੂੰ ਤਸਦੀਕ ਕਰੋ"
 
 #: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:114
 #, kde-format
@@ -107,7 +107,7 @@ msgstr ""
 #: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
 msgid "What is KWallet?"
-msgstr "ਕੇਵਾਲਿਟ ਕੀ ਹੈ?"
+msgstr "ਕੇ-ਵਾਲਟ ਕੀ ਹੈ?"
 
 #: src/ui/ChangeWalletPassword.qml:45
 #, kde-format
@@ -126,7 +126,7 @@ msgstr ""
 #: src/ui/ChangeWalletPassword.qml:60
 #, kde-format
 msgid "Change Wallet Password"
-msgstr "ਵਾਲਿਟ ਪਾਸਵਰਡ ਬਦਲੋ"
+msgstr "ਵਾਲਟ ਦੇ ਪਾਸਵਰਡ ਨੂੰ ਬਦਲੋ"
 
 #: src/ui/ChangeWalletPassword.qml:69
 #, kde-format
@@ -163,6 +163,7 @@ msgid ""
 "Usernames must be lowercase. Uppercase characters were converted to "
 "lowercase."
 msgstr ""
+"ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅੰਗਰੇਜ਼ੀ ਦੇ ਛੋਟੇ ਅੱਖਰਾਂ 'ਚ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ। ਵੱਡੇ ਅੱਖਰਾਂ ਨੂੰ ਛੋਟਿਆਂ ਵਿੱਚ ਬਦਲਿਆ ਜਾਵੇਗਾ।"
 
 #: src/ui/CreateUser.qml:93 src/ui/UserDetailsPage.qml:211
 #, kde-format
@@ -636,6 +637,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"ਖੁਦ ਦੇ ਖਾਤੇ ਨੂੰ ਹਟਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ ਹੈ! ਲਾਗ ਆਉਟ ਕਰੋ ਅਤੇ ਫੇਰ ਇਸ ਵਰਤੋਂਕਾਰ ਖਾਤੇ ਨੂੰ ਹਟਾਉਣ ਲਈ ਹੋਰ "
+"ਵਰਤੋਂਕਾਰ ਵਜੋਂ ਲਾਗਇਨ ਕਰੋ।"
 
 #: src/ui/UserDetailsPage.qml:294
 #, kde-format
