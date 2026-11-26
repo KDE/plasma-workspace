@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2020, 2021, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2010-2016, 2018, 2020-2021, 2023-2026 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:49+0000\n"
-"PO-Revision-Date: 2025-09-15 09:53-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-11-25 11:50-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -113,44 +113,35 @@ msgid "%2 of %1"
 msgstr "%1 ਵਿੱਚੋਂ %2"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%1 ਫਾਇਲ  ਵਿੱਚੋਂ %2"
-msgstr[1] "%1 ਫਾਇਲਾਂ ਵਿੱਚੋਂ %2"
+msgstr[0] "%2 ਫ਼ਾਇਲ ਵਿੱਚੋਂ %3"
+msgstr[1] "%2 ਫ਼ਾਇਲਾਂ ਵਿੱਚੋਂ %3"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%1 ਫੋਲਡਰ ਵਿੱਚੋਂ %2"
-msgstr[1] "%1 ਫੋਲਡਰਾਂ ਵਿੱਚੋਂ %2"
+msgstr[0] "%2 ਫੋਲਡਰ ਵਿੱਚੋਂ %3"
+msgstr[1] "%2 ਫੋਲਡਰਾਂ ਵਿੱਚੋਂ %3"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%1 ਆਈਟਮ ਵਿੱਚੋਂ %2"
-msgstr[1] "%1 ਆਈਟਮਾਂ ਵਿੱਚੋਂ %2"
+msgstr[0] "%2 ਆਈਟਮ ਵਿੱਚੋਂ %3"
+msgstr[1] "%2 ਆਈਟਮਾਂ ਵਿੱਚੋਂ %3"
 
 #: components/JobDetails.qml:137
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] "%1 ਫਾਇਲ"
-msgstr[1] "%1 ਫਾਇਲਾਂ"
+msgstr[0] "%1 ਫ਼ਾਇਲ"
+msgstr[1] "%1 ਫ਼ਾਇਲਾਂ"
 
 #: components/JobDetails.qml:139
 #, kde-format
@@ -404,31 +395,28 @@ msgid "Toggle do not disturb"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਨੂੰ ਬਦਲੋ"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "ਸਾਰੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਮਿਟਾਓ"
+msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
 #: globalshortcuts.cpp:52
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
-msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
+msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬੰਦ"
 
 #: globalshortcuts.cpp:53
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
-msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਚਾਲੂ ਕਰੋ"
+msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਚਾਲੂ"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਚਾਲੂ ਕਰੋ"
+msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਅਤੀਤ ਨੂੰ ਮਿਟਾਇਆ ਗਿਆ"
 
 #: main.qml:61
 #, kde-format

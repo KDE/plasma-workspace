@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_wallpaper_org."
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasma_wallpaper_org."
 "kde.color.pot\n"
-"X-Crowdin-File-ID: 42913\n"
+"X-Crowdin-File-ID: 51170\n"
 
 #: contents/ui/config.qml:21
 #, kde-format

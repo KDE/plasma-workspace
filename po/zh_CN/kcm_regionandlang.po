@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_regionandlang.pot\n"
-"X-Crowdin-File-ID: 42911\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/kcm_regionandlang.pot\n"
+"X-Crowdin-File-ID: 52222\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -345,7 +345,7 @@ msgstr "默认"
 #, kde-format
 msgctxt "@item:intable Friendly name for the C locale"
 msgid "ISO C Standard"
-msgstr ""
+msgstr "ISO C 标准"
 
 #: localelistmodel.cpp:142
 #, kde-format

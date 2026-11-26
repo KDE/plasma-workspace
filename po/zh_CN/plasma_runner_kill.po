@@ -14,8 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_runner_kill.pot\n"
-"X-Crowdin-File-ID: 42941\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasma_runner_kill."
+"pot\n"
+"X-Crowdin-File-ID: 50216\n"
 
 #: killrunner.cpp:27
 #, kde-format

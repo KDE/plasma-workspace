@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Aman Alam <aalam@users.sf.net>, 2013, 2014, 2015, 2016.
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 A S Alam <aalam.yellow@gmail.com>
+# SPDX-FileCopyrightText: 2020-2021, 2023-2026 A S Alam <aalam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-28 00:48+0000\n"
-"PO-Revision-Date: 2026-02-11 17:48-0600\n"
+"PO-Revision-Date: 2026-11-25 11:46-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
 "Language: pa\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 26.08.3\n"
 
 #: qml/BackgroundAppItem.qml:76
 #, kde-format
@@ -182,22 +182,22 @@ msgstr "ਹੋਰ ਕਾਰਵਾਈਆਂ"
 #: qml/ConfigGeneral.qml:283
 #, kde-format
 msgid "Bottom-to-top"
-msgstr ""
+msgstr "ਹੇਠੋਂ ਓਤੇ"
 
 #: qml/ConfigGeneral.qml:284
 #, kde-format
 msgid "Top-to-bottom"
-msgstr ""
+msgstr "ਉੱਤੋਂ ਹੇਠਾਂ"
 
 #: qml/ConfigGeneral.qml:289 qml/ConfigGeneral.qml:296
 #, kde-format
 msgid "Left-to-right"
-msgstr ""
+msgstr "ਖੱਬਿਓ ਸੱਜੇ"
 
 #: qml/ConfigGeneral.qml:290 qml/ConfigGeneral.qml:295
 #, kde-format
 msgid "Right-to-left"
-msgstr ""
+msgstr "ਸੱਜਿਓ ਖੱਬੇ"
 
 #: qml/ConfigGeneral.qml:307
 #, kde-format

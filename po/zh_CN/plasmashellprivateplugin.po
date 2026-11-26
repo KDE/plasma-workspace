@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/"
 "plasmashellprivateplugin.pot\n"
-"X-Crowdin-File-ID: 43273\n"
+"X-Crowdin-File-ID: 52420\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -151,19 +151,19 @@ msgstr "配置…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Hide On-Screen Keyboard"
-msgstr ""
+msgstr "隐藏屏幕键盘"
 
 #: loginlockscreen/Footer.qml:51
 #, kde-format
 msgctxt "@action:button"
 msgid "Show On-Screen Keyboard"
-msgstr ""
+msgstr "显示屏幕键盘"
 
 #: loginlockscreen/Footer.qml:76
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
-msgstr ""
+msgstr "切换布局"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
