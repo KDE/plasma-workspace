@@ -51,3 +51,9 @@ bool isAcceptableSuffix(QString &&suffix)
     std::call_once(s_onceFlag, &fillSuffixes);
     return s_suffixes.contains(QLatin1String("*.%1").arg(std::move(suffix).toLower()));
 }
+
+bool isStandaloneImage(const QString &path)
+{
+    // Covers both contents/images/ and contents/images_dark/.
+    return !path.contains(QLatin1String("contents/images"));
+}

@@ -24,8 +24,7 @@ QStringList ImageWallpaper::findAll(const QStringList &searchPaths)
     const auto filterCondition = [](const QFileInfo &info) {
         const QString path = info.absoluteFilePath();
 
-        return info.baseName() != QLatin1String("screenshot") && !path.contains(QLatin1String("contents/images/"))
-            && !path.contains(QLatin1String("contents/images_dark/"));
+        return info.baseName() != QLatin1String("screenshot") && isStandaloneImage(path);
     };
     int i;
 
@@ -58,7 +57,7 @@ QStringList ImageWallpaper::findAll(const QStringList &searchPaths)
                 if (filterCondition(realwp) && !realwp.isSymLink() && isAcceptableSuffix(realwp.suffix())) {
                     images.append(realwp.filePath());
                 }
-            } else if (realwp.isDir() && !realwp.absoluteFilePath().contains(QLatin1String("contents/images"))) {
+            } else if (realwp.isDir() && isStandaloneImage(realwp.absoluteFilePath())) {
                 // add this to the directories we should be looking at
                 if (!visitQueue.contains(realwp.filePath())) {
                     visitQueue.append(realwp.filePath());

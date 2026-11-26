@@ -61,9 +61,17 @@ private Q_SLOTS:
      * Slots to handle file change signals from KDirWatch
      */
     void slotDirWatchCreated(const QString &path);
+    void slotDirWatchDirty(const QString &path);
     void slotDirWatchDeleted(const QString &path);
 
 private:
+    /**
+     * Re-check whether a path reported by KDirWatch is (or is part of) a
+     * wallpaper. Used for both created and dirty signals: a folder copied in
+     * incrementally only becomes a valid package after the last file landed.
+     */
+    void addBackgroundFromDirWatch(const QString &path);
+
     /**
      * Add files to KDirWatch.
      * Files or dirs should be already added to KDirWatch when

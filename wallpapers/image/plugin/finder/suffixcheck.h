@@ -11,6 +11,13 @@
 const QStringList &suffixes();
 
 /**
+ * Check if a path is outside a wallpaper package's image directory.
+ *
+ * Such images don't belong to the package, but to the list of standalone wallpapers.
+ */
+bool isStandaloneImage(const QString &path);
+
+/**
  * Check if the image format is supported by QImageReader.
  *
  * @return @p true if the format is supported, @p false otherwise.
