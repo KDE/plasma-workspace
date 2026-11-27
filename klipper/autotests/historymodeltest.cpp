@@ -647,7 +647,7 @@ void HistoryModelTest::testMimeTypeOrder()
         QCOMPARE(*plainUtf8TextIt, MimeTypes::plainUtf8Text);
         QVERIFY2(uriListIt < plainUtf8TextIt, formatsString);
         QCOMPARE(data->urls(), TestData::uriList);
-        static_assert(std::same_as<std::ranges::const_iterator_t<QByteArray>, const char *>);
+        static_assert(std::same_as<QByteArray::const_iterator, const char *>);
         const auto uriListText = data->data(MimeTypes::plainUtf8Text);
         for (const auto expectedUri : TestData::uriListStrings) {
             const auto foundUri = std::ranges::search(uriListText, expectedUri);
