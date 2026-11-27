@@ -265,15 +265,21 @@ void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
     m_loaded = m_loaded + 1;
 }
 
-void ImageProxyModel::slotDirWatchCreated(const QString &_path)
+void ImageProxyModel::slotDirWatchCreated(const QString &path)
 {
-    QString path = _path;
+    addBackgroundFromDirWatch(path);
+}
 
-    if (int idx = path.indexOf(QLatin1String("contents/images/")); idx > 0) {
-        path = path.mid(0, idx);
+void ImageProxyModel::slotDirWatchDirty(const QString &path)
+{
+    addBackgroundFromDirWatch(path);
+}
+
+void ImageProxyModel::addBackgroundFromDirWatch(const QString &path)
+{
+    if (QFileInfo(path).isDir() || !isPackageImagePath(path)) {
+        addBackground(QUrl::fromLocalFile(path));
     }
-
-    addBackground(QUrl::fromLocalFile(path));
 }
 
 void ImageProxyModel::slotDirWatchDeleted(const QString &path)
@@ -291,5 +297,6 @@ void ImageProxyModel::setupDirWatch()
     }
 
     connect(&m_dirWatch, &KDirWatch::created, this, &ImageProxyModel::slotDirWatchCreated);
+    connect(&m_dirWatch, &KDirWatch::dirty, this, &ImageProxyModel::slotDirWatchDirty);
     connect(&m_dirWatch, &KDirWatch::deleted, this, &ImageProxyModel::slotDirWatchDeleted);
 }
