@@ -15,7 +15,7 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QIcon>
-#include <QTimer>
+#include <QThread>
 
 #include <KApplicationTrader>
 #include <KIO/OpenUrlJob>
@@ -67,10 +67,8 @@ static QIcon componentIcon(const AppStream::Component &comp)
 
 void InstallerRunner::match(KRunner::RunnerContext &context)
 {
-    // Give the other runners a bit of time to produce results
-    QEventLoop loop;
-    QTimer::singleShot(200, &loop, &QEventLoop::quit);
-    loop.exec();
+    // Give the other runners a bit of time to produce results.
+    QThread::msleep(200);
     if (!context.isValid()) {
         return;
     }
