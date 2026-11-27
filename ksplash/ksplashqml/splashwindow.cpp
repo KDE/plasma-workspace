@@ -33,7 +33,7 @@ SplashWindow::SplashWindow(QQmlEngine *engine, bool testing, bool window, const 
     , m_theme(theme)
 {
     if (auto layerShellWindow = LayerShellQt::Window::get(this)) {
-        layerShellWindow->setScope(QStringLiteral("ksplashqml"));
+        layerShellWindow->setScope(QStringLiteral("splash"));
         layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
         layerShellWindow->setExclusiveZone(-1);
         layerShellWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
