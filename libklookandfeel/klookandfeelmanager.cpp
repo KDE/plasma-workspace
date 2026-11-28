@@ -64,7 +64,7 @@ void writeConfigDefaults(KConfigGroup &group,
                          bool reparseBeforeRevert = false)
 {
     defaultGroup.writeEntry(key, value, writeFlags);
-    defaultGroup.sync();
+    const bool defaultsSynced = defaultGroup.sync();
 
     if (mode != KLookAndFeelManager::Mode::Apply) {
         return;
@@ -72,6 +72,9 @@ void writeConfigDefaults(KConfigGroup &group,
 
     if (reparseBeforeRevert) {
         KConfig *config = group.config();
+        if (!defaultsSynced || (config->isDirty() && !config->sync())) {
+            return;
+        }
         // KConfig remembers the previous revertToDefault() call for this key
         // and skips a second call until the config is reloaded.
         // Reload the defaults so applying another package can notify listeners again.
