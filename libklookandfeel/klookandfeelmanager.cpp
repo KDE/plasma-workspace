@@ -55,6 +55,33 @@ bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QSt
     return !configValue(config, groupPath, entry).isEmpty();
 }
 
+void writeConfigDefaults(KConfigGroup &group,
+                         KConfigGroup &defaultGroup,
+                         const QString &key,
+                         const QString &value,
+                         KConfig::WriteConfigFlags writeFlags,
+                         KLookAndFeelManager::Mode mode,
+                         bool reparseBeforeRevert = false)
+{
+    defaultGroup.writeEntry(key, value, writeFlags);
+    defaultGroup.sync();
+
+    if (mode != KLookAndFeelManager::Mode::Apply) {
+        return;
+    }
+
+    if (reparseBeforeRevert) {
+        KConfig *config = group.config();
+        // KConfig remembers the previous revertToDefault() call for this key
+        // and skips a second call until the config is reloaded.
+        // Reload the defaults so applying another package can notify listeners again.
+        config->reparseConfiguration();
+    }
+
+    group.revertToDefault(key, writeFlags);
+    group.sync();
+}
+
 } // Anonymous namespace
 
 KLookAndFeelManager::KLookAndFeelManager(QObject *parent)
@@ -325,7 +352,8 @@ void KLookAndFeelManager::writeNewDefaults(const QString &filename,
     KConfig configDefault(configDefaults(filename));
     KConfigGroup defaultGroup(&configDefault, group);
 
-    writeNewDefaults(configGroup, defaultGroup, key, value, writeFlags);
+    const bool reparseBeforeRevert = writeFlags.testFlag(KConfig::Notify);
+    writeConfigDefaults(configGroup, defaultGroup, key, value, writeFlags, m_mode, reparseBeforeRevert);
 }
 
 void KLookAndFeelManager::writeNewDefaults(KConfig &config,
@@ -347,13 +375,7 @@ void KLookAndFeelManager::writeNewDefaults(KConfigGroup &group,
                                            const QString &value,
                                            KConfig::WriteConfigFlags writeFlags)
 {
-    defaultGroup.writeEntry(key, value, writeFlags);
-    defaultGroup.sync();
-
-    if (m_mode == Mode::Apply) {
-        group.revertToDefault(key, writeFlags);
-        group.sync();
-    }
+    writeConfigDefaults(group, defaultGroup, key, value, writeFlags, m_mode);
 }
 
 KConfig KLookAndFeelManager::configDefaults(const QString &filename)
