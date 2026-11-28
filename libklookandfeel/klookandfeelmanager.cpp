@@ -236,6 +236,15 @@ void KLookAndFeelManager::setWidgetStyle(const QString &style)
     Q_EMIT styleChanged(style);
 }
 
+void KLookAndFeelManager::setGtkTheme(const QString &gtkTheme)
+{
+    if (gtkTheme.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("KDE"), QStringLiteral("gtkTheme"), gtkTheme, KConfig::Notify);
+}
+
 void KLookAndFeelManager::setColors(const QString &scheme, const QString &colorFile)
 {
     if (scheme.isEmpty() && colorFile.isEmpty()) {
@@ -469,6 +478,9 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
             }
 
             setWidgetStyle(widgetStyle);
+
+            QString gtkTheme = group.readEntry("gtkTheme", QStringLiteral("Breeze"));
+            setGtkTheme(gtkTheme);
         }
 
         if (itemsToApply.testFlag(Colors)) {
