@@ -91,8 +91,8 @@ private:
     void initSettingsAndRegistry();
     void initRegistry();
 
-    KConfigWatcher::Ptr m_configWatcher;
-    bool m_xwaylandClientsScale = true;
+    KConfigWatcher::Ptr m_kwinrcConfigWatcher;
+    double m_xwaylandScaleFactor = 1.0;
 
     SystemTraySettings *m_settings = nullptr;
     PlasmoidRegistry *m_plasmoidRegistry = nullptr;

@@ -136,14 +136,14 @@ void SystemTray::init()
     });
 
     if (KWindowSystem::isPlatformWayland()) {
-        auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::NoGlobals);
-        KConfigGroup kscreenGroup = config->group(QStringLiteral("KScreen"));
-        m_xwaylandClientsScale = kscreenGroup.readEntry("XwaylandClientsScale", true);
+        auto kwinrcConfig = KSharedConfig::openConfig(QStringLiteral("kwinrc"), KConfig::NoGlobals);
+        KConfigGroup xwaylandGroup = kwinrcConfig->group(QStringLiteral("Xwayland"));
+        m_xwaylandScaleFactor = xwaylandGroup.readEntry("Scale", 1.0);
 
-        m_configWatcher = KConfigWatcher::create(config);
-        connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-            if (group.name() == u"KScreen" && names.contains(QByteArrayLiteral("XwaylandClientsScale"))) {
-                m_xwaylandClientsScale = group.readEntry("XwaylandClientsScale", true);
+        m_kwinrcConfigWatcher = KConfigWatcher::create(kwinrcConfig);
+        connect(m_kwinrcConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group) {
+            if (group.name() == u"Xwayland") {
+                m_xwaylandScaleFactor = group.readEntry("Scale", 1.0);
             }
         });
     }
@@ -334,19 +334,25 @@ QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
         pos = window->mapToGlobal(pos.toPoint());
 
         if (KWindowSystem::isPlatformWayland()) {
-            if (!m_xwaylandClientsScale) {
+            // This is equivalent to the previous '~/kdeglobals':KScreen/XwaylandClientsScale == false check.
+            // NOTE: this comment is left for historical reasons.
+            if (m_xwaylandScaleFactor == 1.0) {
                 return pos;
             }
 
-            const qreal devicePixelRatio = window->devicePixelRatio();
+            // XWayland application operates in its own coordinate space that differs from ours.
+            // QWindow::devicePixelRatio returns a value different from the current system scaling factor
+            // needed to transform 'pos' to the native global position on the current screen.
+            // So let's use a corresponding value from kwinrc.
+            const qreal scaleFactor = m_xwaylandScaleFactor;
 
             if (QGuiApplication::screens().size() == 1) {
-                return pos * devicePixelRatio;
+                return pos * scaleFactor;
             }
 
             const QRect geometry = window->screen()->geometry();
             const QRect nativeGeometry = window->screen()->handle()->geometry();
-            const QPointF nativeGlobalPosOnCurrentScreen = (pos - geometry.topLeft()) * devicePixelRatio;
+            const QPointF nativeGlobalPosOnCurrentScreen = (pos - geometry.topLeft()) * scaleFactor;
 
             return nativeGeometry.topLeft() + nativeGlobalPosOnCurrentScreen;
         }
