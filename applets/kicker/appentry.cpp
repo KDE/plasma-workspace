@@ -356,10 +356,13 @@ QVariantList AppEntry::actions() const
 {
     QVariantList actionList;
 
+    bool haveJumpListActions = false;
+
     if (!m_serviceAction) {
         actionList << Kicker::jumpListActions(m_service);
         if (!actionList.isEmpty()) {
             actionList << Kicker::createSeparatorActionItem();
+            haveJumpListActions = true;
         }
     }
 
@@ -370,16 +373,23 @@ QVariantList AppEntry::actions() const
         systemImmutable = (appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable);
     }
 
+    bool haveAddLauncherActions = false;
+
     // We cannot yet link to jump list actions directly from desktop/task manager.
     if (!m_serviceAction) {
         const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, m_service);
         if (!systemImmutable && !addLauncherActions.isEmpty()) {
             actionList << addLauncherActions;
+            haveAddLauncherActions = false;
         }
     }
 
     const QVariantList &recentDocuments = Kicker::recentDocumentActions(m_service);
     if (!recentDocuments.isEmpty()) {
+        if (haveJumpListActions && !haveAddLauncherActions) {
+            // recent documents start with a separator-like header, so drop the extra separator
+            actionList.pop_back();
+        }
         actionList << recentDocuments << Kicker::createSeparatorActionItem();
     }
 
