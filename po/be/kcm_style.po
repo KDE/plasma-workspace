@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-11-28 01:11+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -24,7 +24,7 @@ msgstr ""
 "kcm_style.po\n"
 "X-Crowdin-File-ID: 10776\n"
 
-#: gtkpage.cpp:57
+#: gtkpage.cpp:83
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 не ёсць прыдатным архівам тэмы GTK."
@@ -342,17 +342,36 @@ msgstr ""
 msgid "GTK theme:"
 msgstr "Тэма GTK:"
 
-#: ui/GtkStylePage.qml:85
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgctxt "@item:inlistbox Supported GTK versions, %1 is a list of numbers"
+msgid "GTK %1"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
 #, kde-format
 msgid "Preview…"
 msgstr "Папярэдні прагляд…"
 
-#: ui/GtkStylePage.qml:104
+#: ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Preview supports GTK4 themes only"
+msgstr ""
+
+#: ui/GtkStylePage.qml:130
+#, kde-format
+msgctxt "@info %1 is a list of GTK versions"
+msgid ""
+"This theme does not support GTK %1. Applications built with those versions "
+"will fall back to GTK defaults."
+msgstr ""
+
+#: ui/GtkStylePage.qml:143
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Абраць архіў тэмы GTK"
 
-#: ui/GtkStylePage.qml:106
+#: ui/GtkStylePage.qml:145
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Архіў тэмы GTK (*.tar.xz *.tar.gz *.tar.bz2)"

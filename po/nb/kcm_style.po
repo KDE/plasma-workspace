@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-11-28 01:11+0000\n"
 "PO-Revision-Date: 2025-02-20 21:05+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@nuug.no>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: gtkpage.cpp:57
+#: gtkpage.cpp:83
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 er ikke et gyldig arkiv for GTK-tema."
@@ -336,17 +336,36 @@ msgstr ""
 msgid "GTK theme:"
 msgstr "GTK-tema:"
 
-#: ui/GtkStylePage.qml:85
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgctxt "@item:inlistbox Supported GTK versions, %1 is a list of numbers"
+msgid "GTK %1"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
 #, kde-format
 msgid "Preview…"
 msgstr "Forhåndsvisning …"
 
-#: ui/GtkStylePage.qml:104
+#: ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Preview supports GTK4 themes only"
+msgstr ""
+
+#: ui/GtkStylePage.qml:130
+#, kde-format
+msgctxt "@info %1 is a list of GTK versions"
+msgid ""
+"This theme does not support GTK %1. Applications built with those versions "
+"will fall back to GTK defaults."
+msgstr ""
+
+#: ui/GtkStylePage.qml:143
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Velg arkivfil for GTK-tema"
 
-#: ui/GtkStylePage.qml:106
+#: ui/GtkStylePage.qml:145
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arkivfil for GTK-tema (*.tar.xz *.tar.gz *.tar.bz2)"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-11-28 01:11+0000\n"
 "PO-Revision-Date: 2026-11-13 14:16+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: gtkpage.cpp:57
+#: gtkpage.cpp:83
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "„%1“ nav derīga GTK motīva arhīvs."
@@ -334,17 +334,36 @@ msgstr "Iegūt jaunu…"
 msgid "GTK theme:"
 msgstr "GTK motīvs:"
 
-#: ui/GtkStylePage.qml:85
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgctxt "@item:inlistbox Supported GTK versions, %1 is a list of numbers"
+msgid "GTK %1"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
 #, kde-format
 msgid "Preview…"
 msgstr "Priekšskatījums..."
 
-#: ui/GtkStylePage.qml:104
+#: ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Preview supports GTK4 themes only"
+msgstr ""
+
+#: ui/GtkStylePage.qml:130
+#, kde-format
+msgctxt "@info %1 is a list of GTK versions"
+msgid ""
+"This theme does not support GTK %1. Applications built with those versions "
+"will fall back to GTK defaults."
+msgstr ""
+
+#: ui/GtkStylePage.qml:143
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Atlasīt GTK motīvu arhīvu"
 
-#: ui/GtkStylePage.qml:106
+#: ui/GtkStylePage.qml:145
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK motīvu arhīvs (*.tar.xz *.tar.gz *.tar.bz2)"

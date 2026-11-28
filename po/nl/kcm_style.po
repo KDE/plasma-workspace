@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-11-28 01:11+0000\n"
 "PO-Revision-Date: 2026-09-10 12:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 26.08.0\n"
 
-#: gtkpage.cpp:57
+#: gtkpage.cpp:83
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 is geen geldig GTK-thema-archief."
@@ -342,17 +342,36 @@ msgstr "Nieuwe ophalen…"
 msgid "GTK theme:"
 msgstr "GTK-thema:"
 
-#: ui/GtkStylePage.qml:85
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgctxt "@item:inlistbox Supported GTK versions, %1 is a list of numbers"
+msgid "GTK %1"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
 #, kde-format
 msgid "Preview…"
 msgstr "Voorbeeld…"
 
-#: ui/GtkStylePage.qml:104
+#: ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Preview supports GTK4 themes only"
+msgstr ""
+
+#: ui/GtkStylePage.qml:130
+#, kde-format
+msgctxt "@info %1 is a list of GTK versions"
+msgid ""
+"This theme does not support GTK %1. Applications built with those versions "
+"will fall back to GTK defaults."
+msgstr ""
+
+#: ui/GtkStylePage.qml:143
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "GTK-thema-archief selecteren"
 
-#: ui/GtkStylePage.qml:106
+#: ui/GtkStylePage.qml:145
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK-thema-archief (*.tar.xz *.tar.gz *.tar.bz2)"

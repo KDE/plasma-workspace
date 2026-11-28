@@ -2,7 +2,7 @@
 # translation of kcmstyle.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001,2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id$
+# $Id: kcm_style.po 1754773 2026-11-28 01:54:08Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:49+0000\n"
+"POT-Creation-Date: 2026-11-28 01:11+0000\n"
 "PO-Revision-Date: 2026-09-10 07:23+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.9\n"
 
-#: gtkpage.cpp:57
+#: gtkpage.cpp:83
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
 msgstr "%1 ni veljavna tema arhiva GTK."
@@ -341,17 +341,36 @@ msgstr "Pridobi novo…"
 msgid "GTK theme:"
 msgstr "Tema GTK:"
 
-#: ui/GtkStylePage.qml:85
+#: ui/GtkStylePage.qml:93
+#, kde-format
+msgctxt "@item:inlistbox Supported GTK versions, %1 is a list of numbers"
+msgid "GTK %1"
+msgstr ""
+
+#: ui/GtkStylePage.qml:111
 #, kde-format
 msgid "Preview…"
 msgstr "Predogled…"
 
-#: ui/GtkStylePage.qml:104
+#: ui/GtkStylePage.qml:117
+#, kde-format
+msgid "Preview supports GTK4 themes only"
+msgstr ""
+
+#: ui/GtkStylePage.qml:130
+#, kde-format
+msgctxt "@info %1 is a list of GTK versions"
+msgid ""
+"This theme does not support GTK %1. Applications built with those versions "
+"will fall back to GTK defaults."
+msgstr ""
+
+#: ui/GtkStylePage.qml:143
 #, kde-format
 msgid "Select GTK Theme Archive"
 msgstr "Izberi arhiv tem GTK"
 
-#: ui/GtkStylePage.qml:106
+#: ui/GtkStylePage.qml:145
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arhiv tem GTK (*.tar.xz *.tar.gz *.tar.bz2)"
