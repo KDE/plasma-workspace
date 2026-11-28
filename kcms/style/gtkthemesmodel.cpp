@@ -30,7 +30,7 @@ static QList<int> gtkVersionsList(bool gtk2, bool gtk3, bool gtk4)
 
 GtkThemesModel::GtkThemesModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_selectedTheme(QStringLiteral("Breeze"))
+    , m_selectedTheme()
     , m_themes()
 {
 }

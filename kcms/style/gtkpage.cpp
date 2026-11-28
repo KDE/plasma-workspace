@@ -110,30 +110,46 @@ void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
 
 void GtkPage::save()
 {
-    auto call = m_gtkConfigInterface.setGtkTheme(m_gtkThemesModel->selectedTheme());
+    const QString selectedTheme = m_gtkThemesModel->selectedTheme();
+    if (selectedTheme.isEmpty()) {
+        return;
+    }
+
+    auto call = m_gtkConfigInterface.setGtkTheme(selectedTheme);
     // needs to block so "OK" button closing kcmshell still saves properly
     call.waitForFinished();
 }
 
 void GtkPage::defaults()
 {
-    m_gtkThemesModel->setSelectedTheme(QStringLiteral("Breeze"));
+    if (!m_defaultGtkTheme.isEmpty()) {
+        m_gtkThemesModel->setSelectedTheme(m_defaultGtkTheme);
+    }
 }
 
 void GtkPage::load()
 {
+    const KConfig kdeglobals(QStringLiteral("kdeglobals"));
+    const QString breezeTheme = QStringLiteral("Breeze");
+    m_defaultGtkTheme = kdeglobals.group(QStringLiteral("KDE")).readEntry("gtkTheme", breezeTheme);
+
     m_gtkThemesModel->load();
+    const int themeCount = m_gtkThemesModel->rowCount();
+    if (m_gtkThemesModel->findThemeIndex(m_defaultGtkTheme) == themeCount) {
+        m_defaultGtkTheme = m_gtkThemesModel->findThemeIndex(breezeTheme) < themeCount ? breezeTheme : QString();
+    }
     m_gtkThemesModel->setSelectedTheme(m_gtkConfigInterface.gtkTheme());
 }
 
 bool GtkPage::isDefaults() const
 {
-    return m_gtkThemesModel->selectedTheme() == QLatin1String("Breeze");
+    return m_defaultGtkTheme.isEmpty() || m_gtkThemesModel->selectedTheme() == m_defaultGtkTheme;
 }
 
 bool GtkPage::isSaveNeeded()
 {
-    return m_gtkThemesModel->selectedTheme() != m_gtkConfigInterface.gtkTheme();
+    const QString selectedTheme = m_gtkThemesModel->selectedTheme();
+    return !selectedTheme.isEmpty() && selectedTheme != m_gtkConfigInterface.gtkTheme();
 }
 
 #include "moc_gtkpage.cpp"

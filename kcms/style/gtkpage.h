@@ -49,6 +49,8 @@ Q_SIGNALS:
 private:
     GtkThemesModel *m_gtkThemesModel;
 
+    QString m_defaultGtkTheme;
+
     OrgKdeGtkConfigInterface m_gtkConfigInterface;
 
     QProcess m_gtkPreviewProcess;
