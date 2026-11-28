@@ -257,7 +257,23 @@ PlasmaExtras.Representation {
                         text: eventTitle.text
                         hoverEnabled: true
                         highlighted: ListView.isCurrentItem
+                        // Take focus so Space toggles the description via onClicked.
+                        focus: ListView.isCurrentItem
+                        focusPolicy: Qt.NoFocus
                         Accessible.description: modelData.description
+
+                        // Descriptions are collapsed to a single line by default
+                        property bool expanded: false
+                        readonly property bool expandable: expanded || eventDescriptionPreview.truncated
+
+                        function toggleExpanded() {
+                            if (expandable) {
+                                expanded = !expanded;
+                            }
+                        }
+
+                        onClicked: toggleExpanded()
+
                         readonly property bool hasTime: {
                             // Explicitly all-day event
                             if (modelData.isAllDay) {
@@ -285,7 +301,7 @@ PlasmaExtras.Representation {
 
                         contentItem: GridLayout {
                             id: eventGrid
-                            columns: 3
+                            columns: 4
                             rows: 2
                             rowSpacing: 0
                             columnSpacing: Kirigami.Units.largeSpacing
@@ -355,6 +371,21 @@ PlasmaExtras.Representation {
                                 wrapMode: Text.Wrap
                             }
 
+                            PlasmaComponents.Label {
+                                id: eventDescriptionPreview
+
+                                Layout.row: 1
+                                Layout.column: 2
+                                Layout.fillWidth: true
+
+                                visible: !eventItem.expanded && text.length > 0
+                                text: eventItem.modelData.description
+
+                                wrapMode: Text.Wrap
+                                maximumLineCount: 1
+                                elide: Text.ElideRight
+                            }
+
                             Kirigami.SelectableLabel {
                                 id: eventDescription
 
@@ -362,13 +393,38 @@ PlasmaExtras.Representation {
                                 Layout.column: 2
                                 Layout.fillWidth: true
                                 spacing: 0
-                                
-                                visible: text.length > 0
+
+                                visible: eventItem.expanded && text.length > 0
                                 text: eventItem.modelData.description
-                                                                    
+
                                 wrapMode: Text.Wrap
-                                
+
                                 onLinkActivated: link => Qt.openUrlExternally(link)
+                            }
+
+                            PlasmaComponents.ToolButton {
+                                id: expandButton
+
+                                Layout.row: 0
+                                Layout.column: 3
+                                Layout.rowSpan: 2
+                                // Centered on the collapsed height, so it doesn't move when expanded
+                                Layout.alignment: Qt.AlignTop
+                                Layout.topMargin: Math.max(0, (eventTitle.height + eventDescriptionPreview.implicitHeight - implicitHeight) / 2)
+
+                                visible: eventItem.expandable
+                                focusPolicy: Qt.NoFocus
+                                display: PlasmaComponents.AbstractButton.IconOnly
+                                icon.name: eventItem.expanded ? "collapse" : "expand"
+                                text: eventItem.expanded
+                                    ? i18nc("@action:button", "Collapse")
+                                    : i18nc("@action:button", "Expand")
+
+                                onClicked: eventItem.toggleExpanded()
+
+                                PlasmaComponents.ToolTip {
+                                    text: expandButton.text
+                                }
                             }
                         }
                     }
